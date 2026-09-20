@@ -1,0 +1,36 @@
+name: Spidey - teste visual premium v4
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-art-v4-test.yml"
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aguardar deploy e enviar card v4
+        shell: bash
+        run: |
+          set -euo pipefail
+          sleep 45
+          curl \
+            --retry 6 \
+            --retry-all-errors \
+            --retry-delay 10 \
+            --connect-timeout 20 \
+            --max-time 180 \
+            --fail \
+            --silent \
+            --show-error \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "📰 G47IX • NOTÍCIA • VISUAL PREMIUM V4",
+            "mensagem": "Adventure Effects disponíveis no Pokémon GO. Spacial Rend e Roar of Time continuam entre os efeitos de aventura mais úteis para jogadores. Fonte original: https://x.com/g47ix/status/2100993253747146826",
+            "url": "https://x.com/g47ix/status/2100993253747146826",
+            "gerar_arte": true
+          }
+          JSON
