@@ -33,6 +33,7 @@ jobs:
         shell: bash
         env:
           INSTAGRAM_API: https://i.instagram.com/api/v1/users/web_profile_info/?username=g47ix
+          JINA_READER: https://r.jina.ai/http://imginn.com/g47ix/
           IMG_INN: https://imginn.com/g47ix/
           SPIDEY: https://spidey-pokemon-go.onrender.com/enviar
           STATE_FILE: last_g47ix.txt
@@ -180,8 +181,66 @@ jobs:
           PY
           }
 
+          buscar_jina() {
+            curl \
+              --location \
+              --compressed \
+              --retry 2 \
+              --retry-delay 5 \
+              --retry-connrefused \
+              --connect-timeout 20 \
+              --max-time 90 \
+              --fail \
+              --silent \
+              --show-error \
+              --header "Accept: text/plain" \
+              --user-agent "Mozilla/5.0" \
+              --output "$SOURCE_FILE" \
+              "$JINA_READER"
+
+            python3 - "$SOURCE_FILE" <<'PY'
+          import re
+          import sys
+
+          ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
+          VALUE = {char: index for index, char in enumerate(ALPHABET)}
+
+
+          def shortcode_id(shortcode):
+              number = 0
+
+              for char in shortcode:
+                  if char not in VALUE:
+                      raise ValueError(f"Shortcode invalido: {shortcode}")
+
+                  number = number * 64 + VALUE[char]
+
+              return number
+
+
+          with open(sys.argv[1], encoding="utf-8", errors="replace") as source:
+              text = source.read()
+
+          pattern = re.compile(
+              r'(?:https?://(?:www\.)?(?:imginn|instagram)\.com)?'
+              r'/(?:p|reels?)/([A-Za-z0-9_-]+)',
+              re.IGNORECASE,
+          )
+
+          shortcodes = list(dict.fromkeys(pattern.findall(text)))
+
+          if not shortcodes:
+              raise SystemExit("Leitor nao retornou publicacoes")
+
+          latest = max(shortcodes, key=shortcode_id)
+          print(f"https://www.instagram.com/p/{latest}/")
+          PY
+          }
+
           if POST="$(buscar_instagram)"; then
             echo "Fonte utilizada: Instagram"
+          elif POST="$(buscar_jina)"; then
+            echo "Fonte utilizada: leitor publico"
           elif POST="$(buscar_imginn)"; then
             echo "Fonte utilizada: Imginn"
           else
