@@ -16,17 +16,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Baixar repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Testar Yahoo realtime
+      - name: Validar Yahoo realtime por ID
         shell: bash
         run: |
           set -euo pipefail
           curl -L --compressed --connect-timeout 15 --max-time 60 --fail --silent --show-error \
             -A "Mozilla/5.0" \
-            "https://search.yahoo.co.jp/realtime/search?p=g47ix" \
+            "https://search.yahoo.co.jp/realtime/search?p=id%3Ag47ix&ei=UTF-8" \
             -o yahoo.html
           echo "Bytes: $(wc -c < yahoo.html)"
+          echo "Links G47IX encontrados:"
+          grep -oE 'https?://(twitter|x)\.com/g47ix/status/[0-9]+' yahoo.html | head -20 || true
+          echo "IDs de timeline:"
           grep -oE 'tweetId[^0-9]{0,20}[0-9]{15,}' yahoo.html | head -20 || true
-          grep -oE '/status/[0-9]{15,}' yahoo.html | head -20 || true
-          grep -ioE '.{0,120}g47ix.{0,300}' yahoo.html | head -20 || true
+          if grep -q 'totalResultsReturned' yahoo.html; then
+            grep -oE 'totalResultsReturned[^,}]+' yahoo.html | head -5 || true
+          fi
