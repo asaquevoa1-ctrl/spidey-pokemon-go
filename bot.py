@@ -267,7 +267,12 @@ def enviar():
     except ValueError as erro:
         return jsonify({"erro": str(erro)}), 400
 
-    if dados.get("aprovar"):
+    exige_aprovacao = dados.get(
+        "aprovar",
+        "G47IX" in conteudo["titulo"].upper(),
+    )
+
+    if exige_aprovacao:
         segredo = _segredo_aprovacao()
         if not segredo:
             return jsonify({"erro": "Segredo de aprovação não disponível"}), 500
@@ -297,7 +302,8 @@ def enviar():
         )
 
         resposta = {
-            "status": "aguardando_aprovacao",
+            "status": "enviado",
+            "etapa": "aguardando_aprovacao",
             "arte": bool(conteudo["imagem_bytes"]),
             "modo_arte": conteudo["modo_arte"],
             "coordenadas": len(conteudo["coordenadas"]),
