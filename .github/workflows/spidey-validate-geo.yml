@@ -1,0 +1,17 @@
+name: Spidey - validar coordenadas e GPX
+
+on:
+  push:
+    paths:
+      - "spidey_geo.py"
+      - "test_spidey_geo.py"
+      - ".github/workflows/spidey-validate-geo.yml"
+  workflow_dispatch:
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Rodar testes de coordenadas e GPX
+        run: python -m unittest -v test_spidey_geo.py
