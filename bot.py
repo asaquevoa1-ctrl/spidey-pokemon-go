@@ -88,11 +88,23 @@ def mandar_discord(
         embed["image"] = {"url": "attachment://spidey-card.png"}
 
     if imagem_bytes or gpx_bytes:
-        files = {}
+        files = []
+        indice = 0
         if imagem_bytes:
-            files["file0"] = ("spidey-card.png", imagem_bytes, "image/png")
+            files.append(
+                (
+                    f"files[{indice}]",
+                    ("spidey-card.png", imagem_bytes, "image/png"),
+                )
+            )
+            indice += 1
         if gpx_bytes:
-            files["file1"] = (gpx_nome, gpx_bytes, "application/gpx+xml")
+            files.append(
+                (
+                    f"files[{indice}]",
+                    (gpx_nome, gpx_bytes, "application/gpx+xml"),
+                )
+            )
 
         resposta = requests.post(
             DISCORD_WEBHOOK,
