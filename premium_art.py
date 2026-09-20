@@ -65,8 +65,17 @@ def _headline_body(text):
     return headline, body
 
 
-def _source(titulo):
-    return "G47IX" if "G47IX" in (titulo or "").upper() else "FONTE"
+def _source(titulo, mensagem=""):
+    all_text = f"{titulo or ''} {mensagem or ''}".upper()
+    if "G47IX" in all_text:
+        return "G47IX"
+    if "SPS" in all_text or "SHINY PINGS" in all_text:
+        return "SPS"
+    if "ESA" in all_text or "AGÊNCIA ESPACIAL EUROPEIA" in all_text:
+        return "POKÉMON GO / ESA"
+    if "POKÉMON GO" in all_text:
+        return "POKÉMON GO"
+    return "SPIDEY"
 
 
 def _category(titulo):
@@ -101,6 +110,27 @@ def _cover_crop(img):
     return img.resize((W, H), Image.Resampling.LANCZOS).convert("RGBA")
 
 
+def _context_prompt(clean):
+    u = clean.upper()
+    if "MÁLAGA" in u or "MALAGA" in u or "COMIC-CON" in u:
+        return (
+            "Build the scene specifically around Pokémon GO at Comic-Con Málaga. "
+            "Use a sunny Mediterranean Málaga atmosphere, convention energy, Spanish architecture, "
+            "a premium in-game-style location-background/postcard visual, and Pikachu as the obvious hero subject. "
+            "The artwork should instantly read as Pokémon GO event content, not corporate advertising."
+        )
+    if "ESA" in u or "ASTRONAUTA" in u or "ESPACIAL" in u:
+        return (
+            "Build the scene specifically around the Pokémon GO collaboration with the European Space Agency. "
+            "Use Earth orbit, stars, a polished European space-museum atmosphere and Pikachu in an astronaut suit as the hero. "
+            "If shiny is mentioned, prioritize the shiny Pikachu form. Include a tasteful in-game-style location-background/photo-card motif."
+        )
+    return (
+        "The visual must clearly reference the actual Pokémon GO news topic with recognizable Pokémon/game-world elements, "
+        "not a generic smartphone, abstract technology graphic, pharmaceutical ad, corporate brochure or stock-style composition."
+    )
+
+
 def _generate_background(clean, categoria):
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
@@ -108,21 +138,23 @@ def _generate_background(clean, categoria):
 
     shiny = bool(re.search(r"\b(shiny|brilhante)\b", clean, flags=re.I))
     shiny_instruction = (
-        "If the news highlights a shiny Pokémon, show the shiny form prominently. "
+        "The news mentions a shiny Pokémon: use the shiny form prominently and accurately. "
         if shiny else ""
     )
+    context = _context_prompt(clean)
 
     prompt = f"""
 Create a premium vertical social-media key visual for a Pokémon GO fan-news channel.
-News topic: {clean[:900]}
+News topic: {clean[:1000]}
 Category: {categoria}.
-Style: high-end mobile gaming campaign, bright daylight, realistic cinematic rendering,
-clean blue/cyan energy, depth, polished materials, dynamic smartphone/game-world composition,
-strong focal subject, premium commercial lighting, visually rich but not cluttered.
+{context}
 {shiny_instruction}
+Visual direction: energetic high-end gaming campaign, cinematic realism, rich location detail, game-event atmosphere,
+bright but dramatic lighting, strong sense of depth, polished materials, colorful Pokémon GO energy and premium composition.
+The viewer should understand the subject in less than one second from the hero image alone.
+Avoid generic corporate design, abstract rings, generic phone mockups, medical/pharmaceutical-ad aesthetics, bland gradients and stock-photo composition.
 Do NOT render any text, captions, logos, watermarks, source names, hashtags or UI words.
-Leave a clean lighter area on the LEFT for headline and summary overlays.
-Keep the strongest visual subject on the RIGHT half.
+Leave readable negative space on the LEFT for headline and summary overlays, while the hero Pokémon/event visual dominates the RIGHT and center.
 The final composition must work after cropping to a 4:5 portrait poster.
 """.strip()
 
@@ -153,17 +185,17 @@ The final composition must work after cropping to a 4:5 portrait poster.
 def criar_card_premium(titulo, mensagem):
     clean = _clean(mensagem)
     categoria = _category(titulo)
-    source = _source(titulo)
+    source = _source(titulo, mensagem)
     headline, body = _headline_body(clean)
 
     bg = _cover_crop(_generate_background(clean, categoria))
 
-    # readability veil over the left side
+    # readability veil over the left side; weaker so the hero visual remains visible
     veil = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     vd = ImageDraw.Draw(veil)
-    for x in range(0, 690):
-        t = x / 690
-        alpha = int(238 * (1 - t) + 35 * t)
+    for x in range(0, 650):
+        t = x / 650
+        alpha = int(214 * (1 - t) + 22 * t)
         vd.line((x, 0, x, H), fill=(245, 251, 255, alpha))
     bg.alpha_composite(veil)
 
@@ -179,8 +211,13 @@ def criar_card_premium(titulo, mensagem):
     draw.line((75, 106, 138, 106), fill=(255, 255, 255), width=8)
     draw.text((177, 62), "SPIDEY", font=_font(59, True), fill=(255, 255, 255))
     draw.text((180, 132), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23, True), fill=pale)
-    draw.rounded_rectangle((824, 72, 1011, 127), radius=22, fill=(255, 255, 255))
-    draw.text((848, 88), f"FONTE: {source}", font=_font(19, True), fill=navy)
+
+    source_label = f"FONTE: {source}"
+    sf = _font(18, True)
+    sw = draw.textbbox((0, 0), source_label, font=sf)[2]
+    sx = max(700, 1012 - sw - 36)
+    draw.rounded_rectangle((sx, 72, 1011, 127), radius=22, fill=(255, 255, 255))
+    draw.text((sx + 18, 88), source_label, font=sf, fill=navy)
 
     # Category
     draw.rounded_rectangle((52, 246, 370, 324), radius=25, fill=blue)
@@ -196,11 +233,11 @@ def criar_card_premium(titulo, mensagem):
     draw.rounded_rectangle((54, y + 10, 164, y + 18), radius=4, fill=blue)
 
     # Body
-    bf = _font(33, False)
+    bf = _font(31, False)
     by = y + 58
-    for line in _wrap(draw, body, bf, 515)[:5]:
+    for line in _wrap(draw, body, bf, 505)[:5]:
         draw.text((54, by), line, font=bf, fill=(25, 55, 88))
-        by += 47
+        by += 45
 
     # Data chips only when true
     coords = re.findall(r"[-+]?\d{1,2}\.\d{3,}\s*,\s*[-+]?\d{1,3}\.\d{3,}", clean)
@@ -229,7 +266,7 @@ def criar_card_premium(titulo, mensagem):
     bg.alpha_composite(footer, (0, H - 175))
     draw = ImageDraw.Draw(bg)
     draw.text((54, H - 137), f"Fonte: {source}", font=_font(27, True), fill=(255, 255, 255))
-    draw.text((54, H - 95), "Canal Spidey • resumo visual automático", font=_font(22, False), fill=(190, 218, 240))
+    draw.text((54, H - 95), "Canal Spidey • informação útil para jogar", font=_font(22, False), fill=(190, 218, 240))
     draw.text((748, H - 136), "SEMPRE UM PASSO", font=_font(22, True), fill=(58, 168, 255))
     draw.text((807, H - 100), "À FRENTE", font=_font(32, True), fill=(255, 255, 255))
 
