@@ -6,7 +6,7 @@ from urllib.parse import urljoin
 import requests
 from flask import Flask, jsonify, request
 
-from spidey_art import criar_card
+from spidey_art_v4 import criar_card
 
 app = Flask(__name__)
 
