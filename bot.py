@@ -1,4 +1,5 @@
 import os
+import re
 from html.parser import HTMLParser
 from urllib.parse import urljoin
 
@@ -9,6 +10,7 @@ app = Flask(__name__)
 
 DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK")
 NEWS_URL = "https://pokemongo.com/pt-BR/news"
+G47IX_PROFILE = "https://twstalker.com/g47ix"
 
 ultima_enviada = None
 
@@ -74,6 +76,44 @@ def buscar_noticia():
         )
 
     return parser.noticias[0]
+
+
+def buscar_g47ix():
+    resposta = requests.get(
+        G47IX_PROFILE,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (X11; Linux x86_64) "
+                "AppleWebKit/537.36 Chrome/140 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml"
+        },
+        timeout=25
+    )
+
+    resposta.raise_for_status()
+
+    ids = set(
+        re.findall(
+            r"/g47ix/status/(\d{15,})",
+            resposta.text,
+            flags=re.IGNORECASE
+        )
+    )
+
+    if not ids:
+        raise RuntimeError(
+            "Fonte G47IX respondeu, mas nenhuma publicação foi encontrada."
+        )
+
+    ultimo_id = max(ids, key=int)
+
+    return {
+        "id": ultimo_id,
+        "url": f"https://x.com/g47ix/status/{ultimo_id}",
+        "quantidade_encontrada": len(ids),
+        "fonte": G47IX_PROFILE
+    }
 
 
 def mandar_discord(titulo, mensagem, url=None):
@@ -181,6 +221,21 @@ def check_oficial():
 
     except Exception as erro:
         return jsonify({
+            "erro": str(erro)
+        }), 500
+
+
+@app.route("/check-g47ix-source", methods=["GET"])
+def check_g47ix_source():
+    try:
+        dados = buscar_g47ix()
+        return jsonify({
+            "status": "ok",
+            **dados
+        })
+    except Exception as erro:
+        return jsonify({
+            "status": "erro",
             "erro": str(erro)
         }), 500
 
