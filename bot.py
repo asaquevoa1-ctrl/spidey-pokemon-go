@@ -1,9 +1,12 @@
+import json
 import os
 from html.parser import HTMLParser
 from urllib.parse import urljoin
 
 import requests
 from flask import Flask, jsonify, request
+
+from spidey_art import criar_card
 
 app = Flask(__name__)
 
@@ -76,7 +79,7 @@ def buscar_noticia():
     return parser.noticias[0]
 
 
-def mandar_discord(titulo, mensagem, url=None):
+def mandar_discord(titulo, mensagem, url=None, imagem_bytes=None):
     if not DISCORD_WEBHOOK:
         raise RuntimeError(
             "DISCORD_WEBHOOK não configurado."
@@ -91,13 +94,35 @@ def mandar_discord(titulo, mensagem, url=None):
     if url:
         embed["url"] = url
 
-    resposta = requests.post(
-        DISCORD_WEBHOOK,
-        json={
-            "embeds": [embed]
-        },
-        timeout=15
-    )
+    if imagem_bytes:
+        embed["image"] = {
+            "url": "attachment://spidey-card.png"
+        }
+
+        resposta = requests.post(
+            DISCORD_WEBHOOK,
+            data={
+                "payload_json": json.dumps({
+                    "embeds": [embed]
+                }, ensure_ascii=False)
+            },
+            files={
+                "file": (
+                    "spidey-card.png",
+                    imagem_bytes,
+                    "image/png"
+                )
+            },
+            timeout=30
+        )
+    else:
+        resposta = requests.post(
+            DISCORD_WEBHOOK,
+            json={
+                "embeds": [embed]
+            },
+            timeout=15
+        )
 
     resposta.raise_for_status()
 
@@ -126,13 +151,34 @@ def enviar():
             {"erro": "Mensagem vazia"}
         ), 400
 
+    imagem_bytes = None
+    gerar_arte = dados.get(
+        "gerar_arte",
+        "G47IX" in titulo.upper()
+    )
+
+    if gerar_arte:
+        try:
+            imagem_bytes = criar_card(
+                titulo,
+                mensagem
+            )
+        except Exception as erro_arte:
+            print(
+                f"Falha ao gerar arte fallback: {erro_arte}",
+                flush=True
+            )
+
     mandar_discord(
         titulo,
-        mensagem
+        mensagem,
+        url=dados.get("url"),
+        imagem_bytes=imagem_bytes
     )
 
     return jsonify({
-        "status": "enviado"
+        "status": "enviado",
+        "arte": bool(imagem_bytes)
     })
 
 
