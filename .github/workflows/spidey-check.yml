@@ -1,0 +1,87 @@
+name: Spidey - checar noticias
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-news-check
+  cancel-in-progress: false
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar noticia oficial
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BASE="https://spidey-pokemon-go.onrender.com/check-oficial"
+
+          echo "Consultando Spidey..."
+
+          JSON="$(curl \
+            --retry 3 \
+            --retry-delay 10 \
+            --max-time 120 \
+            --fail \
+            --silent \
+            --show-error \
+            "$BASE")"
+
+          echo "$JSON"
+
+          URL="$(python -c 'import json,sys; print(json.load(sys.stdin)["url"])' <<< "$JSON")"
+
+          if [ ! -f last_news.txt ]; then
+            echo "Primeira execução."
+            echo "Registrando notícia atual sem republicar."
+
+            printf '%s\n' "$URL" > last_news.txt
+
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+            git add last_news.txt
+            git commit -m "Spidey: inicializa controle de noticias"
+            git push
+
+            exit 0
+          fi
+
+          LAST="$(tr -d '\r\n' < last_news.txt)"
+
+          if [ "$URL" = "$LAST" ]; then
+            echo "Sem novidade."
+            exit 0
+          fi
+
+          echo "Nova notícia encontrada!"
+          echo "$URL"
+
+          curl \
+            --retry 3 \
+            --retry-delay 10 \
+            --max-time 120 \
+            --fail \
+            --silent \
+            --show-error \
+            "${BASE}?send=1"
+
+          printf '%s\n' "$URL" > last_news.txt
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add last_news.txt
+          git commit -m "Spidey: atualiza ultima noticia"
+          git push
