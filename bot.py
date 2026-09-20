@@ -10,13 +10,13 @@ app = Flask(__name__)
 DISCORD_WEBHOOK = os.getenv("DISCORD_WEBHOOK")
 NEWS_URL = "https://pokemongo.com/pt-BR/news"
 
-ULTIMA_ENVIADA = None
+ultima_enviada = None
 
 
-class PokemonNewsParser(HTMLParser):
+class NewsParser(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.link_atual = None
+        self.link = None
         self.textos = []
         self.noticias = []
 
@@ -26,32 +26,31 @@ class PokemonNewsParser(HTMLParser):
 
         href = dict(attrs).get("href", "")
 
-        if (
-            "/news/" in href
-            and ("pt-BR" in href or "pt_BR" in href)
-        ):
-            self.link_atual = href
-            self.textos = []
+        if "/news/" in href:
+            url = urljoin(NEWS_URL, href)
+
+            if url.rstrip("/") != NEWS_URL.rstrip("/"):
+                self.link = url
+                self.textos = []
 
     def handle_data(self, data):
-        if self.link_atual:
+        if self.link:
             texto = data.strip()
+
             if texto:
                 self.textos.append(texto)
 
     def handle_endtag(self, tag):
-        if tag == "a" and self.link_atual:
+        if tag == "a" and self.link:
             titulo = " ".join(self.textos).strip()
 
             if titulo:
-                url = urljoin(NEWS_URL, self.link_atual)
-
-                item = (titulo, url)
+                item = (titulo, self.link)
 
                 if item not in self.noticias:
                     self.noticias.append(item)
 
-            self.link_atual = None
+            self.link = None
             self.textos = []
 
 
@@ -59,47 +58,44 @@ def buscar_noticia():
     resposta = requests.get(
         NEWS_URL,
         headers={
-            "User-Agent": "Mozilla/5.0 SpideyPokemonGO/1.0"
+            "User-Agent": "Mozilla/5.0"
         },
         timeout=20
     )
 
     resposta.raise_for_status()
 
-    parser = PokemonNewsParser()
+    parser = NewsParser()
     parser.feed(resposta.text)
 
     if not parser.noticias:
         raise RuntimeError(
-            "Nenhuma notícia foi encontrada."
+            "Nenhuma notícia encontrada."
         )
 
     return parser.noticias[0]
 
 
-def enviar_discord(titulo, url):
+def mandar_discord(titulo, mensagem, url=None):
     if not DISCORD_WEBHOOK:
         raise RuntimeError(
             "DISCORD_WEBHOOK não configurado."
         )
 
-    payload = {
-        "embeds": [
-            {
-                "title": titulo[:256],
-                "url": url,
-                "description": (
-                    "✅ Fonte oficial Pokémon GO\n"
-                    "🕷️ Detectado pelo Spidey"
-                ),
-                "color": 5763719
-            }
-        ]
+    embed = {
+        "title": titulo[:256],
+        "description": mensagem[:4000],
+        "color": 5763719
     }
+
+    if url:
+        embed["url"] = url
 
     resposta = requests.post(
         DISCORD_WEBHOOK,
-        json=payload,
+        json={
+            "embeds": [embed]
+        },
         timeout=15
     )
 
@@ -115,10 +111,14 @@ def home():
 def enviar():
     dados = request.get_json(silent=True) or {}
 
-    mensagem = dados.get("mensagem", "")
     titulo = dados.get(
         "titulo",
         "🕷️ Spidey Pokémon GO"
+    )
+
+    mensagem = dados.get(
+        "mensagem",
+        ""
     )
 
     if not mensagem:
@@ -126,57 +126,55 @@ def enviar():
             {"erro": "Mensagem vazia"}
         ), 400
 
-    payload = {
-        "embeds": [
-            {
-                "title": titulo,
-                "description": mensagem,
-                "color": 16763904
-            }
-        ]
-    }
-
-    resposta = requests.post(
-        DISCORD_WEBHOOK,
-        json=payload,
-        timeout=15
+    mandar_discord(
+        titulo,
+        mensagem
     )
 
-    resposta.raise_for_status()
-
-    return jsonify(
-        {"status": "enviado"}
-    )
+    return jsonify({
+        "status": "enviado"
+    })
 
 
 @app.route("/check-oficial", methods=["GET"])
 def check_oficial():
-    global ULTIMA_ENVIADA
+    global ultima_enviada
 
     try:
         titulo, url = buscar_noticia()
 
-        enviar = request.args.get("send") == "1"
+        enviar_agora = (
+            request.args.get("send") == "1"
+        )
 
-        if enviar:
-            if ULTIMA_ENVIADA == url:
-                return jsonify({
-                    "status": "sem novidade",
-                    "titulo": titulo,
-                    "url": url
-                })
-
-            enviar_discord(titulo, url)
-            ULTIMA_ENVIADA = url
-
+        if not enviar_agora:
             return jsonify({
-                "status": "enviado",
+                "status": "encontrada",
                 "titulo": titulo,
                 "url": url
             })
 
+        if ultima_enviada == url:
+            return jsonify({
+                "status": "sem novidade",
+                "titulo": titulo,
+                "url": url
+            })
+
+        mandar_discord(
+            "📰 Nova notícia oficial",
+            (
+                f"**{titulo}**\n\n"
+                "✅ Fonte oficial Pokémon GO\n"
+                "🕷️ Detectado pelo Spidey"
+            ),
+            url
+        )
+
+        ultima_enviada = url
+
         return jsonify({
-            "status": "encontrada",
+            "status": "enviado",
             "titulo": titulo,
             "url": url
         })
@@ -195,11 +193,4 @@ if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=porta
-    )        "erro": "Discord recusou a mensagem",
-        "codigo": resposta.status_code
-    }), 500
-
-
-if __name__ == "__main__":
-    porta = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=porta)
+    )
