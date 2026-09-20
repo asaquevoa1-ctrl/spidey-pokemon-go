@@ -11,47 +11,22 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: spidey-g47ix-check
-  cancel-in-progress: false
-
 jobs:
   verificar:
     runs-on: ubuntu-latest
-
     steps:
       - name: Baixar repositorio
         uses: actions/checkout@v4
 
-      - name: Testar fontes G47IX
+      - name: Testar Yahoo realtime
         shell: bash
         run: |
           set -euo pipefail
-
-          test_source() {
-            local name="$1"
-            local url="$2"
-            local file
-            file="$(mktemp)"
-            local code
-            code="$(curl -L --compressed --connect-timeout 15 --max-time 60 --silent --show-error \
-              -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36" \
-              -o "$file" -w '%{http_code}' "$url" || true)"
-            echo "=== $name ==="
-            echo "HTTP: $code | bytes: $(wc -c < "$file" | tr -d ' ')"
-            python3 - "$file" <<'PY'
-          import re, sys
-          text = open(sys.argv[1], encoding='utf-8', errors='replace').read()
-          ids = sorted(set(re.findall(r'(?:x\.com|twitter\.com)/g47ix/status/(\d+)', text, flags=re.I)), key=int, reverse=True)
-          print('status ids:', ids[:8])
-          clean = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', text))
-          print('sample:', clean[:700])
-          PY
-            rm -f "$file"
-          }
-
-          test_source "Jina X" "https://r.jina.ai/http://x.com/g47ix"
-          test_source "Jina Twitter" "https://r.jina.ai/http://twitter.com/g47ix"
-          test_source "Yahoo realtime" "https://search.yahoo.co.jp/realtime/search?p=from%3Ag47ix"
-          test_source "Sotwe" "https://www.sotwe.com/g47ix"
-          test_source "Imginn" "https://imginn.com/g47ix/"
+          curl -L --compressed --connect-timeout 15 --max-time 60 --fail --silent --show-error \
+            -A "Mozilla/5.0" \
+            "https://search.yahoo.co.jp/realtime/search?p=g47ix" \
+            -o yahoo.html
+          echo "Bytes: $(wc -c < yahoo.html)"
+          grep -oE 'tweetId[^0-9]{0,20}[0-9]{15,}' yahoo.html | head -20 || true
+          grep -oE '/status/[0-9]{15,}' yahoo.html | head -20 || true
+          grep -ioE '.{0,120}g47ix.{0,300}' yahoo.html | head -20 || true
