@@ -32,33 +32,113 @@ jobs:
       - name: Buscar ultima publicacao G47IX
         shell: bash
         env:
-          PROFILE: https://imginn.com/g47ix/
+          INSTAGRAM_API: https://i.instagram.com/api/v1/users/web_profile_info/?username=g47ix
+          IMG_INN: https://imginn.com/g47ix/
           SPIDEY: https://spidey-pokemon-go.onrender.com/enviar
           STATE_FILE: last_g47ix.txt
         run: |
           set -euo pipefail
 
-          HTML_FILE="$(mktemp)"
-          trap 'rm -f "$HTML_FILE"' EXIT
+          SOURCE_FILE="$(mktemp)"
+          trap 'rm -f "$SOURCE_FILE"' EXIT
 
           echo "Consultando G47IX..."
 
-          curl \
-            --location \
-            --compressed \
-            --retry 3 \
-            --retry-delay 10 \
-            --retry-connrefused \
-            --connect-timeout 20 \
-            --max-time 120 \
-            --fail \
-            --silent \
-            --show-error \
-            --user-agent "Mozilla/5.0" \
-            --output "$HTML_FILE" \
-            "$PROFILE"
+          buscar_instagram() {
+            curl \
+              --location \
+              --compressed \
+              --retry 2 \
+              --retry-delay 5 \
+              --retry-connrefused \
+              --connect-timeout 20 \
+              --max-time 90 \
+              --fail \
+              --silent \
+              --show-error \
+              --header "Accept: application/json" \
+              --header "Accept-Language: en-US,en;q=0.9" \
+              --header "x-ig-app-id: 936619743392459" \
+              --user-agent "Instagram 275.0.0.27.98 Android" \
+              --output "$SOURCE_FILE" \
+              "$INSTAGRAM_API"
 
-          POST="$(python3 - "$HTML_FILE" <<'PY'
+            python3 - "$SOURCE_FILE" <<'PY'
+          import json
+          import re
+          import sys
+
+          ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
+          VALUE = {char: index for index, char in enumerate(ALPHABET)}
+
+
+          def shortcode_id(shortcode):
+              number = 0
+
+              for char in shortcode:
+                  if char not in VALUE:
+                      raise ValueError(f"Shortcode invalido: {shortcode}")
+
+                  number = number * 64 + VALUE[char]
+
+              return number
+
+
+          with open(sys.argv[1], encoding="utf-8", errors="replace") as source:
+              try:
+                  data = json.load(source)
+              except json.JSONDecodeError as error:
+                  raise SystemExit(f"Resposta Instagram invalida: {error}")
+
+          user = data.get("data", {}).get("user") or {}
+          shortcodes = []
+
+
+          def collect(value):
+              if isinstance(value, dict):
+                  shortcode = value.get("shortcode") or value.get("code")
+
+                  if isinstance(shortcode, str) and re.fullmatch(
+                      r"[A-Za-z0-9_-]+", shortcode
+                  ):
+                      shortcodes.append(shortcode)
+
+                  for child in value.values():
+                      collect(child)
+
+              elif isinstance(value, list):
+                  for child in value:
+                      collect(child)
+
+
+          collect(user)
+          shortcodes = list(dict.fromkeys(shortcodes))
+
+          if not shortcodes:
+              raise SystemExit("Instagram nao retornou publicacoes")
+
+          latest = max(shortcodes, key=shortcode_id)
+          print(f"https://www.instagram.com/p/{latest}/")
+          PY
+          }
+
+          buscar_imginn() {
+            curl \
+              --location \
+              --compressed \
+              --retry 2 \
+              --retry-delay 5 \
+              --retry-connrefused \
+              --connect-timeout 20 \
+              --max-time 90 \
+              --fail \
+              --silent \
+              --show-error \
+              --user-agent "Mozilla/5.0" \
+              --output "$SOURCE_FILE" \
+              "$IMG_INN"
+
+            python3 - "$SOURCE_FILE" <<'PY'
           import re
           import sys
 
@@ -93,12 +173,21 @@ jobs:
           shortcodes = list(dict.fromkeys(pattern.findall(html)))
 
           if not shortcodes:
-              raise SystemExit("Nenhuma publicacao G47IX encontrada")
+              raise SystemExit("Imginn nao retornou publicacoes")
 
           latest = max(shortcodes, key=shortcode_id)
           print(f"https://www.instagram.com/p/{latest}/")
           PY
-          )"
+          }
+
+          if POST="$(buscar_instagram)"; then
+            echo "Fonte utilizada: Instagram"
+          elif POST="$(buscar_imginn)"; then
+            echo "Fonte utilizada: Imginn"
+          else
+            echo "Nenhuma fonte retornou publicacoes G47IX." >&2
+            exit 1
+          fi
 
           echo "Publicacao mais recente: $POST"
 
