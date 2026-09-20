@@ -61,6 +61,19 @@ def _categoria(titulo):
     return "NOTÍCIA"
 
 
+def _fonte(titulo, mensagem):
+    all_text = f"{titulo or ''} {mensagem or ''}".upper()
+    if "G47IX" in all_text:
+        return "G47IX"
+    if "SPS" in all_text or "SHINY PINGS" in all_text:
+        return "SPS"
+    if "ESA" in all_text or "AGÊNCIA ESPACIAL EUROPEIA" in all_text:
+        return "POKÉMON GO / ESA"
+    if "FONTE OFICIAL: POKÉMON GO" in all_text or "POKÉMON GO" in all_text:
+        return "POKÉMON GO"
+    return "SPIDEY"
+
+
 def _limpar(text):
     text = text or ""
     text = text.replace("**", "")
@@ -68,6 +81,7 @@ def _limpar(text):
     text = re.sub(r"https?://\S+", "", text)
     text = re.sub(r"Detectado e classificado automaticamente pelo Spidey", "", text, flags=re.I)
     text = re.sub(r"[🕷️🔗]+", "", text)
+    text = re.sub(r"Fonte oficial:[^.]+", "", text, flags=re.I)
     return re.sub(r"\s+", " ", text).strip(" •-\n")
 
 
@@ -77,12 +91,12 @@ def _headline_body(clean):
     parts = re.split(r"(?<=[.!?])\s+", clean)
     headline = parts[0].strip()
     body = " ".join(parts[1:]).strip()
-    if len(headline) > 90:
-        headline = headline[:87].rstrip() + "..."
+    if len(headline) > 96:
+        headline = headline[:93].rstrip() + "..."
     if not body:
         body = "Acompanhe os detalhes e atualizações desta novidade no canal Spidey."
-    if len(body) > 260:
-        body = body[:257].rstrip() + "..."
+    if len(body) > 225:
+        body = body[:222].rstrip() + "..."
     return headline, body
 
 
@@ -97,7 +111,7 @@ def _gradient(size, top, bottom):
 
 
 def _glow_circle(scene, cx, cy, radius, color, width=10, blur=20, alpha=230):
-    layer = Image.new("RGBA", scene.size, (0, 0, 0, 0))
+    layer = Image.new("RGBA", scene.size, (0,0,0,0))
     d = ImageDraw.Draw(layer)
     d.ellipse((cx-radius, cy-radius, cx+radius, cy+radius), outline=color + (alpha,), width=width)
     scene.alpha_composite(layer.filter(ImageFilter.GaussianBlur(blur)))
@@ -111,57 +125,104 @@ def _draw_brand_mark(draw, x, y, size, accent):
     draw.line((x+size//7, cy, x+size-size//7, cy), fill=(255,255,255), width=max(4, size//11))
 
 
-def _phone_layer(w, h, navy, accent, accent2, glow):
-    pad = 90
-    canvas = Image.new("RGBA", (w + pad*2, h + pad*2), (0,0,0,0))
-    d = ImageDraw.Draw(canvas)
-    x, y = pad, pad
+def _tema(clean):
+    u = clean.upper()
+    if "MÁLAGA" in u or "MALAGA" in u or "COMIC-CON" in u:
+        return "malaga"
+    if "ESA" in u or "ASTRONAUTA" in u or "ESPACIAL" in u:
+        return "esa"
+    return "padrao"
 
-    shadow = Image.new("RGBA", canvas.size, (0,0,0,0))
-    sd = ImageDraw.Draw(shadow)
-    sd.rounded_rectangle((x+20, y+28, x+w+20, y+h+28), radius=58, fill=(0,0,0,115))
-    canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(28)))
 
-    d.rounded_rectangle((x, y, x+w, y+h), radius=58, fill=(18,24,37), outline=(108,126,148), width=5)
-    d.rounded_rectangle((x+16, y+20, x+w-16, y+h-20), radius=48, fill=(8,53,101))
+def _hero_malaga(scene, accent, navy):
+    d = ImageDraw.Draw(scene)
+    # sol e céu mediterrâneo
+    sun = Image.new("RGBA", scene.size, (0,0,0,0))
+    sd = ImageDraw.Draw(sun)
+    sd.ellipse((710,210,1070,570), fill=(255,205,82,125))
+    scene.alpha_composite(sun.filter(ImageFilter.GaussianBlur(34)))
 
-    screen = _gradient((w-32, h-40), (29,111,184), (4,39,84))
-    canvas.alpha_composite(screen, (x+16, y+20))
+    # cartão/fundo de localização estilizado
+    d.rounded_rectangle((590,270,1010,930), radius=42, fill=(255,255,255,238), outline=(255,255,255), width=4)
+    photo = _gradient((380,520), (64,167,231), (255,177,91))
+    pd = ImageDraw.Draw(photo)
+    pd.rectangle((0,330,380,520), fill=(223,183,132,255))
+    # skyline mediterrâneo simples
+    for x, w, h in [(15,58,130),(80,72,170),(160,62,115),(235,78,190),(320,48,145)]:
+        pd.rectangle((x,330-h,x+w,330), fill=(245,237,221,255))
+        pd.rectangle((x+12,330-h+28,x+22,330-h+58), fill=(71,133,177,220))
+    # palmeira / costa
+    pd.line((315,315,325,215), fill=(84,79,55,255), width=12)
+    for dx,dy in [(-44,-20),(-10,-42),(28,-28),(50,0)]:
+        pd.line((325,215,325+dx,215+dy), fill=(46,126,82,255), width=10)
+    scene.alpha_composite(photo, (610,295))
 
-    # horizon / map feeling
-    for i in range(7):
-        yy = y + h - 175 + i*19
-        d.line((x+35, yy, x+w-35, yy-42), fill=(64,132,177,90), width=3)
-    for xx in (x+70, x+145, x+230, x+315):
-        d.line((xx, y+h-230, xx+30, y+h-40), fill=(53,108,154,70), width=3)
+    # mascote elétrico estilizado (silhueta amarela, sem parecer anúncio genérico)
+    mascot = Image.new("RGBA", scene.size, (0,0,0,0))
+    md = ImageDraw.Draw(mascot)
+    md.ellipse((730,610,910,795), fill=(255,215,40,255), outline=(126,83,15,255), width=5)
+    md.polygon([(752,635),(700,515),(770,590)], fill=(255,215,40,255))
+    md.polygon([(888,635),(945,515),(875,592)], fill=(255,215,40,255))
+    md.ellipse((773,665,793,687), fill=(24,28,34,255))
+    md.ellipse((847,665,867,687), fill=(24,28,34,255))
+    md.ellipse((770,710,808,748), fill=(235,68,68,245))
+    md.ellipse((842,710,880,748), fill=(235,68,68,245))
+    md.line((820,700,810,712,820,720,830,712,820,700), fill=(80,55,20,255), width=5)
+    # raio decorativo
+    md.polygon([(925,710),(975,660),(952,716),(996,714),(925,810),(950,742),(915,746)], fill=accent + (255,))
+    scene.alpha_composite(mascot)
 
-    c1 = (x+w//2, y+225)
-    c2 = (x+w//2, y+470)
-    _glow_circle(canvas, *c1, 108, accent, 12, 24)
-    _glow_circle(canvas, *c1, 74, glow, 8, 15)
-    _glow_circle(canvas, *c2, 98, accent2, 12, 24)
-    _glow_circle(canvas, *c2, 61, glow, 7, 14)
+    d.rounded_rectangle((628,858,970,922), radius=22, fill=navy + (235,))
+    d.text((668,875), "MÁLAGA • EVENTO PRESENCIAL", font=_font(22, True), fill=(255,255,255))
 
-    for i in range(16):
-        a = i * (math.pi * 2 / 16)
-        for c, r, col in ((c1, 137, glow), (c2, 124, accent)):
-            px = int(c[0] + math.cos(a) * r)
-            py = int(c[1] + math.sin(a) * r)
-            s = 3 + (i % 3)
-            d.ellipse((px-s, py-s, px+s, py+s), fill=col + (200,))
 
-    # clock motif
-    d.line((c2[0], c2[1], c2[0]+44, c2[1]-32), fill=(255,255,255), width=7)
-    d.line((c2[0], c2[1], c2[0]-5, c2[1]-54), fill=(255,255,255), width=7)
-    d.ellipse((c2[0]-9, c2[1]-9, c2[0]+9, c2[1]+9), fill=(255,255,255))
+def _hero_esa(scene, accent, navy):
+    d = ImageDraw.Draw(scene)
+    # espaço / Terra
+    space = Image.new("RGBA", scene.size, (0,0,0,0))
+    sd = ImageDraw.Draw(space)
+    sd.rectangle((560,220,1080,1020), fill=(5,14,34,235))
+    for i in range(48):
+        x = 580 + (i * 73) % 470
+        y = 245 + (i * 137) % 700
+        r = 2 + (i % 3)
+        sd.ellipse((x-r,y-r,x+r,y+r), fill=(255,255,255,180))
+    sd.ellipse((720,650,1110,1040), fill=(33,111,195,255), outline=(126,204,255,220), width=8)
+    sd.arc((748,680,1082,1010), 195, 350, fill=(85,205,135,255), width=26)
+    scene.alpha_composite(space)
 
-    # notch + small marker
-    d.rounded_rectangle((x+w//2-68, y+32, x+w//2+68, y+59), radius=14, fill=(3,9,18))
-    mx, my = x+w-62, y+h-68
-    d.ellipse((mx-23,my-23,mx+23,my+23), fill=accent)
-    d.ellipse((mx-7,my-7,mx+7,my+7), fill=(255,255,255))
+    # capacete/mascote espacial amarelo estilizado
+    hero = Image.new("RGBA", scene.size, (0,0,0,0))
+    hd = ImageDraw.Draw(hero)
+    hd.ellipse((655,330,970,650), fill=(235,244,255,245), outline=(115,160,210,255), width=10)
+    hd.ellipse((700,380,925,605), fill=(20,46,86,255))
+    hd.ellipse((746,432,875,570), fill=(255,215,40,255))
+    hd.polygon([(765,445),(730,365),(785,425)], fill=(255,215,40,255))
+    hd.polygon([(855,445),(900,365),(870,430)], fill=(255,215,40,255))
+    hd.ellipse((774,478,790,495), fill=(15,18,24,255))
+    hd.ellipse((835,478,851,495), fill=(15,18,24,255))
+    hd.ellipse((770,515,796,539), fill=(232,78,74,245))
+    hd.ellipse((830,515,856,539), fill=(232,78,74,245))
+    hd.rounded_rectangle((690,620,930,890), radius=58, fill=(238,244,252,245), outline=(112,158,204,255), width=8)
+    hd.rectangle((760,670,862,748), fill=(30,78,145,255))
+    # brilho shiny
+    _glow_circle(hero, 812, 505, 150, accent, width=9, blur=22, alpha=180)
+    scene.alpha_composite(hero)
+    d.rounded_rectangle((640,920,1000,984), radius=22, fill=navy + (235,))
+    d.text((682,937), "ESA • PIKACHU ASTRONAUTA", font=_font(23, True), fill=(255,255,255))
 
-    return canvas
+
+def _hero_padrao(scene, accent, accent2, navy):
+    d = ImageDraw.Draw(scene)
+    card = Image.new("RGBA", scene.size, (0,0,0,0))
+    cd = ImageDraw.Draw(card)
+    cd.rounded_rectangle((610,300,1005,940), radius=50, fill=(11,35,72,235), outline=(255,255,255,110), width=5)
+    _glow_circle(card, 805, 540, 120, accent, 14, 28)
+    _glow_circle(card, 805, 540, 72, accent2, 8, 18)
+    cd.polygon([(805,390),(866,510),(836,510),(884,655),(812,572),(785,572),(738,670),(765,520),(742,520)], fill=(255,225,72,240))
+    scene.alpha_composite(card)
+    d.rounded_rectangle((655,860,960,922), radius=22, fill=navy + (235,))
+    d.text((706,878), "POKÉMON GO • NOVIDADE", font=_font(23, True), fill=(255,255,255))
 
 
 def criar_card(titulo, mensagem):
@@ -169,22 +230,18 @@ def criar_card(titulo, mensagem):
     p = PALETTES[categoria]
     navy, accent, accent2, glow = p["navy"], p["accent"], p["accent2"], p["glow"]
 
-    scene = _gradient((W,H), (247,252,255), (211,236,253))
+    clean = _limpar(mensagem)
+    tema = _tema(clean)
+
+    # fundo mais vivo e menos corporativo
+    if tema == "malaga":
+        scene = _gradient((W,H), (247,252,255), (255,225,179))
+    elif tema == "esa":
+        scene = _gradient((W,H), (232,242,255), (117,148,201))
+    else:
+        scene = _gradient((W,H), (237,248,255), (183,220,247))
+
     draw = ImageDraw.Draw(scene)
-
-    # atmospheric background
-    sky_glow = Image.new("RGBA", scene.size, (0,0,0,0))
-    sd = ImageDraw.Draw(sky_glow)
-    sd.ellipse((650,-210,1250,390), fill=(255,255,255,210))
-    sd.ellipse((-220,880,460,1500), fill=(236,248,255,230))
-    scene.alpha_composite(sky_glow.filter(ImageFilter.GaussianBlur(18)))
-
-    # mountain silhouettes
-    mountain = Image.new("RGBA", scene.size, (0,0,0,0))
-    md = ImageDraw.Draw(mountain)
-    md.polygon([(420,500),(610,315),(710,430),(825,270),(1010,500)], fill=(170,205,229,95))
-    md.polygon([(525,530),(720,390),(810,480),(950,365),(1110,540)], fill=(141,188,220,70))
-    scene.alpha_composite(mountain.filter(ImageFilter.GaussianBlur(2)))
 
     # header
     draw.rounded_rectangle((34,32,1046,212), radius=40, fill=navy)
@@ -192,18 +249,20 @@ def criar_card(titulo, mensagem):
     draw.text((180,60), "SPIDEY", font=_font(60,True), fill=(255,255,255))
     draw.text((184,131), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23,True), fill=(190,218,239))
 
-    source = "G47IX" if "G47IX" in (titulo or "").upper() else "FONTE"
-    draw.rounded_rectangle((829,72,1012,126), radius=22, fill=(255,255,255))
-    draw.text((852,88), f"FONTE: {source}", font=_font(19,True), fill=navy)
+    source = _fonte(titulo, mensagem)
+    label = f"FONTE: {source}"
+    sw = draw.textbbox((0,0), label, font=_font(18,True))[2]
+    x0 = max(720, 1018 - sw - 38)
+    draw.rounded_rectangle((x0,72,1018,126), radius=22, fill=(255,255,255))
+    draw.text((x0+20,88), label, font=_font(18,True), fill=navy)
 
-    clean = _limpar(mensagem)
     headline, body = _headline_body(clean)
 
     draw.rounded_rectangle((48,250,356,326), radius=25, fill=accent)
     draw.text((80,266), categoria, font=_font(31,True), fill=(255,255,255))
 
-    # headline left, with second line accented when possible
-    hf, lines = _fit(draw, headline.upper(), 535, 4, start=65, minimum=40)
+    # headline / texto à esquerda
+    hf, lines = _fit(draw, headline.upper(), 525, 4, start=62, minimum=38)
     y = 360
     for idx, line in enumerate(lines):
         color = accent if idx == 1 and len(lines) > 1 else navy
@@ -211,28 +270,25 @@ def criar_card(titulo, mensagem):
         y += hf.size + 4
     draw.rounded_rectangle((52,y+10,165,y+18), radius=4, fill=accent)
 
-    # body
-    body_font = _font(33,False)
-    by = y + 58
-    for line in _wrap(draw, body, body_font, 500)[:6]:
+    body_font = _font(30,False)
+    by = y + 56
+    for line in _wrap(draw, body, body_font, 500)[:5]:
         draw.text((52,by), line, font=body_font, fill=(27,56,89))
-        by += 48
+        by += 44
 
-    # phone with perspective-like rotation
-    phone = _phone_layer(390,700,navy,accent,accent2,glow)
-    phone = phone.rotate(-4, resample=Image.Resampling.BICUBIC, expand=True)
-    scene.alpha_composite(phone, (570,280))
-
-    # subtle title callout near phone base
-    draw.rounded_rectangle((610,910,1008,992), radius=24, fill=(255,255,255,225), outline=accent, width=3)
-    draw.text((642,930), "EFEITOS DE AVENTURA", font=_font(25,True), fill=navy)
-    draw.text((642,961), "visual dinâmico • atualização rápida", font=_font(18,False), fill=(74,101,126))
+    # herói contextual
+    if tema == "malaga":
+        _hero_malaga(scene, accent, navy)
+    elif tema == "esa":
+        _hero_esa(scene, accent, navy)
+    else:
+        _hero_padrao(scene, accent, accent2, navy)
 
     shiny = bool(re.search(r"\b(shiny|brilhante)\b", clean, flags=re.I))
     coords = re.findall(r"[-+]?\d{1,2}\.\d{3,}\s*,\s*[-+]?\d{1,3}\.\d{3,}", clean)
     tem_gpx = "gpx" in clean.lower()
 
-    chips = [("INFO", accent), ("FONTE", accent2)]
+    chips = [("INFO", accent)]
     if shiny:
         chips.append(("SHINY", (123,86,255)))
     if coords:
@@ -252,8 +308,7 @@ def criar_card(titulo, mensagem):
         draw.text((x+27,1110),label,font=f,fill=(255,255,255))
         x += bw + 16
 
-    # clean footer, no duplicate source
-    draw.text((54,1220), "Canal Spidey • resumo visual automático", font=_font(22,False), fill=(69,96,122))
+    draw.text((54,1220), "Canal Spidey • informação útil para jogar", font=_font(22,False), fill=(69,96,122))
     draw.text((744,1210), "SEMPRE UM PASSO", font=_font(22,True), fill=accent)
     draw.text((804,1246), "À FRENTE", font=_font(33,True), fill=navy)
 
