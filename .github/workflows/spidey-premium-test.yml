@@ -9,11 +9,12 @@ jobs:
   testar:
     runs-on: ubuntu-latest
     steps:
-      - name: Acordar serviço e testar arte premium
+      - name: Aguardar deploy e testar arte premium
         shell: bash
         run: |
           set -euo pipefail
           BASE="https://spidey-pokemon-go.onrender.com"
+          sleep 60
           for i in 1 2 3 4 5 6; do
             if curl --silent --show-error --fail --max-time 40 "$BASE/" >/dev/null; then
               break
@@ -31,7 +32,7 @@ jobs:
             --data-binary @- \
             "$BASE/enviar" <<'JSON'
           {
-            "titulo": "📰 G47IX • NOTÍCIA • TESTE PREMIUM IA",
+            "titulo": "📰 G47IX • NOTÍCIA • TESTE PREMIUM IA 2",
             "mensagem": "Adventure Effects disponíveis no Pokémon GO. Spacial Rend e Roar of Time continuam entre os efeitos de aventura mais úteis para jogadores. Fonte original: https://x.com/g47ix/status/2100993253747146826",
             "url": "https://x.com/g47ix/status/2100993253747146826",
             "gerar_arte": true
