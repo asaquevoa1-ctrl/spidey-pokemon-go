@@ -1,0 +1,35 @@
+name: Spidey - teste arte automatica
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-art-smoke-test.yml"
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar teste real com arte automatica
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl \
+            --retry 6 \
+            --retry-all-errors \
+            --retry-delay 10 \
+            --connect-timeout 20 \
+            --max-time 180 \
+            --fail \
+            --silent \
+            --show-error \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "📰 G47IX • NOTÍCIA • TESTE REAL",
+            "mensagem": "Adventure Effects atualmente disponíveis no Pokémon GO. Spacial Rend e Roar of Time seguem entre os efeitos de aventura mais úteis. Este é um teste real do novo motor automático de arte do Spidey.",
+            "url": "https://x.com/g47ix/status/2100993253747146826",
+            "gerar_arte": true
+          }
+          JSON
