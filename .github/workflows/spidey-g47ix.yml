@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "12,27,42,57 * * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/spidey-g47ix.yml"
 
 permissions:
   contents: write
@@ -22,7 +25,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Buscar ultima publicacao G47IX
+      - name: Buscar e classificar ultima publicacao G47IX
         shell: bash
         env:
           SPIDEY: https://spidey-pokemon-go.onrender.com/enviar
@@ -32,7 +35,8 @@ jobs:
 
           SEARCH_URL="https://html.duckduckgo.com/html/?q=site%3Ax.com%2Fg47ix%2Fstatus%20G47IX"
           HTML_FILE="$(mktemp)"
-          trap 'rm -f "$HTML_FILE"' EXIT
+          META_FILE="$(mktemp)"
+          trap 'rm -f "$HTML_FILE" "$META_FILE"' EXIT
 
           echo "Consultando publicacoes do G47IX..."
 
@@ -51,29 +55,115 @@ jobs:
             --output "$HTML_FILE" \
             "$SEARCH_URL"
 
-          POST_ID="$(python3 - "$HTML_FILE" <<'PY'
+          python3 - "$HTML_FILE" "$META_FILE" <<'PY'
+          import html
+          import json
           import re
           import sys
+          import unicodedata
           from urllib.parse import unquote
 
-          with open(sys.argv[1], encoding="utf-8", errors="replace") as source:
-              text = unquote(source.read())
+          html_path, meta_path = sys.argv[1:3]
+
+          with open(html_path, encoding="utf-8", errors="replace") as source:
+              raw = source.read()
+
+          decoded = unquote(raw)
 
           ids = set(re.findall(
               r"(?:https?://(?:www\.)?(?:x|twitter)\.com)?/g47ix/status/(\d{15,})",
-              text,
+              decoded,
               flags=re.IGNORECASE,
           ))
 
           if not ids:
               raise SystemExit("Nenhuma publicacao G47IX encontrada na busca publica")
 
-          print(max(ids, key=int))
-          PY
-          )"
+          post_id = max(ids, key=int)
+          marker = f"/g47ix/status/{post_id}"
+          pos = decoded.lower().find(marker.lower())
 
-          POST_URL="https://x.com/g47ix/status/$POST_ID"
-          echo "Publicacao mais recente localizada: $POST_URL"
+          if pos >= 0:
+              start = max(0, pos - 2200)
+              end = min(len(decoded), pos + 3200)
+              window = decoded[start:end]
+          else:
+              window = decoded
+
+          window = re.sub(r"<script\b[^>]*>.*?</script>", " ", window, flags=re.I | re.S)
+          window = re.sub(r"<style\b[^>]*>.*?</style>", " ", window, flags=re.I | re.S)
+          window = re.sub(r"<[^>]+>", " ", window)
+          window = html.unescape(window)
+          window = re.sub(r"\s+", " ", window).strip()
+
+          def normalizar(texto):
+              texto = unicodedata.normalize("NFKD", texto)
+              texto = "".join(ch for ch in texto if not unicodedata.combining(ch))
+              return texto.lower()
+
+          base = normalizar(window)
+
+          grupos = {
+              "codigo": [
+                  "promo code", "redeem code", "codigo promocional", "codigo", "code"
+              ],
+              "evento": [
+                  "community day", "raid day", "research day", "hatch day",
+                  "spotlight hour", "raid hour", "go fest", "city safari",
+                  "safari zone", "event", "evento", "max battle day"
+              ],
+              "atualizacao": [
+                  "update", "updated", "new feature", "feature update",
+                  "move update", "balance", "season", "temporada",
+                  "version", "versao", "mudanca", "changes"
+              ],
+          }
+
+          irrelevante = [
+              "giveaway", "retweet", "repost", "follow me", "subscribe",
+              "merch", "store", "meme", "personal post"
+          ]
+
+          pokemon = [
+              "pokemon go", "raid", "research", "pokestop", "gym",
+              "trainer", "shadow", "mega", "dynamax", "gigantamax",
+              "community day", "spotlight", "team go rocket"
+          ]
+
+          categoria = "noticia"
+
+          if any(term in base for term in grupos["codigo"]):
+              categoria = "codigo"
+          elif any(term in base for term in grupos["evento"]):
+              categoria = "evento"
+          elif any(term in base for term in grupos["atualizacao"]):
+              categoria = "atualizacao"
+          elif any(term in base for term in irrelevante) and not any(term in base for term in pokemon):
+              categoria = "irrelevante"
+          elif not any(term in base for term in pokemon):
+              categoria = "irrelevante"
+
+          resumo = window[:700]
+
+          data = {
+              "id": post_id,
+              "url": f"https://x.com/g47ix/status/{post_id}",
+              "categoria": categoria,
+              "resumo": resumo,
+          }
+
+          with open(meta_path, "w", encoding="utf-8") as output:
+              json.dump(data, output, ensure_ascii=False)
+          PY
+
+          POST_ID="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["id"])' "$META_FILE")"
+          POST_URL="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["url"])' "$META_FILE")"
+          CATEGORIA="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["categoria"])' "$META_FILE")"
+          RESUMO="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["resumo"])' "$META_FILE")"
+
+          echo "Publicacao mais recente: $POST_URL"
+          echo "Classificacao: $CATEGORIA"
+          echo "Trecho analisado: ${RESUMO:0:350}"
 
           LAST_ID=""
           if [[ -f "$STATE_FILE" ]]; then
@@ -121,20 +211,45 @@ jobs:
             exit 0
           fi
 
-          echo "Nova publicacao G47IX encontrada!"
+          if [[ "$CATEGORIA" == "irrelevante" ]]; then
+            echo "Publicacao nova classificada como irrelevante. Nao sera enviada ao Discord."
+            salvar_estado "Spidey: ignora publicacao G47IX irrelevante"
+            exit 0
+          fi
 
-          PAYLOAD="$(python3 - "$POST_URL" <<'PY'
+          case "$CATEGORIA" in
+            evento)
+              ICONE="📅"
+              ROTULO="EVENTO"
+              ;;
+            codigo)
+              ICONE="🎁"
+              ROTULO="CÓDIGO"
+              ;;
+            atualizacao)
+              ICONE="🔄"
+              ROTULO="ATUALIZAÇÃO"
+              ;;
+            *)
+              ICONE="📰"
+              ROTULO="NOTÍCIA"
+              ;;
+          esac
+
+          echo "Nova publicacao relevante do G47IX encontrada: $ROTULO"
+
+          PAYLOAD="$(python3 - "$POST_URL" "$ICONE" "$ROTULO" <<'PY'
           import json
           import sys
 
-          url = sys.argv[1]
+          url, icone, rotulo = sys.argv[1:4]
 
           print(json.dumps({
-              "titulo": "📊 Nova publicação G47IX",
+              "titulo": f"{icone} G47IX • {rotulo}",
               "mensagem": (
-                  "Nova publicação detectada no G47IX.\n\n"
+                  f"Nova publicação classificada como **{rotulo}**.\n\n"
                   f"🔗 {url}\n\n"
-                  "🕷️ Detectado automaticamente pelo Spidey"
+                  "🕷️ Detectado e classificado automaticamente pelo Spidey"
               ),
           }, ensure_ascii=False))
           PY
