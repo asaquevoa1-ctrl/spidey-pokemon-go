@@ -3,6 +3,7 @@ name: Spidey - validar coordenadas e GPX
 on:
   push:
     paths:
+      - "bot.py"
       - "spidey_geo.py"
       - "test_spidey_geo.py"
       - ".github/workflows/spidey-validate-geo.yml"
@@ -13,5 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - name: Validar sintaxe do bot e módulos
+        run: python -m py_compile bot.py spidey_geo.py premium_art.py spidey_art_v4.py
       - name: Rodar testes de coordenadas e GPX
         run: python -m unittest -v test_spidey_geo.py
