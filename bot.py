@@ -184,8 +184,9 @@ def mandar_discord(
             timeout=15,
         )
         if not resposta_botoes.ok:
-            raise RuntimeError(
-                f"Discord botões HTTP {resposta_botoes.status_code}: {resposta_botoes.text[:500]}"
+            print(
+                f"Discord não exibiu botões ({resposta_botoes.status_code}); links de aprovação permanecem disponíveis.",
+                flush=True,
             )
         return
 
@@ -296,6 +297,12 @@ def _botoes_aprovacao(token):
     ]
 
 
+def _links_aprovacao(token):
+    aprovar = f"{PUBLIC_BASE_URL}/aprovar?t={token}"
+    rejeitar = f"{PUBLIC_BASE_URL}/rejeitar?t={token}"
+    return f"\n\n✅ [APROVAR]({aprovar})   ❌ [REPROVAR]({rejeitar})"
+
+
 def _botao_whatsapp(token):
     preparar = f"{PUBLIC_BASE_URL}/whatsapp?t={token}"
     return [
@@ -351,7 +358,7 @@ def enviar():
 
         mandar_discord(
             f"⏳ APROVAÇÃO • {conteudo['titulo']}",
-            conteudo["mensagem"] + "\n\nToque abaixo para decidir a publicação.",
+            conteudo["mensagem"] + "\n\nEscolha uma opção:" + _links_aprovacao(token),
             url=conteudo["url"],
             imagem_bytes=conteudo["imagem_bytes"],
             gpx_bytes=conteudo["gpx_bytes"],
@@ -536,7 +543,7 @@ def check_oficial():
         )
         mandar_discord(
             f"⏳ APROVAÇÃO • {conteudo['titulo']}",
-            conteudo["mensagem"] + "\n\nToque abaixo para decidir a publicação.",
+            conteudo["mensagem"] + "\n\nEscolha uma opção:" + _links_aprovacao(token),
             url=url,
             imagem_bytes=conteudo["imagem_bytes"],
             gpx_bytes=conteudo["gpx_bytes"],
