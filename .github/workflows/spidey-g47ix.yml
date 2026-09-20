@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: "12,27,42,57 * * * *"
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/spidey-g47ix.yml"
 
 permissions:
   contents: write
