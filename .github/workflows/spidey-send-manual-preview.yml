@@ -1,0 +1,89 @@
+name: Spidey - enviar manual visual para aprovacao
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-send-manual-preview.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Suportar imagem pronta no fluxo de aprovação
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path("bot.py")
+          s = p.read_text(encoding="utf-8")
+
+          if "import io\n" not in s:
+              s = s.replace("import hashlib\n", "import hashlib\nimport io\n", 1)
+          if "from PIL import Image\n" not in s:
+              s = s.replace("import requests\n", "import requests\nfrom PIL import Image\n", 1)
+
+          antigo = '''    imagem_bytes = None\n    modo_arte = "sem_arte"\n    erro_premium = None\n    gerar_arte = dados.get("gerar_arte", "G47IX" in titulo.upper())\n'''
+          novo = '''    imagem_bytes = None\n    modo_arte = "sem_arte"\n    erro_premium = None\n    imagem_url = dados.get("imagem_url")\n    if imagem_url:\n        try:\n            resposta_imagem = requests.get(imagem_url, timeout=30)\n            resposta_imagem.raise_for_status()\n            img = Image.open(io.BytesIO(resposta_imagem.content)).convert("RGB")\n            arquivo = io.BytesIO()\n            img.save(arquivo, format="PNG", optimize=True)\n            imagem_bytes = arquivo.getvalue()\n            modo_arte = "fornecida"\n        except Exception as erro_imagem:\n            raise ValueError(f"Falha ao carregar imagem fornecida: {erro_imagem}")\n\n    gerar_arte = dados.get("gerar_arte", "G47IX" in titulo.upper())\n'''
+          if "imagem_url = dados.get(\"imagem_url\")" not in s:
+              if antigo not in s:
+                  raise SystemExit("bloco de arte não encontrado")
+              s = s.replace(antigo, novo, 1)
+
+          antigo_retorno = '''        "erro_premium": erro_premium,\n        "gerar_arte": gerar_arte,\n'''
+          novo_retorno = '''        "erro_premium": erro_premium,\n        "gerar_arte": gerar_arte,\n        "imagem_url": imagem_url,\n'''
+          if '"imagem_url": imagem_url' not in s:
+              if antigo_retorno not in s:
+                  raise SystemExit("retorno de conteúdo não encontrado")
+              s = s.replace(antigo_retorno, novo_retorno, 1)
+
+          antigo_token = '''                "gpx_nome": conteudo["gpx_nome"],\n                "gerar_arte": bool(conteudo["gerar_arte"]),\n'''
+          novo_token = '''                "gpx_nome": conteudo["gpx_nome"],\n                "gerar_arte": bool(conteudo["gerar_arte"]),\n                "imagem_url": conteudo.get("imagem_url"),\n'''
+          if '"imagem_url": conteudo.get("imagem_url")' not in s:
+              if antigo_token not in s:
+                  raise SystemExit("payload do token não encontrado")
+              s = s.replace(antigo_token, novo_token, 1)
+
+          p.write_text(s, encoding="utf-8")
+          PY
+
+          python -m py_compile bot.py spidey_geo.py spidey_approval.py premium_art.py spidey_art_v4.py
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: aceita arte pronta no fluxo de aprovação"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Aguardar deploy atualizado
+        run: sleep 120
+
+      - name: Enviar padrão visual Spidey para aprovação
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "🎨 PADRÃO VISUAL • Spidey",
+            "mensagem": "Prévia do padrão visual oficial do canal Spidey. Este manual será a referência para notícias, eventos, coordenadas/GPX e artes premium. Avalie principalmente impacto visual, leitura no celular, identidade do canal e conexão imediata com Pokémon GO.",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/manual-visual-spidey.jpg",
+            "gerar_arte": false,
+            "gerar_gpx": false,
+            "aprovar": true
+          }
+          JSON
