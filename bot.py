@@ -1,10 +1,12 @@
 import hashlib
+import io
 import json
 import os
 from html.parser import HTMLParser
 from urllib.parse import quote, urljoin
 
 import requests
+from PIL import Image
 from flask import Flask, jsonify, request
 
 from premium_art import criar_card_premium
@@ -248,6 +250,19 @@ def _preparar_conteudo(dados):
     imagem_bytes = None
     modo_arte = "sem_arte"
     erro_premium = None
+    imagem_url = dados.get("imagem_url")
+    if imagem_url:
+        try:
+            resposta_imagem = requests.get(imagem_url, timeout=30)
+            resposta_imagem.raise_for_status()
+            img = Image.open(io.BytesIO(resposta_imagem.content)).convert("RGB")
+            arquivo = io.BytesIO()
+            img.save(arquivo, format="PNG", optimize=True)
+            imagem_bytes = arquivo.getvalue()
+            modo_arte = "fornecida"
+        except Exception as erro_imagem:
+            raise ValueError(f"Falha ao carregar imagem fornecida: {erro_imagem}")
+
     gerar_arte = dados.get("gerar_arte", "G47IX" in titulo.upper())
 
     if gerar_arte:
@@ -283,6 +298,7 @@ def _preparar_conteudo(dados):
         "modo_arte": modo_arte,
         "erro_premium": erro_premium,
         "gerar_arte": gerar_arte,
+        "imagem_url": imagem_url,
     }
 
 
@@ -367,6 +383,7 @@ def enviar():
                 "gerar_gpx": bool(conteudo["gpx_bytes"]),
                 "gpx_nome": conteudo["gpx_nome"],
                 "gerar_arte": bool(conteudo["gerar_arte"]),
+                "imagem_url": conteudo.get("imagem_url"),
             },
             segredo,
         )
