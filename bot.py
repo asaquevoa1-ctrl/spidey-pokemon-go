@@ -8,6 +8,7 @@ from flask import Flask, jsonify, request
 
 from premium_art import criar_card_premium
 from spidey_art_v4 import criar_card
+from spidey_geo import criar_gpx, extrair_coordenadas, formatar_coordenadas
 
 app = Flask(__name__)
 
@@ -65,7 +66,14 @@ def buscar_noticia():
     return parser.noticias[0]
 
 
-def mandar_discord(titulo, mensagem, url=None, imagem_bytes=None):
+def mandar_discord(
+    titulo,
+    mensagem,
+    url=None,
+    imagem_bytes=None,
+    gpx_bytes=None,
+    gpx_nome="spidey-rota.gpx",
+):
     if not DISCORD_WEBHOOK:
         raise RuntimeError("DISCORD_WEBHOOK não configurado.")
 
@@ -76,18 +84,23 @@ def mandar_discord(titulo, mensagem, url=None, imagem_bytes=None):
     }
     if url:
         embed["url"] = url
-
     if imagem_bytes:
         embed["image"] = {"url": "attachment://spidey-card.png"}
+
+    if imagem_bytes or gpx_bytes:
+        files = {}
+        if imagem_bytes:
+            files["file0"] = ("spidey-card.png", imagem_bytes, "image/png")
+        if gpx_bytes:
+            files["file1"] = (gpx_nome, gpx_bytes, "application/gpx+xml")
+
         resposta = requests.post(
             DISCORD_WEBHOOK,
             data={
                 "payload_json": json.dumps({"embeds": [embed]}, ensure_ascii=False)
             },
-            files={
-                "file": ("spidey-card.png", imagem_bytes, "image/png")
-            },
-            timeout=30,
+            files=files,
+            timeout=60,
         )
     else:
         resposta = requests.post(
@@ -96,6 +109,35 @@ def mandar_discord(titulo, mensagem, url=None, imagem_bytes=None):
             timeout=15,
         )
     resposta.raise_for_status()
+
+
+def _coordenadas_explicitas(valor):
+    """Aceita lista [[lat, lon], ...] ou lista de objetos {lat, lon}."""
+    if not isinstance(valor, list):
+        return []
+
+    saida = []
+    vistos = set()
+    for item in valor:
+        try:
+            if isinstance(item, dict):
+                lat = float(item["lat"])
+                lon = float(item.get("lon", item.get("lng")))
+            else:
+                lat = float(item[0])
+                lon = float(item[1])
+        except (KeyError, TypeError, ValueError, IndexError):
+            continue
+
+        if not (-90 <= lat <= 90 and -180 <= lon <= 180):
+            continue
+
+        chave = (round(lat, 7), round(lon, 7))
+        if chave not in vistos:
+            vistos.add(chave)
+            saida.append(chave)
+
+    return saida
 
 
 @app.route("/", methods=["GET"])
@@ -107,10 +149,24 @@ def home():
 def enviar():
     dados = request.get_json(silent=True) or {}
     titulo = dados.get("titulo", "🕷️ Spidey Pokémon GO")
-    mensagem = dados.get("mensagem", "")
+    mensagem_original = dados.get("mensagem", "")
 
-    if not mensagem:
+    if not mensagem_original:
         return jsonify({"erro": "Mensagem vazia"}), 400
+
+    coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))
+    if not coordenadas:
+        coordenadas = extrair_coordenadas(mensagem_original)
+
+    gerar_gpx = bool(dados.get("gerar_gpx", True)) and bool(coordenadas)
+    gpx_bytes = criar_gpx(coordenadas, titulo) if gerar_gpx else None
+
+    mensagem = mensagem_original
+    if coordenadas:
+        bloco_coords = formatar_coordenadas(coordenadas)
+        mensagem += f"\n\n📍 Coordenadas verificadas na entrada:\n{bloco_coords}"
+        if gpx_bytes:
+            mensagem += "\n\n🗺️ Arquivo GPX anexado."
 
     imagem_bytes = None
     modo_arte = "sem_arte"
@@ -140,12 +196,16 @@ def enviar():
         mensagem,
         url=dados.get("url"),
         imagem_bytes=imagem_bytes,
+        gpx_bytes=gpx_bytes,
+        gpx_nome=dados.get("gpx_nome", "spidey-coordenadas.gpx"),
     )
 
     resposta = {
         "status": "enviado",
         "arte": bool(imagem_bytes),
         "modo_arte": modo_arte,
+        "coordenadas": len(coordenadas),
+        "gpx": bool(gpx_bytes),
     }
     if erro_premium:
         resposta["diagnostico_premium"] = erro_premium
