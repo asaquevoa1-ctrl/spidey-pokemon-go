@@ -258,6 +258,8 @@ def _preparar_conteudo(dados):
             resposta_imagem = requests.get(imagem_url, timeout=30)
             resposta_imagem.raise_for_status()
             img = Image.open(io.BytesIO(resposta_imagem.content)).convert("RGB")
+            if img.width < 1000 or img.height < 1200:
+                raise ValueError(f"Arte em baixa resolução: {img.width}x{img.height}; mínimo 1000x1200")
             arquivo = io.BytesIO()
             img.save(arquivo, format="PNG", optimize=True)
             imagem_bytes = arquivo.getvalue()
