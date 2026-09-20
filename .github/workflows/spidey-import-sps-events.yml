@@ -5,16 +5,52 @@ on:
     paths:
       - ".github/workflows/spidey-import-sps-events.yml"
 
+permissions:
+  contents: write
+
 jobs:
   importar:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Corrigir fallback Discord para anexos com aprovação
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path("bot.py")
+          s = p.read_text(encoding="utf-8")
+          antigo = '''    if not resposta.ok:\n        raise RuntimeError(\n            f"Discord HTTP {resposta.status_code}: {resposta.text[:500]}"\n        )\n'''
+          novo = '''    if not resposta.ok and components and (imagem_bytes or gpx_bytes):\n        print(\n            f"Discord recusou anexos + componentes ({resposta.status_code}); usando fallback em duas mensagens.",\n            flush=True,\n        )\n        payload_conteudo = dict(payload)\n        payload_conteudo.pop("components", None)\n        payload_conteudo.pop("attachments", None)\n        resposta_conteudo = requests.post(\n            webhook_url,\n            data={"payload_json": json.dumps(payload_conteudo, ensure_ascii=False)},\n            files=files,\n            timeout=60,\n        )\n        if not resposta_conteudo.ok:\n            raise RuntimeError(\n                f"Discord conteúdo HTTP {resposta_conteudo.status_code}: {resposta_conteudo.text[:500]}"\n            )\n\n        resposta_botoes = requests.post(\n            webhook_url,\n            params={"with_components": "true"},\n            json={\n                "content": "🕷️ Decida abaixo se esta publicação deve seguir:",\n                "components": components,\n            },\n            timeout=15,\n        )\n        if not resposta_botoes.ok:\n            raise RuntimeError(\n                f"Discord botões HTTP {resposta_botoes.status_code}: {resposta_botoes.text[:500]}"\n            )\n        return\n\n    if not resposta.ok:\n        raise RuntimeError(\n            f"Discord HTTP {resposta.status_code}: {resposta.text[:500]}"\n        )\n'''
+          if novo not in s:
+              if antigo not in s:
+                  raise SystemExit("bloco de erro Discord não encontrado")
+              s = s.replace(antigo, novo, 1)
+              p.write_text(s, encoding="utf-8")
+          PY
+
+          python -m py_compile bot.py spidey_geo.py spidey_approval.py premium_art.py spidey_art_v4.py
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: fallback seguro para Discord com anexos e aprovação"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
       - name: Aguardar deploy e enviar eventos para aprovação
         shell: bash
         run: |
           set -euo pipefail
           BASE="https://spidey-pokemon-go.onrender.com"
-          sleep 75
+          sleep 90
 
           echo "Enviando evento Málaga..."
           curl --silent --show-error --fail-with-body --max-time 300 \
