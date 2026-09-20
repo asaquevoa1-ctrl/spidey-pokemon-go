@@ -262,11 +262,14 @@ def _preparar_conteudo(dados):
             erro_premium = "OPENAI_API_KEY ausente no processo"
 
         if imagem_bytes is None:
-            try:
-                imagem_bytes = criar_card(titulo, mensagem)
-                modo_arte = "fallback_v4"
-            except Exception as erro_arte:
-                print(f"Falha ao gerar arte fallback: {erro_arte}", flush=True)
+            if bool(dados.get("permitir_fallback", False)):
+                try:
+                    imagem_bytes = criar_card(titulo, mensagem)
+                    modo_arte = "fallback_v4"
+                except Exception as erro_arte:
+                    print(f"Falha ao gerar arte fallback: {erro_arte}", flush=True)
+            else:
+                modo_arte = "premium_indisponivel"
 
     return {
         "titulo": titulo,
@@ -332,6 +335,18 @@ def enviar():
         conteudo = _preparar_conteudo(dados)
     except ValueError as erro:
         return jsonify({"erro": str(erro)}), 400
+
+    if (
+        bool(conteudo["gerar_arte"])
+        and conteudo["modo_arte"] != "premium"
+        and not bool(dados.get("permitir_fallback", False))
+    ):
+        return jsonify({
+            "status": "aguardando_arte_premium",
+            "arte": False,
+            "modo_arte": conteudo["modo_arte"],
+            "diagnostico_premium": conteudo["erro_premium"],
+        }), 503
 
     exige_aprovacao = dados.get(
         "aprovar",
@@ -414,6 +429,13 @@ def aprovar():
         return _html_resultado("Já processado", "Esta publicação já recebeu uma decisão.")
 
     conteudo = _preparar_conteudo(dados)
+    if bool(dados.get("gerar_arte")) and conteudo["modo_arte"] != "premium":
+        return _html_resultado(
+            "Arte premium indisponível",
+            "A publicação não foi liberada porque a arte premium ainda não foi gerada. Tente novamente mais tarde.",
+            "#ffb84d",
+        ), 503
+
     mandar_discord(
         f"✅ APROVADO • {conteudo['titulo']}",
         conteudo["mensagem"],

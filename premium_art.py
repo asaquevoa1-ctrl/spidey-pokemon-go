@@ -173,7 +173,9 @@ The final composition must work after cropping to a 4:5 portrait poster.
         },
         timeout=180,
     )
-    response.raise_for_status()
+    if not response.ok:
+        detalhe = response.text[:800].replace("\n", " ")
+        raise RuntimeError(f"OpenAI imagem HTTP {response.status_code}: {detalhe}")
     payload = response.json()
     data = payload.get("data") or []
     if not data or not data[0].get("b64_json"):
