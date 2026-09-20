@@ -1,11 +1,13 @@
-name: Spidey - validar coordenadas e GPX
+name: Spidey - validar núcleo editorial
 
 on:
   push:
     paths:
       - "bot.py"
       - "spidey_geo.py"
+      - "spidey_approval.py"
       - "test_spidey_geo.py"
+      - "test_spidey_approval.py"
       - ".github/workflows/spidey-validate-geo.yml"
   workflow_dispatch:
 
@@ -15,6 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Validar sintaxe do bot e módulos
-        run: python -m py_compile bot.py spidey_geo.py premium_art.py spidey_art_v4.py
-      - name: Rodar testes de coordenadas e GPX
-        run: python -m unittest -v test_spidey_geo.py
+        run: python -m py_compile bot.py spidey_geo.py spidey_approval.py premium_art.py spidey_art_v4.py
+      - name: Rodar testes do núcleo editorial
+        run: python -m unittest -v test_spidey_geo.py test_spidey_approval.py
