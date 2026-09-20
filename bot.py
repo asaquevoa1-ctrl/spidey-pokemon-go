@@ -6,13 +6,15 @@ from html.parser import HTMLParser
 from urllib.parse import quote, urljoin
 
 import requests
-from PIL import Image
+from PIL import Image, ImageFile
 from flask import Flask, jsonify, request
 
 from premium_art import criar_card_premium
 from spidey_approval import criar_token, ler_token
 from spidey_art_v4 import criar_card
 from spidey_geo import criar_gpx, extrair_coordenadas, formatar_coordenadas
+
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 app = Flask(__name__)
 
