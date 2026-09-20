@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: "12,27,42,57 * * * *"
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/spidey-g47ix.yml"
 
 permissions:
   contents: write
@@ -25,12 +22,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Buscar e classificar ultima publicacao G47IX
+      - name: Buscar, classificar e publicar ultima publicacao G47IX
         shell: bash
         env:
           SPIDEY: https://spidey-pokemon-go.onrender.com/enviar
           STATE_FILE: last_g47ix.txt
-          DRY_RUN: ${{ github.event_name == 'push' && '1' || '0' }}
         run: |
           set -euo pipefail
 
@@ -86,7 +82,6 @@ jobs:
 
           if not created_ts:
               created_ts = ((int(post_id) >> 22) + 1288834974657) / 1000
-
           if created_ts > 10_000_000_000:
               created_ts = created_ts / 1000
 
@@ -96,7 +91,6 @@ jobs:
               return value.lower()
 
           base = normalizar(text)
-
           codigo = ["promo code", "redeem code", "codigo promocional", "codigo", " code "]
           evento = [
               "community day", "raid day", "research day", "hatch day",
@@ -132,10 +126,8 @@ jobs:
           else:
               categoria = "noticia"
 
-          now = datetime.now(timezone.utc).timestamp()
-          age_hours = max(0, (now - float(created_ts)) / 3600)
-
-          result = {
+          age_hours = max(0, (datetime.now(timezone.utc).timestamp() - float(created_ts)) / 3600)
+          json.dump({
               "id": post_id,
               "url": post.get("url") or f"https://x.com/g47ix/status/{post_id}",
               "categoria": categoria,
@@ -144,9 +136,7 @@ jobs:
               "age_hours": round(age_hours, 2),
               "shiny": "shiny" in base or "brilhante" in base,
               "fonte": "FxTwitter timeline"
-          }
-
-          json.dump(result, open(out, "w", encoding="utf-8"), ensure_ascii=False)
+          }, open(out, "w", encoding="utf-8"), ensure_ascii=False)
           PY
           then
             SOURCE="fxtwitter"
@@ -154,7 +144,6 @@ jobs:
 
           if [[ -z "$SOURCE" ]]; then
             echo "Timeline direta indisponível; usando busca pública de contingência."
-
             SEARCH_URL="https://html.duckduckgo.com/html/?q=site%3Ax.com%2Fg47ix%2Fstatus%20G47IX"
 
             curl \
@@ -356,11 +345,6 @@ jobs:
             *) ICONE="📰"; ROTULO="NOTÍCIA" ;;
           esac
 
-          if [[ "$DRY_RUN" == "1" ]]; then
-            echo "Teste de atualização: publicação relevante encontrada, mas envio ao Discord foi bloqueado neste push."
-            exit 0
-          fi
-
           PAYLOAD="$(python3 - "$POST_URL" "$ICONE" "$ROTULO" "$RESUMO" "$SHINY" <<'PY'
           import json
           import sys
@@ -371,27 +355,43 @@ jobs:
           print(json.dumps({
               "titulo": f"{icone} G47IX • {rotulo}",
               "mensagem": (
-                  f"**{resumo}**{shiny_line}\n\n"
-                  f"🔗 Fonte original: {url}\n\n"
-                  "🕷️ Detectado e classificado automaticamente pelo Spidey"
-              )
+                  f"{resumo}{shiny_line}\n\n"
+                  "Fonte: G47IX"
+              ),
+              "url": url,
+              "gerar_arte": True
           }, ensure_ascii=False))
           PY
           )"
 
-          curl \
+          RESULT="$(curl \
             --retry 3 \
             --retry-all-errors \
             --retry-delay 10 \
             --connect-timeout 20 \
-            --max-time 120 \
+            --max-time 240 \
             --fail \
             --silent \
             --show-error \
             --request POST \
             --header "Content-Type: application/json" \
             --data-binary "$PAYLOAD" \
-            "$SPIDEY"
+            "$SPIDEY")"
 
-          echo
+          echo "$RESULT"
+
+          python3 - "$RESULT" <<'PY'
+          import json
+          import sys
+
+          data = json.loads(sys.argv[1])
+          if data.get("status") != "enviado":
+              raise SystemExit("Spidey não confirmou o envio")
+          if not data.get("arte"):
+              raise SystemExit("Spidey enviou sem arte")
+
+          modo = data.get("modo_arte", "desconhecido")
+          print(f"Modo de arte usado: {modo}")
+          PY
+
           salvar_estado "Spidey: atualiza ultima publicacao G47IX"
