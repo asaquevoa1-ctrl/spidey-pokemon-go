@@ -32,9 +32,7 @@ jobs:
       - name: Buscar ultima publicacao G47IX
         shell: bash
         env:
-          INSTAGRAM_API: https://i.instagram.com/api/v1/users/web_profile_info/?username=g47ix
-          JINA_READER: https://r.jina.ai/http://imginn.com/g47ix/
-          IMG_INN: https://imginn.com/g47ix/
+          G47IX_TIMELINE: https://syndication.twitter.com/srv/timeline-profile/screen-name/g47ix
           SPIDEY: https://spidey-pokemon-go.onrender.com/enviar
           STATE_FILE: last_g47ix.txt
         run: |
@@ -45,208 +43,43 @@ jobs:
 
           echo "Consultando G47IX..."
 
-          buscar_instagram() {
+          buscar_g47ix() {
             curl \
               --location \
               --compressed \
-              --retry 2 \
+              --retry 3 \
               --retry-delay 5 \
               --retry-connrefused \
-              --connect-timeout 20 \
-              --max-time 90 \
+              --connect-timeout 15 \
+              --max-time 60 \
               --fail \
               --silent \
               --show-error \
-              --header "Accept: application/json" \
-              --header "Accept-Language: en-US,en;q=0.9" \
-              --header "x-ig-app-id: 936619743392459" \
-              --user-agent "Instagram 275.0.0.27.98 Android" \
-              --output "$SOURCE_FILE" \
-              "$INSTAGRAM_API"
-
-            python3 - "$SOURCE_FILE" <<'PY'
-          import json
-          import re
-          import sys
-
-          ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
-          VALUE = {char: index for index, char in enumerate(ALPHABET)}
-
-
-          def shortcode_id(shortcode):
-              number = 0
-
-              for char in shortcode:
-                  if char not in VALUE:
-                      raise ValueError(f"Shortcode invalido: {shortcode}")
-
-                  number = number * 64 + VALUE[char]
-
-              return number
-
-
-          with open(sys.argv[1], encoding="utf-8", errors="replace") as source:
-              try:
-                  data = json.load(source)
-              except json.JSONDecodeError as error:
-                  raise SystemExit(f"Resposta Instagram invalida: {error}")
-
-          user = data.get("data", {}).get("user") or {}
-          shortcodes = []
-
-
-          def collect(value):
-              if isinstance(value, dict):
-                  shortcode = value.get("shortcode") or value.get("code")
-
-                  if isinstance(shortcode, str) and re.fullmatch(
-                      r"[A-Za-z0-9_-]+", shortcode
-                  ):
-                      shortcodes.append(shortcode)
-
-                  for child in value.values():
-                      collect(child)
-
-              elif isinstance(value, list):
-                  for child in value:
-                      collect(child)
-
-
-          collect(user)
-          shortcodes = list(dict.fromkeys(shortcodes))
-
-          if not shortcodes:
-              raise SystemExit("Instagram nao retornou publicacoes")
-
-          latest = max(shortcodes, key=shortcode_id)
-          print(f"https://www.instagram.com/p/{latest}/")
-          PY
-          }
-
-          buscar_imginn() {
-            curl \
-              --location \
-              --compressed \
-              --retry 2 \
-              --retry-delay 5 \
-              --retry-connrefused \
-              --connect-timeout 20 \
-              --max-time 90 \
-              --fail \
-              --silent \
-              --show-error \
+              --header "Accept: text/html,application/xhtml+xml" \
               --user-agent "Mozilla/5.0" \
               --output "$SOURCE_FILE" \
-              "$IMG_INN"
+              "$G47IX_TIMELINE"
 
             python3 - "$SOURCE_FILE" <<'PY'
           import re
           import sys
-
-          ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
-          VALUE = {char: index for index, char in enumerate(ALPHABET)}
-
-
-          def shortcode_id(shortcode):
-              number = 0
-
-              for char in shortcode:
-                  if char not in VALUE:
-                      raise ValueError(f"Shortcode invalido: {shortcode}")
-
-                  number = number * 64 + VALUE[char]
-
-              return number
-
-
-          with open(sys.argv[1], encoding="utf-8", errors="replace") as source:
-              html = source.read()
-
-          pattern = re.compile(
-              r'href\s*=\s*["\x27]'
-              r'(?:https?://(?:www\.)?imginn\.com)?'
-              r'/p/([A-Za-z0-9_-]+)'
-              r'(?:/[^"\x27?#]*)?(?:[?#][^"\x27]*)?'
-              r'["\x27]',
-              re.IGNORECASE,
-          )
-
-          shortcodes = list(dict.fromkeys(pattern.findall(html)))
-
-          if not shortcodes:
-              raise SystemExit("Imginn nao retornou publicacoes")
-
-          latest = max(shortcodes, key=shortcode_id)
-          print(f"https://www.instagram.com/p/{latest}/")
-          PY
-          }
-
-          buscar_jina() {
-            curl \
-              --location \
-              --compressed \
-              --retry 2 \
-              --retry-delay 5 \
-              --retry-connrefused \
-              --connect-timeout 20 \
-              --max-time 90 \
-              --fail \
-              --silent \
-              --show-error \
-              --header "Accept: text/plain" \
-              --user-agent "Mozilla/5.0" \
-              --output "$SOURCE_FILE" \
-              "$JINA_READER"
-
-            python3 - "$SOURCE_FILE" <<'PY'
-          import re
-          import sys
-
-          ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
-          VALUE = {char: index for index, char in enumerate(ALPHABET)}
-
-
-          def shortcode_id(shortcode):
-              number = 0
-
-              for char in shortcode:
-                  if char not in VALUE:
-                      raise ValueError(f"Shortcode invalido: {shortcode}")
-
-                  number = number * 64 + VALUE[char]
-
-              return number
-
 
           with open(sys.argv[1], encoding="utf-8", errors="replace") as source:
               text = source.read()
 
-          pattern = re.compile(
-              r'(?:https?://(?:www\.)?(?:imginn|instagram)\.com)?'
-              r'/(?:p|reels?)/([A-Za-z0-9_-]+)',
-              re.IGNORECASE,
-          )
+          ids = set(re.findall(r'"entry_id"\s*:\s*"tweet-(\d+)"', text))
+          ids.update(re.findall(r'"permalink"\s*:\s*"/g47ix/status/(\d+)"', text))
 
-          shortcodes = list(dict.fromkeys(pattern.findall(text)))
+          if not ids:
+              raise SystemExit("Timeline publica nao retornou publicacoes G47IX")
 
-          if not shortcodes:
-              raise SystemExit("Leitor nao retornou publicacoes")
-
-          latest = max(shortcodes, key=shortcode_id)
-          print(f"https://www.instagram.com/p/{latest}/")
+          latest = max(ids, key=int)
+          print(f"https://x.com/g47ix/status/{latest}")
           PY
           }
 
-          if POST="$(buscar_instagram)"; then
-            echo "Fonte utilizada: Instagram"
-          elif POST="$(buscar_jina)"; then
-            echo "Fonte utilizada: leitor publico"
-          elif POST="$(buscar_imginn)"; then
-            echo "Fonte utilizada: Imginn"
-          else
-            echo "Nenhuma fonte retornou publicacoes G47IX." >&2
-            exit 1
-          fi
+          POST="$(buscar_g47ix)"
+          echo "Fonte utilizada: timeline publica oficial do G47IX no X"
 
           echo "Publicacao mais recente: $POST"
 
