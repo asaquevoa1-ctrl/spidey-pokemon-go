@@ -28,8 +28,13 @@ jobs:
 
           if "import io\n" not in s:
               s = s.replace("import hashlib\n", "import hashlib\nimport io\n", 1)
-          if "from PIL import Image\n" not in s:
-              s = s.replace("import requests\n", "import requests\nfrom PIL import Image\n", 1)
+          if "from PIL import Image, ImageFile\n" not in s:
+              if "from PIL import Image\n" in s:
+                  s = s.replace("from PIL import Image\n", "from PIL import Image, ImageFile\n", 1)
+              else:
+                  s = s.replace("import requests\n", "import requests\nfrom PIL import Image, ImageFile\n", 1)
+          if "ImageFile.LOAD_TRUNCATED_IMAGES = True" not in s:
+              s = s.replace("app = Flask(__name__)\n", "ImageFile.LOAD_TRUNCATED_IMAGES = True\n\napp = Flask(__name__)\n", 1)
 
           antigo = '''    imagem_bytes = None\n    modo_arte = "sem_arte"\n    erro_premium = None\n    gerar_arte = dados.get("gerar_arte", "G47IX" in titulo.upper())\n'''
           novo = '''    imagem_bytes = None\n    modo_arte = "sem_arte"\n    erro_premium = None\n    imagem_url = dados.get("imagem_url")\n    if imagem_url:\n        try:\n            resposta_imagem = requests.get(imagem_url, timeout=30)\n            resposta_imagem.raise_for_status()\n            img = Image.open(io.BytesIO(resposta_imagem.content)).convert("RGB")\n            arquivo = io.BytesIO()\n            img.save(arquivo, format="PNG", optimize=True)\n            imagem_bytes = arquivo.getvalue()\n            modo_arte = "fornecida"\n        except Exception as erro_imagem:\n            raise ValueError(f"Falha ao carregar imagem fornecida: {erro_imagem}")\n\n    gerar_arte = dados.get("gerar_arte", "G47IX" in titulo.upper())\n'''
