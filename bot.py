@@ -119,6 +119,7 @@ def mandar_discord(
 
     if imagem_bytes or gpx_bytes:
         files = []
+        attachments = []
         indice = 0
         if imagem_bytes:
             files.append(
@@ -127,6 +128,7 @@ def mandar_discord(
                     ("spidey-card.png", imagem_bytes, "image/png"),
                 )
             )
+            attachments.append({"id": indice, "filename": "spidey-card.png"})
             indice += 1
         if gpx_bytes:
             files.append(
@@ -135,7 +137,9 @@ def mandar_discord(
                     (gpx_nome, gpx_bytes, "application/gpx+xml"),
                 )
             )
+            attachments.append({"id": indice, "filename": gpx_nome})
 
+        payload["attachments"] = attachments
         resposta = requests.post(
             webhook_url,
             params={"with_components": "true"} if components else None,
@@ -150,7 +154,11 @@ def mandar_discord(
             json=payload,
             timeout=15,
         )
-    resposta.raise_for_status()
+
+    if not resposta.ok:
+        raise RuntimeError(
+            f"Discord HTTP {resposta.status_code}: {resposta.text[:500]}"
+        )
 
 
 def _coordenadas_explicitas(valor):
@@ -471,13 +479,44 @@ def check_oficial():
         if ultima_enviada == url:
             return jsonify({"status": "sem novidade", "titulo": titulo, "url": url})
 
+        dados = {
+            "titulo": "📰 Nova notícia oficial Pokémon GO",
+            "mensagem": f"{titulo}\n\n✅ Fonte oficial Pokémon GO",
+            "url": url,
+            "gerar_arte": True,
+            "aprovar": True,
+        }
+        conteudo = _preparar_conteudo(dados)
+        segredo = _segredo_aprovacao()
+        token = criar_token(
+            {
+                "titulo": conteudo["titulo"],
+                "mensagem": conteudo["mensagem_original"],
+                "url": conteudo["url"],
+                "coordenadas": conteudo["coordenadas"],
+                "gerar_gpx": bool(conteudo["gpx_bytes"]),
+                "gpx_nome": conteudo["gpx_nome"],
+                "gerar_arte": True,
+            },
+            segredo,
+        )
         mandar_discord(
-            "📰 Nova notícia oficial",
-            f"**{titulo}**\n\n✅ Fonte oficial Pokémon GO\n🕷️ Detectado pelo Spidey",
-            url,
+            f"⏳ APROVAÇÃO • {conteudo['titulo']}",
+            conteudo["mensagem"] + "\n\nToque abaixo para decidir a publicação.",
+            url=url,
+            imagem_bytes=conteudo["imagem_bytes"],
+            gpx_bytes=conteudo["gpx_bytes"],
+            gpx_nome=conteudo["gpx_nome"],
+            webhook_url=DISCORD_APPROVAL_WEBHOOK,
+            components=_botoes_aprovacao(token),
         )
         ultima_enviada = url
-        return jsonify({"status": "enviado", "titulo": titulo, "url": url})
+        return jsonify({
+            "status": "enviado",
+            "etapa": "aguardando_aprovacao",
+            "titulo": titulo,
+            "url": url,
+        })
     except Exception as erro:
         return jsonify({"erro": str(erro)}), 500
 
