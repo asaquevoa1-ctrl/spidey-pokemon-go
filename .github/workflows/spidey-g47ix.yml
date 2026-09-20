@@ -23,27 +23,25 @@ jobs:
       - name: Baixar repositorio
         uses: actions/checkout@v5
 
-      - name: Consultar fonte G47IX pelo Render
+      - name: Testar buscas públicas G47IX
         shell: bash
         run: |
           set -euo pipefail
 
-          BASE="https://spidey-pokemon-go.onrender.com/check-g47ix-source"
-          BODY="$(mktemp)"
-          trap 'rm -f "$BODY"' EXIT
+          testar() {
+            NOME="$1"
+            URL="$2"
+            ARQ="$(mktemp)"
+            CODE="$(curl -L --compressed --connect-timeout 15 --max-time 60 --silent --show-error \
+              -A "Mozilla/5.0" -o "$ARQ" -w '%{http_code}' "$URL" || true)"
+            echo "=== $NOME | HTTP $CODE | $(wc -c < "$ARQ") bytes ==="
+            grep -oE 'https?://(x|twitter)\.com/g47ix/status/[0-9]+' "$ARQ" | sort -u | head -20 || true
+            grep -oE '/g47ix/status/[0-9]+' "$ARQ" | sort -u | head -20 || true
+            head -c 800 "$ARQ" | tr '\n' ' '
+            echo
+            rm -f "$ARQ"
+          }
 
-          CODE="$(curl \
-            --connect-timeout 20 \
-            --max-time 120 \
-            --silent \
-            --show-error \
-            --output "$BODY" \
-            --write-out '%{http_code}' \
-            "$BASE")"
-
-          echo "HTTP: $CODE"
-          cat "$BODY"
-          echo
-
-          test "$CODE" = "200"
-          python3 -c 'import json,sys; data=json.load(sys.stdin); assert data.get("status")=="ok", data' < "$BODY"
+          testar "Bing RSS" "https://www.bing.com/search?q=site%3Ax.com%2Fg47ix%2Fstatus%20G47IX&format=rss"
+          testar "Bing HTML" "https://www.bing.com/search?q=site%3Ax.com%2Fg47ix%2Fstatus%20G47IX"
+          testar "DuckDuckGo" "https://html.duckduckgo.com/html/?q=site%3Ax.com%2Fg47ix%2Fstatus%20G47IX"
