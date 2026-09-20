@@ -1,0 +1,65 @@
+name: Spidey - proteger arte premium
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-premium-guard.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Impedir publicação com fallback quando premium falhar
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('bot.py')
+          s = p.read_text(encoding='utf-8')
+
+          old = '''        if imagem_bytes is None:\n            try:\n                imagem_bytes = criar_card(titulo, mensagem)\n                modo_arte = "fallback_v4"\n            except Exception as erro_arte:\n                print(f"Falha ao gerar arte fallback: {erro_arte}", flush=True)\n'''
+          new = '''        if imagem_bytes is None:\n            if bool(dados.get("permitir_fallback", False)):\n                try:\n                    imagem_bytes = criar_card(titulo, mensagem)\n                    modo_arte = "fallback_v4"\n                except Exception as erro_arte:\n                    print(f"Falha ao gerar arte fallback: {erro_arte}", flush=True)\n            else:\n                modo_arte = "premium_indisponivel"\n'''
+          if old in s:
+              s = s.replace(old, new, 1)
+
+          marker = '''    exige_aprovacao = dados.get(\n        "aprovar",\n        "G47IX" in conteudo["titulo"].upper(),\n    )\n'''
+          guard = '''    if (\n        bool(conteudo["gerar_arte"])\n        and conteudo["modo_arte"] != "premium"\n        and not bool(dados.get("permitir_fallback", False))\n    ):\n        return jsonify({\n            "status": "aguardando_arte_premium",\n            "arte": False,\n            "modo_arte": conteudo["modo_arte"],\n            "diagnostico_premium": conteudo["erro_premium"],\n        }), 503\n\n''' + marker
+          if '"status": "aguardando_arte_premium"' not in s and marker in s:
+              s = s.replace(marker, guard, 1)
+
+          # Ao aprovar item antigo, também não deixa fallback seguir para publicação.
+          old_ap = '''    conteudo = _preparar_conteudo(dados)\n    mandar_discord(\n        f"✅ APROVADO • {conteudo['titulo']}",\n'''
+          new_ap = '''    conteudo = _preparar_conteudo(dados)\n    if bool(dados.get("gerar_arte")) and conteudo["modo_arte"] != "premium":\n        return _html_resultado(\n            "Arte premium indisponível",\n            "A publicação não foi liberada porque a arte premium ainda não foi gerada. Tente novamente mais tarde.",\n            "#ffb84d",\n        ), 503\n\n    mandar_discord(\n        f"✅ APROVADO • {conteudo['titulo']}",\n'''
+          if old_ap in s and 'Arte premium indisponível' not in s:
+              s = s.replace(old_ap, new_ap, 1)
+
+          p.write_text(s, encoding='utf-8')
+
+          p = Path('premium_art.py')
+          s = p.read_text(encoding='utf-8')
+          old = '    response.raise_for_status()\n'
+          new = '''    if not response.ok:\n        detalhe = response.text[:800].replace("\\n", " ")\n        raise RuntimeError(f"OpenAI imagem HTTP {response.status_code}: {detalhe}")\n'''
+          if old in s:
+              s = s.replace(old, new, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+
+          python -m py_compile bot.py premium_art.py spidey_art_v4.py spidey_geo.py spidey_approval.py
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py premium_art.py
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: exige arte premium antes da aprovação"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
