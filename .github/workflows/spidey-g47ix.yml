@@ -61,63 +61,149 @@ jobs:
           import re
           import sys
           import unicodedata
-          from urllib.parse import unquote
+          from html.parser import HTMLParser
+          from urllib.parse import parse_qs, unquote, urlparse
 
           html_path, meta_path = sys.argv[1:3]
+
+          def limpar_url(href):
+              href = html.unescape(href or "")
+
+              if href.startswith("//"):
+                  href = "https:" + href
+
+              parsed = urlparse(href)
+
+              if "duckduckgo.com" in parsed.netloc and parsed.path.startswith("/l/"):
+                  target = parse_qs(parsed.query).get("uddg", [""])[0]
+                  if target:
+                      href = target
+
+              return unquote(href)
+
+
+          class DDGParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.results = []
+                  self.current = None
+                  self.capture = None
+                  self.capture_tag = None
+
+              def finish_current(self):
+                  if not self.current:
+                      return
+
+                  self.current["title"] = " ".join(self.current.pop("title_parts", [])).strip()
+                  self.current["snippet"] = " ".join(self.current.pop("snippet_parts", [])).strip()
+                  self.results.append(self.current)
+                  self.current = None
+
+              def handle_starttag(self, tag, attrs):
+                  data = dict(attrs)
+                  classes = data.get("class", "")
+
+                  if tag == "a" and "result__a" in classes:
+                      self.finish_current()
+                      self.current = {
+                          "href": limpar_url(data.get("href", "")),
+                          "title_parts": [],
+                          "snippet_parts": [],
+                      }
+                      self.capture = "title"
+                      self.capture_tag = tag
+                      return
+
+                  if self.current and "result__snippet" in classes:
+                      self.capture = "snippet"
+                      self.capture_tag = tag
+
+              def handle_data(self, data):
+                  if not self.current or not self.capture:
+                      return
+
+                  text = data.strip()
+                  if not text:
+                      return
+
+                  if self.capture == "title":
+                      self.current["title_parts"].append(text)
+                  elif self.capture == "snippet":
+                      self.current["snippet_parts"].append(text)
+
+              def handle_endtag(self, tag):
+                  if self.capture and tag == self.capture_tag:
+                      if self.capture == "snippet":
+                          self.finish_current()
+
+                      self.capture = None
+                      self.capture_tag = None
+
 
           with open(html_path, encoding="utf-8", errors="replace") as source:
               raw = source.read()
 
-          decoded = unquote(raw)
+          parser = DDGParser()
+          parser.feed(raw)
+          parser.finish_current()
 
-          ids = set(re.findall(
-              r"(?:https?://(?:www\.)?(?:x|twitter)\.com)?/g47ix/status/(\d{15,})",
-              decoded,
-              flags=re.IGNORECASE,
-          ))
+          encontrados = []
 
-          if not ids:
+          for result in parser.results:
+              joined = " ".join((
+                  result.get("href", ""),
+                  result.get("title", ""),
+                  result.get("snippet", ""),
+              ))
+
+              match = re.search(
+                  r"(?:https?://(?:www\.)?(?:x|twitter)\.com)?/g47ix/status/(\d{15,})",
+                  joined,
+                  flags=re.IGNORECASE,
+              )
+
+              if not match:
+                  continue
+
+              encontrados.append({
+                  "id": match.group(1),
+                  "href": result.get("href", ""),
+                  "title": result.get("title", ""),
+                  "snippet": result.get("snippet", ""),
+              })
+
+          if not encontrados:
               raise SystemExit("Nenhuma publicacao G47IX encontrada na busca publica")
 
-          post_id = max(ids, key=int)
-          marker = f"/g47ix/status/{post_id}"
-          pos = decoded.lower().find(marker.lower())
+          atual = max(encontrados, key=lambda item: int(item["id"]))
+          post_id = atual["id"]
+          contexto = " ".join(filter(None, (atual["title"], atual["snippet"]))).strip()
 
-          if pos >= 0:
-              start = max(0, pos - 2200)
-              end = min(len(decoded), pos + 3200)
-              window = decoded[start:end]
-          else:
-              window = decoded
-
-          window = re.sub(r"<script\b[^>]*>.*?</script>", " ", window, flags=re.I | re.S)
-          window = re.sub(r"<style\b[^>]*>.*?</style>", " ", window, flags=re.I | re.S)
-          window = re.sub(r"<[^>]+>", " ", window)
-          window = html.unescape(window)
-          window = re.sub(r"\s+", " ", window).strip()
+          if not contexto:
+              contexto = atual["href"]
 
           def normalizar(texto):
               texto = unicodedata.normalize("NFKD", texto)
               texto = "".join(ch for ch in texto if not unicodedata.combining(ch))
               return texto.lower()
 
-          base = normalizar(window)
+          base = normalizar(contexto)
 
-          grupos = {
-              "codigo": [
-                  "promo code", "redeem code", "codigo promocional", "codigo", "code"
-              ],
-              "evento": [
-                  "community day", "raid day", "research day", "hatch day",
-                  "spotlight hour", "raid hour", "go fest", "city safari",
-                  "safari zone", "event", "evento", "max battle day"
-              ],
-              "atualizacao": [
-                  "update", "updated", "new feature", "feature update",
-                  "move update", "balance", "season", "temporada",
-                  "version", "versao", "mudanca", "changes"
-              ],
-          }
+          codigo = [
+              "promo code", "redeem code", "codigo promocional", "codigo", "code"
+          ]
+
+          evento = [
+              "community day", "raid day", "research day", "hatch day",
+              "spotlight hour", "raid hour", "go fest", "city safari",
+              "safari zone", "event", "evento", "max battle day"
+          ]
+
+          atualizacao = [
+              "update", "updated", "new feature", "feature update",
+              "move update", "balance", "season", "temporada",
+              "version", "versao", "mudanca", "changes"
+          ]
 
           irrelevante = [
               "giveaway", "retweet", "repost", "follow me", "subscribe",
@@ -127,29 +213,29 @@ jobs:
           pokemon = [
               "pokemon go", "raid", "research", "pokestop", "gym",
               "trainer", "shadow", "mega", "dynamax", "gigantamax",
-              "community day", "spotlight", "team go rocket"
+              "community day", "spotlight", "team go rocket", "zoroark",
+              "zorua", "gbl", "battle league"
           ]
 
-          categoria = "noticia"
-
-          if any(term in base for term in grupos["codigo"]):
+          if any(term in base for term in codigo):
               categoria = "codigo"
-          elif any(term in base for term in grupos["evento"]):
+          elif any(term in base for term in evento) or re.search(r"\bcd\b", base):
               categoria = "evento"
-          elif any(term in base for term in grupos["atualizacao"]):
+          elif any(term in base for term in atualizacao):
               categoria = "atualizacao"
           elif any(term in base for term in irrelevante) and not any(term in base for term in pokemon):
               categoria = "irrelevante"
           elif not any(term in base for term in pokemon):
               categoria = "irrelevante"
-
-          resumo = window[:700]
+          else:
+              categoria = "noticia"
 
           data = {
               "id": post_id,
               "url": f"https://x.com/g47ix/status/{post_id}",
               "categoria": categoria,
-              "resumo": resumo,
+              "titulo_fonte": atual["title"][:300],
+              "resumo": contexto[:700],
           }
 
           with open(meta_path, "w", encoding="utf-8") as output:
@@ -163,7 +249,7 @@ jobs:
 
           echo "Publicacao mais recente: $POST_URL"
           echo "Classificacao: $CATEGORIA"
-          echo "Trecho analisado: ${RESUMO:0:350}"
+          echo "Trecho analisado: ${RESUMO:0:500}"
 
           LAST_ID=""
           if [[ -f "$STATE_FILE" ]]; then
