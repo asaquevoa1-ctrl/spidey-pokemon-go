@@ -25,7 +25,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          BASE="https://spidey-pokemon-go.onrender.com/check-oficial"
+          CHECK="https://spidey-pokemon-go.onrender.com/check-oficial"
+          ENVIAR="https://spidey-pokemon-go.onrender.com/enviar"
 
           echo "Consultando Spidey..."
 
@@ -36,11 +37,12 @@ jobs:
             --fail \
             --silent \
             --show-error \
-            "$BASE")"
+            "$CHECK")"
 
           echo "$JSON"
 
           URL="$(python -c 'import json,sys; print(json.load(sys.stdin)["url"])' <<< "$JSON")"
+          TITULO="$(python -c 'import json,sys; print(json.load(sys.stdin)["titulo"])' <<< "$JSON")"
 
           if [ ! -f last_news.txt ]; then
             echo "Primeira execução."
@@ -65,17 +67,50 @@ jobs:
             exit 0
           fi
 
-          echo "Nova notícia encontrada!"
+          echo "Nova notícia oficial encontrada!"
           echo "$URL"
 
-          curl \
+          PAYLOAD="$(python - "$TITULO" "$URL" <<'PY'
+          import json
+          import sys
+
+          titulo, url = sys.argv[1:3]
+          print(json.dumps({
+              "titulo": "📰 OFICIAL • NOTÍCIA",
+              "mensagem": f"{titulo}\n\nFonte: Pokémon GO oficial",
+              "url": url,
+              "gerar_arte": True,
+              "aprovar": True
+          }, ensure_ascii=False))
+          PY
+          )"
+
+          RESULT="$(curl \
             --retry 3 \
+            --retry-all-errors \
             --retry-delay 10 \
-            --max-time 120 \
+            --connect-timeout 20 \
+            --max-time 240 \
             --fail \
             --silent \
             --show-error \
-            "${BASE}?send=1"
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary "$PAYLOAD" \
+            "$ENVIAR")"
+
+          echo "$RESULT"
+
+          python - "$RESULT" <<'PY'
+          import json
+          import sys
+
+          data = json.loads(sys.argv[1])
+          if data.get("status") != "enviado":
+              raise SystemExit("Spidey não confirmou o envio")
+          if data.get("etapa") != "aguardando_aprovacao":
+              raise SystemExit("Notícia oficial não entrou em aprovação")
+          PY
 
           printf '%s\n' "$URL" > last_news.txt
 
@@ -84,4 +119,5 @@ jobs:
 
           git add last_news.txt
           git commit -m "Spidey: atualiza ultima noticia"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
