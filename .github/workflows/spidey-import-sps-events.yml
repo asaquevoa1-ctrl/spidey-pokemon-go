@@ -1,0 +1,55 @@
+name: Spidey - reenviar eventos SPS
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-import-sps-events.yml"
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aguardar deploy e enviar eventos para aprovação
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://spidey-pokemon-go.onrender.com"
+          sleep 75
+
+          echo "Enviando evento Málaga..."
+          curl --silent --show-error --fail-with-body --max-time 300 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "$BASE/enviar" <<'JSON'
+          {
+            "titulo": "📅 EVENTO • Pokémon GO na Comic-Con Málaga 2026",
+            "mensagem": "Pokémon GO estará na San Diego Comic-Con Málaga de 1 a 4 de outubro de 2026. Haverá Pikachu com fundo de localização de Málaga em Pesquisas de Campo e Pesquisa Temporária exclusivas, confete temático, PokéParadas e Ginásios adicionais, encontros surpresa com Smeargle em Instantâneo de GO e aparições de Pokémon de Paldea. O stand do centro da cidade, no Larios Centro, estará aberto a todos nos dias 2 e 3 de outubro, das 10h às 20h.\n\nFonte oficial: Pokémon GO",
+            "url": "https://pokemongo.com/es/news/comic-con-malaga-2026",
+            "coordenadas": [
+              {"lat": 36.7022833, "lon": -4.4597626},
+              {"lat": 36.7152600, "lon": -4.4327200}
+            ],
+            "gpx_nome": "pokemon-go-comic-con-malaga-2026.gpx",
+            "gerar_gpx": true,
+            "gerar_arte": true,
+            "aprovar": true
+          }
+          JSON
+
+          echo
+          echo "Enviando evento ESA..."
+          curl --silent --show-error --fail-with-body --max-time 300 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "$BASE/enviar" <<'JSON'
+          {
+            "titulo": "🚀 EVENTO • Pokémon GO x Agência Espacial Europeia",
+            "mensagem": "Pokémon GO e a Agência Espacial Europeia (ESA) anunciaram uma colaboração especial. De 4 de outubro de 2026 a 30 de abril de 2027, museus participantes na Europa terão Reides de 1 estrela com Pikachu Astronauta, Pesquisa Temporária e encontros especiais; alguns Pokémon poderão ter fundo de localização. Pikachu Astronauta pode aparecer Brilhante.\n\nDe 4 a 10 de outubro, haverá também Pesquisa de Campo e aparições aumentadas de Pikachu, Clefairy, Magnemite, Starmie, Lunatone, Solrock, Elgyem e Blipbug nos locais participantes.\n\nMuseus: Londres, Toulouse, Nuremberg, Valência, Noordwijk e Transinne. Durante 4–10 de outubro, locais da ESA em Paris, Frascati, Darmstadt, Madrid, Noordwijk, Redu e Harwell também terão o gameplay do evento, exceto fundos de localização.\n\nFonte oficial: Pokémon GO / ESA",
+            "url": "https://pokemongo.com/en/news/european-space-agency-event",
+            "gerar_gpx": false,
+            "gerar_arte": true,
+            "aprovar": true
+          }
+          JSON
