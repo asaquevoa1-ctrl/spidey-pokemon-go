@@ -11,26 +11,38 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: spidey-g47ix-check
+  cancel-in-progress: false
+
 jobs:
   verificar:
     runs-on: ubuntu-latest
+
     steps:
       - name: Baixar repositorio
         uses: actions/checkout@v5
 
-      - name: Validar Yahoo realtime por ID
+      - name: Consultar fonte G47IX pelo Render
         shell: bash
         run: |
           set -euo pipefail
-          curl -L --compressed --connect-timeout 15 --max-time 60 --fail --silent --show-error \
-            -A "Mozilla/5.0" \
-            "https://search.yahoo.co.jp/realtime/search?p=id%3Ag47ix&ei=UTF-8" \
-            -o yahoo.html
-          echo "Bytes: $(wc -c < yahoo.html)"
-          echo "Links G47IX encontrados:"
-          grep -oE 'https?://(twitter|x)\.com/g47ix/status/[0-9]+' yahoo.html | head -20 || true
-          echo "IDs de timeline:"
-          grep -oE 'tweetId[^0-9]{0,20}[0-9]{15,}' yahoo.html | head -20 || true
-          if grep -q 'totalResultsReturned' yahoo.html; then
-            grep -oE 'totalResultsReturned[^,}]+' yahoo.html | head -5 || true
-          fi
+
+          BASE="https://spidey-pokemon-go.onrender.com/check-g47ix-source"
+
+          echo "Consultando Render..."
+
+          JSON="$(curl \
+            --retry 4 \
+            --retry-all-errors \
+            --retry-delay 15 \
+            --connect-timeout 20 \
+            --max-time 180 \
+            --fail \
+            --silent \
+            --show-error \
+            "$BASE")"
+
+          echo "$JSON"
+
+          python3 -c 'import json,sys; data=json.load(sys.stdin); assert data.get("status")=="ok", data' <<< "$JSON"
