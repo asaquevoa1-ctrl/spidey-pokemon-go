@@ -44,12 +44,9 @@ if "def _botao_whatsapp(token):" not in s:
         raise SystemExit("bloco _botoes_aprovacao nao encontrado")
     s = s.replace(alvo, novo, 1)
 
-antigo_if = '    if dados.get("aprovar"):\n'
-novo_if = '    if dados.get("aprovar") or ("G47IX" in conteudo["titulo"].upper() and not dados.get("publicar_direto")):\n'
-if novo_if not in s:
-    if antigo_if not in s:
-        raise SystemExit("if de aprovacao nao encontrado")
-    s = s.replace(antigo_if, novo_if, 1)
+# O fluxo atual já exige aprovação automaticamente para títulos G47IX.
+if 'exige_aprovacao = dados.get(' not in s:
+    raise SystemExit("regra de aprovacao automatica G47IX nao encontrada")
 
 trecho = '''        gpx_nome=conteudo["gpx_nome"],
         webhook_url=DISCORD_PUBLICADOS_WEBHOOK,
