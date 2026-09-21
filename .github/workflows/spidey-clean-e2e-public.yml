@@ -1,0 +1,33 @@
+name: Spidey - limpar teste E2E final
+
+on:
+  push:
+    branches: [spidey-assets]
+    paths:
+      - ".github/workflows/spidey-clean-e2e-public.yml"
+
+jobs:
+  limpar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Limpar mensagens do teste no canal final
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          PUBLIC_CHANNEL_ID: "1550963136519999658"
+        run: |
+          python - <<'PY'
+          import os, requests
+          token=os.environ['DISCORD_BOT_TOKEN'].strip(); cid=os.environ['PUBLIC_CHANNEL_ID']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':100},timeout=30); r.raise_for_status()
+          n=0
+          for m in r.json():
+              embeds=m.get('embeds') or [{}]
+              title=str(embeds[0].get('title') or '')
+              content=str(m.get('content') or '').strip()
+              if '🧪 TESTE TÉCNICO • E2E SPIDEY' in title or content=='-89.1234567,-179.7654321':
+                  d=requests.delete(f'https://discord.com/api/v10/channels/{cid}/messages/{m["id"]}',headers=h,timeout=30)
+                  if d.status_code not in (204,404): d.raise_for_status()
+                  n+=1
+          print('LIMPOS',n)
+          PY
