@@ -1,0 +1,118 @@
+name: Spidey - teste E2E Discord
+
+on:
+  push:
+    branches: [spidey-assets]
+    paths:
+      - ".github/workflows/spidey-e2e-smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Preparar Python
+        run: python -m pip install --quiet requests
+
+      - name: Testar fluxo completo e limpar mensagens
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
+          PUBLIC_CHANNEL_ID: "1550963136519999658"
+          SPIDEY_ENDPOINT: "https://spidey-pokemon-go.onrender.com"
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, re, time, requests
+
+          token = os.environ['DISCORD_BOT_TOKEN'].strip()
+          approval = os.environ['APPROVAL_CHANNEL_ID']
+          public = os.environ['PUBLIC_CHANNEL_ID']
+          base = os.environ['SPIDEY_ENDPOINT'].rstrip('/')
+          api = 'https://discord.com/api/v10'
+          headers = {'Authorization': f'Bot {token}', 'User-Agent': 'SpideyPokemonGO/1.0'}
+          marker = '🧪 TESTE TÉCNICO • E2E SPIDEY'
+          raw_coord = '-89.1234567,-179.7654321'
+
+          def messages(cid, limit=50):
+              r = requests.get(f'{api}/channels/{cid}/messages', headers=headers, params={'limit': limit}, timeout=30)
+              r.raise_for_status()
+              return r.json()
+
+          def title(m):
+              e = (m.get('embeds') or [{}])[0]
+              return str(e.get('title') or '')
+
+          def delete(cid, mid):
+              r = requests.delete(f'{api}/channels/{cid}/messages/{mid}', headers=headers, timeout=30)
+              if r.status_code not in (204, 404):
+                  r.raise_for_status()
+
+          payload = {
+              'titulo': marker,
+              'mensagem': 'Teste técnico automático do fluxo de aprovação, publicação, coordenada e GPX.',
+              'coordenadas': [[-89.1234567, -179.7654321]],
+              'gerar_arte': False,
+              'gerar_gpx': True,
+              'gpx_nome': 'spidey-teste-e2e.gpx',
+              'aprovar': True,
+          }
+          r = requests.post(f'{base}/enviar', json=payload, timeout=60)
+          print('ENVIAR', r.status_code, r.text[:500])
+          r.raise_for_status()
+          body = r.json()
+          assert body.get('etapa') == 'aguardando_aprovacao', body
+          assert body.get('coordenadas') == 1, body
+          assert body.get('gpx') is True, body
+
+          time.sleep(2)
+          approval_msgs = messages(approval)
+          approval_test = next((m for m in approval_msgs if marker in title(m)), None)
+          assert approval_test, 'Mensagem de aprovação não chegou ao canal aguardando-aprovacao'
+          print('APROVACAO_CANAL_OK', approval_test['id'])
+
+          approve_url = None
+          for row in approval_test.get('components') or []:
+              for c in row.get('components') or []:
+                  if c.get('url') and 'aprovar' in str(c.get('label') or '').lower():
+                      approve_url = c['url']
+          if not approve_url:
+              desc = str(((approval_test.get('embeds') or [{}])[0]).get('description') or '')
+              m = re.search(r'\[APROVAR\]\((https?://[^)]+)\)', desc)
+              if m:
+                  approve_url = m.group(1)
+          assert approve_url, 'Link de aprovação não localizado'
+
+          r = requests.get(approve_url, timeout=90)
+          print('APROVAR', r.status_code)
+          r.raise_for_status()
+          assert 'Publicação aprovada' in r.text, 'Página não confirmou aprovação'
+
+          time.sleep(2)
+          # Executa a ponte imediatamente para não depender do cron de 5 minutos.
+          env = os.environ.copy()
+          import subprocess
+          subprocess.run(['python', 'scripts/discord_publish_bridge.py'], check=True, env=env)
+          time.sleep(2)
+
+          public_msgs = messages(public)
+          pub_test = next((m for m in public_msgs if marker in title(m)), None)
+          assert pub_test, 'Conteúdo aprovado não chegou ao canal publicadas-whatsapp'
+          assert any((a.get('filename') or '').endswith('.gpx') for a in (pub_test.get('attachments') or [])), 'GPX não foi preservado'
+          coord_msg = next((m for m in public_msgs if str(m.get('content') or '').strip() == raw_coord), None)
+          assert coord_msg, 'Coordenada crua separada não chegou ao canal final'
+          print('PUBLICACAO_FINAL_OK', pub_test['id'])
+          print('COORDENADA_SEPARADA_OK', coord_msg['id'])
+          print('GPX_OK')
+
+          # Limpeza: remove somente mensagens inequívocas deste teste.
+          for cid in (approval, public):
+              for m in messages(cid, 100):
+                  if marker in title(m) or str(m.get('content') or '').strip() == raw_coord:
+                      delete(cid, m['id'])
+          print('LIMPEZA_OK')
+          PY
