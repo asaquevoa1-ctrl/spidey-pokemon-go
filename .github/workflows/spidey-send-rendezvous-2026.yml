@@ -1,0 +1,46 @@
+name: Spidey - enviar Rendezvous 2026
+
+on:
+  push:
+    branches:
+      - spidey-assets
+    paths:
+      - ".github/workflows/spidey-send-rendezvous-2026.yml"
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar Rendezvous 2026 para aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+          resposta=$(curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "🇮🇳 EVENTO • Pokémon GO no Rendezvous 2026 • IIT Delhi",
+            "mensagem": "Pokémon GO estará no Rendezvous 2026, no campus do IIT Delhi, em Nova Déli, de 28 de setembro a 1º de outubro de 2026, das 10:00 às 20:00 no horário local.\n\n✨ Encontros selvagens: Bulbasaur, Charmander, Squirtle, Pikachu e Eevee; também podem aparecer Nidoran♀, Nidoran♂, Lapras e Snorlax. Todos podem aparecer Brilhantes.\n\n👾 Reides por dia:\n• 28/09 — Meowth\n• 29/09 — Psyduck\n• 30/09 — Snorlax\n• 01/10 — Lapras\n\n🔎 Desafio de Coleção com Incenso, Poké Bolas e XP.\n🎟️ Pesquisa Temporária com XP, Poké Bolas, Passe de Batalha Premium, Incenso, Doce Raro e encontros com Venusaur, Charizard e Blastoise.\n\n📍 Coordenada operacional informada pelo SPS: 28.54571,77.192767\n\n✅ Informações do evento conferidas na página oficial do Pokémon GO.",
+            "url": "https://pokemongo.com/news/pokemongo-iitdelhi-2026",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/spidey-assets/assets/spidey-rendezvous-2026.png",
+            "coordenadas": [[28.54571, 77.192767]],
+            "gerar_arte": false,
+            "gerar_gpx": true,
+            "gpx_nome": "spidey-rendezvous-iit-delhi-2026.gpx",
+            "aprovar": true
+          }
+          JSON
+          )
+          echo "$resposta"
+          python - <<'PY' "$resposta"
+          import json, sys
+          data = json.loads(sys.argv[1])
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+          assert data.get('gpx') is True, data
+          assert data.get('coordenadas') == 1, data
+          print('OK: Rendezvous 2026 enviado para aprovação com arte, coordenada e GPX')
+          PY
