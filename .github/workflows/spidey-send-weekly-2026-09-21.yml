@@ -1,0 +1,76 @@
+name: Spidey - enviar agenda semanal 21-27 setembro 2026
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-send-weekly-2026-09-21.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: spidey-assets
+          fetch-depth: 0
+
+      - name: Baixar e validar arte semanal Spidey
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --silent --show-error --fail --location \
+            "https://uc4d4873194b2534c298e705c3f1.dl.dropboxusercontent.com/cd/0/get/DIhPrTO67AQtIS2bfStDrWNeN7bQjHK3HunDVPEYYPfDFkVjRpwKQx6PwAGetVY82IfyjVXirE60wU3lrolqLWGWW977JxHRjLCewoBIuNDYhwE5hgFG5QM9rj0Gp4oNqb23DgrQa0YvBy30TXC3EXcXPeFl1Pr-3UCkY2dLXyecKA/file?c_luid=4b888265" \
+            -o assets/spidey-agenda-21-27-setembro-2026.png
+
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image
+          p = 'assets/spidey-agenda-21-27-setembro-2026.png'
+          img = Image.open(p)
+          print('Arte semanal:', img.size)
+          if img.width < 1000 or img.height < 1200:
+              raise SystemExit(f'Arte abaixo do padrão Spidey: {img.width}x{img.height}')
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/spidey-agenda-21-27-setembro-2026.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: salva agenda semanal 21-27 setembro 2026"
+            git push origin HEAD:spidey-assets
+          fi
+
+      - name: Enviar agenda semanal para aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+          resposta=$(curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "🗓️ AGENDA DA SEMANA • 21 a 27 de setembro",
+            "mensagem": "Resumo semanal do Pokémon GO detectado a partir do calendário compartilhado no SPS e conferido com fontes públicas.\n\n⚡ SEG 21 — Max Monday com Articuno, Zapdos e Moltres Dynamax.\n📺 TER 22 — encerramento do evento Pokémon Horizons: The Series + Showcase Tuesday.\n👾 QUA 23 — Xurkitree, Buzzwole e Pheromosa entram nas Reides 5★ por região; Mega Malamar; Raid Hour; início de Choose Your Path.\n🐭 QUI 24 — Spotlight Hour de Rattata, 18h–19h, com 2× XP por evolução + GO Battle Thursday.\n🤝 SEX 25 — Friendship Friday com bônus de trocas.\n🌲 SÁB 26 — Catch Mastery: Phantump + início dos City Safari em Boston, Brisbane, Lisboa, Marselha, Munique e Rio de Janeiro.\n🧭 DOM 27 — City Safari continua + Scenic Sunday.\n\nFonte operacional: SPS / calendário semanal G47IX. Dados conferidos antes do envio.",
+            "url": "https://pokemongohub.net/post/event/this-week-in-pokemon-go-september-21-27-2026/",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/spidey-assets/assets/spidey-agenda-21-27-setembro-2026.png",
+            "gerar_arte": false,
+            "gerar_gpx": false,
+            "aprovar": true
+          }
+          JSON
+          )
+          echo "$resposta"
+          python - <<'PY' "$resposta"
+          import json, sys
+          data = json.loads(sys.argv[1])
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+          assert data.get('modo_arte') == 'fornecida', data
+          print('OK: agenda semanal enviada com arte e aguardando aprovação')
+          PY
