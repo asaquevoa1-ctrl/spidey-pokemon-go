@@ -207,6 +207,26 @@ def mandar_discord(
         )
 
 
+def _coord_crua(lat, lon):
+    def numero(valor):
+        return f"{float(valor):.7f}".rstrip("0").rstrip(".")
+    return f"{numero(lat)},{numero(lon)}"
+
+
+def mandar_discord_texto_puro(texto, webhook_url=None):
+    webhook_url = webhook_url or DISCORD_WEBHOOK
+    if not webhook_url:
+        raise RuntimeError("Webhook do Discord não configurado.")
+    resposta = requests.post(webhook_url, json={"content": str(texto)[:2000]}, timeout=15)
+    if not resposta.ok:
+        raise RuntimeError(f"Discord texto HTTP {resposta.status_code}: {resposta.text[:500]}")
+
+
+def mandar_coordenadas_cruas(coordenadas, webhook_url=None):
+    for lat, lon in coordenadas or []:
+        mandar_discord_texto_puro(_coord_crua(lat, lon), webhook_url=webhook_url)
+
+
 def _coordenadas_explicitas(valor):
     """Aceita lista [[lat, lon], ...] ou lista de objetos {lat, lon}."""
     if not isinstance(valor, list):
@@ -464,9 +484,13 @@ def aprovar():
             "#ffb84d",
         ), 503
 
+    mensagem_publicada = conteudo["mensagem_original"]
+    if conteudo["gpx_bytes"]:
+        mensagem_publicada += "\n\n🗺️ Arquivo GPX anexado."
+
     mandar_discord(
         f"✅ APROVADO • {conteudo['titulo']}",
-        conteudo["mensagem"],
+        mensagem_publicada,
         url=conteudo["url"],
         imagem_bytes=conteudo["imagem_bytes"],
         gpx_bytes=conteudo["gpx_bytes"],
@@ -474,6 +498,7 @@ def aprovar():
         webhook_url=DISCORD_PUBLICADOS_WEBHOOK,
         components=_botao_whatsapp(token),
     )
+    mandar_coordenadas_cruas(conteudo["coordenadas"], webhook_url=DISCORD_PUBLICADOS_WEBHOOK)
     tokens_processados.add(token_id)
 
     return _html_resultado(
@@ -495,8 +520,7 @@ def whatsapp():
     titulo = str(dados.get("titulo") or "Spidey Pokémon GO")
     mensagem = str(dados.get("mensagem") or "").strip()
     coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))
-    if coordenadas:
-        mensagem += "\n\n📍 Coordenadas:\n" + formatar_coordenadas(coordenadas)
+    coordenadas_cruas = [_coord_crua(lat, lon) for lat, lon in coordenadas]
     url = dados.get("url")
     if url:
         mensagem += f"\n\n🔗 Fonte: {url}"
@@ -508,6 +532,10 @@ def whatsapp():
         texto.replace("&", "&amp;")
         .replace("<", "&lt;")
         .replace(">", "&gt;")
+    )
+    coords_html = "".join(
+        f'<div class="coord"><code>{c}</code><button class="mini" data-coord="{c}" onclick="copiarCoord(this.dataset.coord)">É só copiar</button></div>'
+        for c in coordenadas_cruas
     )
 
     return f"""<!doctype html>
@@ -521,6 +549,8 @@ body{{margin:0;background:#07192f;color:#fff;font-family:Arial,sans-serif;paddin
 h1{{margin:8px 0 16px;color:#57e389}}textarea{{width:100%;min-height:260px;box-sizing:border-box;border:0;border-radius:16px;padding:16px;font-size:16px;line-height:1.45;background:#f7fbff;color:#10213b}}
 .btn{{display:block;text-align:center;text-decoration:none;border:0;border-radius:16px;padding:15px;margin-top:12px;font-weight:700;font-size:17px;cursor:pointer}}
 .wa{{background:#25D366;color:#062d16}}.copy{{background:#dcecff;color:#0b2a55}}
+.coord{{display:flex;gap:10px;align-items:center;margin-top:12px;padding:12px;border-radius:14px;background:#07192f}}
+.coord code{{flex:1;font-size:17px;word-break:break-all}}.mini{{border:0;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer}}
 small{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}
 </style>
 </head>
@@ -528,11 +558,13 @@ small{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}
 <textarea id="texto" readonly>{texto_html}</textarea>
 <button class="btn copy" onclick="copiar()">📋 Copiar texto</button>
 <a class="btn wa" href="{wa_url}">📲 Abrir WhatsApp</a>
-<small>A arte aprovada continua na publicação do Discord. No WhatsApp, selecione o seu Canal e publique a arte junto com este texto.</small>
+{('<h2 style="margin-top:22px">📍 Coordenadas</h2><div style="color:#b9c9df">É só copiar</div>' + coords_html) if coordenadas_cruas else ''}
+<small>A arte aprovada continua na publicação do Discord. No WhatsApp, selecione o seu Canal, publique a arte e o texto; quando houver coordenadas, envie cada coordenada separadamente.</small>
 </div>
 <script>
 const texto = {texto_js};
 async function copiar(){{await navigator.clipboard.writeText(texto); const b=document.querySelector('.copy'); b.textContent='✅ Texto copiado';}}
+async function copiarCoord(valor){{await navigator.clipboard.writeText(valor);}}
 </script></body></html>"""
 
 
