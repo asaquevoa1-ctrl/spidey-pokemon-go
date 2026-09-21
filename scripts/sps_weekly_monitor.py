@@ -1,9 +1,12 @@
 import json
 import os
 import re
+import subprocess
 import sys
+import tempfile
 import unicodedata
 from pathlib import Path
+from urllib.parse import urlparse
 
 import requests
 
@@ -45,9 +48,61 @@ def _texto_mensagem(msg: dict) -> str:
     return "\n\n".join(partes).strip()
 
 
+def _anexos_imagem(msg: dict) -> list[dict]:
+    imagens = []
+    for anexo in msg.get("attachments") or []:
+        url = str(anexo.get("url") or "").strip()
+        tipo = str(anexo.get("content_type") or "").lower()
+        nome = str(anexo.get("filename") or "").lower()
+        if not url:
+            continue
+        if tipo.startswith("image/") or nome.endswith((".png", ".jpg", ".jpeg", ".webp")):
+            imagens.append(anexo)
+    return imagens
+
+
+def _ocr_anexo(anexo: dict) -> str:
+    url = str(anexo.get("url") or "").strip()
+    if not url:
+        return ""
+
+    resposta = requests.get(url, timeout=45)
+    resposta.raise_for_status()
+
+    nome = str(anexo.get("filename") or "imagem.png")
+    sufixo = Path(urlparse(nome).path).suffix or ".png"
+    with tempfile.NamedTemporaryFile(suffix=sufixo) as arquivo:
+        arquivo.write(resposta.content)
+        arquivo.flush()
+        processo = subprocess.run(
+            ["tesseract", arquivo.name, "stdout", "-l", "eng", "--psm", "6"],
+            capture_output=True,
+            text=True,
+            timeout=60,
+            check=False,
+        )
+    if processo.returncode != 0:
+        print(f"OCR SPS falhou: {processo.stderr[:300]}", flush=True)
+        return ""
+    return processo.stdout.strip()
+
+
+def _ocr_mensagem(msg: dict) -> str:
+    partes = []
+    for anexo in _anexos_imagem(msg)[:2]:
+        try:
+            texto = _ocr_anexo(anexo)
+            if texto:
+                partes.append(texto)
+        except Exception as erro:
+            print(f"Falha ao ler imagem SPS: {erro}", flush=True)
+    return "\n\n".join(partes).strip()
+
+
 def _parece_eventos_da_semana(texto: str) -> bool:
     t = _sem_acentos(texto)
     marcadores_semana = (
+        "go weekly",
         "events this week",
         "event this week",
         "this week's events",
@@ -60,16 +115,69 @@ def _parece_eventos_da_semana(texto: str) -> bool:
         "esta semana",
     )
     tem_semana = any(m in t for m in marcadores_semana)
-    tem_evento = any(m in t for m in ("event", "evento", "raid", "spotlight", "research", "community"))
+    tem_evento = any(
+        m in t
+        for m in (
+            "event",
+            "evento",
+            "raid",
+            "spotlight",
+            "research",
+            "community",
+            "max monday",
+            "showcase tuesday",
+            "friendship friday",
+            "scenic sunday",
+        )
+    )
 
-    # Datas comuns em posts semanais, sem exigir um formato específico.
     datas = re.findall(
         r"\b(?:mon|tue|wed|thu|fri|sat|sun|monday|tuesday|wednesday|thursday|friday|saturday|sunday|"
-        r"segunda|terca|quarta|quinta|sexta|sabado|domingo|sep|sept|oct|nov|dec|"
-        r"set|out|nov|dez|\d{1,2}[/-]\d{1,2})\b",
+        r"segunda|terca|quarta|quinta|sexta|sabado|domingo|sep|sept|september|oct|nov|dec|"
+        r"set|out|nov|dez|\d{1,2}[/-]\d{1,2}|\d{1,2}\s*(?:-|–)\s*\d{1,2})\b",
         t,
     )
     return tem_semana and tem_evento and len(datas) >= 1
+
+
+def _extrair_blocos_relevantes(texto: str) -> str:
+    linhas = [re.sub(r"\s+", " ", l).strip() for l in texto.splitlines()]
+    linhas = [l for l in linhas if l]
+    marcadores = (
+        "max monday",
+        "showcase tuesday",
+        "raid hour",
+        "go battle thursday",
+        "friendship friday",
+        "scenic sunday",
+        "new raids",
+        "mega raids",
+        "pokemon horizons",
+        "pokémon horizons",
+        "choose your path",
+        "spotlight hour",
+        "catch mastery",
+        "city safari",
+        "21-27 september",
+        "21 - 27 september",
+        "21–27 september",
+    )
+
+    escolhidas = []
+    vistos = set()
+    for i, linha in enumerate(linhas):
+        normal = _sem_acentos(linha)
+        if not any(m in normal for m in marcadores):
+            continue
+        for trecho in linhas[i : min(i + 3, len(linhas))]:
+            chave = _sem_acentos(trecho)
+            if chave not in vistos:
+                vistos.add(chave)
+                escolhidas.append(trecho)
+
+    if escolhidas:
+        return "\n".join(escolhidas)
+    return re.sub(r"\n{3,}", "\n\n", texto).strip()
 
 
 def _ler_ultimo_id() -> str:
@@ -113,12 +221,13 @@ def _url_mensagem(msg: dict) -> str | None:
 
 
 def _montar_payload(msg: dict, texto: str) -> dict:
-    limpo = re.sub(r"\n{3,}", "\n\n", texto).strip()
+    limpo = _extrair_blocos_relevantes(texto)
+    limpo = re.sub(r"\n{3,}", "\n\n", limpo).strip()
     if len(limpo) > 3300:
         limpo = limpo[:3297].rstrip() + "..."
 
     mensagem = (
-        "📅 Resumo semanal detectado automaticamente no SPS.\n\n"
+        "📅 Calendário semanal detectado automaticamente no SPS.\n\n"
         f"{limpo}\n\n"
         "🔎 Fonte operacional: SPS\n"
         "🕷️ O Spidey só publica depois da sua aprovação."
@@ -138,7 +247,6 @@ def _montar_payload(msg: dict, texto: str) -> dict:
 def _enviar_spidey(payload: dict) -> bool:
     resposta = requests.post(SPIDEY_ENDPOINT, json=payload, timeout=150)
 
-    # Sem arte premium, o Spidey deve segurar o post e tentar novamente depois.
     if resposta.status_code == 503:
         try:
             diagnostico = resposta.json()
@@ -167,7 +275,6 @@ def main() -> int:
 
     ultimo_id = _ler_ultimo_id()
 
-    # A API do Discord retorna da mais nova para a mais antiga.
     for msg in mensagens:
         message_id = str(msg.get("id") or "").strip()
         if not message_id or message_id == ultimo_id:
@@ -176,6 +283,11 @@ def main() -> int:
             continue
 
         texto = _texto_mensagem(msg)
+        if not _parece_eventos_da_semana(texto) and _anexos_imagem(msg):
+            ocr = _ocr_mensagem(msg)
+            if ocr:
+                texto = "\n\n".join(p for p in (texto, ocr) if p).strip()
+
         if not texto or not _parece_eventos_da_semana(texto):
             continue
 
