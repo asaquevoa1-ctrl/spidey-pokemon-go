@@ -159,20 +159,27 @@ def mandar_discord(
             timeout=15,
         )
 
-    if not resposta.ok and components and (imagem_bytes or gpx_bytes):
+    if not resposta.ok and components:
         print(
-            f"Discord recusou anexos + componentes ({resposta.status_code}); usando fallback em duas mensagens.",
+            f"Discord recusou componentes ({resposta.status_code}); reenviando conteúdo sem botões.",
             flush=True,
         )
         payload_conteudo = dict(payload)
         payload_conteudo.pop("components", None)
-        payload_conteudo.pop("attachments", None)
-        resposta_conteudo = requests.post(
-            webhook_url,
-            data={"payload_json": json.dumps(payload_conteudo, ensure_ascii=False)},
-            files=files,
-            timeout=60,
-        )
+        if imagem_bytes or gpx_bytes:
+            payload_conteudo.pop("attachments", None)
+            resposta_conteudo = requests.post(
+                webhook_url,
+                data={"payload_json": json.dumps(payload_conteudo, ensure_ascii=False)},
+                files=files,
+                timeout=60,
+            )
+        else:
+            resposta_conteudo = requests.post(
+                webhook_url,
+                json=payload_conteudo,
+                timeout=15,
+            )
         if not resposta_conteudo.ok:
             raise RuntimeError(
                 f"Discord conteúdo HTTP {resposta_conteudo.status_code}: {resposta_conteudo.text[:500]}"
