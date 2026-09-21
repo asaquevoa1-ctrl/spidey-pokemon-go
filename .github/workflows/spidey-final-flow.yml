@@ -1,0 +1,95 @@
+name: Spidey - finalizar fluxo Discord e WhatsApp
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-final-flow.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ajustar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Ajustar publicação final
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path("bot.py")
+          s = p.read_text(encoding="utf-8")
+
+          helper_anchor = '''    if not resposta.ok:\n        raise RuntimeError(\n            f"Discord HTTP {resposta.status_code}: {resposta.text[:500]}"\n        )\n\n\ndef _coordenadas_explicitas(valor):\n'''
+          helper_repl = '''    if not resposta.ok:\n        raise RuntimeError(\n            f"Discord HTTP {resposta.status_code}: {resposta.text[:500]}"\n        )\n\n\ndef _coord_crua(lat, lon):\n    def numero(valor):\n        return f"{float(valor):.7f}".rstrip("0").rstrip(".")\n    return f"{numero(lat)},{numero(lon)}"\n\n\ndef mandar_discord_texto_puro(texto, webhook_url=None):\n    webhook_url = webhook_url or DISCORD_WEBHOOK\n    if not webhook_url:\n        raise RuntimeError("Webhook do Discord não configurado.")\n    resposta = requests.post(\n        webhook_url,\n        json={"content": str(texto)[:2000]},\n        timeout=15,\n    )\n    if not resposta.ok:\n        raise RuntimeError(\n            f"Discord texto HTTP {resposta.status_code}: {resposta.text[:500]}"\n        )\n\n\ndef mandar_coordenadas_cruas(coordenadas, webhook_url=None):\n    for lat, lon in coordenadas or []:\n        mandar_discord_texto_puro(_coord_crua(lat, lon), webhook_url=webhook_url)\n\n\ndef _coordenadas_explicitas(valor):\n'''
+          if "def mandar_coordenadas_cruas" not in s:
+              if helper_anchor not in s:
+                  raise SystemExit("Anchor helper não localizado")
+              s = s.replace(helper_anchor, helper_repl, 1)
+
+          approve_anchor = '''    mandar_discord(\n        f"✅ APROVADO • {conteudo['titulo']}",\n        conteudo["mensagem"],\n        url=conteudo["url"],\n        imagem_bytes=conteudo["imagem_bytes"],\n        gpx_bytes=conteudo["gpx_bytes"],\n        gpx_nome=conteudo["gpx_nome"],\n        webhook_url=DISCORD_PUBLICADOS_WEBHOOK,\n        components=_botao_whatsapp(token),\n    )\n    tokens_processados.add(token_id)\n'''
+          approve_repl = '''    mensagem_publicada = conteudo["mensagem_original"]\n    if conteudo["gpx_bytes"]:\n        mensagem_publicada += "\\n\\n🗺️ Arquivo GPX anexado."\n\n    mandar_discord(\n        f"✅ APROVADO • {conteudo['titulo']}",\n        mensagem_publicada,\n        url=conteudo["url"],\n        imagem_bytes=conteudo["imagem_bytes"],\n        gpx_bytes=conteudo["gpx_bytes"],\n        gpx_nome=conteudo["gpx_nome"],\n        webhook_url=DISCORD_PUBLICADOS_WEBHOOK,\n        components=_botao_whatsapp(token),\n    )\n    mandar_coordenadas_cruas(\n        conteudo["coordenadas"],\n        webhook_url=DISCORD_PUBLICADOS_WEBHOOK,\n    )\n    tokens_processados.add(token_id)\n'''
+          if "mensagem_publicada = conteudo[\"mensagem_original\"]" not in s:
+              if approve_anchor not in s:
+                  raise SystemExit("Anchor aprovação não localizado")
+              s = s.replace(approve_anchor, approve_repl, 1)
+
+          wa_anchor = '''    mensagem = str(dados.get("mensagem") or "").strip()\n    coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))\n    if coordenadas:\n        mensagem += "\\n\\n📍 Coordenadas:\\n" + formatar_coordenadas(coordenadas)\n    url = dados.get("url")\n'''
+          wa_repl = '''    mensagem = str(dados.get("mensagem") or "").strip()\n    coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))\n    coordenadas_cruas = [_coord_crua(lat, lon) for lat, lon in coordenadas]\n    url = dados.get("url")\n'''
+          if "coordenadas_cruas = [_coord_crua" not in s:
+              if wa_anchor not in s:
+                  raise SystemExit("Anchor WhatsApp não localizado")
+              s = s.replace(wa_anchor, wa_repl, 1)
+
+          html_anchor = '''    texto_js = json.dumps(texto, ensure_ascii=False)\n    texto_html = (\n        texto.replace("&", "&amp;")\n        .replace("<", "&lt;")\n        .replace(">", "&gt;")\n    )\n\n    return f"""<!doctype html>\n'''
+          html_repl = '''    texto_js = json.dumps(texto, ensure_ascii=False)\n    texto_html = (\n        texto.replace("&", "&amp;")\n        .replace("<", "&lt;")\n        .replace(">", "&gt;")\n    )\n    coords_html = "".join(\n        f'<div class="coord"><code>{c}</code><button class="mini" onclick=\'copiarCoord({json.dumps(c)})\'>É só copiar</button></div>'\n        for c in coordenadas_cruas\n    )\n\n    return f"""<!doctype html>\n'''
+          if "coords_html = \"\".join" not in s:
+              if html_anchor not in s:
+                  raise SystemExit("Anchor HTML não localizado")
+              s = s.replace(html_anchor, html_repl, 1)
+
+          css_anchor = '''.wa{{background:#25D366;color:#062d16}}.copy{{background:#dcecff;color:#0b2a55}}\nsmall{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}\n'''
+          css_repl = '''.wa{{background:#25D366;color:#062d16}}.copy{{background:#dcecff;color:#0b2a55}}\n.coord{{display:flex;gap:10px;align-items:center;margin-top:12px;padding:12px;border-radius:14px;background:#07192f}}\n.coord code{{flex:1;font-size:17px;word-break:break-all}}.mini{{border:0;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer}}\nsmall{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}\n'''
+          if ".coord{{display:flex" not in s:
+              if css_anchor not in s:
+                  raise SystemExit("Anchor CSS não localizado")
+              s = s.replace(css_anchor, css_repl, 1)
+
+          body_anchor = '''<button class="btn copy" onclick="copiar()">📋 Copiar texto</button>\n<a class="btn wa" href="{wa_url}">📲 Abrir WhatsApp</a>\n<small>A arte aprovada continua na publicação do Discord. No WhatsApp, selecione o seu Canal e publique a arte junto com este texto.</small>\n'''
+          body_repl = '''<button class="btn copy" onclick="copiar()">📋 Copiar texto</button>\n<a class="btn wa" href="{wa_url}">📲 Abrir WhatsApp</a>\n{('<h2 style="margin-top:22px">📍 Coordenadas</h2><div style="color:#b9c9df">É só copiar</div>' + coords_html) if coordenadas_cruas else ''}\n<small>A arte aprovada continua na publicação do Discord. No WhatsApp, selecione o seu Canal, publique a arte e o texto; quando houver coordenadas, envie cada coordenada separadamente.</small>\n'''
+          if "envie cada coordenada separadamente" not in s:
+              if body_anchor not in s:
+                  raise SystemExit("Anchor body não localizado")
+              s = s.replace(body_anchor, body_repl, 1)
+
+          js_anchor = '''async function copiar(){{await navigator.clipboard.writeText(texto); const b=document.querySelector('.copy'); b.textContent='✅ Texto copiado';}}\n</script></body></html>"""\n'''
+          js_repl = '''async function copiar(){{await navigator.clipboard.writeText(texto); const b=document.querySelector('.copy'); b.textContent='✅ Texto copiado';}}\nasync function copiarCoord(valor){{await navigator.clipboard.writeText(valor);}}\n</script></body></html>"""\n'''
+          if "copiarCoord(valor)" not in s:
+              if js_anchor not in s:
+                  raise SystemExit("Anchor JS não localizado")
+              s = s.replace(js_anchor, js_repl, 1)
+
+          p.write_text(s, encoding="utf-8")
+          PY
+
+          python -m py_compile bot.py
+
+      - name: Commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: coordenadas separadas e WhatsApp mais prático"
+            git push origin HEAD:main
+          fi
