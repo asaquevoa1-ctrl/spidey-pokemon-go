@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
-      POKEMINERS_CHANNEL_ID: ${{ secrets.POKEMINERS_CHANNEL_ID }}
+      POKEMINERS_CHANNEL_ID: "1550962794814373898"
       POKEMINERS_CHANNEL_NAME: "📥・entrada-pokeminers"
       SPIDEY_ENDPOINT: https://spidey-pokemon-go.onrender.com/enviar
     steps:
@@ -233,7 +233,7 @@ jobs:
                   return None
 
           unseen = []
-          for msg in messages:  # Discord retorna mais nova primeiro
+          for msg in messages:
               mid = str(msg.get("id") or "").strip()
               if not mid:
                   continue
