@@ -1,0 +1,71 @@
+name: Spidey - enviar Malaga exclusiva para aprovacao
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-send-malaga-exclusive.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Baixar arte exclusiva e publicar no repositorio
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --silent --show-error --fail --location \
+            "https://ucb868532c43063049f55851694b.dl.dropboxusercontent.com/cd/0/get/DIjgFaoSTOgVSxCoYShGc6MyzD8BRMx40MuRPVQ1SW5FE1rJGGelT5n54nZ_kyP2iHXzUjCVlRIHmTy3b-ZgDtiKvAgi-we6zBVhuWqgIubC0GnciLTEKq7or2mLF7d5tllvIG-nUXtgBuw5T6j4YzUCfw6PaGyZr9A8AdlSROhPkA/file?c_luid=4b888265" \
+            -o assets/spidey-comic-con-malaga-2026-exclusive.png
+
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image
+          p = 'assets/spidey-comic-con-malaga-2026-exclusive.png'
+          img = Image.open(p)
+          print('Arte:', img.size)
+          if img.width < 1000 or img.height < 1200:
+              raise SystemExit(f'Arte abaixo do minimo: {img.width}x{img.height}')
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/spidey-comic-con-malaga-2026-exclusive.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: salva arte exclusiva Comic-Con Malaga 2026"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Enviar Malaga para aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "🎟️ EVENTO • Comic-Con Málaga 2026 x Pokémon GO",
+            "mensagem": "Pokémon GO estará na Comic-Con Málaga de 1 a 4 de outubro. Pikachu temático poderá ser encontrado em 3 locais por Pesquisa Temporária e Pesquisa de Campo.\n\nFonte oficial: Pokémon GO / Comic-Con Málaga",
+            "url": "https://pokemongo.com/es/news/comic-con-malaga-2026",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/spidey-comic-con-malaga-2026-exclusive.png",
+            "gerar_arte": false,
+            "aprovar": true,
+            "coordenadas": [
+              [36.70477, -4.459977],
+              [36.71477, -4.43222],
+              [36.72077, -4.42155]
+            ],
+            "gerar_gpx": true,
+            "gpx_nome": "pokemon-go-comic-con-malaga-2026.gpx"
+          }
+          JSON
