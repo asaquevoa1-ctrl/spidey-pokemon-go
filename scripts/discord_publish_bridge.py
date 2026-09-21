@@ -9,6 +9,7 @@ PUBLIC_CHANNEL_ID = os.getenv("PUBLIC_CHANNEL_ID", "1550963136519999658").strip(
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 API = "https://discord.com/api/v10"
 COORD_RE = re.compile(r"^-?\d{1,2}(?:\.\d+)?,-?\d{1,3}(?:\.\d+)?$")
+TEST_MARKERS = ("🧪 TESTE TÉCNICO • E2E SPIDEY",)
 
 if not TOKEN:
     raise SystemExit("DISCORD_BOT_TOKEN ausente")
@@ -163,6 +164,10 @@ def main():
         embeds = m.get("embeds") or []
         title = str((embeds[0] if embeds else {}).get("title") or "").strip()
         content = str(m.get("content") or "").strip()
+
+        if any(marker in title or marker in content for marker in TEST_MARKERS):
+            active_new = False
+            continue
 
         if title.startswith("✅ APROVADO"):
             sig = signature(m)
