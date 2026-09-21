@@ -19,34 +19,34 @@ jobs:
           ref: spidey-assets
           fetch-depth: 0
 
-      - name: Salvar arte Rendezvous no repositorio
+      - name: Salvar arte corrigida Rendezvous no repositorio
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p assets
           curl --silent --show-error --fail --location \
-            "https://uc0626c297c9ae6288dfc395e146.dl.dropboxusercontent.com/cd/0/get/DInypa1seKBKJ0ztY_G8KOyGxjhsXk6z-91j3ZMYpr1KkH6EZtUA-DgYHT7L7CfF7RkxMyx4DahzydRKopmKlTDj3Kd4GlUsfZUm4nHC-_tDyPGN24EHBq5UwdAvXeqyOdWRqHmDJUfxIQ5smpe_kM4DZJILkezClj9QEYpz-_JN4w/file?c_luid=4b888265" \
-            -o assets/spidey-rendezvous-2026.jpg
+            "https://uc83542721c4310fcec23a809804.dl.dropboxusercontent.com/cd/0/get/DInThDYSr-avah7oxwdC-JVwlOCciDxfUe2RGz-mG3q1b0CQ0vHWixyD1qBJy7O1Xmo-Hs2clnt4cPgllWYxo-QN4G5vYgHJ-ys7gIkpvQDFujsUJpzxy3TmevF5Za_idbKjNyz0HVBtfgQuFMXb7qIKCp1dWmADEdtfYLnV2KIKXA/file?c_luid=4b888265" \
+            -o assets/spidey-rendezvous-2026-v2.png
 
           python -m pip install --quiet pillow
           python - <<'PY'
           from PIL import Image
-          p = 'assets/spidey-rendezvous-2026.jpg'
+          p = 'assets/spidey-rendezvous-2026-v2.png'
           img = Image.open(p)
           print('Arte:', img.size)
           if img.width < 1000 or img.height < 1200:
-              raise SystemExit(f'Arte abaixo do mínimo: {img.width}x{img.height}')
+              raise SystemExit(f'Arte abaixo do minimo: {img.width}x{img.height}')
           PY
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/spidey-rendezvous-2026.jpg
+          git add assets/spidey-rendezvous-2026-v2.png
           if ! git diff --cached --quiet; then
-            git commit -m "Spidey: salva arte Rendezvous 2026"
+            git commit -m "Spidey: salva arte corrigida Rendezvous 2026"
             git push origin HEAD:spidey-assets
           fi
 
-      - name: Enviar Rendezvous 2026 para aprovacao
+      - name: Enviar Rendezvous 2026 corrigido para aprovacao
         shell: bash
         run: |
           set -euo pipefail
@@ -59,7 +59,7 @@ jobs:
             "titulo": "🇮🇳 EVENTO • Pokémon GO no Rendezvous 2026 • IIT Delhi",
             "mensagem": "Pokémon GO estará no Rendezvous 2026, no campus do IIT Delhi, em Nova Déli, de 28 de setembro a 1º de outubro de 2026, das 10:00 às 20:00 no horário local.\n\n✨ Encontros selvagens: Bulbasaur, Charmander, Squirtle, Pikachu e Eevee; também podem aparecer Nidoran♀, Nidoran♂, Lapras e Snorlax. Todos podem aparecer Brilhantes.\n\n👾 Reides por dia:\n• 28/09 — Meowth\n• 29/09 — Psyduck\n• 30/09 — Snorlax\n• 01/10 — Lapras\n\n🔎 Desafio de Coleção com Incenso, Poké Bolas e XP.\n🎟️ Pesquisa Temporária com XP, Poké Bolas, Passe de Batalha Premium, Incenso, Doce Raro e encontros com Venusaur, Charizard e Blastoise.\n\n📍 Coordenada operacional informada pelo SPS: 28.54571,77.192767\n\n✅ Informações do evento conferidas na página oficial do Pokémon GO.",
             "url": "https://pokemongo.com/news/pokemongo-iitdelhi-2026",
-            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/spidey-assets/assets/spidey-rendezvous-2026.jpg",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/spidey-assets/assets/spidey-rendezvous-2026-v2.png",
             "coordenadas": [[28.54571, 77.192767]],
             "gerar_arte": false,
             "gerar_gpx": true,
@@ -77,5 +77,5 @@ jobs:
           assert data.get('arte') is True, data
           assert data.get('gpx') is True, data
           assert data.get('coordenadas') == 1, data
-          print('OK: Rendezvous 2026 enviado para aprovação com arte, coordenada e GPX')
+          print('OK: Rendezvous 2026 corrigido enviado para aprovação com arte, coordenada e GPX')
           PY
