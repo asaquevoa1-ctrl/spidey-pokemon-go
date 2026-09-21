@@ -1,0 +1,39 @@
+name: Spidey - PokeMiners forced update 0.429.1
+
+on:
+  push:
+    branches:
+      - spidey-assets
+    paths:
+      - ".github/workflows/spidey-send-pokeminers-04291.yml"
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar atualização PokeMiners para aprovação
+        shell: bash
+        run: |
+          set -euo pipefail
+          resposta=$(curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "⚙️ ATUALIZAÇÃO • Pokémon GO 0.429.1",
+            "mensagem": "O PokeMiners detectou uma atualização forçada da API do Pokémon GO.\n\n📦 Versão anterior: 0.427.0\n🆕 Nova versão: 0.429.1\n⚠️ Tipo: atualização forçada\n\nIsso normalmente indica que jogadores precisarão estar na nova versão para continuar acessando o jogo.\n\n🔎 Fonte operacional: PokeMiners #miner-bot\n🕷️ Conteúdo aguardando sua aprovação antes da publicação.",
+            "gerar_gpx": false,
+            "gerar_arte": false,
+            "aprovar": true
+          }
+          JSON
+          )
+          echo "$resposta"
+          python - <<'PY' "$resposta"
+          import json, sys
+          data = json.loads(sys.argv[1])
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          print('OK: atualização 0.429.1 do PokeMiners enviada para aprovação')
+          PY
