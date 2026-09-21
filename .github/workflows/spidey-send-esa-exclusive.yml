@@ -1,0 +1,76 @@
+name: Spidey - enviar ESA exclusiva para aprovacao
+
+on:
+  push:
+    paths:
+      - ".github/workflows/spidey-send-esa-exclusive.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: spidey-assets
+          fetch-depth: 0
+
+      - name: Baixar e validar arte exclusiva ESA
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --silent --show-error --fail --location \
+            "https://uc9185dc4817497fb1fc01a32a82.dl.dropboxusercontent.com/cd/0/get/DIhJ9V3d_k5D-NoA5hO4vHhkcbWzL2sY6oNfCTQ5-sELYfWOk2u8foT8i8K8DMONz3ApLJs50mRBSzaVIF14alN_XGDiu-PHi9vVviBWQtfHVzZSj-eH67HKwsy14WkMfRczuwmVkQLKxw5QgE6jMrEdBe5uy0MxBmPHrnVmzE4PWw/file?c_luid=4b888265" \
+            -o assets/spidey-esa-astronauta-2026-exclusive.png
+
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from PIL import Image
+          p = 'assets/spidey-esa-astronauta-2026-exclusive.png'
+          img = Image.open(p)
+          print('Arte ESA:', img.size)
+          if img.width < 1000 or img.height < 1200:
+              raise SystemExit(f'Arte abaixo do padrão Spidey: {img.width}x{img.height}')
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/spidey-esa-astronauta-2026-exclusive.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: salva arte exclusiva ESA Astronauta 2026"
+            git push origin HEAD:spidey-assets
+          fi
+
+      - name: Enviar evento ESA para aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+          resposta=$(curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "🚀 EVENTO • Pokémon GO x ESA • Pikachu Astronauta",
+            "mensagem": "Pokémon GO e a Agência Espacial Europeia terão um evento especial em museus de ciência e espaço pela Europa de 4 de outubro de 2026 a 30 de abril de 2027.\n\n🚀 Pikachu Astronauta em Reides de 1 estrela\n✨ Pode ser Shiny\n🛰️ Reides presenciais nos museus podem render Pikachu Astronauta com Fundo de Localização\n🔭 Pesquisa Temporária durante todo o período\n📡 De 4 a 10 de outubro: Pesquisa de Campo e aparições aumentadas de Pikachu, Clefairy, Magnemite, Starmie, Lunatone, Solrock, Elgyem e Blipbug\n\nMuseus participantes: Londres, Toulouse, Nuremberg, Valência, Noordwijk e Transinne.\n\nFonte oficial: Pokémon GO / ESA",
+            "url": "https://pokemongo.com/en/news/european-space-agency-event",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/spidey-assets/assets/spidey-esa-astronauta-2026-exclusive.png",
+            "gerar_arte": false,
+            "gerar_gpx": false,
+            "aprovar": true
+          }
+          JSON
+          )
+          echo "$resposta"
+          python - <<'PY' "$resposta"
+          import json, sys
+          data = json.loads(sys.argv[1])
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+          assert data.get('modo_arte') == 'fornecida', data
+          print('OK: ESA enviada com arte fornecida e aguardando aprovação')
+          PY
