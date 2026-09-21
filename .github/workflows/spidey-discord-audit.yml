@@ -1,0 +1,63 @@
+name: Spidey - auditoria Discord
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-discord-audit.yml"
+  workflow_dispatch:
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descobrir canais e fluxo atual
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          GUILD_ID: "1139279003451150467"
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, urllib.error
+
+          token = os.environ["DISCORD_BOT_TOKEN"].strip()
+          guild_id = os.environ["GUILD_ID"].strip()
+          headers = {
+              "Authorization": f"Bot {token}",
+              "User-Agent": "SpideyPokemonGO/1.0",
+              "Accept": "application/json",
+          }
+
+          def get(url):
+              req = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return json.loads(r.read().decode("utf-8"))
+
+          canais = get(f"https://discord.com/api/v10/guilds/{guild_id}/channels")
+          alvos = ("aguardando-aprovacao", "publicadas-whatsapp", "noticias-oficiais", "entrada-pokeminers")
+          encontrados = []
+          for c in canais:
+              nome = str(c.get("name") or "")
+              if any(a in nome.lower() for a in alvos):
+                  encontrados.append((nome, str(c.get("id")), c.get("type")))
+
+          print("CANAIS SPIDEY ENCONTRADOS:")
+          for nome, cid, tipo in encontrados:
+              print(f"- {nome} | {cid} | type={tipo}")
+              try:
+                  msgs = get(f"https://discord.com/api/v10/channels/{cid}/messages?limit=5")
+              except urllib.error.HTTPError as e:
+                  print(f"  sem leitura de mensagens: HTTP {e.code}")
+                  continue
+              for m in msgs[:5]:
+                  autor = ((m.get("author") or {}).get("username") or "?")
+                  texto = str(m.get("content") or "").replace("\n", " ").strip()
+                  if not texto:
+                      embeds = m.get("embeds") or []
+                      if embeds:
+                          texto = str((embeds[0] or {}).get("title") or (embeds[0] or {}).get("description") or "").replace("\n", " ").strip()
+                  print(f"  msg {m.get('id')} | {autor} | {texto[:180]}")
+
+          if not encontrados:
+              raise SystemExit("Nenhum canal-alvo encontrado.")
+          PY
