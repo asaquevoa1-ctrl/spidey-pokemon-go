@@ -1,0 +1,29 @@
+name: Spidey - healthcheck Render
+
+on:
+  push:
+    branches:
+      - spidey-assets
+    paths:
+      - ".github/workflows/spidey-healthcheck-render.yml"
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Aguardar Render voltar
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://spidey-pokemon-go.onrender.com/"
+          for i in $(seq 1 12); do
+            code=$(curl -L -sS -o /tmp/body.txt -w "%{http_code}" --max-time 20 "$URL" || true)
+            echo "Tentativa $i: HTTP $code"
+            if [ "$code" = "200" ]; then
+              cat /tmp/body.txt
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "Render não voltou a HTTP 200 dentro da janela de verificação."
+          exit 1
