@@ -23,6 +23,7 @@ jobs:
     env:
       DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
       POKEMINERS_CHANNEL_ID: ${{ secrets.POKEMINERS_CHANNEL_ID }}
+      POKEMINERS_CHANNEL_NAME: "📥・entrada-pokeminers"
       SPIDEY_ENDPOINT: https://spidey-pokemon-go.onrender.com/enviar
     steps:
       - uses: actions/checkout@v5
@@ -38,6 +39,7 @@ jobs:
           import os
           import re
           import sys
+          import unicodedata
           import urllib.error
           import urllib.parse
           import urllib.request
@@ -46,11 +48,12 @@ jobs:
 
           token = os.getenv("DISCORD_BOT_TOKEN", "").strip()
           channel_id = os.getenv("POKEMINERS_CHANNEL_ID", "").strip()
+          channel_name = os.getenv("POKEMINERS_CHANNEL_NAME", "entrada-pokeminers").strip()
           endpoint = os.getenv("SPIDEY_ENDPOINT", "").strip()
           state_file = Path("last_pokeminers.txt")
 
-          if not token or not channel_id:
-              print("PokeMiners monitor aguardando configuração: DISCORD_BOT_TOKEN e POKEMINERS_CHANNEL_ID.")
+          if not token:
+              print("PokeMiners monitor aguardando configuração: DISCORD_BOT_TOKEN.")
               raise SystemExit(0)
 
           def request_json(url, method="GET", payload=None, headers=None, timeout=60):
@@ -69,9 +72,84 @@ jobs:
                   print(f"HTTP {e.code}: {raw[:800]}", file=sys.stderr)
                   raise
 
+          discord_headers = {"Authorization": f"Bot {token}"}
+
+          def canonical_channel_name(value):
+              normalized = unicodedata.normalize("NFKD", str(value or ""))
+              ascii_name = normalized.encode("ascii", "ignore").decode("ascii").lower()
+              return re.sub(r"[^a-z0-9]+", "-", ascii_name).strip("-")
+
+          def discover_channel_id():
+              status, guilds = request_json(
+                  "https://discord.com/api/v10/users/@me/guilds?limit=200",
+                  headers=discord_headers,
+                  timeout=30,
+              )
+              if status != 200 or not isinstance(guilds, list):
+                  raise RuntimeError("Discord não retornou a lista de servidores do bot.")
+
+              target = canonical_channel_name(channel_name)
+              matches = []
+              for guild in guilds:
+                  guild_id = str(guild.get("id") or "").strip()
+                  if not guild_id:
+                      continue
+                  try:
+                      _, channels = request_json(
+                          f"https://discord.com/api/v10/guilds/{guild_id}/channels",
+                          headers=discord_headers,
+                          timeout=30,
+                      )
+                  except urllib.error.HTTPError:
+                      print(f"Aviso: sem acesso aos canais do servidor {guild_id}.", file=sys.stderr)
+                      continue
+                  if not isinstance(channels, list):
+                      continue
+                  for channel in channels:
+                      if channel.get("type") not in (0, 5):
+                          continue
+                      if canonical_channel_name(channel.get("name")) == target:
+                          matches.append({
+                              "id": str(channel.get("id") or ""),
+                              "name": str(channel.get("name") or ""),
+                              "guild_id": guild_id,
+                              "guild_name": str(guild.get("name") or guild_id),
+                          })
+
+              if not matches:
+                  raise RuntimeError(
+                      f"Canal '{channel_name}' não localizado. "
+                      "Confirme que o bot está no servidor e pode visualizar o canal."
+                  )
+              if len(matches) > 1:
+                  found = ", ".join(f"{item['guild_name']}:{item['id']}" for item in matches)
+                  raise RuntimeError(
+                      "Mais de um canal PokeMiners foi localizado. "
+                      f"Configure POKEMINERS_CHANNEL_ID para escolher um: {found}"
+                  )
+
+              match = matches[0]
+              print(
+                  "Canal PokeMiners localizado automaticamente: "
+                  f"{match['name']} ({match['id']}) em {match['guild_name']}."
+              )
+              return match["id"]
+
+          if not channel_id:
+              channel_id = discover_channel_id()
+
+          status, channel_meta = request_json(
+              f"https://discord.com/api/v10/channels/{channel_id}",
+              headers=discord_headers,
+              timeout=30,
+          )
+          if status != 200 or not isinstance(channel_meta, dict):
+              raise RuntimeError("Discord não retornou os dados do canal PokeMiners.")
+          channel_guild_id = str(channel_meta.get("guild_id") or "").strip()
+
           status, messages = request_json(
               f"https://discord.com/api/v10/channels/{channel_id}/messages?limit=50",
-              headers={"Authorization": f"Bot {token}"},
+              headers=discord_headers,
               timeout=30,
           )
           if status != 200 or not isinstance(messages, list):
@@ -96,13 +174,19 @@ jobs:
                           parts.append(" — ".join(x for x in (name, value) if x))
               return "\n\n".join(parts).strip()
 
+          if messages and not any(full_text(msg) for msg in messages):
+              raise RuntimeError(
+                  "Discord retornou mensagens sem conteúdo. "
+                  "Ative o Message Content Intent do bot no Discord Developer Portal."
+              )
+
           def is_pokeminers(msg, text):
               author = msg.get("author") or {}
               author_text = " ".join([
                   str(author.get("username") or ""),
                   str(author.get("global_name") or ""),
               ]).lower()
-              probe = (author_text + " " + text.lower())
+              probe = author_text + " " + text.lower()
               return any(x in probe for x in ("pokeminers", "miner-bot", "@apk updates", "@forced updates"))
 
           def relevant(text):
@@ -173,8 +257,10 @@ jobs:
           newest_sent_id = None
           for msg, text in unseen:
               mid = str(msg.get("id") or "").strip()
-              guild_id = str(msg.get("guild_id") or "").strip()
-              source_url = f"https://discord.com/channels/{guild_id}/{channel_id}/{mid}" if guild_id else None
+              source_url = (
+                  f"https://discord.com/channels/{channel_guild_id}/{channel_id}/{mid}"
+                  if channel_guild_id else None
+              )
               payload = {
                   "titulo": classify(text),
                   "mensagem": normalize_message(text) + "\n\n🔎 Fonte operacional: PokeMiners #miner-bot\n🕷️ Aguardando sua aprovação antes da publicação.",
