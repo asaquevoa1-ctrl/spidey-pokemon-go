@@ -48,7 +48,7 @@ jobs:
           print('MLB_VALIDADO')
           PY
 
-      - name: Enviar G47IX corrigido
+      - name: Enviar G47IX com arte aprovada
         shell: bash
         run: |
           set -euo pipefail
@@ -58,11 +58,10 @@ jobs:
             "titulo": "📰 G47IX • RAIDS REGIONAIS DE 5 ESTRELAS",
             "mensagem": "Raids regionais de 5 estrelas com Ultra Beasts estão disponíveis por região.\n\n⚡ Xurkitree: Ásia-Pacífico\n🪽 Pheromosa: Europa, Oriente Médio, África e Índia\n💪 Buzzwole: Américas e Groenlândia\n\n✨ Se tiver sorte, você poderá encontrar a versão Brilhante.\n\n⏰ Horário: a publicação do G47IX não informou uma janela específica; o Spidey não vai inventar horário.\n\nFonte: G47IX.",
             "url": "https://x.com/g47ix/status/2102387437825913058",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/curated/spidey-g47ix-ultra-beasts-approved.jpg",
             "coordenadas": [],
             "gerar_gpx": False,
-            "gerar_arte": True,
-            "usar_premium": True,
-            "permitir_fallback": False,
+            "gerar_arte": False,
             "aprovar": True
           }
           print(json.dumps(payload, ensure_ascii=False))
@@ -80,6 +79,6 @@ jobs:
           assert d.get('status') == 'enviado', d
           assert d.get('etapa') == 'aguardando_aprovacao', d
           assert d.get('arte') is True, d
-          assert d.get('modo_arte') == 'premium', d
+          assert d.get('modo_arte') == 'fornecida', d
           print('G47IX_VALIDADO')
           PY
