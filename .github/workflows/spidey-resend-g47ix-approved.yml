@@ -1,0 +1,49 @@
+name: Spidey - reenviar G47IX aprovado
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-resend-g47ix-approved.yml"
+  workflow_dispatch:
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar G47IX aprovado ao Discord
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/payload.json <<'JSON'
+          {
+            "titulo": "📰 G47IX • RAIDS REGIONAIS DE 5 ESTRELAS",
+            "mensagem": "Raids regionais de 5 estrelas com Ultra Beasts estão disponíveis por região.\n\n⚡ Xurkitree: Ásia-Pacífico\n🪽 Pheromosa: Europa, Oriente Médio, África e Índia\n💪 Buzzwole: Américas e Groenlândia\n\n✨ Se tiver sorte, você poderá encontrar a versão Brilhante.\n\n⏰ Horário: não informado pela fonte.\n\nFonte: G47IX",
+            "url": "",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/curated/spidey-g47ix-ultra-beasts-approved.jpg",
+            "coordenadas": [],
+            "gerar_gpx": false,
+            "gerar_arte": false,
+            "aprovar": true
+          }
+          JSON
+
+          code=$(curl --retry 3 --retry-all-errors --retry-delay 5 --connect-timeout 20 --max-time 240 --silent --show-error \
+            -H 'Content-Type: application/json' \
+            --data-binary @/tmp/payload.json \
+            -o /tmp/resp.json -w '%{http_code}' \
+            https://spidey-pokemon-go.onrender.com/enviar || true)
+
+          echo "HTTP $code"
+          cat /tmp/resp.json
+
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/resp.json', encoding='utf-8'))
+          assert d.get('status') == 'enviado', d
+          assert d.get('etapa') == 'aguardando_aprovacao', d
+          assert d.get('arte') is True, d
+          assert d.get('modo_arte') == 'fornecida', d
+          assert d.get('gpx') is False, d
+          print('G47IX_APROVADO_REENVIADO')
+          PY
