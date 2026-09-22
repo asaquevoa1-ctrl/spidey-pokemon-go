@@ -33,11 +33,14 @@ jobs:
         run: python -m py_compile scripts/send_curated.py
 
       - name: Enviar itens curados para aprovacao
+        id: enviar_curados
+        continue-on-error: true
         env:
           SPIDEY_ENDPOINT: https://spidey-pokemon-go.onrender.com/enviar
         run: python scripts/send_curated.py
 
       - name: Gravar estado da fila
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
@@ -51,3 +54,12 @@ jobs:
           git commit -m "Spidey: marca curadoria como enviada [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Confirmar resultado
+        if: always()
+        shell: bash
+        run: |
+          if [[ "${{ steps.enviar_curados.outcome }}" != "success" ]]; then
+            echo "Um ou mais itens falharam, mas os envios bem-sucedidos tiveram o estado preservado."
+            exit 1
+          fi
