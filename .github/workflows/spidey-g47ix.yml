@@ -27,7 +27,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Buscar, classificar e publicar ultima publicacao G47IX
+      - name: Buscar, traduzir, classificar e publicar ultima publicacao G47IX
         shell: bash
         env:
           SPIDEY: https://spidey-pokemon-go.onrender.com/enviar
@@ -68,6 +68,8 @@ jobs:
           import re
           import sys
           import unicodedata
+          import urllib.parse
+          import urllib.request
           from datetime import datetime, timezone
 
           src, out = sys.argv[1:3]
@@ -104,6 +106,41 @@ jobs:
               value = "".join(ch for ch in value if not unicodedata.combining(ch))
               return value.lower()
 
+          def traduzir_ptbr(value):
+              if not value:
+                  return value
+              base = f" {normalizar(value)} "
+              marcadores_en = (
+                  " the ", " and ", " will ", " available ", " if ", " you ",
+                  " might ", " find ", " regional ", " more ", " counters ",
+                  " shiny ", " event ", " raids ", " research ",
+              )
+              if sum(marker in base for marker in marcadores_en) < 2:
+                  return value
+              try:
+                  params = urllib.parse.urlencode({
+                      "client": "gtx",
+                      "sl": "auto",
+                      "tl": "pt",
+                      "dt": "t",
+                      "q": value,
+                  })
+                  req = urllib.request.Request(
+                      "https://translate.googleapis.com/translate_a/single?" + params,
+                      headers={"User-Agent": "Mozilla/5.0"},
+                  )
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      payload = json.load(resp)
+                  translated = "".join(
+                      part[0] for part in (payload[0] or [])
+                      if part and isinstance(part, list) and part[0]
+                  ).strip()
+                  if translated:
+                      return translated
+              except Exception as exc:
+                  print(f"Traducao automatica indisponivel: {exc}", file=sys.stderr)
+              return value
+
           base = normalizar(text)
           codigo = ["promo code", "redeem code", "codigo promocional", "codigo", " code "]
           evento = [
@@ -124,7 +161,8 @@ jobs:
               "pokemon go", "pokemongo", "raid", "research", "pokestop", "gym",
               "trainer", "shadow", "mega", "dynamax", "gigantamax",
               "community day", "spotlight", "team go rocket", "zoroark",
-              "zorua", "gbl", "battle league", "charmander", "pikachu"
+              "zorua", "gbl", "battle league", "charmander", "pikachu",
+              "xurkitree", "pheromosa", "buzzwole", "shiny"
           ]
 
           if any(term in base for term in codigo):
@@ -141,11 +179,13 @@ jobs:
               categoria = "noticia"
 
           age_hours = max(0, (datetime.now(timezone.utc).timestamp() - float(created_ts)) / 3600)
+          resumo_ptbr = traduzir_ptbr(text)
           json.dump({
               "id": post_id,
               "url": post.get("url") or f"https://x.com/g47ix/status/{post_id}",
               "categoria": categoria,
-              "resumo": text[:900],
+              "resumo": resumo_ptbr[:900],
+              "original": text[:900],
               "age_hours": round(age_hours, 2),
               "shiny": "shiny" in base or "brilhante" in base,
           }, open(out, "w", encoding="utf-8"), ensure_ascii=False)
@@ -160,6 +200,7 @@ jobs:
           POST_URL="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["url"])' "$META_FILE")"
           CATEGORIA="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["categoria"])' "$META_FILE")"
           RESUMO="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["resumo"])' "$META_FILE")"
+          ORIGINAL="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["original"])' "$META_FILE")"
           AGE_HOURS="$(python3 -c 'import json,sys; print(int(float(json.load(open(sys.argv[1]))["age_hours"])))' "$META_FILE")"
           SHINY="$(python3 -c 'import json,sys; print("sim" if json.load(open(sys.argv[1]))["shiny"] else "nao")' "$META_FILE")"
 
@@ -168,7 +209,8 @@ jobs:
           echo "Idade aproximada: ${AGE_HOURS}h"
           echo "Classificacao: $CATEGORIA"
           echo "Shiny mencionado: $SHINY"
-          echo "Conteudo: ${RESUMO:0:700}"
+          echo "Original: ${ORIGINAL:0:500}"
+          echo "PT-BR: ${RESUMO:0:700}"
 
           LAST_ID=""
           if [[ -f "$STATE_FILE" ]]; then
@@ -221,22 +263,18 @@ jobs:
             *) ICONE="📰"; ROTULO="NOTÍCIA" ;;
           esac
 
-          PAYLOAD="$(python3 - "$POST_URL" "$ICONE" "$ROTULO" "$RESUMO" "$SHINY" <<'PY'
+          PAYLOAD="$(python3 - "$POST_URL" "$ICONE" "$ROTULO" "$RESUMO" <<'PY'
           import json
           import sys
 
-          url, icone, rotulo, resumo, shiny = sys.argv[1:6]
-          shiny_line = "\n✨ Versão brilhante mencionada pela fonte." if shiny == "sim" else ""
+          url, icone, rotulo, resumo = sys.argv[1:5]
 
           print(json.dumps({
               "titulo": f"{icone} G47IX • {rotulo}",
-              "mensagem": (
-                  f"{resumo}{shiny_line}\n\n"
-                  "Fonte: G47IX"
-              ),
+              "mensagem": f"{resumo}\n\nFonte: G47IX",
               "url": url,
               "gerar_arte": True,
-              "permitir_fallback": True,
+              "permitir_fallback": False,
               "aprovar": True
           }, ensure_ascii=False))
           PY
@@ -273,11 +311,11 @@ jobs:
           data = json.loads(sys.argv[1])
           if data.get("status") != "enviado":
               raise SystemExit("Spidey nao confirmou o envio")
-
-          if data.get("arte"):
-              print(f"Modo de arte usado: {data.get('modo_arte', 'desconhecido')}")
-          else:
-              print("Aviso: envio confirmado sem arte; estado sera salvo para evitar duplicacao.")
+          if not data.get("arte"):
+              raise SystemExit("Spidey confirmou envio sem arte; estado nao deve avancar")
+          if data.get("modo_arte") != "premium":
+              raise SystemExit(f"Arte fora do padrao premium: {data.get('modo_arte')}")
+          print("Arte premium confirmada.")
           PY
 
           salvar_estado "Spidey: atualiza ultima publicacao G47IX"
