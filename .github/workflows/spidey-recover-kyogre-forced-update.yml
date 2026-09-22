@@ -1,0 +1,79 @@
+name: Spidey - recuperar Kyogre e atualizacao forcada
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-recover-kyogre-forced-update.yml"
+  workflow_dispatch:
+
+jobs:
+  recuperar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reenviar itens faltantes e confirmar no Discord
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
+          SPIDEY_ENDPOINT: "https://spidey-pokemon-go.onrender.com/enviar"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, requests, time
+          token=os.environ['DISCORD_BOT_TOKEN'].strip()
+          dst=os.environ['APPROVAL_CHANNEL_ID']; endpoint=os.environ['SPIDEY_ENDPOINT']
+          guild='1139279003451150467'
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          items=[
+            {
+              'titulo':'🌊 GO PASS • OUTUBRO • KYOGRE',
+              'mensagem':(
+                'Pokémon GO anunciou o GO Pass: outubro de 2026.\n\n'
+                '📅 Período: 6 de outubro, 10h → 3 de novembro, 10h — horário local.\n'
+                '🌊 Recompensa em destaque: encontro com Kyogre, com chance de Brilhante.\n'
+                '🎟️ GO Pass Deluxe: o Lucky Trinket retorna como recompensa final.\n'
+                '🎁 Entre as recompensas também estão Doce Raro GG, Passe de Batalha Premium e Ovo da Sorte.\n'
+                '⏳ Recompensas desbloqueadas expiram em 5 de novembro, às 10h, horário local.\n'
+                '🍀 O Lucky Trinket deste passe expira em 8 de novembro de 2026, às 23h59, horário local.\n\n'
+                '🔗 Fonte oficial: https://pokemongo.com/news/go-pass-october-2026\n'
+                '🔎 Detectado por PokeMiners #miner-bot.'
+              ),
+              'url':'https://discord.com/channels/1139279003451150467/1550962794814373898/1552004820603502666',
+              'gerar_gpx':False,'gerar_arte':False,'aprovar':True,
+            },
+            {
+              'titulo':'⚙️ ATUALIZAÇÃO FORÇADA • Pokémon GO',
+              'mensagem':(
+                'O PokeMiners detectou uma mudança forçada na versão de API do Pokémon GO.\n\n'
+                '📦 Versão anterior: 0.427.0\n'
+                '🆕 Nova versão exigida: 0.429.1\n'
+                '⚠️ Tipo: forced update\n\n'
+                'A alteração foi marcada pelo PokeMiners como atualização forçada do jogo.\n\n'
+                '🔎 Fonte operacional: PokeMiners #miner-bot.'
+              ),
+              'url':'https://discord.com/channels/1139279003451150467/1550962794814373898/1551667997280706564',
+              'gerar_gpx':False,'gerar_arte':False,'aprovar':True,
+            },
+          ]
+          def already(url):
+              r=requests.get(f'https://discord.com/api/v10/channels/{dst}/messages',headers=h,params={'limit':100},timeout=30); r.raise_for_status()
+              for m in r.json():
+                  if any(str(e.get('url') or '').strip()==url for e in (m.get('embeds') or [])):
+                      return m
+              return None
+          for item in items:
+              existing=already(item['url'])
+              if existing:
+                  print('JA_EXISTE',item['titulo'],existing['id'])
+                  continue
+              r=requests.post(endpoint,json=item,timeout=120)
+              print('SEND',item['titulo'],'HTTP',r.status_code,r.text[:500])
+              r.raise_for_status(); data=r.json()
+              assert data.get('status')=='enviado' and data.get('etapa')=='aguardando_aprovacao', data
+              time.sleep(1)
+              found=already(item['url'])
+              if not found:
+                  raise SystemExit('ENVIO_OK_MAS_NAO_LOCALIZADO: '+item['titulo'])
+              print('APPROVAL_LINK',item['titulo'],f'https://discord.com/channels/{guild}/{dst}/{found["id"]}')
+          PY
