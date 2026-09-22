@@ -2,6 +2,7 @@ import hashlib
 import io
 import json
 import os
+import time
 from html.parser import HTMLParser
 from urllib.parse import quote, urljoin
 
@@ -26,6 +27,9 @@ PUBLIC_BASE_URL = os.getenv(
     "https://spidey-pokemon-go.onrender.com",
 ).rstrip("/")
 NEWS_URL = "https://pokemongo.com/pt-BR/news"
+WHAPI_BASE_URL = os.getenv("WHAPI_BASE_URL", "https://gate.whapi.cloud").rstrip("/")
+WHAPI_TOKEN = os.getenv("WHAPI_TOKEN", "").strip()
+WHAPI_CHANNEL_ID = os.getenv("WHAPI_CHANNEL_ID", "").strip()
 
 ultima_enviada = None
 tokens_processados = set()
@@ -353,6 +357,62 @@ def _links_aprovacao(token):
     return f"\n\n✅ [APROVAR]({aprovar})   ❌ [REPROVAR]({rejeitar})"
 
 
+def _whapi_configurado():
+    return bool(WHAPI_TOKEN and WHAPI_CHANNEL_ID)
+
+
+def _whapi_caption(conteudo):
+    partes = [conteudo["titulo"], conteudo["mensagem_original"]]
+    if conteudo["coordenadas"]:
+        coords = "\n".join(_coord_crua(lat, lon) for lat, lon in conteudo["coordenadas"])
+        partes.append(f"📍 Coordenadas:\n{coords}")
+    if conteudo["url"]:
+        partes.append(f"🔗 Fonte: {conteudo['url']}")
+    return "\n\n".join(str(p).strip() for p in partes if p).strip()
+
+
+def _publicar_whapi(conteudo):
+    if not _whapi_configurado():
+        return None
+    imagem_url = str(conteudo.get("imagem_url") or "").strip()
+    if not imagem_url:
+        raise RuntimeError("Imagem publica ausente para publicacao automatica no Canal")
+
+    payload = {
+        "to": WHAPI_CHANNEL_ID,
+        "media": imagem_url,
+        "caption": _whapi_caption(conteudo),
+    }
+    headers = {
+        "Authorization": f"Bearer {WHAPI_TOKEN}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+    }
+
+    ultimo_erro = None
+    for espera in (0, 2, 5):
+        if espera:
+            time.sleep(espera)
+        try:
+            resposta = requests.post(
+                f"{WHAPI_BASE_URL}/messages/image",
+                headers=headers,
+                json=payload,
+                timeout=60,
+            )
+            if resposta.status_code >= 500:
+                ultimo_erro = RuntimeError(
+                    f"Whapi HTTP {resposta.status_code}: {resposta.text[:500]}"
+                )
+                continue
+            resposta.raise_for_status()
+            return resposta.json()
+        except (requests.RequestException, ValueError) as erro:
+            ultimo_erro = erro
+
+    raise RuntimeError(f"Falha ao publicar no Canal via Whapi: {ultimo_erro}")
+
+
 def _botao_whatsapp(token):
     preparar = f"{PUBLIC_BASE_URL}/whatsapp?t={token}"
     return [
@@ -492,6 +552,38 @@ def aprovar():
             "#ffb84d",
         ), 503
 
+    if _whapi_configurado():
+        try:
+            resultado_whapi = _publicar_whapi(conteudo)
+        except Exception as erro_whapi:
+            mandar_discord_texto_puro(
+                f"❌ FALHA WHATSAPP • {conteudo['titulo']}\n{str(erro_whapi)[:1200]}",
+                webhook_url=DISCORD_PUBLICADOS_WEBHOOK,
+            )
+            return _html_resultado(
+                "Falha ao publicar no WhatsApp",
+                "O Spidey não confirmou a publicação no Canal. A aprovação não foi consumida; tente novamente depois da correção.",
+                "#ff5a67",
+            ), 502
+
+        tokens_processados.add(token_id)
+        detalhe = "Imagem + legenda publicadas automaticamente no Canal Spidey Pokémon GO."
+        try:
+            sent_id = ((resultado_whapi or {}).get("sent_message") or {}).get("id")
+            if sent_id:
+                detalhe += f" ID: {sent_id}"
+        except Exception:
+            pass
+        mandar_discord_texto_puro(
+            f"✅ WHATSAPP PUBLICADO • {conteudo['titulo']}\n{detalhe}\nhttps://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F",
+            webhook_url=DISCORD_PUBLICADOS_WEBHOOK,
+        )
+        return _html_resultado(
+            "Publicado no WhatsApp",
+            "A publicação foi enviada automaticamente para o Canal Spidey Pokémon GO com arte e legenda no mesmo post.",
+            "#57e389",
+        )
+
     mensagem_publicada = conteudo["mensagem_original"]
     if conteudo["gpx_bytes"]:
         mensagem_publicada += "\n\n🗺️ Arquivo GPX anexado."
@@ -516,7 +608,7 @@ def aprovar():
 
     return _html_resultado(
         "Publicação aprovada",
-        "O conteúdo foi aprovado e encaminhado para a etapa de publicação do Spidey.",
+        "O conteúdo foi aprovado e encaminhado para a etapa de publicação manual porque o gateway automático ainda não está configurado.",
         "#57e389",
     )
 
