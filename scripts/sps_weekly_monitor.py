@@ -23,29 +23,41 @@ def normalizar(texto: str) -> str:
     return "".join(c for c in base if not unicodedata.combining(c)).lower()
 
 
+def blocos_mensagem(msg: dict) -> list[dict]:
+    blocos = [msg]
+    for snapshot in msg.get("message_snapshots") or []:
+        blocos.append(snapshot.get("message") or snapshot)
+    return blocos
+
+
 def texto_mensagem(msg: dict) -> str:
-    partes = [str(msg.get("content") or "").strip()]
-    for embed in msg.get("embeds") or []:
-        partes.extend([
-            str(embed.get("title") or "").strip(),
-            str(embed.get("description") or "").strip(),
-        ])
-        for campo in embed.get("fields") or []:
+    partes = []
+    for bloco in blocos_mensagem(msg):
+        conteudo = str(bloco.get("content") or "").strip()
+        if conteudo:
+            partes.append(conteudo)
+        for embed in bloco.get("embeds") or []:
             partes.extend([
-                str(campo.get("name") or "").strip(),
-                str(campo.get("value") or "").strip(),
+                str(embed.get("title") or "").strip(),
+                str(embed.get("description") or "").strip(),
             ])
+            for campo in embed.get("fields") or []:
+                partes.extend([
+                    str(campo.get("name") or "").strip(),
+                    str(campo.get("value") or "").strip(),
+                ])
     return "\n".join(p for p in partes if p).strip()
 
 
 def imagens(msg: dict) -> list[dict]:
     saida = []
-    for anexo in msg.get("attachments") or []:
-        url = str(anexo.get("url") or "").strip()
-        tipo = str(anexo.get("content_type") or "").lower()
-        nome = str(anexo.get("filename") or "").lower()
-        if url and (tipo.startswith("image/") or nome.endswith((".png", ".jpg", ".jpeg", ".webp"))):
-            saida.append(anexo)
+    for bloco in blocos_mensagem(msg):
+        for anexo in bloco.get("attachments") or []:
+            url = str(anexo.get("url") or "").strip()
+            tipo = str(anexo.get("content_type") or "").lower()
+            nome = str(anexo.get("filename") or "").lower()
+            if url and (tipo.startswith("image/") or nome.endswith((".png", ".jpg", ".jpeg", ".webp"))):
+                saida.append(anexo)
     return saida
 
 
@@ -100,7 +112,11 @@ def buscar() -> list[dict]:
         raise RuntimeError("DISCORD_BOT_TOKEN ausente")
     r = requests.get(
         f"{DISCORD_API}/channels/{CHANNEL_ID}/messages",
-        headers={"Authorization": f"Bot {BOT_TOKEN}"},
+        headers={
+            "Authorization": f"Bot {BOT_TOKEN}",
+            "User-Agent": "SpideyPokemonGO/1.0",
+            "Accept": "application/json",
+        },
         params={"limit": 50},
         timeout=30,
     )
