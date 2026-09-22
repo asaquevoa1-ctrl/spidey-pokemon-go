@@ -1,0 +1,11 @@
+{
+  "status": "pending",
+  "source_verified": true,
+  "titulo": "🌴 SAFÁRI URBANO • RIO DE JANEIRO",
+  "mensagem": "📅 26 e 27 de setembro de 2026\n⏰ 10h às 18h (horário local)\n📍 Evento por toda a cidade do Rio de Janeiro\n\n✨ Destaques confirmados:\n• Eevee com chapéu de explorador pode ser Brilhante.\n• Chance aumentada de encontrar Pokémon Brilhantes para portadores de ingresso.\n• Mudbray aparece nos eventos City Safari 2026.\n• Caça aos Selos GO com até oito carimbos e encontros com Eevee explorador.\n• Bases oficiais no Rio: Praça Muhammad Ali, perto do AquaRio, e Estacionamento dos Pedalinhos, na Lagoa Rodrigo de Freitas.\n\n🌎 Também acontece em Boston, Brisbane, Lisboa, Marseille e Munique — todas em 26 e 27 de setembro.\n\n🗺️ O GPX anexo marca a Praça Muhammad Ali como ponto de encontro confirmado. O Safári é citywide e não fica limitado a essa coordenada.\n\nFonte: Pokémon GO oficial.",
+  "source_url": "https://pokemongo.com/pt-BR/news/rio-city-safari-know-before-you-go",
+  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/curated/spidey-city-safari-rio-2026-final.jpg",
+  "coordenadas": [[-22.89314, -43.19139]],
+  "gerar_gpx": true,
+  "gpx_nome": "spidey-city-safari-rio-2026.gpx"
+}
