@@ -88,15 +88,16 @@ def testar_monetizacao_inativa():
     assert bloco_monetizacao({"monetizacao": {"ativo": False}}) == ""
 
 
-def testar_afiliado():
+def testar_afiliado_shopee():
     data = {
         "mensagem": "Notícia editorial.",
         "monetizacao": {
             "ativo": True,
             "tipo": "afiliado",
-            "parceiro": "Loja Exemplo",
-            "texto": "Confira a oferta para a comunidade.",
-            "url": "https://example.com/spidey",
+            "plataforma": "shopee",
+            "parceiro": "Shopee",
+            "texto": "Oferta relevante para a comunidade.",
+            "url": "https://shopee.com.br/exemplo",
         },
     }
     comercial = bloco_monetizacao(data)
@@ -106,6 +107,44 @@ def testar_afiliado():
     assert final.startswith("Notícia editorial."), final
     assert "──────────────" in final, final
     assert final.index("Notícia editorial.") < final.index("LINK DE AFILIADO"), final
+
+
+def testar_mercado_livre_bloqueado():
+    data = {
+        "monetizacao": {
+            "ativo": True,
+            "tipo": "afiliado",
+            "plataforma": "mercadolivre",
+            "parceiro": "Mercado Livre",
+            "texto": "Oferta",
+            "url": "https://mercadolivre.com.br/exemplo",
+        }
+    }
+    try:
+        bloco_monetizacao(data)
+    except ValueError as exc:
+        assert "bloqueada para WhatsApp" in str(exc), exc
+    else:
+        raise AssertionError("Mercado Livre deveria ser bloqueado para WhatsApp")
+
+
+def testar_plataforma_nao_validada_bloqueada():
+    data = {
+        "monetizacao": {
+            "ativo": True,
+            "tipo": "afiliado",
+            "plataforma": "amazon",
+            "parceiro": "Amazon",
+            "texto": "Oferta",
+            "url": "https://amazon.com.br/exemplo",
+        }
+    }
+    try:
+        bloco_monetizacao(data)
+    except ValueError as exc:
+        assert "ainda nao validada" in str(exc), exc
+    else:
+        raise AssertionError("Plataforma ainda não validada deveria ser bloqueada")
 
 
 def testar_patrocinio():
@@ -130,9 +169,11 @@ def main():
     testar_brisbane()
     testar_multicidade()
     testar_monetizacao_inativa()
-    testar_afiliado()
+    testar_afiliado_shopee()
+    testar_mercado_livre_bloqueado()
+    testar_plataforma_nao_validada_bloqueada()
     testar_patrocinio()
-    print("OK: fusos, virada de dia e monetizacao validados")
+    print("OK: fusos, virada de dia e regras de monetizacao validados")
 
 
 if __name__ == "__main__":
