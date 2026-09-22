@@ -8,6 +8,7 @@ from pathlib import Path
 
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from free_art import criar_card_gratis
 
 DISCORD_API = "https://discord.com/api/v10"
@@ -204,7 +205,10 @@ def criar_arte_e_publicar_asset(msg: dict, nome: str, corpo: str, coords: list[l
     }
     r = requests.put(api, headers=headers, json=payload, timeout=60)
     if r.status_code not in (200, 201):
-        raise RuntimeError(f"GitHub asset HTTP {r.status_code}: {r.text[:500]}")
+        if r.status_code == 422 and "sha" in r.text.lower():
+            print("Arte deste evento já existe no branch de assets; reutilizando.", flush=True)
+        else:
+            raise RuntimeError(f"GitHub asset HTTP {r.status_code}: {r.text[:500]}")
 
     return f"https://raw.githubusercontent.com/{GH_REPO}/{ASSET_BRANCH}/{path}"
 
