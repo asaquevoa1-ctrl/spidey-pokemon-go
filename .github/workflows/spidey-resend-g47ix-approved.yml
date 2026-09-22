@@ -12,15 +12,14 @@ jobs:
   enviar:
     runs-on: ubuntu-latest
     steps:
-      - name: Enviar G47IX aprovado ao Discord
+      - name: Enviar G47IX corrigido ao Discord
         shell: bash
         run: |
           set -euo pipefail
           cat > /tmp/payload.json <<'JSON'
           {
-            "titulo": "📰 G47IX • RAIDS REGIONAIS DE 5 ESTRELAS",
-            "mensagem": "Raids regionais de 5 estrelas com Ultra Beasts estão disponíveis por região.\n\n⚡ Xurkitree: Ásia-Pacífico\n🪽 Pheromosa: Europa, Oriente Médio, África e Índia\n💪 Buzzwole: Américas e Groenlândia\n\n✨ Se tiver sorte, você poderá encontrar a versão Brilhante.\n\n⏰ Horário: não informado pela fonte.\n\nFonte: G47IX",
-            "url": "",
+            "titulo": "🕷️ ULTRA BEASTS • RAIDS REGIONAIS DE 5 ESTRELAS",
+            "mensagem": "📅 Período: 23 a 29 de setembro de 2026\n⏰ Início: 10h — horário local de cada região\n\n⚡ Xurkitree — Ásia-Pacífico\n🪽 Pheromosa — Europa, Oriente Médio, África e Índia\n💪 Buzzwole — Américas e Groenlândia\n\n🇧🇷 Brasil: Buzzwole disponível a partir das 10h (Brasília) em 23/09.\n\n🌟 Hora de Reides: 23/09, das 18h às 19h — horário local.\n✨ Chance de Brilhante disponível.\n\nFonte: G47IX.",
             "imagem_url": "https://ucbfee9316183f3fab1b9fa40029.dl.dropboxusercontent.com/cd/0/get/DIndeDGdbzHaID5ktDiO4Vuy5bMlgBxmmZDvg-F-Kwf8YWIhNSAHbROx9kPUhsoigPBTTbL35GXatdljdaPvB-oGkLPmBu1ttTFBxItj3Z5XiDH2oc_ClQSqISzqNKfTFaKKIIfhk5hRH14kynoo2bZSK0YQpyvnw8BjflyW2_3sWQ/file?c_luid=4b888265",
             "coordenadas": [],
             "gerar_gpx": false,
@@ -46,5 +45,5 @@ jobs:
           assert d.get('arte') is True, d
           assert d.get('modo_arte') == 'fornecida', d
           assert d.get('gpx') is False, d
-          print('G47IX_ARTE_ORIGINAL_VALIDADA')
+          print('G47IX_CORRIGIDO_VALIDADO')
           PY
