@@ -1,0 +1,79 @@
+name: Spidey - preparar testes curados Safari e MLB
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-seed-curated-tests.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  preparar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Baixar artes criadas no ChatGPT
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/curated queue/curated
+
+          curl --fail --location --silent --show-error --max-time 120 \
+            'https://uc5804a0bb5f6fec8f08a9a755f7.dl.dropboxusercontent.com/cd/0/get/DIlcprc7JPrFDq-WReRyAMtWdhBAQoiAHzllxo9zmKI8FoVun5hjM4VRzAZo97BP2KS2nt-MO195Sc5I9QzNXMlG8VbgJEARG-4EyT4XsTm2o8iNO4KvySpaR462KR1EZGnH4eyPd4g34HNxlxgWIs8xRc2v6I6lU5eEzui50pR2YQ/file?c_luid=4b888265' \
+            -o assets/curated/spidey-city-safari-rio-2026-final.jpg
+
+          curl --fail --location --silent --show-error --max-time 120 \
+            'https://uc7003e4c71520c6d44b062b17e2.dl.dropboxusercontent.com/cd/0/get/DIlek1qOSJEBQ_rWZ13TJI0zDyevqwzpwo-cFSPHhEGvJfvm9OjestTlZem4uZk4lHPosnpMEU7RoHsXyUYfg23QZ9uLg-fIbrLAXKyPdRe05sdiEdiOZDP8XrlXB5lUUmTl5FVYm5KazaVHYfYzCThfVvt-BuTSIgBAaW__-q3-qA/file?c_luid=4b888265' \
+            -o assets/curated/spidey-mlb-seattle-2026-final.jpg
+
+          test -s assets/curated/spidey-city-safari-rio-2026-final.jpg
+          test -s assets/curated/spidey-mlb-seattle-2026-final.jpg
+
+      - name: Criar itens editoriais validados
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > queue/curated/2026-09-22-city-safari-rio.json <<'JSON'
+          {
+            "status": "pending",
+            "source_verified": true,
+            "titulo": "🌴 SAFÁRI URBANO • RIO DE JANEIRO",
+            "mensagem": "📅 26 e 27 de setembro de 2026\n⏰ 10h às 18h (horário local)\n📍 Evento por toda a cidade do Rio de Janeiro\n\n✨ Destaques confirmados:\n• Eevee com chapéu de explorador pode ser Brilhante.\n• Chance aumentada de encontrar Pokémon Brilhantes para portadores de ingresso.\n• Mudbray aparece nos eventos City Safari 2026.\n• Caça aos Selos GO com até oito carimbos e encontros com Eevee explorador.\n• Bases oficiais no Rio: Praça Muhammad Ali, perto do AquaRio, e Estacionamento dos Pedalinhos, na Lagoa Rodrigo de Freitas.\n\n🌎 Também acontece em Boston, Brisbane, Lisboa, Marseille e Munique — todas em 26 e 27 de setembro.\n\n🗺️ O GPX anexo marca a Praça Muhammad Ali como ponto de encontro confirmado. O Safári é citywide e não fica limitado a essa coordenada.\n\nFonte: Pokémon GO oficial.",
+            "source_url": "https://pokemongo.com/pt-BR/news/rio-city-safari-know-before-you-go",
+            "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/curated/spidey-city-safari-rio-2026-final.jpg",
+            "coordenadas": [[-22.89314, -43.19139]],
+            "gerar_gpx": true,
+            "gpx_nome": "spidey-city-safari-rio-2026.gpx"
+          }
+          JSON
+
+          cat > queue/curated/2026-09-22-mlb-seattle.json <<'JSON'
+          {
+            "status": "pending",
+            "source_verified": true,
+            "titulo": "⚾ POKÉMON GO × MLB • SEATTLE MARINERS",
+            "mensagem": "📅 22 de setembro de 2026\n📍 T-Mobile Park • Seattle\n⚾ Seattle Mariners x Houston Astros\n\nO Pokémon GO Night do Seattle Mariners está confirmado para 22/09. A colaboração Pokémon GO × MLB 2026 inclui Rotas Oficiais, PokéParadas e Ginásios temáticos nos estádios da MLB. Entre os recursos anunciados para jogos temáticos estão raids de 1 estrela com Pikachu normal, com chance de Brilhante ou Fundo de Localização, além de Pesquisa temporária e bônus relacionados ao evento.\n\n🧢 Importante: o boné do time é ITEM DE AVATAR obtido no jogo — Pikachu não usa boné nem camiseta.\n👕 Código global: MLBxPOKEMONGO2026 para camiseta MLB de avatar, disponível até 30/09/2026.\n\n🎨 A imagem é arte ilustrativa; os dados do evento foram validados nas páginas oficiais do Pokémon GO e do Seattle Mariners.\n\n🗺️ GPX anexo: T-Mobile Park.\n\nFonte principal: Pokémon GO oficial. Fonte complementar: Seattle Mariners/MLB.",
+            "source_url": "https://pokemongo.com/pt-BR/news/mlb-2026",
+            "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/curated/spidey-mlb-seattle-2026-final.jpg",
+            "coordenadas": [[47.59148, -122.332863]],
+            "gerar_gpx": true,
+            "gpx_nome": "spidey-mlb-seattle-2026.gpx"
+          }
+          JSON
+
+      - name: Persistir artes e fila no GitHub
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/curated queue/curated
+          git commit -m "Spidey: adiciona artes curadas Safari e MLB"
+          git pull --rebase origin main
+          git push origin HEAD:main
