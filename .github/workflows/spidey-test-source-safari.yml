@@ -1,0 +1,145 @@
+name: Spidey - teste visual City Safari com imagem real
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-test-source-safari.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  criar-e-enviar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositorio
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Criar card editorial gratuito com imagem real
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet pillow requests
+          mkdir -p /tmp/spidey assets
+
+          python3 - <<'PY'
+          import io
+          import requests
+          from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+          SOURCE = 'https://uploads.folhavitoria.com.br/imagens/2026/06/pokemon-go-safari-urbano-chega-ao-rio-de-janeiro-em-setembro-1000x582.jpg'
+          OUT = '/tmp/spidey/spidey-city-safari-rio-source-v1.png'
+
+          headers = {'User-Agent': 'Mozilla/5.0'}
+          r = requests.get(SOURCE, headers=headers, timeout=30)
+          r.raise_for_status()
+          src = Image.open(io.BytesIO(r.content)).convert('RGB')
+
+          W, H = 1080, 1350
+          canvas = Image.new('RGB', (W, H), '#081A33')
+
+          # HERO: imagem real em destaque, full bleed.
+          hero_h = 1030
+          scale = max(W / src.width, hero_h / src.height)
+          resized = src.resize((int(src.width * scale), int(src.height * scale)), Image.Resampling.LANCZOS)
+          x = (resized.width - W) // 2
+          y = max(0, (resized.height - hero_h) // 2)
+          hero = resized.crop((x, y, x + W, y + hero_h))
+          canvas.paste(hero, (0, 0))
+
+          # Gradiente escuro inferior para legibilidade sem esconder a arte.
+          overlay = Image.new('RGBA', (W, hero_h), (0,0,0,0))
+          od = ImageDraw.Draw(overlay)
+          for yy in range(hero_h):
+              p = yy / hero_h
+              alpha = int(max(0, min(215, (p - 0.50) / 0.50 * 215)))
+              od.line((0, yy, W, yy), fill=(5, 18, 38, alpha))
+          canvas = Image.alpha_composite(canvas.convert('RGBA'), Image.new('RGBA',(W,H),(0,0,0,0)))
+          canvas.alpha_composite(overlay, (0,0))
+
+          draw = ImageDraw.Draw(canvas)
+          regular = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          bold = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+          f_brand = ImageFont.truetype(bold, 38)
+          f_kicker = ImageFont.truetype(bold, 26)
+          f_title = ImageFont.truetype(bold, 82)
+          f_date = ImageFont.truetype(bold, 38)
+          f_body = ImageFont.truetype(regular, 28)
+          f_small = ImageFont.truetype(regular, 20)
+
+          # Marca discreta: sem moldura de app, sem ícones genéricos.
+          draw.rounded_rectangle((54, 48, 270, 112), radius=20, fill=(7, 132, 255, 235))
+          draw.text((78, 58), 'SPIDEY', font=f_brand, fill='white')
+          draw.text((796, 67), 'CITY SAFARI • RIO', font=f_kicker, fill='white')
+
+          # Headline sobre a própria imagem.
+          draw.text((58, 700), 'CITY SAFARI', font=f_title, fill='white', stroke_width=2, stroke_fill=(0,0,0,80))
+          draw.text((58, 790), 'RIO DE JANEIRO', font=f_title, fill=(51, 169, 255, 255), stroke_width=2, stroke_fill=(0,0,0,80))
+          draw.rounded_rectangle((58, 900, 515, 966), radius=22, fill=(255,255,255,238))
+          draw.text((82, 910), '26 E 27 DE SETEMBRO', font=f_date, fill=(8,26,51,255))
+
+          # Rodapé editorial sólido, objetivo.
+          draw.rectangle((0, 1030, W, H), fill=(7, 26, 51, 255))
+          draw.rectangle((58, 1077, 66, 1270), fill=(7, 132, 255, 255))
+          draw.text((92, 1072), '10h–18h • Rio de Janeiro', font=f_date, fill='white')
+          draw.text((92, 1134), 'Eevee explorador • Caça aos selos • encontros especiais', font=f_body, fill=(214,229,245,255))
+          draw.text((92, 1182), 'Evento presencial oficial Pokémon GO', font=f_body, fill=(214,229,245,255))
+          draw.text((92, 1262), 'Imagem promocional: divulgação • Fonte: Pokémon GO', font=f_small, fill=(143,170,198,255))
+          draw.text((785, 1260), 'SEMPRE UM PASSO À FRENTE', font=f_small, fill=(51,169,255,255))
+
+          canvas.convert('RGB').save(OUT, 'PNG', optimize=True)
+          print('Card criado:', OUT)
+          PY
+
+      - name: Salvar arte na branch de assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin spidey-assets
+          git checkout -B spidey-assets origin/spidey-assets
+          mkdir -p assets/tests
+          cp /tmp/spidey/spidey-city-safari-rio-source-v1.png assets/tests/
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/tests/spidey-city-safari-rio-source-v1.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: teste City Safari com imagem real"
+            git push origin HEAD:spidey-assets
+          fi
+
+      - name: Enviar nova proposta visual para aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+          resposta=$(curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "🧪 NOVO TESTE VISUAL • CITY SAFARI RIO",
+            "mensagem": "Teste do novo caminho gratuito: imagem promocional real da notícia + identidade editorial Spidey, sem IA paga.\n\n📅 26 e 27 de setembro de 2026\n🕙 10h às 18h\n📍 Rio de Janeiro\n\nAvalie principalmente a arte. A ideia é que as próximas notícias usem a imagem real da fonte como protagonista, com o Spidey apenas organizando e identificando o conteúdo.",
+            "url": "https://pokemongo.com/featured-in-person-events/citysafari/rio-de-janeiro",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/spidey-assets/assets/tests/spidey-city-safari-rio-source-v1.png",
+            "gerar_arte": false,
+            "gerar_gpx": false,
+            "aprovar": true
+          }
+          JSON
+          )
+          echo "$resposta"
+          python3 - <<'PY' "$resposta"
+          import json, sys
+          data = json.loads(sys.argv[1])
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+          assert data.get('modo_arte') == 'fornecida', data
+          print('OK: nova proposta visual enviada para aprovacao')
+          PY
