@@ -11,6 +11,7 @@ import requests
 ENDPOINT = os.getenv("SPIDEY_ENDPOINT", "https://spidey-pokemon-go.onrender.com/enviar").strip()
 QUEUE_DIR = Path("queue/curated")
 BRASILIA_TZ = ZoneInfo("America/Sao_Paulo")
+MONETIZACAO_TIPOS = {"afiliado", "patrocinio", "apoio"}
 
 
 def _parse_local(value, timezone_name):
@@ -103,7 +104,11 @@ def bloco_horarios(data):
     linhas = []
     if len(padroes_locais) == 1:
         primeiro = processados[0]
-        local = _fmt_faixa(primeiro["inicio_local"], primeiro["fim_local"], primeiro["inicio_local"].date())
+        local = _fmt_faixa(
+            primeiro["inicio_local"],
+            primeiro["fim_local"],
+            primeiro["inicio_local"].date(),
+        )
         linhas.append(f"⏰ Horário local: {local} em cada cidade")
     else:
         linhas.append("⏰ Horários locais:")
@@ -121,12 +126,75 @@ def bloco_horarios(data):
     return "\n".join(linhas)
 
 
+def _url_publica(valor):
+    try:
+        parsed = urlparse(str(valor).strip())
+    except Exception:
+        return False
+    return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+
+
+def bloco_monetizacao(data):
+    monet = data.get("monetizacao") or {}
+    if not monet or not bool(monet.get("ativo", False)):
+        return ""
+
+    tipo = str(monet.get("tipo") or "").strip().lower()
+    parceiro = str(monet.get("parceiro") or "").strip()
+    texto = str(monet.get("texto") or "").strip()
+    url = str(monet.get("url") or "").strip()
+
+    if tipo not in MONETIZACAO_TIPOS:
+        raise ValueError(
+            "monetizacao.tipo precisa ser afiliado, patrocinio ou apoio"
+        )
+    if not parceiro:
+        raise ValueError("monetizacao.parceiro e obrigatorio quando ativo=true")
+    if not texto:
+        raise ValueError("monetizacao.texto e obrigatorio quando ativo=true")
+    if not _url_publica(url):
+        raise ValueError("monetizacao.url precisa ser uma URL http/https valida")
+
+    if tipo == "afiliado":
+        cabecalho = "💰 LINK DE AFILIADO"
+        transparencia = (
+            "🔎 Transparência: este link pode gerar uma comissão para o Spidey, "
+            "sem custo extra para você."
+        )
+    elif tipo == "patrocinio":
+        cabecalho = "🤝 CONTEÚDO PATROCINADO"
+        transparencia = (
+            "🔎 Transparência: esta ação comercial é identificada separadamente "
+            "do conteúdo editorial."
+        )
+    else:
+        cabecalho = "🤝 APOIO AO SPIDEY"
+        transparencia = (
+            "🔎 Transparência: este é um bloco de apoio ao projeto, separado "
+            "do conteúdo editorial."
+        )
+
+    return (
+        f"{cabecalho}\n"
+        f"{parceiro} • {texto}\n"
+        f"🔗 {url}\n"
+        f"{transparencia}"
+    )
+
+
 def mensagem_final(data):
-    mensagem = str(data["mensagem"]).strip()
+    partes = []
     bloco = bloco_horarios(data)
-    if not bloco:
-        return mensagem
-    return f"{bloco}\n\n{mensagem}"
+    if bloco:
+        partes.append(bloco)
+
+    partes.append(str(data["mensagem"]).strip())
+
+    comercial = bloco_monetizacao(data)
+    if comercial:
+        partes.append("──────────────\n" + comercial)
+
+    return "\n\n".join(parte for parte in partes if parte)
 
 
 def validar_item(data, path):
@@ -137,6 +205,9 @@ def validar_item(data, path):
 
     if data.get("source_verified") is not True:
         raise ValueError(f"{path}: source_verified precisa ser true")
+
+    if not _url_publica(data["source_url"]):
+        raise ValueError(f"{path}: source_url precisa ser uma URL http/https valida")
 
     image_host = (urlparse(data["image_url"]).hostname or "").lower()
     if image_host not in {"raw.githubusercontent.com", "github.com"}:
@@ -151,6 +222,12 @@ def validar_item(data, path):
         raise ValueError(f"{path}: horarios precisa ser uma lista")
     if horarios:
         bloco_horarios(data)
+
+    monetizacao = data.get("monetizacao")
+    if monetizacao is not None and not isinstance(monetizacao, dict):
+        raise ValueError(f"{path}: monetizacao precisa ser um objeto")
+    if monetizacao:
+        bloco_monetizacao(data)
 
 
 def payload_spidey(data):
