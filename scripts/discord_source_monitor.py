@@ -1,3 +1,4 @@
+import base64
 import json
 import os
 import re
@@ -7,11 +8,16 @@ from pathlib import Path
 
 import requests
 
+from free_art import criar_card_gratis
+
 DISCORD_API = "https://discord.com/api/v10"
 BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 CHANNEL_ID = os.getenv("DISCORD_SOURCE_CHANNEL_ID", "1550962861998866564").strip()
 SPIDEY_ENDPOINT = os.getenv("SPIDEY_ENDPOINT", "https://spidey-pokemon-go.onrender.com/enviar")
 STATE_FILE = Path(os.getenv("DISCORD_SOURCE_STATE_FILE", "last_discord_source.txt"))
+GH_TOKEN = os.getenv("GH_TOKEN", "").strip()
+GH_REPO = os.getenv("GITHUB_REPOSITORY", "asaquevoa1-ctrl/spidey-pokemon-go").strip()
+ASSET_BRANCH = os.getenv("SPIDEY_ASSET_BRANCH", "spidey-assets").strip()
 
 COORD_RE = re.compile(r"(?<!\d)(-?\d{1,2}\.\d{3,})\s*,\s*(-?\d{1,3}\.\d{3,})(?!\d)")
 
@@ -45,6 +51,21 @@ def texto_mensagem(msg: dict) -> str:
                 if nome or valor:
                     partes.append(" — ".join(x for x in (nome, valor) if x))
     return "\n".join(partes).strip()
+
+
+def primeira_imagem_url(msg: dict) -> str | None:
+    for bloco in blocos(msg):
+        for anexo in bloco.get("attachments") or []:
+            url = str(anexo.get("url") or "").strip()
+            tipo = str(anexo.get("content_type") or "").lower()
+            nome = str(anexo.get("filename") or "").lower()
+            if url and (tipo.startswith("image/") or nome.endswith((".png", ".jpg", ".jpeg", ".webp"))):
+                return url
+        for embed in bloco.get("embeds") or []:
+            url = str((embed.get("image") or {}).get("url") or "").strip()
+            if url:
+                return url
+    return None
 
 
 def eh_semanal(texto: str) -> bool:
@@ -156,37 +177,73 @@ def url_mensagem(msg: dict) -> str | None:
     return None
 
 
+def criar_arte_e_publicar_asset(msg: dict, nome: str, corpo: str, coords: list[list[float]]) -> str | None:
+    origem = primeira_imagem_url(msg)
+    if not origem:
+        print("Evento sem imagem-fonte; aguardando visual em vez de publicar arte feia.", flush=True)
+        return None
+    if not GH_TOKEN:
+        raise RuntimeError("GH_TOKEN ausente para salvar a arte gratuita")
+
+    img_resp = requests.get(origem, timeout=60)
+    img_resp.raise_for_status()
+    card = criar_card_gratis(f"📍 EVENTO • {nome}", corpo, img_resp.content, coords)
+
+    mid = str(msg.get("id") or "evento")
+    path = f"assets/auto/spidey-sps-{mid}.png"
+    api = f"https://api.github.com/repos/{GH_REPO}/contents/{path}"
+    payload = {
+        "message": f"Spidey: arte gratuita SPS {mid}",
+        "content": base64.b64encode(card).decode("ascii"),
+        "branch": ASSET_BRANCH,
+    }
+    headers = {
+        "Authorization": f"Bearer {GH_TOKEN}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    r = requests.put(api, headers=headers, json=payload, timeout=60)
+    if r.status_code not in (200, 201):
+        raise RuntimeError(f"GitHub asset HTTP {r.status_code}: {r.text[:500]}")
+
+    return f"https://raw.githubusercontent.com/{GH_REPO}/{ASSET_BRANCH}/{path}"
+
+
 def enviar(msg: dict, texto: str) -> bool:
     coords = extrair_coordenadas(texto)
     nome = titulo_evento(texto)
     corpo = traduzir_basico(texto)
+
+    imagem_url = criar_arte_e_publicar_asset(msg, nome, corpo, coords)
+    if not imagem_url:
+        return False
+
     payload = {
         "titulo": f"📍 EVENTO • {nome}",
         "mensagem": (
-            "Evento detectado automaticamente a partir de uma mensagem encaminhada do SPS.\n\n"
-            + corpo
-            + "\n\n🔎 Fonte operacional: SPS\n🕷️ O Spidey só publica depois da sua aprovação."
+            corpo
+            + "\n\n🔎 Fonte operacional: SPS\n🕷️ Publicação somente após aprovação."
         ),
         "url": url_mensagem(msg),
         "coordenadas": coords,
         "gerar_gpx": bool(coords),
         "gpx_nome": slug(nome),
-        "gerar_arte": True,
-        "permitir_fallback": False,
+        "imagem_url": imagem_url,
+        "gerar_arte": False,
         "aprovar": True,
     }
     r = requests.post(SPIDEY_ENDPOINT, json=payload, timeout=180)
-    if r.status_code == 503:
-        print("Evento SPS detectado, mas aguardando arte premium; item mantido pendente.", flush=True)
-        print(r.text[:500], flush=True)
-        return False
     r.raise_for_status()
     data = r.json()
-    ok = data.get("status") == "enviado" and data.get("etapa") == "aguardando_aprovacao"
+    ok = (
+        data.get("status") == "enviado"
+        and data.get("etapa") == "aguardando_aprovacao"
+        and data.get("arte") is True
+    )
     if not ok:
         raise RuntimeError(f"Resposta inesperada do Spidey: {json.dumps(data, ensure_ascii=False)}")
     print(
-        f"OK: evento SPS enviado para aprovação: {nome} | coords={len(coords)} | gpx={bool(coords)} | arte={data.get('arte')}",
+        f"OK: evento SPS enviado para aprovação: {nome} | coords={len(coords)} | gpx={bool(coords)} | arte=gratis_spidey",
         flush=True,
     )
     return True
