@@ -1,0 +1,28 @@
+{
+  "status": "pending",
+  "source_verified": true,
+  "titulo": "🌎 NOME DO EVENTO • CIDADE",
+  "mensagem": "Resumo editorial validado do evento. Não inclua publicidade escondida neste campo.",
+  "source_url": "https://fonte-oficial.example/evento",
+  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/curated/arte-final.jpg",
+  "horarios": [
+    {
+      "localidade": "Cidade do evento",
+      "timezone": "America/Los_Angeles",
+      "inicio": "2026-09-22T18:40:00",
+      "fim": "2026-09-22T22:00:00"
+    }
+  ],
+  "coordenadas": [
+    [47.59148, -122.332863]
+  ],
+  "gerar_gpx": true,
+  "gpx_nome": "spidey-evento.gpx",
+  "monetizacao": {
+    "ativo": false,
+    "tipo": "afiliado",
+    "parceiro": "",
+    "texto": "",
+    "url": ""
+  }
+}
