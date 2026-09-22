@@ -297,7 +297,7 @@ def _preparar_conteudo(dados):
     gerar_arte = dados.get("gerar_arte", "G47IX" in titulo.upper())
 
     if gerar_arte:
-        if os.getenv("OPENAI_API_KEY"):
+        if bool(dados.get("usar_premium", True)) and os.getenv("OPENAI_API_KEY"):
             try:
                 imagem_bytes = criar_card_premium(titulo, mensagem)
                 modo_arte = "premium"
@@ -414,6 +414,8 @@ def enviar():
                 "gerar_gpx": bool(conteudo["gpx_bytes"]),
                 "gpx_nome": conteudo["gpx_nome"],
                 "gerar_arte": bool(conteudo["gerar_arte"]),
+                "usar_premium": bool(dados.get("usar_premium", True)),
+                "permitir_fallback": bool(dados.get("permitir_fallback", False)),
                 "imagem_url": conteudo.get("imagem_url"),
             },
             segredo,
