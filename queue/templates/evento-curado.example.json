@@ -21,8 +21,9 @@
   "monetizacao": {
     "ativo": false,
     "tipo": "afiliado",
-    "parceiro": "",
-    "texto": "",
-    "url": ""
+    "plataforma": "shopee",
+    "parceiro": "Shopee",
+    "texto": "Oferta útil e relevante para jogadores de Pokémon GO.",
+    "url": "https://shopee.com.br/seu-link-de-afiliado"
   }
 }
