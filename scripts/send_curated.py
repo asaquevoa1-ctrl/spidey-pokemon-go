@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -41,6 +42,25 @@ def payload_spidey(data):
     }
 
 
+def enviar_com_retry(payload):
+    ultimo_erro = None
+    for tentativa, espera in enumerate((0, 5, 10, 20), start=1):
+        if espera:
+            time.sleep(espera)
+        try:
+            response = requests.post(ENDPOINT, json=payload, timeout=180)
+            if response.status_code in {502, 503, 504}:
+                ultimo_erro = RuntimeError(f"HTTP {response.status_code}: {response.text[:300]}")
+                print(f"Render temporariamente indisponivel; tentativa {tentativa}/4.")
+                continue
+            response.raise_for_status()
+            return response
+        except requests.RequestException as exc:
+            ultimo_erro = exc
+            print(f"Falha de rede; tentativa {tentativa}/4: {exc}")
+    raise ultimo_erro or RuntimeError("Falha desconhecida no envio ao Spidey")
+
+
 def main():
     QUEUE_DIR.mkdir(parents=True, exist_ok=True)
     pending = []
@@ -59,8 +79,7 @@ def main():
     for path, data in pending:
         try:
             validar_item(data, path)
-            response = requests.post(ENDPOINT, json=payload_spidey(data), timeout=180)
-            response.raise_for_status()
+            response = enviar_com_retry(payload_spidey(data))
             result = response.json()
             if result.get("status") != "enviado" or result.get("etapa") != "aguardando_aprovacao":
                 raise RuntimeError(f"resposta inesperada: {result}")
