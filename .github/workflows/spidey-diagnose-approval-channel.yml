@@ -11,7 +11,7 @@ jobs:
   diagnosticar:
     runs-on: ubuntu-latest
     steps:
-      - name: Ler mensagens alvo e gerar links diretos
+      - name: Sinalizar posts corretos no canal de aprovacao
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           APPROVAL_CHANNEL_ID: "1550963072464715997"
@@ -24,25 +24,41 @@ jobs:
           if not token:
               raise SystemExit('DISCORD_BOT_TOKEN_AUSENTE')
           cid=os.environ['APPROVAL_CHANNEL_ID']
-          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0','Content-Type':'application/json'}
           r=requests.get(f'https://discord.com/api/v10/channels/{cid}',headers=h,timeout=30)
-          r.raise_for_status()
-          c=r.json(); guild=str(c.get('guild_id') or '')
-          print('CHANNEL_NAME',c.get('name')); print('GUILD_ID',guild)
+          r.raise_for_status(); c=r.json(); guild=str(c.get('guild_id') or '')
           r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':50},timeout=30)
           r.raise_for_status(); msgs=r.json()
+          def title_of(m):
+              e=m.get('embeds') or []
+              return ((e[0].get('title') if e else '') or '')
+          mlb=None; ultra=None
           for m in msgs:
-              embeds=m.get('embeds') or []
-              title=(embeds[0].get('title') if embeds else '') or ''
-              upper=title.upper()
-              if any(k in upper for k in ('G47IX','MLB','ULTRA BEASTS')):
-                  mid=m['id']
-                  image=((embeds[0].get('image') or {}).get('url') if embeds else '') or ''
-                  print('TARGET',title)
-                  print('MESSAGE_ID',mid)
-                  print('TIMESTAMP',m.get('timestamp'))
-                  print('COMPONENT_ROWS',len(m.get('components') or []))
-                  print('ATTACHMENTS',len(m.get('attachments') or []))
-                  print('EMBED_IMAGE',bool(image))
-                  if guild: print('LINK',f'https://discord.com/channels/{guild}/{cid}/{mid}')
+              t=title_of(m).upper()
+              if mlb is None and 'APROVAÇÃO' in t and 'MLB' in t:
+                  mlb=m
+              if ultra is None and 'APROVAÇÃO' in t and 'ULTRA BEASTS' in t:
+                  ultra=m
+              if mlb and ultra: break
+          if not guild or not mlb or not ultra:
+              raise SystemExit('ALVOS_NAO_ENCONTRADOS')
+          mlb_link=f'https://discord.com/channels/{guild}/{cid}/{mlb["id"]}'
+          ultra_link=f'https://discord.com/channels/{guild}/{cid}/{ultra["id"]}'
+          marker='SPIDEY_CHECK_20260922_2050'
+          if any(marker in (m.get('content') or '') for m in msgs):
+              print('CHECK_JA_EXISTE')
+              raise SystemExit(0)
+          text=(
+              '🕷️ **SPIDEY — POSTS CORRETOS PARA CONFERIR**\n\n'
+              f'⚾ MLB Seattle: {mlb_link}\n'
+              f'🧬 Ultra Beasts / G47IX: {ultra_link}\n\n'
+              'Se você está vendo esta mensagem, este é o canal correto de aprovação.\n'
+              f'`{marker}`'
+          )
+          r=requests.post(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,json={'content':text},timeout=30)
+          print('SEND_HTTP',r.status_code)
+          r.raise_for_status(); sent=r.json()
+          print('SENT_ID',sent.get('id'))
+          print('MLB_LINK',mlb_link)
+          print('ULTRA_LINK',ultra_link)
           PY
