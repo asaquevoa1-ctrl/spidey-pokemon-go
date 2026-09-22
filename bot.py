@@ -530,12 +530,14 @@ def whatsapp():
     coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))
     coordenadas_cruas = [_coord_crua(lat, lon) for lat, lon in coordenadas]
     url = dados.get("url")
+    imagem_url = str(dados.get("imagem_url") or "").strip()
     if url:
         mensagem += f"\n\n🔗 Fonte: {url}"
 
     texto = f"{titulo}\n\n{mensagem}".strip()
     wa_url = "https://wa.me/?text=" + quote(texto)
     texto_js = json.dumps(texto, ensure_ascii=False)
+    imagem_js = json.dumps(imagem_url, ensure_ascii=False)
     texto_html = (
         texto.replace("&", "&amp;")
         .replace("<", "&lt;")
@@ -556,7 +558,7 @@ body{{margin:0;background:#07192f;color:#fff;font-family:Arial,sans-serif;paddin
 .card{{max-width:620px;margin:auto;background:#102a4d;border-radius:24px;padding:24px;box-shadow:0 18px 60px #0008}}
 h1{{margin:8px 0 16px;color:#57e389}}textarea{{width:100%;min-height:260px;box-sizing:border-box;border:0;border-radius:16px;padding:16px;font-size:16px;line-height:1.45;background:#f7fbff;color:#10213b}}
 .btn{{display:block;text-align:center;text-decoration:none;border:0;border-radius:16px;padding:15px;margin-top:12px;font-weight:700;font-size:17px;cursor:pointer}}
-.wa{{background:#25D366;color:#062d16}}.copy{{background:#dcecff;color:#0b2a55}}
+.wa{{background:#25D366;color:#062d16}}.copy{{background:#dcecff;color:#0b2a55}}.share{{background:#57e389;color:#062d16}}
 .coord{{display:flex;gap:10px;align-items:center;margin-top:12px;padding:12px;border-radius:14px;background:#07192f}}
 .coord code{{flex:1;font-size:17px;word-break:break-all}}.mini{{border:0;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer}}
 small{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}
@@ -564,15 +566,49 @@ small{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}
 </head>
 <body><div class="card"><div style="font-size:40px">🕷️</div><h1>Pronto para o WhatsApp</h1>
 <textarea id="texto" readonly>{texto_html}</textarea>
+<button class="btn share" onclick="compartilharPost()">🚀 Compartilhar post</button>
 <button class="btn copy" onclick="copiar()">📋 Copiar texto</button>
 <a class="btn wa" href="{wa_url}">📲 Abrir WhatsApp</a>
 <a class="btn wa" href="https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F">📢 Abrir canal Spidey Pokémon GO</a>
 {('<h2 style="margin-top:22px">📍 Coordenadas</h2><div style="color:#b9c9df">É só copiar</div>' + coords_html) if coordenadas_cruas else ''}
-<small>A arte aprovada continua na publicação do Discord. No WhatsApp, use o botão Abrir canal Spidey Pokémon GO, publique a arte e cole o texto; quando houver coordenadas, envie cada coordenada separadamente.</small>
+<small>A arte aprovada continua na publicação do Discord. Use Compartilhar post primeiro: no Android ele tenta enviar arte + texto juntos pelo compartilhamento nativo. Se o WhatsApp não oferecer o Canal como destino, o texto já fica copiado e você pode usar Abrir canal Spidey Pokémon GO. Quando houver coordenadas, envie cada coordenada separadamente.</small>
 </div>
 <script>
 const texto = {texto_js};
+const imagemUrl = {imagem_js};
 async function copiar(){{await navigator.clipboard.writeText(texto); const b=document.querySelector('.copy'); b.textContent='✅ Texto copiado';}}
+async function compartilharPost(){{
+  const b=document.querySelector('.share');
+  try {{
+    await navigator.clipboard.writeText(texto);
+  }} catch (_) {{}}
+  try {{
+    if (imagemUrl) {{
+      const r = await fetch(imagemUrl, {{cache:'no-store'}});
+      if (!r.ok) throw new Error('Falha ao carregar arte');
+      const blob = await r.blob();
+      const ext = blob.type.includes('png') ? 'png' : 'jpg';
+      const file = new File([blob], `spidey-post.${{ext}}`, {{type: blob.type || 'image/jpeg'}});
+      const dadosShare = {{title:'Spidey Pokémon GO', text:texto, files:[file]}};
+      if (navigator.canShare && navigator.canShare({{files:[file]}})) {{
+        await navigator.share(dadosShare);
+        b.textContent='✅ Compartilhamento aberto';
+        return;
+      }}
+    }}
+    if (navigator.share) {{
+      await navigator.share({{title:'Spidey Pokémon GO', text:texto}});
+      b.textContent='✅ Compartilhamento aberto';
+      return;
+    }}
+    b.textContent='📋 Texto copiado — abra o canal';
+    window.location.href='https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F';
+  }} catch (e) {{
+    if (e && e.name === 'AbortError') return;
+    b.textContent='📋 Texto copiado — abra o canal';
+    window.location.href='https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F';
+  }}
+}}
 async function copiarCoord(valor){{await navigator.clipboard.writeText(valor);}}
 </script></body></html>"""
 
