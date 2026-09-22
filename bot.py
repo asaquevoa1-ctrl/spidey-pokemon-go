@@ -496,6 +496,12 @@ def aprovar():
     if conteudo["gpx_bytes"]:
         mensagem_publicada += "\n\n🗺️ Arquivo GPX anexado."
 
+    preparar_whatsapp = f"{PUBLIC_BASE_URL}/whatsapp?t={token}"
+    mensagem_publicada += (
+        f"\n\n📲 [PREPARAR WHATSAPP]({preparar_whatsapp})"
+        f"\n📢 [ABRIR CANAL SPIDEY](https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F)"
+    )
+
     mandar_discord(
         f"✅ APROVADO • {conteudo['titulo']}",
         mensagem_publicada,
@@ -504,7 +510,6 @@ def aprovar():
         gpx_bytes=conteudo["gpx_bytes"],
         gpx_nome=conteudo["gpx_nome"],
         webhook_url=DISCORD_PUBLICADOS_WEBHOOK,
-        components=_botao_whatsapp(token),
     )
     mandar_coordenadas_cruas(conteudo["coordenadas"], webhook_url=DISCORD_PUBLICADOS_WEBHOOK)
     tokens_processados.add(token_id)
