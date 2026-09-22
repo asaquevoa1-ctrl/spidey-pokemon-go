@@ -9,6 +9,7 @@ on:
     paths:
       - ".github/workflows/spidey-discord-source.yml"
       - "scripts/discord_source_monitor.py"
+      - "free_art.py"
       - "last_discord_source.txt"
 
 permissions:
@@ -23,13 +24,15 @@ jobs:
           fetch-depth: 0
 
       - name: Preparar Python
-        run: python -m pip install --quiet requests
+        run: python -m pip install --quiet requests Pillow
 
       - name: Verificar eventos SPS encaminhados
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           DISCORD_SOURCE_CHANNEL_ID: "1550962861998866564"
           SPIDEY_ENDPOINT: "https://spidey-pokemon-go.onrender.com/enviar"
+          GH_TOKEN: ${{ github.token }}
+          SPIDEY_ASSET_BRANCH: "spidey-assets"
         run: python scripts/discord_source_monitor.py
 
       - name: Salvar antirrepetição
