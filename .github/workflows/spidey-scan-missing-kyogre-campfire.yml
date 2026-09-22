@@ -1,0 +1,64 @@
+name: Spidey - localizar Kyogre e Campfire faltantes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-scan-missing-kyogre-campfire.yml"
+  workflow_dispatch:
+
+jobs:
+  localizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Varrer entrada PokeMiners e comparar fluxo
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          SOURCE_CHANNEL_ID: "1550962794814373898"
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
+          PUBLIC_CHANNEL_ID: "1550963136519999658"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, requests, re
+          token=os.environ['DISCORD_BOT_TOKEN'].strip()
+          src=os.environ['SOURCE_CHANNEL_ID']; approval=os.environ['APPROVAL_CHANNEL_ID']; public=os.environ['PUBLIC_CHANNEL_ID']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          rc=requests.get(f'https://discord.com/api/v10/channels/{src}',headers=h,timeout=30); rc.raise_for_status(); ch=rc.json(); guild=str(ch.get('guild_id') or '')
+          def get(cid,limit=100):
+              r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':limit},timeout=30); r.raise_for_status(); return r.json()
+          src_msgs=get(src,100); ap_msgs=get(approval,100); pub_msgs=get(public,100)
+          def full(m):
+              parts=[str(m.get('content') or '')]
+              for e in m.get('embeds') or []:
+                  parts += [str(e.get('title') or ''),str(e.get('description') or ''),str(e.get('url') or '')]
+                  for f in e.get('fields') or []:
+                      parts += [str(f.get('name') or ''),str(f.get('value') or '')]
+              return '\n'.join(parts)
+          def exact_in(msgs,url):
+              hits=[]
+              for m in msgs:
+                  if any(str(e.get('url') or '').strip()==url for e in (m.get('embeds') or [])):
+                      hits.append(m)
+              return hits
+          needles=('kyogre','campfire','roll-out','rollout','apk','game master','gamemaster','forced update','api version','update date','pokemon go update')
+          matches=[]
+          for m in src_msgs:
+              text=full(m)
+              low=text.lower()
+              if any(n in low for n in needles):
+                  mid=str(m['id']); url=f'https://discord.com/channels/{guild}/{src}/{mid}'
+                  matches.append((int(mid),m,text,url))
+          for _,m,text,url in sorted(matches,reverse=True):
+              compact=re.sub(r'\s+',' ',text).strip()[:700]
+              ap=exact_in(ap_msgs,url); pub=exact_in(pub_msgs,url)
+              print('---')
+              print('SOURCE_ID',m['id'])
+              print('TIMESTAMP',m.get('timestamp'))
+              print('AUTHOR',(m.get('author') or {}).get('username'))
+              print('TEXT',compact)
+              print('SOURCE_URL',url)
+              print('APPROVAL_IDS',','.join(x['id'] for x in ap) if ap else 'NONE')
+              print('PUBLIC_IDS',','.join(x['id'] for x in pub) if pub else 'NONE')
+          PY
