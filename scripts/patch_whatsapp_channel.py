@@ -12,7 +12,7 @@ old_buttons = '''                {
                     "url": preparar,
                 }
 '''
-first_button_with_comma = old_buttons[:-2] + ",\n"
+first_button_with_comma = old_buttons[:-1] + ",\n"
 new_buttons = first_button_with_comma + f'''                {{
                     "type": 2,
                     "style": 5,
