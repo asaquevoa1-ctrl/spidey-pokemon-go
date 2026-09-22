@@ -1,0 +1,97 @@
+name: Spidey - teste gratuito City Safari
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-test-free-safari.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositorio
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Habilitar arte gratuita sem chamar API paga
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p = Path('bot.py')
+          s = p.read_text(encoding='utf-8')
+
+          antigo = '        if os.getenv("OPENAI_API_KEY"):\n'
+          novo = '        if bool(dados.get("usar_premium", True)) and os.getenv("OPENAI_API_KEY"):\n'
+          if novo not in s:
+              if antigo not in s:
+                  raise SystemExit('Bloco premium nao encontrado')
+              s = s.replace(antigo, novo, 1)
+
+          token_antigo = '                "gerar_arte": bool(conteudo["gerar_arte"]),\n                "imagem_url": conteudo.get("imagem_url"),\n'
+          token_novo = '                "gerar_arte": bool(conteudo["gerar_arte"]),\n                "usar_premium": bool(dados.get("usar_premium", True)),\n                "permitir_fallback": bool(dados.get("permitir_fallback", False)),\n                "imagem_url": conteudo.get("imagem_url"),\n'
+          if '"usar_premium": bool(dados.get("usar_premium", True))' not in s:
+              if token_antigo not in s:
+                  raise SystemExit('Bloco do token nao encontrado')
+              s = s.replace(token_antigo, token_novo, 1)
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+          python3 -m py_compile bot.py spidey_art_v4.py spidey_approval.py
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py
+          if ! git diff --cached --quiet; then
+            git commit -m "Spidey: permite forcar arte gratuita"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Aguardar deploy do Render
+        run: sleep 150
+
+      - name: Enviar teste City Safari para aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          resposta=$(curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @- \
+            "https://spidey-pokemon-go.onrender.com/enviar" <<'JSON'
+          {
+            "titulo": "🧪 TESTE GRATUITO • CITY SAFARI",
+            "mensagem": "City Safari chega em 26 e 27 de setembro com atividades em Boston, Brisbane, Lisboa, Marselha, Munique e Rio de Janeiro. O sábado também traz Catch Mastery com Phantump, enquanto no domingo o City Safari continua junto do Scenic Sunday.\n\nTeste do novo caminho de arte gratuita do Spidey — sem geração paga de imagem.",
+            "url": "https://pokemongohub.net/post/event/this-week-in-pokemon-go-september-21-27-2026/",
+            "gerar_arte": true,
+            "usar_premium": false,
+            "permitir_fallback": true,
+            "gerar_gpx": false,
+            "aprovar": true
+          }
+          JSON
+          )
+
+          echo "$resposta"
+
+          python3 - <<'PY' "$resposta"
+          import json, sys
+          data = json.loads(sys.argv[1])
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+          assert data.get('modo_arte') == 'fallback_v4', data
+          print('OK: teste gratuito enviado ao canal de aprovacao')
+          PY
