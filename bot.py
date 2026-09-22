@@ -558,7 +558,7 @@ body{{margin:0;background:#07192f;color:#fff;font-family:Arial,sans-serif;paddin
 .card{{max-width:620px;margin:auto;background:#102a4d;border-radius:24px;padding:24px;box-shadow:0 18px 60px #0008}}
 h1{{margin:8px 0 16px;color:#57e389}}textarea{{width:100%;min-height:260px;box-sizing:border-box;border:0;border-radius:16px;padding:16px;font-size:16px;line-height:1.45;background:#f7fbff;color:#10213b}}
 .btn{{display:block;text-align:center;text-decoration:none;border:0;border-radius:16px;padding:15px;margin-top:12px;font-weight:700;font-size:17px;cursor:pointer}}
-.wa{{background:#25D366;color:#062d16}}.copy{{background:#dcecff;color:#0b2a55}}.share{{background:#57e389;color:#062d16}}
+.wa{{background:#25D366;color:#062d16}}.copy{{background:#dcecff;color:#0b2a55}}.launch{{background:#57e389;color:#062d16}}.download{{background:#f5c84c;color:#2f2600}}
 .coord{{display:flex;gap:10px;align-items:center;margin-top:12px;padding:12px;border-radius:14px;background:#07192f}}
 .coord code{{flex:1;font-size:17px;word-break:break-all}}.mini{{border:0;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer}}
 small{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}
@@ -566,48 +566,53 @@ small{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}
 </head>
 <body><div class="card"><div style="font-size:40px">🕷️</div><h1>Pronto para o WhatsApp</h1>
 <textarea id="texto" readonly>{texto_html}</textarea>
-<button class="btn share" onclick="compartilharPost()">🚀 Compartilhar post</button>
+<button class="btn launch" onclick="prepararCanal()">🚀 Preparar e abrir canal</button>
+<button class="btn download" onclick="baixarArte()">🖼️ Baixar arte</button>
 <button class="btn copy" onclick="copiar()">📋 Copiar texto</button>
-<a class="btn wa" href="{wa_url}">📲 Abrir WhatsApp</a>
 <a class="btn wa" href="https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F">📢 Abrir canal Spidey Pokémon GO</a>
 {('<h2 style="margin-top:22px">📍 Coordenadas</h2><div style="color:#b9c9df">É só copiar</div>' + coords_html) if coordenadas_cruas else ''}
-<small>A arte aprovada continua na publicação do Discord. Use Compartilhar post primeiro: no Android ele tenta enviar arte + texto juntos pelo compartilhamento nativo. Se o WhatsApp não oferecer o Canal como destino, o texto já fica copiado e você pode usar Abrir canal Spidey Pokémon GO. Quando houver coordenadas, envie cada coordenada separadamente.</small>
+<small>Use Preparar e abrir canal: o Spidey copia o texto, baixa a arte e abre diretamente o canal. No WhatsApp, anexe a imagem recém-baixada e cole o texto. Quando houver coordenadas, envie cada coordenada separadamente.</small>
 </div>
 <script>
 const texto = {texto_js};
 const imagemUrl = {imagem_js};
-async function copiar(){{await navigator.clipboard.writeText(texto); const b=document.querySelector('.copy'); b.textContent='✅ Texto copiado';}}
-async function compartilharPost(){{
-  const b=document.querySelector('.share');
+const canalUrl = 'https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F';
+async function copiar(){{
+  await navigator.clipboard.writeText(texto);
+  const b=document.querySelector('.copy');
+  b.textContent='✅ Texto copiado';
+}}
+async function baixarArte(){{
+  const b=document.querySelector('.download');
+  if (!imagemUrl) {{ b.textContent='⚠️ Arte indisponível'; return false; }}
   try {{
-    await navigator.clipboard.writeText(texto);
-  }} catch (_) {{}}
-  try {{
-    if (imagemUrl) {{
-      const r = await fetch(imagemUrl, {{cache:'no-store'}});
-      if (!r.ok) throw new Error('Falha ao carregar arte');
-      const blob = await r.blob();
-      const ext = blob.type.includes('png') ? 'png' : 'jpg';
-      const file = new File([blob], `spidey-post.${{ext}}`, {{type: blob.type || 'image/jpeg'}});
-      const dadosShare = {{title:'Spidey Pokémon GO', text:texto, files:[file]}};
-      if (navigator.canShare && navigator.canShare({{files:[file]}})) {{
-        await navigator.share(dadosShare);
-        b.textContent='✅ Compartilhamento aberto';
-        return;
-      }}
-    }}
-    if (navigator.share) {{
-      await navigator.share({{title:'Spidey Pokémon GO', text:texto}});
-      b.textContent='✅ Compartilhamento aberto';
-      return;
-    }}
-    b.textContent='📋 Texto copiado — abra o canal';
-    window.location.href='https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F';
-  }} catch (e) {{
-    if (e && e.name === 'AbortError') return;
-    b.textContent='📋 Texto copiado — abra o canal';
-    window.location.href='https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F';
+    const r = await fetch(imagemUrl, {{cache:'no-store'}});
+    if (!r.ok) throw new Error('Falha ao carregar arte');
+    const blob = await r.blob();
+    const ext = blob.type.includes('png') ? 'png' : 'jpg';
+    const nome = `spidey-post.${{ext}}`;
+    const obj = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = obj;
+    a.download = nome;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(()=>URL.revokeObjectURL(obj), 5000);
+    b.textContent='✅ Arte baixada';
+    return true;
+  }} catch (_) {{
+    b.textContent='⚠️ Toque para tentar baixar de novo';
+    return false;
   }}
+}}
+async function prepararCanal(){{
+  const b=document.querySelector('.launch');
+  b.textContent='⏳ Preparando...';
+  try {{ await navigator.clipboard.writeText(texto); }} catch (_) {{}}
+  await baixarArte();
+  b.textContent='✅ Texto copiado + arte pronta';
+  setTimeout(()=>{{ window.location.href=canalUrl; }}, 650);
 }}
 async function copiarCoord(valor){{await navigator.clipboard.writeText(valor);}}
 </script></body></html>"""
