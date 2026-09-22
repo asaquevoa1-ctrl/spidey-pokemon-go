@@ -11,7 +11,7 @@ jobs:
   diagnosticar:
     runs-on: ubuntu-latest
     steps:
-      - name: Ler ultimas mensagens do canal de aprovacao
+      - name: Ler mensagens alvo e gerar links diretos
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           APPROVAL_CHANNEL_ID: "1550963072464715997"
@@ -26,27 +26,27 @@ jobs:
           cid=os.environ['APPROVAL_CHANNEL_ID']
           h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
           r=requests.get(f'https://discord.com/api/v10/channels/{cid}',headers=h,timeout=30)
-          print('CHANNEL_HTTP',r.status_code)
           r.raise_for_status()
           c=r.json()
+          guild=str(c.get('guild_id') or '')
           print('CHANNEL_NAME',c.get('name'))
-          print('CHANNEL_ID',c.get('id'))
-          r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':20},timeout=30)
-          print('MESSAGES_HTTP',r.status_code)
+          print('CHANNEL_ID',cid)
+          print('GUILD_ID',guild)
+          r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':50},timeout=30)
           r.raise_for_status()
           msgs=r.json()
-          print('MESSAGE_COUNT',len(msgs))
+          matches=[]
           for m in msgs:
               embeds=m.get('embeds') or []
               title=(embeds[0].get('title') if embeds else '') or ''
-              content=(m.get('content') or '').replace('\n',' ')[:120]
-              print('MSG',m.get('id'),'TITLE=',title[:180],'CONTENT=',content)
-          needles=('G47IX','ULTRA BEAST','MLB','MARINERS')
-          found=[]
-          for m in msgs:
-              embeds=m.get('embeds') or []
-              text=' '.join([(m.get('content') or '')]+[(e.get('title') or '')+' '+(e.get('description') or '') for e in embeds]).upper()
-              if any(n in text for n in needles):
-                  found.append(m.get('id'))
-          print('TARGET_FOUND',','.join(found) if found else 'NONE')
+              upper=title.upper()
+              if ('G47IX' in upper and 'APROVAÇÃO' in upper) or ('MLB' in upper and 'APROVAÇÃO' in upper):
+                  matches.append((int(m['id']),m['id'],title,len(m.get('components') or []),len(m.get('attachments') or [])))
+          for _,mid,title,components,attachments in sorted(matches, reverse=True):
+              print('TARGET',title)
+              print('MESSAGE_ID',mid)
+              print('COMPONENT_ROWS',components)
+              print('ATTACHMENTS',attachments)
+              if guild:
+                  print('LINK',f'https://discord.com/channels/{guild}/{cid}/{mid}')
           PY
