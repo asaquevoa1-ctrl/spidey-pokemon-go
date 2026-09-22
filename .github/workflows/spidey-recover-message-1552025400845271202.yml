@@ -11,38 +11,79 @@ jobs:
   recuperar:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspecionar mensagem origem
+      - name: Localizar ou reenviar entrada PokeMiners
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           SOURCE_CHANNEL_ID: "1550962794814373898"
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
           MESSAGE_ID: "1552025400845271202"
+          SPIDEY_ENDPOINT: "https://spidey-pokemon-go.onrender.com/enviar"
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           import os, requests, json
           token=os.environ['DISCORD_BOT_TOKEN'].strip()
-          cid=os.environ['SOURCE_CHANNEL_ID']
-          mid=os.environ['MESSAGE_ID']
+          src=os.environ['SOURCE_CHANNEL_ID']; dst=os.environ['APPROVAL_CHANNEL_ID']; mid=os.environ['MESSAGE_ID']
+          endpoint=os.environ['SPIDEY_ENDPOINT']
           h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
-          rc=requests.get(f'https://discord.com/api/v10/channels/{cid}',headers=h,timeout=30)
-          print('CHANNEL_HTTP',rc.status_code)
-          rc.raise_for_status(); c=rc.json()
-          print('CHANNEL_NAME',c.get('name'))
-          r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages/{mid}',headers=h,timeout=30)
-          print('MESSAGE_HTTP',r.status_code)
+
+          rc=requests.get(f'https://discord.com/api/v10/channels/{src}',headers=h,timeout=30)
+          rc.raise_for_status(); ch=rc.json(); guild=str(ch.get('guild_id') or '')
+          source_url=f'https://discord.com/channels/{guild}/{src}/{mid}'
+          r=requests.get(f'https://discord.com/api/v10/channels/{src}/messages/{mid}',headers=h,timeout=30)
           r.raise_for_status(); m=r.json()
-          print('AUTHOR', (m.get('author') or {}).get('username'))
-          print('TIMESTAMP',m.get('timestamp'))
-          print('CONTENT',repr(m.get('content') or ''))
-          print('ATTACHMENT_COUNT',len(m.get('attachments') or []))
-          for i,a in enumerate(m.get('attachments') or []):
-              print('ATTACH',i,a.get('filename'),a.get('content_type'),a.get('url'))
-          print('EMBED_COUNT',len(m.get('embeds') or []))
-          for i,e in enumerate(m.get('embeds') or []):
-              print('EMBED',i,'TITLE=',repr(e.get('title')))
-              print('EMBED',i,'DESC=',repr(e.get('description')))
-              print('EMBED',i,'URL=',repr(e.get('url')))
-              print('EMBED',i,'IMAGE=',repr((e.get('image') or {}).get('url')))
-              print('EMBED',i,'THUMB=',repr((e.get('thumbnail') or {}).get('url')))
+          content=(m.get('content') or '').strip()
+          print('SOURCE_CONTENT',repr(content))
+          print('SOURCE_URL',source_url)
+
+          # Procura a origem exata nas 100 mensagens mais recentes de aprovação.
+          r=requests.get(f'https://discord.com/api/v10/channels/{dst}/messages',headers=h,params={'limit':100},timeout=30)
+          r.raise_for_status(); approvals=r.json()
+          found=[]
+          for a in approvals:
+              for e in a.get('embeds') or []:
+                  if str(e.get('url') or '').strip() == source_url:
+                      found.append(a)
+          if found:
+              a=max(found,key=lambda x:int(x['id']))
+              link=f'https://discord.com/channels/{guild}/{dst}/{a["id"]}'
+              print('JA_EXISTE',a['id'])
+              print('APPROVAL_LINK',link)
+              raise SystemExit(0)
+
+          payload={
+            'titulo':'📦 APK • Pokémon GO',
+            'mensagem':(
+              'O PokeMiners detectou um novo rollout do APK do Pokémon GO na Google Play.\n\n'
+              '📅 Data informada da atualização: 21/09/2026\n'
+              '⏰ Horário informado: 20:50:59 UTC (17:50:59 em Brasília)\n'
+              '📱 Plataforma: Google Play / Android\n\n'
+              'Isso indica o início da distribuição de uma nova compilação do aplicativo; a liberação pode ocorrer gradualmente entre os usuários.\n\n'
+              '🔎 Fonte operacional: PokeMiners #miner-bot\n'
+              '🕷️ Aguardando sua aprovação antes da publicação.'
+            ),
+            'url':source_url,
+            'gerar_gpx':False,
+            'gerar_arte':False,
+            'aprovar':True,
+          }
+          rr=requests.post(endpoint,json=payload,timeout=120)
+          print('SPIDEY_HTTP',rr.status_code)
+          print('SPIDEY_RESPONSE',rr.text[:1000])
+          rr.raise_for_status()
+          data=rr.json()
+          assert data.get('status')=='enviado' and data.get('etapa')=='aguardando_aprovacao', data
+
+          # Confirma diretamente no Discord e devolve o link criado.
+          r=requests.get(f'https://discord.com/api/v10/channels/{dst}/messages',headers=h,params={'limit':20},timeout=30)
+          r.raise_for_status(); approvals=r.json()
+          for a in approvals:
+              for e in a.get('embeds') or []:
+                  if str(e.get('url') or '').strip() == source_url:
+                      link=f'https://discord.com/channels/{guild}/{dst}/{a["id"]}'
+                      print('REENVIADO_ID',a['id'])
+                      print('APPROVAL_LINK',link)
+                      raise SystemExit(0)
+          raise SystemExit('REENVIO_OK_MAS_NAO_LOCALIZADO_NO_DISCORD')
           PY
