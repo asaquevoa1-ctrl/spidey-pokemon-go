@@ -2,6 +2,7 @@ import base64
 import io
 import os
 import re
+from pathlib import Path
 
 import requests
 from PIL import Image, ImageDraw, ImageFont
@@ -9,6 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1350
 OPENAI_IMAGE_MODEL = os.getenv("OPENAI_IMAGE_MODEL", "gpt-image-2.5-flare")
 OPENAI_IMAGE_QUALITY = os.getenv("OPENAI_IMAGE_QUALITY", "medium")
+LOGO_PATH = Path(__file__).resolve().parent / "assets" / "spidey-logo-oficial.jpg"
 
 
 def _font(size, bold=False):
@@ -46,8 +48,27 @@ def _clean(text):
     text = re.sub(r"Fonte original:\s*https?://\S+", "", text, flags=re.I)
     text = re.sub(r"https?://\S+", "", text)
     text = re.sub(r"Detectado e classificado automaticamente pelo Spidey", "", text, flags=re.I)
-    text = re.sub(r"[🕷️🔗]+", "", text)
+    text = re.sub(r"\bFonte:\s*(?:G47IX|SPS|Pokémon GO(?: oficial)?)\b", "", text, flags=re.I)
+    text = re.sub(r"[@#][\w_]+", "", text)
+    text = re.sub(r"\b(?:More counters|Mais contadores)\b[^.!?]*[.!?]?", "", text, flags=re.I)
+
+    # O servidor não possui fonte de emoji colorida. Mantemos letras, números,
+    # pontuação útil e acentos; símbolos/emoji ficam fora do texto desenhado.
+    allowed_punct = set(".,:;!?()-_/+%°'\"")
+    text = "".join(
+        ch if (ch.isalnum() or ch.isspace() or ch in allowed_punct) else " "
+        for ch in text
+    )
     return re.sub(r"\s+", " ", text).strip(" •-\n")
+
+
+def _looks_english(text):
+    base = f" {text.lower()} "
+    markers = (
+        " the ", " and ", " will ", " available ", " if ", " you ",
+        " might ", " find ", " shiny ", " regional ", " more ", " counters ",
+    )
+    return sum(marker in base for marker in markers) >= 2
 
 
 def _headline_body(text):
@@ -184,15 +205,37 @@ The final composition must work after cropping to a 4:5 portrait poster.
     return Image.open(io.BytesIO(raw)).convert("RGBA")
 
 
+def _draw_official_logo(bg):
+    if not LOGO_PATH.exists():
+        return False
+    try:
+        logo = Image.open(LOGO_PATH).convert("RGB").resize((112, 112), Image.Resampling.LANCZOS).convert("RGBA")
+        mask = Image.new("L", (112, 112), 0)
+        md = ImageDraw.Draw(mask)
+        md.rounded_rectangle((0, 0, 111, 111), radius=28, fill=255)
+        bg.paste(logo, (52, 52), mask)
+        return True
+    except Exception:
+        return False
+
+
 def criar_card_premium(titulo, mensagem):
     clean = _clean(mensagem)
     categoria = _category(titulo)
     source = _source(titulo, mensagem)
-    headline, body = _headline_body(clean)
+
+    # O assunto original continua alimentando a arte de fundo. Se uma tradução
+    # falhar, o card jamais desenha inglês cru para o público brasileiro.
+    display_clean = clean
+    if source == "G47IX" and _looks_english(display_clean):
+        display_clean = (
+            "Nova informação de Pokémon GO detectada pelo G47IX. "
+            "Confira os detalhes traduzidos no texto da publicação."
+        )
+    headline, body = _headline_body(display_clean)
 
     bg = _cover_crop(_generate_background(clean, categoria))
 
-    # readability veil over the left side; weaker so the hero visual remains visible
     veil = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     vd = ImageDraw.Draw(veil)
     for x in range(0, 650):
@@ -206,13 +249,15 @@ def criar_card_premium(titulo, mensagem):
     blue = (10, 132, 255)
     pale = (194, 224, 247)
 
-    # Header
+    # Header com a identidade oficial aprovada do Spidey.
     draw.rounded_rectangle((36, 34, 1044, 204), radius=40, fill=navy)
-    draw.rounded_rectangle((61, 61, 151, 151), radius=28, fill=blue)
-    draw.ellipse((88, 88, 124, 124), outline=(255, 255, 255), width=7)
-    draw.line((75, 106, 138, 106), fill=(255, 255, 255), width=8)
-    draw.text((177, 62), "SPIDEY", font=_font(59, True), fill=(255, 255, 255))
-    draw.text((180, 132), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23, True), fill=pale)
+    if not _draw_official_logo(bg):
+        draw.rounded_rectangle((61, 61, 151, 151), radius=28, fill=blue)
+        draw.ellipse((88, 88, 124, 124), outline=(255, 255, 255), width=7)
+        draw.line((75, 106, 138, 106), fill=(255, 255, 255), width=8)
+    draw = ImageDraw.Draw(bg)
+    draw.text((183, 62), "SPIDEY", font=_font(59, True), fill=(255, 255, 255))
+    draw.text((186, 132), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23, True), fill=pale)
 
     source_label = f"FONTE: {source}"
     sf = _font(18, True)
@@ -221,11 +266,9 @@ def criar_card_premium(titulo, mensagem):
     draw.rounded_rectangle((sx, 72, 1011, 127), radius=22, fill=(255, 255, 255))
     draw.text((sx + 18, 88), source_label, font=sf, fill=navy)
 
-    # Category
     draw.rounded_rectangle((52, 246, 370, 324), radius=25, fill=blue)
     draw.text((87, 263), categoria, font=_font(32, True), fill=(255, 255, 255))
 
-    # Headline
     hf, hlines = _fit_headline(draw, headline.upper())
     y = 360
     for i, line in enumerate(hlines):
@@ -234,14 +277,12 @@ def criar_card_premium(titulo, mensagem):
         y += hf.size + 5
     draw.rounded_rectangle((54, y + 10, 164, y + 18), radius=4, fill=blue)
 
-    # Body
     bf = _font(31, False)
     by = y + 58
     for line in _wrap(draw, body, bf, 505)[:5]:
         draw.text((54, by), line, font=bf, fill=(25, 55, 88))
         by += 45
 
-    # Data chips only when true
     coords = re.findall(r"[-+]?\d{1,2}\.\d{3,}\s*,\s*[-+]?\d{1,3}\.\d{3,}", clean)
     shiny = bool(re.search(r"\b(shiny|brilhante)\b", clean, flags=re.I))
     gpx = "gpx" in clean.lower()
@@ -263,7 +304,6 @@ def criar_card_premium(titulo, mensagem):
             draw.text((x + 24, cy + 15), label, font=_font(24, True), fill=navy)
             x += bw + 14
 
-    # Footer
     footer = Image.new("RGBA", (W, 175), (5, 33, 72, 238))
     bg.alpha_composite(footer, (0, H - 175))
     draw = ImageDraw.Draw(bg)
