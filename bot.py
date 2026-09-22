@@ -364,6 +364,12 @@ def _botao_whatsapp(token):
                     "style": 5,
                     "label": "📲 Preparar WhatsApp",
                     "url": preparar,
+                },
+                {
+                    "type": 2,
+                    "style": 5,
+                    "label": "📢 Abrir canal Spidey",
+                    "url": "https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F",
                 }
             ],
         }
@@ -560,8 +566,9 @@ small{{display:block;margin-top:16px;color:#b9c9df;line-height:1.4}}
 <textarea id="texto" readonly>{texto_html}</textarea>
 <button class="btn copy" onclick="copiar()">📋 Copiar texto</button>
 <a class="btn wa" href="{wa_url}">📲 Abrir WhatsApp</a>
+<a class="btn wa" href="https://whatsapp.com/channel/0029VbDnlXB2f3EI6wqIcW2F">📢 Abrir canal Spidey Pokémon GO</a>
 {('<h2 style="margin-top:22px">📍 Coordenadas</h2><div style="color:#b9c9df">É só copiar</div>' + coords_html) if coordenadas_cruas else ''}
-<small>A arte aprovada continua na publicação do Discord. No WhatsApp, selecione o seu Canal, publique a arte e o texto; quando houver coordenadas, envie cada coordenada separadamente.</small>
+<small>A arte aprovada continua na publicação do Discord. No WhatsApp, use o botão Abrir canal Spidey Pokémon GO, publique a arte e cole o texto; quando houver coordenadas, envie cada coordenada separadamente.</small>
 </div>
 <script>
 const texto = {texto_js};
