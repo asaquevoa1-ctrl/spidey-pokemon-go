@@ -1,0 +1,44 @@
+name: Spidey - teste arte criada no ChatGPT
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-test-chatgpt-art.yml"
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar arte fornecida para aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > payload.json <<'JSON'
+          {
+            "titulo": "🧪 ARTE CRIADA NO CHATGPT • CITY SAFARI RIO",
+            "mensagem": "Teste do fluxo que queremos: a arte foi criada aqui no ChatGPT, no padrão visual do Spidey, e está sendo enviada pronta para o Discord sem geração de imagem pelo Render.",
+            "url": "https://pokemongo.com/featured-in-person-events/citysafari/rio-de-janeiro",
+            "imagem_url": "https://uc265be1d6424374f0ee8e3c4099.dl.dropboxusercontent.com/cd/0/get/DIkie2AKx6kHj6j1qf6D8VJdwGtegYRL79tdcmdpLbcEUhF3gH4rp30hmKaQPm_7UnHF76X8OQ5L_gobPn7hqEKrf3Wf0-TRWEy-qxwdz3wWbER7z-vO_a2YQg-gmESRhwQSmyjvnDA2pBpJgiWT_qWykbFurjFQJOz0PG3lV1ZGtg/file?c_luid=4b888265",
+            "gerar_arte": false,
+            "gerar_gpx": false,
+            "aprovar": true
+          }
+          JSON
+
+          resposta=$(curl --silent --show-error --fail-with-body --max-time 120 \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --data-binary @payload.json \
+            "https://spidey-pokemon-go.onrender.com/enviar")
+
+          echo "$resposta"
+          python3 - <<'PY' "$resposta"
+          import json, sys
+          data = json.loads(sys.argv[1])
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+          assert data.get('modo_arte') == 'fornecida', data
+          print('OK: arte criada no ChatGPT enviada para aprovacao')
+          PY
