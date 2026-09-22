@@ -27,26 +27,22 @@ jobs:
           h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
           r=requests.get(f'https://discord.com/api/v10/channels/{cid}',headers=h,timeout=30)
           r.raise_for_status()
-          c=r.json()
-          guild=str(c.get('guild_id') or '')
-          print('CHANNEL_NAME',c.get('name'))
-          print('CHANNEL_ID',cid)
-          print('GUILD_ID',guild)
+          c=r.json(); guild=str(c.get('guild_id') or '')
+          print('CHANNEL_NAME',c.get('name')); print('GUILD_ID',guild)
           r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':50},timeout=30)
-          r.raise_for_status()
-          msgs=r.json()
-          matches=[]
+          r.raise_for_status(); msgs=r.json()
           for m in msgs:
               embeds=m.get('embeds') or []
               title=(embeds[0].get('title') if embeds else '') or ''
               upper=title.upper()
-              if ('G47IX' in upper and 'APROVAÇÃO' in upper) or ('MLB' in upper and 'APROVAÇÃO' in upper):
-                  matches.append((int(m['id']),m['id'],title,len(m.get('components') or []),len(m.get('attachments') or [])))
-          for _,mid,title,components,attachments in sorted(matches, reverse=True):
-              print('TARGET',title)
-              print('MESSAGE_ID',mid)
-              print('COMPONENT_ROWS',components)
-              print('ATTACHMENTS',attachments)
-              if guild:
-                  print('LINK',f'https://discord.com/channels/{guild}/{cid}/{mid}')
+              if any(k in upper for k in ('G47IX','MLB','ULTRA BEASTS')):
+                  mid=m['id']
+                  image=((embeds[0].get('image') or {}).get('url') if embeds else '') or ''
+                  print('TARGET',title)
+                  print('MESSAGE_ID',mid)
+                  print('TIMESTAMP',m.get('timestamp'))
+                  print('COMPONENT_ROWS',len(m.get('components') or []))
+                  print('ATTACHMENTS',len(m.get('attachments') or []))
+                  print('EMBED_IMAGE',bool(image))
+                  if guild: print('LINK',f'https://discord.com/channels/{guild}/{cid}/{mid}')
           PY
