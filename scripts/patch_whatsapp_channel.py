@@ -168,5 +168,47 @@ new_help = (
 if old_help in text:
     text = text.replace(old_help, new_help, 1)
 
+# 4) No post publicado, usa links Markdown como caminho principal.
+# Webhooks do Discord podem descartar componentes; links no embed são confiáveis.
+old_publish = '''    mensagem_publicada = conteudo["mensagem_original"]
+    if conteudo["gpx_bytes"]:
+        mensagem_publicada += "\\n\\n🗺️ Arquivo GPX anexado."
+
+    mandar_discord(
+        f"✅ APROVADO • {conteudo['titulo']}",
+        mensagem_publicada,
+        url=conteudo["url"],
+        imagem_bytes=conteudo["imagem_bytes"],
+        gpx_bytes=conteudo["gpx_bytes"],
+        gpx_nome=conteudo["gpx_nome"],
+        webhook_url=DISCORD_PUBLICADOS_WEBHOOK,
+        components=_botao_whatsapp(token),
+    )
+'''
+new_publish = f'''    mensagem_publicada = conteudo["mensagem_original"]
+    if conteudo["gpx_bytes"]:
+        mensagem_publicada += "\\n\\n🗺️ Arquivo GPX anexado."
+
+    preparar_whatsapp = f"{{PUBLIC_BASE_URL}}/whatsapp?t={{token}}"
+    mensagem_publicada += (
+        f"\\n\\n📲 [PREPARAR WHATSAPP]({{preparar_whatsapp}})"
+        f"\\n📢 [ABRIR CANAL SPIDEY]({CHANNEL_URL})"
+    )
+
+    mandar_discord(
+        f"✅ APROVADO • {{conteudo['titulo']}}",
+        mensagem_publicada,
+        url=conteudo["url"],
+        imagem_bytes=conteudo["imagem_bytes"],
+        gpx_bytes=conteudo["gpx_bytes"],
+        gpx_nome=conteudo["gpx_nome"],
+        webhook_url=DISCORD_PUBLICADOS_WEBHOOK,
+    )
+'''
+if "📲 [PREPARAR WHATSAPP]" not in text:
+    if old_publish not in text:
+        raise SystemExit("Âncora da publicação final não encontrada")
+    text = text.replace(old_publish, new_publish, 1)
+
 path.write_text(text, encoding="utf-8")
-print("OK: fluxo direto de preparo do Canal WhatsApp aplicado")
+print("OK: fluxo WhatsApp com links confiáveis aplicado")
