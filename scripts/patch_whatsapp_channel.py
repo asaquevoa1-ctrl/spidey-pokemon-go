@@ -12,7 +12,8 @@ old_buttons = '''                {
                     "url": preparar,
                 }
 '''
-new_buttons = old_buttons + f'''                {{
+first_button_with_comma = old_buttons[:-2] + ",\n"
+new_buttons = first_button_with_comma + f'''                {{
                     "type": 2,
                     "style": 5,
                     "label": "📢 Abrir canal Spidey",
