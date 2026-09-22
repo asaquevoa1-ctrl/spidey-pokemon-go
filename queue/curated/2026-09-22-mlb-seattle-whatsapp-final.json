@@ -1,15 +1,34 @@
 {
-  "status": "pending",
+  "status": "sent",
   "source_verified": true,
   "titulo": "⚾ POKÉMON GO × MLB • SEATTLE MARINERS",
   "mensagem": "📅 22 de setembro de 2026\n📍 T-Mobile Park • Seattle\n⚾ Seattle Mariners x Houston Astros\n\nO Pokémon GO Night do Seattle Mariners está confirmado para 22/09. A colaboração Pokémon GO × MLB 2026 inclui Rotas Oficiais, PokéParadas e Ginásios temáticos nos estádios da MLB. Entre os recursos anunciados para jogos temáticos estão raids de 1 estrela com Pikachu normal, com chance de Brilhante ou Fundo de Localização, além de Pesquisa temporária e bônus relacionados ao evento.\n\n🧢 Importante: o boné do time é ITEM DE AVATAR obtido no jogo — Pikachu não usa boné nem camiseta.\n👕 Código global: MLBxPOKEMONGO2026 para camiseta MLB de avatar, disponível até 30/09/2026.\n\n🎨 A imagem é arte ilustrativa; os dados do evento foram validados nas páginas oficiais do Pokémon GO e do Seattle Mariners.\n\n🗺️ GPX anexo: T-Mobile Park.\n\nFonte principal: Pokémon GO oficial. Fonte complementar: Seattle Mariners/MLB.",
   "source_url": "https://pokemongo.com/news/mlb-2026",
   "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/curated/spidey-mlb-seattle-2026-final.jpg",
   "horarios": [
-    {"localidade": "Seattle", "timezone": "America/Los_Angeles", "inicio": "2026-09-22T18:40:00"}
+    {
+      "localidade": "Seattle",
+      "timezone": "America/Los_Angeles",
+      "inicio": "2026-09-22T18:40:00"
+    }
   ],
-  "coordenadas": [[47.59148, -122.332863]],
+  "coordenadas": [
+    [
+      47.59148,
+      -122.332863
+    ]
+  ],
   "gerar_gpx": true,
   "gpx_nome": "spidey-mlb-seattle-2026.gpx",
-  "monetizacao": {"ativo": false}
+  "monetizacao": {
+    "ativo": false
+  },
+  "spidey_result": {
+    "arte": true,
+    "coordenadas": 1,
+    "etapa": "aguardando_aprovacao",
+    "gpx": true,
+    "modo_arte": "fornecida",
+    "status": "enviado"
+  }
 }
