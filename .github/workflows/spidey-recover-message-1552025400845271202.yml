@@ -1,0 +1,48 @@
+name: Spidey - recuperar mensagem especifica
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-recover-message-1552025400845271202.yml"
+  workflow_dispatch:
+
+jobs:
+  recuperar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspecionar mensagem origem
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          SOURCE_CHANNEL_ID: "1550962794814373898"
+          MESSAGE_ID: "1552025400845271202"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, requests, json
+          token=os.environ['DISCORD_BOT_TOKEN'].strip()
+          cid=os.environ['SOURCE_CHANNEL_ID']
+          mid=os.environ['MESSAGE_ID']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          rc=requests.get(f'https://discord.com/api/v10/channels/{cid}',headers=h,timeout=30)
+          print('CHANNEL_HTTP',rc.status_code)
+          rc.raise_for_status(); c=rc.json()
+          print('CHANNEL_NAME',c.get('name'))
+          r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages/{mid}',headers=h,timeout=30)
+          print('MESSAGE_HTTP',r.status_code)
+          r.raise_for_status(); m=r.json()
+          print('AUTHOR', (m.get('author') or {}).get('username'))
+          print('TIMESTAMP',m.get('timestamp'))
+          print('CONTENT',repr(m.get('content') or ''))
+          print('ATTACHMENT_COUNT',len(m.get('attachments') or []))
+          for i,a in enumerate(m.get('attachments') or []):
+              print('ATTACH',i,a.get('filename'),a.get('content_type'),a.get('url'))
+          print('EMBED_COUNT',len(m.get('embeds') or []))
+          for i,e in enumerate(m.get('embeds') or []):
+              print('EMBED',i,'TITLE=',repr(e.get('title')))
+              print('EMBED',i,'DESC=',repr(e.get('description')))
+              print('EMBED',i,'URL=',repr(e.get('url')))
+              print('EMBED',i,'IMAGE=',repr((e.get('image') or {}).get('url')))
+              print('EMBED',i,'THUMB=',repr((e.get('thumbnail') or {}).get('url')))
+          PY
