@@ -1,10 +1,6 @@
 name: Spidey - dois disparos manuais 22-09
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/spidey-manual-two-posts-20260922.yml"
   workflow_dispatch:
 
 jobs:
