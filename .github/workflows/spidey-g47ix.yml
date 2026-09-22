@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "12,27,42,57 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-g47ix.yml"
 
 permissions:
   contents: write
@@ -20,6 +24,7 @@ jobs:
       - name: Baixar repositorio
         uses: actions/checkout@v5
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Buscar, classificar e publicar ultima publicacao G47IX
@@ -35,8 +40,9 @@ jobs:
           DDG_FILE="$(mktemp)"
           trap 'rm -f "$META_FILE" "$FX_FILE" "$DDG_FILE"' EXIT
 
-          echo "Consultando timeline pública do G47IX..."
+          echo "Consultando timeline publica do G47IX..."
 
+          SOURCE=""
           FX_CODE="$(curl \
             --location \
             --compressed \
@@ -47,11 +53,10 @@ jobs:
             --user-agent "Mozilla/5.0" \
             --output "$FX_FILE" \
             --write-out '%{http_code}' \
-            'https://api.fxtwitter.com/2/profile/g47ix/media?count=20' || true)"
+            'https://api.fxtwitter.com/2/profile/g47ix/statuses?count=20' || true)"
 
-          SOURCE=""
-
-          if [[ "$FX_CODE" == "200" ]] && python3 - "$FX_FILE" "$META_FILE" <<'PY'
+          if [[ "$FX_CODE" == "200" ]]; then
+            if python3 - "$FX_FILE" "$META_FILE" <<'PY'
           import json
           import re
           import sys
@@ -62,17 +67,19 @@ jobs:
 
           try:
               data = json.load(open(src, encoding="utf-8"))
-          except Exception:
+          except Exception as exc:
+              print(f"FxTwitter retornou JSON invalido: {exc}", file=sys.stderr)
               raise SystemExit(1)
 
           posts = [
-              item for item in data.get("results", [])
+              item for item in (data.get("results") or [])
               if isinstance(item, dict)
               and item.get("type") == "status"
               and str(item.get("id", "")).isdigit()
           ]
 
           if not posts:
+              print("FxTwitter nao retornou publicacoes utilizaveis.", file=sys.stderr)
               raise SystemExit(1)
 
           post = max(posts, key=lambda item: int(item["id"]))
@@ -82,8 +89,8 @@ jobs:
 
           if not created_ts:
               created_ts = ((int(post_id) >> 22) + 1288834974657) / 1000
-          if created_ts > 10_000_000_000:
-              created_ts = created_ts / 1000
+          if float(created_ts) > 10_000_000_000:
+              created_ts = float(created_ts) / 1000
 
           def normalizar(value):
               value = unicodedata.normalize("NFKD", value)
@@ -138,30 +145,32 @@ jobs:
               "fonte": "FxTwitter timeline"
           }, open(out, "w", encoding="utf-8"), ensure_ascii=False)
           PY
-          then
-            SOURCE="fxtwitter"
+            then
+              SOURCE="fxtwitter"
+            fi
           fi
 
           if [[ -z "$SOURCE" ]]; then
-            echo "Timeline direta indisponível; usando busca pública de contingência."
+            echo "FxTwitter indisponivel ou sem dados; tentando busca publica de contingencia."
             SEARCH_URL="https://html.duckduckgo.com/html/?q=site%3Ax.com%2Fg47ix%2Fstatus%20G47IX"
 
-            curl \
+            DDG_CODE="$(curl \
               --location \
               --compressed \
-              --retry 3 \
+              --retry 2 \
               --retry-all-errors \
-              --retry-delay 5 \
+              --retry-delay 3 \
               --connect-timeout 15 \
-              --max-time 90 \
-              --fail \
+              --max-time 60 \
               --silent \
               --show-error \
               --user-agent "Mozilla/5.0" \
               --output "$DDG_FILE" \
-              "$SEARCH_URL"
+              --write-out '%{http_code}' \
+              "$SEARCH_URL" || true)"
 
-            python3 - "$DDG_FILE" "$META_FILE" <<'PY'
+            if [[ "$DDG_CODE" == "200" ]]; then
+              if python3 - "$DDG_FILE" "$META_FILE" <<'PY'
           import html
           import json
           import re
@@ -240,7 +249,8 @@ jobs:
                   encontrados.append({**item, "id": match.group(1)})
 
           if not encontrados:
-              raise SystemExit("Nenhuma publicacao G47IX encontrada")
+              print("Busca publica nao encontrou publicacao G47IX.", file=sys.stderr)
+              raise SystemExit(1)
 
           atual = max(encontrados, key=lambda item: int(item["id"]))
           post_id = atual["id"]
@@ -277,6 +287,16 @@ jobs:
               "fonte": "DuckDuckGo fallback"
           }, open(meta_path, "w", encoding="utf-8"), ensure_ascii=False)
           PY
+              then
+                SOURCE="duckduckgo"
+              fi
+            fi
+          fi
+
+          if [[ -z "$SOURCE" || ! -s "$META_FILE" ]]; then
+            echo "Nenhuma fonte publica do G47IX respondeu com dados validos nesta rodada."
+            echo "Encerrando sem erro; a proxima execucao tentara novamente."
+            exit 0
           fi
 
           POST_ID="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["id"])' "$META_FILE")"
@@ -386,12 +406,12 @@ jobs:
 
           data = json.loads(sys.argv[1])
           if data.get("status") != "enviado":
-              raise SystemExit("Spidey não confirmou o envio")
-          if not data.get("arte"):
-              raise SystemExit("Spidey enviou sem arte")
+              raise SystemExit("Spidey nao confirmou o envio")
 
-          modo = data.get("modo_arte", "desconhecido")
-          print(f"Modo de arte usado: {modo}")
+          if data.get("arte"):
+              print(f"Modo de arte usado: {data.get('modo_arte', 'desconhecido')}")
+          else:
+              print("Aviso: envio confirmado sem arte; estado sera salvo para evitar duplicacao.")
           PY
 
           salvar_estado "Spidey: atualiza ultima publicacao G47IX"
