@@ -12,6 +12,8 @@ ENDPOINT = os.getenv("SPIDEY_ENDPOINT", "https://spidey-pokemon-go.onrender.com/
 QUEUE_DIR = Path("queue/curated")
 BRASILIA_TZ = ZoneInfo("America/Sao_Paulo")
 MONETIZACAO_TIPOS = {"afiliado", "patrocinio", "apoio"}
+AFILIADOS_WHATSAPP_PERMITIDOS = {"shopee"}
+AFILIADOS_WHATSAPP_BLOQUEADOS = {"mercadolivre", "mercado_livre", "mercado-livre"}
 
 
 def _parse_local(value, timezone_name):
@@ -134,6 +136,26 @@ def _url_publica(valor):
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
+def _normalizar_plataforma(valor):
+    return str(valor or "").strip().lower().replace(" ", "")
+
+
+def validar_afiliado_whatsapp(monet):
+    plataforma = _normalizar_plataforma(monet.get("plataforma"))
+    if not plataforma:
+        raise ValueError("monetizacao.plataforma e obrigatoria para links de afiliado")
+
+    if plataforma in AFILIADOS_WHATSAPP_BLOQUEADOS:
+        raise ValueError(
+            "plataforma de afiliado bloqueada para WhatsApp pelas regras atuais do programa"
+        )
+
+    if plataforma not in AFILIADOS_WHATSAPP_PERMITIDOS:
+        raise ValueError(
+            "plataforma de afiliado ainda nao validada pelo Spidey para publicacao no WhatsApp"
+        )
+
+
 def bloco_monetizacao(data):
     monet = data.get("monetizacao") or {}
     if not monet or not bool(monet.get("ativo", False)):
@@ -156,6 +178,7 @@ def bloco_monetizacao(data):
         raise ValueError("monetizacao.url precisa ser uma URL http/https valida")
 
     if tipo == "afiliado":
+        validar_afiliado_whatsapp(monet)
         cabecalho = "💰 LINK DE AFILIADO"
         transparencia = (
             "🔎 Transparência: este link pode gerar uma comissão para o Spidey, "
