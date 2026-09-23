@@ -80,7 +80,7 @@ jobs:
           print(f"OK: bot acessou o canal {channel.get('name', channel_id)}.")
 
           status, messages = request_json(
-              f"https://discord.com/api/v10/channels/{channel_id}/messages?limit=50",
+              f"https://discord.com/api/v10/channels/{channel_id}/messages?limit=75",
               headers=discord_headers,
               timeout=30,
           )
@@ -114,7 +114,11 @@ jobs:
                   str(author.get("global_name") or ""),
                   text,
               ]).lower()
-              return any(x in probe for x in ("pokeminers", "miner-bot", "@apk updates", "@forced updates"))
+              markers = (
+                  "pokeminers", "miner-bot", "@apk updates", "@forced updates",
+                  "@news updates", "@gamemaster updates", "@asset updates",
+              )
+              return any(x in probe for x in markers)
 
           def relevant(text):
               t = text.lower()
@@ -122,14 +126,20 @@ jobs:
                   "api version", "forced update", "apk update", "@apk updates",
                   "@forced updates", "game master", "gamemaster", "master file",
                   "asset update", "text update", "remote config", "new version",
-                  "version changed", "datamine", "data mine",
+                  "version changed", "datamine", "data mine", "found a new news item",
+                  "@news updates", "pokemongolive", "campfire apk", "apk roll-out",
+                  "apk rollout",
               )
               return any(m in t for m in markers)
 
           def classify(text):
               t = text.lower()
+              if "found a new news item" in t or "@news updates" in t or "pokemongolive" in t:
+                  return "📰 OFICIAL • Pokémon GO"
+              if "campfire" in t and "apk" in t:
+                  return "🔥 CAMPFIRE • NOVA VERSÃO"
               if "forced update" in t or "api version" in t or "version changed" in t:
-                  return "⚙️ ATUALIZAÇÃO • Pokémon GO"
+                  return "⚙️ ATUALIZAÇÃO FORÇADA • Pokémon GO"
               if "apk" in t:
                   return "📦 APK • Pokémon GO"
               if "game master" in t or "gamemaster" in t or "datamine" in t or "data mine" in t:
@@ -138,19 +148,60 @@ jobs:
 
           def normalize(text):
               compact = re.sub(r"\n{3,}", "\n\n", text).strip()
-              match = re.search(
+
+              forced = re.search(
                   r"(?:api version changed.*?|forced update.*?)(\d+\.\d+\.\d+)\s*(?:->|→)\s*(\d+\.\d+\.\d+)",
                   compact,
                   re.I | re.S,
               )
-              if match:
-                  old, new = match.group(1), match.group(2)
+              if forced:
+                  old, new = forced.group(1), forced.group(2)
                   return (
                       "O PokeMiners detectou uma atualização forçada da API do Pokémon GO.\n\n"
                       f"📦 Versão anterior: {old}\n"
                       f"🆕 Nova versão: {new}\n"
                       "⚠️ Tipo: atualização forçada"
                   )
+
+              campfire = re.search(
+                  r"Found a new Campfire APK on Google Play:\s*([0-9.]+)\s*\(([^)]+)\)",
+                  compact,
+                  re.I,
+              )
+              if campfire:
+                  version, when = campfire.group(1), campfire.group(2)
+                  return (
+                      "O PokeMiners detectou uma nova versão do Campfire na Google Play.\n\n"
+                      f"📦 Versão: {version}\n"
+                      f"🕒 Data informada: {when}\n"
+                      "📱 Plataforma: Android / Google Play"
+                  )
+
+              news = re.search(
+                  r"Found a new news item on PokemonGoLive\s+Title:\s*(.*?)\s+Link:\s*(https?://\S+)",
+                  compact,
+                  re.I | re.S,
+              )
+              if news:
+                  title, link = news.group(1).strip(), news.group(2).strip()
+                  return (
+                      "Nova notícia oficial do Pokémon GO detectada pelo PokeMiners.\n\n"
+                      f"📰 {title}\n"
+                      f"🔗 Fonte oficial: {link}"
+                  )
+
+              rollout = re.search(
+                  r"A new Pokemon Go APK roll-out has started for Google Play, update date is now set to\s*([^\n]+)",
+                  compact,
+                  re.I,
+              )
+              if rollout:
+                  return (
+                      "O PokeMiners detectou um novo rollout do APK do Pokémon GO na Google Play.\n\n"
+                      f"🕒 Data informada: {rollout.group(1).strip()}\n"
+                      "📱 Plataforma: Android / Google Play"
+                  )
+
               return "Nova informação detectada automaticamente no PokeMiners.\n\n" + compact[:3200]
 
           relevant_messages = []
@@ -160,31 +211,30 @@ jobs:
                   relevant_messages.append((msg, text))
 
           if not relevant_messages:
-              print("Nenhuma atualização relevante do PokeMiners nas últimas 50 mensagens.")
+              print("Nenhuma atualização relevante do PokeMiners nas últimas 75 mensagens.")
               raise SystemExit(0)
 
           last_id = state_file.read_text(encoding="utf-8").strip() if state_file.exists() else ""
-
-          # Primeira execução: cria o marco atual sem duplicar o conteúdo já enviado manualmente.
-          if not last_id:
-              current_id = str(relevant_messages[0][0].get("id") or "").strip()
+          if not last_id or not last_id.isdigit():
+              current_id = max(str(m.get("id") or "0") for m, _ in relevant_messages)
               state_file.write_text(current_id + "\n", encoding="utf-8")
               print(f"OK: monitor inicializado no PokeMiners em {current_id}; próximos itens serão enviados automaticamente.")
               raise SystemExit(0)
 
-          unseen = []
-          for msg, text in relevant_messages:
-              mid = str(msg.get("id") or "").strip()
-              if mid == last_id:
-                  break
-              unseen.append((msg, text))
+          last_num = int(last_id)
+          unseen = [
+              (msg, text)
+              for msg, text in relevant_messages
+              if str(msg.get("id") or "").isdigit() and int(msg["id"]) > last_num
+          ]
 
           if not unseen:
               print("Nenhuma nova atualização relevante do PokeMiners.")
               raise SystemExit(0)
 
-          newest_sent_id = None
-          for msg, text in list(reversed(unseen))[:5]:
+          unseen.sort(key=lambda item: int(item[0]["id"]))
+          sent_ids = []
+          for msg, text in unseen[:5]:
               mid = str(msg.get("id") or "").strip()
               source_url = f"https://discord.com/channels/{guild_id}/{channel_id}/{mid}" if guild_id else None
               payload = {
@@ -198,11 +248,11 @@ jobs:
               _, data = request_json(endpoint, method="POST", payload=payload, timeout=120)
               if data.get("status") != "enviado" or data.get("etapa") != "aguardando_aprovacao":
                   raise RuntimeError("Resposta inesperada do Spidey: " + json.dumps(data, ensure_ascii=False))
-              print(f"OK: PokeMiners {mid} enviado para aprovação.")
-              newest_sent_id = mid
+              print(f"OK: PokeMiners {mid} enviado para aprovação como {payload['titulo']}.")
+              sent_ids.append(int(mid))
 
-          if newest_sent_id:
-              state_file.write_text(newest_sent_id + "\n", encoding="utf-8")
+          if sent_ids:
+              state_file.write_text(str(max(sent_ids)) + "\n", encoding="utf-8")
           PY
 
       - name: Salvar antirrepetição
@@ -218,5 +268,6 @@ jobs:
           git add last_pokeminers.txt
           if ! git diff --cached --quiet; then
             git commit -m "Spidey: atualiza controle PokeMiners"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
