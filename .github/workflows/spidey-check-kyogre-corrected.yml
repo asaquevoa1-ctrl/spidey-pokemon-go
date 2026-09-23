@@ -1,0 +1,41 @@
+name: Spidey - localizar Kyogre corrigido
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-check-kyogre-corrected.yml"
+  workflow_dispatch:
+
+jobs:
+  localizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ler mensagens recentes do canal de aprovacao
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, requests
+          token=os.environ['DISCORD_BOT_TOKEN'].strip(); cid=os.environ['APPROVAL_CHANNEL_ID']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':50},timeout=30)
+          r.raise_for_status()
+          for m in r.json():
+              embeds=m.get('embeds') or []
+              title=((embeds[0].get('title') if embeds else '') or '')
+              desc=((embeds[0].get('description') if embeds else '') or '')
+              text=(title+' '+desc+' '+(m.get('content') or '')).upper()
+              if 'KYOGRE' in text or 'DECIDA ABAIXO' in text:
+                  print('MSG_ID',m['id'])
+                  print('TITLE',title)
+                  print('ATTACHMENTS',len(m.get('attachments') or []))
+                  print('COMPONENT_ROWS',len(m.get('components') or []))
+                  print('HAS_RAW_LINK','POKEMONGO.COM/' in desc.upper())
+                  print('CONTENT',(m.get('content') or '')[:250].replace('\n',' '))
+                  print('LINK',f'https://discord.com/channels/1139279003451150467/{cid}/{m["id"]}')
+                  print('---')
+          PY
