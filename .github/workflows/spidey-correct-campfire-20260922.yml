@@ -1,0 +1,55 @@
+name: Spidey - corrigir Campfire 2026.38.1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-correct-campfire-20260922.yml"
+  workflow_dispatch:
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar Campfire com classificacao correta
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
+          SPIDEY_ENDPOINT: "https://spidey-pokemon-go.onrender.com/enviar"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, requests, time
+          token=os.environ['DISCORD_BOT_TOKEN'].strip(); dst=os.environ['APPROVAL_CHANNEL_ID']; endpoint=os.environ['SPIDEY_ENDPOINT']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          source='https://discord.com/channels/1139279003451150467/1550962794814373898/1552030145332781177'
+          payload={
+            'titulo':'🔥 CAMPFIRE • NOVA VERSÃO 2026.38.1',
+            'mensagem':(
+              'O PokeMiners detectou uma nova versão do Campfire na Google Play.\n\n'
+              '📦 Versão: 2026.38.1\n'
+              '📅 Data informada: 17/09/2026\n'
+              '⏰ Horário informado: 20:37:45 UTC (17:37:45 em Brasília)\n'
+              '📱 Plataforma: Android / Google Play\n\n'
+              '🔎 Fonte operacional: PokeMiners #miner-bot.\n'
+              '🕷️ Esta entrada corrige a classificação anterior, que apareceu como APK do Pokémon GO.'
+            ),
+            'url':source,
+            'gerar_gpx':False,
+            'gerar_arte':False,
+            'aprovar':True,
+          }
+          r=requests.post(endpoint,json=payload,timeout=120)
+          print('HTTP',r.status_code,r.text[:500]); r.raise_for_status()
+          data=r.json(); assert data.get('status')=='enviado' and data.get('etapa')=='aguardando_aprovacao', data
+          time.sleep(1)
+          r=requests.get(f'https://discord.com/api/v10/channels/{dst}/messages',headers=h,params={'limit':30},timeout=30); r.raise_for_status()
+          for m in r.json():
+              embeds=m.get('embeds') or []
+              title=((embeds[0].get('title') if embeds else '') or '')
+              if 'CAMPFIRE' in title.upper() and any(str(e.get('url') or '').strip()==source for e in embeds):
+                  print('APPROVAL_LINK',f'https://discord.com/channels/1139279003451150467/{dst}/{m["id"]}')
+                  raise SystemExit(0)
+          raise SystemExit('CAMPFIRE_ENVIADO_MAS_NAO_LOCALIZADO')
+          PY
