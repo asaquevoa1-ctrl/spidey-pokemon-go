@@ -1,6 +1,8 @@
 import io
+import base64
 import math
 import re
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 W, H = 1080, 1350
@@ -125,6 +127,23 @@ def _draw_brand_mark(draw, x, y, size, accent):
     draw.line((x+size//7, cy, x+size-size//7, cy), fill=(255,255,255), width=max(4, size//11))
 
 
+def _logo_oficial():
+    try:
+        raw = Path("assets/spidey-logo-oficial.b64").read_text(encoding="utf-8").strip()
+        return Image.open(io.BytesIO(base64.b64decode(raw))).convert("RGBA")
+    except Exception:
+        return None
+
+
+def _aplicar_logo_oficial(scene, x, y, size):
+    logo = _logo_oficial()
+    if logo is None:
+        return False
+    logo = logo.resize((size, size), Image.Resampling.LANCZOS)
+    scene.alpha_composite(logo, (x, y))
+    return True
+
+
 def _tema(clean):
     u = clean.upper()
     if "MÁLAGA" in u or "MALAGA" in u or "COMIC-CON" in u:
@@ -245,9 +264,10 @@ def criar_card(titulo, mensagem):
 
     # header
     draw.rounded_rectangle((34,32,1046,212), radius=40, fill=navy)
-    _draw_brand_mark(draw, 62, 62, 90, accent)
-    draw.text((180,60), "SPIDEY", font=_font(60,True), fill=(255,255,255))
-    draw.text((184,131), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23,True), fill=(190,218,239))
+    if not _aplicar_logo_oficial(scene, 54, 50, 124):
+        _draw_brand_mark(draw, 62, 62, 90, accent)
+    draw.text((202,60), "SPIDEY", font=_font(60,True), fill=(255,255,255))
+    draw.text((206,131), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23,True), fill=(190,218,239))
 
     source = _fonte(titulo, mensagem)
     label = f"FONTE: {source}"

@@ -510,7 +510,6 @@ def enviar():
             gpx_bytes=conteudo["gpx_bytes"],
             gpx_nome=conteudo["gpx_nome"],
             webhook_url=DISCORD_APPROVAL_WEBHOOK,
-            components=_botoes_aprovacao(token),
         )
 
         resposta = {
@@ -560,10 +559,10 @@ def aprovar():
         return _html_resultado("Já processado", "Esta publicação já recebeu uma decisão.")
 
     conteudo = _preparar_conteudo(dados)
-    if bool(dados.get("gerar_arte")) and conteudo["modo_arte"] != "premium":
+    if bool(dados.get("gerar_arte")) and not conteudo["imagem_bytes"]:
         return _html_resultado(
-            "Arte premium indisponível",
-            "A publicação não foi liberada porque a arte premium ainda não foi gerada. Tente novamente mais tarde.",
+            "Arte indisponível",
+            "A publicação não foi liberada porque nenhuma arte válida está disponível. Tente novamente após corrigir a arte.",
             "#ffb84d",
         ), 503
 
@@ -793,7 +792,6 @@ def check_oficial():
             gpx_bytes=conteudo["gpx_bytes"],
             gpx_nome=conteudo["gpx_nome"],
             webhook_url=DISCORD_APPROVAL_WEBHOOK,
-            components=_botoes_aprovacao(token),
         )
         ultima_enviada = url
         return jsonify({
