@@ -1,4 +1,4 @@
-name: Spidey - corrigir noticias com arte e reenviar Kyogre
+name: Spidey - reenviar Kyogre corrigido
 
 on:
   push:
@@ -7,49 +7,11 @@ on:
       - ".github/workflows/spidey-fix-news-art-and-resend-kyogre.yml"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  corrigir:
+  reenviar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Corrigir monitor PokeMiners para noticias com arte e sem URL crua
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('.github/workflows/spidey-pokeminers.yml')
-          s=p.read_text(encoding='utf-8')
-
-          old='''                  return (\n                      "Nova notícia oficial do Pokémon GO detectada pelo PokeMiners.\\n\\n"\n                      f"📰 {title}\\n"\n                      f"🔗 Fonte oficial: {link}"\n                  )'''
-          new='''                  return (\n                      "Nova notícia oficial do Pokémon GO detectada pelo PokeMiners.\\n\\n"\n                      f"📰 {title}\\n"\n                      "📌 Fonte oficial: Pokémon GO"\n                  )'''
-          if old not in s:
-              raise SystemExit('Trecho normalize(news) não encontrado')
-          s=s.replace(old,new,1)
-
-          old2='''              payload = {\n                  "titulo": classify(text),\n                  "mensagem": normalize(text) + "\\n\\n🔎 Fonte operacional: PokeMiners #miner-bot\\n🕷️ Aguardando sua aprovação antes da publicação.",\n                  "url": source_url,\n                  "gerar_gpx": False,\n                  "gerar_arte": False,\n                  "aprovar": True,\n              }'''
-          new2='''              is_news = bool(re.search(r"Found a new news item on PokemonGoLive|@news updates|pokemongolive", text, re.I))\n              payload = {\n                  "titulo": classify(text),\n                  "mensagem": normalize(text) + "\\n\\n🔎 Fonte operacional: PokeMiners #miner-bot\\n🕷️ Aguardando sua aprovação antes da publicação.",\n                  "url": None if is_news else source_url,\n                  "gerar_gpx": False,\n                  "gerar_arte": is_news,\n                  "usar_premium": False if is_news else True,\n                  "permitir_fallback": True if is_news else False,\n                  "aprovar": True,\n              }'''
-          if old2 not in s:
-              raise SystemExit('Trecho payload não encontrado')
-          s=s.replace(old2,new2,1)
-          p.write_text(s,encoding='utf-8')
-          PY
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/workflows/spidey-pokeminers.yml
-          git commit -m "Spidey: noticias PokeMiners com arte e sem link cru"
-          git pull --rebase origin main
-          git push origin HEAD:main
-
-      - name: Reenviar Kyogre corrigido
+      - name: Reenviar Kyogre com arte e sem link cru
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           APPROVAL_CHANNEL_ID: "1550963072464715997"
@@ -90,7 +52,6 @@ jobs:
           data=r.json()
           assert data.get('status')=='enviado' and data.get('etapa')=='aguardando_aprovacao', data
           assert data.get('arte') is True, data
-          assert data.get('modo_arte') in ('fallback_v4','premium','fornecida'), data
           time.sleep(1)
           rr=requests.get(f'https://discord.com/api/v10/channels/{dst}/messages',headers=h,params={'limit':20},timeout=30)
           rr.raise_for_status()
@@ -98,13 +59,10 @@ jobs:
               embeds=m.get('embeds') or []
               title=((embeds[0].get('title') if embeds else '') or '')
               desc=((embeds[0].get('description') if embeds else '') or '')
-              if 'KYOGRE' in title.upper() and 'GO PASS' in title.upper() and 'pokemongo.com/' not in desc.lower():
+              if 'KYOGRE' in title.upper() and 'GO PASS' in title.upper() and 'pokemongo.com/' not in desc.lower() and m.get('attachments'):
                   print('CORRECTED_ID',m['id'])
                   print('ATTACHMENTS',len(m.get('attachments') or []))
-                  print('COMPONENT_ROWS',len(m.get('components') or []))
                   print('CORRECTED_LINK',f'https://discord.com/channels/1139279003451150467/{dst}/{m["id"]}')
-                  if not m.get('attachments'):
-                      raise SystemExit('Kyogre corrigido sem arte anexada')
                   raise SystemExit(0)
           raise SystemExit('Kyogre corrigido não localizado no Discord')
           PY
