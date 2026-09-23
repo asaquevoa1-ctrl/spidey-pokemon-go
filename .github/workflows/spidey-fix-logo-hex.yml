@@ -1,0 +1,52 @@
+name: Spidey - fix logo oficial hex
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/spidey-fix-logo-hex.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - run: python -m pip install -r requirements.txt
+      - name: Usar asset textual seguro do logo oficial
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('spidey_art_v4.py')
+          s=p.read_text(encoding='utf-8')
+          old='''def _logo_oficial():\n    try:\n        return Image.open(Path("assets/spidey-logo-oficial.jpg")).convert("RGBA")\n    except Exception:\n        return None\n'''
+          new='''def _logo_oficial():\n    try:\n        raw = Path("assets/spidey-logo-oficial.hex").read_text(encoding="utf-8").strip()\n        return Image.open(io.BytesIO(bytes.fromhex(raw))).convert("RGBA")\n    except Exception:\n        return None\n'''
+          if old not in s:
+              raise SystemExit('Helper atual do logo não encontrado')
+          s=s.replace(old,new,1)
+          p.write_text(s,encoding='utf-8')
+          PY
+          python -m py_compile spidey_art_v4.py
+          python - <<'PY'
+          import spidey_art_v4 as art
+          logo=art._logo_oficial()
+          assert logo is not None, 'Logo oficial não abriu'
+          assert logo.size==(80,80),logo.size
+          card=art.criar_card('📰 NOTÍCIA • TESTE LOGO','Validação do logo oficial. Fonte oficial: Pokémon GO.')
+          assert len(card)>50000,len(card)
+          print('LOGO_OFICIAL_VALIDADO',logo.size)
+          print('CARD_COM_LOGO_VALIDADO',len(card))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey_art_v4.py
+          git commit -m "Spidey: usar logo oficial validado no gerador"
+          git pull --rebase origin main
+          git push origin HEAD:main
