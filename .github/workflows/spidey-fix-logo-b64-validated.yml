@@ -1,0 +1,63 @@
+name: Spidey - fix logo oficial b64 validado
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/spidey-fix-logo-b64-validated.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - run: python -m pip install -r requirements.txt
+      - name: Validar asset e aplicar no gerador
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import base64,hashlib,io
+          raw=Path('assets/spidey-logo-oficial-80.b64').read_text(encoding='utf-8').strip()
+          assert len(raw)==4216, len(raw)
+          b=base64.b64decode(raw,validate=True)
+          assert len(b)==3161, len(b)
+          sha=hashlib.sha256(b).hexdigest()
+          print('LOGO_SHA256',sha)
+          assert sha=='72d166383be20e664ddb0d66e791cc72d42bc52a965e26ceb5dc0b3cc847b989',sha
+          im=Image.open(io.BytesIO(b)); im.load(); assert im.size==(80,80),im.size
+          print('LOGO_BYTES_VALIDOS',im.size)
+
+          p=Path('spidey_art_v4.py')
+          s=p.read_text(encoding='utf-8')
+          if 'import base64\n' not in s:
+              s=s.replace('import io\n','import io\nimport base64\n',1)
+          start=s.index('def _logo_oficial():')
+          end=s.index('\n\ndef _aplicar_logo_oficial',start)
+          helper='''def _logo_oficial():\n    try:\n        raw = Path("assets/spidey-logo-oficial-80.b64").read_text(encoding="utf-8").strip()\n        return Image.open(io.BytesIO(base64.b64decode(raw))).convert("RGBA")\n    except Exception:\n        return None\n'''
+          s=s[:start]+helper+s[end:]
+          p.write_text(s,encoding='utf-8')
+          PY
+          python -m py_compile spidey_art_v4.py
+          python - <<'PY'
+          import spidey_art_v4 as art
+          logo=art._logo_oficial(); assert logo is not None; assert logo.size==(80,80),logo.size
+          card=art.criar_card('📰 NOTÍCIA • TESTE LOGO','Validação final do logo oficial. Fonte oficial: Pokémon GO.')
+          assert len(card)>50000,len(card)
+          print('GERADOR_LOGO_OFICIAL_OK',logo.size)
+          print('CARD_COM_LOGO_OFICIAL_OK',len(card))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey_art_v4.py
+          git commit -m "Spidey: usar logo oficial validado no gerador"
+          git pull --rebase origin main
+          git push origin HEAD:main
