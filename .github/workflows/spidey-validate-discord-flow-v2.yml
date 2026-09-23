@@ -1,0 +1,169 @@
+name: Spidey - validar fluxo Discord v2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-validate-discord-flow-v2.yml"
+  workflow_dispatch:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      APPROVAL_CHANNEL_ID: "1550963072464715997"
+      PUBLICADOS_CHANNEL_ID: "1550963136519999658"
+      SPIDEY_ENDPOINT: "https://spidey-pokemon-go.onrender.com/enviar"
+      SPIDEY_BASE: "https://spidey-pokemon-go.onrender.com"
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Validar código e logo oficial
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile bot.py spidey_art_v4.py
+          python - <<'PY'
+          import spidey_art_v4 as art
+          logo = art._logo_oficial()
+          assert logo is not None, 'Logo oficial não carregou'
+          assert logo.width >= 100 and logo.height >= 100, logo.size
+          png = art.criar_card('📰 NOTÍCIA • TESTE', 'Teste do Spidey com fonte oficial: Pokémon GO.')
+          assert len(png) > 50000, len(png)
+          print('LOGO_OFICIAL_OK', logo.size)
+          print('ARTE_FALLBACK_OK', len(png))
+          PY
+
+      - name: Aguardar backend atualizar
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 18); do
+            code=$(curl -L -sS -o /tmp/health -w "%{http_code}" --max-time 20 "$SPIDEY_BASE/" || true)
+            echo "health $i: $code"
+            if [ "$code" = "200" ]; then
+              sleep 5
+              break
+            fi
+            sleep 10
+          done
+
+      - name: Testar disparo real sem publicar
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, re, time, requests
+
+          token = os.environ['DISCORD_BOT_TOKEN'].strip()
+          approval = os.environ['APPROVAL_CHANNEL_ID']
+          endpoint = os.environ['SPIDEY_ENDPOINT']
+          h = {'Authorization': f'Bot {token}', 'User-Agent':'SpideyPokemonGO/1.0'}
+
+          def get_messages(limit=50):
+              r = requests.get(f'https://discord.com/api/v10/channels/{approval}/messages', headers=h, params={'limit':limit}, timeout=30)
+              r.raise_for_status(); return r.json()
+
+          before = {m['id'] for m in get_messages()}
+          payload = {
+              'titulo': '🧪 TESTE FLUXO DISCORD V2',
+              'mensagem': 'Validação técnica do Spidey.\n\n📌 Fonte: teste interno.\n🕷️ Esta mensagem será removida automaticamente.',
+              'url': None,
+              'gerar_gpx': False,
+              'gerar_arte': True,
+              'usar_premium': False,
+              'permitir_fallback': True,
+              'aprovar': True,
+          }
+          r = requests.post(endpoint, json=payload, timeout=180)
+          print('SPIDEY_HTTP', r.status_code)
+          print('SPIDEY_RESPONSE', r.text[:1000])
+          r.raise_for_status()
+          data = r.json()
+          assert data.get('status') == 'enviado' and data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+
+          time.sleep(2)
+          msgs = get_messages()
+          new = [m for m in msgs if m['id'] not in before]
+          tests = []
+          for m in new:
+              embeds = m.get('embeds') or []
+              title = ((embeds[0].get('title') if embeds else '') or '')
+              desc = ((embeds[0].get('description') if embeds else '') or '')
+              if 'TESTE FLUXO DISCORD V2' in title.upper() or 'TESTE FLUXO DISCORD V2' in desc.upper():
+                  tests.append(m)
+
+          assert len(tests) == 1, f'Esperava 1 card de teste; encontrei {len(tests)}. Novas mensagens: {[m["id"] for m in new]}'
+          m = tests[0]
+          embeds = m.get('embeds') or []
+          e = embeds[0]
+          desc = e.get('description') or ''
+          img = (e.get('image') or {}).get('proxy_url') or (e.get('image') or {}).get('url') or ''
+          assert 'APROVAR' in desc and 'REPROVAR' in desc, desc
+          assert img and not img.startswith('attachment://'), img
+          ir = requests.get(img, timeout=30); ir.raise_for_status()
+          assert ir.headers.get('content-type','').startswith('image/'), ir.headers
+          assert len(ir.content) > 50000, len(ir.content)
+
+          # Garante que não houve uma segunda mensagem do fallback de botões.
+          extra_decision = [m for m in new if 'DECIDA ABAIXO' in (m.get('content') or '').upper()]
+          assert not extra_decision, [m['id'] for m in extra_decision]
+
+          # Consome o teste pela rota de REPROVAR (não publica em canal algum).
+          reject = re.search(r'\[REPROVAR\]\((https?://[^)]+)\)', desc, re.I)
+          assert reject, desc
+          rr = requests.get(reject.group(1), timeout=30)
+          print('REJECT_HTTP', rr.status_code)
+          rr.raise_for_status()
+          assert 'rejeitada' in rr.text.lower(), rr.text[:500]
+
+          print('DISCORD_CARD_ID', m['id'])
+          print('DISCORD_ONE_MESSAGE_OK')
+          print('DISCORD_IMAGE_OK', len(ir.content))
+          print('DISCORD_LINKS_OK')
+
+          # Limpa a mensagem de teste. Se o bot não tiver permissão, não falha a validação funcional.
+          dr = requests.delete(f'https://discord.com/api/v10/channels/{approval}/messages/{m["id"]}', headers=h, timeout=30)
+          print('CLEANUP_HTTP', dr.status_code)
+          PY
+
+      - name: Validar aprovação de fallback sem efeito externo
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import bot
+          from spidey_approval import criar_token
+
+          # Isola efeitos externos: testa a rota /aprovar com stubs.
+          sent = []
+          bot._whapi_configurado = lambda: False
+          bot.mandar_discord = lambda *a, **k: sent.append((a,k))
+          bot.mandar_coordenadas_cruas = lambda *a, **k: None
+          bot.tokens_processados.clear()
+
+          dados = {
+              'titulo':'🧪 TESTE APROVAÇÃO FALLBACK',
+              'mensagem':'Teste local de aprovação com arte fallback.',
+              'url':None,
+              'coordenadas':[],
+              'gerar_gpx':False,
+              'gpx_nome':'teste.gpx',
+              'gerar_arte':True,
+              'usar_premium':False,
+              'permitir_fallback':True,
+              'imagem_url':None,
+          }
+          segredo = bot._segredo_aprovacao()
+          # Ambiente de CI não possui webhooks do Render; usa segredo local somente para este teste.
+          bot._segredo_aprovacao = lambda: 'teste-seguro-spidey'
+          tok = criar_token(dados, 'teste-seguro-spidey')
+          c = bot.app.test_client()
+          resp = c.get('/aprovar?t=' + tok)
+          print('APROVAR_LOCAL_HTTP', resp.status_code)
+          assert resp.status_code == 200, resp.data[:500]
+          assert sent, 'Aprovação fallback não encaminhou publicação'
+          print('APROVACAO_FALLBACK_OK')
+          PY
