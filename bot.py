@@ -2,6 +2,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import time
 from html.parser import HTMLParser
 from urllib.parse import quote, urljoin
@@ -171,7 +172,6 @@ def mandar_discord(
         payload_conteudo = dict(payload)
         payload_conteudo.pop("components", None)
         if imagem_bytes or gpx_bytes:
-            payload_conteudo.pop("attachments", None)
             resposta_conteudo = requests.post(
                 webhook_url,
                 data={"payload_json": json.dumps(payload_conteudo, ensure_ascii=False)},
@@ -265,6 +265,21 @@ def _preparar_conteudo(dados):
     mensagem_original = dados.get("mensagem", "")
     if not mensagem_original:
         raise ValueError("Mensagem vazia")
+
+    # Notícias oficiais detectadas pelo PokeMiners devem chegar limpas e com arte.
+    # O link continua servindo para a detecção na origem, mas não é exibido no card.
+    if "OFICIAL" in str(titulo).upper() and "POKEMINERS" in mensagem_original.upper():
+        mensagem_original = re.sub(
+            r"🔗\s*Fonte oficial:\s*https?://\S+",
+            "📌 Fonte oficial: Pokémon GO",
+            mensagem_original,
+            flags=re.I,
+        )
+        dados = dict(dados)
+        dados["url"] = None
+        dados["gerar_arte"] = True
+        dados["usar_premium"] = False
+        dados["permitir_fallback"] = True
 
     coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))
     if not coordenadas:
