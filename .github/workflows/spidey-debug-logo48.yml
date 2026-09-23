@@ -1,0 +1,27 @@
+name: Spidey - validar logo 48
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/spidey-debug-logo48.yml"]
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python -m pip install Pillow
+      - shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import base64,hashlib,io
+          raw=Path('assets/spidey-logo-oficial-48.b64').read_text().strip()
+          print('LEN',len(raw)); assert len(raw)==1800,len(raw)
+          b=base64.b64decode(raw,validate=True)
+          print('BYTES',len(b)); assert len(b)==1348,len(b)
+          h=hashlib.sha256(b).hexdigest(); print('SHA256',h); assert h=='0d9e80a13b430743b4a7e4a5ec2970285df5cd1324f26ab89ab7a27e3d79a4f4',h
+          im=Image.open(io.BytesIO(b)); im.load(); print('SIZE',im.size); assert im.size==(48,48)
+          print('LOGO_48_VALIDO')
+          PY
