@@ -1,5 +1,4 @@
 import io
-import base64
 import math
 import re
 from pathlib import Path
@@ -129,8 +128,7 @@ def _draw_brand_mark(draw, x, y, size, accent):
 
 def _logo_oficial():
     try:
-        raw = Path("assets/spidey-logo-oficial.b64").read_text(encoding="utf-8").strip()
-        return Image.open(io.BytesIO(base64.b64decode(raw))).convert("RGBA")
+        return Image.open(Path("assets/spidey-logo-oficial.jpg")).convert("RGBA")
     except Exception:
         return None
 
