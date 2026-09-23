@@ -1,0 +1,84 @@
+name: Spidey - corrigir fluxo Discord v2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-fix-discord-flow-v2.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Corrigir disparos e logo oficial
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          # ---------- bot.py ----------
+          p = Path('bot.py')
+          s = p.read_text(encoding='utf-8')
+
+          needle = '            components=_botoes_aprovacao(token),\n'
+          count = s.count(needle)
+          if count < 2:
+              raise SystemExit(f'Esperava pelo menos 2 chamadas com components; encontrei {count}')
+          s = s.replace(needle, '')
+
+          old = '''    if bool(dados.get("gerar_arte")) and conteudo["modo_arte"] != "premium":\n        return _html_resultado(\n            "Arte premium indisponível",\n            "A publicação não foi liberada porque a arte premium ainda não foi gerada. Tente novamente mais tarde.",\n            "#ffb84d",\n        ), 503\n'''
+          new = '''    if bool(dados.get("gerar_arte")) and not conteudo["imagem_bytes"]:\n        return _html_resultado(\n            "Arte indisponível",\n            "A publicação não foi liberada porque nenhuma arte válida está disponível. Tente novamente após corrigir a arte.",\n            "#ffb84d",\n        ), 503\n'''
+          if old not in s:
+              raise SystemExit('Bloqueio premium esperado não encontrado em bot.py')
+          s = s.replace(old, new, 1)
+
+          # Deixa explícito no texto que os links pertencem ao mesmo card.
+          s = s.replace(
+              'conteudo["mensagem"] + "\\n\\nEscolha uma opção:" + _links_aprovacao(token),',
+              'conteudo["mensagem"] + "\\n\\nEscolha uma opção:" + _links_aprovacao(token),',
+          )
+
+          p.write_text(s, encoding='utf-8')
+
+          # ---------- spidey_art_v4.py ----------
+          p = Path('spidey_art_v4.py')
+          s = p.read_text(encoding='utf-8')
+
+          if 'import base64\n' not in s:
+              s = s.replace('import io\n', 'import io\nimport base64\n', 1)
+          if 'from pathlib import Path\n' not in s:
+              s = s.replace('import re\n', 'import re\nfrom pathlib import Path\n', 1)
+
+          marker = '''def _draw_brand_mark(draw, x, y, size, accent):\n    draw.rounded_rectangle((x, y, x+size, y+size), radius=size//4, fill=accent)\n    cx, cy = x + size//2, y + size//2\n    draw.ellipse((cx-size//5, cy-size//5, cx+size//5, cy+size//5), outline=(255,255,255), width=max(4, size//12))\n    draw.line((x+size//7, cy, x+size-size//7, cy), fill=(255,255,255), width=max(4, size//11))\n\n\n'''
+          helper = '''def _draw_brand_mark(draw, x, y, size, accent):\n    draw.rounded_rectangle((x, y, x+size, y+size), radius=size//4, fill=accent)\n    cx, cy = x + size//2, y + size//2\n    draw.ellipse((cx-size//5, cy-size//5, cx+size//5, cy+size//5), outline=(255,255,255), width=max(4, size//12))\n    draw.line((x+size//7, cy, x+size-size//7, cy), fill=(255,255,255), width=max(4, size//11))\n\n\ndef _logo_oficial():\n    try:\n        raw = Path("assets/spidey-logo-oficial.b64").read_text(encoding="utf-8").strip()\n        return Image.open(io.BytesIO(base64.b64decode(raw))).convert("RGBA")\n    except Exception:\n        return None\n\n\ndef _aplicar_logo_oficial(scene, x, y, size):\n    logo = _logo_oficial()\n    if logo is None:\n        return False\n    logo = logo.resize((size, size), Image.Resampling.LANCZOS)\n    scene.alpha_composite(logo, (x, y))\n    return True\n\n\n'''
+          if marker not in s:
+              raise SystemExit('Função de marca esperada não encontrada')
+          s = s.replace(marker, helper, 1)
+
+          old_header = '''    draw.rounded_rectangle((34,32,1046,212), radius=40, fill=navy)\n    _draw_brand_mark(draw, 62, 62, 90, accent)\n    draw.text((180,60), "SPIDEY", font=_font(60,True), fill=(255,255,255))\n    draw.text((184,131), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23,True), fill=(190,218,239))\n'''
+          new_header = '''    draw.rounded_rectangle((34,32,1046,212), radius=40, fill=navy)\n    if not _aplicar_logo_oficial(scene, 54, 50, 124):\n        _draw_brand_mark(draw, 62, 62, 90, accent)\n    draw.text((202,60), "SPIDEY", font=_font(60,True), fill=(255,255,255))\n    draw.text((206,131), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23,True), fill=(190,218,239))\n'''
+          if old_header not in s:
+              raise SystemExit('Header esperado não encontrado em spidey_art_v4.py')
+          s = s.replace(old_header, new_header, 1)
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+          python -m py_compile bot.py spidey_art_v4.py
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py spidey_art_v4.py
+          git commit -m "Spidey: estabilizar disparos Discord e aplicar logo oficial"
+          git pull --rebase origin main
+          git push origin HEAD:main
