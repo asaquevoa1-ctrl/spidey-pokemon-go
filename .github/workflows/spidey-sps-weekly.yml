@@ -1,50 +1,10 @@
-name: Spidey - monitor SPS semanal
+name: Spidey - monitor SPS semanal [LEGADO DESATIVADO]
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "14 * * * *"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/spidey-sps-weekly.yml"
-      - "scripts/sps_weekly_monitor.py"
-      - "last_sps_weekly.txt"
-
-permissions:
-  contents: write
 
 jobs:
-  monitorar:
+  legado_desativado:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Preparar OCR
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq tesseract-ocr
-          python -m pip install --quiet requests
-
-      - name: Verificar SPS no canal de entrada Discord
-        env:
-          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
-          SPS_CHANNEL_ID: "1550962861998866564"
-          SPIDEY_ENDPOINT: "https://spidey-pokemon-go.onrender.com/enviar"
-        run: python scripts/sps_weekly_monitor.py
-
-      - name: Salvar antirrepetição
-        shell: bash
-        run: |
-          set -euo pipefail
-          if git diff --quiet -- last_sps_weekly.txt; then
-            echo "Sem novo SPS para registrar."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add last_sps_weekly.txt
-          git commit -m "Spidey: registrar SPS semanal processado"
-          git push origin HEAD:main
+      - run: echo "Workflow legado desativado. Use Spidey - SPS curado."
