@@ -1,112 +1,58 @@
 name: Spidey - validar pipeline curado
 
 on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "*.py"
+      - ".github/workflows/spidey-*-curated.yml"
+      - ".github/workflows/spidey-validate-curated-pipeline.yml"
+      - ".github/workflows/spidey-apply-bot-hardening.yml"
   push:
     branches: [main]
     paths:
+      - "scripts/**"
+      - "*.py"
+      - ".github/workflows/spidey-*-curated.yml"
       - ".github/workflows/spidey-validate-curated-pipeline.yml"
-  workflow_dispatch:
+      - ".github/workflows/spidey-apply-bot-hardening.yml"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   validar:
     runs-on: ubuntu-latest
-    env:
-      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
-      APPROVAL_CHANNEL_ID: "1550963072464715997"
-      GITHUB_TOKEN: ${{ github.token }}
-      GITHUB_REPOSITORY: ${{ github.repository }}
-      SPIDEY_BASE: "https://spidey-pokemon-go.onrender.com"
     steps:
       - uses: actions/checkout@v5
-        with:
-          ref: main
-          fetch-depth: 0
 
-      - name: Aguardar motor novo e disparar teste curado
+      - name: Preparar Python
+        run: python -m pip install --quiet -r requirements.txt
+
+      - name: Validar sintaxe Python
+        run: python -m compileall -q bot.py spidey_approval.py scripts
+
+      - name: Simular hardening do bot sem alterar o repositório
+        run: python scripts/patch_bot_hardening.py --check-only
+
+      - name: Rodar testes do pipeline
+        run: python -m unittest -v test_pipeline_stability.py test_spidey_approval.py test_spidey_geo.py
+
+      - name: Validar entrada dos quatro monitores
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
-          import json, os, re, time, requests
-          from scripts.curated_dispatch import gerar_persistir_e_enviar
-
-          token=os.environ['DISCORD_BOT_TOKEN'].strip()
-          cid=os.environ['APPROVAL_CHANNEL_ID']
-          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
-
-          def msgs():
-              r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':50},timeout=30)
-              r.raise_for_status(); return r.json()
-
-          before={m['id'] for m in msgs()}
-          payload={
-              'titulo':'🧪 TESTE • PIPELINE CURADO SPIDEY',
-              'mensagem':'Validação interna do padrão oficial. Esta arte deve usar o logo oficial do Spidey, sem slogans inventados e será removida automaticamente.',
-              'url':None,
-              'gerar_gpx':False,
-              'aprovar':True,
-          }
-
-          result=None
-          last_error=None
-          for n in range(12):
-              try:
-                  result=gerar_persistir_e_enviar(payload,'teste-pipeline-curado-v1')
-                  break
-              except Exception as exc:
-                  last_error=exc
-                  print(f'TENTATIVA {n+1}: {exc}',flush=True)
-                  time.sleep(15)
-          if result is None:
-              raise SystemExit(f'MOTOR_NAO_FICOU_PRONTO: {last_error}')
-
-          print('RESULT',json.dumps(result,ensure_ascii=False))
-          assert result.get('modo_arte')=='fornecida',result
-          assert result.get('arte') is True,result
-          asset=result['asset_url']; path=result['asset_path']
-          assert asset.startswith('https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/'),asset
-
-          time.sleep(2)
-          new=[m for m in msgs() if m['id'] not in before]
-          tests=[]
-          for m in new:
-              es=m.get('embeds') or []
-              title=((es[0].get('title') if es else '') or '')
-              if 'PIPELINE CURADO SPIDEY' in title.upper(): tests.append(m)
-          assert len(tests)==1,f'Esperava 1 card, encontrei {len(tests)}'
-          m=tests[0]; e=m['embeds'][0]; desc=e.get('description') or ''
-          image=(e.get('image') or {}).get('proxy_url') or (e.get('image') or {}).get('url') or ''
-          assert image,'SEM_IMAGEM_DISCORD'
-          ir=requests.get(image,timeout=30); ir.raise_for_status()
-          assert ir.headers.get('content-type','').startswith('image/'),ir.headers
-          assert len(ir.content)>50000,len(ir.content)
-          assert 'APROVAR' in desc and 'REPROVAR' in desc,desc
-          assert 'attachment://' not in image,image
-
-          reject=re.search(r'\[REPROVAR\]\((https?://[^)]+)\)',desc,re.I)
-          assert reject,'LINK_REPROVAR_AUSENTE'
-          rr=requests.get(reject.group(1),timeout=30)
-          print('REPROVAR_HTTP',rr.status_code)
-          assert rr.status_code==200,rr.text[:500]
-
-          dr=requests.delete(f'https://discord.com/api/v10/channels/{cid}/messages/{m["id"]}',headers=h,timeout=30)
-          print('DISCORD_CLEANUP',dr.status_code)
-
-          # Remove asset de teste do repositório.
-          gh=os.environ['GITHUB_TOKEN']; repo=os.environ['GITHUB_REPOSITORY']
-          ghh={'Authorization':f'Bearer {gh}','Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
-          api=f'https://api.github.com/repos/{repo}/contents/{path}'
-          meta=requests.get(api,headers=ghh,params={'ref':'main'},timeout=30)
-          if meta.status_code==200:
-              sha=meta.json()['sha']
-              dele=requests.delete(api,headers=ghh,json={'message':'Spidey: limpar asset de teste curado','sha':sha,'branch':'main'},timeout=30)
-              print('ASSET_CLEANUP',dele.status_code)
-
-          print('CURATED_PIPELINE_OK')
-          print('ONE_DISCORD_MESSAGE_OK')
-          print('IMAGE_PERSISTED_AND_REUSED_OK')
-          print('APPROVAL_LINKS_OK')
+          import importlib
+          nomes = (
+              'scripts.official_curated_monitor',
+              'scripts.g47ix_curated_monitor',
+              'scripts.pokeminers_curated_monitor',
+              'scripts.sps_curated_monitor',
+          )
+          for nome in nomes:
+              modulo = importlib.import_module(nome)
+              assert callable(getattr(modulo, 'main', None)), nome
+              print('OK', nome)
           PY

@@ -21,7 +21,6 @@ jobs:
       SPS_CHANNEL_ID: "1550962861998866564"
       GITHUB_TOKEN: ${{ github.token }}
       GITHUB_REPOSITORY: ${{ github.repository }}
-      SPIDEY_BASE: "https://spidey-pokemon-go.onrender.com"
       DISCORD_SOURCE_STATE_FILE: "last_discord_source.txt"
       SPS_STATE_FILE: "last_sps_weekly.txt"
     steps:
@@ -37,8 +36,8 @@ jobs:
           sudo apt-get install -y -qq tesseract-ocr
           python -m pip install --quiet requests Pillow
 
-      - name: Verificar SPS e preparar artes curadas
-        run: python scripts/sps_curated_monitor.py
+      - name: Verificar SPS e enfileirar conteúdo curado
+        run: python -m scripts.sps_curated_monitor
 
       - name: Salvar antirrepetição
         if: always()
