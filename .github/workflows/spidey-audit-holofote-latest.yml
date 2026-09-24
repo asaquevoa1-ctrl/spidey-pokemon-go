@@ -1,0 +1,76 @@
+name: Spidey - auditar Holofote Rattata
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-audit-holofote-latest.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      APPROVAL_CHANNEL_ID: "1550963072464715997"
+      GUILD_ID: "1139279003451150467"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Encontrar mensagem limpa mais recente
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, requests
+          token=os.environ['DISCORD_BOT_TOKEN'].strip()
+          channel=os.environ['APPROVAL_CHANNEL_ID']
+          guild=os.environ['GUILD_ID']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          r=requests.get(f'https://discord.com/api/v10/channels/{channel}/messages',headers=h,params={'limit':50},timeout=30)
+          r.raise_for_status()
+          clean=None
+          for m in r.json():
+              embeds=m.get('embeds') or []
+              title=' '.join(str(e.get('title') or '') for e in embeds)
+              desc=' '.join(str(e.get('description') or '') for e in embeds)
+              probe=(title+' '+desc).upper()
+              if 'HORA DO HOLOFOTE' not in probe or 'RATTATA' not in probe:
+                  continue
+              dup='COORDENADAS VERIFICADAS NA ENTRADA' in probe
+              print('RATTATA_MSG',m['id'],m.get('timestamp'),'DUPLICATE_BLOCK='+str(dup),title)
+              if clean is None and not dup:
+                  clean=m
+          if not clean:
+              raise SystemExit('Nenhuma mensagem limpa encontrada')
+          print('CLEAN_LATEST_ID='+clean['id'])
+          print(f'CLEAN_LATEST_URL=https://discord.com/channels/{guild}/{channel}/{clean["id"]}')
+          PY
+
+      - name: Remover marcador temporario do backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('bot.py')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('return "🕷️ Spidey Pokémon GO está online! | explicit-coords-v2"','return "🕷️ Spidey Pokémon GO está online!"')
+          p.write_text(s,encoding='utf-8')
+          PY
+          python -m py_compile bot.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py
+          if git diff --cached --quiet; then
+            echo "Sem marcador temporario para remover."
+            exit 0
+          fi
+          git commit -m "Spidey: remover marcador temporario de deploy"
+          git pull --rebase origin main
+          git push origin HEAD:main
