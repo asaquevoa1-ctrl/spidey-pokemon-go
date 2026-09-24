@@ -1,16 +1,24 @@
+import io
 import json
 import os
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import requests
+from PIL import Image, ImageFile
 
-ENDPOINT = os.getenv("SPIDEY_ENDPOINT", "https://spidey-pokemon-go.onrender.com/enviar").strip()
+from spidey_geo import criar_gpx
+
+ImageFile.LOAD_TRUNCATED_IMAGES = False
+
 QUEUE_DIR = Path("queue/curated")
 BRASILIA_TZ = ZoneInfo("America/Sao_Paulo")
+DISCORD_API = "https://discord.com/api/v10"
+DISCORD_TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
+APPROVAL_CHANNEL_ID = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").strip()
 MONETIZACAO_TIPOS = {"afiliado", "patrocinio", "apoio"}
 AFILIADOS_WHATSAPP_PERMITIDOS = {"shopee"}
 AFILIADOS_WHATSAPP_BLOQUEADOS = {"mercadolivre", "mercado_livre", "mercado-livre"}
@@ -144,16 +152,10 @@ def validar_afiliado_whatsapp(monet):
     plataforma = _normalizar_plataforma(monet.get("plataforma"))
     if not plataforma:
         raise ValueError("monetizacao.plataforma e obrigatoria para links de afiliado")
-
     if plataforma in AFILIADOS_WHATSAPP_BLOQUEADOS:
-        raise ValueError(
-            "plataforma de afiliado bloqueada para WhatsApp pelas regras atuais do programa"
-        )
-
+        raise ValueError("plataforma de afiliado bloqueada para WhatsApp pelas regras atuais do programa")
     if plataforma not in AFILIADOS_WHATSAPP_PERMITIDOS:
-        raise ValueError(
-            "plataforma de afiliado ainda nao validada pelo Spidey para publicacao no WhatsApp"
-        )
+        raise ValueError("plataforma de afiliado ainda nao validada pelo Spidey para publicacao no WhatsApp")
 
 
 def bloco_monetizacao(data):
@@ -167,9 +169,7 @@ def bloco_monetizacao(data):
     url = str(monet.get("url") or "").strip()
 
     if tipo not in MONETIZACAO_TIPOS:
-        raise ValueError(
-            "monetizacao.tipo precisa ser afiliado, patrocinio ou apoio"
-        )
+        raise ValueError("monetizacao.tipo precisa ser afiliado, patrocinio ou apoio")
     if not parceiro:
         raise ValueError("monetizacao.parceiro e obrigatorio quando ativo=true")
     if not texto:
@@ -180,29 +180,15 @@ def bloco_monetizacao(data):
     if tipo == "afiliado":
         validar_afiliado_whatsapp(monet)
         cabecalho = "💰 LINK DE AFILIADO"
-        transparencia = (
-            "🔎 Transparência: este link pode gerar uma comissão para o Spidey, "
-            "sem custo extra para você."
-        )
+        transparencia = "🔎 Transparência: este link pode gerar uma comissão para o Spidey, sem custo extra para você."
     elif tipo == "patrocinio":
         cabecalho = "🤝 CONTEÚDO PATROCINADO"
-        transparencia = (
-            "🔎 Transparência: esta ação comercial é identificada separadamente "
-            "do conteúdo editorial."
-        )
+        transparencia = "🔎 Transparência: esta ação comercial é identificada separadamente do conteúdo editorial."
     else:
         cabecalho = "🤝 APOIO AO SPIDEY"
-        transparencia = (
-            "🔎 Transparência: este é um bloco de apoio ao projeto, separado "
-            "do conteúdo editorial."
-        )
+        transparencia = "🔎 Transparência: este é um bloco de apoio ao projeto, separado do conteúdo editorial."
 
-    return (
-        f"{cabecalho}\n"
-        f"{parceiro} • {texto}\n"
-        f"🔗 {url}\n"
-        f"{transparencia}"
-    )
+    return f"{cabecalho}\n{parceiro} • {texto}\n🔗 {url}\n{transparencia}"
 
 
 def mensagem_final(data):
@@ -210,42 +196,33 @@ def mensagem_final(data):
     bloco = bloco_horarios(data)
     if bloco:
         partes.append(bloco)
-
     partes.append(str(data["mensagem"]).strip())
-
     comercial = bloco_monetizacao(data)
     if comercial:
         partes.append("──────────────\n" + comercial)
-
     return "\n\n".join(parte for parte in partes if parte)
 
 
 def validar_item(data, path):
-    obrigatorios = ["titulo", "mensagem", "source_url", "image_url"]
+    obrigatorios = ["titulo", "mensagem", "source_url", "image_url", "_source_id"]
     faltando = [k for k in obrigatorios if not str(data.get(k, "")).strip()]
     if faltando:
         raise ValueError(f"{path}: faltam campos obrigatorios: {', '.join(faltando)}")
-
     if data.get("source_verified") is not True:
         raise ValueError(f"{path}: source_verified precisa ser true")
-
     if not _url_publica(data["source_url"]):
         raise ValueError(f"{path}: source_url precisa ser uma URL http/https valida")
-
     image_host = (urlparse(data["image_url"]).hostname or "").lower()
     if image_host not in {"raw.githubusercontent.com", "github.com"}:
         raise ValueError(f"{path}: image_url precisa apontar para arte persistida no GitHub")
-
     coords = data.get("coordenadas", [])
     if coords is not None and not isinstance(coords, list):
         raise ValueError(f"{path}: coordenadas precisa ser uma lista")
-
     horarios = data.get("horarios", [])
     if horarios is not None and not isinstance(horarios, list):
         raise ValueError(f"{path}: horarios precisa ser uma lista")
     if horarios:
         bloco_horarios(data)
-
     monetizacao = data.get("monetizacao")
     if monetizacao is not None and not isinstance(monetizacao, dict):
         raise ValueError(f"{path}: monetizacao precisa ser um objeto")
@@ -253,47 +230,115 @@ def validar_item(data, path):
         bloco_monetizacao(data)
 
 
-def payload_spidey(data):
-    return {
-        "titulo": data["titulo"],
-        "mensagem": mensagem_final(data),
-        "url": data["source_url"],
-        "imagem_url": data["image_url"],
-        "coordenadas": data.get("coordenadas", []),
-        "gerar_gpx": bool(data.get("gerar_gpx", True)),
-        "gpx_nome": data.get("gpx_nome", "spidey-evento.gpx"),
-        "gerar_arte": False,
-        "arte_padrao_spidey": True,
-        "aprovar": True,
-    }
+def _discord_headers(json_content=False):
+    if not DISCORD_TOKEN:
+        raise RuntimeError("DISCORD_BOT_TOKEN ausente")
+    headers = {"Authorization": f"Bot {DISCORD_TOKEN}", "User-Agent": "SpideyPokemonGO/2.0"}
+    if json_content:
+        headers["Content-Type"] = "application/json"
+    return headers
 
 
-def enviar_com_retry(payload):
-    ultimo_erro = None
-    for tentativa, espera in enumerate((0, 5, 10, 20), start=1):
-        if espera:
-            time.sleep(espera)
+def _baixar_arte(url):
+    r = requests.get(url, headers={"User-Agent": "SpideyPokemonGO/2.0"}, timeout=45)
+    r.raise_for_status()
+    raw = r.content
+    if len(raw) < 8000:
+        raise ValueError("arte muito pequena/corrompida")
+    with Image.open(io.BytesIO(raw)) as probe:
+        probe.verify()
+    img = Image.open(io.BytesIO(raw)).convert("RGB")
+    if img.width < 1000 or img.height < 1200:
+        raise ValueError(f"arte em baixa resolução: {img.width}x{img.height}")
+    amostra = img.resize((64, 64)).convert("L")
+    minimo, maximo = amostra.getextrema()
+    if maximo <= 12 or (maximo - minimo <= 3 and maximo <= 24):
+        raise ValueError("arte praticamente preta")
+    out = io.BytesIO()
+    img.save(out, format="JPEG", quality=94, optimize=True)
+    return out.getvalue()
+
+
+def _coords_validas(data):
+    saida = []
+    vistos = set()
+    for item in data.get("coordenadas") or []:
         try:
-            response = requests.post(ENDPOINT, json=payload, timeout=180)
-            if response.status_code in {502, 503, 504}:
-                ultimo_erro = RuntimeError(f"HTTP {response.status_code}: {response.text[:300]}")
-                print(f"Render temporariamente indisponivel; tentativa {tentativa}/4.")
-                continue
-            response.raise_for_status()
-            return response
-        except requests.RequestException as exc:
-            ultimo_erro = exc
-            print(f"Falha de rede; tentativa {tentativa}/4: {exc}")
-    raise ultimo_erro or RuntimeError("Falha desconhecida no envio ao Spidey")
+            if isinstance(item, dict):
+                lat = float(item["lat"])
+                lon = float(item.get("lon", item.get("lng")))
+            else:
+                lat = float(item[0])
+                lon = float(item[1])
+        except (KeyError, TypeError, ValueError, IndexError):
+            continue
+        if not (-90 <= lat <= 90 and -180 <= lon <= 180):
+            continue
+        chave = (round(lat, 7), round(lon, 7))
+        if chave not in vistos:
+            vistos.add(chave)
+            saida.append(chave)
+    return saida
+
+
+def enviar_discord(data):
+    arte = _baixar_arte(data["image_url"])
+    coords = _coords_validas(data)
+    gpx = criar_gpx(coords, data.get("titulo") or "Spidey Pokémon GO") if data.get("gerar_gpx", True) and coords else None
+    gpx_nome = str(data.get("gpx_nome") or "spidey-evento.gpx")
+
+    embed = {
+        "title": str(data["titulo"])[:256],
+        "description": mensagem_final(data)[:4000],
+        "url": data["source_url"],
+        "color": 20735,
+        "image": {"url": "attachment://spidey-card.jpg"},
+        "footer": {"text": "Spidey • reaja com ✅ para aprovar ou ❌ para reprovar"},
+    }
+    payload = {
+        "content": "🕷️ **Aguardando aprovação** • ✅ aprovar | ❌ reprovar",
+        "embeds": [embed],
+    }
+    files = [("files[0]", ("spidey-card.jpg", arte, "image/jpeg"))]
+    attachments = [{"id": 0, "filename": "spidey-card.jpg"}]
+    if gpx:
+        files.append(("files[1]", (gpx_nome, gpx, "application/gpx+xml")))
+        attachments.append({"id": 1, "filename": gpx_nome})
+    payload["attachments"] = attachments
+
+    r = requests.post(
+        f"{DISCORD_API}/channels/{APPROVAL_CHANNEL_ID}/messages",
+        headers=_discord_headers(),
+        data={"payload_json": json.dumps(payload, ensure_ascii=False)},
+        files=files,
+        timeout=90,
+    )
+    r.raise_for_status()
+    sent = r.json()
+    mid = str(sent["id"])
+
+    for emoji in ("✅", "❌"):
+        rr = requests.put(
+            f"{DISCORD_API}/channels/{APPROVAL_CHANNEL_ID}/messages/{mid}/reactions/{quote(emoji, safe='')}/@me",
+            headers=_discord_headers(),
+            timeout=30,
+        )
+        rr.raise_for_status()
+    return sent
 
 
 def main():
     QUEUE_DIR.mkdir(parents=True, exist_ok=True)
     pending = []
-
     for path in sorted(QUEUE_DIR.glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
-        if data.get("status", "pending") != "pending":
+        # Não tratar arquivos legados sem status explícito nem reenviar os já enviados.
+        if data.get("status") != "pending":
+            continue
+        # A nova fila automática sempre tem _source_id. Isto impede testes antigos
+        # esquecidos como pending de voltarem para o Discord.
+        if not str(data.get("_source_id") or "").strip():
+            print(f"IGNORADO legado sem _source_id: {path.name}")
             continue
         pending.append((path, data))
 
@@ -305,17 +350,13 @@ def main():
     for path, data in pending:
         try:
             validar_item(data, path)
-            response = enviar_com_retry(payload_spidey(data))
-            result = response.json()
-            if result.get("status") != "enviado" or result.get("etapa") != "aguardando_aprovacao":
-                raise RuntimeError(f"resposta inesperada: {result}")
-            if result.get("modo_arte") != "fornecida":
-                raise RuntimeError(f"arte nao foi tratada como fornecida: {result}")
-
+            sent = enviar_discord(data)
             data["status"] = "sent"
-            data["spidey_result"] = result
+            data["discord_approval_id"] = str(sent.get("id") or "")
+            data["sent_at_utc"] = datetime.now(BRASILIA_TZ).astimezone(ZoneInfo("UTC")).isoformat()
             path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            print(f"ENVIADO: {path.name}")
+            print(f"DISCORD APROVAÇÃO: {path.name} -> {data['discord_approval_id']}")
+            time.sleep(0.4)
         except Exception as exc:
             failures.append(f"{path.name}: {exc}")
             print(f"ERRO: {path.name}: {exc}")
