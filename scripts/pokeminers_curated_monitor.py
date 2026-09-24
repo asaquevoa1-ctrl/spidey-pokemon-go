@@ -2,6 +2,7 @@ import json
 import os
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -12,6 +13,9 @@ DISCORD_API = "https://discord.com/api/v10"
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 CHANNEL = os.getenv("POKEMINERS_CHANNEL_ID", "1550962794814373898").strip()
 STATE = Path(os.getenv("POKEMINERS_STATE_FILE", "last_pokeminers.txt"))
+MAX_ENVIOS = 5
+MAX_PAGINAS = 20
+LIMITE_PAGINA = 100
 
 
 def full_text(msg):
@@ -92,49 +96,103 @@ def normalize(text):
     return "Nova informação detectada automaticamente no PokeMiners.\n\n" + compact[:3000]
 
 
-def main():
+def discord_headers():
     if not TOKEN:
         raise RuntimeError("DISCORD_BOT_TOKEN ausente")
-    h = {"Authorization": f"Bot {TOKEN}", "User-Agent": "SpideyPokemonGO/1.0", "Accept": "application/json"}
-    ch = requests.get(f"{DISCORD_API}/channels/{CHANNEL}", headers=h, timeout=30)
+    return {"Authorization": f"Bot {TOKEN}", "User-Agent": "SpideyPokemonGO/2.0", "Accept": "application/json"}
+
+
+def snowflake_datetime(message_id):
+    try:
+        ms = (int(str(message_id)) >> 22) + 1420070400000
+        return datetime.fromtimestamp(ms / 1000, tz=timezone.utc)
+    except Exception:
+        return None
+
+
+def buscar_novas(last, headers):
+    novas = []
+    after = str(last or "").strip()
+    for pagina in range(1, MAX_PAGINAS + 1):
+        params = {"limit": LIMITE_PAGINA}
+        if after:
+            params["after"] = after
+        r = requests.get(f"{DISCORD_API}/channels/{CHANNEL}/messages", headers=headers, params=params, timeout=30)
+        r.raise_for_status()
+        lote = [m for m in r.json() if str(m.get("id") or "").isdigit()]
+        if not lote:
+            break
+        lote.sort(key=lambda m: int(m["id"]))
+        novas.extend(lote)
+        maior = str(lote[-1]["id"])
+        if maior == after or len(lote) < LIMITE_PAGINA:
+            break
+        after = maior
+        print(f"PokeMiners backlog: página {pagina} lida até {after}.", flush=True)
+    else:
+        raise RuntimeError("Backlog PokeMiners excedeu o limite de segurança; cursor não foi saltado.")
+    # A API pode repetir bordas entre páginas; removemos por ID e preservamos ordem.
+    unicos = {str(m["id"]): m for m in novas}
+    return [unicos[k] for k in sorted(unicos, key=int)]
+
+
+def main():
+    headers = discord_headers()
+    ch = requests.get(f"{DISCORD_API}/channels/{CHANNEL}", headers=headers, timeout=30)
     ch.raise_for_status()
-    guild = str(ch.json().get("guild_id") or "").strip()
-    r = requests.get(f"{DISCORD_API}/channels/{CHANNEL}/messages", headers=h, params={"limit": 75}, timeout=30)
-    r.raise_for_status()
-    messages = r.json()
+    ch_data = ch.json()
+    guild = str(ch_data.get("guild_id") or "").strip()
+    nome_canal = str(ch_data.get("name") or "(sem nome)")
 
-    relevant_messages = []
-    for msg in messages:
-        text = full_text(msg)
-        if not text or not is_pokeminers(msg, text):
-            continue
-        # Notícias de PokemonGoLive são responsabilidade exclusiva do monitor Oficial.
-        low = text.lower()
-        if "@news updates" in low or "found a new news item on pokemongolive" in low or "pokemongo.com/news" in low:
-            continue
-        if relevant(text):
-            relevant_messages.append((msg, text))
-
-    if not relevant_messages:
-        print("Nenhuma atualização operacional relevante do PokeMiners.")
-        return 0
+    latest_r = requests.get(f"{DISCORD_API}/channels/{CHANNEL}/messages", headers=headers, params={"limit": 1}, timeout=30)
+    latest_r.raise_for_status()
+    latest_rows = latest_r.json()
+    latest_id = str((latest_rows[0] if latest_rows else {}).get("id") or "").strip()
+    latest_dt = snowflake_datetime(latest_id)
+    age_h = (datetime.now(timezone.utc) - latest_dt).total_seconds() / 3600 if latest_dt else None
+    age_txt = f"{age_h:.1f}h" if age_h is not None else "desconhecida"
+    print(f"PokeMiners origem: canal={nome_canal!r} id={CHANNEL} newest={latest_id or 'vazio'} idade={age_txt}", flush=True)
+    if age_h is not None and age_h > 24:
+        print(f"ALERTA POKEMINERS: canal sem mensagem nova há {age_h:.1f}h.", file=sys.stderr, flush=True)
 
     last = STATE.read_text(encoding="utf-8").strip() if STATE.exists() else ""
     if not last.isdigit():
-        current = max(int(str(m.get("id") or "0")) for m, _ in relevant_messages)
-        STATE.write_text(str(current) + "\n", encoding="utf-8")
-        print(f"Monitor PokeMiners curado inicializado em {current}.")
+        if latest_id:
+            STATE.write_text(latest_id + "\n", encoding="utf-8")
+            print(f"Monitor PokeMiners inicializado em {latest_id} sem republicar histórico.")
+        else:
+            print("Canal PokeMiners vazio; estado não alterado.")
         return 0
 
-    unseen = [(m, t) for m, t in relevant_messages if str(m.get("id") or "").isdigit() and int(m["id"]) > int(last)]
-    if not unseen:
-        print("Nenhuma nova atualização PokeMiners.")
+    messages = buscar_novas(last, headers)
+    if not messages:
+        print("Nenhuma mensagem nova no canal PokeMiners.")
         return 0
-    unseen.sort(key=lambda item: int(item[0]["id"]))
 
-    sent = []
-    for msg, text in unseen[:5]:
+    checkpoint = int(last)
+    enviados = 0
+    examinados = 0
+
+    for msg in messages:
+        if enviados >= MAX_ENVIOS:
+            break
         mid = str(msg["id"])
+        text = full_text(msg)
+        examinados += 1
+
+        if not text or not is_pokeminers(msg, text):
+            checkpoint = max(checkpoint, int(mid))
+            continue
+
+        low = text.lower()
+        if "@news updates" in low or "found a new news item on pokemongolive" in low or "pokemongo.com/news" in low:
+            checkpoint = max(checkpoint, int(mid))
+            continue
+
+        if not relevant(text):
+            checkpoint = max(checkpoint, int(mid))
+            continue
+
         source_url = f"https://discord.com/channels/{guild}/{CHANNEL}/{mid}" if guild else None
         payload = {
             "titulo": classify(text),
@@ -143,12 +201,19 @@ def main():
             "image_url": first_image_url(msg),
             "gerar_gpx": False,
             "aprovar": True,
+            "media_policy": "source_first",
         }
-        result = gerar_persistir_e_enviar(payload, f"pokeminers-{mid}")
+        try:
+            result = gerar_persistir_e_enviar(payload, f"pokeminers-{mid}")
+        except Exception:
+            STATE.write_text(str(checkpoint) + "\n", encoding="utf-8")
+            raise
         print(json.dumps(result, ensure_ascii=False))
-        sent.append(int(mid))
-    if sent:
-        STATE.write_text(str(max(sent)) + "\n", encoding="utf-8")
+        checkpoint = max(checkpoint, int(mid))
+        enviados += 1
+
+    STATE.write_text(str(checkpoint) + "\n", encoding="utf-8")
+    print(f"PokeMiners: examinados={examinados}; enfileirados={enviados}; cursor={checkpoint}.")
     return 0
 
 
