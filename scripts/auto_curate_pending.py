@@ -67,13 +67,22 @@ def english(t):
 
 def translate(t):
     if not english(t): return t
+    # First try Google's public endpoint; GitHub runners can occasionally be throttled.
     try:
         r=get("https://translate.googleapis.com/translate_a/single",
               params={"client":"gtx","sl":"auto","tl":"pt","dt":"t","q":t},timeout=20)
         r.raise_for_status(); p=r.json()
-        return "".join(x[0] for x in (p[0] or []) if isinstance(x,list) and x and x[0]).strip() or t
-    except Exception as e:
-        print("TRADUCAO:",e); return t
+        out="".join(x[0] for x in (p[0] or []) if isinstance(x,list) and x and x[0]).strip()
+        if out and out!=t: return out
+    except Exception as e: print("TRADUCAO_GOOGLE:",e)
+    # Free fallback: no API key and no paid service.
+    try:
+        r=get("https://api.mymemory.translated.net/get",
+              params={"q":t[:4500],"langpair":"en|pt-BR"},timeout=25)
+        r.raise_for_status(); out=str((r.json().get("responseData") or {}).get("translatedText") or "").strip()
+        if out and out.lower()!=t.lower(): return html.unescape(out)
+    except Exception as e: print("TRADUCAO_MYMEMORY:",e)
+    return t
 
 def page(url):
     r=get(url,timeout=30,allow_redirects=True); r.raise_for_status()
@@ -82,10 +91,18 @@ def page(url):
 def urls(t):
     return [u.rstrip(".,") for u in re.findall(r"https?://[^\s<>\]\)]+",str(t or ""))]
 
+def pogo_url(u):
+    u=str(u or "").strip().replace("/pt_BR/","/pt-BR/")
+    return u
+
 def page_candidates(item):
-    out=[u for u in urls(item.get("mensagem")) if "pokemongo.com/" in u]
-    u=str(item.get("url") or "")
+    out=[pogo_url(u) for u in urls(item.get("mensagem")) if "pokemongo.com/" in u]
+    u=pogo_url(item.get("url"))
     if "pokemongo.com/" in u: out.append(u)
+    # English article is a safe metadata/image fallback when a locale route is unavailable.
+    for base in list(out):
+        if "/pt-BR/" in base: out.append(base.replace("/pt-BR/","/en/"))
+        elif "pokemongo.com/news/" in base: out.append(base.replace("pokemongo.com/news/","pokemongo.com/en/news/"))
     return list(dict.fromkeys(out))
 
 def recursive_images(obj):
@@ -189,7 +206,7 @@ def enrich(item):
     if kind(item)=="G47IX": body=translate(body)
     if kind(item)=="OFICIAL":
         try:
-            p=page(str(item.get("url") or "")); extra=p.description
+            p=page(page_candidates(item)[0] if page_candidates(item) else pogo_url(item.get("url"))); extra=p.description
             if extra and extra.lower() in body.lower(): extra=""
             if not extra:
                 extra=next((x for x in p.paragraphs if x.lower() not in body.lower() and "cookie" not in x.lower()),"")
@@ -232,7 +249,8 @@ def main():
             print("SEM_ARTE",p.name,"; ".join(errs[:3])); continue
         asset=ASSETS/(p.stem+".jpg"); render(item,src,asset,msg)
         out=CURATED/p.name
-        data={"titulo":item.get("titulo"),"mensagem":msg,"source_url":item.get("url"),
+        source_url=pogo_url(item.get("url")) if kind(item)=="OFICIAL" else item.get("url")
+        data={"titulo":item.get("titulo"),"mensagem":msg,"source_url":source_url,
               "image_url":raw(asset),"source_verified":True,
               "coordenadas":item.get("coordenadas",[]),"horarios":item.get("horarios",[]),
               "gerar_gpx":bool(item.get("gerar_gpx",True)),
