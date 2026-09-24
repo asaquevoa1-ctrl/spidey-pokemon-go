@@ -37,7 +37,7 @@ jobs:
         run: python scripts/patch_bot_hardening.py --check-only
 
       - name: Rodar testes do pipeline
-        run: python -m unittest -v test_pipeline_stability.py test_spidey_approval.py test_spidey_geo.py
+        run: python -m unittest -v test_pipeline_stability.py test_spidey_approval.py test_spidey_geo.py test_world_event_times.py
 
       - name: Validar entrada dos quatro monitores
         shell: bash
