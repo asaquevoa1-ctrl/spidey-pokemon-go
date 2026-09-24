@@ -1,0 +1,16 @@
+{
+  "titulo": "📰 OFICIAL • NOTÍCIA",
+  "mensagem": "Prepare-se para o Dia de chocar Sandile!\n\n📌 Fonte: Pokémon GO oficial",
+  "url": "https://pokemongo.com/pt-BR/news/sandile-hatch-day-2026",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "oficial-https://pokemongo.com/pt-BR/news/sandile-hatch-day-2026",
+  "status": "aguardando_arte_chatgpt",
+  "pipeline": "chatgpt_spidey_oficial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-24T17:17:12.393164+00:00"
+}
