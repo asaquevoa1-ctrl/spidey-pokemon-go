@@ -1,6 +1,8 @@
 import json
 import os
 import re
+from datetime import datetime, timezone
+from pathlib import Path
 
 import requests
 
@@ -8,9 +10,11 @@ APPROVAL_CHANNEL_ID = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").st
 PUBLIC_CHANNEL_ID = os.getenv("PUBLIC_CHANNEL_ID", "1550963136519999658").strip()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 API = "https://discord.com/api/v10"
+QUEUE_DIR = Path("queue/curated")
 COORD_RE = re.compile(r"^-?\d{1,2}(?:\.\d+)?,-?\d{1,3}(?:\.\d+)?$")
 TEST_MARKERS = ("🧪 TESTE TÉCNICO • E2E SPIDEY",)
 APPROVAL_MARKER = "Aguardando aprovação"
+TERMINAL_REJECTED = {"rejected", "rejected_art", "decision_conflict", "blocked_art_standard"}
 
 if not TOKEN:
     raise SystemExit("DISCORD_BOT_TOKEN ausente")
@@ -105,6 +109,32 @@ def reaction_count(message, emoji_name):
     return 0
 
 
+def carregar_fila_por_aprovacao():
+    por_id = {}
+    QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+    for path in sorted(QUEUE_DIR.glob("*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            print(f"JSON inválido {path.name}: {exc}")
+            continue
+        mid = str(data.get("discord_approval_id") or "").strip()
+        if mid:
+            por_id[mid] = (path, data)
+    return por_id
+
+
+def marcar_publicado(path, data, public_message_id, reconciled=False):
+    data["status"] = "published"
+    data["discord_public_id"] = str(public_message_id or "")
+    data["published_at_utc"] = datetime.now(timezone.utc).isoformat()
+    if reconciled:
+        data["publication_reconciled"] = True
+    else:
+        data.pop("publication_reconciled", None)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def send_plain(text):
     r = requests.post(
         f"{API}/channels/{PUBLIC_CHANNEL_ID}/messages",
@@ -169,11 +199,14 @@ def send_full(m, strip_approval=False):
 def main():
     approval = get_messages(APPROVAL_CHANNEL_ID)
     published = get_messages(PUBLIC_CHANNEL_ID)
-    published_signatures = {sig for m in published if (sig := signature(m))}
+    published_by_signature = {sig: m for m in published if (sig := signature(m))}
+    queue_by_approval = carregar_fila_por_aprovacao()
     copied = 0
+    reconciled = 0
     active_new = False
 
     for m in sorted(approval, key=lambda x: int(x["id"])):
+        mid = str(m.get("id") or "").strip()
         embeds = m.get("embeds") or []
         title = str((embeds[0] if embeds else {}).get("title") or "").strip()
         content = str(m.get("content") or "").strip()
@@ -184,19 +217,52 @@ def main():
 
         if APPROVAL_MARKER.lower() in content.lower() and embeds:
             sig = signature(m)
+            queue_entry = queue_by_approval.get(mid)
+
+            # Fluxo Premium v1: a fila editorial é a fonte de verdade. A reação
+            # só vira aprovação/reprovação depois que sync_approval_state gravar.
+            if queue_entry:
+                path, data = queue_entry
+                status = str(data.get("status") or "").strip()
+                if status == "published" or status in TERMINAL_REJECTED:
+                    active_new = False
+                    continue
+                if status != "approved":
+                    active_new = False
+                    continue
+
+                existing = published_by_signature.get(sig) if sig else None
+                if existing:
+                    marcar_publicado(path, data, existing.get("id"), reconciled=True)
+                    reconciled += 1
+                    active_new = False
+                    print(f"RECONCILIADO {mid} -> {existing.get('id')}")
+                    continue
+
+                sent = send_full(m, strip_approval=True)
+                if sig:
+                    published_by_signature[sig] = sent
+                marcar_publicado(path, data, sent.get("id"), reconciled=False)
+                copied += 1
+                active_new = True
+                print(f"APROVADO {mid} -> {sent.get('id')}")
+                continue
+
+            # Compatibilidade com aprovações antigas que não têm item na fila.
             rejeicoes = reaction_count(m, "❌")
             aprovacoes = reaction_count(m, "✅")
             if rejeicoes > 1:
-                print(f"REPROVADO {m['id']}")
+                print(f"REPROVADO LEGADO {mid}")
                 active_new = False
                 continue
             if aprovacoes > 1:
-                if sig and sig not in published_signatures:
+                existing = published_by_signature.get(sig) if sig else None
+                if sig and not existing:
                     sent = send_full(m, strip_approval=True)
-                    published_signatures.add(sig)
+                    published_by_signature[sig] = sent
                     copied += 1
                     active_new = True
-                    print(f"APROVADO {m['id']} -> {sent.get('id')}")
+                    print(f"APROVADO LEGADO {mid} -> {sent.get('id')}")
                 else:
                     active_new = False
                 continue
@@ -206,12 +272,13 @@ def main():
         # Compatibilidade com o fluxo antigo já existente no histórico.
         if title.startswith("✅ APROVADO"):
             sig = signature(m)
-            if sig and sig not in published_signatures:
+            existing = published_by_signature.get(sig) if sig else None
+            if sig and not existing:
                 sent = send_full(m)
-                published_signatures.add(sig)
+                published_by_signature[sig] = sent
                 copied += 1
                 active_new = True
-                print(f"PUBLICADO LEGADO {m['id']} -> {sent.get('id')}")
+                print(f"PUBLICADO LEGADO {mid} -> {sent.get('id')}")
             else:
                 active_new = False
             continue
@@ -226,7 +293,7 @@ def main():
         if content or embeds:
             active_new = False
 
-    print(f"Concluído. Novas mensagens publicadas: {copied}")
+    print(f"Concluído. Novas mensagens publicadas: {copied}; reconciliadas: {reconciled}")
 
 
 if __name__ == "__main__":
