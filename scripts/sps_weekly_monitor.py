@@ -16,6 +16,8 @@ SPIDEY_ENDPOINT = os.getenv("SPIDEY_ENDPOINT", "https://spidey-pokemon-go.onrend
 BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 CHANNEL_ID = os.getenv("SPS_CHANNEL_ID", "1550962861998866564").strip()
 STATE_FILE = Path(os.getenv("SPS_STATE_FILE", "last_sps_weekly.txt"))
+MAX_PAGINAS_BACKLOG = 20
+LIMITE_PAGINA = 100
 
 
 def normalizar(texto: str) -> str:
@@ -63,8 +65,11 @@ def imagens(msg: dict) -> list[dict]:
 
 def ocr_primeira_imagem(msg: dict) -> str:
     anexos = imagens(msg)
-    if not anexos or not shutil.which("tesseract"):
+    if not anexos:
         return ""
+    if not shutil.which("tesseract"):
+        raise RuntimeError("Tesseract indisponível para classificar imagem SPS")
+
     anexo = anexos[0]
     resposta = requests.get(anexo["url"], timeout=45)
     resposta.raise_for_status()
@@ -80,7 +85,9 @@ def ocr_primeira_imagem(msg: dict) -> str:
             timeout=60,
             check=False,
         )
-    return proc.stdout.strip() if proc.returncode == 0 else ""
+    if proc.returncode != 0:
+        raise RuntimeError(f"OCR SPS falhou: {proc.stderr.strip()[:300]}")
+    return proc.stdout.strip()
 
 
 def semanal(texto: str) -> bool:
@@ -107,21 +114,65 @@ def salvar_estado(message_id: str) -> None:
     STATE_FILE.write_text(message_id + "\n", encoding="utf-8")
 
 
-def buscar() -> list[dict]:
+def _headers() -> dict:
     if not BOT_TOKEN:
         raise RuntimeError("DISCORD_BOT_TOKEN ausente")
-    r = requests.get(
-        f"{DISCORD_API}/channels/{CHANNEL_ID}/messages",
-        headers={
-            "Authorization": f"Bot {BOT_TOKEN}",
-            "User-Agent": "SpideyPokemonGO/1.0",
-            "Accept": "application/json",
-        },
-        params={"limit": 50},
-        timeout=30,
-    )
-    r.raise_for_status()
-    return r.json()
+    return {
+        "Authorization": f"Bot {BOT_TOKEN}",
+        "User-Agent": "SpideyPokemonGO/2.0",
+        "Accept": "application/json",
+    }
+
+
+def buscar_desde_cursor(ultimo: str) -> list[dict]:
+    """Busca todas as mensagens novas desde o cursor, sem perder backlog silenciosamente."""
+    encontrados = []
+    before = ""
+    cursor_encontrado = not bool(ultimo)
+
+    for pagina in range(1, MAX_PAGINAS_BACKLOG + 1):
+        params = {"limit": LIMITE_PAGINA}
+        if before:
+            params["before"] = before
+        r = requests.get(
+            f"{DISCORD_API}/channels/{CHANNEL_ID}/messages",
+            headers=_headers(),
+            params=params,
+            timeout=30,
+        )
+        r.raise_for_status()
+        lote = r.json()
+        if not lote:
+            cursor_encontrado = True
+            break
+
+        for msg in lote:
+            mid = str(msg.get("id") or "").strip()
+            if ultimo and mid == ultimo:
+                cursor_encontrado = True
+                break
+            encontrados.append(msg)
+
+        if cursor_encontrado:
+            break
+        if len(lote) < LIMITE_PAGINA:
+            cursor_encontrado = True
+            break
+        before = str(lote[-1].get("id") or "").strip()
+        if not before:
+            break
+        print(f"SPS semanal backlog: página {pagina} lida; cursor ainda não encontrado.", flush=True)
+
+    if ultimo and not cursor_encontrado:
+        raise RuntimeError(
+            "Cursor SPS semanal não encontrado após paginação de segurança; estado não foi avançado."
+        )
+    return encontrados
+
+
+def buscar() -> list[dict]:
+    """Compatibilidade com chamadas antigas; usa o cursor persistido."""
+    return buscar_desde_cursor(ler_estado())
 
 
 def url_mensagem(msg: dict) -> str | None:
@@ -152,7 +203,7 @@ def enviar(msg: dict, texto: str) -> bool:
     }
     r = requests.post(SPIDEY_ENDPOINT, json=payload, timeout=180)
     if r.status_code == 503:
-        print("SPS semanal localizado, mas arte premium ainda indisponível.", flush=True)
+        print("SPS semanal localizado, mas arte premium ainda indisponível; cursor preservado para nova tentativa.", flush=True)
         print(r.text[:500], flush=True)
         return False
     r.raise_for_status()
@@ -165,32 +216,39 @@ def enviar(msg: dict, texto: str) -> bool:
 
 
 def main() -> int:
-    mensagens = buscar()
+    ultimo = ler_estado()
+    mensagens = buscar_desde_cursor(ultimo)
     if not mensagens:
-        print("Canal de entrada Discord ainda sem mensagens.")
+        print("Nenhuma nova mensagem SPS para o monitor semanal.")
         return 0
 
-    ultimo = ler_estado()
-    for msg in mensagens:
+    examinados = 0
+    for msg in reversed(mensagens):
         mid = str(msg.get("id") or "").strip()
-        if mid == ultimo:
-            break
         if not mid:
             continue
+        examinados += 1
 
         texto = texto_mensagem(msg)
-        if not semanal(texto) and imagens(msg):
+        anexos_imagem = imagens(msg)
+        if not semanal(texto) and anexos_imagem:
             ocr = ocr_primeira_imagem(msg)
+            # Imagem sem texto reconhecível é ambígua: não avance o cursor,
+            # para não perder uma agenda semanal por falha/transitoriedade do OCR.
+            if not ocr and not texto:
+                raise RuntimeError(f"OCR SPS não extraiu texto da imagem {mid}; cursor preservado")
             if ocr:
                 texto = "\n".join(x for x in (texto, ocr) if x).strip()
 
         if semanal(texto):
             print(f"SPS semanal detectado: {mid}")
-            if enviar(msg, texto):
-                salvar_estado(mid)
-            return 0
+            if not enviar(msg, texto):
+                return 0
 
-    print("Nenhum novo resumo semanal do SPS.")
+        # Só avançamos após classificar com sucesso ou enviar com sucesso.
+        salvar_estado(mid)
+
+    print(f"SPS semanal: examinados={examinados}, cursor={ler_estado() or 'vazio'}.")
     return 0
 
 
