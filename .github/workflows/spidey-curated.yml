@@ -6,6 +6,7 @@ on:
     paths:
       - "queue/curated/**"
       - "scripts/send_curated.py"
+      - "scripts/spidey_art_guard.py"
       - "scripts/test_curated_format.py"
       - ".github/workflows/spidey-curated.yml"
   workflow_dispatch:
@@ -31,10 +32,13 @@ jobs:
         run: python -m pip install --quiet requests pillow
 
       - name: Validar codigo
-        run: python -m py_compile scripts/send_curated.py scripts/test_curated_format.py spidey_geo.py
+        run: python -m py_compile scripts/send_curated.py scripts/spidey_art_guard.py scripts/test_curated_format.py spidey_geo.py
 
       - name: Testar fusos e monetizacao
         run: python scripts/test_curated_format.py
+
+      - name: Aplicar padrão premium obrigatório
+        run: python scripts/spidey_art_guard.py
 
       - name: Enviar itens curados para aprovacao
         id: enviar_curados
@@ -56,7 +60,7 @@ jobs:
             echo "Nenhuma alteracao de estado."
             exit 0
           fi
-          git commit -m "Spidey: marca curadoria como enviada [skip ci]"
+          git commit -m "Spidey: atualiza estado editorial [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
 
@@ -65,6 +69,6 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ steps.enviar_curados.outcome }}" != "success" ]]; then
-            echo "Um ou mais itens falharam, mas os envios bem-sucedidos tiveram o estado preservado."
+            echo "Um ou mais itens falharam, mas os estados bem-sucedidos foram preservados."
             exit 1
           fi
