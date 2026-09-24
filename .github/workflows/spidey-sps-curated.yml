@@ -1,0 +1,56 @@
+name: Spidey - SPS curado
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "4,19,34,49 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-sps-curated
+  cancel-in-progress: false
+
+jobs:
+  monitorar:
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      DISCORD_SOURCE_CHANNEL_ID: "1550962861998866564"
+      SPS_CHANNEL_ID: "1550962861998866564"
+      GITHUB_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      SPIDEY_BASE: "https://spidey-pokemon-go.onrender.com"
+      DISCORD_SOURCE_STATE_FILE: "last_discord_source.txt"
+      SPS_STATE_FILE: "last_sps_weekly.txt"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Preparar dependências
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr
+          python -m pip install --quiet requests Pillow
+
+      - name: Verificar SPS e preparar artes curadas
+        run: python scripts/sps_curated_monitor.py
+
+      - name: Salvar antirrepetição
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add last_discord_source.txt last_sps_weekly.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Spidey: atualizar controles SPS curado"
+          git pull --rebase origin main
+          git push origin HEAD:main
