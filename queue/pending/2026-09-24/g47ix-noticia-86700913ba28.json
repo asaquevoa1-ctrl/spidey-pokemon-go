@@ -5,12 +5,13 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2103058261020680614",
-  "status": "aguardando_arte_chatgpt",
+  "status": "duplicado",
   "pipeline": "chatgpt_spidey_oficial",
   "arte_obrigatoria": true,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-09-24T15:11:05.773530+00:00"
+  "created_at_utc": "2026-09-24T15:11:05.773530+00:00",
+  "duplicate_of": "oficial-https://pokemongo.com/pt_BR/news/pokemon-x-adidas-2026"
 }
