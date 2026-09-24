@@ -1,0 +1,16 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "Just as I predicted, this Pikachu is now available in Remote Raids for the next two days!\n\nSouth Korea trainers, show yourself in the comments 🥸\n\n#pokemongo\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2103071687281434673",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2103071687281434673",
+  "status": "aguardando_arte_chatgpt",
+  "pipeline": "chatgpt_spidey_oficial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-24T15:11:07.800253+00:00"
+}
