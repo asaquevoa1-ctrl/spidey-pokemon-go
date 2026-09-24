@@ -1,6 +1,7 @@
 import io
 import json
 import os
+import sys
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -10,6 +11,7 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import requests
 from PIL import Image, ImageFile
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from spidey_geo import criar_gpx
 
 ImageFile.LOAD_TRUNCATED_IMAGES = False
