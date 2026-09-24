@@ -1,19 +1,24 @@
 import json
-import unicodedata
 from pathlib import Path
+from urllib.parse import urlparse
 
 QUEUE = Path("queue/curated")
-STANDARD = "spidey-premium-v1"
+STANDARD = "spidey-source-v1"
+GENERATED_PREFIX = "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"
 
 
-def norm(value):
-    text = str(value or "").lower()
-    return "".join(c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c))
+def public_http(value):
+    try:
+        parsed = urlparse(str(value or "").strip())
+    except Exception:
+        return False
+    return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
 def block(data, reason):
     data["status"] = "blocked_art_standard"
     data["art_ready_for_review"] = False
+    data["art_standard_version"] = STANDARD
     data["art_block_reason"] = reason
 
 
@@ -21,38 +26,25 @@ def validate(path, data):
     if data.get("status") != "pending":
         return True, None
 
-    if data.get("art_standard_version") != STANDARD:
-        return False, f"arte sem padrão obrigatório {STANDARD}"
-    if data.get("art_ready_for_review") is not True:
-        return False, "arte ainda não liberada para revisão"
+    if data.get("source_verified") is not True:
+        return False, "fonte do conteúdo não foi verificada"
 
-    rules = set(data.get("art_rules") or [])
-    facts = set(data.get("fact_checks") or [])
-    text = norm(" ".join([
-        data.get("titulo", ""),
-        data.get("mensagem", ""),
-        data.get("source_url", ""),
-    ]))
+    source_image = str(data.get("_source_image") or "").strip()
+    if not public_http(source_image):
+        return False, "mídia original da fonte ausente ou inválida"
 
-    if "city safari" in text:
-        required = {"city_safari_pikachu_no_hat", "city_safari_eevee_safari_hat"}
-        missing = required - rules
-        if missing:
-            return False, "City Safari sem regras obrigatórias: " + ", ".join(sorted(missing))
+    image_url = str(data.get("image_url") or "").strip()
+    if not image_url.startswith(GENERATED_PREFIX) or "/assets/generated/" not in image_url:
+        return False, "card final precisa estar persistido em assets/generated no GitHub"
 
-    if "coreia" in text or "korea" in text or "hanbok" in text:
-        if "korea_female_pikachu" not in rules:
-            return False, "evento da Coreia sem confirmação de Pikachu fêmea"
-        shiny_claim = str(data.get("shiny_claim") or "none").strip().lower()
-        if shiny_claim not in {"none", "verified_primary"}:
-            return False, "alegação de shiny boost sem verificação primária"
-
-    if "adidas" in text:
-        required = {"adidas_jacket", "adidas_cap", "lucario_encounter", "lucario_mega_energy"}
-        missing = required - facts
-        if missing:
-            return False, "adidas sem fatos oficiais obrigatórios: " + ", ".join(sorted(missing))
-
+    # O card é sempre montado a partir da mídia real da fonte pelo auto-curador.
+    # Não tentamos inventar personagens, roupas ou detalhes visuais a partir do texto.
+    # Integridade, resolução e arte praticamente preta são validadas novamente
+    # imediatamente antes do envio ao Discord em send_curated.py.
+    data["art_standard_version"] = STANDARD
+    data["art_ready_for_review"] = True
+    data["media_policy"] = "source_first"
+    data.pop("art_block_reason", None)
     return True, None
 
 
@@ -60,6 +52,8 @@ def main():
     QUEUE.mkdir(parents=True, exist_ok=True)
     blocked = 0
     ready = 0
+    changed = 0
+
     for path in sorted(QUEUE.glob("*.json")):
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
@@ -67,19 +61,23 @@ def main():
             print(f"JSON inválido {path.name}: {exc}")
             continue
 
+        before = json.dumps(data, ensure_ascii=False, sort_keys=True)
         ok, reason = validate(path, data)
         if ok:
             if data.get("status") == "pending":
                 ready += 1
-                print(f"ART_OK {path.name}")
-            continue
+                print(f"ART_OK_SOURCE {path.name}")
+        else:
+            block(data, reason)
+            blocked += 1
+            print(f"ART_BLOCKED {path.name}: {reason}")
 
-        block(data, reason)
-        path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        blocked += 1
-        print(f"ART_BLOCKED {path.name}: {reason}")
+        after = json.dumps(data, ensure_ascii=False, sort_keys=True)
+        if before != after:
+            path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            changed += 1
 
-    print(f"Guard concluído: {ready} pronta(s), {blocked} bloqueada(s).")
+    print(f"Guard concluído: {ready} pronta(s), {blocked} bloqueada(s), {changed} atualizada(s).")
     return 0
 
 
