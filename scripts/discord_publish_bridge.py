@@ -10,13 +10,14 @@ TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 API = "https://discord.com/api/v10"
 COORD_RE = re.compile(r"^-?\d{1,2}(?:\.\d+)?,-?\d{1,3}(?:\.\d+)?$")
 TEST_MARKERS = ("🧪 TESTE TÉCNICO • E2E SPIDEY",)
+APPROVAL_MARKER = "Aguardando aprovação"
 
 if not TOKEN:
     raise SystemExit("DISCORD_BOT_TOKEN ausente")
 
 AUTH = {
     "Authorization": f"Bot {TOKEN}",
-    "User-Agent": "SpideyPokemonGO/1.0",
+    "User-Agent": "SpideyPokemonGO/2.0",
 }
 
 
@@ -38,7 +39,9 @@ def clean_embed(e):
             out[k] = e[k]
     if e.get("footer"):
         footer = e["footer"]
-        out["footer"] = {k: footer[k] for k in ("text", "icon_url") if footer.get(k)}
+        text = str(footer.get("text") or "")
+        if "reaja com" not in text.lower():
+            out["footer"] = {k: footer[k] for k in ("text", "icon_url") if footer.get(k)}
     if e.get("author"):
         author = e["author"]
         out["author"] = {k: author[k] for k in ("name", "url", "icon_url") if author.get(k)}
@@ -91,6 +94,17 @@ def signature(m):
     )
 
 
+def reaction_count(message, emoji_name):
+    for reaction in message.get("reactions") or []:
+        emoji = reaction.get("emoji") or {}
+        if str(emoji.get("name") or "") == emoji_name:
+            try:
+                return int(reaction.get("count") or 0)
+            except (TypeError, ValueError):
+                return 0
+    return 0
+
+
 def send_plain(text):
     r = requests.post(
         f"{API}/channels/{PUBLIC_CHANNEL_ID}/messages",
@@ -102,14 +116,14 @@ def send_plain(text):
     return r.json()
 
 
-def send_full(m):
+def send_full(m, strip_approval=False):
     embeds = [clean_embed(e) for e in (m.get("embeds") or [])[:10]]
     components = clean_components(m.get("components") or [])
-    payload = {
-        "content": str(m.get("content") or "")[:2000],
-        "embeds": embeds,
-    }
-    if components:
+    content = str(m.get("content") or "")[:2000]
+    if strip_approval and APPROVAL_MARKER.lower() in content.lower():
+        content = ""
+    payload = {"content": content, "embeds": embeds}
+    if components and not strip_approval:
         payload["components"] = components
 
     files = []
@@ -155,7 +169,6 @@ def send_full(m):
 def main():
     approval = get_messages(APPROVAL_CHANNEL_ID)
     published = get_messages(PUBLIC_CHANNEL_ID)
-
     published_signatures = {sig for m in published if (sig := signature(m))}
     copied = 0
     active_new = False
@@ -169,6 +182,28 @@ def main():
             active_new = False
             continue
 
+        if APPROVAL_MARKER.lower() in content.lower() and embeds:
+            sig = signature(m)
+            rejeicoes = reaction_count(m, "❌")
+            aprovacoes = reaction_count(m, "✅")
+            if rejeicoes > 1:
+                print(f"REPROVADO {m['id']}")
+                active_new = False
+                continue
+            if aprovacoes > 1:
+                if sig and sig not in published_signatures:
+                    sent = send_full(m, strip_approval=True)
+                    published_signatures.add(sig)
+                    copied += 1
+                    active_new = True
+                    print(f"APROVADO {m['id']} -> {sent.get('id')}")
+                else:
+                    active_new = False
+                continue
+            active_new = False
+            continue
+
+        # Compatibilidade com o fluxo antigo já existente no histórico.
         if title.startswith("✅ APROVADO"):
             sig = signature(m)
             if sig and sig not in published_signatures:
@@ -176,7 +211,7 @@ def main():
                 published_signatures.add(sig)
                 copied += 1
                 active_new = True
-                print(f"PUBLICADO {m['id']} -> {sent.get('id')}")
+                print(f"PUBLICADO LEGADO {m['id']} -> {sent.get('id')}")
             else:
                 active_new = False
             continue
