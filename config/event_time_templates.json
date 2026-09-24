@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "source": "referencia_operacional_do_projeto",
+  "rules": {
+    "times_are_local": true,
+    "official_source_overrides_template": true,
+    "do_not_guess_when_source_differs": true,
+    "convert_using_event_date": true,
+    "respect_daylight_saving": true,
+    "reference_timezone": "America/Sao_Paulo",
+    "world_points_file": "config/world_event_points.json"
+  },
+  "templates": {
+    "generic_event_start_times": [
+      "08:00",
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
+      "00:00"
+    ],
+    "community_day": [
+      {"start": "11:00", "end": "14:00"},
+      {"start": "14:00", "end": "17:00"}
+    ],
+    "spotlight_hour": [
+      {"start": "18:00", "end": "19:00"}
+    ],
+    "special_event": [
+      {"start": "18:00", "end": "21:00"}
+    ]
+  },
+  "usage": {
+    "community_day": "Usar a janela confirmada pela fonte oficial; esta lista serve como base de conversao quando o evento seguir um dos padroes conhecidos.",
+    "spotlight_hour": "Base padrao 18:00-19:00 no horario local.",
+    "special_event": "Base padrao 18:00-21:00 no horario local quando a fonte indicar esse formato.",
+    "generic_event_start_times": "Horarios-base para eventos que iniciam em horario local. Sempre priorizar o horario explicitamente informado pela fonte."
+  }
+}
