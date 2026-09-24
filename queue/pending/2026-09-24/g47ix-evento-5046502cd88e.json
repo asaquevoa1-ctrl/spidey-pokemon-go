@@ -1,0 +1,16 @@
+{
+  "titulo": "📅 G47IX • EVENTO",
+  "mensagem": "🐊 Sandile Hatch Day!\n📅 October 17, 11:00 am - 5:00 pm local time\n🥚 Sandile in 2 km Eggs\n✨ Increased Shiny chance\n📏 1/2 Hatch Distance\n🍬 2× Hatch Candy\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2103177133845618911",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2103177133845618911",
+  "status": "aguardando_arte_chatgpt",
+  "pipeline": "chatgpt_spidey_oficial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-24T17:38:49.616724+00:00"
+}
