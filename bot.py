@@ -278,8 +278,9 @@ def _preparar_conteudo(dados):
         dados = dict(dados)
         dados["url"] = None
 
-    coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))
-    if not coordenadas:
+    if "coordenadas" in dados:
+        coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))
+    else:
         coordenadas = extrair_coordenadas(mensagem_original)
 
     gerar_gpx = bool(dados.get("gerar_gpx", True)) and bool(coordenadas)
@@ -450,7 +451,7 @@ def _botao_whatsapp(token):
 
 @app.route("/", methods=["GET"])
 def home():
-    return "🕷️ Spidey Pokémon GO está online!"
+    return "🕷️ Spidey Pokémon GO está online! | explicit-coords-v2"
 
 
 @app.route("/gerar-arte-padrao", methods=["POST"])
