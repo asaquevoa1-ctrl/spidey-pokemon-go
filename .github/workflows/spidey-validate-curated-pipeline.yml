@@ -7,6 +7,8 @@ on:
       - "scripts/**"
       - "*.py"
       - ".github/workflows/spidey-*-curated.yml"
+      - ".github/workflows/spidey-publish-bridge.yml"
+      - ".github/workflows/spidey-sync-approval-state.yml"
       - ".github/workflows/spidey-validate-curated-pipeline.yml"
       - ".github/workflows/spidey-apply-bot-hardening.yml"
   push:
@@ -15,6 +17,8 @@ on:
       - "scripts/**"
       - "*.py"
       - ".github/workflows/spidey-*-curated.yml"
+      - ".github/workflows/spidey-publish-bridge.yml"
+      - ".github/workflows/spidey-sync-approval-state.yml"
       - ".github/workflows/spidey-validate-curated-pipeline.yml"
       - ".github/workflows/spidey-apply-bot-hardening.yml"
 
@@ -37,7 +41,7 @@ jobs:
         run: python scripts/patch_bot_hardening.py --check-only
 
       - name: Rodar testes do pipeline
-        run: python -m unittest -v test_pipeline_stability.py test_spidey_approval.py test_spidey_geo.py test_world_event_times.py
+        run: python -m unittest -v test_pipeline_stability.py test_spidey_approval.py test_spidey_geo.py test_world_event_times.py test_editorial_state.py
 
       - name: Validar entrada dos quatro monitores
         shell: bash
