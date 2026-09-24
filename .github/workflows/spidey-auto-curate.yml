@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - spidey-auto-curate-20260924
     paths:
       - "queue/pending/**"
       - "scripts/auto_curate_pending.py"
