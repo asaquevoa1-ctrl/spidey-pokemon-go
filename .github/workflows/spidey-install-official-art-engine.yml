@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/spidey-install-official-art-engine.yml"
+      - "scripts/patch_official_art_engine.py"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -18,172 +20,35 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Aplicar padrao visual oficial e endpoint de geracao
+      - name: Aplicar motor oficial
+        run: python scripts/patch_official_art_engine.py
+
+      - name: Validar codigo e logo oficial
         shell: bash
         run: |
           set -euo pipefail
-          python - <<'PY'
-          from pathlib import Path
-
-          p=Path('premium_art.py')
-          s=p.read_text(encoding='utf-8')
-          start=s.index('def criar_card_premium(titulo, mensagem):')
-          novo=r'''def criar_card_premium(titulo, mensagem):
-    """Gera a arte OFICIAL do Spidey.
-
-    Regra: a IA cria somente a cena temática; toda identidade, texto e logo
-    são aplicados aqui de forma determinística. Não existe logo alternativo,
-    slogan inventado ou fallback visual.
-    """
-    clean = _clean(mensagem)
-    categoria = _category(titulo)
-    source = _source(titulo, mensagem)
-
-    display_clean = clean
-    if source == "G47IX" and _looks_english(display_clean):
-        display_clean = (
-            "Nova informação de Pokémon GO detectada pelo G47IX. "
-            "Confira os detalhes traduzidos no texto da publicação."
-        )
-    headline, body = _headline_body(display_clean)
-
-    bg = _cover_crop(_generate_background(clean, categoria))
-
-    # Leitura sobre fundo cinematográfico: gradiente escuro discreto, sem
-    # transformar a arte em um card corporativo.
-    veil = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    vd = ImageDraw.Draw(veil)
-    for y in range(H):
-        if y < 120:
-            alpha = 120
-        elif y < 850:
-            alpha = 65
-        else:
-            alpha = min(205, 90 + int((y - 850) * 0.27))
-        vd.line((0, y, W, y), fill=(2, 15, 36, alpha))
-    for x in range(650):
-        t=x/650
-        a=int(135*(1-t))
-        vd.line((x, 0, x, 1020), fill=(0, 15, 38, a))
-    bg.alpha_composite(veil)
-
-    draw = ImageDraw.Draw(bg)
-    white=(255,255,255)
-    navy=(5,25,56)
-    cyan=(31,180,255)
-    gold=(246,190,55)
-
-    # Selo superior simples: categoria + fonte. Nada de slogan.
-    pill=f"{categoria} • {source}"
-    pf=_font(25,True)
-    pw=draw.textbbox((0,0),pill,font=pf)[2]+60
-    draw.rounded_rectangle((46,45,46+pw,105),radius=26,fill=(5,25,56,220),outline=(85,200,255,210),width=2)
-    draw.text((76,61),pill,font=pf,fill=white)
-
-    # Headline forte, estilo pôster.
-    hf, hlines = _fit_headline(draw, headline.upper(), max_width=690, max_lines=4)
-    y=155
-    for i,line in enumerate(hlines):
-        # última/segunda linha pode receber acento azul sem inventar frase.
-        color=cyan if (len(hlines)>1 and i==len(hlines)-1) else white
-        # sombra curta para contraste
-        draw.text((52+3,y+3),line,font=hf,fill=(0,0,0,190))
-        draw.text((52,y),line,font=hf,fill=color)
-        y += hf.size + 4
-    draw.rounded_rectangle((54,y+10,190,y+18),radius=4,fill=cyan)
-
-    # Resumo em painel translúcido: poucas linhas; o texto completo fica no Discord.
-    body_panel_y=max(600,y+70)
-    body_lines=_wrap(draw, body, _font(29,False), 620)[:5]
-    panel_h=58 + len(body_lines)*42
-    draw.rounded_rectangle(
-        (46,body_panel_y,715,body_panel_y+panel_h),
-        radius=30,
-        fill=(4,24,54,205),
-        outline=(120,205,255,150),
-        width=2,
-    )
-    draw.text((76,body_panel_y+22),"DESTAQUES",font=_font(23,True),fill=gold)
-    yy=body_panel_y+62
-    bf=_font(29,False)
-    for line in body_lines:
-        draw.text((76,yy),line,font=bf,fill=white)
-        yy += 42
-
-    # Chips só quando fazem sentido.
-    shiny=bool(re.search(r"\b(shiny|brilhante)\b",clean,flags=re.I))
-    coords=re.findall(r"[-+]?\d{1,2}\.\d{3,}\s*,\s*[-+]?\d{1,3}\.\d{3,}",clean)
-    gpx="gpx" in clean.lower()
-    chips=[]
-    if shiny: chips.append("SHINY POSSÍVEL")
-    if coords: chips.append("COORDENADAS")
-    if gpx: chips.append("GPX")
-    cx=48
-    cy=min(1040, body_panel_y+panel_h+22)
-    for label in chips:
-        cf=_font(22,True)
-        tw=draw.textbbox((0,0),label,font=cf)[2]
-        bw=tw+44
-        draw.rounded_rectangle((cx,cy,cx+bw,cy+52),radius=21,fill=(5,25,56,220),outline=cyan,width=2)
-        draw.text((cx+22,cy+14),label,font=cf,fill=white)
-        cx += bw+12
-
-    # Logo oficial obrigatório no rodapé central.
-    if not LOGO_PATH.exists():
-        raise RuntimeError("Logo oficial do Spidey ausente")
-    try:
-        logo=Image.open(LOGO_PATH).convert("RGB")
-    except Exception as exc:
-        raise RuntimeError(f"Logo oficial do Spidey inválido: {exc}") from exc
-    logo=logo.resize((205,205),Image.Resampling.LANCZOS).convert("RGBA")
-    mask=Image.new("L",(205,205),0)
-    md=ImageDraw.Draw(mask)
-    md.ellipse((0,0,204,204),fill=255)
-    lx=(W-205)//2
-    ly=H-235
-    bg.paste(logo,(lx,ly),mask)
-
-    # Fonte discreta, sem URL crua e sem slogan.
-    draw=ImageDraw.Draw(bg)
-    source_text=f"Fonte: {source}"
-    sf=_font(22,True)
-    sw=draw.textbbox((0,0),source_text,font=sf)[2]
-    draw.rounded_rectangle((W-sw-92,H-94,W-38,H-44),radius=20,fill=(5,25,56,205))
-    draw.text((W-sw-66,H-80),source_text,font=sf,fill=white)
-
-    out=io.BytesIO()
-    bg.convert("RGB").save(out,format="PNG",optimize=True)
-    out.seek(0)
-    return out.getvalue()
-'''
-          s=s[:start]+novo+'\n'
-          p.write_text(s,encoding='utf-8')
-
-          p=Path('bot.py')
-          s=p.read_text(encoding='utf-8')
-          s=s.replace('from flask import Flask, jsonify, request','from flask import Flask, Response, jsonify, request')
-          home='''@app.route("/", methods=["GET"])\ndef home():\n    return "🕷️ Spidey Pokémon GO está online!"\n\n\n'''
-          route='''@app.route("/", methods=["GET"])\ndef home():\n    return "🕷️ Spidey Pokémon GO está online!"\n\n\n@app.route("/gerar-arte-padrao", methods=["POST"])\ndef gerar_arte_padrao():\n    dados = request.get_json(silent=True) or {}\n    titulo = str(dados.get("titulo") or "📰 NOTÍCIA • Pokémon GO").strip()\n    mensagem = str(dados.get("mensagem") or "").strip()\n    if not mensagem:\n        return jsonify({"erro": "Mensagem vazia"}), 400\n    try:\n        imagem = criar_card_premium(titulo, mensagem)\n    except Exception as erro:\n        return jsonify({"erro": str(erro), "status": "arte_indisponivel"}), 503\n    return Response(\n        imagem,\n        mimetype="image/png",\n        headers={\n            "X-Spidey-Art-Mode": "padrao-oficial",\n            "Cache-Control": "no-store",\n        },\n    )\n\n\n'''
-          if '@app.route("/gerar-arte-padrao"' not in s:
-              if home not in s:
-                  raise SystemExit('HOME_NAO_ENCONTRADO')
-              s=s.replace(home,route,1)
-          p.write_text(s,encoding='utf-8')
-          PY
-
           python -m pip install --quiet -r requirements.txt
           python -m py_compile bot.py premium_art.py
           python - <<'PY'
           from PIL import Image
           from pathlib import Path
           p=Path('assets/spidey-logo-oficial.jpg')
-          im=Image.open(p); im.verify()
-          print('LOGO_OFICIAL_VALIDO',p.stat().st_size)
+          im=Image.open(p)
+          im.verify()
+          print('LOGO_OFICIAL_VALIDO', p.stat().st_size)
           PY
 
+      - name: Salvar alteracoes
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add bot.py premium_art.py
+          if git diff --cached --quiet; then
+            echo "Motor oficial ja aplicado."
+            exit 0
+          fi
           git commit -m "Spidey: instalar motor visual oficial sem fallback"
           git pull --rebase origin main
           git push origin HEAD:main
