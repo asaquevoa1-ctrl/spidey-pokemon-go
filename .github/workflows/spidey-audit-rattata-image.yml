@@ -1,0 +1,67 @@
+name: Spidey - auditar imagem Holofote Rattata
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-audit-rattata-image.yml"
+  workflow_dispatch:
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      APPROVAL_CHANNEL_ID: "1550963072464715997"
+    steps:
+      - name: Preparar Pillow
+        run: python -m pip install --quiet requests Pillow
+
+      - name: Auditar ultima mensagem Rattata
+        shell: bash
+        run: |
+          python - <<'PY'
+          import io, os, requests
+          from PIL import Image, ImageStat
+          h={'Authorization':f"Bot {os.environ['DISCORD_BOT_TOKEN'].strip()}",'User-Agent':'SpideyPokemonGO/1.0'}
+          channel=os.environ['APPROVAL_CHANNEL_ID']
+          r=requests.get(f'https://discord.com/api/v10/channels/{channel}/messages',headers=h,params={'limit':50},timeout=30)
+          r.raise_for_status()
+          target=None
+          for m in r.json():
+              embeds=m.get('embeds') or []
+              probe=' '.join((str(e.get('title') or '')+' '+str(e.get('description') or '')) for e in embeds).upper()
+              if 'HORA DO HOLOFOTE' in probe and 'RATTATA' in probe and 'APROVAÇÃO' in probe and 'COORDENADAS VERIFICADAS NA ENTRADA' not in probe:
+                  target=m
+                  break
+          if not target:
+              raise SystemExit('Mensagem limpa de aprovação não encontrada')
+          embeds=target.get('embeds') or []
+          desc='\n'.join(str(e.get('description') or '') for e in embeds)
+          print('MSG_ID='+target['id'])
+          print('DESC_LEN='+str(len(desc)))
+          print('HAS_REPROVAR='+str('REPROVAR' in desc))
+          print('HAS_DUP_COORDS='+str('COORDENADAS VERIFICADAS NA ENTRADA' in desc.upper()))
+          print('ATTACHMENTS='+str(len(target.get('attachments') or [])))
+          url=None
+          if target.get('attachments'):
+              url=target['attachments'][0].get('url')
+          if not url:
+              for e in embeds:
+                  if (e.get('image') or {}).get('url'):
+                      url=e['image']['url']; break
+          print('HAS_IMAGE_URL='+str(bool(url)))
+          if not url:
+              raise SystemExit('Sem imagem na mensagem')
+          img_r=requests.get(url,timeout=60)
+          img_r.raise_for_status()
+          print('IMAGE_BYTES='+str(len(img_r.content)))
+          im=Image.open(io.BytesIO(img_r.content)).convert('RGB')
+          stat=ImageStat.Stat(im.resize((64,64)))
+          mean=tuple(round(x,1) for x in stat.mean)
+          print('IMAGE_SIZE='+str(im.size))
+          print('MEAN_RGB='+str(mean))
+          if max(mean) < 10:
+              raise SystemExit('IMAGEM_REALMENTE_PRETA')
+          print('IMAGE_OK_NOT_BLACK')
+          PY
