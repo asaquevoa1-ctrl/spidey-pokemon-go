@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: spidey-sync-approval-state
+  group: spidey-editorial-state-writer
   cancel-in-progress: false
 
 jobs:
