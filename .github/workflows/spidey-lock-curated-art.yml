@@ -1,0 +1,82 @@
+name: Spidey - travar arte curada
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-lock-curated-art.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Exigir arte final persistida antes da aprovacao
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          p=Path('bot.py')
+          s=p.read_text(encoding='utf-8')
+
+          marker='''    exige_aprovacao = dados.get(\n        "aprovar",\n        "G47IX" in conteudo["titulo"].upper(),\n    )\n\n'''
+          guard='''    exige_aprovacao = dados.get(\n        "aprovar",\n        "G47IX" in conteudo["titulo"].upper(),\n    )\n\n    # REGRA DEFINITIVA DE ARTE: nada entra em aprovação se a arte final\n    # ainda não estiver persistida no repositório do Spidey. Isso elimina\n    # fallback, regeneração no Render e caminhos visuais paralelos.\n    if exige_aprovacao:\n        imagem_final = str(dados.get("imagem_url") or "").strip()\n        arte_padrao = bool(dados.get("arte_padrao_spidey", False))\n        origem_ok = imagem_final.startswith(\n            "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"\n        )\n        if not (arte_padrao and origem_ok and conteudo["modo_arte"] == "fornecida"):\n            return jsonify({\n                "status": "aguardando_arte_curada",\n                "etapa": "bloqueado_antes_da_aprovacao",\n                "arte": False,\n                "motivo": "A arte final precisa ser produzida no padrão Spidey e persistida antes do Discord.",\n            }), 409\n\n'''
+          if '"status": "aguardando_arte_curada"' not in s:
+              if marker not in s:
+                  raise SystemExit('MARCADOR_EXIGE_APROVACAO_NAO_ENCONTRADO')
+              s=s.replace(marker,guard,1)
+
+          token_old='''                "imagem_url": conteudo.get("imagem_url"),\n'''
+          token_new='''                "imagem_url": conteudo.get("imagem_url"),\n                "arte_padrao_spidey": bool(dados.get("arte_padrao_spidey", False)),\n'''
+          if '"arte_padrao_spidey": bool(dados.get("arte_padrao_spidey"' not in s:
+              if token_old not in s:
+                  raise SystemExit('MARCADOR_TOKEN_NAO_ENCONTRADO')
+              s=s.replace(token_old,token_new,1)
+
+          approve_marker='''    conteudo = _preparar_conteudo(dados)\n    if bool(dados.get("gerar_arte")) and not conteudo["imagem_bytes"]:\n'''
+          approve_guard='''    conteudo = _preparar_conteudo(dados)\n\n    # Aprovação reutiliza EXATAMENTE a arte persistida que foi vista no Discord.\n    imagem_final = str(dados.get("imagem_url") or "").strip()\n    origem_ok = imagem_final.startswith(\n        "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"\n    )\n    if not (origem_ok and conteudo["modo_arte"] == "fornecida"):\n        return _html_resultado(\n            "Arte fora do fluxo curado",\n            "Esta entrada foi criada por uma rota antiga e não será publicada. Aguarde a versão corrigida no padrão Spidey.",\n            "#ffb84d",\n        ), 409\n\n    if bool(dados.get("gerar_arte")) and not conteudo["imagem_bytes"]:\n'''
+          if 'Arte fora do fluxo curado' not in s:
+              if approve_marker not in s:
+                  raise SystemExit('MARCADOR_APROVAR_NAO_ENCONTRADO')
+              s=s.replace(approve_marker,approve_guard,1)
+
+          # Remove exceção antiga que forçava notícia PokeMiners a gerar fallback_v4.
+          inicio='''    # Notícias oficiais detectadas pelo PokeMiners devem chegar limpas e com arte.\n'''
+          fim='''    coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))\n'''
+          if inicio in s:
+              a=s.index(inicio)
+              b=s.index(fim,a)
+              bloco=s[a:b]
+              limpeza='''    # Links de notícia do PokeMiners são limpos, mas a arte é preparada\n    # ANTES deste endpoint pela fila curada; o Render nunca cria fallback.\n    if "OFICIAL" in str(titulo).upper() and "POKEMINERS" in mensagem_original.upper():\n        mensagem_original = re.sub(\n            r"🔗\\s*Fonte oficial:\\s*https?://\\S+",\n            "📌 Fonte oficial: Pokémon GO",\n            mensagem_original,\n            flags=re.I,\n        )\n        dados = dict(dados)\n        dados["url"] = None\n\n'''
+              s=s[:a]+limpeza+s[b:]
+
+          p.write_text(s,encoding='utf-8')
+
+          p=Path('scripts/send_curated.py')
+          s=p.read_text(encoding='utf-8')
+          old='''        "gerar_arte": False,\n        "aprovar": True,\n'''
+          new='''        "gerar_arte": False,\n        "arte_padrao_spidey": True,\n        "aprovar": True,\n'''
+          if '"arte_padrao_spidey": True' not in s:
+              if old not in s:
+                  raise SystemExit('MARCADOR_SEND_CURATED_NAO_ENCONTRADO')
+              s=s.replace(old,new,1)
+          p.write_text(s,encoding='utf-8')
+          PY
+
+          python -m py_compile bot.py scripts/send_curated.py
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py scripts/send_curated.py
+          git commit -m "Spidey: exigir arte curada persistida antes da aprovacao"
+          git pull --rebase origin main
+          git push origin HEAD:main
