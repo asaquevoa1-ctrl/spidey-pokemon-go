@@ -5,12 +5,13 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2103177133845618911",
-  "status": "aguardando_arte_chatgpt",
+  "status": "duplicado",
   "pipeline": "chatgpt_spidey_oficial",
   "arte_obrigatoria": true,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-09-24T17:38:49.616724+00:00"
+  "created_at_utc": "2026-09-24T17:38:49.616724+00:00",
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/sandile-hatch-day-2026"
 }
