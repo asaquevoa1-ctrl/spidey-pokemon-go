@@ -451,7 +451,7 @@ def _botao_whatsapp(token):
 
 @app.route("/", methods=["GET"])
 def home():
-    return "🕷️ Spidey Pokémon GO está online! | explicit-coords-v2"
+    return "🕷️ Spidey Pokémon GO está online!"
 
 
 @app.route("/gerar-arte-padrao", methods=["POST"])
