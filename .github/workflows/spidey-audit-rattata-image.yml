@@ -14,15 +14,32 @@ jobs:
       DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
       APPROVAL_CHANNEL_ID: "1550963072464715997"
     steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
       - name: Preparar Pillow
         run: python -m pip install --quiet requests Pillow
-
-      - name: Auditar ultima mensagem Rattata
+      - name: Auditar origem e Discord
         shell: bash
         run: |
           python - <<'PY'
-          import io, os, requests
+          import io, os, hashlib, requests
+          from pathlib import Path
           from PIL import Image, ImageStat
+
+          def stats(label, raw):
+              im=Image.open(io.BytesIO(raw)).convert('RGB')
+              mean=tuple(round(x,1) for x in ImageStat.Stat(im.resize((64,64))).mean)
+              print(label+'_BYTES='+str(len(raw)))
+              print(label+'_SIZE='+str(im.size))
+              print(label+'_MEAN_RGB='+str(mean))
+              print(label+'_SHA256='+hashlib.sha256(raw).hexdigest())
+              return mean
+
+          p=Path('assets/approved/2026-09-24/spidey-holofote-rattata.jpg')
+          src=p.read_bytes()
+          source_mean=stats('SOURCE',src)
+
           h={'Authorization':f"Bot {os.environ['DISCORD_BOT_TOKEN'].strip()}",'User-Agent':'SpideyPokemonGO/1.0'}
           channel=os.environ['APPROVAL_CHANNEL_ID']
           r=requests.get(f'https://discord.com/api/v10/channels/{channel}/messages',headers=h,params={'limit':50},timeout=30)
@@ -32,36 +49,28 @@ jobs:
               embeds=m.get('embeds') or []
               probe=' '.join((str(e.get('title') or '')+' '+str(e.get('description') or '')) for e in embeds).upper()
               if 'HORA DO HOLOFOTE' in probe and 'RATTATA' in probe and 'APROVAÇÃO' in probe and 'COORDENADAS VERIFICADAS NA ENTRADA' not in probe:
-                  target=m
-                  break
+                  target=m; break
           if not target:
-              raise SystemExit('Mensagem limpa de aprovação não encontrada')
-          embeds=target.get('embeds') or []
-          desc='\n'.join(str(e.get('description') or '') for e in embeds)
+              raise SystemExit('Mensagem limpa não encontrada')
+          desc='\n'.join(str(e.get('description') or '') for e in (target.get('embeds') or []))
           print('MSG_ID='+target['id'])
           print('DESC_LEN='+str(len(desc)))
-          print('HAS_REPROVAR='+str('REPROVAR' in desc))
           print('HAS_DUP_COORDS='+str('COORDENADAS VERIFICADAS NA ENTRADA' in desc.upper()))
-          print('ATTACHMENTS='+str(len(target.get('attachments') or [])))
+          print('HAS_REPROVAR='+str('REPROVAR' in desc))
           url=None
           if target.get('attachments'):
               url=target['attachments'][0].get('url')
           if not url:
-              for e in embeds:
+              for e in target.get('embeds') or []:
                   if (e.get('image') or {}).get('url'):
                       url=e['image']['url']; break
-          print('HAS_IMAGE_URL='+str(bool(url)))
-          if not url:
-              raise SystemExit('Sem imagem na mensagem')
-          img_r=requests.get(url,timeout=60)
-          img_r.raise_for_status()
-          print('IMAGE_BYTES='+str(len(img_r.content)))
-          im=Image.open(io.BytesIO(img_r.content)).convert('RGB')
-          stat=ImageStat.Stat(im.resize((64,64)))
-          mean=tuple(round(x,1) for x in stat.mean)
-          print('IMAGE_SIZE='+str(im.size))
-          print('MEAN_RGB='+str(mean))
-          if max(mean) < 10:
-              raise SystemExit('IMAGEM_REALMENTE_PRETA')
-          print('IMAGE_OK_NOT_BLACK')
+          img_r=requests.get(url,timeout=60); img_r.raise_for_status()
+          discord_mean=stats('DISCORD',img_r.content)
+
+          if max(source_mean) < 10:
+              print('CAUSE=SOURCE_ASSET_BLACK')
+          elif max(discord_mean) < 10:
+              print('CAUSE=BACKEND_OR_DISCORD_CONVERSION')
+          else:
+              print('CAUSE=DISPLAY_ONLY')
           PY
