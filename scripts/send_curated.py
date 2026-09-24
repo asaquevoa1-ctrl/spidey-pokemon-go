@@ -230,13 +230,10 @@ def validar_item(data, path):
         bloco_monetizacao(data)
 
 
-def _discord_headers(json_content=False):
+def _discord_headers():
     if not DISCORD_TOKEN:
         raise RuntimeError("DISCORD_BOT_TOKEN ausente")
-    headers = {"Authorization": f"Bot {DISCORD_TOKEN}", "User-Agent": "SpideyPokemonGO/2.0"}
-    if json_content:
-        headers["Content-Type"] = "application/json"
-    return headers
+    return {"Authorization": f"Bot {DISCORD_TOKEN}", "User-Agent": "SpideyPokemonGO/2.0"}
 
 
 def _baixar_arte(url):
@@ -281,15 +278,32 @@ def _coords_validas(data):
     return saida
 
 
+def _bloco_coordenadas(coords):
+    if not coords:
+        return ""
+    linhas = []
+    for i, (lat, lon) in enumerate(coords, start=1):
+        prefixo = f"{i}. " if len(coords) > 1 else ""
+        linhas.append(f"{prefixo}{lat:.6f}, {lon:.6f}")
+    return "📍 Coordenadas:\n" + "\n".join(linhas)
+
+
 def enviar_discord(data):
     arte = _baixar_arte(data["image_url"])
     coords = _coords_validas(data)
     gpx = criar_gpx(coords, data.get("titulo") or "Spidey Pokémon GO") if data.get("gerar_gpx", True) and coords else None
     gpx_nome = str(data.get("gpx_nome") or "spidey-evento.gpx")
 
+    descricao = mensagem_final(data)
+    bloco_coords = _bloco_coordenadas(coords)
+    if bloco_coords:
+        descricao += "\n\n" + bloco_coords
+    if gpx:
+        descricao += "\n\n🗺️ GPX anexado."
+
     embed = {
         "title": str(data["titulo"])[:256],
-        "description": mensagem_final(data)[:4000],
+        "description": descricao[:4000],
         "url": data["source_url"],
         "color": 20735,
         "image": {"url": "attachment://spidey-card.jpg"},
@@ -332,11 +346,8 @@ def main():
     pending = []
     for path in sorted(QUEUE_DIR.glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
-        # Não tratar arquivos legados sem status explícito nem reenviar os já enviados.
         if data.get("status") != "pending":
             continue
-        # A nova fila automática sempre tem _source_id. Isto impede testes antigos
-        # esquecidos como pending de voltarem para o Discord.
         if not str(data.get("_source_id") or "").strip():
             print(f"IGNORADO legado sem _source_id: {path.name}")
             continue
