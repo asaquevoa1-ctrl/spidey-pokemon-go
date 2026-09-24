@@ -1,0 +1,50 @@
+name: Spidey - enviar Holofote Rattata 2026-09-24
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-send-holofote-rattata-20260924.yml"
+  workflow_dispatch:
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar arte e lista para aprovação
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/payload.json <<'JSON'
+          {
+            "titulo": "✨ HORA DO HOLOFOTE • RATTATA",
+            "mensagem": "📅 24 de setembro de 2026\n⏰ 18h às 19h — horário local\n✨ Brilhante disponível\n🎁 Bônus: 2× XP por evolução\n📏 Chance aumentada de encontrar Rattata XXS\n\n🇧🇷 HORÁRIOS DE BRASÍLIA\n\n📅 24 DE SETEMBRO\n\n01h00 — 🇰🇮 Kiritimati, Kiribati\n📍 1.987149,-157.477137\n\n03h00 — 🇳🇿 Auckland, Nova Zelândia\n📍 -36.852095,174.763180\n\n05h00 — 🇦🇺 Sydney, Austrália\n📍 -33.866173,151.205945\n\n06h00 — 🇯🇵 Shinjuku, Japão\n📍 35.688950,139.690540\n\n07h00 — 🇸🇬 Singapura\n📍 1.292400,103.847600\n\n09h30 — 🇮🇳 Chennai, Índia\n📍 13.040300,80.266600\n\n11h00 — 🇦🇪 Dubai, Emirados Árabes\n📍 25.076750,55.132940\n\n12h00 — 🇹🇷 Istambul, Turquia\n📍 41.008200,28.978400\n\n13h00 — 🇪🇸 Zaragoza, Espanha\n📍 41.661609,-0.894640\n\n14h00 — 🇬🇧 Londres, Reino Unido\n📍 51.501000,-0.124600\n\n16h00 — 🇨🇻 Praia, Cabo Verde\n📍 14.910725,-23.527823\n\n17h00 — 🇧🇷 Fernando de Noronha, Brasil\n📍 -3.840100,-32.411810\n\n18h00 — 🇧🇷 Ibirapuera, São Paulo\n📍 -23.584171,-46.660725\n\n19h00 — 🇺🇸 Central Park, Nova York\n📍 40.780300,-73.963000\n\n20h00 — 🇺🇸 Chicago, EUA\n📍 41.898659,-87.623077\n\n21h00 — 🇺🇸 Denver, EUA\n📍 39.739200,-104.990300\n\n22h00 — 🇺🇸 Pier 39, São Francisco\n📍 37.809500,-122.410100\n\n23h00 — 🇺🇸 Anchorage, Alasca\n📍 61.217019,-149.891609\n\n📅 DIA SEGUINTE • 25 DE SETEMBRO\n\n01h00 — 🇺🇸 Honolulu, Havaí\n📍 21.265800,-157.821300\n\n02h00 — 🇦🇸 Pago Pago, Samoa Americana\n📍 -14.277739,-170.688512\n\n📌 Fonte oficial: Pokémon GO",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/approved/2026-09-24/spidey-holofote-rattata.jpg",
+            "gerar_arte": false,
+            "usar_premium": false,
+            "permitir_fallback": false,
+            "arte_padrao_spidey": true,
+            "aprovar": true,
+            "gerar_gpx": false,
+            "coordenadas": []
+          }
+          JSON
+
+          code=$(curl --silent --show-error --output /tmp/response.json --write-out '%{http_code}' \
+            --request POST \
+            --header 'Content-Type: application/json' \
+            --data-binary @/tmp/payload.json \
+            https://spidey-pokemon-go.onrender.com/enviar)
+
+          cat /tmp/response.json
+          echo
+          echo "HTTP=$code"
+          python - <<'PY'
+          import json
+          data=json.load(open('/tmp/response.json', encoding='utf-8'))
+          assert data.get('status') == 'enviado', data
+          assert data.get('etapa') == 'aguardando_aprovacao', data
+          assert data.get('arte') is True, data
+          assert data.get('modo_arte') == 'fornecida', data
+          print('HOLOFOTE_RATTATA_VALIDADO')
+          PY
