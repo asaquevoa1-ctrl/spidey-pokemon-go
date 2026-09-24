@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/spidey-install-official-art-engine.yml"
       - "scripts/patch_official_art_engine.py"
+      - "assets/spidey-logo-oficial.b64"
   workflow_dispatch:
 
 permissions:
