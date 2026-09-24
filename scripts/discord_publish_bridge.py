@@ -16,13 +16,15 @@ TEST_MARKERS = ("🧪 TESTE TÉCNICO • E2E SPIDEY",)
 APPROVAL_MARKER = "Aguardando aprovação"
 TERMINAL_REJECTED = {"rejected", "rejected_art", "decision_conflict", "blocked_art_standard"}
 
-if not TOKEN:
-    raise SystemExit("DISCORD_BOT_TOKEN ausente")
-
 AUTH = {
     "Authorization": f"Bot {TOKEN}",
     "User-Agent": "SpideyPokemonGO/2.0",
 }
+
+
+def status_publicavel(status):
+    """Somente uma decisão editorial explicitamente aprovada pode ir ao canal público."""
+    return str(status or "").strip() == "approved"
 
 
 def get_messages(channel_id, limit=100):
@@ -197,6 +199,9 @@ def send_full(m, strip_approval=False):
 
 
 def main():
+    if not TOKEN:
+        raise SystemExit("DISCORD_BOT_TOKEN ausente")
+
     approval = get_messages(APPROVAL_CHANNEL_ID)
     published = get_messages(PUBLIC_CHANNEL_ID)
     published_by_signature = {sig: m for m in published if (sig := signature(m))}
@@ -227,7 +232,7 @@ def main():
                 if status == "published" or status in TERMINAL_REJECTED:
                     active_new = False
                     continue
-                if status != "approved":
+                if not status_publicavel(status):
                     active_new = False
                     continue
 
