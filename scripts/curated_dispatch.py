@@ -62,14 +62,16 @@ def _put_json(path, payload):
 
 
 def gerar_persistir_e_enviar(payload, source_id):
-    """Fila ÚNICA do Spidey.
+    """Fila única de entrada do Spidey.
 
-    Este módulo NÃO gera arte e NÃO envia para aprovação.
-    Ele somente persiste o conteúdo detectado em queue/pending.
+    Este módulo não cria arte e não envia conteúdo para aprovação. Ele apenas
+    persiste o item detectado em queue/pending. O estágio seguinte usa a mídia
+    real da fonte, valida a imagem e monta o card com identidade discreta do
+    Spidey antes de enviar para o Discord.
 
-    A arte final deve ser produzida no ChatGPT usando o padrão visual já
-    aprovado e o logo oficial do Spidey. Só depois a arte pronta pode seguir
-    para o Discord.
+    O valor de status `aguardando_arte_chatgpt` é mantido temporariamente como
+    chave de compatibilidade com itens e automações já existentes. A etapa
+    editorial oficial é `aguardando_curadoria_midia`.
     """
     titulo = str(payload.get("titulo") or "📰 NOTÍCIA • Pokémon GO").strip()
     mensagem = str(payload.get("mensagem") or "").strip()
@@ -82,7 +84,9 @@ def gerar_persistir_e_enviar(payload, source_id):
         "mensagem": mensagem,
         "_source_id": str(source_id),
         "status": "aguardando_arte_chatgpt",
-        "pipeline": "chatgpt_spidey_oficial",
+        "etapa_editorial": "aguardando_curadoria_midia",
+        "pipeline": "source_media_spidey",
+        "media_policy": str(payload.get("media_policy") or "source_first"),
         "arte_obrigatoria": True,
         "arte_padrao_spidey": True,
         "usar_logo_oficial": True,
@@ -95,7 +99,7 @@ def gerar_persistir_e_enviar(payload, source_id):
     criado = _put_json(path, item)
     return {
         "status": "enfileirado" if criado else "ja_enfileirado",
-        "etapa": "aguardando_arte_chatgpt",
+        "etapa": "aguardando_curadoria_midia",
         "queue_path": path,
         "arte": False,
         "discord": False,
