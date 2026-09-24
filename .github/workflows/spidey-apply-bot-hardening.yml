@@ -1,0 +1,42 @@
+name: Spidey - aplicar hardening do bot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/patch_bot_hardening.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-bot-hardening
+  cancel-in-progress: false
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Aplicar correções idempotentes
+        run: python scripts/patch_bot_hardening.py
+
+      - name: Salvar bot corrigido
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- bot.py; then
+            echo "bot.py já estava endurecido."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot.py
+          git commit -m "Spidey: validar arte e ativar botões Aprovar/Reprovar"
+          git pull --rebase origin main
+          git push origin HEAD:main
