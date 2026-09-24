@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import json
-from datetime import date, datetime, time
+from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -14,6 +14,13 @@ def parse_hhmm(value: str) -> time:
 
 def fmt_hora(dt: datetime) -> str:
     return dt.strftime("%Hh%M")
+
+
+def fmt_janela(inicio: datetime, fim: datetime) -> str:
+    """Exibe início/fim e explicita a data quando a janela cruza a meia-noite."""
+    if inicio.date() == fim.date():
+        return f"{fmt_hora(inicio)}–{fmt_hora(fim)}"
+    return f"{fmt_hora(inicio)}–{fmt_hora(fim)} ({fim.strftime('%d/%m')})"
 
 
 def fmt_data_br(d: date) -> str:
@@ -32,6 +39,8 @@ def calcular(event_date: date, inicio: time, fim: time, config_path: Path = DEFA
         local_tz = ZoneInfo(point["timezone"])
         local_start = datetime.combine(event_date, inicio, tzinfo=local_tz)
         local_end = datetime.combine(event_date, fim, tzinfo=local_tz)
+        if local_end <= local_start:
+            local_end += timedelta(days=1)
         br_start = local_start.astimezone(ref_tz)
         br_end = local_end.astimezone(ref_tz)
         rows.append({
@@ -50,22 +59,28 @@ def calcular(event_date: date, inicio: time, fim: time, config_path: Path = DEFA
 def texto(event_date: date, inicio: time, fim: time, config_path: Path = DEFAULT_CONFIG) -> str:
     config, rows = calcular(event_date, inicio, fim, config_path)
     out = [config.get("display_title", "🇧🇷 HORÁRIOS DE BRASÍLIA")]
+    mostrar_local = bool((config.get("rules") or {}).get("show_local_event_window", True))
     current_date = None
     for row in rows:
-        dt = datetime.fromisoformat(row["brasilia_start"])
-        if dt.date() != current_date:
+        br_start = datetime.fromisoformat(row["brasilia_start"])
+        br_end = datetime.fromisoformat(row["brasilia_end"])
+        local_start = datetime.fromisoformat(row["local_start"])
+        local_end = datetime.fromisoformat(row["local_end"])
+        if br_start.date() != current_date:
             if current_date is not None:
                 out.append("")
-                out.append(f"📅 DIA SEGUINTE • {fmt_data_br(dt.date())}")
+                out.append(f"📅 DIA SEGUINTE • {fmt_data_br(br_start.date())}")
             else:
                 out.append("")
-                out.append(f"📅 {fmt_data_br(dt.date())}")
-            current_date = dt.date()
+                out.append(f"📅 {fmt_data_br(br_start.date())}")
+            current_date = br_start.date()
         out += [
             "",
-            f"{fmt_hora(dt)} — {row['flag']} {row['name']}",
-            f"📍 {row['lat']:.6f},{row['lon']:.6f}",
+            f"{fmt_janela(br_start, br_end)} — {row['flag']} {row['name']}",
         ]
+        if mostrar_local:
+            out.append(f"🕒 Local: {fmt_janela(local_start, local_end)}")
+        out.append(f"📍 {row['lat']:.6f},{row['lon']:.6f}")
     return "\n".join(out).strip()
 
 
