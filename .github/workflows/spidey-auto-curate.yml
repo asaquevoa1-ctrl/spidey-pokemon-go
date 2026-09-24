@@ -55,3 +55,5 @@ jobs:
           git commit -m "Spidey: auto-curadoria de novidades"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
+
+# workflow v1
