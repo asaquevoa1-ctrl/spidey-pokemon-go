@@ -1,6 +1,7 @@
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -14,6 +15,7 @@ from scripts.curated_dispatch import gerar_persistir_e_enviar
 MAX_INDIVIDUAIS_POR_RODADA = 12
 MAX_PAGINAS_BACKLOG = 20
 LIMITE_PAGINA = 100
+FONTE_MAX_IDADE_HORAS = 24
 
 
 def remover_coordenadas_do_corpo(texto):
@@ -32,6 +34,14 @@ def _headers():
         "User-Agent": "SpideyPokemonGO/2.0",
         "Accept": "application/json",
     }
+
+
+def _snowflake_datetime(message_id):
+    try:
+        ms = (int(str(message_id)) >> 22) + 1420070400000
+        return datetime.fromtimestamp(ms / 1000, tz=timezone.utc)
+    except Exception:
+        return None
 
 
 def diagnosticar_canal() -> None:
@@ -53,13 +63,25 @@ def diagnosticar_canal() -> None:
     )
     latest.raise_for_status()
     msgs = latest.json()
-    newest = str((msgs[0] if msgs else {}).get("id") or "vazio")
+    newest = str((msgs[0] if msgs else {}).get("id") or "").strip()
+    newest_dt = _snowflake_datetime(newest)
+    age_h = (datetime.now(timezone.utc) - newest_dt).total_seconds() / 3600 if newest_dt else None
+    age_txt = f"{age_h:.1f}h" if age_h is not None else "desconhecida"
+    cursor = individual.ler_estado() or "vazio"
     print(
         f"SPS origem Discord: canal={nome!r} id={individual.CHANNEL_ID} "
-        f"guild={guild or 'desconhecida'} newest={newest} "
-        f"cursor={individual.ler_estado() or 'vazio'}",
+        f"guild={guild or 'desconhecida'} newest={newest or 'vazio'} "
+        f"cursor={cursor} idade_ultima_mensagem={age_txt}",
         flush=True,
     )
+
+    if not newest:
+        raise RuntimeError("FONTE SPS INDISPONÍVEL: canal intermediário está vazio.")
+    if age_h is not None and age_h > FONTE_MAX_IDADE_HORAS:
+        raise RuntimeError(
+            f"FONTE SPS PARADA: última mensagem do canal intermediário tem {age_h:.1f}h; "
+            f"limite operacional é {FONTE_MAX_IDADE_HORAS}h. O workflow não será marcado como saudável."
+        )
 
 
 def buscar_desde_cursor(ultimo: str) -> list[dict]:
