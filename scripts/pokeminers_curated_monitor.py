@@ -32,6 +32,21 @@ def full_text(msg):
     return "\n\n".join(parts).strip()
 
 
+def first_image_url(msg):
+    for attachment in msg.get("attachments") or []:
+        url = str(attachment.get("url") or "").strip()
+        ctype = str(attachment.get("content_type") or "").lower()
+        name = str(attachment.get("filename") or "").lower()
+        if url and (ctype.startswith("image/") or name.endswith((".png", ".jpg", ".jpeg", ".webp"))):
+            return url
+    for embed in msg.get("embeds") or []:
+        for key in ("image", "thumbnail"):
+            url = str((embed.get(key) or {}).get("url") or "").strip()
+            if url:
+                return url
+    return None
+
+
 def is_pokeminers(msg, text):
     author = msg.get("author") or {}
     probe = " ".join((str(author.get("username") or ""), str(author.get("global_name") or ""), text)).lower()
@@ -125,6 +140,7 @@ def main():
             "titulo": classify(text),
             "mensagem": normalize(text) + "\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
             "url": source_url,
+            "image_url": first_image_url(msg),
             "gerar_gpx": False,
             "aprovar": True,
         }

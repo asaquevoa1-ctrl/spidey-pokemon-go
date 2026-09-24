@@ -1,0 +1,73 @@
+name: Spidey - auto-curadoria e arte
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "queue/pending/**"
+      - "scripts/auto_curate_pending.py"
+      - "scripts/official_curated_monitor.py"
+      - "scripts/g47ix_curated_monitor.py"
+      - "scripts/pokeminers_curated_monitor.py"
+      - "scripts/sps_curated_monitor.py"
+      - "scripts/send_curated.py"
+      - "scripts/discord_publish_bridge.py"
+      - ".github/workflows/spidey-auto-curate.yml"
+      - ".github/workflows/spidey-curated.yml"
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-auto-curate-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  curar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Preparar Python
+        run: python -m pip install --quiet requests pillow
+
+      - name: Validar pipeline Spidey
+        run: |
+          python -m py_compile \
+            scripts/auto_curate_pending.py \
+            scripts/official_curated_monitor.py \
+            scripts/g47ix_curated_monitor.py \
+            scripts/pokeminers_curated_monitor.py \
+            scripts/sps_curated_monitor.py \
+            scripts/send_curated.py \
+            scripts/discord_publish_bridge.py \
+            spidey_geo.py
+          python scripts/test_curated_format.py
+
+      - name: Criar artes e itens curados
+        env:
+          SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
+        run: python scripts/auto_curate_pending.py
+
+      - name: Gravar resultado
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add queue/pending queue/curated assets/generated || true
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração para gravar."
+            exit 0
+          fi
+          git commit -m "Spidey: auto-curadoria de novidades"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

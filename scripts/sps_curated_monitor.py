@@ -28,6 +28,7 @@ def enviar_individual(msg, texto):
         "titulo": f"📍 EVENTO • {nome}",
         "mensagem": corpo + "\n\n🔎 Fonte operacional: SPS",
         "url": individual.url_mensagem(msg),
+        "image_url": individual.primeira_imagem_url(msg),
         "coordenadas": coords,
         "gerar_gpx": bool(coords),
         "gpx_nome": individual.slug(nome),
@@ -47,6 +48,7 @@ def enviar_semanal(msg, texto):
             + "\n\n🔎 Fonte operacional: SPS"
         ),
         "url": weekly.url_mensagem(msg),
+        "image_url": individual.primeira_imagem_url(msg),
         "gerar_gpx": False,
         "aprovar": True,
     }

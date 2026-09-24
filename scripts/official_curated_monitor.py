@@ -14,6 +14,10 @@ STATE = Path(os.getenv("OFFICIAL_STATE_FILE", "last_news.txt"))
 MAX_NOVAS = 5
 
 
+def canonical_url(url):
+    return str(url or "").strip().replace("/pt_BR/", "/pt-BR/")
+
+
 class NewsParser(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -27,7 +31,7 @@ class NewsParser(HTMLParser):
         href = dict(attrs).get("href", "")
         if "/news/" not in href:
             return
-        url = urljoin(NEWS_URL, href)
+        url = canonical_url(urljoin(NEWS_URL, href))
         if url.rstrip("/") == NEWS_URL.rstrip("/"):
             return
         self.link = url
@@ -54,7 +58,7 @@ class NewsParser(HTMLParser):
 def buscar_noticias():
     r = requests.get(
         NEWS_URL,
-        headers={"User-Agent": "Mozilla/5.0 (SpideyPokemonGO/1.0)"},
+        headers={"User-Agent": "Mozilla/5.0 (SpideyPokemonGO/2.0)"},
         timeout=30,
     )
     r.raise_for_status()
@@ -67,16 +71,18 @@ def buscar_noticias():
 
 def main():
     noticias = buscar_noticias()
-    topo_url = noticias[0][1]
-    ultimo = STATE.read_text(encoding="utf-8").strip() if STATE.exists() else ""
+    topo_url = canonical_url(noticias[0][1])
+    ultimo = canonical_url(STATE.read_text(encoding="utf-8").strip()) if STATE.exists() else ""
 
     if not ultimo:
         STATE.write_text(topo_url + "\n", encoding="utf-8")
         print("Monitor oficial inicializado; notícia atual registrada sem republicar.")
         return 0
 
-    urls = [url for _, url in noticias]
+    urls = [canonical_url(url) for _, url in noticias]
     if topo_url == ultimo:
+        # Também normaliza o estado antigo pt_BR -> pt-BR sem criar duplicata.
+        STATE.write_text(topo_url + "\n", encoding="utf-8")
         print("Sem nova notícia oficial.")
         return 0
 
@@ -90,6 +96,7 @@ def main():
 
     enviadas = 0
     for titulo_fonte, url in reversed(novas[:MAX_NOVAS]):
+        url = canonical_url(url)
         payload = {
             "titulo": "📰 OFICIAL • NOTÍCIA",
             "mensagem": f"{titulo_fonte}\n\n📌 Fonte: Pokémon GO oficial",
