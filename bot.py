@@ -16,7 +16,7 @@ from spidey_approval import criar_token, ler_token
 from spidey_art_v4 import criar_card
 from spidey_geo import criar_gpx, extrair_coordenadas, formatar_coordenadas
 
-ImageFile.LOAD_TRUNCATED_IMAGES = True
+ImageFile.LOAD_TRUNCATED_IMAGES = False
 
 app = Flask(__name__)
 
@@ -301,9 +301,25 @@ def _preparar_conteudo(dados):
         try:
             resposta_imagem = requests.get(imagem_url, timeout=30)
             resposta_imagem.raise_for_status()
-            img = Image.open(io.BytesIO(resposta_imagem.content)).convert("RGB")
+            imagem_original = resposta_imagem.content
+            if not imagem_original:
+                raise ValueError("Arquivo de imagem vazio")
+
+            # Primeiro valida o arquivo completo. JPEG/PNG truncado não segue.
+            with Image.open(io.BytesIO(imagem_original)) as probe:
+                probe.verify()
+
+            img = Image.open(io.BytesIO(imagem_original)).convert("RGB")
             if img.width < 1000 or img.height < 1200:
                 raise ValueError(f"Arte em baixa resolução: {img.width}x{img.height}; mínimo 1000x1200")
+
+            # Impede o sintoma já visto no Discord: arquivo abre, mas vira uma
+            # tela praticamente preta por corrupção/incompletude dos bytes.
+            amostra = img.resize((64, 64)).convert("L")
+            minimo, maximo = amostra.getextrema()
+            if maximo <= 12 or (maximo - minimo <= 3 and maximo <= 24):
+                raise ValueError("Arte inválida: imagem praticamente preta")
+
             arquivo = io.BytesIO()
             img.save(arquivo, format="PNG", optimize=True)
             imagem_bytes = arquivo.getvalue()
@@ -547,6 +563,7 @@ def enviar():
             gpx_bytes=conteudo["gpx_bytes"],
             gpx_nome=conteudo["gpx_nome"],
             webhook_url=DISCORD_APPROVAL_WEBHOOK,
+            components=_botoes_aprovacao(token),
         )
 
         resposta = {
