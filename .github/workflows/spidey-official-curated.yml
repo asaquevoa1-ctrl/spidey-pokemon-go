@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/official_curated_monitor.py"
+      - "scripts/curated_dispatch.py"
+      - ".github/workflows/spidey-official-curated.yml"
 
 permissions:
   contents: write
