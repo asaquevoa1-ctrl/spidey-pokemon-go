@@ -9,14 +9,16 @@ QUEUE = Path("queue/curated")
 CHANNEL = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").strip()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 API = "https://discord.com/api/v10"
-
-if not TOKEN:
-    raise SystemExit("DISCORD_BOT_TOKEN ausente")
+TERMINAL_STATUSES = {"published", "rejected", "rejected_art", "decision_conflict", "blocked_art_standard"}
 
 HEADERS = {
     "Authorization": f"Bot {TOKEN}",
     "User-Agent": "SpideyPokemonGO/2.0",
 }
+
+
+def status_terminal(status):
+    return str(status or "").strip() in TERMINAL_STATUSES
 
 
 def reaction_count(message, emoji_name):
@@ -43,6 +45,9 @@ def get_message(message_id):
 
 
 def main():
+    if not TOKEN:
+        raise SystemExit("DISCORD_BOT_TOKEN ausente")
+
     changed = 0
     now = datetime.now(timezone.utc).isoformat()
 
@@ -56,7 +61,7 @@ def main():
         mid = str(data.get("discord_approval_id") or "").strip()
         if not mid:
             continue
-        if data.get("status") in {"published", "rejected", "rejected_art", "decision_conflict"}:
+        if status_terminal(data.get("status")):
             continue
 
         msg = get_message(mid)
