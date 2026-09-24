@@ -1,0 +1,41 @@
+name: Spidey - auditar aprovacoes atuais
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-audit-current-approvals.yml"
+  workflow_dispatch:
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Listar cards recentes de aprovacao
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, requests
+          token=os.environ['DISCORD_BOT_TOKEN'].strip(); cid=os.environ['APPROVAL_CHANNEL_ID']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          r=requests.get(f'https://discord.com/api/v10/channels/{cid}/messages',headers=h,params={'limit':35},timeout=30)
+          r.raise_for_status()
+          for m in r.json():
+              embeds=m.get('embeds') or []
+              if not embeds: continue
+              e=embeds[0]
+              title=(e.get('title') or '').strip()
+              if 'APROVA' not in title.upper(): continue
+              desc=(e.get('description') or '').strip().replace('\n',' | ')
+              img=((e.get('image') or {}).get('url') or '').strip()
+              print('---')
+              print('ID',m.get('id'))
+              print('TITLE',title)
+              print('IMAGE',bool(img),'ATTACH',len(m.get('attachments') or []))
+              print('DESC',desc[:1200])
+              print('URL',e.get('url') or '')
+          PY
