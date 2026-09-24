@@ -24,23 +24,47 @@ def remover_coordenadas_do_corpo(texto):
     return limpo.strip()
 
 
-def buscar_desde_cursor(ultimo: str) -> list[dict]:
-    """Busca todas as mensagens mais novas que o cursor, paginando o Discord.
-
-    O Discord devolve mensagens da mais nova para a mais antiga. O monitor antigo
-    lia apenas 50 itens; após uma interrupção longa o cursor podia sair dessa
-    janela e eventos intermediários eram perdidos. Aqui seguimos páginas de 100
-    até reencontrar o cursor. Se o cursor existir e não for reencontrado dentro
-    do limite de segurança, abortamos sem avançar estado para nunca pular dados.
-    """
+def _headers():
     if not individual.BOT_TOKEN:
         raise RuntimeError("DISCORD_BOT_TOKEN ausente")
-
-    headers = {
+    return {
         "Authorization": f"Bot {individual.BOT_TOKEN}",
         "User-Agent": "SpideyPokemonGO/2.0",
         "Accept": "application/json",
     }
+
+
+def diagnosticar_canal() -> None:
+    h = _headers()
+    r = requests.get(
+        f"{individual.DISCORD_API}/channels/{individual.CHANNEL_ID}",
+        headers=h,
+        timeout=30,
+    )
+    r.raise_for_status()
+    data = r.json()
+    nome = str(data.get("name") or "(sem nome)")
+    guild = str(data.get("guild_id") or "")
+    latest = requests.get(
+        f"{individual.DISCORD_API}/channels/{individual.CHANNEL_ID}/messages",
+        headers=h,
+        params={"limit": 1},
+        timeout=30,
+    )
+    latest.raise_for_status()
+    msgs = latest.json()
+    newest = str((msgs[0] if msgs else {}).get("id") or "vazio")
+    print(
+        f"SPS origem Discord: canal={nome!r} id={individual.CHANNEL_ID} "
+        f"guild={guild or 'desconhecida'} newest={newest} "
+        f"cursor={individual.ler_estado() or 'vazio'}",
+        flush=True,
+    )
+
+
+def buscar_desde_cursor(ultimo: str) -> list[dict]:
+    """Busca todas as mensagens mais novas que o cursor, paginando o Discord."""
+    headers = _headers()
     encontrados: list[dict] = []
     before = ""
     cursor_encontrado = not bool(ultimo)
@@ -71,8 +95,6 @@ def buscar_desde_cursor(ultimo: str) -> list[dict]:
         if cursor_encontrado:
             break
         if len(lote) < LIMITE_PAGINA:
-            # Chegamos ao início do histórico disponível. O cursor antigo pode
-            # ter sido removido; neste caso o backlog coletado é a melhor fonte.
             cursor_encontrado = True
             break
         before = str(lote[-1].get("id") or "").strip()
@@ -134,9 +156,6 @@ def processar_individuais() -> int:
         print("Nenhum novo evento SPS.")
         return 0
 
-    # Discord veio novo->antigo. Voltamos para antigo->novo e avançamos o
-    # cursor inclusive sobre mensagens vazias/semanais, que antes podiam ficar
-    # eternamente na frente do cursor individual.
     cronologicos = list(reversed(mensagens))
     processados = 0
     examinados = 0
@@ -164,8 +183,6 @@ def processar_individuais() -> int:
         try:
             enviar_individual(msg, texto)
         except Exception as exc:
-            # Não avança além de um item que falhou: preserva exatamente o ponto
-            # de retomada e evita perda silenciosa. A próxima rodada tentará de novo.
             print(f"ERRO SPS item {mid}: {exc}", file=sys.stderr, flush=True)
             break
 
@@ -181,6 +198,8 @@ def processar_individuais() -> int:
 
 
 def main():
+    print("=== SPS origem ===")
+    diagnosticar_canal()
     print("=== SPS individual ===")
     processar_individuais()
     print("=== SPS semanal ===")
