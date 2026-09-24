@@ -8,7 +8,7 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "sent",
+  "status": "rejected_art",
   "_source_id": "oficial-https://pokemongo.com/pt-BR/news/sandile-hatch-day-2026",
   "_source_image": "https://pbs.twimg.com/media/HS_7I9SXcAAu-fn.jpg?name=orig",
   "created_at_utc": "2026-09-24T17:17:12.393164+00:00",
@@ -17,5 +17,11 @@
   "art_ready_for_review": true,
   "media_policy": "source_first",
   "discord_approval_id": "1552810333775728690",
-  "sent_at_utc": "2026-09-24T22:33:54.543987+00:00"
+  "sent_at_utc": "2026-09-24T22:33:54.543987+00:00",
+  "needs_art_revision": true,
+  "decision_at_utc": "2026-09-24T22:49:03.333330+00:00",
+  "discord_reactions": {
+    "approved": 1,
+    "rejected": 2
+  }
 }
