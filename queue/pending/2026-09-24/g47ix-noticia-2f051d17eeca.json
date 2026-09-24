@@ -5,14 +5,12 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2103071687281434673",
-  "status": "curated",
+  "status": "aguardando_arte_chatgpt",
   "pipeline": "chatgpt_spidey_oficial",
   "arte_obrigatoria": true,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-09-24T15:11:07.800253+00:00",
-  "curated_path": "queue/curated/g47ix-noticia-2f051d17eeca.json",
-  "asset_path": "assets/generated/g47ix-noticia-2f051d17eeca.jpg"
+  "created_at_utc": "2026-09-24T15:11:07.800253+00:00"
 }
