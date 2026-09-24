@@ -8,6 +8,7 @@ on:
       - "*.py"
       - ".github/workflows/spidey-*-curated.yml"
       - ".github/workflows/spidey-validate-curated-pipeline.yml"
+      - ".github/workflows/spidey-apply-bot-hardening.yml"
   push:
     branches: [main]
     paths:
@@ -15,6 +16,7 @@ on:
       - "*.py"
       - ".github/workflows/spidey-*-curated.yml"
       - ".github/workflows/spidey-validate-curated-pipeline.yml"
+      - ".github/workflows/spidey-apply-bot-hardening.yml"
 
 permissions:
   contents: read
@@ -30,6 +32,9 @@ jobs:
 
       - name: Validar sintaxe Python
         run: python -m compileall -q bot.py spidey_approval.py scripts
+
+      - name: Simular hardening do bot sem alterar o repositório
+        run: python scripts/patch_bot_hardening.py --check-only
 
       - name: Rodar testes do pipeline
         run: python -m unittest -v test_pipeline_stability.py test_spidey_approval.py test_spidey_geo.py
