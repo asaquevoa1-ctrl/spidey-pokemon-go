@@ -8,7 +8,14 @@ on:
     paths:
       - "queue/pending/**"
       - "scripts/auto_curate_pending.py"
+      - "scripts/official_curated_monitor.py"
+      - "scripts/g47ix_curated_monitor.py"
+      - "scripts/pokeminers_curated_monitor.py"
+      - "scripts/sps_curated_monitor.py"
+      - "scripts/send_curated.py"
+      - "scripts/discord_publish_bridge.py"
       - ".github/workflows/spidey-auto-curate.yml"
+      - ".github/workflows/spidey-curated.yml"
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
@@ -33,8 +40,18 @@ jobs:
       - name: Preparar Python
         run: python -m pip install --quiet requests pillow
 
-      - name: Validar auto-curadoria
-        run: python -m py_compile scripts/auto_curate_pending.py
+      - name: Validar pipeline Spidey
+        run: |
+          python -m py_compile \
+            scripts/auto_curate_pending.py \
+            scripts/official_curated_monitor.py \
+            scripts/g47ix_curated_monitor.py \
+            scripts/pokeminers_curated_monitor.py \
+            scripts/sps_curated_monitor.py \
+            scripts/send_curated.py \
+            scripts/discord_publish_bridge.py \
+            spidey_geo.py
+          python scripts/test_curated_format.py
 
       - name: Criar artes e itens curados
         env:
@@ -55,5 +72,3 @@ jobs:
           git commit -m "Spidey: auto-curadoria de novidades"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
-
-# workflow v1
