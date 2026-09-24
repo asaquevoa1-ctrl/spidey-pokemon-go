@@ -1,4 +1,4 @@
-name: Spidey - reenviar Holofote Rattata limpo
+name: Spidey - reenviar Holofote Rattata final
 
 on:
   push:
@@ -11,15 +11,41 @@ jobs:
   enviar:
     runs-on: ubuntu-latest
     steps:
-      - name: Enviar versão limpa para aprovação
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Validar arte final antes do Discord
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet Pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageStat
+          import hashlib
+          p=Path('assets/approved/2026-09-24/spidey-holofote-rattata-final.jpg')
+          raw=p.read_bytes()
+          sha=hashlib.sha256(raw).hexdigest()
+          im=Image.open(p).convert('RGB')
+          mean=ImageStat.Stat(im.resize((64,64))).mean
+          print('FILE_BYTES',len(raw),'SIZE',im.size,'MEAN',tuple(round(x,1) for x in mean),'SHA256',sha)
+          assert sha == '978e9b0ab936aa52d28ec9e144084e900ebf017e7bd74e0a912f14b25aecc669', sha
+          assert im.size == (1000,1250), im.size
+          assert len(raw) == 60724, len(raw)
+          assert max(mean) > 20, mean
+          print('ARTE_FINAL_VALIDADA')
+          PY
+
+      - name: Enviar versão final limpa para aprovação
         shell: bash
         run: |
           set -euo pipefail
           cat > /tmp/payload.json <<'JSON'
           {
             "titulo": "✨ HORA DO HOLOFOTE • RATTATA",
-            "mensagem": "📅 24 de setembro de 2026\n⏰ 18h às 19h — horário local\n✨ Brilhante disponível\n🎁 Bônus: 2× XP por evolução\n📏 Chance aumentada de Rattata XXS\n\n🇧🇷 **HORÁRIOS DE BRASÍLIA**\n📅 **24 DE SETEMBRO**\n\n**01h00** 🇰🇮 Kiritimati, Kiribati\n`1.987149,-157.477137`\n**03h00** 🇳🇿 Auckland, Nova Zelândia\n`-36.852095,174.763180`\n**05h00** 🇦🇺 Sydney, Austrália\n`-33.866173,151.205945`\n**06h00** 🇯🇵 Shinjuku, Japão\n`35.688950,139.690540`\n**07h00** 🇸🇬 Singapura\n`1.292400,103.847600`\n**09h30** 🇮🇳 Chennai, Índia\n`13.040300,80.266600`\n**11h00** 🇦🇪 Dubai, Emirados Árabes\n`25.076750,55.132940`\n**12h00** 🇹🇷 Istambul, Turquia\n`41.008200,28.978400`\n**13h00** 🇪🇸 Zaragoza, Espanha\n`41.661609,-0.894640`\n**14h00** 🇬🇧 Londres, Reino Unido\n`51.501000,-0.124600`\n**16h00** 🇨🇻 Praia, Cabo Verde\n`14.910725,-23.527823`\n**17h00** 🇧🇷 Fernando de Noronha\n`-3.840100,-32.411810`\n**18h00** 🇧🇷 Ibirapuera, São Paulo\n`-23.584171,-46.660725`\n**19h00** 🇺🇸 Central Park, Nova York\n`40.780300,-73.963000`\n**20h00** 🇺🇸 Chicago, EUA\n`41.898659,-87.623077`\n**21h00** 🇺🇸 Denver, EUA\n`39.739200,-104.990300`\n**22h00** 🇺🇸 Pier 39, São Francisco\n`37.809500,-122.410100`\n**23h00** 🇺🇸 Anchorage, Alasca\n`61.217019,-149.891609`\n\n📅 **DIA SEGUINTE • 25 DE SETEMBRO**\n\n**01h00** 🇺🇸 Honolulu, Havaí\n`21.265800,-157.821300`\n\n**02h00** 🇦🇸 Pago Pago, Samoa Americana\n`-14.277739,-170.688512`\n\n📌 Fonte oficial: Pokémon GO",
-            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/approved/2026-09-24/spidey-holofote-rattata.webp",
+            "mensagem": "📅 24 de setembro de 2026\n⏰ 18h às 19h — horário local\n✨ Brilhante disponível\n🎁 Bônus: 2× XP por evolução\n📏 Chance aumentada de Rattata XXS\n\n🇧🇷 **HORÁRIOS DE BRASÍLIA**\n📅 **24 DE SETEMBRO**\n\n**01h00** 🇰🇮 Kiritimati, Kiribati — `1.987149,-157.477137`\n**03h00** 🇳🇿 Auckland, Nova Zelândia — `-36.852095,174.763180`\n**05h00** 🇦🇺 Sydney, Austrália — `-33.866173,151.205945`\n**06h00** 🇯🇵 Shinjuku, Japão — `35.688950,139.690540`\n**07h00** 🇸🇬 Singapura — `1.292400,103.847600`\n**09h30** 🇮🇳 Chennai, Índia — `13.040300,80.266600`\n**11h00** 🇦🇪 Dubai, Emirados Árabes — `25.076750,55.132940`\n**12h00** 🇹🇷 Istambul, Turquia — `41.008200,28.978400`\n**13h00** 🇪🇸 Zaragoza, Espanha — `41.661609,-0.894640`\n**14h00** 🇬🇧 Londres, Reino Unido — `51.501000,-0.124600`\n**16h00** 🇨🇻 Praia, Cabo Verde — `14.910725,-23.527823`\n**17h00** 🇧🇷 Fernando de Noronha — `-3.840100,-32.411810`\n**18h00** 🇧🇷 Ibirapuera, São Paulo — `-23.584171,-46.660725`\n**19h00** 🇺🇸 Central Park, Nova York — `40.780300,-73.963000`\n**20h00** 🇺🇸 Chicago, EUA — `41.898659,-87.623077`\n**21h00** 🇺🇸 Denver, EUA — `39.739200,-104.990300`\n**22h00** 🇺🇸 Pier 39, São Francisco — `37.809500,-122.410100`\n**23h00** 🇺🇸 Anchorage, Alasca — `61.217019,-149.891609`\n\n📅 **DIA SEGUINTE • 25 DE SETEMBRO**\n**01h00** 🇺🇸 Honolulu, Havaí — `21.265800,-157.821300`\n**02h00** 🇦🇸 Pago Pago, Samoa Americana — `-14.277739,-170.688512`\n\n📌 Fonte oficial: Pokémon GO",
+            "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/approved/2026-09-24/spidey-holofote-rattata-final.jpg",
             "gerar_arte": false,
             "usar_premium": false,
             "permitir_fallback": false,
@@ -29,15 +55,11 @@ jobs:
             "coordenadas": []
           }
           JSON
-
           code=$(curl --silent --show-error --output /tmp/response.json --write-out '%{http_code}' \
-            --request POST \
-            --header 'Content-Type: application/json' \
+            --request POST --header 'Content-Type: application/json' \
             --data-binary @/tmp/payload.json \
             https://spidey-pokemon-go.onrender.com/enviar)
-          cat /tmp/response.json
-          echo
-          echo "HTTP=$code"
+          cat /tmp/response.json; echo; echo "HTTP=$code"
           python - <<'PY'
           import json
           data=json.load(open('/tmp/response.json',encoding='utf-8'))
@@ -45,5 +67,5 @@ jobs:
           assert data.get('etapa') == 'aguardando_aprovacao', data
           assert data.get('arte') is True, data
           assert data.get('modo_arte') == 'fornecida', data
-          print('RATTATA_LIMPO_ENVIADO')
+          print('RATTATA_FINAL_ENVIADO')
           PY
