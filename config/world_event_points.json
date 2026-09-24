@@ -15,7 +15,7 @@
     {"order":2,"flag":"🇳🇿","name":"Auckland, Nova Zelândia","timezone":"Pacific/Auckland","lat":-36.852095,"lon":174.763180},
     {"order":3,"flag":"🇦🇺","name":"Sydney, Austrália","timezone":"Australia/Sydney","lat":-33.866173,"lon":151.205945},
     {"order":4,"flag":"🇯🇵","name":"Shinjuku, Japão","timezone":"Asia/Tokyo","lat":35.688950,"lon":139.690540},
-    {"order":5,"flag":"🇸🇬","name":"Singapura","timezone":"Asia/Singapore","lat":1.292400,"lon":103.847600},
+    {"order":5,"flag":"🇹🇼","name":"Taipei, Taiwan","timezone":"Asia/Taipei","lat":25.033964,"lon":121.564468},
     {"order":6,"flag":"🇮🇳","name":"Chennai, Índia","timezone":"Asia/Kolkata","lat":13.040300,"lon":80.266600},
     {"order":7,"flag":"🇦🇪","name":"Dubai, Emirados Árabes","timezone":"Asia/Dubai","lat":25.076750,"lon":55.132940},
     {"order":8,"flag":"🇹🇷","name":"Istambul, Turquia","timezone":"Europe/Istanbul","lat":41.008200,"lon":28.978400},
