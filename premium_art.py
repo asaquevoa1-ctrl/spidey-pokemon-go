@@ -220,12 +220,11 @@ def _draw_official_logo(bg):
 
 
 def criar_card_premium(titulo, mensagem):
+    """Gera a arte oficial do Spidey sem fallback visual."""
     clean = _clean(mensagem)
     categoria = _category(titulo)
     source = _source(titulo, mensagem)
 
-    # O assunto original continua alimentando a arte de fundo. Se uma tradução
-    # falhar, o card jamais desenha inglês cru para o público brasileiro.
     display_clean = clean
     if source == "G47IX" and _looks_english(display_clean):
         display_clean = (
@@ -233,86 +232,99 @@ def criar_card_premium(titulo, mensagem):
             "Confira os detalhes traduzidos no texto da publicação."
         )
     headline, body = _headline_body(display_clean)
-
     bg = _cover_crop(_generate_background(clean, categoria))
 
     veil = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     vd = ImageDraw.Draw(veil)
-    for x in range(0, 650):
+    for y in range(H):
+        if y < 120:
+            alpha = 120
+        elif y < 850:
+            alpha = 65
+        else:
+            alpha = min(205, 90 + int((y - 850) * 0.27))
+        vd.line((0, y, W, y), fill=(2, 15, 36, alpha))
+    for x in range(650):
         t = x / 650
-        alpha = int(214 * (1 - t) + 22 * t)
-        vd.line((x, 0, x, H), fill=(245, 251, 255, alpha))
+        a = int(135 * (1 - t))
+        vd.line((x, 0, x, 1020), fill=(0, 15, 38, a))
     bg.alpha_composite(veil)
 
     draw = ImageDraw.Draw(bg)
-    navy = (9, 39, 80)
-    blue = (10, 132, 255)
-    pale = (194, 224, 247)
+    white = (255, 255, 255)
+    navy = (5, 25, 56)
+    cyan = (31, 180, 255)
+    gold = (246, 190, 55)
 
-    # Header com a identidade oficial aprovada do Spidey.
-    draw.rounded_rectangle((36, 34, 1044, 204), radius=40, fill=navy)
-    if not _draw_official_logo(bg):
-        draw.rounded_rectangle((61, 61, 151, 151), radius=28, fill=blue)
-        draw.ellipse((88, 88, 124, 124), outline=(255, 255, 255), width=7)
-        draw.line((75, 106, 138, 106), fill=(255, 255, 255), width=8)
-    draw = ImageDraw.Draw(bg)
-    draw.text((183, 62), "SPIDEY", font=_font(59, True), fill=(255, 255, 255))
-    draw.text((186, 132), "POKÉMON GO • NOTÍCIAS • EVENTOS • COORDENADAS", font=_font(23, True), fill=pale)
+    pill = f"{categoria} • {source}"
+    pf = _font(25, True)
+    pw = draw.textbbox((0, 0), pill, font=pf)[2] + 60
+    draw.rounded_rectangle((46, 45, 46 + pw, 105), radius=26, fill=(5, 25, 56, 220), outline=(85, 200, 255, 210), width=2)
+    draw.text((76, 61), pill, font=pf, fill=white)
 
-    source_label = f"FONTE: {source}"
-    sf = _font(18, True)
-    sw = draw.textbbox((0, 0), source_label, font=sf)[2]
-    sx = max(700, 1012 - sw - 36)
-    draw.rounded_rectangle((sx, 72, 1011, 127), radius=22, fill=(255, 255, 255))
-    draw.text((sx + 18, 88), source_label, font=sf, fill=navy)
-
-    draw.rounded_rectangle((52, 246, 370, 324), radius=25, fill=blue)
-    draw.text((87, 263), categoria, font=_font(32, True), fill=(255, 255, 255))
-
-    hf, hlines = _fit_headline(draw, headline.upper())
-    y = 360
+    hf, hlines = _fit_headline(draw, headline.upper(), max_width=690, max_lines=4)
+    y = 155
     for i, line in enumerate(hlines):
-        color = blue if i == 1 and len(hlines) > 1 else navy
-        draw.text((54, y), line, font=hf, fill=color)
-        y += hf.size + 5
-    draw.rounded_rectangle((54, y + 10, 164, y + 18), radius=4, fill=blue)
+        color = cyan if (len(hlines) > 1 and i == len(hlines) - 1) else white
+        draw.text((55, y + 3), line, font=hf, fill=(0, 0, 0, 190))
+        draw.text((52, y), line, font=hf, fill=color)
+        y += hf.size + 4
+    draw.rounded_rectangle((54, y + 10, 190, y + 18), radius=4, fill=cyan)
 
-    bf = _font(31, False)
-    by = y + 58
-    for line in _wrap(draw, body, bf, 505)[:5]:
-        draw.text((54, by), line, font=bf, fill=(25, 55, 88))
-        by += 45
+    body_panel_y = max(600, y + 70)
+    bf = _font(29, False)
+    body_lines = _wrap(draw, body, bf, 620)[:5]
+    panel_h = 58 + len(body_lines) * 42
+    draw.rounded_rectangle((46, body_panel_y, 715, body_panel_y + panel_h), radius=30, fill=(4, 24, 54, 205), outline=(120, 205, 255, 150), width=2)
+    draw.text((76, body_panel_y + 22), "DESTAQUES", font=_font(23, True), fill=gold)
+    yy = body_panel_y + 62
+    for line in body_lines:
+        draw.text((76, yy), line, font=bf, fill=white)
+        yy += 42
 
-    coords = re.findall(r"[-+]?\d{1,2}\.\d{3,}\s*,\s*[-+]?\d{1,3}\.\d{3,}", clean)
     shiny = bool(re.search(r"\b(shiny|brilhante)\b", clean, flags=re.I))
+    coords = re.findall(r"[-+]?\d{1,2}\.\d{3,}\s*,\s*[-+]?\d{1,3}\.\d{3,}", clean)
     gpx = "gpx" in clean.lower()
     chips = []
     if shiny:
-        chips.append("SHINY")
+        chips.append("SHINY POSSÍVEL")
     if coords:
         chips.append("COORDENADAS")
     if gpx:
         chips.append("GPX")
+    cx = 48
+    cy = min(1040, body_panel_y + panel_h + 22)
+    for label in chips:
+        cf = _font(22, True)
+        tw = draw.textbbox((0, 0), label, font=cf)[2]
+        bw = tw + 44
+        draw.rounded_rectangle((cx, cy, cx + bw, cy + 52), radius=21, fill=(5, 25, 56, 220), outline=cyan, width=2)
+        draw.text((cx + 22, cy + 14), label, font=cf, fill=white)
+        cx += bw + 12
 
-    if chips:
-        x = 55
-        cy = 930
-        for label in chips:
-            tw = draw.textbbox((0, 0), label, font=_font(24, True))[2]
-            bw = tw + 48
-            draw.rounded_rectangle((x, cy, x + bw, cy + 58), radius=20, fill=(255, 255, 255, 236), outline=blue, width=3)
-            draw.text((x + 24, cy + 15), label, font=_font(24, True), fill=navy)
-            x += bw + 14
+    if not LOGO_PATH.exists():
+        raise RuntimeError("Logo oficial do Spidey ausente")
+    try:
+        logo = Image.open(LOGO_PATH).convert("RGB")
+    except Exception as exc:
+        raise RuntimeError(f"Logo oficial do Spidey inválido: {exc}") from exc
+    logo = logo.resize((205, 205), Image.Resampling.LANCZOS).convert("RGBA")
+    mask = Image.new("L", (205, 205), 0)
+    md = ImageDraw.Draw(mask)
+    md.ellipse((0, 0, 204, 204), fill=255)
+    lx = (W - 205) // 2
+    ly = H - 235
+    bg.paste(logo, (lx, ly), mask)
 
-    footer = Image.new("RGBA", (W, 175), (5, 33, 72, 238))
-    bg.alpha_composite(footer, (0, H - 175))
     draw = ImageDraw.Draw(bg)
-    draw.text((54, H - 137), f"Fonte: {source}", font=_font(27, True), fill=(255, 255, 255))
-    draw.text((54, H - 95), "Canal Spidey • informação útil para jogar", font=_font(22, False), fill=(190, 218, 240))
-    draw.text((748, H - 136), "SEMPRE UM PASSO", font=_font(22, True), fill=(58, 168, 255))
-    draw.text((807, H - 100), "À FRENTE", font=_font(32, True), fill=(255, 255, 255))
+    source_text = f"Fonte: {source}"
+    sf = _font(22, True)
+    sw = draw.textbbox((0, 0), source_text, font=sf)[2]
+    draw.rounded_rectangle((W - sw - 92, H - 94, W - 38, H - 44), radius=20, fill=(5, 25, 56, 205))
+    draw.text((W - sw - 66, H - 80), source_text, font=sf, fill=white)
 
     out = io.BytesIO()
     bg.convert("RGB").save(out, format="PNG", optimize=True)
     out.seek(0)
     return out.getvalue()
+

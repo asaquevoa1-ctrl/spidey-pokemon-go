@@ -9,7 +9,7 @@ from urllib.parse import quote, urljoin
 
 import requests
 from PIL import Image, ImageFile
-from flask import Flask, jsonify, request
+from flask import Flask, Response, jsonify, request
 
 from premium_art import criar_card_premium
 from spidey_approval import criar_token, ler_token
@@ -451,6 +451,27 @@ def _botao_whatsapp(token):
 @app.route("/", methods=["GET"])
 def home():
     return "🕷️ Spidey Pokémon GO está online!"
+
+
+@app.route("/gerar-arte-padrao", methods=["POST"])
+def gerar_arte_padrao():
+    dados = request.get_json(silent=True) or {}
+    titulo = str(dados.get("titulo") or "📰 NOTÍCIA • Pokémon GO").strip()
+    mensagem = str(dados.get("mensagem") or "").strip()
+    if not mensagem:
+        return jsonify({"erro": "Mensagem vazia"}), 400
+    try:
+        imagem = criar_card_premium(titulo, mensagem)
+    except Exception as erro:
+        return jsonify({"erro": str(erro), "status": "arte_indisponivel"}), 503
+    return Response(
+        imagem,
+        mimetype="image/png",
+        headers={
+            "X-Spidey-Art-Mode": "padrao-oficial",
+            "Cache-Control": "no-store",
+        },
+    )
 
 
 @app.route("/enviar", methods=["POST"])
