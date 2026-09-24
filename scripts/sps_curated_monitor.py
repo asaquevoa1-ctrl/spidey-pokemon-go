@@ -1,4 +1,5 @@
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -9,10 +10,18 @@ from scripts import sps_weekly_monitor as weekly
 from scripts.curated_dispatch import gerar_persistir_e_enviar
 
 
+def remover_coordenadas_do_corpo(texto):
+    """Remove coordenadas cruas do texto; elas seguem em campo estruturado/GPX."""
+    limpo = individual.COORD_RE.sub("", texto or "")
+    limpo = re.sub(r"[ \t]+\n", "\n", limpo)
+    limpo = re.sub(r"\n{3,}", "\n\n", limpo)
+    return limpo.strip()
+
+
 def enviar_individual(msg, texto):
     coords = individual.extrair_coordenadas(texto)
     nome = individual.titulo_evento(texto)
-    corpo = individual.traduzir_basico(texto)
+    corpo = remover_coordenadas_do_corpo(individual.traduzir_basico(texto))
     payload = {
         "titulo": f"📍 EVENTO • {nome}",
         "mensagem": corpo + "\n\n🔎 Fonte operacional: SPS",
@@ -45,8 +54,8 @@ def enviar_semanal(msg, texto):
 
 
 def main():
-    # Reutiliza toda a leitura/classificação/antirrepetição já validada,
-    # trocando SOMENTE o antigo gerador de arte pelo pipeline curado oficial.
+    # Reutiliza leitura/classificação/antirrepetição já validada, trocando
+    # somente o envio antigo pelo pipeline curado oficial.
     individual.enviar = enviar_individual
     weekly.enviar = enviar_semanal
     print("=== SPS individual ===")
