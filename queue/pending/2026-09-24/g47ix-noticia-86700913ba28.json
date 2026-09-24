@@ -1,0 +1,16 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "adidas x Pokémon GO is coming! 👟\n\nVisit participating adidas stores to get Timed Research for an in-game cap and jacket (and Lucario encounter)\n\nDetails on how to get the shoes in-game haven’t been announced yet.\n\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2103058261020680614",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2103058261020680614",
+  "status": "aguardando_arte_chatgpt",
+  "pipeline": "chatgpt_spidey_oficial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-24T15:11:05.773530+00:00"
+}
