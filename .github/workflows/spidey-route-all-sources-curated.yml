@@ -1,0 +1,59 @@
+name: Spidey - rotear fontes para arte curada
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-route-all-sources-curated.yml"
+      - "scripts/patch_sources_to_curated.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Aplicar roteamento unico
+        run: python scripts/patch_sources_to_curated.py
+
+      - name: Validar Python e workflows alterados
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/curated_dispatch.py scripts/discord_source_monitor.py scripts/sps_weekly_monitor.py
+          python - <<'PY'
+          from pathlib import Path
+          checks = {
+            '.github/workflows/spidey-check.yml': 'scripts/curated_dispatch.py',
+            '.github/workflows/spidey-g47ix.yml': 'scripts/curated_dispatch.py',
+            '.github/workflows/spidey-pokeminers.yml': 'gerar_persistir_e_enviar',
+            'scripts/discord_source_monitor.py': 'gerar_persistir_e_enviar',
+            'scripts/sps_weekly_monitor.py': 'gerar_persistir_e_enviar',
+          }
+          for path, token in checks.items():
+              text=Path(path).read_text(encoding='utf-8')
+              assert token in text, (path, token)
+              print('OK', path, token)
+          PY
+
+      - name: Salvar roteamento
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/spidey-check.yml .github/workflows/spidey-g47ix.yml .github/workflows/spidey-pokeminers.yml .github/workflows/spidey-discord-source.yml .github/workflows/spidey-sps-weekly.yml scripts/discord_source_monitor.py scripts/sps_weekly_monitor.py
+          if git diff --cached --quiet; then
+            echo "Roteamento ja aplicado."
+            exit 0
+          fi
+          git commit -m "Spidey: unificar fontes no pipeline de arte curada"
+          git pull --rebase origin main
+          git push origin HEAD:main
