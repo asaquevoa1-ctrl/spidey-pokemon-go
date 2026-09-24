@@ -1,4 +1,4 @@
-name: Spidey - auto-curadoria e arte
+name: Spidey - auto-curadoria por mídia da fonte
 
 on:
   push:
@@ -7,11 +7,13 @@ on:
     paths:
       - "queue/pending/**"
       - "scripts/auto_curate_pending.py"
+      - "scripts/curated_dispatch.py"
       - "scripts/official_curated_monitor.py"
       - "scripts/g47ix_curated_monitor.py"
       - "scripts/pokeminers_curated_monitor.py"
       - "scripts/sps_curated_monitor.py"
       - "scripts/send_curated.py"
+      - "scripts/spidey_art_guard.py"
       - "scripts/discord_publish_bridge.py"
       - ".github/workflows/spidey-auto-curate.yml"
       - ".github/workflows/spidey-curated.yml"
@@ -43,16 +45,18 @@ jobs:
         run: |
           python -m py_compile \
             scripts/auto_curate_pending.py \
+            scripts/curated_dispatch.py \
             scripts/official_curated_monitor.py \
             scripts/g47ix_curated_monitor.py \
             scripts/pokeminers_curated_monitor.py \
             scripts/sps_curated_monitor.py \
             scripts/send_curated.py \
+            scripts/spidey_art_guard.py \
             scripts/discord_publish_bridge.py \
             spidey_geo.py
           python scripts/test_curated_format.py
 
-      - name: Criar artes e itens curados
+      - name: Criar cards com mídia da fonte e itens curados
         env:
           SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
         run: python scripts/auto_curate_pending.py
