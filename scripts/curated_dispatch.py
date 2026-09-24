@@ -28,7 +28,7 @@ def _github_headers():
         "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": "SpideyPokemonGO/1.0",
+        "User-Agent": "SpideyPokemonGO/2.0",
     }
 
 
@@ -64,14 +64,13 @@ def _put_json(path, payload):
 def gerar_persistir_e_enviar(payload, source_id):
     """Fila única de entrada do Spidey.
 
-    Este módulo não cria arte e não envia conteúdo para aprovação. Ele apenas
-    persiste o item detectado em queue/pending. O estágio seguinte usa a mídia
-    real da fonte, valida a imagem e monta o card com identidade discreta do
-    Spidey antes de enviar para o Discord.
+    Este módulo não cria a arte final e não envia direto ao Discord. Ele apenas
+    persiste a novidade detectada em queue/pending. O estágio seguinte faz a
+    curadoria editorial e monta a peça conforme o padrão oficial
+    `spidey-premium-v1`.
 
-    O valor de status `aguardando_arte_chatgpt` é mantido temporariamente como
-    chave de compatibilidade com itens e automações já existentes. A etapa
-    editorial oficial é `aguardando_curadoria_midia`.
+    Itens antigos com `aguardando_arte_chatgpt` continuam sendo aceitos pelo
+    auto-curador para compatibilidade; novos itens entram com o estado correto.
     """
     titulo = str(payload.get("titulo") or "📰 NOTÍCIA • Pokémon GO").strip()
     mensagem = str(payload.get("mensagem") or "").strip()
@@ -83,10 +82,11 @@ def gerar_persistir_e_enviar(payload, source_id):
         "titulo": titulo,
         "mensagem": mensagem,
         "_source_id": str(source_id),
-        "status": "aguardando_arte_chatgpt",
-        "etapa_editorial": "aguardando_curadoria_midia",
-        "pipeline": "source_media_spidey",
-        "media_policy": str(payload.get("media_policy") or "source_first"),
+        "status": "aguardando_curadoria_premium",
+        "etapa_editorial": "aguardando_curadoria_premium",
+        "pipeline": "spidey_premium_editorial",
+        "art_standard_version": "spidey-premium-v1",
+        "media_policy": str(payload.get("media_policy") or "premium_editorial"),
         "arte_obrigatoria": True,
         "arte_padrao_spidey": True,
         "usar_logo_oficial": True,
@@ -99,7 +99,7 @@ def gerar_persistir_e_enviar(payload, source_id):
     criado = _put_json(path, item)
     return {
         "status": "enfileirado" if criado else "ja_enfileirado",
-        "etapa": "aguardando_curadoria_midia",
+        "etapa": "aguardando_curadoria_premium",
         "queue_path": path,
         "arte": False,
         "discord": False,
