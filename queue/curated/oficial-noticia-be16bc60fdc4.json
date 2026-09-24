@@ -8,9 +8,11 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "pending",
+  "status": "sent",
   "_source_id": "oficial-https://pokemongo.com/pt_BR/news/pokemon-x-adidas-2026",
   "_source_image": "https://pbs.twimg.com/media/HS-PkQ7XAAACYY7.jpg?name=orig",
   "created_at_utc": "2026-09-24T14:59:09.577990+00:00",
-  "curated_at_utc": "2026-09-24T15:30:24.262001+00:00"
+  "curated_at_utc": "2026-09-24T15:30:24.262001+00:00",
+  "discord_approval_id": "1552706868231802890",
+  "sent_at_utc": "2026-09-24T15:42:46.257641+00:00"
 }
