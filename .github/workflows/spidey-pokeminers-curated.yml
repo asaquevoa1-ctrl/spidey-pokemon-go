@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "2,17,32,47 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/pokeminers_curated_monitor.py"
+      - "scripts/curated_dispatch.py"
+      - ".github/workflows/spidey-pokeminers-curated.yml"
 
 permissions:
   contents: write
