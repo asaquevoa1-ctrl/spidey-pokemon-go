@@ -1,0 +1,35 @@
+{
+  "reference_timezone": "America/Sao_Paulo",
+  "display_title": "🇧🇷 HORÁRIOS DE BRASÍLIA",
+  "rules": {
+    "calculate_from_event_date": true,
+    "respect_daylight_saving": true,
+    "show_local_event_window": true,
+    "group_by_brasilia_date": true,
+    "show_next_day_separator": true,
+    "avoid_term_timeline": true,
+    "coordinate_format": "lat,lon"
+  },
+  "points": [
+    {"order":1,"flag":"🇰🇮","name":"Kiritimati, Kiribati","timezone":"Pacific/Kiritimati","lat":1.987149,"lon":-157.477137},
+    {"order":2,"flag":"🇳🇿","name":"Auckland, Nova Zelândia","timezone":"Pacific/Auckland","lat":-36.852095,"lon":174.763180},
+    {"order":3,"flag":"🇦🇺","name":"Sydney, Austrália","timezone":"Australia/Sydney","lat":-33.866173,"lon":151.205945},
+    {"order":4,"flag":"🇯🇵","name":"Shinjuku, Japão","timezone":"Asia/Tokyo","lat":35.688950,"lon":139.690540},
+    {"order":5,"flag":"🇸🇬","name":"Singapura","timezone":"Asia/Singapore","lat":1.292400,"lon":103.847600},
+    {"order":6,"flag":"🇮🇳","name":"Chennai, Índia","timezone":"Asia/Kolkata","lat":13.040300,"lon":80.266600},
+    {"order":7,"flag":"🇦🇪","name":"Dubai, Emirados Árabes","timezone":"Asia/Dubai","lat":25.076750,"lon":55.132940},
+    {"order":8,"flag":"🇹🇷","name":"Istambul, Turquia","timezone":"Europe/Istanbul","lat":41.008200,"lon":28.978400},
+    {"order":9,"flag":"🇪🇸","name":"Zaragoza, Espanha","timezone":"Europe/Madrid","lat":41.661609,"lon":-0.894640},
+    {"order":10,"flag":"🇬🇧","name":"Londres, Reino Unido","timezone":"Europe/London","lat":51.501000,"lon":-0.124600},
+    {"order":11,"flag":"🇨🇻","name":"Praia, Cabo Verde","timezone":"Atlantic/Cape_Verde","lat":14.910725,"lon":-23.527823},
+    {"order":12,"flag":"🇧🇷","name":"Fernando de Noronha, Brasil","timezone":"America/Noronha","lat":-3.840100,"lon":-32.411810},
+    {"order":13,"flag":"🇧🇷","name":"Ibirapuera, São Paulo","timezone":"America/Sao_Paulo","lat":-23.584171,"lon":-46.660725},
+    {"order":14,"flag":"🇺🇸","name":"Central Park, Nova York","timezone":"America/New_York","lat":40.780300,"lon":-73.963000},
+    {"order":15,"flag":"🇺🇸","name":"Chicago, EUA","timezone":"America/Chicago","lat":41.898659,"lon":-87.623077},
+    {"order":16,"flag":"🇺🇸","name":"Denver, EUA","timezone":"America/Denver","lat":39.739200,"lon":-104.990300},
+    {"order":17,"flag":"🇺🇸","name":"Pier 39, São Francisco","timezone":"America/Los_Angeles","lat":37.809500,"lon":-122.410100},
+    {"order":18,"flag":"🇺🇸","name":"Anchorage, Alasca","timezone":"America/Anchorage","lat":61.217019,"lon":-149.891609},
+    {"order":19,"flag":"🇺🇸","name":"Honolulu, Havaí","timezone":"Pacific/Honolulu","lat":21.265800,"lon":-157.821300},
+    {"order":20,"flag":"🇦🇸","name":"Pago Pago, Samoa Americana","timezone":"Pacific/Pago_Pago","lat":-14.277739,"lon":-170.688512}
+  ]
+}
