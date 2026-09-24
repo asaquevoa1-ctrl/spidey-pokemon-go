@@ -20,7 +20,6 @@ jobs:
       POKEMINERS_CHANNEL_ID: "1550962794814373898"
       GITHUB_TOKEN: ${{ github.token }}
       GITHUB_REPOSITORY: ${{ github.repository }}
-      SPIDEY_BASE: "https://spidey-pokemon-go.onrender.com"
       POKEMINERS_STATE_FILE: "last_pokeminers.txt"
     steps:
       - uses: actions/checkout@v5
@@ -28,8 +27,11 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Verificar PokeMiners e preparar artes curadas
-        run: python scripts/pokeminers_curated_monitor.py
+      - name: Preparar Python
+        run: python -m pip install --quiet requests
+
+      - name: Verificar PokeMiners e enfileirar conteúdo curado
+        run: python -m scripts.pokeminers_curated_monitor
 
       - name: Salvar antirrepetição
         if: always()
