@@ -1,0 +1,16 @@
+{
+  "titulo": "📅 G47IX • EVENTO",
+  "mensagem": "Due to the projected severity of the incoming storm, the City Safari Boston event will be rescheduled to a later date. \n\nhttps://pokemongo.com/news/city-safari-boston-update\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2103111724849139982",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2103111724849139982",
+  "status": "aguardando_arte_chatgpt",
+  "pipeline": "chatgpt_spidey_oficial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-24T15:11:09.444036+00:00"
+}
