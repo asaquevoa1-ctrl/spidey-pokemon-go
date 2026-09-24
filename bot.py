@@ -266,8 +266,8 @@ def _preparar_conteudo(dados):
     if not mensagem_original:
         raise ValueError("Mensagem vazia")
 
-    # Notícias oficiais detectadas pelo PokeMiners devem chegar limpas e com arte.
-    # O link continua servindo para a detecção na origem, mas não é exibido no card.
+    # Links de notícia do PokeMiners são limpos, mas a arte é preparada
+    # ANTES deste endpoint pela fila curada; o Render nunca cria fallback.
     if "OFICIAL" in str(titulo).upper() and "POKEMINERS" in mensagem_original.upper():
         mensagem_original = re.sub(
             r"🔗\s*Fonte oficial:\s*https?://\S+",
@@ -277,9 +277,6 @@ def _preparar_conteudo(dados):
         )
         dados = dict(dados)
         dados["url"] = None
-        dados["gerar_arte"] = True
-        dados["usar_premium"] = False
-        dados["permitir_fallback"] = True
 
     coordenadas = _coordenadas_explicitas(dados.get("coordenadas"))
     if not coordenadas:
@@ -481,6 +478,23 @@ def enviar():
         "G47IX" in conteudo["titulo"].upper(),
     )
 
+    # REGRA DEFINITIVA DE ARTE: nada entra em aprovação se a arte final
+    # ainda não estiver persistida no repositório do Spidey. Isso elimina
+    # fallback, regeneração no Render e caminhos visuais paralelos.
+    if exige_aprovacao:
+        imagem_final = str(dados.get("imagem_url") or "").strip()
+        arte_padrao = bool(dados.get("arte_padrao_spidey", False))
+        origem_ok = imagem_final.startswith(
+            "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"
+        )
+        if not (arte_padrao and origem_ok and conteudo["modo_arte"] == "fornecida"):
+            return jsonify({
+                "status": "aguardando_arte_curada",
+                "etapa": "bloqueado_antes_da_aprovacao",
+                "arte": False,
+                "motivo": "A arte final precisa ser produzida no padrão Spidey e persistida antes do Discord.",
+            }), 409
+
     if exige_aprovacao:
         segredo = _segredo_aprovacao()
         if not segredo:
@@ -498,6 +512,7 @@ def enviar():
                 "usar_premium": bool(dados.get("usar_premium", True)),
                 "permitir_fallback": bool(dados.get("permitir_fallback", False)),
                 "imagem_url": conteudo.get("imagem_url"),
+                "arte_padrao_spidey": bool(dados.get("arte_padrao_spidey", False)),
             },
             segredo,
         )
@@ -559,6 +574,19 @@ def aprovar():
         return _html_resultado("Já processado", "Esta publicação já recebeu uma decisão.")
 
     conteudo = _preparar_conteudo(dados)
+
+    # Aprovação reutiliza EXATAMENTE a arte persistida que foi vista no Discord.
+    imagem_final = str(dados.get("imagem_url") or "").strip()
+    origem_ok = imagem_final.startswith(
+        "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"
+    )
+    if not (origem_ok and conteudo["modo_arte"] == "fornecida"):
+        return _html_resultado(
+            "Arte fora do fluxo curado",
+            "Esta entrada foi criada por uma rota antiga e não será publicada. Aguarde a versão corrigida no padrão Spidey.",
+            "#ffb84d",
+        ), 409
+
     if bool(dados.get("gerar_arte")) and not conteudo["imagem_bytes"]:
         return _html_resultado(
             "Arte indisponível",

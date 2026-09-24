@@ -263,6 +263,7 @@ def payload_spidey(data):
         "gerar_gpx": bool(data.get("gerar_gpx", True)),
         "gpx_nome": data.get("gpx_nome", "spidey-evento.gpx"),
         "gerar_arte": False,
+        "arte_padrao_spidey": True,
         "aprovar": True,
     }
 
