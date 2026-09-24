@@ -1,0 +1,45 @@
+name: Spidey - G47IX curado
+
+on:
+  schedule:
+    - cron: "12,27,42,57 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-g47ix-curated
+  cancel-in-progress: false
+
+jobs:
+  monitorar:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      SPIDEY_BASE: "https://spidey-pokemon-go.onrender.com"
+      G47IX_STATE_FILE: "last_g47ix.txt"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Verificar G47IX e preparar arte curada
+        run: python scripts/g47ix_curated_monitor.py
+
+      - name: Salvar antirrepetição
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- last_g47ix.txt; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add last_g47ix.txt
+          git commit -m "Spidey: atualiza ultima publicacao G47IX curada"
+          git pull --rebase origin main
+          git push origin HEAD:main
