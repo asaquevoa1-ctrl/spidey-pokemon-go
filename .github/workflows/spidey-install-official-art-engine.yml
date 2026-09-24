@@ -20,6 +20,12 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Reconstruir logo oficial
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 --decode assets/spidey-logo-oficial.b64 > assets/spidey-logo-oficial.jpg
+
       - name: Aplicar motor oficial
         run: python scripts/patch_official_art_engine.py
 
@@ -44,11 +50,11 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add bot.py premium_art.py
+          git add assets/spidey-logo-oficial.jpg bot.py premium_art.py
           if git diff --cached --quiet; then
             echo "Motor oficial ja aplicado."
             exit 0
           fi
-          git commit -m "Spidey: instalar motor visual oficial sem fallback"
+          git commit -m "Spidey: instalar motor visual oficial e logo binario"
           git pull --rebase origin main
           git push origin HEAD:main
