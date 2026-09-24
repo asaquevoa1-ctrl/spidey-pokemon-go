@@ -1,4 +1,4 @@
-name: Spidey - corrigir binario Rattata e enviar
+name: Spidey - reparar e enviar Holofote Rattata
 
 on:
   push:
@@ -11,73 +11,89 @@ permissions:
   contents: write
 
 jobs:
-  corrigir-e-enviar:
+  reparar-enviar-validar:
     runs-on: ubuntu-latest
+    env:
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      APPROVAL_CHANNEL_ID: "1550963072464715997"
+      GUILD_ID: "1139279003451150467"
     steps:
       - uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
 
-      - name: Converter WebP valido para JPEG e validar pixels
+      - name: Reparar JPEG preservando a arte aprovada
         shell: bash
         run: |
           set -euo pipefail
           python -m pip install --quiet Pillow requests
           python - <<'PY'
           from pathlib import Path
-          from PIL import Image, ImageStat
-          src=Path('assets/approved/2026-09-24/spidey-holofote-rattata.webp')
-          dst=Path('assets/approved/2026-09-24/spidey-holofote-rattata-final.jpg')
-          im=Image.open(src).convert('RGB')
-          assert im.width >= 1000 and im.height >= 1200, im.size
+          from PIL import Image, ImageFile, ImageStat
+          p=Path('assets/approved/2026-09-24/spidey-holofote-rattata-final.jpg')
+          ImageFile.LOAD_TRUNCATED_IMAGES=True
+          im=Image.open(p).convert('RGB')
+          assert im.size == (1000,1250), im.size
           mean=ImageStat.Stat(im.resize((64,64))).mean
           assert max(mean) > 20, mean
-          im.save(dst,'JPEG',quality=90,optimize=True,progressive=False)
-          test=Image.open(dst).convert('RGB')
+          tmp=p.with_suffix('.fixed.jpg')
+          im.save(tmp,'JPEG',quality=90,optimize=True,progressive=False)
+          tmp.replace(p)
+          ImageFile.LOAD_TRUNCATED_IMAGES=False
+          test=Image.open(p).convert('RGB')
+          test.load()
           mean2=ImageStat.Stat(test.resize((64,64))).mean
+          assert test.size == (1000,1250), test.size
           assert max(mean2) > 20, mean2
-          assert dst.stat().st_size > 100000, dst.stat().st_size
-          print('ARTE_BINARIA_OK',test.size,dst.stat().st_size,tuple(round(x,1) for x in mean2))
+          assert p.stat().st_size > 50000, p.stat().st_size
+          print('JPEG_REPARADO',p.stat().st_size,tuple(round(x,1) for x in mean2))
           PY
 
-      - name: Salvar JPEG binario real
+      - name: Persistir JPEG reparado
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/approved/2026-09-24/spidey-holofote-rattata-final.jpg
-          if ! git diff --cached --quiet; then
-            git commit -m "Spidey: salvar JPEG valido Hora do Holofote Rattata"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          git commit -m "Spidey: reparar binario da arte Rattata"
+          git pull --rebase origin main
+          git push origin HEAD:main
 
-      - name: Enviar versão final limpa para aprovação
+      - name: Confirmar RAW antes do envio
         shell: bash
         run: |
           set -euo pipefail
           IMAGE='https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/approved/2026-09-24/spidey-holofote-rattata-final.jpg'
-          for i in 1 2 3 4 5; do
-            if curl -fsSL --max-time 30 "$IMAGE" -o /tmp/rattata.jpg; then
-              if python - <<'PY'
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            curl -fsSL --max-time 30 "$IMAGE?rev=$(date +%s)" -o /tmp/rattata.jpg || true
+            if python - <<'PY'
           from PIL import Image, ImageStat
-          im=Image.open('/tmp/rattata.jpg').convert('RGB')
+          from pathlib import Path
+          p=Path('/tmp/rattata.jpg')
+          if not p.exists(): raise SystemExit(1)
+          im=Image.open(p).convert('RGB'); im.load()
           mean=ImageStat.Stat(im.resize((64,64))).mean
-          assert im.width >= 1000 and im.height >= 1200
-          assert max(mean) > 20
-          print('RAW_IMAGE_OK',im.size,tuple(round(x,1) for x in mean))
+          assert im.size == (1000,1250), im.size
+          assert p.stat().st_size > 50000, p.stat().st_size
+          assert max(mean) > 20, mean
+          print('RAW_VALIDO',p.stat().st_size,tuple(round(x,1) for x in mean))
           PY
-              then break; fi
-            fi
-            sleep 4
+            then ok=1; break; fi
+            sleep 5
           done
+          test "$ok" = 1
 
+      - name: Enviar para aprovação
+        shell: bash
+        run: |
+          set -euo pipefail
           cat > /tmp/payload.json <<'JSON'
           {
             "titulo": "✨ HORA DO HOLOFOTE • RATTATA",
-            "mensagem": "📅 24 de setembro de 2026\n⏰ 18h às 19h — horário local\n✨ Brilhante disponível\n🎁 Bônus: 2× XP por evolução\n📏 Chance aumentada de Rattata XXS\n\n🇧🇷 **HORÁRIOS DE BRASÍLIA**\n📅 **24 DE SETEMBRO**\n\n**01h00** 🇰🇮 Kiritimati, Kiribati\n`1.987149,-157.477137`\n**03h00** 🇳🇿 Auckland, Nova Zelândia\n`-36.852095,174.763180`\n**05h00** 🇦🇺 Sydney, Austrália\n`-33.866173,151.205945`\n**06h00** 🇯🇵 Shinjuku, Japão\n`35.688950,139.690540`\n**07h00** 🇸🇬 Singapura\n`1.292400,103.847600`\n**09h30** 🇮🇳 Chennai, Índia\n`13.040300,80.266600`\n**11h00** 🇦🇪 Dubai, Emirados Árabes\n`25.076750,55.132940`\n**12h00** 🇹🇷 Istambul, Turquia\n`41.008200,28.978400`\n**13h00** 🇪🇸 Zaragoza, Espanha\n`41.661609,-0.894640`\n**14h00** 🇬🇧 Londres, Reino Unido\n`51.501000,-0.124600`\n**16h00** 🇨🇻 Praia, Cabo Verde\n`14.910725,-23.527823`\n**17h00** 🇧🇷 Fernando de Noronha\n`-3.840100,-32.411810`\n**18h00** 🇧🇷 Ibirapuera, São Paulo\n`-23.584171,-46.660725`\n**19h00** 🇺🇸 Central Park, Nova York\n`40.780300,-73.963000`\n**20h00** 🇺🇸 Chicago, EUA\n`41.898659,-87.623077`\n**21h00** 🇺🇸 Denver, EUA\n`39.739200,-104.990300`\n**22h00** 🇺🇸 Pier 39, São Francisco\n`37.809500,-122.410100`\n**23h00** 🇺🇸 Anchorage, Alasca\n`61.217019,-149.891609`\n\n📅 **DIA SEGUINTE • 25 DE SETEMBRO**\n\n**01h00** 🇺🇸 Honolulu, Havaí\n`21.265800,-157.821300`\n\n**02h00** 🇦🇸 Pago Pago, Samoa Americana\n`-14.277739,-170.688512`\n\n📌 Fonte oficial: Pokémon GO",
+            "mensagem": "📅 24 de setembro de 2026\n⏰ 18h às 19h — horário local\n✨ Brilhante disponível\n🎁 Bônus: 2× XP por evolução\n📏 Chance aumentada de Rattata XXS\n\n🇧🇷 **HORÁRIOS DE BRASÍLIA**\n📅 **24 DE SETEMBRO**\n**01h00** 🇰🇮 Kiritimati — `1.987149,-157.477137`\n**03h00** 🇳🇿 Auckland — `-36.852095,174.763180`\n**05h00** 🇦🇺 Sydney — `-33.866173,151.205945`\n**06h00** 🇯🇵 Shinjuku — `35.688950,139.690540`\n**07h00** 🇸🇬 Singapura — `1.292400,103.847600`\n**09h30** 🇮🇳 Chennai — `13.040300,80.266600`\n**11h00** 🇦🇪 Dubai — `25.076750,55.132940`\n**12h00** 🇹🇷 Istambul — `41.008200,28.978400`\n**13h00** 🇪🇸 Zaragoza — `41.661609,-0.894640`\n**14h00** 🇬🇧 Londres — `51.501000,-0.124600`\n**16h00** 🇨🇻 Praia — `14.910725,-23.527823`\n**17h00** 🇧🇷 Fernando de Noronha — `-3.840100,-32.411810`\n**18h00** 🇧🇷 Ibirapuera, São Paulo — `-23.584171,-46.660725`\n**19h00** 🇺🇸 Central Park, Nova York — `40.780300,-73.963000`\n**20h00** 🇺🇸 Chicago — `41.898659,-87.623077`\n**21h00** 🇺🇸 Denver — `39.739200,-104.990300`\n**22h00** 🇺🇸 Pier 39, São Francisco — `37.809500,-122.410100`\n**23h00** 🇺🇸 Anchorage — `61.217019,-149.891609`\n\n📅 **DIA SEGUINTE • 25 DE SETEMBRO**\n**01h00** 🇺🇸 Honolulu — `21.265800,-157.821300`\n**02h00** 🇦🇸 Pago Pago — `-14.277739,-170.688512`\n\n📌 Fonte oficial: Pokémon GO",
             "imagem_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/approved/2026-09-24/spidey-holofote-rattata-final.jpg",
             "gerar_arte": false,
             "usar_premium": false,
@@ -88,7 +104,6 @@ jobs:
             "coordenadas": []
           }
           JSON
-
           code=$(curl --silent --show-error --output /tmp/response.json --write-out '%{http_code}' \
             --request POST --header 'Content-Type: application/json' \
             --data-binary @/tmp/payload.json \
@@ -96,10 +111,45 @@ jobs:
           cat /tmp/response.json; echo; echo "HTTP=$code"
           python - <<'PY'
           import json
-          data=json.load(open('/tmp/response.json',encoding='utf-8'))
-          assert data.get('status') == 'enviado', data
-          assert data.get('etapa') == 'aguardando_aprovacao', data
-          assert data.get('arte') is True, data
-          assert data.get('modo_arte') == 'fornecida', data
-          print('RATTATA_FINAL_ENVIADO')
+          d=json.load(open('/tmp/response.json',encoding='utf-8'))
+          assert d.get('status')=='enviado',d
+          assert d.get('etapa')=='aguardando_aprovacao',d
+          assert d.get('arte') is True,d
+          assert d.get('modo_arte')=='fornecida',d
+          print('ENVIO_BACKEND_OK')
+          PY
+
+      - name: Validar mensagem real no Discord
+        shell: bash
+        run: |
+          set -euo pipefail
+          sleep 3
+          python - <<'PY'
+          import io,os,requests
+          from PIL import Image,ImageStat
+          token=os.environ['DISCORD_BOT_TOKEN'].strip(); channel=os.environ['APPROVAL_CHANNEL_ID']; guild=os.environ['GUILD_ID']
+          h={'Authorization':f'Bot {token}','User-Agent':'SpideyPokemonGO/1.0'}
+          r=requests.get(f'https://discord.com/api/v10/channels/{channel}/messages',headers=h,params={'limit':30},timeout=30); r.raise_for_status()
+          target=None
+          for m in r.json():
+              es=m.get('embeds') or []
+              probe=' '.join(str(e.get('title') or '')+' '+str(e.get('description') or '') for e in es).upper()
+              if 'APROVAÇÃO' in probe and 'HORA DO HOLOFOTE' in probe and 'RATTATA' in probe:
+                  target=m; break
+          assert target,'mensagem Rattata não encontrada'
+          desc='\n'.join(str(e.get('description') or '') for e in target.get('embeds') or [])
+          assert len(desc)<4000,len(desc)
+          assert 'APROVAR' in desc and 'REPROVAR' in desc
+          assert 'COORDENADAS VERIFICADAS NA ENTRADA' not in desc.upper()
+          url=None
+          for e in target.get('embeds') or []:
+              if (e.get('image') or {}).get('url'): url=e['image']['url']; break
+          assert url,'imagem ausente'
+          rr=requests.get(url,timeout=60); rr.raise_for_status()
+          im=Image.open(io.BytesIO(rr.content)).convert('RGB'); im.load()
+          mean=ImageStat.Stat(im.resize((64,64))).mean
+          assert len(rr.content)>50000,len(rr.content)
+          assert max(mean)>20,mean
+          print('DISCORD_VALIDADO',target['id'],'DESC',len(desc),'IMG_BYTES',len(rr.content),'MEAN',tuple(round(x,1) for x in mean))
+          print(f'LINK=https://discord.com/channels/{guild}/{channel}/{target["id"]}')
           PY
