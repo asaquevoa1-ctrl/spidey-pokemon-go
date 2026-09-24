@@ -67,7 +67,6 @@ def english(t):
 
 def translate(t):
     if not english(t): return t
-    # First try Google's public endpoint; GitHub runners can occasionally be throttled.
     try:
         r=get("https://translate.googleapis.com/translate_a/single",
               params={"client":"gtx","sl":"auto","tl":"pt","dt":"t","q":t},timeout=20)
@@ -75,7 +74,6 @@ def translate(t):
         out="".join(x[0] for x in (p[0] or []) if isinstance(x,list) and x and x[0]).strip()
         if out and out!=t: return out
     except Exception as e: print("TRADUCAO_GOOGLE:",e)
-    # Free fallback: no API key and no paid service.
     try:
         r=get("https://api.mymemory.translated.net/get",
               params={"q":t[:4500],"langpair":"en|pt-BR"},timeout=25)
@@ -92,14 +90,12 @@ def urls(t):
     return [u.rstrip(".,") for u in re.findall(r"https?://[^\s<>\]\)]+",str(t or ""))]
 
 def pogo_url(u):
-    u=str(u or "").strip().replace("/pt_BR/","/pt-BR/")
-    return u
+    return str(u or "").strip().replace("/pt_BR/","/pt-BR/")
 
 def page_candidates(item):
     out=[pogo_url(u) for u in urls(item.get("mensagem")) if "pokemongo.com/" in u]
     u=pogo_url(item.get("url"))
     if "pokemongo.com/" in u: out.append(u)
-    # English article is a safe metadata/image fallback when a locale route is unavailable.
     for base in list(out):
         if "/pt-BR/" in base: out.append(base.replace("/pt-BR/","/en/"))
         elif "pokemongo.com/news/" in base: out.append(base.replace("pokemongo.com/news/","pokemongo.com/en/news/"))
@@ -129,11 +125,22 @@ def fx_images(item):
     except Exception as e: print("FX:",e)
     return out
 
+def matching_social_images(item):
+    if kind(item)!="OFICIAL": return []
+    for p in sorted(PENDING.glob("*/*.json")):
+        try: other=json.loads(p.read_text(encoding="utf-8"))
+        except Exception: continue
+        if kind(other)=="G47IX" and duplicate(item,other):
+            imgs=fx_images(other)
+            if imgs: return imgs
+    return []
+
 def image_candidates(item):
     out=[]
     for u in page_candidates(item):
         try: out+=page(u).images
         except Exception as e: print("PAGE:",u,e)
+    if kind(item)=="OFICIAL": out+=matching_social_images(item)
     if kind(item)=="G47IX": out+=fx_images(item)
     for k in ("image_url","imagem_url","media_url","thumbnail_url"):
         if item.get(k): out.append(str(item[k]))
