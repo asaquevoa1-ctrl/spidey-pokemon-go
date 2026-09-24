@@ -2,6 +2,13 @@ name: Spidey - SPS curado
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sps_curated_monitor.py"
+      - "scripts/discord_source_monitor.py"
+      - "scripts/curated_dispatch.py"
+      - ".github/workflows/spidey-sps-curated.yml"
   schedule:
     - cron: "4,19,34,49 * * * *"
 
