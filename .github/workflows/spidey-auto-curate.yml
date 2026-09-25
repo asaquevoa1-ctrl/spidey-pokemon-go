@@ -6,7 +6,9 @@ on:
       - main
     paths:
       - "queue/pending/**"
+      - "queue/curated/**"
       - "scripts/auto_curate_pending.py"
+      - "scripts/revise_rejected_art.py"
       - "scripts/curated_dispatch.py"
       - "scripts/official_curated_monitor.py"
       - "scripts/g47ix_curated_monitor.py"
@@ -45,6 +47,7 @@ jobs:
         run: |
           python -m py_compile \
             scripts/auto_curate_pending.py \
+            scripts/revise_rejected_art.py \
             scripts/curated_dispatch.py \
             scripts/official_curated_monitor.py \
             scripts/g47ix_curated_monitor.py \
@@ -60,6 +63,11 @@ jobs:
         env:
           SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
         run: python scripts/auto_curate_pending.py
+
+      - name: Revisar automaticamente artes reprovadas
+        env:
+          SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
+        run: python scripts/revise_rejected_art.py
 
       - name: Gravar resultado
         shell: bash
