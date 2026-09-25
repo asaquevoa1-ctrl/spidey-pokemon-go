@@ -7,7 +7,10 @@ from pathlib import Path
 
 import requests
 
-from send_curated import _baixar_arte
+try:
+    from .send_curated import _baixar_arte
+except ImportError:
+    from send_curated import _baixar_arte
 
 APPROVAL_CHANNEL_ID = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").strip()
 PUBLIC_CHANNEL_ID = os.getenv("PUBLIC_CHANNEL_ID", "1550963136519999658").strip()
