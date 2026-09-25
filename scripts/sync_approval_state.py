@@ -6,7 +6,10 @@ from pathlib import Path
 
 import requests
 
-from send_curated import _baixar_arte
+try:
+    from .send_curated import _baixar_arte
+except ImportError:
+    from send_curated import _baixar_arte
 
 QUEUE = Path("queue/curated")
 CHANNEL = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").strip()
@@ -98,13 +101,14 @@ def _build_approval_binding(data, message, message_id, now):
     if current_hash != approval_hash:
         raise ValueError("arte atual não é o arquivo exibido na mensagem aprovada")
 
+    approved_at = str(data.get("approved_at_utc") or "").strip() or now
     return {
         "approval_binding_version": BINDING_VERSION,
         "approved_revision": _current_revision(data),
         "approved_image_url": image_url,
         "approved_discord_approval_id": str(message_id),
         "approved_art_sha256": approval_hash,
-        "approved_at_utc": now,
+        "approved_at_utc": approved_at,
     }
 
 
@@ -183,10 +187,13 @@ def main():
                         dirty = True
 
         if new_status:
-            if data.get("status") != new_status:
+            status_changed = data.get("status") != new_status
+            if status_changed:
                 data["status"] = new_status
                 dirty = True
-            data["decision_at_utc"] = now
+            if status_changed or not data.get("decision_at_utc"):
+                data["decision_at_utc"] = now
+                dirty = True
             reactions = {"approved": yes, "rejected": no}
             if data.get("discord_reactions") != reactions:
                 data["discord_reactions"] = reactions
