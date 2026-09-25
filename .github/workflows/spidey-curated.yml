@@ -6,6 +6,7 @@ on:
     paths:
       - "queue/curated/**"
       - "scripts/send_curated.py"
+      - "scripts/send_curated_resilient.py"
       - "scripts/spidey_art_guard.py"
       - "scripts/test_curated_format.py"
       - ".github/workflows/spidey-curated.yml"
@@ -34,7 +35,7 @@ jobs:
         run: python -m pip install --quiet requests pillow
 
       - name: Validar codigo
-        run: python -m py_compile scripts/send_curated.py scripts/spidey_art_guard.py scripts/test_curated_format.py spidey_geo.py
+        run: python -m py_compile scripts/send_curated.py scripts/send_curated_resilient.py scripts/spidey_art_guard.py scripts/test_curated_format.py spidey_geo.py
 
       - name: Testar fusos e monetizacao
         run: python scripts/test_curated_format.py
@@ -48,7 +49,7 @@ jobs:
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           APPROVAL_CHANNEL_ID: "1550963072464715997"
-        run: python scripts/send_curated.py
+        run: python scripts/send_curated_resilient.py
 
       - name: Gravar estado da fila
         if: always()
