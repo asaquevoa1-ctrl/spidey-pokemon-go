@@ -9,6 +9,7 @@ on:
       - "queue/curated/**"
       - "scripts/auto_curate_pending.py"
       - "scripts/gold_art_upgrade.py"
+      - "scripts/gold_source_fallback.py"
       - "scripts/revise_rejected_art.py"
       - "scripts/curated_dispatch.py"
       - "scripts/official_curated_monitor.py"
@@ -49,6 +50,7 @@ jobs:
           python -m py_compile \
             scripts/auto_curate_pending.py \
             scripts/gold_art_upgrade.py \
+            scripts/gold_source_fallback.py \
             scripts/revise_rejected_art.py \
             scripts/curated_dispatch.py \
             scripts/official_curated_monitor.py \
@@ -72,6 +74,11 @@ jobs:
           SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
           SPIDEY_IMAGE_MODEL: "gpt-image-2.5-sunburst"
         run: python scripts/gold_art_upgrade.py
+
+      - name: Aplicar fallback Gold full-bleed se a chave estiver ausente
+        env:
+          SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
+        run: python scripts/gold_source_fallback.py
 
       - name: Revisar somente legados ainda reprovados
         env:
