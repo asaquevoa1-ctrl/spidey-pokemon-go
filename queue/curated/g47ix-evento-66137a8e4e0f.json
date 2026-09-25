@@ -2,22 +2,20 @@
   "titulo": "📅 G47IX • EVENTO",
   "mensagem": "Devido à gravidade projetada da tempestade que se aproxima, o evento City Safari Boston será remarcado para uma data posterior.\n\nhttps://pokemongo.com/news/city-safari-boston-update\n\n📌 Fonte: G47IX",
   "source_url": "https://x.com/g47ix/status/2103111724849139982",
-  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/g47ix-evento-66137a8e4e0f.jpg",
+  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/g47ix-evento-66137a8e4e0f-r2.jpg",
   "source_verified": true,
   "coordenadas": [],
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "rejected_art",
+  "status": "pending",
   "_source_id": "g47ix-2103111724849139982",
   "_source_image": "https://pbs.twimg.com/media/HR5GDyBbwAAaGDa.jpg?name=orig",
   "created_at_utc": "2026-09-24T15:11:09.444036+00:00",
   "curated_at_utc": "2026-09-24T15:28:30.849371+00:00",
-  "discord_approval_id": "1552706846169759745",
-  "sent_at_utc": "2026-09-24T15:42:41.423378+00:00",
-  "needs_art_revision": true,
+  "needs_art_revision": false,
   "art_standard_version": "spidey-premium-v1",
-  "art_ready_for_review": false,
+  "art_ready_for_review": true,
   "art_rules": [
     "city_safari_pikachu_no_hat",
     "city_safari_eevee_safari_hat"
@@ -25,5 +23,18 @@
   "fact_checks": [
     "city_safari_boston_postponed_due_to_storm"
   ],
-  "rejection_note": "Reprovado por arte fora do padrão premium; regenerar com Pikachu sem chapéu e Eevee usando o chapéu de Safari."
+  "rejection_note": "Reprovado por arte fora do padrão premium; regenerar com Pikachu sem chapéu e Eevee usando o chapéu de Safari.",
+  "art_revision_history": [
+    {
+      "revision": 1,
+      "status": "rejected_art",
+      "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/g47ix-evento-66137a8e4e0f.jpg",
+      "discord_approval_id": "1552706846169759745",
+      "decision_at_utc": null,
+      "discord_reactions": null
+    }
+  ],
+  "art_revision": 2,
+  "art_revision_reason": "human_rejected",
+  "revised_at_utc": "2026-09-25T01:13:41.702539+00:00"
 }
