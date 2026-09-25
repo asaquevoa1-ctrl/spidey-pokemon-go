@@ -2,13 +2,13 @@
   "titulo": "🧪 SPIDEY • TESTE E2E",
   "mensagem": "TESTE E2E CONTROLADO — validação do pipeline Premium v1.\n\nEste item não é uma notícia real. Ele existe apenas para confirmar coleta, curadoria, arte, aprovação humana e publicação sem duplicidade.\n\n📌 Fonte: SPIDEY",
   "source_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go",
-  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/spidey-e2e-20260924-2126-r6.jpg",
+  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/spidey-e2e-20260924-2126-r7.jpg",
   "source_verified": true,
   "coordenadas": [],
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "rejected_art",
+  "status": "pending",
   "_source_id": "spidey-e2e-20260924-2126",
   "_source_image": "https://pbs.twimg.com/media/HS-PkQ7XAAACYY7.jpg?name=orig",
   "created_at_utc": "2026-09-25T00:26:00+00:00",
@@ -18,7 +18,7 @@
   "media_policy": "premium_editorial",
   "visual_mode": "premium_editorial",
   "visual_constraints": [],
-  "needs_art_revision": true,
+  "needs_art_revision": false,
   "art_revision_history": [
     {
       "revision": 1,
@@ -74,20 +74,25 @@
         "approved": 1,
         "rejected": 2
       }
+    },
+    {
+      "revision": 6,
+      "status": "rejected_art",
+      "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/spidey-e2e-20260924-2126-r6.jpg",
+      "discord_approval_id": "1553019617570459709",
+      "decision_at_utc": "2026-09-25T13:02:13.045550+00:00",
+      "discord_reactions": {
+        "approved": 1,
+        "rejected": 2
+      },
+      "art_generator_version": "premium-revision-v2",
+      "art_revision_style": "cinematic"
     }
   ],
-  "art_revision": 6,
+  "art_revision": 7,
   "art_revision_reason": "human_rejected",
-  "revised_at_utc": "2026-09-25T12:01:13.187702+00:00",
+  "revised_at_utc": "2026-09-25T13:19:21.979709+00:00",
   "art_generator_version": "premium-revision-v2",
-  "art_revision_style": "cinematic",
-  "art_refreshed_at_utc": "2026-09-25T12:08:59.097688+00:00",
-  "discord_approval_id": "1553019617570459709",
-  "discord_reactions_ready": true,
-  "sent_at_utc": "2026-09-25T12:25:32.295029+00:00",
-  "decision_at_utc": "2026-09-25T13:02:13.045550+00:00",
-  "discord_reactions": {
-    "approved": 1,
-    "rejected": 2
-  }
+  "art_revision_style": "editorial_split",
+  "art_refreshed_at_utc": "2026-09-25T12:08:59.097688+00:00"
 }
