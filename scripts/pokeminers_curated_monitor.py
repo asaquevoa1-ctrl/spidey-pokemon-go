@@ -17,6 +17,12 @@ MAX_ENVIOS = 5
 MAX_PAGINAS = 20
 LIMITE_PAGINA = 100
 
+NEWS_MARKERS = (
+    "@news updates",
+    "found a new news item on pokemongolive",
+    "pokemongo.com/news",
+)
+
 
 def full_text(msg):
     parts = []
@@ -54,20 +60,73 @@ def first_image_url(msg):
 def is_pokeminers(msg, text):
     author = msg.get("author") or {}
     probe = " ".join((str(author.get("username") or ""), str(author.get("global_name") or ""), text)).lower()
-    return any(x in probe for x in ("pokeminers", "miner-bot", "@apk updates", "@forced updates", "@news updates", "@gamemaster updates", "@asset updates"))
+    return any(
+        x in probe
+        for x in (
+            "pokeminers",
+            "miner-bot",
+            "@apk updates",
+            "@forced updates",
+            "@news updates",
+            "@gamemaster updates",
+            "@asset updates",
+        )
+    )
+
+
+def is_news_item(text):
+    t = str(text or "").lower()
+    return any(marker in t for marker in NEWS_MARKERS)
+
+
+def extract_news(text):
+    compact = str(text or "").strip()
+    title_match = re.search(r"(?:^|\n)\s*Title:\s*(.+?)(?:\n|$)", compact, re.I)
+    title = title_match.group(1).strip() if title_match else ""
+
+    url_match = re.search(
+        r"https?://(?:www\.)?pokemongo\.com/(?:[A-Za-z]{2}(?:-[A-Za-z]{2})?/)?news/[^\s<>\]\)]+",
+        compact,
+        re.I,
+    )
+    url = url_match.group(0).rstrip(".,") if url_match else ""
+    return title, url
 
 
 def relevant(text):
+    if is_news_item(text):
+        return True
     t = text.lower()
-    return any(m in t for m in (
-        "api version", "forced update", "apk update", "@apk updates", "@forced updates",
-        "game master", "gamemaster", "master file", "asset update", "text update",
-        "remote config", "new version", "version changed", "datamine", "data mine",
-        "campfire apk", "apk roll-out", "apk rollout",
-    ))
+    return any(
+        m in t
+        for m in (
+            "api version",
+            "forced update",
+            "apk update",
+            "@apk updates",
+            "@forced updates",
+            "game master",
+            "gamemaster",
+            "master file",
+            "asset update",
+            "text update",
+            "remote config",
+            "new version",
+            "version changed",
+            "datamine",
+            "data mine",
+            "campfire apk",
+            "apk roll-out",
+            "apk rollout",
+        )
+    )
 
 
 def classify(text):
+    if is_news_item(text):
+        title, _ = extract_news(text)
+        return f"📰 {title}" if title else "📰 NOTÍCIA • Pokémon GO"
+
     t = text.lower()
     if "campfire" in t and "apk" in t:
         return "🔥 CAMPFIRE • NOVA VERSÃO"
@@ -82,24 +141,53 @@ def classify(text):
 
 def normalize(text):
     compact = re.sub(r"\n{3,}", "\n\n", text).strip()
-    forced = re.search(r"(?:api version changed.*?|forced update.*?)(\d+\.\d+\.\d+)\s*(?:->|→)\s*(\d+\.\d+\.\d+)", compact, re.I | re.S)
+
+    if is_news_item(compact):
+        title, url = extract_news(compact)
+        parts = [title or "Nova notícia oficial detectada pelo PokeMiners."]
+        if url:
+            parts.append(f"🔗 {url}")
+        return "\n\n".join(parts)
+
+    forced = re.search(
+        r"(?:api version changed.*?|forced update.*?)(\d+\.\d+\.\d+)\s*(?:->|→)\s*(\d+\.\d+\.\d+)",
+        compact,
+        re.I | re.S,
+    )
     if forced:
         old, new = forced.group(1), forced.group(2)
-        return f"O PokeMiners detectou uma atualização forçada da API do Pokémon GO.\n\n📦 Versão anterior: {old}\n🆕 Nova versão: {new}\n⚠️ Tipo: atualização forçada"
+        return (
+            "O PokeMiners detectou uma atualização forçada da API do Pokémon GO."
+            f"\n\n📦 Versão anterior: {old}\n🆕 Nova versão: {new}\n⚠️ Tipo: atualização forçada"
+        )
     campfire = re.search(r"Found a new Campfire APK on Google Play:\s*([0-9.]+)\s*\(([^)]+)\)", compact, re.I)
     if campfire:
         version, when = campfire.group(1), campfire.group(2)
-        return f"O PokeMiners detectou uma nova versão do Campfire na Google Play.\n\n📦 Versão: {version}\n🕒 Data informada: {when}\n📱 Plataforma: Android / Google Play"
-    rollout = re.search(r"A new Pokemon Go APK roll-out has started for Google Play, update date is now set to\s*([^\n]+)", compact, re.I)
+        return (
+            "O PokeMiners detectou uma nova versão do Campfire na Google Play."
+            f"\n\n📦 Versão: {version}\n🕒 Data informada: {when}\n📱 Plataforma: Android / Google Play"
+        )
+    rollout = re.search(
+        r"A new Pokemon Go APK roll-out has started for Google Play, update date is now set to\s*([^\n]+)",
+        compact,
+        re.I,
+    )
     if rollout:
-        return f"O PokeMiners detectou um novo rollout do APK do Pokémon GO na Google Play.\n\n🕒 Data informada: {rollout.group(1).strip()}\n📱 Plataforma: Android / Google Play"
+        return (
+            "O PokeMiners detectou um novo rollout do APK do Pokémon GO na Google Play."
+            f"\n\n🕒 Data informada: {rollout.group(1).strip()}\n📱 Plataforma: Android / Google Play"
+        )
     return "Nova informação detectada automaticamente no PokeMiners.\n\n" + compact[:3000]
 
 
 def discord_headers():
     if not TOKEN:
         raise RuntimeError("DISCORD_BOT_TOKEN ausente")
-    return {"Authorization": f"Bot {TOKEN}", "User-Agent": "SpideyPokemonGO/2.0", "Accept": "application/json"}
+    return {
+        "Authorization": f"Bot {TOKEN}",
+        "User-Agent": "SpideyPokemonGO/2.0",
+        "Accept": "application/json",
+    }
 
 
 def snowflake_datetime(message_id):
@@ -117,7 +205,12 @@ def buscar_novas(last, headers):
         params = {"limit": LIMITE_PAGINA}
         if after:
             params["after"] = after
-        r = requests.get(f"{DISCORD_API}/channels/{CHANNEL}/messages", headers=headers, params=params, timeout=30)
+        r = requests.get(
+            f"{DISCORD_API}/channels/{CHANNEL}/messages",
+            headers=headers,
+            params=params,
+            timeout=30,
+        )
         r.raise_for_status()
         lote = [m for m in r.json() if str(m.get("id") or "").isdigit()]
         if not lote:
@@ -131,9 +224,29 @@ def buscar_novas(last, headers):
         print(f"PokeMiners backlog: página {pagina} lida até {after}.", flush=True)
     else:
         raise RuntimeError("Backlog PokeMiners excedeu o limite de segurança; cursor não foi saltado.")
+
     # A API pode repetir bordas entre páginas; removemos por ID e preservamos ordem.
     unicos = {str(m["id"]): m for m in novas}
     return [unicos[k] for k in sorted(unicos, key=int)]
+
+
+def build_payload(msg, guild):
+    mid = str(msg["id"])
+    text = full_text(msg)
+    source_url = f"https://discord.com/channels/{guild}/{CHANNEL}/{mid}" if guild else None
+    _, official_news_url = extract_news(text) if is_news_item(text) else ("", "")
+
+    payload = {
+        "titulo": classify(text),
+        "mensagem": normalize(text) + "\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+        "url": official_news_url or source_url,
+        "source_channel_url": source_url,
+        "image_url": first_image_url(msg),
+        "gerar_gpx": False,
+        "aprovar": True,
+        "media_policy": "source_first",
+    }
+    return payload
 
 
 def main():
@@ -144,16 +257,28 @@ def main():
     guild = str(ch_data.get("guild_id") or "").strip()
     nome_canal = str(ch_data.get("name") or "(sem nome)")
 
-    latest_r = requests.get(f"{DISCORD_API}/channels/{CHANNEL}/messages", headers=headers, params={"limit": 1}, timeout=30)
+    latest_r = requests.get(
+        f"{DISCORD_API}/channels/{CHANNEL}/messages",
+        headers=headers,
+        params={"limit": 1},
+        timeout=30,
+    )
     latest_r.raise_for_status()
     latest_rows = latest_r.json()
     latest_id = str((latest_rows[0] if latest_rows else {}).get("id") or "").strip()
     latest_dt = snowflake_datetime(latest_id)
     age_h = (datetime.now(timezone.utc) - latest_dt).total_seconds() / 3600 if latest_dt else None
     age_txt = f"{age_h:.1f}h" if age_h is not None else "desconhecida"
-    print(f"PokeMiners origem: canal={nome_canal!r} id={CHANNEL} newest={latest_id or 'vazio'} idade={age_txt}", flush=True)
+    print(
+        f"PokeMiners origem: canal={nome_canal!r} id={CHANNEL} newest={latest_id or 'vazio'} idade={age_txt}",
+        flush=True,
+    )
     if age_h is not None and age_h > 24:
-        print(f"ALERTA POKEMINERS: canal sem mensagem nova há {age_h:.1f}h.", file=sys.stderr, flush=True)
+        print(
+            f"ALERTA POKEMINERS: canal sem mensagem nova há {age_h:.1f}h.",
+            file=sys.stderr,
+            flush=True,
+        )
 
     last = STATE.read_text(encoding="utf-8").strip() if STATE.exists() else ""
     if not last.isdigit():
@@ -176,6 +301,7 @@ def main():
     for msg in messages:
         if enviados >= MAX_ENVIOS:
             break
+
         mid = str(msg["id"])
         text = full_text(msg)
         examinados += 1
@@ -184,33 +310,21 @@ def main():
             checkpoint = max(checkpoint, int(mid))
             continue
 
-        low = text.lower()
-        if "@news updates" in low or "found a new news item on pokemongolive" in low or "pokemongo.com/news" in low:
-            checkpoint = max(checkpoint, int(mid))
-            continue
-
         if not relevant(text):
             checkpoint = max(checkpoint, int(mid))
             continue
 
-        source_url = f"https://discord.com/channels/{guild}/{CHANNEL}/{mid}" if guild else None
-        payload = {
-            "titulo": classify(text),
-            "mensagem": normalize(text) + "\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
-            "url": source_url,
-            "image_url": first_image_url(msg),
-            "gerar_gpx": False,
-            "aprovar": True,
-            "media_policy": "source_first",
-        }
+        payload = build_payload(msg, guild)
         try:
             result = gerar_persistir_e_enviar(payload, f"pokeminers-{mid}")
         except Exception:
             STATE.write_text(str(checkpoint) + "\n", encoding="utf-8")
             raise
+
         print(json.dumps(result, ensure_ascii=False))
         checkpoint = max(checkpoint, int(mid))
-        enviados += 1
+        if result.get("status") != "ja_enfileirado":
+            enviados += 1
 
     STATE.write_text(str(checkpoint) + "\n", encoding="utf-8")
     print(f"PokeMiners: examinados={examinados}; enfileirados={enviados}; cursor={checkpoint}.")
