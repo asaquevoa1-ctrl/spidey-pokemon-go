@@ -8,14 +8,14 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "pending",
+  "status": "blocked_art_standard",
   "_source_id": "g47ix-2103071687281434673",
   "_source_image": "https://pbs.twimg.com/media/HSIqv1NXsAUfNMo.jpg?name=orig",
   "created_at_utc": "2026-09-24T15:11:07.800253+00:00",
   "curated_at_utc": "2026-09-24T15:28:33.581240+00:00",
   "needs_art_revision": false,
   "art_standard_version": "spidey-premium-v1",
-  "art_ready_for_review": true,
+  "art_ready_for_review": false,
   "art_rules": [
     "korea_female_pikachu"
   ],
@@ -37,5 +37,6 @@
   ],
   "art_revision": 2,
   "art_revision_reason": "human_rejected",
-  "revised_at_utc": "2026-09-25T01:13:42.078448+00:00"
+  "revised_at_utc": "2026-09-25T01:13:42.078448+00:00",
+  "art_block_reason": "política visual não está em premium_editorial"
 }

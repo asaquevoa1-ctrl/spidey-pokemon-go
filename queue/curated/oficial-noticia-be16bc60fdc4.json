@@ -8,14 +8,14 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "pending",
+  "status": "blocked_art_standard",
   "_source_id": "oficial-https://pokemongo.com/pt_BR/news/pokemon-x-adidas-2026",
   "_source_image": "https://pbs.twimg.com/media/HS-PkQ7XAAACYY7.jpg?name=orig",
   "created_at_utc": "2026-09-24T14:59:09.577990+00:00",
   "curated_at_utc": "2026-09-24T15:30:24.262001+00:00",
   "needs_art_revision": false,
   "art_standard_version": "spidey-premium-v1",
-  "art_ready_for_review": true,
+  "art_ready_for_review": false,
   "art_rules": [
     "premium_campaign_visual"
   ],
@@ -41,5 +41,6 @@
   ],
   "art_revision": 2,
   "art_revision_reason": "human_rejected",
-  "revised_at_utc": "2026-09-25T01:13:42.433493+00:00"
+  "revised_at_utc": "2026-09-25T01:13:42.433493+00:00",
+  "art_block_reason": "política visual não está em premium_editorial"
 }
