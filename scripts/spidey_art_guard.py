@@ -6,6 +6,8 @@ from urllib.parse import urlparse
 QUEUE = Path("queue/curated")
 STANDARD = "spidey-premium-v1"
 GOLD_ENGINE = "spidey-gold-openai-v1"
+GOLD_SOURCE_ENGINE = "spidey-gold-source-v1"
+GOLD_ENGINES = {GOLD_ENGINE, GOLD_SOURCE_ENGINE}
 GOLD_REFERENCE = "spidey-gold-standard-2026-09-25"
 GENERATED_PREFIX = "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"
 
@@ -58,11 +60,16 @@ def validate(path, data):
     if str(data.get("media_policy") or "") != "premium_editorial":
         return False, "política visual não está em premium_editorial"
 
-    # Gold Standard é agora condição técnica de entrada no Discord.
+    # Gold Standard é condição técnica de entrada no Discord. O motor OpenAI é
+    # preferencial; o source-v1 é um fallback full-bleed certificado que usa a
+    # mídia factual da própria fonte quando a chave de geração não está disponível.
     if data.get("gold_standard_visual") is not True:
         return False, "arte não foi gerada pelo fluxo Gold Standard"
-    if str(data.get("art_generator_version") or "") != GOLD_ENGINE:
-        return False, f"motor visual inválido; obrigatório {GOLD_ENGINE}"
+    engine = str(data.get("art_generator_version") or "")
+    if engine not in GOLD_ENGINES:
+        return False, "motor visual inválido; obrigatório um motor Gold certificado"
+    if engine == GOLD_SOURCE_ENGINE and str(data.get("art_revision_style") or "") != "gold_source_full_bleed":
+        return False, "fallback Gold precisa usar composição full-bleed certificada"
     if str(data.get("visual_reference_set") or "") != GOLD_REFERENCE:
         return False, "referência visual oficial Gold Standard ausente"
     if data.get("brand_logo_overlay") is not True:
