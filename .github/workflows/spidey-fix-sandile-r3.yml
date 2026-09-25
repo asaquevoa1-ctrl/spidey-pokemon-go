@@ -1,0 +1,105 @@
+name: Spidey - corrigir binário Sandile R3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".tmp/sandile-r3/READY"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-editorial-state-writer
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruir arte aprovada sem corrupção
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .tmp/sandile-r3/part-* | base64 -d > assets/generated/dig-in-during-sandile-hatch-day-84d6b9a27b0e-gold-r4.jpg
+          python - <<'PY'
+          from PIL import Image
+          import hashlib
+          p='assets/generated/dig-in-during-sandile-hatch-day-84d6b9a27b0e-gold-r4.jpg'
+          with Image.open(p) as im:
+              im.verify()
+          raw=open(p,'rb').read()
+          got=hashlib.sha256(raw).hexdigest()
+          exp='b5bf6078432a4587e89bd7ce21d7f931761a7d027804019a378bab5112e7c88f'
+          assert got == exp, (got, exp)
+          print('JPEG_OK', len(raw), got)
+          PY
+
+      - name: Reabrir item Sandile como R4
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          p=Path('queue/curated/dig-in-during-sandile-hatch-day-84d6b9a27b0e.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          hist=d.setdefault('art_revision_history', [])
+          hist.append({
+              'revision': d.get('art_revision'),
+              'status': 'delivery_corrupted',
+              'image_url': d.get('image_url'),
+              'discord_approval_id': d.get('discord_approval_id'),
+              'decision_at_utc': d.get('decision_at_utc'),
+              'discord_reactions': d.get('discord_reactions'),
+              'art_generator_version': d.get('art_generator_version'),
+              'art_revision_style': d.get('art_revision_style'),
+          })
+          for k in (
+              'discord_approval_id','discord_reactions_ready','sent_at_utc','approval_reconciled',
+              'decision_at_utc','discord_reactions','discord_public_id','published_at_utc',
+              'publication_reconciled','approval_binding_version','approved_revision',
+              'approved_image_url','approved_discord_approval_id','approved_art_sha256',
+              'approved_at_utc','approval_binding_error','published_revision','published_image_url',
+              'published_approval_id','published_art_sha256','publication_block_reason',
+              'publication_blocked_at_utc'
+          ):
+              d.pop(k, None)
+          d.update({
+              'image_url':'https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/dig-in-during-sandile-hatch-day-84d6b9a27b0e-gold-r4.jpg',
+              'status':'pending',
+              'art_revision':4,
+              'art_revision_reason':'replace_corrupted_binary_delivery',
+              'needs_art_revision':False,
+              'art_ready_for_review':True,
+              'art_standard_version':'spidey-premium-v1',
+              'art_generator_version':'spidey-gold-openai-v1',
+              'art_generation_model':'chatgpt-imagegen-manual-gold',
+              'art_generation_origin':'chatgpt_image_gen_manual',
+              'visual_reference_set':'spidey-gold-standard-2026-09-25',
+              'gold_standard_visual':True,
+              'brand_logo_overlay':True,
+              'art_revision_style':'gold_cinematic_editorial',
+              'manual_visual_approved':True,
+              'binary_delivery_verified':True,
+              'binary_sha256':'b5bf6078432a4587e89bd7ce21d7f931761a7d027804019a378bab5112e7c88f',
+              'gold_generated_at_utc':datetime.now(timezone.utc).isoformat(),
+          })
+          p.write_text(json.dumps(d, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          PY
+
+      - name: Gravar correção
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf .tmp/sandile-r3
+          git add assets/generated queue/curated .tmp || true
+          git commit -m "Spidey: corrigir binário Sandile Gold R4"
+          git pull --rebase origin main
+          git push origin HEAD:main
