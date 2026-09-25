@@ -8,7 +8,7 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "blocked_art_standard",
+  "status": "awaiting_gold_art",
   "_source_id": "pokeminers-1552728818232598530",
   "_source_image": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
   "created_at_utc": "2026-09-25T14:32:48.833920+00:00",
@@ -35,15 +35,5 @@
   "art_revision": 2,
   "art_revision_reason": "gold_standard_upgrade",
   "needs_art_revision": false,
-  "art_generator_version": "premium-revision-v2",
-  "art_generation_model": "source-media-editorial-pillow-v1",
-  "visual_reference_set": "spidey-gold-standard-2026-09-25",
-  "gold_standard_visual": true,
-  "brand_logo_overlay": true,
-  "art_revision_style": "poster_focus",
-  "gold_source_fallback": true,
-  "gold_fallback_reason": "OPENAI_API_KEY ausente",
-  "gold_generated_at_utc": "2026-09-25T15:08:35.541043+00:00",
-  "art_refreshed_at_utc": "2026-09-25T15:08:36.109531+00:00",
-  "art_block_reason": "motor visual inválido; obrigatório um motor Gold certificado"
+  "gold_art_error": "OPENAI_API_KEY ausente"
 }
