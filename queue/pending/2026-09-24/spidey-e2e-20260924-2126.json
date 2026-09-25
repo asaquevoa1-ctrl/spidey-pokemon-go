@@ -1,0 +1,18 @@
+{
+  "titulo": "🧪 SPIDEY • TESTE E2E",
+  "mensagem": "TESTE E2E CONTROLADO — validação do pipeline Premium v1.\n\nEste item não é uma notícia real. Ele existe apenas para confirmar coleta, curadoria, arte, aprovação humana e publicação sem duplicidade.",
+  "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go",
+  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/oficial-noticia-be16bc60fdc4.jpg",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "spidey-e2e-20260924-2126",
+  "status": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-25T00:26:00+00:00"
+}
