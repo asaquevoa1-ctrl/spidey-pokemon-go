@@ -5,6 +5,8 @@ from urllib.parse import urlparse
 
 QUEUE = Path("queue/curated")
 STANDARD = "spidey-premium-v1"
+GOLD_ENGINE = "spidey-gold-openai-v1"
+GOLD_REFERENCE = "spidey-gold-standard-2026-09-25"
 GENERATED_PREFIX = "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"
 
 
@@ -56,6 +58,16 @@ def validate(path, data):
     if str(data.get("media_policy") or "") != "premium_editorial":
         return False, "política visual não está em premium_editorial"
 
+    # Gold Standard é agora condição técnica de entrada no Discord.
+    if data.get("gold_standard_visual") is not True:
+        return False, "arte não foi gerada pelo fluxo Gold Standard"
+    if str(data.get("art_generator_version") or "") != GOLD_ENGINE:
+        return False, f"motor visual inválido; obrigatório {GOLD_ENGINE}"
+    if str(data.get("visual_reference_set") or "") != GOLD_REFERENCE:
+        return False, "referência visual oficial Gold Standard ausente"
+    if data.get("brand_logo_overlay") is not True:
+        return False, "logo oficial Spidey não foi aplicado pelo sistema"
+
     text = norm(" ".join([
         data.get("titulo", ""),
         data.get("mensagem", ""),
@@ -101,7 +113,7 @@ def main():
         if ok:
             if data.get("status") == "pending":
                 ready += 1
-                print(f"ART_OK_PREMIUM {path.name}")
+                print(f"ART_OK_GOLD {path.name}")
         else:
             block(data, reason)
             blocked += 1
@@ -112,7 +124,7 @@ def main():
             path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             changed += 1
 
-    print(f"Guard premium concluído: {ready} pronta(s), {blocked} bloqueada(s), {changed} atualizada(s).")
+    print(f"Guard Gold concluído: {ready} pronta(s), {blocked} bloqueada(s), {changed} atualizada(s).")
     return 0
 
 
