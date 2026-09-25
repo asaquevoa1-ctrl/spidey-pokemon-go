@@ -1,0 +1,63 @@
+name: Spidey V2 Clean - E2E único
+
+on:
+  push:
+    branches:
+      - spidey-v2-clean
+    paths:
+      - "v2/**"
+      - ".github/workflows/spidey-v2-clean.yml"
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-v2-clean
+  cancel-in-progress: false
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout V2
+        uses: actions/checkout@v5
+        with:
+          ref: spidey-v2-clean
+          fetch-depth: 0
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependências
+        run: python -m pip install --quiet requests
+
+      - name: Validar núcleo
+        run: python -m py_compile v2/spidey_core.py
+
+      - name: Rodar E2E mínimo
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          APPROVAL_CHANNEL_ID: "1550963072464715997"
+          PUBLIC_CHANNEL_ID: "1550963136519999658"
+        run: python v2/spidey_core.py
+
+      - name: Persistir estado
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v2/queue || true
+          if git diff --cached --quiet; then
+            echo "Sem alteração de estado."
+            exit 0
+          fi
+          git commit -m "Spidey V2: atualiza estado E2E [skip ci]"
+          git pull --rebase origin spidey-v2-clean
+          git push origin HEAD:spidey-v2-clean
