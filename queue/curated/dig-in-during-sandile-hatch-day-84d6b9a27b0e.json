@@ -8,7 +8,7 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "rejected_art",
+  "status": "pending",
   "_source_id": "pokeminers-1552728818232598530",
   "_source_image": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
   "created_at_utc": "2026-09-25T14:32:48.833920+00:00",
@@ -47,7 +47,7 @@
   ],
   "art_revision": 3,
   "art_revision_reason": "human_visual_approved_chat",
-  "needs_art_revision": true,
+  "needs_art_revision": false,
   "art_generator_version": "spidey-gold-source-v1",
   "art_generation_model": "source-media-editorial-pillow-v1",
   "art_generation_origin": "chatgpt_image_gen_manual",
@@ -55,18 +55,9 @@
   "gold_standard_visual": true,
   "brand_logo_overlay": true,
   "art_revision_style": "gold_source_full_bleed",
-  "gold_generated_at_utc": "2026-09-25T20:16:36.514109+00:00",
+  "gold_generated_at_utc": "2026-09-25T20:47:03.636218+00:00",
   "manual_visual_approved": true,
   "manual_visual_approved_at_utc": "2026-09-25T18:56:58+00:00",
   "gold_source_fallback": true,
-  "gold_fallback_reason": "OPENAI_API_KEY ausente",
-  "discord_approval_id": "1553118756195143710",
-  "discord_reactions_ready": true,
-  "sent_at_utc": "2026-09-25T20:29:56.753960+00:00",
-  "approval_reconciled": true,
-  "decision_at_utc": "2026-09-25T20:46:47.287057+00:00",
-  "discord_reactions": {
-    "approved": 1,
-    "rejected": 2
-  }
+  "gold_fallback_reason": "OPENAI_API_KEY ausente"
 }
