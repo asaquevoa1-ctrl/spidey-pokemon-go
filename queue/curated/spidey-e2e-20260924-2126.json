@@ -2,13 +2,13 @@
   "titulo": "🧪 SPIDEY • TESTE E2E",
   "mensagem": "TESTE E2E CONTROLADO — validação do pipeline Premium v1.\n\nEste item não é uma notícia real. Ele existe apenas para confirmar coleta, curadoria, arte, aprovação humana e publicação sem duplicidade.\n\n📌 Fonte: SPIDEY",
   "source_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go",
-  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/spidey-e2e-20260924-2126-r2.jpg",
+  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/spidey-e2e-20260924-2126-r3.jpg",
   "source_verified": true,
   "coordenadas": [],
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "rejected_art",
+  "status": "pending",
   "_source_id": "spidey-e2e-20260924-2126",
   "_source_image": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/oficial-noticia-be16bc60fdc4.jpg",
   "created_at_utc": "2026-09-25T00:26:00+00:00",
@@ -18,7 +18,7 @@
   "media_policy": "premium_editorial",
   "visual_mode": "premium_editorial",
   "visual_constraints": [],
-  "needs_art_revision": true,
+  "needs_art_revision": false,
   "art_revision_history": [
     {
       "revision": 1,
@@ -30,17 +30,20 @@
         "approved": 1,
         "rejected": 2
       }
+    },
+    {
+      "revision": 2,
+      "status": "rejected_art",
+      "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/spidey-e2e-20260924-2126-r2.jpg",
+      "discord_approval_id": "1552852899174813756",
+      "decision_at_utc": "2026-09-25T01:37:35.729739+00:00",
+      "discord_reactions": {
+        "approved": 1,
+        "rejected": 2
+      }
     }
   ],
-  "art_revision": 2,
+  "art_revision": 3,
   "art_revision_reason": "human_rejected",
-  "revised_at_utc": "2026-09-25T01:13:43.214105+00:00",
-  "discord_approval_id": "1552852899174813756",
-  "discord_reactions_ready": true,
-  "sent_at_utc": "2026-09-25T01:23:03.564758+00:00",
-  "decision_at_utc": "2026-09-25T01:37:35.729739+00:00",
-  "discord_reactions": {
-    "approved": 1,
-    "rejected": 2
-  }
+  "revised_at_utc": "2026-09-25T01:43:59.703379+00:00"
 }
