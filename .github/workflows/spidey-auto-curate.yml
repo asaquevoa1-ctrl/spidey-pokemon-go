@@ -29,7 +29,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: spidey-auto-curate-${{ github.ref_name }}
+  group: spidey-editorial-state-writer
   cancel-in-progress: false
 
 jobs:
@@ -80,10 +80,9 @@ jobs:
           SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
         run: python scripts/gold_source_fallback.py
 
-      - name: Revisar somente legados ainda reprovados
-        env:
-          SPIDEY_ASSET_BRANCH: ${{ github.ref_name }}
-        run: python scripts/revise_rejected_art.py
+      # O antigo revise_rejected_art.py continua no repositório para legados,
+      # mas não roda depois do Gold: ele poderia sobrescrever uma arte Gold
+      # recém-gerada por um layout premium-revision-v2.
 
       - name: Gravar resultado
         shell: bash
