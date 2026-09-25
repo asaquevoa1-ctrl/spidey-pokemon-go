@@ -1,4 +1,5 @@
 import json
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
@@ -7,6 +8,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts import send_curated as core
 
 _ORIG_GET = requests.get
