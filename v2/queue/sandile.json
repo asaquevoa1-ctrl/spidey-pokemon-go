@@ -5,7 +5,10 @@
   "source_url": "https://pokemongo.com/news/sandile-hatch-day-2026",
   "image_url": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
   "image_filename": "sandile-v2-source.jpg",
-  "status": "ready",
+  "status": "sent",
   "publish_enabled": false,
-  "created_at_utc": "2026-09-25T22:10:00Z"
+  "created_at_utc": "2026-09-25T22:10:00Z",
+  "approval_message_id": "1553167855900561550",
+  "approved_art_sha256": "46d113606d8d8206af7eaf504ac23a753b5fde46c9690ba1a7674c043b7f6ad8",
+  "sent_at_utc": "2026-09-25T22:14:35.155597+00:00"
 }
