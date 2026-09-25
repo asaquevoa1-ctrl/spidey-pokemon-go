@@ -17,5 +17,7 @@
   "art_ready_for_review": true,
   "media_policy": "premium_editorial",
   "visual_mode": "premium_editorial",
-  "visual_constraints": []
+  "visual_constraints": [],
+  "recovered_from_missed_news": true,
+  "recovery_reason": "pokeminers_news_filter_fixed_2026-09-25"
 }
