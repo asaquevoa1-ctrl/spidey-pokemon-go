@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 Dig in during Sandile Hatch Day!",
+  "mensagem": "Dig in during Sandile Hatch Day!\n\n🔗 https://pokemongo.com/news/sandile-hatch-day-2026\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1552728818232598530",
+  "image_url": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1552728818232598530",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-25T14:32:48.833920+00:00"
+}
