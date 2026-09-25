@@ -10,7 +10,7 @@
   "gpx_nome": "spidey-evento.gpx",
   "status": "pending",
   "_source_id": "spidey-e2e-20260924-2126",
-  "_source_image": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/oficial-noticia-be16bc60fdc4.jpg",
+  "_source_image": "https://pbs.twimg.com/media/HS-PkQ7XAAACYY7.jpg?name=orig",
   "created_at_utc": "2026-09-25T00:26:00+00:00",
   "curated_at_utc": "2026-09-25T00:27:51.897851+00:00",
   "art_standard_version": "spidey-premium-v1",
@@ -78,5 +78,8 @@
   ],
   "art_revision": 6,
   "art_revision_reason": "human_rejected",
-  "revised_at_utc": "2026-09-25T12:01:13.187702+00:00"
+  "revised_at_utc": "2026-09-25T12:01:13.187702+00:00",
+  "art_generator_version": "premium-revision-v2",
+  "art_revision_style": "cinematic",
+  "art_refreshed_at_utc": "2026-09-25T12:08:59.097688+00:00"
 }
