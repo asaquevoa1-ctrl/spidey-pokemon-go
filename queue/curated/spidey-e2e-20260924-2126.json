@@ -8,7 +8,7 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "sent",
+  "status": "rejected_art",
   "_source_id": "spidey-e2e-20260924-2126",
   "_source_image": "https://pbs.twimg.com/media/HS-PkQ7XAAACYY7.jpg?name=orig",
   "created_at_utc": "2026-09-25T00:26:00+00:00",
@@ -18,7 +18,7 @@
   "media_policy": "premium_editorial",
   "visual_mode": "premium_editorial",
   "visual_constraints": [],
-  "needs_art_revision": false,
+  "needs_art_revision": true,
   "art_revision_history": [
     {
       "revision": 1,
@@ -84,5 +84,10 @@
   "art_refreshed_at_utc": "2026-09-25T12:08:59.097688+00:00",
   "discord_approval_id": "1553019617570459709",
   "discord_reactions_ready": true,
-  "sent_at_utc": "2026-09-25T12:25:32.295029+00:00"
+  "sent_at_utc": "2026-09-25T12:25:32.295029+00:00",
+  "decision_at_utc": "2026-09-25T13:02:13.045550+00:00",
+  "discord_reactions": {
+    "approved": 1,
+    "rejected": 2
+  }
 }
