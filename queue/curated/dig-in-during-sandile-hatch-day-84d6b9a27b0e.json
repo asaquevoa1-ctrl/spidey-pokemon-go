@@ -22,5 +22,6 @@
   "recovery_reason": "pokeminers_news_filter_fixed_2026-09-25",
   "discord_approval_id": "1553052106259177532",
   "discord_reactions_ready": true,
-  "sent_at_utc": "2026-09-25T14:34:38.926347+00:00"
+  "sent_at_utc": "2026-09-25T14:34:38.926347+00:00",
+  "force_gold_regeneration": true
 }
