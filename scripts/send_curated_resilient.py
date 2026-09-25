@@ -57,6 +57,32 @@ core.requests.post = _post_retry
 core.requests.put = _put_retry
 
 
+def _revision_number(data):
+    try:
+        return max(1, int(data.get("art_revision") or 1))
+    except (TypeError, ValueError):
+        return 1
+
+
+def approval_payload_data(data):
+    """Dá identidade própria à aprovação de cada revisão visual.
+
+    A R1 mantém o título original. R2+ recebe um sufixo visível no Discord,
+    permitindo reconciliar retries da MESMA revisão sem confundir uma R2 com a
+    mensagem antiga da R1 rejeitada.
+    """
+    revision = _revision_number(data)
+    if revision <= 1:
+        return data
+
+    prepared = dict(data)
+    suffix = f" • R{revision}"
+    title = str(prepared.get("titulo") or "").strip()
+    if not title.endswith(suffix):
+        prepared["titulo"] = title[: max(0, 256 - len(suffix))] + suffix
+    return prepared
+
+
 def _descricao_esperada(data):
     descricao = core.mensagem_final(data)
     coords = core._coords_validas(data)
@@ -85,11 +111,12 @@ def _mesma_aprovacao(message, data):
     embeds = message.get("embeds") or []
     if not embeds:
         return False
+    expected = approval_payload_data(data)
     embed = embeds[0] or {}
     return (
-        str(embed.get("title") or "") == str(data.get("titulo") or "")[:256]
-        and str(embed.get("url") or "") == str(data.get("source_url") or "")
-        and str(embed.get("description") or "") == _descricao_esperada(data)
+        str(embed.get("title") or "") == str(expected.get("titulo") or "")[:256]
+        and str(embed.get("url") or "") == str(expected.get("source_url") or "")
+        and str(embed.get("description") or "") == _descricao_esperada(expected)
     )
 
 
@@ -120,6 +147,8 @@ def marcar_enviado(path, data, message_id, reconciled=False):
         data["sent_at_utc"] = datetime.now(ZoneInfo("UTC")).isoformat()
     if reconciled:
         data["approval_reconciled"] = True
+    else:
+        data.pop("approval_reconciled", None)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
@@ -171,7 +200,7 @@ def main():
                 print(f"DISCORD APROVAÇÃO RECONCILIADA: {path.name} -> {message_id}")
                 continue
 
-            sent = core.enviar_discord(data)
+            sent = core.enviar_discord(approval_payload_data(data))
             message_id = str(sent.get("id") or "")
             if not message_id:
                 raise RuntimeError("Discord não retornou id da mensagem")
