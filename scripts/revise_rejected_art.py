@@ -141,6 +141,19 @@ def revise(path, item):
         "discord_public_id",
         "published_at_utc",
         "publication_reconciled",
+        "approval_binding_version",
+        "approved_revision",
+        "approved_image_url",
+        "approved_discord_approval_id",
+        "approved_art_sha256",
+        "approved_at_utc",
+        "approval_binding_error",
+        "published_revision",
+        "published_image_url",
+        "published_approval_id",
+        "published_art_sha256",
+        "publication_block_reason",
+        "publication_blocked_at_utc",
     ):
         item.pop(key, None)
 
