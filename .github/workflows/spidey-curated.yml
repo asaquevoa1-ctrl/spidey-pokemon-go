@@ -9,6 +9,8 @@ on:
       - "scripts/spidey_art_guard.py"
       - "scripts/test_curated_format.py"
       - ".github/workflows/spidey-curated.yml"
+  schedule:
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
