@@ -1,0 +1,21 @@
+{
+  "titulo": "📦 APK • Pokémon GO",
+  "mensagem": "O PokeMiners detectou um novo rollout do APK do Pokémon GO na Google Play.\n\n🕒 Data informada: Sep 25, 2026 02:57:28 UTC\n📱 Plataforma: Android / Google Play\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1553160003542847629",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1553160003542847629",
+  "image_url": null,
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1553160003542847629",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-25T21:44:56.311127+00:00"
+}
