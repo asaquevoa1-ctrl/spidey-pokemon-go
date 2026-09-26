@@ -1,23 +1,26 @@
-import base64
 import hashlib
 import json
 import mimetypes
 import os
 import time
 from datetime import datetime, timezone
+from io import BytesIO
 from pathlib import Path
 from urllib.parse import quote
 
 import requests
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
 QUEUE_DIR = ROOT / "queue"
-ASSET_DIR = ROOT / "assets_b64"
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 APPROVAL_CHANNEL = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").strip()
 PUBLIC_CHANNEL = os.getenv("PUBLIC_CHANNEL_ID", "1550963136519999658").strip()
 API = "https://discord.com/api/v10"
-USER_AGENT = "SpideyPokemonGO-V2/1.3"
+USER_AGENT = "SpideyPokemonGO-V2/1.4"
+
+MIN_WIDTH = 800
+MIN_HEIGHT = 1200
 
 
 def now():
@@ -44,46 +47,56 @@ def request(method, url, **kwargs):
     return last
 
 
-def valid_image(data):
-    return len(data) >= 10000 and (
-        data.startswith(b"\xff\xd8\xff")
-        or data.startswith(b"\x89PNG\r\n\x1a\n")
-        or data.startswith(b"RIFF")
-    )
-
-
 def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def local_b64_asset_bytes(stem):
-    parts = sorted(ASSET_DIR.glob(f"{stem}.*"))
-    if not parts:
-        raise RuntimeError(f"asset base64 ausente: {stem}")
-    encoded = "".join(part.read_text(encoding="utf-8").strip() for part in parts)
+def validate_art(data):
+    if len(data) < 50_000:
+        raise RuntimeError("arte bloqueada: arquivo pequeno demais para publicação")
     try:
-        data = base64.b64decode(encoded, validate=True)
+        with Image.open(BytesIO(data)) as im:
+            width, height = im.size
+            fmt = (im.format or "").upper()
     except Exception as exc:
-        raise RuntimeError(f"asset base64 inválido: {exc}") from exc
-    if not valid_image(data):
-        raise RuntimeError("asset base64 não é imagem válida")
-    return data
+        raise RuntimeError(f"arte bloqueada: imagem inválida ({exc})") from exc
+
+    if fmt not in {"JPEG", "PNG", "WEBP"}:
+        raise RuntimeError(f"arte bloqueada: formato não permitido ({fmt})")
+    if width < MIN_WIDTH or height < MIN_HEIGHT:
+        raise RuntimeError(
+            f"arte bloqueada: resolução {width}x{height}; mínimo {MIN_WIDTH}x{MIN_HEIGHT}"
+        )
+    if height <= width:
+        raise RuntimeError(f"arte bloqueada: orientação não vertical ({width}x{height})")
+
+    print(f"V2_ART_OK {width}x{height} format={fmt} bytes={len(data)}")
+    return width, height, fmt
+
+
+def local_file_bytes(relative_path):
+    relative_path = str(relative_path or "").strip()
+    if not relative_path:
+        raise RuntimeError("image_file ausente")
+    path = (ROOT / relative_path).resolve()
+    if ROOT.resolve() not in path.parents:
+        raise RuntimeError("image_file fora de v2")
+    if not path.is_file():
+        raise RuntimeError(f"image_file não encontrado: {relative_path}")
+    return path.read_bytes()
 
 
 def download_image(url):
     response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=60)
     response.raise_for_status()
-    data = response.content
-    if not valid_image(data):
-        raise RuntimeError("imagem externa inválida")
-    return data
+    return response.content
 
 
 def item_image_bytes(item):
-    stem = str(item.get("image_b64_asset") or "").strip()
-    if stem:
-        data = local_b64_asset_bytes(stem)
-        source = f"local_b64_asset:{stem}"
+    local_path = str(item.get("image_file") or "").strip()
+    if local_path:
+        data = local_file_bytes(local_path)
+        source = f"local_file:{local_path}"
     else:
         url = str(item.get("image_url") or "").strip()
         if not url:
@@ -91,6 +104,7 @@ def item_image_bytes(item):
         data = download_image(url)
         source = "external_url"
 
+    validate_art(data)
     actual = sha256(data)
     expected = str(item.get("source_art_sha256") or "").strip().lower()
     if expected and actual != expected:
@@ -167,6 +181,7 @@ def verified_approved_image(message, item):
         seen.add(url)
         try:
             data = download_image(url)
+            validate_art(data)
         except Exception as exc:
             print(f"V2_IMAGE_CANDIDATE_FAIL origin={origin} error={exc}")
             continue
@@ -175,8 +190,6 @@ def verified_approved_image(message, item):
             print(f"V2_IMAGE_VERIFIED origin={origin} sha256={actual}")
             return data, filename, mime
 
-    # Discord pode omitir o anexo na releitura. Nesse caso, recarrega a arte
-    # armazenada no V2 e só aceita bytes idênticos ao hash que foi aprovado.
     data = item_image_bytes(item)
     actual = sha256(data)
     if actual != expected:
@@ -193,14 +206,14 @@ def send_approval(path, item):
     filename = str(item.get("image_filename") or "spidey.jpg")
     mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
     payload = {
-        "content": "🧪 **SPIDEY V2 GOLD** • Aguardando aprovação • ✅ aprovar | ❌ rejeitar",
+        "content": "🕷️ **SPIDEY V2** • Aguardando aprovação • ✅ aprovar | ❌ rejeitar",
         "embeds": [{
             "title": str(item["title"])[:256],
             "description": str(item.get("description") or "")[:4000],
             "url": item.get("source_url"),
             "color": 0x1478FF,
             "image": {"url": f"attachment://{filename}"},
-            "footer": {"text": "V2 mínimo • Gold Standard → aprovação → publicação"},
+            "footer": {"text": "Spidey • arte full-size validada"},
         }],
         "attachments": [{"id": 0, "filename": filename}],
     }
