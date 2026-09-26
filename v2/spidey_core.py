@@ -1,3 +1,4 @@
+import base64
 import hashlib
 import json
 import mimetypes
@@ -14,8 +15,10 @@ QUEUE_DIR = ROOT / "queue"
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 APPROVAL_CHANNEL = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").strip()
 PUBLIC_CHANNEL = os.getenv("PUBLIC_CHANNEL_ID", "1550963136519999658").strip()
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
+GITHUB_REPOSITORY = os.getenv("GITHUB_REPOSITORY", "asaquevoa1-ctrl/spidey-pokemon-go").strip()
 API = "https://discord.com/api/v10"
-USER_AGENT = "SpideyPokemonGO-V2/1.1"
+USER_AGENT = "SpideyPokemonGO-V2/1.2"
 
 
 def now():
@@ -59,6 +62,44 @@ def download_image(url):
     data = r.content
     if not valid_image(data):
         raise RuntimeError("imagem inválida")
+    return data
+
+
+def github_blob_bytes(blob_sha):
+    if not blob_sha:
+        raise RuntimeError("image_blob_sha ausente")
+    gh_headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": USER_AGENT,
+    }
+    if GITHUB_TOKEN:
+        gh_headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+    r = requests.get(
+        f"https://api.github.com/repos/{GITHUB_REPOSITORY}/git/blobs/{blob_sha}",
+        headers=gh_headers,
+        timeout=60,
+    )
+    r.raise_for_status()
+    payload = r.json()
+    if str(payload.get("encoding") or "") != "base64":
+        raise RuntimeError("blob GitHub sem encoding base64")
+    data = base64.b64decode(str(payload.get("content") or "").replace("\n", ""))
+    if not valid_image(data):
+        raise RuntimeError("blob GitHub não é imagem válida")
+    return data
+
+
+def item_image_bytes(item):
+    blob_sha = str(item.get("image_blob_sha") or "").strip()
+    if blob_sha:
+        data = github_blob_bytes(blob_sha)
+        print(f"V2_IMAGE_SOURCE github_blob sha={blob_sha}")
+        return data
+    url = str(item.get("image_url") or "").strip()
+    if not url:
+        raise RuntimeError("item sem image_blob_sha e sem image_url")
+    data = download_image(url)
+    print("V2_IMAGE_SOURCE external_url")
     return data
 
 
@@ -111,7 +152,6 @@ def verified_approved_image(message, item):
         raise RuntimeError("hash aprovado ausente")
 
     candidates = []
-
     for att in message.get("attachments") or []:
         url = str(att.get("url") or "").strip()
         filename = str(att.get("filename") or item.get("image_filename") or "spidey.jpg")
@@ -127,14 +167,6 @@ def verified_approved_image(message, item):
                 filename = str(item.get("image_filename") or "spidey.jpg")
                 mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
                 candidates.append((url, filename, mime, f"embed_{key}"))
-
-    # Fallback controlado: usa a URL original apenas se os bytes continuarem
-    # EXATAMENTE iguais ao SHA-256 gravado quando a aprovação foi enviada.
-    source_url = str(item.get("image_url") or "").strip()
-    if source_url:
-        filename = str(item.get("image_filename") or "spidey.jpg")
-        mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
-        candidates.append((source_url, filename, mime, "source_hash_fallback"))
 
     seen = set()
     for url, filename, mime, origin in candidates:
@@ -152,11 +184,20 @@ def verified_approved_image(message, item):
             return data, filename, mime
         print(f"V2_IMAGE_HASH_MISMATCH origin={origin} got={actual}")
 
-    raise RuntimeError("nenhuma imagem recuperada corresponde ao hash aprovado")
+    # Fallback seguro: recarrega a própria arte-fonte do item (blob Gold ou URL)
+    # e só aceita se os bytes forem idênticos ao SHA-256 gravado na aprovação.
+    data = item_image_bytes(item)
+    actual = sha256(data)
+    if actual != expected:
+        raise RuntimeError("arte-fonte mudou depois da aprovação")
+    filename = str(item.get("image_filename") or "spidey.jpg")
+    mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
+    print(f"V2_IMAGE_VERIFIED origin=item_source sha256={actual}")
+    return data, filename, mime
 
 
 def send_approval(path, item):
-    image = download_image(item["image_url"])
+    image = item_image_bytes(item)
     image_hash = sha256(image)
     filename = item.get("image_filename") or "spidey.jpg"
     mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
@@ -168,7 +209,7 @@ def send_approval(path, item):
             "url": item.get("source_url"),
             "color": 0x1478FF,
             "image": {"url": f"attachment://{filename}"},
-            "footer": {"text": "V2 mínimo • uma entrada → aprovação → publicação"},
+            "footer": {"text": "V2 mínimo • arte Gold → aprovação → publicação"},
         }],
         "attachments": [{"id": 0, "filename": filename}],
     }
@@ -206,7 +247,7 @@ def publish(path, item, approval_message):
             "url": item.get("source_url"),
             "color": 0x1478FF,
             "image": {"url": f"attachment://{filename}"},
-            "footer": {"text": "Spidey Pokémon GO • V2 E2E"},
+            "footer": {"text": "Spidey Pokémon GO"},
         }],
         "attachments": [{"id": 0, "filename": filename}],
     }
@@ -249,7 +290,6 @@ def sync(path, item):
 
     human_yes = yes >= 2
     human_no = no >= 2
-
     if human_yes and human_no:
         item.update({"status": "conflict", "decision_at_utc": now(), "reactions": {"yes": yes, "no": no}})
         save(path, item)
@@ -280,7 +320,6 @@ def main():
     path = files[0]
     item = json.loads(path.read_text(encoding="utf-8"))
     status = str(item.get("status") or "")
-
     if status == "ready":
         send_approval(path, item)
     elif status == "sent":
