@@ -2,7 +2,6 @@ import hashlib
 import json
 import mimetypes
 import os
-import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -16,18 +15,15 @@ TOKEN = os.getenv("DISCORD_BOT_TOKEN", "").strip()
 APPROVAL_CHANNEL = os.getenv("APPROVAL_CHANNEL_ID", "1550963072464715997").strip()
 PUBLIC_CHANNEL = os.getenv("PUBLIC_CHANNEL_ID", "1550963136519999658").strip()
 API = "https://discord.com/api/v10"
-USER_AGENT = "SpideyPokemonGO-V2/1.0"
+USER_AGENT = "SpideyPokemonGO-V2/1.1"
 
 
 def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-def headers(json_body=False):
-    h = {"Authorization": f"Bot {TOKEN}", "User-Agent": USER_AGENT}
-    if json_body:
-        h["Content-Type"] = "application/json"
-    return h
+def headers():
+    return {"Authorization": f"Bot {TOKEN}", "User-Agent": USER_AGENT}
 
 
 def request(method, url, **kwargs):
@@ -46,18 +42,27 @@ def request(method, url, **kwargs):
     return last
 
 
+def valid_image(data):
+    return (
+        len(data) >= 10000
+        and (
+            data.startswith(b"\xff\xd8\xff")
+            or data.startswith(b"\x89PNG\r\n\x1a\n")
+            or data.startswith(b"RIFF")
+        )
+    )
+
+
 def download_image(url):
     r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=60)
     r.raise_for_status()
     data = r.content
-    if len(data) < 10000:
-        raise RuntimeError("imagem muito pequena ou inválida")
-    if not (data.startswith(b"\xff\xd8\xff") or data.startswith(b"\x89PNG\r\n\x1a\n") or data.startswith(b"RIFF")):
-        raise RuntimeError("formato de imagem não reconhecido")
+    if not valid_image(data):
+        raise RuntimeError("imagem inválida")
     return data
 
 
-def sha(data):
+def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
@@ -100,21 +105,60 @@ def add_reactions(message_id):
         time.sleep(0.35)
 
 
-def approval_attachment_bytes(message):
+def verified_approved_image(message, item):
+    expected = str(item.get("approved_art_sha256") or "").strip().lower()
+    if len(expected) != 64:
+        raise RuntimeError("hash aprovado ausente")
+
+    candidates = []
+
     for att in message.get("attachments") or []:
-        url = str(att.get("url") or "")
-        ctype = str(att.get("content_type") or "")
-        if url and (ctype.startswith("image/") or str(att.get("filename") or "").lower().endswith((".jpg", ".jpeg", ".png", ".webp"))):
-            r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=60)
-            r.raise_for_status()
-            return r.content, str(att.get("filename") or "spidey.jpg"), ctype or "image/jpeg"
-    raise RuntimeError("mensagem de aprovação sem imagem")
+        url = str(att.get("url") or "").strip()
+        filename = str(att.get("filename") or item.get("image_filename") or "spidey.jpg")
+        mime = str(att.get("content_type") or mimetypes.guess_type(filename)[0] or "image/jpeg")
+        if url:
+            candidates.append((url, filename, mime, "attachment"))
+
+    for embed in message.get("embeds") or []:
+        image = embed.get("image") or {}
+        for key in ("url", "proxy_url"):
+            url = str(image.get(key) or "").strip()
+            if url and not url.startswith("attachment://"):
+                filename = str(item.get("image_filename") or "spidey.jpg")
+                mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
+                candidates.append((url, filename, mime, f"embed_{key}"))
+
+    # Fallback controlado: usa a URL original apenas se os bytes continuarem
+    # EXATAMENTE iguais ao SHA-256 gravado quando a aprovação foi enviada.
+    source_url = str(item.get("image_url") or "").strip()
+    if source_url:
+        filename = str(item.get("image_filename") or "spidey.jpg")
+        mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
+        candidates.append((source_url, filename, mime, "source_hash_fallback"))
+
+    seen = set()
+    for url, filename, mime, origin in candidates:
+        if url in seen:
+            continue
+        seen.add(url)
+        try:
+            data = download_image(url)
+        except Exception as exc:
+            print(f"V2_IMAGE_CANDIDATE_FAIL origin={origin} error={exc}")
+            continue
+        actual = sha256(data)
+        if actual == expected:
+            print(f"V2_IMAGE_VERIFIED origin={origin} sha256={actual}")
+            return data, filename, mime
+        print(f"V2_IMAGE_HASH_MISMATCH origin={origin} got={actual}")
+
+    raise RuntimeError("nenhuma imagem recuperada corresponde ao hash aprovado")
 
 
 def send_approval(path, item):
     image = download_image(item["image_url"])
-    image_hash = sha(image)
-    filename = item.get("image_filename") or "spidey-sandile.jpg"
+    image_hash = sha256(image)
+    filename = item.get("image_filename") or "spidey.jpg"
     mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
     payload = {
         "content": "🧪 **SPIDEY V2 CLEAN** • Aguardando aprovação • ✅ aprovar | ❌ rejeitar",
@@ -153,17 +197,7 @@ def send_approval(path, item):
 
 
 def publish(path, item, approval_message):
-    image, filename, mime = approval_attachment_bytes(approval_message)
-    current_hash = sha(image)
-    expected = str(item.get("approved_art_sha256") or "")
-    if not expected or current_hash != expected:
-        item["status"] = "conflict"
-        item["error"] = "hash da imagem aprovada não confere"
-        item["decision_at_utc"] = now()
-        save(path, item)
-        print("V2_CONFLICT_HASH")
-        return
-
+    image, filename, mime = verified_approved_image(approval_message, item)
     payload = {
         "content": "",
         "embeds": [{
@@ -172,7 +206,7 @@ def publish(path, item, approval_message):
             "url": item.get("source_url"),
             "color": 0x1478FF,
             "image": {"url": f"attachment://{filename}"},
-            "footer": {"text": "Spidey Pokémon GO"},
+            "footer": {"text": "Spidey Pokémon GO • V2 E2E"},
         }],
         "attachments": [{"id": 0, "filename": filename}],
     }
@@ -186,14 +220,18 @@ def publish(path, item, approval_message):
     )
     r.raise_for_status()
     public = r.json()
+    public_id = str(public.get("id") or "")
+    if not public_id:
+        raise RuntimeError("Discord não retornou id público")
     item.update({
         "status": "published",
-        "public_message_id": str(public.get("id") or ""),
+        "public_message_id": public_id,
         "decision_at_utc": now(),
         "published_at_utc": now(),
+        "published_art_sha256": sha256(image),
     })
     save(path, item)
-    print("V2_PUBLISHED", item["public_message_id"])
+    print("V2_PUBLISHED", public_id)
 
 
 def sync(path, item):
@@ -209,7 +247,6 @@ def sync(path, item):
     no = reaction_count(msg, "❌")
     print(f"V2_REACTIONS yes={yes} no={no}")
 
-    # O bot coloca uma reação de cada. Decisão humana começa em 2.
     human_yes = yes >= 2
     human_no = no >= 2
 
@@ -239,6 +276,7 @@ def main():
     files = sorted(QUEUE_DIR.glob("*.json"))
     if len(files) != 1:
         raise SystemExit(f"V2 exige exatamente 1 item no teste; encontrados={len(files)}")
+
     path = files[0]
     item = json.loads(path.read_text(encoding="utf-8"))
     status = str(item.get("status") or "")
