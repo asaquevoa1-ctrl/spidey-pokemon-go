@@ -44,6 +44,8 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           APPROVAL_CHANNEL_ID: "1550963072464715997"
           PUBLIC_CHANNEL_ID: "1550963136519999658"
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: python v2/spidey_core.py
 
       - name: Persistir estado
