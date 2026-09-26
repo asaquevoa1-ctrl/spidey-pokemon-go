@@ -8,7 +8,7 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "sent",
+  "status": "rejected_art",
   "_source_id": "pokeminers-1552728818232598530",
   "_source_image": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
   "created_at_utc": "2026-09-25T14:32:48.833920+00:00",
@@ -47,7 +47,7 @@
   ],
   "art_revision": 3,
   "art_revision_reason": "human_visual_approved_chat",
-  "needs_art_revision": false,
+  "needs_art_revision": true,
   "art_generator_version": "spidey-gold-source-v1",
   "art_generation_model": "source-media-editorial-pillow-v1",
   "art_generation_origin": "chatgpt_image_gen_manual",
@@ -63,5 +63,10 @@
   "discord_approval_id": "1553118756195143710",
   "discord_reactions_ready": true,
   "sent_at_utc": "2026-09-26T15:20:07.811227+00:00",
-  "approval_reconciled": true
+  "approval_reconciled": true,
+  "decision_at_utc": "2026-09-26T15:21:23.958092+00:00",
+  "discord_reactions": {
+    "approved": 1,
+    "rejected": 2
+  }
 }
