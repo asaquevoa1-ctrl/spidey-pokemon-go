@@ -20,9 +20,20 @@
     "donor_x": 500,
     "donor_y": 20
   },
-  "status": "needs_art",
+  "status": "sent",
   "publish_enabled": true,
   "visual_quality": "spidey_gold_standard",
   "art_standard_version": "spidey-premium-v1",
-  "visual_note": "R2 gratuita: full-size 1024x1536, sem API paga e com remoção do branding residual Twilight Trails da mídia-fonte antes do Discord."
+  "visual_note": "R2 gratuita: full-size 1024x1536, sem API paga e com remoção do branding residual Twilight Trails da mídia-fonte antes do Discord.",
+  "image_file": "generated/sandile-v2-free-fullsize-r2.png",
+  "image_filename": "sandile-v2-free-fullsize-r2.png",
+  "source_art_sha256": "a48126e3599c40da197ac1fce9470f81f5cd75478dba0846c16cd5b33ada91ad",
+  "source_image_url_resolved": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
+  "art_generated_at_utc": "2026-09-27T13:06:35.337961+00:00",
+  "art_dimensions": "1024x1536",
+  "art_pipeline": "free_official_media_plus_deterministic_spidey_overlay_v2",
+  "art_cost": "zero",
+  "approval_message_id": "1553754735461273736",
+  "approved_art_sha256": "a48126e3599c40da197ac1fce9470f81f5cd75478dba0846c16cd5b33ada91ad",
+  "sent_at_utc": "2026-09-27T13:06:38.016877+00:00"
 }
