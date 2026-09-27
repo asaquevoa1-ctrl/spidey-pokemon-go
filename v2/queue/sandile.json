@@ -11,9 +11,20 @@
   "date_text": "17 de outubro de 2026",
   "time_text": "11h às 17h • horário local",
   "event_text": "Evento oficial • Pokémon GO",
-  "status": "needs_art",
+  "status": "sent",
   "publish_enabled": true,
   "visual_quality": "spidey_gold_standard",
   "art_standard_version": "spidey-premium-v1",
-  "visual_note": "Renderer gratuito: mídia oficial como base + composição Spidey full-size 1024x1536 + logo oficial + textos determinísticos. Sem API paga."
+  "visual_note": "Renderer gratuito: mídia oficial como base + composição Spidey full-size 1024x1536 + logo oficial + textos determinísticos. Sem API paga.",
+  "image_file": "generated/sandile-v2-free-fullsize.png",
+  "image_filename": "sandile-v2-free-fullsize.png",
+  "source_art_sha256": "a3b443e631e881604d44a3d7f28906c994a416feef465744dfaf44860a0501b8",
+  "source_image_url_resolved": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
+  "art_generated_at_utc": "2026-09-27T13:02:19.990743+00:00",
+  "art_dimensions": "1024x1536",
+  "art_pipeline": "free_official_media_plus_deterministic_spidey_overlay_v1",
+  "art_cost": "zero",
+  "approval_message_id": "1553753662537334844",
+  "approved_art_sha256": "a3b443e631e881604d44a3d7f28906c994a416feef465744dfaf44860a0501b8",
+  "sent_at_utc": "2026-09-27T13:02:22.418184+00:00"
 }
