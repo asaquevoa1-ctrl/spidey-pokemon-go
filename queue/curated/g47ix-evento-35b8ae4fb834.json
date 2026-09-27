@@ -8,7 +8,7 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "pending",
+  "status": "sent",
   "_source_id": "g47ix-2104348930242904070",
   "_source_image": "https://pbs.twimg.com/media/HTQl9-iXAAAEWrA.jpg?name=orig",
   "created_at_utc": "2026-09-27T23:26:52.046786+00:00",
@@ -29,5 +29,8 @@
   "art_revision_style": "gold_source_full_bleed",
   "gold_source_fallback": true,
   "gold_fallback_reason": "OPENAI_API_KEY ausente",
-  "gold_generated_at_utc": "2026-09-27T23:30:35.747509+00:00"
+  "gold_generated_at_utc": "2026-09-27T23:30:35.747509+00:00",
+  "discord_approval_id": "1553912295757971569",
+  "discord_reactions_ready": true,
+  "sent_at_utc": "2026-09-27T23:32:43.309231+00:00"
 }
