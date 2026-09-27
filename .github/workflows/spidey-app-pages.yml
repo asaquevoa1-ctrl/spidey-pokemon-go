@@ -1,0 +1,54 @@
+name: Spidey App v1 - Pages
+
+on:
+  push:
+    branches:
+      - spidey-app-v1
+    paths:
+      - 'spidey-app/**'
+      - 'assets/spidey-logo-oficial.jpg'
+      - '.github/workflows/spidey-app-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: spidey-app-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Montar app
+        run: |
+          rm -rf dist
+          mkdir -p dist/assets
+          cp -R spidey-app/* dist/
+          cp assets/spidey-logo-oficial.jpg dist/assets/spidey-logo-oficial.jpg
+          test -f dist/index.html
+          test -f dist/data/events.json
+          test -f dist/assets/spidey-logo-oficial.jpg
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Empacotar Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
