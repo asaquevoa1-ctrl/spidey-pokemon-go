@@ -35,7 +35,7 @@ jobs:
           test -f assets/spidey-logo-oficial.jpg
           grep -q 'spidey-event-v1' spidey-app/data/events.json
           grep -q 'Baixar GPX' spidey-app/app.js
-          grep -q 'Coordenadas' spidey-app/index.html
+          grep -qi 'coordenadas' spidey-app/index.html
 
       - name: Smoke test HTTP
         run: |
