@@ -1,0 +1,50 @@
+name: Spidey App v1 - Validate
+
+on:
+  push:
+    branches:
+      - spidey-app-v1
+    paths:
+      - 'spidey-app/**'
+      - '.github/workflows/spidey-app-validate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validar JavaScript
+        run: node --check spidey-app/app.js
+
+      - name: Validar JSON de eventos
+        run: python -m json.tool spidey-app/data/events.json >/dev/null
+
+      - name: Validar manifesto
+        run: python -m json.tool spidey-app/manifest.webmanifest >/dev/null
+
+      - name: Validar arquivos obrigatórios
+        run: |
+          test -f spidey-app/index.html
+          test -f spidey-app/styles.css
+          test -f spidey-app/sw.js
+          test -f assets/spidey-logo-oficial.jpg
+          grep -q 'spidey-event-v1' spidey-app/data/events.json
+          grep -q 'Baixar GPX' spidey-app/app.js
+          grep -q 'Coordenadas' spidey-app/index.html
+
+      - name: Smoke test HTTP
+        run: |
+          mkdir -p spidey-app/assets
+          cp assets/spidey-logo-oficial.jpg spidey-app/assets/spidey-logo-oficial.jpg
+          cd spidey-app
+          python -m http.server 8080 >/tmp/spidey-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          sleep 2
+          curl --fail --silent http://127.0.0.1:8080/ | grep -q 'Seu calendário Pokémon GO'
+          curl --fail --silent http://127.0.0.1:8080/data/events.json | grep -q 'festival-das-luzes-2026-india'
