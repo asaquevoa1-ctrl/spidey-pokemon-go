@@ -13,7 +13,6 @@ const toast = $('#toast');
 
 const MONTHS = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' });
 const DATE_SHORT = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short' });
-const DATE_TIME = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
 
 function showToast(message) {
   toast.textContent = message;
@@ -24,6 +23,17 @@ function showToast(message) {
 
 function parseDate(value) {
   return value ? new Date(value) : null;
+}
+
+function formatDateTime(date, timeZone = 'America/Sao_Paulo') {
+  return new Intl.DateTimeFormat('pt-BR', {
+    day: '2-digit',
+    month: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+    timeZone,
+  }).format(date);
 }
 
 function startOfDay(date) {
@@ -50,7 +60,8 @@ function overlapsDay(event, day) {
 function formatRange(event) {
   const { start, end } = getBrazilRange(event);
   if (!start || !end) return 'Horário a confirmar';
-  return `${DATE_TIME.format(start)} → ${DATE_TIME.format(end)}`;
+  const zone = event.schedule?.brazil_timezone || 'America/Sao_Paulo';
+  return `${formatDateTime(start, zone)} → ${formatDateTime(end, zone)}`;
 }
 
 function eventImage(event) {
@@ -101,7 +112,7 @@ function renderCalendar() {
     button.title = events.length ? `${events.length} evento(s)` : 'Sem eventos';
     button.addEventListener('click', () => {
       if (events.length === 1) openEvent(events[0]);
-      else if (events.length > 1) renderEvents(events, `Eventos de ${DATE_SHORT.format(day)}`);
+      else if (events.length > 1) renderEvents(events);
       else showToast('Nenhum evento neste dia.');
     });
     calendar.appendChild(button);
@@ -110,7 +121,11 @@ function renderCalendar() {
 }
 
 function renderEvents(events = state.events) {
-  const sorted = [...events].sort((a, b) => getBrazilRange(a).start - getBrazilRange(b).start);
+  const sorted = [...events].sort((a, b) => {
+    const aStart = getBrazilRange(a).start?.getTime() || Number.MAX_SAFE_INTEGER;
+    const bStart = getBrazilRange(b).start?.getTime() || Number.MAX_SAFE_INTEGER;
+    return aStart - bStart;
+  });
   eventList.innerHTML = '';
   if (!sorted.length) {
     eventList.innerHTML = '<p class="empty">Nenhum evento disponível.</p>';
@@ -171,6 +186,8 @@ function openEvent(event) {
   const localEnd = parseDate(event.schedule?.end_local);
   const brazilStart = parseDate(event.schedule?.start_brazil || event.schedule?.start_local);
   const brazilEnd = parseDate(event.schedule?.end_brazil || event.schedule?.end_local);
+  const localZone = event.schedule?.local_timezone || 'UTC';
+  const brazilZone = event.schedule?.brazil_timezone || 'America/Sao_Paulo';
   const bonuses = event.bonuses || [];
   const pokemon = event.pokemon || [];
   detail.innerHTML = `
@@ -180,8 +197,8 @@ function openEvent(event) {
       <h2>${event.title}</h2>
       <p>${event.summary || ''}</p>
       <div class="info-grid">
-        <div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${DATE_TIME.format(localStart)} → ${DATE_TIME.format(localEnd)}` : 'A confirmar'}</strong></div>
-        <div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${DATE_TIME.format(brazilStart)} → ${DATE_TIME.format(brazilEnd)}` : 'A confirmar'}</strong></div>
+        <div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div>
+        <div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>
       </div>
       <h3>Coordenadas</h3>
       ${locationRows(event)}
@@ -189,6 +206,7 @@ function openEvent(event) {
         ${event.gpx?.enabled !== false && (event.locations || []).length ? '<button id="downloadGpx" class="action-btn gold">Baixar GPX</button>' : ''}
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">Fonte</a>` : ''}
       </div>
+      ${event.gpx?.enabled === false && event.gpx?.reason ? `<p class="microcopy">GPX indisponível: ${event.gpx.reason}</p>` : ''}
       ${pokemon.length ? `<h3>Pokémon em destaque</h3><ul class="bonus-list">${pokemon.map((item) => `<li>${item.name}${item.note ? ` — ${item.note}` : ''}</li>`).join('')}</ul>` : ''}
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${event.notes?.length ? `<h3>Observações</h3><ul class="bonus-list">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
