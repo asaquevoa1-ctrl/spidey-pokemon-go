@@ -121,6 +121,10 @@ Lucario é recompensa/encontro, não item de roupa.
 - Longitude válida: -180 a 180.
 - Deduplicar coordenadas preservando a ordem.
 - Coordenadas devem aparecer em texto copiável no Discord.
+- O formato público padrão é `latitude, longitude`, sem letras `N`, `S`, `E` ou `W` e sem símbolo de grau.
+- Hemisférios sul e oeste devem ser representados por valores negativos.
+- Exemplo Índia: `20.5937, 78.9629`.
+- Exemplo São Paulo: `-23.5505, -46.6333`.
 - Gerar GPX quando `gerar_gpx=true` e houver coordenadas válidas.
 - Não extrair números comuns como coordenadas.
 
