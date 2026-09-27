@@ -1,8 +1,9 @@
 {
-  "id": "sandile-v2-api-fullsize",
+  "id": "sandile-v2-free-fullsize",
   "title": "Dia de Incubação do Sandile",
   "description": "17 de outubro de 2026 • 11h às 17h • horário local\nEvento oficial Pokémon GO.",
   "source_url": "https://pokemongo.com/pt-BR/news/sandile-hatch-day-2026",
+  "source_image_url": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
   "source_label": "PokeMiners",
   "kicker": "DIA DE INCUBAÇÃO DO",
   "display_title": "SANDILE",
@@ -10,10 +11,9 @@
   "date_text": "17 de outubro de 2026",
   "time_text": "11h às 17h • horário local",
   "event_text": "Evento oficial • Pokémon GO",
-  "scene_prompt": "Premium cinematic vertical promotional scene for a monster-catching mobile game event. Sandile, the small tan-and-black crocodile-like Pokémon, is the heroic main subject, excited beside a cream egg with large green spots that is beginning to hatch. Golden-hour desert canyon and ancient stone ruins, dramatic warm sunset, glowing sand particles, subtle futuristic blue PokéStop-like towers in the distance, rich depth, dynamic low camera, high-end game key art, saturated but realistic lighting, crisp character detail, energetic and joyful. Keep the central lower third usable for editorial typography. NO words, NO letters, NO logos, NO watermarks, NO interface panels, NO branding.",
   "status": "needs_art",
   "publish_enabled": true,
   "visual_quality": "spidey_gold_standard",
   "art_standard_version": "spidey-premium-v1",
-  "visual_note": "Teste do novo fluxo: a IA gera somente a cena full-size; textos, dados e logo Spidey oficial são aplicados de forma determinística antes do Discord."
+  "visual_note": "Renderer gratuito: mídia oficial como base + composição Spidey full-size 1024x1536 + logo oficial + textos determinísticos. Sem API paga."
 }
