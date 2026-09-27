@@ -3,7 +3,7 @@
   "title": "TESTE C • Transporte da arte aprovada",
   "description": "Não avaliar o visual. Conferir apenas se a mesma arte aprovada chegou inteira e full-size ao Discord.",
   "source_url": "https://pokemongo.com/pt-BR/news/sandile-hatch-day-2026",
-  "status": "sent",
+  "status": "published",
   "publish_enabled": true,
   "visual_quality": "human_approved_before_transport_test",
   "art_standard_version": "spidey-premium-v1",
@@ -16,5 +16,9 @@
   "art_cost": "zero",
   "approval_message_id": "1553783896989245471",
   "approved_art_sha256": "a3a7b32ef1bede7a234985f9972ebe7e2cc3ef5cadbd85b71de989670bb7efb5",
-  "sent_at_utc": "2026-09-27T15:02:30.959839+00:00"
+  "sent_at_utc": "2026-09-27T15:02:30.959839+00:00",
+  "public_message_id": "1553787877048057876",
+  "decision_at_utc": "2026-09-27T15:18:18.155808+00:00",
+  "published_at_utc": "2026-09-27T15:18:18.155828+00:00",
+  "published_art_sha256": "a3a7b32ef1bede7a234985f9972ebe7e2cc3ef5cadbd85b71de989670bb7efb5"
 }
