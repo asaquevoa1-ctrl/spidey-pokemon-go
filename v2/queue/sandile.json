@@ -11,7 +11,7 @@
   "date_text": "17 de outubro de 2026",
   "time_text": "11h às 17h • horário local",
   "event_text": "Evento oficial • Pokémon GO",
-  "status": "sent",
+  "status": "rejected",
   "publish_enabled": true,
   "visual_quality": "spidey_gold_standard",
   "art_standard_version": "spidey-premium-v1",
@@ -26,5 +26,10 @@
   "art_cost": "zero",
   "approval_message_id": "1553753662537334844",
   "approved_art_sha256": "a3b443e631e881604d44a3d7f28906c994a416feef465744dfaf44860a0501b8",
-  "sent_at_utc": "2026-09-27T13:02:22.418184+00:00"
+  "sent_at_utc": "2026-09-27T13:02:22.418184+00:00",
+  "decision_at_utc": "2026-09-27T13:05:48.817716+00:00",
+  "reactions": {
+    "yes": 1,
+    "no": 2
+  }
 }
