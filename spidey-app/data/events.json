@@ -1,0 +1,61 @@
+{
+  "schema_version": "spidey-event-v1",
+  "events": [
+    {
+      "id": "festival-of-lights-2026-pokeminers-e2",
+      "slug": "festival-das-luzes-2026-india",
+      "status": "published",
+      "title": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta",
+      "summary": "Evento exclusivo para Treinadores na Índia, com Pikachu usando trajes temáticos.",
+      "category": "evento_especial",
+      "tags": ["Índia", "Pikachu", "Evento especial"],
+      "source": {
+        "name": "Pokémon GO",
+        "captured_via": "PokeMiners",
+        "url": "https://pokemongo.com/news/festival-of-lights-2026"
+      },
+      "art": {
+        "url": "https://uc92e0ea91d5ffd889dc5d4bb84e.dl.dropboxusercontent.com/cd/0/get/DI_0hcXS2-ns8Mo9JAaM0eHT5BHhBuluCwEPG789fSFZ4ia94epqTDarr9HLPyCI3SVudnfcRrWrTbKxrCW1r6-CkOM7ZGgBK9WBP87uAJN_Ls1wHFogB6XM2XuB9PgaYO7moVtBpUcisudBKqLH5oQH5NVkXXY5a121wmgsk2xbgg/file?c_luid=4b888265",
+        "alt": "Arte Spidey do Festival das Luzes 2026",
+        "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
+        "width": 1024,
+        "height": 1536,
+        "standard": "spidey-premium-v1"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Kolkata",
+        "start_local": "2026-11-06T10:00:00+05:30",
+        "end_local": "2026-11-08T20:00:00+05:30",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T01:30:00-03:00",
+        "end_brazil": "2026-11-08T11:30:00-03:00"
+      },
+      "locations": [
+        {
+          "label": "Índia • referência geográfica",
+          "latitude": 20.5937,
+          "longitude": 78.9629,
+          "coordinate_type": "country_reference",
+          "copyable": true
+        }
+      ],
+      "pokemon": [
+        {"name": "Pikachu com saree", "note": "traje temático"},
+        {"name": "Pikachu com kurta", "note": "traje temático"}
+      ],
+      "bonuses": [],
+      "notes": [
+        "As coordenadas exibidas são uma referência geográfica da Índia, não um ponto oficial específico do evento."
+      ],
+      "gpx": {
+        "enabled": false,
+        "filename": "festival-das-luzes-2026-india.gpx",
+        "reason": "Sem ponto oficial específico confirmado para gerar rota GPX."
+      },
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [60]
+      }
+    }
+  ]
+}
