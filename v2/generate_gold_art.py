@@ -19,7 +19,7 @@ LOGO_PATH = REPO_ROOT / "assets" / "spidey-logo-oficial.jpg"
 SIZE = (1024, 1536)
 FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSansCondensed-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-USER_AGENT = "SpideyPokemonGO-V2-FreeRenderer/1.0"
+USER_AGENT = "SpideyPokemonGO-V2-FreeRenderer/1.1"
 
 
 def now():
@@ -106,13 +106,11 @@ def rounded_panel(draw, xy, fill, outline, width=3, radius=26):
 
 
 def build_background(source):
-    # Fundo full-bleed derivado da própria mídia oficial, sem custo e sem inventar conteúdo.
     bg = ImageOps.fit(source, SIZE, method=Image.Resampling.LANCZOS)
     bg = bg.filter(ImageFilter.GaussianBlur(24))
     bg = ImageEnhance.Color(bg).enhance(1.22)
     bg = ImageEnhance.Contrast(bg).enhance(1.10).convert("RGBA")
 
-    # Escurece laterais e base para garantir leitura.
     shade = Image.new("RGBA", SIZE, (0, 0, 0, 0))
     px = shade.load()
     for y in range(SIZE[1]):
@@ -124,38 +122,69 @@ def build_background(source):
     return Image.alpha_composite(bg, shade)
 
 
-def hero_layer(source):
-    # Mídia oficial ocupa a área nobre em full-bleed, sem “card dentro do card”.
+def remove_residual_source_branding(hero, item):
+    if item.get("remove_source_branding") is not True:
+        return hero
+
+    cfg = item.get("source_branding_cover") or {}
+    x = int(cfg.get("x", 20))
+    y = int(cfg.get("y", 20))
+    w = int(cfg.get("w", 410))
+    h = int(cfg.get("h", 220))
+    donor_x = int(cfg.get("donor_x", 500))
+    donor_y = int(cfg.get("donor_y", 20))
+
+    x = max(0, min(x, hero.width - 1))
+    y = max(0, min(y, hero.height - 1))
+    w = max(40, min(w, hero.width - x))
+    h = max(40, min(h, hero.height - y))
+    donor_x = max(0, min(donor_x, hero.width - w))
+    donor_y = max(0, min(donor_y, hero.height - h))
+
+    donor = hero.crop((donor_x, donor_y, donor_x + w, donor_y + h)).convert("RGBA")
+    donor = donor.filter(ImageFilter.GaussianBlur(5))
+
+    mask = Image.new("L", (w, h), 0)
+    md = ImageDraw.Draw(mask)
+    md.rounded_rectangle((16, 16, w - 16, h - 16), radius=44, fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(26))
+
+    cleaned = hero.copy()
+    cleaned.paste(donor, (x, y), mask)
+    print(f"V2_SOURCE_BRANDING_COVER box={x},{y},{w},{h} donor={donor_x},{donor_y}")
+    return cleaned
+
+
+def hero_layer(source, item):
     hero = ImageOps.fit(source, (1024, 820), method=Image.Resampling.LANCZOS, centering=(0.5, 0.45)).convert("RGBA")
+    hero = remove_residual_source_branding(hero, item)
+
     mask = Image.new("L", hero.size, 255)
     md = ImageDraw.Draw(mask)
-    for y in range(650, 820):
-        alpha = int(255 * (1 - (y - 650) / 170))
-        md.line((0, y, 1024, y), fill=max(0, alpha))
+    for yy in range(650, 820):
+        alpha = int(255 * (1 - (yy - 650) / 170))
+        md.line((0, yy, 1024, yy), fill=max(0, alpha))
     hero.putalpha(mask)
     return hero
 
 
 def add_frame(draw):
-    # Moldura angular azul/dourada para identidade Spidey sem poluir o herói.
     draw.line([(22, 118), (22, 1460), (118, 1514), (906, 1514), (1002, 1460), (1002, 118)], fill=(0, 170, 255, 210), width=5)
     draw.line([(31, 128), (31, 1448), (126, 1502), (898, 1502), (993, 1448), (993, 128)], fill=(255, 195, 35, 210), width=3)
 
 
 def compose(item, source):
     image = build_background(source)
-    image.alpha_composite(hero_layer(source), (0, 115))
+    image.alpha_composite(hero_layer(source, item), (0, 115))
     draw = ImageDraw.Draw(image, "RGBA")
     add_frame(draw)
 
-    # Cabeçalho
     rounded_panel(draw, (42, 30, 230, 92), (8, 106, 240, 245), (55, 190, 255, 255), width=2, radius=8)
     draw.text((61, 38), "SPIDEY", font=ImageFont.truetype(FONT_BOLD, 42), fill=(255, 255, 255, 255))
     draw.text((255, 36), "POKÉMON GO", font=ImageFont.truetype(FONT_BOLD, 24), fill=(255, 255, 255, 255))
     draw.text((255, 66), "NOTÍCIAS • EVENTOS • COMUNIDADE", font=ImageFont.truetype(FONT_REG, 18), fill=(235, 242, 255, 255))
     draw.multiline_text((814, 28), "SEMPRE\nUM PASSO\nÀ FRENTE", font=ImageFont.truetype(FONT_BOLD, 20), fill=(240, 245, 255, 255), spacing=4, align="center")
 
-    # Faixa editorial principal
     draw.rounded_rectangle((58, 745, 966, 1098), radius=46, fill=(2, 12, 38, 205), outline=(0, 176, 255, 220), width=4)
     draw.line((105, 772, 919, 772), fill=(255, 194, 35, 220), width=3)
 
@@ -180,7 +209,6 @@ def compose(item, source):
         draw.text((270, y + 13), text, font=fit_font(text, 570, 33, 21), fill=(255, 255, 255, 255))
         y += 76
 
-    # Logo oficial real
     if not LOGO_PATH.is_file():
         raise RuntimeError(f"logo oficial ausente: {LOGO_PATH}")
     logo = Image.open(LOGO_PATH).convert("RGB")
@@ -232,7 +260,7 @@ def main():
         "source_image_url_resolved": source_image_url,
         "art_generated_at_utc": now(),
         "art_dimensions": f"{SIZE[0]}x{SIZE[1]}",
-        "art_pipeline": "free_official_media_plus_deterministic_spidey_overlay_v1",
+        "art_pipeline": "free_official_media_plus_deterministic_spidey_overlay_v2",
         "art_cost": "zero",
     })
     save_queue(path, item)
