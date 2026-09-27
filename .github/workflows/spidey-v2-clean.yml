@@ -21,6 +21,7 @@ concurrency:
 jobs:
   e2e:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Checkout V2
         uses: actions/checkout@v5
@@ -34,12 +35,19 @@ jobs:
           python-version: "3.12"
 
       - name: Dependências
-        run: python -m pip install --quiet requests
+        run: python -m pip install --quiet requests pillow
 
       - name: Validar núcleo
-        run: python -m py_compile v2/spidey_core.py
+        run: python -m py_compile v2/spidey_core.py v2/generate_gold_art.py
 
-      - name: Rodar E2E mínimo
+      - name: Gerar arte Gold full-size
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SPIDEY_IMAGE_MODEL: "gpt-image-2.5-sunburst-2026-09-08"
+          SPIDEY_IMAGE_QUALITY: "high"
+        run: python v2/generate_gold_art.py
+
+      - name: Rodar aprovação/publicação V2
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           APPROVAL_CHANNEL_ID: "1550963072464715997"
@@ -48,18 +56,18 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python v2/spidey_core.py
 
-      - name: Persistir estado
+      - name: Persistir estado e arte
         if: always()
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add v2/queue || true
+          git add v2/queue v2/generated || true
           if git diff --cached --quiet; then
             echo "Sem alteração de estado."
             exit 0
           fi
-          git commit -m "Spidey V2: atualiza estado E2E [skip ci]"
+          git commit -m "Spidey V2: atualiza arte/estado E2E [skip ci]"
           git pull --rebase origin spidey-v2-clean
           git push origin HEAD:spidey-v2-clean
