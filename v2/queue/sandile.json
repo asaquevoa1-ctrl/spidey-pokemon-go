@@ -6,7 +6,7 @@
   "source_channel_id": "1550962794814373898",
   "source_message_id": "1552991457466646548",
   "source_url": "https://pokemongo.com/news/festival-of-lights-2026",
-  "status": "ready",
+  "status": "sent",
   "publish_enabled": true,
   "visual_quality": "human_approved",
   "art_standard_version": "spidey-premium-v1",
@@ -17,5 +17,8 @@
   "source_art_sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
   "art_dimensions": "1024x1536",
   "captured_at_utc": "2026-09-27T15:32:35.442976+00:00",
-  "approval_note": "Aprovar/rejeitar exatamente esta arte. Não regenerar, não reduzir, não substituir."
+  "approval_note": "Aprovar/rejeitar exatamente esta arte. Não regenerar, não reduzir, não substituir.",
+  "approval_message_id": "1553901212187885579",
+  "approved_art_sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
+  "sent_at_utc": "2026-09-27T22:48:41.127573+00:00"
 }
