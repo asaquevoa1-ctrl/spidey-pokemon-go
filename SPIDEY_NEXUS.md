@@ -236,3 +236,89 @@ Não reescrever o que já funciona sem motivo.
 Não confiar apenas neste documento: ele é o mapa de continuidade, mas o código atual do repositório é a verdade técnica final.
 
 Ao receber `SPIDEYNEXUS`, ler este arquivo, conferir commits/estado atual, localizar a primeira pendência crítica ainda aberta e continuar dali.
+
+---
+
+## Atualização canônica — 27/09/2026 — V2 Clean + decisão de custo zero
+
+### Decisão de produto
+
+O canal público será gratuito e a orientação explícita do usuário é **priorizar custo zero** sempre que possível.
+
+Consequência: **não usar a API paga da OpenAI como dependência obrigatória de produção**. A assinatura do ChatGPT não deve ser confundida com créditos de API. O workflow experimental que usa `OPENAI_API_KEY` pode permanecer como prova técnica, mas não é o caminho de produção enquanto exigir cobrança adicional.
+
+### Branch de saneamento
+
+Branch ativa de teste: `spidey-v2-clean`.
+
+Objetivo do V2: provar um fluxo mínimo e confiável antes de religar todas as fontes:
+
+`1 item → 1 arte → Discord aprovação → ✅/❌ humano → publicação ou bloqueio`
+
+### O que o V2 já provou
+
+O E2E positivo do núcleo mínimo foi validado com Sandile:
+
+- arte enviada ao canal de aprovação;
+- ✅ humano reconhecido;
+- mesma arte validada por SHA-256;
+- publicação no canal público;
+- estado final `published`;
+- mensagem pública validada: `1553525839411421235`;
+- rerun posterior resultou em NOOP, sem duplicação.
+
+Portanto, **aprovação → publicação com idempotência = FUNCIONA no V2**.
+
+### Padrão visual atual
+
+O usuário reafirmou que o Gold Standard já existia antes do Sandile. A arte final de Sandile produzida no chat em 27/09 foi aprovada visualmente, com:
+
+- composição vertical mobile-first;
+- português consistente;
+- data `17 de outubro de 2026`;
+- horário `11h às 17h`, horário local;
+- identidade visual Spidey;
+- qualidade considerada correta pelo usuário.
+
+Essa aprovação visual não redefine o padrão; apenas confirma o padrão já estabelecido.
+
+### Gargalo real atual
+
+O problema recorrente não é mais a lógica de ✅/publicação. O gargalo é **transportar/produzir a arte final full-size dentro do ambiente operacional sem reduzir, corromper ou quebrar o arquivo**.
+
+Tentativas por base64 fragmentado e assets reduzidos geraram arte pequena/instável e não devem ser tratadas como solução definitiva.
+
+O V2 já possui guarda de resolução mínima no `v2/spidey_core.py`:
+
+- mínimo `800x1200`;
+- orientação vertical obrigatória;
+- bloqueio de arquivo pequeno demais;
+- validação de SHA-256 antes de publicar.
+
+### Estado atual do Sandile V2
+
+Item: `v2/queue/sandile.json`.
+
+No último estado conhecido antes desta atualização, ele estava em `asset_loading`, preparando teste full-size.
+
+Foi criado `v2/generate_gold_art.py` e o workflow V2 foi adaptado para gerar arte no próprio GitHub Actions antes do Discord.
+
+Run de teste: `36317620236`.
+
+Resultado: **falhou antes do Discord porque `OPENAI_API_KEY` estava ausente**. Isso não é mais considerado ação a ser pedida ao usuário, pois a nova decisão é evitar custo.
+
+### Próxima direção técnica
+
+A próxima solução deve manter o V2 simples e sem custo adicional:
+
+1. remover a API paga da OpenAI como dependência obrigatória;
+2. preservar o core que já funciona para Discord/✅/publicação;
+3. resolver geração/montagem full-size por rota gratuita;
+4. usar mídia oficial/licenciada/permitida e composição determinística quando necessário;
+5. aplicar o logo oficial real e textos/dados de forma determinística;
+6. bloquear qualquer arte abaixo do padrão/resolução antes do Discord;
+7. só depois religar Oficial, G47IX, PokeMiners e SPS.
+
+### Regra de retomada
+
+Ao receber `SPIDEYNEXUS`, **não pedir OPENAI_API_KEY por padrão**. Primeiro verificar se já existe uma rota gratuita operacional para gerar/compor a arte full-size. O objetivo atual é fechar esse gargalo mantendo custo zero.
