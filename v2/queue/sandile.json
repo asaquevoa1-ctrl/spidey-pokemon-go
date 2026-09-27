@@ -20,5 +20,6 @@
   "approval_note": "Aprovar/rejeitar exatamente esta arte. Não regenerar, não reduzir, não substituir.",
   "approval_message_id": "1553901212187885579",
   "approved_art_sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
-  "sent_at_utc": "2026-09-27T22:48:41.127573+00:00"
+  "sent_at_utc": "2026-09-27T22:48:41.127573+00:00",
+  "approval_sync_requested": true
 }
