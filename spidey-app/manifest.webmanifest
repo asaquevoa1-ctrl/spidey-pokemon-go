@@ -1,0 +1,19 @@
+{
+  "name": "Spidey Pokémon GO",
+  "short_name": "Spidey GO",
+  "description": "Calendário Pokémon GO com eventos, horários, coordenadas e GPX.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050b16",
+  "theme_color": "#07162d",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/spidey-logo-oficial.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
