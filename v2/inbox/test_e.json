@@ -1,0 +1,16 @@
+{
+  "source": "PokeMiners",
+  "source_channel_id": "1550962794814373898",
+  "source_message_id": "1552991457466646548",
+  "source_timestamp": "2026-09-25T10:33:36.646000+00:00",
+  "source_author": "PokeMiners #miner-bot",
+  "raw_text": "Found a new news item on PokemonGoLive\n\nTitle: Celebrate the Festival of Lights with the return of Pikachu wearing a saree and Pikachu wearing a kurta!\nLink: https://pokemongo.com/news/festival-of-lights-2026\n\n@subscriber, @news updates\n\nCelebrate the Festival of Lights with the return of Pikachu wearing...",
+  "title": "Celebrate the Festival of Lights with the return of Pikachu wearing a saree and Pikachu wearing a kurta!",
+  "source_url": "https://pokemongo.com/news/festival-of-lights-2026",
+  "status": "captured",
+  "captured_at_utc": "2026-09-27T15:32:35.442976+00:00",
+  "test_stage": "E1_ENTRADA_ONLY",
+  "art_generated": false,
+  "approval_sent": false,
+  "published": false
+}
