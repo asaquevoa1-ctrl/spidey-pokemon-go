@@ -13,6 +13,7 @@ STAMPS_FILE = ROOT / "spidey-app" / "data" / "stamps.json"
 GENERATED_ART_DIR = ROOT / "spidey-app" / "assets" / "events" / "generated"
 WEEKLY_DIR = ROOT / "weekly"
 CURRENT_FILE = WEEKLY_DIR / "current.json"
+APP_WEEKLY_FILE = ROOT / "spidey-app" / "data" / "weekly.json"
 ARCHIVE_DIR = WEEKLY_DIR / "archive"
 BR = ZoneInfo("America/Sao_Paulo")
 
@@ -310,6 +311,7 @@ def main() -> int:
     anchor = date.fromisoformat(override) if override else datetime.now(BR).date()
     payload = build(anchor)
     save(CURRENT_FILE, payload)
+    save(APP_WEEKLY_FILE, payload)
     save(ARCHIVE_DIR / f"{payload['week_start']}.json", payload)
     print(json.dumps({
         "week": f"{payload['week_start']}..{payload['week_end']}",

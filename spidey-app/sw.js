@@ -1,17 +1,21 @@
-const CACHE = 'spidey-app-v1-20260928-art2';
+const CACHE = 'spidey-app-v1-20260928-tabs2';
 const CORE = [
   './',
   './index.html',
   './styles.css',
   './stamps.css',
   './art-system.css',
+  './tabs-v2.css',
   './app.js',
   './art-system.js',
+  './weekly.js',
+  './map.js',
   './push.js',
   './calendar-enhancements.js',
   './manifest.webmanifest',
   './data/events.json',
   './data/stamps.json',
+  './data/weekly.json',
   './assets/spidey-logo-oficial.jpg',
   './assets/festival-das-luzes-approved.png',
   './assets/festival-das-luzes-2026.jpg'
@@ -36,9 +40,9 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   const isAppShell = url.origin === self.location.origin && (
     request.mode === 'navigate' ||
-    /\/(?:index\.html|app\.js|art-system\.js|styles\.css|art-system\.css|stamps\.css)$/.test(url.pathname)
+    /\/(?:index\.html|app\.js|art-system\.js|weekly\.js|map\.js|styles\.css|art-system\.css|stamps\.css|tabs-v2\.css)$/.test(url.pathname)
   );
-  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json');
+  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json');
 
   if (isAppShell || isData) {
     event.respondWith(
