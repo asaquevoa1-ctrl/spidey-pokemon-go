@@ -1,0 +1,77 @@
+name: Spidey Weekly - resumo semanal
+
+on:
+  schedule:
+    # Segunda-feira, 07:05 no horário de Brasília (10:05 UTC).
+    - cron: '5 10 * * 1'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/build_spidey_weekly.py"
+      - ".github/workflows/spidey-weekly.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-weekly-writer
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Preparar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Validar gerador
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/build_spidey_weekly.py
+          python -m json.tool spidey-app/data/events.json >/dev/null
+          python -m json.tool spidey-app/data/stamps.json >/dev/null
+
+      - name: Gerar Spidey Weekly
+        run: python -m scripts.build_spidey_weekly
+
+      - name: Validar saída
+        run: |
+          set -euo pipefail
+          python -m json.tool weekly/current.json >/dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.load(open('weekly/current.json', encoding='utf-8'))
+          assert data['schema_version'] == 'spidey-weekly-v1'
+          assert data['status'] == 'ready_for_art'
+          assert len(data['days']) == 7
+          assert data['week_start'] <= data['week_end']
+          archive=Path('weekly/archive') / f"{data['week_start']}.json"
+          assert archive.exists(), archive
+          print('Spidey Weekly OK:', data['title'], data['meta']['calendar_events_in_week'], 'eventos')
+          PY
+
+      - name: Gravar pacote semanal
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add weekly/current.json weekly/archive
+          if git diff --cached --quiet; then
+            echo "Weekly já estava atualizado."
+            exit 0
+          fi
+          git commit -m "Spidey Weekly: atualiza resumo semanal [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
