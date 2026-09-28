@@ -1,0 +1,497 @@
+{
+  "schema_version": "spidey-weekly-v1",
+  "week_start": "2026-09-28",
+  "week_end": "2026-10-04",
+  "timezone": "America/Sao_Paulo",
+  "title": "Spidey Weekly • 28/09 a 04/10",
+  "visual_standard": "spidey-weekly-premium-v1",
+  "status": "ready_for_art",
+  "days": [
+    {
+      "date": "2026-09-28",
+      "weekday": "monday",
+      "items": []
+    },
+    {
+      "date": "2026-09-29",
+      "weekday": "tuesday",
+      "items": [
+        {
+          "id": "2026-09-29-showcase-tuesday",
+          "title": "Descoberta Diária: Terça de Vitrine",
+          "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+          "category": "daily_discovery",
+          "tags": [
+            "Vitrines",
+            "PokéStop",
+            "Twilight Trails"
+          ],
+          "start_brazil": "2026-09-29T00:00:00-03:00",
+          "end_brazil": "2026-09-29T23:59:59-03:00",
+          "source": {
+            "name": "Twilight Trails • Daily Discoveries",
+            "url": "https://leekduck.com/events/season-24-twilight-trails/",
+            "confidence": "verified"
+          },
+          "art": {}
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "weekday": "wednesday",
+      "items": []
+    },
+    {
+      "date": "2026-10-01",
+      "weekday": "thursday",
+      "items": [
+        {
+          "id": "2026-10-01-go-battle-thursday",
+          "title": "Descoberta Diária: Quinta de Batalhas GO",
+          "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+          "category": "daily_discovery",
+          "tags": [
+            "GO Battle",
+            "PvP",
+            "Twilight Trails"
+          ],
+          "start_brazil": "2026-10-01T00:00:00-03:00",
+          "end_brazil": "2026-10-01T23:59:59-03:00",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+            "confidence": "official"
+          },
+          "art": {}
+        },
+        {
+          "id": "2026-10-01-spotlight-seedot",
+          "title": "Spotlight Hour: Seedot",
+          "summary": "2× PE por captura.",
+          "category": "spotlight_hour",
+          "tags": [
+            "Spotlight Hour",
+            "Seedot",
+            "Global"
+          ],
+          "start_brazil": "2026-10-01T18:00:00-03:00",
+          "end_brazil": "2026-10-01T19:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {}
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "friday",
+      "items": [
+        {
+          "id": "2026-10-02-friendship-friday",
+          "title": "Descoberta Diária: Sexta da Amizade",
+          "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+          "category": "daily_discovery",
+          "tags": [
+            "Amizade",
+            "Trocas",
+            "Twilight Trails"
+          ],
+          "start_brazil": "2026-10-02T00:00:00-03:00",
+          "end_brazil": "2026-10-02T23:59:59-03:00",
+          "source": {
+            "name": "Twilight Trails • Daily Discoveries",
+            "url": "https://leekduck.com/events/season-24-twilight-trails/",
+            "confidence": "verified"
+          },
+          "art": {}
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "weekday": "saturday",
+      "items": [
+        {
+          "id": "2026-10-gigantamax-cinderace-max-day",
+          "title": "Dia de Batalhas Max: Cinderace Gigamax",
+          "summary": "Cinderace Gigamax em Batalhas Max de seis estrelas, com estreia do Brilhante.",
+          "category": "max_battle_day",
+          "tags": [
+            "Cinderace",
+            "Gigamax",
+            "Max Battle Day"
+          ],
+          "start_brazil": "2026-10-03T14:00:00-03:00",
+          "end_brazil": "2026-10-03T17:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+            "confidence": "official"
+          },
+          "art": {}
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "weekday": "sunday",
+      "items": [
+        {
+          "id": "2026-10-04-scenic-sunday",
+          "title": "Descoberta Diária: Domingo Pitoresco",
+          "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+          "category": "daily_discovery",
+          "tags": [
+            "Domingo Pitoresco",
+            "Rotas",
+            "Twilight Trails"
+          ],
+          "start_brazil": "2026-10-04T00:00:00-03:00",
+          "end_brazil": "2026-10-04T23:59:59-03:00",
+          "source": {
+            "name": "Twilight Trails • Daily Discoveries",
+            "url": "https://leekduck.com/events/season-24-twilight-trails/",
+            "confidence": "verified"
+          },
+          "art": {}
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "featured": [
+      {
+        "id": "2026-09-harvest-festival-applin",
+        "title": "Festival da Colheita 2026: Applin Picking",
+        "summary": "Festival da Colheita com estreia de Applin Brilhante.",
+        "category": "evento_especial",
+        "tags": [
+          "Harvest",
+          "Applin",
+          "Global"
+        ],
+        "start_brazil": "2026-09-29T10:00:00-03:00",
+        "end_brazil": "2026-10-05T20:00:00-03:00",
+        "source": {
+          "name": "Leek Duck • fonte oficial referenciada",
+          "url": "https://leekduck.com/events/harvest-festival-2026/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-10-world-space-week",
+        "title": "Semana Mundial do Espaço 2026",
+        "summary": "Semana Mundial do Espaço com estreia do Pikachu Astronauta em reides e Pesquisa temporária.",
+        "category": "evento_especial",
+        "tags": [
+          "Astronaut Pikachu",
+          "Space Week",
+          "Global"
+        ],
+        "start_brazil": "2026-10-04T00:00:00-03:00",
+        "end_brazil": "2026-10-10T23:59:59-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/en/news/world-space-week-2026",
+          "confidence": "official"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-09-choose-your-path",
+        "title": "Choose Your Path • Twilight Trails",
+        "summary": "Pesquisa temporária ramificada com caminhos de exploração, captura ou batalha.",
+        "category": "timed_research",
+        "tags": [
+          "Pesquisa",
+          "Twilight Trails",
+          "Global"
+        ],
+        "start_brazil": "2026-09-23T10:00:00-03:00",
+        "end_brazil": "2026-09-28T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • calendário setembro 2026",
+          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-10-harvest-taken-over",
+        "title": "Festival da Colheita: A Invasão",
+        "summary": "Invasão da Equipe GO Rocket durante o Festival da Colheita, com Zekrom Sombroso e remoção de Frustração.",
+        "category": "team_go_rocket",
+        "tags": [
+          "Team GO Rocket",
+          "Zekrom Sombroso",
+          "Global"
+        ],
+        "start_brazil": "2026-10-02T00:00:00-03:00",
+        "end_brazil": "2026-10-05T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
+          "confidence": "official"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-10-gigantamax-cinderace-max-day",
+        "title": "Dia de Batalhas Max: Cinderace Gigamax",
+        "summary": "Cinderace Gigamax em Batalhas Max de seis estrelas, com estreia do Brilhante.",
+        "category": "max_battle_day",
+        "tags": [
+          "Cinderace",
+          "Gigamax",
+          "Max Battle Day"
+        ],
+        "start_brazil": "2026-10-03T14:00:00-03:00",
+        "end_brazil": "2026-10-03T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+          "confidence": "official"
+        },
+        "art": {}
+      }
+    ],
+    "raids": [
+      {
+        "id": "2026-09-30-raid-hour-xerneas",
+        "title": "Raid Hour: Xerneas",
+        "summary": "Xerneas em destaque nas reides de cinco estrelas.",
+        "category": "raid_hour",
+        "tags": [
+          "Raid Hour",
+          "5 estrelas",
+          "Global"
+        ],
+        "start_brazil": "2026-09-30T18:00:00-03:00",
+        "end_brazil": "2026-09-30T19:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • calendário setembro 2026",
+          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-09-raids-ultra-beasts",
+        "title": "Reides 5★: Xurkitree / Buzzwole / Pheromosa",
+        "summary": "Ultra Beasts regionais: Xurkitree (APAC), Buzzwole (Américas/Greenland) e Pheromosa (Europa/Oriente Médio/África/Índia).",
+        "category": "raid_rotation",
+        "tags": [
+          "Reide 5★",
+          "Rotação",
+          "Global"
+        ],
+        "start_brazil": "2026-09-23T06:00:00-03:00",
+        "end_brazil": "2026-09-29T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • calendário setembro 2026",
+          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-09-raids-xerneas",
+        "title": "Reides 5★: Xerneas",
+        "summary": "Xerneas fecha setembro e segue no início de outubro.",
+        "category": "raid_rotation",
+        "tags": [
+          "Reide 5★",
+          "Rotação",
+          "Global"
+        ],
+        "start_brazil": "2026-09-30T06:00:00-03:00",
+        "end_brazil": "2026-10-06T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • calendário setembro 2026",
+          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-09-mega-malamar-raids",
+        "title": "Mega Reides: Mega Malamar",
+        "summary": "Mega Malamar na rotação de Mega Reides.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Mega Reide",
+          "Rotação",
+          "Global"
+        ],
+        "start_brazil": "2026-09-23T06:00:00-03:00",
+        "end_brazil": "2026-09-29T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • calendário setembro 2026",
+          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-09-mega-victreebel-raids",
+        "title": "Mega Reides: Mega Victreebel",
+        "summary": "Mega Victreebel fecha setembro e segue no início de outubro.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Mega Reide",
+          "Rotação",
+          "Global"
+        ],
+        "start_brazil": "2026-09-30T06:00:00-03:00",
+        "end_brazil": "2026-10-06T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • calendário setembro 2026",
+          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-10-shadow-thundurus",
+        "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+        "summary": "Thundurus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+        "category": "shadow_raids",
+        "tags": [
+          "Shadow Raid",
+          "Thundurus (Forma Encarnada)",
+          "Fim de semana"
+        ],
+        "start_brazil": "2026-10-03T00:00:00-03:00",
+        "end_brazil": "2026-10-04T23:59:59-03:00",
+        "source": {
+          "name": "Pokémon GO Hub • calendário outubro 2026",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      }
+    ],
+    "max_pvp": [
+      {
+        "id": "2026-09-28-max-monday-sobble",
+        "title": "Max Monday: Dynamax Sobble",
+        "summary": "Sobble Dynamax em destaque nos Power Spots.",
+        "category": "max_monday",
+        "tags": [
+          "Max Monday",
+          "Dynamax",
+          "Global"
+        ],
+        "start_brazil": "2026-09-28T06:00:00-03:00",
+        "end_brazil": "2026-09-28T21:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • calendário setembro 2026",
+          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-09-gbl-22-29",
+        "title": "GO Battle League: Ultra / Master Mega / Retro Cup",
+        "summary": "Ultra League, Master League: Mega Edition e Retro Cup: Great League Edition.",
+        "category": "go_battle_league",
+        "tags": [
+          "GO Battle League",
+          "PvP",
+          "Twilight Trails"
+        ],
+        "start_brazil": "2026-09-22T17:00:00-03:00",
+        "end_brazil": "2026-09-29T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+          "confidence": "official"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-09-gbl-29-1006",
+        "title": "GO Battle League: Master / Mega Color Cup",
+        "summary": "Master League e Mega Color Cup: Great League Edition.",
+        "category": "go_battle_league",
+        "tags": [
+          "GO Battle League",
+          "PvP",
+          "Twilight Trails"
+        ],
+        "start_brazil": "2026-09-29T17:00:00-03:00",
+        "end_brazil": "2026-10-06T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+          "confidence": "official"
+        },
+        "art": {}
+      }
+    ],
+    "also_happening": [
+      {
+        "id": "2026-09-iit-delhi-rendezvous",
+        "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
+        "summary": "Evento oficial no IIT Delhi com bônus, encontros, reides, Collection Challenge e Pesquisa temporária.",
+        "category": "regional_event",
+        "tags": [
+          "Índia",
+          "IIT Delhi",
+          "Regional"
+        ],
+        "start_brazil": "2026-09-28T01:30:00-03:00",
+        "end_brazil": "2026-10-01T11:30:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/pokemongo-iitdelhi-2026",
+          "confidence": "official"
+        },
+        "art": {}
+      },
+      {
+        "id": "2026-10-patterns-of-the-wild-indonesia",
+        "title": "Patterns of the Wild • Indonésia",
+        "summary": "Evento regional na Indonésia com Pikachu usando camisa batik e Fundo Especial.",
+        "category": "regional_event",
+        "tags": [
+          "Indonésia",
+          "Pikachu Batik",
+          "Regional"
+        ],
+        "start_brazil": "2026-10-02T00:00:00-03:00",
+        "end_brazil": "2026-10-02T10:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/patterns-of-the-wild-2026",
+          "confidence": "official"
+        },
+        "art": {}
+      }
+    ]
+  },
+  "stamps": [
+    {
+      "id": "pokexciting-cross-region-2026",
+      "title": "PokéXciting! Cross-Region GO Stamp Rally",
+      "summary": "Rally regional oficial com cinco selos PokéXciting! distribuídos por cidades da Ásia-Pacífico.",
+      "stamp_count": 5,
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/event-apac-stamp-rally-2026",
+        "confidence": "official"
+      }
+    }
+  ],
+  "meta": {
+    "calendar_events_in_week": 21,
+    "generated_at": "2026-09-28T11:21:43.931034-03:00",
+    "source": "spidey-app/data/events.json + stamps.json"
+  }
+}
