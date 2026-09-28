@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260927c';
+const CACHE = 'spidey-app-v1-20260928-hq1';
 const CORE = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const CORE = [
   './manifest.webmanifest',
   './data/events.json',
   './assets/spidey-logo-oficial.jpg',
+  './assets/festival-das-luzes-approved.png',
   './assets/festival-das-luzes-2026.jpg'
 ];
 
