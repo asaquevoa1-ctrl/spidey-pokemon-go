@@ -4,15 +4,27 @@ Atualizado em 28/09/2026.
 
 ## Decisão de produto
 
-O destino principal do projeto deixou de ser um canal público de WhatsApp/Discord. O produto passa a ser um **aplicativo/PWA público Spidey Pokémon GO**.
+O destino principal do projeto é um **aplicativo/PWA público Spidey Pokémon GO**.
 
-O Discord permanece como **painel editorial de aprovação humana**, não como produto final.
+WhatsApp/Discord não são o produto final. O Discord pode continuar existindo como painel editorial e de exceções, mas **a aprovação humana não deve ser obrigatória para todos os eventos**.
 
-Fluxo alvo:
+### Fluxo alvo revisado
 
-`Fontes → coleta → curadoria → arte Premium → aprovação humana no Discord → banco de eventos → Spidey App → notificações`
+`Fontes → captura → extração/estruturação → validações automáticas → geração de arte Premium → publicação no Spidey App → notificações`
 
-Nada deve entrar no app público sem aprovação editorial válida.
+Quando a fonte for confiável e todas as validações passarem, o evento pode ser publicado automaticamente.
+
+A revisão humana fica reservada para exceções, por exemplo:
+
+- conflito entre fontes;
+- data/horário ambíguo;
+- timezone ausente ou incoerente;
+- coordenada não confirmada;
+- arte fora do padrão;
+- baixa confiança do conteúdo;
+- qualquer dado que possa induzir o usuário ao erro.
+
+A meta é eliminar o usuário como gargalo sem remover as travas de segurança editorial.
 
 ## Produto desejado
 
@@ -21,14 +33,16 @@ O app deve concentrar:
 - calendário mensal de eventos;
 - dias destacados quando há evento;
 - abertura do evento ao tocar no dia/card;
-- arte Premium aprovada;
+- arte Premium;
 - horários locais e conversão para Brasil;
 - coordenadas em formato copiável `latitude, longitude`;
 - GPX para download quando houver coordenadas reais/adequadas;
 - bônus, Pokémon em destaque, raids, pesquisas, recompensas e demais informações;
 - fonte oficial;
 - notificações;
-- filtros/favoritos e demais evoluções depois do MVP.
+- filtros/favoritos;
+- mapa;
+- módulo de **GO Stamp Rally / Stamps**.
 
 ## Estado atual do app
 
@@ -88,35 +102,13 @@ Arte Gold Standard aprovada pelo usuário: Festival das Luzes com Pikachu saree 
 
 Arquivo original aprovado: 1024×1536, aproximadamente 2,2 MB.
 
-A importação HQ foi feita pelo workflow temporário `Spidey Import HQ Art` e terminou com sucesso.
+A arte HQ foi publicada no app e validada no celular.
 
-Commit que publicou a arte HQ no app:
+O problema de recorte da tela de detalhe foi corrigido. A arte agora aparece inteira em proporção 2:3, preservando topo, corpo, logo, rodapé e fonte.
 
-`edd317d956da053dee5b1b4ac859216dec2d08e0`
+### Pendência visual restante
 
-O deploy correspondente no Vercel concluiu com sucesso.
-
-## PENDÊNCIA VISUAL IMEDIATA — RETOMAR DAQUI
-
-No último teste em celular, a qualidade ficou boa, mas a arte está **recortada na tela de detalhe**.
-
-Causa técnica provável já identificada no CSS:
-
-`.detail-hero { max-height: 440px; object-fit: cover; }`
-
-Isso força o poster vertical 2:3 a preencher uma área horizontal/limitada e corta partes da arte.
-
-Próxima correção:
-
-- no detalhe, exibir a arte inteira;
-- usar `object-fit: contain` ou altura automática compatível com 2:3;
-- preservar 100% do poster sem crop;
-- manter card/lista podendo usar thumbnail recortada se visualmente fizer sentido;
-- validar no celular antes de declarar concluído.
-
-## Outra pendência visual
-
-A arte HQ ainda mostra a coordenada como:
+A própria arte ainda mostra a coordenada como:
 
 `20.5937° N, 78.9629° E`
 
@@ -124,7 +116,78 @@ Preferência atual do usuário:
 
 `20.5937, 78.9629`
 
-Remover `N` e `E` também **da própria arte**, sem reduzir qualidade nem alterar o restante do layout.
+Remover `N` e `E` **da própria arte**, sem reduzir qualidade nem alterar o restante do layout.
+
+## NOVO MÓDULO — STAMPS / GO STAMP RALLY
+
+O app deve também suportar eventos mundiais de **Stamp Rally**.
+
+Objetivo: além de informar o evento, ajudar o jogador a executar a rota de selos.
+
+### Estrutura de dados desejada
+
+`Stamp Rally → várias Stops → coordenadas → recompensa → período → progresso/rota`
+
+Cada Stamp Rally deve poder conter:
+
+- nome do rally;
+- cidade/país;
+- data de início/fim;
+- quantidade de selos/stamps;
+- recompensas;
+- necessidade ou não de ingresso;
+- fonte;
+- lista de PokéStops participantes.
+
+Cada Stop deve ter, quando disponível:
+
+- nome;
+- latitude;
+- longitude;
+- tipo da coordenada;
+- nível/confiança da coordenada;
+- botão para copiar coordenada;
+- GPX individual.
+
+### Funções previstas
+
+- copiar coordenada de uma Stop com um toque;
+- GPX individual da Stop;
+- GPX completo do rally com todas as Stops confirmadas;
+- mapa com os pontos;
+- ordenar Stops por distância usando localização do aparelho;
+- botão/próxima Stop;
+- progresso do usuário, por exemplo `3/8 selos`;
+- notificação para novo Stamp Rally ou término próximo.
+
+### Regra crítica de coordenadas
+
+Separar rigorosamente:
+
+- `exact_pokestop` = coordenada exata confirmada da PokéStop;
+- `venue_reference` / `city_reference` = referência aproximada do local.
+
+Nunca gerar GPX como se fosse uma PokéStop exata quando só houver referência aproximada.
+
+## Arquitetura de navegação desejada
+
+Direção preferida para a navegação principal:
+
+`Calendário | Stamps | Mapa`
+
+Stamp Rally também deve poder aparecer no calendário mensal quando tiver período definido.
+
+## Próxima etapa técnica recomendada
+
+Antes de automatizar todas as fontes, adaptar o modelo de dados do app para suportar **eventos normais + Stamp Rallies**.
+
+Depois unir o motor existente ao app:
+
+`novo evento → validação automática → arte → registro estruturado → calendário/app → notificação`
+
+Publicação automática deve ser idempotente e sem duplicação.
+
+Revisão humana só entra quando alguma validação falhar ou houver ambiguidade.
 
 ## Regras para próxima retomada
 
@@ -133,12 +196,14 @@ Quando o usuário escrever `SPIDEYNEXUS`:
 1. ler `SPIDEY_NEXUS.md`;
 2. ler este `SPIDEY_APP_STATUS.md`;
 3. conferir a `main` atual;
-4. preservar o pipeline editorial V2 que já funciona;
-5. NÃO voltar para o conceito de WhatsApp como produto principal;
-6. retomar primeiro a correção do **recorte da arte HQ na tela de detalhe**;
-7. depois corrigir a coordenada da arte para remover N/E;
-8. validar o deploy no Vercel e no celular;
-9. só então avançar em banco de eventos, notificações e conexão automática das fontes.
+4. preservar tudo que já funciona;
+5. NÃO voltar para WhatsApp como produto principal;
+6. considerar o recorte da arte como RESOLVIDO;
+7. manter pendente apenas o acabamento da coordenada da arte sem `N/E`;
+8. priorizar a adaptação do modelo de dados para **eventos + Stamps**;
+9. depois implementar o fluxo de autopublicação com validações automáticas;
+10. manter revisão humana apenas como exceção;
+11. validar deploy no Vercel e comportamento real antes de declarar concluído.
 
 ## Princípio de continuidade
 
@@ -146,4 +211,4 @@ Não recomeçar o projeto.
 
 Não pedir ao usuário para refazer Vercel/GitHub: as integrações já foram configuradas.
 
-Não declarar que algo está pronto sem verificar deploy e comportamento real.
+Não declarar algo pronto sem verificar o deploy e o comportamento real.
