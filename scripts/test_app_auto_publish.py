@@ -1,4 +1,4 @@
-from scripts.app_auto_publish import validate_event, validate_stamp
+from scripts.app_auto_publish_v2 import validate_event, validate_stamp
 
 
 BASE_VALIDATION = {
@@ -71,6 +71,13 @@ def run():
     errors = validate_event(event_payload(), candidate)
     assert not errors, f"Evento oficial válido foi bloqueado: {errors}"
 
+    calendar_only = event_payload()
+    calendar_only.pop("art")
+    calendar_only["presentation"] = {"requires_art": False}
+    calendar_validation = {"validation": {**BASE_VALIDATION, "art_verified": False}}
+    errors = validate_event(calendar_only, calendar_validation)
+    assert not errors, f"Evento de calendário sem arte dedicada foi bloqueado: {errors}"
+
     secondary = event_payload()
     secondary["source"]["confidence"] = "verified"
     bad_candidate = {"validation": {**BASE_VALIDATION, "cross_checked": False}}
@@ -107,7 +114,7 @@ def run():
     errors = validate_stamp(exact_stamp, candidate)
     assert not errors, f"PokéStop exata confirmada foi bloqueada: {errors}"
 
-    print("app_auto_publish gate tests: OK")
+    print("app_auto_publish v2 gate tests: OK")
 
 
 if __name__ == "__main__":
