@@ -23,6 +23,7 @@ CATEGORY_GROUPS = {
     "shadow_raids": "raids",
     "max_monday": "max_pvp",
     "max_battle": "max_pvp",
+    "max_battle_day": "max_pvp",
     "gmax": "max_pvp",
     "gbl": "max_pvp",
     "go_battle_league": "max_pvp",
@@ -122,8 +123,8 @@ def score(event: dict) -> tuple[int, datetime]:
         "go_fest": 0, "community_day": 1, "raid_day": 2, "hatch_day": 3,
         "evento_especial": 4, "timed_research": 5, "catch_mastery": 6,
         "raid_hour": 7, "spotlight_hour": 8, "max_monday": 9,
-        "raid_rotation": 10, "mega_raid_rotation": 11, "shadow_raids": 12,
-        "gbl": 13, "go_battle_league": 13,
+        "max_battle_day": 9, "raid_rotation": 10, "mega_raid_rotation": 11,
+        "shadow_raids": 12, "gbl": 13, "go_battle_league": 13,
     }
     start, _ = event_range(event)
     return priorities.get(category, 50), start or datetime.max.replace(tzinfo=BR)
@@ -164,8 +165,9 @@ def build(anchor: date) -> dict:
             start, end = event_range(event)
             if start and end and overlaps(start, end, d_start, d_end):
                 group = group_for(event)
-                # No card diário: itens de grande duração/rotações ficam nos blocos próprios.
-                if group in {"daily", "featured"} and (end - start) <= timedelta(days=2):
+                # Eventos curtos podem aparecer também na faixa dos 7 dias.
+                # Rotações longas continuam apenas nos blocos inferiores.
+                if group in {"daily", "featured", "raids", "max_pvp"} and (end - start) <= timedelta(days=2):
                     active.append(clean_event(event))
         active.sort(key=lambda item: item.get("start_brazil") or "")
         days.append({"date": day.isoformat(), "weekday": day.strftime("%A").lower(), "items": active[:5]})
