@@ -1,0 +1,61 @@
+name: Spidey Art System v1 - validar branch
+
+on:
+  push:
+    branches:
+      - spidey-art-system-v1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v5
+
+      - name: Preparar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Preparar Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Validar JavaScript e arquivos do app
+        run: |
+          set -euo pipefail
+          node --check spidey-app/app.js
+          node --check spidey-app/art-system.js
+          node --check spidey-app/sw.js
+          grep -q 'art-system.css' spidey-app/index.html
+          grep -q 'art-system.js' spidey-app/index.html
+          grep -q 'art-system.css' spidey-app/sw.js
+          grep -q 'art-system.js' spidey-app/sw.js
+          ! grep -q "replaceWith.*spidey-logo-oficial" spidey-app/art-system.js
+
+      - name: Auditar cobertura de artes
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/audit_event_art.py
+          python scripts/audit_event_art.py --output reports/art-audit.json
+          python -m json.tool reports/art-audit.json >/dev/null
+
+      - name: Validar regras críticas
+        run: |
+          python - <<'PY'
+          import json
+          report=json.load(open('reports/art-audit.json', encoding='utf-8'))
+          assert report['festival_hero_ready'] is True
+          assert report['rules']['logo_is_event_art'] is False
+          assert report['rules']['data_uri_allowed'] is False
+          print('Art System v1 OK')
+          print('Set/Out:', report['sep_oct_2026']['total'], 'eventos')
+          print('Hero prontos:', report['sep_oct_2026']['ready']['hero'])
+          print('Weekly prontos:', report['sep_oct_2026']['ready']['weekly'])
+          print('Precisam de arte:', len(report['sep_oct_2026']['needs_art']))
+          PY
