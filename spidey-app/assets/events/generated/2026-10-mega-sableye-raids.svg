@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620" role="img" aria-labelledby="title desc">
+<title id="title">Mega Reides: Mega Sableye</title>
+<desc id="desc">Arte vetorial automática Spidey para MEGA REIDES. Não é a arte Premium final.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#10234A"/>
+    <stop offset="0.55" stop-color="#07162D"/>
+    <stop offset="1" stop-color="#050B16"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.82" cy="0.08" r="0.62">
+    <stop offset="0" stop-color="#8E7CFF" stop-opacity="0.38"/>
+    <stop offset="1" stop-color="#8E7CFF" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1080" height="1620" fill="url(#bg)"/>
+<rect width="1080" height="1620" fill="url(#glow)"/>
+<circle cx="888" cy="190" r="250" fill="none" stroke="#8E7CFF" stroke-opacity="0.20" stroke-width="3"/>
+<circle cx="888" cy="190" r="190" fill="none" stroke="#8E7CFF" stroke-opacity="0.12" stroke-width="2"/>
+<circle cx="888" cy="190" r="125" fill="none" stroke="#8E7CFF" stroke-opacity="0.10" stroke-width="2"/>
+<path d="M0 1180 L1080 840" stroke="#8E7CFF" stroke-opacity="0.07" stroke-width="3"/>
+<path d="M0 1260 L1080 920" stroke="#F3C75A" stroke-opacity="0.05" stroke-width="3"/>
+<circle cx="130" cy="220" r="80" fill="#8E7CFF" fill-opacity="0.10" filter="url(#soft)"/>
+
+<text x="84" y="105" font-size="28" font-weight="900" letter-spacing="8" fill="#43D6FF" font-family="Inter,Arial,sans-serif">SPIDEY</text>
+<text x="84" y="148" font-size="20" font-weight="700" letter-spacing="4" fill="#98ABC7" font-family="Inter,Arial,sans-serif">POKÉMON GO • EVENTO</text>
+
+<rect x="84" y="240" width="235" height="64" rx="32" fill="#8E7CFF" fill-opacity="0.15" stroke="#8E7CFF" stroke-opacity="0.45"/>
+<text x="112" y="282" font-size="25" font-weight="900" letter-spacing="2" fill="#8E7CFF" font-family="Inter,Arial,sans-serif">MEGA REIDES</text>
+
+<text x="84" y="410" font-size="28" font-weight="800" letter-spacing="3" fill="#F3C75A" font-family="Inter,Arial,sans-serif">28/10 06:00 → 03/11 22:00</text>
+<text x="84" y="590" font-size="76" font-weight="900" fill="#F7FBFF" font-family="Inter,Arial,sans-serif">Mega Reides: Mega Sableye</text>
+<text x="84" y="730" font-size="31" font-weight="500" fill="#C0CEE0" font-family="Inter,Arial,sans-serif">Mega Sableye na rotação de Mega Reides.</text>
+
+<line x1="84" y1="1210" x2="996" y2="1210" stroke="#43D6FF" stroke-opacity="0.18"/>
+<rect x="84" y="1288" width="176" height="54" rx="27" fill="#8E7CFF" fill-opacity="0.12" stroke="#8E7CFF" stroke-opacity="0.32"/><text x="102" y="1323" font-size="22" font-weight="700" fill="#DCEBFA" font-family="Inter,Arial,sans-serif">Mega Reide</text><rect x="274" y="1288" width="131" height="54" rx="27" fill="#8E7CFF" fill-opacity="0.12" stroke="#8E7CFF" stroke-opacity="0.32"/><text x="292" y="1323" font-size="22" font-weight="700" fill="#DCEBFA" font-family="Inter,Arial,sans-serif">Rotação</text><rect x="419" y="1288" width="206" height="54" rx="27" fill="#8E7CFF" fill-opacity="0.12" stroke="#8E7CFF" stroke-opacity="0.32"/><text x="437" y="1323" font-size="22" font-weight="700" fill="#DCEBFA" font-family="Inter,Arial,sans-serif">Mega Sableye</text>
+
+<text x="84" y="1455" font-size="20" font-weight="700" fill="#98ABC7" font-family="Inter,Arial,sans-serif">FONTE</text>
+<text x="84" y="1494" font-size="24" font-weight="700" fill="#DCE7F5" font-family="Inter,Arial,sans-serif">Pokémon GO Hub • calendário outubro 2026</text>
+<text x="84" y="1560" font-size="18" font-weight="700" letter-spacing="2" fill="#F3C75A" font-family="Inter,Arial,sans-serif">VISUAL AUTOMÁTICO • ARTE PREMIUM AINDA NÃO DISPONÍVEL</text>
+</svg>
