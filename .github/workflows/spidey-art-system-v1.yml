@@ -36,6 +36,7 @@ jobs:
           node --check spidey-app/sw.js
           python -m py_compile scripts/generate_event_vector_art.py
           python -m py_compile scripts/audit_event_art.py
+          python -m py_compile scripts/sync_nexus_art_status.py
           grep -q 'art-system.css' spidey-app/index.html
           grep -q 'art-system.js' spidey-app/index.html
           grep -q 'art-system.css' spidey-app/sw.js
@@ -76,15 +77,21 @@ jobs:
           print('Fallback vetorial hero:', scope['generated_vector']['hero'])
           PY
 
-      - name: Gravar visuais vetoriais gerados na branch
+      - name: Sincronizar SPIDEYNEXUS
+        run: |
+          set -euo pipefail
+          python scripts/sync_nexus_art_status.py
+          grep -q 'Art System v1' SPIDEY_NEXUS.md
+
+      - name: Gravar estado validado na branch
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add spidey-app/assets/events/generated
+          git add spidey-app/assets/events/generated SPIDEY_NEXUS.md
           if git diff --cached --quiet; then
-            echo "Visuais gerados já estavam atualizados."
+            echo "Art System e Nexus já estavam atualizados."
             exit 0
           fi
-          git commit -m "Spidey Art: atualiza visuais individuais gerados [skip ci]"
+          git commit -m "Spidey Art: atualiza visuais e Nexus [skip ci]"
           git push origin HEAD:spidey-art-system-v1
