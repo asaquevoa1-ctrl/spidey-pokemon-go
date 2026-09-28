@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260928-stamps1';
+const CACHE = 'spidey-app-v1-20260928-stamps2-safe-coords';
 const CORE = [
   './',
   './index.html',

@@ -72,7 +72,12 @@ function eventImage(event) {
 }
 
 function validCoordinate(point) {
-  return Number.isFinite(Number(point?.latitude)) && Number.isFinite(Number(point?.longitude));
+  const latRaw = point?.latitude;
+  const lonRaw = point?.longitude;
+  if (latRaw === null || latRaw === undefined || latRaw === '' || lonRaw === null || lonRaw === undefined || lonRaw === '') return false;
+  const latitude = Number(latRaw);
+  const longitude = Number(lonRaw);
+  return Number.isFinite(latitude) && Number.isFinite(longitude) && latitude >= -90 && latitude <= 90 && longitude >= -180 && longitude <= 180;
 }
 
 function exactPokestop(stop) {
