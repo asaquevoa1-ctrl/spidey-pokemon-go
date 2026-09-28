@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#031224"/>
+      <stop offset="0.5" stop-color="#06324f"/>
+      <stop offset="1" stop-color="#08111f"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="40%" r="55%">
+      <stop offset="0" stop-color="#d9fbff" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#49d6ff" stop-opacity=".40"/>
+      <stop offset="1" stop-color="#49d6ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffe98e"/>
+      <stop offset="1" stop-color="#f3b630"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#000" flood-opacity=".55"/></filter>
+    <clipPath id="logoClip"><rect x="64" y="62" width="242" height="110" rx="28"/></clipPath>
+  </defs>
+  <rect width="1080" height="1620" fill="url(#bg)"/>
+  <circle cx="800" cy="430" r="360" fill="url(#moon)"/>
+  <path d="M0 1010 C140 910 280 930 405 865 C555 785 730 825 1080 710 V1620 H0Z" fill="#071a26"/>
+  <path d="M0 1120 C170 1010 300 1055 480 970 C650 890 820 920 1080 835 V1620 H0Z" fill="#07101c"/>
+  <g opacity=".55" filter="url(#glow)">
+    <path d="M695 260 l-70 -105 M720 250 l-5 -135 M750 270 l70 -120 M785 300 l125 -70" stroke="#6cf5ff" stroke-width="11" stroke-linecap="round"/>
+    <path d="M700 300 l-115 -40 M735 300 l-15 -130 M775 315 l95 -95" stroke="#ffd765" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <image href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png" x="325" y="250" width="690" height="810" preserveAspectRatio="xMidYMid meet" filter="url(#shadow)"/>
+  <rect x="54" y="52" width="262" height="130" rx="34" fill="#06111d" opacity=".9" stroke="#1ea6d8" stroke-width="2"/>
+  <image href="../../spidey-logo-oficial.jpg" x="64" y="62" width="242" height="110" preserveAspectRatio="xMidYMid slice" clip-path="url(#logoClip)"/>
+  <rect x="64" y="205" width="292" height="58" rx="29" fill="#d9232e"/>
+  <text x="210" y="244" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="800" fill="#fff">RAID HOUR</text>
+  <text x="64" y="1125" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="900" fill="#fff" letter-spacing="-4">XERNEAS</text>
+  <text x="66" y="1192" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#7feaff">REIDES 5★ • 30 DE SETEMBRO</text>
+  <rect x="64" y="1240" width="952" height="238" rx="42" fill="#06111d" opacity=".93" stroke="#1b5873" stroke-width="2"/>
+  <text x="112" y="1322" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#b8c8d8">HORÁRIO LOCAL</text>
+  <text x="112" y="1402" font-family="Arial,Helvetica,sans-serif" font-size="67" font-weight="900" fill="url(#gold)">18:00 — 19:00</text>
+  <text x="112" y="1455" font-family="Arial,Helvetica,sans-serif" font-size="28" fill="#91a9bc">Xerneas em destaque nas Reides de 5 estrelas</text>
+  <text x="64" y="1552" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#5fc8ef">SPIDEY • EVENT ART PREMIUM v1</text>
+  <circle cx="994" cy="1538" r="9" fill="#f5c84f"/>
+</svg>
