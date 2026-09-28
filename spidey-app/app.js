@@ -393,8 +393,12 @@ function setView(viewId) {
     tab.classList.toggle('active', active);
     if (active) tab.setAttribute('aria-current', 'page'); else tab.removeAttribute('aria-current');
   });
+  if (viewId === 'weeklyView' && typeof renderWeeklyView === 'function') renderWeeklyView();
   if (viewId === 'stampsView') renderStamps();
-  if (viewId === 'mapView') renderMapSummary();
+  if (viewId === 'mapView') {
+    if (typeof renderMapV2 === 'function') renderMapV2();
+    else renderMapSummary();
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -412,7 +416,9 @@ async function loadContent() {
     renderCalendar();
     renderEvents();
     renderStamps();
-    renderMapSummary();
+    if (typeof renderWeeklyView === 'function') renderWeeklyView();
+    if (typeof renderMapV2 === 'function') renderMapV2();
+    else renderMapSummary();
   } catch (error) {
     console.error(error);
     eventList.innerHTML = '<p class="empty">Não foi possível carregar os eventos.</p>';
