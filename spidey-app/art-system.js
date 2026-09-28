@@ -64,6 +64,25 @@ function spideyLegacyArtAsset(event) {
   };
 }
 
+function spideyGeneratedArtId(event) {
+  return String(event?.id || '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9._-]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'evento';
+}
+
+function spideyGeneratedArtAsset(event) {
+  if (!event?.id) return null;
+  return {
+    url: `assets/events/generated/${spideyGeneratedArtId(event)}.svg`,
+    width: 1080,
+    height: 1620,
+    sha256: '',
+    sourceRole: 'generated_vector',
+  };
+}
+
 function spideyArtIsLogo(url) {
   return /spidey-logo-oficial/i.test(String(url || ''));
 }
@@ -96,6 +115,9 @@ function spideyResolveEventArt(event, role = 'card') {
 
   const legacy = spideyLegacyArtAsset(event);
   if (legacy) candidates.push(legacy);
+
+  const generated = spideyGeneratedArtAsset(event);
+  if (generated) candidates.push(generated);
 
   for (const candidate of candidates) {
     const key = `${candidate.url}|${candidate.width}|${candidate.height}`;
@@ -141,6 +163,7 @@ function spideyApplyImageAsset(image, event, role) {
   image.removeAttribute('onerror');
   image.src = spideyVersionedArtUrl(asset);
   image.alt = event?.art?.alt || event?.title || 'Arte do evento';
+  image.dataset.artSource = asset.sourceRole || 'unknown';
   image.onerror = () => {
     if (image.isConnected) image.replaceWith(spideyFallbackNode(event, role));
   };
@@ -184,5 +207,6 @@ spideyArtObserver.observe(eventList, { childList: true, subtree: true });
 window.SpideyArt = {
   resolve: spideyResolveEventArt,
   usable: spideyArtUsable,
+  generated: spideyGeneratedArtAsset,
   limits: SPIDEY_ART_LIMITS,
 };
