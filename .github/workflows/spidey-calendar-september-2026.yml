@@ -1,5 +1,6 @@
 name: Spidey Calendar - Setembro 2026
 
+# Sincronização canônica do mês; workflow idempotente.
 on:
   push:
     branches:
