@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260928-art1';
+const CACHE = 'spidey-app-v1-20260928-art2';
 const CORE = [
   './',
   './index.html',
@@ -33,12 +33,21 @@ self.addEventListener('fetch', (event) => {
   const request = event.request;
   if (request.method !== 'GET') return;
 
-  if (request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json')) {
+  const url = new URL(request.url);
+  const isAppShell = url.origin === self.location.origin && (
+    request.mode === 'navigate' ||
+    /\/(?:index\.html|app\.js|art-system\.js|styles\.css|art-system\.css|stamps\.css)$/.test(url.pathname)
+  );
+  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json');
+
+  if (isAppShell || isData) {
     event.respondWith(
-      fetch(request)
+      fetch(request, { cache: 'no-store' })
         .then((response) => {
-          const copy = response.clone();
-          caches.open(CACHE).then((cache) => cache.put(request, copy));
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE).then((cache) => cache.put(request, copy));
+          }
           return response;
         })
         .catch(() => caches.match(request))
@@ -48,7 +57,7 @@ self.addEventListener('fetch', (event) => {
 
   event.respondWith(
     caches.match(request).then((cached) => cached || fetch(request).then((response) => {
-      if (response.ok && new URL(request.url).origin === self.location.origin) {
+      if (response.ok && url.origin === self.location.origin) {
         const copy = response.clone();
         caches.open(CACHE).then((cache) => cache.put(request, copy));
       }

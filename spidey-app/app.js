@@ -65,9 +65,20 @@ function formatRange(event) {
   return `${formatDateTime(start, zone)} → ${formatDateTime(end, zone)}`;
 }
 
+function generatedEventArtUrl(event) {
+  const id = String(event?.id || 'evento')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9._-]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'evento';
+  return `assets/events/generated/${id}.svg`;
+}
+
 function eventImage(event) {
-  const url = event.art?.url || 'assets/spidey-logo-oficial.jpg';
-  const version = event.art?.web_sha256 || event.art?.sha256;
+  const artUrl = String(event.art?.url || '').trim();
+  const forbidden = !artUrl || /^data:/i.test(artUrl) || /spidey-logo/i.test(artUrl) || /fallback.*logo/i.test(artUrl);
+  const url = forbidden ? generatedEventArtUrl(event) : artUrl;
+  const version = forbidden ? '' : (event.art?.web_sha256 || event.art?.sha256);
   return url.startsWith('assets/') && version ? `${url}?v=${String(version).slice(0, 12)}` : url;
 }
 
@@ -144,7 +155,7 @@ function renderEvents(events = state.events) {
     card.className = 'event-card';
     card.tabIndex = 0;
     card.innerHTML = `
-      <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src='assets/spidey-logo-oficial.jpg'">
+      <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">
       <div>
         <span class="eyebrow">${event.location_label || event.locations?.[0]?.label || 'Evento'}</span>
         <h3>${event.title}</h3>
@@ -349,7 +360,7 @@ function openEvent(event) {
   const bonuses = event.bonuses || [];
   const pokemon = event.pokemon || [];
   detail.innerHTML = `
-    <img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src='assets/spidey-logo-oficial.jpg'">
+    <img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
       <h2>${event.title}</h2><p>${event.summary || ''}</p>
@@ -455,5 +466,5 @@ $('#installButton').addEventListener('click', async () => {
   $('#installButton').hidden = true;
 });
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(console.error));
+if ('serviceWorker' in navigator) window.addEventListener('load', async () => { try { const reg = await navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }); await reg.update(); } catch (error) { console.error(error); } });
 loadContent();
