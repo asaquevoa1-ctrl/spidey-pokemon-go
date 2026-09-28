@@ -1,10 +1,11 @@
-const CACHE = 'spidey-app-v1-20260928-calendar1';
+const CACHE = 'spidey-app-v1-20260928-push1';
 const CORE = [
   './',
   './index.html',
   './styles.css',
   './stamps.css',
   './app.js',
+  './push.js',
   './calendar-enhancements.js',
   './manifest.webmanifest',
   './data/events.json',
@@ -62,20 +63,51 @@ self.addEventListener('push', (event) => {
     icon: 'assets/spidey-logo-oficial.jpg',
     badge: 'assets/spidey-logo-oficial.jpg',
     data: { url: data.url || './' },
-    tag: data.tag || 'spidey-update'
+    tag: data.tag || 'spidey-update',
+    renotify: false,
   }));
 });
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  const url = event.notification.data?.url || './';
+  const relativeUrl = event.notification.data?.url || './';
+  const targetUrl = new URL(relativeUrl, self.location.origin).href;
   event.waitUntil(clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
     for (const client of windows) {
       if ('focus' in client) {
-        client.navigate(url);
+        client.navigate(targetUrl);
         return client.focus();
       }
     }
-    return clients.openWindow ? clients.openWindow(url) : undefined;
+    return clients.openWindow ? clients.openWindow(targetUrl) : undefined;
   }));
+});
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+  const raw = atob(base64);
+  return Uint8Array.from([...raw].map((char) => char.charCodeAt(0)));
+}
+
+self.addEventListener('pushsubscriptionchange', (event) => {
+  event.waitUntil((async () => {
+    try {
+      const keyResponse = await fetch('api/push/public-key', { cache: 'no-store' });
+      if (!keyResponse.ok) return;
+      const { publicKey } = await keyResponse.json();
+      if (!publicKey) return;
+      const subscription = await self.registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(publicKey),
+      });
+      await fetch('api/push/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ subscription: subscription.toJSON(), device: { source: 'pushsubscriptionchange' } }),
+      });
+    } catch (error) {
+      console.error('Spidey pushsubscriptionchange', error);
+    }
+  })());
 });
