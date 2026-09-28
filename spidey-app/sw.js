@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260928-outubro-experience1';
+const CACHE = 'spidey-app-v1-20260928-visual-v3-fix1';
 const CORE = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const CORE = [
   './art-system.css',
   './tabs-v2.css',
   './experience-v1.css',
+  './visual-v3.css',
   './app.js',
   './art-system.js',
   './weekly.js',
@@ -46,7 +47,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   const isAppShell = url.origin === self.location.origin && (
     request.mode === 'navigate' ||
-    /\/(?:index\.html|app\.js|art-system\.js|weekly\.js|premium-event-art\.js|map\.js|push\.js|calendar-enhancements\.js|experience-v1\.js|styles\.css|art-system\.css|stamps\.css|tabs-v2\.css|experience-v1\.css)$/.test(url.pathname)
+    /\/(?:index\.html|app\.js|art-system\.js|weekly\.js|premium-event-art\.js|map\.js|push\.js|calendar-enhancements\.js|experience-v1\.js|styles\.css|art-system\.css|stamps\.css|tabs-v2\.css|experience-v1\.css|visual-v3\.css)$/.test(url.pathname)
   );
   const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json');
 

@@ -1,7 +1,7 @@
 window.SPIDEY_PREMIUM_EVENT_ART = {
   '2026-09-30-raid-hour-xerneas': {
     standard: 'spidey-event-premium-v1',
-    alt: 'Arte Premium Spidey para Raid Hour de Xerneas',
+    alt: 'Arte Spidey específica para Hora de Reides de Xerneas',
     assets: {
       thumb: { url: 'assets/events/premium/raid-hour-xerneas-v1.svg', width: 1080, height: 1620 },
       card: { url: 'assets/events/premium/raid-hour-xerneas-v1.svg', width: 1080, height: 1620 },
@@ -11,7 +11,7 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
   },
   '2026-10-01-spotlight-seedot': {
     standard: 'spidey-event-premium-v1',
-    alt: 'Arte Premium Spidey para Hora do Holofote de Seedot',
+    alt: 'Arte Spidey específica para Hora do Holofote de Seedot',
     assets: {
       thumb: { url: 'assets/events/premium/spotlight-seedot-v1.svg', width: 1080, height: 1620 },
       card: { url: 'assets/events/premium/spotlight-seedot-v1.svg', width: 1080, height: 1620 },
@@ -21,7 +21,7 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
   },
   '2026-09-gible-community-day-classic': {
     standard: 'spidey-event-premium-v1',
-    alt: 'Arte Premium Spidey para Dia Comunitário Clássico de Gible',
+    alt: 'Arte Spidey específica para Dia Comunitário Clássico de Gible',
     assets: {
       thumb: { url: 'assets/events/premium/community-day-gible-v1.svg', width: 1080, height: 1620 },
       card: { url: 'assets/events/premium/community-day-gible-v1.svg', width: 1080, height: 1620 },
@@ -31,7 +31,7 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
   }
 };
 
-(function installSpideyPremiumEventArt() {
+(function installSpideyArtPriorityFix() {
   if (typeof spideyResolveEventArt !== 'function' || typeof spideyArtUsable !== 'function') return;
 
   const baseResolve = spideyResolveEventArt;
@@ -43,52 +43,35 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
     poster: ['poster', 'hero']
   };
 
-  spideyResolveEventArt = function spideyResolveEventArtWithPremiumCatalog(event, role = 'card') {
+  function premiumAsset(event, role = 'card') {
     const entry = window.SPIDEY_PREMIUM_EVENT_ART?.[event?.id];
-    if (entry?.assets) {
-      const roles = roleOrder[role] || roleOrder.card;
-      for (const candidateRole of roles) {
-        const raw = entry.assets[candidateRole];
-        if (!raw?.url) continue;
-        const asset = {
-          url: raw.url,
-          width: Number(raw.width || 0),
-          height: Number(raw.height || 0),
-          sha256: raw.sha256 || '',
-          sourceRole: `premium_catalog:${candidateRole}`,
-          standard: entry.standard || 'spidey-event-premium-v1'
-        };
-        if (spideyArtUsable(asset, role)) return asset;
-      }
+    if (!entry?.assets) return null;
+    const roles = roleOrder[role] || roleOrder.card;
+    for (const candidateRole of roles) {
+      const raw = entry.assets[candidateRole];
+      if (!raw?.url) continue;
+      const asset = {
+        url: raw.url,
+        width: Number(raw.width || 0),
+        height: Number(raw.height || 0),
+        sha256: raw.sha256 || '',
+        sourceRole: `premium_catalog:${candidateRole}`,
+        standard: entry.standard || 'spidey-event-premium-v1'
+      };
+      if (spideyArtUsable(asset, role)) return asset;
     }
-    return baseResolve(event, role);
+    return null;
+  }
+
+  spideyResolveEventArt = function spideyResolveEventArtPriorityFixed(event, role = 'card') {
+    return premiumAsset(event, role) || baseResolve(event, role);
   };
 
   if (window.SpideyArt) window.SpideyArt.resolve = spideyResolveEventArt;
-
-  if (typeof weeklyArtUrl === 'function') {
-    const baseWeeklyArtUrl = weeklyArtUrl;
-    weeklyArtUrl = function weeklyArtUrlWithPremiumCatalog(item) {
-      const event = typeof weeklyFindEvent === 'function' ? weeklyFindEvent(item?.id) : null;
-      if (event) {
-        const asset = spideyResolveEventArt(event, 'weekly');
-        if (asset?.url && String(asset.sourceRole || '').startsWith('premium_catalog:')) {
-          return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(asset) : asset.url;
-        }
-      }
-      return baseWeeklyArtUrl(item);
-    };
-  }
-
-  if (typeof state !== 'undefined' && state?.events?.length && typeof renderEvents === 'function') renderEvents();
-  if (typeof spideyWeeklyData !== 'undefined' && spideyWeeklyData && typeof renderWeeklyView === 'function') renderWeeklyView();
+  window.SpideyPremiumArt = { resolve: premiumAsset };
 })();
 
-(function installSpideyVisualV2October() {
-  if (typeof spideyResolveEventArt !== 'function') return;
-
-  const SPRITE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
-
+(function installSpideyVisualV3() {
   const POKEMON_ART = [
     { keys: ['giratina forma origem', 'giratina origin'], id: 10007, label: 'Giratina (Forma Origem)' },
     { keys: ['xerneas'], id: 716, label: 'Xerneas' },
@@ -107,7 +90,8 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
     { keys: ['sobble'], id: 816, label: 'Sobble' },
     { keys: ['zekrom'], id: 644, label: 'Zekrom' },
     { keys: ['pikachu'], id: 25, label: 'Pikachu' },
-    { keys: ['gible'], id: 443, label: 'Gible' }
+    { keys: ['gible'], id: 443, label: 'Gible' },
+    { keys: ['zorua'], id: 570, label: 'Zorua' }
   ];
 
   const TAG_PTBR = {
@@ -155,10 +139,9 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
   }
 
   function localizeEvent(event) {
-    if (!event || event.__spideyPtBrV2) return event;
+    if (!event) return event;
     event.title = localizeTitle(event.title);
     if (Array.isArray(event.tags)) event.tags = event.tags.map((tag) => TAG_PTBR[tag] || tag);
-    event.__spideyPtBrV2 = true;
     return event;
   }
 
@@ -176,89 +159,47 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
     return POKEMON_ART.find((entry) => entry.keys.some((key) => text.includes(normalize(key)))) || null;
   }
 
-  function specificAsset(event) {
-    const pokemon = findPokemon(event);
-    if (!pokemon) return null;
-    return {
-      url: `${SPRITE_BASE}/${pokemon.id}.png`,
-      width: 1024,
-      height: 1536,
-      sha256: '',
-      sourceRole: 'event_specific_pokemon_v2',
-      standard: 'spidey-event-specific-v2',
-      character: pokemon.label
-    };
-  }
-
-  function keepApprovedLocal(asset) {
-    const url = String(asset?.url || '');
-    return /festival-das-luzes-approved\.png/i.test(url);
-  }
-
-  const previousResolve = spideyResolveEventArt;
-  spideyResolveEventArt = function spideyResolveEventArtV2(event, role = 'card') {
-    localizeEvent(event);
-    const previous = previousResolve(event, role);
-    if (keepApprovedLocal(previous)) return previous;
-    const specific = specificAsset(event);
-    return specific || previous;
-  };
-  if (window.SpideyArt) window.SpideyArt.resolve = spideyResolveEventArt;
-
-  if (typeof weeklyArtUrl === 'function') {
-    const previousWeeklyArtUrl = weeklyArtUrl;
-    weeklyArtUrl = function weeklyArtUrlV2(item) {
-      if (item) {
-        item.title = localizeTitle(item.title);
-        if (Array.isArray(item.tags)) item.tags = item.tags.map((tag) => TAG_PTBR[tag] || tag);
-      }
-      const event = typeof weeklyFindEvent === 'function' ? weeklyFindEvent(item?.id) : null;
-      if (event) {
-        localizeEvent(event);
-        const specific = specificAsset(event);
-        if (specific?.url) return specific.url;
-      }
-      return previousWeeklyArtUrl(item);
-    };
-  }
-
   function visualTone(event) {
     return CATEGORY_TONE[event?.category] || 'default';
   }
 
-  function backupImage(image, event) {
-    if (!image || !event || !specificAsset(event)) return;
+  function isLocalSpecificAsset(asset) {
+    const role = String(asset?.sourceRole || '');
+    const url = String(asset?.url || '');
+    return role.startsWith('premium_catalog:') || /festival-das-luzes-approved\.png/i.test(url) || /assets\/events\/premium\//i.test(url);
+  }
+
+  function applyResolvedImage(image, event, role) {
+    if (!image || !event || typeof spideyResolveEventArt !== 'function') return;
+    const asset = spideyResolveEventArt(event, role);
+    if (!asset?.url) return;
+    const next = typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(asset) : asset.url;
+    if (image.getAttribute('src') !== next) image.setAttribute('src', next);
+    image.classList.toggle('spidey-poster-art-v3', isLocalSpecificAsset(asset));
+    image.classList.remove('spidey-specific-art-v2');
     image.onerror = () => {
       image.onerror = null;
-      image.classList.remove('spidey-specific-art-v2');
+      image.classList.remove('spidey-poster-art-v3');
       image.src = typeof generatedEventArtUrl === 'function' ? generatedEventArtUrl(event) : '';
     };
   }
 
-  function decorateNode(node, event) {
+  function decorateNode(node, event, role = 'card') {
     if (!node || !event) return;
     localizeEvent(event);
-    const pokemon = findPokemon(event);
     node.dataset.visualCategory = visualTone(event);
     node.dataset.eventCategory = event.category || '';
+    const pokemon = findPokemon(event);
     if (pokemon) node.dataset.visualCharacter = pokemon.label;
-
     const image = node.matches?.('img') ? node : node.querySelector?.('img');
-    if (image && pokemon) {
-      const asset = specificAsset(event);
-      if (asset?.url && image.src !== asset.url) image.src = asset.url;
-      image.classList.add('spidey-specific-art-v2');
-      image.alt = `${pokemon.label} • ${event.title}`;
-      backupImage(image, event);
-    }
+    if (image) applyResolvedImage(image, event, role);
   }
 
   function decorateEventCards() {
-    const cards = [...document.querySelectorAll('#eventList .event-card')];
-    cards.forEach((card) => {
+    document.querySelectorAll('#eventList .event-card').forEach((card) => {
       const title = card.querySelector('h3')?.textContent || '';
       const event = state?.events?.find((item) => localizeTitle(item.title) === title || item.title === title);
-      if (event) decorateNode(card, event);
+      if (event) decorateNode(card, event, 'card');
     });
   }
 
@@ -266,22 +207,19 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
     document.querySelectorAll('.experience-event[data-event-id]').forEach((node) => {
       const event = state?.events?.find((item) => item.id === node.dataset.eventId);
       if (!event) return;
-      const surface = node.closest('.experience-feature, .experience-mini') || node;
-      decorateNode(surface, event);
+      const feature = node.closest('.experience-feature');
+      decorateNode(feature || node.closest('.experience-mini') || node, event, feature ? 'hero' : 'card');
     });
   }
 
   function decorateWeekly() {
     document.querySelectorAll('[data-weekly-event]').forEach((node) => {
       const event = state?.events?.find((item) => item.id === node.dataset.weeklyEvent);
-      if (event) decorateNode(node, event);
+      if (event) decorateNode(node, event, 'weekly');
     });
     document.querySelectorAll('#weeklyView .eyebrow').forEach((node) => {
       if (node.textContent.trim().toUpperCase() === 'SPIDEY WEEKLY') node.textContent = 'SEMANA SPIDEY';
       if (node.textContent.trim().toUpperCase() === 'STAMPS') node.textContent = 'SELOS';
-    });
-    document.querySelectorAll('#weeklyView h2').forEach((node) => {
-      if (node.textContent.trim() === 'Rallies ativos') node.textContent = 'Rallies de selos ativos';
     });
   }
 
@@ -289,19 +227,13 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
     const root = document.querySelector('#eventDetail');
     if (!root || !event) return;
     localizeEvent(event);
-    root.classList.add('spidey-detail-v2');
+    root.classList.add('spidey-detail-v3');
     root.dataset.visualCategory = visualTone(event);
     const pokemon = findPokemon(event);
     if (pokemon) root.dataset.visualCharacter = pokemon.label;
 
     const hero = root.querySelector('.detail-hero');
-    if (hero && pokemon) {
-      const asset = specificAsset(event);
-      if (asset?.url) hero.src = asset.url;
-      hero.classList.add('spidey-specific-art-v2');
-      hero.alt = `${pokemon.label} • ${event.title}`;
-      backupImage(hero, event);
-    }
+    if (hero) applyResolvedImage(hero, event, 'hero');
 
     const body = root.querySelector('.detail-body');
     if (body && !body.querySelector('.spidey-detail-ribbon')) {
@@ -319,39 +251,55 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
     decorateWeekly();
   }
 
+  if (typeof weeklyArtUrl === 'function') {
+    const previousWeeklyArtUrl = weeklyArtUrl;
+    weeklyArtUrl = function weeklyArtUrlV3(item) {
+      if (item) {
+        item.title = localizeTitle(item.title);
+        if (Array.isArray(item.tags)) item.tags = item.tags.map((tag) => TAG_PTBR[tag] || tag);
+      }
+      const event = typeof weeklyFindEvent === 'function' ? weeklyFindEvent(item?.id) : null;
+      if (event && typeof spideyResolveEventArt === 'function') {
+        const asset = spideyResolveEventArt(event, 'weekly');
+        if (asset?.url) return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(asset) : asset.url;
+      }
+      return previousWeeklyArtUrl(item);
+    };
+  }
+
   if (typeof renderEvents === 'function') {
-    const previousRenderEvents = renderEvents;
-    renderEvents = function renderEventsV2(events = state.events) {
+    const base = renderEvents;
+    renderEvents = function renderEventsV3(events = state.events) {
       (events || []).forEach(localizeEvent);
-      const result = previousRenderEvents(events);
+      const result = base(events);
       queueMicrotask(decorateAll);
       return result;
     };
   }
 
   if (typeof renderCalendar === 'function') {
-    const previousRenderCalendar = renderCalendar;
-    renderCalendar = function renderCalendarV2(...args) {
+    const base = renderCalendar;
+    renderCalendar = function renderCalendarV3(...args) {
       state?.events?.forEach(localizeEvent);
-      const result = previousRenderCalendar(...args);
+      const result = base(...args);
       queueMicrotask(decorateAll);
       return result;
     };
   }
 
   if (typeof openEvent === 'function') {
-    const previousOpenEvent = openEvent;
-    openEvent = function openEventV2(event) {
+    const base = openEvent;
+    openEvent = function openEventV3(event) {
       localizeEvent(event);
-      const result = previousOpenEvent(event);
+      const result = base(event);
       decorateDetail(event);
       return result;
     };
   }
 
   if (typeof renderWeeklyView === 'function') {
-    const previousRenderWeeklyView = renderWeeklyView;
-    renderWeeklyView = function renderWeeklyViewV2(...args) {
+    const base = renderWeeklyView;
+    renderWeeklyView = function renderWeeklyViewV3(...args) {
       if (typeof spideyWeeklyData !== 'undefined' && spideyWeeklyData) {
         for (const day of spideyWeeklyData.days || []) {
           for (const item of day.items || []) item.title = localizeTitle(item.title);
@@ -360,27 +308,16 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
           for (const item of items || []) item.title = localizeTitle(item.title);
         }
       }
-      const result = previousRenderWeeklyView(...args);
+      const result = base(...args);
       queueMicrotask(decorateAll);
       return result;
     };
   }
 
-  const observer = new MutationObserver(() => decorateAll());
-  observer.observe(document.body, { childList: true, subtree: true });
-
   setTimeout(() => {
     state?.events?.forEach(localizeEvent);
-    if (typeof renderEvents === 'function' && state?.events?.length) renderEvents();
-    if (typeof renderWeeklyView === 'function') renderWeeklyView();
     decorateAll();
   }, 0);
 
-  window.SpideyVisualV2 = {
-    pokemonArt: POKEMON_ART,
-    localizeTitle,
-    findPokemon,
-    specificAsset,
-    decorate: decorateAll
-  };
+  window.SpideyVisualV3 = { localizeTitle, findPokemon, decorate: decorateAll };
 })();
