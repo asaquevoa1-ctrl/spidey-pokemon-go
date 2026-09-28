@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -9,6 +10,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 EVENTS_FILE = ROOT / "spidey-app" / "data" / "events.json"
 STAMPS_FILE = ROOT / "spidey-app" / "data" / "stamps.json"
+GENERATED_ART_DIR = ROOT / "spidey-app" / "assets" / "events" / "generated"
 WEEKLY_DIR = ROOT / "weekly"
 CURRENT_FILE = WEEKLY_DIR / "current.json"
 ARCHIVE_DIR = WEEKLY_DIR / "archive"
@@ -73,6 +75,94 @@ def event_range(event: dict) -> tuple[datetime | None, datetime | None]:
     return parse_dt(schedule.get("start_brazil") or schedule.get("start_local")), parse_dt(schedule.get("end_brazil") or schedule.get("end_local"))
 
 
+def slugify(value: str) -> str:
+    value = value.lower().strip()
+    value = re.sub(r"[^a-z0-9._-]+", "-", value)
+    return value.strip("-") or "evento"
+
+
+def normalize_art(raw, art: dict, source_role: str) -> dict | None:
+    if not raw:
+        return None
+    if isinstance(raw, str):
+        return {
+            "url": raw,
+            "width": int(art.get(f"{source_role}_width") or art.get("web_width") or art.get("width") or 0),
+            "height": int(art.get(f"{source_role}_height") or art.get("web_height") or art.get("height") or 0),
+            "sha256": art.get(f"{source_role}_sha256") or art.get("web_sha256") or art.get("sha256") or "",
+            "source_role": source_role,
+        }
+    if not isinstance(raw, dict):
+        return None
+    return {
+        "url": raw.get("url") or raw.get("src") or "",
+        "width": int(raw.get("width") or 0),
+        "height": int(raw.get("height") or 0),
+        "sha256": raw.get("sha256") or raw.get("web_sha256") or "",
+        "source_role": source_role,
+    }
+
+
+def weekly_art_usable(asset: dict | None) -> bool:
+    if not asset:
+        return False
+    url = str(asset.get("url") or "").strip()
+    if not url or url.lower().startswith("data:") or ".b64" in url.lower() or "spidey-logo-oficial" in url.lower():
+        return False
+    return int(asset.get("width") or 0) >= 720 and int(asset.get("height") or 0) >= 900
+
+
+def resolve_weekly_art(event: dict) -> dict:
+    art = event.get("art") or {}
+    assets = art.get("assets") or {}
+    candidates: list[dict] = []
+    for role in ("card", "thumb", "hero", "poster"):
+        for raw in (assets.get(role), art.get(role)):
+            item = normalize_art(raw, art, role)
+            if item:
+                candidates.append(item)
+    if art.get("url"):
+        candidates.append({
+            "url": art.get("url"),
+            "width": int(art.get("web_width") or art.get("width") or 0),
+            "height": int(art.get("web_height") or art.get("height") or 0),
+            "sha256": art.get("web_sha256") or art.get("sha256") or "",
+            "source_role": "legacy",
+        })
+
+    for candidate in candidates:
+        if weekly_art_usable(candidate):
+            return {
+                **candidate,
+                "kind": "premium_or_source_art",
+                "premium": art.get("standard") == "spidey-premium-v1",
+            }
+
+    event_id = str(event.get("id") or "").strip()
+    generated_name = f"{slugify(event_id)}.svg" if event_id else ""
+    generated_path = GENERATED_ART_DIR / generated_name if generated_name else None
+    if generated_path and generated_path.exists():
+        return {
+            "url": f"assets/events/generated/{generated_name}",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": False,
+        }
+
+    return {
+        "url": "",
+        "width": 0,
+        "height": 0,
+        "sha256": "",
+        "source_role": "missing",
+        "kind": "missing",
+        "premium": False,
+    }
+
+
 def clean_event(event: dict) -> dict:
     start, end = event_range(event)
     return {
@@ -85,6 +175,7 @@ def clean_event(event: dict) -> dict:
         "end_brazil": end.isoformat() if end else None,
         "source": event.get("source") or {},
         "art": event.get("art") or {},
+        "weekly_art": resolve_weekly_art(event),
     }
 
 
@@ -165,8 +256,6 @@ def build(anchor: date) -> dict:
             start, end = event_range(event)
             if start and end and overlaps(start, end, d_start, d_end):
                 group = group_for(event)
-                # Eventos curtos podem aparecer também na faixa dos 7 dias.
-                # Rotações longas continuam apenas nos blocos inferiores.
                 if group in {"daily", "featured", "raids", "max_pvp"} and (end - start) <= timedelta(days=2):
                     active.append(clean_event(event))
         active.sort(key=lambda item: item.get("start_brazil") or "")
@@ -185,11 +274,14 @@ def build(anchor: date) -> dict:
                 "source": rally.get("source") or {},
             })
 
-    # Evita uma arte semanal ilegível. Dados completos continuam no calendário.
     sections["featured"] = sections["featured"][:8]
     sections["raids"] = sections["raids"][:10]
     sections["max_pvp"] = sections["max_pvp"][:8]
     sections["also_happening"] = sections["also_happening"][:12]
+
+    weekly_items = [item for day in days for item in day["items"]]
+    weekly_items += [item for group in sections.values() for item in group]
+    unique_art = {item["id"]: item["weekly_art"] for item in weekly_items if item.get("id")}
 
     return {
         "schema_version": "spidey-weekly-v1",
@@ -204,8 +296,11 @@ def build(anchor: date) -> dict:
         "stamps": stamps[:8],
         "meta": {
             "calendar_events_in_week": len(events),
+            "events_with_weekly_art": sum(1 for art in unique_art.values() if art.get("url")),
+            "events_with_premium_weekly_art": sum(1 for art in unique_art.values() if art.get("premium")),
+            "events_with_generated_weekly_art": sum(1 for art in unique_art.values() if art.get("kind") == "generated_vector"),
             "generated_at": datetime.now(BR).isoformat(),
-            "source": "spidey-app/data/events.json + stamps.json",
+            "source": "spidey-app/data/events.json + stamps.json + Art System v1",
         },
     }
 
@@ -219,6 +314,9 @@ def main() -> int:
     print(json.dumps({
         "week": f"{payload['week_start']}..{payload['week_end']}",
         "events": payload["meta"]["calendar_events_in_week"],
+        "weekly_art": payload["meta"]["events_with_weekly_art"],
+        "weekly_premium": payload["meta"]["events_with_premium_weekly_art"],
+        "weekly_generated": payload["meta"]["events_with_generated_weekly_art"],
         "featured": len(payload["sections"]["featured"]),
         "raids": len(payload["sections"]["raids"]),
         "max_pvp": len(payload["sections"]["max_pvp"]),
