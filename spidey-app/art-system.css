@@ -1,0 +1,138 @@
+.spidey-event-art {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  isolation: isolate;
+  color: #f7fbff;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(67, 214, 255, .28), transparent 30%),
+    radial-gradient(circle at 12% 88%, rgba(243, 199, 90, .2), transparent 32%),
+    linear-gradient(145deg, #10234a 0%, #07162d 55%, #050b16 100%);
+  border: 1px solid rgba(67, 214, 255, .24);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
+}
+
+.spidey-event-art::before,
+.spidey-event-art::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.spidey-event-art::before {
+  width: 82%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(67,214,255,.18);
+  border-radius: 50%;
+  right: -34%;
+  top: -22%;
+  box-shadow:
+    0 0 0 18px rgba(67,214,255,.035),
+    0 0 0 44px rgba(67,214,255,.02);
+}
+
+.spidey-event-art::after {
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0 42%, rgba(255,255,255,.025) 42% 43%, transparent 43% 100%),
+    linear-gradient(30deg, transparent 0 64%, rgba(243,199,90,.035) 64% 65%, transparent 65% 100%);
+}
+
+.spidey-event-art--thumb {
+  width: 92px;
+  height: 112px;
+  border-radius: 15px;
+  padding: 9px;
+  flex: 0 0 auto;
+}
+
+.spidey-event-art--hero {
+  width: 100%;
+  min-height: min(70vh, 620px);
+  aspect-ratio: 4 / 5;
+  padding: clamp(22px, 5vw, 42px);
+  border: 0;
+  border-bottom: 1px solid rgba(67,214,255,.2);
+}
+
+.spidey-art-kicker {
+  display: block;
+  color: #43d6ff;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.spidey-art-title {
+  display: block;
+  letter-spacing: -.03em;
+  text-wrap: balance;
+}
+
+.spidey-art-range {
+  color: #d6e5f7;
+}
+
+.spidey-art-status {
+  color: #f3c75a;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.spidey-event-art--thumb .spidey-art-kicker {
+  font-size: .45rem;
+  line-height: 1.25;
+}
+
+.spidey-event-art--thumb .spidey-art-title {
+  margin-top: 5px;
+  font-size: .7rem;
+  line-height: 1.05;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.spidey-event-art--thumb .spidey-art-range,
+.spidey-event-art--thumb .spidey-art-status {
+  display: none;
+}
+
+.spidey-event-art--hero .spidey-art-kicker {
+  font-size: clamp(.7rem, 2vw, .9rem);
+}
+
+.spidey-event-art--hero .spidey-art-title {
+  max-width: 90%;
+  margin-top: 12px;
+  font-size: clamp(2rem, 7vw, 4rem);
+  line-height: .98;
+}
+
+.spidey-event-art--hero .spidey-art-range {
+  margin-top: 16px;
+  max-width: 80%;
+  font-size: clamp(.82rem, 2vw, 1rem);
+  line-height: 1.45;
+}
+
+.spidey-event-art--hero .spidey-art-status {
+  margin-top: 22px;
+  font-size: .68rem;
+}
+
+@media (max-width:560px) {
+  .spidey-event-art--thumb {
+    width: 78px;
+    height: 100px;
+  }
+  .spidey-event-art--hero {
+    min-height: 410px;
+    aspect-ratio: 4 / 5;
+  }
+}
