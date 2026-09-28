@@ -1,11 +1,13 @@
-const CACHE = 'spidey-app-v1-20260928-hq3-fullposter';
+const CACHE = 'spidey-app-v1-20260928-stamps1';
 const CORE = [
   './',
   './index.html',
   './styles.css',
+  './stamps.css',
   './app.js',
   './manifest.webmanifest',
   './data/events.json',
+  './data/stamps.json',
   './assets/spidey-logo-oficial.jpg',
   './assets/festival-das-luzes-approved.png',
   './assets/festival-das-luzes-2026.jpg'
@@ -27,7 +29,7 @@ self.addEventListener('fetch', (event) => {
   const request = event.request;
   if (request.method !== 'GET') return;
 
-  if (request.url.includes('/data/events.json')) {
+  if (request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json')) {
     event.respondWith(
       fetch(request)
         .then((response) => {
@@ -55,11 +57,11 @@ self.addEventListener('push', (event) => {
   let data = {};
   try { data = event.data ? event.data.json() : {}; } catch (_) { data = { body: event.data?.text() || '' }; }
   event.waitUntil(self.registration.showNotification(data.title || 'Spidey Pokémon GO', {
-    body: data.body || 'Há uma novidade no calendário Spidey.',
+    body: data.body || 'Há uma novidade no Spidey.',
     icon: 'assets/spidey-logo-oficial.jpg',
     badge: 'assets/spidey-logo-oficial.jpg',
     data: { url: data.url || './' },
-    tag: data.tag || 'spidey-event-update'
+    tag: data.tag || 'spidey-update'
   }));
 });
 
