@@ -37,8 +37,9 @@ jobs:
           for path in files:
               ET.parse(path)
               text = path.read_text(encoding='utf-8')
-              assert 'spidey-logo-oficial.jpg' in text, path
               assert 'width="1080"' in text and 'height="1620"' in text, path
+              assert 'raw.githubusercontent.com' not in text, path
+              assert 'http://' not in text and 'https://' not in text, path
               print('SVG OK:', path.name)
           catalog = Path('spidey-app/premium-event-art.js').read_text(encoding='utf-8')
           for event_id in [
@@ -53,5 +54,3 @@ jobs:
               assert './' + str(path).replace('spidey-app/', '') in sw, path
           print('Premium Event Art v1 OK')
           PY
-
-# validation trigger
