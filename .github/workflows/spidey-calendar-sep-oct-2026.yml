@@ -1,0 +1,87 @@
+name: Spidey Calendar - Setembro e Outubro 2026
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/sync_calendar_2026_09_extras.py"
+      - "scripts/sync_calendar_2026_10.py"
+      - "scripts/app_auto_publish_v2.py"
+      - "scripts/test_app_auto_publish.py"
+      - ".github/workflows/spidey-calendar-sep-oct-2026.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-calendar-month-writer
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Preparar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Validar scripts e gate
+        run: |
+          set -euo pipefail
+          python -m py_compile \
+            scripts/app_auto_publish_v2.py \
+            scripts/test_app_auto_publish.py \
+            scripts/sync_calendar_2026_09_extras.py \
+            scripts/sync_calendar_2026_10.py
+          python -m scripts.test_app_auto_publish
+
+      - name: Completar setembro
+        run: python -m scripts.sync_calendar_2026_09_extras
+
+      - name: Sincronizar outubro
+        run: python -m scripts.sync_calendar_2026_10
+
+      - name: Validar calendário e app
+        run: |
+          set -euo pipefail
+          python -m json.tool spidey-app/data/events.json >/dev/null
+          python -m json.tool spidey-app/data/stamps.json >/dev/null
+          node --check spidey-app/app.js
+          node --check spidey-app/calendar-enhancements.js
+          grep -q 'calendar-enhancements.js' spidey-app/index.html
+          python - <<'PY'
+          import json
+          data=json.load(open('spidey-app/data/events.json', encoding='utf-8'))
+          events=data.get('events', [])
+          ids=[e.get('id') for e in events]
+          if len(ids) != len(set(ids)):
+              raise SystemExit('IDs duplicados em events.json')
+          sep=[e for e in events if (e.get('schedule') or {}).get('start_brazil','').startswith('2026-09')]
+          octo=[e for e in events if (e.get('schedule') or {}).get('start_brazil','').startswith('2026-10')]
+          print(f'events_total={len(events)} sep_starts={len(sep)} oct_starts={len(octo)}')
+          PY
+          echo 'Calendários setembro/outubro OK'
+
+      - name: Gravar dados públicos uma única vez
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey-app/data/events.json
+          if git diff --cached --quiet; then
+            echo "Calendários já estavam sincronizados."
+            exit 0
+          fi
+          git commit -m "Spidey Calendar: publica setembro e outubro 2026"
+          git pull --rebase origin main
+          git push origin HEAD:main
