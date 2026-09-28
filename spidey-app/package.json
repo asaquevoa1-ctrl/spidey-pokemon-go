@@ -1,0 +1,8 @@
+{
+  "name": "spidey-pokemon-go-app",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "web-push": "^3.6.7"
+  }
+}
