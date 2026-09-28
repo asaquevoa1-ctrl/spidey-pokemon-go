@@ -1963,6 +1963,3458 @@
         ]
       },
       "status": "published"
+    },
+    {
+      "id": "2026-09-13-scenic-sunday",
+      "slug": "2026-09-13-scenic-sunday",
+      "title": "Descoberta Diária: Domingo Pitoresco",
+      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "category": "daily_discovery",
+      "tags": [
+        "Domingo Pitoresco",
+        "Rotas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-13T00:00:00-03:00",
+        "end_local": "2026-09-13T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-13T00:00:00-03:00",
+        "end_brazil": "2026-09-13T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-20-scenic-sunday",
+      "slug": "2026-09-20-scenic-sunday",
+      "title": "Descoberta Diária: Domingo Pitoresco",
+      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "category": "daily_discovery",
+      "tags": [
+        "Domingo Pitoresco",
+        "Rotas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-20T00:00:00-03:00",
+        "end_local": "2026-09-20T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-20T00:00:00-03:00",
+        "end_brazil": "2026-09-20T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-27-scenic-sunday",
+      "slug": "2026-09-27-scenic-sunday",
+      "title": "Descoberta Diária: Domingo Pitoresco",
+      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "category": "daily_discovery",
+      "tags": [
+        "Domingo Pitoresco",
+        "Rotas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-27T00:00:00-03:00",
+        "end_local": "2026-09-27T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-27T00:00:00-03:00",
+        "end_brazil": "2026-09-27T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-08-showcase-tuesday",
+      "slug": "2026-09-08-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-08T00:00:00-03:00",
+        "end_local": "2026-09-08T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-08T00:00:00-03:00",
+        "end_brazil": "2026-09-08T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-15-showcase-tuesday",
+      "slug": "2026-09-15-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-15T00:00:00-03:00",
+        "end_local": "2026-09-15T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-15T00:00:00-03:00",
+        "end_brazil": "2026-09-15T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-22-showcase-tuesday",
+      "slug": "2026-09-22-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-22T00:00:00-03:00",
+        "end_local": "2026-09-22T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-22T00:00:00-03:00",
+        "end_brazil": "2026-09-22T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-29-showcase-tuesday",
+      "slug": "2026-09-29-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-29T00:00:00-03:00",
+        "end_local": "2026-09-29T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-29T00:00:00-03:00",
+        "end_brazil": "2026-09-29T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-10-go-battle-thursday",
+      "slug": "2026-09-10-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-10T00:00:00-03:00",
+        "end_local": "2026-09-10T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-10T00:00:00-03:00",
+        "end_brazil": "2026-09-10T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-17-go-battle-thursday",
+      "slug": "2026-09-17-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-17T00:00:00-03:00",
+        "end_local": "2026-09-17T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-17T00:00:00-03:00",
+        "end_brazil": "2026-09-17T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-24-go-battle-thursday",
+      "slug": "2026-09-24-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-24T00:00:00-03:00",
+        "end_local": "2026-09-24T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-24T00:00:00-03:00",
+        "end_brazil": "2026-09-24T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-11-friendship-friday",
+      "slug": "2026-09-11-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-11T00:00:00-03:00",
+        "end_local": "2026-09-11T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-11T00:00:00-03:00",
+        "end_brazil": "2026-09-11T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-18-friendship-friday",
+      "slug": "2026-09-18-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-18T00:00:00-03:00",
+        "end_local": "2026-09-18T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-18T00:00:00-03:00",
+        "end_brazil": "2026-09-18T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-25-friendship-friday",
+      "slug": "2026-09-25-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-25T00:00:00-03:00",
+        "end_local": "2026-09-25T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-25T00:00:00-03:00",
+        "end_brazil": "2026-09-25T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-city-safari-brisbane",
+      "slug": "2026-09-city-safari-brisbane",
+      "title": "Pokémon GO City Safari: Brisbane",
+      "summary": "Evento presencial City Safari nos dias 26 e 27 de setembro, das 10h às 18h em cada dia.",
+      "category": "city_safari",
+      "tags": [
+        "City Safari",
+        "Austrália",
+        "Presencial"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/featured-in-person-events/citysafari/brisbane",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Australia/Brisbane",
+        "start_local": "2026-09-26T10:00:00+10:00",
+        "end_local": "2026-09-27T18:00:00+10:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-25T21:00:00-03:00",
+        "end_brazil": "2026-09-27T05:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [
+        "A faixa no detalhe cobre os dois dias; a janela jogável diária é das 10h às 18h."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-city-safari-lisbon",
+      "slug": "2026-09-city-safari-lisbon",
+      "title": "Pokémon GO City Safari: Lisboa",
+      "summary": "Evento presencial City Safari nos dias 26 e 27 de setembro, das 10h às 18h em cada dia.",
+      "category": "city_safari",
+      "tags": [
+        "City Safari",
+        "Portugal",
+        "Presencial"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/featured-in-person-events/citysafari/lisbon",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/Lisbon",
+        "start_local": "2026-09-26T10:00:00+01:00",
+        "end_local": "2026-09-27T18:00:00+01:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-26T06:00:00-03:00",
+        "end_brazil": "2026-09-27T14:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [
+        "A faixa no detalhe cobre os dois dias; a janela jogável diária é das 10h às 18h."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-city-safari-marseille",
+      "slug": "2026-09-city-safari-marseille",
+      "title": "Pokémon GO City Safari: Marselha",
+      "summary": "Evento presencial City Safari nos dias 26 e 27 de setembro, das 10h às 18h em cada dia.",
+      "category": "city_safari",
+      "tags": [
+        "City Safari",
+        "França",
+        "Presencial"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/featured-in-person-events/citysafari/marseille",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/Paris",
+        "start_local": "2026-09-26T10:00:00+02:00",
+        "end_local": "2026-09-27T18:00:00+02:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-26T05:00:00-03:00",
+        "end_brazil": "2026-09-27T13:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [
+        "A faixa no detalhe cobre os dois dias; a janela jogável diária é das 10h às 18h."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-city-safari-munich",
+      "slug": "2026-09-city-safari-munich",
+      "title": "Pokémon GO City Safari: Munique",
+      "summary": "Evento presencial City Safari nos dias 26 e 27 de setembro, das 10h às 18h em cada dia.",
+      "category": "city_safari",
+      "tags": [
+        "City Safari",
+        "Alemanha",
+        "Presencial"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/featured-in-person-events/citysafari/munich",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/Berlin",
+        "start_local": "2026-09-26T10:00:00+02:00",
+        "end_local": "2026-09-27T18:00:00+02:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-26T05:00:00-03:00",
+        "end_brazil": "2026-09-27T13:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [
+        "A faixa no detalhe cobre os dois dias; a janela jogável diária é das 10h às 18h."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-city-safari-rio",
+      "slug": "2026-09-city-safari-rio",
+      "title": "Pokémon GO City Safari: Rio de Janeiro",
+      "summary": "Evento presencial City Safari nos dias 26 e 27 de setembro, das 10h às 18h em cada dia.",
+      "category": "city_safari",
+      "tags": [
+        "City Safari",
+        "Brasil",
+        "Presencial"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/featured-in-person-events/citysafari/rio-de-janeiro",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-26T10:00:00-03:00",
+        "end_local": "2026-09-27T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-26T10:00:00-03:00",
+        "end_brazil": "2026-09-27T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [
+        "A faixa no detalhe cobre os dois dias; a janela jogável diária é das 10h às 18h."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-iit-delhi-rendezvous",
+      "slug": "2026-09-iit-delhi-rendezvous",
+      "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
+      "summary": "Evento oficial no IIT Delhi com bônus, encontros, reides, Collection Challenge e Pesquisa temporária.",
+      "category": "regional_event",
+      "tags": [
+        "Índia",
+        "IIT Delhi",
+        "Regional"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/pokemongo-iitdelhi-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Kolkata",
+        "start_local": "2026-09-28T10:00:00+05:30",
+        "end_local": "2026-10-01T20:00:00+05:30",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-28T01:30:00-03:00",
+        "end_brazil": "2026-10-01T11:30:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenada exata necessária para este item de calendário."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-harvest-taken-over",
+      "slug": "2026-10-harvest-taken-over",
+      "title": "Festival da Colheita: A Invasão",
+      "summary": "Invasão da Equipe GO Rocket durante o Festival da Colheita, com Zekrom Sombroso e remoção de Frustração.",
+      "category": "team_go_rocket",
+      "tags": [
+        "Team GO Rocket",
+        "Zekrom Sombroso",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-02T00:00:00-03:00",
+        "end_local": "2026-10-05T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-02T00:00:00-03:00",
+        "end_brazil": "2026-10-05T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-patterns-of-the-wild-indonesia",
+      "slug": "2026-10-patterns-of-the-wild-indonesia",
+      "title": "Patterns of the Wild • Indonésia",
+      "summary": "Evento regional na Indonésia com Pikachu usando camisa batik e Fundo Especial.",
+      "category": "regional_event",
+      "tags": [
+        "Indonésia",
+        "Pikachu Batik",
+        "Regional"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/patterns-of-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Jakarta",
+        "start_local": "2026-10-02T10:00:00+07:00",
+        "end_local": "2026-10-02T20:00:00+07:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-02T00:00:00-03:00",
+        "end_brazil": "2026-10-02T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-gigantamax-cinderace-max-day",
+      "slug": "2026-10-gigantamax-cinderace-max-day",
+      "title": "Dia de Batalhas Max: Cinderace Gigamax",
+      "summary": "Cinderace Gigamax em Batalhas Max de seis estrelas, com estreia do Brilhante.",
+      "category": "max_battle_day",
+      "tags": [
+        "Cinderace",
+        "Gigamax",
+        "Max Battle Day"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-03T14:00:00-03:00",
+        "end_local": "2026-10-03T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-03T14:00:00-03:00",
+        "end_brazil": "2026-10-03T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-world-space-week",
+      "slug": "2026-10-world-space-week",
+      "title": "Semana Mundial do Espaço 2026",
+      "summary": "Semana Mundial do Espaço com estreia do Pikachu Astronauta em reides e Pesquisa temporária.",
+      "category": "evento_especial",
+      "tags": [
+        "Astronaut Pikachu",
+        "Space Week",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/world-space-week-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-04T00:00:00-03:00",
+        "end_local": "2026-10-10T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-04T00:00:00-03:00",
+        "end_brazil": "2026-10-10T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-go-pass",
+      "slug": "2026-10-go-pass",
+      "title": "GO Pass: Outubro",
+      "summary": "GO Pass de outubro com Kyogre e retorno do Globo da Sorte no Passe Deluxe.",
+      "category": "go_pass",
+      "tags": [
+        "GO Pass",
+        "Kyogre",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-pass-october-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-06T10:00:00-03:00",
+        "end_local": "2026-11-03T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-06T10:00:00-03:00",
+        "end_brazil": "2026-11-03T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-zorua-community-day",
+      "slug": "2026-10-zorua-community-day",
+      "title": "Dia Comunitário: Zorua",
+      "summary": "Zorua em destaque no Dia Comunitário de outubro, com Soco Enganador para Zoroark ao evoluir.",
+      "category": "community_day",
+      "tags": [
+        "Zorua",
+        "Community Day",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/news/communityday-october-2026-zorua",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-10T14:00:00-03:00",
+        "end_local": "2026-10-10T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-10T14:00:00-03:00",
+        "end_brazil": "2026-10-10T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-fall-marathon-buddy-trek",
+      "slug": "2026-10-fall-marathon-buddy-trek",
+      "title": "Maratona das Folhas: Caminhada Companheira",
+      "summary": "Evento com estreia de Bramblin e progressão do GO Pass temático.",
+      "category": "evento_especial",
+      "tags": [
+        "Bramblin",
+        "Buddy",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/fall-marathon-buddy-trek-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-13T10:00:00-03:00",
+        "end_local": "2026-10-19T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-13T10:00:00-03:00",
+        "end_brazil": "2026-10-19T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-sandile-hatch-day",
+      "slug": "2026-10-sandile-hatch-day",
+      "title": "Dia de Chocar: Sandile",
+      "summary": "Sandile chocará com muito mais frequência em Ovos de 2 km, com chance aumentada de Brilhante.",
+      "category": "hatch_day",
+      "tags": [
+        "Sandile",
+        "Hatch Day",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-17T11:00:00-03:00",
+        "end_local": "2026-10-17T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-17T11:00:00-03:00",
+        "end_brazil": "2026-10-17T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-dynamax-max-battle-day",
+      "slug": "2026-10-dynamax-max-battle-day",
+      "title": "Dia de Batalhas Max: Dinamax",
+      "summary": "Dia de Batalhas Max anunciado para 24 de outubro; o Pokémon em destaque ainda pode receber atualização oficial.",
+      "category": "max_battle_day",
+      "tags": [
+        "Dinamax",
+        "Max Battle Day",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-24T14:00:00-03:00",
+        "end_local": "2026-10-24T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-24T14:00:00-03:00",
+        "end_brazil": "2026-10-24T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Data e janela confirmadas no calendário atual; detalhes do destaque ainda estão sujeitos a anúncio."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-halloween-part-1",
+      "slug": "2026-10-halloween-part-1",
+      "title": "Halloween 2026: Parte I",
+      "summary": "Primeira parte do evento de Halloween 2026.",
+      "category": "halloween",
+      "tags": [
+        "Halloween",
+        "Evento",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-27T10:00:00-03:00",
+        "end_local": "2026-10-31T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-27T10:00:00-03:00",
+        "end_brazil": "2026-10-31T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Detalhes de Pokémon e bônus ainda podem ser ampliados quando a página oficial específica for publicada."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-super-mega-raid-day",
+      "slug": "2026-10-super-mega-raid-day",
+      "title": "Dia de Super Megarreides",
+      "summary": "Dia de Super Megarreides de Halloween; chefe em destaque ainda sujeito a anúncio oficial.",
+      "category": "raid_day",
+      "tags": [
+        "Super Mega",
+        "Raid Day",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-31T14:00:00-03:00",
+        "end_local": "2026-10-31T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-31T14:00:00-03:00",
+        "end_brazil": "2026-10-31T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Data e janela confirmadas; o chefe pode ser atualizado automaticamente após anúncio."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-01-spotlight-seedot",
+      "slug": "2026-10-01-spotlight-seedot",
+      "title": "Spotlight Hour: Seedot",
+      "summary": "2× PE por captura.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Seedot",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-01T18:00:00-03:00",
+        "end_local": "2026-10-01T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-01T18:00:00-03:00",
+        "end_brazil": "2026-10-01T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-08-spotlight-elgyem",
+      "slug": "2026-10-08-spotlight-elgyem",
+      "title": "Spotlight Hour: Elgyem",
+      "summary": "2× Doces por captura.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Elgyem",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-08T18:00:00-03:00",
+        "end_local": "2026-10-08T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-08T18:00:00-03:00",
+        "end_brazil": "2026-10-08T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-15-spotlight-stufful",
+      "slug": "2026-10-15-spotlight-stufful",
+      "title": "Spotlight Hour: Stufful",
+      "summary": "2× Doces por transferência.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Stufful",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-15T18:00:00-03:00",
+        "end_local": "2026-10-15T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-15T18:00:00-03:00",
+        "end_brazil": "2026-10-15T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-22-spotlight-morelull",
+      "slug": "2026-10-22-spotlight-morelull",
+      "title": "Spotlight Hour: Morelull",
+      "summary": "2× Poeira Estelar por captura.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Morelull",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-22T18:00:00-03:00",
+        "end_local": "2026-10-22T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-22T18:00:00-03:00",
+        "end_brazil": "2026-10-22T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-29-spotlight-gastly",
+      "slug": "2026-10-29-spotlight-gastly",
+      "title": "Spotlight Hour: Gastly",
+      "summary": "2× PE por evolução.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Gastly",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-29T18:00:00-03:00",
+        "end_local": "2026-10-29T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-29T18:00:00-03:00",
+        "end_brazil": "2026-10-29T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-07-raid-hour-yveltal",
+      "slug": "2026-10-07-raid-hour-yveltal",
+      "title": "Raid Hour: Yveltal",
+      "summary": "Yveltal em destaque na Hora de Reides.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-07T18:00:00-03:00",
+        "end_local": "2026-10-07T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-07T18:00:00-03:00",
+        "end_brazil": "2026-10-07T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-14-raid-hour-dialga",
+      "slug": "2026-10-14-raid-hour-dialga",
+      "title": "Raid Hour: Dialga",
+      "summary": "Dialga em destaque na Hora de Reides.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-14T18:00:00-03:00",
+        "end_local": "2026-10-14T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-14T18:00:00-03:00",
+        "end_brazil": "2026-10-14T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-21-raid-hour-palkia",
+      "slug": "2026-10-21-raid-hour-palkia",
+      "title": "Raid Hour: Palkia",
+      "summary": "Palkia em destaque na Hora de Reides.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-21T18:00:00-03:00",
+        "end_local": "2026-10-21T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-21T18:00:00-03:00",
+        "end_brazil": "2026-10-21T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "slug": "2026-10-28-raid-hour-giratina-forma-origem",
+      "title": "Raid Hour: Giratina Forma Origem",
+      "summary": "Giratina Forma Origem em destaque na Hora de Reides.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-28T18:00:00-03:00",
+        "end_local": "2026-10-28T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-28T18:00:00-03:00",
+        "end_brazil": "2026-10-28T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-05-max-monday-sizzlipede",
+      "slug": "2026-10-05-max-monday-sizzlipede",
+      "title": "Max Monday: Dynamax Sizzlipede",
+      "summary": "Sizzlipede Dynamax em destaque nos Power Spots durante a Segunda Max.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Sizzlipede"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-05T06:00:00-03:00",
+        "end_local": "2026-10-05T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-05T06:00:00-03:00",
+        "end_brazil": "2026-10-05T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-12-max-monday-rookidee",
+      "slug": "2026-10-12-max-monday-rookidee",
+      "title": "Max Monday: Dynamax Rookidee",
+      "summary": "Rookidee Dynamax em destaque nos Power Spots durante a Segunda Max.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Rookidee"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-12T06:00:00-03:00",
+        "end_local": "2026-10-12T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-12T06:00:00-03:00",
+        "end_brazil": "2026-10-12T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-19-max-monday-sneasel",
+      "slug": "2026-10-19-max-monday-sneasel",
+      "title": "Max Monday: Dynamax Sneasel",
+      "summary": "Sneasel Dynamax em destaque nos Power Spots durante a Segunda Max.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Sneasel"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-19T06:00:00-03:00",
+        "end_local": "2026-10-19T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-19T06:00:00-03:00",
+        "end_brazil": "2026-10-19T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-26-max-monday-sableye",
+      "slug": "2026-10-26-max-monday-sableye",
+      "title": "Max Monday: Dynamax Sableye",
+      "summary": "Sableye Dynamax em destaque nos Power Spots durante a Segunda Max.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Sableye"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-26T06:00:00-03:00",
+        "end_local": "2026-10-26T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-26T06:00:00-03:00",
+        "end_brazil": "2026-10-26T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-raids-yveltal",
+      "slug": "2026-10-raids-yveltal",
+      "title": "Reides 5★: Yveltal",
+      "summary": "Yveltal na rotação de Reides de cinco estrelas.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Yveltal"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-07T06:00:00-03:00",
+        "end_local": "2026-10-13T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-07T06:00:00-03:00",
+        "end_brazil": "2026-10-13T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-raids-dialga",
+      "slug": "2026-10-raids-dialga",
+      "title": "Reides 5★: Dialga",
+      "summary": "Dialga na rotação de Reides de cinco estrelas.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Dialga"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-14T06:00:00-03:00",
+        "end_local": "2026-10-20T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-14T06:00:00-03:00",
+        "end_brazil": "2026-10-20T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-raids-palkia",
+      "slug": "2026-10-raids-palkia",
+      "title": "Reides 5★: Palkia",
+      "summary": "Palkia na rotação de Reides de cinco estrelas.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Palkia"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-21T06:00:00-03:00",
+        "end_local": "2026-10-27T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-21T06:00:00-03:00",
+        "end_brazil": "2026-10-27T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-raids-giratina-origin",
+      "slug": "2026-10-raids-giratina-origin",
+      "title": "Reides 5★: Giratina (Forma Origem)",
+      "summary": "Giratina (Forma Origem) na rotação de Reides de cinco estrelas.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Giratina (Forma Origem)"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-28T06:00:00-03:00",
+        "end_local": "2026-11-03T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-28T06:00:00-03:00",
+        "end_brazil": "2026-11-03T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-mega-blastoise-raids",
+      "slug": "2026-10-mega-blastoise-raids",
+      "title": "Mega Reides: Mega Blastoise",
+      "summary": "Mega Blastoise na rotação de Mega Reides.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Mega Blastoise"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-07T06:00:00-03:00",
+        "end_local": "2026-10-13T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-07T06:00:00-03:00",
+        "end_brazil": "2026-10-13T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-mega-dragonite-raids",
+      "slug": "2026-10-mega-dragonite-raids",
+      "title": "Mega Reides: Mega Dragonite",
+      "summary": "Mega Dragonite na rotação de Mega Reides.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Mega Dragonite"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-14T06:00:00-03:00",
+        "end_local": "2026-10-20T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-14T06:00:00-03:00",
+        "end_brazil": "2026-10-20T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-mega-charizard-xy-raids",
+      "slug": "2026-10-mega-charizard-xy-raids",
+      "title": "Mega Reides: Mega Charizard X e Y",
+      "summary": "Mega Charizard X e Y na rotação de Mega Reides.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Mega Charizard X e Y"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-21T06:00:00-03:00",
+        "end_local": "2026-10-27T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-21T06:00:00-03:00",
+        "end_brazil": "2026-10-27T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-mega-sableye-raids",
+      "slug": "2026-10-mega-sableye-raids",
+      "title": "Mega Reides: Mega Sableye",
+      "summary": "Mega Sableye na rotação de Mega Reides.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Mega Sableye"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-28T06:00:00-03:00",
+        "end_local": "2026-11-03T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-28T06:00:00-03:00",
+        "end_brazil": "2026-11-03T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-gbl-06-13",
+      "slug": "2026-10-gbl-06-13",
+      "title": "GO Battle League: Great Mega / Ultra Mega / Master Mega",
+      "summary": "Rotação da Liga de Batalha GO: Great Mega / Ultra Mega / Master Mega.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-06T17:00:00-03:00",
+        "end_local": "2026-10-13T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-06T17:00:00-03:00",
+        "end_brazil": "2026-10-13T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-gbl-13-20",
+      "slug": "2026-10-gbl-13-20",
+      "title": "GO Battle League: Great / Ultra Mega / Little Cup",
+      "summary": "Rotação da Liga de Batalha GO: Great / Ultra Mega / Little Cup.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-13T17:00:00-03:00",
+        "end_local": "2026-10-20T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-13T17:00:00-03:00",
+        "end_brazil": "2026-10-20T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-gbl-20-27",
+      "slug": "2026-10-gbl-20-27",
+      "title": "GO Battle League: Ultra / Master Mega / Fantasy Cup",
+      "summary": "Rotação da Liga de Batalha GO: Ultra / Master Mega / Fantasy Cup.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-20T17:00:00-03:00",
+        "end_local": "2026-10-27T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-20T17:00:00-03:00",
+        "end_brazil": "2026-10-27T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-gbl-27-1103",
+      "slug": "2026-10-gbl-27-1103",
+      "title": "GO Battle League: Master / Mega Halloween Cup",
+      "summary": "Rotação da Liga de Batalha GO: Master / Mega Halloween Cup.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-27T17:00:00-03:00",
+        "end_local": "2026-11-03T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-27T17:00:00-03:00",
+        "end_brazil": "2026-11-03T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-shadow-thundurus",
+      "slug": "2026-10-shadow-thundurus",
+      "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+      "summary": "Thundurus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Thundurus (Forma Encarnada)",
+        "Fim de semana"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-03T00:00:00-03:00",
+        "end_local": "2026-10-04T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-03T00:00:00-03:00",
+        "end_brazil": "2026-10-04T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-shadow-landorus-10",
+      "slug": "2026-10-shadow-landorus-10",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Landorus (Forma Encarnada)",
+        "Fim de semana"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-10T00:00:00-03:00",
+        "end_local": "2026-10-11T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-10T00:00:00-03:00",
+        "end_brazil": "2026-10-11T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-shadow-landorus-17",
+      "slug": "2026-10-shadow-landorus-17",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Landorus (Forma Encarnada)",
+        "Fim de semana"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-17T00:00:00-03:00",
+        "end_local": "2026-10-18T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-17T00:00:00-03:00",
+        "end_brazil": "2026-10-18T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-shadow-landorus-24",
+      "slug": "2026-10-shadow-landorus-24",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Landorus (Forma Encarnada)",
+        "Fim de semana"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-24T00:00:00-03:00",
+        "end_local": "2026-10-25T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-24T00:00:00-03:00",
+        "end_brazil": "2026-10-25T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-shadow-landorus-31",
+      "slug": "2026-10-shadow-landorus-31",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Landorus (Forma Encarnada)",
+        "Fim de semana"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-31T00:00:00-03:00",
+        "end_local": "2026-11-01T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-31T00:00:00-03:00",
+        "end_brazil": "2026-11-01T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-04-scenic-sunday",
+      "slug": "2026-10-04-scenic-sunday",
+      "title": "Descoberta Diária: Domingo Pitoresco",
+      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "category": "daily_discovery",
+      "tags": [
+        "Domingo Pitoresco",
+        "Rotas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-04T00:00:00-03:00",
+        "end_local": "2026-10-04T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-04T00:00:00-03:00",
+        "end_brazil": "2026-10-04T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-11-scenic-sunday",
+      "slug": "2026-10-11-scenic-sunday",
+      "title": "Descoberta Diária: Domingo Pitoresco",
+      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "category": "daily_discovery",
+      "tags": [
+        "Domingo Pitoresco",
+        "Rotas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-11T00:00:00-03:00",
+        "end_local": "2026-10-11T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-11T00:00:00-03:00",
+        "end_brazil": "2026-10-11T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-18-scenic-sunday",
+      "slug": "2026-10-18-scenic-sunday",
+      "title": "Descoberta Diária: Domingo Pitoresco",
+      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "category": "daily_discovery",
+      "tags": [
+        "Domingo Pitoresco",
+        "Rotas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-18T00:00:00-03:00",
+        "end_local": "2026-10-18T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-18T00:00:00-03:00",
+        "end_brazil": "2026-10-18T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-25-scenic-sunday",
+      "slug": "2026-10-25-scenic-sunday",
+      "title": "Descoberta Diária: Domingo Pitoresco",
+      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "category": "daily_discovery",
+      "tags": [
+        "Domingo Pitoresco",
+        "Rotas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-25T00:00:00-03:00",
+        "end_local": "2026-10-25T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-25T00:00:00-03:00",
+        "end_brazil": "2026-10-25T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-06-showcase-tuesday",
+      "slug": "2026-10-06-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-06T00:00:00-03:00",
+        "end_local": "2026-10-06T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-06T00:00:00-03:00",
+        "end_brazil": "2026-10-06T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-13-showcase-tuesday",
+      "slug": "2026-10-13-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-13T00:00:00-03:00",
+        "end_local": "2026-10-13T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-13T00:00:00-03:00",
+        "end_brazil": "2026-10-13T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-20-showcase-tuesday",
+      "slug": "2026-10-20-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-20T00:00:00-03:00",
+        "end_local": "2026-10-20T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-20T00:00:00-03:00",
+        "end_brazil": "2026-10-20T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-27-showcase-tuesday",
+      "slug": "2026-10-27-showcase-tuesday",
+      "title": "Descoberta Diária: Terça de Vitrine",
+      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "category": "daily_discovery",
+      "tags": [
+        "Vitrines",
+        "PokéStop",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-27T00:00:00-03:00",
+        "end_local": "2026-10-27T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-27T00:00:00-03:00",
+        "end_brazil": "2026-10-27T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-01-go-battle-thursday",
+      "slug": "2026-10-01-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-01T00:00:00-03:00",
+        "end_local": "2026-10-01T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-01T00:00:00-03:00",
+        "end_brazil": "2026-10-01T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-08-go-battle-thursday",
+      "slug": "2026-10-08-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-08T00:00:00-03:00",
+        "end_local": "2026-10-08T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-08T00:00:00-03:00",
+        "end_brazil": "2026-10-08T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-15-go-battle-thursday",
+      "slug": "2026-10-15-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-15T00:00:00-03:00",
+        "end_local": "2026-10-15T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-15T00:00:00-03:00",
+        "end_brazil": "2026-10-15T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-22-go-battle-thursday",
+      "slug": "2026-10-22-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-22T00:00:00-03:00",
+        "end_local": "2026-10-22T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-22T00:00:00-03:00",
+        "end_brazil": "2026-10-22T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-29-go-battle-thursday",
+      "slug": "2026-10-29-go-battle-thursday",
+      "title": "Descoberta Diária: Quinta de Batalhas GO",
+      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "category": "daily_discovery",
+      "tags": [
+        "GO Battle",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-29T00:00:00-03:00",
+        "end_local": "2026-10-29T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-29T00:00:00-03:00",
+        "end_brazil": "2026-10-29T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-02-friendship-friday",
+      "slug": "2026-10-02-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-02T00:00:00-03:00",
+        "end_local": "2026-10-02T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-02T00:00:00-03:00",
+        "end_brazil": "2026-10-02T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-09-friendship-friday",
+      "slug": "2026-10-09-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-09T00:00:00-03:00",
+        "end_local": "2026-10-09T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-09T00:00:00-03:00",
+        "end_brazil": "2026-10-09T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-16-friendship-friday",
+      "slug": "2026-10-16-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-16T00:00:00-03:00",
+        "end_local": "2026-10-16T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-16T00:00:00-03:00",
+        "end_brazil": "2026-10-16T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-23-friendship-friday",
+      "slug": "2026-10-23-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-23T00:00:00-03:00",
+        "end_local": "2026-10-23T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-23T00:00:00-03:00",
+        "end_brazil": "2026-10-23T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-10-30-friendship-friday",
+      "slug": "2026-10-30-friendship-friday",
+      "title": "Descoberta Diária: Sexta da Amizade",
+      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "category": "daily_discovery",
+      "tags": [
+        "Amizade",
+        "Trocas",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Twilight Trails • Daily Discoveries",
+        "url": "https://leekduck.com/events/season-24-twilight-trails/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-30T00:00:00-03:00",
+        "end_local": "2026-10-30T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-30T00:00:00-03:00",
+        "end_brazil": "2026-10-30T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published"
     }
   ]
 }
