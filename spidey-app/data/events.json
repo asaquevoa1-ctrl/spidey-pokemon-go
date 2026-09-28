@@ -71,6 +71,1898 @@
           60
         ]
       }
+    },
+    {
+      "id": "2026-09-mega-ascension",
+      "slug": "2026-09-mega-ascension",
+      "title": "Mega Ascension",
+      "summary": "Evento de Mega Evolução que abre setembro.",
+      "category": "evento_especial",
+      "tags": [
+        "Mega",
+        "Global",
+        "Setembro"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-08-31T10:00:00-03:00",
+        "end_local": "2026-09-04T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-08-31T10:00:00-03:00",
+        "end_brazil": "2026-09-04T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-go-fest-mega-finale",
+      "slug": "2026-09-go-fest-mega-finale",
+      "title": "Pokémon GO Fest 2026: Mega Finale",
+      "summary": "Finale global do GO Fest 2026, das 10h às 18h em cada dia.",
+      "category": "go_fest",
+      "tags": [
+        "GO Fest",
+        "Mega",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-05T10:00:00-03:00",
+        "end_local": "2026-09-06T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-05T10:00:00-03:00",
+        "end_brazil": "2026-09-06T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [
+        "A janela diária do evento é de 10h às 18h no sábado e no domingo."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-twilight-trails-season",
+      "slug": "2026-09-twilight-trails-season",
+      "title": "Temporada Twilight Trails",
+      "summary": "Temporada Twilight Trails.",
+      "category": "temporada",
+      "tags": [
+        "Temporada",
+        "Twilight Trails",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-08T10:00:00-03:00",
+        "end_local": "2026-12-01T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-08T10:00:00-03:00",
+        "end_brazil": "2026-12-01T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-go-pass",
+      "slug": "2026-09-go-pass",
+      "title": "GO Pass: Setembro",
+      "summary": "GO Pass de setembro com Latios entre as recompensas.",
+      "category": "go_pass",
+      "tags": [
+        "GO Pass",
+        "Latios",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-september-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-08T10:00:00-03:00",
+        "end_local": "2026-10-06T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-08T10:00:00-03:00",
+        "end_brazil": "2026-10-06T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-mega-squads",
+      "slug": "2026-09-mega-squads",
+      "title": "Mega Squads",
+      "summary": "Evento Mega Squads com estreia de Maschiff/Mabosstiff e outras novidades.",
+      "category": "evento_especial",
+      "tags": [
+        "Mega",
+        "Maschiff",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-08T10:00:00-03:00",
+        "end_local": "2026-09-14T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-08T10:00:00-03:00",
+        "end_brazil": "2026-09-14T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-gible-community-day-classic",
+      "slug": "2026-09-gible-community-day-classic",
+      "title": "Dia Comunitário Clássico: Gible",
+      "summary": "Gible em destaque no Dia Comunitário Clássico de setembro.",
+      "category": "community_day",
+      "tags": [
+        "Gible",
+        "Community Day",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-12T14:00:00-03:00",
+        "end_local": "2026-09-12T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-12T14:00:00-03:00",
+        "end_brazil": "2026-09-12T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-horizons-celebration",
+      "slug": "2026-09-horizons-celebration",
+      "title": "Celebração Pokémon Horizons: The Series",
+      "summary": "Retorno do evento de celebração de Pokémon Horizons: The Series.",
+      "category": "evento_especial",
+      "tags": [
+        "Horizons",
+        "Evento",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-16T10:00:00-03:00",
+        "end_local": "2026-09-22T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-16T10:00:00-03:00",
+        "end_brazil": "2026-09-22T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-staraptor-super-mega-raid-day",
+      "slug": "2026-09-staraptor-super-mega-raid-day",
+      "title": "Dia de Reides Super Mega: Staraptor",
+      "summary": "Staraptor em destaque no Dia de Reides Super Mega.",
+      "category": "raid_day",
+      "tags": [
+        "Staraptor",
+        "Super Mega",
+        "Raid Day"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-19T14:00:00-03:00",
+        "end_local": "2026-09-19T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-19T14:00:00-03:00",
+        "end_brazil": "2026-09-19T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-choose-your-path",
+      "slug": "2026-09-choose-your-path",
+      "title": "Choose Your Path • Twilight Trails",
+      "summary": "Pesquisa temporária ramificada com caminhos de exploração, captura ou batalha.",
+      "category": "timed_research",
+      "tags": [
+        "Pesquisa",
+        "Twilight Trails",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-23T10:00:00-03:00",
+        "end_local": "2026-09-28T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-23T10:00:00-03:00",
+        "end_brazil": "2026-09-28T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-phantump-catch-mastery",
+      "slug": "2026-09-phantump-catch-mastery",
+      "title": "Catch Mastery: Phantump",
+      "summary": "Evento Catch Mastery com Phantump e chance aumentada de Brilhante.",
+      "category": "catch_mastery",
+      "tags": [
+        "Phantump",
+        "Catch Mastery",
+        "Global"
+      ],
+      "source": {
+        "name": "Leek Duck • fonte oficial referenciada",
+        "url": "https://leekduck.com/events/catch-mastery-phantump-2026/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-26T10:00:00-03:00",
+        "end_local": "2026-09-26T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-26T10:00:00-03:00",
+        "end_brazil": "2026-09-26T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-harvest-festival-applin",
+      "slug": "2026-09-harvest-festival-applin",
+      "title": "Festival da Colheita 2026: Applin Picking",
+      "summary": "Festival da Colheita com estreia de Applin Brilhante.",
+      "category": "evento_especial",
+      "tags": [
+        "Harvest",
+        "Applin",
+        "Global"
+      ],
+      "source": {
+        "name": "Leek Duck • fonte oficial referenciada",
+        "url": "https://leekduck.com/events/harvest-festival-2026/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-29T10:00:00-03:00",
+        "end_local": "2026-10-05T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-29T10:00:00-03:00",
+        "end_brazil": "2026-10-05T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-10-spotlight-weedle",
+      "slug": "2026-09-10-spotlight-weedle",
+      "title": "Spotlight Hour: Weedle, Kakuna e Beedrill",
+      "summary": "2× Candy por transferência.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Semanal",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-10T18:00:00-03:00",
+        "end_local": "2026-09-10T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-10T18:00:00-03:00",
+        "end_brazil": "2026-09-10T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-13-spotlight-houndour",
+      "slug": "2026-09-13-spotlight-houndour",
+      "title": "Spotlight Hour: Houndour e Houndoom",
+      "summary": "2× Candy por transferência.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Semanal",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-13T18:00:00-03:00",
+        "end_local": "2026-09-13T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-13T18:00:00-03:00",
+        "end_brazil": "2026-09-13T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-17-spotlight-charmander",
+      "slug": "2026-09-17-spotlight-charmander",
+      "title": "Spotlight Hour: Charmander com óculos de Friede",
+      "summary": "2× Poeira Estelar por captura.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Semanal",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-17T18:00:00-03:00",
+        "end_local": "2026-09-17T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-17T18:00:00-03:00",
+        "end_brazil": "2026-09-17T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-24-spotlight-rattata",
+      "slug": "2026-09-24-spotlight-rattata",
+      "title": "Spotlight Hour: Rattata",
+      "summary": "2× XP por evolução e chance aumentada de Rattata XXS.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Spotlight Hour",
+        "Semanal",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-24T18:00:00-03:00",
+        "end_local": "2026-09-24T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-24T18:00:00-03:00",
+        "end_brazil": "2026-09-24T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-02-raid-hour-regi",
+      "slug": "2026-09-02-raid-hour-regi",
+      "title": "Raid Hour: Regirock, Regice e Registeel",
+      "summary": "Trio Regi em reides de cinco estrelas.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-02T18:00:00-03:00",
+        "end_local": "2026-09-02T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-02T18:00:00-03:00",
+        "end_brazil": "2026-09-02T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-09-raid-hour-zacian",
+      "slug": "2026-09-09-raid-hour-zacian",
+      "title": "Raid Hour: Zacian",
+      "summary": "Zacian (Herói de Muitas Batalhas) em destaque.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-09T18:00:00-03:00",
+        "end_local": "2026-09-09T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-09T18:00:00-03:00",
+        "end_brazil": "2026-09-09T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-16-raid-hour-zamazenta",
+      "slug": "2026-09-16-raid-hour-zamazenta",
+      "title": "Raid Hour: Zamazenta",
+      "summary": "Zamazenta (Herói de Muitas Batalhas) em destaque.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-16T18:00:00-03:00",
+        "end_local": "2026-09-16T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-16T18:00:00-03:00",
+        "end_brazil": "2026-09-16T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-23-raid-hour-ultra-beasts",
+      "slug": "2026-09-23-raid-hour-ultra-beasts",
+      "title": "Raid Hour: Ultra Beasts regionais",
+      "summary": "Xurkitree na Ásia-Pacífico, Buzzwole nas Américas/Greenland e Pheromosa na Europa/Oriente Médio/África/Índia.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-23T18:00:00-03:00",
+        "end_local": "2026-09-23T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-23T18:00:00-03:00",
+        "end_brazil": "2026-09-23T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-30-raid-hour-xerneas",
+      "slug": "2026-09-30-raid-hour-xerneas",
+      "title": "Raid Hour: Xerneas",
+      "summary": "Xerneas em destaque nas reides de cinco estrelas.",
+      "category": "raid_hour",
+      "tags": [
+        "Raid Hour",
+        "5 estrelas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-30T18:00:00-03:00",
+        "end_local": "2026-09-30T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-30T18:00:00-03:00",
+        "end_brazil": "2026-09-30T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-07-max-monday-ralts",
+      "slug": "2026-09-07-max-monday-ralts",
+      "title": "Max Monday: Dynamax Ralts",
+      "summary": "Ralts Dynamax em destaque nos Power Spots.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-07T06:00:00-03:00",
+        "end_local": "2026-09-07T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-07T06:00:00-03:00",
+        "end_brazil": "2026-09-07T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-14-max-monday-rhyhorn",
+      "slug": "2026-09-14-max-monday-rhyhorn",
+      "title": "Max Monday: Dynamax Rhyhorn",
+      "summary": "Rhyhorn Dynamax em destaque nos Power Spots.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-14T06:00:00-03:00",
+        "end_local": "2026-09-14T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-14T06:00:00-03:00",
+        "end_brazil": "2026-09-14T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-21-max-monday-birds",
+      "slug": "2026-09-21-max-monday-birds",
+      "title": "Max Monday: Articuno, Zapdos e Moltres Dynamax",
+      "summary": "As três aves lendárias de Kanto em Max Battles.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-21T06:00:00-03:00",
+        "end_local": "2026-09-21T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-21T06:00:00-03:00",
+        "end_brazil": "2026-09-21T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-28-max-monday-sobble",
+      "slug": "2026-09-28-max-monday-sobble",
+      "title": "Max Monday: Dynamax Sobble",
+      "summary": "Sobble Dynamax em destaque nos Power Spots.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dynamax",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-28T06:00:00-03:00",
+        "end_local": "2026-09-28T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-28T06:00:00-03:00",
+        "end_brazil": "2026-09-28T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-raids-regi-return",
+      "slug": "2026-09-raids-regi-return",
+      "title": "Reides 5★: Regirock, Regice e Registeel",
+      "summary": "Retorno do trio Regi após a janela especial do início de setembro.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-07T10:00:00-03:00",
+        "end_local": "2026-09-08T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-07T10:00:00-03:00",
+        "end_brazil": "2026-09-08T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-raids-zacian",
+      "slug": "2026-09-raids-zacian",
+      "title": "Reides 5★: Zacian",
+      "summary": "Zacian (Herói de Muitas Batalhas) na rotação.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-09T10:00:00-03:00",
+        "end_local": "2026-09-15T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-09T10:00:00-03:00",
+        "end_brazil": "2026-09-15T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-raids-zamazenta",
+      "slug": "2026-09-raids-zamazenta",
+      "title": "Reides 5★: Zamazenta",
+      "summary": "Zamazenta (Herói de Muitas Batalhas) na rotação.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-16T10:00:00-03:00",
+        "end_local": "2026-09-22T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-16T10:00:00-03:00",
+        "end_brazil": "2026-09-22T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-raids-ultra-beasts",
+      "slug": "2026-09-raids-ultra-beasts",
+      "title": "Reides 5★: Xurkitree / Buzzwole / Pheromosa",
+      "summary": "Ultra Beasts regionais: Xurkitree (APAC), Buzzwole (Américas/Greenland) e Pheromosa (Europa/Oriente Médio/África/Índia).",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-23T06:00:00-03:00",
+        "end_local": "2026-09-29T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-23T06:00:00-03:00",
+        "end_brazil": "2026-09-29T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-raids-xerneas",
+      "slug": "2026-09-raids-xerneas",
+      "title": "Reides 5★: Xerneas",
+      "summary": "Xerneas fecha setembro e segue no início de outubro.",
+      "category": "raid_rotation",
+      "tags": [
+        "Reide 5★",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-30T06:00:00-03:00",
+        "end_local": "2026-10-06T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-30T06:00:00-03:00",
+        "end_brazil": "2026-10-06T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-mega-beedrill-raids",
+      "slug": "2026-09-mega-beedrill-raids",
+      "title": "Mega Reides: Mega Beedrill",
+      "summary": "Mega Beedrill na rotação de Mega Reides.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-08T06:00:00-03:00",
+        "end_local": "2026-09-15T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-08T06:00:00-03:00",
+        "end_brazil": "2026-09-15T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-mega-houndoom-raids",
+      "slug": "2026-09-mega-houndoom-raids",
+      "title": "Mega Reides: Mega Houndoom",
+      "summary": "Mega Houndoom entra em rotação durante Mega Squads.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-11T06:00:00-03:00",
+        "end_local": "2026-09-15T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-11T06:00:00-03:00",
+        "end_brazil": "2026-09-15T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-mega-venusaur-raids",
+      "slug": "2026-09-mega-venusaur-raids",
+      "title": "Mega Reides: Mega Venusaur",
+      "summary": "Mega Venusaur na rotação de Mega Reides.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-16T06:00:00-03:00",
+        "end_local": "2026-09-22T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-16T06:00:00-03:00",
+        "end_brazil": "2026-09-22T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-mega-malamar-raids",
+      "slug": "2026-09-mega-malamar-raids",
+      "title": "Mega Reides: Mega Malamar",
+      "summary": "Mega Malamar na rotação de Mega Reides.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-23T06:00:00-03:00",
+        "end_local": "2026-09-29T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-23T06:00:00-03:00",
+        "end_brazil": "2026-09-29T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-mega-victreebel-raids",
+      "slug": "2026-09-mega-victreebel-raids",
+      "title": "Mega Reides: Mega Victreebel",
+      "summary": "Mega Victreebel fecha setembro e segue no início de outubro.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Mega Reide",
+        "Rotação",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-30T06:00:00-03:00",
+        "end_local": "2026-10-06T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-30T06:00:00-03:00",
+        "end_brazil": "2026-10-06T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-gbl-08-15",
+      "slug": "2026-09-gbl-08-15",
+      "title": "GO Battle League: Mega Editions",
+      "summary": "Great League: Mega Edition, Ultra League: Mega Edition e Master League: Mega Edition.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-08T17:00:00-03:00",
+        "end_local": "2026-09-15T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-08T17:00:00-03:00",
+        "end_brazil": "2026-09-15T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-gbl-15-22",
+      "slug": "2026-09-gbl-15-22",
+      "title": "GO Battle League: Great / Ultra Mega / Willpower Cup",
+      "summary": "Great League, Ultra League: Mega Edition e Willpower Cup: Great League Edition.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-15T17:00:00-03:00",
+        "end_local": "2026-09-22T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-15T17:00:00-03:00",
+        "end_brazil": "2026-09-22T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-gbl-22-29",
+      "slug": "2026-09-gbl-22-29",
+      "title": "GO Battle League: Ultra / Master Mega / Retro Cup",
+      "summary": "Ultra League, Master League: Mega Edition e Retro Cup: Great League Edition.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-22T17:00:00-03:00",
+        "end_local": "2026-09-29T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-22T17:00:00-03:00",
+        "end_brazil": "2026-09-29T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-gbl-29-1006",
+      "slug": "2026-09-gbl-29-1006",
+      "title": "GO Battle League: Master / Mega Color Cup",
+      "summary": "Master League e Mega Color Cup: Great League Edition.",
+      "category": "go_battle_league",
+      "tags": [
+        "GO Battle League",
+        "PvP",
+        "Twilight Trails"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-29T17:00:00-03:00",
+        "end_local": "2026-10-06T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-29T17:00:00-03:00",
+        "end_brazil": "2026-10-06T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-shadow-giratina-05",
+      "slug": "2026-09-shadow-giratina-05",
+      "title": "Shadow Raids: Giratina (Forma Alterada)",
+      "summary": "Giratina Sombroso (Forma Alterada) em Shadow Raids no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Fim de semana",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-05T00:00:00-03:00",
+        "end_local": "2026-09-06T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-05T00:00:00-03:00",
+        "end_brazil": "2026-09-06T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-shadow-thundurus-12",
+      "slug": "2026-09-shadow-thundurus-12",
+      "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+      "summary": "Thundurus Sombroso (Forma Encarnada) em Shadow Raids no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Fim de semana",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-12T00:00:00-03:00",
+        "end_local": "2026-09-13T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-12T00:00:00-03:00",
+        "end_brazil": "2026-09-13T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-shadow-thundurus-19",
+      "slug": "2026-09-shadow-thundurus-19",
+      "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+      "summary": "Thundurus Sombroso (Forma Encarnada) em Shadow Raids no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Fim de semana",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-19T00:00:00-03:00",
+        "end_local": "2026-09-20T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-19T00:00:00-03:00",
+        "end_brazil": "2026-09-20T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-09-shadow-thundurus-26",
+      "slug": "2026-09-shadow-thundurus-26",
+      "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+      "summary": "Thundurus Sombroso (Forma Encarnada) em Shadow Raids no fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Shadow Raid",
+        "Fim de semana",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-26T00:00:00-03:00",
+        "end_local": "2026-09-27T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-26T00:00:00-03:00",
+        "end_brazil": "2026-09-27T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada específica confirmada."
+      },
+      "notes": [],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published"
     }
   ]
 }
