@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#07162d">
-  <meta name="description" content="Calendário de eventos Pokémon GO com horários, coordenadas e GPX.">
+  <meta name="description" content="Calendário Pokémon GO com eventos, Stamp Rallies, coordenadas e GPX.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Garante o pôster Premium inteiro no detalhe: proporção 2:3, sem crop. */
     .detail-hero {
       width: 100%;
       height: min(calc((100vw - 18px) * 1.5), 1080px) !important;
@@ -26,60 +25,103 @@
       <img src="assets/spidey-logo-oficial.jpg" alt="Spidey Pokémon GO" class="brand-logo">
       <div>
         <strong>Spidey</strong>
-        <span>Pokémon GO • Eventos</span>
+        <span>Pokémon GO • Eventos & Stamps</span>
       </div>
     </div>
     <button id="installButton" class="ghost-btn" hidden>Instalar</button>
   </header>
 
   <main>
-    <section class="hero">
-      <span class="eyebrow">SEMPRE UM PASSO À FRENTE</span>
-      <h1>Seu calendário Pokémon GO</h1>
-      <p>Eventos, horários no Brasil, coordenadas copiáveis e rotas GPX em um só lugar.</p>
-      <div class="hero-actions">
-        <button id="todayButton" class="primary-btn">Ver hoje</button>
-        <button id="notificationButton" class="secondary-btn">Ativar notificações</button>
-      </div>
-      <p id="notificationStatus" class="microcopy"></p>
+    <section id="calendarView" class="app-view">
+      <section class="hero">
+        <span class="eyebrow">SEMPRE UM PASSO À FRENTE</span>
+        <h1>Seu calendário Pokémon GO</h1>
+        <p>Eventos, horários no Brasil, coordenadas copiáveis e rotas GPX em um só lugar.</p>
+        <div class="hero-actions">
+          <button id="todayButton" class="primary-btn">Ver hoje</button>
+          <button id="notificationButton" class="secondary-btn">Ativar notificações</button>
+        </div>
+        <p id="notificationStatus" class="microcopy"></p>
+      </section>
+
+      <section class="status-strip" aria-label="Resumo">
+        <div><strong id="nowCount">0</strong><span>Acontecendo</span></div>
+        <div><strong id="monthCount">0</strong><span>No mês</span></div>
+        <div><strong id="nextCount">0</strong><span>Próximos</span></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">AGENDA</span>
+            <h2>Calendário</h2>
+          </div>
+          <div class="month-nav">
+            <button id="prevMonth" aria-label="Mês anterior">‹</button>
+            <strong id="monthLabel"></strong>
+            <button id="nextMonth" aria-label="Próximo mês">›</button>
+          </div>
+        </div>
+        <div class="calendar-wrap">
+          <div class="weekdays" aria-hidden="true">
+            <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+          </div>
+          <div id="calendar" class="calendar"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">PRÓXIMOS</span>
+            <h2>Eventos</h2>
+          </div>
+        </div>
+        <div id="eventList" class="event-list"></div>
+      </section>
     </section>
 
-    <section class="status-strip" aria-label="Resumo">
-      <div><strong id="nowCount">0</strong><span>Acontecendo</span></div>
-      <div><strong id="monthCount">0</strong><span>No mês</span></div>
-      <div><strong id="nextCount">0</strong><span>Próximos</span></div>
+    <section id="stampsView" class="app-view" hidden>
+      <section class="hero hero-compact">
+        <span class="eyebrow">GO STAMP RALLY</span>
+        <h1>Stamps pelo mundo</h1>
+        <p>Encontre rallies, acompanhe os selos e use coordenadas/GPX somente quando a PokéStop estiver confirmada.</p>
+      </section>
+
+      <section class="status-strip" aria-label="Resumo de Stamps">
+        <div><strong id="stampRallyCount">0</strong><span>Rallies</span></div>
+        <div><strong id="stampStopCount">0</strong><span>Stops</span></div>
+        <div><strong id="stampReadyCount">0</strong><span>GPX prontos</span></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">ROTAS</span>
+            <h2>Stamp Rallies</h2>
+          </div>
+        </div>
+        <div id="stampList" class="stamp-list"></div>
+      </section>
     </section>
 
-    <section class="section">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">AGENDA</span>
-          <h2>Calendário</h2>
-        </div>
-        <div class="month-nav">
-          <button id="prevMonth" aria-label="Mês anterior">‹</button>
-          <strong id="monthLabel"></strong>
-          <button id="nextMonth" aria-label="Próximo mês">›</button>
-        </div>
-      </div>
-      <div class="calendar-wrap">
-        <div class="weekdays" aria-hidden="true">
-          <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
-        </div>
-        <div id="calendar" class="calendar"></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow">PRÓXIMOS</span>
-          <h2>Eventos</h2>
-        </div>
-      </div>
-      <div id="eventList" class="event-list"></div>
+    <section id="mapView" class="app-view" hidden>
+      <section class="hero hero-compact">
+        <span class="eyebrow">MAPA</span>
+        <h1>Stops confirmadas</h1>
+        <p>O mapa só recebe pontos com coordenada confiável. Referências de cidade ou venue não viram PokéStop por aproximação.</p>
+      </section>
+      <section class="section">
+        <div id="mapSummary" class="map-placeholder"></div>
+      </section>
     </section>
   </main>
+
+  <nav class="app-tabs" aria-label="Navegação principal">
+    <button class="app-tab active" data-view="calendarView" aria-current="page">Calendário</button>
+    <button class="app-tab" data-view="stampsView">Stamps</button>
+    <button class="app-tab" data-view="mapView">Mapa</button>
+  </nav>
 
   <dialog id="eventDialog" class="event-dialog">
     <article id="eventDetail"></article>
@@ -87,7 +129,6 @@
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
   <script src="app.js" defer></script>
 </body>
 </html>
