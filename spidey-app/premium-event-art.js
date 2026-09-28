@@ -65,4 +65,19 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
   };
 
   if (window.SpideyArt) window.SpideyArt.resolve = spideyResolveEventArt;
+
+  if (typeof weeklyArtUrl === 'function') {
+    const baseWeeklyArtUrl = weeklyArtUrl;
+    weeklyArtUrl = function weeklyArtUrlWithPremiumCatalog(item) {
+      const event = typeof weeklyFindEvent === 'function' ? weeklyFindEvent(item?.id) : null;
+      if (event) {
+        const asset = spideyResolveEventArt(event, 'weekly');
+        if (asset?.url && String(asset.sourceRole || '').startsWith('premium_catalog:')) {
+          return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(asset) : asset.url;
+        }
+      }
+      return baseWeeklyArtUrl(item);
+    };
+    if (typeof spideyWeeklyData !== 'undefined' && spideyWeeklyData && typeof renderWeeklyView === 'function') renderWeeklyView();
+  }
 })();
