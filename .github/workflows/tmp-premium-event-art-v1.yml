@@ -1,0 +1,55 @@
+name: TEMP Spidey Premium Event Art v1
+
+on:
+  push:
+    branches:
+      - spidey-premium-event-art-v1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: spidey-premium-event-art-v1
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Validar JavaScript
+        run: |
+          node --check spidey-app/premium-event-art.js
+          node --check spidey-app/calendar-enhancements.js
+          node --check spidey-app/sw.js
+      - name: Validar SVGs e catálogo
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          files = [
+              Path('spidey-app/assets/events/premium/raid-hour-xerneas-v1.svg'),
+              Path('spidey-app/assets/events/premium/spotlight-seedot-v1.svg'),
+              Path('spidey-app/assets/events/premium/community-day-gible-v1.svg'),
+          ]
+          for path in files:
+              ET.parse(path)
+              text = path.read_text(encoding='utf-8')
+              assert 'spidey-logo-oficial.jpg' in text, path
+              assert 'width="1080"' in text and 'height="1620"' in text, path
+              print('SVG OK:', path.name)
+          catalog = Path('spidey-app/premium-event-art.js').read_text(encoding='utf-8')
+          for event_id in [
+              '2026-09-30-raid-hour-xerneas',
+              '2026-10-01-spotlight-seedot',
+              '2026-09-gible-community-day-classic',
+          ]:
+              assert event_id in catalog, event_id
+          sw = Path('spidey-app/sw.js').read_text(encoding='utf-8')
+          assert 'premium-event-art.js' in sw
+          for path in files:
+              assert './' + str(path).replace('spidey-app/', '') in sw, path
+          print('Premium Event Art v1 OK')
+          PY
