@@ -65,7 +65,12 @@ function formatRange(event) {
 }
 
 function eventImage(event) {
-  return event.art?.url || 'assets/spidey-logo-oficial.jpg';
+  const url = event.art?.url || 'assets/spidey-logo-oficial.jpg';
+  const version = event.art?.web_sha256 || event.art?.sha256;
+  if (url.startsWith('assets/') && version) {
+    return `${url}?v=${String(version).slice(0, 12)}`;
+  }
+  return url;
 }
 
 function renderStats() {
@@ -136,7 +141,7 @@ function renderEvents(events = state.events) {
     card.className = 'event-card';
     card.tabIndex = 0;
     card.innerHTML = `
-      <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.src='assets/spidey-logo-oficial.jpg'">
+      <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src='assets/spidey-logo-oficial.jpg'">
       <div>
         <span class="eyebrow">${event.location_label || event.locations?.[0]?.label || 'Evento'}</span>
         <h3>${event.title}</h3>
@@ -191,7 +196,7 @@ function openEvent(event) {
   const bonuses = event.bonuses || [];
   const pokemon = event.pokemon || [];
   detail.innerHTML = `
-    <img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.src='assets/spidey-logo-oficial.jpg'">
+    <img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src='assets/spidey-logo-oficial.jpg'">
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
       <h2>${event.title}</h2>
