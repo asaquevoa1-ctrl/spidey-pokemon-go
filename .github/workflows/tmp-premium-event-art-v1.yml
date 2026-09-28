@@ -53,3 +53,5 @@ jobs:
               assert './' + str(path).replace('spidey-app/', '') in sw, path
           print('Premium Event Art v1 OK')
           PY
+
+# validation trigger
