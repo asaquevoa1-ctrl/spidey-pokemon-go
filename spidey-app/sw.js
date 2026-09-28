@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260928-hq2-nocrop';
+const CACHE = 'spidey-app-v1-20260928-hq3-fullposter';
 const CORE = [
   './',
   './index.html',
