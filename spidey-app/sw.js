@@ -1,10 +1,11 @@
-const CACHE = 'spidey-app-v1-20260928-stamps2-safe-coords';
+const CACHE = 'spidey-app-v1-20260928-calendar1';
 const CORE = [
   './',
   './index.html',
   './styles.css',
   './stamps.css',
   './app.js',
+  './calendar-enhancements.js',
   './manifest.webmanifest',
   './data/events.json',
   './data/stamps.json',
