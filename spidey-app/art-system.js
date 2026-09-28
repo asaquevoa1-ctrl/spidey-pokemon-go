@@ -15,15 +15,22 @@ const SPIDEY_ART_ROLE_ORDER = {
 };
 
 const SPIDEY_CATEGORY_LABELS = {
-  spotlight_hour: 'Spotlight Hour',
-  raid_hour: 'Raid Hour',
+  spotlight_hour: 'Hora do Holofote',
+  raid_hour: 'Hora de Reides',
   raid_rotation: 'Reides',
-  mega_raid_rotation: 'Mega Reides',
-  shadow_raids: 'Shadow Raids',
-  max_monday: 'Max Monday',
-  max_battle_day: 'Max Battle Day',
-  community_day: 'Community Day',
-  go_battle_league: 'GO Battle League',
+  mega_raid_rotation: 'Megarreides',
+  shadow_raids: 'Reides Sombrosas',
+  max_monday: 'Segunda Max',
+  max_battle_day: 'Dia de Batalhas Max',
+  community_day: 'Dia Comunitário',
+  go_battle_league: 'Liga de Batalha GO',
+  team_go_rocket: 'Equipe GO Rocket',
+  raid_day: 'Dia de Reides',
+  halloween: 'Halloween',
+  city_safari: 'City Safari',
+  go_pass: 'GO Pass',
+  temporada: 'Temporada',
+  hatch_day: 'Dia de Chocar',
   evento_especial: 'Evento Especial',
   regional_event: 'Evento Regional',
   daily_discovery: 'Descoberta Diária',
@@ -148,7 +155,7 @@ function spideyFallbackNode(event, role = 'card') {
     <span class="spidey-art-kicker">SPIDEY • ${spideyCategoryLabel(event)}</span>
     <strong class="spidey-art-title"></strong>
     <span class="spidey-art-range"></span>
-    <span class="spidey-art-status">Arte Premium em preparação</span>`;
+    <span class="spidey-art-status">Arte específica em preparação</span>`;
   wrapper.querySelector('.spidey-art-title').textContent = event?.title || 'Evento Pokémon GO';
   wrapper.querySelector('.spidey-art-range').textContent = range;
   return wrapper;
