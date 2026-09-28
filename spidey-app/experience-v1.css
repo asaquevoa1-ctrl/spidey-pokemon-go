@@ -1,0 +1,219 @@
+:root {
+  --spidey-cyan: #48d9ff;
+  --spidey-gold: #f5c84f;
+  --spidey-panel: rgba(8, 23, 43, .78);
+  --spidey-line: rgba(119, 203, 235, .18);
+}
+
+.experience-intro {
+  padding-bottom: 10px;
+}
+
+.experience-intro h1 {
+  max-width: 720px;
+}
+
+.experience-intro p {
+  max-width: 680px;
+}
+
+.experience-section {
+  padding-top: 18px;
+  padding-bottom: 12px;
+}
+
+.experience-feature {
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--spidey-line);
+  background:
+    radial-gradient(circle at 82% 10%, rgba(72,217,255,.15), transparent 32%),
+    linear-gradient(145deg, rgba(10,31,57,.98), rgba(5,15,29,.98));
+  box-shadow: 0 22px 70px rgba(0,0,0,.28);
+}
+
+.experience-feature-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.experience-feature-art-wrap {
+  position: relative;
+  min-height: 430px;
+  background: #07101e;
+}
+
+.experience-feature-art {
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.experience-feature-art-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 62%, rgba(6,17,31,.9) 100%);
+  pointer-events: none;
+}
+
+.experience-feature-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 34px 34px 32px;
+}
+
+.experience-kicker {
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--spidey-cyan);
+}
+
+.experience-feature-copy h3 {
+  margin: 0;
+  font-size: clamp(1.65rem, 5vw, 2.7rem);
+  line-height: 1.02;
+}
+
+.experience-countdown {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(245,200,79,.13);
+  border: 1px solid rgba(245,200,79,.35);
+  color: #ffe18a;
+  font-weight: 850;
+}
+
+.experience-range,
+.experience-summary {
+  color: #b8c7d8;
+  line-height: 1.55;
+}
+
+.experience-cta {
+  margin-top: 7px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.experience-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(245px, 34%);
+  gap: 14px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding: 2px 2px 12px;
+  scrollbar-width: thin;
+}
+
+.experience-mini {
+  scroll-snap-align: start;
+  overflow: hidden;
+  border: 1px solid var(--spidey-line);
+  border-radius: 22px;
+  background: var(--spidey-panel);
+  cursor: pointer;
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.experience-mini:hover,
+.experience-mini:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(72,217,255,.48);
+}
+
+.experience-mini img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 34%;
+  background: #07101e;
+  display: block;
+}
+
+.experience-mini-copy {
+  padding: 15px 16px 17px;
+}
+
+.experience-mini-copy strong {
+  display: block;
+  margin: 6px 0 7px;
+  font-size: 1.02rem;
+  line-height: 1.2;
+}
+
+.experience-mini-meta {
+  color: #9fb1c5;
+  font-size: .84rem;
+  line-height: 1.45;
+}
+
+.experience-empty {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px dashed rgba(123,183,215,.28);
+  color: #9fb1c5;
+  background: rgba(6,20,38,.5);
+}
+
+.experience-link-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--spidey-cyan);
+  font-weight: 850;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.calendar-focus-note {
+  margin: 10px 0 0;
+  color: #8fa5bc;
+  font-size: .82rem;
+}
+
+@media (max-width: 760px) {
+  .experience-feature-button {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-feature-art-wrap,
+  .experience-feature-art {
+    min-height: 0;
+  }
+
+  .experience-feature-art {
+    aspect-ratio: 16 / 11;
+    object-position: center 28%;
+  }
+
+  .experience-feature-art-wrap::after {
+    background: linear-gradient(180deg, transparent 64%, rgba(6,17,31,.92) 100%);
+  }
+
+  .experience-feature-copy {
+    padding: 22px 20px 24px;
+  }
+
+  .experience-rail {
+    grid-auto-columns: minmax(250px, 82vw);
+  }
+}
