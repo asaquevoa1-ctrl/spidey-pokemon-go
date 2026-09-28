@@ -56,7 +56,8 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add spidey-app/index.html spidey-app/app.js spidey-app/sw.js spidey-app/data/weekly.json scripts/build_spidey_weekly.py .github/workflows/spidey-weekly.yml
+          git checkout -- .github/workflows/spidey-weekly.yml
+          git add spidey-app/index.html spidey-app/app.js spidey-app/sw.js spidey-app/data/weekly.json scripts/build_spidey_weekly.py
           if git diff --cached --quiet; then
             echo 'Nada a gravar.'
             exit 0
