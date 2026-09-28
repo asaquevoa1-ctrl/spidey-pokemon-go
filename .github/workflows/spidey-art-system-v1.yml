@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Preparar Python
         uses: actions/setup-python@v6
@@ -32,16 +34,24 @@ jobs:
           node --check spidey-app/app.js
           node --check spidey-app/art-system.js
           node --check spidey-app/sw.js
+          python -m py_compile scripts/generate_event_vector_art.py
+          python -m py_compile scripts/audit_event_art.py
           grep -q 'art-system.css' spidey-app/index.html
           grep -q 'art-system.js' spidey-app/index.html
           grep -q 'art-system.css' spidey-app/sw.js
           grep -q 'art-system.js' spidey-app/sw.js
           ! grep -q "replaceWith.*spidey-logo-oficial" spidey-app/art-system.js
 
+      - name: Gerar visuais individuais de fallback
+        run: |
+          set -euo pipefail
+          python scripts/generate_event_vector_art.py
+          test -d spidey-app/assets/events/generated
+          test "$(find spidey-app/assets/events/generated -name '*.svg' | wc -l)" -gt 0
+
       - name: Auditar cobertura de artes
         run: |
           set -euo pipefail
-          python -m py_compile scripts/audit_event_art.py
           python scripts/audit_event_art.py --output reports/art-audit.json
           python -m json.tool reports/art-audit.json >/dev/null
 
@@ -50,12 +60,31 @@ jobs:
           python - <<'PY'
           import json
           report=json.load(open('reports/art-audit.json', encoding='utf-8'))
+          scope=report['sep_oct_2026']
           assert report['festival_hero_ready'] is True
           assert report['rules']['logo_is_event_art'] is False
           assert report['rules']['data_uri_allowed'] is False
+          assert report['rules']['generated_vector_is_premium'] is False
+          assert scope['ready']['hero'] == scope['total']
+          assert scope['ready']['weekly'] == scope['total']
+          assert len(scope['needs_art']) == 0
           print('Art System v1 OK')
-          print('Set/Out:', report['sep_oct_2026']['total'], 'eventos')
-          print('Hero prontos:', report['sep_oct_2026']['ready']['hero'])
-          print('Weekly prontos:', report['sep_oct_2026']['ready']['weekly'])
-          print('Precisam de arte:', len(report['sep_oct_2026']['needs_art']))
+          print('Set/Out:', scope['total'], 'eventos')
+          print('Hero cobertos:', scope['ready']['hero'])
+          print('Weekly cobertos:', scope['ready']['weekly'])
+          print('Premium/source hero:', scope['premium_or_source_art']['hero'])
+          print('Fallback vetorial hero:', scope['generated_vector']['hero'])
           PY
+
+      - name: Gravar visuais vetoriais gerados na branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey-app/assets/events/generated
+          if git diff --cached --quiet; then
+            echo "Visuais gerados já estavam atualizados."
+            exit 0
+          fi
+          git commit -m "Spidey Art: atualiza visuais individuais gerados [skip ci]"
+          git push origin HEAD:spidey-art-system-v1
