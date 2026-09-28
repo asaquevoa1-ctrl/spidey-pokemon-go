@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-09-28-max-monday-sobble:start:60",
-      "event_id": "2026-09-28-max-monday-sobble",
-      "event_title": "Max Monday: Dynamax Sobble",
-      "category": "max_monday",
-      "scheduled_for": "2026-09-28T05:00:00-03:00",
-      "event_start": "2026-09-28T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Max Monday: Dynamax Sobble começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-09-28-max-monday-sobble",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-09-harvest-festival-applin:start:60",
       "event_id": "2026-09-harvest-festival-applin",
       "event_title": "Festival da Colheita 2026: Applin Picking",
@@ -869,7 +851,7 @@
     }
   ],
   "meta": {
-    "pending_count": 48,
+    "pending_count": 47,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
