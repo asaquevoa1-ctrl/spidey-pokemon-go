@@ -1,0 +1,188 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#weeklyView,
+#weeklyView .weekly-shell,
+#weeklyView .weekly-hero-card,
+#weeklyView #weeklySections,
+#weeklyView .weekly-block,
+#weeklyView .weekly-grid,
+#weeklyView .weekly-item,
+#weeklyView .weekly-item-copy,
+#weeklyView .weekly-stamp-grid,
+#weeklyView .weekly-stamp-card {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#weeklyView .weekly-shell,
+#weeklyView #weeklySections {
+  width: 100%;
+  overflow: hidden;
+}
+
+#weeklyView .weekly-days {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(142px, 72vw);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+#weeklyView .weekly-day {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+#weeklyView .weekly-item strong,
+#weeklyView .weekly-item-copy p,
+#weeklyView .weekly-stamp-card strong {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.event-wherewhen-v4 {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.event-wherewhen-v4 > h3,
+.rally-coordinate-bundle-v4 > h3 {
+  margin-bottom: 0;
+}
+
+.event-local-window-v4 {
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(67,214,255,.16);
+  background: rgba(67,214,255,.055);
+}
+
+.event-local-window-v4 span,
+.event-local-window-v4 small {
+  color: var(--muted);
+}
+
+.event-local-window-v4 strong {
+  font-size: 1rem;
+}
+
+.event-location-list-v4,
+.world-reference-list-v4 {
+  display: grid;
+  gap: 8px;
+}
+
+.event-location-row-v4,
+.world-reference-row-v4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.07);
+  background: rgba(255,255,255,.035);
+}
+
+.event-location-row-v4 > div,
+.world-reference-row-v4 > div {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.event-location-row-v4 small,
+.world-reference-row-v4 small {
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.event-location-row-v4 code,
+.world-reference-row-v4 code {
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  color: var(--cyan);
+}
+
+.world-reference-v4 {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(243,199,90,.16);
+  background: rgba(243,199,90,.045);
+}
+
+.world-reference-v4 summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.rally-coordinate-bundle-v4 {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 22px;
+}
+
+#rallyAllCoordinates {
+  width: 100%;
+  max-width: 100%;
+  min-height: 118px;
+  box-sizing: border-box;
+  resize: vertical;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(67,214,255,.18);
+  background: rgba(4,15,31,.78);
+  color: var(--text);
+  font: 700 .82rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre;
+  overflow: auto;
+}
+
+:root[data-theme="light"] #rallyAllCoordinates {
+  background: #f8fbff;
+  border-color: rgba(18,88,145,.18);
+}
+
+:root[data-theme="light"] .event-location-row-v4,
+:root[data-theme="light"] .world-reference-row-v4,
+:root[data-theme="light"] .event-local-window-v4,
+:root[data-theme="light"] .world-reference-v4 {
+  background: rgba(255,255,255,.88);
+  border-color: rgba(18,88,145,.14);
+}
+
+@media (max-width: 560px) {
+  #weeklyView .weekly-days {
+    grid-auto-columns: minmax(138px, 78vw);
+  }
+
+  .event-location-row-v4,
+  .world-reference-row-v4 {
+    align-items: flex-start;
+  }
+
+  .event-location-row-v4 .action-btn,
+  .world-reference-row-v4 .action-btn {
+    flex: 0 0 auto;
+  }
+}
