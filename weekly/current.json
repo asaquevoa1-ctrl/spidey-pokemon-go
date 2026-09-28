@@ -10,7 +10,27 @@
     {
       "date": "2026-09-28",
       "weekday": "monday",
-      "items": []
+      "items": [
+        {
+          "id": "2026-09-28-max-monday-sobble",
+          "title": "Max Monday: Dynamax Sobble",
+          "summary": "Sobble Dynamax em destaque nos Power Spots.",
+          "category": "max_monday",
+          "tags": [
+            "Max Monday",
+            "Dynamax",
+            "Global"
+          ],
+          "start_brazil": "2026-09-28T06:00:00-03:00",
+          "end_brazil": "2026-09-28T21:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • calendário setembro 2026",
+            "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {}
+        }
+      ]
     },
     {
       "date": "2026-09-29",
@@ -40,7 +60,27 @@
     {
       "date": "2026-09-30",
       "weekday": "wednesday",
-      "items": []
+      "items": [
+        {
+          "id": "2026-09-30-raid-hour-xerneas",
+          "title": "Raid Hour: Xerneas",
+          "summary": "Xerneas em destaque nas reides de cinco estrelas.",
+          "category": "raid_hour",
+          "tags": [
+            "Raid Hour",
+            "5 estrelas",
+            "Global"
+          ],
+          "start_brazil": "2026-09-30T18:00:00-03:00",
+          "end_brazil": "2026-09-30T19:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • calendário setembro 2026",
+            "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {}
+        }
+      ]
     },
     {
       "date": "2026-10-01",
@@ -116,6 +156,25 @@
       "weekday": "saturday",
       "items": [
         {
+          "id": "2026-10-shadow-thundurus",
+          "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+          "summary": "Thundurus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Shadow Raid",
+            "Thundurus (Forma Encarnada)",
+            "Fim de semana"
+          ],
+          "start_brazil": "2026-10-03T00:00:00-03:00",
+          "end_brazil": "2026-10-04T23:59:59-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {}
+        },
+        {
           "id": "2026-10-gigantamax-cinderace-max-day",
           "title": "Dia de Batalhas Max: Cinderace Gigamax",
           "summary": "Cinderace Gigamax em Batalhas Max de seis estrelas, com estreia do Brilhante.",
@@ -140,6 +199,25 @@
       "date": "2026-10-04",
       "weekday": "sunday",
       "items": [
+        {
+          "id": "2026-10-shadow-thundurus",
+          "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+          "summary": "Thundurus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Shadow Raid",
+            "Thundurus (Forma Encarnada)",
+            "Fim de semana"
+          ],
+          "start_brazil": "2026-10-03T00:00:00-03:00",
+          "end_brazil": "2026-10-04T23:59:59-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {}
+        },
         {
           "id": "2026-10-04-scenic-sunday",
           "title": "Descoberta Diária: Domingo Pitoresco",
@@ -236,25 +314,6 @@
         "source": {
           "name": "Pokémon GO",
           "url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
-          "confidence": "official"
-        },
-        "art": {}
-      },
-      {
-        "id": "2026-10-gigantamax-cinderace-max-day",
-        "title": "Dia de Batalhas Max: Cinderace Gigamax",
-        "summary": "Cinderace Gigamax em Batalhas Max de seis estrelas, com estreia do Brilhante.",
-        "category": "max_battle_day",
-        "tags": [
-          "Cinderace",
-          "Gigamax",
-          "Max Battle Day"
-        ],
-        "start_brazil": "2026-10-03T14:00:00-03:00",
-        "end_brazil": "2026-10-03T17:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
           "confidence": "official"
         },
         "art": {}
@@ -397,6 +456,25 @@
         "art": {}
       },
       {
+        "id": "2026-10-gigantamax-cinderace-max-day",
+        "title": "Dia de Batalhas Max: Cinderace Gigamax",
+        "summary": "Cinderace Gigamax em Batalhas Max de seis estrelas, com estreia do Brilhante.",
+        "category": "max_battle_day",
+        "tags": [
+          "Cinderace",
+          "Gigamax",
+          "Max Battle Day"
+        ],
+        "start_brazil": "2026-10-03T14:00:00-03:00",
+        "end_brazil": "2026-10-03T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+          "confidence": "official"
+        },
+        "art": {}
+      },
+      {
         "id": "2026-09-gbl-22-29",
         "title": "GO Battle League: Ultra / Master Mega / Retro Cup",
         "summary": "Ultra League, Master League: Mega Edition e Retro Cup: Great League Edition.",
@@ -491,7 +569,7 @@
   ],
   "meta": {
     "calendar_events_in_week": 21,
-    "generated_at": "2026-09-28T11:21:43.931034-03:00",
+    "generated_at": "2026-09-28T11:24:56.731613-03:00",
     "source": "spidey-app/data/events.json + stamps.json"
   }
 }
