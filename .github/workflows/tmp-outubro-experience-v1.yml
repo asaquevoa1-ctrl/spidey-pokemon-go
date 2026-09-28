@@ -1,0 +1,59 @@
+name: TEMP Spidey Outubro Experience v1
+
+on:
+  push:
+    branches:
+      - spidey-outubro-experience-v1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: spidey-outubro-experience-v1
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Validar JavaScript
+        run: |
+          node --check spidey-app/app.js
+          node --check spidey-app/art-system.js
+          node --check spidey-app/premium-event-art.js
+          node --check spidey-app/weekly.js
+          node --check spidey-app/calendar-enhancements.js
+          node --check spidey-app/experience-v1.js
+          node --check spidey-app/sw.js
+      - name: Validar integração da experiência
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          index = Path('spidey-app/index.html').read_text(encoding='utf-8')
+          sw = Path('spidey-app/sw.js').read_text(encoding='utf-8')
+          exp = Path('spidey-app/experience-v1.js').read_text(encoding='utf-8')
+          css = Path('spidey-app/experience-v1.css').read_text(encoding='utf-8')
+
+          required_ids = ['nowExperience', 'todayExperience', 'weekExperience', 'weekShortcut', 'calendarFocusNote']
+          for item in required_ids:
+              assert f'id="{item}"' in index, item
+
+          scripts = [
+              'app.js', 'art-system.js', 'weekly.js', 'premium-event-art.js',
+              'map.js', 'push.js', 'calendar-enhancements.js', 'experience-v1.js'
+          ]
+          positions = [index.index(f'src="{name}"') for name in scripts]
+          assert positions == sorted(positions), positions
+
+          assert 'experience-v1.css' in index
+          assert 'experience-v1.js' in sw
+          assert 'experience-v1.css' in sw
+          assert 'premium-event-art.js' in index
+          assert "focusOffset = now.getDate() >= 25 ? 1 : 0" in exp
+          assert 'Hora do Holofote' in exp and 'Hora de Reides' in exp and 'Dia Comunitário' in exp
+          assert '.experience-feature' in css and '.experience-rail' in css
+          print('Outubro Experience v1 OK')
+          PY
