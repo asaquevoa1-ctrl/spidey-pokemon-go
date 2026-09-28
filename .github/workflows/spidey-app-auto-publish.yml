@@ -37,7 +37,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m py_compile scripts/app_auto_publish.py scripts/test_app_auto_publish.py
-          python scripts/test_app_auto_publish.py
+          python -m scripts.test_app_auto_publish
           python -m json.tool spidey-app/data/events.json >/dev/null
           python -m json.tool spidey-app/data/stamps.json >/dev/null
 
