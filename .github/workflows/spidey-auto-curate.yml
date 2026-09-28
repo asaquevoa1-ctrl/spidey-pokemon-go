@@ -95,6 +95,6 @@ jobs:
             echo "Nenhuma alteração para gravar."
             exit 0
           fi
-          git commit -m "Spidey: auto-curadoria Gold Standard"
+          git commit -m "Spidey: auto-curadoria Gold Standard [skip ci]"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
