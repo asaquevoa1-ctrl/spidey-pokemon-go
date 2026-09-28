@@ -28,7 +28,16 @@
             "url": "https://pokemongohub.net/post/guide/september-2026-events/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-09-28-max-monday-sobble.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         }
       ]
     },
@@ -53,7 +62,16 @@
             "url": "https://leekduck.com/events/season-24-twilight-trails/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-09-29-showcase-tuesday.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         }
       ]
     },
@@ -78,7 +96,16 @@
             "url": "https://pokemongohub.net/post/guide/september-2026-events/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-09-30-raid-hour-xerneas.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         }
       ]
     },
@@ -103,7 +130,16 @@
             "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
             "confidence": "official"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-10-01-go-battle-thursday.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         },
         {
           "id": "2026-10-01-spotlight-seedot",
@@ -122,7 +158,16 @@
             "url": "https://pokemongohub.net/post/event/october-2026-events/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-10-01-spotlight-seedot.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         }
       ]
     },
@@ -147,7 +192,16 @@
             "url": "https://leekduck.com/events/season-24-twilight-trails/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-10-02-friendship-friday.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         }
       ]
     },
@@ -172,7 +226,16 @@
             "url": "https://pokemongohub.net/post/event/october-2026-events/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-10-shadow-thundurus.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         },
         {
           "id": "2026-10-gigantamax-cinderace-max-day",
@@ -191,7 +254,16 @@
             "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
             "confidence": "official"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-10-gigantamax-cinderace-max-day.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         }
       ]
     },
@@ -216,7 +288,16 @@
             "url": "https://pokemongohub.net/post/event/october-2026-events/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-10-shadow-thundurus.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         },
         {
           "id": "2026-10-04-scenic-sunday",
@@ -235,7 +316,16 @@
             "url": "https://leekduck.com/events/season-24-twilight-trails/",
             "confidence": "verified"
           },
-          "art": {}
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/generated/2026-10-04-scenic-sunday.svg",
+            "width": 1080,
+            "height": 1620,
+            "sha256": "",
+            "source_role": "generated_vector",
+            "kind": "generated_vector",
+            "premium": false
+          }
         }
       ]
     }
@@ -259,7 +349,16 @@
           "url": "https://leekduck.com/events/harvest-festival-2026/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-harvest-festival-applin.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-10-world-space-week",
@@ -278,7 +377,16 @@
           "url": "https://pokemongo.com/en/news/world-space-week-2026",
           "confidence": "official"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-10-world-space-week.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-09-choose-your-path",
@@ -297,7 +405,16 @@
           "url": "https://pokemongohub.net/post/guide/september-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-choose-your-path.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-10-harvest-taken-over",
@@ -316,7 +433,16 @@
           "url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
           "confidence": "official"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-10-harvest-taken-over.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       }
     ],
     "raids": [
@@ -337,7 +463,16 @@
           "url": "https://pokemongohub.net/post/guide/september-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-30-raid-hour-xerneas.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-09-raids-ultra-beasts",
@@ -356,7 +491,16 @@
           "url": "https://pokemongohub.net/post/guide/september-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-raids-ultra-beasts.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-09-raids-xerneas",
@@ -375,7 +519,16 @@
           "url": "https://pokemongohub.net/post/guide/september-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-raids-xerneas.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-09-mega-malamar-raids",
@@ -394,7 +547,16 @@
           "url": "https://pokemongohub.net/post/guide/september-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-mega-malamar-raids.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-09-mega-victreebel-raids",
@@ -413,7 +575,16 @@
           "url": "https://pokemongohub.net/post/guide/september-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-mega-victreebel-raids.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-10-shadow-thundurus",
@@ -432,7 +603,16 @@
           "url": "https://pokemongohub.net/post/event/october-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-10-shadow-thundurus.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       }
     ],
     "max_pvp": [
@@ -453,7 +633,16 @@
           "url": "https://pokemongohub.net/post/guide/september-2026-events/",
           "confidence": "verified"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-28-max-monday-sobble.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-10-gigantamax-cinderace-max-day",
@@ -472,7 +661,16 @@
           "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
           "confidence": "official"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-10-gigantamax-cinderace-max-day.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-09-gbl-22-29",
@@ -491,7 +689,16 @@
           "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
           "confidence": "official"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-gbl-22-29.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-09-gbl-29-1006",
@@ -510,7 +717,16 @@
           "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
           "confidence": "official"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-gbl-29-1006.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       }
     ],
     "also_happening": [
@@ -531,7 +747,16 @@
           "url": "https://pokemongo.com/news/pokemongo-iitdelhi-2026",
           "confidence": "official"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-09-iit-delhi-rendezvous.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       },
       {
         "id": "2026-10-patterns-of-the-wild-indonesia",
@@ -550,7 +775,16 @@
           "url": "https://pokemongo.com/news/patterns-of-the-wild-2026",
           "confidence": "official"
         },
-        "art": {}
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/generated/2026-10-patterns-of-the-wild-indonesia.svg",
+          "width": 1080,
+          "height": 1620,
+          "sha256": "",
+          "source_role": "generated_vector",
+          "kind": "generated_vector",
+          "premium": false
+        }
       }
     ]
   },
@@ -569,7 +803,10 @@
   ],
   "meta": {
     "calendar_events_in_week": 21,
-    "generated_at": "2026-09-28T11:24:56.731613-03:00",
-    "source": "spidey-app/data/events.json + stamps.json"
+    "events_with_weekly_art": 21,
+    "events_with_premium_weekly_art": 0,
+    "events_with_generated_weekly_art": 21,
+    "generated_at": "2026-09-28T12:09:03.306075-03:00",
+    "source": "spidey-app/data/events.json + stamps.json + Art System v1"
   }
 }
