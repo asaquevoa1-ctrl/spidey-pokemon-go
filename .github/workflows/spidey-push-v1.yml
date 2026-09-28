@@ -43,3 +43,5 @@ jobs:
           grep -q 'api/push/subscribe' push.js
           grep -q '?event=' ../notifications/queue.json
           echo 'Spidey Push v1: validação OK'
+
+# Trigger dedicado para validar a primeira versão sem gerar commits intermediários na main.
