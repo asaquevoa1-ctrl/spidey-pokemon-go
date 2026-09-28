@@ -1,0 +1,876 @@
+{
+  "schema_version": "spidey-notification-queue-v1",
+  "timezone": "America/Sao_Paulo",
+  "horizon_days": 45,
+  "jobs": [
+    {
+      "id": "2026-09-28-max-monday-sobble:start:60",
+      "event_id": "2026-09-28-max-monday-sobble",
+      "event_title": "Max Monday: Dynamax Sobble",
+      "category": "max_monday",
+      "scheduled_for": "2026-09-28T05:00:00-03:00",
+      "event_start": "2026-09-28T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Max Monday: Dynamax Sobble começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-09-28-max-monday-sobble",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-09-harvest-festival-applin:start:60",
+      "event_id": "2026-09-harvest-festival-applin",
+      "event_title": "Festival da Colheita 2026: Applin Picking",
+      "category": "evento_especial",
+      "scheduled_for": "2026-09-29T09:00:00-03:00",
+      "event_start": "2026-09-29T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Festival da Colheita 2026: Applin Picking começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-09-harvest-festival-applin",
+      "status": "pending",
+      "source": {
+        "name": "Leek Duck • fonte oficial referenciada",
+        "url": "https://leekduck.com/events/harvest-festival-2026/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-09-gbl-29-1006:start:60",
+      "event_id": "2026-09-gbl-29-1006",
+      "event_title": "GO Battle League: Master / Mega Color Cup",
+      "category": "go_battle_league",
+      "scheduled_for": "2026-09-29T16:00:00-03:00",
+      "event_start": "2026-09-29T17:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "GO Battle League: Master / Mega Color Cup começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-09-gbl-29-1006",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-09-mega-victreebel-raids:start:60",
+      "event_id": "2026-09-mega-victreebel-raids",
+      "event_title": "Mega Reides: Mega Victreebel",
+      "category": "mega_raid_rotation",
+      "scheduled_for": "2026-09-30T05:00:00-03:00",
+      "event_start": "2026-09-30T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Mega Reides: Mega Victreebel começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-09-mega-victreebel-raids",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-09-raids-xerneas:start:60",
+      "event_id": "2026-09-raids-xerneas",
+      "event_title": "Reides 5★: Xerneas",
+      "category": "raid_rotation",
+      "scheduled_for": "2026-09-30T05:00:00-03:00",
+      "event_start": "2026-09-30T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Reides 5★: Xerneas começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-09-raids-xerneas",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-09-30-raid-hour-xerneas:start:60",
+      "event_id": "2026-09-30-raid-hour-xerneas",
+      "event_title": "Raid Hour: Xerneas",
+      "category": "raid_hour",
+      "scheduled_for": "2026-09-30T17:00:00-03:00",
+      "event_start": "2026-09-30T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Raid Hour: Xerneas começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-09-30-raid-hour-xerneas",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • calendário setembro 2026",
+        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-01-spotlight-seedot:start:60",
+      "event_id": "2026-10-01-spotlight-seedot",
+      "event_title": "Spotlight Hour: Seedot",
+      "category": "spotlight_hour",
+      "scheduled_for": "2026-10-01T17:00:00-03:00",
+      "event_start": "2026-10-01T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Spotlight Hour: Seedot começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-01-spotlight-seedot",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-harvest-taken-over:start:60",
+      "event_id": "2026-10-harvest-taken-over",
+      "event_title": "Festival da Colheita: A Invasão",
+      "category": "team_go_rocket",
+      "scheduled_for": "2026-10-01T23:00:00-03:00",
+      "event_start": "2026-10-02T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Festival da Colheita: A Invasão começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-harvest-taken-over",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-patterns-of-the-wild-indonesia:start:60",
+      "event_id": "2026-10-patterns-of-the-wild-indonesia",
+      "event_title": "Patterns of the Wild • Indonésia",
+      "category": "regional_event",
+      "scheduled_for": "2026-10-01T23:00:00-03:00",
+      "event_start": "2026-10-02T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Patterns of the Wild • Indonésia começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-patterns-of-the-wild-indonesia",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/patterns-of-the-wild-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-shadow-thundurus:start:60",
+      "event_id": "2026-10-shadow-thundurus",
+      "event_title": "Shadow Raids: Thundurus (Forma Encarnada)",
+      "category": "shadow_raids",
+      "scheduled_for": "2026-10-02T23:00:00-03:00",
+      "event_start": "2026-10-03T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Shadow Raids: Thundurus (Forma Encarnada) começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-shadow-thundurus",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-gigantamax-cinderace-max-day:start:60",
+      "event_id": "2026-10-gigantamax-cinderace-max-day",
+      "event_title": "Dia de Batalhas Max: Cinderace Gigamax",
+      "category": "max_battle_day",
+      "scheduled_for": "2026-10-03T13:00:00-03:00",
+      "event_start": "2026-10-03T14:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Dia de Batalhas Max: Cinderace Gigamax começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-gigantamax-cinderace-max-day",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-world-space-week:start:60",
+      "event_id": "2026-10-world-space-week",
+      "event_title": "Semana Mundial do Espaço 2026",
+      "category": "evento_especial",
+      "scheduled_for": "2026-10-03T23:00:00-03:00",
+      "event_start": "2026-10-04T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Semana Mundial do Espaço 2026 começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-world-space-week",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/world-space-week-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-05-max-monday-sizzlipede:start:60",
+      "event_id": "2026-10-05-max-monday-sizzlipede",
+      "event_title": "Max Monday: Dynamax Sizzlipede",
+      "category": "max_monday",
+      "scheduled_for": "2026-10-05T05:00:00-03:00",
+      "event_start": "2026-10-05T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Max Monday: Dynamax Sizzlipede começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-05-max-monday-sizzlipede",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-go-pass:start:60",
+      "event_id": "2026-10-go-pass",
+      "event_title": "GO Pass: Outubro",
+      "category": "go_pass",
+      "scheduled_for": "2026-10-06T09:00:00-03:00",
+      "event_start": "2026-10-06T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "GO Pass: Outubro começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-go-pass",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-pass-october-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-gbl-06-13:start:60",
+      "event_id": "2026-10-gbl-06-13",
+      "event_title": "GO Battle League: Great Mega / Ultra Mega / Master Mega",
+      "category": "go_battle_league",
+      "scheduled_for": "2026-10-06T16:00:00-03:00",
+      "event_start": "2026-10-06T17:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "GO Battle League: Great Mega / Ultra Mega / Master Mega começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-gbl-06-13",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-mega-blastoise-raids:start:60",
+      "event_id": "2026-10-mega-blastoise-raids",
+      "event_title": "Mega Reides: Mega Blastoise",
+      "category": "mega_raid_rotation",
+      "scheduled_for": "2026-10-07T05:00:00-03:00",
+      "event_start": "2026-10-07T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Mega Reides: Mega Blastoise começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-mega-blastoise-raids",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-raids-yveltal:start:60",
+      "event_id": "2026-10-raids-yveltal",
+      "event_title": "Reides 5★: Yveltal",
+      "category": "raid_rotation",
+      "scheduled_for": "2026-10-07T05:00:00-03:00",
+      "event_start": "2026-10-07T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Reides 5★: Yveltal começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-raids-yveltal",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-07-raid-hour-yveltal:start:60",
+      "event_id": "2026-10-07-raid-hour-yveltal",
+      "event_title": "Raid Hour: Yveltal",
+      "category": "raid_hour",
+      "scheduled_for": "2026-10-07T17:00:00-03:00",
+      "event_start": "2026-10-07T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Raid Hour: Yveltal começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-07-raid-hour-yveltal",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-08-spotlight-elgyem:start:60",
+      "event_id": "2026-10-08-spotlight-elgyem",
+      "event_title": "Spotlight Hour: Elgyem",
+      "category": "spotlight_hour",
+      "scheduled_for": "2026-10-08T17:00:00-03:00",
+      "event_start": "2026-10-08T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Spotlight Hour: Elgyem começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-08-spotlight-elgyem",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-shadow-landorus-10:start:60",
+      "event_id": "2026-10-shadow-landorus-10",
+      "event_title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "category": "shadow_raids",
+      "scheduled_for": "2026-10-09T23:00:00-03:00",
+      "event_start": "2026-10-10T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Shadow Raids: Landorus (Forma Encarnada) começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-shadow-landorus-10",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-zorua-community-day:start:60",
+      "event_id": "2026-10-zorua-community-day",
+      "event_title": "Dia Comunitário: Zorua",
+      "category": "community_day",
+      "scheduled_for": "2026-10-10T13:00:00-03:00",
+      "event_start": "2026-10-10T14:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Dia Comunitário: Zorua começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-zorua-community-day",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/news/communityday-october-2026-zorua",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-12-max-monday-rookidee:start:60",
+      "event_id": "2026-10-12-max-monday-rookidee",
+      "event_title": "Max Monday: Dynamax Rookidee",
+      "category": "max_monday",
+      "scheduled_for": "2026-10-12T05:00:00-03:00",
+      "event_start": "2026-10-12T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Max Monday: Dynamax Rookidee começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-12-max-monday-rookidee",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-fall-marathon-buddy-trek:start:60",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "event_title": "Maratona das Folhas: Caminhada Companheira",
+      "category": "evento_especial",
+      "scheduled_for": "2026-10-13T09:00:00-03:00",
+      "event_start": "2026-10-13T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Maratona das Folhas: Caminhada Companheira começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-fall-marathon-buddy-trek",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/fall-marathon-buddy-trek-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-gbl-13-20:start:60",
+      "event_id": "2026-10-gbl-13-20",
+      "event_title": "GO Battle League: Great / Ultra Mega / Little Cup",
+      "category": "go_battle_league",
+      "scheduled_for": "2026-10-13T16:00:00-03:00",
+      "event_start": "2026-10-13T17:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "GO Battle League: Great / Ultra Mega / Little Cup começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-gbl-13-20",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-mega-dragonite-raids:start:60",
+      "event_id": "2026-10-mega-dragonite-raids",
+      "event_title": "Mega Reides: Mega Dragonite",
+      "category": "mega_raid_rotation",
+      "scheduled_for": "2026-10-14T05:00:00-03:00",
+      "event_start": "2026-10-14T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Mega Reides: Mega Dragonite começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-mega-dragonite-raids",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-raids-dialga:start:60",
+      "event_id": "2026-10-raids-dialga",
+      "event_title": "Reides 5★: Dialga",
+      "category": "raid_rotation",
+      "scheduled_for": "2026-10-14T05:00:00-03:00",
+      "event_start": "2026-10-14T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Reides 5★: Dialga começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-raids-dialga",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-14-raid-hour-dialga:start:60",
+      "event_id": "2026-10-14-raid-hour-dialga",
+      "event_title": "Raid Hour: Dialga",
+      "category": "raid_hour",
+      "scheduled_for": "2026-10-14T17:00:00-03:00",
+      "event_start": "2026-10-14T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Raid Hour: Dialga começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-14-raid-hour-dialga",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-15-spotlight-stufful:start:60",
+      "event_id": "2026-10-15-spotlight-stufful",
+      "event_title": "Spotlight Hour: Stufful",
+      "category": "spotlight_hour",
+      "scheduled_for": "2026-10-15T17:00:00-03:00",
+      "event_start": "2026-10-15T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Spotlight Hour: Stufful começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-15-spotlight-stufful",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-shadow-landorus-17:start:60",
+      "event_id": "2026-10-shadow-landorus-17",
+      "event_title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "category": "shadow_raids",
+      "scheduled_for": "2026-10-16T23:00:00-03:00",
+      "event_start": "2026-10-17T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Shadow Raids: Landorus (Forma Encarnada) começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-shadow-landorus-17",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-sandile-hatch-day:start:60",
+      "event_id": "2026-10-sandile-hatch-day",
+      "event_title": "Dia de Chocar: Sandile",
+      "category": "hatch_day",
+      "scheduled_for": "2026-10-17T10:00:00-03:00",
+      "event_start": "2026-10-17T11:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Dia de Chocar: Sandile começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-sandile-hatch-day",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-19-max-monday-sneasel:start:60",
+      "event_id": "2026-10-19-max-monday-sneasel",
+      "event_title": "Max Monday: Dynamax Sneasel",
+      "category": "max_monday",
+      "scheduled_for": "2026-10-19T05:00:00-03:00",
+      "event_start": "2026-10-19T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Max Monday: Dynamax Sneasel começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-19-max-monday-sneasel",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-gbl-20-27:start:60",
+      "event_id": "2026-10-gbl-20-27",
+      "event_title": "GO Battle League: Ultra / Master Mega / Fantasy Cup",
+      "category": "go_battle_league",
+      "scheduled_for": "2026-10-20T16:00:00-03:00",
+      "event_start": "2026-10-20T17:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "GO Battle League: Ultra / Master Mega / Fantasy Cup começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-gbl-20-27",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-mega-charizard-xy-raids:start:60",
+      "event_id": "2026-10-mega-charizard-xy-raids",
+      "event_title": "Mega Reides: Mega Charizard X e Y",
+      "category": "mega_raid_rotation",
+      "scheduled_for": "2026-10-21T05:00:00-03:00",
+      "event_start": "2026-10-21T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Mega Reides: Mega Charizard X e Y começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-mega-charizard-xy-raids",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-raids-palkia:start:60",
+      "event_id": "2026-10-raids-palkia",
+      "event_title": "Reides 5★: Palkia",
+      "category": "raid_rotation",
+      "scheduled_for": "2026-10-21T05:00:00-03:00",
+      "event_start": "2026-10-21T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Reides 5★: Palkia começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-raids-palkia",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-21-raid-hour-palkia:start:60",
+      "event_id": "2026-10-21-raid-hour-palkia",
+      "event_title": "Raid Hour: Palkia",
+      "category": "raid_hour",
+      "scheduled_for": "2026-10-21T17:00:00-03:00",
+      "event_start": "2026-10-21T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Raid Hour: Palkia começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-21-raid-hour-palkia",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-22-spotlight-morelull:start:60",
+      "event_id": "2026-10-22-spotlight-morelull",
+      "event_title": "Spotlight Hour: Morelull",
+      "category": "spotlight_hour",
+      "scheduled_for": "2026-10-22T17:00:00-03:00",
+      "event_start": "2026-10-22T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Spotlight Hour: Morelull começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-22-spotlight-morelull",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-shadow-landorus-24:start:60",
+      "event_id": "2026-10-shadow-landorus-24",
+      "event_title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "category": "shadow_raids",
+      "scheduled_for": "2026-10-23T23:00:00-03:00",
+      "event_start": "2026-10-24T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Shadow Raids: Landorus (Forma Encarnada) começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-shadow-landorus-24",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-dynamax-max-battle-day:start:60",
+      "event_id": "2026-10-dynamax-max-battle-day",
+      "event_title": "Dia de Batalhas Max: Dinamax",
+      "category": "max_battle_day",
+      "scheduled_for": "2026-10-24T13:00:00-03:00",
+      "event_start": "2026-10-24T14:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Dia de Batalhas Max: Dinamax começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-dynamax-max-battle-day",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-26-max-monday-sableye:start:60",
+      "event_id": "2026-10-26-max-monday-sableye",
+      "event_title": "Max Monday: Dynamax Sableye",
+      "category": "max_monday",
+      "scheduled_for": "2026-10-26T05:00:00-03:00",
+      "event_start": "2026-10-26T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Max Monday: Dynamax Sableye começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-26-max-monday-sableye",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-halloween-part-1:start:60",
+      "event_id": "2026-10-halloween-part-1",
+      "event_title": "Halloween 2026: Parte I",
+      "category": "halloween",
+      "scheduled_for": "2026-10-27T09:00:00-03:00",
+      "event_start": "2026-10-27T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Halloween 2026: Parte I começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-halloween-part-1",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-gbl-27-1103:start:60",
+      "event_id": "2026-10-gbl-27-1103",
+      "event_title": "GO Battle League: Master / Mega Halloween Cup",
+      "category": "go_battle_league",
+      "scheduled_for": "2026-10-27T16:00:00-03:00",
+      "event_start": "2026-10-27T17:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "GO Battle League: Master / Mega Halloween Cup começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-gbl-27-1103",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-10-mega-sableye-raids:start:60",
+      "event_id": "2026-10-mega-sableye-raids",
+      "event_title": "Mega Reides: Mega Sableye",
+      "category": "mega_raid_rotation",
+      "scheduled_for": "2026-10-28T05:00:00-03:00",
+      "event_start": "2026-10-28T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Mega Reides: Mega Sableye começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-mega-sableye-raids",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-raids-giratina-origin:start:60",
+      "event_id": "2026-10-raids-giratina-origin",
+      "event_title": "Reides 5★: Giratina (Forma Origem)",
+      "category": "raid_rotation",
+      "scheduled_for": "2026-10-28T05:00:00-03:00",
+      "event_start": "2026-10-28T06:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Reides 5★: Giratina (Forma Origem) começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-raids-giratina-origin",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-28-raid-hour-giratina-forma-origem:start:60",
+      "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "event_title": "Raid Hour: Giratina Forma Origem",
+      "category": "raid_hour",
+      "scheduled_for": "2026-10-28T17:00:00-03:00",
+      "event_start": "2026-10-28T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Raid Hour: Giratina Forma Origem começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-28-raid-hour-giratina-forma-origem",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-29-spotlight-gastly:start:60",
+      "event_id": "2026-10-29-spotlight-gastly",
+      "event_title": "Spotlight Hour: Gastly",
+      "category": "spotlight_hour",
+      "scheduled_for": "2026-10-29T17:00:00-03:00",
+      "event_start": "2026-10-29T18:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Spotlight Hour: Gastly começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-29-spotlight-gastly",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-shadow-landorus-31:start:60",
+      "event_id": "2026-10-shadow-landorus-31",
+      "event_title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "category": "shadow_raids",
+      "scheduled_for": "2026-10-30T23:00:00-03:00",
+      "event_start": "2026-10-31T00:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Shadow Raids: Landorus (Forma Encarnada) começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-shadow-landorus-31",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "2026-10-super-mega-raid-day:start:60",
+      "event_id": "2026-10-super-mega-raid-day",
+      "event_title": "Dia de Super Megarreides",
+      "category": "raid_day",
+      "scheduled_for": "2026-10-31T13:00:00-03:00",
+      "event_start": "2026-10-31T14:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Dia de Super Megarreides começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-super-mega-raid-day",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      }
+    },
+    {
+      "id": "festival-of-lights-2026-pokeminers-e2:start:60",
+      "event_id": "festival-of-lights-2026-pokeminers-e2",
+      "event_title": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta",
+      "category": "evento_especial",
+      "scheduled_for": "2026-11-06T00:30:00-03:00",
+      "event_start": "2026-11-06T01:30:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta começa em cerca de 1 hora(s).",
+      "url": "./?event=festival-das-luzes-2026-india",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "captured_via": "PokeMiners",
+        "url": "https://pokemongo.com/news/festival-of-lights-2026"
+      }
+    }
+  ],
+  "meta": {
+    "pending_count": 48,
+    "delivery_backend": "not_configured",
+    "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
+  }
+}
