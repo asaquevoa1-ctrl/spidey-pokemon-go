@@ -19,6 +19,7 @@ concurrency:
   group: spidey-weekly-writer
   cancel-in-progress: false
 
+# Gera o pacote editorial do visual aprovado "Spidey Weekly".
 jobs:
   build:
     runs-on: ubuntu-latest
