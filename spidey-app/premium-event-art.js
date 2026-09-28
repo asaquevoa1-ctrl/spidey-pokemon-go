@@ -78,6 +78,8 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
       }
       return baseWeeklyArtUrl(item);
     };
-    if (typeof spideyWeeklyData !== 'undefined' && spideyWeeklyData && typeof renderWeeklyView === 'function') renderWeeklyView();
   }
+
+  if (typeof state !== 'undefined' && state?.events?.length && typeof renderEvents === 'function') renderEvents();
+  if (typeof spideyWeeklyData !== 'undefined' && spideyWeeklyData && typeof renderWeeklyView === 'function') renderWeeklyView();
 })();
