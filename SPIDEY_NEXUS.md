@@ -411,3 +411,50 @@ Ao receber `SPIDEYNEXUS`, conferir se `spidey-art-system-v1` já foi incorporado
 
 Se já estiver na `main`, considerar **logo borrado como fallback = corrigido** e continuar a evolução das artes Premium individuais.
 
+---
+
+## Atualização canônica — 28/09/2026 — Horários, locais e coordenadas
+
+### Padrão visual obrigatório
+
+Toda nova tela, mockup ou módulo do Spidey deve manter o **logo oficial existente no projeto**, sem redesenhar, reinterpretar ou criar uma variação parecida. O cabeçalho, cores-base e linguagem visual devem permanecer coerentes entre Calendário, Semana, Stamps, Mapa e futuras guias.
+
+### Bloco padrão no detalhe do evento
+
+Eventos que dependam de horário mundial, região ou local devem ter um bloco **Horários e locais** no detalhe. Esse bloco deve mostrar, quando aplicável:
+
+- cidade/região e país;
+- horário local do evento;
+- conversão para `America/Sao_Paulo`;
+- coordenada somente quando houver referência válida;
+- tipo/confiança da coordenada;
+- ações disponíveis para aquela coordenada.
+
+Para eventos globais por horário local, como Community Day, Spotlight Hour e Raid Hour, a prioridade é mostrar a tabela mundial de horários. Esses eventos não devem receber uma coordenada única artificial.
+
+### Política de coordenadas
+
+Nunca inventar coordenada exata.
+
+Tipos relevantes continuam separados:
+
+- `exact_pokestop` = Stop confirmada e apta a GPX;
+- `venue_reference` = referência aproximada de venue;
+- `city_reference` = referência aproximada de cidade.
+
+GPX de PokéStop só pode existir para `exact_pokestop` confirmado. Referências aproximadas devem ser identificadas como tal e não podem ser promovidas silenciosamente a ponto exato.
+
+### Ações da interface
+
+Quando uma coordenada válida existir, a interface deve oferecer, conforme compatibilidade:
+
+- **Copiar coordenada**;
+- **Abrir em aplicativo compatível** usando mecanismos padrão do sistema operacional/deep link geográfico quando disponíveis;
+- **Compartilhar coordenada**;
+- **Baixar GPX**, apenas quando permitido pela política de precisão.
+
+O Spidey não deve prometer ou implementar como requisito um teleporte automático específico em PGSharp, iPoGo ou Fake GPS. A integração deve permanecer genérica e baseada em mecanismos suportados pelo sistema/aplicativo receptor. Se um app instalado aceitar coordenadas via Intent/deep link, o sistema operacional poderá oferecê-lo ao usuário.
+
+### Regra de retomada
+
+Ao receber `SPIDEYNEXUS`, preservar esta lógica ao construir Community Day, Spotlight Hour, Raid Hour, Stamps, City Safari e demais eventos com localizações: **horário mundial correto primeiro; coordenada apenas quando verdadeira; ações universais e seguras; nunca inventar precisão.**
