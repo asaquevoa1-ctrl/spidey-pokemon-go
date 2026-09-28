@@ -1,0 +1,1 @@
+O logo público é sincronizado a partir do blob assets/spidey-logo-oficial.jpg.
