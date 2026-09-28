@@ -1,0 +1,67 @@
+name: TEMP Spidey hotfix art fallback
+
+on:
+  push:
+    branches:
+      - spidey-art-hotfix-v2
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: spidey-art-hotfix-v2
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Patch app shell and cache policy
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          app = Path('spidey-app/app.js')
+          text = app.read_text(encoding='utf-8')
+          old = """function eventImage(event) {\n  const url = event.art?.url || 'assets/spidey-logo-oficial.jpg';\n  const version = event.art?.web_sha256 || event.art?.sha256;\n  return url.startsWith('assets/') && version ? `${url}?v=${String(version).slice(0, 12)}` : url;\n}\n"""
+          new = """function generatedEventArtUrl(event) {\n  const id = String(event?.id || 'evento')\n    .toLowerCase()\n    .trim()\n    .replace(/[^a-z0-9._-]+/g, '-')\n    .replace(/^-+|-+$/g, '') || 'evento';\n  return `assets/events/generated/${id}.svg`;\n}\n\nfunction eventImage(event) {\n  const artUrl = String(event.art?.url || '').trim();\n  const forbidden = !artUrl || /^data:/i.test(artUrl) || /spidey-logo/i.test(artUrl) || /fallback.*logo/i.test(artUrl);\n  const url = forbidden ? generatedEventArtUrl(event) : artUrl;\n  const version = forbidden ? '' : (event.art?.web_sha256 || event.art?.sha256);\n  return url.startsWith('assets/') && version ? `${url}?v=${String(version).slice(0, 12)}` : url;\n}\n"""
+          if old not in text:
+              raise SystemExit('eventImage block not found; aborting hotfix')
+          text = text.replace(old, new, 1)
+          text = text.replace("onerror=\"this.onerror=null;this.src='assets/spidey-logo-oficial.jpg'\"", "onerror=\"this.onerror=null;this.src=generatedEventArtUrl(event)\"")
+          text = text.replace("if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(console.error));", "if ('serviceWorker' in navigator) window.addEventListener('load', async () => { try { const reg = await navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }); await reg.update(); } catch (error) { console.error(error); } });")
+          app.write_text(text, encoding='utf-8')
+
+          sw = Path('spidey-app/sw.js')
+          swt = sw.read_text(encoding='utf-8')
+          swt = swt.replace("const CACHE = 'spidey-app-v1-20260928-art1';", "const CACHE = 'spidey-app-v1-20260928-art2';")
+          old_fetch = """  if (request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json')) {\n    event.respondWith(\n      fetch(request)\n        .then((response) => {\n          const copy = response.clone();\n          caches.open(CACHE).then((cache) => cache.put(request, copy));\n          return response;\n        })\n        .catch(() => caches.match(request))\n    );\n    return;\n  }\n\n  event.respondWith(\n    caches.match(request).then((cached) => cached || fetch(request).then((response) => {\n      if (response.ok && new URL(request.url).origin === self.location.origin) {\n        const copy = response.clone();\n        caches.open(CACHE).then((cache) => cache.put(request, copy));\n      }\n      return response;\n    }))\n  );\n"""
+          new_fetch = """  const url = new URL(request.url);\n  const isAppShell = url.origin === self.location.origin && (\n    request.mode === 'navigate' ||\n    /\\/(?:index\\.html|app\\.js|art-system\\.js|styles\\.css|art-system\\.css|stamps\\.css)$/.test(url.pathname)\n  );\n  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json');\n\n  if (isAppShell || isData) {\n    event.respondWith(\n      fetch(request, { cache: 'no-store' })\n        .then((response) => {\n          if (response.ok) {\n            const copy = response.clone();\n            caches.open(CACHE).then((cache) => cache.put(request, copy));\n          }\n          return response;\n        })\n        .catch(() => caches.match(request))\n    );\n    return;\n  }\n\n  event.respondWith(\n    caches.match(request).then((cached) => cached || fetch(request).then((response) => {\n      if (response.ok && url.origin === self.location.origin) {\n        const copy = response.clone();\n        caches.open(CACHE).then((cache) => cache.put(request, copy));\n      }\n      return response;\n    }))\n  );\n"""
+          if old_fetch not in swt:
+              raise SystemExit('sw fetch block not found; aborting hotfix')
+          swt = swt.replace(old_fetch, new_fetch, 1)
+          sw.write_text(swt, encoding='utf-8')
+          PY
+      - name: Validate hotfix
+        run: |
+          set -euo pipefail
+          node --check spidey-app/app.js
+          node --check spidey-app/sw.js
+          grep -q "assets/events/generated" spidey-app/app.js
+          ! grep -q "onerror=.*spidey-logo-oficial" spidey-app/app.js
+          grep -q "updateViaCache: 'none'" spidey-app/app.js
+          grep -q "request.mode === 'navigate'" spidey-app/sw.js
+          grep -q "art2" spidey-app/sw.js
+      - name: Commit patch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey-app/app.js spidey-app/sw.js
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Spidey App: elimina logo como fallback e força atualização do shell [skip ci]"
+          git push origin HEAD:spidey-art-hotfix-v2
