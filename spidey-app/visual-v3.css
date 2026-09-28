@@ -1,0 +1,122 @@
+/* Spidey Visual v3 — correção baseada no QA real do celular */
+
+.spidey-poster-art-v3 {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  object-fit: cover !important;
+  object-position: center top !important;
+  padding: 0 !important;
+  filter: none !important;
+  background: #07101e !important;
+}
+
+/* Uma arte local específica não pode ser tratada como sprite recortado. */
+.experience-feature[data-visual-category] .experience-feature-art.spidey-poster-art-v3 {
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+.experience-feature[data-visual-category] .experience-feature-art-wrap:has(.spidey-poster-art-v3)::after {
+  background: linear-gradient(90deg, transparent 72%, color-mix(in srgb, var(--visual-b) 88%, transparent) 100%);
+}
+
+.experience-mini[data-visual-category] img.spidey-poster-art-v3,
+.weekly-item[data-visual-category] img.spidey-poster-art-v3,
+.event-card[data-visual-category] img.spidey-poster-art-v3 {
+  padding: 0 !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+/* O detalhe volta a respeitar a proporção real do poster, sem o recorte gigante visto no vídeo. */
+.spidey-detail-v3 .detail-hero.spidey-poster-art-v3 {
+  width: 100%;
+  height: min(calc((100vw - 18px) * 1.5), 1080px) !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 0 !important;
+  border-bottom: 1px solid var(--visual-border);
+}
+
+.spidey-detail-v3 .detail-body {
+  position: relative;
+  border-radius: 26px 26px 0 0;
+  background:
+    radial-gradient(circle at 85% 0%, var(--visual-glow), transparent 24%),
+    linear-gradient(180deg, rgba(8,23,43,.99), rgba(5,14,27,1) 44%);
+}
+
+.spidey-detail-v3 .spidey-detail-ribbon {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 13px;
+}
+
+.spidey-detail-v3 .spidey-detail-ribbon span,
+.spidey-detail-v3 .spidey-detail-ribbon strong {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--visual-border);
+  background: rgba(255,255,255,.055);
+  font-size: .78rem;
+}
+
+.spidey-detail-v3 .spidey-detail-ribbon span {
+  color: var(--visual-accent);
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.spidey-detail-v3 .spidey-detail-ribbon strong { color: #fff; }
+
+/* Evita os grandes blocos visualmente vazios que apareceram durante o carregamento da Semana. */
+.weekly-item,
+.event-card,
+.experience-mini {
+  contain: layout paint;
+}
+
+.weekly-item img,
+.event-thumb,
+.experience-mini img {
+  background:
+    radial-gradient(circle at 70% 25%, rgba(72,217,255,.12), transparent 32%),
+    linear-gradient(145deg, #10234a, #07101e);
+}
+
+.weekly-item img[hidden] {
+  display: none !important;
+}
+
+.weekly-item-copy,
+.event-card > div,
+.experience-mini-copy {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 760px) {
+  .experience-feature[data-visual-category] .experience-feature-art.spidey-poster-art-v3 {
+    aspect-ratio: 4 / 5 !important;
+    max-height: 70vh;
+  }
+
+  .experience-feature[data-visual-category] .experience-feature-art-wrap:has(.spidey-poster-art-v3)::after {
+    background: linear-gradient(180deg, transparent 74%, color-mix(in srgb, var(--visual-b) 92%, transparent) 100%);
+  }
+
+  .spidey-detail-v3 .detail-hero.spidey-poster-art-v3 {
+    height: min(calc((100vw - 18px) * 1.5), 900px) !important;
+  }
+}
