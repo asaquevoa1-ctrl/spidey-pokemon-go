@@ -1,0 +1,102 @@
+{
+  "schema_version": "spidey-stamp-rally-v1",
+  "rallies": [
+    {
+      "id": "pokexciting-cross-region-2026",
+      "slug": "pokexciting-cross-region-go-stamp-rally",
+      "status": "published",
+      "title": "PokéXciting! Cross-Region GO Stamp Rally",
+      "summary": "Rally regional oficial com cinco selos PokéXciting! distribuídos por cidades da Ásia-Pacífico.",
+      "stamp_count": 5,
+      "ticket_required": null,
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/event-apac-stamp-rally-2026",
+        "confidence": "official"
+      },
+      "calendar": {
+        "enabled": false,
+        "reason": "Rally de longa duração; exibir prioritariamente na área Stamps para não marcar todos os dias do calendário."
+      },
+      "rewards": [
+        "Cada selo regional dá encontro com um PokéXciting! Pikachu da cidade, com Location Background local."
+      ],
+      "stops": [
+        {
+          "id": "pokexciting-kuala-lumpur-klcc",
+          "stamp_number": 1,
+          "city": "Kuala Lumpur",
+          "country": "Malásia",
+          "venue": "KLCC Park • In front of Esplanade",
+          "available_from": "2026-09-12",
+          "available_until": "2029-09-11",
+          "latitude": null,
+          "longitude": null,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "unconfirmed",
+          "gpx_enabled": false
+        },
+        {
+          "id": "pokexciting-taipei-xiangti",
+          "stamp_number": 2,
+          "city": "Taipei",
+          "country": "Taiwan",
+          "venue": "Xiangti Boulevard",
+          "available_from": "2026-09-12",
+          "available_until": "2029-09-11",
+          "latitude": null,
+          "longitude": null,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "unconfirmed",
+          "gpx_enabled": false
+        },
+        {
+          "id": "pokexciting-singapore-changi-t3",
+          "stamp_number": 3,
+          "city": "Singapura",
+          "country": "Singapura",
+          "venue": "Changi Airport • Terminal 3 Departure Hall",
+          "available_from": "2026-09-12",
+          "available_until": "2029-09-11",
+          "latitude": null,
+          "longitude": null,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "unconfirmed",
+          "gpx_enabled": false
+        },
+        {
+          "id": "pokexciting-manila-moa-sky",
+          "stamp_number": 4,
+          "city": "Manila",
+          "country": "Filipinas",
+          "venue": "SM Mall of Asia • MOA Sky",
+          "available_from": "2026-09-12",
+          "available_until": "2029-09-11",
+          "latitude": null,
+          "longitude": null,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "unconfirmed",
+          "gpx_enabled": false
+        },
+        {
+          "id": "pokexciting-bangkok-tba",
+          "stamp_number": 5,
+          "city": "Bangkok",
+          "country": "Tailândia",
+          "venue": "Local a confirmar",
+          "available_from": null,
+          "available_until": null,
+          "latitude": null,
+          "longitude": null,
+          "coordinate_type": "unknown",
+          "coordinate_confidence": "unconfirmed",
+          "gpx_enabled": false
+        }
+      ],
+      "notes": [
+        "Não gerar GPX nem oferecer copiar coordenada até existir latitude/longitude confirmada da PokéStop.",
+        "Venue oficial não deve ser tratado automaticamente como coordenada exata da PokéStop."
+      ]
+    }
+  ]
+}
