@@ -1,0 +1,76 @@
+name: Spidey Import HQ Art
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/spidey-import-hq-art.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import-hq-art:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    env:
+      ART_URL: 'https://uc043303737a3bab3b69898ae987.dl.dropboxusercontent.com/cd/0/get/DI9mxZcZRU7d7vJxbBsYLVt6AR0BJ2LHhUmy_L1V5d6zqMPdRXl_WZMzqG7JmCEDBJWdxebxDqdkjTCAldA9kbzyLFBZKdeUKbefB7HxmJcOJzHSCDOvRDlpfvsZFss62nNLFcfKoDF8tyX3FjXEgo4vq73ZJOGvtwm8zsK_A7rU-Q/file?c_luid=4b888265'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Baixar arte aprovada em resolução original
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 2 "$ART_URL" -o spidey-app/assets/festival-das-luzes-approved.png
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('spidey-app/assets/festival-das-luzes-approved.png')
+          data = p.read_bytes()
+          assert len(data) > 1_000_000, f'arquivo pequeno demais: {len(data)} bytes'
+          assert data[:8] == b'\x89PNG\r\n\x1a\n', 'arquivo não é PNG válido'
+          print('arte HQ validada:', len(data), 'bytes')
+          PY
+
+      - name: Apontar evento para a arte HQ
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('spidey-app/data/events.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          event = next(e for e in data['events'] if e['id'] == 'festival-of-lights-2026-pokeminers-e2')
+          art = event.setdefault('art', {})
+          art['url'] = 'assets/festival-das-luzes-approved.png'
+          art['sha256'] = '6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda'
+          art['web_sha256'] = '6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda'
+          art['width'] = 1024
+          art['height'] = 1536
+          art['web_width'] = 1024
+          art['web_height'] = 1536
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          sw = Path('spidey-app/sw.js')
+          text = sw.read_text(encoding='utf-8')
+          import re
+          text = re.sub(r"const CACHE = '[^']+';", "const CACHE = 'spidey-app-v1-20260928-hq1';", text, count=1)
+          asset = "  './assets/festival-das-luzes-approved.png'"
+          if asset not in text:
+              text = text.replace("  './assets/spidey-logo-oficial.jpg'", "  './assets/spidey-logo-oficial.jpg',\n" + asset)
+          sw.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Persistir arte HQ e remover workflow temporário
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/spidey-import-hq-art.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add spidey-app/assets/festival-das-luzes-approved.png spidey-app/data/events.json spidey-app/sw.js .github/workflows/spidey-import-hq-art.yml
+          git commit -m 'Spidey App: publica arte HQ do Festival'
+          git push origin main
