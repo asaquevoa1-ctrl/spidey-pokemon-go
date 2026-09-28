@@ -15,11 +15,14 @@
         "url": "https://pokemongo.com/news/festival-of-lights-2026"
       },
       "art": {
-        "url": "https://uc92e0ea91d5ffd889dc5d4bb84e.dl.dropboxusercontent.com/cd/0/get/DI_0hcXS2-ns8Mo9JAaM0eHT5BHhBuluCwEPG789fSFZ4ia94epqTDarr9HLPyCI3SVudnfcRrWrTbKxrCW1r6-CkOM7ZGgBK9WBP87uAJN_Ls1wHFogB6XM2XuB9PgaYO7moVtBpUcisudBKqLH5oQH5NVkXXY5a121wmgsk2xbgg/file?c_luid=4b888265",
+        "url": "assets/festival-das-luzes-2026.jpg",
         "alt": "Arte Spidey do Festival das Luzes 2026",
         "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
+        "web_sha256": "1af77264f7b85373d9eb18b27346ed5befbc493d7811c7c924d482f38f4e0a83",
         "width": 1024,
         "height": 1536,
+        "web_width": 480,
+        "web_height": 720,
         "standard": "spidey-premium-v1"
       },
       "schedule": {
