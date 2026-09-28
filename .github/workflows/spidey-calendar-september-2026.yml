@@ -1,0 +1,68 @@
+name: Spidey Calendar - Setembro 2026
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/sync_calendar_2026_09.py"
+      - "scripts/app_auto_publish_v2.py"
+      - "scripts/test_app_auto_publish.py"
+      - ".github/workflows/spidey-calendar-september-2026.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-calendar-month-writer
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Preparar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Validar gate
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/app_auto_publish_v2.py scripts/test_app_auto_publish.py scripts/sync_calendar_2026_09.py
+          python -m scripts.test_app_auto_publish
+
+      - name: Sincronizar calendário de setembro
+        run: python -m scripts.sync_calendar_2026_09
+
+      - name: Validar app
+        run: |
+          set -euo pipefail
+          python -m json.tool spidey-app/data/events.json >/dev/null
+          python -m json.tool spidey-app/data/stamps.json >/dev/null
+          node --check spidey-app/app.js
+          node --check spidey-app/calendar-enhancements.js
+          grep -q 'calendar-enhancements.js' spidey-app/index.html
+          echo 'Calendário setembro OK'
+
+      - name: Gravar calendário
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey-app/data/events.json
+          if git diff --cached --quiet; then
+            echo "Setembro já estava sincronizado."
+            exit 0
+          fi
+          git commit -m "Spidey Calendar: publica setembro 2026 completo"
+          git pull --rebase origin main
+          git push origin HEAD:main
