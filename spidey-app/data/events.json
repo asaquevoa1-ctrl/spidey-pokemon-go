@@ -16,13 +16,14 @@
       },
       "art": {
         "url": "assets/festival-das-luzes-2026.jpg",
+        "b64_url": "assets/festival-das-luzes-2026-v2.b64",
         "alt": "Arte Spidey do Festival das Luzes 2026",
         "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
-        "web_sha256": "1af77264f7b85373d9eb18b27346ed5befbc493d7811c7c924d482f38f4e0a83",
+        "web_sha256": "cc9ef1365b673ccd4a9b7f5a2f2567205b22d7732186573fdd1101e2c0319fcc",
         "width": 1024,
         "height": 1536,
-        "web_width": 480,
-        "web_height": 720,
+        "web_width": 120,
+        "web_height": 180,
         "standard": "spidey-premium-v1"
       },
       "schedule": {
