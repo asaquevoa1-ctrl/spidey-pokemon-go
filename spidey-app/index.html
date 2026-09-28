@@ -7,6 +7,17 @@
   <meta name="description" content="Calendário de eventos Pokémon GO com horários, coordenadas e GPX.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Garante o pôster Premium inteiro no detalhe: proporção 2:3, sem crop. */
+    .detail-hero {
+      width: 100%;
+      height: min(calc((100vw - 18px) * 1.5), 1080px) !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      object-position: center center;
+      background: #0a1222;
+    }
+  </style>
   <title>Spidey Pokémon GO</title>
 </head>
 <body>
