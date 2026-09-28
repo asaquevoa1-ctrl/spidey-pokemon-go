@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260928-tabs2';
+const CACHE = 'spidey-app-v1-20260928-premium-event-art1';
 const CORE = [
   './',
   './index.html',
@@ -12,13 +12,17 @@ const CORE = [
   './map.js',
   './push.js',
   './calendar-enhancements.js',
+  './premium-event-art.js',
   './manifest.webmanifest',
   './data/events.json',
   './data/stamps.json',
   './data/weekly.json',
   './assets/spidey-logo-oficial.jpg',
   './assets/festival-das-luzes-approved.png',
-  './assets/festival-das-luzes-2026.jpg'
+  './assets/festival-das-luzes-2026.jpg',
+  './assets/events/premium/raid-hour-xerneas-v1.svg',
+  './assets/events/premium/spotlight-seedot-v1.svg',
+  './assets/events/premium/community-day-gible-v1.svg'
 ];
 
 self.addEventListener('install', (event) => {
@@ -40,7 +44,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   const isAppShell = url.origin === self.location.origin && (
     request.mode === 'navigate' ||
-    /\/(?:index\.html|app\.js|art-system\.js|weekly\.js|map\.js|styles\.css|art-system\.css|stamps\.css|tabs-v2\.css)$/.test(url.pathname)
+    /\/(?:index\.html|app\.js|art-system\.js|weekly\.js|map\.js|push\.js|calendar-enhancements\.js|premium-event-art\.js|styles\.css|art-system\.css|stamps\.css|tabs-v2\.css)$/.test(url.pathname)
   );
   const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json');
 

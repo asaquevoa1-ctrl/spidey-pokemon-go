@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#031224"/><stop offset=".5" stop-color="#07334d"/><stop offset="1" stop-color="#07101d"/></linearGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="58%"><stop offset="0" stop-color="#c9fbff" stop-opacity=".95"/><stop offset=".35" stop-color="#46d8ff" stop-opacity=".32"/><stop offset="1" stop-color="#46d8ff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff0a4"/><stop offset="1" stop-color="#efb92f"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000" flood-opacity=".5"/></filter>
+  </defs>
+  <rect width="1080" height="1620" fill="url(#bg)"/>
+  <circle cx="730" cy="450" r="390" fill="url(#halo)"/>
+  <path d="M0 1030 C170 920 315 940 455 875 C610 805 815 820 1080 730 V1620 H0Z" fill="#071925"/>
+  <path d="M0 1135 C180 1030 360 1070 515 995 C690 910 860 945 1080 860 V1620 H0Z" fill="#06101a"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="660" cy="705" rx="235" ry="145" fill="#111b25"/>
+    <path d="M558 635 C520 545 535 425 610 350 C655 305 700 330 714 385 C725 430 700 510 708 575 L760 650 Z" fill="#1f4d75"/>
+    <path d="M592 424 C575 380 590 340 630 312 C672 283 715 296 736 325 C753 349 750 376 728 396 C692 429 632 438 592 424Z" fill="#294d79"/>
+    <path d="M650 324 L680 282 L720 322 L695 347 Z" fill="#f1e7c6"/>
+    <path d="M610 610 C635 655 655 710 646 780 C638 842 600 905 570 967 L525 960 C545 890 560 822 550 757 C540 690 520 655 505 625Z" fill="#e7e6cf"/>
+    <path d="M735 632 C790 650 835 685 860 730 C885 776 889 838 865 907 L820 902 C829 842 818 790 786 753 C760 722 730 706 694 698Z" fill="#111b25"/>
+    <path d="M770 795 C798 826 804 875 788 932 L747 1000 L708 992 L742 915 C756 876 750 839 730 812Z" fill="#e7e6cf"/>
+    <path d="M555 785 C520 820 503 873 510 930 L526 1008 L484 1015 L451 940 C433 892 442 840 470 802Z" fill="#111b25"/>
+    <path d="M470 650 C420 650 380 634 345 600 C380 575 425 562 476 566Z" fill="#111b25"/>
+    <path d="M575 430 C555 405 530 394 500 396" stroke="#67e5ff" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="655" cy="360" r="9" fill="#8bf7ff"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M610 320 C570 255 525 215 470 185 M610 320 C560 285 500 275 430 280 M610 320 C585 245 585 180 610 120" stroke="#65eaff" stroke-width="15"/>
+    <path d="M650 315 C640 230 660 170 700 110 M650 315 C700 245 750 205 815 175 M650 315 C720 285 785 275 855 285" stroke="#ffd65f" stroke-width="15"/>
+    <path d="M505 213 L455 150 M530 246 L480 230" stroke="#f07b49" stroke-width="11"/>
+    <path d="M714 190 L748 128 M768 214 L835 202" stroke="#df76d8" stroke-width="11"/>
+    <path d="M604 176 L560 122 M690 168 L730 116" stroke="#80d8ff" stroke-width="10"/>
+  </g>
+  <rect x="64" y="70" width="278" height="54" rx="27" fill="#d9232e"/>
+  <text x="203" y="107" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="800" fill="#fff">RAID HOUR</text>
+  <text x="64" y="1120" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="900" fill="#fff" letter-spacing="-4">XERNEAS</text>
+  <text x="66" y="1190" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700" fill="#7feaff">REIDES 5★ • 30 DE SETEMBRO</text>
+  <rect x="64" y="1240" width="952" height="238" rx="42" fill="#06111d" opacity=".94" stroke="#1b5873" stroke-width="2"/>
+  <text x="112" y="1322" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#b8c8d8">HORÁRIO LOCAL</text>
+  <text x="112" y="1402" font-family="Arial,Helvetica,sans-serif" font-size="67" font-weight="900" fill="url(#gold)">18:00 — 19:00</text>
+  <text x="112" y="1455" font-family="Arial,Helvetica,sans-serif" font-size="28" fill="#91a9bc">Xerneas em destaque nas Reides de 5 estrelas</text>
+  <text x="64" y="1552" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#5fc8ef">SPIDEY EVENT ART • PREMIUM v1</text>
+  <circle cx="994" cy="1538" r="9" fill="#f5c84f"/>
+</svg>

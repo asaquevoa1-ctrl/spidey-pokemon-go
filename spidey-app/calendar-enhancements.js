@@ -27,4 +27,12 @@
     }
     return baseRenderEvents(events);
   };
+
+  if (!document.querySelector('script[data-spidey-premium-event-art]')) {
+    const script = document.createElement('script');
+    script.src = 'premium-event-art.js';
+    script.defer = true;
+    script.dataset.spideyPremiumEventArt = '1';
+    document.head.appendChild(script);
+  }
 })();

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06131b"/><stop offset=".55" stop-color="#0d342f"/><stop offset="1" stop-color="#102016"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#80f5ff" stop-opacity=".72"/><stop offset="1" stop-color="#80f5ff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c7ff6f"/><stop offset="1" stop-color="#68db86"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#000" flood-opacity=".55"/></filter>
+  </defs>
+  <rect width="1080" height="1620" fill="url(#bg)"/>
+  <path d="M260 0 H820 L650 1040 H430Z" fill="url(#beam)" opacity=".62"/>
+  <circle cx="540" cy="610" r="335" fill="#0f4f45" opacity=".32"/>
+  <g opacity=".24" fill="#8bcf87"><circle cx="130" cy="460" r="64"/><circle cx="950" cy="540" r="88"/><circle cx="165" cy="835" r="105"/><circle cx="930" cy="890" r="125"/></g>
+  <g filter="url(#shadow)">
+    <ellipse cx="540" cy="650" rx="185" ry="210" fill="#a77f57"/>
+    <ellipse cx="540" cy="565" rx="195" ry="120" fill="#d8d2c4"/>
+    <path d="M355 550 Q540 455 725 550 L700 495 Q540 390 380 495Z" fill="#a8a49d"/>
+    <path d="M505 450 L505 360 Q540 330 575 360 L575 450Z" fill="#b7b2aa"/>
+    <ellipse cx="475" cy="640" rx="30" ry="48" fill="#121719"/>
+    <ellipse cx="605" cy="640" rx="30" ry="48" fill="#121719"/>
+    <ellipse cx="470" cy="628" rx="9" ry="15" fill="#f4f0d2"/>
+    <ellipse cx="600" cy="628" rx="9" ry="15" fill="#f4f0d2"/>
+    <ellipse cx="430" cy="820" rx="72" ry="42" fill="#ded5b4" transform="rotate(-20 430 820)"/>
+    <ellipse cx="650" cy="820" rx="72" ry="42" fill="#ded5b4" transform="rotate(20 650 820)"/>
+  </g>
+  <rect x="64" y="70" width="360" height="54" rx="27" fill="#15a8d2"/>
+  <text x="244" y="107" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="800" fill="#fff">HORA DO HOLOFOTE</text>
+  <text x="64" y="1110" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="900" fill="#fff" letter-spacing="-4">SEEDOT</text>
+  <text x="66" y="1177" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700" fill="#7feaff">1 DE OUTUBRO • DESTAQUE SEMANAL</text>
+  <rect x="64" y="1230" width="952" height="250" rx="42" fill="#06111d" opacity=".93" stroke="#1c6d69" stroke-width="2"/>
+  <text x="112" y="1310" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#a8c6bc">HORÁRIO LOCAL</text>
+  <text x="112" y="1387" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="900" fill="url(#lime)">18:00 — 19:00</text>
+  <text x="112" y="1450" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="800" fill="#fff">BÔNUS • 2× PE POR CAPTURA</text>
+  <text x="64" y="1552" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#59c9d7">SPIDEY EVENT ART • PREMIUM v1</text>
+  <circle cx="994" cy="1538" r="9" fill="#a5ef73"/>
+</svg>
