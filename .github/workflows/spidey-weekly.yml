@@ -49,10 +49,13 @@ jobs:
         run: |
           set -euo pipefail
           python -m json.tool weekly/current.json >/dev/null
+          python -m json.tool spidey-app/data/weekly.json >/dev/null
           python - <<'PY'
           import json
           from pathlib import Path
           data=json.load(open('weekly/current.json', encoding='utf-8'))
+          app_data=json.load(open('spidey-app/data/weekly.json', encoding='utf-8'))
+          assert data == app_data, 'weekly.json do app divergiu do pacote canônico'
           assert data['schema_version'] == 'spidey-weekly-v1'
           assert data['status'] == 'ready_for_art'
           assert len(data['days']) == 7
@@ -89,7 +92,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add weekly/current.json weekly/archive
+          git add weekly/current.json weekly/archive spidey-app/data/weekly.json
           if git diff --cached --quiet; then
             echo "Weekly já estava atualizado."
             exit 0
