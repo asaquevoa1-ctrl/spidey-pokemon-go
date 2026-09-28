@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#07162d">
   <meta name="description" content="Spidey Pokémon GO: próximos eventos, horários no Brasil, selos, coordenadas confirmadas e GPX.">
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('spidey-theme');
+        const mode = ['light', 'dark', 'system'].includes(stored) ? stored : 'system';
+        const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.themeMode = mode;
+        document.documentElement.dataset.theme = mode === 'system' ? (dark ? 'dark' : 'light') : mode;
+      } catch (_) {
+        document.documentElement.dataset.themeMode = 'system';
+        document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+    })();
+  </script>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="stamps.css">
@@ -12,6 +26,7 @@
   <link rel="stylesheet" href="tabs-v2.css">
   <link rel="stylesheet" href="experience-v1.css">
   <link rel="stylesheet" href="visual-v3.css">
+  <link rel="stylesheet" href="theme.css">
   <style>
     .detail-hero {
       width: 100%;
@@ -33,7 +48,17 @@
         <span>Pokémon GO • Eventos & Selos</span>
       </div>
     </div>
-    <button id="installButton" class="ghost-btn" hidden>Instalar</button>
+    <div class="topbar-actions">
+      <label class="theme-control" for="themeSelect">
+        <span>Aparência</span>
+        <select id="themeSelect" aria-label="Aparência do app">
+          <option value="system">Sistema</option>
+          <option value="light">Claro</option>
+          <option value="dark">Escuro</option>
+        </select>
+      </label>
+      <button id="installButton" class="ghost-btn" hidden>Instalar</button>
+    </div>
   </header>
 
   <main>
@@ -218,6 +243,7 @@
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="theme.js" defer></script>
   <script src="app.js" defer></script>
   <script src="art-system.js" defer></script>
   <script src="weekly.js" defer></script>
