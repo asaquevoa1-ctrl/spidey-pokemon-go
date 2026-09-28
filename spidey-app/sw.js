@@ -1,10 +1,12 @@
-const CACHE = 'spidey-app-v1-20260928-push1';
+const CACHE = 'spidey-app-v1-20260928-art1';
 const CORE = [
   './',
   './index.html',
   './styles.css',
   './stamps.css',
+  './art-system.css',
   './app.js',
+  './art-system.js',
   './push.js',
   './calendar-enhancements.js',
   './manifest.webmanifest',
