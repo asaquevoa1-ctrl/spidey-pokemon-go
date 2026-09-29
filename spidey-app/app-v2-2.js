@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-app-v2.2-20260929.1';
+  const VERSION = 'spidey-app-v2.2-20260929.2';
   const MONTHS = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
   const GROUPS = [
     { id: 'raids', label: 'Reides', hint: 'Rotações e Sombrosas', categories: ['raid_rotation', 'shadow_raids'] },
@@ -21,6 +21,13 @@
       .replace(/'/g, '&#039;');
   }
 
+  function appState() {
+    try {
+      if (typeof state !== 'undefined' && state) return state;
+    } catch (_) {}
+    return null;
+  }
+
   function rangeOf(event) {
     if (typeof getBrazilRange === 'function') return getBrazilRange(event);
     const startRaw = event?.schedule?.start_brazil || event?.schedule?.start_local;
@@ -32,8 +39,9 @@
   }
 
   function targetMonth() {
-    if (window.state?.month instanceof Date && !Number.isNaN(state.month.getTime())) {
-      return new Date(state.month.getFullYear(), state.month.getMonth(), 1);
+    const current = appState();
+    if (current?.month instanceof Date && !Number.isNaN(current.month.getTime())) {
+      return new Date(current.month.getFullYear(), current.month.getMonth(), 1);
     }
     const now = new Date();
     const offset = now.getDate() >= 25 ? 1 : 0;
@@ -93,7 +101,8 @@
   }
 
   function visibleEventsFor(month) {
-    const events = Array.isArray(window.state?.events) ? state.events : [];
+    const current = appState();
+    const events = Array.isArray(current?.events) ? current.events : [];
     const { start: monthStart, end: monthEnd } = monthBounds(month);
     return events.filter((event) => {
       if (!event || ['rejected','rejected_art','blocked_art_standard'].includes(event.status)) return false;
@@ -138,7 +147,8 @@
   function bindEvents(root) {
     root.querySelectorAll('[data-v22-event]').forEach((button) => {
       button.addEventListener('click', () => {
-        const event = state.events.find((item) => item.id === button.dataset.v22Event);
+        const current = appState();
+        const event = current?.events?.find((item) => item.id === button.dataset.v22Event);
         if (event && typeof openEvent === 'function') openEvent(event);
       });
     });
@@ -178,7 +188,8 @@
   }
 
   function render() {
-    if (!Array.isArray(window.state?.events) || !state.events.length) return false;
+    const current = appState();
+    if (!Array.isArray(current?.events) || !current.events.length) return false;
     const calendarSection = document.querySelector('#calendar')?.closest('.section');
     if (!calendarSection) return false;
 
