@@ -1,29 +1,27 @@
 import json
-import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 from gold_art_upgrade import (
     ASSETS,
     GOLD_REFERENCE,
+    LOGO,
     QUEUE,
     STANDARD,
-    clean_title,
     clear_approval_state,
     fetch_source_image,
     font,
-    overlay_brand,
     prepare_revision,
     raw_url,
     source_label,
 )
 
 ENGINE = "spidey-gold-source-v1"
-MODEL = "source-media-editorial-pillow-v1"
+MODEL = "source-media-editorial-pillow-v2"
 W, H = 1024, 1536
+TARGET_RATIO = W / H
 
 
 def cover(image, width=W, height=H):
@@ -37,159 +35,88 @@ def cover(image, width=W, height=H):
     return resized.crop((x, y, x + width, y + height))
 
 
-def title_pt(item):
-    raw = clean_title(item)
-    raw = re.sub(r"^Dig in during\s+", "", raw, flags=re.I).strip()
-
-    patterns = (
-        (r"^(.+?)\s+Hatch Day!?$", "DIA DE INCUBAÇÃO DO {}"),
-        (r"^(.+?)\s+Community Day!?$", "DIA DA COMUNIDADE: {}"),
-        (r"^(.+?)\s+Raid Day!?$", "DIA DE REIDES: {}"),
-        (r"^(.+?)\s+Research Day!?$", "DIA DE PESQUISA: {}"),
+def contain(image, max_width, max_height):
+    scale = min(max_width / image.width, max_height / image.height)
+    return image.resize(
+        (max(1, int(image.width * scale)), max(1, int(image.height * scale))),
+        Image.Resampling.LANCZOS,
     )
-    for pattern, fmt in patterns:
-        match = re.match(pattern, raw, flags=re.I)
-        if match:
-            return fmt.format(match.group(1).strip().upper())
-
-    if re.search(r"Spotlight Hour", raw, flags=re.I):
-        name = re.sub(r"\s*Spotlight Hour.*$", "", raw, flags=re.I).strip()
-        return f"HORA DO HOLOFOTE: {name.upper()}" if name else "HORA DO HOLOFOTE"
-
-    # Tradução apenas textual; se o serviço falhar, preserva o título factual original.
-    try:
-        response = requests.get(
-            "https://translate.googleapis.com/translate_a/single",
-            params={"client": "gtx", "sl": "auto", "tl": "pt", "dt": "t", "q": raw},
-            timeout=15,
-        )
-        response.raise_for_status()
-        payload = response.json()
-        translated = "".join(
-            part[0] for part in (payload[0] or [])
-            if isinstance(part, list) and part and part[0]
-        ).strip()
-        if translated:
-            return translated.upper()
-    except Exception as exc:
-        print("GOLD_SOURCE_TRANSLATION", exc)
-
-    return raw.upper()
 
 
-def wrap_lines(draw, text, fnt, max_width, max_lines=3):
-    words = str(text).split()
-    lines = []
-    current = ""
-    for word in words:
-        trial = (current + " " + word).strip()
-        if not current or draw.textbbox((0, 0), trial, font=fnt, stroke_width=2)[2] <= max_width:
-            current = trial
-            continue
-        lines.append(current)
-        current = word
-        if len(lines) >= max_lines - 1:
-            break
-    if current and len(lines) < max_lines:
-        lines.append(current)
-    consumed = " ".join(lines)
-    if len(consumed.split()) < len(words):
-        last = lines[-1]
-        while last and draw.textbbox((0, 0), last + "…", font=fnt, stroke_width=2)[2] > max_width:
-            last = last[:-1].rstrip()
-        lines[-1] = last + "…"
-    return lines
+def source_canvas(source):
+    """Preserva a mídia factual sempre que um crop 2:3 cortaria informação demais."""
+    ratio = source.width / source.height
+    near_vertical = abs(ratio - TARGET_RATIO) <= 0.16
+
+    if near_vertical:
+        scene = cover(source).convert("RGB")
+    else:
+        background = cover(source).filter(ImageFilter.GaussianBlur(30)).convert("RGB")
+        background = ImageEnhance.Brightness(background).enhance(0.58)
+        background = ImageEnhance.Color(background).enhance(1.08)
+        scene = background.convert("RGBA")
+
+        foreground = contain(source, int(W * 0.96), int(H * 0.88)).convert("RGBA")
+        x = (W - foreground.width) // 2
+        y = (H - foreground.height) // 2
+
+        # Sombra difusa sem caixa, borda ou moldura: a mídia continua sendo a própria cena.
+        shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        shadow_patch = Image.new("RGBA", (foreground.width, foreground.height), (0, 0, 0, 160))
+        shadow.paste(shadow_patch, (x, y + 16))
+        shadow = shadow.filter(ImageFilter.GaussianBlur(28))
+        scene = Image.alpha_composite(scene, shadow)
+        scene.alpha_composite(foreground, (x, y))
+        scene = scene.convert("RGB")
+
+    scene = ImageEnhance.Color(scene).enhance(1.10)
+    scene = ImageEnhance.Contrast(scene).enhance(1.06)
+    scene = ImageEnhance.Sharpness(scene).enhance(1.05)
+    return scene.convert("RGBA")
+
+
+def overlay_source_signature(canvas, item):
+    """Assinatura mínima para mídia factual: sem manchete duplicada, pill ou card."""
+    overlay = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    top_h = 138
+    for y in range(top_h):
+        alpha = int(120 * (1 - y / top_h))
+        draw.line((0, y, W, y), fill=(1, 8, 23, alpha))
+
+    bottom_h = 170
+    for y in range(H - bottom_h, H):
+        t = (y - (H - bottom_h)) / bottom_h
+        draw.line((0, y, W, y), fill=(1, 8, 23, int(25 + 155 * t)))
+
+    margin = 42
+    draw.text((margin, 30), "SPIDEY  /  POKÉMON GO", font=font(23, True), fill=(250, 252, 255, 245))
+    draw.text((margin, 67), "MÍDIA FACTUAL • FONTE PRESERVADA", font=font(16, False), fill=(192, 219, 245, 225))
+    draw.rectangle((margin, 101, margin + 150, 105), fill=(235, 194, 73, 235))
+
+    source = f"Fonte: {source_label(item)}"
+    draw.text((margin, H - 58), source, font=font(16, False), fill=(224, 235, 247, 235))
+
+    if LOGO.exists():
+        logo = Image.open(LOGO).convert("RGB")
+        side = 92
+        logo = logo.resize((side, side), Image.Resampling.LANCZOS).convert("RGBA")
+        mask = Image.new("L", (side, side), 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, side - 1, side - 1), fill=255)
+        lx = W - margin - side
+        ly = H - margin - side
+        draw.ellipse((lx - 3, ly - 3, lx + side + 3, ly + side + 3), outline=(235, 194, 73, 210), width=2)
+        overlay.paste(logo, (lx, ly), mask)
+
+    return Image.alpha_composite(canvas, overlay)
 
 
 def render_full_bleed(source, out, item):
-    scene = cover(source).convert("RGB")
-    scene = ImageEnhance.Color(scene).enhance(1.16)
-    scene = ImageEnhance.Contrast(scene).enhance(1.10)
-    scene = ImageEnhance.Sharpness(scene).enhance(1.08).convert("RGBA")
-
-    # Cria profundidade sem transformar a mídia da fonte em screenshot/card encaixotado.
-    blurred = cover(source).filter(ImageFilter.GaussianBlur(24)).convert("RGBA")
-    blurred = ImageEnhance.Brightness(blurred.convert("RGB")).enhance(0.70).convert("RGBA")
-    canvas = Image.blend(blurred, scene, 0.82)
-
-    shade = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    sd = ImageDraw.Draw(shade)
-
-    # Vinheta lateral.
-    for x in range(150):
-        alpha = int(105 * (1 - x / 150))
-        sd.line((x, 0, x, H), fill=(0, 8, 24, alpha))
-        sd.line((W - 1 - x, 0, W - 1 - x, H), fill=(0, 8, 24, alpha))
-
-    # Gradiente superior para o cabeçalho oficial e inferior para a manchete.
-    for y in range(0, 310):
-        alpha = int(150 * (1 - y / 310))
-        sd.line((0, y, W, y), fill=(0, 10, 32, alpha))
-    start = 660
-    for y in range(start, H):
-        t = (y - start) / (H - start)
-        alpha = int(20 + 220 * min(1.0, t * 1.20))
-        sd.line((0, y, W, y), fill=(0, 8, 24, alpha))
-
-    canvas = Image.alpha_composite(canvas, shade)
-    draw = ImageDraw.Draw(canvas)
-
-    official = "pokemongo.com" in str(item.get("source_url") or "").lower()
-    eyebrow = "EVENTO OFICIAL • POKÉMON GO" if official else f"ATUALIZAÇÃO • {source_label(item).upper()}"
-    eyebrow_font = font(24, True)
-    box = draw.textbbox((0, 0), eyebrow, font=eyebrow_font)
-    ew = box[2] - box[0]
-    ex = 54
-    ey = 690
-    draw.rounded_rectangle(
-        (ex, ey, min(W - 54, ex + ew + 62), ey + 58),
-        radius=24,
-        fill=(5, 26, 57, 218),
-        outline=(47, 198, 255, 225),
-        width=2,
-    )
-    draw.text((ex + 30, ey + 14), eyebrow, font=eyebrow_font, fill=(245, 249, 255, 255))
-
-    title = title_pt(item)
-    title_font = None
-    lines = []
-    for size in range(92, 54, -4):
-        candidate = font(size, True)
-        wrapped = wrap_lines(draw, title, candidate, 900, 3)
-        total_h = len(wrapped) * int(size * 1.02)
-        if total_h <= 285:
-            title_font = candidate
-            lines = wrapped
-            break
-    if title_font is None:
-        title_font = font(54, True)
-        lines = wrap_lines(draw, title, title_font, 900, 3)
-
-    y = 785
-    for idx, line in enumerate(lines):
-        # Alterna branco/dourado para criar hierarquia sem sacrificar leitura.
-        fill = (255, 211, 74, 255) if idx == 0 else (244, 249, 255, 255)
-        draw.text(
-            (54, y),
-            line,
-            font=title_font,
-            fill=fill,
-            stroke_width=4,
-            stroke_fill=(0, 10, 28, 235),
-        )
-        bbox = draw.textbbox((54, y), line, font=title_font, stroke_width=4)
-        y = bbox[3] + 8
-
-    accent_y = min(1140, y + 22)
-    draw.rounded_rectangle((54, accent_y, 388, accent_y + 6), radius=3, fill=(44, 194, 255, 245))
-    draw.rounded_rectangle((402, accent_y, 620, accent_y + 6), radius=3, fill=(236, 193, 70, 245))
-
-    sub = "Fonte verificada • detalhes no link da publicação"
-    draw.text((54, accent_y + 25), sub, font=font(21, False), fill=(236, 242, 250, 238))
-
+    canvas = source_canvas(source)
+    canvas = overlay_source_signature(canvas, item)
     out.parent.mkdir(parents=True, exist_ok=True)
     canvas.convert("RGB").save(out, "JPEG", quality=95, optimize=True)
-    overlay_brand(out, item)
 
 
 def eligible(item):
