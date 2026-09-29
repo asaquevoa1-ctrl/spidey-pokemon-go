@@ -135,6 +135,23 @@ Uma peça deve ser bloqueada antes do Discord se:
 - a imagem final não estiver persistida no GitHub;
 - a fonte do conteúdo não estiver verificada.
 
+### 9.1 Regra fail-closed de qualidade visual
+
+Se o sistema não conseguir produzir uma arte que realmente atinja o padrão `spidey-premium-v1`, **ele deve parar e manter o item bloqueado/aguardando revisão**.
+
+É proibido promover a Premium, liberar para aprovação ou publicar como substituto:
+
+- fallback de mídia da fonte;
+- arte vetorial automática;
+- placeholder;
+- key-art simples com personagem recortado sobre fundo genérico;
+- composição automática abaixo do padrão visual já aprovado;
+- qualquer peça que exista apenas porque “foi possível gerar”.
+
+Esses materiais podem existir exclusivamente como apoio técnico e devem ser identificados como tal. Eles não podem registrar `art_ready_for_review=true`, `gold_standard_visual=true` nem usar `spidey-premium-v1` como se tivessem atingido o padrão.
+
+**Ausência temporária de arte Premium é preferível a baixar o padrão.** Uma nova tentativa/revisão deve preservar o histórico R1/R2/R3/... e exigir nova decisão humana quando houver nova arte.
+
 ## 10. Critérios de reprovação humana
 
 Reprovar se:
