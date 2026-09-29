@@ -8,13 +8,13 @@
   "horarios": [],
   "gerar_gpx": false,
   "gpx_nome": "spidey-evento.gpx",
-  "status": "pending",
+  "status": "blocked_art_standard",
   "_source_id": "pokeminers-1552728818232598530",
   "_source_image": "https://lh3.googleusercontent.com/r1sFIBAWuypbu790nY-nohK15pwrrz9wxabdnLn-equ2WbOzIF-1_H6L15URPfazMTlosJBnBe-PR_Wpdj6Q7GJ2JrShPTDUEc6_GMgtShxE%3Ds0-e365",
   "created_at_utc": "2026-09-25T14:32:48.833920+00:00",
   "curated_at_utc": "2026-09-25T14:33:35.058744+00:00",
   "art_standard_version": "spidey-premium-v1",
-  "art_ready_for_review": true,
+  "art_ready_for_review": false,
   "media_policy": "premium_editorial",
   "visual_mode": "premium_editorial",
   "visual_constraints": [],
@@ -47,7 +47,7 @@
   ],
   "art_revision": 3,
   "art_revision_reason": "human_visual_approved_chat",
-  "needs_art_revision": false,
+  "needs_art_revision": true,
   "art_generator_version": "spidey-gold-source-v1",
   "art_generation_model": "source-media-editorial-pillow-v2",
   "art_generation_origin": "chatgpt_image_gen_manual",
@@ -59,5 +59,6 @@
   "manual_visual_approved": true,
   "manual_visual_approved_at_utc": "2026-09-25T18:56:58+00:00",
   "gold_source_fallback": true,
-  "gold_fallback_reason": "OPENAI_API_KEY ausente"
+  "gold_fallback_reason": "OPENAI_API_KEY ausente",
+  "art_block_reason": "arte é apenas fallback/preview técnico; não pode ser promovida a spidey-premium-v1"
 }
