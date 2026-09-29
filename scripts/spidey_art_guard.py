@@ -6,8 +6,14 @@ from urllib.parse import urlparse
 QUEUE = Path("queue/curated")
 STANDARD = "spidey-premium-v1"
 GOLD_ENGINE = "spidey-gold-openai-v1"
-GOLD_SOURCE_ENGINE = "spidey-gold-source-v1"
-GOLD_ENGINES = {GOLD_ENGINE, GOLD_SOURCE_ENGINE}
+APPROVED_ENGINE = "spidey-premium-approved-v1"
+PREMIUM_ENGINES = {GOLD_ENGINE, APPROVED_ENGINE}
+TECHNICAL_ENGINES = {
+    "spidey-gold-source-v1",
+    "spidey-source-preview-v1",
+    "spidey-event-vector-v1",
+    "spidey-app-keyart-v4",
+}
 GOLD_REFERENCE = "spidey-gold-standard-2026-09-25"
 GENERATED_PREFIX = "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/"
 
@@ -30,6 +36,7 @@ def block(data, reason):
     data["art_ready_for_review"] = False
     data["art_standard_version"] = STANDARD
     data["art_block_reason"] = reason
+    data["needs_art_revision"] = True
 
 
 def validate(path, data):
@@ -60,16 +67,22 @@ def validate(path, data):
     if str(data.get("media_policy") or "") != "premium_editorial":
         return False, "política visual não está em premium_editorial"
 
-    # Gold Standard é condição técnica de entrada no Discord. O motor OpenAI é
-    # preferencial; o source-v1 é um fallback full-bleed certificado que usa a
-    # mídia factual da própria fonte quando a chave de geração não está disponível.
-    if data.get("gold_standard_visual") is not True:
-        return False, "arte não foi gerada pelo fluxo Gold Standard"
+    # Regra editorial soberana: fallback, mídia de fonte, vetor, placeholder e
+    # key-art simples podem existir como apoio técnico, mas NUNCA podem entrar
+    # no Discord de aprovação fingindo ser Premium. Se o padrão não foi
+    # alcançado, o item fica bloqueado e volta para revisão.
     engine = str(data.get("art_generator_version") or "")
-    if engine not in GOLD_ENGINES:
-        return False, "motor visual inválido; obrigatório um motor Gold certificado"
-    if engine == GOLD_SOURCE_ENGINE and str(data.get("art_revision_style") or "") != "gold_source_full_bleed":
-        return False, "fallback Gold precisa usar composição full-bleed certificada"
+    if engine in TECHNICAL_ENGINES:
+        return False, "arte é apenas fallback/preview técnico; não pode ser promovida a spidey-premium-v1"
+    if engine not in PREMIUM_ENGINES:
+        return False, "motor visual não certificado para o padrão Premium"
+
+    if data.get("gold_standard_visual") is not True:
+        return False, "arte ainda não atingiu o padrão visual Premium aprovado"
+
+    if engine == APPROVED_ENGINE and data.get("premium_visual_approved") is not True:
+        return False, "arte importada não possui aprovação visual Premium explícita"
+
     if str(data.get("visual_reference_set") or "") != GOLD_REFERENCE:
         return False, "referência visual oficial Gold Standard ausente"
     if data.get("brand_logo_overlay") is not True:
@@ -120,7 +133,7 @@ def main():
         if ok:
             if data.get("status") == "pending":
                 ready += 1
-                print(f"ART_OK_GOLD {path.name}")
+                print(f"ART_OK_PREMIUM {path.name}")
         else:
             block(data, reason)
             blocked += 1
@@ -131,7 +144,7 @@ def main():
             path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             changed += 1
 
-    print(f"Guard Gold concluído: {ready} pronta(s), {blocked} bloqueada(s), {changed} atualizada(s).")
+    print(f"Guard Premium concluído: {ready} pronta(s), {blocked} bloqueada(s), {changed} atualizada(s).")
     return 0
 
 
