@@ -103,14 +103,48 @@ Se a peça ainda não atingir o padrão visual aprovado, vale a regra fail-close
 - Xerneas: problema pendente é carregamento/integração da arte, não redefinição do estilo aprovado.
 - Sizzlipede e Zorua: preservar direção visual Premium aprovada.
 
-## Implementação inicial do App v2
+## Regra 6 — agenda mensal por faixas
 
-Arquivos do app:
+A referência enviada pelo usuário em 29/09/2026 mostrou uma direção aprovada de organização: calendário mensal denso, porém estruturado por categoria, semelhante a uma tabela de calendário esportivo.
+
+A regra é aproveitar **a hierarquia da informação**, não copiar o pôster estático.
+
+No app:
+
+- eventos recorrentes do mês devem ser agrupados por faixas de categoria;
+- categorias prioritárias: Reides, Hora de Reides, Mega-Reides, Segunda Max, Holofote e Eventos;
+- cada item deve mostrar primeiro **data + Pokémon/evento + bônus curto quando houver**;
+- evitar transformar cada item em um card vertical completo;
+- a leitura deve funcionar por varredura rápida, como agenda esportiva;
+- tocar em um item abre o detalhe completo;
+- a agenda mensal por faixas substitui a redundância de um segundo rail de “Próximos dias” quando ambos mostrarem a mesma informação;
+- o calendário tradicional permanece disponível, porém pode ficar recolhido por padrão no celular;
+- datas precisam ser visualmente fortes e fáceis de localizar;
+- categorias podem usar cores próprias, mas cor deve indicar função, não apenas decorar;
+- eventos sem arte adequada não devem ganhar placeholder chamativo só para preencher espaço.
+
+A ideia central é: **mostrar, não explicar**.
+
+## Regra 7 — validação visual em uso real
+
+Screenshot isolado e CSS correto não bastam.
+
+Mudanças relevantes do app devem ser julgadas pelo uso real no celular: rolagem com o dedo, densidade, leitura, abertura de detalhes, Semana, Selos e modo claro/escuro.
+
+Se uma arte falhar no detalhe, o espaço visual deve colapsar; nunca manter uma grande área vazia.
+
+## Implementação do App v2
+
+Arquivos-base:
 
 - `spidey-app/app-v2.css`
 - `spidey-app/app-v2.js`
+- `spidey-app/app-v2-1.css`
+- `spidey-app/app-v2-1.js`
+- `spidey-app/app-v2-2.css`
+- `spidey-app/app-v2-2.js`
 
-Objetivos desta primeira implementação:
+Objetivos implementados/dirigidos:
 
 - abertura da Home sem card gigante de apresentação;
 - status em faixa compacta;
@@ -122,10 +156,12 @@ Objetivos desta primeira implementação:
 - movimento discreto com respeito a `prefers-reduced-motion`;
 - limpeza automática de linguagem interna conhecida;
 - paleta clara de maior contraste;
-- preservação do modo escuro.
+- preservação do modo escuro;
+- agenda mensal categorizada por faixas;
+- calendário completo recolhível no celular.
 
 ## Regra de retomada
 
 Ao receber `SPIDEYNEXUS`, tratar este documento como decisão de produto vigente do app, juntamente com `SPIDEY_NEXUS.md` e `SPIDEY_PREMIUM_STANDARD.md`.
 
-Não voltar ao visual de slides, não reintroduzir linguagem de IA e não enfraquecer contraste do modo claro sem decisão explícita do usuário.
+Não voltar ao visual de slides, não reintroduzir linguagem de IA, não enfraquecer contraste do modo claro e não voltar à pilha de cards quando uma agenda categorizada resolver melhor a informação, salvo decisão explícita do usuário.
