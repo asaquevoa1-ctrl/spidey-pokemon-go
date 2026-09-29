@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#190705"/><stop offset=".48" stop-color="#6b1708"/><stop offset="1" stop-color="#080302"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#ffb44d" stop-opacity=".98"/><stop offset=".4" stop-color="#ff5b22" stop-opacity=".32"/><stop offset="1" stop-color="#5c0d00" stop-opacity="0"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="20" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="logoClip"><rect x="54" y="48" width="182" height="86" rx="22"/></clipPath>
+  </defs>
+  <rect width="1080" height="1350" fill="url(#bg)"/>
+  <circle cx="540" cy="500" r="430" fill="url(#halo)"/>
+  <g opacity=".28" fill="#ffc565"><circle cx="120" cy="300" r="5"/><circle cx="210" cy="210" r="4"/><circle cx="890" cy="210" r="5"/><circle cx="950" cy="350" r="4"/><circle cx="780" cy="145" r="3"/></g>
+  <path d="M0 835C170 760 290 825 410 745S690 715 815 790 980 770 1080 720V1350H0Z" fill="#160706" opacity=".75"/>
+  <image href="../../spidey-logo-oficial.jpg" x="54" y="48" width="182" height="86" preserveAspectRatio="xMidYMid slice" clip-path="url(#logoClip)"/>
+  <text x="264" y="91" fill="#ffd8b4" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" letter-spacing="4">SPIDEY PREMIUM</text>
+  <text x="54" y="190" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="46" font-weight="800" letter-spacing="5">SEGUNDA MAX</text>
+  <text x="54" y="252" fill="#ffc06c" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700">5 OUT 2026  •  06:00–21:00  •  HORÁRIO LOCAL</text>
+  <image href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/850.png" x="210" y="275" width="660" height="620" preserveAspectRatio="xMidYMid meet" filter="url(#glow)"/>
+  <rect x="54" y="930" width="972" height="300" rx="38" fill="#170907" opacity=".92" stroke="#ff8b37" stroke-opacity=".5"/>
+  <text x="92" y="1015" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="900" letter-spacing="2">SIZZLIPEDE</text>
+  <text x="92" y="1074" fill="#ffc06c" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="800">DINAMAX EM DESTAQUE</text>
+  <text x="92" y="1138" fill="#ffe7d6" font-family="Arial,Helvetica,sans-serif" font-size="30">Power Spots com Sizzlipede Dinamax durante a Segunda Max</text>
+  <text x="92" y="1190" fill="#c9a28a" font-family="Arial,Helvetica,sans-serif" font-size="25">Informação vinculada ao evento real no Spidey</text>
+  <rect x="54" y="1270" width="972" height="2" fill="#ff8b37" opacity=".4"/>
+  <text x="54" y="1312" fill="#a06b4e" font-family="Arial,Helvetica,sans-serif" font-size="22" letter-spacing="2">SPIDEY • POKÉMON GO • PREMIUM V1</text>
+</svg>
