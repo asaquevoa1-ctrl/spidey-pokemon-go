@@ -17,15 +17,16 @@
         document.documentElement.dataset.themeMode = 'system';
         document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
+      window.SPIDEY_BUILD = '2026-09-29-keyart-v6';
     })();
   </script>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="stamps.css">
-  <link rel="stylesheet" href="art-system.css">
+  <link rel="stylesheet" href="art-system.css?v=20260929-keyart6">
   <link rel="stylesheet" href="tabs-v2.css">
   <link rel="stylesheet" href="experience-v1.css">
-  <link rel="stylesheet" href="visual-v3.css">
+  <link rel="stylesheet" href="visual-v3.css?v=20260929-keyart6">
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="qa-corrections-v1.css">
   <link rel="stylesheet" href="stamps-v2.css">
@@ -247,15 +248,48 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="theme.js" defer></script>
   <script src="app.js" defer></script>
-  <script src="art-system.js" defer></script>
+  <script src="art-system.js?v=20260929-keyart6" defer></script>
   <script src="weekly.js" defer></script>
-  <script src="premium-event-art.js" defer></script>
-  <script src="premium-art-pack-v1.js" defer></script>
+  <script src="premium-event-art.js?v=20260929-keyart6" defer></script>
   <script src="map.js" defer></script>
   <script src="push.js" defer></script>
   <script src="calendar-enhancements.js" defer></script>
   <script src="experience-v1.js" defer></script>
   <script src="qa-corrections-v1.js" defer></script>
   <script src="stamps-v2.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const catalog = window.SPIDEY_PREMIUM_EVENT_ART || (window.SPIDEY_PREMIUM_EVENT_ART = {});
+      for (const key of Object.keys(catalog)) delete catalog[key];
+
+      const officialArt = (id, alt) => {
+        const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+        const make = () => ({ url, width: 800, height: 1200 });
+        return {
+          standard: 'spidey-app-keyart-v4',
+          visualApproved: true,
+          premium_visual_approved: true,
+          alt,
+          assets: { thumb: make(), card: make(), hero: make(), poster: make() }
+        };
+      };
+
+      catalog['2026-09-30-raid-hour-xerneas'] = officialArt(716, 'Xerneas — Hora de Reides');
+      catalog['2026-10-01-spotlight-seedot'] = officialArt(273, 'Seedot — Hora do Holofote');
+      catalog['2026-10-05-max-monday-sizzlipede'] = officialArt(850, 'Sizzlipede — Segunda Max');
+      catalog['2026-10-zorua-community-day'] = officialArt(570, 'Zorua — Dia Comunitário');
+
+      window.SPIDEY_PREMIUM_ART_PACK_V1 = {
+        version: '2026-09-29.6-clean-character-keyart',
+        standard: 'spidey-app-keyart-v4',
+        failClosed: true,
+        events: Object.keys(catalog)
+      };
+
+      queueMicrotask(() => window.SpideyVisualV3?.decorate?.());
+      setTimeout(() => window.SpideyVisualV3?.decorate?.(), 300);
+      setTimeout(() => window.SpideyVisualV3?.decorate?.(), 1200);
+    });
+  </script>
 </body>
 </html>
