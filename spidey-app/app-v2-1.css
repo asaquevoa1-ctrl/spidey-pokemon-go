@@ -1,0 +1,298 @@
+/* Spidey App v2.1 — refinamento validado em uso real no celular */
+
+body.spidey-app-v2 {
+  --v21-gap: 12px;
+}
+
+/* Menos cabeçalho de apresentação, mais entrada de app. */
+@media (max-width: 760px) {
+  body.spidey-app-v2 .experience-intro {
+    padding: 14px 2px 6px;
+  }
+
+  body.spidey-app-v2 .experience-intro h1 {
+    margin: 4px 0 6px;
+    font-size: clamp(1.85rem, 8vw, 2.55rem);
+    line-height: .98;
+  }
+
+  body.spidey-app-v2 .experience-intro > p:not(.microcopy) {
+    font-size: .9rem;
+    line-height: 1.4;
+  }
+
+  body.spidey-app-v2 .hero-actions {
+    margin-top: 10px;
+  }
+
+  body.spidey-app-v2 .status-strip {
+    margin: 6px 0 16px;
+  }
+
+  body.spidey-app-v2 .section,
+  body.spidey-app-v2 .experience-section {
+    margin-top: 18px;
+    padding-top: 0;
+  }
+}
+
+/* Se eyebrow e título dizem a mesma coisa, o eyebrow some. */
+body.spidey-app-v2 .v21-redundant-label {
+  display: none !important;
+}
+
+/* Destaque principal: menos pôster/slide, mais notícia/evento. */
+@media (max-width: 760px) {
+  body.spidey-app-v2 .experience-feature {
+    border-radius: 20px;
+  }
+
+  body.spidey-app-v2 .experience-feature-art {
+    width: 100%;
+    aspect-ratio: 16 / 10 !important;
+    max-height: 360px !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+    object-position: center 30% !important;
+  }
+
+  body.spidey-app-v2 .experience-feature-copy {
+    margin-top: -58px !important;
+    padding: 54px 16px 16px !important;
+    gap: 7px !important;
+  }
+
+  body.spidey-app-v2 .experience-feature-copy h3 {
+    font-size: 1.35rem !important;
+    line-height: 1.06;
+  }
+
+  body.spidey-app-v2 .experience-summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Hoje / próximos dias: cartão horizontal compacto. */
+body.spidey-app-v2 .experience-rail {
+  grid-auto-columns: min(84vw, 330px) !important;
+  gap: 10px !important;
+}
+
+body.spidey-app-v2 .experience-mini {
+  display: grid !important;
+  grid-template-columns: 104px minmax(0, 1fr) !important;
+  min-height: 126px;
+  overflow: hidden;
+  border-radius: 18px !important;
+}
+
+body.spidey-app-v2 .experience-mini img {
+  width: 104px !important;
+  height: 100% !important;
+  min-height: 126px !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center 28% !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+body.spidey-app-v2 .experience-mini-copy {
+  min-width: 0;
+  padding: 12px 13px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.spidey-app-v2 .experience-mini-copy strong {
+  margin: 4px 0 5px !important;
+  font-size: .95rem !important;
+  line-height: 1.18;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+body.spidey-app-v2 .experience-mini-meta {
+  font-size: .76rem !important;
+  line-height: 1.34 !important;
+}
+
+/* Semana: remove o comportamento de slide + KPIs em cards. */
+body.spidey-app-v2 #weeklyView .hero-compact {
+  padding-bottom: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+body.spidey-app-v2 #weeklyView .hero-compact h1 {
+  font-size: clamp(2rem, 9vw, 3rem) !important;
+  line-height: .98;
+}
+
+body.spidey-app-v2 #weeklyView .status-strip {
+  gap: 14px;
+  margin: 4px 0 14px;
+  padding: 0;
+  overflow: visible;
+}
+
+body.spidey-app-v2 #weeklyView .status-strip div {
+  min-width: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.spidey-app-v2 #weeklyView .weekly-hero-card {
+  padding: 12px 0 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body.spidey-app-v2 #weeklyView .weekly-hero-card > .eyebrow {
+  display: none !important;
+}
+
+body.spidey-app-v2 #weeklyView .weekly-hero-card > h2 {
+  font-size: 1.35rem !important;
+  margin-bottom: 10px !important;
+}
+
+/* Detalhe: arte quebrada nunca ocupa uma tela vazia. */
+body.spidey-app-v2 #eventDetail.v21-no-hero .detail-hero,
+body.spidey-app-v2 .detail-hero.v21-broken-art {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.spidey-app-v2 #eventDetail.v21-no-hero .detail-body {
+  margin-top: 0 !important;
+  border-radius: 24px 24px 0 0 !important;
+}
+
+/* Selos: lista de rota, não grade de placeholders/admin. */
+body.spidey-app-v2 .stamp-gallery-v2 {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+}
+
+body.spidey-app-v2 .stamp-tile-v2 {
+  display: grid !important;
+  grid-template-columns: 76px minmax(0, 1fr) !important;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(130, 160, 190, .16) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: left;
+}
+
+body.spidey-app-v2 .stamp-tile-art-v2 {
+  width: 76px !important;
+  height: 76px !important;
+  min-height: 76px !important;
+  aspect-ratio: 1 !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+body.spidey-app-v2 .stamp-tile-art-v2 img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+body.spidey-app-v2 .stamp-art-placeholder-v2 {
+  min-height: 76px !important;
+  height: 76px !important;
+  display: grid !important;
+  place-content: center !important;
+  background: rgba(120, 150, 185, .08) !important;
+}
+
+body.spidey-app-v2 .stamp-art-placeholder-v2 > span,
+body.spidey-app-v2 .stamp-art-placeholder-v2 > small {
+  display: none !important;
+}
+
+body.spidey-app-v2 .stamp-art-placeholder-v2 > strong {
+  font-size: 1.55rem !important;
+  line-height: 1 !important;
+}
+
+body.spidey-app-v2 .stamp-tile-status-v2 {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  font-size: .72rem !important;
+}
+
+body.spidey-app-v2 .stamp-tile-copy-v2 {
+  padding: 0 !important;
+}
+
+body.spidey-app-v2 .stamp-dashboard-v2 {
+  display: flex !important;
+  gap: 16px !important;
+  overflow-x: auto;
+  padding: 4px 0 10px !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+body.spidey-app-v2 .stamp-dashboard-v2 > div {
+  min-width: max-content;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* Modo claro: controles ativos precisam ser legíveis, não lavados. */
+:root[data-theme="light"] body.spidey-app-v2 .stamp-filterchips-v2 button.active,
+:root[data-theme="light"] body.spidey-app-v2 .map-filter.active,
+:root[data-theme="light"] body.spidey-app-v2 .app-tab.active {
+  color: #082b45 !important;
+  background: #d9edf8 !important;
+  border-color: #86bed4 !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .stamp-tile-v2 {
+  border-bottom-color: #d7e0e8 !important;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .stamp-art-placeholder-v2 {
+  color: #10263a !important;
+  background: #edf3f8 !important;
+}
+
+/* Seletor do tema não pode cortar "Sistema". */
+body.spidey-app-v2 .theme-control select {
+  min-width: 104px;
+  max-width: 118px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.spidey-app-v2 *,
+  body.spidey-app-v2 *::before,
+  body.spidey-app-v2 *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
