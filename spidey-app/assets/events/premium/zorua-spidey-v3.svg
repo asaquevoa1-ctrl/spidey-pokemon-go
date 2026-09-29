@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0512"/><stop offset=".48" stop-color="#4a1262"/><stop offset="1" stop-color="#050208"/></linearGradient>
+  <radialGradient id="halo" cx="52%" cy="38%" r="58%"><stop stop-color="#ffb0ff" stop-opacity=".88"/><stop offset=".28" stop-color="#b85bff" stop-opacity=".4"/><stop offset="1" stop-color="#5c1b88" stop-opacity="0"/></radialGradient>
+  <linearGradient id="fur" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3e3a55"/><stop offset="1" stop-color="#17141f"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffd6ff"/><stop offset="1" stop-color="#ff79dc"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#000" flood-opacity=".6"/></filter>
+</defs>
+<rect width="1080" height="1620" fill="url(#bg)"/>
+<circle cx="565" cy="485" r="425" fill="url(#halo)"/>
+<circle cx="850" cy="245" r="150" fill="#ffd9a5" opacity=".2"/>
+<g opacity=".28" fill="#ff8df5"><circle cx="120" cy="295" r="5"/><circle cx="210" cy="188" r="3"/><circle cx="890" cy="250" r="5"/><circle cx="960" cy="355" r="4"/><circle cx="760" cy="130" r="3"/></g>
+<path d="M0 1010C175 900 330 955 465 870S735 805 870 860 995 830 1080 770V1620H0Z" fill="#0d0712" opacity=".9"/>
+<g transform="translate(170 250)" filter="url(#shadow)">
+  <ellipse cx="390" cy="545" rx="255" ry="135" fill="#d45cff" opacity=".18" filter="url(#glow)"/>
+  <path d="M215 460C120 375 145 255 250 180L305 275C350 242 414 230 480 250L548 167C627 245 644 362 592 445 552 511 476 558 386 557 314 556 255 526 215 460Z" fill="url(#fur)" stroke="#0f0d14" stroke-width="12"/>
+  <path d="M250 184L190 85 315 132 305 275Z" fill="#2e2b42" stroke="#0f0d14" stroke-width="10"/>
+  <path d="M548 167L630 75 650 223 592 445Z" fill="#2e2b42" stroke="#0f0d14" stroke-width="10"/>
+  <path d="M294 196C342 125 430 84 494 108 461 144 443 188 451 236 399 223 348 240 305 275Z" fill="#aa3949"/>
+  <path d="M360 148C389 105 430 77 470 67 462 115 474 149 505 177 457 171 415 179 378 202Z" fill="#d64b57"/>
+  <ellipse cx="337" cy="356" rx="48" ry="62" fill="#f7f3ef" transform="rotate(-12 337 356)"/>
+  <ellipse cx="475" cy="349" rx="48" ry="62" fill="#f7f3ef" transform="rotate(12 475 349)"/>
+  <ellipse cx="343" cy="365" rx="20" ry="34" fill="#6feadf"/>
+  <ellipse cx="469" cy="358" rx="20" ry="34" fill="#6feadf"/>
+  <ellipse cx="348" cy="369" rx="7" ry="17" fill="#162328"/>
+  <ellipse cx="464" cy="362" rx="7" ry="17" fill="#162328"/>
+  <circle cx="301" cy="307" r="20" fill="#b43b4c"/><circle cx="405" cy="292" r="22" fill="#b43b4c"/><circle cx="515" cy="306" r="20" fill="#b43b4c"/>
+  <path d="M385 420C407 434 430 434 452 419" fill="none" stroke="#8b2f3e" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160 525C215 560 260 610 290 680 223 680 161 649 120 602Z" fill="#1a171f"/>
+  <path d="M565 500C645 514 706 561 742 628 670 637 605 621 551 582Z" fill="#1a171f"/>
+  <path d="M168 566C92 595 52 652 40 725 118 716 184 690 232 648Z" fill="#2b2838"/>
+  <path d="M694 603C754 633 792 681 810 743 744 730 690 705 650 664Z" fill="#2b2838"/>
+</g>
+<rect x="64" y="70" width="330" height="54" rx="27" fill="#8f2f8f"/>
+<text x="229" y="107" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="800" fill="#fff">DIA COMUNITÁRIO</text>
+<text x="64" y="1115" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="900" fill="#fff" letter-spacing="-3">ZORUA</text>
+<text x="66" y="1184" font-family="Arial,Helvetica,sans-serif" font-size="37" font-weight="800" fill="#ff9df2">10 DE OUTUBRO • DIA COMUNITÁRIO</text>
+<rect x="64" y="1230" width="952" height="246" rx="42" fill="#100716" opacity=".94" stroke="#6d2d7d" stroke-width="2"/>
+<text x="112" y="1313" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#d7b7dd">HORÁRIO LOCAL</text>
+<text x="112" y="1393" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="900" fill="url(#gold)">14:00 — 17:00</text>
+<text x="112" y="1448" font-family="Arial,Helvetica,sans-serif" font-size="28" fill="#c8a4cf">Evolua para Zoroark com Soco Enganador</text>
+<text x="64" y="1552" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ed8fff">SPIDEY EVENT ART • PREMIUM v1</text>
+<circle cx="994" cy="1538" r="9" fill="#f5c84f"/>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#120504"/><stop offset=".48" stop-color="#7a1a08"/><stop offset="1" stop-color="#050202"/></linearGradient>
+  <radialGradient id="halo" cx="55%" cy="40%" r="55%"><stop stop-color="#ffd36a" stop-opacity=".92"/><stop offset=".28" stop-color="#ff6b2d" stop-opacity=".45"/><stop offset="1" stop-color="#ff3300" stop-opacity="0"/></radialGradient>
+  <linearGradient id="body" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#63251f"/><stop offset=".55" stop-color="#a93a2d"/><stop offset="1" stop-color="#d94f37"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff0a4"/><stop offset="1" stop-color="#ffb33c"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000" flood-opacity=".55"/></filter>
+</defs>
+<rect width="1080" height="1620" fill="url(#bg)"/>
+<circle cx="620" cy="500" r="430" fill="url(#halo)"/>
+<g opacity=".32" fill="#ffc368"><circle cx="110" cy="265" r="6"/><circle cx="190" cy="180" r="4"/><circle cx="860" cy="190" r="5"/><circle cx="965" cy="330" r="4"/><circle cx="790" cy="125" r="3"/></g>
+<path d="M0 1035C170 930 320 980 460 900S720 805 860 855 990 835 1080 770V1620H0Z" fill="#140705" opacity=".86"/>
+<g transform="translate(120 315) rotate(-8 430 330)" filter="url(#shadow)">
+  <ellipse cx="445" cy="420" rx="330" ry="120" fill="#ff4d20" opacity=".22" filter="url(#glow)"/>
+  <g fill="url(#body)" stroke="#31120f" stroke-width="8">
+    <ellipse cx="180" cy="475" rx="92" ry="74"/>
+    <ellipse cx="270" cy="435" rx="98" ry="78"/>
+    <ellipse cx="360" cy="390" rx="104" ry="82"/>
+    <ellipse cx="455" cy="345" rx="108" ry="86"/>
+    <ellipse cx="555" cy="305" rx="104" ry="82"/>
+    <ellipse cx="650" cy="275" rx="98" ry="78"/>
+  </g>
+  <g fill="#f0a83e" opacity=".68"><ellipse cx="185" cy="460" rx="28" ry="15"/><ellipse cx="278" cy="420" rx="30" ry="16"/><ellipse cx="370" cy="373" rx="31" ry="17"/><ellipse cx="468" cy="330" rx="32" ry="18"/><ellipse cx="560" cy="292" rx="30" ry="16"/></g>
+  <g fill="#44160f"><path d="M135 515l-38 48 58-18z"/><path d="M230 478l-30 52 55-21z"/><path d="M328 435l-28 55 56-24z"/><path d="M428 392l-26 58 58-26z"/><path d="M530 350l-24 56 55-24z"/></g>
+  <path d="M704 222C770 210 822 240 846 286 872 335 848 390 788 410 740 426 692 408 670 373 646 336 655 263 704 222Z" fill="#d9472c" stroke="#31120f" stroke-width="9"/>
+  <path d="M698 270C729 249 765 246 792 256L775 310 718 307Z" fill="#24100d"/>
+  <path d="M745 258l24 52 34-47z" fill="#ffe45b" stroke="#7c4a00" stroke-width="5"/>
+  <path d="M806 267l-28 46 48-18z" fill="#ffe45b" stroke="#7c4a00" stroke-width="5"/>
+  <path d="M742 355l36 35 42-40" fill="none" stroke="#f7c450" stroke-width="15" stroke-linecap="round"/>
+  <path d="M700 238c-22-44-13-79 17-112M785 230c27-47 65-66 105-58" fill="none" stroke="#f57f4f" stroke-width="13" stroke-linecap="round"/>
+</g>
+<rect x="64" y="70" width="305" height="54" rx="27" fill="#cc3a19"/>
+<text x="217" y="107" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="800" fill="#fff">SEGUNDA MAX</text>
+<text x="64" y="1115" font-family="Arial,Helvetica,sans-serif" font-size="94" font-weight="900" fill="#fff" letter-spacing="-2">SIZZLIPEDE</text>
+<text x="66" y="1184" font-family="Arial,Helvetica,sans-serif" font-size="37" font-weight="800" fill="#ffc06c">DINAMAX • 5 DE OUTUBRO</text>
+<rect x="64" y="1230" width="952" height="246" rx="42" fill="#120806" opacity=".94" stroke="#7f3218" stroke-width="2"/>
+<text x="112" y="1313" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#d7b8a7">HORÁRIO LOCAL</text>
+<text x="112" y="1393" font-family="Arial,Helvetica,sans-serif" font-size="66" font-weight="900" fill="url(#gold)">06:00 — 21:00</text>
+<text x="112" y="1448" font-family="Arial,Helvetica,sans-serif" font-size="28" fill="#caa493">Sizzlipede Dinamax em destaque nos Power Spots</text>
+<text x="64" y="1552" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ff9a58">SPIDEY EVENT ART • PREMIUM v1</text>
+<circle cx="994" cy="1538" r="9" fill="#f5c84f"/>
+</svg>
