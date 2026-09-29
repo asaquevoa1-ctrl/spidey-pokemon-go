@@ -20,10 +20,11 @@ REPO = os.getenv("GITHUB_REPOSITORY", "asaquevoa1-ctrl/spidey-pokemon-go").strip
 BRANCH = os.getenv("SPIDEY_ASSET_BRANCH", "main").strip() or "main"
 MODEL = os.getenv("SPIDEY_IMAGE_MODEL", "gpt-image-2.5-sunburst").strip()
 STANDARD = "spidey-premium-v1"
+# Mantém o identificador certificado pelo guard. A composição interna passa a key art v2.
 GOLD_ENGINE = "spidey-gold-openai-v1"
 GOLD_REFERENCE = "spidey-gold-standard-2026-09-25"
 ELIGIBLE = {"pending", "awaiting_gold_art", "rejected_art"}
-UA = "Mozilla/5.0 (SpideyPokemonGO/3.0)"
+UA = "Mozilla/5.0 (SpideyPokemonGO/4.0)"
 
 
 class PageText(HTMLParser):
@@ -35,10 +36,10 @@ class PageText(HTMLParser):
         self.description = ""
 
     def handle_starttag(self, tag, attrs):
-        a = dict(attrs)
+        attrs = dict(attrs)
         if tag == "meta":
-            key = (a.get("property") or a.get("name") or "").lower()
-            value = (a.get("content") or "").strip()
+            key = (attrs.get("property") or attrs.get("name") or "").lower()
+            value = (attrs.get("content") or "").strip()
             if key in {"description", "og:description", "twitter:description"} and value and not self.description:
                 self.description = unescape(value)
         elif tag == "p":
@@ -92,10 +93,10 @@ def fetch_page_context(url):
     if not str(url or "").startswith("http"):
         return ""
     try:
-        r = requests.get(url, headers={"User-Agent": UA}, timeout=35, allow_redirects=True)
-        r.raise_for_status()
+        response = requests.get(url, headers={"User-Agent": UA}, timeout=35, allow_redirects=True)
+        response.raise_for_status()
         parser = PageText()
-        parser.feed(r.text)
+        parser.feed(response.text)
         chunks = []
         if parser.description:
             chunks.append(parser.description)
@@ -107,11 +108,11 @@ def fetch_page_context(url):
 
 
 def fetch_source_image(url):
-    r = requests.get(str(url), headers={"User-Agent": UA}, timeout=45, allow_redirects=True)
-    r.raise_for_status()
-    if len(r.content) < 8000:
+    response = requests.get(str(url), headers={"User-Agent": UA}, timeout=45, allow_redirects=True)
+    response.raise_for_status()
+    if len(response.content) < 8000:
         raise RuntimeError("mídia-fonte pequena ou inválida")
-    image = Image.open(io.BytesIO(r.content)).convert("RGB")
+    image = Image.open(io.BytesIO(response.content)).convert("RGB")
     if image.width < 450 or image.height < 300:
         raise RuntimeError(f"mídia-fonte insuficiente: {image.width}x{image.height}")
     image.thumbnail((1536, 1536), Image.Resampling.LANCZOS)
@@ -127,35 +128,35 @@ def prompt_for(item, revision, page_context):
     message = str(item.get("mensagem") or "").strip()
     title = clean_title(item)
     constraints = ", ".join(str(x) for x in (item.get("visual_constraints") or [])) or "nenhuma regra extra"
-    revision_note = "primeira geração" if revision <= 1 else f"revisão R{revision}; mudar de forma perceptível a composição em relação à anterior"
+    revision_note = "primeira geração" if revision <= 1 else f"revisão R{revision}; mudar perceptivelmente enquadramento, luz ou profundidade"
+
     return f"""
-Crie UMA arte final vertical premium para o canal brasileiro Spidey Pokémon GO.
+Crie apenas o KEY ART cinematográfico vertical 2:3 para uma peça editorial premium de Pokémon GO.
 
-Isto NÃO é um card simples, NÃO é uma captura emoldurada e NÃO deve colocar a imagem de referência dentro de uma caixa. Reconstrua a cena como uma peça promocional cinematográfica completa, rica e compartilhável, com profundidade, iluminação premium, cenário temático, personagem/evento dominante, contraste forte, acabamento gamer/editorial e composição visual equivalente a campanha oficial de grande evento.
+A imagem gerada será finalizada por um sistema gráfico separado. Portanto:
+- NÃO escreva título, legenda, data, horário, bônus, número, palavra, marca d'água ou texto de qualquer espécie;
+- NÃO desenhe logotipos, marcas ou selos;
+- NÃO crie cards, caixas, painéis, molduras, dashboards ou blocos de interface;
+- NÃO coloque a imagem de referência dentro de outra imagem;
+- NÃO deixe bordas de screenshot, telefone, navegador ou publicação social;
+- NÃO invente personagens, formas, roupas, acessórios, shiny, itens ou elementos factuais não sustentados pela referência/contexto;
+- preserve com alta fidelidade a identidade visual do Pokémon/personagem e os elementos factuais importantes da referência;
+- reconstrua o assunto como uma CENA COMPLETA, full-bleed, com profundidade, atmosfera, iluminação volumétrica, primeiro plano/meio/fundo e acabamento de campanha premium;
+- protagonista grande e integrado ao ambiente, nunca parecendo figurinha colada;
+- composição mobile-first com leitura imediata;
+- azul elétrico e dourado podem aparecer apenas como acentos Spidey, sem destruir a paleta natural do evento;
+- reserve espaço visual respirável no terço inferior esquerdo para o título que será aplicado depois pelo sistema;
+- mantenha o canto inferior direito relativamente limpo para a assinatura oficial pequena;
+- evite áreas totalmente pretas, fundos vazios e estética genérica de template.
 
-PADRÃO VISUAL OBRIGATÓRIO SPIDEY GOLD STANDARD:
-- vertical 2:3, mobile-first;
-- protagonista grande integrado ao ambiente, não uma foto colada;
-- azul neon + dourado como identidade de apoio, sem engessar a paleta temática do evento;
-- título principal muito forte, grande e legível;
-- blocos informativos premium integrados à cena, com ícones limpos;
-- aparência cinematográfica, vibrante, moderna e de alto impacto;
-- jamais aparência genérica, template simples, dashboard corporativo, caixa de remédio ou screenshot dentro de moldura;
-- texto visível em português do Brasil, exceto nomes oficiais, nomes de Pokémon e marcas;
-- não inventar datas, horários, bônus, shiny, locais, recompensas ou itens;
-- se algum dado não estiver confirmado no contexto factual, simplesmente omita esse bloco;
-- não desenhe logotipo Spidey, não crie marca d'água Spidey e não duplique branding: o logotipo oficial será aplicado depois pelo sistema;
-- deixe uma faixa limpa no topo para o cabeçalho oficial e uma área limpa no rodapé central para o logotipo oficial;
-- não inserir marcas d'água aleatórias.
-
-TÍTULO/ASSUNTO:
+ASSUNTO PARA ENTENDER A CENA (não escrever este texto na imagem):
 {title}
 
-TEXTO DA ENTRADA:
-{message[:4500]}
+ENTRADA FACTUAL (usar somente para compreender o contexto visual; não reproduzir texto):
+{message[:4200]}
 
-CONTEXTO FACTUAL DA FONTE:
-{page_context or 'Sem contexto adicional disponível; use somente a entrada e a imagem de referência.'}
+CONTEXTO DA FONTE (não reproduzir texto):
+{page_context or 'Sem contexto adicional; preserve apenas o que estiver sustentado pela entrada e pela imagem de referência.'}
 
 REGRAS VISUAIS ESPECÍFICAS:
 {constraints}
@@ -163,8 +164,40 @@ REGRAS VISUAIS ESPECÍFICAS:
 GERAÇÃO:
 {revision_note}
 
-Use a imagem de referência somente para preservar o assunto/personagem e pistas visuais factuais. O resultado deve parecer uma arte nova e premium do Spidey, no mesmo nível visual de peças como City Safari, Autumn Picnic, Hora do Holofote, collabs e alertas premium já aprovados pelo editor.
+Resultado esperado: key art cinematográfico de campanha, sem tipografia e sem UI. O acabamento editorial, título exato, fonte e logo serão inseridos posteriormente pelo sistema Spidey.
 """.strip()
+
+
+def text_width(draw, value, text_font):
+    box = draw.textbbox((0, 0), value, font=text_font)
+    return box[2] - box[0]
+
+
+def wrap_title(draw, value, text_font, max_width):
+    words = str(value or "").split()
+    if not words:
+        return ["POKÉMON GO"]
+    lines = []
+    current = words[0]
+    for word in words[1:]:
+        candidate = f"{current} {word}"
+        if text_width(draw, candidate, text_font) <= max_width:
+            current = candidate
+        else:
+            lines.append(current)
+            current = word
+    lines.append(current)
+    return lines
+
+
+def fit_title(draw, value, max_width, max_lines=4):
+    for size in range(72, 31, -2):
+        title_font = font(size, True)
+        lines = wrap_title(draw, value, title_font, max_width)
+        if len(lines) <= max_lines and all(text_width(draw, line, title_font) <= max_width for line in lines):
+            return title_font, lines
+    title_font = font(32, True)
+    return title_font, wrap_title(draw, value, title_font, max_width)[:max_lines]
 
 
 def overlay_brand(path, item):
@@ -173,39 +206,58 @@ def overlay_brand(path, item):
     overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
-    # Cabeçalho fixo oficial.
-    draw.rounded_rectangle((30, 28, 205, 92), radius=8, fill=(16, 91, 218, 245))
-    draw.text((52, 43), "SPIDEY", font=font(31, True), fill="white")
-    draw.rectangle((222, 31, 226, 91), fill=(240, 245, 255, 235))
-    draw.text((245, 33), "POKÉMON GO", font=font(22, True), fill="white")
-    draw.text((245, 62), "NOTÍCIAS • EVENTOS • COMUNIDADE", font=font(17, True), fill=(240, 245, 255, 245))
-    slogan = "SEMPRE\nUM PASSO\nÀ FRENTE"
-    draw.multiline_text((w - 190, 28), slogan, font=font(19, False), fill="white", spacing=5, align="center")
-    draw.rectangle((w - 135, 105, w - 62, 111), fill=(20, 119, 255, 245))
+    # Gradientes editoriais: protegem tipografia sem transformar a arte em um card.
+    top_h = max(150, int(h * 0.13))
+    for y in range(top_h):
+        alpha = int(125 * (1 - y / top_h))
+        draw.line((0, y, w, y), fill=(1, 8, 23, alpha))
 
-    # Rodapé escurecido para assinatura oficial sem competir com a arte.
-    footer_h = 250
-    for y in range(h - footer_h, h):
-        t = (y - (h - footer_h)) / footer_h
-        alpha = int(25 + 205 * t)
-        draw.line((0, y, w, y), fill=(0, 10, 28, alpha))
+    bottom_h = max(430, int(h * 0.35))
+    start_y = h - bottom_h
+    for y in range(start_y, h):
+        t = (y - start_y) / bottom_h
+        alpha = int(18 + 205 * (t ** 1.65))
+        draw.line((0, y, w, y), fill=(1, 8, 23, alpha))
 
-    logo = Image.open(LOGO).convert("RGB")
-    side = min(215, int(w * 0.21))
-    logo = logo.resize((side, side), Image.Resampling.LANCZOS).convert("RGBA")
-    mask = Image.new("L", (side, side), 0)
-    ImageDraw.Draw(mask).ellipse((0, 0, side - 1, side - 1), fill=255)
-    lx = (w - side) // 2
-    ly = h - side - 25
-    overlay.paste(logo, (lx, ly), mask)
+    margin = max(34, int(w * 0.045))
 
-    line_y = ly + side // 2
-    draw.rectangle((35, line_y, lx - 18, line_y + 5), fill=(235, 194, 73, 235))
-    draw.rectangle((lx + side + 18, line_y, w - 35, line_y + 5), fill=(235, 194, 73, 235))
-    draw.text((45, h - 105), "JOGO\nEXPLORAÇÃO\nCOMUNIDADE", font=font(16, False), fill=(247, 249, 252, 240), spacing=7)
-    src = f"Fonte: {source_label(item)}"
-    sw = draw.textbbox((0, 0), src, font=font(16, False))[2]
-    draw.text((w - sw - 45, h - 70), src, font=font(16, False), fill=(247, 249, 252, 240))
+    # Cabeçalho mínimo. Sem caixa azul, slogan ou bloco fixo pesado.
+    header_font = font(max(18, int(w * 0.021)), True)
+    micro_font = font(max(14, int(w * 0.015)), False)
+    draw.text((margin, 34), "SPIDEY  /  POKÉMON GO", font=header_font, fill=(250, 252, 255, 245))
+    draw.text((margin, 70), "NOTÍCIAS • EVENTOS • COMUNIDADE", font=micro_font, fill=(188, 217, 245, 225))
+    draw.rectangle((margin, 105, margin + int(w * 0.15), 109), fill=(235, 194, 73, 235))
+
+    # Título exato aplicado pelo sistema: sem depender da capacidade tipográfica do modelo de imagem.
+    title = clean_title(item)
+    max_title_width = int(w * 0.76)
+    title_font, lines = fit_title(draw, title, max_title_width)
+    line_box = draw.textbbox((0, 0), "Ag", font=title_font)
+    line_height = max(38, line_box[3] - line_box[1] + 10)
+    title_height = line_height * len(lines)
+    title_y = h - 105 - title_height
+
+    # Sombra suave de texto, sem painel retangular.
+    for index, line in enumerate(lines):
+        y = title_y + index * line_height
+        draw.text((margin + 2, y + 3), line, font=title_font, fill=(0, 0, 0, 155))
+        draw.text((margin, y), line, font=title_font, fill=(252, 253, 255, 255))
+
+    source = f"Fonte: {source_label(item)}"
+    source_font = font(max(15, int(w * 0.016)), False)
+    draw.text((margin, h - 58), source, font=source_font, fill=(220, 232, 245, 230))
+
+    # Logo oficial pequeno, como assinatura, não como protagonista.
+    if LOGO.exists():
+        logo = Image.open(LOGO).convert("RGB")
+        side = min(112, max(82, int(w * 0.105)))
+        logo = logo.resize((side, side), Image.Resampling.LANCZOS).convert("RGBA")
+        mask = Image.new("L", (side, side), 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, side - 1, side - 1), fill=255)
+        lx = w - margin - side
+        ly = h - margin - side
+        draw.ellipse((lx - 4, ly - 4, lx + side + 4, ly + side + 4), outline=(235, 194, 73, 220), width=3)
+        overlay.paste(logo, (lx, ly), mask)
 
     final = Image.alpha_composite(image, overlay).convert("RGB")
     final.save(path, "JPEG", quality=95, optimize=True)
@@ -309,7 +361,7 @@ def generate_one(path, item):
         "visual_reference_set": GOLD_REFERENCE,
         "gold_standard_visual": True,
         "brand_logo_overlay": True,
-        "art_revision_style": "gold_cinematic_editorial",
+        "art_revision_style": "gold_keyart_editorial_v2",
         "gold_generated_at_utc": datetime.now(timezone.utc).isoformat(),
     })
     item.pop("gold_art_error", None)
