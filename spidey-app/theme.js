@@ -1,6 +1,25 @@
 (() => {
   const STORAGE_KEY = 'spidey-theme';
   const media = window.matchMedia('(prefers-color-scheme: dark)');
+  const APP_V2_VERSION = '20260929-appv2-1';
+
+  function loadAppV2Assets() {
+    if (!document.querySelector('link[data-spidey-app-v2]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `app-v2.css?v=${APP_V2_VERSION}`;
+      link.dataset.spideyAppV2 = '1';
+      document.head.appendChild(link);
+    }
+
+    if (!document.querySelector('script[data-spidey-app-v2]')) {
+      const script = document.createElement('script');
+      script.src = `app-v2.js?v=${APP_V2_VERSION}`;
+      script.dataset.spideyAppV2 = '1';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  }
 
   function normalizeMode(value) {
     return ['light', 'dark', 'system'].includes(value) ? value : 'system';
@@ -19,7 +38,7 @@
     document.documentElement.style.colorScheme = effective;
 
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', effective === 'dark' ? '#07162d' : '#f4f7fb');
+    if (meta) meta.setAttribute('content', effective === 'dark' ? '#07162d' : '#f6f8fb');
 
     const select = document.querySelector('#themeSelect');
     if (select && select.value !== normalized) select.value = normalized;
@@ -47,6 +66,8 @@
 
     applyTheme(currentMode(), false);
   }
+
+  loadAppV2Assets();
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initThemeControl, { once: true });
   else initThemeControl();

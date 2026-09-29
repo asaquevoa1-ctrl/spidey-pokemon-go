@@ -1,0 +1,460 @@
+/* Spidey App v2 — feed vivo, menos "slide", mobile-first */
+
+:root {
+  --v2-radius-lg: 24px;
+  --v2-radius-md: 16px;
+  --v2-motion: 180ms cubic-bezier(.2,.75,.25,1);
+}
+
+body.spidey-app-v2 {
+  overflow-x: hidden;
+}
+
+body.spidey-app-v2 main {
+  width: min(100%, 1040px);
+  padding-top: 8px;
+}
+
+/* A abertura deixa de ser um slide/cartaz. */
+body.spidey-app-v2 .experience-intro {
+  margin: 0;
+  padding: 24px 4px 14px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible;
+}
+
+body.spidey-app-v2 .experience-intro::after { display: none; }
+
+body.spidey-app-v2 .experience-intro h1 {
+  max-width: 690px;
+  margin: 8px 0 10px;
+  font-size: clamp(2.25rem, 9vw, 4.6rem);
+  line-height: .94;
+  letter-spacing: -.055em;
+}
+
+body.spidey-app-v2 .experience-intro > p:not(.microcopy) {
+  max-width: 560px;
+  margin: 0;
+  font-size: .98rem;
+  line-height: 1.52;
+}
+
+body.spidey-app-v2 .hero-actions {
+  margin-top: 16px;
+}
+
+body.spidey-app-v2 .primary-btn,
+body.spidey-app-v2 .secondary-btn,
+body.spidey-app-v2 .action-btn,
+body.spidey-app-v2 .ghost-btn {
+  border-radius: 999px;
+  transition: transform var(--v2-motion), box-shadow var(--v2-motion), background var(--v2-motion);
+}
+
+body.spidey-app-v2 .primary-btn:active,
+body.spidey-app-v2 .secondary-btn:active,
+body.spidey-app-v2 .action-btn:active,
+body.spidey-app-v2 .ghost-btn:active {
+  transform: scale(.97);
+}
+
+/* Resumo vira uma faixa leve, não três cards de apresentação. */
+body.spidey-app-v2 .status-strip {
+  display: flex;
+  gap: 8px;
+  margin: 4px 0 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 2px 0 4px;
+}
+
+body.spidey-app-v2 .status-strip::-webkit-scrollbar { display: none; }
+
+body.spidey-app-v2 .status-strip div {
+  min-width: 108px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  text-align: left;
+  box-shadow: none !important;
+}
+
+body.spidey-app-v2 .status-strip strong {
+  display: inline;
+  font-size: 1rem;
+}
+
+body.spidey-app-v2 .status-strip span {
+  display: inline;
+  margin: 0;
+  font-size: .72rem;
+}
+
+body.spidey-app-v2 .section {
+  margin-top: 24px;
+}
+
+body.spidey-app-v2 .section-head {
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+body.spidey-app-v2 .section-head h2 {
+  font-size: 1.36rem;
+}
+
+body.spidey-app-v2 .eyebrow,
+body.spidey-app-v2 .experience-kicker {
+  letter-spacing: .105em;
+}
+
+/* Destaque principal mais próximo de um app de esporte/eventos. */
+body.spidey-app-v2 .experience-feature {
+  border-radius: var(--v2-radius-lg);
+  box-shadow: 0 18px 52px rgba(0,0,0,.22);
+  transition: transform var(--v2-motion), border-color var(--v2-motion);
+}
+
+body.spidey-app-v2 .experience-feature:active {
+  transform: scale(.992);
+}
+
+body.spidey-app-v2 .experience-feature-copy {
+  gap: 9px;
+}
+
+body.spidey-app-v2 .experience-countdown {
+  padding: 6px 10px;
+  font-size: .8rem;
+}
+
+/* Rail horizontal: cards menores, com ritmo de feed. */
+body.spidey-app-v2 .experience-rail {
+  grid-auto-columns: minmax(210px, 29%);
+  gap: 10px;
+  padding: 2px 0 10px;
+  scroll-padding-inline: 2px;
+}
+
+body.spidey-app-v2 .experience-mini {
+  border-radius: 18px;
+  box-shadow: none;
+  transition: transform var(--v2-motion), border-color var(--v2-motion);
+}
+
+body.spidey-app-v2 .experience-mini:active {
+  transform: scale(.985);
+}
+
+body.spidey-app-v2 .experience-mini-copy {
+  padding: 12px 13px 14px;
+}
+
+/* Lista final vira timeline/feed em vez de pilha de slides. */
+body.spidey-app-v2 .event-list {
+  gap: 0;
+}
+
+body.spidey-app-v2 .event-card {
+  position: relative;
+  grid-template-columns: 76px minmax(0,1fr);
+  gap: 13px;
+  padding: 12px 4px;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(140,170,205,.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: transform var(--v2-motion), background var(--v2-motion);
+}
+
+body.spidey-app-v2 .event-card::before { display: none !important; }
+
+body.spidey-app-v2 .event-card:hover,
+body.spidey-app-v2 .event-card:focus-visible {
+  transform: translateX(3px);
+  background: rgba(90,150,210,.045) !important;
+  outline: none;
+}
+
+body.spidey-app-v2 .event-thumb {
+  width: 76px;
+  height: 92px;
+  border-radius: 14px !important;
+}
+
+body.spidey-app-v2 .event-card h3 {
+  margin: 3px 0 5px;
+  font-size: 1rem;
+}
+
+body.spidey-app-v2 .event-meta {
+  line-height: 1.42;
+}
+
+body.spidey-app-v2 .badges {
+  margin-top: 7px;
+}
+
+/* Calendário continua funcional, mas visualmente mais leve. */
+body.spidey-app-v2 .calendar-wrap,
+body.spidey-app-v2 .weekly-hero-card,
+body.spidey-app-v2 .map-shell {
+  border-radius: 18px;
+  box-shadow: none !important;
+}
+
+body.spidey-app-v2 .calendar-day {
+  transition: transform var(--v2-motion), background var(--v2-motion), border-color var(--v2-motion);
+}
+
+body.spidey-app-v2 .calendar-day:active {
+  transform: scale(.95);
+}
+
+/* Telas secundárias começam como cabeçalho, não como slide. */
+body.spidey-app-v2 .hero-compact {
+  margin: 0 0 14px;
+  padding: 22px 4px 14px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.spidey-app-v2 .hero-compact::after { display: none; }
+body.spidey-app-v2 .hero-compact h1 { margin-bottom: 8px; }
+
+/* Detalhe se comporta como bottom-sheet no celular. */
+body.spidey-app-v2 .event-dialog {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+body.spidey-app-v2 .detail-body {
+  padding: 20px;
+}
+
+body.spidey-app-v2 .info-grid {
+  gap: 7px;
+  margin: 14px 0 18px;
+}
+
+body.spidey-app-v2 .info-box {
+  border-radius: 12px;
+  box-shadow: none !important;
+}
+
+body.spidey-app-v2 .bonus-list {
+  gap: 1px;
+  border-top: 1px solid rgba(140,170,205,.13);
+  border-bottom: 1px solid rgba(140,170,205,.13);
+}
+
+body.spidey-app-v2 .bonus-list li {
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid rgba(140,170,205,.1);
+}
+
+body.spidey-app-v2 .bonus-list li:last-child { border-bottom: 0; }
+
+/* Barra inferior mais leve e com estado ativo evidente. */
+body.spidey-app-v2 .app-tabs {
+  border-radius: 22px;
+  padding: 5px;
+}
+
+body.spidey-app-v2 .app-tab {
+  position: relative;
+  transition: color var(--v2-motion), background var(--v2-motion), transform var(--v2-motion);
+}
+
+body.spidey-app-v2 .app-tab:active { transform: scale(.96); }
+
+/* Movimento discreto. */
+body.spidey-app-v2 .v2-reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 360ms ease, transform 360ms ease;
+}
+
+body.spidey-app-v2 .v2-reveal.v2-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modo claro: paleta própria, com contraste de leitura. */
+:root[data-theme="light"] body.spidey-app-v2 {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-2: #edf2f8;
+  --text: #0b1728;
+  --muted: #42566e;
+  --cyan: #00698f;
+  --blue: #1557b7;
+  --gold: #825600;
+  --good: #0d6f4d;
+  --danger: #ad2f43;
+  color: var(--text);
+  background: #f6f8fb;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .topbar {
+  background: rgba(250,252,255,.94);
+  border-bottom-color: rgba(23,48,78,.10);
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .brand span,
+:root[data-theme="light"] body.spidey-app-v2 .hero p,
+:root[data-theme="light"] body.spidey-app-v2 .experience-summary,
+:root[data-theme="light"] body.spidey-app-v2 .experience-range,
+:root[data-theme="light"] body.spidey-app-v2 .experience-mini-meta,
+:root[data-theme="light"] body.spidey-app-v2 .event-meta,
+:root[data-theme="light"] body.spidey-app-v2 .calendar-focus-note,
+:root[data-theme="light"] body.spidey-app-v2 .microcopy,
+:root[data-theme="light"] body.spidey-app-v2 .detail-body p {
+  color: #42566e !important;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .eyebrow,
+:root[data-theme="light"] body.spidey-app-v2 .experience-kicker,
+:root[data-theme="light"] body.spidey-app-v2 .experience-link-btn {
+  color: #00698f !important;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .secondary-btn,
+:root[data-theme="light"] body.spidey-app-v2 .action-btn {
+  color: #103657;
+  background: #e7f0fa;
+  border-color: #bfd0e3;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .badge,
+:root[data-theme="light"] body.spidey-app-v2 .weekly-tags span,
+:root[data-theme="light"] body.spidey-app-v2 .stamp-check {
+  color: #173a58;
+  background: #eaf1f8;
+  border-color: #c7d5e3;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .status-strip div {
+  background: #fff !important;
+  border: 1px solid #d6e0ea !important;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .status-strip span {
+  color: #4a5e74;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .status-strip strong {
+  color: #704a00;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .event-card {
+  border-bottom-color: #d9e1e9 !important;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .event-card h3,
+:root[data-theme="light"] body.spidey-app-v2 h1,
+:root[data-theme="light"] body.spidey-app-v2 h2,
+:root[data-theme="light"] body.spidey-app-v2 h3,
+:root[data-theme="light"] body.spidey-app-v2 strong {
+  color: #0b1728;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .calendar-wrap,
+:root[data-theme="light"] body.spidey-app-v2 .weekly-hero-card,
+:root[data-theme="light"] body.spidey-app-v2 .experience-mini,
+:root[data-theme="light"] body.spidey-app-v2 .stamp-card,
+:root[data-theme="light"] body.spidey-app-v2 .map-location-card,
+:root[data-theme="light"] body.spidey-app-v2 .map-pending-card,
+:root[data-theme="light"] body.spidey-app-v2 .info-box {
+  background: #fff !important;
+  border-color: #d6e0ea !important;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .event-dialog {
+  background: #f8fafc;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .bonus-list li {
+  color: #21374d;
+}
+
+@media (max-width: 760px) {
+  body.spidey-app-v2 main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  body.spidey-app-v2 .experience-feature-button {
+    display: block;
+    position: relative;
+  }
+
+  body.spidey-app-v2 .experience-feature-art {
+    aspect-ratio: 4 / 5;
+    max-height: 66vh;
+    object-fit: cover;
+  }
+
+  body.spidey-app-v2 .experience-feature-copy {
+    position: relative;
+    z-index: 2;
+    margin-top: -92px;
+    padding: 78px 18px 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(5,14,27,.95) 46%, rgba(5,14,27,1) 100%);
+  }
+
+  :root[data-theme="light"] body.spidey-app-v2 .experience-feature-copy {
+    background: linear-gradient(180deg, transparent 0%, rgba(248,250,252,.94) 48%, #f8fafc 100%);
+  }
+
+  body.spidey-app-v2 .experience-rail {
+    grid-auto-columns: minmax(218px, 72vw);
+  }
+
+  body.spidey-app-v2 .event-dialog {
+    width: 100%;
+    max-width: none;
+    max-height: 94dvh;
+    margin: auto 0 0;
+    border-radius: 24px 24px 0 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    animation: spideySheetIn 220ms cubic-bezier(.2,.75,.25,1);
+  }
+
+  body.spidey-app-v2 .dialog-close {
+    top: 8px;
+  }
+}
+
+@keyframes spideySheetIn {
+  from { transform: translateY(28px); opacity: .65; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.spidey-app-v2 *,
+  body.spidey-app-v2 *::before,
+  body.spidey-app-v2 *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+
+  body.spidey-app-v2 .v2-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

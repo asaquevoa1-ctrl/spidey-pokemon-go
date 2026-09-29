@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260929-premium-approved-v1';
+const CACHE = 'spidey-app-v2-20260929-dynamic-v1';
 const CORE = [
   './',
   './index.html',
@@ -11,7 +11,9 @@ const CORE = [
   './visual-v3.css',
   './theme.css',
   './qa-corrections-v1.css',
+  './app-v2.css',
   './theme.js',
+  './app-v2.js',
   './app.js',
   './art-system.js',
   './weekly.js',
@@ -56,7 +58,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   const isAppShell = url.origin === self.location.origin && (
     request.mode === 'navigate' ||
-    /\/(?:index\.html|app\.js|art-system\.js|weekly\.js|premium-event-art\.js|premium-art-pack-v1\.js|map\.js|push\.js|calendar-enhancements\.js|experience-v1\.js|qa-corrections-v1\.js|stamps-v2\.js|theme\.js|styles\.css|art-system\.css|stamps\.css|stamps-v2\.css|tabs-v2\.css|experience-v1\.css|visual-v3\.css|theme\.css|qa-corrections-v1\.css)$/.test(url.pathname)
+    /\/(?:index\.html|app\.js|app-v2\.js|art-system\.js|weekly\.js|premium-event-art\.js|premium-art-pack-v1\.js|map\.js|push\.js|calendar-enhancements\.js|experience-v1\.js|qa-corrections-v1\.js|stamps-v2\.js|theme\.js|styles\.css|app-v2\.css|art-system\.css|stamps\.css|stamps-v2\.css|tabs-v2\.css|experience-v1\.css|visual-v3\.css|theme\.css|qa-corrections-v1\.css)$/.test(url.pathname)
   );
   const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json');
 
