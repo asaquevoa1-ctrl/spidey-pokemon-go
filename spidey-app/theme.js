@@ -1,7 +1,7 @@
 (() => {
   const STORAGE_KEY = 'spidey-theme';
   const media = window.matchMedia('(prefers-color-scheme: dark)');
-  const APP_UI_VERSION = '20260929-appv23-mobilecleanup1';
+  const APP_UI_VERSION = '20260929-appv23-mobilecleanup2';
 
   function hasAsset(selector, name) {
     return [...document.querySelectorAll(selector)].some((el) => String(el.href || el.src || '').includes(name));

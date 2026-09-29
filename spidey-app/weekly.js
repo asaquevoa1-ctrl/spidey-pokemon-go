@@ -37,9 +37,30 @@ function weeklyTimeLabel(item) {
 }
 
 function weeklyArtUrl(item) {
+  const event = weeklyFindEvent(item?.id);
+
+  // Arte Premium aprovada do catálogo é a única preferência visual automática.
+  const premium = window.SpideyPremiumArt?.resolve?.(event, 'weekly');
+  if (premium?.url) {
+    return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(premium) : premium.url;
+  }
+
+  // Fail-closed: weekly_art técnico, vetor gerado, placeholder ou fallback nunca
+  // entra na interface pública só para preencher espaço.
   const art = item?.weekly_art || {};
-  if (art.url && !/spidey-logo/i.test(art.url) && !/^data:/i.test(art.url)) return art.url;
-  return typeof generatedEventArtUrl === 'function' ? generatedEventArtUrl(item) : '';
+  const url = String(art.url || '').trim();
+  const technical = /(?:^|\/)assets\/events\/generated\//i.test(url)
+    || /generated_vector|placeholder|preview|fallback/i.test(`${art.source_role || ''} ${art.kind || ''}`);
+
+  if (
+    art.premium === true
+    && url
+    && !technical
+    && !/spidey-logo/i.test(url)
+    && !/^data:/i.test(url)
+  ) return url;
+
+  return '';
 }
 
 function weeklyFindEvent(id) {

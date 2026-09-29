@@ -1,12 +1,12 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-app-v2.3-20260929.1-mobile-cleanup';
+  const VERSION = 'spidey-app-v2.3-20260929.2-video-cleanup';
   const TECHNICAL_ART = /\/assets\/events\/generated\//i;
   let scheduled = false;
 
   function contextText(img) {
-    const owner = img.closest('[data-v22-event], .event-card, .experience-mini, .experience-feature, #eventDetail');
+    const owner = img.closest('[data-v22-event], .event-card, .experience-mini, .experience-feature, .weekly-item, #eventDetail');
     return `${img.alt || ''} ${owner?.textContent || ''}`;
   }
 
@@ -24,6 +24,7 @@
     img.closest('.experience-mini')?.classList.add('v23-no-art');
     img.closest('.experience-feature')?.classList.add('v23-no-art');
     img.closest('.event-card')?.classList.add('v23-no-art');
+    img.closest('.weekly-item')?.classList.add('v23-no-art');
     img.closest('[data-v22-event]')?.classList.add('v23-no-art');
   }
 
@@ -38,6 +39,7 @@
     img.closest('.experience-mini')?.classList.remove('v23-no-art');
     img.closest('.experience-feature')?.classList.remove('v23-no-art');
     img.closest('.event-card')?.classList.remove('v23-no-art');
+    img.closest('.weekly-item')?.classList.remove('v23-no-art');
     img.closest('[data-v22-event]')?.classList.remove('v23-no-art');
   }
 
@@ -74,7 +76,7 @@
   }
 
   function guardPublicArt(root = document) {
-    root.querySelectorAll?.('.detail-hero, .experience-feature-art, .experience-mini img, .event-thumb, .v22-event-art')
+    root.querySelectorAll?.('.detail-hero, .experience-feature-art, .experience-mini img, .event-thumb, .v22-event-art, .weekly-item img')
       .forEach(guardImage);
   }
 
@@ -83,6 +85,21 @@
     const feedSection = document.querySelector('#eventList')?.closest('.section');
     if (!feedSection) return;
     feedSection.classList.toggle('v23-legacy-feed', Boolean(board));
+  }
+
+  function hideInternalStampNotes(root = document) {
+    root.querySelectorAll?.('.stamp-detail-v2 h3').forEach((heading) => {
+      if (heading.textContent.trim() !== 'Observações') return;
+      heading.hidden = true;
+      const notes = heading.nextElementSibling;
+      if (notes?.matches('.bonus-list')) notes.hidden = true;
+    });
+
+    root.querySelectorAll?.('.stamp-detail-v2 li, .stamp-detail-v2 p').forEach((el) => {
+      if (/Piloto SPS|Updated exact coords|fonte de cruzamento|revalidar antes de substituir/i.test(el.textContent || '')) {
+        el.hidden = true;
+      }
+    });
   }
 
   function humanizeRemainingCopy(root = document) {
@@ -108,6 +125,7 @@
     document.documentElement.dataset.spideyApp = 'v2.3';
     hideLegacyFeedWhenMonthBoardExists();
     humanizeRemainingCopy();
+    hideInternalStampNotes();
     guardPublicArt();
   }
 
