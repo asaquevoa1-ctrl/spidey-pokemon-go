@@ -17,27 +17,33 @@
         document.documentElement.dataset.themeMode = 'system';
         document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
-      window.SPIDEY_BUILD = '2026-09-29-keyart-v6';
+      window.SPIDEY_BUILD = '2026-09-29-premium-v8';
     })();
   </script>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="stamps.css">
-  <link rel="stylesheet" href="art-system.css?v=20260929-keyart6">
-  <link rel="stylesheet" href="tabs-v2.css">
-  <link rel="stylesheet" href="experience-v1.css">
-  <link rel="stylesheet" href="visual-v3.css?v=20260929-keyart6">
-  <link rel="stylesheet" href="theme.css">
-  <link rel="stylesheet" href="qa-corrections-v1.css">
-  <link rel="stylesheet" href="stamps-v2.css">
+  <link rel="stylesheet" href="styles.css?v=20260929-premium8">
+  <link rel="stylesheet" href="stamps.css?v=20260929-premium8">
+  <link rel="stylesheet" href="art-system.css?v=20260929-premium8">
+  <link rel="stylesheet" href="tabs-v2.css?v=20260929-premium8">
+  <link rel="stylesheet" href="experience-v1.css?v=20260929-premium8">
+  <link rel="stylesheet" href="visual-v3.css?v=20260929-premium8">
+  <link rel="stylesheet" href="theme.css?v=20260929-premium8">
+  <link rel="stylesheet" href="qa-corrections-v1.css?v=20260929-premium8">
+  <link rel="stylesheet" href="stamps-v2.css?v=20260929-premium8">
   <style>
-    .detail-hero {
-      width: 100%;
-      height: min(calc((100vw - 18px) * 1.5), 1080px) !important;
+    .detail-hero,
+    .spidey-detail-v3 .detail-hero.spidey-poster-art-v3,
+    #eventDetail .detail-hero.spidey-poster-art-v3 {
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
       max-height: none !important;
+      aspect-ratio: auto !important;
       object-fit: contain !important;
-      object-position: center center;
-      background: #0a1222;
+      object-position: center top !important;
+      padding: 0 !important;
+      background: transparent !important;
     }
   </style>
   <title>Spidey Pokémon GO</title>
@@ -246,27 +252,24 @@
   </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="theme.js" defer></script>
-  <script src="app.js" defer></script>
-  <script src="art-system.js?v=20260929-keyart6" defer></script>
-  <script src="weekly.js" defer></script>
-  <script src="premium-event-art.js?v=20260929-keyart6" defer></script>
-  <script src="map.js" defer></script>
-  <script src="push.js" defer></script>
-  <script src="calendar-enhancements.js" defer></script>
-  <script src="experience-v1.js" defer></script>
-  <script src="qa-corrections-v1.js" defer></script>
-  <script src="stamps-v2.js" defer></script>
+  <script src="theme.js?v=20260929-premium8" defer></script>
+  <script src="premium-inline-xerneas.js?v=20260929-premium8" defer></script>
+  <script src="app.js?v=20260929-premium8" defer></script>
+  <script src="art-system.js?v=20260929-premium8" defer></script>
+  <script src="weekly.js?v=20260929-premium8" defer></script>
+  <script src="premium-event-art.js?v=20260929-premium8" defer></script>
+  <script src="map.js?v=20260929-premium8" defer></script>
+  <script src="push.js?v=20260929-premium8" defer></script>
+  <script src="calendar-enhancements.js?v=20260929-premium8" defer></script>
+  <script src="experience-v1.js?v=20260929-premium8" defer></script>
+  <script src="qa-corrections-v1.js?v=20260929-premium8" defer></script>
+  <script src="stamps-v2.js?v=20260929-premium8" defer></script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
-      const catalog = window.SPIDEY_PREMIUM_EVENT_ART || (window.SPIDEY_PREMIUM_EVENT_ART = {});
-      for (const key of Object.keys(catalog)) delete catalog[key];
-
-      const officialArt = (id, alt) => {
-        const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
-        const make = () => ({ url, width: 800, height: 1200 });
+      const makeApprovedEntry = (url, alt) => {
+        const make = () => ({ url, width: 960, height: 1200 });
         return {
-          standard: 'spidey-app-keyart-v4',
+          standard: 'spidey-premium-v1',
           visualApproved: true,
           premium_visual_approved: true,
           alt,
@@ -274,21 +277,29 @@
         };
       };
 
-      catalog['2026-09-30-raid-hour-xerneas'] = officialArt(716, 'Xerneas — Hora de Reides');
-      catalog['2026-10-01-spotlight-seedot'] = officialArt(273, 'Seedot — Hora do Holofote');
-      catalog['2026-10-05-max-monday-sizzlipede'] = officialArt(850, 'Sizzlipede — Segunda Max');
-      catalog['2026-10-zorua-community-day'] = officialArt(570, 'Zorua — Dia Comunitário');
-
+      const catalog = { ...(window.SPIDEY_PREMIUM_EVENT_ART || {}) };
+      const xerneas = window.SPIDEY_INLINE_ART?.xerneas;
+      if (xerneas) {
+        catalog['2026-09-30-raid-hour-xerneas'] = makeApprovedEntry(
+          xerneas,
+          'Hora de Reides — Xerneas — arte Premium Spidey aprovada'
+        );
+      }
+      catalog['2026-10-01-spotlight-seedot'] = makeApprovedEntry(
+        'assets/events/premium/seedot-premium-approved-v2.svg?v=20260929-premium8',
+        'Hora do Holofote — Seedot — 1 de outubro de 2026'
+      );
+      window.SPIDEY_PREMIUM_EVENT_ART = catalog;
       window.SPIDEY_PREMIUM_ART_PACK_V1 = {
-        version: '2026-09-29.6-clean-character-keyart',
-        standard: 'spidey-app-keyart-v4',
+        version: '2026-09-29.8-premium-source',
+        standard: 'spidey-premium-v1',
         failClosed: true,
         events: Object.keys(catalog)
       };
 
       queueMicrotask(() => window.SpideyVisualV3?.decorate?.());
-      setTimeout(() => window.SpideyVisualV3?.decorate?.(), 300);
-      setTimeout(() => window.SpideyVisualV3?.decorate?.(), 1200);
+      setTimeout(() => window.SpideyVisualV3?.decorate?.(), 250);
+      setTimeout(() => window.SpideyVisualV3?.decorate?.(), 900);
     });
   </script>
 </body>
