@@ -1,0 +1,281 @@
+/* Spidey App v2.2 — agenda mensal por faixas, inspirada em calendário esportivo */
+
+body.spidey-app-v2 .v22-superseded { display: none !important; }
+
+.v22-month-section {
+  margin-top: 22px;
+  padding: 0;
+}
+
+.v22-month-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.v22-month-head h2 {
+  margin: 2px 0 0;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  letter-spacing: -.035em;
+}
+
+.v22-month-head p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.v22-board {
+  display: grid;
+  gap: 2px;
+  border-top: 1px solid rgba(140,170,205,.16);
+  border-bottom: 1px solid rgba(140,170,205,.16);
+}
+
+.v22-group {
+  --v22-accent: #43d6ff;
+  display: grid;
+  grid-template-columns: 122px minmax(0,1fr);
+  gap: 14px;
+  align-items: stretch;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(140,170,205,.12);
+}
+
+.v22-group:last-child { border-bottom: 0; }
+.v22-group[data-group="raids"] { --v22-accent: #9a7cff; }
+.v22-group[data-group="raid-hour"] { --v22-accent: #ff9f43; }
+.v22-group[data-group="mega"] { --v22-accent: #4dd7c6; }
+.v22-group[data-group="max"] { --v22-accent: #ff5d9e; }
+.v22-group[data-group="spotlight"] { --v22-accent: #f5c84f; }
+.v22-group[data-group="events"] { --v22-accent: #61b8ff; }
+
+.v22-group-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 10px 8px 0;
+}
+
+.v22-group-label strong {
+  color: var(--v22-accent);
+  font-size: .72rem;
+  line-height: 1.12;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.v22-group-label span {
+  color: var(--muted);
+  font-size: .68rem;
+}
+
+.v22-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(185px, 225px);
+  gap: 8px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  padding: 1px 2px 5px;
+}
+
+.v22-rail::-webkit-scrollbar { display: none; }
+
+.v22-event {
+  appearance: none;
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 9px;
+  align-items: center;
+  min-height: 72px;
+  padding: 8px 10px;
+  border: 1px solid rgba(140,170,205,.13);
+  border-radius: 15px;
+  background: rgba(255,255,255,.035);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.v22-event:active { transform: scale(.985); }
+.v22-event:hover,
+.v22-event:focus-visible {
+  border-color: color-mix(in srgb, var(--v22-accent) 58%, transparent);
+  background: color-mix(in srgb, var(--v22-accent) 8%, transparent);
+  outline: none;
+}
+
+.v22-date {
+  min-width: 46px;
+  max-width: 58px;
+  padding: 6px 5px;
+  border-radius: 10px;
+  background: #f7f8fb;
+  color: #111827;
+  text-align: center;
+  box-shadow: inset 0 -4px 0 #f5c84f;
+}
+
+.v22-date strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+
+.v22-date span {
+  display: block;
+  margin-top: 3px;
+  font-size: .56rem;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.v22-date.is-range {
+  min-width: 62px;
+  max-width: 74px;
+}
+
+.v22-date.is-range strong {
+  font-size: .72rem;
+  line-height: 1.05;
+}
+
+.v22-event-main {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.v22-event-art {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  object-fit: cover;
+  object-position: center 30%;
+  background: rgba(255,255,255,.05);
+}
+
+.v22-event-copy {
+  min-width: 0;
+}
+
+.v22-event-copy strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .82rem;
+  line-height: 1.18;
+}
+
+.v22-event-copy small {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .68rem;
+  line-height: 1.25;
+}
+
+.v22-calendar-section.v22-calendar-collapsed .calendar-wrap,
+.v22-calendar-section.v22-calendar-collapsed .calendar-focus-note,
+.v22-calendar-section.v22-calendar-collapsed .month-nav {
+  display: none !important;
+}
+
+.v22-calendar-toggle {
+  appearance: none;
+  border: 1px solid rgba(140,170,205,.18);
+  border-radius: 999px;
+  padding: 7px 11px;
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  font: inherit;
+  font-size: .74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .v22-board,
+:root[data-theme="light"] body.spidey-app-v2 .v22-group {
+  border-color: #d8e1ea;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .v22-event {
+  background: #fff;
+  border-color: #d9e2eb;
+  color: #0b1728;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .v22-event:hover,
+:root[data-theme="light"] body.spidey-app-v2 .v22-event:focus-visible {
+  background: #f2f7fb;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .v22-event-copy small,
+:root[data-theme="light"] body.spidey-app-v2 .v22-group-label span,
+:root[data-theme="light"] body.spidey-app-v2 .v22-month-head p {
+  color: #455b72;
+}
+
+:root[data-theme="light"] body.spidey-app-v2 .v22-calendar-toggle {
+  background: #eef4f9;
+  border-color: #c8d6e3;
+  color: #17334d;
+}
+
+@media (max-width: 760px) {
+  .v22-month-section { margin-top: 18px; }
+  .v22-month-head { align-items: center; }
+  .v22-month-head p { display: none; }
+
+  .v22-group {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 10px 0;
+  }
+
+  .v22-group-label {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 2px;
+  }
+
+  .v22-group-label span { display: none; }
+
+  .v22-rail {
+    margin-inline: -12px;
+    padding-inline: 12px;
+    grid-auto-columns: minmax(205px, 75vw);
+  }
+
+  .v22-event {
+    min-height: 68px;
+    padding: 7px 9px;
+    border-radius: 14px;
+  }
+
+  .v22-event-art {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v22-event { transition: none !important; }
+}
