@@ -1,5 +1,6 @@
 let spideyMap = null;
 let spideyMapLayer = null;
+let spideyMapTiles = null;
 let spideyLeafletPromise = null;
 let spideyMapFilter = 'all';
 
@@ -169,6 +170,23 @@ function renderPendingVenues() {
     </article>`).join('');
 }
 
+function fitSpideyMap(bounds) {
+  if (!spideyMap || !bounds.length) return;
+
+  // O mapa é criado quando a aba ainda pode estar oculta. Sempre recalcular o
+  // tamanho depois que a aba Mapa estiver visível, antes de calcular o zoom.
+  spideyMap.invalidateSize({ pan: false, animate: false });
+  if (bounds.length === 1) spideyMap.setView(bounds[0], 15, { animate: false });
+  else spideyMap.fitBounds(bounds, { padding: [30, 30], animate: false });
+
+  setTimeout(() => {
+    if (!spideyMap) return;
+    spideyMap.invalidateSize({ pan: false, animate: false });
+    if (bounds.length === 1) spideyMap.setView(bounds[0], 15, { animate: false });
+    else spideyMap.fitBounds(bounds, { padding: [30, 30], animate: false });
+  }, 100);
+}
+
 async function drawLeafletMap(points) {
   const mapEl = document.querySelector('#worldMap');
   const fallback = document.querySelector('#mapEngineStatus');
@@ -184,10 +202,15 @@ async function drawLeafletMap(points) {
     const L = await ensureLeaflet();
     if (!spideyMap) {
       spideyMap = L.map(mapEl, { zoomControl: true, attributionControl: true });
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      spideyMapTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
+        crossOrigin: true,
         attribution: '&copy; OpenStreetMap contributors',
-      }).addTo(spideyMap);
+      });
+      spideyMapTiles.on('tileerror', () => {
+        if (fallback) fallback.textContent = 'O mapa base não carregou. As coordenadas continuam disponíveis abaixo.';
+      });
+      spideyMapTiles.addTo(spideyMap);
       spideyMapLayer = L.layerGroup().addTo(spideyMap);
     }
     spideyMapLayer.clearLayers();
@@ -197,9 +220,7 @@ async function drawLeafletMap(points) {
       marker.bindPopup(`<strong>${point.title}</strong><br>${point.subtitle}<br><code>${mapCoordinateText(point)}</code>`);
       bounds.push([point.latitude, point.longitude]);
     });
-    if (bounds.length === 1) spideyMap.setView(bounds[0], 15);
-    else spideyMap.fitBounds(bounds, { padding: [30, 30] });
-    setTimeout(() => spideyMap.invalidateSize(), 50);
+    fitSpideyMap(bounds);
     if (fallback) fallback.textContent = `${points.length} ponto(s) exato(s) no mapa.`;
   } catch (error) {
     console.error(error);
