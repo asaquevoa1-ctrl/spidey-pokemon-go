@@ -1,7 +1,7 @@
 (() => {
   const STORAGE_KEY = 'spidey-theme';
   const media = window.matchMedia('(prefers-color-scheme: dark)');
-  const APP_UI_VERSION = '20260929-appv21-mobile2';
+  const APP_UI_VERSION = '20260929-appv22-monthboard1';
 
   function hasAsset(selector, name) {
     return [...document.querySelectorAll(selector)].some((el) => String(el.href || el.src || '').includes(name));
@@ -28,8 +28,10 @@
   function loadAppUi() {
     loadStyle('app-v2.css', 'spideyAppV2');
     loadStyle('app-v2-1.css', 'spideyAppV21');
+    loadStyle('app-v2-2.css', 'spideyAppV22');
     loadScript('app-v2.js', 'spideyAppV2');
     loadScript('app-v2-1.js', 'spideyAppV21');
+    loadScript('app-v2-2.js', 'spideyAppV22');
   }
 
   function normalizeMode(value) {
