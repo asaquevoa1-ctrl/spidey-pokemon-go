@@ -1,0 +1,77 @@
+/* Spidey App v2.3 — limpeza pública validada em vídeo real no celular */
+
+/* A agenda mensal categorizada substitui o feed longo e redundante da Home. */
+body.spidey-app-v2 .v23-legacy-feed {
+  display: none !important;
+}
+
+/* Fallback técnico, imagem quebrada ou integração visual instável nunca ocupa espaço público. */
+body.spidey-app-v2 .v23-hidden-art,
+body.spidey-app-v2 #eventDetail.v23-no-hero .detail-hero {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.spidey-app-v2 #eventDetail.v23-no-hero .detail-body {
+  margin-top: 0 !important;
+  padding-top: 20px !important;
+  border-radius: 24px 24px 0 0 !important;
+}
+
+/* Cards sem arte válida continuam úteis em modo textual, sem placeholder. */
+body.spidey-app-v2 .experience-mini.v23-no-art {
+  grid-template-columns: 1fr !important;
+  min-height: 0 !important;
+}
+
+body.spidey-app-v2 .experience-mini.v23-no-art .experience-mini-copy {
+  min-height: 110px;
+  padding: 14px 15px !important;
+}
+
+body.spidey-app-v2 .experience-feature.v23-no-art .experience-feature-art-wrap {
+  display: none !important;
+}
+
+body.spidey-app-v2 .experience-feature.v23-no-art .experience-feature-copy {
+  margin-top: 0 !important;
+  padding: 18px !important;
+  background: transparent !important;
+}
+
+body.spidey-app-v2 .event-card.v23-no-art {
+  grid-template-columns: 1fr !important;
+}
+
+body.spidey-app-v2 .event-card.v23-no-art .event-thumb {
+  display: none !important;
+}
+
+body.spidey-app-v2 .v22-event.v23-no-art .v22-event-main {
+  grid-template-columns: 1fr !important;
+}
+
+body.spidey-app-v2 .v22-event.v23-no-art .v22-event-art {
+  display: none !important;
+}
+
+/* Sem arte, a informação continua alinhada com data + título, sem buraco visual. */
+body.spidey-app-v2 .v22-event.v23-no-art .v22-event-copy {
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  body.spidey-app-v2 .experience-feature.v23-no-art {
+    border-radius: 18px;
+  }
+
+  body.spidey-app-v2 .experience-feature.v23-no-art .experience-feature-copy {
+    min-height: 132px;
+    justify-content: center;
+  }
+}
