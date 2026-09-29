@@ -1,0 +1,21 @@
+{
+  "titulo": "📦 APK • Pokémon GO",
+  "mensagem": "Nova informação detectada automaticamente no PokeMiners.\n\nPokemon Go update 0.431.0 is now available on Google Play\n\nAPK roll-out is complete\nhttps://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo\n\n@subscriber, @apk updates\n\nPokémon GO - Apps on Google Play\n\nDiscover Pokémon worldwide\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1554563321221480450",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1554563321221480450",
+  "image_url": "https://play-lh.googleusercontent.com/DUA40mf0fd6lUkU_Pvfw78BOoY37nPNM5tKw0tf4sCqzJfNwR84wqj-J00WN99QaZ89SpruNsU1xX7sDw6uBZg=s0-br30",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1554563321221480450",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-29T19:00:00.916186+00:00"
+}
