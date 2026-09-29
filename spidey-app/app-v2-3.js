@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-app-v2.3-20260929.2-video-cleanup';
+  const VERSION = 'spidey-app-v2.3-20260929.3-mobile-polish';
   const TECHNICAL_ART = /\/assets\/events\/generated\//i;
   let scheduled = false;
 
@@ -52,8 +52,6 @@
       return;
     }
 
-    // Xerneas ainda tem integração visual instável. Até a arte válida carregar de
-    // forma verificável, o app mostra conteúdo textual em vez de um bloco vazio.
     if (isKnownBrokenPublicArt(img)) {
       collapseArt(img, 'xerneas-integration');
       return;
@@ -80,6 +78,21 @@
       .forEach(guardImage);
   }
 
+  function compactWeeklyWithoutArt(root = document) {
+    root.querySelectorAll?.('.weekly-item').forEach((card) => {
+      const image = card.querySelector('img');
+      const usable = Boolean(image && !image.hidden && !image.classList.contains('v23-hidden-art'));
+      card.classList.toggle('v23-no-art', !usable);
+    });
+  }
+
+  function hideInternalStats() {
+    const artStat = document.querySelector('#weeklyArtCount')?.parentElement;
+    if (!artStat) return;
+    artStat.hidden = true;
+    artStat.classList.add('v23-internal-stat');
+  }
+
   function hideLegacyFeedWhenMonthBoardExists() {
     const board = document.querySelector('#monthBoardV22');
     const feedSection = document.querySelector('#eventList')?.closest('.section');
@@ -103,7 +116,7 @@
   }
 
   function humanizeRemainingCopy(root = document) {
-    root.querySelectorAll?.('.microcopy, p, small, span').forEach((el) => {
+    root.querySelectorAll?.('.microcopy, p, small, span, .map-location-type').forEach((el) => {
       if (el.children.length) return;
       const text = el.textContent.trim();
       if (!text) return;
@@ -115,6 +128,16 @@
 
       if (/^GPX indispon[ií]vel:/i.test(text)) {
         el.textContent = 'Sem rota GPX para este evento.';
+        return;
+      }
+
+      if (text === 'Permissão de notificações ativada.') {
+        el.textContent = 'Notificações ativadas.';
+        return;
+      }
+
+      if (el.classList.contains('map-location-type') && text === 'STAMP') {
+        el.textContent = 'SELO';
       }
     });
   }
@@ -126,7 +149,9 @@
     hideLegacyFeedWhenMonthBoardExists();
     humanizeRemainingCopy();
     hideInternalStampNotes();
+    hideInternalStats();
     guardPublicArt();
+    compactWeeklyWithoutArt();
   }
 
   function schedule() {
@@ -138,9 +163,15 @@
   function init() {
     apply();
     const observer = new MutationObserver((mutations) => {
-      if (mutations.some((m) => m.addedNodes.length || (m.type === 'attributes' && m.attributeName === 'src'))) schedule();
+      if (mutations.some((m) => m.addedNodes.length || m.type === 'characterData' || (m.type === 'attributes' && m.attributeName === 'src'))) schedule();
     });
-    observer.observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['src'] });
+    observer.observe(document.body, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: ['src'],
+    });
     window.addEventListener('spideythemechange', schedule);
     window.SpideyAppV23 = { version: VERSION, refresh: apply };
   }

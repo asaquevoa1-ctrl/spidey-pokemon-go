@@ -20,8 +20,27 @@ Regras vigentes:
 
 A regra fail-closed continua soberana: ausência de arte aprovada é aceitável; arte técnica fingindo ser produto final não é.
 
+## Regra 9 — densidade mobile, contraste e linguagem pública
+
+A validação em vídeo real no celular definiu também:
+
+- cards da Semana sem arte pública válida devem usar toda a largura para texto; nunca reservar uma coluna vazia onde existiria uma imagem;
+- indicadores internos como `Com arte` ou `Com visual` não pertencem ao resumo público;
+- o modo claro precisa manter contraste forte em estados de evento, chamadas para ação, horário, textos secundários e estados de coordenada;
+- estados `pendente` e `confirmado` devem permanecer claramente legíveis em fundo claro, sem amarelo ou verde lavado;
+- mensagens públicas devem ser curtas e naturais, por exemplo `Notificações ativadas.` em vez de frases de permissão/sistema;
+- labels visíveis devem ser em português sempre que houver equivalente natural: `SELO` no lugar de `STAMP`;
+- quando o destaque principal não tiver arte válida, o layout textual deve ser compacto e não ocupar altura de pôster;
+- a validação final continua sendo a rolagem real no celular, não apenas inspeção de CSS.
+
+### Regra geográfica — Taipei x Singapura
+
+`Taipei, Taiwan` continua sendo a referência asiática oficial para horários/calendário do projeto, no timezone `Asia/Taipei`.
+
+Isso **não** significa remover Singapura quando Singapura for uma localização real de um evento, Rally ou PokéStop oficial. Dados factuais de localização devem ser preservados. No `PokéXciting! Cross-Region GO Stamp Rally`, Singapura/Changi Airport é uma parada real do Rally e deve permanecer.
+
 ## Critério de validação
 
-A validação final deve considerar o fluxo real no celular: Home, agenda do mês, abertura do evento, Semana, Selos e alternância de tema.
+A validação final deve considerar o fluxo real no celular: Home, agenda do mês, abertura do evento, Semana, Selos, Mapa e alternância de tema.
 
 O critério é simples: a pessoa deve enxergar informação útil e hierarquia clara, sem perceber mecanismos internos do projeto.
