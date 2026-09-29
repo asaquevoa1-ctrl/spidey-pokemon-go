@@ -1,0 +1,19 @@
+{
+  "titulo": "🔄 G47IX • ATUALIZAÇÃO",
+  "mensagem": "Trainers, the 431 app update to Pokémon GO will require all assets to be re-downloaded. We recommend you connect to Wi-Fi and Download All Assets to minimize the impact on your data plan. Learn more: https://scopelyexplore.helpshift.com/hc/faq/17-download-all-assets/ #PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/ScopelyExplore/status/2104674570477133952",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2104674570477133952",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-09-29T00:17:11.896146+00:00"
+}
