@@ -6,10 +6,8 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 from gold_art_upgrade import (
     ASSETS,
-    GOLD_REFERENCE,
     LOGO,
     QUEUE,
-    STANDARD,
     clear_approval_state,
     fetch_source_image,
     font,
@@ -18,8 +16,11 @@ from gold_art_upgrade import (
     source_label,
 )
 
-ENGINE = "spidey-gold-source-v1"
-MODEL = "source-media-editorial-pillow-v2"
+# Este renderer NÃO é Premium. Ele existe apenas para preservar uma referência
+# visual/factual quando ainda não há arte spidey-premium-v1 aprovada.
+ENGINE = "spidey-source-preview-v1"
+MODEL = "source-media-preview-pillow-v1"
+TECHNICAL_STANDARD = "spidey-technical-fallback-v1"
 W, H = 1024, 1536
 TARGET_RATIO = W / H
 
@@ -44,7 +45,6 @@ def contain(image, max_width, max_height):
 
 
 def source_canvas(source):
-    """Preserva a mídia factual sempre que um crop 2:3 cortaria informação demais."""
     ratio = source.width / source.height
     near_vertical = abs(ratio - TARGET_RATIO) <= 0.16
 
@@ -59,8 +59,6 @@ def source_canvas(source):
         foreground = contain(source, int(W * 0.96), int(H * 0.88)).convert("RGBA")
         x = (W - foreground.width) // 2
         y = (H - foreground.height) // 2
-
-        # Sombra difusa sem caixa, borda ou moldura: a mídia continua sendo a própria cena.
         shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         shadow_patch = Image.new("RGBA", (foreground.width, foreground.height), (0, 0, 0, 160))
         shadow.paste(shadow_patch, (x, y + 16))
@@ -76,7 +74,6 @@ def source_canvas(source):
 
 
 def overlay_source_signature(canvas, item):
-    """Assinatura mínima para mídia factual: sem manchete duplicada, pill ou card."""
     overlay = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
@@ -92,11 +89,9 @@ def overlay_source_signature(canvas, item):
 
     margin = 42
     draw.text((margin, 30), "SPIDEY  /  POKÉMON GO", font=font(23, True), fill=(250, 252, 255, 245))
-    draw.text((margin, 67), "MÍDIA FACTUAL • FONTE PRESERVADA", font=font(16, False), fill=(192, 219, 245, 225))
+    draw.text((margin, 67), "PRÉVIA TÉCNICA • NÃO PREMIUM", font=font(16, False), fill=(192, 219, 245, 225))
     draw.rectangle((margin, 101, margin + 150, 105), fill=(235, 194, 73, 235))
-
-    source = f"Fonte: {source_label(item)}"
-    draw.text((margin, H - 58), source, font=font(16, False), fill=(224, 235, 247, 235))
+    draw.text((margin, H - 58), f"Fonte: {source_label(item)}", font=font(16, False), fill=(224, 235, 247, 235))
 
     if LOGO.exists():
         logo = Image.open(LOGO).convert("RGB")
@@ -112,7 +107,7 @@ def overlay_source_signature(canvas, item):
     return Image.alpha_composite(canvas, overlay)
 
 
-def render_full_bleed(source, out, item):
+def render_preview(source, out, item):
     canvas = source_canvas(source)
     canvas = overlay_source_signature(canvas, item)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -120,10 +115,7 @@ def render_full_bleed(source, out, item):
 
 
 def eligible(item):
-    if str(item.get("status") or "") != "awaiting_gold_art":
-        return False
-    error = str(item.get("gold_art_error") or "")
-    return "OPENAI_API_KEY ausente" in error
+    return str(item.get("status") or "") == "awaiting_gold_art"
 
 
 def generate(path, item):
@@ -134,33 +126,32 @@ def generate(path, item):
     revision, reason = prepare_revision(item)
     source = fetch_source_image(source_url)
     ASSETS.mkdir(parents=True, exist_ok=True)
-    out = ASSETS / f"{path.stem}-gold-source-r{revision}.jpg"
-    render_full_bleed(source, out, item)
+    out = ASSETS / f"{path.stem}-source-preview-r{revision}.jpg"
+    render_preview(source, out, item)
 
     clear_approval_state(item)
     item.update({
         "image_url": raw_url(out),
-        "status": "pending",
+        "status": "blocked_art_standard",
         "art_revision": revision,
         "art_revision_reason": reason,
-        "needs_art_revision": False,
-        "art_ready_for_review": True,
-        "art_standard_version": STANDARD,
+        "needs_art_revision": True,
+        "art_ready_for_review": False,
+        "art_standard_version": TECHNICAL_STANDARD,
         "art_generator_version": ENGINE,
         "art_generation_model": MODEL,
-        "visual_reference_set": GOLD_REFERENCE,
-        "gold_standard_visual": True,
+        "gold_standard_visual": False,
         "brand_logo_overlay": True,
-        "art_revision_style": "gold_source_full_bleed",
-        "gold_source_fallback": True,
-        "gold_fallback_reason": "OPENAI_API_KEY ausente",
-        "gold_generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "art_revision_style": "source_preview_only",
+        "technical_fallback": True,
+        "art_block_reason": "prévia factual gerada; ainda falta arte spidey-premium-v1 real",
+        "technical_preview_generated_at_utc": datetime.now(timezone.utc).isoformat(),
     })
     item.pop("gold_art_error", None)
     item.pop("gold_art_retry_at_utc", None)
     item.pop("force_gold_regeneration", None)
     path.write_text(json.dumps(item, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("GOLD_SOURCE_READY", path.name, f"R{revision}", out.as_posix())
+    print("SOURCE_PREVIEW_ONLY", path.name, f"R{revision}", out.as_posix())
 
 
 def main():
@@ -171,7 +162,7 @@ def main():
         try:
             item = json.loads(path.read_text(encoding="utf-8"))
         except Exception as exc:
-            print("GOLD_SOURCE_JSON_ERROR", path.name, exc)
+            print("SOURCE_PREVIEW_JSON_ERROR", path.name, exc)
             continue
         if not eligible(item):
             continue
@@ -179,16 +170,16 @@ def main():
             generate(path, item)
             done += 1
         except Exception as exc:
-            item["status"] = "awaiting_gold_art"
+            item["status"] = "blocked_art_standard"
             item["art_ready_for_review"] = False
-            item["gold_source_fallback_error"] = str(exc)[:800]
-            item["gold_source_retry_at_utc"] = datetime.now(timezone.utc).isoformat()
+            item["needs_art_revision"] = True
+            item["technical_preview_error"] = str(exc)[:800]
             clear_approval_state(item)
             path.write_text(json.dumps(item, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            print("GOLD_SOURCE_WAIT", path.name, exc)
+            print("SOURCE_PREVIEW_WAIT", path.name, exc)
             failed += 1
 
-    print(f"Fallback Gold: {done} pronta(s), {failed} aguardando nova tentativa.")
+    print(f"Preview técnico: {done} gerada(s), {failed} com erro. Nenhuma marcada como Premium.")
     return 0
 
 
