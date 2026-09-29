@@ -1,35 +1,54 @@
 window.SPIDEY_PREMIUM_EVENT_ART = {
   '2026-09-30-raid-hour-xerneas': {
-    standard: 'spidey-event-premium-v1',
-    alt: 'Arte Spidey específica para Hora de Reides de Xerneas',
+    standard: 'spidey-premium-v1',
+    alt: 'Hora de Reides — Xerneas — arte Premium Spidey aprovada',
     assets: {
-      thumb: { url: 'assets/events/premium/raid-hour-xerneas-v1.svg', width: 1080, height: 1620 },
-      card: { url: 'assets/events/premium/raid-hour-xerneas-v1.svg', width: 1080, height: 1620 },
-      hero: { url: 'assets/events/premium/raid-hour-xerneas-v1.svg', width: 1080, height: 1620 },
-      poster: { url: 'assets/events/premium/raid-hour-xerneas-v1.svg', width: 1080, height: 1620 }
+      thumb: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
+      card: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
+      hero: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
+      poster: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 }
     }
   },
   '2026-10-01-spotlight-seedot': {
-    standard: 'spidey-event-premium-v1',
-    alt: 'Arte Spidey específica para Hora do Holofote de Seedot',
+    standard: 'spidey-premium-v1',
+    alt: 'Hora do Holofote — Seedot — arte Premium Spidey aprovada',
     assets: {
-      thumb: { url: 'assets/events/premium/spotlight-seedot-v1.svg', width: 1080, height: 1620 },
-      card: { url: 'assets/events/premium/spotlight-seedot-v1.svg', width: 1080, height: 1620 },
-      hero: { url: 'assets/events/premium/spotlight-seedot-v1.svg', width: 1080, height: 1620 },
-      poster: { url: 'assets/events/premium/spotlight-seedot-v1.svg', width: 1080, height: 1620 }
+      thumb: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
+      card: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
+      hero: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
+      poster: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 }
     }
   },
-  '2026-09-gible-community-day-classic': {
-    standard: 'spidey-event-premium-v1',
-    alt: 'Arte Spidey específica para Dia Comunitário Clássico de Gible',
+  '2026-10-05-max-monday-sizzlipede': {
+    standard: 'spidey-premium-v1',
+    alt: 'Segunda Max — Sizzlipede Dynamax — arte Premium Spidey aprovada',
     assets: {
-      thumb: { url: 'assets/events/premium/community-day-gible-v1.svg', width: 1080, height: 1620 },
-      card: { url: 'assets/events/premium/community-day-gible-v1.svg', width: 1080, height: 1620 },
-      hero: { url: 'assets/events/premium/community-day-gible-v1.svg', width: 1080, height: 1620 },
-      poster: { url: 'assets/events/premium/community-day-gible-v1.svg', width: 1080, height: 1620 }
+      thumb: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
+      card: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
+      hero: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
+      poster: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 }
+    }
+  },
+  '2026-10-zorua-community-day': {
+    standard: 'spidey-premium-v1',
+    alt: 'Dia Comunitário — Zorua — arte Premium Spidey aprovada',
+    assets: {
+      thumb: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
+      card: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
+      hero: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
+      poster: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 }
     }
   }
 };
+
+// O catálogo aprovado é soberano. Nenhum fallback, pack tardio ou script de
+// compatibilidade pode trocar estas quatro artes por SVG, placeholder ou
+// artwork genérico.
+Object.freeze(window.SPIDEY_PREMIUM_EVENT_ART);
+for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
+  Object.freeze(entry.assets);
+  Object.freeze(entry);
+}
 
 (function installSpideyArtPriorityFix() {
   if (typeof spideyResolveEventArt !== 'function' || typeof spideyArtUsable !== 'function') return;
@@ -56,7 +75,7 @@ window.SPIDEY_PREMIUM_EVENT_ART = {
         height: Number(raw.height || 0),
         sha256: raw.sha256 || '',
         sourceRole: `premium_catalog:${candidateRole}`,
-        standard: entry.standard || 'spidey-event-premium-v1'
+        standard: entry.standard || 'spidey-premium-v1'
       };
       if (spideyArtUsable(asset, role)) return asset;
     }
