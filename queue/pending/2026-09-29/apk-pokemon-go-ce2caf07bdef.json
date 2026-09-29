@@ -8,7 +8,7 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1554563321221480450",
-  "status": "aguardando_curadoria_premium",
+  "status": "curated",
   "etapa_editorial": "aguardando_curadoria_premium",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
@@ -17,5 +17,8 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-09-29T19:00:00.916186+00:00"
+  "created_at_utc": "2026-09-29T19:00:00.916186+00:00",
+  "curated_path": "queue/curated/apk-pokemon-go-ce2caf07bdef.json",
+  "asset_path": "assets/generated/apk-pokemon-go-ce2caf07bdef.jpg",
+  "visual_mode": "premium_editorial"
 }
