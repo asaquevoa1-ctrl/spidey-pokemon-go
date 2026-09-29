@@ -31,6 +31,65 @@
   object-position: center top !important;
 }
 
+/*
+ * Character Key Art v4
+ * Os PNGs transparentes de artwork oficial do Pokémon viram a camada protagonista.
+ * O cenário, luz e profundidade são produzidos pelo app — sem desenhar o Pokémon no SVG
+ * e sem repetir data/horário/bônus dentro da imagem.
+ */
+img.spidey-poster-art-v3[src*="/official-artwork/"] {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: clamp(18px, 5vw, 64px) !important;
+  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, .42)) !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(77, 219, 255, .38) 0 17%, transparent 46%),
+    radial-gradient(circle at 22% 82%, rgba(243, 199, 90, .19), transparent 35%),
+    linear-gradient(145deg, #12336c 0%, #081a38 48%, #040a16 100%) !important;
+}
+
+[data-visual-category="raid"] img.spidey-poster-art-v3[src*="/official-artwork/"] {
+  background:
+    radial-gradient(circle at 52% 38%, rgba(98, 224, 255, .5) 0 15%, transparent 43%),
+    radial-gradient(circle at 18% 78%, rgba(76, 117, 255, .3), transparent 38%),
+    linear-gradient(155deg, #122c62 0%, #081832 52%, #030814 100%) !important;
+}
+
+[data-visual-category="spotlight"] img.spidey-poster-art-v3[src*="/official-artwork/"] {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(218, 255, 124, .44) 0 16%, transparent 43%),
+    radial-gradient(circle at 20% 80%, rgba(58, 210, 132, .28), transparent 36%),
+    linear-gradient(150deg, #184d3d 0%, #0a2a2b 51%, #041315 100%) !important;
+}
+
+[data-visual-category="max"] img.spidey-poster-art-v3[src*="/official-artwork/"] {
+  background:
+    radial-gradient(circle at 52% 39%, rgba(255, 117, 90, .48) 0 15%, transparent 43%),
+    radial-gradient(circle at 18% 82%, rgba(255, 189, 60, .25), transparent 36%),
+    linear-gradient(150deg, #65201d 0%, #321316 52%, #11080b 100%) !important;
+}
+
+[data-visual-category="community"] img.spidey-poster-art-v3[src*="/official-artwork/"] {
+  background:
+    radial-gradient(circle at 52% 39%, rgba(193, 127, 255, .48) 0 15%, transparent 43%),
+    radial-gradient(circle at 18% 82%, rgba(70, 174, 255, .23), transparent 36%),
+    linear-gradient(150deg, #3d215f 0%, #1f1539 52%, #0a0817 100%) !important;
+}
+
+.experience-mini[data-visual-category] img.spidey-poster-art-v3[src*="/official-artwork/"],
+.weekly-item[data-visual-category] img.spidey-poster-art-v3[src*="/official-artwork/"],
+.event-card[data-visual-category] img.spidey-poster-art-v3[src*="/official-artwork/"] {
+  padding: 9px !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+.experience-feature[data-visual-category] .experience-feature-art.spidey-poster-art-v3[src*="/official-artwork/"] {
+  padding: clamp(28px, 6vw, 72px) !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
 /* O detalhe volta a respeitar a proporção real do poster, sem o recorte gigante visto no vídeo. */
 .spidey-detail-v3 .detail-hero.spidey-poster-art-v3 {
   width: 100%;
@@ -41,6 +100,11 @@
   object-position: center center !important;
   padding: 0 !important;
   border-bottom: 1px solid var(--visual-border);
+}
+
+.spidey-detail-v3 .detail-hero.spidey-poster-art-v3[src*="/official-artwork/"] {
+  padding: clamp(34px, 8vw, 96px) !important;
+  object-fit: contain !important;
 }
 
 .spidey-detail-v3 .detail-body {
