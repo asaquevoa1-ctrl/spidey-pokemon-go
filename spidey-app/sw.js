@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-v1-20260929-artfix-v2';
+const CACHE = 'spidey-app-v1-20260929-premium-approved-v1';
 const CORE = [
   './',
   './index.html',
@@ -31,12 +31,10 @@ const CORE = [
   './assets/spidey-logo-oficial.jpg',
   './assets/festival-das-luzes-approved.png',
   './assets/festival-das-luzes-2026.jpg',
-  './assets/events/premium/raid-hour-xerneas-v1.svg',
-  './assets/events/premium/spotlight-seedot-v1.svg',
-  './assets/events/premium/community-day-gible-v1.svg',
-  './assets/events/premium/xerneas-spidey-v2.svg',
-  './assets/events/premium/sizzlipede-spidey-v2.svg',
-  './assets/events/premium/zorua-spidey-v2.svg'
+  './assets/events/premium/xerneas-premium-approved-v1.avif',
+  './assets/events/premium/seedot-premium-approved-v1.avif',
+  './assets/events/premium/sizzlipede-premium-approved-v1.avif',
+  './assets/events/premium/zorua-premium-approved-v1.avif'
 ];
 
 self.addEventListener('install', (event) => {
