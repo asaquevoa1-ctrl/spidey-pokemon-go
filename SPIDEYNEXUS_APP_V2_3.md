@@ -1,4 +1,4 @@
-# SPIDEYNEXUS — Diretriz canônica do Spidey App v2.3
+# SPIDEYNEXUS — Diretriz canônica do Spidey App v2.4
 
 Este arquivo é uma extensão canônica de `SPIDEYNEXUS_APP_V2.md` e deve ser aplicado junto de `SPIDEY_NEXUS.md` e `SPIDEY_PREMIUM_STANDARD.md` quando a palavra-chave `SPIDEYNEXUS` for usada.
 
@@ -14,7 +14,6 @@ Regras vigentes:
 - arte vetorial automática, placeholder, preview técnica ou composição abaixo do padrão aprovado não pode preencher um espaço visual só para evitar ausência de imagem;
 - se não houver arte pública válida, o app deve usar um layout textual compacto e continuar funcional;
 - se uma imagem falhar ao carregar, a área da imagem deve colapsar; nunca deixar retângulo vazio;
-- enquanto a integração da arte aprovada de Xerneas estiver instável, é preferível mostrar o evento sem imagem a mostrar um bloco vazio ou fallback técnico;
 - a agenda mensal por faixas substitui o feed longo antigo da Home quando ambos repetirem os mesmos eventos;
 - linguagem de pipeline, IA, curadoria ou disponibilidade de arte não pertence à experiência pública.
 
@@ -39,8 +38,25 @@ A validação em vídeo real no celular definiu também:
 
 Isso **não** significa remover Singapura quando Singapura for uma localização real de um evento, Rally ou PokéStop oficial. Dados factuais de localização devem ser preservados. No `PokéXciting! Cross-Region GO Stamp Rally`, Singapura/Changi Airport é uma parada real do Rally e deve permanecer.
 
+## Regra 10 — calendário funcional e soberania da melhor arte aprovada
+
+A partir da validação móvel de 29/09/2026, estas regras são obrigatórias:
+
+- a navegação do calendário mensal deve funcionar nos dois sentidos; os controles de mês anterior e mês seguinte nunca podem ficar cortados, ocultos fora da tela ou inacessíveis no celular;
+- ao voltar para agosto, julho ou qualquer mês anterior, deve ser possível avançar novamente para setembro, outubro, novembro e meses seguintes;
+- tocar numa data com um único evento abre diretamente esse evento;
+- tocar numa data com vários eventos abre um seletor curto do dia e cada item abre o respectivo detalhe;
+- o calendário é navegação funcional, não decoração;
+- uma arte Premium aprovada é soberana sobre versões antigas, inline, vetoriais, thumbnails de baixa qualidade ou fallback;
+- Xerneas usa a arte Premium aprovada também na rotação `2026-09-raids-xerneas`, não apenas na Hora de Reides `2026-09-30-raid-hour-xerneas`;
+- quando o mesmo Pokémon/evento tiver IDs técnicos diferentes, a melhor arte aprovada deve ser reaproveitada sempre que a identidade editorial for a mesma;
+- artes aprovadas em cards devem permanecer nítidas e visualmente úteis no celular; miniaturas minúsculas ou compressão que faça a peça parecer borrada não são aceitáveis;
+- a arte atual do Festival das Luzes contendo artefatos visuais residuais `E`/`N` não pode ser exibida no app público; enquanto não houver peça corrigida e aprovada, aplicar fail-closed e exibir o evento em modo textual;
+- Seedot permanece aprovado conforme decisão humana já registrada; não reabrir essa decisão sem solicitação explícita;
+- nenhuma correção de cache, integração ou ID pode substituir uma arte aprovada por uma peça visual inferior.
+
 ## Critério de validação
 
-A validação final deve considerar o fluxo real no celular: Home, agenda do mês, abertura do evento, Semana, Selos, Mapa e alternância de tema.
+A validação final deve considerar o fluxo real no celular: Home, agenda do mês, calendário navegando para trás e para frente, toque nas datas, abertura do evento, Semana, Selos, Mapa e alternância de tema.
 
-O critério é simples: a pessoa deve enxergar informação útil e hierarquia clara, sem perceber mecanismos internos do projeto.
+O critério é simples: a pessoa deve enxergar informação útil, artes nítidas e hierarquia clara, sem perceber mecanismos internos do projeto e sem encontrar controles que parecem funcionar mas não executam a ação esperada.
