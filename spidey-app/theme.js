@@ -1,24 +1,35 @@
 (() => {
   const STORAGE_KEY = 'spidey-theme';
   const media = window.matchMedia('(prefers-color-scheme: dark)');
-  const APP_V2_VERSION = '20260929-appv2-1';
+  const APP_UI_VERSION = '20260929-appv21-mobile2';
 
-  function loadAppV2Assets() {
-    if (!document.querySelector('link[data-spidey-app-v2]')) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = `app-v2.css?v=${APP_V2_VERSION}`;
-      link.dataset.spideyAppV2 = '1';
-      document.head.appendChild(link);
-    }
+  function hasAsset(selector, name) {
+    return [...document.querySelectorAll(selector)].some((el) => String(el.href || el.src || '').includes(name));
+  }
 
-    if (!document.querySelector('script[data-spidey-app-v2]')) {
-      const script = document.createElement('script');
-      script.src = `app-v2.js?v=${APP_V2_VERSION}`;
-      script.dataset.spideyAppV2 = '1';
-      script.async = true;
-      document.head.appendChild(script);
-    }
+  function loadStyle(name, marker) {
+    if (hasAsset('link[rel="stylesheet"]', name)) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${name}?v=${APP_UI_VERSION}`;
+    link.dataset[marker] = '1';
+    document.head.appendChild(link);
+  }
+
+  function loadScript(name, marker) {
+    if (hasAsset('script[src]', name)) return;
+    const script = document.createElement('script');
+    script.src = `${name}?v=${APP_UI_VERSION}`;
+    script.dataset[marker] = '1';
+    script.async = false;
+    document.head.appendChild(script);
+  }
+
+  function loadAppUi() {
+    loadStyle('app-v2.css', 'spideyAppV2');
+    loadStyle('app-v2-1.css', 'spideyAppV21');
+    loadScript('app-v2.js', 'spideyAppV2');
+    loadScript('app-v2-1.js', 'spideyAppV21');
   }
 
   function normalizeMode(value) {
@@ -67,7 +78,7 @@
     applyTheme(currentMode(), false);
   }
 
-  loadAppV2Assets();
+  loadAppUi();
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initThemeControl, { once: true });
   else initThemeControl();
