@@ -4,42 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-09-mega-victreebel-raids:start:60",
-      "event_id": "2026-09-mega-victreebel-raids",
-      "event_title": "Mega Reides: Mega Victreebel",
-      "category": "mega_raid_rotation",
-      "scheduled_for": "2026-09-30T05:00:00-03:00",
-      "event_start": "2026-09-30T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Mega Reides: Mega Victreebel começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-09-mega-victreebel-raids",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
-      "id": "2026-09-raids-xerneas:start:60",
-      "event_id": "2026-09-raids-xerneas",
-      "event_title": "Reides 5★: Xerneas",
-      "category": "raid_rotation",
-      "scheduled_for": "2026-09-30T05:00:00-03:00",
-      "event_start": "2026-09-30T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Reides 5★: Xerneas começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-09-raids-xerneas",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-09-30-raid-hour-xerneas:start:60",
       "event_id": "2026-09-30-raid-hour-xerneas",
       "event_title": "Raid Hour: Xerneas",
@@ -815,7 +779,7 @@
     }
   ],
   "meta": {
-    "pending_count": 45,
+    "pending_count": 43,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
