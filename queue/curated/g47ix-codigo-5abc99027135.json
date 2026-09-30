@@ -1,0 +1,26 @@
+{
+  "titulo": "🎁 G47IX • CÓDIGO",
+  "mensagem": "Use code ADIDASxPOKEMON to get a pair of adidas shoes for your avatar! 👟\n\nRedeem here:\nhttps://store.pokemongo.com/offer-redemption?passcode=ADIDASxPOKEMON\n\nAvailable for a limited time only.\n\nYou can also get an adidas T-shirt and cap through Timed Research at selected adidas stores.\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "source_url": "https://x.com/g47ix/status/2105095676300247085",
+  "image_url": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/assets/generated/g47ix-codigo-5abc99027135.jpg",
+  "source_verified": true,
+  "coordenadas": [],
+  "horarios": [],
+  "gerar_gpx": false,
+  "gpx_nome": "spidey-evento.gpx",
+  "status": "pending",
+  "_source_id": "g47ix-2105095676300247085",
+  "_source_image": "https://pbs.twimg.com/media/HTbM-YdXkAAjBGW.jpg?name=orig",
+  "created_at_utc": "2026-09-30T00:47:54.967700+00:00",
+  "curated_at_utc": "2026-09-30T00:48:15.733142+00:00",
+  "art_standard_version": "spidey-premium-v1",
+  "art_ready_for_review": true,
+  "media_policy": "premium_editorial",
+  "visual_mode": "premium_editorial",
+  "visual_constraints": [
+    "adidas_jacket",
+    "adidas_cap",
+    "lucario_encounter",
+    "lucario_mega_energy"
+  ]
+}
