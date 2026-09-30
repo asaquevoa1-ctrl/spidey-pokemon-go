@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-art-coverage-v1-20260929.1';
+  const VERSION = 'spidey-art-coverage-v1-20260929.2-premium-first';
   const BAD_PUBLIC_ART = /(?:assets\/events\/generated\/|generated_vector|placeholder|preview|fallback|festival-das-luzes-approved\.png|festival-das-luzes-2026\.jpg)/i;
   const PREMIUM_ART = /\/assets\/events\/premium\//i;
   const SOURCE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
@@ -76,15 +76,8 @@
     return null;
   }
 
-  function toneFor(event) {
-    return CATEGORY[event?.category] || ['special', '✦'];
-  }
-
-  function eventById(id) {
-    if (!id) return null;
-    return stateEvents().find((event) => String(event.id) === String(id)) || null;
-  }
-
+  function toneFor(event) { return CATEGORY[event?.category] || ['special', '✦']; }
+  function eventById(id) { return id ? stateEvents().find((event) => String(event.id) === String(id)) || null : null; }
   function eventByTitle(title) {
     const key = normalize(title);
     if (!key) return null;
@@ -100,17 +93,13 @@
       || container?.querySelector?.('[data-event-id]')?.dataset?.eventId
       || container?.querySelector?.('[data-weekly-event]')?.dataset?.weeklyEvent
       || container?.querySelector?.('[data-v22-event]')?.dataset?.v22Event;
-    if (direct) {
-      const found = eventById(direct);
-      if (found) return found;
-    }
+    if (direct) { const found = eventById(direct); if (found) return found; }
     const title = container?.querySelector?.('h2,h3,.experience-mini-copy strong,.weekly-item-copy strong,.v22-event-copy strong')?.textContent;
     return eventByTitle(title);
   }
 
   function roleFor(container) {
-    if (container?.id === 'eventDetail') return 'hero';
-    if (container?.classList?.contains('experience-feature')) return 'hero';
+    if (container?.id === 'eventDetail' || container?.classList?.contains('experience-feature')) return 'hero';
     if (container?.classList?.contains('event-card')) return 'card';
     if (container?.classList?.contains('weekly-item')) return 'weekly';
     return 'thumb';
@@ -119,8 +108,9 @@
   function badImage(img, event, role) {
     if (!img) return true;
     const src = String(img.currentSrc || img.src || '');
-    if (!src || img.hidden || img.classList.contains('v23-hidden-art')) return true;
+    if (!src) return true;
     if (PREMIUM_ART.test(src)) return false;
+    if (img.hidden || img.classList.contains('v23-hidden-art')) return true;
     if (BAD_PUBLIC_ART.test(src)) return true;
     if (/festival[- ]das[- ]luzes|festival of lights/i.test(`${src} ${event?.title || ''}`)) return true;
     if (!img.complete) return false;
@@ -137,12 +127,7 @@
     node.dataset.coverageEvent = event?.id || normalize(event?.title);
     node.setAttribute('role', 'img');
     node.setAttribute('aria-label', `Arte de ${event?.title || 'evento Pokémon GO'}`);
-    node.innerHTML = `
-      <span class="spidey-cover-orbit" aria-hidden="true"></span>
-      <span class="spidey-cover-mark" aria-hidden="true">${mark}</span>
-      <span class="spidey-cover-brand" aria-hidden="true">SPIDEY</span>
-      ${pokemon ? `<img class="spidey-cover-pokemon" src="${pokemon.url}" alt="" loading="lazy" decoding="async">` : '<span class="spidey-cover-emblem" aria-hidden="true">◈</span>'}
-    `;
+    node.innerHTML = `<span class="spidey-cover-orbit" aria-hidden="true"></span><span class="spidey-cover-mark" aria-hidden="true">${mark}</span><span class="spidey-cover-brand" aria-hidden="true">SPIDEY</span>${pokemon ? `<img class="spidey-cover-pokemon" src="${pokemon.url}" alt="" loading="lazy" decoding="async">` : '<span class="spidey-cover-emblem" aria-hidden="true">◈</span>'}`;
     node.querySelector('.spidey-cover-pokemon')?.addEventListener('error', (e) => {
       e.currentTarget.remove();
       if (!node.querySelector('.spidey-cover-emblem')) {
@@ -173,17 +158,13 @@
   function removeNoArtState(container) {
     container.classList.remove('v23-no-art');
     if (container.id === 'eventDetail') container.classList.remove('v23-no-hero');
-    const feature = container.closest?.('.experience-feature');
-    feature?.classList.remove('v23-no-art');
+    container.closest?.('.experience-feature')?.classList.remove('v23-no-art');
   }
 
   function ensureCover(container, event, role) {
-    if (!container || !event) return;
+    if (!container || !event) return null;
     const existing = container.querySelector(':scope > .spidey-cover-art, .experience-feature-art-wrap > .spidey-cover-art, .v22-event-main > .spidey-cover-art');
-    if (existing?.dataset.coverageEvent === String(event.id || normalize(event.title))) {
-      removeNoArtState(container);
-      return existing;
-    }
+    if (existing?.dataset.coverageEvent === String(event.id || normalize(event.title))) { removeNoArtState(container); return existing; }
     existing?.remove();
     const cover = coverNode(event, role);
     const point = insertionPoint(container);
@@ -193,32 +174,26 @@
     return cover;
   }
 
-  function removeCover(container) {
-    container?.querySelectorAll?.('.spidey-cover-art').forEach((node) => node.remove());
-  }
+  function removeCover(container) { container?.querySelectorAll?.('.spidey-cover-art').forEach((node) => node.remove()); }
 
   function decorateContainer(container) {
     const event = eventFor(container);
     if (!event) return;
     const role = roleFor(container);
     const image = container.querySelector('img:not(.spidey-cover-pokemon)');
-
     const decide = () => {
       if (image && !badImage(image, event, role)) {
         image.hidden = false;
         image.classList.remove('v23-hidden-art');
+        delete image.dataset.v23ArtReason;
         removeCover(container);
         removeNoArtState(container);
         return;
       }
-      if (image) {
-        image.hidden = true;
-        image.classList.add('v23-hidden-art');
-      }
+      if (image) { image.hidden = true; image.classList.add('v23-hidden-art'); }
       ensureCover(container, event, role);
     };
-
-    if (image && !image.complete && !BAD_PUBLIC_ART.test(String(image.src || ''))) {
+    if (image && !image.complete && !BAD_PUBLIC_ART.test(String(image.src || '')) && !PREMIUM_ART.test(String(image.src || ''))) {
       if (image.dataset.coverageProbe !== '1') {
         image.dataset.coverageProbe = '1';
         image.addEventListener('load', decide, { once: true });
@@ -230,14 +205,7 @@
   }
 
   function decorate(root = document) {
-    const selectors = [
-      '[data-v22-event]',
-      '.event-card',
-      '.weekly-item',
-      '.experience-mini',
-      '.experience-feature',
-    ];
-    root.querySelectorAll?.(selectors.join(',')).forEach(decorateContainer);
+    root.querySelectorAll?.('[data-v22-event],.event-card,.weekly-item,.experience-mini,.experience-feature').forEach(decorateContainer);
     const detail = document.querySelector('#eventDetail');
     if (detail?.querySelector('h2')) decorateContainer(detail);
     document.documentElement.dataset.spideyArtCoverage = VERSION;
@@ -246,10 +214,7 @@
   function schedule() {
     if (scheduled) return;
     scheduled = true;
-    requestAnimationFrame(() => {
-      scheduled = false;
-      decorate();
-    });
+    requestAnimationFrame(() => { scheduled = false; decorate(); });
   }
 
   async function init() {
@@ -258,13 +223,7 @@
     const observer = new MutationObserver((mutations) => {
       if (mutations.some((m) => m.addedNodes.length || m.type === 'characterData' || (m.type === 'attributes' && ['src', 'hidden'].includes(m.attributeName)))) schedule();
     });
-    observer.observe(document.body, {
-      subtree: true,
-      childList: true,
-      characterData: true,
-      attributes: true,
-      attributeFilter: ['src', 'hidden'],
-    });
+    observer.observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['src', 'hidden'] });
     window.addEventListener('spideythemechange', schedule);
     window.SpideyArtCoverage = {
       version: VERSION,
