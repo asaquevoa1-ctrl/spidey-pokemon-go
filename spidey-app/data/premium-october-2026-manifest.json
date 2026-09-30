@@ -1,0 +1,29 @@
+{
+  "version": "2026-09-30-preview-1",
+  "standard": "spidey-premium-v1",
+  "priority": "APP",
+  "productionDeploy": false,
+  "visualPolicy": {
+    "singleArtPerEvent": true,
+    "noOverlay": true,
+    "approvedArtWins": true,
+    "failClosed": true
+  },
+  "october2026": {
+    "calendar": "approved-reference",
+    "events": [
+      "harvest-festival",
+      "team-go-rocket-takeover",
+      "gmax-cinderace",
+      "world-space-week",
+      "community-day-zorua",
+      "fall-marathon-buddy-trek",
+      "dialga-raids",
+      "sandile-hatch-day",
+      "palkia-raids",
+      "giratina-raids",
+      "super-mega-raid-day"
+    ]
+  },
+  "notes": "Preview branch only. Do not deploy to production until visual QA is approved."
+}
