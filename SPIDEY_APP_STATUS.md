@@ -212,3 +212,8 @@ Não recomeçar o projeto.
 Não pedir ao usuário para refazer Vercel/GitHub: as integrações já foram configuradas.
 
 Não declarar algo pronto sem verificar o deploy e o comportamento real.
+
+
+## Checkpoint de continuidade — 01/10/2026
+
+Continuação da branch `spidey-fly-v1`, sem promoção a main/produção. Código do candidato: `8fac1edb4a24c2474d89e8c9e311892153ed6c87`. FLY dinâmico, Command Center, Selos e Novidades foram trabalhados preservando decisões canônicas. QA responsivo 390/1280 e 33 testes passaram. O estado concreto, preview, evidências e limites estão em `SPIDEY_PUBLIC_RELEASE.md`; lê-lo na próxima retomada. Não interpretar este checkpoint como lançamento público aprovado: cobertura Premium pendente, Android/PWA/push e Amigos/Chat continuam em aberto.

@@ -1,6 +1,6 @@
 # Spidey — candidato público para 02/10/2026
 
-Estado: PREVIEW EM QA; promoção/main depende da aprovação visual do editor.
+Estado: PREVIEW COM QA RESPONSIVO CONCLUÍDO; promoção/main depende da aprovação visual do editor.
 Branch: `spidey-fly-v1`, continuidade a partir de `6f0ff93`.
 
 ## Escopo e ordem do trabalho
@@ -37,6 +37,19 @@ Este documento não substitui Constituição, registro de artes nem regras de pr
 ## QA real de preview
 Registrar abaixo apenas o que foi observado no navegador; build READY não é aprovação.
 A página `spidey-app/qa-responsive.html` permite carregar o app real em iframes de 390 e 1280 pixels. Isto valida viewport/CSS responsivo, não substitui teste em Android físico ou instalação PWA.
+
+### Evidência de 01/10/2026
+- Código validado: `8fac1edb4a24c2474d89e8c9e311892153ed6c87` na branch `spidey-fly-v1`.
+- Vercel READY: https://spidey-pokemon-2h77ya50c-spidey3.vercel.app/spidey-app/
+- Desktop no navegador e iframe de 1280 × 850; mobile em iframe de 390 × 850. Home, FLY, Selos e Novidades inspecionados visualmente. As seis guias cabem no mobile.
+- Tema claro e escuro aplicados; navegação lateral desktop e inferior mobile preservadas.
+- FLY inicial selecionou a janela vigente de Xerneas. Ao selecionar Seedot, primeiro início em Kiritimati 01/10 01:00 Brasília e última janela em Pago Pago até 02/10 03:00. Alternância Essentials/Todos mostrou 20/28 locais. Taipei preservada.
+- Selos: indicador 2 rallies / 22 Stops / 1 GPX pronto. Em rodada anterior desta mesma série, marcar/desmarcar Japão, próxima Stop, cópia de restantes com toast e persistência após recarga foram observados. PokéXciting sem Stops exatas ficou bloqueado para GPX.
+- Novidades mostrou fonte oficial e secundária separadas, com links originais.
+- Scripts legados receberam escritas idempotentes de textos/hidden para evitar mutações recorrentes. Navegação por cliques observada após correção.
+- Log recente consultado mostrou erros da extensão do navegador, sem erro do app nessa amostra. Isto não prova ausência de todos os erros.
+- Não foi conferido o conteúdo do clipboard nem o arquivo GPX baixado no navegador; não alegar essas provas.
+- Android físico, PWA instalada, push, upgrade real do service worker e aprovação humana continuam pendentes.
 
 ## Pendências para lançamento
 - Aprovação visual da preview pelo editor, após QA mobile/desktop.
