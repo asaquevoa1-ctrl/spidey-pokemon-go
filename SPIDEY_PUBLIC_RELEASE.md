@@ -1,7 +1,7 @@
 # Spidey — candidato público para 02/10/2026
 
 Estado atual: ARTE DA ROTAÇÃO XERNEAS APPROVED; liberação pública pendente de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
-Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código validada nesta rodada: `62c86a4`. Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
+Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código validada após aprovação: `641463d`. Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
 
 ## Escopo e ordem do trabalho
 1. Estabilidade e não regressão.
@@ -118,3 +118,9 @@ Nenhuma promoção a main/produção nesta rodada. O próximo passo editorial é
 A decisão “Sim, aprovo” aprova a arte corrigida da rotação Xerneas. PNG aprovado agora no master para os dois IDs da rotação, byte a byte igual ao revisado; original da Hora de Reides, candidata e AVIF histórico preservados. A exceção de preview deixou de ser necessária para Xerneas. Registro: `docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json`.
 
 Versão do app `2026-10-01-xerneas-approved-v1`; cache inclui o novo caminho aprovado. Detalhe mantém o full_poster já validado e dimensões reservadas. Etiquetas Harvest, Astronaut Pikachu, Space Week, Shadow Raid e GO Battle League recebem equivalentes pt-BR. Confirmar integração pós-aprovação no preview, sem assumir que troca de status dispensa QA. Demais artes e Android/PWA/push continuam pendentes; aprovação de uma peça não equivale à aprovação do lançamento completo. Nenhuma promoção a main/produção nesta rodada.
+
+### Integração pós-aprovação confirmada
+Código `641463d5f98e47b0396f2971928e9ce0be92615c`; preview direto: https://spidey-pokemon-3dtankvqz-spidey3.vercel.app/spidey-app/index.html
+Home/Semana/detalhe resolvem o novo PNG aprovado. Mobile 390×850 e desktop 1280×850 renderizam 1121×1403, mantendo pôster inteiro, Fechar focado e detalhe no topo. Hora de Reides ainda usa o original 1229×1536 e ação única que fecha o diálogo e seleciona o evento correto no FLY. Etiquetas pt-BR foram observadas na Semana. 11 testes Node passaram; sintaxe dos 18 scripts ativos e integridade dos masters passaram. Provas em `docs/qa/XERNEAS_ROTATION_20261001.md`.
+
+Auditoria de preparação: entre 01 e 07/10, 23 eventos no catálogo; 1 com master APPROVED (Xerneas), 2 com recortes PENDING_REVIEW e 20 sem arquivo no compositor Home/FLY. Coberturas da Semana não equivalem a Premium aprovado. Inventário e sequência para 02/10 em `docs/qa/PUBLIC_ART_READINESS_20261001.md`, começando por Applin/A Invasão e Cinderace. O lançamento completo continua pendente dessas artes e das provas Android/PWA/push.

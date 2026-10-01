@@ -4,9 +4,10 @@
 Branch `spidey-fly-v1`, checkpoint retomado `f32ae6e439d1e04443933c97da0f5dd6dfaa5685`.
 Preview do checkpoint: https://spidey-pokemon-is9kph570-spidey3.vercel.app/spidey-app/qa-responsive.html
 
-Base de código final: `62c86a4936079023c3881d6e52ec7a8c2953401f`.
-Preview direto verificado: https://spidey-pokemon-o8gs3th9c-spidey3.vercel.app/spidey-app/index.html
-QA responsivo final: https://spidey-pokemon-o8gs3th9c-spidey3.vercel.app/spidey-app/qa-responsive.html
+Base de código atual, após aprovação: `641463d5f98e47b0396f2971928e9ce0be92615c`.
+Preview direto verificado: https://spidey-pokemon-3dtankvqz-spidey3.vercel.app/spidey-app/index.html
+QA responsivo: https://spidey-pokemon-3dtankvqz-spidey3.vercel.app/spidey-app/qa-responsive.html
+Os registros anteriores abaixo documentam a validação da candidata; a última seção documenta a aprovação e a integração pelo master.
 
 ## Observado no navegador
 - Mobile 390×850 e desktop 1280×850: Home mostrou a miniatura da rotação; detalhe decodificou o PNG corrigido em 1121×1403. Pôster inteiro foi inspecionado depois de rolar o detalhe para o topo.
@@ -82,3 +83,13 @@ Além dos 38 testes, `node --check` passou nos 18 scripts ativos. A última alte
 
 ## Decisão humana posterior — 01/10/2026 09:08 BRT
 Após esta prova, o editor respondeu “Sim, aprovo”. Estado corrente da rotação passa a APPROVED, sem alteração de bytes: cópia final `assets/events/premium/xerneas-rotation-approved-v1.png`, mesmo SHA256 b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738. Associação exclusiva aos dois IDs da rotação, fonte de decisão e fatos em `XERNEAS_ROTATION_APPROVAL_20261001.json`. Hora de Reides e demais masters intactos. A nova integração pelo master deve ser novamente observada na preview; limites do lançamento permanecem.
+
+## Integração pelo master APPROVED confirmada — 641463d
+- Mobile 390×850: URL `assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234`, complete=true, naturalWidth=1121/naturalHeight=1403. Detalhe 360×451, width/height reservados antes da carga, foco no Fechar e scrollTop=0; documento/scrollWidth 375/375.
+- Desktop 1280×850, escuro: mesmo PNG íntegro, 620px de altura, sem corte; documento/scrollWidth 1265/1265. Home e Semana resolvem o mesmo arquivo aprovado, sem candidato concorrente.
+- Hora de Reides: original `1000426235.png?v=2b97e5ae1478`, complete=true, 1229×1536. Exatamente uma ação Ver rota mundial; clique fechou o modal e abriu FLY com Hora de Reides: Xerneas selecionado.
+- Semana mostrou Festival da Colheita, Pikachu Astronauta, Semana do Espaço, Reide Sombria e Liga de Batalha GO nas etiquetas localizadas. Outros termos do catálogo continuam sujeitos à revisão pt-BR.
+- 11 testes Node passaram após a alteração, incluindo verificação dos bytes aprovados contra a candidata, IDs permitidos, original preservado e Hora de Reides distinta. Sintaxe dos 18 scripts ativos e git diff --check passaram. Os 28 testes Python da rodada anterior continuam como prova daquela rodada; não foram repetidos sem mudança de backend.
+- Evidência mobile: `xerneas-approved-mobile-641463d-20261001.jpg`; desktop: `xerneas-approved-desktop-dark-641463d-20261001.jpg`.
+- Aprovação registrada em `XERNEAS_ROTATION_APPROVAL_20261001.json`; Xerneas retirado do registro de preview. AVIF histórico, candidata e originais intactos. Nenhuma promoção a produção/main.
+- Inventário das demais artes para 02/10: `PUBLIC_ART_READINESS_20261001.md`. Android físico/PWA/offline/push e clipboard/GPX real permanecem sem nova prova.
