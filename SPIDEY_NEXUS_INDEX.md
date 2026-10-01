@@ -1,7 +1,7 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
 Status: OBRIGATÓRIO
-Data: 2026-09-30
+Data: 2026-10-01
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -70,4 +70,4 @@ O arquivo `SPIDEY_APPROVED_ARTS.md` é a autoridade editorial de aprovação vis
 
 ## Manutenção
 Toda nova decisão estrutural deve atualizar o documento especializado correspondente. Se surgir um novo documento canônico, adicioná-lo à seção 'Leitura obrigatória na retomada' deste índice.
-Último handoff: seção HANDOFF OBRIGATÓRIO de 01/10/2026 07:40 BRT no SPIDEY_NEXUS.md. Checkpoint contém arte de rotação candidata ainda sem QA visual, não promover.
+Último handoff: seção RETOMADA VALIDADA — 01/10/2026 no `SPIDEY_NEXUS.md`. Base de código `62c86a4`, branch `spidey-fly-v1`, continuidade de `f32ae6e`. Rotação Xerneas visível no preview em mobile/desktop, Home/Semana/detalhe; candidata ainda `PENDING_REVIEW`. Provas e limites em `docs/qa/XERNEAS_ROTATION_20261001.md` e estado público em `SPIDEY_PUBLIC_RELEASE.md`. Próximo: decisão visual do editor, cobertura das demais artes e QA Android/PWA/push da versão corrente antes de promoção.

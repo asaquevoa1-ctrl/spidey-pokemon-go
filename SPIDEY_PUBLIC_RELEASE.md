@@ -1,7 +1,7 @@
 # Spidey — candidato público para 02/10/2026
 
-Estado: PREVIEW COM QA RESPONSIVO CONCLUÍDO; promoção/main depende da aprovação visual do editor.
-Branch: `spidey-fly-v1`, continuidade a partir de `6f0ff93`.
+Estado atual: PREVIEW VALIDADA EM MOBILE/DESKTOP; liberação pública pendente de aprovação/cobertura de artes e QA Android/PWA/push da versão corrente.
+Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código validada nesta rodada: `62c86a4`. Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
 
 ## Escopo e ordem do trabalho
 1. Estabilidade e não regressão.
@@ -100,3 +100,16 @@ Novo checkpoint contém PNG corrigido de rotação Xerneas e integração EXCLUS
 
 ## Retomada do checkpoint f32ae6e — 01/10/2026
 PNG da rotação comprovado na Home/detalhe em mobile 390 e desktop 1280; original da Hora de Reides preservado. Encontrados foco inicial no rodapé do detalhe e vínculo antigo da rotação na Semana. Correção incremental compartilha a exceção de revisão entre telas, mantém Fechar antes do conteúdo, reinicia o detalhe no topo e atualiza cache. 10 testes Node, 28 Python e sintaxe dos 18 scripts ativos passaram. Nova preview da correção ainda precisa de QA; evidência detalhada em `docs/qa/XERNEAS_ROTATION_20261001.md`. Aprovação humana da arte e promoção permanecem pendentes.
+
+## Estado consolidado após QA — 01/10/2026
+Código `62c86a4936079023c3881d6e52ec7a8c2953401f`, preview direto verificado: https://spidey-pokemon-o8gs3th9c-spidey3.vercel.app/spidey-app/index.html
+
+- FUNCIONA nesta prova: candidata Xerneas inteira em mobile/desktop; Home, Semana e detalhe com o PNG correto; foco inicial no Fechar e rolagem zero. Original da Hora de Reides preservado e ação única para FLY com seleção correta.
+- FUNCIONA nesta prova: temas claro/escuro/sistema, sem overflow horizontal nas medidas conferidas; FLY 20/28, Taipei e conversões; marcar/desmarcar e reabrir progresso local de Selos.
+- Preparação incremental: service worker com cache `spidey-app-20261001-public-review-v4`, assets necessários incluídos e busca de asset ignorando query de hash; tamanho do pôster reservado durante carregamento. Isto não comprova upgrade/offline num PWA físico.
+- Linguagem: fontes legíveis no detalhe/Novidades; títulos básicos localizados; textos públicos próprios de Selos, busca por PokéStop/cidade/selo e rótulo Copiar e baixar. Notas técnicas e coordenadas originais permanecem no dado. Tags e termos remanescentes devem continuar sendo revisados.
+- PARCIAL: cópia e download mostraram toast, mas clipboard e arquivo GPX não foram comprovados; Novidades usa o catálogo, sem novo feed externo; cobertura visual/Premium incompleta; candidata Xerneas ainda `PENDING_REVIEW`.
+- PENDENTE: aprovação visual humana, cobertura/revisão factual de artes, Android físico e instalação/upgrade/offline/push da versão corrente. Amigos/Chat NÃO IMPLEMENTADO, conforme prioridade existente.
+- 10 testes Node + 28 Python passaram; sintaxe dos 18 scripts ativos e hashes do master passaram. Relatório e prints versionados em `docs/qa/XERNEAS_ROTATION_20261001.md`.
+
+Nenhuma promoção a main/produção nesta rodada. O próximo passo editorial é revisar exatamente o PNG `b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738`, sem aprovar por inferência nem reutilizar aprovação do AVIF anterior.
