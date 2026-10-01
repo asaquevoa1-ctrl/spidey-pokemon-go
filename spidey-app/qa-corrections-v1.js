@@ -161,14 +161,11 @@
       ${summary ? `<div class="event-local-window-v4"><span>Horário do evento</span><strong>${summary}</strong><small>Esse horário vale no relógio da região onde você vai jogar.</small></div>` : `
         <div class="event-local-window-v4"><span>Horário</span><strong>${typeof originalFormatRange === 'function' ? originalFormatRange(event) : 'A confirmar'}</strong></div>`}
       ${actualLocations || (!isLocalTimeEvent(event) ? '<p class="microcopy">Sem coordenadas específicas confirmadas para este evento.</p>' : '')}
-      ${isLocalTimeEvent(event) ? '<div class="world-reference-loading-v4 microcopy">Carregando horários pelo mundo…</div>' : ''}
+      
     `;
     if (actionRow) actionRow.before(section); else body.appendChild(section);
 
-    if (isLocalTimeEvent(event)) {
-      const points = await loadWorldPoints();
-      section.querySelector('.world-reference-loading-v4')?.replaceWith(document.createRange().createContextualFragment(worldReferenceRows(event, points)));
-    }
+    // The FLY view owns the world route and its timezone calculations.
 
     section.querySelectorAll('.copy-event-ref-v4').forEach((button) => {
       button.addEventListener('click', async () => {

@@ -477,3 +477,6 @@ Os prints do editor e a reprodução no preview revelaram que a imagem vinculada
 
 ## Originais de Xerneas reenviados — 01/10/2026, 07:24 BRT
 Quatro arquivos recebidos diretamente do editor e preservados sem modificação; manifesto `docs/qa/xerneas-originals-20261001.json`. `1000426235.png` recupera a peça completa de Hora de Reides de 30/09, 18–19h, associada exclusivamente a `2026-09-30-raid-hour-xerneas`, coerente com o catálogo. Não copiar essa data para a rotação geral. `1000426215.png` é variante sem data, ainda intitulada Hora de Reides; preservar sem inferir associação à rotação. `1000431444.png` traz 14–26/10 e bônus divergentes; `1000431181.png` traz Elite Raids 18/10. Preservar referências, não publicar para a rotação 30/09–06/10. O AVIF truncado permanece intacto para rastreabilidade; bloqueio da rotação geral ainda não resolvido. Nenhuma promoção de produção.
+
+## Detalhe público simplificado — 01/10/2026
+Removida rota mundial paralela do detalhe; única ação Ver rota mundial abre FLY e fecha o dialog, permitindo usar seleção, horários e coordenadas. Ausência de GPX deixa de gerar aviso sem ação; downloads existentes e regras de Selos preservados. Tentativa de corrigir poster da rotação de Xerneas bloqueada por quota da ferramenta de imagem; nenhum novo APPROVED criado.
