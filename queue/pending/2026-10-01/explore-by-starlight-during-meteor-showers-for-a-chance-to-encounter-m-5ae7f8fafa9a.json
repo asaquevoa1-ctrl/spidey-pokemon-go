@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 Explore by starlight during meteor showers for a chance to encounter Minior!",
+  "mensagem": "Explore by starlight during meteor showers for a chance to encounter Minior!\n\n🔗 https://pokemongo.com/news/minior-meteor-showers-2026\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1555267240436437092",
+  "image_url": "https://lh3.googleusercontent.com/u0gcBk4WxvszF4cKKAseYnVDOT8ombVKElMwM2f8545aa98EHjJADmhiyJ6EGXDRhLSlJn6SE4ESV6WVVRLfuQUTIM5Hx7wsKN80mLYxW4rt",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1555267240436437092",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-01T17:33:18.423964+00:00"
+}
