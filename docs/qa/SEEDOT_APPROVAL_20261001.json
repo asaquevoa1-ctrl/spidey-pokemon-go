@@ -1,0 +1,131 @@
+{
+  "schema_version": "spidey-app-art-approval-v1",
+  "status": "APPROVED",
+  "decision": {
+    "authority": "human_editor",
+    "channel": "chat",
+    "text": "Sim, aprovo",
+    "at": "2026-10-01T19:07:44-03:00",
+    "scope": "Somente o PNG corrigido de Seedot apresentado no preview e print desktop do checkpoint 8d5541e; aprovação vinculada exclusivamente ao eventId listado."
+  },
+  "branch": "spidey-fly-v1",
+  "displayed_checkpoint": "8d5541e6012f652a77ce1a2ccef8b64b881a249c",
+  "reviewed_code_commit": "2ed7ef81b43d728e421e12e4888543d5155a5510",
+  "candidate_record": "docs/qa/NEXT_ART_REVIEW_20261001.json",
+  "event_ids": [
+    "2026-10-01-spotlight-seedot"
+  ],
+  "artworks": [
+    {
+      "event_id": "2026-10-01-spotlight-seedot",
+      "status": "APPROVED",
+      "candidate_file": "spidey-app/assets/events/review/seedot-spotlight-correction-v1.png",
+      "approved_file": "spidey-app/assets/events/premium/seedot-spotlight-approved-v1.png",
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "bytes": 2215863,
+      "width": 1121,
+      "height": 1403,
+      "display": "full_poster",
+      "input_file": "spidey-app/assets/events/recovered/1000431445.png",
+      "input_sha256": "1cc51c7567245bd9e005d13b39d3064c52409c79e4846391194fc72a85823c4d",
+      "source_classification": "community",
+      "source_urls": [
+        "https://pokemongohub.net/post/event/seedot-spotlight-hour-october-2026-last-minute-guide/",
+        "https://leekduck.com/events/pokemonspotlighthour2026-10-01/"
+      ],
+      "factual_review": {
+        "start_local": "2026-10-01T18:00:00",
+        "end_local": "2026-10-01T19:00:00",
+        "claims": [
+          "2× PE por captura.",
+          "Seedot aparece mais frequentemente na natureza."
+        ],
+        "removed": [
+          "Dia Comunitário",
+          "11/10 e 14–17h",
+          "Chance aumentada de Brilhante",
+          "Golpe exclusivo Razor Leaf",
+          "Pesquisas e bônus genéricos"
+        ]
+      },
+      "displayed_proof": {
+        "file": "docs/qa/seedot-desktop-review-2ed7ef8-20261001.jpg",
+        "viewport": "1280×850, tema Escuro, detalhe",
+        "bytes": 142330,
+        "sha256": "845dc6164bade8558dfa104cd1188cb06753198e0c3532a937332beabd7f2ee0"
+      }
+    }
+  ],
+  "previous_master_sha256": "8af530bffe0d860a74fd7295a7637b85f6251bc48a3f63f63e52d8e05bd59e71",
+  "preserved_master_entries": {
+    "2026-10-harvest-taken-over": {
+      "file": "assets/events/premium/harvest-invasion-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-gigantamax-cinderace-max-day": {
+      "file": "assets/events/premium/cinderace-max-day-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-xerneas-raids": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "festival-of-lights-2026-pokeminers-e2": {
+      "file": "assets/festival-das-luzes-approved.png",
+      "status": "APPROVED",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda"
+    },
+    "2026-09-raids-xerneas": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "2026-09-30-raid-hour-xerneas": {
+      "file": "assets/events/recovered/1000426235.png",
+      "status": "APPROVED",
+      "width": 1229,
+      "height": 1536,
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c"
+    }
+  },
+  "rendering_qa": "docs/qa/SEEDOT_APPROVAL_20261001.md",
+  "prior_rendering_qa": "docs/qa/NEXT_ART_20261001.md",
+  "excluded_from_decision": [
+    "Applin e Semana do Espaço",
+    "Zorua e demais artes pendentes",
+    "Lançamento completo / main / produção"
+  ],
+  "preserved": [
+    "PNG candidata e original Seedot byte a byte",
+    "Todas as entradas aprovadas anteriores sem alteração",
+    "Registros anteriores de revisão/aprovação/prompts/recusas sem alteração"
+  ],
+  "post_approval_qa": {
+    "status": "LOCAL_CHECKS_PASSED_PREVIEW_PENDING",
+    "node_tests_passed": 16,
+    "active_scripts_syntax_passed": 18,
+    "service_worker_syntax_passed": true,
+    "json_precache_hashes_diff_passed": true
+  }
+}

@@ -1,8 +1,8 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **3 com arte no master APPROVED**, **1 com pôster corrigido PENDING_REVIEW**, **19 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **4 com arte no master APPROVED**, **19 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
-Xerneas, Invasão e Cinderace foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
+Xerneas, Invasão, Cinderace e Seedot foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
 ## Ordem para a entrega em 02/10
 
@@ -10,7 +10,7 @@ Xerneas, Invasão e Cinderace foram aprovados explicitamente pelo editor e estã
 2. Aprovação humana de Invasão e Cinderace concluída em 01/10, 15:45 BRT; novos paths confirmados no preview `a242f88`, mobile/desktop/Semana/FLY. Cinderace em 03/10, 14–17h locais; FLY corrigido e testado. Provas anteriores em `PRIORITY_ART_20261001.md`, pós-aprovação em `PRIORITY_ART_APPROVAL_20261001.md`.
 3. Semana Mundial do Espaço em 04/10 e Mega Victreebel vigente; depois Yveltal/Hora de Reides e Mega Blastoise. Não presumir aprovação das peças de Yveltal previamente rejeitadas.
 4. Completar Temporada, GO Pass, Liga de Batalha GO e Descobertas Diárias; revisar fontes dos eventos regionais.
-5. Seedot de 01/10 possui agora pôster corrigido integral PENDING_REVIEW, conferido no preview `2ed7ef8`; decisão humana específica ainda pendente.
+5. Seedot de 01/10 APPROVED pela decisão de 19:07 BRT sobre o PNG exato conferido em `2ed7ef8`; integração pós-aprovação em conferência.
 
 Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile/desktop e decisão humana específica. Novas artes não podem sobrescrever Xerneas nem recuperar aprovações antigas. Android/PWA/offline/push e prova de clipboard/GPX permanecem frentes independentes.
 
@@ -30,7 +30,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-gigantamax-cinderace-max-day` | Dia de Batalhas Max: Cinderace Gigamax | 2026-10-03 → 2026-10-03 | APPROVED |
 | `2026-10-world-space-week` | Semana Mundial do Espaço 2026 | 2026-10-04 → 2026-10-10 | Sem arquivo no compositor Home/FLY |
 | `2026-10-go-pass` | GO Pass: Outubro | 2026-10-06 → 2026-11-03 | Sem arquivo no compositor Home/FLY |
-| `2026-10-01-spotlight-seedot` | Hora do Holofote: Seedot | 2026-10-01 → 2026-10-01 | Pôster corrigido PENDING_REVIEW |
+| `2026-10-01-spotlight-seedot` | Hora do Holofote: Seedot | 2026-10-01 → 2026-10-01 | APPROVED |
 | `2026-10-07-raid-hour-yveltal` | Hora de Reides: Yveltal | 2026-10-07 → 2026-10-07 | Sem arquivo no compositor Home/FLY |
 | `2026-10-05-max-monday-sizzlipede` | Segunda Max: Dinamax Sizzlipede | 2026-10-05 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
 | `2026-10-raids-yveltal` | Reides 5★: Yveltal | 2026-10-07 → 2026-10-13 | Sem arquivo no compositor Home/FLY |
@@ -57,3 +57,10 @@ Applin teve segunda recusa com o mesmo pedido; Semana Mundial do Espaço teve re
 
 
 QA de Seedot concluído no código `2ed7ef8`, Home/Semana/detalhe/FLY, mobile/desktop Claro/Escuro, duas provas em `NEXT_ART_20261001.md`. Mantém PENDING_REVIEW até decisão humana exata. Esta conferência não altera contagens, não comprova Android/PWA/push nem libera produção.
+
+
+## APROVAÇÃO SEEDOT — 01/10/2026, 19:07 BRT
+
+Editor respondeu “Sim, aprovo” ao PNG exato de Seedot apresentado no checkpoint `8d5541e`/QA `2ed7ef8`. Hash `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`, 1121×1403, agora APPROVED exclusivamente para `2026-10-01-spotlight-seedot`. Cópia premium idêntica à candidata em `assets/events/premium/seedot-spotlight-approved-v1.png`; original/candidata e registros históricos preservados. Registro `docs/qa/SEEDOT_APPROVAL_20261001.json`, confirmação pós-aprovação em `docs/qa/SEEDOT_APPROVAL_20261001.md`.
+
+Master soberano/full_poster, mesmos papéis de imagem, cache/shell versionados. Fonte Seedot permanece comunidade; nenhuma alteração factual nesta consolidação. Somente a entrada Seedot sai do preview; todas as entradas aprovadas anteriores preservadas. Inventário corrente 23 eventos: 4 APPROVED, 19 sem arquivo Home/FLY; Zorua pendente fora da janela. Próximo desta rodada: testes e QA pós-aprovação; depois cobertura restante e Android/PWA/push. Applin/Espaço recusados, sem novo arquivo. Nenhuma promoção a main/produção; aprovação não inclui lançamento completo.

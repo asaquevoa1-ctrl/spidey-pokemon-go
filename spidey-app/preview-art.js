@@ -1,13 +1,5 @@
 // Review candidates and recovered illustration crops. This never grants approval.
 window.SPIDEY_PREVIEW_ART=Object.freeze({
-  "2026-10-01-spotlight-seedot": {
-    "file": "assets/events/review/seedot-spotlight-correction-v1.png",
-    "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
-    "status": "PENDING_REVIEW",
-    "display": "full_poster",
-    "width": 1121,
-    "height": 1403
-  },
   "2026-10-zorua-community-day": {
     "file": "assets/events/recovered/1000431272.png",
     "sha256": "2ac4a1fd65a1aaed9f792611913584f428c00999fcaf0c81ba2820709dc24af9",

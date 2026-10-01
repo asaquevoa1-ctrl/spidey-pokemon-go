@@ -95,3 +95,10 @@ QA pós-aprovação `a242f88`: Home/Semana/detalhe e FLY de Cinderace renderizam
 ## Seedot integral para revisão — 01/10
 
 `preview-art.js` passa a mapear explicitamente Seedot para `assets/events/review/seedot-spotlight-correction-v1.png`, hash `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`, 1121×1403, full_poster PENDING_REVIEW; não é master nem Premium aprovado. Original/crop preservados como histórico. Mesmo arquivo por contexto via resolver de candidatas; cache/shell versionados. Nenhuma entrada Applin/Espaço porque ferramenta não entregou binário. Catálogo aprovado inalterado. Manifesto `docs/qa/NEXT_ART_REVIEW_20261001.json`.
+
+
+## APROVAÇÃO SEEDOT — 01/10/2026, 19:07 BRT
+
+Editor respondeu “Sim, aprovo” ao PNG exato de Seedot apresentado no checkpoint `8d5541e`/QA `2ed7ef8`. Hash `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`, 1121×1403, agora APPROVED exclusivamente para `2026-10-01-spotlight-seedot`. Cópia premium idêntica à candidata em `assets/events/premium/seedot-spotlight-approved-v1.png`; original/candidata e registros históricos preservados. Registro `docs/qa/SEEDOT_APPROVAL_20261001.json`, confirmação pós-aprovação em `docs/qa/SEEDOT_APPROVAL_20261001.md`.
+
+Master soberano/full_poster, mesmos papéis de imagem, cache/shell versionados. Fonte Seedot permanece comunidade; nenhuma alteração factual nesta consolidação. Somente a entrada Seedot sai do preview; todas as entradas aprovadas anteriores preservadas. Inventário corrente 23 eventos: 4 APPROVED, 19 sem arquivo Home/FLY; Zorua pendente fora da janela. Próximo desta rodada: testes e QA pós-aprovação; depois cobertura restante e Android/PWA/push. Applin/Espaço recusados, sem novo arquivo. Nenhuma promoção a main/produção; aprovação não inclui lançamento completo.

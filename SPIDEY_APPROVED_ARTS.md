@@ -17,7 +17,7 @@ Arte `APPROVED` não pode ser substituída por fallback, thumbnail, heurística,
 - REJECTED — não usar.
 - PENDING_REVIEW — ainda sem aprovação final.
 
-## Nova candidata de Seedot — 01/10/2026, após aprovação de Invasão/Cinderace
+## Histórico — candidata de Seedot — 01/10/2026, após aprovação de Invasão/Cinderace
 
 Pôster integral corrigido para `2026-10-01-spotlight-seedot`, **PENDING_REVIEW**, `assets/events/review/seedot-spotlight-correction-v1.png`, SHA256 `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`, 1121×1403. Fonte da comunidade (Pokémon GO Hub + Leek Duck): 01/10/2026, 18–19h locais, 2× PE por captura e mais Seedot na natureza. Removidos Community Day/11/10/14–17h, golpe exclusivo, maior chance de Brilhante e painéis sem confirmação. Original preservado byte a byte. Entrada explícita full_poster no preview substitui somente o recorte provisório de Seedot; master aprovado inalterado.
 
@@ -126,3 +126,10 @@ PNG corrigido decodificado e visível em Home/Semana/detalhe no preview, 390×85
 O editor respondeu “Sim, aprovo” à apresentação deste PNG exato. Estado corrente passa de PENDING_REVIEW a APPROVED exclusivamente para os dois IDs da rotação. A cópia em `assets/events/premium/xerneas-rotation-approved-v1.png` é byte a byte igual à candidata revisada. A candidata e o AVIF anterior continuam preservados para rastreabilidade. O master passa a resolver o PNG saudável sem exceção de revisão; as entradas de Xerneas foram retiradas de `preview-art.js`. A aprovação é da arte de Xerneas, não de outras peças nem do lançamento público completo.
 
 Validação factual da peça: Xerneas em Reides 5★, 30/09–06/10/2026, corroborado por Leek Duck e GO Hub, mantendo classificação de comunidade. Sem painéis de bônus/horários não confirmados. Registro completo em `docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json`.
+
+
+## APROVAÇÃO SEEDOT — 01/10/2026, 19:07 BRT
+
+Editor respondeu “Sim, aprovo” ao PNG exato de Seedot apresentado no checkpoint `8d5541e`/QA `2ed7ef8`. Hash `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`, 1121×1403, agora APPROVED exclusivamente para `2026-10-01-spotlight-seedot`. Cópia premium idêntica à candidata em `assets/events/premium/seedot-spotlight-approved-v1.png`; original/candidata e registros históricos preservados. Registro `docs/qa/SEEDOT_APPROVAL_20261001.json`, confirmação pós-aprovação em `docs/qa/SEEDOT_APPROVAL_20261001.md`.
+
+Master soberano/full_poster, mesmos papéis de imagem, cache/shell versionados. Fonte Seedot permanece comunidade; nenhuma alteração factual nesta consolidação. Somente a entrada Seedot sai do preview; todas as entradas aprovadas anteriores preservadas. Inventário corrente 23 eventos: 4 APPROVED, 19 sem arquivo Home/FLY; Zorua pendente fora da janela. Próximo desta rodada: testes e QA pós-aprovação; depois cobertura restante e Android/PWA/push. Applin/Espaço recusados, sem novo arquivo. Nenhuma promoção a main/produção; aprovação não inclui lançamento completo.

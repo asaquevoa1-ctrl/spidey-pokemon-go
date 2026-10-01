@@ -1,6 +1,6 @@
 # Spidey — candidato público para 02/10/2026
 
-Estado atual: XERNEAS, INVASÃO e CINDERACE APPROVED por decisões humanas explícitas; PNGs exatos preservados no master. Seedot com novo pôster corrigido PENDING_REVIEW. Artes de Applin e Semana do Espaço pendentes por recusa da ferramenta. Liberação pública depende de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
+Estado atual: XERNEAS, INVASÃO e CINDERACE APPROVED por decisões humanas explícitas; PNGs exatos preservados no master. Seedot também APPROVED por decisão explícita de 19:07 BRT; integração pós-aprovação em conferência. Artes de Applin e Semana do Espaço pendentes por recusa da ferramenta. Liberação pública depende de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
 Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código mais recente conferida em preview: `2ed7ef8` (Seedot PENDING_REVIEW; masters anteriores preservados). Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
 
 ## Escopo e ordem do trabalho
@@ -152,3 +152,10 @@ Pôster corrigido do Holofote de Seedot, 01/10 18–19h locais e 2× PE por capt
 Preview seguro verificado https://spidey-pokemon-1v45kgmxg-spidey3.vercel.app/spidey-app/index.html. Pôster exato decodificado 1121×1403 na Home/detalhe/Semana/FLY; mobile Claro 390×850 e desktop Escuro 1280×850. Sem overflow horizontal medido, detalhe inicia no topo, ação única fecha diálogo e seleciona Seedot no FLY. 20/28 referências, Taipei 07–08h e Pago Pago 02/10 02–03h Brasília observados. Masters Xerneas/Invasão/Cinderace intactos e carregados no app direto. Fontes de Seedot continuam comunidade; detalhes de Espaço mostram prazo da pesquisa separado até 12/10.
 
 15 testes Node e verificações locais já concluídos; provas e limites específicos em `docs/qa/NEXT_ART_20261001.md` e manifesto JSON homônimo de revisão. Clique via Enter no iframe e clique no app direto desktop comprovados; toque físico Android ainda pendente. Nova arte Seedot **PENDING_REVIEW**, decisão humana não inferida. Applin/Espaço sem arte por recusa; 23 eventos, 3 APPROVED, 1 pôster pendente, 19 sem arquivo Home/FLY. Lançamento público continua condicionado à cobertura/revisão e provas Android/PWA/push; nenhuma promoção a main/produção.
+
+
+## APROVAÇÃO SEEDOT — 01/10/2026, 19:07 BRT
+
+Editor respondeu “Sim, aprovo” ao PNG exato de Seedot apresentado no checkpoint `8d5541e`/QA `2ed7ef8`. Hash `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`, 1121×1403, agora APPROVED exclusivamente para `2026-10-01-spotlight-seedot`. Cópia premium idêntica à candidata em `assets/events/premium/seedot-spotlight-approved-v1.png`; original/candidata e registros históricos preservados. Registro `docs/qa/SEEDOT_APPROVAL_20261001.json`, confirmação pós-aprovação em `docs/qa/SEEDOT_APPROVAL_20261001.md`.
+
+Master soberano/full_poster, mesmos papéis de imagem, cache/shell versionados. Fonte Seedot permanece comunidade; nenhuma alteração factual nesta consolidação. Somente a entrada Seedot sai do preview; todas as entradas aprovadas anteriores preservadas. Inventário corrente 23 eventos: 4 APPROVED, 19 sem arquivo Home/FLY; Zorua pendente fora da janela. Próximo desta rodada: testes e QA pós-aprovação; depois cobertura restante e Android/PWA/push. Applin/Espaço recusados, sem novo arquivo. Nenhuma promoção a main/produção; aprovação não inclui lançamento completo.

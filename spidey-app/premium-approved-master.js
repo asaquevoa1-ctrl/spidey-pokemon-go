@@ -1,6 +1,15 @@
 (() => {
   'use strict';
   const master = {
+  "2026-10-01-spotlight-seedot": {
+    "file": "assets/events/premium/seedot-spotlight-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+    "approval_record": "docs/qa/SEEDOT_APPROVAL_20261001.json"
+  },
   "2026-10-harvest-taken-over": {
     "file": "assets/events/premium/harvest-invasion-approved-v1.png",
     "status": "APPROVED",
@@ -50,7 +59,7 @@
     "width": 1229,
     "height": 1536,
     "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c"
-}
+  }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
   window.SPIDEY_UNAVAILABLE_ART=Object.freeze({

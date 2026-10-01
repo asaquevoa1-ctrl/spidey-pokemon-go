@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-seedot-review-v1';
+const CACHE = 'spidey-app-20261001-seedot-approved-v1';
 const CORE = [
   './',
   './index.html',
@@ -54,6 +54,7 @@ const CORE = [
   './assets/spidey-logo-oficial.jpg',
   './assets/events/premium/xerneas-rotation-approved-v1.png',
   './assets/events/review/seedot-spotlight-correction-v1.png',
+  './assets/events/premium/seedot-spotlight-approved-v1.png',
   './assets/events/premium/cinderace-max-day-approved-v1.png',
   './assets/events/premium/harvest-invasion-approved-v1.png',
   './assets/events/recovered/1000426235.png',

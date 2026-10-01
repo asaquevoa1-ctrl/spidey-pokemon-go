@@ -34,7 +34,7 @@ test('human approval binds only the exact two reviewed posters across roles and 
  const applin={id:'2026-09-harvest-festival-applin'};
  assert.equal(w.SPIDEY_APPROVED_ART_MASTER[applin.id],undefined);
  assert.equal(w.SPIDEY_PREVIEW_ART[applin.id],undefined);assert.equal(w.SpideyReviewArt.poster(applin),null);assert.equal(context.weeklyArtUrl(applin),'');
- for(const id of ['2026-10-01-spotlight-seedot','2026-10-zorua-community-day']){
+ for(const id of ['2026-10-zorua-community-day']){
   assert.equal(w.SPIDEY_APPROVED_ART_MASTER[id],undefined);assert.equal(w.SPIDEY_PREVIEW_ART[id].status,'PENDING_REVIEW');
  }
 });
@@ -50,22 +50,43 @@ test('approved masters and unavailable originals stay protected from unrelated c
  assert.equal(w.SpideyArt.resolve({id:'broken'},'hero'),null);
  assert.equal(w.SpideyReviewArt.poster({id:'broken'}),null);
 });
-test('corrected Seedot is an explicit full-poster candidate; blocked generations grant no asset or approval',()=>{
- const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/NEXT_ART_REVIEW_20261001.json','utf8'));
- assert.equal(record.status,'PENDING_REVIEW');assert.equal(record.candidates.length,1);
- const c=record.candidates[0],e={id:c.event_id},draft=w.SPIDEY_PREVIEW_ART[e.id],file=fs.readFileSync(c.file);
- assert.equal(draft.status,'PENDING_REVIEW');assert.equal(draft.display,'full_poster');
- assert.equal(crypto.createHash('sha256').update(file).digest('hex'),c.sha256);
- assert.equal(draft.width,file.readUInt32BE(16));assert.equal(draft.height,file.readUInt32BE(20));
+test('Seedot human decision binds the exact reviewed PNG and preserves earlier masters',()=>{
+ const {window:w,context}=setup();
+ const approval=JSON.parse(fs.readFileSync('docs/qa/SEEDOT_APPROVAL_20261001.json','utf8'));
+ const review=JSON.parse(fs.readFileSync(approval.candidate_record,'utf8'));
+ assert.equal(approval.status,'APPROVED');assert.equal(approval.decision.text,'Sim, aprovo');
+ assert.equal(review.status,'PENDING_REVIEW');assert.equal(review.candidates.length,1);
+ const c=review.candidates[0],a=approval.artworks[0],e={id:c.event_id},master=w.SPIDEY_APPROVED_ART_MASTER[e.id];
+ assert.deepEqual(approval.event_ids,[c.event_id]);assert.equal(approval.artworks.length,1);
+ assert.equal(master.status,'APPROVED');assert.equal(master.display,'full_poster');
+ assert.equal(master.approval_record,'docs/qa/SEEDOT_APPROVAL_20261001.json');
+ assert.equal('spidey-app/'+master.file,a.approved_file);assert.equal(a.candidate_file,c.file);
+ const file=fs.readFileSync(a.approved_file);
+ assert.deepEqual(file,fs.readFileSync(c.file));assert.equal(file.length,a.bytes);
+ assert.equal(crypto.createHash('sha256').update(file).digest('hex'),c.sha256);assert.equal(master.sha256,c.sha256);
+ assert.equal(master.width,file.readUInt32BE(16));assert.equal(master.height,file.readUInt32BE(20));
  assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.input_file)).digest('hex'),c.input_sha256);
- assert.equal(w.SPIDEY_APPROVED_ART_MASTER[e.id],undefined);assert.equal(w.SPIDEY_PREMIUM_EVENT_ART[e.id],undefined);
+ assert.equal(w.SPIDEY_PREVIEW_ART[e.id],undefined);assert.equal(w.SpideyReviewArt.poster(e),null);
+ assert.equal(w.SPIDEY_PREMIUM_EVENT_ART[e.id].visualApproved,true);
  for(const role of ['thumb','card','weekly','hero','poster']){
-  const a=w.SpideyArt.resolve(e,role);assert.equal(a.url,draft.file);assert.equal(a.sha256,c.sha256);assert.equal(a.status,'PENDING_REVIEW');assert.equal(a.standard,undefined);
+  const asset=w.SpideyArt.resolve(e,role);assert.equal(asset.url,master.file);assert.equal(asset.sha256,c.sha256);
+  assert.equal(asset.standard,'spidey-premium-v1');assert.match(asset.sourceRole,/^premium_catalog:/);
  }
- assert.equal(context.weeklyArtUrl(e),draft.file+'?v='+c.sha256.slice(0,12));
- assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/premium-approved-master.js')).digest('hex'),record.preserved_master_sha256);
+ assert.equal(context.weeklyArtUrl(e),master.file+'?v='+c.sha256.slice(0,12));
+ assert.equal(approval.previous_master_sha256,review.preserved_master_sha256);
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id].sort());
+ for(const [id,old] of Object.entries(approval.preserved_master_entries)){
+  assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
+  assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
+ }
+ const proof=fs.readFileSync(a.displayed_proof.file);
+ assert.equal(crypto.createHash('sha256').update(proof).digest('hex'),a.displayed_proof.sha256);
+});
+test('Applin and Space generation refusals grant no asset or inferred approval',()=>{
+ const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/NEXT_ART_REVIEW_20261001.json','utf8'));
+ assert.equal(record.blocked.length,2);
  for(const b of record.blocked){
   assert.equal(b.file,null);assert.equal(w.SPIDEY_PREVIEW_ART[b.event_id],undefined);assert.equal(w.SPIDEY_APPROVED_ART_MASTER[b.event_id],undefined);
-  assert.equal(w.SpideyReviewArt.poster({id:b.event_id}),null);
+  assert.equal(w.SpideyReviewArt.poster({id:b.event_id}),null);assert.equal(context.weeklyArtUrl({id:b.event_id}),'');
  }
 });
