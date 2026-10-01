@@ -25,3 +25,5 @@
 /* A known truncated binary must never reserve an empty poster-sized region. */
 body.spidey-player-ui #eventDetail img.detail-hero[src*="xerneas-premium-approved-v1.avif"],body.spidey-player-ui img[src*="xerneas-premium-approved-v1.avif"]{display:none!important}
 .player-art-notice{margin:0;padding:16px 20px;color:var(--player-ink);font-size:.85rem;border-bottom:1px solid var(--player-line)}
+
+body.spidey-player-ui #eventDetail.player-art-unavailable .spidey-cover-art{display:none!important}
