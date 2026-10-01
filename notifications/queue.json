@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-09-30-raid-hour-xerneas:start:60",
-      "event_id": "2026-09-30-raid-hour-xerneas",
-      "event_title": "Raid Hour: Xerneas",
-      "category": "raid_hour",
-      "scheduled_for": "2026-09-30T17:00:00-03:00",
-      "event_start": "2026-09-30T18:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Raid Hour: Xerneas começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-09-30-raid-hour-xerneas",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-01-spotlight-seedot:start:60",
       "event_id": "2026-10-01-spotlight-seedot",
       "event_title": "Spotlight Hour: Seedot",
@@ -779,7 +761,7 @@
     }
   ],
   "meta": {
-    "pending_count": 43,
+    "pending_count": 42,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
