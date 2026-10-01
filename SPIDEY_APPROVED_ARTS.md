@@ -17,6 +17,14 @@ Arte `APPROVED` não pode ser substituída por fallback, thumbnail, heurística,
 - REJECTED — não usar.
 - PENDING_REVIEW — ainda sem aprovação final.
 
+## Nova candidata de Seedot — 01/10/2026, após aprovação de Invasão/Cinderace
+
+Pôster integral corrigido para `2026-10-01-spotlight-seedot`, **PENDING_REVIEW**, `assets/events/review/seedot-spotlight-correction-v1.png`, SHA256 `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`, 1121×1403. Fonte da comunidade (Pokémon GO Hub + Leek Duck): 01/10/2026, 18–19h locais, 2× PE por captura e mais Seedot na natureza. Removidos Community Day/11/10/14–17h, golpe exclusivo, maior chance de Brilhante e painéis sem confirmação. Original preservado byte a byte. Entrada explícita full_poster no preview substitui somente o recorte provisório de Seedot; master aprovado inalterado.
+
+Applin foi recusado novamente com o mesmo prompt/inputs, request ID `4038e879-6ed2-4e02-a770-aae59e8e8855`; Semana Mundial do Espaço também foi recusada, request ID `e8330835-4c71-41fb-98eb-c3896d30b92f`. Nenhum arquivo entregue para essas duas peças e nenhuma aprovação inferida. Recusas, prompts exatos, fontes e candidata Seedot em `docs/qa/NEXT_ART_REVIEW_20261001.json`. Dados oficiais da Semana do Espaço atualizados: evento 04–10/10, pesquisa gratuita até 12/10 às 23h59 locais. Arte permanece pendente.
+
+QA e prova da candidata Seedot devem ser concluídos e registrados em `docs/qa/NEXT_ART_20261001.md` antes de solicitar a decisão humana sobre este PNG exato. Xerneas/Invasão/Cinderace/Hora de Reides/Festival das Luzes mantêm APPROVED; esta rodada não os altera nem aprova produção.
+
 ## Aprovação de Invasão e Cinderace — 01/10/2026, 15:45 BRT
 
 O editor respondeu “Sim, aprovo” aos dois PNGs exatos apresentados no checkpoint `df9d050`, código de QA `684d80e`. As peças passam de PENDING_REVIEW para **APPROVED** e entram no master. Cópias byte a byte; candidatas, originais e registro histórico de prompts preservados. Vínculo auditável da decisão/arquivos/eventIds/provas: `docs/qa/PRIORITY_ART_APPROVAL_20261001.json`. Histórico de geração: `docs/qa/PRIORITY_ART_REVIEW_20261001.json`.

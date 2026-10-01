@@ -532,3 +532,11 @@ Código validado `a242f88cbe575902c064110883d71e1ef12778b4`, tree local/remoto i
 14 testes Node, sintaxe de 18 scripts/SW, JSON/precaches/hashes/diff passaram. Quatro provas novas e limites em `docs/qa/PRIORITY_ART_APPROVAL_20261001.md`; decisão e provas vinculadas em JSON homônimo. Checkpoint documental que contém este handoff não altera código validado.
 
 Próximo: Applin/cobertura restante (23 eventos: 3 APPROVED, 1 recorte pendente, 19 sem arquivo Home/FLY), Android físico/instalação/upgrade/offline PWA/push, clipboard/GPX real. Applin bloqueado pela tentativa de geração documentada, sem arquivo, Pumpkaboo revogado não substitui. Não reabrir Xerneas/Invasão/Cinderace aprovados; continuar nesta branch sem reinício. Nenhuma promoção a main/produção e Amigos/Chat posterior ao núcleo.
+
+## Continuação — Seedot corrigido e bloqueios persistidos, 01/10/2026
+
+Após “Ok, e agora?”, preservado checkpoint `aaaedd1` na branch spidey-fly-v1. Repetido o pedido exato de Applin, mesmos prompt/inputs: nova recusa de saída, sem arquivo. Preparada Semana do Espaço com referência visual oficial e marca, também recusada, sem arquivo. Requests/prompts no manifesto `docs/qa/NEXT_ART_REVIEW_20261001.json`; não alterar prompts para contornar nem inferir arte Premium de fallback.
+
+Seedot foi entregue por edição do original recuperado: novo full_poster PENDING_REVIEW, 1121×1403, SHA256 `6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f`. Correção 01/10, 18–19h locais, 2× PE por captura; removidos Community Day/11/10/14–17h/golpe exclusivo/shiny boost/pesquisas genéricas. Fonte comunidade GO Hub + Leek Duck; dados/Semana alinhados. Original e master aprovados preservados; apenas Seedot muda de recorte provisório para candidata integral. Shell/cache atualizados. Dados de Espaço incluem fonte pt-BR oficial/reides uma estrela/pesquisa gratuita e prazo 12/10, mantendo evento 04–10/10.
+
+Próximo desta rodada: testes e QA mobile/desktop/Home/Semana/detalhe/FLY de Seedot; registrar provas antes da revisão humana exata. Inventário corrente 23 eventos: 3 APPROVED, 1 pôster PENDING_REVIEW, 19 sem arquivo. Applin/Espaço/cobertura restante, Android/PWA/push e clipboard/GPX real continuam pendentes. Nenhuma promoção a main/produção.

@@ -3027,7 +3027,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/en/news/world-space-week-2026",
+        "url": "https://pokemongo.com/pt-BR/news/world-space-week-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -3050,14 +3050,26 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O evento acontece de 04/10 às 00h até 10/10 às 23h59 locais.",
+        "Conclua a Pesquisa temporária e resgate suas recompensas até 12/10 às 23h59 locais."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Pesquisa temporária gratuita com encontro de Pikachu Astronauta."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu Astronauta",
+          "note": "estreia em Reides de uma estrela e Pesquisa temporária; pode aparecer Brilhante"
+        }
+      ]
     },
     {
       "id": "2026-10-go-pass",
@@ -3383,7 +3395,7 @@
     {
       "id": "2026-10-01-spotlight-seedot",
       "slug": "2026-10-01-spotlight-seedot",
-      "title": "Spotlight Hour: Seedot",
+      "title": "Hora do Holofote: Seedot",
       "summary": "2× PE por captura.",
       "category": "spotlight_hour",
       "tags": [
@@ -3392,8 +3404,8 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Pokémon GO Hub • guia Seedot + Leek Duck",
+        "url": "https://pokemongohub.net/post/event/seedot-spotlight-hour-october-2026-last-minute-guide/",
         "confidence": "verified"
       },
       "schedule": {
@@ -3416,14 +3428,25 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O bônus de PE vale para capturas durante a janela do evento."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "2× PE por captura."
+      ],
+      "pokemon": [
+        {
+          "name": "Seedot",
+          "note": "mais aparições na natureza; variação Brilhante disponível"
+        }
+      ]
     },
     {
       "id": "2026-10-08-spotlight-elgyem",

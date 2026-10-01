@@ -1,0 +1,90 @@
+{
+  "status": "PENDING_REVIEW",
+  "date": "2026-10-01",
+  "branch": "spidey-fly-v1",
+  "base_commit": "aaaedd1341ec9b2d5ee4484cb4a6579a1b01cd60",
+  "tool": "built-in image_gen",
+  "approval_required": "Aprovação humana explícita sobre o PNG exato após QA; não aprova produção.",
+  "candidates": [
+    {
+      "event_id": "2026-10-01-spotlight-seedot",
+      "file": "spidey-app/assets/events/review/seedot-spotlight-correction-v1.png",
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "width": 1121,
+      "height": 1403,
+      "bytes": 2215863,
+      "input_file": "spidey-app/assets/events/recovered/1000431445.png",
+      "input_sha256": "1cc51c7567245bd9e005d13b39d3064c52409c79e4846391194fc72a85823c4d",
+      "source_classification": "community",
+      "source_urls": [
+        "https://pokemongohub.net/post/event/seedot-spotlight-hour-october-2026-last-minute-guide/",
+        "https://leekduck.com/events/pokemonspotlighthour2026-10-01/"
+      ],
+      "factual_review": {
+        "start_local": "2026-10-01T18:00:00",
+        "end_local": "2026-10-01T19:00:00",
+        "claims": [
+          "2× PE por captura.",
+          "Seedot aparece mais frequentemente na natureza."
+        ],
+        "removed": [
+          "Dia Comunitário",
+          "11/10 e 14–17h",
+          "Chance aumentada de Brilhante",
+          "Golpe exclusivo Razor Leaf",
+          "Pesquisas e bônus genéricos"
+        ]
+      },
+      "prompt": "Use case: text-localization.\nEdit target: the supplied Spidey Seedot poster.\nPreserve the central three Seedot illustrations, their appearance, autumn forest and lantern scene, warm cinematic golden light, Spidey gold spider emblem and brand header, Pokémon GO logo, rich polished editorial finish and portrait aspect ratio.\nChange the inaccurate Community Day information to the verified Spotlight Hour. Replace \"COMMUNITY DAY\" with \"HORA DO HOLOFOTE\" and keep \"SEEDOT\" as the prominent subject title.\nReplace the date/time panel with exact large, mobile-legible Portuguese text:\n\"1 DE OUTUBRO DE 2026\"\n\"DAS 18H ÀS 19H • HORÁRIO LOCAL\"\nDelete all six existing lower bonus panels. Replace them with ONLY two spacious luminous gold-edged panels:\nPanel 1: \"2× PE POR CAPTURA\"\nPanel 2: \"MAIS SEEDOT NA NATUREZA\"\nFooter: \"Fontes: Pokémon GO Hub e Leek Duck\"\nPreserve the existing Spidey header and slogan \"SEMPRE UM PASSO À FRENTE\".\nConstraints: no Community Day, no 11 October, no 14–17h, no exclusive move or Razor Leaf, no increased Shiny chance, no research or other invented rewards. Use correct accents, generous safe margins and a balanced large title/date/bonus hierarchy; keep all subjects and information uncut. Remove the old official-source footer because this correction uses community sources. This is the corrected artwork itself, not an app mockup. Do not edit the illustration or replace the scene."
+    }
+  ],
+  "blocked": [
+    {
+      "event_id": "2026-09-harvest-festival-applin",
+      "status": "GENERATION_BLOCKED",
+      "file": null,
+      "error_type": "moderation_blocked",
+      "moderation_stage": "output",
+      "categories": [
+        "other"
+      ],
+      "request_id": "4038e879-6ed2-4e02-a770-aae59e8e8855",
+      "previous_request_id": "7cd320ba-240b-42d9-bea1-a6424e8ddc70",
+      "previous_record": "docs/qa/PRIORITY_ART_REVIEW_20261001.json",
+      "retry": "Mesma solicitação e mesmos três inputs, sem alteração do prompt.",
+      "prompt": "Use case: ads-marketing. Asset type: Spidey Pokémon GO premium editorial event poster, portrait 4:5, richly finished game illustration, legible on a mobile screen.\nCreate a NEW corrected Festival da Colheita: Pomar de Applin poster.\nInput images: image 1 is an OLD REVOKED Harvest poster: use its luxurious gold, orange, warm orchard atmosphere, engraved event typography and Spidey header as STYLE ONLY; discard its Pokémon, all its event text and all six bonus boxes. Image 2 is Applin appearance reference, the Pokémon must look exactly recognizably like this small apple Pokémon: red apple body, two green eye stalks with black eyes and tan bottom, NOT an apple with a human face, no arms, not Pumpkaboo. Image 3 is the official Spidey logo reference; preserve the gold spider and blue circular Poké Ball emblem.\nScene: cinematic autumn apple orchard, richly detailed red apples and baskets, sunlit golden leaves, depth, mossy magic and gentle sparkles. One large red Applin, faithfully matched to image 2, is the central protagonist among harvested apples, lit with golden rim light. NO other Pokémon. High quality polished anime game key art with vivid rich light and immersive scene, not a generic character cutout.\nComposition: compact Spidey Pokémon GO brand header at top left and the small slogan at top right; 45% is the gorgeous Applin orchard scene; big beautiful title under the subject; concise luminous gold-framed time panel and TWO clean spacious information strips below. Large readable typography with dark backing; no tiny grids.\nExact Portuguese text only:\nHeader: \"Spidey\" / \"Pokémon GO\"\nSlogan: \"SEMPRE UM PASSO À FRENTE\"\nTitle: \"FESTIVAL DA COLHEITA\"\nSubtitle: \"POMAR DE APPLIN\"\nDate panel, three separate lines: \"29 SET — 5 OUT 2026\" / \"INÍCIO: 29/09 ÀS 10H\" / \"FIM: 05/10 ÀS 20H • HORÁRIO LOCAL\"\nInfo strip 1: \"ESTREIA DE APPLIN BRILHANTE\"\nInfo strip 2: \"MAIOR CHANCE DE SMOLIV BRILHANTE\"\nFooter: \"Fonte: Pokémon GO oficial\"\nConstraints: preserve the recognizable Spidey brand emblem from the references, no enlarged logo as main art. Only the exact provided copy. Do not reuse old \"das 10h às 20h\" daily timing. No claims of increased shiny Applin chance: it is a shiny debut only. No Pumpkaboo, Petilil, Halloween pumpkin, scarecrow or generic mystery. No invented Pokémon, item bonuses, discounts, coordinates, map decoration claims or official approval stamp. Ensure all accents, text and full subject are clear and uncut. Keep all copy within generous print safe margins. This is an app artwork candidate for review, not a screenshot or mockup.",
+      "source_url": "https://pokemongo.com/pt-BR/news/harvest-festival-2026"
+    },
+    {
+      "event_id": "2026-10-world-space-week",
+      "status": "GENERATION_BLOCKED",
+      "file": null,
+      "error_type": "moderation_blocked",
+      "moderation_stage": "output",
+      "categories": [
+        "other"
+      ],
+      "request_id": "e8330835-4c71-41fb-98eb-c3896d30b92f",
+      "prompt": "Use case: ads-marketing.\nAsset type: new Spidey Pokémon GO premium editorial event poster, portrait 4:5, legible and impactful on mobile.\nInput image 1: official World Space Week image, use ONLY as the exact appearance reference for Astronaut Pikachu. Preserve its recognisable yellow Pikachu face and red cheeks, transparent round helmet with ears, white padded spacesuit, blue gloves and blue boots, white lightning-bolt shaped tail and chest panel. Do not copy the official image layout, 10th Anniversary mark or Twilight Trails logo.\nInput image 2: approved Spidey Cinderace poster, STYLE/BRAND/HIERARCHY reference only; do not depict Cinderace or reuse its event information.\nInput image 3: official Spidey logo, use the gold spider and blue circular emblem accurately in the compact brand header.\nScene: cinematic deep blue and violet cosmic vista with detailed stars, luminous nebula and Earth's atmospheric curve. One large Astronaut Pikachu joyfully floating above Earth, faithful to image 1, lively polished game key art, depth and cool rim lighting. Rich immersive scene, not a flat character cutout or corporate slide.\nComposition: compact Spidey header at top, hero illustration occupying the upper half, substantial sculpted event title with silver/blue lighting and gold accents, luminous time panel, then TWO spacious dark information panels. Correct Portuguese accents, generous safe margins and large mobile-readable text. Full subject visible.\nExact text:\nHeader \"Spidey\" / \"Pokémon GO\"\nSlogan \"SEMPRE UM PASSO À FRENTE\"\nTitle \"SEMANA MUNDIAL DO ESPAÇO\"\nSubtitle \"PIKACHU ASTRONAUTA\"\nDate panel, three separate lines:\n\"4 A 10 DE OUTUBRO DE 2026\"\n\"INÍCIO: 04/10 ÀS 00H\"\n\"FIM: 10/10 ÀS 23H59 • HORÁRIO LOCAL\"\nInformation panel 1 \"REIDES DE UMA ESTRELA\"\nInformation panel 2 \"PESQUISA TEMPORÁRIA GRATUITA\"\nSeparate clear footer note \"PESQUISA: RESGATE ATÉ 12/10 ÀS 23H59\"\nSource footer \"Fonte: Pokémon GO oficial\"\nConstraints: the EVENT ends on October 10; the RESEARCH claim deadline is October 12. Keep that distinction readable. No shiny debut or increased shiny chance claim. No invented XP, Stardust or Candy bonus, rewards or space Pokémon. No other characters. Retain a recognisable Spidey brand, use the Pokémon GO logo compactly above the title if useful. Do not include an APPROVED seal, coordinates, app UI, device frame or technical implementation text. Deliver the final portrait artwork itself.",
+      "source_url": "https://pokemongo.com/pt-BR/news/world-space-week-2026",
+      "factual_review": {
+        "start_local": "2026-10-04T00:00:00",
+        "end_local": "2026-10-10T23:59:00",
+        "research_claim_deadline_local": "2026-10-12T23:59:00",
+        "claims": [
+          "Pikachu Astronauta estreia em reides de uma estrela.",
+          "Pesquisa temporária gratuita com encontro de Pikachu Astronauta."
+        ]
+      },
+      "reference_image_url": "https://lh3.googleusercontent.com/AiDIi-NAxX879TxCAX8X6I6EwjrUUajpCN18w4uPXAwSqgbR1y6_awmrDJFY31ljBfh4flc1v5Ma2by0Mt4y77-Q4LCPLnSBEMZIJSS0hvZx%3Ds0-e365",
+      "reference_image_sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9"
+    }
+  ],
+  "preserved": [
+    "Master aprovado sem alterações: Xerneas rotação/Hora de Reides, Invasão, Cinderace, Festival das Luzes.",
+    "Original Seedot e demais originais preservados byte a byte.",
+    "Registros históricos de aprovação e candidatas preservados."
+  ],
+  "next_action": "Integrar e conferir Seedot em Home/Semana/detalhe/FLY, obter decisão humana sobre o PNG exato. Applin/Espaço sem arquivo; seguir demais frentes públicas sem declarar Premium substituto.",
+  "preserved_master_sha256": "8af530bffe0d860a74fd7295a7637b85f6251bc48a3f63f63e52d8e05bd59e71"
+}

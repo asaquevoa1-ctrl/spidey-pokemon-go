@@ -50,3 +50,22 @@ test('approved masters and unavailable originals stay protected from unrelated c
  assert.equal(w.SpideyArt.resolve({id:'broken'},'hero'),null);
  assert.equal(w.SpideyReviewArt.poster({id:'broken'}),null);
 });
+test('corrected Seedot is an explicit full-poster candidate; blocked generations grant no asset or approval',()=>{
+ const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/NEXT_ART_REVIEW_20261001.json','utf8'));
+ assert.equal(record.status,'PENDING_REVIEW');assert.equal(record.candidates.length,1);
+ const c=record.candidates[0],e={id:c.event_id},draft=w.SPIDEY_PREVIEW_ART[e.id],file=fs.readFileSync(c.file);
+ assert.equal(draft.status,'PENDING_REVIEW');assert.equal(draft.display,'full_poster');
+ assert.equal(crypto.createHash('sha256').update(file).digest('hex'),c.sha256);
+ assert.equal(draft.width,file.readUInt32BE(16));assert.equal(draft.height,file.readUInt32BE(20));
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.input_file)).digest('hex'),c.input_sha256);
+ assert.equal(w.SPIDEY_APPROVED_ART_MASTER[e.id],undefined);assert.equal(w.SPIDEY_PREMIUM_EVENT_ART[e.id],undefined);
+ for(const role of ['thumb','card','weekly','hero','poster']){
+  const a=w.SpideyArt.resolve(e,role);assert.equal(a.url,draft.file);assert.equal(a.sha256,c.sha256);assert.equal(a.status,'PENDING_REVIEW');assert.equal(a.standard,undefined);
+ }
+ assert.equal(context.weeklyArtUrl(e),draft.file+'?v='+c.sha256.slice(0,12));
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/premium-approved-master.js')).digest('hex'),record.preserved_master_sha256);
+ for(const b of record.blocked){
+  assert.equal(b.file,null);assert.equal(w.SPIDEY_PREVIEW_ART[b.event_id],undefined);assert.equal(w.SPIDEY_APPROVED_ART_MASTER[b.event_id],undefined);
+  assert.equal(w.SpideyReviewArt.poster({id:b.event_id}),null);
+ }
+});

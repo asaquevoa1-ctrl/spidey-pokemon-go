@@ -143,7 +143,7 @@
         },
         {
           "id": "2026-10-01-spotlight-seedot",
-          "title": "Spotlight Hour: Seedot",
+          "title": "Hora do Holofote: Seedot",
           "summary": "2× PE por captura.",
           "category": "spotlight_hour",
           "tags": [
@@ -154,8 +154,8 @@
           "start_brazil": "2026-10-01T18:00:00-03:00",
           "end_brazil": "2026-10-01T19:00:00-03:00",
           "source": {
-            "name": "Pokémon GO Hub • calendário outubro 2026",
-            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "name": "Pokémon GO Hub • guia Seedot + Leek Duck",
+            "url": "https://pokemongohub.net/post/event/seedot-spotlight-hour-october-2026-last-minute-guide/",
             "confidence": "verified"
           },
           "art": {},
@@ -167,7 +167,19 @@
             "source_role": "generated_vector",
             "kind": "generated_vector",
             "premium": false
-          }
+          },
+          "bonuses": [
+            "2× PE por captura."
+          ],
+          "pokemon": [
+            {
+              "name": "Seedot",
+              "note": "mais aparições na natureza; variação Brilhante disponível"
+            }
+          ],
+          "notes": [
+            "O bônus de PE vale para capturas durante a janela do evento."
+          ]
         }
       ]
     },
@@ -375,7 +387,7 @@
         "end_brazil": "2026-10-10T23:59:59-03:00",
         "source": {
           "name": "Pokémon GO",
-          "url": "https://pokemongo.com/en/news/world-space-week-2026",
+          "url": "https://pokemongo.com/pt-BR/news/world-space-week-2026",
           "confidence": "official"
         },
         "art": {},
@@ -387,7 +399,20 @@
           "source_role": "generated_vector",
           "kind": "generated_vector",
           "premium": false
-        }
+        },
+        "bonuses": [
+          "Pesquisa temporária gratuita com encontro de Pikachu Astronauta."
+        ],
+        "pokemon": [
+          {
+            "name": "Pikachu Astronauta",
+            "note": "estreia em Reides de uma estrela e Pesquisa temporária; pode aparecer Brilhante"
+          }
+        ],
+        "notes": [
+          "O evento acontece de 04/10 às 00h até 10/10 às 23h59 locais.",
+          "Conclua a Pesquisa temporária e resgate suas recompensas até 12/10 às 23h59 locais."
+        ]
       },
       {
         "id": "2026-09-choose-your-path",
