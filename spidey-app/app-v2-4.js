@@ -129,7 +129,8 @@
     const label = document.querySelector('#monthLabel');
     if (!current?.month || !label) return;
     const text = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' }).format(current.month);
-    label.textContent = text.charAt(0).toUpperCase() + text.slice(1);
+    const next = text.charAt(0).toUpperCase() + text.slice(1);
+    if (label.textContent !== next) label.textContent = next;
   }
 
   function hideDefectiveFestivalArt(root = document) {
@@ -139,7 +140,7 @@
       const text = `${img.alt || ''} ${owner?.textContent || ''}`;
       if (window.isSpideyApprovedImage?.(src)) return;
       if (!/festival[- ]das[- ]luzes|festival of lights/i.test(`${src} ${text}`)) return;
-      img.hidden = true;
+      if (img.hidden !== true) img.hidden = true;
       img.classList.add('v23-hidden-art');
       owner?.classList.add('v23-no-art');
       img.closest('#eventDetail')?.classList.add('v23-no-hero');
@@ -152,7 +153,7 @@
       const text = `${img.alt || ''} ${owner?.textContent || ''}`;
       if (!/xerneas/i.test(text)) return;
       if (!String(img.currentSrc || img.src || '').includes('xerneas-premium-approved-v1.avif')) return;
-      img.hidden = false;
+      if (img.hidden !== false) img.hidden = false;
       img.classList.remove('v23-hidden-art');
       delete img.dataset.v23ArtReason;
       owner?.classList.remove('v23-no-art');
