@@ -5,7 +5,7 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2105708386960773442",
-  "status": "aguardando_curadoria_premium",
+  "status": "duplicado",
   "etapa_editorial": "aguardando_curadoria_premium",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
@@ -15,5 +15,6 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-10-01T17:29:24.884626+00:00"
+  "created_at_utc": "2026-10-01T17:29:24.884626+00:00",
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026"
 }
