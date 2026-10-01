@@ -122,10 +122,75 @@
     "Registros anteriores de revisão/aprovação/prompts/recusas sem alteração"
   ],
   "post_approval_qa": {
-    "status": "LOCAL_CHECKS_PASSED_PREVIEW_PENDING",
+    "status": "PREVIEW_VERIFIED",
     "node_tests_passed": 16,
     "active_scripts_syntax_passed": 18,
     "service_worker_syntax_passed": true,
-    "json_precache_hashes_diff_passed": true
+    "json_precache_hashes_diff_passed": true,
+    "code_commit": "b310f5aefba0e3f6b841f8014e8b0677442922ef",
+    "deployment_id": "dpl_DFyY8YzAB9BUmUa1n7L2u22BZQCx",
+    "deployment_state": "READY",
+    "preview_url": "https://spidey-pokemon-5uir2c532-spidey3.vercel.app/spidey-app/index.html",
+    "responsive_viewports": [
+      [
+        390,
+        850
+      ],
+      [
+        1280,
+        850
+      ]
+    ],
+    "actual_document_widths": [
+      375,
+      1265
+    ],
+    "horizontal_overflow": false,
+    "poster_natural_size": [
+      1121,
+      1403
+    ],
+    "close_accessible": true,
+    "dialog_initial_scroll_top": 0,
+    "screens": [
+      "Semana",
+      "Detalhe",
+      "FLY"
+    ],
+    "home_observation": "Após 19h Brasília, destaque é Xerneas. Masters Xerneas/Invasão/Cinderace carregados íntegros. Seedot permanece acessível pela Semana/FLY; não forçar relógio para a Home.",
+    "fly_seedot": {
+      "action_count": 1,
+      "dialog_closed": true,
+      "event_selected": "2026-10-01-spotlight-seedot",
+      "essentials": 20,
+      "all_points": 28,
+      "taipei_local": "01/10 18–19h",
+      "taipei_brasilia": "01/10 07–08h",
+      "pago_pago_brasilia": "02/10 02–03h"
+    },
+    "weekly_opening": "Enter no iframe mobile; clique no título no app direto desktop, ambos abriram o detalhe aprovado.",
+    "proofs": [
+      {
+        "file": "docs/qa/seedot-mobile-approved-b310f5a-20261001.jpg",
+        "sha256": "4db86b32bd28cac39894e1c2201d0557a2a15ae8537c4383b6b5dbeece8f271d",
+        "bytes": 101539
+      },
+      {
+        "file": "docs/qa/seedot-desktop-approved-b310f5a-20261001.jpg",
+        "sha256": "d9ff5f59ce3d879f586e974f740d6e71fd04d3e57dda06b3596b1f78d21c0b34",
+        "bytes": 140132
+      }
+    ],
+    "precache_local_audit": {
+      "file_count": 63,
+      "disk_bytes": 16269934,
+      "network_or_offline_test": false
+    },
+    "limits": [
+      "Sem toque Android físico/instalação/upgrade/offline PWA/push nesta rodada.",
+      "Sem nova prova de clipboard/GPX real.",
+      "19 eventos sem arquivo Home/FLY; Applin/Espaço sem arte por recusa documentada.",
+      "Sem promoção a main/produção."
+    ]
   }
 }

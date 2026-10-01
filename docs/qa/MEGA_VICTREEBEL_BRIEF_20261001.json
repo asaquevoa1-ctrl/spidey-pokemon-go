@@ -1,0 +1,38 @@
+{
+  "status": "FACTUAL_BRIEF_PREPARED_ART_PENDING",
+  "event_id": "2026-09-mega-victreebel-raids",
+  "date": "2026-10-01",
+  "catalog_base": "b310f5aefba0e3f6b841f8014e8b0677442922ef",
+  "art_file": null,
+  "art_status": "PENDING",
+  "approval": null,
+  "community_sources": [
+    {
+      "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+      "supports": "Mega Victreebel 30/09–06/10 na tabela Mega Raids."
+    },
+    {
+      "url": "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
+      "supports": "30/09 06h até 06/10 22h locais, Mega Reides; Victreebel pode aparecer Brilhante."
+    }
+  ],
+  "official_visual_reference": {
+    "page_url": "https://pokemongo.com/en/gofest/megafinale",
+    "status": "LOCATED_NOT_YET_INSPECTED",
+    "scope": "A página oficial lista Mega Victreebel no Mega Finale/Ascension; não confirma por si só a rotação de 30/09–06/10."
+  },
+  "factual_limits": [
+    "Datas da rotação verificadas em fontes da comunidade; anúncio primário dessa rotação não localizado na busca oficial.",
+    "GO Hub tem frase genérica de troca de chefes às 10h; Leek Duck registra explicitamente 06h–22h para esta rotação. Catálogo não foi alterado; pôster proposto deve usar apenas datas, sem inventar janela diária.",
+    "Não transportar bônus de Mega Finale/Ascension de agosto/setembro para esta rotação.",
+    "Não prometer shiny boost, estreia Brilhante, golpe exclusivo, pesquisa ou seis estrelas sem fonte específica.",
+    "Source.name atual cita Pokémon GO calendário mas URL é GO Hub: alinhar nome do editor à fonte da comunidade na próxima alteração, sem alegar anúncio oficial."
+  ],
+  "suggested_poster_text": [
+    "MEGARREIDES",
+    "MEGA VICTREEBEL",
+    "30 DE SETEMBRO A 6 DE OUTUBRO DE 2026",
+    "Fonte: Leek Duck • Pokémon GO Hub"
+  ],
+  "next_action": "Inspecionar o modelo visual oficial e preparar peça Premium com identidade Spidey; depois integrar PENDING_REVIEW e obter QA/decisão humana sobre PNG exato. Não substituir masters aprovados."
+}
