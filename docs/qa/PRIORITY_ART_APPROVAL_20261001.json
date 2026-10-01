@@ -1,0 +1,97 @@
+{
+  "schema_version": "spidey-app-art-approval-v1",
+  "status": "APPROVED",
+  "decision": {
+    "authority": "human_editor",
+    "channel": "chat",
+    "text": "Sim, aprovo",
+    "at": "2026-10-01T15:45:53-03:00",
+    "scope": "Os dois PNGs corrigidos de Invasão e Cinderace apresentados nos prints e no preview da rodada df9d050; somente os eventIds listados."
+  },
+  "branch": "spidey-fly-v1",
+  "displayed_checkpoint": "df9d050458f76708c7ebf3365e8b38e436670758",
+  "reviewed_code_commit": "684d80e794cecaecf66991f96b4d74c963fb444c",
+  "candidate_record": "docs/qa/PRIORITY_ART_REVIEW_20261001.json",
+  "event_ids": [
+    "2026-10-harvest-taken-over",
+    "2026-10-gigantamax-cinderace-max-day"
+  ],
+  "artworks": [
+    {
+      "event_id": "2026-10-harvest-taken-over",
+      "status": "APPROVED",
+      "candidate_file": "spidey-app/assets/events/review/harvest-invasion-correction-v1.png",
+      "approved_file": "spidey-app/assets/events/premium/harvest-invasion-approved-v1.png",
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "bytes": 2425578,
+      "width": 1121,
+      "height": 1403,
+      "display": "full_poster",
+      "input_file": "spidey-app/assets/events/recovered/1000431443.png",
+      "input_sha256": "d729c8a522131c8c6b333149453cacd0c5c46433a2f3af29c95b93804af458a9",
+      "source_url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
+      "factual_review": {
+        "start_local": "2026-10-02T00:00:00",
+        "end_local": "2026-10-05T20:00:00",
+        "claims": [
+          "Zekrom Sombroso com Giovanni, usando Super-radar Rocket do Passe GO.",
+          "Remoção de Frustração com MT de ataque carregado."
+        ],
+        "removed": [
+          "Zekrom em reides",
+          "janela diária 10h–20h",
+          "painéis genéricos sem confirmação"
+        ]
+      },
+      "displayed_proof": {
+        "file": "docs/qa/invasion-mobile-684d80e-20261001.jpg",
+        "sha256": "388ccf8ad32d99a40040dd9b92cab467f8529adcdc4c7027b49393cbb9d9076f"
+      }
+    },
+    {
+      "event_id": "2026-10-gigantamax-cinderace-max-day",
+      "status": "APPROVED",
+      "candidate_file": "spidey-app/assets/events/review/cinderace-max-day-correction-v1.png",
+      "approved_file": "spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png",
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "bytes": 2304232,
+      "width": 1121,
+      "height": 1403,
+      "display": "full_poster",
+      "input_file": "spidey-app/assets/events/recovered/1000431441.png",
+      "input_sha256": "a24633255c4d22974c9d9cfb6fe6e31237f419075c260bf723d43788311425cd",
+      "source_url": "https://pokemongo.com/pt-BR/news/gigantamax-cinderace-max-battle-day-2026",
+      "factual_review": {
+        "start_local": "2026-10-03T14:00:00",
+        "end_local": "2026-10-03T17:00:00",
+        "claims": [
+          "Cinderace Gigamax em Batalhas Max de seis estrelas.",
+          "Estreia do Brilhante."
+        ],
+        "removed": [
+          "10h–20h",
+          "Doces GG não anunciados",
+          "PE como bônus gratuito",
+          "Poeira Estelar não anunciada"
+        ]
+      },
+      "displayed_proof": {
+        "file": "docs/qa/cinderace-desktop-dark-684d80e-20261001.jpg",
+        "sha256": "8a2fb110cd524b56e6df3fe96e0dd1784c31d8bb3188abcab26bbbdf611898fc"
+      }
+    }
+  ],
+  "rendering_qa": "docs/qa/PRIORITY_ART_APPROVAL_20261001.md",
+  "prior_rendering_qa": "docs/qa/PRIORITY_ART_20261001.md",
+  "excluded_from_decision": [
+    "Arte de Applin",
+    "Demais artes pendentes",
+    "Lançamento completo / main / produção"
+  ],
+  "preserved": [
+    "PNG candidatas e originais recuperados byte a byte",
+    "Xerneas rotação e Hora de Reides aprovados",
+    "Festival das Luzes aprovado",
+    "Registro histórico de candidatas e prompts sem alteração"
+  ]
+}

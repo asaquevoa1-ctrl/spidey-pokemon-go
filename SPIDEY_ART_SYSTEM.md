@@ -85,3 +85,7 @@ A rotação Xerneas recebeu decisão explícita do editor sobre o PNG corrigido.
 
 ## Pôsteres novos no preview — 01/10/2026
 Invasão e Cinderace são entradas explícitas por eventId em `preview-art.js`, `PENDING_REVIEW`/`full_poster`, com dimensões e hashes reais. O resolver comum e a Semana aceitam somente essas candidatas integrais explícitas, identificadas como `preview_candidate:poster`, sem conceder `spidey-premium-v1`, aprovação ou inscrição em `SPIDEY_PREMIUM_EVENT_ART`. Qualquer master existente conserva precedência, inclusive sua regra de indisponibilidade. Recortes, vetores e placeholders não ganham autorização na Semana por esta alteração. Applin continua sem candidata.
+
+## Transição editorial — Invasão/Cinderace APPROVED, 01/10 15:45 BRT
+
+Aprovação humana explícita dos dois PNGs exatos da rodada `df9d050`. Cópias byte a byte em `assets/events/premium/harvest-invasion-approved-v1.png` e `assets/events/premium/cinderace-max-day-approved-v1.png`; hashes/dimensões/eventIds/decisão em `docs/qa/PRIORITY_ART_APPROVAL_20261001.json`. `premium-approved-master.js` é autoridade única; mesmas imagens em todos os papéis, `display: full_poster` e dimensões reservadas no detalhe. Removidas somente estas duas entradas de preview; Seedot/Zorua continuam pendentes. Originais/candidatas e masters anteriores preservados. Cache/shell versionados para novos paths aprovados; sem mudança de composição nem regeneração.

@@ -8,22 +8,6 @@ window.SPIDEY_PREVIEW_ART=Object.freeze({
     "offset": 13,
     "aspect": 1.9
   },
-  "2026-10-gigantamax-cinderace-max-day": {
-    "file": "assets/events/review/cinderace-max-day-correction-v1.png",
-    "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
-    "status": "PENDING_REVIEW",
-    "display": "full_poster",
-    "width": 1121,
-    "height": 1403
-  },
-  "2026-10-harvest-taken-over": {
-    "file": "assets/events/review/harvest-invasion-correction-v1.png",
-    "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
-    "status": "PENDING_REVIEW",
-    "display": "full_poster",
-    "width": 1121,
-    "height": 1403
-  },
   "2026-10-zorua-community-day": {
     "file": "assets/events/recovered/1000431272.png",
     "sha256": "2ac4a1fd65a1aaed9f792611913584f428c00999fcaf0c81ba2820709dc24af9",

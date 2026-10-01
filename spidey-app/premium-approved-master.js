@@ -1,6 +1,24 @@
 (() => {
   'use strict';
   const master = {
+  "2026-10-harvest-taken-over": {
+    "file": "assets/events/premium/harvest-invasion-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+    "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+  },
+  "2026-10-gigantamax-cinderace-max-day": {
+    "file": "assets/events/premium/cinderace-max-day-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+    "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+  },
   "2026-10-xerneas-raids": {
     "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
     "status": "APPROVED",

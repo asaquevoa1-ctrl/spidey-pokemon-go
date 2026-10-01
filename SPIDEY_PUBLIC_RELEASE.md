@@ -1,6 +1,6 @@
 # Spidey — candidato público para 02/10/2026
 
-Estado atual: XERNEAS APPROVED; Invasão e Cinderace corrigidos e validados em preview, PENDING_REVIEW; arte de Applin pendente por recusa da ferramenta. Liberação pública depende de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
+Estado atual: XERNEAS, INVASÃO e CINDERACE APPROVED por decisões humanas explícitas; PNGs exatos preservados no master. Arte de Applin pendente por recusa da ferramenta. Liberação pública depende de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
 Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código mais recente validada: `684d80e`. Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
 
 ## Escopo e ordem do trabalho
@@ -133,3 +133,9 @@ Cinderace estava sem identificação Global: corrigido acesso ao FLY e removido 
 Applin teve geração recusada, sem arquivo. Dados oficiais e condições do Passe GO estão atualizados, mas a cobertura técnica vetorial/CSS não constitui Premium; Harvest/Pumpkaboo continua revogado. Xerneas e demais masters/originais íntegros, aprovados preservados. Relatório/provas: `docs/qa/PRIORITY_ART_20261001.md`; vínculos de bytes/prompts: `docs/qa/PRIORITY_ART_REVIEW_20261001.json`. 14 testes Node e sintaxe dos 18 scripts ativos/SW passaram. Novo inventário: 23 eventos, 1 master aprovado, 2 pôsteres em revisão, 1 recorte em revisão, 19 sem arquivo no compositor Home/FLY.
 
 Próximo: aprovação humana específica das duas peças, solução da arte de Applin e cobertura restante. Android/PWA/offline/push e clipboard/GPX real permanecem sem nova prova; Amigos/Chat posterior ao núcleo. Nenhuma promoção a main/produção nesta rodada.
+
+## Aprovação de Invasão e Cinderace — 01/10, 15:45 BRT
+
+Decisão explícita “Sim, aprovo” sobre os dois PNGs apresentados em `df9d050`; status APPROVED, sem regeneração/alteração de bytes. Registro `docs/qa/PRIORITY_ART_APPROVAL_20261001.json`. Master, cache e entradas de revisão alinhados à nova autoridade; confirmações pós-aprovação em `docs/qa/PRIORITY_ART_APPROVAL_20261001.md`.
+
+Inventário corrente: 23 eventos, 3 no master APPROVED, 1 recorte PENDING_REVIEW, 19 sem arquivo Home/FLY. Aprovação restrita a Invasão e Cinderace; Xerneas já aprovado preservado. Próximos: Applin/cobertura restante, Android físico/instalação/upgrade/offline PWA/push e prova de clipboard/GPX. Amigos/Chat posterior ao núcleo. Nenhuma promoção a main/produção.
