@@ -527,7 +527,7 @@
     {
       "id": "2026-09-harvest-festival-applin",
       "slug": "2026-09-harvest-festival-applin",
-      "title": "Festival da Colheita 2026: Applin Picking",
+      "title": "Festival da Colheita: Pomar de Applin",
       "summary": "Festival da Colheita com estreia de Applin Brilhante.",
       "category": "evento_especial",
       "tags": [
@@ -536,9 +536,9 @@
         "Global"
       ],
       "source": {
-        "name": "Leek Duck • fonte oficial referenciada",
-        "url": "https://leekduck.com/events/harvest-festival-2026/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/news/harvest-festival-2026",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -560,14 +560,48 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Os bônus dos ranques 1, 10 e 20 exigem alcançar essas conquistas no Passe GO.",
+        "Módulos Atrair Musgosos atraem maçãs: toque nelas para receber maçãs de evolução ou encontros.",
+        "A Pesquisa temporária permite escolher um de três caminhos de maçãs; conclua e resgate até 05/10, às 20h locais.",
+        "Resgate as recompensas desbloqueadas do Passe GO até 07/10, às 20h locais.",
+        "Applin estreia na versão Brilhante; o anúncio não informa maior chance de Brilhante para Applin."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Smoliv tem maior chance de aparecer Brilhante.",
+        "Passe GO, ranque 1: Applin tem mais chance de carregar maçãs ao ser capturado.",
+        "Passe GO, ranque 10: Módulos Atrair Musgosos duram uma hora.",
+        "Passe GO, ranque 20: mais Poeira Estelar ao derrotar Recrutas e Líderes Rocket."
+      ],
+      "pokemon": [
+        {
+          "name": "Applin",
+          "note": "estreia do Brilhante; pode aparecer na natureza"
+        },
+        {
+          "name": "Smoliv",
+          "note": "maior chance de Brilhante"
+        },
+        {
+          "name": "Skwovet",
+          "note": "encontros na natureza"
+        },
+        {
+          "name": "Lechonk",
+          "note": "encontros na natureza"
+        },
+        {
+          "name": "Cottonee com coroa florida",
+          "note": "pode aparecer ao tocar maçãs atraídas pelo Módulo Atrair Musgoso"
+        }
+      ]
     },
     {
       "id": "2026-09-10-spotlight-weedle",
@@ -2795,7 +2829,7 @@
       "id": "2026-10-harvest-taken-over",
       "slug": "2026-10-harvest-taken-over",
       "title": "Festival da Colheita: A Invasão",
-      "summary": "Invasão da Equipe GO Rocket durante o Festival da Colheita, com Zekrom Sombroso e remoção de Frustração.",
+      "summary": "Resgate Zekrom Sombroso com Giovanni e aproveite a janela para remover Frustração.",
       "category": "team_go_rocket",
       "tags": [
         "Team GO Rocket",
@@ -2827,14 +2861,48 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Começa à meia-noite de 02/10 e termina em 05/10, às 20h locais.",
+        "Avance no Passe GO: Festival da Colheita para obter um Super-radar Rocket.",
+        "Giovanni pode ser encontrado somente em Poképaradas; Zekrom Sombroso não é anunciado em reides.",
+        "Pokémon Sombrosos e Purificados não podem se fundir.",
+        "Resgate as recompensas do Passe GO até 07/10, às 20h locais."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Mais aparições da Equipe GO Rocket em Poképaradas e balões.",
+        "Use uma MT de ataque carregado para remover Frustração de Pokémon Sombrosos.",
+        "Slugma tem maior chance de aparecer Brilhante.",
+        "Capturas em Reides Sombrosas de uma e três estrelas têm maior variação de ataque, defesa e PS."
+      ],
+      "pokemon": [
+        {
+          "name": "Zekrom Sombroso",
+          "note": "resgate com Giovanni usando Super-radar Rocket"
+        },
+        {
+          "name": "Shroodle",
+          "note": "estreia do Brilhante ao chocar"
+        },
+        {
+          "name": "Wimpod Sombroso",
+          "note": "novo Pokémon dos Recrutas Rocket"
+        },
+        {
+          "name": "Fomantis Sombroso",
+          "note": "novo Pokémon dos Recrutas Rocket"
+        },
+        {
+          "name": "Sandygast Sombroso",
+          "note": "novo Pokémon dos Recrutas Rocket"
+        }
+      ]
     },
     {
       "id": "2026-10-patterns-of-the-wild-indonesia",
@@ -2894,7 +2962,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+        "url": "https://pokemongo.com/pt-BR/news/gigantamax-cinderace-max-battle-day-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -2917,14 +2985,33 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "As batalhas acontecem apenas em 03/10, das 14h às 17h no horário de cada região.",
+        "Para ativar os bônus de exploração, recolha primeiro todas as Partículas Max disponíveis no menu Proximidades.",
+        "Ingresso pago opcional: Pesquisa temporária com 1 Cogumelo Max, 25.000 PE e 6.400 Partículas Max; 2× PE em Batalhas Max somente com o ingresso.",
+        "Pesquisa do ingresso: conclua e resgate em 03/10, das 14h às 17h locais.",
+        "Limite de Reides a Distância de 20: de 02/10 às 21h até 04/10 às 00h, em Brasília."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Durante 14h–17h: limite de coleta de Partículas Max de 1.600.",
+        "Durante 14h–17h: 8× Partículas Max nos Pontos de Energia.",
+        "Durante 14h–17h: todos os Pontos de Energia com Batalhas Gigamax, atualizações mais frequentes e pontos adicionais.",
+        "Até três trocas especiais no dia.",
+        "Das 00h às 17h locais: 2× Partículas Max ao explorar e 1/4 da distância para obtê-las."
+      ],
+      "pokemon": [
+        {
+          "name": "Cinderace Gigamax",
+          "note": "Batalhas Max de seis estrelas; estreia do Brilhante"
+        }
+      ]
     },
     {
       "id": "2026-10-world-space-week",

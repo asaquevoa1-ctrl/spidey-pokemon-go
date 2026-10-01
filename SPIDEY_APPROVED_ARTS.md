@@ -17,6 +17,21 @@ Arte `APPROVED` não pode ser substituída por fallback, thumbnail, heurística,
 - REJECTED — não usar.
 - PENDING_REVIEW — ainda sem aprovação final.
 
+## Candidatas corrigidas — 01/10/2026, continuidade após Xerneas
+
+Invasão e Cinderace receberam novas peças integrais `PENDING_REVIEW`, feitas por edição dos originais recuperados. Não são adicionadas ao master aprovado. Vínculo auditável de arquivos, SHA256, dimensões, originais, fontes oficiais e prompts: `docs/qa/PRIORITY_ART_REVIEW_20261001.json`.
+
+| eventId | Candidata | SHA256 | Estado |
+|---|---|---|---|
+| `2026-10-harvest-taken-over` | `assets/events/review/harvest-invasion-correction-v1.png` | `918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165` | PENDING_REVIEW |
+| `2026-10-gigantamax-cinderace-max-day` | `assets/events/review/cinderace-max-day-correction-v1.png` | `b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470` | PENDING_REVIEW |
+
+Ambas PNG 1121×1403. Invasão: 02/10 às 00h → 05/10 às 20h locais; Giovanni com Zekrom Sombroso e remoção de Frustração. Retiradas alegações de Zekrom em reides e painéis não confirmados. Cinderace: 03/10, 14–17h locais, Batalhas Max de seis estrelas e estreia do Brilhante; retirados horário e bônus incorretos. Recorte antigo de Cinderace sucedido apenas no preview; original preservado byte a byte.
+
+Applin: fonte primária encontrada e dados do Pomar/condições do Passe GO atualizados. A ferramenta de imagem recusou a geração (`moderation_blocked`, estágio de saída, request ID no registro). Não há nova candidata nem arquivo gerado; arte continua pendente. Harvest/Pumpkaboo permanece REVOKED_FACTUAL e não é usado como substituto.
+
+Xerneas e Festival das Luzes aprovados permanecem intactos. A decisão anterior “Sim, aprovo” não se estende a estas duas candidatas. Necessárias revisão humana dos arquivos exatos e QA antes de promoção.
+
 ## Registro recuperado/consolidado
 
 ### Xerneas

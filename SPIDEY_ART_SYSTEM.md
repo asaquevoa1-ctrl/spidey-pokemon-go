@@ -82,3 +82,6 @@ Usar `poster` quando disponível.
 
 ## Transição após aprovação humana — 01/10/2026
 A rotação Xerneas recebeu decisão explícita do editor sobre o PNG corrigido. A cópia final conserva hash/dimensões da candidata, integra o master como APPROVED e sai do registro de preview. `display: full_poster` mantém a composição já validada do detalhe, com proporção reservada e pôster inteiro; não constitui um renderer concorrente. Fonte de aprovação: `docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json`. Hora de Reides permanece um asset distinto. Histórico original e candidata são preservados.
+
+## Pôsteres novos no preview — 01/10/2026
+Invasão e Cinderace são entradas explícitas por eventId em `preview-art.js`, `PENDING_REVIEW`/`full_poster`, com dimensões e hashes reais. O resolver comum e a Semana aceitam somente essas candidatas integrais explícitas, identificadas como `preview_candidate:poster`, sem conceder `spidey-premium-v1`, aprovação ou inscrição em `SPIDEY_PREMIUM_EVENT_ART`. Qualquer master existente conserva precedência, inclusive sua regra de indisponibilidade. Recortes, vetores e placeholders não ganham autorização na Semana por esta alteração. Applin continua sem candidata.

@@ -251,7 +251,7 @@
           "end_brazil": "2026-10-03T17:00:00-03:00",
           "source": {
             "name": "Pokémon GO",
-            "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+            "url": "https://pokemongo.com/pt-BR/news/gigantamax-cinderace-max-battle-day-2026",
             "confidence": "official"
           },
           "art": {},
@@ -334,7 +334,7 @@
     "featured": [
       {
         "id": "2026-09-harvest-festival-applin",
-        "title": "Festival da Colheita 2026: Applin Picking",
+        "title": "Festival da Colheita: Pomar de Applin",
         "summary": "Festival da Colheita com estreia de Applin Brilhante.",
         "category": "evento_especial",
         "tags": [
@@ -345,9 +345,9 @@
         "start_brazil": "2026-09-29T10:00:00-03:00",
         "end_brazil": "2026-10-05T20:00:00-03:00",
         "source": {
-          "name": "Leek Duck • fonte oficial referenciada",
-          "url": "https://leekduck.com/events/harvest-festival-2026/",
-          "confidence": "verified"
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/pt-BR/news/harvest-festival-2026",
+          "confidence": "official"
         },
         "art": {},
         "weekly_art": {
@@ -419,7 +419,7 @@
       {
         "id": "2026-10-harvest-taken-over",
         "title": "Festival da Colheita: A Invasão",
-        "summary": "Invasão da Equipe GO Rocket durante o Festival da Colheita, com Zekrom Sombroso e remoção de Frustração.",
+        "summary": "Resgate Zekrom Sombroso com Giovanni e aproveite a janela para remover Frustração.",
         "category": "team_go_rocket",
         "tags": [
           "Team GO Rocket",
@@ -658,7 +658,7 @@
         "end_brazil": "2026-10-03T17:00:00-03:00",
         "source": {
           "name": "Pokémon GO",
-          "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+          "url": "https://pokemongo.com/pt-BR/news/gigantamax-cinderace-max-battle-day-2026",
           "confidence": "official"
         },
         "art": {},

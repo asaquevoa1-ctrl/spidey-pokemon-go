@@ -9,12 +9,20 @@ window.SPIDEY_PREVIEW_ART=Object.freeze({
     "aspect": 1.9
   },
   "2026-10-gigantamax-cinderace-max-day": {
-    "file": "assets/events/recovered/1000431441.png",
-    "sha256": "a24633255c4d22974c9d9cfb6fe6e31237f419075c260bf723d43788311425cd",
+    "file": "assets/events/review/cinderace-max-day-correction-v1.png",
+    "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
     "status": "PENDING_REVIEW",
-    "display": "illustration_crop",
-    "offset": 13,
-    "aspect": 1.9
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403
+  },
+  "2026-10-harvest-taken-over": {
+    "file": "assets/events/review/harvest-invasion-correction-v1.png",
+    "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+    "status": "PENDING_REVIEW",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403
   },
   "2026-10-zorua-community-day": {
     "file": "assets/events/recovered/1000431272.png",
@@ -29,6 +37,11 @@ window.SPIDEY_PREVIEW_ART=Object.freeze({
 // All screens share this explicit exception for a known unavailable original.
 // A healthy approved original always wins; unrelated drafts never substitute it.
 window.SpideyReviewArt=Object.freeze({
+  poster(event){
+    if(window.SPIDEY_APPROVED_ART_MASTER?.[event?.id])return null;
+    const review=window.SPIDEY_PREVIEW_ART?.[event?.id];
+    return review?.status==='PENDING_REVIEW'&&review.display==='full_poster'?review:null;
+  },
   correction(event){
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
     const review=window.SPIDEY_PREVIEW_ART?.[event?.id];

@@ -46,6 +46,12 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
 
   spideyResolveEventArt = function spideyResolveEventArtPriorityFixed(event, role = 'card') {
     if(window.SPIDEY_APPROVED_ART_MASTER?.[event?.id])return premiumAsset(event,role);
+    const review=window.SpideyReviewArt?.poster(event);
+    if(review){
+      const asset={url:review.file,width:review.width,height:review.height,sha256:review.sha256,
+        sourceRole:'preview_candidate:poster',status:review.status};
+      if(spideyArtUsable(asset,role))return asset;
+    }
     return premiumAsset(event, role) || baseResolve(event, role);
   };
 
@@ -157,7 +163,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   function isLocalSpecificAsset(asset) {
     const role = String(asset?.sourceRole || '');
     const url = String(asset?.url || '');
-    return role.startsWith('premium_catalog:') || role.startsWith('preview_correction:') || /festival-das-luzes-approved\.png/i.test(url) || /assets\/events\/premium\//i.test(url);
+    return role.startsWith('premium_catalog:') || role.startsWith('preview_correction:') || role.startsWith('preview_candidate:') || /festival-das-luzes-approved\.png/i.test(url) || /assets\/events\/premium\//i.test(url);
   }
 
   function applyResolvedImage(image, event, role) {
