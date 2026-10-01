@@ -70,3 +70,4 @@ O arquivo `SPIDEY_APPROVED_ARTS.md` é a autoridade editorial de aprovação vis
 
 ## Manutenção
 Toda nova decisão estrutural deve atualizar o documento especializado correspondente. Se surgir um novo documento canônico, adicioná-lo à seção 'Leitura obrigatória na retomada' deste índice.
+Último handoff: seção HANDOFF OBRIGATÓRIO de 01/10/2026 07:40 BRT no SPIDEY_NEXUS.md. Checkpoint contém arte de rotação candidata ainda sem QA visual, não promover.

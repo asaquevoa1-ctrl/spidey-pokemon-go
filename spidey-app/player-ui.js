@@ -5,14 +5,15 @@
   function art(e){
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.[e.id];
     const review=window.SPIDEY_PREVIEW_ART?.[e.id];
-    if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file])return null;
+    if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file])return reviewCorrection(e)?`${review.file}?v=${review.sha256.slice(0,12)}`:null;
     const a=approved||review;
     return a?`${a.file}?v=${a.sha256.slice(0,12)}`:null;
   }
+  function reviewCorrection(e){const a=window.SPIDEY_APPROVED_ART_MASTER?.[e.id],r=window.SPIDEY_PREVIEW_ART?.[e.id];return Boolean(a&&window.SPIDEY_UNAVAILABLE_ART?.[a.file]&&r?.status==='PENDING_REVIEW'&&r.display==='full_poster'&&r.restoresUnavailableArt===a.file)}
   function image(e,thumb=false){
     const url=art(e);if(!url)return '';
     const draft=window.SPIDEY_PREVIEW_ART?.[e.id];
-    if(draft&&!window.SPIDEY_APPROVED_ART_MASTER?.[e.id])return `<span class="player-art-window ${thumb?'player-thumbnail':''}"><img src="${esc(url)}" alt="Ilustração de ${esc(title(e))}"></span>`;
+    if(draft&&draft.display!=='full_poster'&&!window.SPIDEY_APPROVED_ART_MASTER?.[e.id])return `<span class="player-art-window ${thumb?'player-thumbnail':''}"><img src="${esc(url)}" alt="Ilustração de ${esc(title(e))}"></span>`;
     return `<img class="${thumb?'player-thumbnail':'player-poster'}" src="${esc(url)}" alt="Arte de ${esc(title(e))}" ${thumb?'loading="lazy"':''}>`;
   }
   function source(e){try{return /(^|\.)(pokemongo\.com|pokemongolive\.com)$/.test(new URL(e.source.url).hostname)?'Anúncio oficial':/pokeminers|datamine/i.test(e.source.name||'')?'Prévia • ainda não confirmada':'Informação da comunidade'}catch{return 'Informação em confirmação'}}
@@ -50,6 +51,6 @@
     window.addEventListener('spideycontentready',renderHome);renderHome();
     setInterval(()=>{if(!home.hidden)renderHome()},60000);
   }
-  window.SpideyPlayer=Object.freeze({panel,row,art,image,facts,time,title,renderHome});
+  window.SpideyPlayer=Object.freeze({panel,row,art,image,facts,time,title,renderHome,reviewCorrection});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();
