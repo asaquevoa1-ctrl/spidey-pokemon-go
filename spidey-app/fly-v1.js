@@ -8,8 +8,8 @@
   function render(){
     const s=document.getElementById('flyView');if(!s)return;
     const list=events(),select=s.querySelector('#flyEventSelect'),now=new Date();
-    if(!selected||!list.some(e=>e.id===selected))selected=list.find(e=>core.route(e,points,now).some(p=>p.end>now))?.id||list.at(-1)?.id||'';
-    const signature=list.map(e=>e.id).join('|');if(select.dataset.signature!==signature){select.innerHTML=list.map(e=>`<option value="${esc(e.id)}">${esc(e.title)}</option>`).join('');select.dataset.signature=signature}select.value=selected;
+    if(points.length && (!selected||!list.some(e=>e.id===selected)))selected=list.find(e=>core.route(e,points,now).some(p=>p.end>now))?.id||list.at(-1)?.id||'';
+    const signature=list.map(e=>e.id).join('|');if(select.dataset.signature!==signature){select.innerHTML=list.map(e=>`<option value="${esc(e.id)}">${esc(e.title.replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:'))}</option>`).join('');select.dataset.signature=signature}select.value=selected;
     const e=list.find(e=>e.id===selected),all=e?core.route(e,points,now):[],rows=mode==='essential'?all.filter(p=>p.essential):all;
     const active=all.filter(p=>['ATIVO AGORA','ÚLTIMA CHANCE'].includes(p.status)),next=all.find(p=>p.status==='PRÓXIMO');
     s.querySelector('#flyNow').textContent=active.length?active.slice(0,2).map(p=>p.name).join(' • '):'Nenhuma janela ativa';

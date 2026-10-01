@@ -5,7 +5,7 @@
   let scheduled = false;
 
   const copy = [
-    ['.experience-intro .eyebrow', 'AGORA'],
+    ['.experience-intro .eyebrow', 'SPIDEY COMMAND CENTER'],
     ['.experience-intro h1', 'O que está rolando agora?'],
     ['.experience-intro > p:not(.microcopy)', 'Eventos, horários e o que vem por aí — direto ao ponto.'],
     ['#nowCount + span', 'Agora'],

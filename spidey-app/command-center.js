@@ -5,7 +5,8 @@
     root.querySelectorAll('[data-event-id],[data-v22-event]').forEach(card=>{
       const id=card.dataset.eventId||card.dataset.v22Event,e=state.events.find(e=>e.id===id);
       if(!window.SpideyFlyCore.eligible(e)||card.querySelector('.cc-fly-action'))return;
-      const b=document.createElement('button');b.className='action-btn cc-fly-action';b.textContent='FLY — Ver rota mundial';b.addEventListener('click',ev=>{ev.stopPropagation();window.SpideyFly.open(id)});card.append(b);
+      const nested=card.matches('button,a')||card.closest('button,a');
+      const b=document.createElement(nested?'span':'button');b.className=nested?'cc-fly-action cc-fly-label':'action-btn cc-fly-action';b.textContent=nested?'FLY • Rota mundial disponível':'FLY — Ver rota mundial';if(!nested)b.addEventListener('click',ev=>{ev.stopPropagation();window.SpideyFly.open(id)});card.append(b);
     });
   }
   function renderNews(){
