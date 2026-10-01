@@ -84,7 +84,12 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
     'Shadow Raids': 'Reides Sombrosas',
     'Team GO Rocket': 'Equipe GO Rocket',
     'Community Day': 'Dia Comunitário',
-    'Max Battle Day': 'Dia de Batalhas Max'
+    'Max Battle Day': 'Dia de Batalhas Max',
+    'Harvest': 'Festival da Colheita',
+    'Astronaut Pikachu': 'Pikachu Astronauta',
+    'Space Week': 'Semana do Espaço',
+    'Shadow Raid': 'Reide Sombria',
+    'GO Battle League': 'Liga de Batalha GO'
   };
 
   const CATEGORY_TONE = {

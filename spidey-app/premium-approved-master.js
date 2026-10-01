@@ -2,11 +2,13 @@
   'use strict';
   const master = {
   "2026-10-xerneas-raids": {
-    "file": "assets/events/premium/xerneas-premium-approved-v1.avif",
+    "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
     "status": "APPROVED",
-    "width": 960,
-    "height": 1200,
-    "sha256": "458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee"
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+    "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
   },
   "festival-of-lights-2026-pokeminers-e2": {
     "file": "assets/festival-das-luzes-approved.png",
@@ -16,11 +18,13 @@
     "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda"
   },
   "2026-09-raids-xerneas": {
-    "file": "assets/events/premium/xerneas-premium-approved-v1.avif",
+    "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
     "status": "APPROVED",
-    "width": 960,
-    "height": 1200,
-    "sha256": "458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee"
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+    "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
   },
   "2026-09-30-raid-hour-xerneas": {
     "file": "assets/events/recovered/1000426235.png",

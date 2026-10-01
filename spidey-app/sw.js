@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-public-review-v4';
+const CACHE = 'spidey-app-20261001-xerneas-approved-v1';
 const CORE = [
   './',
   './index.html',
@@ -52,7 +52,7 @@ const CORE = [
   './data/weekly.json',
   './data/world-event-points.json',
   './assets/spidey-logo-oficial.jpg',
-  './assets/events/review/xerneas-rotation-correction-v1.png',
+  './assets/events/premium/xerneas-rotation-approved-v1.png',
   './assets/events/recovered/1000426235.png',
   './assets/events/recovered/1000431445.png',
   './assets/events/recovered/1000431441.png',

@@ -1,8 +1,5 @@
 // Review candidates and recovered illustration crops. This never grants approval.
 window.SPIDEY_PREVIEW_ART=Object.freeze({
-  "2026-09-raids-xerneas": {"file": "assets/events/review/xerneas-rotation-correction-v1.png", "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738", "status": "PENDING_REVIEW", "display": "full_poster", "restoresUnavailableArt": "assets/events/premium/xerneas-premium-approved-v1.avif", "width": 1121, "height": 1403},
-  "2026-10-xerneas-raids": {"file": "assets/events/review/xerneas-rotation-correction-v1.png", "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738", "status": "PENDING_REVIEW", "display": "full_poster", "restoresUnavailableArt": "assets/events/premium/xerneas-premium-approved-v1.avif", "width": 1121, "height": 1403},
-
   "2026-10-01-spotlight-seedot": {
     "file": "assets/events/recovered/1000431445.png",
     "sha256": "1cc51c7567245bd9e005d13b39d3064c52409c79e4846391194fc72a85823c4d",

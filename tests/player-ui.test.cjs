@@ -7,3 +7,26 @@ test('approved binary outranks a preview illustration; preview never grants appr
 test('unavailable approved binary does not fall through to a competing preview',()=>{const w=setup();w.SPIDEY_APPROVED_ART_MASTER.x={file:'broken.avif',sha256:'abc'};w.SPIDEY_PREVIEW_ART.x={file:'draft.png',sha256:'def'};w.SPIDEY_UNAVAILABLE_ART={'broken.avif':'TRUNCATED_CONTAINER'};assert.equal(w.SpideyPlayer.art({id:'x'}),null);assert.equal(w.SpideyPlayer.image({id:'x'}),'')});
 
 test('explicit correction draft restores an unavailable asset only in preview without changing master',()=>{const w=setup();const a={file:'broken.avif',sha256:'abc'};w.SPIDEY_APPROVED_ART_MASTER.x=a;w.SPIDEY_UNAVAILABLE_ART={'broken.avif':'TRUNCATED_CONTAINER'};w.SPIDEY_PREVIEW_ART.x={file:'review.png',sha256:'def',status:'PENDING_REVIEW',display:'full_poster',restoresUnavailableArt:'broken.avif'};assert.equal(w.SpideyPlayer.art({id:'x'}),'review.png?v=def');assert.equal(w.SPIDEY_APPROVED_ART_MASTER.x,a);assert.ok(!w.SpideyPlayer.image({id:'x'}).includes('player-art-window'))});
+
+test('human-approved rotation stays bound to exact reviewed bytes and cannot replace Raid Hour',()=>{
+ const w=setup(),context=vm.createContext({window:w});
+ vm.runInContext(fs.readFileSync('spidey-app/premium-approved-master.js','utf8'),context);
+ vm.runInContext(fs.readFileSync('spidey-app/preview-art.js','utf8'),context);
+ const record=JSON.parse(fs.readFileSync('docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json','utf8'));
+ const crypto=require('node:crypto'),hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+ assert.equal(record.status,'APPROVED');assert.equal(record.decision.text,'Sim, aprovo');
+ assert.equal(hash(record.approved_file),record.sha256);assert.equal(hash(record.candidate_file),record.sha256);
+ assert.deepEqual(record.event_ids,['2026-09-raids-xerneas','2026-10-xerneas-raids']);
+ for(const id of record.event_ids){
+  const entry=w.SPIDEY_APPROVED_ART_MASTER[id];
+  assert.equal(entry.status,'APPROVED');assert.equal('spidey-app/'+entry.file,record.approved_file);
+  assert.equal(entry.sha256,record.sha256);assert.equal(w.SPIDEY_PREVIEW_ART[id],undefined);
+  assert.equal(w.SpideyPlayer.reviewCorrection({id}),false);
+  assert.equal(w.SpideyPlayer.art({id}),entry.file+'?v='+record.sha256.slice(0,12));
+  assert.ok(w.SpideyPlayer.image({id}).includes('width="1121" height="1403"'));
+ }
+ const hour=record.raid_hour_asset_unchanged;
+ assert.equal('spidey-app/'+w.SPIDEY_APPROVED_ART_MASTER[hour.event_id].file,hour.file);
+ assert.equal(hash(hour.file),hour.sha256);assert.notEqual(w.SpideyPlayer.art({id:hour.event_id}),w.SpideyPlayer.art({id:record.event_ids[0]}));
+ assert.equal(hash(record.superseded_asset_preserved.file),record.superseded_asset_preserved.sha256);
+});

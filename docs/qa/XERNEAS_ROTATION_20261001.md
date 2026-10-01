@@ -79,3 +79,6 @@ Além dos 38 testes, `node --check` passou nos 18 scripts ativos. A última alte
 - Amostra de logs tinha erros da extensão do navegador, sem erro do app observado nessa amostra; não é prova de ausência de todos os erros.
 - Novidades não virou um feed externo independente. Amigos/Chat permanece NÃO IMPLEMENTADO, posterior ao núcleo.
 - Nenhuma promoção a main/produção nesta rodada. Alterações preexistentes do worktree foram preservadas em stash antes do avanço para f32ae6e.
+
+## Decisão humana posterior — 01/10/2026 09:08 BRT
+Após esta prova, o editor respondeu “Sim, aprovo”. Estado corrente da rotação passa a APPROVED, sem alteração de bytes: cópia final `assets/events/premium/xerneas-rotation-approved-v1.png`, mesmo SHA256 b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738. Associação exclusiva aos dois IDs da rotação, fonte de decisão e fatos em `XERNEAS_ROTATION_APPROVAL_20261001.json`. Hora de Reides e demais masters intactos. A nova integração pelo master deve ser novamente observada na preview; limites do lançamento permanecem.

@@ -1,6 +1,6 @@
 # Spidey — candidato público para 02/10/2026
 
-Estado atual: PREVIEW VALIDADA EM MOBILE/DESKTOP; liberação pública pendente de aprovação/cobertura de artes e QA Android/PWA/push da versão corrente.
+Estado atual: ARTE DA ROTAÇÃO XERNEAS APPROVED; liberação pública pendente de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
 Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código validada nesta rodada: `62c86a4`. Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
 
 ## Escopo e ordem do trabalho
@@ -113,3 +113,8 @@ Código `62c86a4936079023c3881d6e52ec7a8c2953401f`, preview direto verificado: h
 - 10 testes Node + 28 Python passaram; sintaxe dos 18 scripts ativos e hashes do master passaram. Relatório e prints versionados em `docs/qa/XERNEAS_ROTATION_20261001.md`.
 
 Nenhuma promoção a main/produção nesta rodada. O próximo passo editorial é revisar exatamente o PNG `b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738`, sem aprovar por inferência nem reutilizar aprovação do AVIF anterior.
+
+## Aprovação humana consolidada — 01/10/2026 09:08 BRT
+A decisão “Sim, aprovo” aprova a arte corrigida da rotação Xerneas. PNG aprovado agora no master para os dois IDs da rotação, byte a byte igual ao revisado; original da Hora de Reides, candidata e AVIF histórico preservados. A exceção de preview deixou de ser necessária para Xerneas. Registro: `docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json`.
+
+Versão do app `2026-10-01-xerneas-approved-v1`; cache inclui o novo caminho aprovado. Detalhe mantém o full_poster já validado e dimensões reservadas. Etiquetas Harvest, Astronaut Pikachu, Space Week, Shadow Raid e GO Battle League recebem equivalentes pt-BR. Confirmar integração pós-aprovação no preview, sem assumir que troca de status dispensa QA. Demais artes e Android/PWA/push continuam pendentes; aprovação de uma peça não equivale à aprovação do lançamento completo. Nenhuma promoção a main/produção nesta rodada.

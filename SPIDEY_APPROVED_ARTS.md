@@ -1,7 +1,7 @@
 # SPIDEY — REGISTRO CANÔNICO DE ARTES
 
 Status: FONTE DE VERDADE EDITORIAL
-Data-base: 2026-09-30
+Data-base: 2026-10-01
 
 ## Regra absoluta
 Nenhuma arte é considerada aprovada apenas porque existe no repositório, foi gerada, aparece no App ou possui nome semelhante a Premium.
@@ -20,10 +20,15 @@ Arte `APPROVED` não pode ser substituída por fallback, thumbnail, heurística,
 ## Registro recuperado/consolidado
 
 ### Xerneas
-- eventId: `2026-10-xerneas-raids`
+- eventIds da rotação: `2026-09-raids-xerneas` e `2026-10-xerneas-raids`
 - status: `APPROVED`
-- asset conhecido: `spidey-app/assets/events/premium/xerneas-premium-approved-v1.avif`
-- regra: esta é a referência visual aprovada; nenhuma miniatura/fallback concorrente pode substituí-la.
+- asset corrente: `spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png`
+- SHA256: `b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738`, 1121×1403.
+- decisão humana: “Sim, aprovo”, 01/10/2026 09:08:35 BRT, em resposta ao PNG e preview da rodada `24add19`.
+- registro do vínculo: `docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json`.
+- regra: o arquivo aprovado corrente é soberano em Home, Semana, Calendário e detalhe; não usar fallback/arte concorrente.
+- AVIF anterior truncado preservado como histórico, sem alterações de bytes/hash. Foi sucedido pela nova aprovação explícita; não é o asset ativo da rotação.
+- Hora de Reides `2026-09-30-raid-hour-xerneas`: mantém `assets/events/recovered/1000426235.png` e sua aprovação anterior; não usa este PNG de rotação.
 
 ### Harvest Festival / Festival da Colheita
 - status: `REVOKED_FACTUAL`
@@ -66,10 +71,10 @@ O catálogo executável `spidey-app/premium-approved-master.js` foi alinhado ao 
 
 | eventId | Arquivo | SHA-256 |
 |---|---|---|
-| `2026-10-xerneas-raids` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |
+| `2026-10-xerneas-raids` | `assets/events/premium/xerneas-rotation-approved-v1.png` | `b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738` |
 | `festival-of-lights-2026-pokeminers-e2` | `assets/festival-das-luzes-approved.png` | `6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda` |
-| `2026-09-raids-xerneas` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |
-| `2026-09-30-raid-hour-xerneas` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |
+| `2026-09-raids-xerneas` | `assets/events/premium/xerneas-rotation-approved-v1.png` | `b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738` |
+| `2026-09-30-raid-hour-xerneas` | `assets/events/recovered/1000426235.png` | `2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c` |
 
 
 ## Recuperação materializada — 01/10/2026, revisão para uso público
@@ -91,3 +96,8 @@ Ferramenta de imagens voltou a permitir edição. Candidato `assets/events/revie
 
 ## QA de renderização da candidata — 01/10/2026
 PNG corrigido decodificado e visível em Home/Semana/detalhe no preview, 390×850 e 1280×850. Hash e dimensões permanecem os acima. Provas em `docs/qa/XERNEAS_ROTATION_20261001.md`; base de código `62c86a4`. Hora de Reides manteve o original exclusivo `1000426235.png`, SHA256 `2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c`. Nenhuma arte nova recebeu APPROVED. A candidata de rotação continua PENDING_REVIEW, aguardando decisão visual/factual explícita do editor sobre este arquivo exato.
+
+## Aprovação explícita da rotação — 01/10/2026, 09:08 BRT
+O editor respondeu “Sim, aprovo” à apresentação deste PNG exato. Estado corrente passa de PENDING_REVIEW a APPROVED exclusivamente para os dois IDs da rotação. A cópia em `assets/events/premium/xerneas-rotation-approved-v1.png` é byte a byte igual à candidata revisada. A candidata e o AVIF anterior continuam preservados para rastreabilidade. O master passa a resolver o PNG saudável sem exceção de revisão; as entradas de Xerneas foram retiradas de `preview-art.js`. A aprovação é da arte de Xerneas, não de outras peças nem do lançamento público completo.
+
+Validação factual da peça: Xerneas em Reides 5★, 30/09–06/10/2026, corroborado por Leek Duck e GO Hub, mantendo classificação de comunidade. Sem painéis de bônus/horários não confirmados. Registro completo em `docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json`.
