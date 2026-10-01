@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 OFICIAL • NOTÍCIA",
+  "mensagem": "Explore sob a luz das estrelas durante chuvas de meteoros para ter a chance de encontrar Minior.\n\n📌 Fonte: Pokémon GO oficial",
+  "url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "oficial-https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-01T17:19:41.429150+00:00"
+}
