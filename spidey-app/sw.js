@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-command-center-v1';
+const CACHE = 'spidey-app-20261001-player-v1';
 const CORE = [
   './',
   './index.html',
@@ -21,6 +21,9 @@ const CORE = [
   './fly-v1.js',
   './fly-v1.css',
   './command-center.js',
+  './player-ui.js',
+  './player-ui.css',
+  './preview-art.js',
   './command-center.css',
   './premium-approved-master.js',
   './trust-world-v1.js',

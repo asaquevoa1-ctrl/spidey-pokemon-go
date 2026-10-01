@@ -70,3 +70,12 @@ O catálogo executável `spidey-app/premium-approved-master.js` foi alinhado ao 
 | `festival-of-lights-2026-pokeminers-e2` | `assets/festival-das-luzes-approved.png` | `6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda` |
 | `2026-09-raids-xerneas` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |
 | `2026-09-30-raid-hour-xerneas` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |
+
+
+## Recuperação materializada — 01/10/2026, revisão para uso público
+
+Os 11 binários do lote original reenviado em 30/09 foram recuperados sem alterações e preservados em `spidey-app/assets/events/recovered/`. Hashes e dimensões estão em `manifest.json` dessa pasta. A ausência de arquivo deixou de ser o bloqueio desse lote; o bloqueio agora é factual.
+
+Verificação visual dos originais: Seedot diz Community Day em 11/10, 14–17h, shiny aumentado e golpe exclusivo; não corresponde ao Holofote de 01/10, 18–19h, 2× PE. Zorua diz 3–9/10; o catálogo oficial registra Community Day 10/10. Cinderace diz 10–20h; o anúncio registra 14–17h. Hatch traz Togepi em lugar de Sandile. Xerneas recuperado diz 14–26/10, incompatível com a rotação atual; NÃO substitui o AVIF aprovado. Harvest/Pumpkaboo permanece revogado. Não publicar integralmente essas informações incorretas.
+
+No candidato da branch, `preview-art.js` usa apenas a área pictórica dos originais de Seedot, Zorua e Cinderace, por recorte CSS (arquivos binários intactos). Informações ficam em HTML, vindas do evento existente. Isto é uma proposta `PENDING_REVIEW`, separada do master aprovado; não é novo APPROVED nem poster corrigido. As demais peças permanecem preservadas fora da UI enquanto os conflitos factuais são resolvidos. A tentativa de edição factual de Seedot pela ferramenta de imagem foi bloqueada por limite da conta; nenhum substituto foi declarado aprovado.

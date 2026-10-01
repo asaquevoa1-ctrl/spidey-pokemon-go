@@ -1,0 +1,93 @@
+{
+  "recovered_at": "2026-10-01",
+  "records": [
+    {
+      "file": "assets/events/recovered/1000431272.png",
+      "sha256": "2ac4a1fd65a1aaed9f792611913584f428c00999fcaf0c81ba2820709dc24af9",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431441.png",
+      "sha256": "a24633255c4d22974c9d9cfb6fe6e31237f419075c260bf723d43788311425cd",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431442.png",
+      "sha256": "3d803f063a4e25674cd18b8cf792bd1a8d3e9ffb67aa47091d95715998d38efc",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431443.png",
+      "sha256": "d729c8a522131c8c6b333149453cacd0c5c46433a2f3af29c95b93804af458a9",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431444.png",
+      "sha256": "a40f370579a19e69e756a279cdcbf15af0e8742ab1b27112bfbd69f704a4c785",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431445.png",
+      "sha256": "1cc51c7567245bd9e005d13b39d3064c52409c79e4846391194fc72a85823c4d",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431446.png",
+      "sha256": "c1c93863f28bc597c5c994293dbf734955f7b919a9ee27e875f7bc84ed7c885a",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431464.png",
+      "sha256": "cc482a601ef38fdcbf6105d162eb88aee60cc5c40213904aa77f6ba0a01af685",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431468.png",
+      "sha256": "fd6ce88fb10f4999e5b51185f5cf9fb9311cc54fa0d61e5f967863278186bf5e",
+      "width": 1229,
+      "height": 1536,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431906.png",
+      "sha256": "a8e6eb133e8d32d6dd76a170d3945df40cbf5c41360968358aece9932e7173ca",
+      "width": 1536,
+      "height": 1024,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    },
+    {
+      "file": "assets/events/recovered/1000431924.png",
+      "sha256": "243054295b904852cea9ba9039a52954d159315f5a5367634e5c172f3465ebf5",
+      "width": 1536,
+      "height": 1024,
+      "status": "PENDING_REVIEW",
+      "reason": "Original recuperado; associação e conteúdo factual devem ser conferidos antes de publicação integral."
+    }
+  ]
+}

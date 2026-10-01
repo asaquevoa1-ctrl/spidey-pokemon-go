@@ -463,3 +463,7 @@ Ao receber `SPIDEYNEXUS`, preservar esta lógica ao construir Community Day, Spo
 ## Checkpoint de continuidade — 01/10/2026
 
 Continuação da branch `spidey-fly-v1`, sem promoção a main/produção. Código do candidato: `8fac1edb4a24c2474d89e8c9e311892153ed6c87`. FLY dinâmico, Command Center, Selos e Novidades foram trabalhados preservando decisões canônicas. QA responsivo 390/1280 e 33 testes passaram. O estado concreto, preview, evidências e limites estão em `SPIDEY_PUBLIC_RELEASE.md`; lê-lo na próxima retomada. Não interpretar este checkpoint como lançamento público aprovado: cobertura Premium pendente, Android/PWA/push e Amigos/Chat continuam em aberto.
+
+
+### Direção do editor — 01/10 manhã
+O candidato anterior foi considerado funcional, mas a identidade e arquitetura foram criticadas como corporativas/PowerPoint; não tomar esse visual como aprovado. Artes são essenciais para lançamento. FLY deve incluir peculiaridades, bônus e arte do evento. Linguagem técnica/bastidores deve sair da experiência pública. Trabalho concreto e evidências adicionais em `SPIDEY_PUBLIC_RELEASE.md` e recuperação factual em `SPIDEY_APPROVED_ARTS.md`. Entrega alvo 02/10, núcleo antes de Amigos/Chat.
