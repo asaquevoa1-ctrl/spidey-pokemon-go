@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-xerneas-review-v2';
+const CACHE = 'spidey-app-20261001-public-review-v3';
 const CORE = [
   './',
   './index.html',

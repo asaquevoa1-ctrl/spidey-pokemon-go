@@ -61,7 +61,7 @@
       <button class="stamp-tile-v2 ${done ? 'is-done' : ''}" type="button" data-stamp-stop-id="${escapeHtml(stop.id)}" aria-label="Abrir selo ${number}: ${escapeHtml(stop.venue || stop.city || '')}">
         <div class="stamp-tile-art-v2">
           ${image ? `<img src="${escapeHtml(image)}" alt="Selo ${number} · ${escapeHtml(stop.venue || stop.city || '')}" loading="lazy" decoding="async">` : `
-            <div class="stamp-art-placeholder-v2" aria-label="Imagem do selo ainda não cadastrada">
+            <div class="stamp-art-placeholder-v2" aria-label="Imagem do selo ainda não disponível">
               <span>SELO</span><strong>${number}</strong><small>imagem pendente</small>
             </div>`}
           <span class="stamp-tile-status-v2">${done ? '✓' : number}</span>
@@ -84,6 +84,7 @@
 
   openStampRally = function spideyOpenStampRallyV2(rally) {
     const stops = orderedStops(rally);
+    const publicNotes=rally.public_notes ?? rally.notes ?? [];
     let progress = getStampProgress(rally);
     const exactStops = stops.filter(exactPokestop);
     const fullGpx = exactStops.length === stops.length && stops.length > 0;
@@ -120,7 +121,7 @@
         ${cover ? `<img class="stamp-rally-cover-v2" src="${escapeHtml(cover)}" alt="${escapeHtml(rally.title)}" loading="eager">` : ''}
         <span class="eyebrow">GO STAMP RALLY · ROTA SPIDEY</span>
         <h2>${escapeHtml(rally.title)}</h2>
-        <p>${escapeHtml(rally.summary || '')}</p>
+        <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
@@ -158,11 +159,11 @@
 
         <section class="stamp-gallery-section-v2">
           <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">SELO POR SELO</span><h3>Galeria do set</h3></div>
+            <div><span class="eyebrow">SELO POR SELO</span><h3>Seus selos</h3></div>
             <span id="stampVisibleCount" class="stamp-visible-count-v2"></span>
           </div>
           <div class="stamp-filterbar-v2">
-            <input id="stampSearchV2" type="search" placeholder="Buscar Stop, cidade ou selo…" autocomplete="off">
+            <input id="stampSearchV2" type="search" placeholder="Buscar PokéStop, cidade ou selo…" autocomplete="off">
             <select id="stampRegionV2" aria-label="Filtrar por região">
               <option value="all">Todas as regiões</option>
               ${regions.map((item) => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}
@@ -178,7 +179,7 @@
         </section>
 
         ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
-        ${(rally.notes || []).length ? `<h3>Observações</h3><ul class="bonus-list">${rally.notes.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+        ${publicNotes.length ? `<h3>O que você precisa saber</h3><ul class="bonus-list">${publicNotes.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
         ${rally.source?.url ? `<div class="action-row"><a class="action-btn" href="${escapeHtml(rally.source.url)}" target="_blank" rel="noopener">Fonte oficial</a></div>` : ''}
       </div>`;
 

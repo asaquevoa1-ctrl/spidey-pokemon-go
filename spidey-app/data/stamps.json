@@ -96,7 +96,9 @@
       "notes": [
         "Não gerar GPX nem oferecer copiar coordenada até existir latitude/longitude confirmada da PokéStop.",
         "Venue oficial não deve ser tratado automaticamente como coordenada exata da PokéStop."
-      ]
+      ],
+      "public_summary": "Rally regional oficial com cinco selos PokéXciting! distribuídos por cidades da Ásia-Pacífico.",
+      "public_notes": []
     },
     {
       "id": "pokemon-centre-japan-stamp-rally-2026",
@@ -412,6 +414,10 @@
         "O ponto adicional 35.729167, 139.718678 no complexo Sunshine City não entra como 18º selo neste piloto, pois a fonte de cruzamento o descreve como ponto adicional/área especial do mesmo complexo do Mega Tokyo.",
         "Se SPS ou fonte oficial atualizar um ponto, revalidar antes de substituir a coordenada.",
         "GPX completo é permitido somente enquanto todos os 17 pontos permanecerem confirmados."
+      ],
+      "public_summary": "Colecione selos nos Pokémon Centers do Japão e acompanhe a rota dos 17 locais.",
+      "public_notes": [
+        "O ponto extra no complexo Sunshine City pertence ao mesmo local do Pokémon Center Mega Tokyo e não conta como outro selo."
       ]
     }
   ]

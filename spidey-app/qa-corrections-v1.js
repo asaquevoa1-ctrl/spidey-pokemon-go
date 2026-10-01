@@ -229,7 +229,7 @@
       <div class="detail-body stamp-detail">
         <span class="eyebrow">GO STAMP RALLY</span>
         <h2>${rally.title}</h2>
-        <p>${rally.summary || ''}</p>
+        <p>${rally.public_summary ?? rally.summary ?? ''}</p>
         <div class="info-grid">
           <div class="info-box"><span>Progresso</span><strong id="rallyProgressText">${progress.size}/${stops.length} selos</strong></div>
           <div class="info-box"><span>Coordenadas confirmadas</span><strong>${exactStops.length}/${stops.length}</strong></div>
@@ -251,7 +251,7 @@
 
         <div class="stamp-stops">${stops.map((stop) => stampStopHtml(rally, stop, progress)).join('')}</div>
         ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
-        ${(rally.notes || []).length ? `<h3>Observações</h3><ul class="bonus-list">${rally.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
+        ${(rally.public_notes ?? rally.notes ?? []).length ? `<h3>Observações</h3><ul class="bonus-list">${(rally.public_notes ?? rally.notes ?? []).map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       </div>`;
 
     detail.querySelectorAll('.stamp-toggle').forEach((input) => {

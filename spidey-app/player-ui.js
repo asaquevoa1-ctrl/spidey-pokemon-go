@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const title=e=>String(e.title||'').replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:');
+  const title=e=>window.SpideyVisualV3?.localizeTitle(e.title)||String(e.title||'').replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:');
   function art(e){
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.[e.id];
     const review=window.SPIDEY_PREVIEW_ART?.[e.id];
@@ -12,8 +12,10 @@
   function image(e,thumb=false){
     const url=art(e);if(!url)return '';
     const draft=window.SPIDEY_PREVIEW_ART?.[e.id];
+    const asset=window.SPIDEY_APPROVED_ART_MASTER?.[e.id]?window.SpideyReviewArt.resolve(e):draft;
+    const size=asset?.width&&asset?.height?`width="${asset.width}" height="${asset.height}"`:'';
     if(draft&&draft.display!=='full_poster'&&!window.SPIDEY_APPROVED_ART_MASTER?.[e.id])return `<span class="player-art-window ${thumb?'player-thumbnail':''}"><img src="${esc(url)}" alt="Ilustração de ${esc(title(e))}"></span>`;
-    return `<img class="${thumb?'player-thumbnail':'player-poster'}" src="${esc(url)}" alt="Arte de ${esc(title(e))}" ${thumb?'loading="lazy"':''}>`;
+    return `<img class="${thumb?'player-thumbnail':'player-poster'}" src="${esc(url)}" alt="Arte de ${esc(title(e))}" ${size} ${thumb?'loading="lazy"':''}>`;
   }
   function source(e){try{return /(^|\.)(pokemongo\.com|pokemongolive\.com)$/.test(new URL(e.source.url).hostname)?'Anúncio oficial':/pokeminers|datamine/i.test(e.source.name||'')?'Prévia • ainda não confirmada':'Informação da comunidade'}catch{return 'Informação em confirmação'}}
   function facts(e){

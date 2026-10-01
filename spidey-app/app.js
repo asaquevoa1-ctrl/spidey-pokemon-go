@@ -244,7 +244,7 @@ function renderStamps() {
           <h3>${rally.title}</h3>
         </div>
       </div>
-      <p>${rally.summary || ''}</p>
+      <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="stamp-progress"><span style="width:${stops.length ? Math.min(100, (progress.size / stops.length) * 100) : 0}%"></span></div>
       <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> carimbados · <strong>${exact}</strong> coordenadas exatas</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
@@ -291,7 +291,7 @@ function openStampRally(rally) {
     <div class="detail-body stamp-detail">
       <span class="eyebrow">GO STAMP RALLY</span>
       <h2>${rally.title}</h2>
-      <p>${rally.summary || ''}</p>
+      <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="info-grid">
         <div class="info-box"><span>Progresso</span><strong id="rallyProgressText">${progress.size}/${stops.length} selos</strong></div>
         <div class="info-box"><span>GPX confirmado</span><strong>${exactStops.length}/${stops.length} Stops</strong></div>
@@ -303,7 +303,7 @@ function openStampRally(rally) {
       ${!fullGpx ? '<p class="microcopy">GPX completo fica bloqueado até todas as PokéStops terem coordenadas exatas confirmadas.</p>' : ''}
       <div class="stamp-stops">${stops.map((stop) => stampStopHtml(rally, stop, progress)).join('')}</div>
       ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
-      ${(rally.notes || []).length ? `<h3>Observações</h3><ul class="bonus-list">${rally.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
+      ${(rally.public_notes ?? rally.notes ?? []).length ? `<h3>Observações</h3><ul class="bonus-list">${(rally.public_notes ?? rally.notes ?? []).map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;
 
   detail.querySelectorAll('.stamp-toggle').forEach((input) => {
