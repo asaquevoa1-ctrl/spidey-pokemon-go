@@ -1,0 +1,79 @@
+{
+  "status": "PENDING_REVIEW",
+  "date": "2026-10-01",
+  "branch": "spidey-fly-v1",
+  "base_commit": "887a2cd558c65ff86d7cb039ab0a91c23ffc859f",
+  "event_id": "2026-09-mega-victreebel-raids",
+  "approval": null,
+  "generation_mode": "built-in imagegen",
+  "brief": "docs/qa/MEGA_VICTREEBEL_BRIEF_20261001.json",
+  "candidate": {
+    "file": "spidey-app/assets/events/review/mega-victreebel-rotation-v2.png",
+    "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+    "width": 1121,
+    "height": 1403,
+    "bytes": 2612794,
+    "revision": 2
+  },
+  "revision_history": [
+    {
+      "revision": 1,
+      "file": "spidey-app/assets/events/review/mega-victreebel-rotation-v1.png",
+      "sha256": "0038728890ea814d790f2f3eadf2f0437da9c0457cd940a1dcde1520f1488b56",
+      "bytes": 2642086,
+      "status": "SUPERSEDED_BEFORE_REVIEW",
+      "reason": "Torres de Batalhas Max herdadas da referência eram inadequadas para Megarreides.",
+      "prompt": "Use case: precise-object-edit.\nAsset type: vertical editorial Spidey Pokémon GO event poster, a NEW sibling for human review.\nInput images: Image 1 Cinderace approved Spidey poster is the layout, brand and quality reference/edit target; Image 2 is the official Mega Victreebel appearance reference from Pokémon GO; Image 3 is the official Spidey logo.\nPrimary request: make a new Premium Mega Victreebel Mega Raids poster by replacing Cinderace, all Cinderace text and the fiery city with Mega Victreebel and an atmospheric overgrown jungle at night. This is a distinct event artwork; never reuse Cinderace or Gigantamax visual cues.\nKeep the sharp official Spidey logo, blue and gold brand, premium cinematic illustration quality, strong readable hierarchy and full vertical portrait composition from Image 1. Subject anatomy and coloration must follow Image 2: this is MEGA Victreebel, not regular Victreebel, Bellsprout or a generic carnivorous plant. Render it clearly as the large central protagonist, with green leaves, yellow pitcher body, vivid green and poison violet lighting, mist and vines. No extra Pokémon.\nExact poster text, Portuguese, no extra factual claims:\n\"Spidey\"\n\"Pokémon GO\"\n\"SEMPRE UM PASSO À FRENTE\"\n\"MEGA VICTREEBEL\"\n\"MEGARREIDES\"\n\"30 DE SETEMBRO A 6 DE OUTUBRO DE 2026\"\n\"Fonte: Leek Duck • Pokémon GO Hub\"\nComposition: official Spidey identity in header, Mega Victreebel occupies the upper and middle scene, bold MEGA VICTREEBEL name below, MEGARREIDES subtitle and one large date band below, source legible at footer; generous breathing room, no rectangular bonus panels when there are no confirmed bonus claims.\nConstraints: full poster visible, no cropping, high resolution portrait, no invented time window, no shiny boost or shiny debut, no six-star badge, no Gigantamax/Dynamax clouds or giant fireball, no exclusive move, no GO Fest Mega Finale or Mega Ascension dates/bonuses, no super mega claim, no coordinates, no duplicate characters, no extra event copy. Copy exact accents and dates. The source is community, so never label it official."
+    },
+    {
+      "revision": 2,
+      "file": "spidey-app/assets/events/review/mega-victreebel-rotation-v2.png",
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "status": "PENDING_REVIEW",
+      "prompt": "Use case: precise-object-edit.\nThis is a targeted correction of the attached Mega Victreebel Spidey poster. Preserve the Pokémon illustration, its anatomy/colors, the official Spidey header/logo, every Portuguese word, all dates and the entire text/layout exactly.\nChange ONLY the glowing cylindrical towers/buildings at the left and right of the jungle scene: remove those towers and their crossed Max Battle emblems completely, replacing those areas with unmarked ancient stone jungle ruins, dense vines and mist under the same green/violet cinematic lighting. This is a Mega Raid rotation, so Max Battle towers and Max/Dynamax/Gigantamax iconography must not appear.\nDo not add text, characters, emblems, stars, bonuses or new claims. Keep the full vertical poster dimensions and all edges. This must remain the same Mega Victreebel scene and typography with only the background towers corrected."
+    }
+  ],
+  "inputs": [
+    {
+      "file": "spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png",
+      "role": "style/layout edit target; Cinderace removed for distinct event",
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470"
+    },
+    {
+      "file": "docs/qa/mega-victreebel-official-reference.png",
+      "role": "official Pokémon appearance; not rotation-date proof",
+      "sha256": "6e320471232e94b5ede715b8092d1ce5c73bbc0e4877e767bd9d99e084fa9d8e",
+      "width": 125,
+      "height": 125
+    },
+    {
+      "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+      "role": "official Spidey logo",
+      "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+    }
+  ],
+  "preserved_master_sha256": "ff07481ff91661fddf4a3ab76de9a04b7c4f6301d8f5bc98195b5718ffaab306",
+  "factual_validation": {
+    "rotation": "30/09–06/10/2026",
+    "community_sources": [
+      "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
+      "https://pokemongohub.net/post/guide/september-2026-events/"
+    ],
+    "primary_appearance": "https://pokemongo.com/en/gofest/megafinale",
+    "poster_source_classification": "COMMUNITY",
+    "no_claims": [
+      "daily window",
+      "shiny boost/debut",
+      "exclusive move",
+      "Dynamax/Gigantamax/Max Battles",
+      "Super Mega Raids",
+      "GO Fest bonus"
+    ]
+  },
+  "qa": {
+    "status": "PREVIEW_PENDING",
+    "local_tests_passed": 20,
+    "active_scripts_syntax": 19,
+    "masters_preserved": true
+  }
+}

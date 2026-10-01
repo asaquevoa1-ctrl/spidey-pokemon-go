@@ -90,3 +90,16 @@ test('Applin and Space generation refusals grant no asset or inferred approval',
   assert.equal(w.SpideyReviewArt.poster({id:b.event_id}),null);assert.equal(context.weeklyArtUrl({id:b.event_id}),'');
  }
 });
+test('Mega Victreebel review uses one intact candidate across roles without granting approval',()=>{
+ const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/MEGA_VICTREEBEL_REVIEW_20261001.json'));
+ const c=record.candidate,e={id:record.event_id},preview=w.SPIDEY_PREVIEW_ART[e.id];
+ assert.equal(record.status,'PENDING_REVIEW');assert.equal(record.approval,null);assert.equal(w.SPIDEY_APPROVED_ART_MASTER[e.id],undefined);
+ const file=fs.readFileSync(c.file);assert.equal(file.length,c.bytes);assert.equal(crypto.createHash('sha256').update(file).digest('hex'),c.sha256);
+ assert.equal(c.width,file.readUInt32BE(16));assert.equal(c.height,file.readUInt32BE(20));assert.equal(preview.status,'PENDING_REVIEW');assert.equal(preview.sha256,c.sha256);
+ for(const role of ['thumb','card','weekly','hero','poster']){
+  const a=w.SpideyArt.resolve(e,role);assert.equal('spidey-app/'+a.url,c.file);assert.match(a.sourceRole,/^preview_candidate:/);
+ }
+ assert.equal(context.weeklyArtUrl(e),preview.file+'?v='+c.sha256.slice(0,12));
+ for(const previous of record.revision_history)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(previous.file)).digest('hex'),previous.sha256);
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/premium-approved-master.js')).digest('hex'),record.preserved_master_sha256);
+});

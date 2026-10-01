@@ -19,7 +19,7 @@
     if(!eligible(e))return [];
     const s=e.schedule,rows=points.map(p=>({...p,start:localToDate(s.start_local.slice(0,10),s.start_local.slice(11,16),p.timezone),end:localToDate(s.end_local.slice(0,10),s.end_local.slice(11,16),p.timezone)})).filter(p=>p.start&&p.end&&p.end>p.start).sort((a,b)=>a.start-b.start||a.order-b.order);
     const next=rows.find(p=>p.start>now),last=Math.max(...rows.map(p=>+p.end));
-    return rows.map(p=>({...p,status:now>=p.end?'ENCERRADO':now>=p.start?(+p.end===last?'ÚLTIMA CHANCE':'ATIVO AGORA'):+p.start===+next?.start?'PRÓXIMO':'FUTURO'}));
+    return rows.map(p=>({...p,featuredPokemon:e.regional_pokemon?.by_timezone?.[p.timezone]||null,status:now>=p.end?'ENCERRADO':now>=p.start?(+p.end===last?'ÚLTIMA CHANCE':'ATIVO AGORA'):+p.start===+next?.start?'PRÓXIMO':'FUTURO'}));
   }
   function loadPoints(){return pointsPromise||=fetch('data/world-event-points.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Referências indisponíveis');return r.json()}).then(d=>d.points)}
   window.SpideyFlyCore=Object.freeze({eligible,localToDate,route,loadPoints});

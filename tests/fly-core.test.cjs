@@ -37,6 +37,22 @@ test('preserve both geography bases and approved assets',()=>{
  const crypto=require('node:crypto');for(const entry of Object.values(sandbox.window.SPIDEY_APPROVED_ART_MASTER))assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+entry.file)).digest('hex'),entry.sha256);
  assert.ok(!sandbox.window.SPIDEY_APPROVED_ART_MASTER['harvest-festival-2026']);
 });
+test('Lake Trio regional route preserves event identity, India exception, DST and unknown island boundaries',()=>{
+ const events=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events;
+ const trio=events.filter(e=>e.id==='2026-10-dynamax-max-battle-day');assert.equal(trio.length,1);
+ const rows=core.route(trio[0],points,new Date('2026-10-01T22:00Z'));assert.equal(rows.length,28);
+ for(const [zone,pokemon,start,end] of [
+  ['Asia/Taipei','Uxie','2026-10-24T06:00:00.000Z','2026-10-24T09:00:00.000Z'],
+  ['Asia/Kolkata','Mesprit','2026-10-24T08:30:00.000Z','2026-10-24T11:30:00.000Z'],
+  ['Europe/London','Mesprit','2026-10-24T13:00:00.000Z','2026-10-24T16:00:00.000Z'],
+  ['America/New_York','Azelf','2026-10-24T18:00:00.000Z','2026-10-24T21:00:00.000Z'],
+  ['America/Sao_Paulo','Azelf','2026-10-24T17:00:00.000Z','2026-10-24T20:00:00.000Z']
+ ]){
+  const p=rows.find(p=>p.timezone===zone);assert.equal(p.featuredPokemon,pokemon);assert.equal(p.start.toISOString(),start);assert.equal(p.end.toISOString(),end);
+ }
+ for(const zone of ['Pacific/Kiritimati','Pacific/Honolulu','Pacific/Pago_Pago'])assert.equal(rows.find(p=>p.timezone===zone).featuredPokemon,null);
+ assert.ok(core.route(events.find(e=>e.id==='2026-10-gigantamax-cinderace-max-day'),points).every(p=>p.featuredPokemon===null));
+});
 test('offline cache contains every local shell file',()=>{
  const sw=fs.readFileSync('spidey-app/sw.js','utf8');const files=[...sw.matchAll(/'\.\/([^']+)'/g)].map(x=>x[1]);for(const file of files)assert.ok(fs.existsSync('spidey-app/'+file),file);
 });

@@ -12,8 +12,11 @@
   }
   function renderNews(){
     const target=document.getElementById('newsList');if(!target)return;
-    const items=state.events.filter(e=>e.source?.url&&getBrazilRange(e).end>=new Date()).sort((a,b)=>(b.updated_at||b.published_at||'').localeCompare(a.updated_at||a.published_at||'')||getBrazilRange(a).start-getBrazilRange(b).start);
-    target.innerHTML=items.slice(0,24).map(e=>`<article class="cc-news-card"><span class="eyebrow">${esc(sourceLabel(e))}</span><p class="microcopy">${esc(e.source.name||'Fonte do evento')}</p><h2>${esc(e.title)}</h2><p>${esc(e.summary||'Veja os detalhes e a fonte deste evento.')}</p><p class="microcopy">${esc(formatRange(e))}</p><div class="action-row"><button class="action-btn" data-news-event="${esc(e.id)}">Ver evento</button><a class="action-btn" href="${esc(e.source.url)}" target="_blank" rel="noopener">Consultar fonte</a></div></article>`).join('')||'<p class="empty">Nenhuma novidade por enquanto.</p>';
+    const items=window.SpideyNews.build(state.events,getBrazilRange);
+    target.innerHTML=items.slice(0,24).map(story=>{
+      const e=story.event,multiple=story.events.length>1;
+      return `<article class="cc-news-card" data-news-story="${esc(story.key)}"><span class="eyebrow">${esc(sourceLabel(e))}</span><p class="microcopy">${esc(e.source.name||'Fonte do evento')}${story.updated?' • Atualizado '+esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit'}).format(new Date(story.updated))):''}</p><h2>${esc(story.title)}</h2><p>${esc(story.summary||'Veja os detalhes e a fonte deste evento.')}</p>${story.events.map(item=>`<p class="microcopy">${multiple?'<strong>'+esc(item.title)+'</strong><br>':''}${esc(formatRange(item))} (Brasília)</p>`).join('')}<div class="action-row">${story.events.map(item=>`<button class="action-btn" data-news-event="${esc(item.id)}">${multiple?esc(item.news?.window_label||item.title):'Ver evento'}</button>`).join('')}<a class="action-btn" href="${esc(e.source.url)}" target="_blank" rel="noopener">Consultar fonte</a></div></article>`;
+    }).join('')||'<p class="empty">Nenhuma novidade por enquanto.</p>';
   }
   function mount(){
     const nav=document.querySelector('.app-tabs'),main=document.querySelector('main');if(!nav||!main)return;

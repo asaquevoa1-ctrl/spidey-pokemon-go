@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-seedot-approved-v1';
+const CACHE = 'spidey-app-20261001-news-mega-review-v1';
 const CORE = [
   './',
   './index.html',
@@ -20,6 +20,7 @@ const CORE = [
   './fly-core.js',
   './fly-v1.js',
   './fly-v1.css',
+  './news-feed.js',
   './command-center.js',
   './player-ui.js',
   './player-ui.css',
@@ -53,6 +54,7 @@ const CORE = [
   './data/world-event-points.json',
   './assets/spidey-logo-oficial.jpg',
   './assets/events/premium/xerneas-rotation-approved-v1.png',
+  './assets/events/review/mega-victreebel-rotation-v2.png',
   './assets/events/review/seedot-spotlight-correction-v1.png',
   './assets/events/premium/seedot-spotlight-approved-v1.png',
   './assets/events/premium/cinderace-max-day-approved-v1.png',

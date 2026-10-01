@@ -136,3 +136,8 @@ Master soberano/full_poster, mesmos papéis de imagem, cache/shell versionados. 
 
 
 Handoff pós-aprovação Seedot: código `b310f5a`, preview seguro https://spidey-pokemon-5uir2c532-spidey3.vercel.app/spidey-app/index.html, mobile/desktop/Semana/detalhe/FLY conferidos, 16 testes passaram e duas provas preservadas. Home passou a Xerneas após o encerramento local de Seedot às 19h; masters anteriores preservados. Relatório `docs/qa/SEEDOT_APPROVAL_20261001.md`. Brief factual da próxima peça `docs/qa/MEGA_VICTREEBEL_BRIEF_20261001.json` (comunidade, sem arte/sem aprovação) e roteiro de teste físico `docs/qa/PUBLIC_ANDROID_QA_20261001.md` preparados. Continuar nesta branch sem reiniciar; não reabrir Xerneas/Invasão/Cinderace/Seedot aprovados. Checkpoint documental posterior não altera o código conferido; nenhuma promoção a main/produção.
+
+
+## Mega Victreebel — candidata em revisão, 01/10/2026
+
+Somente `2026-09-mega-victreebel-raids`: PNG v2 `assets/events/review/mega-victreebel-rotation-v2.png`, SHA256 `6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22`, 1121×1403, PENDING_REVIEW. Datas 30/09–06/10/2026 de Leek Duck/GO Hub (comunidade); referência de aparência Pokémon GO, sem transferir bônus/datas do Mega Finale. Geração built-in imagegen; v1 preservada, v2 elimina torres/símbolos de Batalhas Max. Registro exato `docs/qa/MEGA_VICTREEBEL_REVIEW_20261001.json`. Master APPROVED e todas as decisões anteriores intactos. Falta QA do novo preview e decisão humana específica; nenhuma aprovação ou produção inferida.

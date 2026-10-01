@@ -1,10 +1,10 @@
 {
-  "status": "FACTUAL_BRIEF_PREPARED_ART_PENDING",
+  "status": "PENDING_REVIEW_PREVIEW_QA_PENDING",
   "event_id": "2026-09-mega-victreebel-raids",
   "date": "2026-10-01",
   "catalog_base": "b310f5aefba0e3f6b841f8014e8b0677442922ef",
-  "art_file": null,
-  "art_status": "PENDING",
+  "art_file": "assets/events/review/mega-victreebel-rotation-v2.png",
+  "art_status": "PENDING_REVIEW",
   "approval": null,
   "community_sources": [
     {
@@ -18,15 +18,18 @@
   ],
   "official_visual_reference": {
     "page_url": "https://pokemongo.com/en/gofest/megafinale",
-    "status": "LOCATED_NOT_YET_INSPECTED",
-    "scope": "A página oficial lista Mega Victreebel no Mega Finale/Ascension; não confirma por si só a rotação de 30/09–06/10."
+    "status": "INSPECTED",
+    "scope": "A página oficial lista Mega Victreebel no Mega Finale/Ascension; não confirma por si só a rotação de 30/09–06/10.",
+    "asset_url": "https://lh3.googleusercontent.com/88DOPnidVQD5dTmbNDi6yTZJh7HneD77lsDZz_DyNJq2MD8VWV5Rd4jL_fgff2cTtRXRBpDojCpjokw8vPrvxGSUU11mYK1EnXoqZSZXu6E%3Ds0",
+    "source_width": 125,
+    "source_height": 125
   },
   "factual_limits": [
     "Datas da rotação verificadas em fontes da comunidade; anúncio primário dessa rotação não localizado na busca oficial.",
     "GO Hub tem frase genérica de troca de chefes às 10h; Leek Duck registra explicitamente 06h–22h para esta rotação. Catálogo não foi alterado; pôster proposto deve usar apenas datas, sem inventar janela diária.",
     "Não transportar bônus de Mega Finale/Ascension de agosto/setembro para esta rotação.",
     "Não prometer shiny boost, estreia Brilhante, golpe exclusivo, pesquisa ou seis estrelas sem fonte específica.",
-    "Source.name atual cita Pokémon GO calendário mas URL é GO Hub: alinhar nome do editor à fonte da comunidade na próxima alteração, sem alegar anúncio oficial."
+    "Nome da fonte do catálogo alinhado a Leek Duck, com conferência adicional GO Hub; comunidade, sem alegar anúncio oficial da rotação."
   ],
   "suggested_poster_text": [
     "MEGARREIDES",
@@ -34,5 +37,8 @@
     "30 DE SETEMBRO A 6 DE OUTUBRO DE 2026",
     "Fonte: Leek Duck • Pokémon GO Hub"
   ],
-  "next_action": "Inspecionar o modelo visual oficial e preparar peça Premium com identidade Spidey; depois integrar PENDING_REVIEW e obter QA/decisão humana sobre PNG exato. Não substituir masters aprovados."
+  "next_action": "Conferir candidata no preview mobile/desktop e apresentar PNG exato ao editor. Decisão humana pendente; master não modificado.",
+  "art_sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+  "art_width": 1121,
+  "art_height": 1403
 }

@@ -1605,8 +1605,8 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "name": "Leek Duck • calendário de Megarreides",
+        "url": "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
         "confidence": "verified"
       },
       "schedule": {
@@ -1629,7 +1629,9 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Rotação e janela local verificadas em Leek Duck; GO Hub também lista as datas de 30/09 a 06/10. Fonte da comunidade."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -2940,14 +2942,35 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Evento exclusivo da Indonésia: 02/10, das 10h às 20h locais. A conversão mostrada usa Jacarta como referência; a Indonésia possui mais de um fuso.",
+        "Pesquisa temporária na Indonésia: 28/09 às 06h até 10/10 às 23h59 locais; inclui encontros, 1.000 PE e 1.000 de Poeira Estelar.",
+        "Desafio de coleção com PE, Poeira Estelar e adesivos de Pikachu.",
+        "Tire fotos dos seus próprios Pokémon para encontros adicionais de Pikachu de camisa batik."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "updated_at": "2026-10-01T22:47:56Z",
+      "bonuses": [
+        "Incenso dura duas horas durante o evento.",
+        "Maior chance de encontrar os Pokémon Brilhantes em destaque na natureza.",
+        "Pikachu de camisa batik com Fundo Especial na natureza, Pesquisa temporária e encontros ao tirar fotos."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu de camisa batik",
+          "note": "Fundo Especial; pode aparecer Brilhante"
+        },
+        {
+          "name": "Caterpie, Oddish, Gloom, Bellsprout, Ledyba, Ledian, Hoppip, Skiploom, Sunkern e Wurmple",
+          "note": "encontros selvagens em destaque"
+        }
+      ]
     },
     {
       "id": "2026-10-gigantamax-cinderace-max-day",
@@ -3254,18 +3277,21 @@
     {
       "id": "2026-10-dynamax-max-battle-day",
       "slug": "2026-10-dynamax-max-battle-day",
-      "title": "Dia de Batalhas Max: Dinamax",
-      "summary": "Dia de Batalhas Max anunciado para 24 de outubro; o Pokémon em destaque ainda pode receber atualização oficial.",
+      "title": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax",
+      "summary": "Em 24/10, das 14h às 17h locais, enfrente o trio Dinamax em Batalhas Max de cinco estrelas. O Pokémon disponível depende da região.",
       "category": "max_battle_day",
       "tags": [
+        "Uxie",
+        "Mesprit",
+        "Azelf",
         "Dinamax",
         "Max Battle Day",
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -3288,7 +3314,10 @@
         "reason": "Evento sem coordenada exata específica confirmada."
       },
       "notes": [
-        "Data e janela confirmadas no calendário atual; detalhes do destaque ainda estão sujeitos a anúncio."
+        "Distribuição regional anunciada: Uxie na Ásia-Pacífico; Mesprit na Europa, Oriente Médio, África e Índia; Azelf nas Américas e Groenlândia.",
+        "Para os bônus de exploração, recolha primeiro todas as Partículas Max do menu Proximidades.",
+        "Limite global de Reides a Distância de 20: de 23/10 às 21h até 25/10 às 00h, em Brasília. Esta janela é diferente do horário local das Batalhas Max.",
+        "Ingresso pago opcional: Pesquisa temporária com 1 Cogumelo Max, 25.000 PE e 6.400 Partículas Max; 2× PE em Batalhas Max somente com ingresso. Conclua e resgate em 24/10, das 14h às 17h locais."
       ],
       "notifications": {
         "enabled": true,
@@ -3296,7 +3325,60 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "updated_at": "2026-10-01T22:47:56Z",
+      "bonuses": [
+        "Durante 14h–17h: limite de coleta de 1.600 Partículas Max e 8× Partículas nos Pontos de Energia.",
+        "Durante 14h–17h: todos os Pontos de Energia com Batalhas Dinamax, atualizações mais frequentes e pontos adicionais.",
+        "Até três trocas especiais no dia.",
+        "Das 00h às 17h locais: 2× Partículas Max ao explorar e 1/4 da distância para obtê-las."
+      ],
+      "pokemon": [
+        {
+          "name": "Uxie Dinamax",
+          "note": "Ásia-Pacífico; pode aparecer Brilhante"
+        },
+        {
+          "name": "Mesprit Dinamax",
+          "note": "Europa, Oriente Médio, África e Índia; pode aparecer Brilhante"
+        },
+        {
+          "name": "Azelf Dinamax",
+          "note": "Américas e Groenlândia; pode aparecer Brilhante"
+        }
+      ],
+      "regional_pokemon": {
+        "by_timezone": {
+          "Pacific/Auckland": "Uxie",
+          "Australia/Sydney": "Uxie",
+          "Asia/Tokyo": "Uxie",
+          "Asia/Taipei": "Uxie",
+          "Asia/Hong_Kong": "Uxie",
+          "Asia/Jakarta": "Uxie",
+          "Asia/Kolkata": "Mesprit",
+          "Asia/Dubai": "Mesprit",
+          "Europe/Istanbul": "Mesprit",
+          "Europe/Madrid": "Mesprit",
+          "Europe/London": "Mesprit",
+          "Atlantic/Cape_Verde": "Mesprit",
+          "Europe/Athens": "Mesprit",
+          "Europe/Rome": "Mesprit",
+          "America/Noronha": "Azelf",
+          "America/Sao_Paulo": "Azelf",
+          "America/New_York": "Azelf",
+          "America/Chicago": "Azelf",
+          "America/Denver": "Azelf",
+          "America/Los_Angeles": "Azelf",
+          "America/Anchorage": "Azelf",
+          "America/Argentina/Buenos_Aires": "Azelf"
+        },
+        "unconfirmed_timezones": [
+          "Pacific/Kiritimati",
+          "Pacific/Honolulu",
+          "Pacific/Pago_Pago"
+        ],
+        "source_url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026"
+      }
     },
     {
       "id": "2026-10-halloween-part-1",
@@ -5526,6 +5608,202 @@
         "default_lead_minutes": []
       },
       "status": "published"
+    },
+    {
+      "id": "2026-10-minior-orionids",
+      "slug": "2026-10-minior-orionids",
+      "title": "Minior: chuva de meteoros Orionidas",
+      "summary": "Minior na Forma Meteoro aparece na natureza durante as Orionidas.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Orionidas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-19T17:00:00-03:00",
+        "end_local": "2026-10-24T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-19T17:00:00-03:00",
+        "end_brazil": "2026-10-24T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "published_on": "2026-10-01",
+        "window_label": "Orionidas • 10/2026"
+      },
+      "updated_at": "2026-10-01T22:47:56Z"
+    },
+    {
+      "id": "2026-11-minior-leonids",
+      "slug": "2026-11-minior-leonids",
+      "title": "Minior: chuva de meteoros Leônidas",
+      "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Leônidas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-14T17:00:00-03:00",
+        "end_local": "2026-11-19T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-14T17:00:00-03:00",
+        "end_brazil": "2026-11-19T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "published_on": "2026-10-01",
+        "window_label": "Leônidas • 11/2026"
+      },
+      "updated_at": "2026-10-01T22:47:56Z"
+    },
+    {
+      "id": "2026-12-minior-geminids",
+      "slug": "2026-12-minior-geminids",
+      "title": "Minior: chuva de meteoros Geminidas",
+      "summary": "Minior na Forma Meteoro aparece na natureza durante as Geminidas.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Geminidas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-11T17:00:00-03:00",
+        "end_local": "2026-12-16T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-11T17:00:00-03:00",
+        "end_brazil": "2026-12-16T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
+        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "published_on": "2026-10-01",
+        "window_label": "Geminidas • 12/2026"
+      },
+      "updated_at": "2026-10-01T22:47:56Z"
     }
   ]
 }
