@@ -144,7 +144,7 @@
 
         <section class="rally-coordinate-bundle-v4 stamp-datahub-v2">
           <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">DATAHUB / ROTA</span><h3>Coordenadas em lote</h3></div>
+            <div><span class="eyebrow">COPIAR E BAIXAR</span><h3>Coordenadas em lote</h3></div>
           </div>
           <p class="microcopy">Formato <strong>latitude,longitude</strong>, uma coordenada por linha e na mesma ordem dos selos.</p>
           <textarea id="rallyAllCoordinates" readonly rows="8">${copySet(exactStops)}</textarea>
