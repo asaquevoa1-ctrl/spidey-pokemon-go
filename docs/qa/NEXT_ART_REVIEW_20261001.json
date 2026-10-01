@@ -85,6 +85,49 @@
     "Original Seedot e demais originais preservados byte a byte.",
     "Registros históricos de aprovação e candidatas preservados."
   ],
-  "next_action": "Integrar e conferir Seedot em Home/Semana/detalhe/FLY, obter decisão humana sobre o PNG exato. Applin/Espaço sem arquivo; seguir demais frentes públicas sem declarar Premium substituto.",
-  "preserved_master_sha256": "8af530bffe0d860a74fd7295a7637b85f6251bc48a3f63f63e52d8e05bd59e71"
+  "next_action": "Obter decisão humana sobre o PNG Seedot exato já conferido no preview. Continuar cobertura restante e QA Android/PWA/push, sem reabrir masters aprovados e sem contornar recusas de Applin/Espaço.",
+  "preserved_master_sha256": "8af530bffe0d860a74fd7295a7637b85f6251bc48a3f63f63e52d8e05bd59e71",
+  "qa": {
+    "status": "PREVIEW_VERIFIED_APPROVAL_PENDING",
+    "observed_at_utc": "2026-10-01T22:03:36.390342+00:00",
+    "code_commit": "2ed7ef81b43d728e421e12e4888543d5155a5510",
+    "deployment_id": "dpl_AV7yjHyCzHJkfBVUFzDgaEMw6hio",
+    "preview_url": "https://spidey-pokemon-1v45kgmxg-spidey3.vercel.app/spidey-app/index.html",
+    "responsive_url": "https://spidey-pokemon-1v45kgmxg-spidey3.vercel.app/spidey-app/qa-responsive.html",
+    "candidate_decoded": {
+      "width": 1121,
+      "height": 1403,
+      "complete": true,
+      "query_sha12": "6ac0ebbd5b60"
+    },
+    "observations": [
+      "Home mobile: PNG corrigido integral, completo, mesma query de hash e fonte da comunidade.",
+      "Detalhe mobile Claro e desktop Escuro: PNG 1121×1403, pôster inteiro, scroll inicial zero, Fechar acessível, ação Ver rota mundial única.",
+      "Sem overflow horizontal nas medidas observadas: mobile clientWidth/scrollWidth 375/375; desktop 1265/1265; app direto 1348/1348.",
+      "Semana: src correto e imagem decodificada. Enter abre detalhe no iframe mobile; clique no título abre detalhe no app direto desktop.",
+      "FLY: ação do detalhe fecha modal e mantém Seedot; PNG integral também no mobile. Essenciais 20 e todos 28; Taipei 01/10 07–08h Brasília; Pago Pago 02/10 02–03h Brasília.",
+      "App direto: masters Xerneas/Invasão/Cinderace carregados 1121×1403 em paths premium e hashes anteriores.",
+      "Espaço: detalhe mostra evento 04–10/10, reides de uma estrela, pesquisa gratuita e resgate até 12/10 23h59 local, fonte oficial. Sem nova arte Premium."
+    ],
+    "proofs": [
+      {
+        "file": "docs/qa/seedot-mobile-review-2ed7ef8-20261001.jpg",
+        "viewport": "390×850, tema Claro, detalhe",
+        "bytes": 101169,
+        "sha256": "65dcc4ea196433643be92643c9f873f1be1c3241ca68d2f46864a0e522f6420b"
+      },
+      {
+        "file": "docs/qa/seedot-desktop-review-2ed7ef8-20261001.jpg",
+        "viewport": "1280×850, tema Escuro, detalhe",
+        "bytes": 142330,
+        "sha256": "845dc6164bade8558dfa104cd1188cb06753198e0c3532a937332beabd7f2ee0"
+      }
+    ],
+    "limits": [
+      "Clique automatizado no card Seedot do iframe mobile deixou diálogo fechado; abertura via Enter e clique no app direto foram comprovadas. Toque em Android físico ainda sem prova.",
+      "Amostra de logs mostrou erros da extensão do navegador; não foi observado erro do app nessa amostra, não prova ausência de todos os erros.",
+      "Android físico, instalação/upgrade/offline PWA e push, clipboard real e conteúdo GPX continuam sem prova nesta versão.",
+      "Cobertura Premium incompleta; sem aprovação humana de Seedot e sem promoção a main/produção."
+    ]
+  }
 }

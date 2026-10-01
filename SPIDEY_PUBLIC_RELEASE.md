@@ -1,7 +1,7 @@
 # Spidey — candidato público para 02/10/2026
 
 Estado atual: XERNEAS, INVASÃO e CINDERACE APPROVED por decisões humanas explícitas; PNGs exatos preservados no master. Seedot com novo pôster corrigido PENDING_REVIEW. Artes de Applin e Semana do Espaço pendentes por recusa da ferramenta. Liberação pública depende de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
-Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código mais recente validada: `a242f88` (pós-aprovação). Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
+Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código mais recente conferida em preview: `2ed7ef8` (Seedot PENDING_REVIEW; masters anteriores preservados). Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
 
 ## Escopo e ordem do trabalho
 1. Estabilidade e não regressão.
@@ -144,4 +144,11 @@ QA pós-aprovação confirmado em `a242f88`: mobile/desktop Claro/Escuro, Home/S
 
 ## Próxima peça disponível — Seedot, 01/10
 
-Pôster corrigido do Holofote de Seedot, 01/10 18–19h locais e 2× PE por captura, PENDING_REVIEW. Não registra aprovação nem altera master. GO Hub/Leek Duck identificados como comunidade; original preservado. Applin repetido com mesmo pedido foi recusado novamente e Semana do Espaço também recusada, sem imagens. Dados oficiais de Espaço agora incluem reides de uma estrela/pesquisa gratuita/prazo de pesquisa separado de 12/10. Registro `docs/qa/NEXT_ART_REVIEW_20261001.json`; QA `docs/qa/NEXT_ART_20261001.md`. Inventário 3 aprovados, 1 pôster corrigido pendente, 19 sem arquivo. QA/revisão Seedot e demais bloqueios públicos continuam pendentes.
+Pôster corrigido do Holofote de Seedot, 01/10 18–19h locais e 2× PE por captura, PENDING_REVIEW. Não registra aprovação nem altera master. GO Hub/Leek Duck identificados como comunidade; original preservado. Applin repetido com mesmo pedido foi recusado novamente e Semana do Espaço também recusada, sem imagens. Dados oficiais de Espaço agora incluem reides de uma estrela/pesquisa gratuita/prazo de pesquisa separado de 12/10. Registro `docs/qa/NEXT_ART_REVIEW_20261001.json`; QA `docs/qa/NEXT_ART_20261001.md`. Inventário 3 aprovados, 1 pôster corrigido pendente, 19 sem arquivo. QA de preview Seedot concluído abaixo; decisão humana e demais bloqueios públicos continuam pendentes.
+
+
+### QA Seedot concluído — código 2ed7ef8
+
+Preview seguro verificado https://spidey-pokemon-1v45kgmxg-spidey3.vercel.app/spidey-app/index.html. Pôster exato decodificado 1121×1403 na Home/detalhe/Semana/FLY; mobile Claro 390×850 e desktop Escuro 1280×850. Sem overflow horizontal medido, detalhe inicia no topo, ação única fecha diálogo e seleciona Seedot no FLY. 20/28 referências, Taipei 07–08h e Pago Pago 02/10 02–03h Brasília observados. Masters Xerneas/Invasão/Cinderace intactos e carregados no app direto. Fontes de Seedot continuam comunidade; detalhes de Espaço mostram prazo da pesquisa separado até 12/10.
+
+15 testes Node e verificações locais já concluídos; provas e limites específicos em `docs/qa/NEXT_ART_20261001.md` e manifesto JSON homônimo de revisão. Clique via Enter no iframe e clique no app direto desktop comprovados; toque físico Android ainda pendente. Nova arte Seedot **PENDING_REVIEW**, decisão humana não inferida. Applin/Espaço sem arte por recusa; 23 eventos, 3 APPROVED, 1 pôster pendente, 19 sem arquivo Home/FLY. Lançamento público continua condicionado à cobertura/revisão e provas Android/PWA/push; nenhuma promoção a main/produção.

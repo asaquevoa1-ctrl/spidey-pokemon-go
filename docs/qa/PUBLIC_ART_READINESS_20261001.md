@@ -10,7 +10,7 @@ Xerneas, Invasão e Cinderace foram aprovados explicitamente pelo editor e estã
 2. Aprovação humana de Invasão e Cinderace concluída em 01/10, 15:45 BRT; novos paths confirmados no preview `a242f88`, mobile/desktop/Semana/FLY. Cinderace em 03/10, 14–17h locais; FLY corrigido e testado. Provas anteriores em `PRIORITY_ART_20261001.md`, pós-aprovação em `PRIORITY_ART_APPROVAL_20261001.md`.
 3. Semana Mundial do Espaço em 04/10 e Mega Victreebel vigente; depois Yveltal/Hora de Reides e Mega Blastoise. Não presumir aprovação das peças de Yveltal previamente rejeitadas.
 4. Completar Temporada, GO Pass, Liga de Batalha GO e Descobertas Diárias; revisar fontes dos eventos regionais.
-5. Seedot de 01/10 permanece item urgente de hoje: recorte atual não torna o pôster antigo de Community Day factual nem aprovado.
+5. Seedot de 01/10 possui agora pôster corrigido integral PENDING_REVIEW, conferido no preview `2ed7ef8`; decisão humana específica ainda pendente.
 
 Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile/desktop e decisão humana específica. Novas artes não podem sobrescrever Xerneas nem recuperar aprovações antigas. Android/PWA/offline/push e prova de clipboard/GPX permanecem frentes independentes.
 
@@ -54,3 +54,6 @@ Transição exata desta decisão: 1 master + 2 pôsteres pendentes + 1 recorte +
 Seedot agora possui pôster corrigido integral PENDING_REVIEW para 01/10 18–19h locais e 2× PE por captura, substituindo o recorte provisório somente em preview. Fontes GO Hub + Leek Duck mantidas como comunidade, sem rótulo de anúncio oficial. Inventário passa a 3 APPROVED, 1 pôster PENDING_REVIEW, 19 sem arquivo Home/FLY (23 eventos); Zorua recortado permanece pendente fora desta janela.
 
 Applin teve segunda recusa com o mesmo pedido; Semana Mundial do Espaço teve recusa na primeira geração, sem arquivos. Dados de Espaço verificados na fonte primária pt-BR, incluindo pesquisa gratuita e prazo separado de 12/10. Registros/hashes/prompts/recusas em `NEXT_ART_REVIEW_20261001.json`; QA de Seedot em `NEXT_ART_20261001.md`. Próximo após revisão Seedot: resolver artes bloqueadas e demais coberturas, começando por Mega Victreebel, depois restantes; Android/PWA/push continua sem nova prova.
+
+
+QA de Seedot concluído no código `2ed7ef8`, Home/Semana/detalhe/FLY, mobile/desktop Claro/Escuro, duas provas em `NEXT_ART_20261001.md`. Mantém PENDING_REVIEW até decisão humana exata. Esta conferência não altera contagens, não comprova Android/PWA/push nem libera produção.

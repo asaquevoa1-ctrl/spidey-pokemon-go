@@ -23,7 +23,7 @@ Pôster integral corrigido para `2026-10-01-spotlight-seedot`, **PENDING_REVIEW*
 
 Applin foi recusado novamente com o mesmo prompt/inputs, request ID `4038e879-6ed2-4e02-a770-aae59e8e8855`; Semana Mundial do Espaço também foi recusada, request ID `e8330835-4c71-41fb-98eb-c3896d30b92f`. Nenhum arquivo entregue para essas duas peças e nenhuma aprovação inferida. Recusas, prompts exatos, fontes e candidata Seedot em `docs/qa/NEXT_ART_REVIEW_20261001.json`. Dados oficiais da Semana do Espaço atualizados: evento 04–10/10, pesquisa gratuita até 12/10 às 23h59 locais. Arte permanece pendente.
 
-QA e prova da candidata Seedot devem ser concluídos e registrados em `docs/qa/NEXT_ART_20261001.md` antes de solicitar a decisão humana sobre este PNG exato. Xerneas/Invasão/Cinderace/Hora de Reides/Festival das Luzes mantêm APPROVED; esta rodada não os altera nem aprova produção.
+QA e provas da candidata Seedot concluídos no código `2ed7ef8`, mobile/desktop, Home/Semana/detalhe/FLY, em `docs/qa/NEXT_ART_20261001.md`. PNG exato continua PENDING_REVIEW até decisão humana explícita; limitações de toque Android/PWA permanecem no relatório. Xerneas/Invasão/Cinderace/Hora de Reides/Festival das Luzes mantêm APPROVED; esta rodada não os altera nem aprova produção.
 
 ## Aprovação de Invasão e Cinderace — 01/10/2026, 15:45 BRT
 
