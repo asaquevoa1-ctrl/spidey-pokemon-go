@@ -30,6 +30,10 @@
     "sha256": "458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee"
   }
 };
+  // Availability is separate from editorial approval. Preserve the canonical bytes.
+  window.SPIDEY_UNAVAILABLE_ART=Object.freeze({
+    'assets/events/premium/xerneas-premium-approved-v1.avif':'TRUNCATED_CONTAINER'
+  });
   for(const entry of Object.values(master))Object.freeze(entry);
   Object.freeze(master);
   window.SPIDEY_APPROVED_ART_MASTER=master;

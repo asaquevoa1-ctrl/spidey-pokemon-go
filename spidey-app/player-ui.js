@@ -5,6 +5,7 @@
   function art(e){
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.[e.id];
     const review=window.SPIDEY_PREVIEW_ART?.[e.id];
+    if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file])return null;
     const a=approved||review;
     return a?`${a.file}?v=${a.sha256.slice(0,12)}`:null;
   }
