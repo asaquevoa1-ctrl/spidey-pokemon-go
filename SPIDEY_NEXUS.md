@@ -467,3 +467,7 @@ Continuação da branch `spidey-fly-v1`, sem promoção a main/produção. Códi
 
 ### Direção do editor — 01/10 manhã
 O candidato anterior foi considerado funcional, mas a identidade e arquitetura foram criticadas como corporativas/PowerPoint; não tomar esse visual como aprovado. Artes são essenciais para lançamento. FLY deve incluir peculiaridades, bônus e arte do evento. Linguagem técnica/bastidores deve sair da experiência pública. Trabalho concreto e evidências adicionais em `SPIDEY_PUBLIC_RELEASE.md` e recuperação factual em `SPIDEY_APPROVED_ARTS.md`. Entrega alvo 02/10, núcleo antes de Amigos/Chat.
+
+
+### Checkpoint testado — Home/FLY, 01/10 manhã
+Código observado na preview: `d7028d672abff8995f4b55e64157ab3d8f5d54f9`. Arquivos `player-ui.js/css` compõem Home e dados específicos no FLY. `preview-art.js` é proposta separada do master; usa recortes pictóricos de originais, sem aprovação automática. 11 binários recuperados, com manifesto de hashes. 36 testes passaram; QA 390/1280 e Xerneas preservado. Ler limites e provas em `SPIDEY_PUBLIC_RELEASE.md`; não declarar toda a cobertura Premium concluída. Main/produção sem promoção.
