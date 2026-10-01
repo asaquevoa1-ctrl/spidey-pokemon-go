@@ -1,0 +1,26 @@
+[
+  {
+    "file": "spidey-app/assets/events/recovered/1000431444.png",
+    "sha256": "a40f370579a19e69e756a279cdcbf15af0e8742ab1b27112bfbd69f704a4c785",
+    "width": 1229,
+    "height": 1536
+  },
+  {
+    "file": "spidey-app/assets/events/recovered/1000426235.png",
+    "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c",
+    "width": 1229,
+    "height": 1536
+  },
+  {
+    "file": "spidey-app/assets/events/recovered/1000431181.png",
+    "sha256": "c019a1778c7f304ed5d427a51eacb08836d053dcad450e33e21b370332b9cf7f",
+    "width": 1024,
+    "height": 1536
+  },
+  {
+    "file": "spidey-app/assets/events/recovered/1000426215.png",
+    "sha256": "ce89201d52e65dd7e9c250fa423d86d8e46d78eda600767ce063775320df09cf",
+    "width": 1024,
+    "height": 1536
+  }
+]
