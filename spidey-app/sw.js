@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-priority-art-review-v1';
+const CACHE = 'spidey-app-20261001-priority-art-review-v2';
 const CORE = [
   './',
   './index.html',

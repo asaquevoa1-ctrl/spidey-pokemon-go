@@ -21,6 +21,16 @@ test('chronological route, simultaneous windows, now/next/end/last chance',()=>{
  const last=core.route(event,points,new Date('2026-10-11T03:30Z'));assert.ok(last.some(p=>p.status==='ÚLTIMA CHANCE'));assert.ok(last.some(p=>p.status==='ENCERRADO'));
  assert.ok(core.route(event,points,new Date('2026-10-12')).every(p=>p.status==='ENCERRADO'));
 });
+test('official global Cinderace window is available on the world route with its actual date',()=>{
+ const e=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events.find(e=>e.id==='2026-10-gigantamax-cinderace-max-day');
+ assert.equal(core.eligible(e),true);
+ const rows=core.route(e,points,new Date('2026-10-02T12:00Z'));
+ assert.equal(rows.length,28);
+ const taipei=rows.find(p=>p.timezone==='Asia/Taipei');
+ assert.equal(taipei.start.toISOString(),'2026-10-03T06:00:00.000Z');
+ assert.equal(taipei.end.toISOString(),'2026-10-03T09:00:00.000Z');
+ assert.equal(core.eligible({...e,tags:['Cinderace','Gigamax']}),false);
+});
 test('preserve both geography bases and approved assets',()=>{
  assert.equal(points.length,28);assert.ok(points.some(p=>p.name.includes('Taipei')&&p.essential));assert.ok(points.some(p=>p.name.includes('Osaka')));assert.ok(points.some(p=>p.name.includes('Shinjuku')));
  vm.runInContext(fs.readFileSync('spidey-app/premium-approved-master.js','utf8'),sandbox);
