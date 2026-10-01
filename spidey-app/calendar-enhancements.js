@@ -28,7 +28,7 @@
     return baseRenderEvents(events);
   };
 
-  if (!document.querySelector('script[data-spidey-premium-event-art]')) {
+  if (!document.querySelector('script[src*="premium-event-art.js"]')) {
     const script = document.createElement('script');
     script.src = 'premium-event-art.js';
     script.defer = true;

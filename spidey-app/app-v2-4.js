@@ -21,25 +21,7 @@
   }
 
   function repairPremiumCatalog() {
-    const catalog = { ...(window.SPIDEY_PREMIUM_EVENT_ART || {}) };
-    {
-      const xerneas = approvedEntry(XERNEAS_ART_URL, 'Xerneas — arte Premium Spidey aprovada');
-      catalog['2026-09-raids-xerneas'] = xerneas;
-      catalog['2026-09-30-raid-hour-xerneas'] = xerneas;
-    }
-
-    for (const id of ['2026-10-01-spotlight-seedot', '2026-10-05-max-monday-sizzlipede', '2026-10-zorua-community-day']) {
-      if (!catalog[id]) continue;
-      catalog[id] = { ...catalog[id], visualApproved: true, premium_visual_approved: true };
-    }
-
-    window.SPIDEY_PREMIUM_EVENT_ART = catalog;
-    window.SPIDEY_PREMIUM_ART_PACK_V1 = {
-      version: VERSION,
-      standard: 'spidey-premium-v1',
-      failClosed: true,
-      events: Object.keys(catalog),
-    };
+    // Approval belongs exclusively to premium-approved-master.js.
   }
 
   function dayForButton(button) {
@@ -155,6 +137,7 @@
       const src = String(img.currentSrc || img.src || '');
       const owner = img.closest('[data-v22-event], .event-card, .experience-mini, .experience-feature, .weekly-item, #eventDetail');
       const text = `${img.alt || ''} ${owner?.textContent || ''}`;
+      if (window.isSpideyApprovedImage?.(src)) return;
       if (!/festival[- ]das[- ]luzes|festival of lights/i.test(`${src} ${text}`)) return;
       img.hidden = true;
       img.classList.add('v23-hidden-art');

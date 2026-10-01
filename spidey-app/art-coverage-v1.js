@@ -106,6 +106,7 @@
   }
 
   function badImage(img, event, role) {
+    if (window.isSpideyApprovedImage?.(img?.currentSrc || img?.src)) return false;
     if (!img) return true;
     const src = String(img.currentSrc || img.src || '');
     if (!src) return true;

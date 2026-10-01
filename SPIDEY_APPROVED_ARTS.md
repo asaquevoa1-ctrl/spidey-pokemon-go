@@ -60,3 +60,13 @@ Se o arquivo binário exato de uma arte aprovada não estiver no repositório, N
 3. Registrar hash SHA-256, dimensões e finalidade (thumb/card/hero/poster).
 4. Atualizar este documento para `APPROVED` somente após a associação inequívoca.
 5. Fazer o catálogo master do App consumir exclusivamente este conjunto aprovado.
+## Verificação de integridade — 01/10/2026
+
+O catálogo executável `spidey-app/premium-approved-master.js` foi alinhado ao registro: Xerneas e Festival das Luzes (aprovação documentada em `SPIDEY_APP_STATUS.md`). O módulo deixa de marcar automaticamente Seedot/Zorua/Sizzlipede como aprovados; os binários permanecem preservados, sem nova aprovação inferida. Harvest revogado não entra no catálogo.
+
+| eventId | Arquivo | SHA-256 |
+|---|---|---|
+| `2026-10-xerneas-raids` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |
+| `festival-of-lights-2026-pokeminers-e2` | `assets/festival-das-luzes-approved.png` | `6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda` |
+| `2026-09-raids-xerneas` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |
+| `2026-09-30-raid-hour-xerneas` | `assets/events/premium/xerneas-premium-approved-v1.avif` | `458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee` |

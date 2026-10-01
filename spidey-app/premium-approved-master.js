@@ -1,23 +1,38 @@
 (() => {
   'use strict';
-  // ÚNICA FONTE DE VERDADE VISUAL DO SPIDEY.
-  // Somente artes aprovadas explicitamente pelo Anderson entram aqui.
-  // Nenhum fallback, thumbnail ou gerador pode substituir uma entrada APPROVED.
-  const MASTER = Object.freeze({
-    'harvest-festival-2026': { file:'assets/events/premium/approved/harvest-festival-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'team-go-rocket-takeover-2026': { file:'assets/events/premium/approved/team-go-rocket-takeover-2026.png', detailFile:'assets/events/premium/approved/team-go-rocket-takeover-2026-wide.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'gmax-cinderace-2026': { file:'assets/events/premium/approved/gmax-cinderace-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'october-mystery-event-2026': { file:'assets/events/premium/approved/october-mystery-event-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'zorua-october-2026': { file:'assets/events/premium/approved/zorua-october-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'seedot-community-day-2026': { file:'assets/events/premium/approved/seedot-community-day-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'hatch-day-october-2026': { file:'assets/events/premium/approved/hatch-day-october-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'xerneas-raids-october-2026': { file:'assets/events/premium/approved/xerneas-raids-october-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' },
-    'halloween-part-1-2026': { file:'assets/events/premium/approved/halloween-part-1-2026.png', status:'APPROVED', source:'user-approved-2026-09-30' }
-  });
-  window.SPIDEY_APPROVED_ART_MASTER = MASTER;
-  window.getSpideyApprovedArt = (eventId, context='card') => {
-    const entry = MASTER[eventId];
-    if (!entry || entry.status !== 'APPROVED') return null;
-    return context === 'detail' && entry.detailFile ? entry.detailFile : entry.file;
-  };
+  const master = {
+  "2026-10-xerneas-raids": {
+    "file": "assets/events/premium/xerneas-premium-approved-v1.avif",
+    "status": "APPROVED",
+    "width": 960,
+    "height": 1200,
+    "sha256": "458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee"
+  },
+  "festival-of-lights-2026-pokeminers-e2": {
+    "file": "assets/festival-das-luzes-approved.png",
+    "status": "APPROVED",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda"
+  },
+  "2026-09-raids-xerneas": {
+    "file": "assets/events/premium/xerneas-premium-approved-v1.avif",
+    "status": "APPROVED",
+    "width": 960,
+    "height": 1200,
+    "sha256": "458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee"
+  },
+  "2026-09-30-raid-hour-xerneas": {
+    "file": "assets/events/premium/xerneas-premium-approved-v1.avif",
+    "status": "APPROVED",
+    "width": 960,
+    "height": 1200,
+    "sha256": "458dab7343a16b75b2d64a25fef6476140895384495e1f4d9d3ff6ae3d0b94ee"
+  }
+};
+  for(const entry of Object.values(master))Object.freeze(entry);
+  Object.freeze(master);
+  window.SPIDEY_APPROVED_ART_MASTER=master;
+  window.getSpideyApprovedArt=(id)=>master[id]?.file||null;
+  window.isSpideyApprovedImage=(url)=>Object.values(master).some(e=>String(url||'').split('?')[0].endsWith(e.file));
 })();

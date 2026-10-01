@@ -1,54 +1,8 @@
-window.SPIDEY_PREMIUM_EVENT_ART = {
-  '2026-09-30-raid-hour-xerneas': {
-    standard: 'spidey-premium-v1',
-    alt: 'Hora de Reides — Xerneas — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  },
-  '2026-10-01-spotlight-seedot': {
-    standard: 'spidey-premium-v1',
-    alt: 'Hora do Holofote — Seedot — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  },
-  '2026-10-05-max-monday-sizzlipede': {
-    standard: 'spidey-premium-v1',
-    alt: 'Segunda Max — Sizzlipede Dynamax — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  },
-  '2026-10-zorua-community-day': {
-    standard: 'spidey-premium-v1',
-    alt: 'Dia Comunitário — Zorua — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  }
-};
-
-// O catálogo aprovado é soberano. Nenhum fallback, pack tardio ou script de
-// compatibilidade pode trocar estas quatro artes por SVG, placeholder ou
-// artwork genérico.
-Object.freeze(window.SPIDEY_PREMIUM_EVENT_ART);
-for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
-  Object.freeze(entry.assets);
-  Object.freeze(entry);
-}
+// Only the canonical approved registry grants visual approval.
+window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(window.SPIDEY_APPROVED_ART_MASTER).map(([id,e])=>{
+ const asset=()=>Object.freeze({url:e.file,width:e.width,height:e.height,sha256:e.sha256});
+ return [id,Object.freeze({standard:'spidey-premium-v1',visualApproved:true,premium_visual_approved:true,assets:Object.freeze({thumb:asset(),card:asset(),hero:asset(),poster:asset()})})];
+})));
 
 (function installSpideyArtPriorityFix() {
   if (typeof spideyResolveEventArt !== 'function' || typeof spideyArtUsable !== 'function') return;

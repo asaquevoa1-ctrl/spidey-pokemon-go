@@ -68,23 +68,7 @@
   }
 
   function zonedLocalToDate(dateValue, timeValue, timeZone) {
-    const dateMatch = String(dateValue || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
-    const timeMatch = String(timeValue || '').match(/^(\d{2}):(\d{2})$/);
-    if (!dateMatch || !timeMatch) return null;
-    const desired = {
-      year: Number(dateMatch[1]), month: Number(dateMatch[2]), day: Number(dateMatch[3]),
-      hour: Number(timeMatch[1]), minute: Number(timeMatch[2]), second: 0,
-    };
-    const desiredUtc = Date.UTC(desired.year, desired.month - 1, desired.day, desired.hour, desired.minute, 0);
-    let guess = desiredUtc;
-    for (let i = 0; i < 3; i += 1) {
-      const seen = formatPartsInZone(new Date(guess), timeZone);
-      const seenUtc = Date.UTC(seen.year, seen.month - 1, seen.day, seen.hour, seen.minute, seen.second || 0);
-      const delta = desiredUtc - seenUtc;
-      guess += delta;
-      if (Math.abs(delta) < 1000) break;
-    }
-    return new Date(guess);
+    return window.SpideyFlyCore.localToDate(dateValue, timeValue, timeZone);
   }
 
   function formatBrazil(date) {
@@ -108,19 +92,7 @@
   }
 
   async function loadWorldPoints() {
-    if (!worldPointsPromise) {
-      worldPointsPromise = fetch(WORLD_POINTS_URL, { cache: 'no-store' })
-        .then((response) => {
-          if (!response.ok) throw new Error(`world points HTTP ${response.status}`);
-          return response.json();
-        })
-        .then((data) => data.points || [])
-        .catch((error) => {
-          console.error('Spidey world points', error);
-          return [];
-        });
-    }
-    return worldPointsPromise;
+    return window.SpideyFlyCore.loadPoints().catch(() => []);
   }
 
   function coordinateTypeLabel(location) {

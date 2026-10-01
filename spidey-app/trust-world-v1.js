@@ -8,6 +8,6 @@
   function renderWorldEvents(){const r=document.getElementById('worldEvents');if(!r)return;r.innerHTML=worldEvents.map(e=>`<article class="world-event-card" data-world-event="${esc(e.id)}"><div class="world-event-meta">${badge(e.locality)} ${badge(e.status)}</div><h3>${esc(e.title)}</h3><p><strong>${esc(e.place)}</strong> · ${esc(e.dates)}</p><p class="microcopy">${esc(e.note)}</p><div class="art-state art-pending">SEM ARTE PREMIUM APROVADA</div></article>`).join('')}
   function exposeApprovedPremium(root=document){const c=window.SPIDEY_PREMIUM_EVENT_ART||{};root.querySelectorAll?.('[data-v22-event], [data-event-id]').forEach(o=>{const id=o.dataset.v22Event||o.dataset.eventId,e=c[id];if(!(e?.visualApproved===true&&e?.premium_visual_approved===true))return;o.classList.remove('spidey-art-unapproved');o.querySelectorAll('img').forEach(i=>{if(!i.classList.contains('v23-hidden-art'))i.hidden=false})})}
   function loadFly(){if(document.querySelector('script[data-spidey-fly]'))return;const s=document.createElement('script');s.src='fly-v1.js?v=20260930-fly3';s.defer=true;s.dataset.spideyFly='1';document.head.append(s)}
-  function apply(){renderWorldEvents();exposeApprovedPremium();loadFly()}
+  function apply(){renderWorldEvents();exposeApprovedPremium()}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();window.addEventListener('load',()=>setTimeout(()=>exposeApprovedPremium(),180),{once:true});
 })();

@@ -92,7 +92,7 @@ function validCoordinate(point) {
 }
 
 function exactPokestop(stop) {
-  return validCoordinate(stop) && stop.coordinate_type === 'exact_pokestop' && stop.coordinate_confidence !== 'unconfirmed';
+  return validCoordinate(stop) && stop.coordinate_type === 'exact_pokestop' && ['confirmed', 'verified', 'official', 'community_verified'].includes(stop.coordinate_confidence);
 }
 
 function renderStats() {
@@ -210,7 +210,7 @@ function getStampProgress(rally) {
   catch (_) { return new Set(); }
 }
 function saveStampProgress(rally, set) {
-  localStorage.setItem(stampProgressKey(rally), JSON.stringify([...set]));
+  try { localStorage.setItem(stampProgressKey(rally), JSON.stringify([...set])); } catch { showToast('Não foi possível salvar o progresso neste aparelho.'); }
 }
 
 function renderStampStats() {
@@ -413,6 +413,7 @@ async function loadContent() {
     const [eventsData, stampsData] = await Promise.all([eventsResponse.json(), stampsResponse.json()]);
     state.events = (eventsData.events || []).filter((event) => event.status === 'published');
     state.stamps = (stampsData.rallies || []).filter((rally) => rally.status === 'published');
+    window.dispatchEvent(new Event('spideycontentready'));
     renderCalendar();
     renderEvents();
     renderStamps();

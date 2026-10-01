@@ -38,7 +38,6 @@
       ['DATAHUB / ROTA', 'COORDENADAS'],
       ['Coordenadas em lote', 'Coordenadas da rota'],
       ['Galeria do set', 'Seus selos'],
-      ['imagem pendente', ''],
       ['Visual automático', ''],
       ['Arte Premium ainda não disponível', ''],
       ['Conteúdo factual', ''],
@@ -111,7 +110,7 @@
   }
 
   function compactStamps(root = document) {
-    root.querySelectorAll?.('.stamp-art-placeholder-v2 small').forEach((el) => { el.hidden = true; });
+    root.querySelectorAll?.('.stamp-art-placeholder-v2 small').forEach((el) => { el.hidden = false; });
     root.querySelectorAll?.('.stamp-art-placeholder-v2 > span').forEach((el) => { el.hidden = true; });
   }
 
