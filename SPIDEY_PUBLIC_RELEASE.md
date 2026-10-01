@@ -1,7 +1,7 @@
 # Spidey — candidato público para 02/10/2026
 
-Estado atual: ARTE DA ROTAÇÃO XERNEAS APPROVED; liberação pública pendente de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
-Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código validada após aprovação: `641463d`. Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
+Estado atual: XERNEAS APPROVED; Invasão e Cinderace corrigidos e validados em preview, PENDING_REVIEW; arte de Applin pendente por recusa da ferramenta. Liberação pública depende de cobertura/revisão das demais artes e QA Android/PWA/push da versão corrente.
+Branch: `spidey-fly-v1`, retomada de `f32ae6e`. Base de código mais recente validada: `684d80e`. Os registros anteriores abaixo são históricos; consultar a última seção para o estado atual.
 
 ## Escopo e ordem do trabalho
 1. Estabilidade e não regressão.
@@ -124,3 +124,12 @@ Código `641463d5f98e47b0396f2971928e9ce0be92615c`; preview direto: https://spid
 Home/Semana/detalhe resolvem o novo PNG aprovado. Mobile 390×850 e desktop 1280×850 renderizam 1121×1403, mantendo pôster inteiro, Fechar focado e detalhe no topo. Hora de Reides ainda usa o original 1229×1536 e ação única que fecha o diálogo e seleciona o evento correto no FLY. Etiquetas pt-BR foram observadas na Semana. 11 testes Node passaram; sintaxe dos 18 scripts ativos e integridade dos masters passaram. Provas em `docs/qa/XERNEAS_ROTATION_20261001.md`.
 
 Auditoria de preparação: entre 01 e 07/10, 23 eventos no catálogo; 1 com master APPROVED (Xerneas), 2 com recortes PENDING_REVIEW e 20 sem arquivo no compositor Home/FLY. Coberturas da Semana não equivalem a Premium aprovado. Inventário e sequência para 02/10 em `docs/qa/PUBLIC_ART_READINESS_20261001.md`, começando por Applin/A Invasão e Cinderace. O lançamento completo continua pendente dessas artes e das provas Android/PWA/push.
+
+## Artes prioritárias conferidas — 01/10/2026
+Código `684d80e794cecaecf66991f96b4d74c963fb444c`, preview direto verificado https://spidey-pokemon-6a6143fc8-spidey3.vercel.app/spidey-app/index.html. Invasão e Cinderace têm pôsteres corrigidos 1121×1403, ambos PENDING_REVIEW, presentes na Home/detalhe/Semana, mobile/desktop, claro/escuro. Invasão 02/10 00h → 05/10 20h locais, Zekrom com Giovanni e remoção de Frustração; Cinderace 03/10 14–17h locais, seis estrelas e estreia do Brilhante. Fontes primárias pt-BR verificadas e três eventos com bônus/condições detalhados no app.
+
+Cinderace estava sem identificação Global: corrigido acesso ao FLY e removido aviso indevido de local pendente. A ação única Ver rota mundial fecha o modal e mantém Cinderace selecionado; arte/fonte/bônus, 20/28 pontos e conversões de Taipei conferidos. Nenhum Ponto de Energia exato inventado. Applin/Invasão ainda fora das categorias FLY atuais.
+
+Applin teve geração recusada, sem arquivo. Dados oficiais e condições do Passe GO estão atualizados, mas a cobertura técnica vetorial/CSS não constitui Premium; Harvest/Pumpkaboo continua revogado. Xerneas e demais masters/originais íntegros, aprovados preservados. Relatório/provas: `docs/qa/PRIORITY_ART_20261001.md`; vínculos de bytes/prompts: `docs/qa/PRIORITY_ART_REVIEW_20261001.json`. 14 testes Node e sintaxe dos 18 scripts ativos/SW passaram. Novo inventário: 23 eventos, 1 master aprovado, 2 pôsteres em revisão, 1 recorte em revisão, 19 sem arquivo no compositor Home/FLY.
+
+Próximo: aprovação humana específica das duas peças, solução da arte de Applin e cobertura restante. Android/PWA/offline/push e clipboard/GPX real permanecem sem nova prova; Amigos/Chat posterior ao núcleo. Nenhuma promoção a main/produção nesta rodada.

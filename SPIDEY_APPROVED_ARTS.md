@@ -32,6 +32,8 @@ Applin: fonte primária encontrada e dados do Pomar/condições do Passe GO atua
 
 Xerneas e Festival das Luzes aprovados permanecem intactos. A decisão anterior “Sim, aprovo” não se estende a estas duas candidatas. Necessárias revisão humana dos arquivos exatos e QA antes de promoção.
 
+QA dessas duas candidatas concluído no código `684d80e`, mobile/desktop e Semana; Cinderace também no FLY com tag Global corrigida. Relatório `docs/qa/PRIORITY_ART_20261001.md`. Renderização/fatos conferidos não mudam PENDING_REVIEW: falta decisão humana sobre esses PNGs exatos.
+
 ## Registro recuperado/consolidado
 
 ### Xerneas
