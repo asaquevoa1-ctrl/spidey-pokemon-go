@@ -218,7 +218,7 @@ function renderStampStats() {
   const stops = rallies.flatMap((rally) => rally.stops || []);
   $('#stampRallyCount').textContent = rallies.length;
   $('#stampStopCount').textContent = stops.length;
-  $('#stampReadyCount').textContent = stops.filter(exactPokestop).length;
+  $('#stampReadyCount').textContent = rallies.filter(r => r.stops?.length && r.stops.every(exactPokestop)).length;
 }
 
 function renderStamps() {

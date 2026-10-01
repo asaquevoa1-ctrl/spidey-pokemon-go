@@ -16,7 +16,9 @@ Ao receber `SPIDEYNEXUS`, consultar nesta ordem:
 4. `SPIDEY_APPROVED_ARTS.md` — registro editorial canônico de artes aprovadas/revogadas/pendentes.
 5. `SPIDEY_PREMIUM_STANDARD.md` — padrão visual Premium.
 6. `SPIDEY_ART_SYSTEM.md` — resolução e uso de assets por contexto.
-7. Código e dados atuais da branch/main aplicável — verdade técnica da implementação.
+7. `SPIDEY_PUBLIC_RELEASE.md` — candidato público, prioridades, QA e bloqueios atuais.
+8. `SPIDEY_PRODUCT_EXPERIENCE.md` e `SPIDEY_STAMPS_V2.md` — experiência e regras de Selos/Amigos.
+9. Código e dados atuais da branch/main aplicável — verdade técnica da implementação.
 
 ## Regra de consolidação
 Uma decisão relevante NÃO está consolidada apenas porque foi discutida em chat.

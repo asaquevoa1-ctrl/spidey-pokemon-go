@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  function sourceLabel(e){try{const host=new URL(e.source.url).hostname;return /(^|\.)(pokemongo\.com|pokemongolive\.com)$/.test(host)?'FONTE OFICIAL':/pokeminers|datamine/i.test(e.source.name||'')?'DATAMINE • NÃO CONFIRMADO':'FONTE SECUNDÁRIA'}catch{return 'FONTE EM VERIFICAÇÃO'}}
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function flyActions(root=document){
     root.querySelectorAll('[data-event-id],[data-v22-event]').forEach(card=>{
@@ -12,7 +13,7 @@
   function renderNews(){
     const target=document.getElementById('newsList');if(!target)return;
     const items=state.events.filter(e=>e.source?.url&&getBrazilRange(e).end>=new Date()).sort((a,b)=>(b.updated_at||b.published_at||'').localeCompare(a.updated_at||a.published_at||'')||getBrazilRange(a).start-getBrazilRange(b).start);
-    target.innerHTML=items.slice(0,24).map(e=>`<article class="cc-news-card"><span class="eyebrow">${esc(e.source.name||'Fonte do evento')}</span><h2>${esc(e.title)}</h2><p>${esc(e.summary||'Veja os detalhes e a fonte deste evento.')}</p><p class="microcopy">${esc(formatRange(e))}</p><div class="action-row"><button class="action-btn" data-news-event="${esc(e.id)}">Ver evento</button><a class="action-btn" href="${esc(e.source.url)}" target="_blank" rel="noopener">Consultar fonte</a></div></article>`).join('')||'<p class="empty">Nenhuma novidade disponível no catálogo.</p>';
+    target.innerHTML=items.slice(0,24).map(e=>`<article class="cc-news-card"><span class="eyebrow">${esc(sourceLabel(e))}</span><p class="microcopy">${esc(e.source.name||'Fonte do evento')}</p><h2>${esc(e.title)}</h2><p>${esc(e.summary||'Veja os detalhes e a fonte deste evento.')}</p><p class="microcopy">${esc(formatRange(e))}</p><div class="action-row"><button class="action-btn" data-news-event="${esc(e.id)}">Ver evento</button><a class="action-btn" href="${esc(e.source.url)}" target="_blank" rel="noopener">Consultar fonte</a></div></article>`).join('')||'<p class="empty">Nenhuma novidade disponível no catálogo.</p>';
   }
   function mount(){
     const nav=document.querySelector('.app-tabs'),main=document.querySelector('main');if(!nav||!main)return;
