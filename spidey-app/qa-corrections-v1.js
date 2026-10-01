@@ -160,7 +160,7 @@
       <h3>Horários e locais</h3>
       ${summary ? `<div class="event-local-window-v4"><span>Horário do evento</span><strong>${summary}</strong><small>Esse horário vale no relógio da região onde você vai jogar.</small></div>` : `
         <div class="event-local-window-v4"><span>Horário</span><strong>${typeof originalFormatRange === 'function' ? originalFormatRange(event) : 'A confirmar'}</strong></div>`}
-      ${actualLocations || (!isLocalTimeEvent(event) ? '<p class="microcopy">Sem coordenadas específicas confirmadas para este evento.</p>' : '')}
+      ${actualLocations || (!hasGlobalTag(event) ? '<p class="microcopy">O local ainda será confirmado.</p>' : '')}
       
     `;
     if (actionRow) actionRow.before(section); else body.appendChild(section);

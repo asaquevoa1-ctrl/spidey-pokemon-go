@@ -17,6 +17,14 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   };
 
   function premiumAsset(event, role = 'card') {
+    const approved=window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
+    if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file]){
+      const review=window.SpideyReviewArt?.resolve(event);
+      if(!review)return null;
+      const asset={url:review.file,width:review.width,height:review.height,sha256:review.sha256,
+        sourceRole:'preview_correction:poster',status:review.status};
+      return spideyArtUsable(asset,role)?asset:null;
+    }
     const entry = window.SPIDEY_PREMIUM_EVENT_ART?.[event?.id];
     if (!entry?.assets) return null;
     const roles = roleOrder[role] || roleOrder.card;
@@ -37,6 +45,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   }
 
   spideyResolveEventArt = function spideyResolveEventArtPriorityFixed(event, role = 'card') {
+    if(window.SPIDEY_APPROVED_ART_MASTER?.[event?.id])return premiumAsset(event,role);
     return premiumAsset(event, role) || baseResolve(event, role);
   };
 
@@ -107,6 +116,10 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
       .replace(/^Max Monday:/i, 'Segunda Max:')
       .replace(/^Community Day:/i, 'Dia Comunitário:')
       .replace(/^Max Battle Day:/i, 'Dia de Batalhas Max:')
+      .replace(/^Shadow Raids:/i, 'Reides Sombrosas:')
+      .replace(/^GO Battle League:/i, 'Liga de Batalha GO:')
+      .replace(/^Mega Reides:/i, 'Megarreides:')
+      .replace(/\bDynamax\b/gi, 'Dinamax')
       .replace(/\bChoose Your Path\b/gi, 'Escolha seu caminho')
       .replace(/\bRaid Day\b/gi, 'Dia de Reides');
   }
@@ -139,7 +152,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   function isLocalSpecificAsset(asset) {
     const role = String(asset?.sourceRole || '');
     const url = String(asset?.url || '');
-    return role.startsWith('premium_catalog:') || /festival-das-luzes-approved\.png/i.test(url) || /assets\/events\/premium\//i.test(url);
+    return role.startsWith('premium_catalog:') || role.startsWith('preview_correction:') || /festival-das-luzes-approved\.png/i.test(url) || /assets\/events\/premium\//i.test(url);
   }
 
   function applyResolvedImage(image, event, role) {

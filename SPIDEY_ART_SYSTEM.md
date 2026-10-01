@@ -76,3 +76,6 @@ Usar `poster` quando disponível.
 4. Atualizar os eventos prioritários de setembro/outubro com arte individual.
 5. Ligar a geração automática de artes ao pipeline de autopublicação.
 6. Reusar o mesmo sistema no Spidey Weekly.
+
+## Exceção explícita de revisão — 01/10/2026
+`preview-art.js` concentra a decisão de mostrar a candidata de correção de um original indisponível. A exceção exige o mesmo eventId, `PENDING_REVIEW`, `full_poster` e `restoresUnavailableArt` igual ao arquivo indisponível. Original aprovado íntegro sempre tem precedência; rascunhos não relacionados não substituem aprovação. Home e resolver de Semana/detalhe consomem a mesma decisão. A candidata não é adicionada ao catálogo aprovado nem recebe o padrão Premium automaticamente.

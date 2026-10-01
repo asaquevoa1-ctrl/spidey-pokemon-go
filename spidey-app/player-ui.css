@@ -27,3 +27,6 @@ body.spidey-player-ui #eventDetail img.detail-hero[src*="xerneas-premium-approve
 .player-art-notice{margin:0;padding:16px 20px;color:var(--player-ink);font-size:.85rem;border-bottom:1px solid var(--player-line)}
 
 body.spidey-player-ui #eventDetail.player-art-unavailable .spidey-cover-art{display:none!important}
+
+/* Keep the close control visible before the poster and avoid focusing a footer link. */
+.spidey-player-ui .dialog-close{float:none;display:block;width:44px;height:44px;margin:12px 12px -56px auto;z-index:5}

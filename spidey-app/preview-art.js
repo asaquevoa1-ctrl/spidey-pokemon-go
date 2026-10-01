@@ -1,4 +1,4 @@
-// Recovered original illustrations, preview-only crops. Not approved posters.
+// Review candidates and recovered illustration crops. This never grants approval.
 window.SPIDEY_PREVIEW_ART=Object.freeze({
   "2026-09-raids-xerneas": {"file": "assets/events/review/xerneas-rotation-correction-v1.png", "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738", "status": "PENDING_REVIEW", "display": "full_poster", "restoresUnavailableArt": "assets/events/premium/xerneas-premium-approved-v1.avif", "width": 1121, "height": 1403},
   "2026-10-xerneas-raids": {"file": "assets/events/review/xerneas-rotation-correction-v1.png", "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738", "status": "PENDING_REVIEW", "display": "full_poster", "restoresUnavailableArt": "assets/events/premium/xerneas-premium-approved-v1.avif", "width": 1121, "height": 1403},
@@ -26,5 +26,23 @@ window.SPIDEY_PREVIEW_ART=Object.freeze({
     "display": "illustration_crop",
     "offset": 13,
     "aspect": 1.9
+  }
+});
+
+// All screens share this explicit exception for a known unavailable original.
+// A healthy approved original always wins; unrelated drafts never substitute it.
+window.SpideyReviewArt=Object.freeze({
+  correction(event){
+    const approved=window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
+    const review=window.SPIDEY_PREVIEW_ART?.[event?.id];
+    return Boolean(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file]
+      &&review?.status==='PENDING_REVIEW'&&review.display==='full_poster'
+      &&review.restoresUnavailableArt===approved.file);
+  },
+  resolve(event){
+    const approved=window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
+    if(!approved)return null;
+    if(!window.SPIDEY_UNAVAILABLE_ART?.[approved.file])return approved;
+    return this.correction(event)?window.SPIDEY_PREVIEW_ART[event.id]:null;
   }
 });

@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-player-v1';
+const CACHE = 'spidey-app-20261001-xerneas-review-v2';
 const CORE = [
   './',
   './index.html',
@@ -52,7 +52,11 @@ const CORE = [
   './data/weekly.json',
   './data/world-event-points.json',
   './assets/spidey-logo-oficial.jpg',
-  './assets/events/premium/xerneas-premium-approved-v1.avif',
+  './assets/events/review/xerneas-rotation-correction-v1.png',
+  './assets/events/recovered/1000426235.png',
+  './assets/events/recovered/1000431445.png',
+  './assets/events/recovered/1000431441.png',
+  './assets/events/recovered/1000431272.png',
   './assets/events/premium/seedot-premium-approved-v1.avif',
   './assets/events/premium/sizzlipede-premium-approved-v1.avif',
   './assets/events/premium/zorua-premium-approved-v1.avif'
@@ -94,7 +98,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => cached || fetch(request).then((response) => {
+    caches.match(request, { ignoreSearch: url.origin === self.location.origin && url.pathname.includes('/assets/') }).then((cached) => cached || fetch(request).then((response) => {
       if (response.ok && url.origin === self.location.origin) {
         const copy = response.clone();
         caches.open(CACHE).then((cache) => cache.put(request, copy));
