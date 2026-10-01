@@ -93,5 +93,78 @@
     "Xerneas rotação e Hora de Reides aprovados",
     "Festival das Luzes aprovado",
     "Registro histórico de candidatas e prompts sem alteração"
-  ]
+  ],
+  "post_approval_qa": {
+    "code_commit": "a242f88cbe575902c064110883d71e1ef12778b4",
+    "deployment_id": "dpl_EHiVvMsaDnwNeXGHPsofynKN6UDd",
+    "deployment_state": "READY",
+    "preview_url": "https://spidey-pokemon-huc1kneau-spidey3.vercel.app/spidey-app/index.html",
+    "responsive_viewports": [
+      [
+        390,
+        850
+      ],
+      [
+        1280,
+        850
+      ]
+    ],
+    "actual_document_widths": [
+      375,
+      1265
+    ],
+    "horizontal_overflow": false,
+    "poster_natural_size": [
+      1121,
+      1403
+    ],
+    "screens": [
+      "Home",
+      "Semana",
+      "Detalhe",
+      "FLY de Cinderace"
+    ],
+    "close_accessible": true,
+    "dialog_initial_scroll_top": 0,
+    "fly_cinderace": {
+      "action_count": 1,
+      "dialog_closed": true,
+      "event_selected": "2026-10-gigantamax-cinderace-max-day",
+      "essentials": 20,
+      "all_points": 28,
+      "taipei_local": "03/10 14:00–17:00",
+      "taipei_brasilia": "03/10 03:00–06:00"
+    },
+    "node_tests_passed": 14,
+    "active_scripts_syntax_passed": 18,
+    "service_worker_syntax_passed": true,
+    "proofs": [
+      {
+        "file": "docs/qa/invasion-mobile-approved-a242f88-20261001.jpg",
+        "sha256": "f395c996991df06e8d3d6fa24651125f269421ef3f8e9660051e3828ecff3d6e",
+        "bytes": 105676
+      },
+      {
+        "file": "docs/qa/cinderace-mobile-approved-a242f88-20261001.jpg",
+        "sha256": "f591b3570968c319ae5bbbf4a41ea0b203352899968696ce5b72e1f91f010322",
+        "bytes": 107224
+      },
+      {
+        "file": "docs/qa/cinderace-desktop-approved-a242f88-20261001.jpg",
+        "sha256": "33c6d47acb15c3167c18d4e43e5bd8b36f8cdb086bbcdb4eda13d9e0405f6e84",
+        "bytes": 145646
+      },
+      {
+        "file": "docs/qa/invasion-desktop-approved-a242f88-20261001.jpg",
+        "sha256": "bc8aa692228cafde48898ef2abbae37d7e3c30283f995035ba8b3a3b44bbc89e",
+        "bytes": 146819
+      }
+    ],
+    "limits": [
+      "Sem teste de Android físico/instalação/upgrade/offline PWA/push nesta rodada",
+      "Sem nova prova de clipboard/GPX real",
+      "Arte de Applin/cobertura restante pendentes",
+      "Sem promoção a main/produção"
+    ]
+  }
 }

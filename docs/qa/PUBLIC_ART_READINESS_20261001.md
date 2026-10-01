@@ -7,7 +7,7 @@ Xerneas, Invasão e Cinderace foram aprovados explicitamente pelo editor e estã
 ## Ordem para a entrega em 02/10
 
 1. Festival da Colheita com Applin, já ativo: arte ainda pendente; a ferramenta recusou a geração nesta tentativa. O antigo Harvest/Pumpkaboo permanece revogado. A Invasão, que começa em 02/10, tem pôster corrigido aprovado.
-2. Aprovação humana de Invasão e Cinderace concluída em 01/10, 15:45 BRT; confirmar novos paths no preview. Cinderace em 03/10, 14–17h locais; FLY corrigido e testado. Provas anteriores em `PRIORITY_ART_20261001.md`, pós-aprovação em `PRIORITY_ART_APPROVAL_20261001.md`.
+2. Aprovação humana de Invasão e Cinderace concluída em 01/10, 15:45 BRT; novos paths confirmados no preview `a242f88`, mobile/desktop/Semana/FLY. Cinderace em 03/10, 14–17h locais; FLY corrigido e testado. Provas anteriores em `PRIORITY_ART_20261001.md`, pós-aprovação em `PRIORITY_ART_APPROVAL_20261001.md`.
 3. Semana Mundial do Espaço em 04/10 e Mega Victreebel vigente; depois Yveltal/Hora de Reides e Mega Blastoise. Não presumir aprovação das peças de Yveltal previamente rejeitadas.
 4. Completar Temporada, GO Pass, Liga de Batalha GO e Descobertas Diárias; revisar fontes dos eventos regionais.
 5. Seedot de 01/10 permanece item urgente de hoje: recorte atual não torna o pôster antigo de Community Day factual nem aprovado.

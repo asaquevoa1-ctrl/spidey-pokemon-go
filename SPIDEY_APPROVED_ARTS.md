@@ -30,7 +30,7 @@ Ambas PNG 1121×1403, `display: full_poster`, mesmos bytes aprovados para thumb/
 
 Master aprovado é soberano; estas duas entradas saem de `preview-art.js`. Xerneas, Hora de Reides e Festival das Luzes permanecem intactos. A decisão de 09:08 BRT foi exclusiva de Xerneas; a decisão de 15:45 BRT aprova somente estas duas peças. Não aprova Applin, Seedot, Zorua nem o lançamento completo.
 
-QA anterior mobile/desktop/Semana e FLY de Cinderace está em `docs/qa/PRIORITY_ART_20261001.md`. Confirmação dos novos caminhos aprovados deve ser registrada em `docs/qa/PRIORITY_ART_APPROVAL_20261001.md` antes do handoff.
+QA anterior mobile/desktop/Semana e FLY de Cinderace está em `docs/qa/PRIORITY_ART_20261001.md`. Novos caminhos confirmados na revisão `a242f88`: mobile/desktop/Semana e FLY de Cinderace, 14 testes passaram. Evidências em `docs/qa/PRIORITY_ART_APPROVAL_20261001.md`.
 
 Applin: dados oficiais atualizados, mas ferramenta recusou a geração, sem novo arquivo. Arte permanece pendente. Harvest/Pumpkaboo continua REVOKED_FACTUAL e não é substituto. Android/PWA/push e cobertura restante continuam pendentes de prova.
 

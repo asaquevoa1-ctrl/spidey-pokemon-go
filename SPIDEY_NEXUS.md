@@ -524,3 +524,11 @@ Editor respondeu “Sim, aprovo” aos dois PNGs exatos apresentados no checkpoi
 Entradas de Invasão/Cinderace removidas do preview-art; full_poster e resolução soberana mantidos. Shell/cache atualizados, teste de aprovação liga decisão aos bytes/eventIds e preserva as pendências de Applin/Seedot/Zorua. Próximo nesta rodada: testar, publicar checkpoint de branch e confirmar novos caminhos no preview mobile/desktop/Semana/FLY; registrar evidências antes do handoff.
 
 Inventário corrente: 23 eventos entre 01–07/10, 3 masters APPROVED, 1 recorte pendente, 19 sem arquivo Home/FLY. Applin/cobertura restante e Android/PWA/push continuam pendentes; aprovação não inclui lançamento completo nem produção. Não reiniciar nem reabrir artes já aprovadas.
+
+### QA pós-aprovação concluído e handoff
+
+Código validado `a242f88cbe575902c064110883d71e1ef12778b4`, tree local/remoto idêntico, deploy READY `dpl_EHiVvMsaDnwNeXGHPsofynKN6UDd`. Preview seguro verificado https://spidey-pokemon-huc1kneau-spidey3.vercel.app/spidey-app/index.html. Invasão e Cinderace APPROVED realmente decodificados 1121×1403, paths premium/hashes corretos, completos no mobile Claro e desktop Escuro. Home/Semana/detalhe, duas ocorrências de Cinderace na Semana; Xerneas aprovado preservado. Fechar acessível, scroll inicial zero, sem overflow horizontal nas medidas observadas. FLY de Cinderace: ação única fecha diálogo e mantém seleção, arte/fonte/bônus, 20/28 pontos e Taipei corretos. App direto também conferido, aba com Cinderace deixada disponível.
+
+14 testes Node, sintaxe de 18 scripts/SW, JSON/precaches/hashes/diff passaram. Quatro provas novas e limites em `docs/qa/PRIORITY_ART_APPROVAL_20261001.md`; decisão e provas vinculadas em JSON homônimo. Checkpoint documental que contém este handoff não altera código validado.
+
+Próximo: Applin/cobertura restante (23 eventos: 3 APPROVED, 1 recorte pendente, 19 sem arquivo Home/FLY), Android físico/instalação/upgrade/offline PWA/push, clipboard/GPX real. Applin bloqueado pela tentativa de geração documentada, sem arquivo, Pumpkaboo revogado não substitui. Não reabrir Xerneas/Invasão/Cinderace aprovados; continuar nesta branch sem reinício. Nenhuma promoção a main/produção e Amigos/Chat posterior ao núcleo.

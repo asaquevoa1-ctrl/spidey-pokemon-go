@@ -89,3 +89,5 @@ Invasão e Cinderace são entradas explícitas por eventId em `preview-art.js`, 
 ## Transição editorial — Invasão/Cinderace APPROVED, 01/10 15:45 BRT
 
 Aprovação humana explícita dos dois PNGs exatos da rodada `df9d050`. Cópias byte a byte em `assets/events/premium/harvest-invasion-approved-v1.png` e `assets/events/premium/cinderace-max-day-approved-v1.png`; hashes/dimensões/eventIds/decisão em `docs/qa/PRIORITY_ART_APPROVAL_20261001.json`. `premium-approved-master.js` é autoridade única; mesmas imagens em todos os papéis, `display: full_poster` e dimensões reservadas no detalhe. Removidas somente estas duas entradas de preview; Seedot/Zorua continuam pendentes. Originais/candidatas e masters anteriores preservados. Cache/shell versionados para novos paths aprovados; sem mudança de composição nem regeneração.
+
+QA pós-aprovação `a242f88`: Home/Semana/detalhe e FLY de Cinderace renderizam os arquivos premium completos 1121×1403 em mobile/desktop. Quatro provas e resultado dos 14 testes em `docs/qa/PRIORITY_ART_APPROVAL_20261001.md`; registro também vincula hashes dos prints.
