@@ -14,3 +14,6 @@
 @media(prefers-reduced-motion:reduce){.spidey-player-ui *{scroll-behavior:auto!important;transition:none!important}}
 
 .player-art-window{display:block;position:relative;overflow:hidden;width:100%;aspect-ratio:1.9;background:#061222;align-self:stretch}.player-art-window img{position:absolute;display:block!important;width:100%;height:auto!important;max-height:none!important;top:-31%;left:0}.player-art-window.player-thumbnail{width:64px;aspect-ratio:1;height:64px;align-self:center;border-radius:5px}.player-art-window.player-thumbnail img{top:-18%}.player-event:has(.player-art-window){grid-template-columns:1fr}.player-event:has(.player-art-window) .player-art-window{max-height:410px}.player-event:has(.player-art-window) .player-event-copy{padding:24px 30px}.player-event:has(.player-art-window) h2{font-size:1.8rem}@media(max-width:760px){.player-art-window{aspect-ratio:1.9}.player-event:has(.player-art-window) .player-event-copy{padding:22px}}
+
+/* Illustration-only viewport excludes all historical poster dates/claims. */
+.player-art-window,.player-event:has(.player-art-window) .player-art-window{aspect-ratio:3.6;max-height:none}.player-art-window img{top:-45%}.player-art-window.player-thumbnail{aspect-ratio:1}.player-art-window.player-thumbnail img{width:300%;left:-100%;top:-40%}

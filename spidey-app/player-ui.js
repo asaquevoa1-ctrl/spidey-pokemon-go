@@ -19,7 +19,14 @@
     const bonuses=Array.isArray(e.bonuses)?e.bonuses.filter(x=>typeof x==='string'):[];
     return [...new Set([e.summary,...bonuses].filter(Boolean))];
   }
-  function time(e){const s=e.schedule||{};if(!s.start_local||!s.end_local)return 'Horário a confirmar';const date=s.start_local.slice(8,10)+'/'+s.start_local.slice(5,7);return `${date} · ${s.start_local.slice(11,16)}–${s.end_local.slice(11,16)}${window.SpideyFlyCore?.eligible(e)?' no horário de cada região':' (Brasília)'}`}
+  function time(e){
+    const s=e.schedule||{};if(!s.start_local||!s.end_local)return 'Horário a confirmar';
+    if(!window.SpideyFlyCore?.eligible(e))return `${formatRange(e)} (Brasília)`;
+    const date=v=>v.slice(8,10)+'/'+v.slice(5,7);
+    const a=date(s.start_local),b=date(s.end_local);
+    return `${a} · ${s.start_local.slice(11,16)} → ${a!==b?b+' · ':''}${s.end_local.slice(11,16)} no horário de cada região`;
+  }
+
   function panel(e,{fly=false}={}){
     if(!e)return '<p>Escolha um evento para ver os detalhes.</p>';
     const image=art(e),pokemon=(e.pokemon||[]).map(p=>typeof p==='string'?p:`${p.name}${p.note?' — '+p.note:''}`),notes=(e.notes||[]).filter(n=>typeof n==='string');
