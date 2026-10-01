@@ -153,7 +153,7 @@
             <button id="copyVisibleStampCoords" class="action-btn" type="button">Copiar filtradas</button>
             ${fullGpx ? '<button id="downloadRallyGpxV2" class="action-btn" type="button">Baixar GPX completo</button>' : ''}
           </div>
-          ${!fullGpx ? `<p class="microcopy">GPX completo bloqueado até todas as ${stops.length} Stops terem coordenadas exatas. As funções de copiar usam somente pontos confirmados.</p>` : ''}
+          ${!fullGpx ? `<p class="microcopy">A rota GPX ficará disponível quando todas as ${stops.length} PokéStops estiverem confirmadas. Você já pode copiar os pontos disponíveis.</p>` : ''}
         </section>
 
         <section class="stamp-gallery-section-v2">

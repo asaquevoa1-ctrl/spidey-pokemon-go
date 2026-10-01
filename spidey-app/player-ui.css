@@ -17,3 +17,5 @@
 
 /* Illustration-only viewport excludes all historical poster dates/claims. */
 .player-art-window,.player-event:has(.player-art-window) .player-art-window{aspect-ratio:3.6;max-height:none}.player-art-window img{top:-45%}.player-art-window.player-thumbnail{aspect-ratio:1}.player-art-window.player-thumbnail img{width:300%;left:-100%;top:-40%}
+
+.player-art-window,.player-event:has(.player-art-window) .player-art-window{aspect-ratio:3.05}.player-art-window.player-thumbnail{aspect-ratio:1}

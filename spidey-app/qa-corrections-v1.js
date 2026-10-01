@@ -97,9 +97,9 @@
 
   function coordinateTypeLabel(location) {
     if (location?.coordinate_type === 'exact_pokestop') return 'PokéStop exata';
-    if (location?.coordinate_type === 'venue_reference') return 'Referência do local';
-    if (location?.coordinate_type === 'city_reference') return 'Referência da cidade';
-    return 'Referência geográfica';
+    if (location?.coordinate_type === 'venue_reference') return 'Local aproximado';
+    if (location?.coordinate_type === 'city_reference') return 'Cidade';
+    return 'Local aproximado';
   }
 
   function eventLocationRows(event) {
@@ -115,11 +115,11 @@
   }
 
   function worldReferenceRows(event, points) {
-    if (!points.length) return '<p class="microcopy">Referências mundiais indisponíveis neste momento.</p>';
+    if (!points.length) return '<p class="microcopy">Não foi possível carregar os horários pelo mundo.</p>';
     const windowText = localWindow(event);
     return `<details class="world-reference-v4">
-      <summary>Ver ${points.length} referências mundiais de horário e coordenadas</summary>
-      <p class="microcopy">São pontos de referência por fuso horário. Não são PokéStops oficiais do evento.</p>
+      <summary>Ver horários em ${points.length} lugares pelo mundo</summary>
+      <p class="microcopy">Escolha uma região para ver quando jogar. Estes locais não são PokéStops do evento.</p>
       <div class="world-reference-list-v4">${points.map((point) => {
         const value = `${Number(point.lat).toFixed(6)},${Number(point.lon).toFixed(6)}`;
         return `<div class="world-reference-row-v4">
@@ -158,10 +158,10 @@
     section.className = 'event-wherewhen-v4';
     section.innerHTML = `
       <h3>Horários e locais</h3>
-      ${summary ? `<div class="event-local-window-v4"><span>Horário do evento</span><strong>${summary}</strong><small>No Brasil, eventos globais por horário local também acontecem nesse mesmo relógio local.</small></div>` : `
+      ${summary ? `<div class="event-local-window-v4"><span>Horário do evento</span><strong>${summary}</strong><small>Esse horário vale no relógio da região onde você vai jogar.</small></div>` : `
         <div class="event-local-window-v4"><span>Horário</span><strong>${typeof originalFormatRange === 'function' ? originalFormatRange(event) : 'A confirmar'}</strong></div>`}
       ${actualLocations || (!isLocalTimeEvent(event) ? '<p class="microcopy">Sem coordenadas específicas confirmadas para este evento.</p>' : '')}
-      ${isLocalTimeEvent(event) ? '<div class="world-reference-loading-v4 microcopy">Carregando referências mundiais…</div>' : ''}
+      ${isLocalTimeEvent(event) ? '<div class="world-reference-loading-v4 microcopy">Carregando horários pelo mundo…</div>' : ''}
     `;
     if (actionRow) actionRow.before(section); else body.appendChild(section);
 
