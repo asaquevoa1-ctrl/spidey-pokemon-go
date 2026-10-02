@@ -1,5 +1,5 @@
 {
-  "status": "APPROVED_POST_APPROVAL_QA_PENDING",
+  "status": "APPROVED_PREVIEW_QA_PASSED",
   "event_id": "2026-09-mega-victreebel-raids",
   "date": "2026-10-01",
   "catalog_base": "b310f5aefba0e3f6b841f8014e8b0677442922ef",
@@ -37,8 +37,9 @@
     "30 DE SETEMBRO A 6 DE OUTUBRO DE 2026",
     "Fonte: Leek Duck • Pokémon GO Hub"
   ],
-  "next_action": "Conferir caminho aprovado no preview mobile/desktop/Home/Semana/detalhe e persistir provas; continuar cobertura restante e Android/PWA/push.",
+  "next_action": "Continuar cobertura restante e provas Android/PWA/push; não reabrir Mega Victreebel v2 nem os masters anteriores aprovados.",
   "art_sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
   "art_width": 1121,
-  "art_height": 1403
+  "art_height": 1403,
+  "post_approval_qa": "docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md"
 }

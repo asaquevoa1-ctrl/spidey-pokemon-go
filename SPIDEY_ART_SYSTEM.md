@@ -110,3 +110,5 @@ Handoff pós-aprovação Seedot: código `b310f5a`, preview seguro https://spide
 ## Mega Victreebel v2 APPROVED — 01/10, 22:09 BRT
 
 Decisão humana sobre o PNG completo recebido no chat, hash/dimensões/eventId em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json`. Novo caminho premium preserva bytes da candidata; autoridade única no master, `full_poster` em todos os papéis. Apenas esta entrada é removida do preview; Zorua e sete masters anteriores preservados. Composição/resolver/dados/Novidades não mudam. Shell e cache versionados; QA pós-aprovação em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md`.
+
+QA pós-aprovação `4b0f319`: novo master integral confirmado em Home/Semana/detalhe, mobile/desktop e clique direto. Duas provas e 21 testes em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md`; sete masters anteriores preservados.

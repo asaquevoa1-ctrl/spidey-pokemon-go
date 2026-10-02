@@ -138,7 +138,7 @@
     "Histórico de revisão, prompts e fontes; catálogo de 124 eventos e Novidades"
   ],
   "post_approval_qa": {
-    "status": "PENDING_PREVIEW_VERIFICATION",
+    "status": "PREVIEW_VERIFIED",
     "node_tests_passed": 21,
     "active_scripts_syntax_passed": 19,
     "service_worker_syntax_passed": true,
@@ -147,6 +147,81 @@
       "file_count": 67,
       "disk_bytes": 21519488,
       "network_or_offline_test": false
-    }
+    },
+    "code_commit": "4b0f3198e62fa50af5fd89b71475350e76d573e8",
+    "deployment_id": "dpl_ALwMEt9AWVpzqn9UZ5iDYmrQShem",
+    "deployment_state": "READY",
+    "preview_url": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/index.html",
+    "browser_evidence": "docs/qa/mega-victreebel-approved-browser-4b0f319-20261001.json",
+    "responsive_viewports": [
+      [
+        390,
+        850
+      ],
+      [
+        1280,
+        850
+      ]
+    ],
+    "actual_document_widths": [
+      375,
+      1265
+    ],
+    "horizontal_overflow": false,
+    "poster_natural_size": [
+      1121,
+      1403
+    ],
+    "close_accessible": true,
+    "dialog_initial_scroll_top": 0,
+    "screens": [
+      "Home",
+      "Semana",
+      "Detalhe"
+    ],
+    "desktop_direct_click": "PASSED",
+    "masters_visible_preserved": [
+      "Xerneas",
+      "Invasão",
+      "Cinderace"
+    ],
+    "earlier_master_entries_and_bytes_preserved": 7,
+    "weekly_raid_hour_xerneas": [
+      1229,
+      1536
+    ],
+    "news_observed": [
+      "Fique por dentro",
+      "Patterns of the Wild • Indonésia",
+      "Minior chega com as chuvas de meteoros"
+    ],
+    "proofs": [
+      {
+        "file": "docs/qa/mega-victreebel-mobile-approved-4b0f319-20261001.jpg",
+        "sha256": "0817747b70109afc3c2f8eb89892eb3bf23866fab8e5a010cbef47271b171a9b",
+        "bytes": 105636,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/mega-victreebel-desktop-approved-4b0f319-20261001.jpg",
+        "sha256": "2bb35722c2a7a9066db16e0dfa5f2024aec3c731a63993e336292be23ad0df9d",
+        "bytes": 150079,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      }
+    ],
+    "limits": [
+      "Android físico e instalação/upgrade/offline/push PWA pendentes.",
+      "GPX pendente; clipboard direto desktop já comprovado no código 282ea97, sem repetição nesta rodada.",
+      "18 eventos sem arquivo Home/FLY; Applin/Espaço sem arquivo por recusa documentada.",
+      "Sem promoção a main/produção."
+    ]
   }
 }
