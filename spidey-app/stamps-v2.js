@@ -152,7 +152,7 @@
             <button id="copyAllStampCoords" class="action-btn gold" type="button">Copiar todas</button>
             <button id="copyRemainingStampCoords" class="action-btn" type="button">Copiar só faltantes</button>
             <button id="copyVisibleStampCoords" class="action-btn" type="button">Copiar filtradas</button>
-            ${fullGpx ? '<button id="downloadRallyGpxV2" class="action-btn" type="button">Baixar GPX completo</button>' : ''}
+            ${fullGpx ? '<a id="downloadRallyGpxV2" class="action-btn">Baixar GPX completo</a>' : ''}
           </div>
           ${!fullGpx ? `<p class="microcopy">A rota GPX ficará disponível quando todas as ${stops.length} PokéStops estiverem confirmadas. Você já pode copiar os pontos disponíveis.</p>` : ''}
         </section>
@@ -261,11 +261,14 @@
       const visible = filteredStops();
       setClipboard(copySet(visible), `${visible.filter(exactPokestop).length} coordenadas filtradas copiadas.`);
     });
-    detail.querySelector('#downloadRallyGpxV2')?.addEventListener('click', () => {
-      if (!fullGpx) return;
-      downloadText(`${rally.slug}.gpx`, gpxDocument(rally.title, stops.map((stop) => ({ ...stop, name: `${stop.stamp_number || ''} ${stop.city || ''} - ${stop.venue || ''}`.trim() }))));
-      showToast('GPX completo gerado na ordem dos selos.');
-    });
+    const gpxLink = detail.querySelector('#downloadRallyGpxV2');
+    if (fullGpx && gpxLink) {
+      const content = gpxDocument(rally.title, stops.map((stop) => ({ ...stop, name: `${stop.stamp_number || ''} ${stop.city || ''} - ${stop.venue || ''}`.trim() })));
+      const url = URL.createObjectURL(new Blob([content], { type: 'application/gpx+xml;charset=utf-8' }));
+      gpxLink.href = url;
+      gpxLink.download = `${rally.slug}.gpx`;
+      dialog.addEventListener('close', () => URL.revokeObjectURL(url), { once: true });
+    }
 
     detail.querySelector('#stampSearchV2')?.addEventListener('input', (event) => {
       search = event.target.value || '';

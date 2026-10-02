@@ -428,21 +428,8 @@ async function loadContent() {
 }
 
 async function enableNotifications() {
-  if (!('Notification' in window) || !('serviceWorker' in navigator)) {
-    $('#notificationStatus').textContent = 'Este navegador não oferece notificações PWA.';
-    return;
-  }
-  const permission = await Notification.requestPermission();
-  if (permission !== 'granted') {
-    $('#notificationStatus').textContent = 'Notificações não autorizadas.';
-    return;
-  }
-  const registration = await navigator.serviceWorker.ready;
-  await registration.showNotification('Spidey Pokémon GO', {
-    body: 'Notificações ativadas neste aparelho. O push automático será ligado ao motor do Spidey.',
-    icon: 'assets/spidey-logo-oficial.jpg', badge: 'assets/spidey-logo-oficial.jpg', tag: 'spidey-notification-ready',
-  });
-  $('#notificationStatus').textContent = 'Permissão de notificações ativada.';
+  if (window.SpideyPush?.subscribeRemotePush) return window.SpideyPush.subscribeRemotePush();
+  $('#notificationStatus').textContent = 'Notificações indisponíveis no momento.';
 }
 
 $('#prevMonth').addEventListener('click', () => { state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); renderCalendar(); });

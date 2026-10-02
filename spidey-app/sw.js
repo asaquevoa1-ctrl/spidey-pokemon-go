@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261002-october-raids-approved-v1';
+const CACHE = 'spidey-app-20261002-download-push-v1';
 const CORE = [
   './',
   './index.html',
@@ -25,6 +25,7 @@ const CORE = [
   './player-ui.js',
   './player-ui.css',
   './preview-art.js',
+  './assets/events/review/zorua-community-day-correction-v1.png',
   './command-center.css',
   './premium-approved-master.js',
   './trust-world-v1.js',
@@ -79,7 +80,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => key.startsWith('spidey-app-') && key !== CACHE).map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });
@@ -89,6 +90,7 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
 
   const url = new URL(request.url);
+  if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
   const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json');
 
@@ -98,7 +100,7 @@ self.addEventListener('fetch', (event) => {
         .then((response) => {
           if (response.ok) {
             const copy = response.clone();
-            caches.open(CACHE).then((cache) => cache.put(request, copy));
+            event.waitUntil(caches.open(CACHE).then((cache) => cache.put(request, copy)));
           }
           return response;
         })
@@ -111,7 +113,7 @@ self.addEventListener('fetch', (event) => {
     caches.match(request, { ignoreSearch: url.origin === self.location.origin && url.pathname.includes('/assets/') }).then((cached) => cached || fetch(request).then((response) => {
       if (response.ok && url.origin === self.location.origin) {
         const copy = response.clone();
-        caches.open(CACHE).then((cache) => cache.put(request, copy));
+        event.waitUntil(caches.open(CACHE).then((cache) => cache.put(request, copy)));
       }
       return response;
     }))
@@ -132,10 +134,12 @@ self.addEventListener('push', (event) => {
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const relativeUrl = event.notification.data?.url || './';
-  const targetUrl = new URL(relativeUrl, self.location.origin).href;
+  const appUrl = new URL('./', self.location.href);
+  const requestedUrl = new URL(relativeUrl, appUrl);
+  const targetUrl = requestedUrl.origin === appUrl.origin ? requestedUrl.href : appUrl.href;
   event.waitUntil(clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
     for (const client of windows) {
-      if ('focus' in client) {
+      if (client.url.startsWith(appUrl.href) && 'focus' in client) {
         client.navigate(targetUrl);
         return client.focus();
       }

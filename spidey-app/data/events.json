@@ -3143,7 +3143,7 @@
       "id": "2026-10-zorua-community-day",
       "slug": "2026-10-zorua-community-day",
       "title": "Dia Comunitário: Zorua",
-      "summary": "Zorua em destaque no Dia Comunitário de outubro, com Soco Enganador para Zoroark ao evoluir.",
+      "summary": "Zorua na natureza, 3× PE e 2× Doces por captura. Evolua para Zoroark com Soco Enganador até as 21h locais.",
       "category": "community_day",
       "tags": [
         "Zorua",
@@ -3175,7 +3175,12 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Evento em 10/10, das 14h às 17h, horário local.",
+        "3× PE e 2× Doces por captura durante o evento.",
+        "Evolua Zorua até as 21h locais para receber Zoroark com o ataque ágil Soco Enganador.",
+        "Módulos Atrair comuns duram uma hora; Zorua atraídos por eles podem aparecer com Fundo Especial. A janela de encontros vai até 21h locais."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
