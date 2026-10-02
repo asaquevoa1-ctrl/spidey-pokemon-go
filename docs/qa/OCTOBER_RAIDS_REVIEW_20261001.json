@@ -74,7 +74,7 @@
     }
   ],
   "qa": {
-    "status": "PENDING",
+    "status": "PREVIEW_ART_VERIFIED",
     "node_tests_passed": 22,
     "active_scripts_syntax_passed": 19,
     "service_worker_syntax_passed": true,
@@ -84,7 +84,110 @@
       "file_count": 70,
       "disk_bytes": 28777950,
       "network_or_offline_test": false
-    }
+    },
+    "code_commit": "10e28fcb2b785206bfde67116526a97e76a9d145",
+    "verified_at": "2026-10-02T03:48:16.276105+00:00",
+    "preview_url": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/index.html",
+    "responsive_harness": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/qa-responsive.html",
+    "mobile": "390×850, Claro: três PNGs integrais 1121×1403, contain, rodapé visível, sem overflow horizontal no detalhe; Fechar focado e scrollTop 0.",
+    "desktop": "1280×850, Escuro: três PNGs integrais, contain em caixa 703×620, rodapé visível, sem overflow horizontal no detalhe.",
+    "entry_path": "Início → Mostrar calendário → 7 de outubro → evento → detalhe; seleção pelo UI, sem alterar relógio/estado interno.",
+    "fly_hour": "Ver rota mundial abre Yveltal 07/10, 18–19h local, 20 essenciais; arquivo da Hora de Reides correto no card mobile/desktop.",
+    "surface_limits": [
+      "Home atual limita Vem por aí aos seis próximos: novas peças de 07/10 não apareceram nesta Home.",
+      "Semana corrente 28/09–04/10 não contém as três novas peças; preservação dos masters atuais conferida, sem forçar data.",
+      "QA responsivo em navegador remoto não é teste de Android físico/instalação/offline/push."
+    ],
+    "master_preview_check": "Xerneas, Invasão, Cinderace e Mega Victreebel carregaram na Semana/Home; Seedot confirmado no detalhe após renovar acesso temporário Vercel.",
+    "seedot_access_issue": {
+      "status": "RESOLVED",
+      "cause_observed": "URL exata do PNG redirecionou ao login Vercel.",
+      "recovery": "Acesso temporário renovado pelo conector; mesmo PNG passou no app, natural 1121×1403. Nenhuma mudança em código/arte."
+    },
+    "observations_file": "docs/qa/october-raids-browser-10e28fc-20261002.json",
+    "proofs": [
+      {
+        "file": "docs/qa/yveltal-rotation-mobile-10e28fc-20261002.jpg",
+        "sha256": "b8ea5be8d873a3a0cf5e09c53007ee4990dbcd832dc870b5dc02969db8b25de0",
+        "bytes": 93938,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-hour-mobile-10e28fc-20261002.jpg",
+        "sha256": "d154ce2710ebc6b7cf54b986a2a90b641534e9c8c0d26b9db81d3db66304d83f",
+        "bytes": 99930,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/mega-blastoise-mobile-10e28fc-20261002.jpg",
+        "sha256": "515163bc564a9543f65b935d31b5f2b3c9b16b5f56d3589fa20ac658654aefcd",
+        "bytes": 105575,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/mega-blastoise-desktop-10e28fc-20261002.jpg",
+        "sha256": "b7370ae5c90d9da17bbb881a85157254739fca0d8f24135e1a915dfee69f3336",
+        "bytes": 153778,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-rotation-desktop-10e28fc-20261002.jpg",
+        "sha256": "5ee0480c4841e748e5e2055e11f723a5c6f69bbab3bb4ca13a76caf7a8752640",
+        "bytes": 127480,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-hour-desktop-10e28fc-20261002.jpg",
+        "sha256": "25bbc0a0b9d186e0c7bf3ee70206a306b16017ff1faccc78bd0c0ade773d186e",
+        "bytes": 136289,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-hour-fly-mobile-10e28fc-20261002.jpg",
+        "sha256": "25a4c2f73041313c371fcf79b9e88d4bee0fc08c036b293c055917dd7a78434b",
+        "bytes": 62370,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/seedot-load-failed-10e28fc-20261002.jpg",
+        "sha256": "8d4c90c75da6fad38facfcfe6eec8173ad6ffe3dc9c5df60cdf3226cf433f335",
+        "bytes": 35872,
+        "dimensions": [
+          1348,
+          926
+        ]
+      },
+      {
+        "file": "docs/qa/seedot-access-restored-10e28fc-20261002.jpg",
+        "sha256": "06aa01ded320bde2bfcfb5cd3e6bd0e15c131a436c0839671a78d5674d3834f4",
+        "bytes": 125355,
+        "dimensions": [
+          1348,
+          926
+        ]
+      }
+    ]
   },
   "revision_history": [
     {

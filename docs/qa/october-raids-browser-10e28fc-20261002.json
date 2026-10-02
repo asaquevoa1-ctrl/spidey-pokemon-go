@@ -1,0 +1,421 @@
+{
+  "code_commit": "10e28fcb2b785206bfde67116526a97e76a9d145",
+  "preview": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/index.html",
+  "qa_harness": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/qa-responsive.html",
+  "captured_at": "2026-10-02T03:45:06.567Z",
+  "observations": [
+    {
+      "event": "2026-10-raids-yveltal",
+      "viewport": "mobile390",
+      "theme": "light",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          360,
+          450.546875
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/review/yveltal-rotation-v1.png?v=dbed7399b3e3"
+      },
+      "dialog": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "text": "REIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nReides 5★: Yveltal\n\nYveltal na rotação de Reides de cinco estrelas.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 360
+      }
+    },
+    {
+      "event": "2026-10-07-raid-hour-yveltal",
+      "viewport": "mobile390",
+      "theme": "light",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          360,
+          450.546875
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/review/yveltal-raid-hour-v2.png?v=a3881d22755b"
+      },
+      "dialog": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "text": "HORA DE REIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nHora de Reides: Yveltal\n\nYveltal em destaque na Hora de Reides.\n\nHorários e locais\nHorário do evento\n07 de out. · 18:00–19:00 · horário local\nEsse horário vale no relógio da região onde você vai jogar.\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.\n7 de outubro, 18h às 19h no horário de cada região.\nVer rota mundial",
+        "width": 360
+      }
+    },
+    {
+      "event": "2026-10-mega-blastoise-raids",
+      "viewport": "mobile390",
+      "theme": "light",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          360,
+          450.546875
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/review/mega-blastoise-rotation-v1.png?v=474fa9a79395"
+      },
+      "dialog": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "text": "MEGA-REIDES\nINFORMAÇÃO DA COMUNIDADE\nMegarreides: Mega Blastoise\n\nMega Blastoise na rotação de Mega Reides.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 360
+      }
+    },
+    {
+      "event": "2026-10-mega-blastoise-raids",
+      "viewport": "desktop1280",
+      "theme": "dark",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          703,
+          620
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/review/mega-blastoise-rotation-v1.png?v=474fa9a79395"
+      },
+      "dialog": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "text": "MEGA-REIDES\nINFORMAÇÃO DA COMUNIDADE\nMegarreides: Mega Blastoise\n\nMega Blastoise na rotação de Mega Reides.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 703
+      }
+    },
+    {
+      "event": "2026-10-raids-yveltal",
+      "viewport": "desktop1280",
+      "theme": "dark",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          703,
+          620
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/review/yveltal-rotation-v1.png?v=dbed7399b3e3"
+      },
+      "dialog": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "text": "REIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nReides 5★: Yveltal\n\nYveltal na rotação de Reides de cinco estrelas.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 703
+      }
+    },
+    {
+      "event": "2026-10-07-raid-hour-yveltal",
+      "viewport": "desktop1280",
+      "theme": "dark",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          703,
+          620
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/review/yveltal-raid-hour-v2.png?v=a3881d22755b"
+      },
+      "dialog": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "text": "HORA DE REIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nHora de Reides: Yveltal\n\nYveltal em destaque na Hora de Reides.\n\nHorários e locais\nHorário do evento\n07 de out. · 18:00–19:00 · horário local\nEsse horário vale no relógio da região onde você vai jogar.\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.\n7 de outubro, 18h às 19h no horário de cada região.\nVer rota mundial",
+        "width": 703
+      }
+    },
+    {
+      "event": "2026-10-07-raid-hour-yveltal",
+      "surface": "FLY",
+      "viewport": "desktop1280",
+      "selected": "2026-10-07-raid-hour-yveltal",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/review/yveltal-raid-hour-v2.png?v=a3881d22755b"
+      },
+      "count": "20",
+      "summary": "HORA DE REIDES\nHora de Reides: Yveltal\n\n07/10 · 18:00 → 19:00 no horário de cada região\n\nYveltal em destaque na Hora de Reides.\n\nO que mais você precisa saber\nTodos os detalhes\nInformação da comunidade ↗",
+      "route": "01\nPRÓXIMO\n🇰🇮 Kiritimati, Kiribati\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 01:00 → 07/10, 02:00\n\nLocal aproximado · confira no mapa\n1.987149,-157.477137\nCopiar coordenadas\nAbrir mapa\n02\nFUTURO\n🇳🇿 Auckland, Nova Zelândia\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 02:00 → 07/10, 03:00\n\nLocal aproximado · confira no mapa\n-36.852095,174.76318\nCopiar coordenadas\nAbrir mapa\n03\nFUTURO\n🇦🇺 Sydney, Austrália\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 04:00 → 07/10, 05:00\n\nLocal aproximado · confira no mapa\n-33.866173,151.205945\nCopiar coordenadas\nAbrir mapa\n04\nFUTURO\n🇯🇵 Shinjuku, Japão\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 06:00 → 07/10, 07:00\n\nLocal aproximado · confira no mapa\n35.68895,139.69054\nCopiar coordenadas\nAbrir mapa\n05\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 07:00 → 07/10, 08:00\n\nLocal aproximado · confira no mapa\n25.033964,121.564468\nCopiar coordenadas\nAbrir mapa\n06\nFUTURO\n🇮🇳 Chennai, Índia\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 09:30 → 07/10, 10:30\n\nLocal aproximado · confira no mapa\n13.0403,80.2666\nCopiar coordenadas\nAbrir mapa\n07\nFUTURO\n🇦🇪 Dubai, Emirados Árabes\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 11:00 → 07/10, 12:00\n\nLocal aproximado · confira no mapa\n25.07675,55.13294\nCopiar coordenadas\nAbrir mapa\n08\nFUTURO\n🇹🇷 Istambul, Turquia\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 12:00 → 07/10, 13:00\n\nLocal aproximado · confira no mapa\n41.0082,28.9784\nCopiar coordenadas\nAbrir mapa\n09\nFUTURO\n🇪🇸 Zaragoza, Espanha\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 13:00 → 07/10, 14:00\n\nLocal aproximado · confira no mapa\n41.661609,-0.89464\nCopiar coordenadas\nAbrir mapa\n10\nFUTURO\n🇬🇧 Londres, Reino Unido\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 14:00 → 07/10, 15:00\n\nLocal aproximado · confira no mapa\n51.501,-0.1246\nCopiar coordenadas\nAbrir mapa\n11\nFUTURO\n🇨🇻 Praia, Cabo Verde\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 16:00 → 07/10, 17:00\n\nLocal aproximado · confira no mapa\n14.910725,-23.527823\nCopiar coordenadas\nAbrir mapa\n12\nFUTURO\n🇧🇷 Fernando de Noronha, Brasil\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 17:00 → 07/10, 18:00\n\nLocal aproximado · confira no mapa\n-3.8401,-32.41181\nCopiar coordenadas\nAbrir mapa\n13\nFUTURO\n🇧🇷 Ibirapuera, São Paulo\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 18:00 → 07/10, 19:00\n\nLocal aproximado · confira no mapa\n-23.584171,-46.660725\nCopiar coordenadas\nAbrir mapa\n14\nFUTURO\n🇺🇸 Central Park, Nova York\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 19:00 → 07/10, 20:00\n\nLocal aproximado · confira no mapa\n40.7803,-73.963\nCopiar coordenadas\nAbrir mapa\n15\nFUTURO\n🇺🇸 Chicago, EUA\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 20:00 → 07/10, 21:00\n\nLocal aproximado · confira no mapa\n41.898659,-87.623077\nCopiar coordenadas\nAbrir mapa\n16\nFUTURO\n🇺🇸 Denver, EUA\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 21:00 → 07/10, 22:00\n\nLocal aproximado · confira no mapa\n39.7392,-104.9903\nCopiar coordenadas\nAbrir mapa\n17\nFUTURO\n🇺🇸 Pier 39, São Francisco\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 22:00 → 07/10, 23:00\n\nLocal aproximado · confira no mapa\n37.8095,-122.4101\nCopiar coordenadas\nAbrir mapa\n18\nFUTURO\n🇺🇸 Anchorage, Alasca\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 23:00 → 08/10, 00:00\n\nLocal aproximado · confira no mapa\n61.217019,-149.891609\nCopiar coordenadas\nAbrir mapa\n19\nFUTURO\n🇺🇸 Honolulu, Havaí\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 08/10, 01:00 → 08/10, 02:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n21.2658,-157.8213\nCopiar coordenadas\nAbrir mapa\n20\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 08/10, 02:00 → 08/10, 03:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa"
+    },
+    {
+      "surface": "Semana",
+      "period": "28 de set. → 04 de out.",
+      "masters": [
+        {
+          "alt": "Arte de Reides 5★: Xerneas",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+        },
+        {
+          "alt": "Arte de Megarreides: Mega Victreebel",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        },
+        {
+          "alt": "Arte de Festival da Colheita: A Invasão",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+        },
+        {
+          "alt": "Arte de Dia de Batalhas Max: Cinderace Gigamax",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+        },
+        {
+          "alt": "Festival da Colheita: A Invasão",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+        },
+        {
+          "alt": "Megarreides: Mega Victreebel",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        },
+        {
+          "alt": "Reides 5★: Xerneas",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+        },
+        {
+          "alt": "",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+        },
+        {
+          "alt": "",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        },
+        {
+          "alt": "",
+          "complete": false,
+          "natural": [
+            0,
+            0
+          ],
+          "src": ""
+        },
+        {
+          "alt": "",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+        },
+        {
+          "alt": "Reides 5★: Xerneas",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+        },
+        {
+          "alt": "Megarreides: Mega Victreebel",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        },
+        {
+          "alt": "Festival da Colheita: A Invasão",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+        },
+        {
+          "alt": "Dia de Batalhas Max: Cinderace Gigamax",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+        },
+        {
+          "alt": "Hora do Holofote: Seedot",
+          "complete": false,
+          "natural": [
+            0,
+            0
+          ],
+          "src": ""
+        },
+        {
+          "alt": "Dia de Batalhas Max: Cinderace Gigamax",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+        },
+        {
+          "alt": "Festival da Colheita: A Invasão",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+        },
+        {
+          "alt": "Reides 5★: Xerneas",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+        },
+        {
+          "alt": "Megarreides: Mega Victreebel",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        },
+        {
+          "alt": "Dia de Batalhas Max: Cinderace Gigamax",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+        },
+        {
+          "alt": "Arte de Hora do Holofote: Seedot",
+          "complete": false,
+          "natural": [
+            0,
+            0
+          ],
+          "src": ""
+        }
+      ],
+      "new_october7_art_visible": false,
+      "reason": "Novas artes fora da semana corrente."
+    },
+    {
+      "surface": "Detalhe",
+      "event": "2026-10-xerneas-raids",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+      }
+    },
+    {
+      "surface": "Detalhe",
+      "event": "2026-10-01-spotlight-seedot",
+      "image": {
+        "attribute": "assets/events/premium/seedot-spotlight-approved-v1.png?v=6ac0ebbd5b60",
+        "complete": true,
+        "natural": [
+          0,
+          0
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/seedot-spotlight-approved-v1.png?v=6ac0ebbd5b60"
+      },
+      "status": "IMAGE_LOAD_FAILED"
+    },
+    {
+      "surface": "Detalhe",
+      "event": "2026-10-01-spotlight-seedot",
+      "status": "PASSED_AFTER_PREVIEW_ACCESS_REFRESH",
+      "image": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "src": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/assets/events/premium/seedot-spotlight-approved-v1.png?v=6ac0ebbd5b60"
+      },
+      "recovery": "Arquivo direto redirecionou ao login Vercel. Acesso temporário renovado pelo conector; PNG original voltou a renderizar dentro do app. Nenhum código/asset modificado."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "status": "IN_PROGRESS",
+  "status": "AWAITING_VISUAL_REVIEW_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -25,10 +25,11 @@
       "Semana Mundial do Espaço"
     ],
     "android_physical_install_update_offline_push": "PENDING",
-    "gpx_download_browser": "PENDING",
-    "approved_master_integrity": "PASSED_68a616a",
-    "mobile_desktop_core": "PASSED_4b0f319",
-    "launch_approval": "PENDING"
+    "gpx_download_browser": "PENDING_DOWNLOAD_PROOF",
+    "approved_master_integrity": "PASSED_10e28fc",
+    "mobile_desktop_core": "PREVIEW_ART_PASSED_10e28fc_PHYSICAL_ANDROID_PENDING",
+    "launch_approval": "PENDING",
+    "push_live_configuration": "UNKNOWN_VERCEL_PROTECTED_RESPONSE"
   },
   "next_batch": [
     "2026-10-raids-yveltal",
@@ -38,6 +39,19 @@
   "completed_public_launch": false,
   "completed_this_sprint": [
     "Três PNGs integrais gerados, revisão factual/cenário feita, integração explícita PENDING_REVIEW",
-    "22 testes Node e integridade dos masters passaram"
+    "22 testes Node e integridade dos masters passaram",
+    "QA real mobile/desktop dos três PNGs e calendário/detalhe; FLY Hora de Reides conferido",
+    "Progresso Selos persistiu e teste restaurado; GPX incompleto bloqueado",
+    "Acesso temporário Seedot renovado, mesmo master renderizado; falha/recuperação documentadas"
+  ],
+  "updated_at": "2026-10-02T03:48:16.276105+00:00",
+  "code_commit": "10e28fcb2b785206bfde67116526a97e76a9d145",
+  "preview_url": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/index.html",
+  "unresolved": [
+    "15 eventos sem arquivo Home/FLY e três artes aguardando decisão humana",
+    "Applin/Espaço bloqueados por recusa da geração",
+    "GPX Japão: toast observado, arquivo/XML não capturado",
+    "Android físico/instalação/atualização/offline/push sem prova",
+    "Produção não autorizada; preview protegido por Vercel"
   ]
 }
