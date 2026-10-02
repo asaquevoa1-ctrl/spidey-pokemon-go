@@ -1,0 +1,262 @@
+{
+  "code_commit": "18fba5b2269a9e74510d096a9d4e794107517aa4",
+  "deployment_id": "dpl_Errd7CNihkycUzVQus3FZgJva3CW",
+  "preview_url": "https://spidey-pokemon-gdp8kfe9l-spidey3.vercel.app/spidey-app/index.html",
+  "observations": [
+    {
+      "dialog": {
+        "focused": "closeDialog",
+        "open": true,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "text": "×\nREIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nReides 5★: Yveltal\n\nYveltal na rotação de Reides de cinco estrelas.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 360
+      },
+      "documentWidth": 375,
+      "image": {
+        "complete": true,
+        "height": 1403,
+        "rendered": {
+          "height": 450.546875,
+          "width": 360,
+          "x": 0,
+          "y": 52
+        },
+        "src": "assets/events/premium/yveltal-rotation-approved-v1.png?v=dbed7399b3e3",
+        "width": 1121
+      },
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "event_id": "2026-10-raids-yveltal",
+      "viewport_name": "mobile_claro",
+      "screenshot": "docs/qa/spidey-yveltal-mobile-approved-20261002.jpg",
+      "served_asset": {
+        "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+        "bytes": 2265106
+      },
+      "screenshot_sha256": "297ae61374049e4eed3fbae4103908d2c223fc94c5be1ffa8debeb3631b38b5a"
+    },
+    {
+      "dialog": {
+        "focused": "closeDialog",
+        "open": true,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "text": "×\nMEGA-REIDES\nINFORMAÇÃO DA COMUNIDADE\nMegarreides: Mega Blastoise\n\nMega Blastoise na rotação de Mega Reides.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 360
+      },
+      "documentWidth": 375,
+      "image": {
+        "complete": true,
+        "height": 1403,
+        "rendered": {
+          "height": 450.546875,
+          "width": 360,
+          "x": 0,
+          "y": 52
+        },
+        "src": "assets/events/premium/mega-blastoise-rotation-approved-v1.png?v=474fa9a79395",
+        "width": 1121
+      },
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "event_id": "2026-10-mega-blastoise-raids",
+      "viewport_name": "mobile_claro",
+      "screenshot": "docs/qa/spidey-blastoise-mobile-approved-20261002.jpg",
+      "served_asset": {
+        "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+        "bytes": 2718402
+      },
+      "screenshot_sha256": "b875ad8f145498170c4df8861c2bf226a247420e9fd8f6cd7ab44d33833ca581"
+    },
+    {
+      "dialog": {
+        "focused": "closeDialog",
+        "open": true,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "text": "×\nHORA DE REIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nHora de Reides: Yveltal\n\nYveltal em destaque na Hora de Reides.\n\nHorários e locais\nHorário do evento\n07 de out. · 18:00–19:00 · horário local\nEsse horário vale no relógio da região onde você vai jogar.\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.\n7 de outubro, 18h às 19h no horário de cada região.\nVer rota mundial",
+        "width": 360
+      },
+      "documentWidth": 375,
+      "image": {
+        "complete": true,
+        "height": 1403,
+        "rendered": {
+          "height": 450.546875,
+          "width": 360,
+          "x": 0,
+          "y": 80
+        },
+        "src": "assets/events/premium/yveltal-raid-hour-approved-v1.png?v=a3881d22755b",
+        "width": 1121
+      },
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "event_id": "2026-10-07-raid-hour-yveltal",
+      "viewport_name": "mobile_claro",
+      "screenshot": "docs/qa/spidey-yveltal-hour-mobile-approved-v2-20261002.jpg",
+      "served_asset": {
+        "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+        "bytes": 2273727
+      },
+      "screenshot_sha256": "bab4a49f65572612bb8a7619634063d2521ac3f9adb0f2cf69e6819fa9ff28b7"
+    },
+    {
+      "dialog": {
+        "focused": "closeDialog",
+        "open": true,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "text": "×\nREIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nReides 5★: Yveltal\n\nYveltal na rotação de Reides de cinco estrelas.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 703
+      },
+      "documentWidth": 1265,
+      "image": {
+        "complete": true,
+        "height": 1403,
+        "rendered": {
+          "height": 620,
+          "width": 703,
+          "x": 273.5,
+          "y": 43.5
+        },
+        "src": "assets/events/premium/yveltal-rotation-approved-v1.png?v=dbed7399b3e3",
+        "width": 1121
+      },
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "event_id": "2026-10-raids-yveltal",
+      "viewport_name": "desktop_escuro",
+      "screenshot": "docs/qa/spidey-yveltal-desktop-approved-20261002.jpg",
+      "screenshot_sha256": "c71ced20bbbd503ce9d61ff47514787f5b00536b78d2c88d0199294700431dde"
+    },
+    {
+      "dialog": {
+        "focused": "closeDialog",
+        "open": true,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "text": "×\nMEGA-REIDES\nINFORMAÇÃO DA COMUNIDADE\nMegarreides: Mega Blastoise\n\nMega Blastoise na rotação de Mega Reides.\n\nHorários e locais\nHorário\n07 de out., 06:00 → 13 de out., 22:00\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "width": 703
+      },
+      "documentWidth": 1265,
+      "image": {
+        "complete": true,
+        "height": 1403,
+        "rendered": {
+          "height": 620,
+          "width": 703,
+          "x": 273.5,
+          "y": 43.5
+        },
+        "src": "assets/events/premium/mega-blastoise-rotation-approved-v1.png?v=474fa9a79395",
+        "width": 1121
+      },
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "event_id": "2026-10-mega-blastoise-raids",
+      "viewport_name": "desktop_escuro",
+      "screenshot": "docs/qa/spidey-blastoise-desktop-approved-20261002.jpg",
+      "screenshot_sha256": "0dcaea7695d2b9f6a757e9fa88579a88fa250fe3e71c25f2f79747866bf45b9f"
+    },
+    {
+      "dialog": {
+        "focused": "closeDialog",
+        "open": true,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "text": "×\nHORA DE REIDES\nYveltal\nINFORMAÇÃO DA COMUNIDADE\nHora de Reides: Yveltal\n\nYveltal em destaque na Hora de Reides.\n\nHorários e locais\nHorário do evento\n07 de out. · 18:00–19:00 · horário local\nEsse horário vale no relógio da região onde você vai jogar.\nFonte\nObservações\nDatas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.\n7 de outubro, 18h às 19h no horário de cada região.\nVer rota mundial",
+        "width": 703
+      },
+      "documentWidth": 1265,
+      "image": {
+        "complete": true,
+        "height": 1403,
+        "rendered": {
+          "height": 620,
+          "width": 703,
+          "x": 273.5,
+          "y": 43.5
+        },
+        "src": "assets/events/premium/yveltal-raid-hour-approved-v1.png?v=a3881d22755b",
+        "width": 1121
+      },
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "event_id": "2026-10-07-raid-hour-yveltal",
+      "viewport_name": "desktop_escuro",
+      "screenshot_transfer": "unavailable"
+    }
+  ],
+  "fly": {
+    "dialog_open": false,
+    "image": {
+      "complete": true,
+      "height": 1403,
+      "src": "assets/events/premium/yveltal-raid-hour-approved-v1.png?v=a3881d22755b",
+      "width": 1121
+    },
+    "route_count": 20,
+    "rows": [
+      "01\nPRÓXIMO\n🇰🇮 Kiritimati, Kiribati\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 01:00 → 07/10, 02:00\n\nLocal aproximado · confira no mapa\n1.987149,-157.477137\nCopiar coordenadas\nAbrir mapa",
+      "02\nFUTURO\n🇳🇿 Auckland, Nova Zelândia\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 02:00 → 07/10, 03:00\n\nLocal aproximado · confira no mapa\n-36.852095,174.76318\nCopiar coordenadas\nAbrir mapa",
+      "03\nFUTURO\n🇦🇺 Sydney, Austrália\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 04:00 → 07/10, 05:00\n\nLocal aproximado · confira no mapa\n-33.866173,151.205945\nCopiar coordenadas\nAbrir mapa",
+      "04\nFUTURO\n🇯🇵 Shinjuku, Japão\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 06:00 → 07/10, 07:00\n\nLocal aproximado · confira no mapa\n35.68895,139.69054\nCopiar coordenadas\nAbrir mapa",
+      "05\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 07:00 → 07/10, 08:00\n\nLocal aproximado · confira no mapa\n25.033964,121.564468\nCopiar coordenadas\nAbrir mapa",
+      "06\nFUTURO\n🇮🇳 Chennai, Índia\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 09:30 → 07/10, 10:30\n\nLocal aproximado · confira no mapa\n13.0403,80.2666\nCopiar coordenadas\nAbrir mapa",
+      "07\nFUTURO\n🇦🇪 Dubai, Emirados Árabes\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 11:00 → 07/10, 12:00\n\nLocal aproximado · confira no mapa\n25.07675,55.13294\nCopiar coordenadas\nAbrir mapa",
+      "08\nFUTURO\n🇹🇷 Istambul, Turquia\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 12:00 → 07/10, 13:00\n\nLocal aproximado · confira no mapa\n41.0082,28.9784\nCopiar coordenadas\nAbrir mapa",
+      "09\nFUTURO\n🇪🇸 Zaragoza, Espanha\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 13:00 → 07/10, 14:00\n\nLocal aproximado · confira no mapa\n41.661609,-0.89464\nCopiar coordenadas\nAbrir mapa",
+      "10\nFUTURO\n🇬🇧 Londres, Reino Unido\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 14:00 → 07/10, 15:00\n\nLocal aproximado · confira no mapa\n51.501,-0.1246\nCopiar coordenadas\nAbrir mapa",
+      "11\nFUTURO\n🇨🇻 Praia, Cabo Verde\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 16:00 → 07/10, 17:00\n\nLocal aproximado · confira no mapa\n14.910725,-23.527823\nCopiar coordenadas\nAbrir mapa",
+      "12\nFUTURO\n🇧🇷 Fernando de Noronha, Brasil\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 17:00 → 07/10, 18:00\n\nLocal aproximado · confira no mapa\n-3.8401,-32.41181\nCopiar coordenadas\nAbrir mapa",
+      "13\nFUTURO\n🇧🇷 Ibirapuera, São Paulo\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 18:00 → 07/10, 19:00\n\nLocal aproximado · confira no mapa\n-23.584171,-46.660725\nCopiar coordenadas\nAbrir mapa",
+      "14\nFUTURO\n🇺🇸 Central Park, Nova York\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 19:00 → 07/10, 20:00\n\nLocal aproximado · confira no mapa\n40.7803,-73.963\nCopiar coordenadas\nAbrir mapa",
+      "15\nFUTURO\n🇺🇸 Chicago, EUA\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 20:00 → 07/10, 21:00\n\nLocal aproximado · confira no mapa\n41.898659,-87.623077\nCopiar coordenadas\nAbrir mapa",
+      "16\nFUTURO\n🇺🇸 Denver, EUA\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 21:00 → 07/10, 22:00\n\nLocal aproximado · confira no mapa\n39.7392,-104.9903\nCopiar coordenadas\nAbrir mapa",
+      "17\nFUTURO\n🇺🇸 Pier 39, São Francisco\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 22:00 → 07/10, 23:00\n\nLocal aproximado · confira no mapa\n37.8095,-122.4101\nCopiar coordenadas\nAbrir mapa",
+      "18\nFUTURO\n🇺🇸 Anchorage, Alasca\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 23:00 → 08/10, 00:00\n\nLocal aproximado · confira no mapa\n61.217019,-149.891609\nCopiar coordenadas\nAbrir mapa",
+      "19\nFUTURO\n🇺🇸 Honolulu, Havaí\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 08/10, 01:00 → 08/10, 02:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n21.2658,-157.8213\nCopiar coordenadas\nAbrir mapa",
+      "20\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 08/10, 02:00 → 08/10, 03:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa"
+    ],
+    "scroll_width": 375,
+    "selected_event": "2026-10-07-raid-hour-yveltal",
+    "viewport_width": 390,
+    "all_hotspots": {
+      "count": 28,
+      "taipei": "06\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 07/10 · 18:00 → 19:00\n\nBrasília: 07/10, 07:00 → 07/10, 08:00\n\nLocal aproximado · confira no mapa\n25.033964,121.564468\nCopiar coordenadas\nAbrir mapa"
+    },
+    "screenshot": "docs/qa/spidey-yveltal-hour-fly-approved-20261002.jpg",
+    "screenshot_sha256": "115dd66a9d4326f839961397045af0857653557102430e789036d5fc996e3224"
+  },
+  "direct_app": {
+    "click_calendar_to_raid_hour": true
+  },
+  "checked_at": "2026-10-02T17:04:13.643Z",
+  "method": "Browser UI, responsive app iframe 390x850 light / 1280x850 dark, and direct app desktop click",
+  "limits": [
+    "Responsive iframe is not a physical Android/PWA test.",
+    "Current Home next-six list and week of 28/09–04/10 do not include the 07/10 posters; these surfaces are not claimed as new poster proofs.",
+    "No GPX, clipboard, push or offline tests in this round.",
+    "Desktop raid-hour image and DOM inspected, but its screenshot file transfer was unavailable; five poster screenshots and one FLY screenshot are preserved."
+  ]
+}

@@ -184,14 +184,18 @@
     "Android físico/PWA/push e GPX sem prova"
   ],
   "post_approval_qa": {
-    "status": "PENDING",
+    "status": "PASSED_RESPONSIVE_POSTERS_AND_FLY",
     "node_tests_passed": 22,
     "limits": [
       "Android físico/instalação/atualização/offline/push pendentes.",
       "GPX Japão não capturado na rodada anterior, download/XML sem prova.",
       "15 eventos sem arquivo no compositor Home/FLY; Applin/Espaço recusados.",
       "Home seis próximos e Semana 28/09–04/10 ainda não contêm as peças de 07/10.",
-      "Nenhuma promoção a main/produção."
+      "Nenhuma promoção a main/produção.",
+      "Responsive iframe is not a physical Android/PWA test.",
+      "Current Home next-six list and week of 28/09–04/10 do not include the 07/10 posters; these surfaces are not claimed as new poster proofs.",
+      "No GPX, clipboard, push or offline tests in this round.",
+      "Desktop raid-hour image and DOM inspected, but its screenshot file transfer was unavailable; five poster screenshots and one FLY screenshot are preserved."
     ],
     "active_scripts_syntax_passed": 19,
     "service_worker_syntax_passed": true,
@@ -202,6 +206,66 @@
       "disk_bytes_local_files": 28767946,
       "root_navigation_entry": true,
       "network_or_offline_test": false
-    }
+    },
+    "checked_at": "2026-10-02T17:04:13.643Z",
+    "code_commit": "18fba5b2269a9e74510d096a9d4e794107517aa4",
+    "deployment_id": "dpl_Errd7CNihkycUzVQus3FZgJva3CW",
+    "preview_url": "https://spidey-pokemon-gdp8kfe9l-spidey3.vercel.app/spidey-app/index.html",
+    "dom_evidence": "docs/qa/october-raids-approved-browser-18fba5b-20261002.json",
+    "responsive_checks": {
+      "mobile": {
+        "width": 390,
+        "height": 850,
+        "theme": "light"
+      },
+      "desktop": {
+        "width": 1280,
+        "height": 850,
+        "theme": "dark"
+      },
+      "posters": 3,
+      "natural_size": "1121x1403",
+      "full_posters_observed": true,
+      "dialog_focus": "closeDialog",
+      "dialog_scroll_top": 0,
+      "horizontal_overflow_observed": false
+    },
+    "served_asset_hashes_match": true,
+    "fly": {
+      "selected_event": "2026-10-07-raid-hour-yveltal",
+      "dialog_closed": true,
+      "essential_count": 20,
+      "all_count": 28,
+      "taipei_brasilia": "07/10 07:00–08:00",
+      "last_window_brasilia": "08/10 02:00–03:00"
+    },
+    "direct_desktop_calendar_click": true,
+    "screenshots": [
+      {
+        "file": "docs/qa/spidey-yveltal-mobile-approved-20261002.jpg",
+        "sha256": "297ae61374049e4eed3fbae4103908d2c223fc94c5be1ffa8debeb3631b38b5a"
+      },
+      {
+        "file": "docs/qa/spidey-blastoise-mobile-approved-20261002.jpg",
+        "sha256": "b875ad8f145498170c4df8861c2bf226a247420e9fd8f6cd7ab44d33833ca581"
+      },
+      {
+        "file": "docs/qa/spidey-yveltal-hour-mobile-approved-v2-20261002.jpg",
+        "sha256": "bab4a49f65572612bb8a7619634063d2521ac3f9adb0f2cf69e6819fa9ff28b7"
+      },
+      {
+        "file": "docs/qa/spidey-yveltal-desktop-approved-20261002.jpg",
+        "sha256": "c71ced20bbbd503ce9d61ff47514787f5b00536b78d2c88d0199294700431dde"
+      },
+      {
+        "file": "docs/qa/spidey-blastoise-desktop-approved-20261002.jpg",
+        "sha256": "0dcaea7695d2b9f6a757e9fa88579a88fa250fe3e71c25f2f79747866bf45b9f"
+      },
+      {
+        "file": "docs/qa/spidey-yveltal-hour-fly-approved-20261002.jpg",
+        "sha256": "115dd66a9d4326f839961397045af0857653557102430e789036d5fc996e3224"
+      }
+    ],
+    "tests_this_round": "Not rerun; only QA documents and evidence changed. 22 Node tests and syntax/integrity results above are from the approval commit."
   }
 }

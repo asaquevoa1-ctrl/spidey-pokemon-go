@@ -1,5 +1,5 @@
 {
-  "status": "ARTS_APPROVED_POST_APPROVAL_QA_PENDING_PUBLIC_BLOCKED",
+  "status": "POST_APPROVAL_POSTER_QA_PASSED_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -26,8 +26,8 @@
     ],
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PENDING_DOWNLOAD_PROOF",
-    "approved_master_integrity": "PASSED_10e28fc",
-    "mobile_desktop_core": "POST_APPROVAL_QA_PENDING",
+    "approved_master_integrity": "SERVED_THREE_POSTERS_SHA256_MATCH_18fba5b_PREVIOUS_MASTER_UNCHANGED",
+    "mobile_desktop_core": "POST_APPROVAL_POSTER_AND_FLY_QA_PASSED_18fba5b_OTHER_CORE_NOT_RETESTED",
     "launch_approval": "PENDING",
     "push_live_configuration": "UNKNOWN_VERCEL_PROTECTED_RESPONSE"
   },
@@ -43,17 +43,19 @@
     "QA real mobile/desktop dos três PNGs e calendário/detalhe; FLY Hora de Reides conferido",
     "Progresso Selos persistiu e teste restaurado; GPX incompleto bloqueado",
     "Acesso temporário Seedot renovado, mesmo master renderizado; falha/recuperação documentadas",
-    "Editor aprovou os três PNGs exatos em 02/10 07:16:30 BRT; cópias premium idênticas, oito entradas anteriores preservadas."
+    "Editor aprovou os três PNGs exatos em 02/10 07:16:30 BRT; cópias premium idênticas, oito entradas anteriores preservadas.",
+    "Retomada 02/10 após limite de conversa: QA pós-aprovação dos três pôsteres no código 18fba5b, mobile Claro/desktop Escuro, hashes servidos iguais aos aprovados; FLY 20/28 e clique direto da Hora de Reides confirmados."
   ],
-  "updated_at": "2026-10-02T07:16:30-03:00",
-  "code_commit": "10e28fcb2b785206bfde67116526a97e76a9d145",
-  "preview_url": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-02T17:04:13.643Z",
+  "code_commit": "18fba5b2269a9e74510d096a9d4e794107517aa4",
+  "preview_url": "https://spidey-pokemon-gdp8kfe9l-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
-    "15 eventos sem arquivo Home/FLY; novo lote aprovado, QA pós-aprovação em andamento",
+    "15 eventos sem arquivo Home/FLY no último inventário 01–07/10; cobertura restante pendente",
     "Applin/Espaço bloqueados por recusa da geração",
-    "GPX Japão: toast observado, arquivo/XML não capturado",
+    "GPX Japão: download/XML ainda sem prova",
     "Android físico/instalação/atualização/offline/push sem prova",
-    "Produção não autorizada; preview protegido por Vercel"
+    "Lançamento completo e produção não aprovados; preview protegido por Vercel"
   ],
-  "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+  "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json",
+  "post_approval_qa_record": "docs/qa/october-raids-approved-browser-18fba5b-20261002.json"
 }
