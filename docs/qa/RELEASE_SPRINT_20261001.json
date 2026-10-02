@@ -1,0 +1,43 @@
+{
+  "status": "IN_PROGRESS",
+  "branch": "spidey-fly-v1",
+  "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
+  "requested_at": "2026-10-01T22:41:59-03:00",
+  "budget_minutes": 140,
+  "target_deadline_brt": "2026-10-02T01:01:59-03:00",
+  "deadline_basis": "Prazo de 2h20 informado pelo editor; alvo aproximado, não garantia de conclusão.",
+  "scope": [
+    "Preservar padrão Premium e todos os masters aprovados",
+    "Avançar arte individual pendente e fatos do catálogo",
+    "Confirmar navegação/ações/GPX e preparar instalação/offline",
+    "Sem novo desenvolvimento de Amigos/Chat antes do núcleo"
+  ],
+  "gates": {
+    "premium_window_20261001_07": {
+      "events": 23,
+      "approved": 5,
+      "missing": 15,
+      "status": "PENDING",
+      "pending_posters": 3
+    },
+    "blocked_generation": [
+      "Applin",
+      "Semana Mundial do Espaço"
+    ],
+    "android_physical_install_update_offline_push": "PENDING",
+    "gpx_download_browser": "PENDING",
+    "approved_master_integrity": "PASSED_68a616a",
+    "mobile_desktop_core": "PASSED_4b0f319",
+    "launch_approval": "PENDING"
+  },
+  "next_batch": [
+    "2026-10-raids-yveltal",
+    "2026-10-07-raid-hour-yveltal",
+    "2026-10-mega-blastoise-raids"
+  ],
+  "completed_public_launch": false,
+  "completed_this_sprint": [
+    "Três PNGs integrais gerados, revisão factual/cenário feita, integração explícita PENDING_REVIEW",
+    "22 testes Node e integridade dos masters passaram"
+  ]
+}

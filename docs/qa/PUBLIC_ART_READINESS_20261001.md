@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **5 com arte no master APPROVED**, **18 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **5 com arte no master APPROVED**, **3 pôsteres PENDING_REVIEW (lote Yveltal/Mega Blastoise)**, **15 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
 Xerneas, Invasão, Cinderace, Seedot e Mega Victreebel foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -31,10 +31,10 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-world-space-week` | Semana Mundial do Espaço 2026 | 2026-10-04 → 2026-10-10 | Sem arquivo no compositor Home/FLY |
 | `2026-10-go-pass` | GO Pass: Outubro | 2026-10-06 → 2026-11-03 | Sem arquivo no compositor Home/FLY |
 | `2026-10-01-spotlight-seedot` | Hora do Holofote: Seedot | 2026-10-01 → 2026-10-01 | APPROVED |
-| `2026-10-07-raid-hour-yveltal` | Hora de Reides: Yveltal | 2026-10-07 → 2026-10-07 | Sem arquivo no compositor Home/FLY |
+| `2026-10-07-raid-hour-yveltal` | Hora de Reides: Yveltal | 2026-10-07 → 2026-10-07 | Pôster PENDING_REVIEW |
 | `2026-10-05-max-monday-sizzlipede` | Segunda Max: Dinamax Sizzlipede | 2026-10-05 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
-| `2026-10-raids-yveltal` | Reides 5★: Yveltal | 2026-10-07 → 2026-10-13 | Sem arquivo no compositor Home/FLY |
-| `2026-10-mega-blastoise-raids` | Megarreides: Mega Blastoise | 2026-10-07 → 2026-10-13 | Sem arquivo no compositor Home/FLY |
+| `2026-10-raids-yveltal` | Reides 5★: Yveltal | 2026-10-07 → 2026-10-13 | Pôster PENDING_REVIEW |
+| `2026-10-mega-blastoise-raids` | Megarreides: Mega Blastoise | 2026-10-07 → 2026-10-13 | Pôster PENDING_REVIEW |
 | `2026-10-gbl-06-13` | Liga de Batalha GO: Great Mega / Ultra Mega / Master Mega | 2026-10-06 → 2026-10-13 | Sem arquivo no compositor Home/FLY |
 | `2026-10-shadow-thundurus` | Reides Sombrosas: Thundurus (Forma Encarnada) | 2026-10-03 → 2026-10-04 | Sem arquivo no compositor Home/FLY |
 | `2026-10-04-scenic-sunday` | Descoberta Diária: Domingo Pitoresco | 2026-10-04 → 2026-10-04 | Sem arquivo no compositor Home/FLY |

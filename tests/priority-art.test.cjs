@@ -121,5 +121,27 @@ test('Mega Victreebel human approval binds the directly displayed v2 PNG and pre
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
  }
- assert.deepEqual(Object.keys(w.SPIDEY_PREVIEW_ART),['2026-10-zorua-community-day']);assert.equal(w.SPIDEY_PREVIEW_ART['2026-10-zorua-community-day'].status,'PENDING_REVIEW');
+ const next=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_REVIEW_20261001.json'));
+ assert.deepEqual(Object.keys(w.SPIDEY_PREVIEW_ART).sort(),['2026-10-zorua-community-day',...next.candidates.map(c=>c.event_id)].sort());assert.equal(w.SPIDEY_PREVIEW_ART['2026-10-zorua-community-day'].status,'PENDING_REVIEW');
+});
+test('October raid drafts remain distinct, intact and pending across roles without changing approved masters',()=>{
+ const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_REVIEW_20261001.json'));
+ assert.equal(record.status,'PENDING_REVIEW');assert.equal(record.approval,null);assert.equal(record.candidates.length,3);
+ assert.equal(record.source_classification,'COMMUNITY');
+ assert.deepEqual(record.candidates.map(c=>c.event_id).sort(),['2026-10-raids-yveltal','2026-10-07-raid-hour-yveltal','2026-10-mega-blastoise-raids'].sort());
+ const files=new Set();
+ for(const c of record.candidates){
+  const e={id:c.event_id},p=w.SPIDEY_PREVIEW_ART[e.id],b=fs.readFileSync(c.file);files.add(c.file);
+  assert.equal(c.status,'PENDING_REVIEW');assert.equal(p.status,'PENDING_REVIEW');assert.equal(p.display,'full_poster');assert.equal(w.SPIDEY_APPROVED_ART_MASTER[e.id],undefined);
+  assert.equal(w.SPIDEY_PREMIUM_EVENT_ART[e.id],undefined);assert.equal(b.length,c.bytes);assert.equal(crypto.createHash('sha256').update(b).digest('hex'),c.sha256);
+  assert.equal(c.width,b.readUInt32BE(16));assert.equal(c.height,b.readUInt32BE(20));assert.equal(p.sha256,c.sha256);
+  for(const role of ['thumb','card','weekly','hero','poster']){
+   const a=w.SpideyArt.resolve(e,role);assert.equal('spidey-app/'+a.url,c.file);assert.match(a.sourceRole,/^preview_candidate:/);assert.notEqual(a.standard,'spidey-premium-v1');
+  }
+  assert.equal(context.weeklyArtUrl(e),p.file+'?v='+c.sha256.slice(0,12));
+ }
+ assert.equal(files.size,3);
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/premium-approved-master.js')).digest('hex'),record.preserved_master_sha256);
+ for(const c of record.revision_history)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.file)).digest('hex'),c.sha256);
+ for(const c of record.inputs)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.file)).digest('hex'),c.sha256);
 });

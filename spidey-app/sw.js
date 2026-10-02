@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261001-mega-victreebel-approved-v1';
+const CACHE = 'spidey-app-20261001-october-raids-review-v1';
 const CORE = [
   './',
   './index.html',
@@ -55,6 +55,9 @@ const CORE = [
   './assets/spidey-logo-oficial.jpg',
   './assets/events/premium/xerneas-rotation-approved-v1.png',
   './assets/events/review/mega-victreebel-rotation-v2.png',
+  './assets/events/review/yveltal-rotation-v1.png',
+  './assets/events/review/yveltal-raid-hour-v2.png',
+  './assets/events/review/mega-blastoise-rotation-v1.png',
   './assets/events/premium/mega-victreebel-rotation-approved-v1.png',
   './assets/events/review/seedot-spotlight-correction-v1.png',
   './assets/events/premium/seedot-spotlight-approved-v1.png',

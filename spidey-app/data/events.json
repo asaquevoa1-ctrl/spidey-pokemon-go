@@ -3713,7 +3713,7 @@
     {
       "id": "2026-10-07-raid-hour-yveltal",
       "slug": "2026-10-07-raid-hour-yveltal",
-      "title": "Raid Hour: Yveltal",
+      "title": "Hora de Reides: Yveltal",
       "summary": "Yveltal em destaque na Hora de Reides.",
       "category": "raid_hour",
       "tags": [
@@ -3722,8 +3722,8 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Leek Duck • calendário de reides",
+        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
         "confidence": "verified"
       },
       "schedule": {
@@ -3746,7 +3746,10 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Datas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "7 de outubro, 18h às 19h no horário de cada região."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -4082,8 +4085,8 @@
         "Yveltal"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Leek Duck • calendário de reides",
+        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
         "confidence": "verified"
       },
       "schedule": {
@@ -4106,7 +4109,9 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Datas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -4286,7 +4291,9 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Datas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
