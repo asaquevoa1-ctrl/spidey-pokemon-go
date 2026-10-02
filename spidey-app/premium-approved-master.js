@@ -95,6 +95,15 @@
     "width": 1229,
     "height": 1536,
     "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c"
+  },
+  "2026-10-zorua-community-day": {
+    "file": "assets/events/premium/zorua-community-day-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+    "approval_record": "docs/qa/ZORUA_APPROVAL_20261002.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

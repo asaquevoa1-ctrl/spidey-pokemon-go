@@ -3187,7 +3187,17 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "3× PE por captura, das 14h às 17h locais.",
+        "2× Doces por captura, das 14h às 17h locais.",
+        "2× chance de receber Doces GG por captura para Treinadores de nível 31 ou superior.",
+        "Incenso ativado durante o evento dura três horas, exceto o Incenso de Aventura Diário.",
+        "Módulos Atrair ativados duram uma hora; encontros com Zorua em Módulos Atrair comuns ficam disponíveis das 14h às 21h locais.",
+        "Uma troca especial adicional, máximo de duas no dia, das 14h às 21h locais.",
+        "Trocas custam 50% menos Poeira Estelar, das 14h às 21h locais.",
+        "Surpresa ao tirar retratos durante o Dia Comunitário."
+      ]
     },
     {
       "id": "2026-10-fall-marathon-buddy-trek",

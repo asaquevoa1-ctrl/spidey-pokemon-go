@@ -35,7 +35,7 @@ test('human approval binds only the exact two reviewed posters across roles and 
  assert.equal(w.SPIDEY_APPROVED_ART_MASTER[applin.id],undefined);
  assert.equal(w.SPIDEY_PREVIEW_ART[applin.id],undefined);assert.equal(w.SpideyReviewArt.poster(applin),null);assert.equal(context.weeklyArtUrl(applin),'');
  for(const id of ['2026-10-zorua-community-day']){
-  assert.equal(w.SPIDEY_APPROVED_ART_MASTER[id],undefined);assert.equal(w.SPIDEY_PREVIEW_ART[id].status,'PENDING_REVIEW');
+  assert.equal(w.SPIDEY_APPROVED_ART_MASTER[id].status,'APPROVED');assert.equal(w.SPIDEY_PREVIEW_ART[id],undefined);
  }
 });
 test('approved masters and unavailable originals stay protected from unrelated candidate posters',()=>{
@@ -76,7 +76,7 @@ test('Seedot human decision binds the exact reviewed PNG and preserves earlier m
  assert.equal(approval.previous_master_sha256,review.preserved_master_sha256);
  const subsequentApproval=JSON.parse(fs.readFileSync('docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json','utf8'));
  const octoberApproval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json','utf8'));
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...subsequentApproval.event_ids,...octoberApproval.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...subsequentApproval.event_ids,...octoberApproval.event_ids,'2026-10-zorua-community-day'].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
@@ -118,12 +118,12 @@ test('Mega Victreebel human approval binds the directly displayed v2 PNG and pre
  assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);
  assert.equal(Object.keys(approval.preserved_master_entries).length,7);
  const octoberApproval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json'));
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...octoberApproval.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...octoberApproval.event_ids,'2026-10-zorua-community-day'].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
  }
- assert.deepEqual(Object.keys(w.SPIDEY_PREVIEW_ART),['2026-10-zorua-community-day']);assert.equal(w.SPIDEY_PREVIEW_ART['2026-10-zorua-community-day'].status,'PENDING_REVIEW');
+ assert.deepEqual(Object.keys(w.SPIDEY_PREVIEW_ART),[]);assert.equal(w.SPIDEY_APPROVED_ART_MASTER['2026-10-zorua-community-day'].status,'APPROVED');
 });
 test('October human approval binds the three exact resent PNGs across roles and preserves earlier masters',()=>{
  const {window:w,context}=setup(),approval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json'));
@@ -150,7 +150,7 @@ test('October human approval binds the three exact resent PNGs across roles and 
  }
  assert.equal(files.size,3);
  assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);assert.equal(Object.keys(approval.preserved_master_entries).length,8);
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids,'2026-10-zorua-community-day'].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);

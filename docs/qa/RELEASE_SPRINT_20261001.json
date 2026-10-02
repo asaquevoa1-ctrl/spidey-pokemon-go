@@ -1,5 +1,5 @@
 {
-  "status": "ZORUA_PREVIEW_VERIFIED_APPROVAL_PENDING_PUBLIC_BLOCKED",
+  "status": "ZORUA_APPROVED_PUBLIC_BLOCKED_PAUSE_REQUESTED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -31,10 +31,10 @@
     "mobile_desktop_core": "ZORUA_POSTER_AND_FLY_QA_PASSED_A2B5638_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
     "push_live_configuration": "INCOMPLETE_HTTP_503_PUSH_NOT_CONFIGURED_A2B5638",
-    "zorua_poster": "PREVIEW_VERIFIED_APPROVAL_PENDING"
+    "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PENDING"
   },
   "next_batch": [
-    "2026-10-zorua-community-day",
+    "Post-approval Zorua preview QA",
     "Android/PWA/push",
     "GPX download proof"
   ],
@@ -47,20 +47,26 @@
     "Acesso temporário Seedot renovado, mesmo master renderizado; falha/recuperação documentadas",
     "Editor aprovou os três PNGs exatos em 02/10 07:16:30 BRT; cópias premium idênticas, oito entradas anteriores preservadas.",
     "Retomada 02/10 após limite de conversa: QA pós-aprovação dos três pôsteres no código 18fba5b, mobile Claro/desktop Escuro, hashes servidos iguais aos aprovados; FLY 20/28 e clique direto da Hora de Reides confirmados.",
-    "a2b5638: 31 tests passed; native GPX link, root push API routing and offline worker robustness deployed; real push status and Zorua mobile/desktop/FLY 20/28 verified."
+    "a2b5638: 31 tests passed; native GPX link, root push API routing and offline worker robustness deployed; real push status and Zorua mobile/desktop/FLY 20/28 verified.",
+    "Zorua aprovado explicitamente em 02/10 18:38:35 BRT; bônus rechecados na fonte oficial e master atualizado com cópia byte a byte."
   ],
-  "updated_at": "2026-10-02T21:23:11.446Z",
+  "updated_at": "2026-10-02T21:41:28.177Z",
   "code_commit": "a2b56386e2eed9ba5cd173c7fb3590e8aa122f88",
   "preview_url": "https://spidey-pokemon-cg9922frj-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
     "15 eventos sem arquivo Home/FLY no último inventário 01–07/10; cobertura restante pendente",
-    "Zorua completo corrigido e conferido, PENDING_REVIEW até decisão humana exata",
+    "Zorua APPROVED; QA do novo preview pós-aprovação pendente",
     "Applin/Espaço/Sizzlipede bloqueados por recusa da geração",
     "GPX Japão: link nativo confirmado, download/XML sem captura",
     "Push: HTTP 503 push_not_configured; configuração de servidor e recebimento real pendentes",
     "Android físico/instalação/atualização/offline/push sem prova",
     "Lançamento completo e produção não aprovados"
   ],
-  "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json",
-  "post_approval_qa_record": "docs/qa/october-raids-approved-browser-18fba5b-20261002.json"
+  "approval_record": "docs/qa/ZORUA_APPROVAL_20261002.json",
+  "post_approval_qa_record": "docs/qa/october-raids-approved-browser-18fba5b-20261002.json",
+  "pause_requested": {
+    "at": "2026-10-02T18:38:35-03:00",
+    "budget_minutes": 5,
+    "resume": "Somente quando editor acionar novamente."
+  }
 }

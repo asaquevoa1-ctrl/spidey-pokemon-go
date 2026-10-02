@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261002-download-push-v1';
+const CACHE = 'spidey-app-20261002-zorua-approved-v1';
 const CORE = [
   './',
   './index.html',
@@ -26,6 +26,7 @@ const CORE = [
   './player-ui.css',
   './preview-art.js',
   './assets/events/review/zorua-community-day-correction-v1.png',
+  './assets/events/premium/zorua-community-day-approved-v1.png',
   './command-center.css',
   './premium-approved-master.js',
   './trust-world-v1.js',
