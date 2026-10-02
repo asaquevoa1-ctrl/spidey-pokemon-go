@@ -46,6 +46,33 @@
   ],
   "preserved": "Master e todos os arquivos aprovados preservados. Original Zorua mantido byte a byte.",
   "qa": {
-    "status": "PENDING_NEW_PREVIEW"
+    "status": "PREVIEW_VERIFIED_APPROVAL_PENDING",
+    "code_commit": "a2b56386e2eed9ba5cd173c7fb3590e8aa122f88",
+    "preview_url": "https://spidey-pokemon-cg9922frj-spidey3.vercel.app/spidey-app/index.html",
+    "record": "docs/qa/DOWNLOAD_PUSH_ZORUA_QA_20261002.json",
+    "browser": "docs/qa/spidey-browser-a2b5638-20261002.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-zorua-mobile-verified-a2b5638-20261002.jpg",
+        "sha256": "917df2a4f3b16f1ebdb874e62490d80d96c022f5287f171074a672a53078e2fe",
+        "bytes": 102023
+      },
+      {
+        "file": "docs/qa/proofs/spidey-zorua-desktop-a2b5638-20261002.jpg",
+        "sha256": "d3e9191938bacc94c97967fb77c96f8e1ca45aa496fe953d3be4ba802fe5232c",
+        "bytes": 135012
+      },
+      {
+        "file": "docs/qa/proofs/spidey-zorua-fly-a2b5638-20261002.jpg",
+        "sha256": "d3f43e0ee86f7f910030173beba6b36b3c4e1b8c81280653e8ec0f6b5af5ff5f",
+        "bytes": 97824
+      }
+    ],
+    "served_hash_proof": null,
+    "limits": [
+      "Browser responsivo não é Android físico.",
+      "Imagem servida renderizou 1121×1403 e URI com hash esperado; captura dos bytes expirou, sem prova SHA256 dos bytes servidos nesta rodada.",
+      "Home seis próximos e Semana atual não incluem Zorua de 10/10; não há nova prova visual nessas duas superfícies."
+    ]
   }
 }
