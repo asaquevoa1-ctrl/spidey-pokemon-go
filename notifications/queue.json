@@ -4,42 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-harvest-taken-over:start:60",
-      "event_id": "2026-10-harvest-taken-over",
-      "event_title": "Festival da Colheita: A Invasão",
-      "category": "team_go_rocket",
-      "scheduled_for": "2026-10-01T23:00:00-03:00",
-      "event_start": "2026-10-02T00:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Festival da Colheita: A Invasão começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-harvest-taken-over",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "2026-10-patterns-of-the-wild-indonesia:start:60",
-      "event_id": "2026-10-patterns-of-the-wild-indonesia",
-      "event_title": "Patterns of the Wild • Indonésia",
-      "category": "regional_event",
-      "scheduled_for": "2026-10-01T23:00:00-03:00",
-      "event_start": "2026-10-02T00:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Patterns of the Wild • Indonésia começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-patterns-of-the-wild-indonesia",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/patterns-of-the-wild-2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-shadow-thundurus:start:60",
       "event_id": "2026-10-shadow-thundurus",
       "event_title": "Shadow Raids: Thundurus (Forma Encarnada)",
@@ -743,7 +707,7 @@
     }
   ],
   "meta": {
-    "pending_count": 41,
+    "pending_count": 39,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
