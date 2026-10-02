@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **4 com arte no master APPROVED**, **19 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **4 com arte no master APPROVED**, **1 pôster PENDING_REVIEW (Mega Victreebel v2)**, **18 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
 Xerneas, Invasão, Cinderace e Seedot foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -22,7 +22,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-09-go-pass` | GO Pass: Setembro | 2026-09-08 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
 | `2026-09-harvest-festival-applin` | Festival da Colheita: Pomar de Applin | 2026-09-29 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
 | `2026-09-raids-xerneas` | Reides 5★: Xerneas | 2026-09-30 → 2026-10-06 | APPROVED |
-| `2026-09-mega-victreebel-raids` | Megarreides: Mega Victreebel | 2026-09-30 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
+| `2026-09-mega-victreebel-raids` | Megarreides: Mega Victreebel | 2026-09-30 → 2026-10-06 | Pôster v2 PENDING_REVIEW |
 | `2026-09-gbl-29-1006` | Liga de Batalha GO: Master / Mega Color Cup | 2026-09-29 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
 | `2026-09-iit-delhi-rendezvous` | Pokémon GO no Rendezvous 2026 • IIT Delhi | 2026-09-28 → 2026-10-01 | Sem arquivo no compositor Home/FLY |
 | `2026-10-harvest-taken-over` | Festival da Colheita: A Invasão | 2026-10-02 → 2026-10-05 | APPROVED |
@@ -67,3 +67,6 @@ Master soberano/full_poster, mesmos papéis de imagem, cache/shell versionados. 
 
 
 Handoff pós-aprovação Seedot: código `b310f5a`, preview seguro https://spidey-pokemon-5uir2c532-spidey3.vercel.app/spidey-app/index.html, mobile/desktop/Semana/detalhe/FLY conferidos, 16 testes passaram e duas provas preservadas. Home passou a Xerneas após o encerramento local de Seedot às 19h; masters anteriores preservados. Relatório `docs/qa/SEEDOT_APPROVAL_20261001.md`. Brief factual da próxima peça `docs/qa/MEGA_VICTREEBEL_BRIEF_20261001.json` (comunidade, sem arte/sem aprovação) e roteiro de teste físico `docs/qa/PUBLIC_ANDROID_QA_20261001.md` preparados. Continuar nesta branch sem reiniciar; não reabrir Xerneas/Invasão/Cinderace/Seedot aprovados. Checkpoint documental posterior não altera o código conferido; nenhuma promoção a main/produção.
+
+
+QA da rodada Novidades/Mega Victreebel concluído em `282ea97`, preview direto https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/index.html. Mobile 390 Claro/desktop 1280 Escuro sem overflow; um anúncio Minior/três períodos, trio regional/detalhe/FLY 20/28 com seleção preservada; candidata Mega v2 inteira 1121×1403 em Home/Semana/detalhe. Cliques e clipboard Taipei exato comprovados no app direto desktop. 21 testes passaram; masters anteriores intactos. Quatro prints/observações/hashes em `docs/qa/NEWS_UPDATE_20261001.md` e `docs/qa/MEGA_VICTREEBEL_REVIEW_20261001.json`. Candidata v2 PENDING_REVIEW até decisão humana específica; 23 eventos de 01–07/10 agora 4 APPROVED + 1 pôster em revisão + 18 sem arquivo Home/FLY. Demais artes, Android/PWA/push e GPX continuam pendentes; coleta de notícias observada, ingestão do app foi editorial, sem nova prova automática. Nenhuma promoção a main/produção. Continuar da branch/checkpoint documental, preservando o código validado `282ea97`.

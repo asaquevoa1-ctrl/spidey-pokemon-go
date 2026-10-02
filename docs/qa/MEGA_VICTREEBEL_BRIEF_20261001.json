@@ -1,5 +1,5 @@
 {
-  "status": "PENDING_REVIEW_PREVIEW_QA_PENDING",
+  "status": "PENDING_REVIEW_PREVIEW_QA_PASSED",
   "event_id": "2026-09-mega-victreebel-raids",
   "date": "2026-10-01",
   "catalog_base": "b310f5aefba0e3f6b841f8014e8b0677442922ef",
@@ -37,7 +37,7 @@
     "30 DE SETEMBRO A 6 DE OUTUBRO DE 2026",
     "Fonte: Leek Duck • Pokémon GO Hub"
   ],
-  "next_action": "Conferir candidata no preview mobile/desktop e apresentar PNG exato ao editor. Decisão humana pendente; master não modificado.",
+  "next_action": "Decisão humana sobre PNG v2 exato, já conferido no preview mobile/desktop/Home/Semana/detalhe. Master preservado, demais artes e Android/PWA/push pendentes.",
   "art_sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
   "art_width": 1121,
   "art_height": 1403

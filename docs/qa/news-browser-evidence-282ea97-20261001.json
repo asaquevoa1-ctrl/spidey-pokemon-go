@@ -1,0 +1,102 @@
+{
+  "code_commit": "282ea97f5f7c3890890ec60249ff4ee9e60e769a",
+  "verified_url": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/index.html",
+  "observed_at_utc": "2026-10-02T00:22:25.151Z",
+  "mobile": {
+    "frame_width": 390,
+    "frame_height": 850,
+    "content_width": 375,
+    "scroll_width": 375,
+    "theme": "light",
+    "news": {
+      "miniorActions": 3,
+      "miniorStories": 1,
+      "titles": [
+        "Patterns of the Wild • Indonésia",
+        "Minior chega com as chuvas de meteoros",
+        "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax"
+      ],
+      "trioTime": "24/10 · 14:00 → 17:00 no horário de cada região"
+    },
+    "mega": [
+      {
+        "complete": true,
+        "height": 450.546875,
+        "naturalHeight": 1403,
+        "naturalWidth": 1121,
+        "src": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/assets/events/review/mega-victreebel-rotation-v2.png?v=6cd064429903",
+        "width": 360
+      }
+    ],
+    "dialog_focus": "Fechar",
+    "dialog_scroll_top": 0,
+    "trio": {
+      "count": 20,
+      "rows": [
+        "05\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nUxie Dinamax nesta região\n\nLocal: 24/10 · 14:00 → 17:00\n\nBrasília: 24/10, 03:00 → 24/10, 06:00\n\nLocal aproximado · confira no mapa\n25.033964,121.564468\nCopiar coordenadas\nAbrir mapa",
+        "06\nFUTURO\n🇮🇳 Chennai, Índia\n\nMesprit Dinamax nesta região\n\nLocal: 24/10 · 14:00 → 17:00\n\nBrasília: 24/10, 05:30 → 24/10, 08:30\n\nLocal aproximado · confira no mapa\n13.0403,80.2666\nCopiar coordenadas\nAbrir mapa",
+        "10\nFUTURO\n🇬🇧 Londres, Reino Unido\n\nMesprit Dinamax nesta região\n\nLocal: 24/10 · 14:00 → 17:00\n\nBrasília: 24/10, 10:00 → 24/10, 13:00\n\nLocal aproximado · confira no mapa\n51.501,-0.1246\nCopiar coordenadas\nAbrir mapa",
+        "14\nFUTURO\n🇺🇸 Central Park, Nova York\n\nAzelf Dinamax nesta região\n\nLocal: 24/10 · 14:00 → 17:00\n\nBrasília: 24/10, 15:00 → 24/10, 18:00\n\nLocal aproximado · confira no mapa\n40.7803,-73.963\nCopiar coordenadas\nAbrir mapa",
+        "20\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nPokémon regional a confirmar neste local.\n\nLocal: 24/10 · 14:00 → 17:00\n\nBrasília: 24/10, 22:00 → 25/10, 01:00\n\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa"
+      ]
+    },
+    "all_hotspots_count": 28
+  },
+  "desktop": {
+    "frame_width": 1280,
+    "frame_height": 850,
+    "content_width": 1265,
+    "scroll_width": 1265,
+    "theme": "dark",
+    "mega": [
+      {
+        "complete": true,
+        "height": 620,
+        "naturalHeight": 1403,
+        "naturalWidth": 1121,
+        "src": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/assets/events/review/mega-victreebel-rotation-v2.png?v=6cd064429903",
+        "width": 703
+      }
+    ],
+    "weekly_mega": [
+      {
+        "complete": true,
+        "height": 1403,
+        "src": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/assets/events/review/mega-victreebel-rotation-v2.png?v=6cd064429903",
+        "width": 1121
+      }
+    ]
+  },
+  "direct_app": {
+    "click_flow": "Novidades -> trio detail -> Ver rota mundial; dialog closes and selected ID preserved",
+    "selected_event": "2026-10-dynamax-max-battle-day",
+    "copied_expected": "25.033964,121.564468",
+    "clipboard_actual": "25.033964,121.564468",
+    "clipboard_passed": true,
+    "protected_images": [
+      {
+        "complete": true,
+        "height": 1403,
+        "src": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234",
+        "width": 1121
+      },
+      {
+        "complete": true,
+        "height": 1403,
+        "src": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519",
+        "width": 1121
+      },
+      {
+        "complete": true,
+        "height": 1403,
+        "src": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8",
+        "width": 1121
+      }
+    ]
+  },
+  "limitations": [
+    "Responsive browser frames; not physical Android",
+    "Iframe clipboard read was empty despite toast; direct application clipboard was exact",
+    "No production promotion, PWA install/update/offline/push or GPX download proof"
+  ]
+}

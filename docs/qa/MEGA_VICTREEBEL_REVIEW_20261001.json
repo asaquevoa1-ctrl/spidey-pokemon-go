@@ -71,9 +71,69 @@
     ]
   },
   "qa": {
-    "status": "PREVIEW_PENDING",
-    "local_tests_passed": 20,
+    "status": "PASSED_BROWSER_MOBILE_DESKTOP",
+    "local_tests_passed": 21,
     "active_scripts_syntax": 19,
-    "masters_preserved": true
+    "masters_preserved": true,
+    "code_commit": "282ea97f5f7c3890890ec60249ff4ee9e60e769a",
+    "preview_url": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/index.html",
+    "deployment_id": "dpl_5z7TiyUrGzgErZSe9ttfvR4vRy7B",
+    "browser_evidence": "docs/qa/news-browser-evidence-282ea97-20261001.json",
+    "proofs": [
+      {
+        "file": "docs/qa/mega-victreebel-desktop-review-282ea97-20261001.jpg",
+        "sha256": "27ea58fca0f9a274ebe1380c55cc7394ff2f1ade020ec45e6d6788d863ee94f4",
+        "bytes": 149911,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/mega-victreebel-direct-review-282ea97-20261001.jpg",
+        "sha256": "8dc1f2759be7c3137bfad1b3aa91eacba28f51e7e7eaac119b665ce3d2145174",
+        "bytes": 132484,
+        "size": [
+          1348,
+          926
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/mega-victreebel-mobile-review-282ea97-20261001.jpg",
+        "sha256": "ecfe214ebac34abce5497c87b8dedc5b5e974a57486994cc6ccf870a700d6c3c",
+        "bytes": 105625,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/news-desktop-282ea97-20261001.jpg",
+        "sha256": "d87c135f0cbd7ae11dcd7fd5668aa0c97cc9bc552644ec7e99cd0eed22c8b98a",
+        "bytes": 108549,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      }
+    ],
+    "android_physical": "PENDING",
+    "pwa_install_update_offline_push": "PENDING",
+    "clipboard": {
+      "status": "PASSED_DESKTOP_DIRECT_APP",
+      "expected": "25.033964,121.564468",
+      "actual": "25.033964,121.564468"
+    },
+    "gpx_download": "PENDING"
+  },
+  "displayed_proof": {
+    "file": "docs/qa/mega-victreebel-direct-review-282ea97-20261001.jpg",
+    "sha256": "8dc1f2759be7c3137bfad1b3aa91eacba28f51e7e7eaac119b665ce3d2145174",
+    "code_commit": "282ea97f5f7c3890890ec60249ff4ee9e60e769a",
+    "candidate_sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22"
   }
 }
