@@ -1,14 +1,14 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **5 com arte no master APPROVED**, **3 pôsteres PENDING_REVIEW (lote Yveltal/Mega Blastoise)**, **15 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **8 com arte no master APPROVED**, **0 pôsteres PENDING_REVIEW nesta janela**, **15 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
-Xerneas, Invasão, Cinderace, Seedot e Mega Victreebel foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
+Xerneas, Invasão, Cinderace, Seedot, Mega Victreebel, rotação Yveltal, Hora de Reides Yveltal e Mega Blastoise foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
 ## Ordem para a entrega em 02/10
 
 1. Festival da Colheita com Applin, já ativo: arte ainda pendente; a ferramenta recusou a geração nesta tentativa. O antigo Harvest/Pumpkaboo permanece revogado. A Invasão, que começa em 02/10, tem pôster corrigido aprovado.
 2. Aprovação humana de Invasão e Cinderace concluída em 01/10, 15:45 BRT; novos paths confirmados no preview `a242f88`, mobile/desktop/Semana/FLY. Cinderace em 03/10, 14–17h locais; FLY corrigido e testado. Provas anteriores em `PRIORITY_ART_20261001.md`, pós-aprovação em `PRIORITY_ART_APPROVAL_20261001.md`.
-3. Mega Victreebel vigente aprovado em 01/10, 22:09 BRT; Semana Mundial do Espaço em 04/10 ainda sem arte. Depois Yveltal/Hora de Reides e Mega Blastoise. Não presumir aprovação das peças de Yveltal previamente rejeitadas.
+3. Mega Victreebel vigente aprovado em 01/10, 22:09 BRT; Semana Mundial do Espaço em 04/10 ainda sem arte. Yveltal rotação v1/Hora de Reides v2 e Mega Blastoise v1 aprovados em 02/10, 07:16 BRT; registro `OCTOBER_RAIDS_APPROVAL_20261002.json`. A decisão refere-se aos PNGs novos exatos, sem recuperar peças de Yveltal anteriormente rejeitadas.
 4. Completar Temporada, GO Pass, Liga de Batalha GO e Descobertas Diárias; revisar fontes dos eventos regionais.
 5. Seedot de 01/10 APPROVED pela decisão de 19:07 BRT sobre o PNG exato conferido em `2ed7ef8`; integração pós-aprovação conferida em `b310f5a`.
 
@@ -31,10 +31,10 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-world-space-week` | Semana Mundial do Espaço 2026 | 2026-10-04 → 2026-10-10 | Sem arquivo no compositor Home/FLY |
 | `2026-10-go-pass` | GO Pass: Outubro | 2026-10-06 → 2026-11-03 | Sem arquivo no compositor Home/FLY |
 | `2026-10-01-spotlight-seedot` | Hora do Holofote: Seedot | 2026-10-01 → 2026-10-01 | APPROVED |
-| `2026-10-07-raid-hour-yveltal` | Hora de Reides: Yveltal | 2026-10-07 → 2026-10-07 | Pôster PENDING_REVIEW |
+| `2026-10-07-raid-hour-yveltal` | Hora de Reides: Yveltal | 2026-10-07 → 2026-10-07 | APPROVED |
 | `2026-10-05-max-monday-sizzlipede` | Segunda Max: Dinamax Sizzlipede | 2026-10-05 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
-| `2026-10-raids-yveltal` | Reides 5★: Yveltal | 2026-10-07 → 2026-10-13 | Pôster PENDING_REVIEW |
-| `2026-10-mega-blastoise-raids` | Megarreides: Mega Blastoise | 2026-10-07 → 2026-10-13 | Pôster PENDING_REVIEW |
+| `2026-10-raids-yveltal` | Reides 5★: Yveltal | 2026-10-07 → 2026-10-13 | APPROVED |
+| `2026-10-mega-blastoise-raids` | Megarreides: Mega Blastoise | 2026-10-07 → 2026-10-13 | APPROVED |
 | `2026-10-gbl-06-13` | Liga de Batalha GO: Great Mega / Ultra Mega / Master Mega | 2026-10-06 → 2026-10-13 | Sem arquivo no compositor Home/FLY |
 | `2026-10-shadow-thundurus` | Reides Sombrosas: Thundurus (Forma Encarnada) | 2026-10-03 → 2026-10-04 | Sem arquivo no compositor Home/FLY |
 | `2026-10-04-scenic-sunday` | Descoberta Diária: Domingo Pitoresco | 2026-10-04 → 2026-10-04 | Sem arquivo no compositor Home/FLY |
@@ -85,3 +85,12 @@ Código `10e28fc`: três novas candidatas integrais, PENDING_REVIEW, conferidas 
 Inventário atual: **23 eventos, 5 APPROVED + 3 pôsteres em revisão + 15 sem arquivo Home/FLY**. Aprovação das três candidatas ainda depende de decisão visual humana específica. Master/arquivos anteriores preservados; Seedot voltou a renderizar após renovar acesso temporário Vercel, sem mudança de arte/código.
 
 Progresso Selos persistiu no navegador e GPX incompleto foi bloqueado; download/XML do GPX Japão não comprovados, apesar do toast. Android físico/PWA/atualização/offline/push continuam pendentes. Applin/Espaço seguem recusados, sem nova peça. Prazo informado não torna o lançamento completo pronto; bloqueios em `RELEASE_SPRINT_20261001.json`, roteiro físico `PUBLIC_ANDROID_QA_20261001.md`. Sem promoção a main/produção.
+
+
+## Aprovação das três artes de reides — 02/10/2026, 07:16 BRT
+
+Editor respondeu “Aprovo todas as três” após reenvio separado dos PNGs integrais no checkpoint `1824d8b`, QA prévio `10e28fc`. APPROVED exclusivamente: `2026-10-raids-yveltal` (rotação v1, hash `dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328`); `2026-10-07-raid-hour-yveltal` (candidata v2, hash `a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b`); `2026-10-mega-blastoise-raids` (v1, hash `474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321`). Todos 1121×1403; cópias premium aprovadas byte a byte, sem regeneração. Registro `docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json` e MD homônimo. Fonte/datas permanecem comunidade.
+
+Três entradas retiradas do preview, agora no master/full_poster; oito entradas anteriores preservadas com arquivos/histórico. Candidatas/revisão anterior da Hora de Reides/prompts/provas intactos. Shell/cache/master versionados. Catálogo de 124 IDs/janelas inalterado. QA pós-aprovação do novo preview pendente; não atribuir prova do preview antigo ao código novo.
+
+Inventário 01–07/10: 23 eventos, 8 APPROVED e 15 sem arquivo Home/FLY; Zorua pendente fora da janela. Applin/Espaço continuam recusados, sem peça nova; Android físico/PWA/push e download/XML GPX Japão pendentes. Prazo alvo anterior 01:02 BRT passou; lançamento completo não está pronto. A aprovação destas três peças não autoriza main/produção. Continuar branch/NEXUS, sem reiniciar nem reabrir artes aprovadas.

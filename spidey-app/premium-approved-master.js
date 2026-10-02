@@ -1,6 +1,33 @@
 (() => {
   'use strict';
   const master = {
+  "2026-10-raids-yveltal": {
+    "file": "assets/events/premium/yveltal-rotation-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+    "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+  },
+  "2026-10-07-raid-hour-yveltal": {
+    "file": "assets/events/premium/yveltal-raid-hour-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+    "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+  },
+  "2026-10-mega-blastoise-raids": {
+    "file": "assets/events/premium/mega-blastoise-rotation-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+    "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+  },
   "2026-09-mega-victreebel-raids": {
     "file": "assets/events/premium/mega-victreebel-rotation-approved-v1.png",
     "status": "APPROVED",
