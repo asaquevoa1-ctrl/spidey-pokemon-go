@@ -74,7 +74,8 @@ test('Seedot human decision binds the exact reviewed PNG and preserves earlier m
  }
  assert.equal(context.weeklyArtUrl(e),master.file+'?v='+c.sha256.slice(0,12));
  assert.equal(approval.previous_master_sha256,review.preserved_master_sha256);
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id].sort());
+ const subsequentApproval=JSON.parse(fs.readFileSync('docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json','utf8'));
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...subsequentApproval.event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
@@ -90,16 +91,35 @@ test('Applin and Space generation refusals grant no asset or inferred approval',
   assert.equal(w.SpideyReviewArt.poster({id:b.event_id}),null);assert.equal(context.weeklyArtUrl({id:b.event_id}),'');
  }
 });
-test('Mega Victreebel review uses one intact candidate across roles without granting approval',()=>{
- const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/MEGA_VICTREEBEL_REVIEW_20261001.json'));
- const c=record.candidate,e={id:record.event_id},preview=w.SPIDEY_PREVIEW_ART[e.id];
- assert.equal(record.status,'PENDING_REVIEW');assert.equal(record.approval,null);assert.equal(w.SPIDEY_APPROVED_ART_MASTER[e.id],undefined);
- const file=fs.readFileSync(c.file);assert.equal(file.length,c.bytes);assert.equal(crypto.createHash('sha256').update(file).digest('hex'),c.sha256);
- assert.equal(c.width,file.readUInt32BE(16));assert.equal(c.height,file.readUInt32BE(20));assert.equal(preview.status,'PENDING_REVIEW');assert.equal(preview.sha256,c.sha256);
+test('Mega Victreebel human approval binds the directly displayed v2 PNG and preserves all earlier masters',()=>{
+ const {window:w,context}=setup(),approval=JSON.parse(fs.readFileSync('docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json'));
+ const record=JSON.parse(fs.readFileSync(approval.candidate_record));
+ const c=record.candidate,e={id:record.event_id},a=approval.artworks[0],master=w.SPIDEY_APPROVED_ART_MASTER[e.id];
+ assert.equal(record.status,'PENDING_REVIEW');assert.equal(record.approval,null);
+ assert.equal(approval.status,'APPROVED');assert.equal(approval.decision.text,'Sim, aprovo');assert.equal(approval.decision.at,'2026-10-01T22:09:17-03:00');
+ assert.deepEqual(approval.event_ids,['2026-09-mega-victreebel-raids']);assert.equal(approval.artworks.length,1);
+ assert.equal(a.revision,2);assert.equal(a.candidate_file,c.file);assert.equal(a.source_classification,'community');
+ assert.equal(a.displayed_asset.file,c.file);assert.equal(a.displayed_asset.sha256,c.sha256);assert.match(a.displayed_asset.via,/PNG completo exibido diretamente no chat/);
+ const file=fs.readFileSync(a.approved_file);assert.deepEqual(file,fs.readFileSync(c.file));assert.equal(file.length,c.bytes);assert.equal(file.length,a.bytes);
+ assert.equal(crypto.createHash('sha256').update(file).digest('hex'),c.sha256);assert.equal(a.sha256,c.sha256);
+ assert.equal(c.width,file.readUInt32BE(16));assert.equal(c.height,file.readUInt32BE(20));
+ assert.equal(master.status,'APPROVED');assert.equal(master.display,'full_poster');assert.equal(master.sha256,c.sha256);
+ assert.equal(master.width,c.width);assert.equal(master.height,c.height);assert.equal(master.approval_record,'docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json');
+ assert.equal('spidey-app/'+master.file,a.approved_file);assert.equal(w.getSpideyApprovedArt(e.id),master.file);
+ assert.equal(w.SPIDEY_PREVIEW_ART[e.id],undefined);assert.equal(w.SpideyReviewArt.poster(e),null);assert.equal(w.SPIDEY_PREMIUM_EVENT_ART[e.id].visualApproved,true);
  for(const role of ['thumb','card','weekly','hero','poster']){
-  const a=w.SpideyArt.resolve(e,role);assert.equal('spidey-app/'+a.url,c.file);assert.match(a.sourceRole,/^preview_candidate:/);
+  const asset=w.SpideyArt.resolve(e,role);assert.equal(asset.url,master.file);assert.equal(asset.sha256,c.sha256);
+  assert.equal(asset.standard,'spidey-premium-v1');assert.match(asset.sourceRole,/^premium_catalog:/);
  }
- assert.equal(context.weeklyArtUrl(e),preview.file+'?v='+c.sha256.slice(0,12));
+ assert.equal(context.weeklyArtUrl(e),master.file+'?v='+c.sha256.slice(0,12));
  for(const previous of record.revision_history)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(previous.file)).digest('hex'),previous.sha256);
- assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/premium-approved-master.js')).digest('hex'),record.preserved_master_sha256);
+ for(const input of record.inputs)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(input.file)).digest('hex'),input.sha256);
+ assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);
+ assert.equal(Object.keys(approval.preserved_master_entries).length,7);
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id].sort());
+ for(const [id,old] of Object.entries(approval.preserved_master_entries)){
+  assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
+  assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
+ }
+ assert.deepEqual(Object.keys(w.SPIDEY_PREVIEW_ART),['2026-10-zorua-community-day']);assert.equal(w.SPIDEY_PREVIEW_ART['2026-10-zorua-community-day'].status,'PENDING_REVIEW');
 });

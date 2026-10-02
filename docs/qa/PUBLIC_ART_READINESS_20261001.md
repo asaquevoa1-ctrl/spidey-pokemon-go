@@ -1,18 +1,18 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **4 com arte no master APPROVED**, **1 pôster PENDING_REVIEW (Mega Victreebel v2)**, **18 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **5 com arte no master APPROVED**, **18 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
-Xerneas, Invasão, Cinderace e Seedot foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
+Xerneas, Invasão, Cinderace, Seedot e Mega Victreebel foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
 ## Ordem para a entrega em 02/10
 
 1. Festival da Colheita com Applin, já ativo: arte ainda pendente; a ferramenta recusou a geração nesta tentativa. O antigo Harvest/Pumpkaboo permanece revogado. A Invasão, que começa em 02/10, tem pôster corrigido aprovado.
 2. Aprovação humana de Invasão e Cinderace concluída em 01/10, 15:45 BRT; novos paths confirmados no preview `a242f88`, mobile/desktop/Semana/FLY. Cinderace em 03/10, 14–17h locais; FLY corrigido e testado. Provas anteriores em `PRIORITY_ART_20261001.md`, pós-aprovação em `PRIORITY_ART_APPROVAL_20261001.md`.
-3. Semana Mundial do Espaço em 04/10 e Mega Victreebel vigente; depois Yveltal/Hora de Reides e Mega Blastoise. Não presumir aprovação das peças de Yveltal previamente rejeitadas.
+3. Mega Victreebel vigente aprovado em 01/10, 22:09 BRT; Semana Mundial do Espaço em 04/10 ainda sem arte. Depois Yveltal/Hora de Reides e Mega Blastoise. Não presumir aprovação das peças de Yveltal previamente rejeitadas.
 4. Completar Temporada, GO Pass, Liga de Batalha GO e Descobertas Diárias; revisar fontes dos eventos regionais.
 5. Seedot de 01/10 APPROVED pela decisão de 19:07 BRT sobre o PNG exato conferido em `2ed7ef8`; integração pós-aprovação conferida em `b310f5a`.
 
-Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile/desktop e decisão humana específica. Novas artes não podem sobrescrever Xerneas nem recuperar aprovações antigas. Android/PWA/offline/push e prova de clipboard/GPX permanecem frentes independentes.
+Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile/desktop e decisão humana específica. Novas artes não podem sobrescrever Xerneas nem recuperar aprovações antigas. Android/PWA/offline/push e GPX permanecem frentes independentes; clipboard direto desktop já comprovado em `282ea97`, sem prova física Android.
 
 ## Inventário
 
@@ -22,7 +22,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-09-go-pass` | GO Pass: Setembro | 2026-09-08 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
 | `2026-09-harvest-festival-applin` | Festival da Colheita: Pomar de Applin | 2026-09-29 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
 | `2026-09-raids-xerneas` | Reides 5★: Xerneas | 2026-09-30 → 2026-10-06 | APPROVED |
-| `2026-09-mega-victreebel-raids` | Megarreides: Mega Victreebel | 2026-09-30 → 2026-10-06 | Pôster v2 PENDING_REVIEW |
+| `2026-09-mega-victreebel-raids` | Megarreides: Mega Victreebel | 2026-09-30 → 2026-10-06 | APPROVED |
 | `2026-09-gbl-29-1006` | Liga de Batalha GO: Master / Mega Color Cup | 2026-09-29 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
 | `2026-09-iit-delhi-rendezvous` | Pokémon GO no Rendezvous 2026 • IIT Delhi | 2026-09-28 → 2026-10-01 | Sem arquivo no compositor Home/FLY |
 | `2026-10-harvest-taken-over` | Festival da Colheita: A Invasão | 2026-10-02 → 2026-10-05 | APPROVED |
@@ -70,3 +70,10 @@ Handoff pós-aprovação Seedot: código `b310f5a`, preview seguro https://spide
 
 
 QA da rodada Novidades/Mega Victreebel concluído em `282ea97`, preview direto https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/index.html. Mobile 390 Claro/desktop 1280 Escuro sem overflow; um anúncio Minior/três períodos, trio regional/detalhe/FLY 20/28 com seleção preservada; candidata Mega v2 inteira 1121×1403 em Home/Semana/detalhe. Cliques e clipboard Taipei exato comprovados no app direto desktop. 21 testes passaram; masters anteriores intactos. Quatro prints/observações/hashes em `docs/qa/NEWS_UPDATE_20261001.md` e `docs/qa/MEGA_VICTREEBEL_REVIEW_20261001.json`. Candidata v2 PENDING_REVIEW até decisão humana específica; 23 eventos de 01–07/10 agora 4 APPROVED + 1 pôster em revisão + 18 sem arquivo Home/FLY. Demais artes, Android/PWA/push e GPX continuam pendentes; coleta de notícias observada, ingestão do app foi editorial, sem nova prova automática. Nenhuma promoção a main/produção. Continuar da branch/checkpoint documental, preservando o código validado `282ea97`.
+
+
+## Aprovação Mega Victreebel v2 — 01/10/2026, 22:09 BRT
+
+Editor respondeu “Sim, aprovo” ao PNG v2 completo mostrado diretamente no chat após o reenvio da imagem. APPROVED exclusivamente para `2026-09-mega-victreebel-raids`; hash `6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22`, 1121×1403. Cópia byte a byte em `assets/events/premium/mega-victreebel-rotation-approved-v1.png`, sem regeneração. Vínculo da decisão/arquivo/eventId: `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json`. Datas permanecem identificadas como comunidade; aparência primária não é prova da rotação.
+
+Somente Mega Victreebel sai do preview e entra no master; sete entradas anteriores, arquivos e históricos preservados. Shell/cache versionados. Inventário 01–07/10: 23 eventos, 5 APPROVED, 18 sem arquivo no compositor Home/FLY; Zorua pendente fora da janela. QA dos novos caminhos em andamento, relatório `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md`. Próximo: cobertura restante e Android/PWA/push; Applin/Espaço seguem sem arquivo por recusas documentadas. Nenhuma promoção a main/produção.

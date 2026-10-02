@@ -105,3 +105,8 @@ Master soberano/full_poster, mesmos papéis de imagem, cache/shell versionados. 
 
 
 Handoff pós-aprovação Seedot: código `b310f5a`, preview seguro https://spidey-pokemon-5uir2c532-spidey3.vercel.app/spidey-app/index.html, mobile/desktop/Semana/detalhe/FLY conferidos, 16 testes passaram e duas provas preservadas. Home passou a Xerneas após o encerramento local de Seedot às 19h; masters anteriores preservados. Relatório `docs/qa/SEEDOT_APPROVAL_20261001.md`. Brief factual da próxima peça `docs/qa/MEGA_VICTREEBEL_BRIEF_20261001.json` (comunidade, sem arte/sem aprovação) e roteiro de teste físico `docs/qa/PUBLIC_ANDROID_QA_20261001.md` preparados. Continuar nesta branch sem reiniciar; não reabrir Xerneas/Invasão/Cinderace/Seedot aprovados. Checkpoint documental posterior não altera o código conferido; nenhuma promoção a main/produção.
+
+
+## Mega Victreebel v2 APPROVED — 01/10, 22:09 BRT
+
+Decisão humana sobre o PNG completo recebido no chat, hash/dimensões/eventId em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json`. Novo caminho premium preserva bytes da candidata; autoridade única no master, `full_poster` em todos os papéis. Apenas esta entrada é removida do preview; Zorua e sete masters anteriores preservados. Composição/resolver/dados/Novidades não mudam. Shell e cache versionados; QA pós-aprovação em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md`.

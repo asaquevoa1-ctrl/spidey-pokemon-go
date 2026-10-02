@@ -1,6 +1,15 @@
 (() => {
   'use strict';
   const master = {
+  "2026-09-mega-victreebel-raids": {
+    "file": "assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+    "approval_record": "docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json"
+  },
   "2026-10-01-spotlight-seedot": {
     "file": "assets/events/premium/seedot-spotlight-approved-v1.png",
     "status": "APPROVED",

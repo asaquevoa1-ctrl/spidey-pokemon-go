@@ -1,13 +1,5 @@
 // Review candidates and recovered illustration crops. This never grants approval.
 window.SPIDEY_PREVIEW_ART=Object.freeze({
-  "2026-09-mega-victreebel-raids": {
-    "file": "assets/events/review/mega-victreebel-rotation-v2.png",
-    "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
-    "status": "PENDING_REVIEW",
-    "display": "full_poster",
-    "width": 1121,
-    "height": 1403
-  },
   "2026-10-zorua-community-day": {
     "file": "assets/events/recovered/1000431272.png",
     "sha256": "2ac4a1fd65a1aaed9f792611913584f428c00999fcaf0c81ba2820709dc24af9",

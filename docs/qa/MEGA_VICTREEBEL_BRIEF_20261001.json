@@ -1,11 +1,11 @@
 {
-  "status": "PENDING_REVIEW_PREVIEW_QA_PASSED",
+  "status": "APPROVED_POST_APPROVAL_QA_PENDING",
   "event_id": "2026-09-mega-victreebel-raids",
   "date": "2026-10-01",
   "catalog_base": "b310f5aefba0e3f6b841f8014e8b0677442922ef",
-  "art_file": "assets/events/review/mega-victreebel-rotation-v2.png",
-  "art_status": "PENDING_REVIEW",
-  "approval": null,
+  "art_file": "assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+  "art_status": "APPROVED",
+  "approval": "docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json",
   "community_sources": [
     {
       "url": "https://pokemongohub.net/post/guide/september-2026-events/",
@@ -37,7 +37,7 @@
     "30 DE SETEMBRO A 6 DE OUTUBRO DE 2026",
     "Fonte: Leek Duck • Pokémon GO Hub"
   ],
-  "next_action": "Decisão humana sobre PNG v2 exato, já conferido no preview mobile/desktop/Home/Semana/detalhe. Master preservado, demais artes e Android/PWA/push pendentes.",
+  "next_action": "Conferir caminho aprovado no preview mobile/desktop/Home/Semana/detalhe e persistir provas; continuar cobertura restante e Android/PWA/push.",
   "art_sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
   "art_width": 1121,
   "art_height": 1403
