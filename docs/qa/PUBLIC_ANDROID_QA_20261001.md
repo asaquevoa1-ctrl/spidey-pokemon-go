@@ -1,12 +1,13 @@
 # QA Android para preparação pública — 02/10/2026
 
-**PENDENTE em aparelho físico.** Código conferido `10e28fc`; QA responsivo mobile/desktop em navegador remoto. App: https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/index.html. Registrar aparelho/Android/Chrome, horário BRT, conexão e prova de cada resultado; iframe não comprova Android. Preview protegido pela Vercel; não alterar a proteção nem confundir acesso temporário com lançamento público.
+**PENDENTE em aparelho físico.** Código corrente conferido `0433c322c43839f13a36996d52e511475c8739ae`; QA responsivo mobile/desktop no navegador remoto. App: https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/index.html. Registrar aparelho/Android/Chrome, horário BRT, conexão e prova de cada resultado; iframe não comprova Android. Preview protegido pela Vercel; não alterar a proteção nem confundir acesso temporário com lançamento público.
 
 | Caso | Ação no aparelho | Evidência necessária | Estado físico |
 | --- | --- | --- | --- |
 | Abertura | Abrir no Chrome, alternar Claro/Escuro/Sistema, navegar nas seis guias | Print legível, toque funcional | PENDENTE |
 | Masters | Abrir Xerneas, Invasão, Cinderace, Seedot e Mega Victreebel | PNG original inteiro, Fechar acessível, detalhe no topo | PENDENTE |
 | Novo lote aprovado | Calendário → Mostrar → 7/10 → Yveltal, Hora de Reides e Mega Blastoise | Arquivo correto completo; três PNGs agora APPROVED; conferir paths premium | PENDENTE |
+| Zorua aprovado | Calendário → 10/10 → Zorua → Ver rota mundial | PNG premium inteiro, bônus oficiais, foco Fechar, eventId do Zorua e relógios conferidos | PENDENTE |
 | FLY | Hora de Reides Yveltal e Cinderace, Essenciais/Todos | 20/28 referências, local/Brasília, Taipei e mudança de dia | PENDENTE |
 | Coordenadas | Copiar, colar em campo de texto e abrir mapa | Valor copiado igual ao exibido | PENDENTE |
 | Instalação | Adicionar à tela inicial/Instalar, abrir ícone | App abre e navega; conferir ícone e disponibilidade real de instalação | PENDENTE |
@@ -23,3 +24,7 @@ Progresso Selos foi 0→1/17 e persistiu ao fechar/reabrir; teste restaurado a 0
 Precache: 70 arquivos locais, 28.777.950 bytes em disco; não é tráfego nem prova offline. Manifesto aponta logo JPEG 128×128 como `sizes:any`; confirmar instalação/ícone no aparelho. Configuração/recebimento push não comprovados; leitura do endpoint no conector retornou proteção Vercel.
 
 Cobertura: 23 eventos, 8 APPROVED + 15 sem arquivo Home/FLY. Applin/Espaço com recusas documentadas. Lançamento completo continua bloqueado; este roteiro não concede aprovação de arte/produção/funcionalidade sem evidência.
+
+## Evidência de navegador corrente — 02/10/2026, 21h BRT
+
+Zorua aprovado foi conferido no preview do código `0433c32`: mobile 390 Claro/desktop 1280 Escuro, PNG inteiro, foco Fechar, sem overflow nas medidas, FLY 20/28 e hash servido idêntico à aprovação. GPX Japão baixado nesta rodada e XML GPX 1.1/17 pontos/ordem/nomes validados contra catálogo; PokéXciting 0/5 sem link completo. Registros `zorua-approved-browser-0433c32-20261002.json` e `japan-rally-browser-download-0433c32-20261002.json`. Estes resultados substituem a pendência histórica de captura no navegador descrita acima; todos os casos físicos da tabela continuam PENDENTE. Push do preview responde HTTP 503 `push_not_configured`, no-store; configurar servidor e obter recebimento real antes de concluir.

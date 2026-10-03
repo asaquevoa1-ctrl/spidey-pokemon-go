@@ -1,5 +1,5 @@
 {
-  "status": "ZORUA_APPROVED_PUBLIC_BLOCKED_PAUSE_REQUESTED",
+  "status": "ZORUA_POST_APPROVAL_QA_GPX_PASSED_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -26,17 +26,17 @@
       "Sizzlipede"
     ],
     "android_physical_install_update_offline_push": "PENDING",
-    "gpx_download_browser": "NATIVE_LINK_VERIFIED_DOWNLOAD_CAPTURE_TIMED_OUT_A2B5638",
-    "approved_master_integrity": "SERVED_THREE_POSTERS_SHA256_MATCH_18fba5b_PREVIOUS_MASTER_UNCHANGED",
-    "mobile_desktop_core": "ZORUA_POSTER_AND_FLY_QA_PASSED_A2B5638_PHYSICAL_PENDING",
+    "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
+    "approved_master_integrity": "ZORUA_SERVED_SHA256_MATCH_0433C32_PLUS_THREE_SERVED_POSTERS_18FBA5B_PRIOR_MASTER_ENTRIES_PRESERVED",
+    "mobile_desktop_core": "ZORUA_APPROVED_POSTER_FLY_20_28_PASSED_0433C32_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
-    "push_live_configuration": "INCOMPLETE_HTTP_503_PUSH_NOT_CONFIGURED_A2B5638",
-    "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PENDING"
+    "push_live_configuration": "INCOMPLETE_HTTP_503_PUSH_NOT_CONFIGURED_0433C32",
+    "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32"
   },
   "next_batch": [
-    "Post-approval Zorua preview QA",
-    "Android/PWA/push",
-    "GPX download proof"
+    "Coverage of remaining Premium art",
+    "Server push configuration and real delivery",
+    "Physical Android/PWA install, update and offline QA"
   ],
   "completed_public_launch": false,
   "completed_this_sprint": [
@@ -48,25 +48,27 @@
     "Editor aprovou os três PNGs exatos em 02/10 07:16:30 BRT; cópias premium idênticas, oito entradas anteriores preservadas.",
     "Retomada 02/10 após limite de conversa: QA pós-aprovação dos três pôsteres no código 18fba5b, mobile Claro/desktop Escuro, hashes servidos iguais aos aprovados; FLY 20/28 e clique direto da Hora de Reides confirmados.",
     "a2b5638: 31 tests passed; native GPX link, root push API routing and offline worker robustness deployed; real push status and Zorua mobile/desktop/FLY 20/28 verified.",
-    "Zorua aprovado explicitamente em 02/10 18:38:35 BRT; bônus rechecados na fonte oficial e master atualizado com cópia byte a byte."
+    "Zorua aprovado explicitamente em 02/10 18:38:35 BRT; bônus rechecados na fonte oficial e master atualizado com cópia byte a byte.",
+    "0433c32 preview: approved Zorua mobile/desktop/FLY 20/28 verified; served PNG exact approved SHA256; new browser-downloaded Japan GPX parsed with all 17 coordinates, names and order matching catalog."
   ],
-  "updated_at": "2026-10-02T21:41:28.177Z",
-  "code_commit": "a2b56386e2eed9ba5cd173c7fb3590e8aa122f88",
-  "preview_url": "https://spidey-pokemon-cg9922frj-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-03T00:03:06.669Z",
+  "code_commit": "0433c322c43839f13a36996d52e511475c8739ae",
+  "preview_url": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
     "15 eventos sem arquivo Home/FLY no último inventário 01–07/10; cobertura restante pendente",
-    "Zorua APPROVED; QA do novo preview pós-aprovação pendente",
     "Applin/Espaço/Sizzlipede bloqueados por recusa da geração",
-    "GPX Japão: link nativo confirmado, download/XML sem captura",
     "Push: HTTP 503 push_not_configured; configuração de servidor e recebimento real pendentes",
     "Android físico/instalação/atualização/offline/push sem prova",
     "Lançamento completo e produção não aprovados"
   ],
   "approval_record": "docs/qa/ZORUA_APPROVAL_20261002.json",
-  "post_approval_qa_record": "docs/qa/october-raids-approved-browser-18fba5b-20261002.json",
+  "post_approval_qa_record": "docs/qa/zorua-approved-browser-0433c32-20261002.json",
   "pause_requested": {
     "at": "2026-10-02T18:38:35-03:00",
     "budget_minutes": 5,
-    "resume": "Somente quando editor acionar novamente."
-  }
+    "resume": "Somente quando editor acionar novamente.",
+    "ended_at": "2026-10-02T20:49:18-03:00",
+    "active": false
+  },
+  "gpx_qa_record": "docs/qa/japan-rally-browser-download-0433c32-20261002.json"
 }

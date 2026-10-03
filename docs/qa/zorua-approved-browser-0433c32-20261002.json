@@ -1,0 +1,357 @@
+{
+  "code_commit": "0433c322c43839f13a36996d52e511475c8739ae",
+  "preview_url": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/index.html",
+  "qa_url": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/qa-responsive.html",
+  "recorded_at": "2026-10-03T00:00:43.906Z",
+  "direct": {
+    "clientWidth": 703,
+    "dialogOpen": true,
+    "focused": "closeDialog",
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "src": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "scrollTop": 0,
+    "scrollWidth": 703,
+    "text": "×\nDIA COMUNITÁRIO\nZorua\nANÚNCIO OFICIAL\nDia Comunitário: Zorua\n\nZorua na natureza, 3× PE e 2× Doces por captura. Evolua para Zoroark com Soco Enganador até as 21h locais.\n\nHorários e locais\nHorário do evento\n10 de out. · 14:00–17:00 · horário local\nEsse horário vale no relógio da região onde você vai jogar.\nFonte\nBônus e informações\n3× PE por captura, das 14h às 17h locais.\n2× Doces por captura, das 14h às 17h locais.\n2× chance de receber Doces GG por captura para Treinadores de nível 31 ou superior.\nIncenso ativado durante o evento dura três horas, exceto o Incenso de Aventura Diário.\nMódulos Atrair ativados duram uma hora; encontros com Zorua em Módulos Atrair comuns ficam disponíveis das 14h às 21h locais.\nUma troca especial adicional, máximo de duas no dia, das 14h às 21h locais.\nTrocas custam 50% menos Poeira Estelar, das 14h às 21h locais.\nSurpresa ao tirar retratos durante o Dia Comunitário.\nObservações\nEvento em 10/10, das 14h às 17h, horário local.\n3× PE e 2× Doces por captura durante o evento.\nEvolua Zorua até as 21h locais para receber Zoroark com o ataque ágil Soco Enganador.\nMódulos Atrair comuns duram uma hora; Zorua atraídos por eles podem aparecer com Fundo Especial. A janela de encontros vai até 21h locais.\nVer rota mundial"
+  },
+  "mobile": {
+    "bodyScrollWidth": 375,
+    "bonuses": [
+      "3× PE por captura, das 14h às 17h locais.\n2× Doces por captura, das 14h às 17h locais.\n2× chance de receber Doces GG por captura para Treinadores de nível 31 ou superior.\nIncenso ativado durante o evento dura três horas, exceto o Incenso de Aventura Diário.\nMódulos Atrair ativados duram uma hora; encontros com Zorua em Módulos Atrair comuns ficam disponíveis das 14h às 21h locais.\nUma troca especial adicional, máximo de duas no dia, das 14h às 21h locais.\nTrocas custam 50% menos Poeira Estelar, das 14h às 21h locais.\nSurpresa ao tirar retratos durante o Dia Comunitário.",
+      "Evento em 10/10, das 14h às 17h, horário local.\n3× PE e 2× Doces por captura durante o evento.\nEvolua Zorua até as 21h locais para receber Zoroark com o ataque ágil Soco Enganador.\nMódulos Atrair comuns duram uma hora; Zorua atraídos por eles podem aparecer com Fundo Especial. A janela de encontros vai até 21h locais."
+    ],
+    "clientWidth": 360,
+    "focused": "closeDialog",
+    "open": true,
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "objectFit": "contain",
+        "renderedHeight": 450.546875,
+        "renderedWidth": 360,
+        "src": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "scrollTop": 0,
+    "scrollWidth": 360,
+    "theme": "light",
+    "viewportWidth": 375
+  },
+  "desktop": {
+    "bodyScrollWidth": 1265,
+    "clientWidth": 703,
+    "focused": "closeDialog",
+    "open": true,
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "objectFit": "contain",
+        "renderedHeight": 620,
+        "renderedWidth": 703,
+        "src": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "scrollTop": 0,
+    "scrollWidth": 703,
+    "theme": "dark",
+    "viewportWidth": 1265
+  },
+  "fly_essentials": {
+    "count": 20,
+    "event": "2026-10-zorua-community-day",
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "src": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "rows": [
+      "01\nPRÓXIMO\n🇰🇮 Kiritimati, Kiribati\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 09/10, 21:00 → 10/10, 00:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n1.987149,-157.477137\nCopiar coordenadas\nAbrir mapa",
+      "02\nFUTURO\n🇳🇿 Auckland, Nova Zelândia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 09/10, 22:00 → 10/10, 01:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n-36.852095,174.76318\nCopiar coordenadas\nAbrir mapa",
+      "03\nFUTURO\n🇦🇺 Sydney, Austrália\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 00:00 → 10/10, 03:00\n\nLocal aproximado · confira no mapa\n-33.866173,151.205945\nCopiar coordenadas\nAbrir mapa",
+      "04\nFUTURO\n🇯🇵 Shinjuku, Japão\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 02:00 → 10/10, 05:00\n\nLocal aproximado · confira no mapa\n35.68895,139.69054\nCopiar coordenadas\nAbrir mapa",
+      "05\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 03:00 → 10/10, 06:00\n\nLocal aproximado · confira no mapa\n25.033964,121.564468\nCopiar coordenadas\nAbrir mapa",
+      "06\nFUTURO\n🇮🇳 Chennai, Índia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 05:30 → 10/10, 08:30\n\nLocal aproximado · confira no mapa\n13.0403,80.2666\nCopiar coordenadas\nAbrir mapa",
+      "07\nFUTURO\n🇦🇪 Dubai, Emirados Árabes\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 07:00 → 10/10, 10:00\n\nLocal aproximado · confira no mapa\n25.07675,55.13294\nCopiar coordenadas\nAbrir mapa",
+      "08\nFUTURO\n🇹🇷 Istambul, Turquia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 08:00 → 10/10, 11:00\n\nLocal aproximado · confira no mapa\n41.0082,28.9784\nCopiar coordenadas\nAbrir mapa",
+      "09\nFUTURO\n🇪🇸 Zaragoza, Espanha\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 09:00 → 10/10, 12:00\n\nLocal aproximado · confira no mapa\n41.661609,-0.89464\nCopiar coordenadas\nAbrir mapa",
+      "10\nFUTURO\n🇬🇧 Londres, Reino Unido\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 10:00 → 10/10, 13:00\n\nLocal aproximado · confira no mapa\n51.501,-0.1246\nCopiar coordenadas\nAbrir mapa",
+      "11\nFUTURO\n🇨🇻 Praia, Cabo Verde\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 12:00 → 10/10, 15:00\n\nLocal aproximado · confira no mapa\n14.910725,-23.527823\nCopiar coordenadas\nAbrir mapa",
+      "12\nFUTURO\n🇧🇷 Fernando de Noronha, Brasil\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 13:00 → 10/10, 16:00\n\nLocal aproximado · confira no mapa\n-3.8401,-32.41181\nCopiar coordenadas\nAbrir mapa",
+      "13\nFUTURO\n🇧🇷 Ibirapuera, São Paulo\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 14:00 → 10/10, 17:00\n\nLocal aproximado · confira no mapa\n-23.584171,-46.660725\nCopiar coordenadas\nAbrir mapa",
+      "14\nFUTURO\n🇺🇸 Central Park, Nova York\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 15:00 → 10/10, 18:00\n\nLocal aproximado · confira no mapa\n40.7803,-73.963\nCopiar coordenadas\nAbrir mapa",
+      "15\nFUTURO\n🇺🇸 Chicago, EUA\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 16:00 → 10/10, 19:00\n\nLocal aproximado · confira no mapa\n41.898659,-87.623077\nCopiar coordenadas\nAbrir mapa",
+      "16\nFUTURO\n🇺🇸 Denver, EUA\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 17:00 → 10/10, 20:00\n\nLocal aproximado · confira no mapa\n39.7392,-104.9903\nCopiar coordenadas\nAbrir mapa",
+      "17\nFUTURO\n🇺🇸 Pier 39, São Francisco\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 18:00 → 10/10, 21:00\n\nLocal aproximado · confira no mapa\n37.8095,-122.4101\nCopiar coordenadas\nAbrir mapa",
+      "18\nFUTURO\n🇺🇸 Anchorage, Alasca\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 19:00 → 10/10, 22:00\n\nLocal aproximado · confira no mapa\n61.217019,-149.891609\nCopiar coordenadas\nAbrir mapa",
+      "19\nFUTURO\n🇺🇸 Honolulu, Havaí\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 21:00 → 11/10, 00:00\n\nLocal aproximado · confira no mapa\n21.2658,-157.8213\nCopiar coordenadas\nAbrir mapa",
+      "20\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 22:00 → 11/10, 01:00\n\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa"
+    ],
+    "scrollWidth": 375,
+    "viewportWidth": 375
+  },
+  "fly_full": {
+    "count": 28,
+    "event": "2026-10-zorua-community-day",
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "src": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "rows": [
+      "01\nPRÓXIMO\n🇰🇮 Kiritimati, Kiribati\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 09/10, 21:00 → 10/10, 00:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n1.987149,-157.477137\nCopiar coordenadas\nAbrir mapa",
+      "02\nFUTURO\n🇳🇿 Auckland, Nova Zelândia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 09/10, 22:00 → 10/10, 01:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n-36.852095,174.76318\nCopiar coordenadas\nAbrir mapa",
+      "03\nFUTURO\n🇦🇺 Sydney, Austrália\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 00:00 → 10/10, 03:00\n\nLocal aproximado · confira no mapa\n-33.866173,151.205945\nCopiar coordenadas\nAbrir mapa",
+      "04\nFUTURO\n🇯🇵 Shinjuku, Japão\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 02:00 → 10/10, 05:00\n\nLocal aproximado · confira no mapa\n35.68895,139.69054\nCopiar coordenadas\nAbrir mapa",
+      "05\nFUTURO\n🇯🇵 Osaka, Japão\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 02:00 → 10/10, 05:00\n\nLocal aproximado · confira no mapa\n34.65011,135.5105\nCopiar coordenadas\nAbrir mapa",
+      "06\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 03:00 → 10/10, 06:00\n\nLocal aproximado · confira no mapa\n25.033964,121.564468\nCopiar coordenadas\nAbrir mapa",
+      "07\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 03:00 → 10/10, 06:00\n\nLocal aproximado · confira no mapa\n25.0444,121.5296\nCopiar coordenadas\nAbrir mapa",
+      "08\nFUTURO\n🇭🇰 Hong Kong, Hong Kong\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 03:00 → 10/10, 06:00\n\nLocal aproximado · confira no mapa\n22.277957,114.15616\nCopiar coordenadas\nAbrir mapa",
+      "09\nFUTURO\n🇮🇩 Jacarta, Indonésia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 04:00 → 10/10, 07:00\n\nLocal aproximado · confira no mapa\n-6.175554,106.827587\nCopiar coordenadas\nAbrir mapa",
+      "10\nFUTURO\n🇮🇳 Chennai, Índia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 05:30 → 10/10, 08:30\n\nLocal aproximado · confira no mapa\n13.0403,80.2666\nCopiar coordenadas\nAbrir mapa",
+      "11\nFUTURO\n🇦🇪 Dubai, Emirados Árabes\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 07:00 → 10/10, 10:00\n\nLocal aproximado · confira no mapa\n25.07675,55.13294\nCopiar coordenadas\nAbrir mapa",
+      "12\nFUTURO\n🇹🇷 Istambul, Turquia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 08:00 → 10/10, 11:00\n\nLocal aproximado · confira no mapa\n41.0082,28.9784\nCopiar coordenadas\nAbrir mapa",
+      "13\nFUTURO\n🇬🇷 Tessalônica, Grécia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 08:00 → 10/10, 11:00\n\nLocal aproximado · confira no mapa\n40.626936,22.952342\nCopiar coordenadas\nAbrir mapa",
+      "14\nFUTURO\n🇪🇸 Zaragoza, Espanha\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 09:00 → 10/10, 12:00\n\nLocal aproximado · confira no mapa\n41.661609,-0.89464\nCopiar coordenadas\nAbrir mapa",
+      "15\nFUTURO\n🇮🇹 Roma, Itália\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 09:00 → 10/10, 12:00\n\nLocal aproximado · confira no mapa\n41.889988,12.493033\nCopiar coordenadas\nAbrir mapa",
+      "16\nFUTURO\n🇬🇧 Londres, Reino Unido\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 10:00 → 10/10, 13:00\n\nLocal aproximado · confira no mapa\n51.501,-0.1246\nCopiar coordenadas\nAbrir mapa",
+      "17\nFUTURO\n🇨🇻 Praia, Cabo Verde\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 12:00 → 10/10, 15:00\n\nLocal aproximado · confira no mapa\n14.910725,-23.527823\nCopiar coordenadas\nAbrir mapa",
+      "18\nFUTURO\n🇧🇷 Fernando de Noronha, Brasil\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 13:00 → 10/10, 16:00\n\nLocal aproximado · confira no mapa\n-3.8401,-32.41181\nCopiar coordenadas\nAbrir mapa",
+      "19\nFUTURO\n🇧🇷 Ibirapuera, São Paulo\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 14:00 → 10/10, 17:00\n\nLocal aproximado · confira no mapa\n-23.584171,-46.660725\nCopiar coordenadas\nAbrir mapa",
+      "20\nFUTURO\n🇧🇷 Ibirapuera, São Paulo, Brasil\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 14:00 → 10/10, 17:00\n\nLocal aproximado · confira no mapa\n-23.5841713,-46.66072464\nCopiar coordenadas\nAbrir mapa",
+      "21\nFUTURO\n🇦🇷 Buenos Aires, Argentina\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 14:00 → 10/10, 17:00\n\nLocal aproximado · confira no mapa\n-34.608403,-58.372164\nCopiar coordenadas\nAbrir mapa",
+      "22\nFUTURO\n🇺🇸 Central Park, Nova York\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 15:00 → 10/10, 18:00\n\nLocal aproximado · confira no mapa\n40.7803,-73.963\nCopiar coordenadas\nAbrir mapa",
+      "23\nFUTURO\n🇺🇸 Chicago, EUA\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 16:00 → 10/10, 19:00\n\nLocal aproximado · confira no mapa\n41.898659,-87.623077\nCopiar coordenadas\nAbrir mapa",
+      "24\nFUTURO\n🇺🇸 Denver, EUA\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 17:00 → 10/10, 20:00\n\nLocal aproximado · confira no mapa\n39.7392,-104.9903\nCopiar coordenadas\nAbrir mapa",
+      "25\nFUTURO\n🇺🇸 Pier 39, São Francisco\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 18:00 → 10/10, 21:00\n\nLocal aproximado · confira no mapa\n37.8095,-122.4101\nCopiar coordenadas\nAbrir mapa",
+      "26\nFUTURO\n🇺🇸 Anchorage, Alasca\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 19:00 → 10/10, 22:00\n\nLocal aproximado · confira no mapa\n61.217019,-149.891609\nCopiar coordenadas\nAbrir mapa",
+      "27\nFUTURO\n🇺🇸 Honolulu, Havaí\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 21:00 → 11/10, 00:00\n\nLocal aproximado · confira no mapa\n21.2658,-157.8213\nCopiar coordenadas\nAbrir mapa",
+      "28\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 22:00 → 11/10, 01:00\n\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa"
+    ],
+    "scrollWidth": 375,
+    "viewportWidth": 375
+  },
+  "fly_desktop": {
+    "count": 28,
+    "event": "2026-10-zorua-community-day",
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "src": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "scrollWidth": 1265,
+    "theme": "dark",
+    "viewportWidth": 1265
+  },
+  "gpx_link": {
+    "link": [
+      {
+        "download": "pokemon-centre-stamp-rally-japan-2026.gpx",
+        "hrefScheme": "blob",
+        "label": "Baixar GPX completo"
+      }
+    ],
+    "text": "×\nGO STAMP RALLY · ROTA SPIDEY\nThe Pokémon Centre Stamp Rally — Japão\n\nColecione selos nos Pokémon Centers do Japão e acompanhe a rota dos 17 locais.\n\n0/17\nconcluídos\n17/17\ncoordenadas exatas\n17\nrestantes\nROTA\nPróximo selo\n1 de 17\n1\nPokéStop exata\nPokémon Center Fukuoka\n\nFukuoka · Japão\n\nJR Hakata City • Amu Plaza Hakata 8F\n33.589108,130.418954\nCopiar\n← Anterior\nMarcar como feito\nPróximo →\nCOPIAR E BAIXAR\nCoordenadas da rota\n\nFormato latitude,longitude, uma coordenada por linha e na mesma ordem dos selos.\n\nCopiar todas\nCopiar só faltantes\nCopiar filtradas\nBaixar GPX completo\nSELO POR SELO\nSeus selos\n17/17\nTodas as regiões\nFukuoka\nFunabashi\nHiroshima\nKanazawa\nKyoto\nNagoya\nOkinawa\nOsaka\nSapporo\nSendai\nTakamatsu\nTóquio\nYokohama\nTodos\nFaltam\nFeitos\nCom coordenada\n1\n1\nPokémon Center Fukuoka\nFukuoka\nCoordenada confirmada\n2\n2\nPokémon Center Hiroshima\nHiroshima\nCoordenada confirmada\n3\n3\nPokémon Center Mega Tokyo\nTóquio\nCoordenada confirmada\n4\n4\nPokémon Center Kanazawa\nKanazawa\nCoordenada confirmada\n5\n5\nPokémon Center Kyoto\nKyoto\nCoordenada confirmada\n6\n6\nPokémon Center Nagoya\nNagoya\nCoordenada confirmada\n7\n7\nPokémon Center Okinawa\nOkinawa\nCoordenada confirmada\n8\n8\nPokémon Center Osaka\nOsaka\nCoordenada confirmada\n9\n9\nPokémon Center Osaka DX\nOsaka\nCoordenada confirmada\nRecompensas\nAo coletar o selo em um Pokémon Center participante, encontro com Pikachu com fundo de localização daquele Pokémon Center.\nO que você precisa saber\nO ponto extra no complexo Sunshine City pertence ao mesmo local do Pokémon Center Mega Tokyo e não conta como outro selo.\nFonte oficial"
+  },
+  "download_event": {
+    "error": "Error: Timed out after 15000ms waiting for download."
+  },
+  "incomplete_rally": {
+    "downloadLinks": 0,
+    "text": "×\nGO STAMP RALLY · ROTA SPIDEY\nPokéXciting! Cross-Region GO Stamp Rally\n\nRally regional oficial com cinco selos PokéXciting! distribuídos por cidades da Ásia-Pacífico.\n\n0/5\nconcluídos\n0/5\ncoordenadas exatas\n5\nrestantes\nROTA\nPróximo selo\n1 de 5\n1\nLocal do evento • coordenada ainda não confirmada\nKLCC Park • In front of Esplanade\n\nKuala Lumpur · Malásia\n\nCoordenada exata ainda não confirmada.\n\n← Anterior\nMarcar como feito\nPróximo →\nCOPIAR E BAIXAR\nCoordenadas da rota\n\nFormato latitude,longitude, uma coordenada por linha e na mesma ordem dos selos.\n\nCopiar todas\nCopiar só faltantes\nCopiar filtradas\n\nA rota GPX ficará disponível quando todas as 5 PokéStops estiverem confirmadas. Você já pode copiar os pontos disponíveis.\n\nSELO POR SELO\nSeus selos\n5/5\nTodas as regiões\nBangkok\nKuala Lumpur\nManila\nSingapura\nTaipei\nTodos\nFaltam\nFeitos\nCom coordenada\n1\n1\nKLCC Park • In front of Esplanade\nKuala Lumpur\nCoordenada pendente\n2\n2\nXiangti Boulevard\nTaipei\nCoordenada pendente\n3\n3\nChangi Airport • Terminal 3 Departure Hall\nSingapura\nCoordenada pendente\n4\n4\nSM Mall of Asia • MOA Sky\nManila\nCoordenada pendente\n5\n5\nLocal a confirmar\nBangkok\nCoordenada pendente\nRecompensas\nCada selo regional dá encontro com um PokéXciting! Pikachu da cidade, com Location Background local.\nFonte oficial"
+  },
+  "console": [
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:16.542Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:16.542Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:28.856Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:28.857Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:28.860Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:28.860Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:30.923Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-02T23:58:30.923Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.049Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.049Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.050Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.050Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.678Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.678Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.681Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:19.681Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:21.641Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:21.641Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:22.284Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    },
+    {
+      "level": "error",
+      "message": "Error sending browser metadata to extension: Object",
+      "timestamp": "2026-10-03T00:00:22.322Z",
+      "url": "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/content-script.bundle.js"
+    }
+  ],
+  "served_approved_png": {
+    "browser_path": "/home/oai/share/d8061830-942b-4f83-9017-19da51691079/e2258bfb-2c9e-4659-af8c-bcb2393f9cfa",
+    "bytes": 2299199,
+    "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+    "width": 1121,
+    "height": 1403,
+    "approved_sha_match": true
+  },
+  "deployment_id": "dpl_8EsSkfWnfXqbB9rLNPTHUfXfEJpB",
+  "resume_authorization": {
+    "text": "Opa / Voltei, temos sinal",
+    "at": "2026-10-02T20:49:18-03:00"
+  },
+  "gpx_xml_proof": "docs/qa/japan-rally-browser-download-0433c32-20261002.json",
+  "push_public_key": {
+    "status": 503,
+    "body": {
+      "error": "push_not_configured"
+    },
+    "cache_control": "no-store",
+    "configuration_complete": false,
+    "real_device_delivery": "PENDING"
+  },
+  "physical_android": "PENDING",
+  "home_weekly_visual_zorua": "NOT_OBSERVED_EVENT_OUTSIDE_CURRENT_WINDOW",
+  "source_rechecked_at": "2026-10-03T00:03:06.669Z",
+  "source_url": "https://pokemongo.com/pt-BR/news/communityday-october-2026-zorua",
+  "browser_extension_errors": "Returned log batch contains extension metadata errors; not attributed to app.",
+  "screenshots": [
+    {
+      "path": "docs/qa/spidey-zorua-approved-mobile-0433c32-20261002.jpg",
+      "sha256": "46c27748c5c903b11320ab66d96d8b45cb1b30358bb42da984038585b5833033",
+      "bytes": 101710
+    },
+    {
+      "path": "docs/qa/spidey-zorua-approved-desktop-0433c32-20261002.jpg",
+      "sha256": "95f83785cfcb231823eb0c17c85b25f7483263c696bb1ba8c68a80ea3f3c2c16",
+      "bytes": 134321
+    },
+    {
+      "path": "docs/qa/spidey-zorua-fly-mobile-0433c32-20261002.jpg",
+      "sha256": "3fd3294f73758bc16caa9439f5ad541a423b9ddcaa6a316d7e7536ed066f166c",
+      "bytes": 68219
+    },
+    {
+      "path": "docs/qa/spidey-zorua-fly-verified-0433c32-20261002.jpg",
+      "sha256": "98b9f0892797a27580ed690079666f58a2ca79b86f550e951b7d580ae9401717",
+      "bytes": 107798
+    },
+    {
+      "path": "docs/qa/spidey-japan-gpx-link-0433c32-20261002.jpg",
+      "sha256": "111e8cc62e627caf05526ff3817a6904b6729e72ed9b85b423eec2099c1f2eb6",
+      "bytes": 81059
+    }
+  ]
+}
