@@ -1,5 +1,15 @@
 // Review candidates and recovered illustration crops. This never grants approval.
-window.SPIDEY_PREVIEW_ART=Object.freeze({});
+window.SPIDEY_PREVIEW_ART=Object.freeze({
+  "2026-10-04-scenic-sunday": {
+    "file": "assets/events/review/scenic-sunday-20261004-v2.png",
+    "status": "PENDING_REVIEW",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+    "review_record": "docs/qa/SCENIC_SUNDAY_REVIEW_20261003.json"
+  }
+});
 
 // All screens share this explicit exception for a known unavailable original.
 // A healthy approved original always wins; unrelated drafts never substitute it.

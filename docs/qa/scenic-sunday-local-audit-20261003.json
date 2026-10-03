@@ -1,0 +1,217 @@
+{
+  "status": "PASSED_LOCAL",
+  "node_tests_passed": 33,
+  "master_entries_preserved": 16,
+  "approved_asset_files_preserved": 15,
+  "protected_files": 272,
+  "frozen_review_approval_json_records": 17,
+  "other_events_unchanged": 123,
+  "unchanged_event_fields": [
+    "schedule",
+    "calendar",
+    "locations",
+    "gpx",
+    "notifications",
+    "status",
+    "category",
+    "tags"
+  ],
+  "new_fly_eligibility": false,
+  "preview_helper_unchanged": true,
+  "roles": {
+    "thumb": {
+      "url": "assets/events/review/scenic-sunday-20261004-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "sourceRole": "preview_candidate:poster",
+      "status": "PENDING_REVIEW"
+    },
+    "card": {
+      "url": "assets/events/review/scenic-sunday-20261004-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "sourceRole": "preview_candidate:poster",
+      "status": "PENDING_REVIEW"
+    },
+    "weekly": {
+      "url": "assets/events/review/scenic-sunday-20261004-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "sourceRole": "preview_candidate:poster",
+      "status": "PENDING_REVIEW"
+    },
+    "hero": {
+      "url": "assets/events/review/scenic-sunday-20261004-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "sourceRole": "preview_candidate:poster",
+      "status": "PENDING_REVIEW"
+    },
+    "poster": {
+      "url": "assets/events/review/scenic-sunday-20261004-v2.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "sourceRole": "preview_candidate:poster",
+      "status": "PENDING_REVIEW"
+    }
+  },
+  "cache": "spidey-app-20261003-scenic-review-v2",
+  "cache_files": 77,
+  "catalog_sha256": "90b3af70743455216a020e65df7dab4a0c7c461f22356f886ec04886cff479ef",
+  "syntax": "preview-art.js/sw.js passed",
+  "whitespace": "passed",
+  "inventory": {
+    "window": "2026-10-01/2026-10-07",
+    "events": 23,
+    "counts": {
+      "APPROVED": 11,
+      "PENDING_REVIEW": 1,
+      "MISSING": 11
+    },
+    "rows": [
+      {
+        "event_id": "2026-09-twilight-trails-season",
+        "title": "Temporada Twilight Trails",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-09-go-pass",
+        "title": "Passe GO: Setembro",
+        "status": "APPROVED",
+        "url": "assets/events/premium/go-pass-september-latios-approved-v1.png?v=d73632253693"
+      },
+      {
+        "event_id": "2026-09-harvest-festival-applin",
+        "title": "Festival da Colheita: Pomar de Applin",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-09-raids-xerneas",
+        "title": "Reides 5★: Xerneas",
+        "status": "APPROVED",
+        "url": "assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+      },
+      {
+        "event_id": "2026-09-mega-victreebel-raids",
+        "title": "Mega Reides: Mega Victreebel",
+        "status": "APPROVED",
+        "url": "assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+      },
+      {
+        "event_id": "2026-09-gbl-29-1006",
+        "title": "GO Battle League: Master / Mega Color Cup",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-09-iit-delhi-rendezvous",
+        "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-10-harvest-taken-over",
+        "title": "Festival da Colheita: A Invasão",
+        "status": "APPROVED",
+        "url": "assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+      },
+      {
+        "event_id": "2026-10-patterns-of-the-wild-indonesia",
+        "title": "Patterns of the Wild • Indonésia",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-10-gigantamax-cinderace-max-day",
+        "title": "Dia de Batalhas Max: Cinderace Gigamax",
+        "status": "APPROVED",
+        "url": "assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+      },
+      {
+        "event_id": "2026-10-world-space-week",
+        "title": "Semana Mundial do Espaço 2026",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-10-go-pass",
+        "title": "Passe GO: Outubro",
+        "status": "APPROVED",
+        "url": "assets/events/premium/go-pass-october-kyogre-approved-v1.png?v=c194eee09b62"
+      },
+      {
+        "event_id": "2026-10-01-spotlight-seedot",
+        "title": "Hora do Holofote: Seedot",
+        "status": "APPROVED",
+        "url": "assets/events/premium/seedot-spotlight-approved-v1.png?v=6ac0ebbd5b60"
+      },
+      {
+        "event_id": "2026-10-07-raid-hour-yveltal",
+        "title": "Hora de Reides: Yveltal",
+        "status": "APPROVED",
+        "url": "assets/events/premium/yveltal-raid-hour-approved-v1.png?v=a3881d22755b"
+      },
+      {
+        "event_id": "2026-10-05-max-monday-sizzlipede",
+        "title": "Max Monday: Dynamax Sizzlipede",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-10-raids-yveltal",
+        "title": "Reides 5★: Yveltal",
+        "status": "APPROVED",
+        "url": "assets/events/premium/yveltal-rotation-approved-v1.png?v=dbed7399b3e3"
+      },
+      {
+        "event_id": "2026-10-mega-blastoise-raids",
+        "title": "Mega Reides: Mega Blastoise",
+        "status": "APPROVED",
+        "url": "assets/events/premium/mega-blastoise-rotation-approved-v1.png?v=474fa9a79395"
+      },
+      {
+        "event_id": "2026-10-gbl-06-13",
+        "title": "GO Battle League: Great Mega / Ultra Mega / Master Mega",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-10-shadow-thundurus",
+        "title": "Reides Sombrosas: Thundurus (Forma Encarnada)",
+        "status": "APPROVED",
+        "url": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png?v=eb8141c8220c"
+      },
+      {
+        "event_id": "2026-10-04-scenic-sunday",
+        "title": "Descoberta Diária: Domingo Pitoresco",
+        "status": "PENDING_REVIEW",
+        "url": "assets/events/review/scenic-sunday-20261004-v2.png?v=0ecff3534586"
+      },
+      {
+        "event_id": "2026-10-06-showcase-tuesday",
+        "title": "Descoberta Diária: Terça de Vitrine",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-10-01-go-battle-thursday",
+        "title": "Descoberta Diária: Quinta de Batalhas GO",
+        "status": "MISSING",
+        "url": null
+      },
+      {
+        "event_id": "2026-10-02-friendship-friday",
+        "title": "Descoberta Diária: Sexta da Amizade",
+        "status": "MISSING",
+        "url": null
+      }
+    ]
+  }
+}

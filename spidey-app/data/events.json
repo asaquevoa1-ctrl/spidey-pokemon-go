@@ -4891,7 +4891,7 @@
       "id": "2026-10-04-scenic-sunday",
       "slug": "2026-10-04-scenic-sunday",
       "title": "Descoberta Diária: Domingo Pitoresco",
-      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "summary": "Mais Pokémon na natureza e nas Rotas; Incenso atrai ainda mais nas Rotas, distância menor para doces de companheiro e até três encontros com Mateo.",
       "category": "daily_discovery",
       "tags": [
         "Domingo Pitoresco",
@@ -4899,7 +4899,7 @@
         "Twilight Trails"
       ],
       "source": {
-        "name": "Twilight Trails • Daily Discoveries",
+        "name": "Leek Duck • Descobertas Diárias da temporada",
         "url": "https://leekduck.com/events/season-24-twilight-trails/",
         "confidence": "verified"
       },
@@ -4923,12 +4923,22 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Eevee na arte é um companheiro ilustrativo; nenhuma espécie específica é anunciada como destaque desta Descoberta Diária.",
+        "O guia atual da Leek Duck informa estes bônus para a temporada; fonte comunitária, sujeita a alterações.",
+        "As Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Mais Pokémon aparecendo na natureza e ao percorrer Rotas.",
+        "Incenso atrai ainda mais Pokémon enquanto você percorre Rotas.",
+        "Distância reduzida para ganhar doces ao explorar Rotas com seu Pokémon companheiro.",
+        "Mateo pode ser encontrado até três vezes no dia ao percorrer Rotas."
+      ]
     },
     {
       "id": "2026-10-11-scenic-sunday",
