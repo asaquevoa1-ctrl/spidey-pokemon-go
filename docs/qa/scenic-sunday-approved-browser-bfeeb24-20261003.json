@@ -1,0 +1,88 @@
+{
+  "status": "PASSED_PREVIEW",
+  "observed_at": "2026-10-03T20:06:29.391Z",
+  "code_commit": "bfeeb24797b582441cd8e217f37bac4e485ae356",
+  "deployment_id": "dpl_Ds5ovzfof7tmatsTw3KEGPG2TChf",
+  "preview_url": "https://spidey-pokemon-jtmdvu1t9-spidey3.vercel.app/spidey-app/index.html",
+  "wrapper_url": "https://spidey-pokemon-jtmdvu1t9-spidey3.vercel.app/spidey-app/qa-responsive.html",
+  "mobile": {
+    "dialog": {
+      "clientWidth": 360,
+      "left": 0,
+      "scrollTop": 0,
+      "scrollWidth": 360,
+      "width": 375
+    },
+    "focus": "closeDialog",
+    "image": {
+      "complete": true,
+      "fit": "contain",
+      "height": 449.828125,
+      "naturalHeight": 1402,
+      "naturalWidth": 1122,
+      "src": "https://spidey-pokemon-jtmdvu1t9-spidey3.vercel.app/spidey-app/assets/events/premium/scenic-sunday-20261004-approved-v1.png?v=0ecff3534586",
+      "width": 360
+    },
+    "page": {
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Domingo Pitoresco\n\nMais Pokémon na natureza e nas Rotas; Incenso atrai ainda mais nas Rotas, distância menor para doces de companheiro e até três encontros com Mateo.\n\nHorários e locais\nHorário\n04 de out., 00:00 → 04 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nMais Pokémon aparecendo na natureza e ao percorrer Rotas.\nIncenso atrai ainda mais Pokémon enquanto você percorre Rotas.\nDistância reduzida para ganhar doces ao explorar Rotas com seu Pokémon companheiro.\nMateo pode ser encontrado até três vezes no dia ao percorrer Rotas.\nObservações\nEevee na arte é um companheiro ilustrativo; nenhuma espécie específica é anunciada como destaque desta Descoberta Diária.\nO guia atual da Leek Duck informa estes bônus para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+    "theme": "light",
+    "viewport": {
+      "height": 850,
+      "width": 390
+    }
+  },
+  "desktop": {
+    "dialog": {
+      "clientWidth": 703,
+      "left": 272.5,
+      "scrollTop": 0,
+      "scrollWidth": 703,
+      "width": 720
+    },
+    "focus": "closeDialog",
+    "image": {
+      "complete": true,
+      "fit": "contain",
+      "height": 620,
+      "naturalHeight": 1402,
+      "naturalWidth": 1122,
+      "src": "https://spidey-pokemon-jtmdvu1t9-spidey3.vercel.app/spidey-app/assets/events/premium/scenic-sunday-20261004-approved-v1.png?v=0ecff3534586",
+      "width": 703
+    },
+    "page": {
+      "clientWidth": 1265,
+      "scrollWidth": 1265
+    },
+    "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Domingo Pitoresco\n\nMais Pokémon na natureza e nas Rotas; Incenso atrai ainda mais nas Rotas, distância menor para doces de companheiro e até três encontros com Mateo.\n\nHorários e locais\nHorário\n04 de out., 00:00 → 04 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nMais Pokémon aparecendo na natureza e ao percorrer Rotas.\nIncenso atrai ainda mais Pokémon enquanto você percorre Rotas.\nDistância reduzida para ganhar doces ao explorar Rotas com seu Pokémon companheiro.\nMateo pode ser encontrado até três vezes no dia ao percorrer Rotas.\nObservações\nEevee na arte é um companheiro ilustrativo; nenhuma espécie específica é anunciada como destaque desta Descoberta Diária.\nO guia atual da Leek Duck informa estes bônus para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+    "theme": "dark",
+    "viewport": {
+      "height": 850,
+      "width": 1280
+    }
+  },
+  "served_file": "/home/oai/share/159dc8a2-1163-4c21-9f8d-c357462d4302/796614c7-5d1f-40c0-970e-9220363a653b",
+  "home_to_detail": "PASSED_MOBILE_AND_DESKTOP",
+  "physical_android": "PENDING",
+  "public_access": "BLOCKED_USER_PHONE_LOGIN",
+  "access_scope": "Temporary share cookie used only for own QA; does not verify access from another person’s phone.",
+  "weekly_scope": "Resolver validated locally; latest browser observation of Oct4 text row is historical candidate QA 14fa3ad, no new poster thumbnail claim.",
+  "existing_limit": "Detail still uses generic location placeholder: O local ainda será confirmado.",
+  "served_png_sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+  "served_png_bytes": 2739274,
+  "served_png_matches_approved": true,
+  "proofs": [
+    {
+      "file": "docs/qa/proofs/spidey-scenic-sunday-approved-mobile-bfeeb24-20261003.jpg",
+      "bytes": 117268,
+      "sha256": "c61cf225b83aa9c2d565aa3c097138663650be4f0250e8a617850bd545434328"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-scenic-sunday-approved-desktop-bfeeb24-20261003.jpg",
+      "bytes": 164395,
+      "sha256": "3c297b81945278db2f3b9303e16978337e694d5b27ddd8e8e76b82adf1ccdadf"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "status": "SCENIC_SUNDAY_REVIEW_QA_PASSED_PUBLIC_BLOCKED",
+  "status": "SCENIC_SUNDAY_APPROVED_QA_PASSED_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -15,8 +15,8 @@
   "gates": {
     "premium_window_20261001_07": {
       "events": 23,
-      "approved": 11,
-      "pending_posters": 1,
+      "approved": 12,
+      "pending_posters": 0,
       "missing": 11,
       "status": "PENDING_REMAINING_COVERAGE"
     },
@@ -27,8 +27,8 @@
     ],
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
-    "approved_master_integrity": "16_MASTER_ENTRIES_15_APPROVED_FILES_PRESERVED_14FA3AD",
-    "mobile_desktop_core": "SCENIC_SUNDAY_MOBILE_CLARO_DESKTOP_ESCURO_SERVED_EXACT_PNG_PASSED_14FA3AD_PHYSICAL_PENDING",
+    "approved_master_integrity": "17_MASTER_ENTRIES_16_PRIOR_ENTRIES_15_PRIOR_FILES_PRESERVED_BFEEB24",
+    "mobile_desktop_core": "SCENIC_SUNDAY_APPROVED_MOBILE_CLARO_DESKTOP_ESCURO_SERVED_EXACT_PNG_PASSED_BFEEB24_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
     "push_live_configuration": "BLOCKED_DASHBOARD_LOGIN_HTTP_503_PUSH_NOT_CONFIGURED_A17F6D4",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
@@ -36,10 +36,10 @@
     "go_pass_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_FF37843",
     "tester_shared_preview_access": "BLOCKED_USER_PHONE_LOGIN_20261003_0847_BRT_DASHBOARD_AUTH_NOT_COMPLETED",
     "latios_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_D14897B",
-    "scenic_sunday_poster": "PENDING_HUMAN_REVIEW_PREVIEW_QA_PASSED_14FA3AD"
+    "scenic_sunday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_BFEEB24"
   },
   "next_batch": [
-    "Decisão humana sobre Domingo Pitoresco v2 e cobertura das 11 peças ainda sem arquivo Home/FLY na janela 01–07/10, com fontes e recusas preservadas",
+    "Cobertura das 11 artes ainda pendentes na janela 01–07/10, com fontes e recusas preservadas; Domingo Pitoresco já aprovado",
     "Acesso público Vercel e alertas: painel não autenticado; nenhum segredo/proteção alterado",
     "QA físico Android/PWA/atualização/offline/recebimento push"
   ],
@@ -61,21 +61,22 @@
     "03/10 09:04:55 BRT: aprovação explícita do Passe GO/Kyogre v1 entregue em PNG integral. ff37843: cópia premium idêntica, master 15/14 anteriores preservados, preview vazio, catálogo inalterado, 33 testes e QA novo mobile/desktop/hash servido passaram. Acesso de testadores e Android físico permanecem pendentes.",
     "03/10: Latios v1 PENDING_REVIEW; fonte oficial/bônus condicionais conferidos, 33 testes, 15 masters e 123 outros eventos preservados; QA mobile/desktop e servido hash exato no código 760b117.",
     "03/10 13:01 BRT: Latios v1 aprovado explicitamente; PNG premium idêntico, 15 masters anteriores e catálogo inteiro preservados; 33 testes e QA novo mobile/desktop/servido exato d14897b passaram.",
-    "03/10: Domingo Pitoresco v2 PENDING_REVIEW; fonte atual comunitária, quatro bônus com condições de Rotas/companheiro e Eevee ilustrativo. 33 testes, 16 masters/15 arquivos e 123 outros eventos preservados. QA 14fa3ad mobile Claro/desktop Escuro e bytes servidos exatos passou; Semana mostra o evento em linha textual."
+    "03/10: Domingo Pitoresco v2 PENDING_REVIEW; fonte atual comunitária, quatro bônus com condições de Rotas/companheiro e Eevee ilustrativo. 33 testes, 16 masters/15 arquivos e 123 outros eventos preservados. QA 14fa3ad mobile Claro/desktop Escuro e bytes servidos exatos passou; Semana mostra o evento em linha textual.",
+    "03/10 16:52:31 BRT: “Aprovo” consolida somente o PNG Domingo Pitoresco v2, cópia premium exata. bfeeb24: master 17/16 anteriores e 15 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/servido exato passaram. Janela23:12 APPROVED/0 candidatas/11 pendentes; acesso público e Android continuam pendentes."
   ],
-  "updated_at": "2026-10-03T19:38:22.947321+00:00",
-  "code_commit": "ff37843208635a0923adc1996371aaacd2a430f6",
-  "preview_url": "https://spidey-pokemon-i6523e1iy-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-03T20:08:53.100281+00:00",
+  "code_commit": "bfeeb24797b582441cd8e217f37bac4e485ae356",
+  "preview_url": "https://spidey-pokemon-jtmdvu1t9-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
-    "13 eventos sem arquivo Home/FLY na janela 01–07/10; 10 APPROVED e nenhuma candidata ativa. GO Pass aprovado pela decisão de 03/10 09:04:55 BRT.",
+    "11 eventos ainda sem arte Home/FLY na janela 01–07/10; 12 APPROVED e nenhuma candidata ativa. Domingo Pitoresco aprovado pela decisão de 03/10 16:52:31 BRT.",
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
     "Lançamento completo e produção não aprovados",
     "Link de compartilhamento ainda bloqueia testador no celular; teste HTTP anterior não confirma acesso real. Painel exige login e formulário seguro não concluído. Não repetir autenticação sem nova solicitação."
   ],
-  "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json",
-  "post_approval_qa_record": "docs/qa/thundurus-elgyem-approved-browser-29c1aec-20261003.json",
+  "approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json",
+  "post_approval_qa_record": "docs/qa/scenic-sunday-approved-browser-bfeeb24-20261003.json",
   "pause_requested": {
     "at": "2026-10-02T18:38:35-03:00",
     "budget_minutes": 5,
@@ -84,10 +85,10 @@
     "active": false
   },
   "gpx_qa_record": "docs/qa/japan-rally-browser-download-0433c32-20261002.json",
-  "candidate_review_record": "docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json",
-  "candidate_qa_record": "docs/qa/THUNDURUS_ELGYEM_QA_20261002.json",
+  "candidate_review_record": "docs/qa/SCENIC_SUNDAY_REVIEW_20261003.json",
+  "candidate_qa_record": "docs/qa/scenic-sunday-browser-14fa3ad-20261003.json",
   "current_art_review_record": "docs/qa/SCENIC_SUNDAY_REVIEW_20261003.json",
-  "current_art_qa_record": "docs/qa/go-pass-approved-browser-ff37843-20261003.json",
+  "current_art_qa_record": "docs/qa/scenic-sunday-approved-browser-bfeeb24-20261003.json",
   "art_delivery_followup": {
     "reported_at": "2026-10-03T08:48:33-03:00",
     "event_id": "2026-10-go-pass",
@@ -97,5 +98,10 @@
       "at": "2026-10-03T09:04:55-03:00"
     }
   },
-  "current_art_approval_record": "docs/qa/LATIOS_APPROVAL_20261003.json"
+  "current_art_approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json",
+  "current_art_decision": {
+    "text": "Aprovo",
+    "at": "2026-10-03T16:52:31-03:00",
+    "context": "Decisão explícita após o PNG integral Domingo Pitoresco v2 e a prova desktop mostrados na resposta imediatamente anterior. Aprovação exclusiva desta imagem, sem aprovação de lançamento."
+  }
 }
