@@ -1,0 +1,192 @@
+{
+  "status": "PASSED",
+  "created_at": "2026-10-03T16:07:17.986Z",
+  "master_entries": 16,
+  "previous_master_entries_preserved": 15,
+  "previous_approved_file_count": 14,
+  "candidate_record_frozen": true,
+  "approved_copy_identical": true,
+  "catalog_unchanged": true,
+  "catalog_events": 124,
+  "new_fly_eligibility": false,
+  "review_helper_unchanged": true,
+  "syntax_passed": [
+    "premium-approved-master.js",
+    "preview-art.js",
+    "sw.js"
+  ],
+  "cache_files": 76,
+  "roles": {
+    "thumb": {
+      "url": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "sourceRole": "premium_catalog:thumb",
+      "standard": "spidey-premium-v1"
+    },
+    "card": {
+      "url": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "sourceRole": "premium_catalog:card",
+      "standard": "spidey-premium-v1"
+    },
+    "weekly": {
+      "url": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "sourceRole": "premium_catalog:card",
+      "standard": "spidey-premium-v1"
+    },
+    "hero": {
+      "url": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "sourceRole": "premium_catalog:hero",
+      "standard": "spidey-premium-v1"
+    },
+    "poster": {
+      "url": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "sourceRole": "premium_catalog:poster",
+      "standard": "spidey-premium-v1"
+    }
+  },
+  "inventory": {
+    "events": 23,
+    "approved": 11,
+    "pending_posters": 0,
+    "missing": 12,
+    "rows": [
+      {
+        "event_id": "2026-09-twilight-trails-season",
+        "title": "Temporada Twilight Trails",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-09-go-pass",
+        "title": "Passe GO: Setembro",
+        "status": "APPROVED",
+        "file": "assets/events/premium/go-pass-september-latios-approved-v1.png?v=d73632253693"
+      },
+      {
+        "event_id": "2026-09-harvest-festival-applin",
+        "title": "Festival da Colheita: Pomar de Applin",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-09-raids-xerneas",
+        "title": "Reides 5★: Xerneas",
+        "status": "APPROVED",
+        "file": "assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+      },
+      {
+        "event_id": "2026-09-mega-victreebel-raids",
+        "title": "Mega Reides: Mega Victreebel",
+        "status": "APPROVED",
+        "file": "assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+      },
+      {
+        "event_id": "2026-09-gbl-29-1006",
+        "title": "GO Battle League: Master / Mega Color Cup",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-09-iit-delhi-rendezvous",
+        "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-harvest-taken-over",
+        "title": "Festival da Colheita: A Invasão",
+        "status": "APPROVED",
+        "file": "assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+      },
+      {
+        "event_id": "2026-10-patterns-of-the-wild-indonesia",
+        "title": "Patterns of the Wild • Indonésia",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-gigantamax-cinderace-max-day",
+        "title": "Dia de Batalhas Max: Cinderace Gigamax",
+        "status": "APPROVED",
+        "file": "assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+      },
+      {
+        "event_id": "2026-10-world-space-week",
+        "title": "Semana Mundial do Espaço 2026",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-go-pass",
+        "title": "Passe GO: Outubro",
+        "status": "APPROVED",
+        "file": "assets/events/premium/go-pass-october-kyogre-approved-v1.png?v=c194eee09b62"
+      },
+      {
+        "event_id": "2026-10-01-spotlight-seedot",
+        "title": "Hora do Holofote: Seedot",
+        "status": "APPROVED",
+        "file": "assets/events/premium/seedot-spotlight-approved-v1.png?v=6ac0ebbd5b60"
+      },
+      {
+        "event_id": "2026-10-07-raid-hour-yveltal",
+        "title": "Hora de Reides: Yveltal",
+        "status": "APPROVED",
+        "file": "assets/events/premium/yveltal-raid-hour-approved-v1.png?v=a3881d22755b"
+      },
+      {
+        "event_id": "2026-10-05-max-monday-sizzlipede",
+        "title": "Max Monday: Dynamax Sizzlipede",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-raids-yveltal",
+        "title": "Reides 5★: Yveltal",
+        "status": "APPROVED",
+        "file": "assets/events/premium/yveltal-rotation-approved-v1.png?v=dbed7399b3e3"
+      },
+      {
+        "event_id": "2026-10-mega-blastoise-raids",
+        "title": "Mega Reides: Mega Blastoise",
+        "status": "APPROVED",
+        "file": "assets/events/premium/mega-blastoise-rotation-approved-v1.png?v=474fa9a79395"
+      },
+      {
+        "event_id": "2026-10-gbl-06-13",
+        "title": "GO Battle League: Great Mega / Ultra Mega / Master Mega",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-shadow-thundurus",
+        "title": "Reides Sombrosas: Thundurus (Forma Encarnada)",
+        "status": "APPROVED",
+        "file": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png?v=eb8141c8220c"
+      },
+      {
+        "event_id": "2026-10-04-scenic-sunday",
+        "title": "Descoberta Diária: Domingo Pitoresco",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-06-showcase-tuesday",
+        "title": "Descoberta Diária: Terça de Vitrine",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-01-go-battle-thursday",
+        "title": "Descoberta Diária: Quinta de Batalhas GO",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-02-friendship-friday",
+        "title": "Descoberta Diária: Sexta da Amizade",
+        "status": "MISSING",
+        "file": null
+      }
+    ]
+  }
+}

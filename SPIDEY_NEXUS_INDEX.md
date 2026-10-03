@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-03
 
-Estado corrente: Latios/Passe GO de setembro v1 PENDING_REVIEW, PNG integral entregue no chat e integrado no preview. Fonte oficial PT-BR conferida; QA PASSED_PREVIEW no código `760b117`: 33 testes, mobile Claro/desktop Escuro e arquivo servido idêntico à candidata. Todos os 15 masters, 14 arquivos aprovados e 123 outros eventos preservados. Janela 01–07/10: 23 eventos, 10 APPROVED, 1 PENDING_REVIEW e 12 sem arquivo Home/FLY. Passe GO de outubro/Kyogre permanece APPROVED. Acesso público BLOCKED_USER_PHONE_LOGIN; painel sem autenticação administrativa concluída. Android/PWA/push e lançamento completo pendentes. Registro: `docs/qa/LATIOS_REVIEW_20261003.json`.
+Estado corrente: Latios/Passe GO de setembro v1 APPROVED pela decisão “Eu aprovo, com certeza”, 03/10 13:01:11 BRT. PNG premium idêntico à candidata, master com 16 entradas e 15 anteriores preservadas; preview vazio. QA pós-aprovação do novo código ainda PENDING. Janela 01–07/10: 23 eventos, 11 APPROVED, 0 candidatas e 12 sem arquivo Home/FLY. Passe GO de outubro/Kyogre permanece APPROVED. Acesso público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push e lançamento completo pendentes. Registro: `docs/qa/LATIOS_APPROVAL_20261003.json`.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.

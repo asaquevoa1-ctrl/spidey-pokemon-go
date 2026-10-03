@@ -131,6 +131,15 @@
     "height": 1402,
     "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
     "approval_record": "docs/qa/GO_PASS_APPROVAL_20261003.json"
+  },
+  "2026-09-go-pass": {
+    "file": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+    "approval_record": "docs/qa/LATIOS_APPROVAL_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
