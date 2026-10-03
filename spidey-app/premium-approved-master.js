@@ -140,6 +140,15 @@
     "height": 1402,
     "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
     "approval_record": "docs/qa/LATIOS_APPROVAL_20261003.json"
+  },
+  "2026-10-04-scenic-sunday": {
+    "file": "assets/events/premium/scenic-sunday-20261004-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+    "approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
