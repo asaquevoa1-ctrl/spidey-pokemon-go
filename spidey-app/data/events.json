@@ -3097,8 +3097,8 @@
     {
       "id": "2026-10-go-pass",
       "slug": "2026-10-go-pass",
-      "title": "GO Pass: Outubro",
-      "summary": "GO Pass de outubro com Kyogre e retorno do Globo da Sorte no Passe Deluxe.",
+      "title": "Passe GO: Outubro",
+      "summary": "Passe GO de outubro com encontro com Kyogre e Globo da Sorte na versão Deluxe.",
       "category": "go_pass",
       "tags": [
         "GO Pass",
@@ -3107,7 +3107,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-pass-october-2026",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-october-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -3130,14 +3130,30 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O Passe GO gratuito é recebido automaticamente; o Deluxe é uma versão paga.",
+        "As recompensas desbloqueadas podem ser resgatadas até 5/11/2026 às 10h, horário local.",
+        "O Globo da Sorte do Deluxe expira em 8/11/2026 às 23h59, horário local.",
+        "Kyogre pode ser Brilhante com sorte; nenhuma chance aumentada é anunciada."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Encontro com Kyogre ao progredir no Passe GO.",
+        "Globo da Sorte como recompensa final do Passe GO Deluxe (versão paga).",
+        "Ao atingir o Ranque 50: 2× duração do Incenso de Aventura Diário."
+      ],
+      "pokemon": [
+        {
+          "name": "Kyogre",
+          "note": "Encontro como recompensa do Passe GO."
+        }
+      ]
     },
     {
       "id": "2026-10-zorua-community-day",

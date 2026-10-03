@@ -6,6 +6,28 @@ function setup(){
  for(const file of ['premium-approved-master.js','preview-art.js','art-system.js','premium-event-art.js','weekly.js'])vm.runInContext(fs.readFileSync('spidey-app/'+file,'utf8').replace(/\nloadWeeklyData\(\);\s*$/,''),context);
  return {window,context};
 }
+test('October GO Pass candidate preserves approved masters and keeps paid/rank conditions explicit',()=>{
+ const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/GO_PASS_REVIEW_20261003.json','utf8'));
+ const c=record.candidates[0],events=JSON.parse(fs.readFileSync('spidey-app/data/events.json','utf8')).events,e=events.find(e=>e.id===c.event_id);
+ assert.equal(record.status,'PENDING_REVIEW');assert.equal(record.approval,null);
+ assert.equal(c.event_id,'2026-10-go-pass');assert.equal(c.revision,1);assert.equal(c.source_classification,'official');
+ assert.equal(e.schedule.start_local,'2026-10-06T10:00:00-03:00');assert.equal(e.schedule.end_local,'2026-11-03T10:00:00-03:00');
+ assert.equal(e.title,'Passe GO: Outubro');assert.equal(e.source.confidence,'official');assert.equal(e.source.url,'https://pokemongo.com/pt-BR/news/go-pass-october-2026');
+ assert.ok(e.bonuses.includes('Globo da Sorte como recompensa final do Passe GO Deluxe (versão paga).'));
+ assert.ok(e.bonuses.includes('Ao atingir o Ranque 50: 2× duração do Incenso de Aventura Diário.'));
+ assert.equal(e.calendar.mode,'hidden');assert.equal(e.gpx.enabled,false);
+ const file=fs.readFileSync(c.file),hash=crypto.createHash('sha256').update(file).digest('hex');
+ assert.equal(hash,c.sha256);assert.equal(file.length,c.bytes);assert.equal(file.readUInt32BE(16),c.width);assert.equal(file.readUInt32BE(20),c.height);
+ assert.equal(w.SPIDEY_APPROVED_ART_MASTER[e.id],undefined);assert.equal(w.SPIDEY_PREMIUM_EVENT_ART[e.id],undefined);
+ const preview=w.SpideyReviewArt.poster(e);assert.equal('spidey-app/'+preview.file,c.file);assert.equal(preview.sha256,c.sha256);
+ for(const role of ['thumb','card','weekly','hero','poster']){
+  const art=w.SpideyArt.resolve(e,role);assert.equal('spidey-app/'+art.url,c.file);assert.equal(art.standard,undefined);
+ }
+ assert.equal(context.weeklyArtUrl(e),preview.file+'?v='+c.sha256.slice(0,12));
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/premium-approved-master.js')).digest('hex'),record.preserved_master_sha256);
+ assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER)),record.preserved_master_entries);
+ for(const old of Object.values(record.preserved_master_entries))assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
+});
 test('human approval binds only the exact two reviewed posters across roles and Weekly',()=>{
  const {window:w,context}=setup();
  const record=JSON.parse(fs.readFileSync('docs/qa/PRIORITY_ART_APPROVAL_20261001.json','utf8'));
