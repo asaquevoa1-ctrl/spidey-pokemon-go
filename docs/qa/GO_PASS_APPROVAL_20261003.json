@@ -179,7 +179,7 @@
     "pre_approval_code": "97c6823f1efb180782550ef22bf660416a1aebdc",
     "pre_approval_record": "docs/qa/go-pass-browser-97c6823-20261003.json",
     "pre_approval_status": "PASSED_PREVIEW",
-    "post_approval_status": "PENDING_NEW_PREVIEW",
+    "post_approval_status": "PASSED_PREVIEW",
     "physical_android": "PENDING",
     "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
     "preserved_master_count": 14,
@@ -187,7 +187,45 @@
     "catalog_unchanged": true,
     "node_tests_passed": 33,
     "syntax": "Changed active scripts passed",
-    "cache_paths_exist": 75
+    "cache_paths_exist": 75,
+    "post_approval_code": "ff37843208635a0923adc1996371aaacd2a430f6",
+    "post_approval_preview": "https://spidey-pokemon-i6523e1iy-spidey3.vercel.app/spidey-app/index.html",
+    "post_approval_deployment": "dpl_3AtDzJtXDBQvJcgpwTtvQuw4pnHw",
+    "post_approval_checked_at": "2026-10-03T12:21:37.200977+00:00",
+    "post_approval_record": "docs/qa/go-pass-approved-browser-ff37843-20261003.json",
+    "served_png": {
+      "browser_path": "/home/oai/share/f7876890-292d-40cf-a9a6-c849220c1021/c7996054-c8f1-40a8-80b4-6b6471747e4e",
+      "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+      "bytes": 2848940,
+      "matches_approved": true
+    },
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-go-pass-approved-mobile-ff37843-20261003.jpg",
+        "bytes": 110438,
+        "sha256": "b942a899bee1f46361e6f57973ebfccab1a8085d47a4c340d2beb1dd627de244"
+      },
+      {
+        "file": "docs/qa/proofs/spidey-go-pass-approved-desktop-ff37843-20261003.jpg",
+        "bytes": 157714,
+        "sha256": "eb0de463288b1d0882f63367499481b2fdfe42e4008af6e08a980e2e1935d4f2"
+      }
+    ],
+    "responsive_mobile": [
+      390,
+      850
+    ],
+    "responsive_desktop": [
+      1280,
+      850
+    ],
+    "detail_poster": "Exact approved PNG complete, object-fit contain, close focus, scrollTop 0, no horizontal overflow measured",
+    "inventory_20261001_07": {
+      "events": 23,
+      "approved": 10,
+      "pending_posters": 0,
+      "missing_home_fly": 13
+    }
   },
   "release": {
     "production_approved": false,

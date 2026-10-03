@@ -1,0 +1,84 @@
+{
+  "status": "PASSED_PREVIEW",
+  "code_commit": "ff37843208635a0923adc1996371aaacd2a430f6",
+  "preview_url": "https://spidey-pokemon-i6523e1iy-spidey3.vercel.app/spidey-app/index.html",
+  "deployment_id": "dpl_3AtDzJtXDBQvJcgpwTtvQuw4pnHw",
+  "physical_android": false,
+  "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
+  "views": [
+    {
+      "viewport": [
+        390,
+        850
+      ],
+      "dialog": {
+        "clientWidth": 360,
+        "scrollTop": 0,
+        "scrollWidth": 360
+      },
+      "focus": "closeDialog",
+      "heading": "Passe GO: Outubro",
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "assets/events/premium/go-pass-october-kyogre-approved-v1.png?v=c194eee09b62",
+        "width": 1122
+      },
+      "text": "×\nGO PASS\nANÚNCIO OFICIAL\nPasse GO: Outubro\n\nPasse GO de outubro com encontro com Kyogre e Globo da Sorte na versão Deluxe.\n\nHorários e locais\nHorário\n06 de out., 10:00 → 03 de nov., 10:00\nFonte\nPokémon em destaque\nKyogre — Encontro como recompensa do Passe GO.\nBônus e informações\nEncontro com Kyogre ao progredir no Passe GO.\nGlobo da Sorte como recompensa final do Passe GO Deluxe (versão paga).\nAo atingir o Ranque 50: 2× duração do Incenso de Aventura Diário.\nObservações\nO Passe GO gratuito é recebido automaticamente; o Deluxe é uma versão paga.\nAs recompensas desbloqueadas podem ser resgatadas até 5/11/2026 às 10h, horário local.\nO Globo da Sorte do Deluxe expira em 8/11/2026 às 23h59, horário local.\nKyogre pode ser Brilhante com sorte; nenhuma chance aumentada é anunciada.",
+      "theme": "light"
+    },
+    {
+      "viewport": [
+        1280,
+        850
+      ],
+      "dialog": {
+        "clientWidth": 703,
+        "scrollTop": 0,
+        "scrollWidth": 703
+      },
+      "focus": "closeDialog",
+      "heading": "Passe GO: Outubro",
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "assets/events/premium/go-pass-october-kyogre-approved-v1.png?v=c194eee09b62",
+        "width": 1122
+      },
+      "text": "×\nGO PASS\nANÚNCIO OFICIAL\nPasse GO: Outubro\n\nPasse GO de outubro com encontro com Kyogre e Globo da Sorte na versão Deluxe.\n\nHorários e locais\nHorário\n06 de out., 10:00 → 03 de nov., 10:00\nFonte\nPokémon em destaque\nKyogre — Encontro como recompensa do Passe GO.\nBônus e informações\nEncontro com Kyogre ao progredir no Passe GO.\nGlobo da Sorte como recompensa final do Passe GO Deluxe (versão paga).\nAo atingir o Ranque 50: 2× duração do Incenso de Aventura Diário.\nObservações\nO Passe GO gratuito é recebido automaticamente; o Deluxe é uma versão paga.\nAs recompensas desbloqueadas podem ser resgatadas até 5/11/2026 às 10h, horário local.\nO Globo da Sorte do Deluxe expira em 8/11/2026 às 23h59, horário local.\nKyogre pode ser Brilhante com sorte; nenhuma chance aumentada é anunciada.",
+      "theme": "dark"
+    }
+  ],
+  "screenshots": [
+    "spidey-go-pass-approved-mobile-ff37843-20261003.jpg",
+    "spidey-go-pass-approved-desktop-ff37843-20261003.jpg"
+  ],
+  "served_media_path": "/home/oai/share/f7876890-292d-40cf-a9a6-c849220c1021/c7996054-c8f1-40a8-80b4-6b6471747e4e",
+  "served_png": {
+    "browser_path": "/home/oai/share/f7876890-292d-40cf-a9a6-c849220c1021/c7996054-c8f1-40a8-80b4-6b6471747e4e",
+    "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+    "bytes": 2848940,
+    "matches_approved": true
+  },
+  "observed_at": "2026-10-03T12:21:37.200977+00:00",
+  "proofs": [
+    {
+      "file": "docs/qa/proofs/spidey-go-pass-approved-mobile-ff37843-20261003.jpg",
+      "bytes": 110438,
+      "sha256": "b942a899bee1f46361e6f57973ebfccab1a8085d47a4c340d2beb1dd627de244"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-go-pass-approved-desktop-ff37843-20261003.jpg",
+      "bytes": 157714,
+      "sha256": "eb0de463288b1d0882f63367499481b2fdfe42e4008af6e08a980e2e1935d4f2"
+    }
+  ],
+  "node_tests_passed": 33,
+  "approval_decision_at": "2026-10-03T09:04:55-03:00",
+  "catalog_unchanged": true,
+  "master_count": 15,
+  "preserved_master_count": 14,
+  "scope": "Approved GO Pass detail from Home; responsive mobile Claro and desktop Escuro; full PNG and served bytes. No physical Android or public-access claim."
+}

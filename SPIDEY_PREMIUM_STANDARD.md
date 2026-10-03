@@ -182,3 +182,7 @@ O projeto não deve mudar de direção por causa de uma crítica isolada. A deci
 Versão atual do padrão: `spidey-premium-v1`.
 
 Toda peça nova enviada ao Discord deve registrar esse padrão no item curado.
+
+## Passe GO de outubro/Kyogre v1 aprovado — 03/10, 09:04 BRT
+
+Master soberano APPROVED/full_poster para `2026-10-go-pass`, fonte oficial mantida. Cópia premium idêntica à candidata, 1122 × 1402, hash `c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67`. Master 15 entradas, 14 anteriores intactas; preview vazio. Resolver/Weekly/detalhe usam o mesmo asset aprovado e recebem `spidey-premium-v1`. Fonte, datas e condições Deluxe/Ranque 50 preservadas; aprovação não cria janela FLY nem concede lançamento completo. Registro `docs/qa/GO_PASS_APPROVAL_20261003.json`; QA novo `ff37843`, 33 testes, mobile Claro/desktop Escuro e bytes servidos exatos. Arquivos/revisões anteriores protegidos.

@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **9 com arte no master APPROVED**, **1 pôster PENDING_REVIEW (Passe GO de outubro/Kyogre v1)**, **13 sem arquivo resolvido pelo compositor Home/FLY**. São 14 eventos ainda sem conclusão/aprovação. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **10 com arte no master APPROVED**, **nenhum pôster PENDING_REVIEW nesta janela**, **13 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
 Xerneas, Invasão, Cinderace, Seedot, Mega Victreebel, rotação Yveltal, Hora de Reides Yveltal e Mega Blastoise foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -29,7 +29,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-patterns-of-the-wild-indonesia` | Patterns of the Wild • Indonésia | 2026-10-02 → 2026-10-02 | Sem arquivo no compositor Home/FLY |
 | `2026-10-gigantamax-cinderace-max-day` | Dia de Batalhas Max: Cinderace Gigamax | 2026-10-03 → 2026-10-03 | APPROVED |
 | `2026-10-world-space-week` | Semana Mundial do Espaço 2026 | 2026-10-04 → 2026-10-10 | Sem arquivo no compositor Home/FLY |
-| `2026-10-go-pass` | Passe GO: Outubro | 2026-10-06 → 2026-11-03 | PENDING_REVIEW — Kyogre v1, QA passou |
+| `2026-10-go-pass` | Passe GO: Outubro | 2026-10-06 → 2026-11-03 | APPROVED — Kyogre v1 |
 | `2026-10-01-spotlight-seedot` | Hora do Holofote: Seedot | 2026-10-01 → 2026-10-01 | APPROVED |
 | `2026-10-07-raid-hour-yveltal` | Hora de Reides: Yveltal | 2026-10-07 → 2026-10-07 | APPROVED |
 | `2026-10-05-max-monday-sizzlipede` | Segunda Max: Dinamax Sizzlipede | 2026-10-05 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
@@ -42,7 +42,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-01-go-battle-thursday` | Descoberta Diária: Quinta de Batalhas GO | 2026-10-01 → 2026-10-01 | Sem arquivo no compositor Home/FLY |
 | `2026-10-02-friendship-friday` | Descoberta Diária: Sexta da Amizade | 2026-10-02 → 2026-10-02 | Sem arquivo no compositor Home/FLY |
 
-Fonte do inventário: `spidey-app/data/events.json`, `premium-approved-master.js`, `preview-art.js` e resolução real de `SpideyPlayer.art`, no código `97c6823`; 23 IDs recalculados com 9 APPROVED, 1 candidata e 13 sem arquivo Home/FLY. Registro: `docs/qa/go-pass-inventory-97c6823-20261003.json`. Datas/nomes dos demais eventos neste inventário não constituem nova verificação oficial. Artes não cadastradas ou factualmente conflitantes continuam pendentes de revisão.
+Fonte do inventário: `spidey-app/data/events.json`, `premium-approved-master.js`, `preview-art.js` e resolução real de `SpideyPlayer.art`, no código `ff37843`; 23 IDs recalculados com 10 APPROVED, 0 candidatas e 13 sem arquivo Home/FLY. Registro: `docs/qa/go-pass-approved-inventory-ff37843-20261003.json`. Datas/nomes dos demais eventos neste inventário não constituem nova verificação oficial. Artes não cadastradas ou factualmente conflitantes continuam pendentes de revisão.
 
 
 Applin/Invasão/Cinderace receberam verificação nas fontes primárias pt-BR; os demais nomes/datas do inventário não foram revalidados nesta rodada. Histórico do inventário anterior: 1 master, 2 recortes e 20 sem arquivo em `641463d`. Registro dos novos bytes e prompts: `PRIORITY_ART_REVIEW_20261001.json`.
@@ -118,3 +118,17 @@ A URL normal solicita conta Vercel. Um link temporário nativo com `_vercel_shar
 Inventário recalculado pelo compositor real: 23 eventos na janela 01–07/10, 9 APPROVED, 1 PENDING_REVIEW e 13 sem arquivo. São **14 ainda sem conclusão/aprovação**, sendo a candidata do Passe GO já gerada. Master: 14 entradas, intacto. As recusas Applin/Espaço/Sizzlipede continuam registradas, sem novas tentativas de contorno.
 
 Núcleo apto a teste: eventos, FLY/horários/fusos/coordenadas, Selos e GPX confirmado. Ainda pendentes: configuração/recebimento real de alertas, Android físico/instalação PWA/atualização/offline, demais artes e validação final. Amigos/Chat permanece depois do núcleo. Sem promoção para main/produção, configuração push ou dispatch. Próximo passo editorial: decisão do editor sobre o PNG exato do Passe GO; preservar todos os masters.
+
+## Passe GO/Kyogre v1 APPROVED — 03/10/2026, 09:04:55 BRT
+
+Decisão explícita “Fantástico / Eu aprovo” após entrega do PNG integral no chat e link para o original. Registro canônico: `docs/qa/GO_PASS_APPROVAL_20261003.json`. A aprovação encerra a pendência de entrega/revisão para este PNG exato; o registro pré-aprovação JSON permanece histórico e íntegro.
+
+Evento `2026-10-go-pass`: cópia final `assets/events/premium/go-pass-october-kyogre-approved-v1.png`, 1122 × 1402, 2.848.940 bytes, SHA256 `c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67`, byte a byte igual à candidata v1. APPROVED/full_poster no master; entrada removida do preview. As 14 entradas anteriores permanecem idênticas, total 15. Nenhum arquivo anterior removido ou alterado; 192 blobs de assets/revisões/aprovações protegidos preservados na comparação completa de árvores.
+
+Código: `ff37843208635a0923adc1996371aaacd2a430f6`, branch `spidey-fly-v1`; Vercel READY `dpl_3AtDzJtXDBQvJcgpwTtvQuw4pnHw`. Preview conferido internamente: https://spidey-pokemon-i6523e1iy-spidey3.vercel.app/spidey-app/index.html. Shell/master/preview/cache versionados; precache usa o caminho aprovado. Catálogo inteiro permaneceu byte a byte igual, 124 eventos; nenhum horário, bônus ou elegibilidade FLY foi alterado por esta aprovação.
+
+33 testes passaram, sintaxe dos três scripts alterados passou e os 75 paths do cache existem. QA novo: diálogo do Passe GO pela Home em 390 × 850 Claro e 1280 × 850 Escuro, PNG inteiro em `contain`, foco Fechar, scrollTop 0 e sem overflow horizontal. Download real pelo navegador do arquivo servido no caminho premium: SHA256/bytes exatos da aprovação. Relatório `docs/qa/go-pass-approved-browser-ff37843-20261003.json` e dois JPEGs em `docs/qa/proofs/`. A captura visual pode coincidir com a candidata porque os pixels aprovados não mudaram; DOM/caminho e arquivo servido vinculam esta prova ao novo código. Teste responsivo não substitui Android físico.
+
+Inventário pelo compositor real: 23 eventos entre 01 e 07/10, **10 APPROVED**, **0 candidatas** e **13 sem arquivo Home/FLY**. Registro `docs/qa/go-pass-approved-inventory-ff37843-20261003.json`. Elgyem e outros masters fora da janela não entram neste número.
+
+Compartilhamento público continua **BLOCKED_USER_PHONE_LOGIN**, conforme prova do editor às 08:47 BRT. O acesso temporário usado apenas para QA do novo deployment não resolve nem comprova acesso dos testadores no celular; token efêmero não foi persistido. Proteção Vercel permaneceu ativa, e o login administrativo anterior não foi concluído; não repetir autenticação sem nova solicitação. Push/configuração/recebimento real, Android/PWA/atualização/offline e 13 artes restantes seguem pendentes. Applin/Espaço/Sizzlipede permanecem com recusas registradas. Sem promoção para main/produção, dispatch, mensagens externas ou alteração de segredo/configuração. Não regenerar nem reabrir a aprovação do Passe GO.
