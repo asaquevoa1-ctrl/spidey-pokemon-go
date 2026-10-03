@@ -13,6 +13,9 @@ Fontes verificadas: https://pokemongohub.net/post/event/october-2026-events/ e h
 
 Todos os 124 IDs e horários do catálogo foram preservados. Apenas os títulos dos dois eventos foram traduzidos para português e o bônus já existente no resumo de Elgyem foi incluído no campo estruturado. Os dois pôsteres resolvem nas cinco funções visuais e na Semana. Thundurus é um evento de fim de semana sem janela horária global na FLY; Elgyem é elegível para rota mundial.
 
-QA local: 31/31 testes passaram, sintaxe verificada e integridade dos 12 masters confirmada. Conferência visual da nova prévia ainda pendente no checkpoint inicial. Detalhes, prompts completos, hashes e referências em `THUNDURUS_ELGYEM_REVIEW_20261002.json`; QA em `THUNDURUS_ELGYEM_QA_20261002.json`.
+QA local: 31/31 testes passaram, sintaxe verificada e integridade dos 12 masters confirmada. Conferência visual concluída na prévia `a17f6d4`, mobile Claro 390×850 e desktop Escuro 1280×850: dois pôsteres completos, foco Fechar e scrollTop 0; downloads dos PNGs servidos têm hashes idênticos às candidatas. FLY Elgyem conferido em 20/28 locais, horários local/Brasília e coordenadas. Detalhes, prompts completos, hashes e referências em `THUNDURUS_ELGYEM_REVIEW_20261002.json`; QA em `THUNDURUS_ELGYEM_QA_20261002.json`.
 
 Push: painel de variáveis redirecionou para login, sem acesso às configurações. O connector disponível não oferece escrita de variáveis e não há CLI/credencial no runtime. Nenhum segredo, configuração ou envio push foi criado. Android físico continua pendente.
+
+
+Prévia verificada: https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html. Seis provas/DOM e limites em `THUNDURUS_ELGYEM_QA_20261002.json`. Android físico permanece pendente; produção não promovida. Arquivos ativos exatos serão apresentados completos no chat para decisão humana.

@@ -200,3 +200,10 @@ GPX Japão: PASSED_DOWNLOADED_XML. Clique no link nativo “Baixar GPX completo�
 Relatório `docs/qa/ZORUA_APPROVAL_20261002.md`, registro canônico JSON homônimo, DOM `docs/qa/zorua-approved-browser-0433c32-20261002.json` e cinco screenshots preservados. 31 testes/sintaxe são resultados anteriores válidos da consolidação `0433c32`; não foram executados novamente nesta rodada sem alteração de código. Logs consultados registraram erros da extensão de metadados do navegador, sem erro do app no lote retornado; não confundir isso com prova de ausência de erros fora desse lote.
 
 Push: novo endpoint do preview respondeu HTTP 503 `push_not_configured`, Cache-Control no-store. Configuração do servidor e recebimento real permanecem bloqueios; nenhuma inscrição/configuração secreta/envio foi alterado. Android físico/instalação/atualização/offline continuam pendentes. Último inventário 01–07/10: 23 eventos, 8 APPROVED, 15 sem arquivo Home/FLY; Zorua fora da janela. Applin/Espaço/Sizzlipede continuam com recusas registradas. Lançamento completo/produção não aprovados; sem promoção a main e sem mensagens externas. Próxima frente: cobertura restante, configuração push e QA físico. Não reabrir a aprovação nem regenerar Zorua.
+
+
+## Thundurus e Elgyem — 03/10/2026, PENDING_REVIEW
+
+Duas candidatas novas, **sem aprovação humana**: `2026-10-shadow-thundurus` → `assets/events/review/thundurus-shadow-weekend-v1.png`, SHA256 `eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439`; `2026-10-08-spotlight-elgyem` → `assets/events/review/elgyem-spotlight-v2.png`, SHA256 `2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9`. Ambas 1121×1403/full_poster, fonte comunidade. Elgyem v1 preservada como revisão interna sem nome, fora da UI. Os 12 masters aprovados continuam intactos, inclusive Zorua.
+
+Registro/prompts: `docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json`. QA de preview `a17f6d4` com 31 testes, mobile/desktop, hashes servidos idênticos e FLY Elgyem 20/28: `docs/qa/THUNDURUS_ELGYEM_QA_20261002.json`. Este QA não concede APPROVED. Próximo é decisão do editor sobre os dois PNGs exatos; produção não promovida.

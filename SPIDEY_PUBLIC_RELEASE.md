@@ -247,3 +247,10 @@ GPX Japão: PASSED_DOWNLOADED_XML. Clique no link nativo “Baixar GPX completo�
 Relatório `docs/qa/ZORUA_APPROVAL_20261002.md`, registro canônico JSON homônimo, DOM `docs/qa/zorua-approved-browser-0433c32-20261002.json` e cinco screenshots preservados. 31 testes/sintaxe são resultados anteriores válidos da consolidação `0433c32`; não foram executados novamente nesta rodada sem alteração de código. Logs consultados registraram erros da extensão de metadados do navegador, sem erro do app no lote retornado; não confundir isso com prova de ausência de erros fora desse lote.
 
 Push: novo endpoint do preview respondeu HTTP 503 `push_not_configured`, Cache-Control no-store. Configuração do servidor e recebimento real permanecem bloqueios; nenhuma inscrição/configuração secreta/envio foi alterado. Android físico/instalação/atualização/offline continuam pendentes. Último inventário 01–07/10: 23 eventos, 8 APPROVED, 15 sem arquivo Home/FLY; Zorua fora da janela. Applin/Espaço/Sizzlipede continuam com recusas registradas. Lançamento completo/produção não aprovados; sem promoção a main e sem mensagens externas. Próxima frente: cobertura restante, configuração push e QA físico. Não reabrir a aprovação nem regenerar Zorua.
+
+
+## Estado corrente — duas novas artes em revisão, 03/10/2026
+
+Código `a17f6d4`, preview https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html: Thundurus v1 e Elgyem v2 PENDING_REVIEW. 31 testes, dois pôsteres completos em mobile Claro/desktop Escuro, hashes servidos exatos e FLY Elgyem 20/28/horários/coords conferidos. Thundurus presente Home/Semana; 12 masters e 124 IDs/janelas preservados. QA em `docs/qa/THUNDURUS_ELGYEM_QA_20261002.json`.
+
+Inventário 01–07/10: 23 eventos, 8 APPROVED, 1 em revisão e 14 sem arquivo Home/FLY. Elgyem em revisão fora da janela. Push no novo preview continua 503; painel exige login e variáveis não inspecionadas. Android físico e lançamento completo continuam pendentes. Próximo: decisão humana das duas peças, restante da cobertura e configuração/QA físico. Sem main/produção nem disparos externos.

@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **8 com arte no master APPROVED**, **0 pôsteres PENDING_REVIEW nesta janela**, **15 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **8 com arte no master APPROVED**, **1 pôster PENDING_REVIEW nesta janela**, **14 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
 Xerneas, Invasão, Cinderace, Seedot, Mega Victreebel, rotação Yveltal, Hora de Reides Yveltal e Mega Blastoise foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -36,7 +36,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-raids-yveltal` | Reides 5★: Yveltal | 2026-10-07 → 2026-10-13 | APPROVED |
 | `2026-10-mega-blastoise-raids` | Megarreides: Mega Blastoise | 2026-10-07 → 2026-10-13 | APPROVED |
 | `2026-10-gbl-06-13` | Liga de Batalha GO: Great Mega / Ultra Mega / Master Mega | 2026-10-06 → 2026-10-13 | Sem arquivo no compositor Home/FLY |
-| `2026-10-shadow-thundurus` | Reides Sombrosas: Thundurus (Forma Encarnada) | 2026-10-03 → 2026-10-04 | Sem arquivo no compositor Home/FLY |
+| `2026-10-shadow-thundurus` | Reides Sombrosas: Thundurus (Forma Encarnada) | 2026-10-03 → 2026-10-04 | PENDING_REVIEW — Thundurus v1 |
 | `2026-10-04-scenic-sunday` | Descoberta Diária: Domingo Pitoresco | 2026-10-04 → 2026-10-04 | Sem arquivo no compositor Home/FLY |
 | `2026-10-06-showcase-tuesday` | Descoberta Diária: Terça de Vitrine | 2026-10-06 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
 | `2026-10-01-go-battle-thursday` | Descoberta Diária: Quinta de Batalhas GO | 2026-10-01 → 2026-10-01 | Sem arquivo no compositor Home/FLY |
@@ -94,3 +94,8 @@ Editor respondeu “Aprovo todas as três” após reenvio separado dos PNGs int
 Três entradas retiradas do preview, agora no master/full_poster; oito entradas anteriores preservadas com arquivos/histórico. Candidatas/revisão anterior da Hora de Reides/prompts/provas intactos. Shell/cache/master versionados. Catálogo de 124 IDs/janelas inalterado. QA pós-aprovação do novo preview pendente; não atribuir prova do preview antigo ao código novo.
 
 Inventário 01–07/10: 23 eventos, 8 APPROVED e 15 sem arquivo Home/FLY; Zorua pendente fora da janela. Applin/Espaço continuam recusados, sem peça nova; Android físico/PWA/push e download/XML GPX Japão pendentes. Prazo alvo anterior 01:02 BRT passou; lançamento completo não está pronto. A aprovação destas três peças não autoriza main/produção. Continuar branch/NEXUS, sem reiniciar nem reabrir artes aprovadas.
+
+
+## Inventário recalculado — 03/10/2026, a17f6d4
+
+23 eventos na janela 01–07/10: 8 APPROVED, 1 pôster PENDING_REVIEW (Thundurus v1), 14 sem arquivo Home/FLY. Elgyem v2 também em revisão, fora da janela, em 8/10. Dois PNGs íntegros/31 testes/mobile/desktop/hashes servidos e FLY Elgyem 20/28 conferidos; revisão humana ainda pendente. Registro `THUNDURUS_ELGYEM_REVIEW_20261002.json`, QA homônimo. Masters preservados; recusas anteriores e bloqueios push/Android físico inalterados.

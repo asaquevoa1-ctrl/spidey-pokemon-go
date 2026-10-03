@@ -1,9 +1,9 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
 Status: OBRIGATÓRIO
-Data: 2026-10-02
+Data: 2026-10-03
 
-Estado corrente: QA pós-aprovação do Zorua PASSED_PREVIEW e GPX Japão PASSED_DOWNLOADED_XML no código `0433c32`. Arte APPROVED preservada; push HTTP 503/configuração incompleta, Android físico e cobertura restante pendentes. Retomada autorizada às 20:49:18 BRT; última seção contém o handoff.
+Estado corrente: Thundurus v1 e Elgyem v2 PENDING_REVIEW, QA de preview aprovado tecnicamente no código `a17f6d4` (31 testes, mobile/desktop, hashes servidos e FLY Elgyem 20/28). Nenhuma aprovação visual inferida. Zorua APPROVED e GPX Japão já verificados; push/configuração, Android físico e cobertura restante pendentes. Última seção contém o handoff.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -183,3 +183,10 @@ GPX Japão: PASSED_DOWNLOADED_XML. Clique no link nativo “Baixar GPX completo�
 Relatório `docs/qa/ZORUA_APPROVAL_20261002.md`, registro canônico JSON homônimo, DOM `docs/qa/zorua-approved-browser-0433c32-20261002.json` e cinco screenshots preservados. 31 testes/sintaxe são resultados anteriores válidos da consolidação `0433c32`; não foram executados novamente nesta rodada sem alteração de código. Logs consultados registraram erros da extensão de metadados do navegador, sem erro do app no lote retornado; não confundir isso com prova de ausência de erros fora desse lote.
 
 Push: novo endpoint do preview respondeu HTTP 503 `push_not_configured`, Cache-Control no-store. Configuração do servidor e recebimento real permanecem bloqueios; nenhuma inscrição/configuração secreta/envio foi alterado. Android físico/instalação/atualização/offline continuam pendentes. Último inventário 01–07/10: 23 eventos, 8 APPROVED, 15 sem arquivo Home/FLY; Zorua fora da janela. Applin/Espaço/Sizzlipede continuam com recusas registradas. Lançamento completo/produção não aprovados; sem promoção a main e sem mensagens externas. Próxima frente: cobertura restante, configuração push e QA físico. Não reabrir a aprovação nem regenerar Zorua.
+
+
+## Duas novas candidatas conferidas — 03/10/2026
+
+Thundurus Sombroso v1 (`2026-10-shadow-thundurus`) e Elgyem v2 (`2026-10-08-spotlight-elgyem`) estão **PENDING_REVIEW**, aprovação null. Código `a17f6d45535758ff2b5a36ef0e4e6e476af933e8`, deploy READY `dpl_57gGY2xz7ksHTXjZzQSPtudp2V2g`, preview https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html. Registro completo/prompts/hashes: `docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json`; QA e seis provas: `docs/qa/THUNDURUS_ELGYEM_QA_20261002.json`. Elgyem v1 sem nome permanece só no histórico. Os 12 masters e todos os IDs/horários foram preservados.
+
+Próximo: decisão humana específica sobre os dois PNGs completos mostrados no chat. Elgyem integra FLY 20/28, relógios local/Brasília e coordenadas; Thundurus aparece na Home/Semana e não recebe janela global inventada. Janela 01–07/10: 23 eventos, 8 APPROVED, 1 em revisão, 14 sem arquivo Home/FLY. Push continua 503 e o painel bloqueia a inspeção de variáveis por login; Android físico pendente. Nenhuma promoção main/produção nem envio externo. Detalhes no último handoff de `SPIDEY_NEXUS.md`.

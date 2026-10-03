@@ -95,10 +95,10 @@
     "Recusas anteriores Applin, Space e Sizzlipede não foram contornadas."
   ],
   "qa": {
-    "status": "LOCAL_QA_PASSED_BROWSER_PENDING",
+    "status": "PREVIEW_VERIFIED_APPROVAL_PENDING",
     "record": "docs/qa/THUNDURUS_ELGYEM_QA_20261002.json",
-    "code_commit": null,
-    "preview_url": null,
+    "code_commit": "a17f6d45535758ff2b5a36ef0e4e6e476af933e8",
+    "preview_url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html",
     "local": {
       "tests": 31,
       "passed": 31,
@@ -116,7 +116,65 @@
         "poster"
       ],
       "weekly_candidate_urls_verified": true
-    }
+    },
+    "browser_record": "docs/qa/thundurus-elgyem-browser-a17f6d4-20261003.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-thundurus-mobile-a17f6d4-20261003.jpg",
+        "bytes": 106751,
+        "sha256": "43fd8a487fdad8c25f5bf5b4959798375d40e3deb50dafd851267a89c5efb0b8",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-mobile-a17f6d4-20261003.jpg",
+        "bytes": 102066,
+        "sha256": "c918e5f647d366b8bdedec0ec1d73a92c7bcb94ad6e8e01bf680c0dab90bcef7",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-desktop-a17f6d4-20261003.jpg",
+        "bytes": 142311,
+        "sha256": "7d9bea3e38096cf5c75265de10ca78e8b42688a822067ae4c497bd9768263423",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-thundurus-desktop-a17f6d4-20261003.jpg",
+        "bytes": 145817,
+        "sha256": "5269c10497b37adcb3a872dce4e263d8f424f14e9e810e437a2c5ba3568364cc",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-fly-desktop-a17f6d4-20261003.jpg",
+        "bytes": 84341,
+        "sha256": "9011bf0e6b3fbd7e86652a7eacc27fd77fb8b5d55f9f10929609f1c1dffc24bd",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-fly-mobile-a17f6d4-20261003.jpg",
+        "bytes": 65008,
+        "sha256": "f8bb6d6fc5a7ee1a6508577bb2c2713e4970546820b573c2a2b28dcf4c2b0c10",
+        "size": [
+          1363,
+          936
+        ]
+      }
+    ],
+    "served_hashes_match": true
   },
   "push": {
     "status": "BLOCKED_DASHBOARD_ACCESS",
@@ -126,6 +184,13 @@
       "Sem Vercel CLI ou credencial disponível no runtime.",
       "Painel environment-variables redirecionou para login; estado das variáveis não inspecionado.",
       "Nenhuma assinatura, segredo ou envio push criado nesta rodada."
-    ]
+    ],
+    "public_key_probe": {
+      "url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/api/push/public-key",
+      "status": 503,
+      "error": "push_not_configured",
+      "cache_control": "no-store",
+      "at": "Sat, 03 Oct 2026 10:20:58 GMT"
+    }
   }
 }
