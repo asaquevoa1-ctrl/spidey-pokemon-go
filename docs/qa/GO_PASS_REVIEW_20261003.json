@@ -206,7 +206,8 @@
         "sha256": "eb0de463288b1d0882f63367499481b2fdfe42e4008af6e08a980e2e1935d4f2"
       }
     ],
-    "anonymous_shared_access": "PASSED_FRESH_COOKIE_JAR_HTTP_200_APP_AND_EXACT_PNG"
+    "anonymous_shared_access": "PASSED_FRESH_COOKIE_JAR_HTTP_200_APP_AND_EXACT_PNG",
+    "external_tester_access": "BLOCKED_USER_PHONE_LOGIN"
   },
   "release": {
     "production_approved": false,
@@ -257,5 +258,20 @@
       ]
     },
     "status": "published"
+  },
+  "delivery_and_access_followup": {
+    "updated_at": "2026-10-03T11:58:28.027169+00:00",
+    "user_phone_access_reported_at": "2026-10-03T08:47:23-03:00",
+    "tester_shared_access": "BLOCKED_USER_PHONE_LOGIN",
+    "prior_http_test_scope": "Passed for that HTTP client; not a successful user phone test.",
+    "project_vercel_authentication": {
+      "enabled": true,
+      "deployment_type": "all_except_custom_domains",
+      "password_enabled": false
+    },
+    "dashboard_access": "LOGIN_REQUIRED_SECURE_AUTH_DECLINED_NO_SETTINGS_CHANGED",
+    "art_not_received_reported_at": "2026-10-03T08:48:33-03:00",
+    "full_png_delivery": "Offered inline and as original file link; receipt not yet confirmed.",
+    "approval": null
   }
 }

@@ -34,7 +34,7 @@
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
     "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC",
     "go_pass_poster": "PENDING_REVIEW_PREVIEW_QA_PASSED_97C6823",
-    "tester_shared_preview_access": "PASSED_ANONYMOUS_TEMPORARY_LINK_97C6823_NORMAL_URL_PROTECTED"
+    "tester_shared_preview_access": "BLOCKED_USER_PHONE_LOGIN_20261003_0847_BRT_DASHBOARD_AUTH_NOT_COMPLETED"
   },
   "next_batch": [
     "Configuração de alertas: acesso ao painel Vercel e configuração do servidor pendentes",
@@ -56,7 +56,7 @@
     "03/10 07:30:21 BRT: aprovação humana dos PNGs exatos Thundurus v1 e Elgyem v2. 29c1aec: cópias premium idênticas, 14 masters/12 anteriores preservados, catálogo inalterado, 32 testes e QA pós-aprovação novo preview mobile/desktop/hashes servidos e FLY Elgyem 20/28 passaram.",
     "97c6823: Passe GO/Kyogre v1 gerado e integrado PENDING_REVIEW com fonte oficial PT-BR e condições Deluxe/Ranque 50 explícitas; 33 testes, mobile Claro/desktop Escuro, hash servido e acesso compartilhado anônimo passaram. Masters e outros 123 eventos preservados; aprovação humana e Android físico pendentes."
   ],
-  "updated_at": "2026-10-03T11:42:21.094604+00:00",
+  "updated_at": "2026-10-03T11:58:28.027169+00:00",
   "code_commit": "97c6823f1efb180782550ef22bf660416a1aebdc",
   "preview_url": "https://spidey-pokemon-9oklrwpv9-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
@@ -64,7 +64,8 @@
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
-    "Lançamento completo e produção não aprovados"
+    "Lançamento completo e produção não aprovados",
+    "Link de compartilhamento ainda bloqueia testador no celular; teste HTTP anterior não confirma acesso real. Painel exige login e formulário seguro não concluído. Não repetir autenticação sem nova solicitação."
   ],
   "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json",
   "post_approval_qa_record": "docs/qa/thundurus-elgyem-approved-browser-29c1aec-20261003.json",
@@ -79,5 +80,11 @@
   "candidate_review_record": "docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json",
   "candidate_qa_record": "docs/qa/THUNDURUS_ELGYEM_QA_20261002.json",
   "current_art_review_record": "docs/qa/GO_PASS_REVIEW_20261003.json",
-  "current_art_qa_record": "docs/qa/go-pass-browser-97c6823-20261003.json"
+  "current_art_qa_record": "docs/qa/go-pass-browser-97c6823-20261003.json",
+  "art_delivery_followup": {
+    "reported_at": "2026-10-03T08:48:33-03:00",
+    "event_id": "2026-10-go-pass",
+    "status": "FULL_PNG_LINK_OFFERED_AWAITING_USER_REVIEW",
+    "human_approval": null
+  }
 }

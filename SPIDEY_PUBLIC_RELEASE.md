@@ -1,6 +1,6 @@
 # Spidey — candidato público, estado de 03/10/2026
 
-Estado atual: Passe GO de outubro/Kyogre v1 PENDING_REVIEW, sem aprovação humana; QA PASSED_PREVIEW no código `97c6823` (33 testes, PNG integral mobile Claro/desktop Escuro e hash servido exato). Master permanece com 14 entradas APPROVED e todos os arquivos protegidos preservados. Janela 01–07/10: 23 eventos, 9 APPROVED, 1 candidata e 13 sem arquivo Home/FLY. Acesso compartilhado sem conta comprovado com cookies inicialmente vazios; o endereço normal continua protegido. Push/configuração e Android físico pendentes; lançamento completo não concluído.
+Estado atual: Passe GO de outubro/Kyogre v1 PENDING_REVIEW, sem aprovação humana; QA PASSED_PREVIEW no código `97c6823` (33 testes, PNG integral mobile Claro/desktop Escuro e hash servido exato). Master permanece com 14 entradas APPROVED e todos os arquivos protegidos preservados. Janela 01–07/10: 23 eventos, 9 APPROVED, 1 candidata e 13 sem arquivo Home/FLY. Teste HTTP anônimo passou, mas editor confirmou login exigido no celular em 03/10 08:47 BRT: compartilhamento externo BLOCKED, não liberado; acesso administrativo não concluído. Push/configuração e Android físico pendentes; lançamento completo não concluído.
 Branch: `spidey-fly-v1`. Código conferido: `97c6823f1efb180782550ef22bf660416a1aebdc`. Preview: https://spidey-pokemon-9oklrwpv9-spidey3.vercel.app/spidey-app/index.html. Registros abaixo são históricos; consultar a última seção para o estado corrente.
 
 ## Escopo e ordem do trabalho
@@ -275,3 +275,13 @@ A URL normal solicita conta Vercel. Um link temporário nativo com `_vercel_shar
 Inventário recalculado pelo compositor real: 23 eventos na janela 01–07/10, 9 APPROVED, 1 PENDING_REVIEW e 13 sem arquivo. São **14 ainda sem conclusão/aprovação**, sendo a candidata do Passe GO já gerada. Master: 14 entradas, intacto. As recusas Applin/Espaço/Sizzlipede continuam registradas, sem novas tentativas de contorno.
 
 Núcleo apto a teste: eventos, FLY/horários/fusos/coordenadas, Selos e GPX confirmado. Ainda pendentes: configuração/recebimento real de alertas, Android físico/instalação PWA/atualização/offline, demais artes e validação final. Amigos/Chat permanece depois do núcleo. Sem promoção para main/produção, configuração push ou dispatch. Próximo passo editorial: decisão do editor sobre o PNG exato do Passe GO; preservar todos os masters.
+
+## Correção de continuidade — 03/10/2026 — compartilhamento bloqueado no celular
+
+Às 08:47:23 BRT, o editor informou que o link completo continuava exigindo acesso e enviou foto de tela de login do Vercel. O teste HTTP anônimo anteriormente registrado permanece uma evidência restrita àquele cliente; não comprovou acesso real dos testadores no celular. **Compartilhamento externo: BLOCKED_USER_PHONE_LOGIN**, sem solução confirmada. Não reapresentar o link efêmero anterior como acesso público garantido.
+
+Consulta conectada confirmou `ssoProtection.enabled=true`, `deploymentType=all_except_custom_domains` e senha desabilitada. O conector disponível não modifica a permissão de Share. Abertura do painel redirecionou para login; o formulário seguro retornou `declined`. Nenhuma proteção, segredo, deploy de produção ou permissão foi modificada. Acesso administrativo necessário para ajustar Share da prévia segue não concluído. Não reiniciar a autenticação sem nova solicitação do editor.
+
+Às 08:48:33 BRT, o editor informou que o Passe GO/Kyogre não chegou para avaliação. Foi disponibilizado no chat o PNG integral já existente e um link para o original, conferido byte a byte pelo SHA256 `c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67`. O print anterior da interface não constitui recebimento confirmado nem aprovação. **Passe GO v1 continua PENDING_REVIEW; approval=null.** Aguardar decisão específica; não gerar outra versão nem promover esta por inferência.
+
+Arte e QA responsivo continuam no código `97c6823`, 33 testes passados; masters 14 APPROVED, janela 01–07/10 com 9 APPROVED, 1 candidata e 13 sem arquivo. Estes fatos não equivalem à liberação para testadores, nem a Android físico ou lançamento aprovado.
