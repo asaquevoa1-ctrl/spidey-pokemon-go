@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-shadow-thundurus:start:60",
-      "event_id": "2026-10-shadow-thundurus",
-      "event_title": "Shadow Raids: Thundurus (Forma Encarnada)",
-      "category": "shadow_raids",
-      "scheduled_for": "2026-10-02T23:00:00-03:00",
-      "event_start": "2026-10-03T00:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Shadow Raids: Thundurus (Forma Encarnada) começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-shadow-thundurus",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-gigantamax-cinderace-max-day:start:60",
       "event_id": "2026-10-gigantamax-cinderace-max-day",
       "event_title": "Dia de Batalhas Max: Cinderace Gigamax",
@@ -707,7 +689,7 @@
     }
   ],
   "meta": {
-    "pending_count": 39,
+    "pending_count": 38,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
