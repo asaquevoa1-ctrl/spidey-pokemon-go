@@ -122,6 +122,15 @@
     "height": 1403,
     "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
     "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json"
+  },
+  "2026-10-go-pass": {
+    "file": "assets/events/premium/go-pass-october-kyogre-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+    "approval_record": "docs/qa/GO_PASS_APPROVAL_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

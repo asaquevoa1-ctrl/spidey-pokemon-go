@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261003-go-pass-review-v1';
+const CACHE = 'spidey-app-20261003-go-pass-approved-v1';
 const CORE = [
   './',
   './index.html',
@@ -25,7 +25,7 @@ const CORE = [
   './player-ui.js',
   './player-ui.css',
   './preview-art.js',
-  './assets/events/review/go-pass-october-kyogre-v1.png',
+  './assets/events/premium/go-pass-october-kyogre-approved-v1.png',
   './assets/events/premium/thundurus-shadow-weekend-approved-v1.png',
   './assets/events/premium/elgyem-spotlight-approved-v1.png',
   './assets/events/review/zorua-community-day-correction-v1.png',

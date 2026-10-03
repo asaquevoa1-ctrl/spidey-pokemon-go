@@ -1,15 +1,5 @@
 // Review candidates and recovered illustration crops. This never grants approval.
-window.SPIDEY_PREVIEW_ART=Object.freeze({
-  "2026-10-go-pass": {
-    "file": "assets/events/review/go-pass-october-kyogre-v1.png",
-    "width": 1122,
-    "height": 1402,
-    "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
-    "status": "PENDING_REVIEW",
-    "display": "full_poster",
-    "review_record": "docs/qa/GO_PASS_REVIEW_20261003.json"
-  }
-});
+window.SPIDEY_PREVIEW_ART=Object.freeze({});
 
 // All screens share this explicit exception for a known unavailable original.
 // A healthy approved original always wins; unrelated drafts never substitute it.
