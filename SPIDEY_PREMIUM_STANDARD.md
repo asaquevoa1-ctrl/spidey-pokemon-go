@@ -191,3 +191,8 @@ Master soberano APPROVED/full_poster para `2026-10-go-pass`, fonte oficial manti
 ## Latios v1 para decisão humana — 03/10
 
 Candidata raster integral, 1122 × 1402, cenário aéreo cinematográfico, Latios azul normal, marca oficial, título/datas/bônus legíveis. Dados oficiais e condições 3–4/10/Ranque 50 explícitas, sem prêmio pago tratado como gratuito. `docs/qa/LATIOS_REVIEW_20261003.json` vincula prompt/referências/hash. Status PENDING_REVIEW; os 15 masters continuam intactos e esta avaliação não concede aprovação visual humana. QA `760b117` mobile/desktop passou.
+
+
+## Latios v1 aprovado — 03/10, 13:01 BRT
+
+Aprovação humana consolidada exclusivamente para `2026-09-go-pass`, full_poster 1122 × 1402, hash `d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50`. Cópia premium idêntica à candidata, master soberano APPROVED; mesmos pixels nos cinco papéis, sem alteração de composição/helper. 16 entradas master, 15 anteriores intactas; preview vazio. Cache `spidey-app-20261003-latios-approved-v1`, 76 paths, aprovado no precache. Catálogo/fatos/FLY inalterados. 33 testes e QA mobile Claro/desktop Escuro/servido hash exato `d14897b` passaram. Registro `docs/qa/LATIOS_APPROVAL_20261003.json`; originais/revisões protegidos, sem main/produção.

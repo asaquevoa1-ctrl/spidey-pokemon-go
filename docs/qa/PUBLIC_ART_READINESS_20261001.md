@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **10 com arte no master APPROVED**, **1 pôster PENDING_REVIEW (Latios/Passe GO de setembro)** e **12 sem arquivo resolvido pelo compositor Home/FLY**. Cobertura de interface não equivale a arte Premium aprovada. Inventário corrente: `latios-inventory-760b117-20261003.json`.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **11 com arte no master APPROVED**, **nenhum pôster PENDING_REVIEW nesta janela** e **12 sem arquivo resolvido pelo compositor Home/FLY**. Cobertura de interface não equivale a arte Premium aprovada. Inventário corrente: `latios-approved-inventory-d14897b-20261003.json`.
 
 Xerneas, Invasão, Cinderace, Seedot, Mega Victreebel, rotação Yveltal, Hora de Reides Yveltal e Mega Blastoise foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -19,7 +19,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | eventId | Evento | Datas locais do catálogo | Arte no compositor |
 | --- | --- | --- | --- |
 | `2026-09-twilight-trails-season` | Temporada Twilight Trails | 2026-09-08 → 2026-12-01 | Sem arquivo no compositor Home/FLY |
-| `2026-09-go-pass` | Passe GO: Setembro | 2026-09-08 → 2026-10-06 | PENDING_REVIEW — pôster integral Latios v1 |
+| `2026-09-go-pass` | Passe GO: Setembro | 2026-09-08 → 2026-10-06 | APPROVED — pôster integral Latios v1 |
 | `2026-09-harvest-festival-applin` | Festival da Colheita: Pomar de Applin | 2026-09-29 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
 | `2026-09-raids-xerneas` | Reides 5★: Xerneas | 2026-09-30 → 2026-10-06 | APPROVED |
 | `2026-09-mega-victreebel-raids` | Megarreides: Mega Victreebel | 2026-09-30 → 2026-10-06 | APPROVED |
@@ -135,3 +135,6 @@ Compartilhamento público continua **BLOCKED_USER_PHONE_LOGIN**, conforme prova 
 
 
 Atualização 03/10: Latios v1 produzido, fonte oficial/bônus verificados, QA 33 testes + mobile/desktop `760b117` passou. Revisão humana pendente; demais 12 sem arquivo continuam na fila, com recusas Applin/Espaço/Sizzlipede preservadas. Acesso para testadores ainda bloqueado pelo Vercel; não chamar acesso interno temporário de link público validado.
+
+
+Aprovação 03/10 13:01 BRT: Latios v1 APPROVED; PNG premium idêntico à candidata, QA pós-aprovação `d14897b` PASSED_PREVIEW (33 testes/mobile/desktop/servido exato). Janela 11 aprovados/0 candidatas/12 sem arquivo. Compartilhamento público continua bloqueado no teste do celular; Android físico/push pendentes.

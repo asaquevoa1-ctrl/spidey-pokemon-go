@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-03
 
-Estado corrente: Latios/Passe GO de setembro v1 APPROVED pela decisão “Eu aprovo, com certeza”, 03/10 13:01:11 BRT. PNG premium idêntico à candidata, master com 16 entradas e 15 anteriores preservadas; preview vazio. QA pós-aprovação do novo código ainda PENDING. Janela 01–07/10: 23 eventos, 11 APPROVED, 0 candidatas e 12 sem arquivo Home/FLY. Passe GO de outubro/Kyogre permanece APPROVED. Acesso público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push e lançamento completo pendentes. Registro: `docs/qa/LATIOS_APPROVAL_20261003.json`.
+Estado corrente: Latios/Passe GO de setembro v1 APPROVED pela decisão “Eu aprovo, com certeza”, 03/10 13:01:11 BRT. QA pós-aprovação PASSED_PREVIEW no código `d14897b`: 33 testes, mobile Claro/desktop Escuro e PNG servido idêntico ao aprovado. Master com 16 entradas, 15 anteriores intactas; preview vazio. Janela 01–07/10: 23 eventos, 11 APPROVED e 12 sem arquivo Home/FLY. Catálogo inteiro inalterado nesta aprovação, 124 eventos. Acesso público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push e lançamento completo pendentes. Registro: `docs/qa/LATIOS_APPROVAL_20261003.json`.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -240,3 +240,8 @@ Compartilhamento público continua **BLOCKED_USER_PHONE_LOGIN**, conforme prova 
 ## Retomada corrente — Latios, 03/10/2026
 
 Candidata v1 PENDING_REVIEW e aprovação humana ainda pendente. QA novo `760b117`, relatório `docs/qa/latios-browser-760b117-20261003.json`; fonte/fatos/prompt/referências/hashes em `docs/qa/LATIOS_REVIEW_20261003.json`. Inventário `docs/qa/latios-inventory-760b117-20261003.json`. Mesma peça em todos os papéis via resolver de preview; não é master aprovado e não cria janela FLY. Publicação restrita à branch `spidey-fly-v1`; acesso dos testadores continua bloqueado. Não repetir login administrativo recusado sem nova solicitação nem substituir qualquer master.
+
+
+## Aprovação corrente — Latios, 03/10 13:01 BRT
+
+A decisão humana está consolidada no master e em `docs/qa/LATIOS_APPROVAL_20261003.json`; revisão original congelada pelo SHA256. Pós-aprovação conferida no código `d14897b`, mesmo PNG inteiro em mobile/desktop e hash servido exato. Inventário `docs/qa/latios-approved-inventory-d14897b-20261003.json`: 11 APPROVED/0 candidatas/12 sem arquivo na janela 01–07/10. Preservar todos os 16 masters, incluindo Kyogre, e não regenerar/reabrir esta aprovação. Acesso dos testadores continua bloqueado; main/produção/configuração/push sem alteração.

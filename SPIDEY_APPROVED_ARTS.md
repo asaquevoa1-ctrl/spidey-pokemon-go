@@ -248,3 +248,10 @@ Compartilhamento público continua **BLOCKED_USER_PHONE_LOGIN**, conforme prova 
 EventId `2026-09-go-pass`, arquivo `spidey-app/assets/events/review/go-pass-september-latios-v1.png`, 1122 × 1402, SHA256 `d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50`. Nova candidata completa gerada no padrão visual da marca, validada factualmente na fonte oficial e conferida em mobile/desktop `760b117`. **Aprovação humana ainda pendente**; não adicionar ao master nem inferir aprovação do “Ok / E agora?” ou de aprovações anteriores. Manifesto `docs/qa/LATIOS_REVIEW_20261003.json`; QA `docs/qa/latios-browser-760b117-20261003.json`.
 
 15 entradas master/14 arquivos anteriores intactos, incluindo Kyogre aprovado; nenhuma revisão histórica foi sobrescrita. Inventário 01–07/10: 10 APPROVED, 1 candidata e 12 sem arquivo. O arquivo exato foi entregue por geração de imagem e oferecido integralmente para revisão.
+
+
+## Latios / Passe GO de setembro v1 — APPROVED, 03/10 13:01 BRT
+
+Decisão explícita **“Eu aprovo, com certeza”** sobre o PNG completo entregue na resposta anterior, candidata v1 para `2026-09-go-pass`. Registro `docs/qa/LATIOS_APPROVAL_20261003.json` vincula decisão/timestamp, hash da revisão histórica congelada, referências, fatos e cópia premium idêntica. Asset aprovado `spidey-app/assets/events/premium/go-pass-september-latios-approved-v1.png`, SHA256 `d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50`, 1122 × 1402. Status APPROVED/full_poster no master; preview removido somente deste ID. Nenhuma regeneração/revisão nova.
+
+QA pós-aprovação `d14897b` passou: 33 testes, mobile Claro/desktop Escuro e PNG servido exato. Todos os 15 masters anteriores e todos os assets/registros históricos preservados; agora 16 entradas. Catálogo/fatos/FLY inalterados. Janela 01–07/10: 11 APPROVED e 12 sem arquivo. Lançamento e acesso público continuam pendentes.

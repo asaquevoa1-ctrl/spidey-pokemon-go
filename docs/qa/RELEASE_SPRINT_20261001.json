@@ -1,5 +1,5 @@
 {
-  "status": "LATIOS_REVIEW_QA_PASSED_PUBLIC_BLOCKED",
+  "status": "LATIOS_APPROVED_POST_APPROVAL_QA_PASSED_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -15,8 +15,8 @@
   "gates": {
     "premium_window_20261001_07": {
       "events": 23,
-      "approved": 10,
-      "pending_posters": 1,
+      "approved": 11,
+      "pending_posters": 0,
       "missing": 12,
       "status": "PENDING_REMAINING_COVERAGE"
     },
@@ -27,20 +27,19 @@
     ],
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
-    "approved_master_integrity": "15_MASTER_ENTRIES_AND_14_FILES_UNCHANGED_218_PROTECTED_BLOBS_PRESERVED_760B117",
-    "mobile_desktop_core": "LATIOS_MOBILE_CLARO_DESKTOP_ESCURO_SERVED_EXACT_PNG_PASSED_760B117_PHYSICAL_PENDING",
+    "approved_master_integrity": "16_MASTER_ENTRIES_15_PREVIOUS_AND_212_PROTECTED_BLOBS_PRESERVED_D14897B",
+    "mobile_desktop_core": "LATIOS_APPROVED_MOBILE_CLARO_DESKTOP_ESCURO_SERVED_EXACT_PNG_PASSED_D14897B_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
     "push_live_configuration": "BLOCKED_DASHBOARD_LOGIN_HTTP_503_PUSH_NOT_CONFIGURED_A17F6D4",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
     "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC",
     "go_pass_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_FF37843",
     "tester_shared_preview_access": "BLOCKED_USER_PHONE_LOGIN_20261003_0847_BRT_DASHBOARD_AUTH_NOT_COMPLETED",
-    "latios_poster": "PENDING_HUMAN_REVIEW_V1_PREVIEW_QA_PASSED_760B117"
+    "latios_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_D14897B"
   },
   "next_batch": [
-    "Decisão editorial sobre Latios v1; 12 eventos ainda sem arquivo Home/FLY na janela 01–07/10",
-    "Cobertura restante com fonte primária; recusas anteriores preservadas",
-    "Acesso público Vercel e alertas: painel não autenticado, nenhum segredo/proteção alterado",
+    "Cobertura das 12 artes ainda sem arquivo Home/FLY na janela 01–07/10, com fontes verificadas e recusas preservadas",
+    "Acesso público Vercel e alertas: painel não autenticado; nenhum segredo/proteção alterado",
     "QA físico Android/PWA/atualização/offline/recebimento push"
   ],
   "completed_public_launch": false,
@@ -59,9 +58,10 @@
     "03/10 07:30:21 BRT: aprovação humana dos PNGs exatos Thundurus v1 e Elgyem v2. 29c1aec: cópias premium idênticas, 14 masters/12 anteriores preservados, catálogo inalterado, 32 testes e QA pós-aprovação novo preview mobile/desktop/hashes servidos e FLY Elgyem 20/28 passaram.",
     "97c6823: Passe GO/Kyogre v1 gerado e integrado PENDING_REVIEW com fonte oficial PT-BR e condições Deluxe/Ranque 50 explícitas; 33 testes, mobile Claro/desktop Escuro, hash servido e acesso compartilhado anônimo passaram. Masters e outros 123 eventos preservados; aprovação humana e Android físico pendentes.",
     "03/10 09:04:55 BRT: aprovação explícita do Passe GO/Kyogre v1 entregue em PNG integral. ff37843: cópia premium idêntica, master 15/14 anteriores preservados, preview vazio, catálogo inalterado, 33 testes e QA novo mobile/desktop/hash servido passaram. Acesso de testadores e Android físico permanecem pendentes.",
-    "03/10: Latios v1 PENDING_REVIEW; fonte oficial/bônus condicionais conferidos, 33 testes, 15 masters e 123 outros eventos preservados; QA mobile/desktop e servido hash exato no código 760b117."
+    "03/10: Latios v1 PENDING_REVIEW; fonte oficial/bônus condicionais conferidos, 33 testes, 15 masters e 123 outros eventos preservados; QA mobile/desktop e servido hash exato no código 760b117.",
+    "03/10 13:01 BRT: Latios v1 aprovado explicitamente; PNG premium idêntico, 15 masters anteriores e catálogo inteiro preservados; 33 testes e QA novo mobile/desktop/servido exato d14897b passaram."
   ],
-  "updated_at": "2026-10-03T15:56:15.749814+00:00",
+  "updated_at": "2026-10-03T16:14:52.241479+00:00",
   "code_commit": "ff37843208635a0923adc1996371aaacd2a430f6",
   "preview_url": "https://spidey-pokemon-i6523e1iy-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [

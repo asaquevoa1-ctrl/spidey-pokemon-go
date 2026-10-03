@@ -127,3 +127,8 @@ Master soberano APPROVED/full_poster para `2026-10-go-pass`, fonte oficial manti
 ## Latios v1 no resolver de preview — 03/10
 
 Entrada explícita somente para `2026-09-go-pass` em `preview-art.js`, PENDING_REVIEW/full_poster, 1122 × 1402, hash `d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50` e registro `docs/qa/LATIOS_REVIEW_20261003.json`. Resolver comum fornece os mesmos pixels em todos os cinco papéis, sem padrão Premium automático nem catálogo aprovado. Helper existente inteiro preservado e master continua soberano (15 entradas intactas). Cache `spidey-app-20261003-latios-review-v1`, 76 paths; somente query de preview versionada. Período/calendário/elegibilidade FLY inalterados. 33 testes e QA mobile Claro/desktop Escuro `760b117` passaram, servido hash exato.
+
+
+## Latios v1 aprovado — 03/10, 13:01 BRT
+
+Aprovação humana consolidada exclusivamente para `2026-09-go-pass`, full_poster 1122 × 1402, hash `d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50`. Cópia premium idêntica à candidata, master soberano APPROVED; mesmos pixels nos cinco papéis, sem alteração de composição/helper. 16 entradas master, 15 anteriores intactas; preview vazio. Cache `spidey-app-20261003-latios-approved-v1`, 76 paths, aprovado no precache. Catálogo/fatos/FLY inalterados. 33 testes e QA mobile Claro/desktop Escuro/servido hash exato `d14897b` passaram. Registro `docs/qa/LATIOS_APPROVAL_20261003.json`; originais/revisões protegidos, sem main/produção.
