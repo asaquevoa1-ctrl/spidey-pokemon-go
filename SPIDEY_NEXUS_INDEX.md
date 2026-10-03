@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-03
 
-Estado corrente: Domingo Pitoresco de 4/10 APPROVED pela decisão “Aprovo” de 03/10, 16:52:31 BRT. Cópia premium idêntica à candidata v2, sem regeneração. QA PASSED_PREVIEW no código `bfeeb24`: 33 testes, mobile Claro 390×850/desktop Escuro 1280×850 e PNG servido exato. Master com 17 entradas; 16 anteriores/15 arquivos preservados. Janela 01–07/10: 23 eventos, 12 APPROVED, nenhuma candidata ativa e 11 sem arte Home/FLY. Acesso público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push pendentes. Registro: `docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json`.
+Estado corrente: Terça de Vitrine de 6/10 v1 PENDING_REVIEW, aprovação humana ainda nula. QA PASSED_PREVIEW no código `dbf6956`: 33 testes, mobile Claro 390×850/desktop Escuro 1280×850 e PNG servido exato. Todos os 17 masters/16 arquivos aprovados anteriores preservados, incluindo Domingo Pitoresco. Janela 01–07/10: 23 eventos, 12 APPROVED, 1 candidata e 10 sem arte Home/FLY. Acesso público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push pendentes. Registro: `docs/qa/SHOWCASE_TUESDAY_REVIEW_20261003.json`.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -265,3 +265,15 @@ Fonte atual continua comunitária (Leek Duck); condições de Rotas/companheiro 
 Nova conferência Home → detalhe em mobile/desktop: pôster inteiro/contain, foco Fechar, scrollTop 0 e sem overflow horizontal; PNG servido byte a byte igual ao aprovado. Provas: `docs/qa/scenic-sunday-approved-browser-bfeeb24-20261003.json`, auditoria `docs/qa/scenic-sunday-approved-local-audit-20261003.json`. Semana: resolver conferido localmente; a linha textual de 4/10 foi observada no QA histórico da candidata, sem nova alegação visual de miniatura. O detalhe mantém o placeholder genérico de local.
 
 Preview de QA verificado: https://spidey-pokemon-jtmdvu1t9-spidey3.vercel.app/spidey-app/index.html. Cookie temporário usado somente nesta conferência, sem validar acesso público de terceiros. Sem promoção a main/produção ou alteração de proteção/segredos/push. Próximo: cobertura das 11 artes restantes e resolução independente das pendências de acesso/Android.
+
+## Terça de Vitrine — candidata v1 conferida em 03/10/2026
+
+Terça de Vitrine de 6/10 v1 PENDING_REVIEW, aprovação humana ainda nula. QA PASSED_PREVIEW no código `dbf6956`: 33 testes, mobile Claro 390×850/desktop Escuro 1280×850 e PNG servido exato. Todos os 17 masters/16 arquivos aprovados anteriores preservados, incluindo Domingo Pitoresco. Janela 01–07/10: 23 eventos, 12 APPROVED, 1 candidata e 10 sem arte Home/FLY. Acesso público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push pendentes. Registro: `docs/qa/SHOWCASE_TUESDAY_REVIEW_20261003.json`.
+
+EventId `2026-10-06-showcase-tuesday`; arquivo `spidey-app/assets/events/review/showcase-tuesday-20261006-v1.png`, 1122×1402, 2.636.843 bytes, SHA256 `ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19`. PNG integral novo, vinculado exclusivamente pelo preview/full_poster, sem adicioná-lo ao master ou conceder aprovação. As mensagens “Bora” de continuação não são decisão visual sobre esta nova peça. Candidata original e prompt exato preservados no registro de revisão.
+
+Fatos: 6/10, 00h–23h59 locais; até cinco Vitrines de Poképarada para participar no dia e mais Poképaradas poderão ter Vitrines. Fonte atual comunitária Leek Duck; anúncio oficial de junho corrobora a mecânica anterior, não comprova sozinho a vigência em outubro. Snorlax ilustrativo; nenhuma espécie específica, recompensa, multiplicador ou chance de Brilhante prometida. Catálogo de 124 eventos: somente resumo/fonte/bônus/notas desta terça enriquecidos; os outros 123 eventos e todas as janelas/calendário/coordenadas/GPX/eligibilidade FLY preservados. SHA256 corrente `01b81b8daa9d8bc3aeda730aecb76c1884e6153bd021d6b9fc8e6ce4511827d9`. Nenhuma nova entrada FLY.
+
+QA: Home → detalhe mobile Claro/desktop Escuro, pôster inteiro/contain, rodapé visível, foco Fechar, scrollTop 0, sem overflow horizontal. Download real do PNG servido idêntico à candidata. Provas/medidas: `docs/qa/showcase-tuesday-browser-dbf6956-20261003.json`; auditoria local: `docs/qa/showcase-tuesday-local-audit-20261003.json`. Semana: resolver conferido localmente, sem nova prova visual nesta rodada. Placeholder genérico de local conhecido permanece no detalhe. Cache `spidey-app-20261003-showcase-review-v1`, 78 paths.
+
+Preview próprio conferido: https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/index.html. Acesso temporário restrito à própria conferência; não comprova acesso público de testadores. Nenhuma alteração de main/produção, proteção, segredos ou push. Próximo: entregar o PNG integral e obter decisão humana específica sobre esta candidata; dez eventos continuam sem arte e as frentes de acesso/Android seguem pendentes. Registros e decisões visuais anteriores permanecem congelados.

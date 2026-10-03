@@ -322,7 +322,7 @@
     }
   ],
   "qa": {
-    "status": "PENDING_NEW_PREVIEW",
+    "status": "PASSED_PREVIEW",
     "physical_android": "PENDING",
     "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
     "node_tests": "PASSED",
@@ -335,7 +335,85 @@
       "approved": 12,
       "pending_posters": 1,
       "missing": 10
-    }
+    },
+    "checked_at": "2026-10-03T22:29:25.866957+00:00",
+    "code_commit": "dbf6956555764e5790360521ab9b0078f3db0e12",
+    "deployment": "dpl_57L7YqfszpGwtvwJW5Rcd5uv83NB",
+    "preview_url": "https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/index.html",
+    "browser_record": "docs/qa/showcase-tuesday-browser-dbf6956-20261003.json",
+    "mobile": {
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/assets/events/review/showcase-tuesday-20261006-v1.png?v=ac11ef360b59",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Terça de Vitrine\n\nParticipe de até cinco Vitrines de Poképarada no dia; mais Poképaradas poderão sediar Vitrines.\n\nHorários e locais\nHorário\n06 de out., 00:00 → 06 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nParticipação em até cinco Vitrines de Poképarada no dia.\nMais Poképaradas poderão sediar Vitrines de Poképarada.\nObservações\nSnorlax na arte é ilustrativo; nenhuma espécie específica foi confirmada como destaque das Vitrines de 06/10 na fonte consultada.\nO guia atual da Leek Duck informa estes benefícios para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      }
+    },
+    "desktop": {
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/assets/events/review/showcase-tuesday-20261006-v1.png?v=ac11ef360b59",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Terça de Vitrine\n\nParticipe de até cinco Vitrines de Poképarada no dia; mais Poképaradas poderão sediar Vitrines.\n\nHorários e locais\nHorário\n06 de out., 00:00 → 06 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nParticipação em até cinco Vitrines de Poképarada no dia.\nMais Poképaradas poderão sediar Vitrines de Poképarada.\nObservações\nSnorlax na arte é ilustrativo; nenhuma espécie específica foi confirmada como destaque das Vitrines de 06/10 na fonte consultada.\nO guia atual da Leek Duck informa estes benefícios para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      }
+    },
+    "served_png": {
+      "exact_candidate": true,
+      "bytes": 2636843,
+      "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+    },
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-showcase-tuesday-mobile-dbf6956-20261003.jpg",
+        "bytes": 109943,
+        "sha256": "5f2c410d5a74ea760d3ce05b8631e4058430de9369aeafe6add3a6660728548f"
+      },
+      {
+        "file": "docs/qa/proofs/spidey-showcase-tuesday-desktop-dbf6956-20261003.jpg",
+        "bytes": 156024,
+        "sha256": "2584cb387403dc3bddaaa2fd3c2cded0ba94646374a0473bb6c28031581c152d"
+      }
+    ],
+    "week_visual_proof": "Not checked in this round; Tuesday is outside the currently displayed week.",
+    "known_detail_copy": "Generic location placeholder remains; no specific location for the daily event."
   },
   "release": {
     "production_approved": false,
