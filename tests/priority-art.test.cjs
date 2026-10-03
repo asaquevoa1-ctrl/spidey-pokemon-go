@@ -76,7 +76,7 @@ test('Seedot human decision binds the exact reviewed PNG and preserves earlier m
  assert.equal(approval.previous_master_sha256,review.preserved_master_sha256);
  const subsequentApproval=JSON.parse(fs.readFileSync('docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json','utf8'));
  const octoberApproval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json','utf8'));
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...subsequentApproval.event_ids,...octoberApproval.event_ids,'2026-10-zorua-community-day'].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...subsequentApproval.event_ids,...octoberApproval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
@@ -118,7 +118,7 @@ test('Mega Victreebel human approval binds the directly displayed v2 PNG and pre
  assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);
  assert.equal(Object.keys(approval.preserved_master_entries).length,7);
  const octoberApproval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json'));
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...octoberApproval.event_ids,'2026-10-zorua-community-day'].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...octoberApproval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
@@ -151,11 +151,34 @@ test('October human approval binds the three exact resent PNGs across roles and 
  }
  assert.equal(files.size,3);
  assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);assert.equal(Object.keys(approval.preserved_master_entries).length,8);
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids,'2026-10-zorua-community-day'].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
  }
  for(const c of record.revision_history)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.file)).digest('hex'),c.sha256);
  for(const c of record.inputs)assert.equal(crypto.createHash('sha256').update(fs.readFileSync(c.file)).digest('hex'),c.sha256);
+});
+test('Thundurus and Elgyem approval binds the displayed revisions while preserving twelve earlier masters',()=>{
+ const {window:w,context}=setup(),approval=JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json'));
+ const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+ const review=JSON.parse(fs.readFileSync(approval.candidate_record));
+ assert.equal(approval.status,'APPROVED');assert.equal(approval.decision.text,'Com certeza, eu aprovo as duas novas artes');assert.equal(approval.decision.at,'2026-10-03T07:30:21-03:00');
+ assert.equal(review.status,'PENDING_REVIEW');assert.equal(review.approval,null);assert.equal(hash(approval.candidate_record),approval.candidate_record_sha256);
+ assert.deepEqual(approval.event_ids,['2026-10-shadow-thundurus','2026-10-08-spotlight-elgyem']);assert.equal(approval.artworks.length,2);
+ assert.equal(Object.keys(approval.preserved_master_entries).length,12);
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids].sort());
+ for(const [id,old] of Object.entries(approval.preserved_master_entries)){assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);assert.equal(hash('spidey-app/'+old.file),old.sha256);}
+ for(const a of approval.artworks){
+  const c=review.candidates.find(c=>c.event_id===a.event_id),e={id:a.event_id},master=w.SPIDEY_APPROVED_ART_MASTER[e.id];
+  assert.equal(a.candidate_file,c.file);assert.equal(a.candidate_revision,c.revision);assert.equal(a.displayed_asset.file,c.file);assert.equal(a.displayed_asset.sha256,c.sha256);
+  assert.equal(a.source_classification,'community');assert.deepEqual(fs.readFileSync(a.approved_file),fs.readFileSync(c.file));assert.equal(hash(a.approved_file),c.sha256);
+  assert.equal(master.status,'APPROVED');assert.equal(master.display,'full_poster');assert.equal('spidey-app/'+master.file,a.approved_file);assert.equal(master.sha256,c.sha256);
+  assert.equal(master.approval_record,'docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json');assert.equal(w.SPIDEY_PREVIEW_ART[e.id],undefined);assert.equal(w.SpideyReviewArt.poster(e),null);
+  for(const role of ['thumb','card','weekly','hero','poster']){const art=w.SpideyArt.resolve(e,role);assert.equal(art.url,master.file);assert.equal(art.standard,'spidey-premium-v1');assert.match(art.sourceRole,/^premium_catalog:/);}
+  assert.equal(context.weeklyArtUrl(e),master.file+'?v='+c.sha256.slice(0,12));assert.equal(w.SPIDEY_PREMIUM_EVENT_ART[e.id].visualApproved,true);
+ }
+ const elgyem=review.candidates.find(c=>c.event_id==='2026-10-08-spotlight-elgyem');
+ assert.equal(elgyem.revision,2);assert.notEqual(elgyem.sha256,elgyem.revision_history[0].sha256);assert.equal(hash(elgyem.revision_history[0].file),elgyem.revision_history[0].sha256);
+ assert.equal(approval.previous_master_sha256,review.preserved_master_sha256);
 });

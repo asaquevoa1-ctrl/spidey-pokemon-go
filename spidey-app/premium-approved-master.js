@@ -104,6 +104,24 @@
     "height": 1403,
     "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
     "approval_record": "docs/qa/ZORUA_APPROVAL_20261002.json"
+  },
+  "2026-10-shadow-thundurus": {
+    "file": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+    "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json"
+  },
+  "2026-10-08-spotlight-elgyem": {
+    "file": "assets/events/premium/elgyem-spotlight-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1121,
+    "height": 1403,
+    "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+    "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
