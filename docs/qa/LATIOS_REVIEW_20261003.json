@@ -302,7 +302,7 @@
     }
   ],
   "qa": {
-    "status": "LOCAL_PASSED_BROWSER_PENDING",
+    "status": "PASSED_PREVIEW",
     "node_tests": "PENDING",
     "physical_android": "PENDING",
     "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
@@ -311,7 +311,29 @@
     "syntax": "preview-art.js/sw.js passed",
     "cache_files": 76,
     "master_entries_preserved": 15,
-    "other_events_unchanged": 123
+    "other_events_unchanged": 123,
+    "observed_at": "2026-10-03T15:51:24.187Z",
+    "code_commit": "760b1179e8fd1b76076cd947fc91388c12b52442",
+    "preview_url": "https://spidey-pokemon-m4vhhogwm-spidey3.vercel.app/spidey-app/index.html",
+    "deployment_id": "dpl_7EMe954ujCBBSvtvnnAi87mbob46",
+    "browser_record": "docs/qa/latios-browser-760b117-20261003.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-latios-mobile-760b117-20261003.jpg",
+        "bytes": 110128,
+        "sha256": "121f4bbd171598147ca2e91a1cc211b5fddadb6210051e1c5d1a04b0162760c3"
+      },
+      {
+        "file": "docs/qa/proofs/spidey-latios-desktop-760b117-20261003.jpg",
+        "bytes": 154683,
+        "sha256": "b0976fef668845862281bc9babc2bee218c32f089573b54999095b589cfe65b0"
+      }
+    ],
+    "served_png_sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+    "served_png_bytes": 2757480,
+    "served_png_matches_candidate": true,
+    "mobile": "390 × 850 Claro; PNG integral/contain, foco Fechar, scrollTop 0, sem overflow horizontal.",
+    "desktop": "1280 × 850 Escuro; PNG integral/contain, foco Fechar, scrollTop 0, sem overflow horizontal."
   },
   "release": {
     "production_approved": false,

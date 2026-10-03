@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-10-03T15:51:24.187Z",
+  "code_commit": "760b1179e8fd1b76076cd947fc91388c12b52442",
+  "deployment_id": "dpl_7EMe954ujCBBSvtvnnAi87mbob46",
+  "preview_url": "https://spidey-pokemon-m4vhhogwm-spidey3.vercel.app/spidey-app/index.html",
+  "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
+  "physical_android": "PENDING",
+  "views": [
+    {
+      "label": "mobile-claro",
+      "dialog": {
+        "activeElement": "closeDialog",
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 360
+      },
+      "image": {
+        "complete": true,
+        "height": 1402,
+        "objectFit": "contain",
+        "src": "assets/events/review/go-pass-september-latios-v1.png?v=d73632253693",
+        "width": 1122
+      },
+      "text": "×\nGO PASS\nANÚNCIO OFICIAL\nPasse GO: Setembro\n\nPasse GO de setembro com Latios entre as recompensas por progressão e Pontos GO sem limite diário em 3 e 4 de outubro.\n\nHorários e locais\nHorário\n08 de set., 10:00 → 06 de out., 10:00\nFonte\nBônus e informações\nEncontro com Latios ao avançar nos Ranques do Passe GO.\n3 e 4 de outubro, horário local: Pontos GO sem limite diário.\nAo atingir o Ranque 50: 2× duração do Incenso de Aventura Diário.\nDeluxe (versão paga), Ranque 20: Incubadora Temporária.\nObservações\nPasse gratuito recebido automaticamente; recompensas dependem da progressão.\nResgate as recompensas desbloqueadas até 8 de outubro, às 10h, horário local.\nIncubadora Temporária do Deluxe expira em 13 de outubro, às 10h, horário local.\nLatios Brilhante somente com sorte; nenhuma probabilidade aumentada anunciada.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-latios-mobile-760b117-20261003.jpg"
+    },
+    {
+      "label": "desktop-escuro",
+      "dialog": {
+        "activeElement": "closeDialog",
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 703
+      },
+      "image": {
+        "complete": true,
+        "height": 1402,
+        "objectFit": "contain",
+        "src": "assets/events/review/go-pass-september-latios-v1.png?v=d73632253693",
+        "width": 1122
+      },
+      "text": "×\nGO PASS\nANÚNCIO OFICIAL\nPasse GO: Setembro\n\nPasse GO de setembro com Latios entre as recompensas por progressão e Pontos GO sem limite diário em 3 e 4 de outubro.\n\nHorários e locais\nHorário\n08 de set., 10:00 → 06 de out., 10:00\nFonte\nBônus e informações\nEncontro com Latios ao avançar nos Ranques do Passe GO.\n3 e 4 de outubro, horário local: Pontos GO sem limite diário.\nAo atingir o Ranque 50: 2× duração do Incenso de Aventura Diário.\nDeluxe (versão paga), Ranque 20: Incubadora Temporária.\nObservações\nPasse gratuito recebido automaticamente; recompensas dependem da progressão.\nResgate as recompensas desbloqueadas até 8 de outubro, às 10h, horário local.\nIncubadora Temporária do Deluxe expira em 13 de outubro, às 10h, horário local.\nLatios Brilhante somente com sorte; nenhuma probabilidade aumentada anunciada.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-latios-desktop-760b117-20261003.jpg"
+    }
+  ],
+  "served_download": "/home/oai/share/9a01d4db-96bd-463f-847d-e45b41940520/ff9fb08d-55fd-4cb2-95e1-8f77e030b2b6",
+  "served_download_verification": {
+    "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+    "bytes": 2757480,
+    "matches_candidate": true
+  },
+  "status": "PASSED_PREVIEW"
+}

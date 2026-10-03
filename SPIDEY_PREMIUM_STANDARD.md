@@ -186,3 +186,8 @@ Toda peça nova enviada ao Discord deve registrar esse padrão no item curado.
 ## Passe GO de outubro/Kyogre v1 aprovado — 03/10, 09:04 BRT
 
 Master soberano APPROVED/full_poster para `2026-10-go-pass`, fonte oficial mantida. Cópia premium idêntica à candidata, 1122 × 1402, hash `c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67`. Master 15 entradas, 14 anteriores intactas; preview vazio. Resolver/Weekly/detalhe usam o mesmo asset aprovado e recebem `spidey-premium-v1`. Fonte, datas e condições Deluxe/Ranque 50 preservadas; aprovação não cria janela FLY nem concede lançamento completo. Registro `docs/qa/GO_PASS_APPROVAL_20261003.json`; QA novo `ff37843`, 33 testes, mobile Claro/desktop Escuro e bytes servidos exatos. Arquivos/revisões anteriores protegidos.
+
+
+## Latios v1 para decisão humana — 03/10
+
+Candidata raster integral, 1122 × 1402, cenário aéreo cinematográfico, Latios azul normal, marca oficial, título/datas/bônus legíveis. Dados oficiais e condições 3–4/10/Ranque 50 explícitas, sem prêmio pago tratado como gratuito. `docs/qa/LATIOS_REVIEW_20261003.json` vincula prompt/referências/hash. Status PENDING_REVIEW; os 15 masters continuam intactos e esta avaliação não concede aprovação visual humana. QA `760b117` mobile/desktop passou.

@@ -122,3 +122,8 @@ Aprovação explícita dos PNGs exatos em `docs/qa/THUNDURUS_ELGYEM_APPROVAL_202
 ## Passe GO de outubro/Kyogre v1 aprovado — 03/10, 09:04 BRT
 
 Master soberano APPROVED/full_poster para `2026-10-go-pass`, fonte oficial mantida. Cópia premium idêntica à candidata, 1122 × 1402, hash `c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67`. Master 15 entradas, 14 anteriores intactas; preview vazio. Resolver/Weekly/detalhe usam o mesmo asset aprovado e recebem `spidey-premium-v1`. Fonte, datas e condições Deluxe/Ranque 50 preservadas; aprovação não cria janela FLY nem concede lançamento completo. Registro `docs/qa/GO_PASS_APPROVAL_20261003.json`; QA novo `ff37843`, 33 testes, mobile Claro/desktop Escuro e bytes servidos exatos. Arquivos/revisões anteriores protegidos.
+
+
+## Latios v1 no resolver de preview — 03/10
+
+Entrada explícita somente para `2026-09-go-pass` em `preview-art.js`, PENDING_REVIEW/full_poster, 1122 × 1402, hash `d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50` e registro `docs/qa/LATIOS_REVIEW_20261003.json`. Resolver comum fornece os mesmos pixels em todos os cinco papéis, sem padrão Premium automático nem catálogo aprovado. Helper existente inteiro preservado e master continua soberano (15 entradas intactas). Cache `spidey-app-20261003-latios-review-v1`, 76 paths; somente query de preview versionada. Período/calendário/elegibilidade FLY inalterados. 33 testes e QA mobile Claro/desktop Escuro `760b117` passaram, servido hash exato.

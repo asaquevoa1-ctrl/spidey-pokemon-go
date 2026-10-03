@@ -241,3 +241,10 @@ Código: `ff37843208635a0923adc1996371aaacd2a430f6`, branch `spidey-fly-v1`; Ver
 Inventário pelo compositor real: 23 eventos entre 01 e 07/10, **10 APPROVED**, **0 candidatas** e **13 sem arquivo Home/FLY**. Registro `docs/qa/go-pass-approved-inventory-ff37843-20261003.json`. Elgyem e outros masters fora da janela não entram neste número.
 
 Compartilhamento público continua **BLOCKED_USER_PHONE_LOGIN**, conforme prova do editor às 08:47 BRT. O acesso temporário usado apenas para QA do novo deployment não resolve nem comprova acesso dos testadores no celular; token efêmero não foi persistido. Proteção Vercel permaneceu ativa, e o login administrativo anterior não foi concluído; não repetir autenticação sem nova solicitação. Push/configuração/recebimento real, Android/PWA/atualização/offline e 13 artes restantes seguem pendentes. Applin/Espaço/Sizzlipede permanecem com recusas registradas. Sem promoção para main/produção, dispatch, mensagens externas ou alteração de segredo/configuração. Não regenerar nem reabrir a aprovação do Passe GO.
+
+
+## Latios / Passe GO de setembro v1 — PENDING_REVIEW, 03/10
+
+EventId `2026-09-go-pass`, arquivo `spidey-app/assets/events/review/go-pass-september-latios-v1.png`, 1122 × 1402, SHA256 `d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50`. Nova candidata completa gerada no padrão visual da marca, validada factualmente na fonte oficial e conferida em mobile/desktop `760b117`. **Aprovação humana ainda pendente**; não adicionar ao master nem inferir aprovação do “Ok / E agora?” ou de aprovações anteriores. Manifesto `docs/qa/LATIOS_REVIEW_20261003.json`; QA `docs/qa/latios-browser-760b117-20261003.json`.
+
+15 entradas master/14 arquivos anteriores intactos, incluindo Kyogre aprovado; nenhuma revisão histórica foi sobrescrita. Inventário 01–07/10: 10 APPROVED, 1 candidata e 12 sem arquivo. O arquivo exato foi entregue por geração de imagem e oferecido integralmente para revisão.

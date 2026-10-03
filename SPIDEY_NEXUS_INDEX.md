@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-03
 
-Estado corrente: Latios/Passe GO de setembro v1 PENDING_REVIEW, PNG integral gerado e integrado no preview; fatos conferidos na fonte oficial PT-BR. QA local passou: 33 testes, 15 masters preservados, 123 outros eventos intactos; QA navegador do novo código ainda PENDING. Janela 01–07/10: 23 eventos, 10 APPROVED, 1 PENDING_REVIEW e 12 sem arquivo Home/FLY. Passe GO de outubro/Kyogre continua APPROVED conforme decisão 03/10 09:04:55 BRT. Acesso público BLOCKED_USER_PHONE_LOGIN; painel sem autenticação administrativa concluída. Android/PWA/push e lançamento completo pendentes. Registro da nova candidata: `docs/qa/LATIOS_REVIEW_20261003.json`.
+Estado corrente: Latios/Passe GO de setembro v1 PENDING_REVIEW, PNG integral entregue no chat e integrado no preview. Fonte oficial PT-BR conferida; QA PASSED_PREVIEW no código `760b117`: 33 testes, mobile Claro/desktop Escuro e arquivo servido idêntico à candidata. Todos os 15 masters, 14 arquivos aprovados e 123 outros eventos preservados. Janela 01–07/10: 23 eventos, 10 APPROVED, 1 PENDING_REVIEW e 12 sem arquivo Home/FLY. Passe GO de outubro/Kyogre permanece APPROVED. Acesso público BLOCKED_USER_PHONE_LOGIN; painel sem autenticação administrativa concluída. Android/PWA/push e lançamento completo pendentes. Registro: `docs/qa/LATIOS_REVIEW_20261003.json`.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -235,3 +235,8 @@ Código: `ff37843208635a0923adc1996371aaacd2a430f6`, branch `spidey-fly-v1`; Ver
 Inventário pelo compositor real: 23 eventos entre 01 e 07/10, **10 APPROVED**, **0 candidatas** e **13 sem arquivo Home/FLY**. Registro `docs/qa/go-pass-approved-inventory-ff37843-20261003.json`. Elgyem e outros masters fora da janela não entram neste número.
 
 Compartilhamento público continua **BLOCKED_USER_PHONE_LOGIN**, conforme prova do editor às 08:47 BRT. O acesso temporário usado apenas para QA do novo deployment não resolve nem comprova acesso dos testadores no celular; token efêmero não foi persistido. Proteção Vercel permaneceu ativa, e o login administrativo anterior não foi concluído; não repetir autenticação sem nova solicitação. Push/configuração/recebimento real, Android/PWA/atualização/offline e 13 artes restantes seguem pendentes. Applin/Espaço/Sizzlipede permanecem com recusas registradas. Sem promoção para main/produção, dispatch, mensagens externas ou alteração de segredo/configuração. Não regenerar nem reabrir a aprovação do Passe GO.
+
+
+## Retomada corrente — Latios, 03/10/2026
+
+Candidata v1 PENDING_REVIEW e aprovação humana ainda pendente. QA novo `760b117`, relatório `docs/qa/latios-browser-760b117-20261003.json`; fonte/fatos/prompt/referências/hashes em `docs/qa/LATIOS_REVIEW_20261003.json`. Inventário `docs/qa/latios-inventory-760b117-20261003.json`. Mesma peça em todos os papéis via resolver de preview; não é master aprovado e não cria janela FLY. Publicação restrita à branch `spidey-fly-v1`; acesso dos testadores continua bloqueado. Não repetir login administrativo recusado sem nova solicitação nem substituir qualquer master.

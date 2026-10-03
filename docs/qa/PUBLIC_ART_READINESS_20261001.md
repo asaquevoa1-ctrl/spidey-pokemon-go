@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **10 com arte no master APPROVED**, **nenhum pôster PENDING_REVIEW nesta janela**, **13 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **10 com arte no master APPROVED**, **1 pôster PENDING_REVIEW (Latios/Passe GO de setembro)** e **12 sem arquivo resolvido pelo compositor Home/FLY**. Cobertura de interface não equivale a arte Premium aprovada. Inventário corrente: `latios-inventory-760b117-20261003.json`.
 
 Xerneas, Invasão, Cinderace, Seedot, Mega Victreebel, rotação Yveltal, Hora de Reides Yveltal e Mega Blastoise foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -19,7 +19,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | eventId | Evento | Datas locais do catálogo | Arte no compositor |
 | --- | --- | --- | --- |
 | `2026-09-twilight-trails-season` | Temporada Twilight Trails | 2026-09-08 → 2026-12-01 | Sem arquivo no compositor Home/FLY |
-| `2026-09-go-pass` | GO Pass: Setembro | 2026-09-08 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
+| `2026-09-go-pass` | Passe GO: Setembro | 2026-09-08 → 2026-10-06 | PENDING_REVIEW — pôster integral Latios v1 |
 | `2026-09-harvest-festival-applin` | Festival da Colheita: Pomar de Applin | 2026-09-29 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
 | `2026-09-raids-xerneas` | Reides 5★: Xerneas | 2026-09-30 → 2026-10-06 | APPROVED |
 | `2026-09-mega-victreebel-raids` | Megarreides: Mega Victreebel | 2026-09-30 → 2026-10-06 | APPROVED |
@@ -132,3 +132,6 @@ Código: `ff37843208635a0923adc1996371aaacd2a430f6`, branch `spidey-fly-v1`; Ver
 Inventário pelo compositor real: 23 eventos entre 01 e 07/10, **10 APPROVED**, **0 candidatas** e **13 sem arquivo Home/FLY**. Registro `docs/qa/go-pass-approved-inventory-ff37843-20261003.json`. Elgyem e outros masters fora da janela não entram neste número.
 
 Compartilhamento público continua **BLOCKED_USER_PHONE_LOGIN**, conforme prova do editor às 08:47 BRT. O acesso temporário usado apenas para QA do novo deployment não resolve nem comprova acesso dos testadores no celular; token efêmero não foi persistido. Proteção Vercel permaneceu ativa, e o login administrativo anterior não foi concluído; não repetir autenticação sem nova solicitação. Push/configuração/recebimento real, Android/PWA/atualização/offline e 13 artes restantes seguem pendentes. Applin/Espaço/Sizzlipede permanecem com recusas registradas. Sem promoção para main/produção, dispatch, mensagens externas ou alteração de segredo/configuração. Não regenerar nem reabrir a aprovação do Passe GO.
+
+
+Atualização 03/10: Latios v1 produzido, fonte oficial/bônus verificados, QA 33 testes + mobile/desktop `760b117` passou. Revisão humana pendente; demais 12 sem arquivo continuam na fila, com recusas Applin/Espaço/Sizzlipede preservadas. Acesso para testadores ainda bloqueado pelo Vercel; não chamar acesso interno temporário de link público validado.
