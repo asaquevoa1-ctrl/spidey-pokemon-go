@@ -213,3 +213,17 @@ Registro/prompts: `docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json`. QA de preview
 “Com certeza, eu aprovo as duas novas artes” aprova os PNGs completos exibidos anteriormente, com eventIds/revisões/hashes vinculados em `docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json`. Caminhos finais `assets/events/premium/thundurus-shadow-weekend-approved-v1.png` e `assets/events/premium/elgyem-spotlight-approved-v1.png`, 1121×1403, idênticos às candidatas v1/v2. Elgyem v1 incompleta preservada só no histórico. Os dois IDs entram no master APPROVED/full_poster e saem do preview; 12 entradas anteriores preservadas, total 14. Fonte permanece comunidade, sem mudança factual na aprovação.
 
 QA pós-aprovação PASSED_PREVIEW no código `29c1aecf53742de581ea0fc036793d91a859bc60`: 32 testes, mobile Claro/desktop Escuro, dois PNGs integrais e downloads servidos com hashes exatos, asset de Thundurus na Semana, FLY Elgyem 20/28. Cinco provas/DOM no relatório `docs/qa/thundurus-elgyem-approved-browser-29c1aec-20261003.json`. Prévia https://spidey-pokemon-7whircohq-spidey3.vercel.app/spidey-app/index.html. Android físico/push e lançamento completo ainda pendentes; nenhuma promoção a produção.
+
+## Handoff — 03/10/2026 — Passe GO em revisão e acesso de testadores
+
+Código de interface: `97c6823f1efb180782550ef22bf660416a1aebdc`, branch `spidey-fly-v1`. Preview conferido: https://spidey-pokemon-9oklrwpv9-spidey3.vercel.app/spidey-app/index.html.
+
+Passe GO/Kyogre v1 está **PENDING_REVIEW**; aprovação humana segue nula. Fonte primária PT-BR rechecada: https://pokemongo.com/pt-BR/news/go-pass-october-2026. Texto distingue o Globo da Sorte pago (Deluxe) e 2× duração do Incenso de Aventura Diário ao atingir o Ranque 50. Datas 06/10 10h–03/11 10h locais preservadas. Não foi criada uma janela FLY para este passe de progressão. Os outros 123 eventos e todos os horários do catálogo permanecem iguais ao código anterior.
+
+33 testes passaram antes da publicação do código. Novo preview READY conferido visualmente em 390 × 850 Claro e 1280 × 850 Escuro: arquivo íntegro, `contain`, sem overflow horizontal no diálogo; SHA256 servido igual ao candidato. Evidências: `docs/qa/GO_PASS_REVIEW_20261003.json`, `docs/qa/go-pass-browser-97c6823-20261003.json` e respectivos JPEGs em `docs/qa/proofs/`. Aprovações anteriores não foram alteradas.
+
+A URL normal solicita conta Vercel. Um link temporário nativo com `_vercel_share` abriu a interface e o PNG em cliente sem autenticação e com cookies inicialmente vazios (HTTP 200). Compartilhar o link completo emitido, sem copiar o endereço pós-redirecionamento da barra. Expiração nativa informada: 10/4/2026, 10:30:31 AM; prazo do recurso: 23h. Token efêmero omitido do repositório. Proteções do projeto não foram alteradas; não há URL pública permanente nova.
+
+Inventário recalculado pelo compositor real: 23 eventos na janela 01–07/10, 9 APPROVED, 1 PENDING_REVIEW e 13 sem arquivo. São **14 ainda sem conclusão/aprovação**, sendo a candidata do Passe GO já gerada. Master: 14 entradas, intacto. As recusas Applin/Espaço/Sizzlipede continuam registradas, sem novas tentativas de contorno.
+
+Núcleo apto a teste: eventos, FLY/horários/fusos/coordenadas, Selos e GPX confirmado. Ainda pendentes: configuração/recebimento real de alertas, Android físico/instalação PWA/atualização/offline, demais artes e validação final. Amigos/Chat permanece depois do núcleo. Sem promoção para main/produção, configuração push ou dispatch. Próximo passo editorial: decisão do editor sobre o PNG exato do Passe GO; preservar todos os masters.

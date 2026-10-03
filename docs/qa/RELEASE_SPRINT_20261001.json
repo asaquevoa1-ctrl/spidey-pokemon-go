@@ -1,5 +1,5 @@
 {
-  "status": "THUNDURUS_ELGYEM_APPROVED_POST_APPROVAL_QA_PASSED_PUBLIC_BLOCKED",
+  "status": "GO_PASS_REVIEW_PREVIEW_QA_PASSED_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -16,9 +16,9 @@
     "premium_window_20261001_07": {
       "events": 23,
       "approved": 9,
-      "pending_posters": 0,
-      "missing": 14,
-      "status": "PENDING_REMAINING_COVERAGE"
+      "pending_posters": 1,
+      "missing": 13,
+      "status": "PENDING_REMAINING_COVERAGE_AND_GO_PASS_APPROVAL"
     },
     "blocked_generation": [
       "Applin",
@@ -27,12 +27,14 @@
     ],
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
-    "approved_master_integrity": "14_MASTER_ENTRIES_12_PREVIOUS_AND_ALL_PROTECTED_FILES_PRESERVED_29C1AEC",
+    "approved_master_integrity": "14_MASTER_ENTRIES_AND_ALL_PROTECTED_FILES_PRESERVED_97C6823",
     "mobile_desktop_core": "TWO_APPROVED_POSTERS_MOBILE_DESKTOP_SERVED_HASHES_AND_ELGYEM_FLY_20_28_PASSED_29C1AEC_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
     "push_live_configuration": "BLOCKED_DASHBOARD_LOGIN_HTTP_503_PUSH_NOT_CONFIGURED_A17F6D4",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
-    "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC"
+    "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC",
+    "go_pass_poster": "PENDING_REVIEW_PREVIEW_QA_PASSED_97C6823",
+    "tester_shared_preview_access": "PASSED_ANONYMOUS_TEMPORARY_LINK_97C6823_NORMAL_URL_PROTECTED"
   },
   "next_batch": [
     "Configuração de alertas: acesso ao painel Vercel e configuração do servidor pendentes",
@@ -51,13 +53,14 @@
     "Zorua aprovado explicitamente em 02/10 18:38:35 BRT; bônus rechecados na fonte oficial e master atualizado com cópia byte a byte.",
     "0433c32 preview: approved Zorua mobile/desktop/FLY 20/28 verified; served PNG exact approved SHA256; new browser-downloaded Japan GPX parsed with all 17 coordinates, names and order matching catalog.",
     "a17f6d4: Thundurus Sombroso v1 e Elgyem v2 gerados, comunidade identificada, títulos PT-BR e bônus estruturado de Elgyem; 31 testes passaram; mobile Claro/desktop Escuro e hashes servidos exatos conferidos, FLY Elgyem 20/28 e horários/coords verificados; aprovação humana pendente.",
-    "03/10 07:30:21 BRT: aprovação humana dos PNGs exatos Thundurus v1 e Elgyem v2. 29c1aec: cópias premium idênticas, 14 masters/12 anteriores preservados, catálogo inalterado, 32 testes e QA pós-aprovação novo preview mobile/desktop/hashes servidos e FLY Elgyem 20/28 passaram."
+    "03/10 07:30:21 BRT: aprovação humana dos PNGs exatos Thundurus v1 e Elgyem v2. 29c1aec: cópias premium idênticas, 14 masters/12 anteriores preservados, catálogo inalterado, 32 testes e QA pós-aprovação novo preview mobile/desktop/hashes servidos e FLY Elgyem 20/28 passaram.",
+    "97c6823: Passe GO/Kyogre v1 gerado e integrado PENDING_REVIEW com fonte oficial PT-BR e condições Deluxe/Ranque 50 explícitas; 33 testes, mobile Claro/desktop Escuro, hash servido e acesso compartilhado anônimo passaram. Masters e outros 123 eventos preservados; aprovação humana e Android físico pendentes."
   ],
-  "updated_at": "2026-10-03T10:45:32.263Z",
-  "code_commit": "29c1aecf53742de581ea0fc036793d91a859bc60",
-  "preview_url": "https://spidey-pokemon-7whircohq-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-03T11:42:21.094604+00:00",
+  "code_commit": "97c6823f1efb180782550ef22bf660416a1aebdc",
+  "preview_url": "https://spidey-pokemon-9oklrwpv9-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
-    "14 eventos sem arquivo Home/FLY na janela 01–07/10; 9 APPROVED e nenhuma candidata ativa. Elgyem APPROVED fora da janela.",
+    "13 eventos sem arquivo Home/FLY e 1 Passe GO PENDING_REVIEW na janela 01–07/10; 9 APPROVED. São 14 sem conclusão/aprovação; Elgyem APPROVED fora da janela.",
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
@@ -74,5 +77,7 @@
   },
   "gpx_qa_record": "docs/qa/japan-rally-browser-download-0433c32-20261002.json",
   "candidate_review_record": "docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json",
-  "candidate_qa_record": "docs/qa/THUNDURUS_ELGYEM_QA_20261002.json"
+  "candidate_qa_record": "docs/qa/THUNDURUS_ELGYEM_QA_20261002.json",
+  "current_art_review_record": "docs/qa/GO_PASS_REVIEW_20261003.json",
+  "current_art_qa_record": "docs/qa/go-pass-browser-97c6823-20261003.json"
 }

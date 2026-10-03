@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **9 com arte no master APPROVED**, **nenhum pôster PENDING_REVIEW nesta janela**, **14 sem arquivo resolvido pelo compositor Home/FLY**. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **9 com arte no master APPROVED**, **1 pôster PENDING_REVIEW (Passe GO de outubro/Kyogre v1)**, **13 sem arquivo resolvido pelo compositor Home/FLY**. São 14 eventos ainda sem conclusão/aprovação. Este inventário não declara ausência de toda representação na Semana: essa tela ainda compõe coberturas por categoria. Cobertura de interface não equivale a arte Premium aprovada.
 
 Xerneas, Invasão, Cinderace, Seedot, Mega Victreebel, rotação Yveltal, Hora de Reides Yveltal e Mega Blastoise foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -29,7 +29,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-patterns-of-the-wild-indonesia` | Patterns of the Wild • Indonésia | 2026-10-02 → 2026-10-02 | Sem arquivo no compositor Home/FLY |
 | `2026-10-gigantamax-cinderace-max-day` | Dia de Batalhas Max: Cinderace Gigamax | 2026-10-03 → 2026-10-03 | APPROVED |
 | `2026-10-world-space-week` | Semana Mundial do Espaço 2026 | 2026-10-04 → 2026-10-10 | Sem arquivo no compositor Home/FLY |
-| `2026-10-go-pass` | GO Pass: Outubro | 2026-10-06 → 2026-11-03 | Sem arquivo no compositor Home/FLY |
+| `2026-10-go-pass` | Passe GO: Outubro | 2026-10-06 → 2026-11-03 | PENDING_REVIEW — Kyogre v1, QA passou |
 | `2026-10-01-spotlight-seedot` | Hora do Holofote: Seedot | 2026-10-01 → 2026-10-01 | APPROVED |
 | `2026-10-07-raid-hour-yveltal` | Hora de Reides: Yveltal | 2026-10-07 → 2026-10-07 | APPROVED |
 | `2026-10-05-max-monday-sizzlipede` | Segunda Max: Dinamax Sizzlipede | 2026-10-05 → 2026-10-05 | Sem arquivo no compositor Home/FLY |
@@ -42,7 +42,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-01-go-battle-thursday` | Descoberta Diária: Quinta de Batalhas GO | 2026-10-01 → 2026-10-01 | Sem arquivo no compositor Home/FLY |
 | `2026-10-02-friendship-friday` | Descoberta Diária: Sexta da Amizade | 2026-10-02 → 2026-10-02 | Sem arquivo no compositor Home/FLY |
 
-Fonte do inventário: `spidey-app/data/events.json`, `premium-approved-master.js`, `preview-art.js` e resolução real de `SpideyPlayer.art`, no código `29c1aec`, após a decisão de 03/10 07:30:21 BRT; 23 IDs da tabela recalculados com 9 APPROVED, 0 candidatas e 14 sem arquivo Home/FLY. Datas/nomes neste inventário não constituem nova verificação oficial dos demais eventos. Artes não cadastradas ou factualmente conflitantes continuam pendentes de revisão.
+Fonte do inventário: `spidey-app/data/events.json`, `premium-approved-master.js`, `preview-art.js` e resolução real de `SpideyPlayer.art`, no código `97c6823`; 23 IDs recalculados com 9 APPROVED, 1 candidata e 13 sem arquivo Home/FLY. Registro: `docs/qa/go-pass-inventory-97c6823-20261003.json`. Datas/nomes dos demais eventos neste inventário não constituem nova verificação oficial. Artes não cadastradas ou factualmente conflitantes continuam pendentes de revisão.
 
 
 Applin/Invasão/Cinderace receberam verificação nas fontes primárias pt-BR; os demais nomes/datas do inventário não foram revalidados nesta rodada. Histórico do inventário anterior: 1 master, 2 recortes e 20 sem arquivo em `641463d`. Registro dos novos bytes e prompts: `PRIORITY_ART_REVIEW_20261001.json`.
@@ -103,3 +103,18 @@ Inventário 01–07/10: 23 eventos, 8 APPROVED e 15 sem arquivo Home/FLY; Zorua 
 ## Aprovação consolidada — 03/10/2026, 29c1aec
 
 Thundurus v1 e Elgyem v2 aprovados explicitamente às 07:30:21 BRT. Registro `THUNDURUS_ELGYEM_APPROVAL_20261003.json` e QA pós-aprovação `thundurus-elgyem-approved-browser-29c1aec-20261003.json`: 32 testes, dois pôsteres completos mobile/desktop, hashes servidos exatos, FLY Elgyem 20/28. Master total 14 entradas, 12 anteriores preservadas, preview ativo vazio. Recalculo dos 23 IDs da tabela por `SpideyPlayer.art`: 9 APPROVED, 0 PENDING_REVIEW e 14 sem arquivo Home/FLY. Elgyem aprovado em 8/10 fora da janela. Fonte comunitária preservada; cobertura artística não equivale a prontidão física/publicação. Recusas anteriores, push/configuração e Android físico continuam pendentes.
+
+
+## Handoff — 03/10/2026 — Passe GO em revisão e acesso de testadores
+
+Código de interface: `97c6823f1efb180782550ef22bf660416a1aebdc`, branch `spidey-fly-v1`. Preview conferido: https://spidey-pokemon-9oklrwpv9-spidey3.vercel.app/spidey-app/index.html.
+
+Passe GO/Kyogre v1 está **PENDING_REVIEW**; aprovação humana segue nula. Fonte primária PT-BR rechecada: https://pokemongo.com/pt-BR/news/go-pass-october-2026. Texto distingue o Globo da Sorte pago (Deluxe) e 2× duração do Incenso de Aventura Diário ao atingir o Ranque 50. Datas 06/10 10h–03/11 10h locais preservadas. Não foi criada uma janela FLY para este passe de progressão. Os outros 123 eventos e todos os horários do catálogo permanecem iguais ao código anterior.
+
+33 testes passaram antes da publicação do código. Novo preview READY conferido visualmente em 390 × 850 Claro e 1280 × 850 Escuro: arquivo íntegro, `contain`, sem overflow horizontal no diálogo; SHA256 servido igual ao candidato. Evidências: `docs/qa/GO_PASS_REVIEW_20261003.json`, `docs/qa/go-pass-browser-97c6823-20261003.json` e respectivos JPEGs em `docs/qa/proofs/`. Aprovações anteriores não foram alteradas.
+
+A URL normal solicita conta Vercel. Um link temporário nativo com `_vercel_share` abriu a interface e o PNG em cliente sem autenticação e com cookies inicialmente vazios (HTTP 200). Compartilhar o link completo emitido, sem copiar o endereço pós-redirecionamento da barra. Expiração nativa informada: 10/4/2026, 10:30:31 AM; prazo do recurso: 23h. Token efêmero omitido do repositório. Proteções do projeto não foram alteradas; não há URL pública permanente nova.
+
+Inventário recalculado pelo compositor real: 23 eventos na janela 01–07/10, 9 APPROVED, 1 PENDING_REVIEW e 13 sem arquivo. São **14 ainda sem conclusão/aprovação**, sendo a candidata do Passe GO já gerada. Master: 14 entradas, intacto. As recusas Applin/Espaço/Sizzlipede continuam registradas, sem novas tentativas de contorno.
+
+Núcleo apto a teste: eventos, FLY/horários/fusos/coordenadas, Selos e GPX confirmado. Ainda pendentes: configuração/recebimento real de alertas, Android físico/instalação PWA/atualização/offline, demais artes e validação final. Amigos/Chat permanece depois do núcleo. Sem promoção para main/produção, configuração push ou dispatch. Próximo passo editorial: decisão do editor sobre o PNG exato do Passe GO; preservar todos os masters.

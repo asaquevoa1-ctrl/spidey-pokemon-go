@@ -185,10 +185,28 @@
     }
   ],
   "qa": {
-    "status": "PENDING_NEW_PREVIEW",
+    "status": "PASSED_PREVIEW",
     "physical_android": "PENDING",
     "node_tests_passed": 33,
-    "syntax": "Changed active scripts passed"
+    "syntax": "Changed active scripts passed",
+    "observed_at": "2026-10-03T11:42:21.094604+00:00",
+    "code_commit": "97c6823f1efb180782550ef22bf660416a1aebdc",
+    "preview_url": "https://spidey-pokemon-9oklrwpv9-spidey3.vercel.app/spidey-app/index.html",
+    "deployment_id": "dpl_H35VdLksCo4g1McHwHvMVhGuuGhf",
+    "browser_record": "docs/qa/go-pass-browser-97c6823-20261003.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-go-pass-mobile-97c6823-20261003.jpg",
+        "bytes": 110438,
+        "sha256": "b942a899bee1f46361e6f57973ebfccab1a8085d47a4c340d2beb1dd627de244"
+      },
+      {
+        "file": "docs/qa/proofs/spidey-go-pass-desktop-97c6823-20261003.jpg",
+        "bytes": 157714,
+        "sha256": "eb0de463288b1d0882f63367499481b2fdfe42e4008af6e08a980e2e1935d4f2"
+      }
+    ],
+    "anonymous_shared_access": "PASSED_FRESH_COOKIE_JAR_HTTP_200_APP_AND_EXACT_PNG"
   },
   "release": {
     "production_approved": false,
