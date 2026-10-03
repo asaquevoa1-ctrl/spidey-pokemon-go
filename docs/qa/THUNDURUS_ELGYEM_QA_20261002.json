@@ -1,0 +1,42 @@
+{
+  "status": "LOCAL_QA_PASSED_BROWSER_PENDING",
+  "record_date": "2026-10-02",
+  "base_commit": "12209c2dceabc2aad4d3e638c870d02c438f6844",
+  "code_commit": null,
+  "preview_url": null,
+  "human_approval": null,
+  "production_promoted": false,
+  "local": {
+    "tests": 31,
+    "passed": 31,
+    "failed": 0,
+    "catalog_count": 124,
+    "ids_preserved": true,
+    "schedules_preserved": true,
+    "approved_count": 12,
+    "approved_master_preserved": true,
+    "candidate_roles": [
+      "thumb",
+      "card",
+      "weekly",
+      "hero",
+      "poster"
+    ],
+    "weekly_candidate_urls_verified": true
+  },
+  "browser": null,
+  "push": {
+    "status": "BLOCKED_DASHBOARD_ACCESS",
+    "configuration_written": false,
+    "notes": [
+      "Connector disponível não expõe operações de variáveis de ambiente.",
+      "Sem Vercel CLI ou credencial disponível no runtime.",
+      "Painel environment-variables redirecionou para login; estado das variáveis não inspecionado.",
+      "Nenhuma assinatura, segredo ou envio push criado nesta rodada."
+    ]
+  },
+  "limitations": [
+    "Ainda sem QA desta nova prévia no browser.",
+    "Android físico, instalação PWA, offline real e recebimento push não validados."
+  ]
+}

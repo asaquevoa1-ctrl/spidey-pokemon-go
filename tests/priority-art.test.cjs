@@ -123,7 +123,8 @@ test('Mega Victreebel human approval binds the directly displayed v2 PNG and pre
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
  }
- assert.deepEqual(Object.keys(w.SPIDEY_PREVIEW_ART),[]);assert.equal(w.SPIDEY_APPROVED_ART_MASTER['2026-10-zorua-community-day'].status,'APPROVED');
+ for(const id of Object.keys(w.SPIDEY_APPROVED_ART_MASTER))assert.equal(w.SPIDEY_PREVIEW_ART[id],undefined);
+ assert.equal(w.SPIDEY_APPROVED_ART_MASTER['2026-10-zorua-community-day'].status,'APPROVED');
 });
 test('October human approval binds the three exact resent PNGs across roles and preserves earlier masters',()=>{
  const {window:w,context}=setup(),approval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json'));

@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261002-zorua-approved-v1';
+const CACHE = 'spidey-app-20261002-thundurus-elgyem-review-v1';
 const CORE = [
   './',
   './index.html',
@@ -25,6 +25,8 @@ const CORE = [
   './player-ui.js',
   './player-ui.css',
   './preview-art.js',
+  './assets/events/review/thundurus-shadow-weekend-v1.png',
+  './assets/events/review/elgyem-spotlight-v2.png',
   './assets/events/review/zorua-community-day-correction-v1.png',
   './assets/events/premium/zorua-community-day-approved-v1.png',
   './command-center.css',

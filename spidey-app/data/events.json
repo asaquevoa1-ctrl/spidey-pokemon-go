@@ -3548,7 +3548,7 @@
     {
       "id": "2026-10-08-spotlight-elgyem",
       "slug": "2026-10-08-spotlight-elgyem",
-      "title": "Spotlight Hour: Elgyem",
+      "title": "Hora do Holofote: Elgyem",
       "summary": "2× Doces por captura.",
       "category": "spotlight_hour",
       "tags": [
@@ -3588,7 +3588,10 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "2× Doces por captura."
+      ]
     },
     {
       "id": "2026-10-15-spotlight-stufful",
@@ -4635,7 +4638,7 @@
     {
       "id": "2026-10-shadow-thundurus",
       "slug": "2026-10-shadow-thundurus",
-      "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+      "title": "Reides Sombrosas: Thundurus (Forma Encarnada)",
       "summary": "Thundurus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
       "category": "shadow_raids",
       "tags": [
