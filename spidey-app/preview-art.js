@@ -1,5 +1,15 @@
 // Review candidates and recovered illustration crops. This never grants approval.
-window.SPIDEY_PREVIEW_ART=Object.freeze({});
+window.SPIDEY_PREVIEW_ART=Object.freeze({
+  "2026-10-06-showcase-tuesday": {
+    "file": "assets/events/review/showcase-tuesday-20261006-v1.png",
+    "status": "PENDING_REVIEW",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+    "review_record": "docs/qa/SHOWCASE_TUESDAY_REVIEW_20261003.json"
+  }
+});
 
 // All screens share this explicit exception for a known unavailable original.
 // A healthy approved original always wins; unrelated drafts never substitute it.

@@ -5073,7 +5073,7 @@
       "id": "2026-10-06-showcase-tuesday",
       "slug": "2026-10-06-showcase-tuesday",
       "title": "Descoberta Diária: Terça de Vitrine",
-      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "summary": "Participe de até cinco Vitrines de Poképarada no dia; mais Poképaradas poderão sediar Vitrines.",
       "category": "daily_discovery",
       "tags": [
         "Vitrines",
@@ -5081,7 +5081,7 @@
         "Twilight Trails"
       ],
       "source": {
-        "name": "Twilight Trails • Daily Discoveries",
+        "name": "Leek Duck • Descobertas Diárias da temporada",
         "url": "https://leekduck.com/events/season-24-twilight-trails/",
         "confidence": "verified"
       },
@@ -5105,12 +5105,20 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Snorlax na arte é ilustrativo; nenhuma espécie específica foi confirmada como destaque das Vitrines de 06/10 na fonte consultada.",
+        "O guia atual da Leek Duck informa estes benefícios para a temporada; fonte comunitária, sujeita a alterações.",
+        "As Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Participação em até cinco Vitrines de Poképarada no dia.",
+        "Mais Poképaradas poderão sediar Vitrines de Poképarada."
+      ]
     },
     {
       "id": "2026-10-13-showcase-tuesday",

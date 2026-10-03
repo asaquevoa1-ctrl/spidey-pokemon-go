@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261003-scenic-approved-v1';
+const CACHE = 'spidey-app-20261003-showcase-review-v1';
 const CORE = [
   './',
   './index.html',
@@ -25,6 +25,7 @@ const CORE = [
   './player-ui.js',
   './player-ui.css',
   './preview-art.js',
+  './assets/events/review/showcase-tuesday-20261006-v1.png',
   './assets/events/premium/scenic-sunday-20261004-approved-v1.png',
   './assets/events/premium/go-pass-september-latios-approved-v1.png',
   './assets/events/premium/go-pass-october-kyogre-approved-v1.png',
