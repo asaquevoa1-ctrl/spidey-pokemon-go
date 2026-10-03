@@ -1,6 +1,6 @@
 # Artes públicas — preparação de 01/10/2026
 
-Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **11 com arte no master APPROVED**, **nenhum pôster PENDING_REVIEW nesta janela** e **12 sem arquivo resolvido pelo compositor Home/FLY**. Cobertura de interface não equivale a arte Premium aprovada. Inventário corrente: `latios-approved-inventory-d14897b-20261003.json`.
+Auditoria do catálogo atual entre 01 e 07/10: **23 eventos**, **11 no master APPROVED**, **1 pôster PENDING_REVIEW** (Domingo Pitoresco v2) e **11 sem arquivo Home/FLY**. Auditoria: `scenic-sunday-local-audit-20261003.json`; QA `14fa3ad` em `SCENIC_SUNDAY_REVIEW_20261003.json`.
 
 Xerneas, Invasão, Cinderace, Seedot, Mega Victreebel, rotação Yveltal, Hora de Reides Yveltal e Mega Blastoise foram aprovados explicitamente pelo editor e estão protegidos pelo master/hash. Decisão das duas peças de 15:45 BRT: `PRIORITY_ART_APPROVAL_20261001.json`. Aprovações não se estendem às demais peças. Festival das Luzes tem arte própria aprovada, mas está fora desta janela do catálogo.
 
@@ -37,7 +37,7 @@ Cada nova peça precisa de validação factual, arquivo íntegro, preview mobile
 | `2026-10-mega-blastoise-raids` | Megarreides: Mega Blastoise | 2026-10-07 → 2026-10-13 | APPROVED |
 | `2026-10-gbl-06-13` | Liga de Batalha GO: Great Mega / Ultra Mega / Master Mega | 2026-10-06 → 2026-10-13 | Sem arquivo no compositor Home/FLY |
 | `2026-10-shadow-thundurus` | Reides Sombrosas: Thundurus (Forma Encarnada) | 2026-10-03 → 2026-10-04 | APPROVED — Thundurus v1 |
-| `2026-10-04-scenic-sunday` | Descoberta Diária: Domingo Pitoresco | 2026-10-04 → 2026-10-04 | Sem arquivo no compositor Home/FLY |
+| `2026-10-04-scenic-sunday` | Descoberta Diária: Domingo Pitoresco | 2026-10-04 → 2026-10-04 | PENDING_REVIEW — pôster integral v2 |
 | `2026-10-06-showcase-tuesday` | Descoberta Diária: Terça de Vitrine | 2026-10-06 → 2026-10-06 | Sem arquivo no compositor Home/FLY |
 | `2026-10-01-go-battle-thursday` | Descoberta Diária: Quinta de Batalhas GO | 2026-10-01 → 2026-10-01 | Sem arquivo no compositor Home/FLY |
 | `2026-10-02-friendship-friday` | Descoberta Diária: Sexta da Amizade | 2026-10-02 → 2026-10-02 | Sem arquivo no compositor Home/FLY |
@@ -138,3 +138,11 @@ Atualização 03/10: Latios v1 produzido, fonte oficial/bônus verificados, QA 3
 
 
 Aprovação 03/10 13:01 BRT: Latios v1 APPROVED; PNG premium idêntico à candidata, QA pós-aprovação `d14897b` PASSED_PREVIEW (33 testes/mobile/desktop/servido exato). Janela 11 aprovados/0 candidatas/12 sem arquivo. Compartilhamento público continua bloqueado no teste do celular; Android físico/push pendentes.
+
+## Domingo Pitoresco v2 para revisão — 03/10/2026
+
+Domingo Pitoresco de 4/10: candidata v2 PENDING_REVIEW, revisão humana ainda pendente. QA PASSED_PREVIEW no código `14fa3ad`: 33 testes, mobile Claro 390×850/desktop Escuro 1280×850 e PNG servido idêntico à candidata. 16 masters aprovados/15 arquivos preservados. Janela 01–07/10: 23 eventos, 11 APPROVED, 1 candidata e 11 sem arquivo Home/FLY. Fonte atual Leek Duck identificada como comunidade; bônus condicionados a Rotas/companheiro. Acesso público BLOCKED_USER_PHONE_LOGIN e Android/PWA/push pendentes. Registro: `docs/qa/SCENIC_SUNDAY_REVIEW_20261003.json`.
+
+PNG integral `assets/events/review/scenic-sunday-20261004-v2.png`, 1122 × 1402, 2739274 bytes, SHA256 `0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977`. V1 preservada para histórico; ícone de rosto não validado substituído por presente via imagegen na v2. Eevee é ilustrativo, sem promessa de encontro destacado. A vigência nesta temporada vem do guia comunitário; anúncio oficial de junho confirma a mecânica da temporada anterior e não prova outubro isoladamente. Fonte/datas/bônus/observações enriquecidos somente para `2026-10-04-scenic-sunday`; outros 123 eventos e horários/calendário/coordenadas/GPX preservados.
+
+Integração explícita PENDING_REVIEW/full_poster, resolver comum nos cinco papéis, sem inclusão no master ou concessão de `spidey-premium-v1`. Helper inteiro preservado; cache 77 paths e query de preview versionados. Home e detalhe renderizam a mesma candidata; Semana mostra o evento em linha textual de 4/10, sem miniatura de pôster observada. Não cria nova elegibilidade FLY. Provas e limites: `docs/qa/scenic-sunday-browser-14fa3ad-20261003.json`, auditoria `docs/qa/scenic-sunday-local-audit-20261003.json`. Sem promoção a main/produção ou alteração de proteção/push. Próximo: entregar PNG completo para decisão humana específica; depois artes restantes e frentes públicas/físicas pendentes.

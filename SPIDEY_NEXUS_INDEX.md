@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-03
 
-Estado corrente: Latios/Passe GO de setembro v1 APPROVED pela decisão “Eu aprovo, com certeza”, 03/10 13:01:11 BRT. QA pós-aprovação PASSED_PREVIEW no código `d14897b`: 33 testes, mobile Claro/desktop Escuro e PNG servido idêntico ao aprovado. Master com 16 entradas, 15 anteriores intactas; preview vazio. Janela 01–07/10: 23 eventos, 11 APPROVED e 12 sem arquivo Home/FLY. Catálogo inteiro inalterado nesta aprovação, 124 eventos. Acesso público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push e lançamento completo pendentes. Registro: `docs/qa/LATIOS_APPROVAL_20261003.json`.
+Estado corrente: Domingo Pitoresco de 4/10: candidata v2 PENDING_REVIEW, revisão humana ainda pendente. QA PASSED_PREVIEW no código `14fa3ad`: 33 testes, mobile Claro 390×850/desktop Escuro 1280×850 e PNG servido idêntico à candidata. 16 masters aprovados/15 arquivos preservados. Janela 01–07/10: 23 eventos, 11 APPROVED, 1 candidata e 11 sem arquivo Home/FLY. Fonte atual Leek Duck identificada como comunidade; bônus condicionados a Rotas/companheiro. Acesso público BLOCKED_USER_PHONE_LOGIN e Android/PWA/push pendentes. Registro: `docs/qa/SCENIC_SUNDAY_REVIEW_20261003.json`.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -245,3 +245,11 @@ Candidata v1 PENDING_REVIEW e aprovação humana ainda pendente. QA novo `760b11
 ## Aprovação corrente — Latios, 03/10 13:01 BRT
 
 A decisão humana está consolidada no master e em `docs/qa/LATIOS_APPROVAL_20261003.json`; revisão original congelada pelo SHA256. Pós-aprovação conferida no código `d14897b`, mesmo PNG inteiro em mobile/desktop e hash servido exato. Inventário `docs/qa/latios-approved-inventory-d14897b-20261003.json`: 11 APPROVED/0 candidatas/12 sem arquivo na janela 01–07/10. Preservar todos os 16 masters, incluindo Kyogre, e não regenerar/reabrir esta aprovação. Acesso dos testadores continua bloqueado; main/produção/configuração/push sem alteração.
+
+## Domingo Pitoresco v2 para revisão — 03/10/2026
+
+Domingo Pitoresco de 4/10: candidata v2 PENDING_REVIEW, revisão humana ainda pendente. QA PASSED_PREVIEW no código `14fa3ad`: 33 testes, mobile Claro 390×850/desktop Escuro 1280×850 e PNG servido idêntico à candidata. 16 masters aprovados/15 arquivos preservados. Janela 01–07/10: 23 eventos, 11 APPROVED, 1 candidata e 11 sem arquivo Home/FLY. Fonte atual Leek Duck identificada como comunidade; bônus condicionados a Rotas/companheiro. Acesso público BLOCKED_USER_PHONE_LOGIN e Android/PWA/push pendentes. Registro: `docs/qa/SCENIC_SUNDAY_REVIEW_20261003.json`.
+
+PNG integral `assets/events/review/scenic-sunday-20261004-v2.png`, 1122 × 1402, 2739274 bytes, SHA256 `0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977`. V1 preservada para histórico; ícone de rosto não validado substituído por presente via imagegen na v2. Eevee é ilustrativo, sem promessa de encontro destacado. A vigência nesta temporada vem do guia comunitário; anúncio oficial de junho confirma a mecânica da temporada anterior e não prova outubro isoladamente. Fonte/datas/bônus/observações enriquecidos somente para `2026-10-04-scenic-sunday`; outros 123 eventos e horários/calendário/coordenadas/GPX preservados.
+
+Integração explícita PENDING_REVIEW/full_poster, resolver comum nos cinco papéis, sem inclusão no master ou concessão de `spidey-premium-v1`. Helper inteiro preservado; cache 77 paths e query de preview versionados. Home e detalhe renderizam a mesma candidata; Semana mostra o evento em linha textual de 4/10, sem miniatura de pôster observada. Não cria nova elegibilidade FLY. Provas e limites: `docs/qa/scenic-sunday-browser-14fa3ad-20261003.json`, auditoria `docs/qa/scenic-sunday-local-audit-20261003.json`. Sem promoção a main/produção ou alteração de proteção/push. Próximo: entregar PNG completo para decisão humana específica; depois artes restantes e frentes públicas/físicas pendentes.

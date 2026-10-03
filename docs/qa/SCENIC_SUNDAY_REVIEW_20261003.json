@@ -332,7 +332,7 @@
     }
   ],
   "qa": {
-    "status": "PENDING_PREVIEW",
+    "status": "PASSED_PREVIEW",
     "physical_android": "PENDING",
     "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
     "node_tests_passed": 33,
@@ -340,7 +340,37 @@
     "syntax": "preview-art.js/sw.js passed",
     "cache_files": 77,
     "master_entries_preserved": 16,
-    "other_events_unchanged": 123
+    "other_events_unchanged": 123,
+    "code_commit": "14fa3ad9c6f13f7c68674204a4673c019c903412",
+    "deployment_id": "dpl_GkvYqVcYvaL4tFBQwzkTEacyxARe",
+    "preview_url": "https://spidey-pokemon-e2uhsymr1-spidey3.vercel.app/spidey-app/index.html",
+    "observed_at": "2026-10-03T19:34:50.955Z",
+    "browser_record": "docs/qa/scenic-sunday-browser-14fa3ad-20261003.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-scenic-sunday-mobile-14fa3ad-20261003.jpg",
+        "bytes": 117226,
+        "sha256": "8c709fea94178223c3d42a0547b769ba8ebea5adcaf944b2e43150b3dc6b74e8"
+      },
+      {
+        "file": "docs/qa/proofs/spidey-scenic-sunday-desktop-14fa3ad-20261003.jpg",
+        "bytes": 163934,
+        "sha256": "b60adb05c43800c6665757dfefc1c2f8ce99ac7e473fd3e3f21bd26b31984287"
+      }
+    ],
+    "served_png_sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+    "served_png_bytes": 2739274,
+    "served_png_matches_candidate": true,
+    "mobile": "390 × 850 Claro; pôster integral/contain, foco Fechar e sem overflow horizontal.",
+    "desktop": "1280 × 850 Escuro; pôster integral/contain, foco Fechar e sem overflow horizontal.",
+    "week": "Evento presente na linha de 4/10; sem miniatura de pôster observada nesta tela.",
+    "limits": [
+      "Responsive browser views do not prove physical Android installation, updates, offline or push.",
+      "External tester access remains blocked by the login reported on the user phone.",
+      "Daily discovery has no new FLY eligibility or invented coordinates.",
+      "Existing generic location placeholder remains in the detail.",
+      "The week view shows this event as a text row; no poster thumbnail was observed in that view."
+    ]
   },
   "release": {
     "production_approved": false,
