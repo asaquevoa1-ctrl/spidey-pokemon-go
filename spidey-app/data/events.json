@@ -212,8 +212,8 @@
     {
       "id": "2026-09-go-pass",
       "slug": "2026-09-go-pass",
-      "title": "GO Pass: Setembro",
-      "summary": "GO Pass de setembro com Latios entre as recompensas.",
+      "title": "Passe GO: Setembro",
+      "summary": "Passe GO de setembro com Latios entre as recompensas por progressão e Pontos GO sem limite diário em 3 e 4 de outubro.",
       "category": "go_pass",
       "tags": [
         "GO Pass",
@@ -245,14 +245,25 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Passe gratuito recebido automaticamente; recompensas dependem da progressão.",
+        "Resgate as recompensas desbloqueadas até 8 de outubro, às 10h, horário local.",
+        "Incubadora Temporária do Deluxe expira em 13 de outubro, às 10h, horário local.",
+        "Latios Brilhante somente com sorte; nenhuma probabilidade aumentada anunciada."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Encontro com Latios ao avançar nos Ranques do Passe GO.",
+        "3 e 4 de outubro, horário local: Pontos GO sem limite diário.",
+        "Ao atingir o Ranque 50: 2× duração do Incenso de Aventura Diário.",
+        "Deluxe (versão paga), Ranque 20: Incubadora Temporária."
+      ]
     },
     {
       "id": "2026-09-mega-squads",

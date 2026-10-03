@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-03
 
-Estado corrente: Passe GO de outubro/Kyogre v1 APPROVED por decisão explícita de 03/10 09:04:55 BRT; QA pós-aprovação PASSED_PREVIEW no código `ff37843` (33 testes, mobile Claro/desktop Escuro e arquivo servido idêntico ao PNG aprovado). Master com 15 entradas, 14 anteriores intactas; preview sem candidatas ativas. Janela 01–07/10: 23 eventos, 10 APPROVED e 13 sem arquivo Home/FLY. Acesso público para testadores BLOCKED_USER_PHONE_LOGIN; painel sem acesso administrativo concluído. Push/configuração e Android físico pendentes; lançamento completo não concluído.
+Estado corrente: Latios/Passe GO de setembro v1 PENDING_REVIEW, PNG integral gerado e integrado no preview; fatos conferidos na fonte oficial PT-BR. QA local passou: 33 testes, 15 masters preservados, 123 outros eventos intactos; QA navegador do novo código ainda PENDING. Janela 01–07/10: 23 eventos, 10 APPROVED, 1 PENDING_REVIEW e 12 sem arquivo Home/FLY. Passe GO de outubro/Kyogre continua APPROVED conforme decisão 03/10 09:04:55 BRT. Acesso público BLOCKED_USER_PHONE_LOGIN; painel sem autenticação administrativa concluída. Android/PWA/push e lançamento completo pendentes. Registro da nova candidata: `docs/qa/LATIOS_REVIEW_20261003.json`.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
