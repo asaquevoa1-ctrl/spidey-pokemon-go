@@ -1,5 +1,5 @@
 {
-  "status": "THUNDURUS_ELGYEM_PREVIEW_PASSED_APPROVAL_PENDING_PUBLIC_BLOCKED",
+  "status": "THUNDURUS_ELGYEM_APPROVED_POST_APPROVAL_QA_PASSED_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -15,10 +15,10 @@
   "gates": {
     "premium_window_20261001_07": {
       "events": 23,
-      "approved": 8,
-      "pending_posters": 1,
+      "approved": 9,
+      "pending_posters": 0,
       "missing": 14,
-      "status": "PENDING_COVERAGE_AND_ONE_REVIEW"
+      "status": "PENDING_REMAINING_COVERAGE"
     },
     "blocked_generation": [
       "Applin",
@@ -27,15 +27,14 @@
     ],
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
-    "approved_master_integrity": "12_MASTER_ENTRIES_AND_ALL_PREMIUM_FILES_PRESERVED_A17F6D4",
-    "mobile_desktop_core": "TWO_REVIEW_POSTERS_MOBILE_DESKTOP_AND_ELGYEM_FLY_20_28_PASSED_A17F6D4_PHYSICAL_PENDING",
+    "approved_master_integrity": "14_MASTER_ENTRIES_12_PREVIOUS_AND_ALL_PROTECTED_FILES_PRESERVED_29C1AEC",
+    "mobile_desktop_core": "TWO_APPROVED_POSTERS_MOBILE_DESKTOP_SERVED_HASHES_AND_ELGYEM_FLY_20_28_PASSED_29C1AEC_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
     "push_live_configuration": "BLOCKED_DASHBOARD_LOGIN_HTTP_503_PUSH_NOT_CONFIGURED_A17F6D4",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
-    "thundurus_elgyem_posters": "PENDING_REVIEW_PREVIEW_QA_PASSED_A17F6D4"
+    "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC"
   },
   "next_batch": [
-    "Decisão humana sobre os dois PNGs exatos de Thundurus v1 e Elgyem v2",
     "Configuração de alertas: acesso ao painel Vercel e configuração do servidor pendentes",
     "Cobertura restante e QA físico Android/PWA/atualização/offline/recebimento push"
   ],
@@ -51,20 +50,21 @@
     "a2b5638: 31 tests passed; native GPX link, root push API routing and offline worker robustness deployed; real push status and Zorua mobile/desktop/FLY 20/28 verified.",
     "Zorua aprovado explicitamente em 02/10 18:38:35 BRT; bônus rechecados na fonte oficial e master atualizado com cópia byte a byte.",
     "0433c32 preview: approved Zorua mobile/desktop/FLY 20/28 verified; served PNG exact approved SHA256; new browser-downloaded Japan GPX parsed with all 17 coordinates, names and order matching catalog.",
-    "a17f6d4: Thundurus Sombroso v1 e Elgyem v2 gerados, comunidade identificada, títulos PT-BR e bônus estruturado de Elgyem; 31 testes passaram; mobile Claro/desktop Escuro e hashes servidos exatos conferidos, FLY Elgyem 20/28 e horários/coords verificados; aprovação humana pendente."
+    "a17f6d4: Thundurus Sombroso v1 e Elgyem v2 gerados, comunidade identificada, títulos PT-BR e bônus estruturado de Elgyem; 31 testes passaram; mobile Claro/desktop Escuro e hashes servidos exatos conferidos, FLY Elgyem 20/28 e horários/coords verificados; aprovação humana pendente.",
+    "03/10 07:30:21 BRT: aprovação humana dos PNGs exatos Thundurus v1 e Elgyem v2. 29c1aec: cópias premium idênticas, 14 masters/12 anteriores preservados, catálogo inalterado, 32 testes e QA pós-aprovação novo preview mobile/desktop/hashes servidos e FLY Elgyem 20/28 passaram."
   ],
-  "updated_at": "2026-10-03T10:20:58Z",
-  "code_commit": "a17f6d45535758ff2b5a36ef0e4e6e476af933e8",
-  "preview_url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-03T10:45:32.263Z",
+  "code_commit": "29c1aecf53742de581ea0fc036793d91a859bc60",
+  "preview_url": "https://spidey-pokemon-7whircohq-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
-    "14 eventos sem arquivo Home/FLY no inventário 01–07/10; Thundurus em revisão nesta janela, Elgyem em revisão fora dela",
+    "14 eventos sem arquivo Home/FLY na janela 01–07/10; 9 APPROVED e nenhuma candidata ativa. Elgyem APPROVED fora da janela.",
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
     "Lançamento completo e produção não aprovados"
   ],
-  "approval_record": "docs/qa/ZORUA_APPROVAL_20261002.json",
-  "post_approval_qa_record": "docs/qa/zorua-approved-browser-0433c32-20261002.json",
+  "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json",
+  "post_approval_qa_record": "docs/qa/thundurus-elgyem-approved-browser-29c1aec-20261003.json",
   "pause_requested": {
     "at": "2026-10-02T18:38:35-03:00",
     "budget_minutes": 5,

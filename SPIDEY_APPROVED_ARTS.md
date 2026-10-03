@@ -202,8 +202,14 @@ Relatório `docs/qa/ZORUA_APPROVAL_20261002.md`, registro canônico JSON homôni
 Push: novo endpoint do preview respondeu HTTP 503 `push_not_configured`, Cache-Control no-store. Configuração do servidor e recebimento real permanecem bloqueios; nenhuma inscrição/configuração secreta/envio foi alterado. Android físico/instalação/atualização/offline continuam pendentes. Último inventário 01–07/10: 23 eventos, 8 APPROVED, 15 sem arquivo Home/FLY; Zorua fora da janela. Applin/Espaço/Sizzlipede continuam com recusas registradas. Lançamento completo/produção não aprovados; sem promoção a main e sem mensagens externas. Próxima frente: cobertura restante, configuração push e QA físico. Não reabrir a aprovação nem regenerar Zorua.
 
 
-## Thundurus e Elgyem — 03/10/2026, PENDING_REVIEW
+## Histórico pré-aprovação — Thundurus e Elgyem, 03/10/2026, PENDING_REVIEW
 
 Duas candidatas novas, **sem aprovação humana**: `2026-10-shadow-thundurus` → `assets/events/review/thundurus-shadow-weekend-v1.png`, SHA256 `eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439`; `2026-10-08-spotlight-elgyem` → `assets/events/review/elgyem-spotlight-v2.png`, SHA256 `2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9`. Ambas 1121×1403/full_poster, fonte comunidade. Elgyem v1 preservada como revisão interna sem nome, fora da UI. Os 12 masters aprovados continuam intactos, inclusive Zorua.
 
 Registro/prompts: `docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json`. QA de preview `a17f6d4` com 31 testes, mobile/desktop, hashes servidos idênticos e FLY Elgyem 20/28: `docs/qa/THUNDURUS_ELGYEM_QA_20261002.json`. Este QA não concede APPROVED. Próximo é decisão do editor sobre os dois PNGs exatos; produção não promovida.
+
+## Thundurus v1 e Elgyem v2 APPROVED — 03/10/2026, 07:30 BRT
+
+“Com certeza, eu aprovo as duas novas artes” aprova os PNGs completos exibidos anteriormente, com eventIds/revisões/hashes vinculados em `docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json`. Caminhos finais `assets/events/premium/thundurus-shadow-weekend-approved-v1.png` e `assets/events/premium/elgyem-spotlight-approved-v1.png`, 1121×1403, idênticos às candidatas v1/v2. Elgyem v1 incompleta preservada só no histórico. Os dois IDs entram no master APPROVED/full_poster e saem do preview; 12 entradas anteriores preservadas, total 14. Fonte permanece comunidade, sem mudança factual na aprovação.
+
+QA pós-aprovação PASSED_PREVIEW no código `29c1aecf53742de581ea0fc036793d91a859bc60`: 32 testes, mobile Claro/desktop Escuro, dois PNGs integrais e downloads servidos com hashes exatos, asset de Thundurus na Semana, FLY Elgyem 20/28. Cinco provas/DOM no relatório `docs/qa/thundurus-elgyem-approved-browser-29c1aec-20261003.json`. Prévia https://spidey-pokemon-7whircohq-spidey3.vercel.app/spidey-app/index.html. Android físico/push e lançamento completo ainda pendentes; nenhuma promoção a produção.

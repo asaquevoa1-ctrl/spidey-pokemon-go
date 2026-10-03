@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-03
 
-Estado corrente: Thundurus v1 e Elgyem v2 PENDING_REVIEW, QA de preview aprovado tecnicamente no código `a17f6d4` (31 testes, mobile/desktop, hashes servidos e FLY Elgyem 20/28). Nenhuma aprovação visual inferida. Zorua APPROVED e GPX Japão já verificados; push/configuração, Android físico e cobertura restante pendentes. Última seção contém o handoff.
+Estado corrente: Thundurus Sombroso v1 e Elgyem v2 APPROVED por decisão explícita de 03/10 07:30:21 BRT; QA pós-aprovação PASSED_PREVIEW no código `29c1aec` (32 testes, dois PNGs mobile/desktop, hashes servidos e FLY Elgyem 20/28). Master com 14 entradas e 12 anteriores preservadas. Zorua APPROVED e GPX Japão já verificados. Cobertura restante, push/configuração e Android físico pendentes; lançamento completo não concluído. Última seção contém o handoff.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -190,3 +190,9 @@ Push: novo endpoint do preview respondeu HTTP 503 `push_not_configured`, Cache-C
 Thundurus Sombroso v1 (`2026-10-shadow-thundurus`) e Elgyem v2 (`2026-10-08-spotlight-elgyem`) estão **PENDING_REVIEW**, aprovação null. Código `a17f6d45535758ff2b5a36ef0e4e6e476af933e8`, deploy READY `dpl_57gGY2xz7ksHTXjZzQSPtudp2V2g`, preview https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html. Registro completo/prompts/hashes: `docs/qa/THUNDURUS_ELGYEM_REVIEW_20261002.json`; QA e seis provas: `docs/qa/THUNDURUS_ELGYEM_QA_20261002.json`. Elgyem v1 sem nome permanece só no histórico. Os 12 masters e todos os IDs/horários foram preservados.
 
 Próximo: decisão humana específica sobre os dois PNGs completos mostrados no chat. Elgyem integra FLY 20/28, relógios local/Brasília e coordenadas; Thundurus aparece na Home/Semana e não recebe janela global inventada. Janela 01–07/10: 23 eventos, 8 APPROVED, 1 em revisão, 14 sem arquivo Home/FLY. Push continua 503 e o painel bloqueia a inspeção de variáveis por login; Android físico pendente. Nenhuma promoção main/produção nem envio externo. Detalhes no último handoff de `SPIDEY_NEXUS.md`.
+
+## Handoff corrente — Thundurus e Elgyem aprovados, 03/10/2026
+
+Decisão explícita de 07:30:21 BRT ligada aos dois PNGs exatos, Thundurus v1 e Elgyem v2. Registro `docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json`; QA pós-aprovação PASSED_PREVIEW no código `29c1aecf53742de581ea0fc036793d91a859bc60`, 32 testes e cinco provas em `docs/qa/thundurus-elgyem-approved-browser-29c1aec-20261003.json`. Prévia: https://spidey-pokemon-7whircohq-spidey3.vercel.app/spidey-app/index.html. Master 14 entradas; 12 anteriores, candidatas e catálogo preservados. Nenhuma candidata ativa. Janela 01–07/10: 23 eventos, 9 APPROVED, 0 pendentes, 14 sem arquivo Home/FLY; Elgyem aprovado fora da janela.
+
+FLY Elgyem usa PNG aprovado, 20/28 locais, horas locais/Brasília e coordenadas conferidos; Thundurus aprovado confirmado no detalhe/Home e asset da Semana. Cobertura restante, acesso/configuração push e Android físico são a próxima frente. Sem main/produção, disparo ou pausa ativa. Não pedir novamente a aprovação já concedida. Último handoff de `SPIDEY_NEXUS.md` contém limites e provas; checkpoint posterior altera somente documentação.

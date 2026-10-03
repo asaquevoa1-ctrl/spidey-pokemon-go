@@ -112,3 +112,9 @@ Handoff pós-aprovação Seedot: código `b310f5a`, preview seguro https://spide
 Decisão humana sobre o PNG completo recebido no chat, hash/dimensões/eventId em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json`. Novo caminho premium preserva bytes da candidata; autoridade única no master, `full_poster` em todos os papéis. Apenas esta entrada é removida do preview; Zorua e sete masters anteriores preservados. Composição/resolver/dados/Novidades não mudam. Shell e cache versionados; QA pós-aprovação em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md`.
 
 QA pós-aprovação `4b0f319`: novo master integral confirmado em Home/Semana/detalhe, mobile/desktop e clique direto. Duas provas e 21 testes em `docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md`; sete masters anteriores preservados.
+
+## Thundurus e Elgyem consolidados no master — 03/10/2026
+
+Aprovação explícita dos PNGs exatos em `docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json`. Cópias premium byte a byte das candidatas Thundurus v1 e Elgyem v2, master soberano APPROVED/full_poster, IDs separados e fontes comunitárias mantidas. As duas entradas saem do preview; agora 14 entradas no master e nenhuma candidata ativa. Os 12 masters anteriores, catálogos e originais/histórico permanecem intactos. Shell/master/preview/cache versionados; precache aponta para os caminhos aprovados, sem duplicar os mesmos cinco MB de candidatas. Resolvers e composição comuns preservados.
+
+32 testes da consolidação e QA pós-aprovação no código `29c1aec` passaram. Provas específicas do novo deploy em `docs/qa/thundurus-elgyem-approved-browser-29c1aec-20261003.json`; mobile responsivo não comprova Android físico. Esta consolidação não autoriza main/produção.
