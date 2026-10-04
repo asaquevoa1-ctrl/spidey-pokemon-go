@@ -24,36 +24,36 @@
     {
       "id": "2026-10-go-pass:start:60",
       "event_id": "2026-10-go-pass",
-      "event_title": "GO Pass: Outubro",
+      "event_title": "Passe GO: Outubro",
       "category": "go_pass",
       "scheduled_for": "2026-10-06T09:00:00-03:00",
       "event_start": "2026-10-06T10:00:00-03:00",
       "lead_minutes": 60,
       "title": "Spidey Pokémon GO",
-      "body": "GO Pass: Outubro começa em cerca de 1 hora(s).",
+      "body": "Passe GO: Outubro começa em cerca de 1 hora(s).",
       "url": "./?event=2026-10-go-pass",
       "status": "pending",
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-pass-october-2026",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-october-2026",
         "confidence": "official"
       }
     },
     {
       "id": "2026-10-gbl-06-13:start:60",
       "event_id": "2026-10-gbl-06-13",
-      "event_title": "GO Battle League: Great Mega / Ultra Mega / Master Mega",
+      "event_title": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições",
       "category": "go_battle_league",
       "scheduled_for": "2026-10-06T16:00:00-03:00",
       "event_start": "2026-10-06T17:00:00-03:00",
       "lead_minutes": 60,
       "title": "Spidey Pokémon GO",
-      "body": "GO Battle League: Great Mega / Ultra Mega / Master Mega começa em cerca de 1 hora(s).",
+      "body": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições começa em cerca de 1 hora(s).",
       "url": "./?event=2026-10-gbl-06-13",
       "status": "pending",
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
         "confidence": "official"
       }
     },
@@ -88,39 +88,39 @@
       "url": "./?event=2026-10-raids-yveltal",
       "status": "pending",
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Leek Duck • calendário de reides",
+        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
         "confidence": "verified"
       }
     },
     {
       "id": "2026-10-07-raid-hour-yveltal:start:60",
       "event_id": "2026-10-07-raid-hour-yveltal",
-      "event_title": "Raid Hour: Yveltal",
+      "event_title": "Hora de Reides: Yveltal",
       "category": "raid_hour",
       "scheduled_for": "2026-10-07T17:00:00-03:00",
       "event_start": "2026-10-07T18:00:00-03:00",
       "lead_minutes": 60,
       "title": "Spidey Pokémon GO",
-      "body": "Raid Hour: Yveltal começa em cerca de 1 hora(s).",
+      "body": "Hora de Reides: Yveltal começa em cerca de 1 hora(s).",
       "url": "./?event=2026-10-07-raid-hour-yveltal",
       "status": "pending",
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Leek Duck • calendário de reides",
+        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
         "confidence": "verified"
       }
     },
     {
       "id": "2026-10-08-spotlight-elgyem:start:60",
       "event_id": "2026-10-08-spotlight-elgyem",
-      "event_title": "Spotlight Hour: Elgyem",
+      "event_title": "Hora do Holofote: Elgyem",
       "category": "spotlight_hour",
       "scheduled_for": "2026-10-08T17:00:00-03:00",
       "event_start": "2026-10-08T18:00:00-03:00",
       "lead_minutes": 60,
       "title": "Spidey Pokémon GO",
-      "body": "Spotlight Hour: Elgyem começa em cerca de 1 hora(s).",
+      "body": "Hora do Holofote: Elgyem começa em cerca de 1 hora(s).",
       "url": "./?event=2026-10-08-spotlight-elgyem",
       "status": "pending",
       "source": {
@@ -346,6 +346,24 @@
       }
     },
     {
+      "id": "2026-10-minior-orionids:start:60",
+      "event_id": "2026-10-minior-orionids",
+      "event_title": "Minior: chuva de meteoros Orionidas",
+      "category": "evento_especial",
+      "scheduled_for": "2026-10-19T16:00:00-03:00",
+      "event_start": "2026-10-19T17:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Minior: chuva de meteoros Orionidas começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-minior-orionids",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-10-gbl-20-27:start:60",
       "event_id": "2026-10-gbl-20-27",
       "event_title": "GO Battle League: Ultra / Master Mega / Fantasy Cup",
@@ -456,19 +474,19 @@
     {
       "id": "2026-10-dynamax-max-battle-day:start:60",
       "event_id": "2026-10-dynamax-max-battle-day",
-      "event_title": "Dia de Batalhas Max: Dinamax",
+      "event_title": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax",
       "category": "max_battle_day",
       "scheduled_for": "2026-10-24T13:00:00-03:00",
       "event_start": "2026-10-24T14:00:00-03:00",
       "lead_minutes": 60,
       "title": "Spidey Pokémon GO",
-      "body": "Dia de Batalhas Max: Dinamax começa em cerca de 1 hora(s).",
+      "body": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax começa em cerca de 1 hora(s).",
       "url": "./?event=2026-10-dynamax-max-battle-day",
       "status": "pending",
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+        "confidence": "official"
       }
     },
     {
@@ -650,10 +668,28 @@
         "captured_via": "PokeMiners",
         "url": "https://pokemongo.com/news/festival-of-lights-2026"
       }
+    },
+    {
+      "id": "2026-11-minior-leonids:start:60",
+      "event_id": "2026-11-minior-leonids",
+      "event_title": "Minior: chuva de meteoros Leônidas",
+      "category": "evento_especial",
+      "scheduled_for": "2026-11-14T16:00:00-03:00",
+      "event_start": "2026-11-14T17:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Minior: chuva de meteoros Leônidas começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-minior-leonids",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      }
     }
   ],
   "meta": {
-    "pending_count": 36,
+    "pending_count": 38,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
