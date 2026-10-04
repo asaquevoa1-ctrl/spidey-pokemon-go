@@ -1,7 +1,29 @@
+const BRAZIL_CALENDAR_FORMAT = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit',
+});
+
+function brazilDateKey(date) {
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
+  const parts = Object.fromEntries(BRAZIL_CALENDAR_FORMAT.formatToParts(date)
+    .filter((part) => part.type !== 'literal').map((part) => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+// Grid dates represent the day printed on a button, rather than an instant.
+function calendarDateKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+}
+
+function calendarToday(reference = new Date()) {
+  const [year, month, day] = brazilDateKey(reference).split('-').map(Number);
+  return new Date(year, month - 1, day);
+}
+
+const initialCalendarDay = calendarToday();
 const state = {
   events: [],
   stamps: [],
-  month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+  month: new Date(initialCalendarDay.getFullYear(), initialCalendarDay.getMonth(), 1),
   deferredInstall: null,
 };
 
@@ -55,7 +77,10 @@ function getBrazilRange(event) {
 function overlapsDay(event, day) {
   const { start, end } = getBrazilRange(event);
   if (!start || !end) return false;
-  return start <= endOfDay(day) && end >= startOfDay(day);
+  const firstDay = brazilDateKey(start);
+  const lastDay = brazilDateKey(end);
+  const selectedDay = calendarDateKey(day);
+  return Boolean(firstDay && lastDay && firstDay <= selectedDay && lastDay >= selectedDay);
 }
 
 function formatRange(event) {
@@ -97,15 +122,15 @@ function exactPokestop(stop) {
 
 function renderStats() {
   const now = new Date();
-  const monthStart = new Date(state.month.getFullYear(), state.month.getMonth(), 1);
-  const monthEnd = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 0, 23, 59, 59);
+  const monthStart = calendarDateKey(new Date(state.month.getFullYear(), state.month.getMonth(), 1));
+  const monthEnd = calendarDateKey(new Date(state.month.getFullYear(), state.month.getMonth() + 1, 0));
   $('#nowCount').textContent = state.events.filter((event) => {
     const { start, end } = getBrazilRange(event);
     return start && end && start <= now && end >= now;
   }).length;
   $('#monthCount').textContent = state.events.filter((event) => {
     const { start, end } = getBrazilRange(event);
-    return start && end && start <= monthEnd && end >= monthStart;
+    return start && end && brazilDateKey(start) <= monthEnd && brazilDateKey(end) >= monthStart;
   }).length;
   $('#nextCount').textContent = state.events.filter((event) => {
     const { start } = getBrazilRange(event);
@@ -120,7 +145,7 @@ function renderCalendar() {
   const month = state.month.getMonth();
   const first = new Date(year, month, 1);
   const gridStart = new Date(year, month, 1 - first.getDay());
-  const today = startOfDay(new Date()).getTime();
+  const today = calendarDateKey(calendarToday());
 
   for (let i = 0; i < 42; i += 1) {
     const day = new Date(gridStart);
@@ -129,7 +154,7 @@ function renderCalendar() {
     const button = document.createElement('button');
     button.className = 'calendar-day';
     if (day.getMonth() !== month) button.classList.add('outside');
-    if (startOfDay(day).getTime() === today) button.classList.add('today');
+    if (calendarDateKey(day) === today) button.classList.add('today');
     if (events.length) button.classList.add('has-event');
     button.innerHTML = `<span class="day-number">${day.getDate()}</span><span class="event-dots">${events.slice(0, 4).map(() => '<i class="event-dot"></i>').join('')}</span>`;
     button.title = events.length ? `${events.length} evento(s)` : 'Sem eventos';
@@ -435,7 +460,7 @@ async function enableNotifications() {
 $('#prevMonth').addEventListener('click', () => { state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); renderCalendar(); });
 $('#nextMonth').addEventListener('click', () => { state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1); renderCalendar(); });
 $('#todayButton').addEventListener('click', () => {
-  const now = new Date();
+  const now = calendarToday();
   state.month = new Date(now.getFullYear(), now.getMonth(), 1);
   renderCalendar();
   renderEvents(state.events.filter((event) => overlapsDay(event, now)));

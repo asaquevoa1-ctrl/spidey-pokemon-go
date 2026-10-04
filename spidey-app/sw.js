@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261004-remaining-approved-v1';
+const CACHE = 'spidey-app-20261004-calendar-brasil-v1';
 const CORE = [
   './assets/events/premium/twilight-trails-season-2026-approved-v1.png',
   './assets/events/premium/gbl-20260929-1006-approved-v1.png',

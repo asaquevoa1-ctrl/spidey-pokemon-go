@@ -9,7 +9,7 @@
     if (!range.start || !range.end) return false;
 
     if (mode === 'start') {
-      return startOfDay(range.start).getTime() === startOfDay(day).getTime();
+      return brazilDateKey(range.start) === calendarDateKey(day);
     }
 
     return baseOverlapsDay(event, day);

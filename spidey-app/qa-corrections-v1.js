@@ -157,10 +157,10 @@
     const section = document.createElement('section');
     section.className = 'event-wherewhen-v4';
     section.innerHTML = `
-      <h3>Horários e locais</h3>
+      <h3>${actualLocations ? 'Horários e locais' : 'Horários'}</h3>
       ${summary ? `<div class="event-local-window-v4"><span>Horário do evento</span><strong>${summary}</strong><small>Esse horário vale no relógio da região onde você vai jogar.</small></div>` : `
         <div class="event-local-window-v4"><span>Horário</span><strong>${typeof originalFormatRange === 'function' ? originalFormatRange(event) : 'A confirmar'}</strong></div>`}
-      ${actualLocations || (!hasGlobalTag(event) ? '<p class="microcopy">O local ainda será confirmado.</p>' : '')}
+      ${actualLocations}
       
     `;
     if (actionRow) actionRow.before(section); else body.appendChild(section);

@@ -186,7 +186,7 @@
     const target = document.querySelector('#todayExperience');
     if (!target) return;
     const today = state.events
-      .filter((event) => overlapsDay(event, reference))
+      .filter((event) => overlapsDay(event, calendarToday(reference)))
       .filter((event) => eventRange(event).end >= reference)
       .sort((a, b) => {
         const activeDiff = Number(activeNow(b, reference)) - Number(activeNow(a, reference));
