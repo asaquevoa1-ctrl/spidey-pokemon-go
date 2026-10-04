@@ -1,5 +1,5 @@
 {
-  "status": "SHOWCASE_TUESDAY_REVIEW_QA_PASSED_PUBLIC_BLOCKED",
+  "status": "SHOWCASE_TUESDAY_APPROVED_QA_PASSED_PUBLIC_BLOCKED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -15,8 +15,8 @@
   "gates": {
     "premium_window_20261001_07": {
       "events": 23,
-      "approved": 12,
-      "pending_posters": 1,
+      "approved": 13,
+      "pending_posters": 0,
       "missing": 10,
       "status": "PENDING_REMAINING_COVERAGE"
     },
@@ -27,8 +27,8 @@
     ],
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
-    "approved_master_integrity": "17_MASTER_ENTRIES_16_APPROVED_FILES_PRESERVED_DBF6956",
-    "mobile_desktop_core": "SHOWCASE_TUESDAY_CANDIDATE_MOBILE_CLARO_DESKTOP_ESCURO_SERVED_EXACT_PNG_PASSED_DBF6956_PHYSICAL_PENDING",
+    "approved_master_integrity": "18_MASTER_ENTRIES_17_PRIOR_ENTRIES_16_PRIOR_FILES_PRESERVED_C3BB225",
+    "mobile_desktop_core": "SHOWCASE_TUESDAY_APPROVED_MOBILE_CLARO_DESKTOP_ESCURO_SERVED_EXACT_PNG_PASSED_C3BB225_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
     "push_live_configuration": "BLOCKED_DASHBOARD_LOGIN_HTTP_503_PUSH_NOT_CONFIGURED_A17F6D4",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
@@ -37,11 +37,10 @@
     "tester_shared_preview_access": "BLOCKED_USER_PHONE_LOGIN_20261003_0847_BRT_DASHBOARD_AUTH_NOT_COMPLETED",
     "latios_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_D14897B",
     "scenic_sunday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_BFEEB24",
-    "showcase_tuesday_poster": "PENDING_HUMAN_REVIEW_QA_PASSED_DBF6956"
+    "showcase_tuesday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_C3BB225"
   },
   "next_batch": [
-    "Decisão humana específica da nova Terça de Vitrine v1, ainda PENDING_REVIEW; Domingo Pitoresco aprovado preservado",
-    "Cobertura dos dez eventos ainda sem arte Home/FLY na janela 01–07/10, preservando fontes e recusas registradas",
+    "Cobertura dos dez eventos ainda sem arte Home/FLY na janela 01–07/10, preservando fontes e recusas registradas; Terça de Vitrine aprovada",
     "Acesso público Vercel e alertas; painel não autenticado, nenhuma proteção/segredo alterado",
     "QA físico Android/PWA/atualização/offline/recebimento push"
   ],
@@ -65,21 +64,22 @@
     "03/10 13:01 BRT: Latios v1 aprovado explicitamente; PNG premium idêntico, 15 masters anteriores e catálogo inteiro preservados; 33 testes e QA novo mobile/desktop/servido exato d14897b passaram.",
     "03/10: Domingo Pitoresco v2 PENDING_REVIEW; fonte atual comunitária, quatro bônus com condições de Rotas/companheiro e Eevee ilustrativo. 33 testes, 16 masters/15 arquivos e 123 outros eventos preservados. QA 14fa3ad mobile Claro/desktop Escuro e bytes servidos exatos passou; Semana mostra o evento em linha textual.",
     "03/10 16:52:31 BRT: “Aprovo” consolida somente o PNG Domingo Pitoresco v2, cópia premium exata. bfeeb24: master 17/16 anteriores e 15 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/servido exato passaram. Janela23:12 APPROVED/0 candidatas/11 pendentes; acesso público e Android continuam pendentes.",
-    "03/10: Terça de Vitrine v1 nova candidata PENDING_REVIEW; benefícios do guia comunitário atual conferidos, Snorlax ilustrativo. dbf6956: 33 testes, 17 masters/16 arquivos e 123 outros eventos preservados; mobile Claro/desktop Escuro/PNG servido exato passaram. Janela23:12 APPROVED/1 candidata/10 sem arte. Continuação “Bora” não inferida como aprovação."
+    "03/10: Terça de Vitrine v1 nova candidata PENDING_REVIEW; benefícios do guia comunitário atual conferidos, Snorlax ilustrativo. dbf6956: 33 testes, 17 masters/16 arquivos e 123 outros eventos preservados; mobile Claro/desktop Escuro/PNG servido exato passaram. Janela23:12 APPROVED/1 candidata/10 sem arte. Continuação “Bora” não inferida como aprovação.",
+    "03/10 20:56:01 BRT: “Aprovo” consolida somente a Terça de Vitrine v1. c3bb225: cópia premium exata, master18/17 anteriores e16 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/PNG servido exato passaram. Janela23:13 APPROVED/0 candidatas/10 sem arte. Público e Android pendentes."
   ],
-  "updated_at": "2026-10-03T22:29:25.866957+00:00",
-  "code_commit": "dbf6956555764e5790360521ab9b0078f3db0e12",
-  "preview_url": "https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-04T00:06:25.155879+00:00",
+  "code_commit": "c3bb22547c2a4bcdabe0275cfa915f6aecfb917b",
+  "preview_url": "https://spidey-pokemon-4et5ix99r-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
-    "10 eventos sem arte Home/FLY e Terça de Vitrine v1 aguardando decisão humana na janela 01–07/10; 12 APPROVED. Domingo Pitoresco aprovado preservado.",
+    "10 eventos sem arte Home/FLY na janela 01–07/10; 13 APPROVED e nenhuma candidata ativa. Terça de Vitrine v1 aprovada pela decisão de 03/10 20:56:01 BRT.",
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
     "Lançamento completo e produção não aprovados",
     "Link de compartilhamento ainda bloqueia testador no celular; teste HTTP anterior não confirma acesso real. Painel exige login e formulário seguro não concluído. Não repetir autenticação sem nova solicitação."
   ],
-  "approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json",
-  "post_approval_qa_record": "docs/qa/scenic-sunday-approved-browser-bfeeb24-20261003.json",
+  "approval_record": "docs/qa/SHOWCASE_TUESDAY_APPROVAL_20261003.json",
+  "post_approval_qa_record": "docs/qa/showcase-tuesday-approved-browser-c3bb225-20261003.json",
   "pause_requested": {
     "at": "2026-10-02T18:38:35-03:00",
     "budget_minutes": 5,
@@ -91,7 +91,7 @@
   "candidate_review_record": "docs/qa/SHOWCASE_TUESDAY_REVIEW_20261003.json",
   "candidate_qa_record": "docs/qa/showcase-tuesday-browser-dbf6956-20261003.json",
   "current_art_review_record": "docs/qa/SHOWCASE_TUESDAY_REVIEW_20261003.json",
-  "current_art_qa_record": "docs/qa/showcase-tuesday-browser-dbf6956-20261003.json",
+  "current_art_qa_record": "docs/qa/showcase-tuesday-approved-browser-c3bb225-20261003.json",
   "art_delivery_followup": {
     "reported_at": "2026-10-03T08:48:33-03:00",
     "event_id": "2026-10-go-pass",
@@ -101,11 +101,10 @@
       "at": "2026-10-03T09:04:55-03:00"
     }
   },
-  "current_art_approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json",
+  "current_art_approval_record": "docs/qa/SHOWCASE_TUESDAY_APPROVAL_20261003.json",
   "current_art_decision": {
-    "status": "PENDING",
-    "event_id": "2026-10-06-showcase-tuesday",
-    "text": null,
-    "context": "Nova candidata; mensagens Bora autorizam continuação do trabalho, sem aprovação visual inferida."
+    "text": "Aprovo",
+    "at": "2026-10-03T20:56:01-03:00",
+    "context": "Decisão explícita após reenvio do PNG integral Terça de Vitrine v1 na resposta imediatamente anterior. Aprovação exclusiva desta imagem, sem aprovação de lançamento."
   }
 }

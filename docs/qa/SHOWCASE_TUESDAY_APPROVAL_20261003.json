@@ -268,7 +268,7 @@
     }
   ],
   "qa": {
-    "status": "PENDING_NEW_PREVIEW",
+    "status": "PASSED_PREVIEW",
     "node_tests": "PASSED",
     "physical_android": "PENDING",
     "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
@@ -282,7 +282,31 @@
       "approved": 13,
       "pending_posters": 0,
       "missing": 10
-    }
+    },
+    "observed_at": "2026-10-04T00:03:57.241Z",
+    "code_commit": "c3bb22547c2a4bcdabe0275cfa915f6aecfb917b",
+    "preview_url": "https://spidey-pokemon-4et5ix99r-spidey3.vercel.app/spidey-app/index.html",
+    "deployment_id": "dpl_w1Ji7THftEqZPJW5ojFPJ2fsvoye",
+    "browser_record": "docs/qa/showcase-tuesday-approved-browser-c3bb225-20261003.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-showcase-tuesday-approved-mobile-c3bb225-20261003.jpg",
+        "bytes": 109943,
+        "sha256": "5f2c410d5a74ea760d3ce05b8631e4058430de9369aeafe6add3a6660728548f"
+      },
+      {
+        "file": "docs/qa/proofs/spidey-showcase-tuesday-approved-desktop-c3bb225-20261003.jpg",
+        "bytes": 156024,
+        "sha256": "2584cb387403dc3bddaaa2fd3c2cded0ba94646374a0473bb6c28031581c152d"
+      }
+    ],
+    "served_png_sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+    "served_png_bytes": 2636843,
+    "served_png_matches_approved": true,
+    "mobile": "390 × 850 Claro; PNG inteiro/contain, foco Fechar, scrollTop 0, sem overflow horizontal.",
+    "desktop": "1280 × 850 Escuro; PNG inteiro/contain, foco Fechar, scrollTop 0, sem overflow horizontal.",
+    "weekly": "Approved resolver checked locally; no new Week thumbnail proof this round.",
+    "existing_limit": "The detail retains its generic location placeholder."
   },
   "release": {
     "production_approved": false,
