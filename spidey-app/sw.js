@@ -1,8 +1,14 @@
-const CACHE = 'spidey-app-20261004-space-museums-v1';
+const CACHE = 'spidey-app-20261004-space-backgrounds-v2';
 const CORE = [
   './space-week.js',
   './space-week.css',
   './data/space-museums.json',
+  './assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png',
+  './assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png',
+  './assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png',
+  './assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png',
+  './assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png',
+  './assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png',
   './assets/events/official/world-space-week-2026.jpg',
   './assets/events/official/esa-museums-2026.jpg',
   './assets/events/premium/twilight-trails-season-2026-approved-v1.png',
@@ -111,7 +117,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
-  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json');
+  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json') || request.url.includes('/data/space-museums.json');
 
   if (isAppShell || isData) {
     event.respondWith(

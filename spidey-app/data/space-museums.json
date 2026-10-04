@@ -20,7 +20,7 @@
     "Reides presenciais de uma estrela nos museus podem render Pikachu Astronauta com Fundo de Localização.",
     "Pesquisas temporárias nos museus: alguns encontros também podem vir com o fundo.",
     "De 4 a 10/10, alguns encontros das Pesquisas de Campo dos museus podem ter o fundo.",
-    "Fundo e Brilhante não são garantidos."
+    "Em reides, o Fundo de Localização e o Brilhante não são garantidos."
   ],
   "weekly_gameplay": "De 4 a 10/10, mais encontros com Pikachu, Clefairy, Magnemite, Starmie, Lunatone, Solrock, Elgyem e Blipbug ao redor dos locais participantes.",
   "esa_note": "As unidades da ESA oferecem atividades de 4 a 10/10, sem Fundos de Localização.",
@@ -48,6 +48,31 @@
       "source": {
         "url": "https://www.sciencemuseum.org.uk/visit",
         "confidence": "official"
+      },
+      "location_background": {
+        "file": "assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "68e449fec0ea5b0affe2ca3332fe1f7871d59740c530a484fb1d9b161990d87e",
+        "bytes": 458555,
+        "alt": "Fundo de Localização de Londres no Pokémon GO: Science Museum",
+        "classification": "datamined_game_asset",
+        "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_scienceMuseumLondon.png",
+        "source_git_sha": "c2457e8a71cbfa2246978541d2c27b822914d776",
+        "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
+      },
+      "research": {
+        "status": "exact_tasks_unconfirmed",
+        "field_tasks": [],
+        "timed_steps": [],
+        "report": null,
+        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
+      },
+      "gpx": {
+        "status": "event_area_unverified",
+        "coverage_polygon": null,
+        "route_points": [],
+        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -67,6 +92,31 @@
       "source": {
         "url": "https://metropole.toulouse.fr/annuaire/cite-de-lespace",
         "confidence": "official_municipal"
+      },
+      "location_background": {
+        "file": "assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "e98ae5d1cfcd3a8ba5d351236bc3f77bd140c26a887a7e85afda3caa634ddb4f",
+        "bytes": 507237,
+        "alt": "Fundo de Localização de Toulouse no Pokémon GO: Cité de l’espace",
+        "classification": "datamined_game_asset",
+        "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_citeDeEspace.png",
+        "source_git_sha": "308972521ee4202ae23db2546e734677255a9ec2",
+        "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
+      },
+      "research": {
+        "status": "exact_tasks_unconfirmed",
+        "field_tasks": [],
+        "timed_steps": [],
+        "report": null,
+        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
+      },
+      "gpx": {
+        "status": "event_area_unverified",
+        "coverage_polygon": null,
+        "route_points": [],
+        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -86,6 +136,31 @@
       "source": {
         "url": "https://www.deutsches-museum.de/nuernberg/besuch/anfahrt",
         "confidence": "official"
+      },
+      "location_background": {
+        "file": "assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "f0516c182e8e2852eaa6d4d1e591b953c264bd8b7797613086358a4f5c728fe2",
+        "bytes": 483542,
+        "alt": "Fundo de Localização de Nuremberg no Pokémon GO: Deutsches Museum Nürnberg",
+        "classification": "datamined_game_asset",
+        "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_spaceCenterGermany.png",
+        "source_git_sha": "deb2430e91a5b25a9bc6668dee456a617ecf6ec9",
+        "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
+      },
+      "research": {
+        "status": "exact_tasks_unconfirmed",
+        "field_tasks": [],
+        "timed_steps": [],
+        "report": null,
+        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
+      },
+      "gpx": {
+        "status": "event_area_unverified",
+        "coverage_polygon": null,
+        "route_points": [],
+        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -99,6 +174,74 @@
       "source": {
         "url": "https://www.valencia.es/es/-/infociudad-museo-de-las-ciencias",
         "confidence": "official_municipal"
+      },
+      "location_background": {
+        "file": "assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "f7e8bf69f6011a6ffed5d19e788216250a7e1cf909b9489cd9514c751b4b1e48",
+        "bytes": 478256,
+        "alt": "Fundo de Localização de Valência no Pokémon GO: Museu de les Ciències",
+        "classification": "datamined_game_asset",
+        "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_ciudadDeLasArtes.png",
+        "source_git_sha": "3b36530bf997ca41257f47f54f6de00dfe5cc211",
+        "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
+      },
+      "research": {
+        "status": "community_report_valencia_only",
+        "field_tasks": [
+          {
+            "id": "spin-10",
+            "title": "Girar 10 Poképaradas",
+            "reported_title": "Spin 10 PokéStops",
+            "confidence": "community_firsthand",
+            "reward": {
+              "type": "encounter",
+              "description": "Encontro do evento com fundo (relatado)",
+              "species": null,
+              "background": "reported_guaranteed_not_officially_verified"
+            }
+          },
+          {
+            "id": "buddy-hearts-3",
+            "title": "Ganhar 3 corações com seu companheiro",
+            "reported_title": "Earn 3 hearts with your buddy",
+            "confidence": "community_firsthand",
+            "reward": {
+              "type": "encounter",
+              "description": "Encontro do evento com fundo (relatado)",
+              "species": null,
+              "background": "reported_guaranteed_not_officially_verified"
+            }
+          },
+          {
+            "id": "catch-10",
+            "title": "Capturar 10 Pokémon",
+            "reported_title": "Catch 10 Pokémon",
+            "confidence": "community_firsthand",
+            "reward": {
+              "type": "encounter",
+              "description": "Encontro do evento com fundo (relatado)",
+              "species": null,
+              "background": "reported_guaranteed_not_officially_verified"
+            }
+          }
+        ],
+        "timed_steps": [],
+        "report": {
+          "url": "https://www.reddit.com/r/pokemongo/comments/1wx0pd3/esa_event_is_live_in_valencia/",
+          "name": "Relato direto de jogador em Valência",
+          "confidence": "community_firsthand",
+          "reported_date": "2026-10-04",
+          "scope_venue_id": "museu-ciencies-valencia"
+        },
+        "note": "O relato informa encontros com fundo nas três tarefas. Espécies por tarefa ainda não confirmadas; a informação não se estende aos demais museus."
+      },
+      "gpx": {
+        "status": "event_area_unverified",
+        "coverage_polygon": null,
+        "route_points": [],
+        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -118,6 +261,31 @@
       "source": {
         "url": "https://www.space-expo.nl/en/contact",
         "confidence": "official"
+      },
+      "location_background": {
+        "file": "assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "e9769f0113b68300d5163ed456ccb0ae9fe71a6d0daec36c81cd986deb77a116",
+        "bytes": 404084,
+        "alt": "Fundo de Localização de Noordwijk no Pokémon GO: Space Expo",
+        "classification": "datamined_game_asset",
+        "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_spaceExpoNL.png",
+        "source_git_sha": "47516e0ea73ce551f8a1ee9e85235ccaec8c1213",
+        "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
+      },
+      "research": {
+        "status": "exact_tasks_unconfirmed",
+        "field_tasks": [],
+        "timed_steps": [],
+        "report": null,
+        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
+      },
+      "gpx": {
+        "status": "event_area_unverified",
+        "coverage_polygon": null,
+        "route_points": [],
+        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -137,12 +305,51 @@
       "source": {
         "url": "https://www.eurospacecenter.be/en/infos-tarifs",
         "confidence": "official"
+      },
+      "location_background": {
+        "file": "assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "c60fdac0978ba7a11f13aa98999203570d421b86993076cd8eb96b231488c556",
+        "bytes": 606666,
+        "alt": "Fundo de Localização de Transinne no Pokémon GO: Euro Space Center",
+        "classification": "datamined_game_asset",
+        "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_euroSpaceCenter.png",
+        "source_git_sha": "025207b119061c8d4919720779c5e98b18b55727",
+        "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
+      },
+      "research": {
+        "status": "exact_tasks_unconfirmed",
+        "field_tasks": [],
+        "timed_steps": [],
+        "report": null,
+        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
+      },
+      "gpx": {
+        "status": "event_area_unverified",
+        "coverage_polygon": null,
+        "route_points": [],
+        "note": "Limites do evento ainda não confirmados."
       }
     }
   ],
   "gpx": {
     "enabled": false,
-    "reason": "Referências de museus não são PokéStops exatas."
+    "reason": "Nenhum limite da área do evento nem rota de cobertura integral foi verificado para os seis museus. Pontos de referência isolados não comprovam a cobertura solicitada.",
+    "public_note": "GPX de cobertura total pendentes: ainda faltam limites confirmados da área do evento em cada museu."
   },
-  "verified_at": "2026-10-04T11:56:17.646150+00:00"
+  "verified_at": "2026-10-04T12:54:53.931662+00:00",
+  "background_assets_source": {
+    "name": "PokeMiners — acervo comunitário de arquivos do jogo",
+    "url": "https://github.com/PokeMiners/pogo_assets/tree/master/Images/LocationCards",
+    "confidence": "community_datamine",
+    "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml",
+    "city_mapping_confidence": "community_reference"
+  },
+  "research": {
+    "timed_instruction": "Entre no museu participante para receber a pesquisa do evento. As etapas e espécies de recompensa deste local ainda não foram confirmadas.",
+    "field_instruction": "Gire as Poképaradas da área participante para procurar tarefas do evento.",
+    "official_reward_rule": "O anúncio oficial informa que alguns encontros de pesquisas podem ter o Fundo de Localização. Os Pokémon dos encontros selvagens não definem as recompensas das tarefas.",
+    "source_url": "https://pokemongo.com/en/news/european-space-agency-event"
+  }
 }

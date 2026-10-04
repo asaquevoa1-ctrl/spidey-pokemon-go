@@ -26,6 +26,26 @@
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
   }
 
+  function backgroundFigure(venue) {
+    const media = venue.location_background;
+    if (!media) return '';
+    return `<figure class="space-location-background"><img src="${esc(media.file)}?v=${esc(media.sha256.slice(0,12))}" width="${media.width}" height="${media.height}" alt="${esc(media.alt)}" loading="lazy" decoding="async"><figcaption>Fundo de Localização · ${esc(venue.city)}</figcaption></figure>`;
+  }
+
+  function researchSection(venue, data) {
+    const research = venue.research;
+    if (!research || !data.research) return '';
+    const tasks = research.field_tasks || [];
+    const report = research.report;
+    return `<details class="space-research" ${tasks.length ? 'open' : ''}>
+      <summary>Missões e recompensas <span>${tasks.length ? `${tasks.length} relatadas` : 'A confirmar'}</span></summary>
+      ${tasks.length ? `<p class="space-report-label">Relato de jogadores · ${esc(venue.city)} · 04/10/2026</p><table><thead><tr><th scope="col">Tarefa</th><th scope="col">Recompensa relatada</th></tr></thead><tbody>${tasks.map(task => `<tr><td>${esc(task.title)}</td><td>${esc(task.reward.description)}</td></tr>`).join('')}</tbody></table><p>${esc(research.note)}</p><a class="space-venue-source" href="${esc(report.url)}" target="_blank" rel="noopener">Ver relato de ${esc(venue.city)} ↗</a>` : `<p>${esc(research.note)}</p>`}
+      <p><strong>Pesquisa temporária:</strong> ${esc(data.research.timed_instruction)}</p>
+      <p><strong>Pesquisa de Campo · 4 a 10/10:</strong> ${esc(data.research.field_instruction)}</p>
+      <p class="microcopy">${esc(data.research.official_reward_rule)}</p>
+    </details>`;
+  }
+
   function museumRows(data, reference = new Date()) {
     return data.museums.map(venue => {
       const coordinate = venue.coordinate;
@@ -33,6 +53,9 @@
       return `<article class="space-museum" data-space-museum="${esc(venue.id)}">
         <span class="eyebrow">${esc(venue.city)} · ${esc(venue.country)}</span>
         <h3>${esc(venue.name)}</h3>
+        ${backgroundFigure(venue)}
+        ${researchSection(venue, data)}
+        ${venue.gpx ? `<p class="space-gpx-status"><strong>GPX da área:</strong> ${esc(venue.gpx.note)}</p>` : ''}
         <p>${esc(venue.address)}</p>
         <p class="space-clock">Agora no local: <strong>${esc(clock(venue.timezone, reference))}</strong><br>Brasília: ${esc(clock('America/Sao_Paulo', reference))}</p>
         ${coordinate ? `<code>${esc(value)}</code><p class="microcopy">Referência do museu; confira o ponto no mapa.</p>` : ''}
@@ -58,8 +81,10 @@
         <p><strong>04/10/2026 a 30/04/2027</strong> · ${data.museums.length} museus participantes</p>
         <section class="space-background-info"><h3>Como conseguir o Fundo de Localização</h3><ul class="bonus-list">${data.background_rules.map(text => `<li>${esc(text)}</li>`).join('')}</ul></section>
         <details class="space-extra"><summary>Mais encontros entre 4 e 10 de outubro</summary><p>${esc(data.weekly_gameplay)}</p><p>${esc(data.esa_note)}</p></details>
-        <p class="microcopy">Confira os horários de visita de cada museu. Os horários acima mostram o relógio atual, sem prometer reides durante todo o dia.</p>
+        <p class="microcopy">Confira os horários de visita de cada museu. Os relógios mostram a hora atual, sem prometer reides durante todo o dia.</p>
+        <p class="space-gpx-note">${esc(data.gpx.public_note)}</p>
         <div class="space-museum-list">${museumRows(data)}</div>
+        <p class="space-background-credit">Fundos do jogo: <a href="${esc(data.background_assets_source.url)}" target="_blank" rel="noopener">acervo comunitário PokeMiners ↗</a>. Cidades conferidas no <a href="${esc(data.background_assets_source.city_mapping_url)}" target="_blank" rel="noopener">Serebii ↗</a>.</p>
         <a class="action-btn" href="${esc(data.source.url)}" target="_blank" rel="noopener">Anúncio oficial ↗</a>
       </div>`;
       dialog.showModal();
@@ -123,6 +148,6 @@
       });
     },60000);
   }
-  window.SpideySpace = Object.freeze({openMuseums,clock,mapUrl,museumRows});
+  window.SpideySpace = Object.freeze({openMuseums,clock,mapUrl,museumRows,researchSection});
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
 })();

@@ -14,11 +14,11 @@ function worker(overrides = {}) {
 }
 test('offline shell and event data use the stored response including versioned requests', async () => {
   const w = worker();
-  for (const url of ['https://spidey.test/spidey-app/app.js?v=current', 'https://spidey.test/spidey-app/data/events.json']) {
+  for (const url of ['https://spidey.test/spidey-app/app.js?v=current', 'https://spidey.test/spidey-app/data/events.json', 'https://spidey.test/spidey-app/data/space-museums.json?v=current']) {
     let result; w.listeners.fetch({ request: { method: 'GET', url, mode: 'cors' }, respondWith: p => { result = p; } });
     assert.equal(await result, w.cached);
   }
-  assert.equal(w.matches.length, 2); assert.ok(w.matches.every(m => m.options.ignoreSearch));
+  assert.equal(w.matches.length, 3); assert.ok(w.matches.every(m => m.options.ignoreSearch));
 });
 test('API requests bypass offline cache and updates preserve unrelated caches', async () => {
   const removed = []; const caches = { keys: async () => ['spidey-app-old', 'unrelated-cache'], delete: async key => removed.push(key) };
