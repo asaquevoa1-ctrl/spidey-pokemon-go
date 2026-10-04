@@ -1,4 +1,5 @@
 #weeklyView .weekly-item[data-weekly-art-owner="canonical"] {
+  display: grid !important;
   grid-template-columns: 82px minmax(0, 1fr) !important;
 }
 
