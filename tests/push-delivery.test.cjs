@@ -15,10 +15,11 @@ function subscription(id) {
 test('only a genuine signed token for this main-branch workflow authorizes delivery', async () => {
   const { verifyGithubToken, DISPATCH_AUDIENCE } = await import('../spidey-app/api/push/_auth.js');
   const repo = 'asaquevoa1-ctrl/spidey-pokemon-go';
-  const claims = { iss: 'https://token.actions.githubusercontent.com', aud: DISPATCH_AUDIENCE, repository: repo, ref: 'refs/heads/main', workflow_ref: `${repo}/.github/workflows/spidey-push-dispatch.yml@refs/heads/main`, sub: `repo:${repo}:ref:refs/heads/main`, event_name: 'schedule', iat: now / 1000 - 10, nbf: now / 1000 - 10, exp: now / 1000 + 300 };
+  const claims = { iss: 'https://token.actions.githubusercontent.com', aud: DISPATCH_AUDIENCE, repository: repo, repository_id: '1377613549', repository_owner_id: '331416810', ref: 'refs/heads/main', workflow_ref: `${repo}/.github/workflows/spidey-push-dispatch.yml@refs/heads/main`, sub: `repo:${repo}:ref:refs/heads/main`, event_name: 'schedule', iat: now / 1000 - 10, nbf: now / 1000 - 10, exp: now / 1000 + 300 };
   const options = { now, fetchKeys: async () => [{ ...publicKey.export({ format: 'jwk' }), kid: 'qa-key' }] };
   assert.equal(await verifyGithubToken(jwt(claims), options), true);
-  for (const patch of [{ repository: 'outsider/other' }, { ref: 'refs/pull/1/merge' }, { workflow_ref: `${repo}/.github/workflows/untrusted.yml@refs/heads/main` }, { aud: 'different-api' }, { exp: now / 1000 - 1 }, { event_name: 'pull_request' }, { sub: `repo:${repo}:pull_request` }]) assert.equal(await verifyGithubToken(jwt({ ...claims, ...patch }), options), false);
+  assert.equal(await verifyGithubToken(jwt({ ...claims, sub: 'repo:asaquevoa1-ctrl@331416810/spidey-pokemon-go@1377613549:ref:refs/heads/main' }), options), true);
+  for (const patch of [{ repository: 'outsider/other' }, { repository_id: '123' }, { repository_owner_id: '456' }, { ref: 'refs/pull/1/merge' }, { workflow_ref: `${repo}/.github/workflows/untrusted.yml@refs/heads/main` }, { aud: 'different-api' }, { exp: now / 1000 - 1 }, { event_name: 'pull_request' }, { sub: `repo:${repo}:pull_request` }]) assert.equal(await verifyGithubToken(jwt({ ...claims, ...patch }), options), false);
   const other = crypto.generateKeyPairSync('rsa', { modulusLength: 2048 });
   assert.equal(await verifyGithubToken(jwt(claims, other.privateKey), options), false);
   assert.equal(await verifyGithubToken(jwt(claims, privateKey, 'none'), options), false);

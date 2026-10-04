@@ -2,6 +2,9 @@ import { createPublicKey, verify, timingSafeEqual } from 'node:crypto';
 import { env } from './_config.js';
 export const DISPATCH_AUDIENCE = 'https://spidey-pokemon-go.vercel.app/api/push/dispatch';
 const REPOSITORY = 'asaquevoa1-ctrl/spidey-pokemon-go';
+const REPOSITORY_ID = '1377613549';
+const OWNER_ID = '331416810';
+const SUBJECTS = new Set([`repo:${REPOSITORY}:ref:refs/heads/main`, `repo:asaquevoa1-ctrl@${OWNER_ID}/spidey-pokemon-go@${REPOSITORY_ID}:ref:refs/heads/main`]);
 const WORKFLOW = `${REPOSITORY}/.github/workflows/spidey-push-dispatch.yml@refs/heads/main`;
 let cachedKeys;
 let keysFetchedAt = 0;
@@ -16,7 +19,8 @@ export async function verifyGithubToken(token, { fetchKeys, now = Date.now() } =
     if (claims.iss !== 'https://token.actions.githubusercontent.com'
       || claims.aud !== DISPATCH_AUDIENCE || claims.repository !== REPOSITORY
       || claims.ref !== 'refs/heads/main' || claims.workflow_ref !== WORKFLOW
-      || claims.sub !== `repo:${REPOSITORY}:ref:refs/heads/main`
+      || String(claims.repository_id) !== REPOSITORY_ID || String(claims.repository_owner_id) !== OWNER_ID
+      || !SUBJECTS.has(claims.sub)
       || !['schedule', 'workflow_dispatch', 'push'].includes(claims.event_name)
       || !Number.isFinite(claims.exp) || claims.exp <= seconds
       || !Number.isFinite(claims.iat) || claims.iat > seconds + 60

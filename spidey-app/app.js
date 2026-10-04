@@ -428,7 +428,7 @@ function setView(viewId) {
     if (typeof renderMapV2 === 'function') renderMapV2();
     else renderMapSummary();
   }
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 let contentLoading = null;
@@ -451,7 +451,7 @@ async function loadContent({ refresh = false } = {}) {
       const fingerprint = JSON.stringify([events, stamps]);
       lastContentCheck = Date.now();
       const status = document.getElementById('calendarUpdateStatus');
-      if (status) status.textContent = 'Agenda em dia. As novidades aparecem aqui automaticamente.';
+      if (status) status.textContent = 'Novidades no mesmo link. A agenda é atualizada automaticamente.';
       window.dispatchEvent(new Event('spideycatalogchecked'));
       if (fingerprint === catalogFingerprint) return;
       catalogFingerprint = fingerprint;
