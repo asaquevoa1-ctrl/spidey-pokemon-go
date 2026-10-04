@@ -1,0 +1,206 @@
+{
+  "status": "PENDING_REVIEW",
+  "date": "2026-10-01",
+  "branch": "spidey-fly-v1",
+  "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
+  "approval": null,
+  "source_classification": "COMMUNITY",
+  "community_sources": [
+    "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
+    "https://pokemongohub.net/post/event/october-2026-events/",
+    "https://leekduck.com/events/"
+  ],
+  "factual_limits": [
+    "Sem anúncio primário específico dessa rotação localizado; manter comunidade.",
+    "GO Hub indica troca genérica às 10h; Leek Duck lista 06h→22h; catálogo preserva janela específica, pôsteres de rotação usam somente datas.",
+    "Yveltal e Mega Blastoise 07–13/10; Hora de Reides Yveltal 07/10, 18–19h locais.",
+    "Nenhuma promessa de bônus/shiny boost/golpe exclusivo/estreia/ticket.",
+    "Hora de Reides é arquivo e eventId distintos da rotação."
+  ],
+  "inputs": [
+    {
+      "file": "spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png",
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "role": "style/layout reference; original immutable"
+    },
+    {
+      "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+      "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132",
+      "role": "official Spidey identity"
+    }
+  ],
+  "preserved_master_sha256": "2203a242fe884ff995eedd49f9a1b4530f3aa50dfcfb2b82171888563a347d59",
+  "prompts": {
+    "2026-10-raids-yveltal": "Use case: style-transfer. Asset type: full vertical Spidey Pokémon GO event poster for a mobile-first public app. Edit target: input image 1, the human-approved Xerneas rotation poster, used only as the established Premium design/layout reference. Input image 2 is the exact official Spidey logo, keep its identity. Deliver one complete portrait poster, same visual quality and approximate 1121×1403 composition, sharp readable Portuguese typography, lush cinematic Pokémon illustration, generous safe edges, complete intact footer. Keep Spidey header/logo, Pokémon GO logo, visual hierarchy, bold dimensional title and premium ornamental date panel. Replace Xerneas completely with the requested Pokémon, do not recolor Xerneas into a new character. Keep the new Pokémon faithful to its recognizable official anatomy/colors. No extra Pokémon, no invented bonuses/rewards, no generic vector design or cutout on a flat background, no Max towers, no Dynamax or Gigantamax symbols, no Super Mega Raids, no shiny boost, no debut claim, no exclusive move, no research or ticket claim. No old Xerneas/date text anywhere. Footer exact text: \"Fonte: Leek Duck • Pokémon GO Hub\". Preserve complete logo/title/date/footer inside the canvas. This is a new review candidate; do not mark approval or put technical review status in the artwork. Create the Yveltal ROTATION poster: normal Yveltal, massive dark crimson and black legendary avian, fully opened long clawed wings with five pale gray tips, dark branching vein-like patterns across crimson body/wings, gray chest ruff, long crimson tail with three pointed black claws, vivid icy-blue eyes; recognizable Y-shaped silhouette. Dynamic powerful flight over a dramatic ruined mountain valley under a crimson eclipse/night sky, red energy and mist, rich cinematic detail. Palette crimson/black/gold with pale highlights. Exact prominent text: \"YVELTAL\", \"NAS BATALHAS DE REIDE\", \"7 A 13 DE OUTUBRO DE 2026\". Lower panel: exactly five gold stars and text \"REIDES DE CINCO ESTRELAS\". No daily hours and no Raid Hour label on this rotation poster.",
+    "2026-10-07-raid-hour-yveltal": "Use case: style-transfer. Asset type: full vertical Spidey Pokémon GO event poster for a mobile-first public app. Edit target: input image 1, the human-approved Xerneas rotation poster, used only as the established Premium design/layout reference. Input image 2 is the exact official Spidey logo, keep its identity. Deliver one complete portrait poster, same visual quality and approximate 1121×1403 composition, sharp readable Portuguese typography, lush cinematic Pokémon illustration, generous safe edges, complete intact footer. Keep Spidey header/logo, Pokémon GO logo, visual hierarchy, bold dimensional title and premium ornamental date panel. Replace Xerneas completely with the requested Pokémon, do not recolor Xerneas into a new character. Keep the new Pokémon faithful to its recognizable official anatomy/colors. No extra Pokémon, no invented bonuses/rewards, no generic vector design or cutout on a flat background, no Max towers, no Dynamax or Gigantamax symbols, no Super Mega Raids, no shiny boost, no debut claim, no exclusive move, no research or ticket claim. No old Xerneas/date text anywhere. Footer exact text: \"Fonte: Leek Duck • Pokémon GO Hub\". Preserve complete logo/title/date/footer inside the canvas. This is a new review candidate; do not mark approval or put technical review status in the artwork. Create a separate Yveltal RAID HOUR poster, not the rotation. Yveltal in faithful crimson/black normal colors, long clawed wings in a striking Y silhouette, gray chest ruff, icy blue eyes, huge scale soaring above illuminated raid gyms/city skyline at dusk, dramatic crimson cloud vortex and energetic cinematic lighting. Exact prominent text: \"HORA DE REIDES\", \"YVELTAL\", \"7 DE OUTUBRO DE 2026\", \"18H ÀS 19H • HORÁRIO LOCAL\". Lower panel exactly five gold stars and \"REIDES DE CINCO ESTRELAS\". No rotation range, no extra dates, no boosted shiny or exclusive attack claims.",
+    "2026-10-mega-blastoise-raids": "Use case: style-transfer. Asset type: full vertical Spidey Pokémon GO event poster for a mobile-first public app. Edit target: input image 1, the human-approved Xerneas rotation poster, used only as the established Premium design/layout reference. Input image 2 is the exact official Spidey logo, keep its identity. Deliver one complete portrait poster, same visual quality and approximate 1121×1403 composition, sharp readable Portuguese typography, lush cinematic Pokémon illustration, generous safe edges, complete intact footer. Keep Spidey header/logo, Pokémon GO logo, visual hierarchy, bold dimensional title and premium ornamental date panel. Replace Xerneas completely with the requested Pokémon, do not recolor Xerneas into a new character. Keep the new Pokémon faithful to its recognizable official anatomy/colors. No extra Pokémon, no invented bonuses/rewards, no generic vector design or cutout on a flat background, no Max towers, no Dynamax or Gigantamax symbols, no Super Mega Raids, no shiny boost, no debut claim, no exclusive move, no research or ticket claim. No old Xerneas/date text anywhere. Footer exact text: \"Fonte: Leek Duck • Pokémon GO Hub\". Preserve complete logo/title/date/footer inside the canvas. This is a new review candidate; do not mark approval or put technical review status in the artwork. Create the Mega Blastoise ROTATION poster: Mega Blastoise, a powerful blue bipedal turtle with large brown shell, light tan segmented belly, unmistakable single giant water cannon over the center of the shell and two smaller cannons built into its forearms, white wrist shell plating; it is Mega Blastoise, not ordinary Blastoise with twin shoulder cannons. Dynamic powerful stance amid towering turquoise water waves and ancient coastal ruins, cinematic ocean storm and blue energy, rich detailed cohesive environment. Palette aquatic cyan/deep navy/white/gold. Exact prominent text: \"MEGA BLASTOISE\", \"MEGARREIDES\", \"7 A 13 DE OUTUBRO DE 2026\". Use a Mega evolution emblem in lower panel, REMOVE the five-star raid row of Xerneas entirely; no raid star count, no ordinary Blastoise title, no daily hours or bonus claims."
+  },
+  "candidates": [
+    {
+      "event_id": "2026-10-raids-yveltal",
+      "file": "spidey-app/assets/events/review/yveltal-rotation-v1.png",
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+      "bytes": 2265106,
+      "width": 1121,
+      "height": 1403,
+      "revision": 1,
+      "status": "PENDING_REVIEW",
+      "generator": "built-in imagegen",
+      "visual_check": "Texto/data/fonte/5 estrelas e composição integral conferidos na saída; revisão humana pendente."
+    },
+    {
+      "event_id": "2026-10-07-raid-hour-yveltal",
+      "file": "spidey-app/assets/events/review/yveltal-raid-hour-v2.png",
+      "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+      "bytes": 2273727,
+      "width": 1121,
+      "height": 1403,
+      "revision": 2,
+      "status": "PENDING_REVIEW",
+      "generator": "built-in imagegen",
+      "visual_check": "Estruturas Max/emblemas e silhuetas extras removidos; data/18–19h local/5 estrelas/fonte e pôster integral preservados. Revisão humana pendente."
+    },
+    {
+      "event_id": "2026-10-mega-blastoise-raids",
+      "file": "spidey-app/assets/events/review/mega-blastoise-rotation-v1.png",
+      "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+      "bytes": 2718402,
+      "width": 1121,
+      "height": 1403,
+      "revision": 1,
+      "status": "PENDING_REVIEW",
+      "generator": "built-in imagegen",
+      "visual_check": "Mega Blastoise com canhão central + canhões dos braços, datas/fonte/emblema Mega sem estrelas, pôster completo; revisão humana pendente."
+    }
+  ],
+  "qa": {
+    "status": "PREVIEW_ART_VERIFIED",
+    "node_tests_passed": 22,
+    "active_scripts_syntax_passed": 19,
+    "service_worker_syntax_passed": true,
+    "masters_and_history_hashes": "PASSED",
+    "catalog_ids_and_schedules_preserved": 124,
+    "precache_local_audit": {
+      "file_count": 70,
+      "disk_bytes": 28777950,
+      "network_or_offline_test": false
+    },
+    "code_commit": "10e28fcb2b785206bfde67116526a97e76a9d145",
+    "verified_at": "2026-10-02T03:48:16.276105+00:00",
+    "preview_url": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/index.html",
+    "responsive_harness": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/qa-responsive.html",
+    "mobile": "390×850, Claro: três PNGs integrais 1121×1403, contain, rodapé visível, sem overflow horizontal no detalhe; Fechar focado e scrollTop 0.",
+    "desktop": "1280×850, Escuro: três PNGs integrais, contain em caixa 703×620, rodapé visível, sem overflow horizontal no detalhe.",
+    "entry_path": "Início → Mostrar calendário → 7 de outubro → evento → detalhe; seleção pelo UI, sem alterar relógio/estado interno.",
+    "fly_hour": "Ver rota mundial abre Yveltal 07/10, 18–19h local, 20 essenciais; arquivo da Hora de Reides correto no card mobile/desktop.",
+    "surface_limits": [
+      "Home atual limita Vem por aí aos seis próximos: novas peças de 07/10 não apareceram nesta Home.",
+      "Semana corrente 28/09–04/10 não contém as três novas peças; preservação dos masters atuais conferida, sem forçar data.",
+      "QA responsivo em navegador remoto não é teste de Android físico/instalação/offline/push."
+    ],
+    "master_preview_check": "Xerneas, Invasão, Cinderace e Mega Victreebel carregaram na Semana/Home; Seedot confirmado no detalhe após renovar acesso temporário Vercel.",
+    "seedot_access_issue": {
+      "status": "RESOLVED",
+      "cause_observed": "URL exata do PNG redirecionou ao login Vercel.",
+      "recovery": "Acesso temporário renovado pelo conector; mesmo PNG passou no app, natural 1121×1403. Nenhuma mudança em código/arte."
+    },
+    "observations_file": "docs/qa/october-raids-browser-10e28fc-20261002.json",
+    "proofs": [
+      {
+        "file": "docs/qa/yveltal-rotation-mobile-10e28fc-20261002.jpg",
+        "sha256": "b8ea5be8d873a3a0cf5e09c53007ee4990dbcd832dc870b5dc02969db8b25de0",
+        "bytes": 93938,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-hour-mobile-10e28fc-20261002.jpg",
+        "sha256": "d154ce2710ebc6b7cf54b986a2a90b641534e9c8c0d26b9db81d3db66304d83f",
+        "bytes": 99930,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/mega-blastoise-mobile-10e28fc-20261002.jpg",
+        "sha256": "515163bc564a9543f65b935d31b5f2b3c9b16b5f56d3589fa20ac658654aefcd",
+        "bytes": 105575,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/mega-blastoise-desktop-10e28fc-20261002.jpg",
+        "sha256": "b7370ae5c90d9da17bbb881a85157254739fca0d8f24135e1a915dfee69f3336",
+        "bytes": 153778,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-rotation-desktop-10e28fc-20261002.jpg",
+        "sha256": "5ee0480c4841e748e5e2055e11f723a5c6f69bbab3bb4ca13a76caf7a8752640",
+        "bytes": 127480,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-hour-desktop-10e28fc-20261002.jpg",
+        "sha256": "25bbc0a0b9d186e0c7bf3ee70206a306b16017ff1faccc78bd0c0ade773d186e",
+        "bytes": 136289,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/yveltal-hour-fly-mobile-10e28fc-20261002.jpg",
+        "sha256": "25a4c2f73041313c371fcf79b9e88d4bee0fc08c036b293c055917dd7a78434b",
+        "bytes": 62370,
+        "dimensions": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/seedot-load-failed-10e28fc-20261002.jpg",
+        "sha256": "8d4c90c75da6fad38facfcfe6eec8173ad6ffe3dc9c5df60cdf3226cf433f335",
+        "bytes": 35872,
+        "dimensions": [
+          1348,
+          926
+        ]
+      },
+      {
+        "file": "docs/qa/seedot-access-restored-10e28fc-20261002.jpg",
+        "sha256": "06aa01ded320bde2bfcfb5cd3e6bd0e15c131a436c0839671a78d5674d3834f4",
+        "bytes": 125355,
+        "dimensions": [
+          1348,
+          926
+        ]
+      }
+    ]
+  },
+  "revision_history": [
+    {
+      "event_id": "2026-10-07-raid-hour-yveltal",
+      "file": "spidey-app/assets/events/review/yveltal-raid-hour-v1.png",
+      "sha256": "3da3f158caf1b8303fb5a0820262b315a4ae0a7978c805b9d57013e937b78335",
+      "bytes": 2299763,
+      "width": 1121,
+      "height": 1403,
+      "revision": 1,
+      "status": "REVISION_REQUIRED",
+      "reason": "Estruturas vermelhas com emblemas no cenário lembram Power Spots/Max; remover antes da revisão final."
+    }
+  ],
+  "revision_prompt_yveltal_hour_v2": "Use case: precise-object-edit. Edit only the supplied new Yveltal Raid Hour poster. Preserve the exact large Yveltal illustration/anatomy, Spidey logo/header, Pokémon GO logo, title HORA DE REIDES YVELTAL, date 7 DE OUTUBRO DE 2026, time 18H ÀS 19H • HORÁRIO LOCAL, five-star lower panel, source footer and overall portrait composition/quality. Remove EVERY red holographic raid tower, vertical beam, ringed platform structure and Pokémon-face emblem from the CITY background. They resemble Max Power Spots and are factually wrong for this five-star Raid Hour. Replace those structures with ordinary city architecture, warm windows and streets under the same sunset/red storm, no gyms/towers/emblems/beams at all. Also remove small distant black bird/Pokémon silhouettes; retain only the single dominant Yveltal. Change ONLY these background objects. Preserve all wording, date, time, five stars, logo, quality and full footer unchanged. No new symbols or Pokémon, no Max/Dynamax/Gigantamax imagery."
+}

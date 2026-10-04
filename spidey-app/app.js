@@ -1,7 +1,29 @@
+const BRAZIL_CALENDAR_FORMAT = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit',
+});
+
+function brazilDateKey(date) {
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
+  const parts = Object.fromEntries(BRAZIL_CALENDAR_FORMAT.formatToParts(date)
+    .filter((part) => part.type !== 'literal').map((part) => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+// Grid dates represent the day printed on a button, rather than an instant.
+function calendarDateKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+}
+
+function calendarToday(reference = new Date()) {
+  const [year, month, day] = brazilDateKey(reference).split('-').map(Number);
+  return new Date(year, month - 1, day);
+}
+
+const initialCalendarDay = calendarToday();
 const state = {
   events: [],
   stamps: [],
-  month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+  month: new Date(initialCalendarDay.getFullYear(), initialCalendarDay.getMonth(), 1),
   deferredInstall: null,
 };
 
@@ -55,7 +77,10 @@ function getBrazilRange(event) {
 function overlapsDay(event, day) {
   const { start, end } = getBrazilRange(event);
   if (!start || !end) return false;
-  return start <= endOfDay(day) && end >= startOfDay(day);
+  const firstDay = brazilDateKey(start);
+  const lastDay = brazilDateKey(end);
+  const selectedDay = calendarDateKey(day);
+  return Boolean(firstDay && lastDay && firstDay <= selectedDay && lastDay >= selectedDay);
 }
 
 function formatRange(event) {
@@ -92,20 +117,20 @@ function validCoordinate(point) {
 }
 
 function exactPokestop(stop) {
-  return validCoordinate(stop) && stop.coordinate_type === 'exact_pokestop' && stop.coordinate_confidence !== 'unconfirmed';
+  return validCoordinate(stop) && stop.coordinate_type === 'exact_pokestop' && ['confirmed', 'verified', 'official', 'community_verified'].includes(stop.coordinate_confidence);
 }
 
 function renderStats() {
   const now = new Date();
-  const monthStart = new Date(state.month.getFullYear(), state.month.getMonth(), 1);
-  const monthEnd = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 0, 23, 59, 59);
+  const monthStart = calendarDateKey(new Date(state.month.getFullYear(), state.month.getMonth(), 1));
+  const monthEnd = calendarDateKey(new Date(state.month.getFullYear(), state.month.getMonth() + 1, 0));
   $('#nowCount').textContent = state.events.filter((event) => {
     const { start, end } = getBrazilRange(event);
     return start && end && start <= now && end >= now;
   }).length;
   $('#monthCount').textContent = state.events.filter((event) => {
     const { start, end } = getBrazilRange(event);
-    return start && end && start <= monthEnd && end >= monthStart;
+    return start && end && brazilDateKey(start) <= monthEnd && brazilDateKey(end) >= monthStart;
   }).length;
   $('#nextCount').textContent = state.events.filter((event) => {
     const { start } = getBrazilRange(event);
@@ -120,7 +145,7 @@ function renderCalendar() {
   const month = state.month.getMonth();
   const first = new Date(year, month, 1);
   const gridStart = new Date(year, month, 1 - first.getDay());
-  const today = startOfDay(new Date()).getTime();
+  const today = calendarDateKey(calendarToday());
 
   for (let i = 0; i < 42; i += 1) {
     const day = new Date(gridStart);
@@ -129,7 +154,7 @@ function renderCalendar() {
     const button = document.createElement('button');
     button.className = 'calendar-day';
     if (day.getMonth() !== month) button.classList.add('outside');
-    if (startOfDay(day).getTime() === today) button.classList.add('today');
+    if (calendarDateKey(day) === today) button.classList.add('today');
     if (events.length) button.classList.add('has-event');
     button.innerHTML = `<span class="day-number">${day.getDate()}</span><span class="event-dots">${events.slice(0, 4).map(() => '<i class="event-dot"></i>').join('')}</span>`;
     button.title = events.length ? `${events.length} evento(s)` : 'Sem eventos';
@@ -210,7 +235,7 @@ function getStampProgress(rally) {
   catch (_) { return new Set(); }
 }
 function saveStampProgress(rally, set) {
-  localStorage.setItem(stampProgressKey(rally), JSON.stringify([...set]));
+  try { localStorage.setItem(stampProgressKey(rally), JSON.stringify([...set])); } catch { showToast('Não foi possível salvar o progresso neste aparelho.'); }
 }
 
 function renderStampStats() {
@@ -218,7 +243,7 @@ function renderStampStats() {
   const stops = rallies.flatMap((rally) => rally.stops || []);
   $('#stampRallyCount').textContent = rallies.length;
   $('#stampStopCount').textContent = stops.length;
-  $('#stampReadyCount').textContent = stops.filter(exactPokestop).length;
+  $('#stampReadyCount').textContent = rallies.filter(r => r.stops?.length && r.stops.every(exactPokestop)).length;
 }
 
 function renderStamps() {
@@ -244,7 +269,7 @@ function renderStamps() {
           <h3>${rally.title}</h3>
         </div>
       </div>
-      <p>${rally.summary || ''}</p>
+      <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="stamp-progress"><span style="width:${stops.length ? Math.min(100, (progress.size / stops.length) * 100) : 0}%"></span></div>
       <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> carimbados · <strong>${exact}</strong> coordenadas exatas</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
@@ -257,7 +282,7 @@ function renderStamps() {
 
 function stampCoordinateLabel(stop) {
   if (stop.coordinate_type === 'exact_pokestop' && exactPokestop(stop)) return 'PokéStop exata';
-  if (stop.coordinate_type === 'venue_reference') return 'Venue oficial • coordenada exata pendente';
+  if (stop.coordinate_type === 'venue_reference') return 'Local do evento • coordenada ainda não confirmada';
   return 'Coordenada a confirmar';
 }
 
@@ -291,7 +316,7 @@ function openStampRally(rally) {
     <div class="detail-body stamp-detail">
       <span class="eyebrow">GO STAMP RALLY</span>
       <h2>${rally.title}</h2>
-      <p>${rally.summary || ''}</p>
+      <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="info-grid">
         <div class="info-box"><span>Progresso</span><strong id="rallyProgressText">${progress.size}/${stops.length} selos</strong></div>
         <div class="info-box"><span>GPX confirmado</span><strong>${exactStops.length}/${stops.length} Stops</strong></div>
@@ -303,7 +328,7 @@ function openStampRally(rally) {
       ${!fullGpx ? '<p class="microcopy">GPX completo fica bloqueado até todas as PokéStops terem coordenadas exatas confirmadas.</p>' : ''}
       <div class="stamp-stops">${stops.map((stop) => stampStopHtml(rally, stop, progress)).join('')}</div>
       ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
-      ${(rally.notes || []).length ? `<h3>Observações</h3><ul class="bonus-list">${rally.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
+      ${(rally.public_notes ?? rally.notes ?? []).length ? `<h3>Observações</h3><ul class="bonus-list">${(rally.public_notes ?? rally.notes ?? []).map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;
 
   detail.querySelectorAll('.stamp-toggle').forEach((input) => {
@@ -373,7 +398,6 @@ function openEvent(event) {
         ${event.gpx?.enabled !== false && (event.locations || []).length ? '<button id="downloadGpx" class="action-btn gold">Baixar GPX</button>' : ''}
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">Fonte</a>` : ''}
       </div>
-      ${event.gpx?.enabled === false && event.gpx?.reason ? `<p class="microcopy">GPX indisponível: ${event.gpx.reason}</p>` : ''}
       ${pokemon.length ? `<h3>Pokémon em destaque</h3><ul class="bonus-list">${pokemon.map((item) => `<li>${item.name}${item.note ? ` — ${item.note}` : ''}</li>`).join('')}</ul>` : ''}
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${event.notes?.length ? `<h3>Observações</h3><ul class="bonus-list">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
@@ -413,6 +437,7 @@ async function loadContent() {
     const [eventsData, stampsData] = await Promise.all([eventsResponse.json(), stampsResponse.json()]);
     state.events = (eventsData.events || []).filter((event) => event.status === 'published');
     state.stamps = (stampsData.rallies || []).filter((rally) => rally.status === 'published');
+    window.dispatchEvent(new Event('spideycontentready'));
     renderCalendar();
     renderEvents();
     renderStamps();
@@ -428,27 +453,14 @@ async function loadContent() {
 }
 
 async function enableNotifications() {
-  if (!('Notification' in window) || !('serviceWorker' in navigator)) {
-    $('#notificationStatus').textContent = 'Este navegador não oferece notificações PWA.';
-    return;
-  }
-  const permission = await Notification.requestPermission();
-  if (permission !== 'granted') {
-    $('#notificationStatus').textContent = 'Notificações não autorizadas.';
-    return;
-  }
-  const registration = await navigator.serviceWorker.ready;
-  await registration.showNotification('Spidey Pokémon GO', {
-    body: 'Notificações ativadas neste aparelho. O push automático será ligado ao motor do Spidey.',
-    icon: 'assets/spidey-logo-oficial.jpg', badge: 'assets/spidey-logo-oficial.jpg', tag: 'spidey-notification-ready',
-  });
-  $('#notificationStatus').textContent = 'Permissão de notificações ativada.';
+  if (window.SpideyPush?.subscribeRemotePush) return window.SpideyPush.subscribeRemotePush();
+  $('#notificationStatus').textContent = 'Notificações indisponíveis no momento.';
 }
 
 $('#prevMonth').addEventListener('click', () => { state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); renderCalendar(); });
 $('#nextMonth').addEventListener('click', () => { state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1); renderCalendar(); });
 $('#todayButton').addEventListener('click', () => {
-  const now = new Date();
+  const now = calendarToday();
   state.month = new Date(now.getFullYear(), now.getMonth(), 1);
   renderCalendar();
   renderEvents(state.events.filter((event) => overlapsDay(event, now)));

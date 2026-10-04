@@ -1,0 +1,425 @@
+{
+  "status": "PENDING_REVIEW",
+  "approval": null,
+  "created_at": "2026-10-03T20:21:33.733089+00:00",
+  "branch": "spidey-fly-v1",
+  "base_commit": "b8aa84f2ca9a1845d167e06b5295778008a84b25",
+  "event_ids": [
+    "2026-10-06-showcase-tuesday"
+  ],
+  "preserved_master_sha256": "b26cdea46cf1e3c864ea3a3b2848a5a390faf58ef2c47eb05d132d3a8c3a894b",
+  "preserved_master_entries": {
+    "2026-10-raids-yveltal": {
+      "file": "assets/events/premium/yveltal-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+      "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+    },
+    "2026-10-07-raid-hour-yveltal": {
+      "file": "assets/events/premium/yveltal-raid-hour-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+      "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+    },
+    "2026-10-mega-blastoise-raids": {
+      "file": "assets/events/premium/mega-blastoise-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+      "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+    },
+    "2026-09-mega-victreebel-raids": {
+      "file": "assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "approval_record": "docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json"
+    },
+    "2026-10-01-spotlight-seedot": {
+      "file": "assets/events/premium/seedot-spotlight-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "approval_record": "docs/qa/SEEDOT_APPROVAL_20261001.json"
+    },
+    "2026-10-harvest-taken-over": {
+      "file": "assets/events/premium/harvest-invasion-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-gigantamax-cinderace-max-day": {
+      "file": "assets/events/premium/cinderace-max-day-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-xerneas-raids": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "festival-of-lights-2026-pokeminers-e2": {
+      "file": "assets/festival-das-luzes-approved.png",
+      "status": "APPROVED",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda"
+    },
+    "2026-09-raids-xerneas": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "2026-09-30-raid-hour-xerneas": {
+      "file": "assets/events/recovered/1000426235.png",
+      "status": "APPROVED",
+      "width": 1229,
+      "height": 1536,
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c"
+    },
+    "2026-10-zorua-community-day": {
+      "file": "assets/events/premium/zorua-community-day-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+      "approval_record": "docs/qa/ZORUA_APPROVAL_20261002.json"
+    },
+    "2026-10-shadow-thundurus": {
+      "file": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json"
+    },
+    "2026-10-08-spotlight-elgyem": {
+      "file": "assets/events/premium/elgyem-spotlight-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json"
+    },
+    "2026-10-go-pass": {
+      "file": "assets/events/premium/go-pass-october-kyogre-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+      "approval_record": "docs/qa/GO_PASS_APPROVAL_20261003.json"
+    },
+    "2026-09-go-pass": {
+      "file": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+      "approval_record": "docs/qa/LATIOS_APPROVAL_20261003.json"
+    },
+    "2026-10-04-scenic-sunday": {
+      "file": "assets/events/premium/scenic-sunday-20261004-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json"
+    }
+  },
+  "preserved_master_assets": {
+    "assets/events/premium/yveltal-rotation-approved-v1.png": {
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+      "bytes": 2265106
+    },
+    "assets/events/premium/yveltal-raid-hour-approved-v1.png": {
+      "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+      "bytes": 2273727
+    },
+    "assets/events/premium/mega-blastoise-rotation-approved-v1.png": {
+      "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+      "bytes": 2718402
+    },
+    "assets/events/premium/mega-victreebel-rotation-approved-v1.png": {
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "bytes": 2612794
+    },
+    "assets/events/premium/seedot-spotlight-approved-v1.png": {
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "bytes": 2215863
+    },
+    "assets/events/premium/harvest-invasion-approved-v1.png": {
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "bytes": 2425578
+    },
+    "assets/events/premium/cinderace-max-day-approved-v1.png": {
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "bytes": 2304232
+    },
+    "assets/events/premium/xerneas-rotation-approved-v1.png": {
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "bytes": 2181736
+    },
+    "assets/festival-das-luzes-approved.png": {
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
+      "bytes": 2277749
+    },
+    "assets/events/recovered/1000426235.png": {
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c",
+      "bytes": 582854
+    },
+    "assets/events/premium/zorua-community-day-approved-v1.png": {
+      "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+      "bytes": 2299199
+    },
+    "assets/events/premium/thundurus-shadow-weekend-approved-v1.png": {
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "bytes": 2519761
+    },
+    "assets/events/premium/elgyem-spotlight-approved-v1.png": {
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "bytes": 2455329
+    },
+    "assets/events/premium/go-pass-october-kyogre-approved-v1.png": {
+      "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+      "bytes": 2848940
+    },
+    "assets/events/premium/go-pass-september-latios-approved-v1.png": {
+      "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+      "bytes": 2757480
+    },
+    "assets/events/premium/scenic-sunday-20261004-approved-v1.png": {
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "bytes": 2739274
+    }
+  },
+  "previous_catalog_sha256": "90b3af70743455216a020e65df7dab4a0c7c461f22356f886ec04886cff479ef",
+  "catalog_sha256": "01b81b8daa9d8bc3aeda730aecb76c1884e6153bd021d6b9fc8e6ce4511827d9",
+  "original_event": {
+    "id": "2026-10-06-showcase-tuesday",
+    "slug": "2026-10-06-showcase-tuesday",
+    "title": "Descoberta Diária: Terça de Vitrine",
+    "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+    "category": "daily_discovery",
+    "tags": [
+      "Vitrines",
+      "PokéStop",
+      "Twilight Trails"
+    ],
+    "source": {
+      "name": "Twilight Trails • Daily Discoveries",
+      "url": "https://leekduck.com/events/season-24-twilight-trails/",
+      "confidence": "verified"
+    },
+    "schedule": {
+      "local_timezone": "America/Sao_Paulo",
+      "start_local": "2026-10-06T00:00:00-03:00",
+      "end_local": "2026-10-06T23:59:59-03:00",
+      "brazil_timezone": "America/Sao_Paulo",
+      "start_brazil": "2026-10-06T00:00:00-03:00",
+      "end_brazil": "2026-10-06T23:59:59-03:00"
+    },
+    "calendar": {
+      "mode": "span"
+    },
+    "presentation": {
+      "requires_art": false,
+      "fallback_visual": "spidey-logo"
+    },
+    "locations": [],
+    "gpx": {
+      "enabled": false,
+      "reason": "Evento sem coordenada exata específica confirmada."
+    },
+    "notes": [],
+    "notifications": {
+      "enabled": false,
+      "default_lead_minutes": []
+    },
+    "status": "published"
+  },
+  "candidates": [
+    {
+      "file": "spidey-app/assets/events/review/showcase-tuesday-20261006-v1.png",
+      "event_id": "2026-10-06-showcase-tuesday",
+      "revision": 1,
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2636843,
+      "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+      "git_blob_sha": "9ffb0d9156d96c92234d8b905480ddb299eed32e",
+      "source_classification": "community",
+      "generation": {
+        "tool": "imagegen",
+        "use_case": "style-transfer / ads-marketing",
+        "prompt": "Use case: style-transfer / ads-marketing.\nTransform the supplied poster DESIGN into a distinct NEW Spidey Pokémon GO event poster for “TERÇA DE VITRINE”, keeping the excellent premium visual identity and official brand header, but replacing the entire event scene and all event text. Reference image 1 is the official Spidey logo: preserve its exact blue-black-gold spider/Poké Ball emblem and brand lettering. Reference image 2 is only the approved DESIGN/QUALITY reference: do not reuse its Sunday wording, date, Eevee, mountains, hiking scene or bonus claims. The reference files are not to be overwritten.\n\nOutput: one complete high-resolution portrait poster, approximately 4:5 (at least 1080 × 1350), full uncropped composition, cinematic collectible game illustration with polished 3D gold/turquoise typography. This is for mobile users; clear large Portuguese copy, no PowerPoint layout or plain generic cards.\n\nScene: a vibrant park plaza hosting a friendly Pokémon showcase, golden late-afternoon sunlight, blossoms, festive teal/gold ribbons, elegant small blue PokéStop showcase display behind the hero. Ordinary normal-color Snorlax (navy-blue fur, cream face/belly, two pointed ears, sleepy closed eyes, two arms and two clawed feet), impressively large and proudly standing at ground level, with two adult trainers celebrating. This is an illustrative scene, NOT a claim that Snorlax is the featured or eligible species on October 6. No costume, no shiny colors, no Dynamax/Gigantamax aura, no Max clouds, no battle arena, no stars promising shiny odds. Snorlax must be recognizable and anatomically correct. Rich depth, warm rim light, sparkling celebration atmosphere; deep navy, turquoise/cyan and gold accents.\n\nComposition:\n- Official circular Spidey emblem and “Spidey Pokémon GO” at top left, matching the reference branding. Small header “POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE”, and top-right brand motto “SEMPRE UM PASSO À FRENTE”.\n- Main scene occupies upper half, original and visually impressive.\n- Large spectacular embossed title centered below hero scene, exactly “TERÇA DE VITRINE”, with smaller “DESCOBERTA DIÁRIA”.\n- Date/time band directly below, exact copy: “6 OUT 2026” and “00H–23H59 • HORÁRIO LOCAL”.\n- Two generously spaced premium illuminated navy/gold information bands with simple blue showcase icons. Band 1 copy: “ATÉ 5 VITRINES DE POKÉPARADA” with smaller “PARA PARTICIPAR NO DIA”. Band 2 copy: “MAIS POKÉPARADAS” with smaller “PODERÃO TER VITRINES”.\n- Readable footer exactly “Fonte: Leek Duck • Guia da temporada • Cena ilustrativa”.\nAll text must be Portuguese, accurately accented, spelled exactly and readable without being cut off. Preserve plenty of safe margin and the full footer. Do not add dates, species announcements, rewards, XP, Stardust, free items, candy bonuses, trophy rewards, shiny promises, multipliers, coordinates, maps or fabricated event information. The logo and branding are the only elements carried over from the reference; this is a new event asset, not a replacement of the approved Sunday image.",
+        "inputs": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "role": "official_logo",
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/scenic-sunday-20261004-approved-v1.png",
+            "role": "approved_style_reference_only",
+            "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977"
+          }
+        ],
+        "output_file": "/workspace/scratch/c0435855b301/generated_images/exec-515af84f-9119-4568-a42c-86b43db12db2.png"
+      },
+      "fact_check": {
+        "status": "VERIFIED_CURRENT_COMMUNITY_GUIDE_PRIMARY_MECHANICS",
+        "checked_at": "2026-10-03",
+        "current_season_source": "https://leekduck.com/events/season-24-twilight-trails/",
+        "corroborating_prior_season_announcement": "https://pokemongo.com/pt-BR/news/choose-your-path-forever-forward-2026",
+        "official_announcement_scope": "Anúncio de junho para Sempre em Frente; confirma a mecânica, não a vigência em outubro sozinho. A página oficial atual da temporada não detalha esta Descoberta Diária no conteúdo consultado.",
+        "period": "6/10/2026, 00h–23h59, horário local",
+        "maximum_showcases": 5,
+        "more_pokestops": "Possibilidade, não garantia de disponibilidade de Vitrines em toda Poképarada.",
+        "featured_species": "Nenhuma confirmada na fonte consultada; Snorlax é ilustrativo.",
+        "rewards_multipliers_shiny_boost": null
+      },
+      "visual_check": {
+        "status": "PASSED_FOR_HUMAN_REVIEW",
+        "full_poster": true,
+        "all_text_visible": true,
+        "snorlax": "Normal, ilustrativo; sem variante Max/Brilhante.",
+        "human_approval": "PENDING"
+      }
+    }
+  ],
+  "qa": {
+    "status": "PASSED_PREVIEW",
+    "physical_android": "PENDING",
+    "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
+    "node_tests": "PASSED",
+    "node_tests_passed": 33,
+    "syntax": "preview-art.js/sw.js passed",
+    "local_audit": "docs/qa/showcase-tuesday-local-audit-20261003.json",
+    "cache_files": 78,
+    "inventory": {
+      "events": 23,
+      "approved": 12,
+      "pending_posters": 1,
+      "missing": 10
+    },
+    "checked_at": "2026-10-03T22:29:25.866957+00:00",
+    "code_commit": "dbf6956555764e5790360521ab9b0078f3db0e12",
+    "deployment": "dpl_57L7YqfszpGwtvwJW5Rcd5uv83NB",
+    "preview_url": "https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/index.html",
+    "browser_record": "docs/qa/showcase-tuesday-browser-dbf6956-20261003.json",
+    "mobile": {
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/assets/events/review/showcase-tuesday-20261006-v1.png?v=ac11ef360b59",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Terça de Vitrine\n\nParticipe de até cinco Vitrines de Poképarada no dia; mais Poképaradas poderão sediar Vitrines.\n\nHorários e locais\nHorário\n06 de out., 00:00 → 06 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nParticipação em até cinco Vitrines de Poképarada no dia.\nMais Poképaradas poderão sediar Vitrines de Poképarada.\nObservações\nSnorlax na arte é ilustrativo; nenhuma espécie específica foi confirmada como destaque das Vitrines de 06/10 na fonte consultada.\nO guia atual da Leek Duck informa estes benefícios para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      }
+    },
+    "desktop": {
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-1bo7i1q0p-spidey3.vercel.app/spidey-app/assets/events/review/showcase-tuesday-20261006-v1.png?v=ac11ef360b59",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Terça de Vitrine\n\nParticipe de até cinco Vitrines de Poképarada no dia; mais Poképaradas poderão sediar Vitrines.\n\nHorários e locais\nHorário\n06 de out., 00:00 → 06 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nParticipação em até cinco Vitrines de Poképarada no dia.\nMais Poképaradas poderão sediar Vitrines de Poképarada.\nObservações\nSnorlax na arte é ilustrativo; nenhuma espécie específica foi confirmada como destaque das Vitrines de 06/10 na fonte consultada.\nO guia atual da Leek Duck informa estes benefícios para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      }
+    },
+    "served_png": {
+      "exact_candidate": true,
+      "bytes": 2636843,
+      "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+    },
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-showcase-tuesday-mobile-dbf6956-20261003.jpg",
+        "bytes": 109943,
+        "sha256": "5f2c410d5a74ea760d3ce05b8631e4058430de9369aeafe6add3a6660728548f"
+      },
+      {
+        "file": "docs/qa/proofs/spidey-showcase-tuesday-desktop-dbf6956-20261003.jpg",
+        "bytes": 156024,
+        "sha256": "2584cb387403dc3bddaaa2fd3c2cded0ba94646374a0473bb6c28031581c152d"
+      }
+    ],
+    "week_visual_proof": "Not checked in this round; Tuesday is outside the currently displayed week.",
+    "known_detail_copy": "Generic location placeholder remains; no specific location for the daily event."
+  },
+  "release": {
+    "production_approved": false,
+    "promoted_to_main": false,
+    "push_configuration_changed": false,
+    "deployment_protection_changed": false,
+    "new_fly_eligibility": false
+  }
+}

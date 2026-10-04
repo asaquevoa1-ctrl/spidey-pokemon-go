@@ -45,6 +45,12 @@ function weeklyArtUrl(item) {
     return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(premium) : premium.url;
   }
 
+  // Explicit full-poster candidates on this preview branch; never grants approval.
+  if (window.SpideyReviewArt?.poster(event)) {
+    const review = spideyResolveEventArt(event, 'weekly');
+    if (review?.sourceRole === 'preview_candidate:poster') return spideyVersionedArtUrl(review);
+  }
+
   // Fail-closed: weekly_art técnico, vetor gerado, placeholder ou fallback nunca
   // entra na interface pública só para preencher espaço.
   const art = item?.weekly_art || {};

@@ -1,0 +1,102 @@
+{
+  "status": "PASSED_PREVIEW_BACKGROUNDS_SCOPED_RESEARCH_GPX_BLOCKED_UNVERIFIED_BOUNDARIES",
+  "verified_at": "2026-10-04T13:13:07.498769+00:00",
+  "code_commit": "036e0c3b31eb8946270216aa8049b6e3ff5bcf12",
+  "parent_commit": "7bac95bbf18cdd68cd78c4eb18544de573191cfe",
+  "code_tree": "11dbcd68466d513d24eca6fa6c38b954d1526677",
+  "preview_url": "https://spidey-pokemon-50c311k5g-spidey3.vercel.app/spidey-app/index.html",
+  "deployment_id": "dpl_AN9bsHdDiDnTTF6rDDHE3DvZnoAR",
+  "deployment_state": "READY",
+  "deployment_target": null,
+  "unit_tests": {
+    "total": 43,
+    "passed": 43,
+    "failed": 0
+  },
+  "backgrounds": {
+    "original_files": 6,
+    "dimensions": [
+      512,
+      512
+    ],
+    "integral": true,
+    "classification": "datamined_game_asset",
+    "premium_approval_granted": false
+  },
+  "research": {
+    "field_tasks": 3,
+    "verified_scope": "Community firsthand report from Valencia only",
+    "per_task_species_verified": false,
+    "other_cities_tasks_verified": false,
+    "timed_steps_verified": false
+  },
+  "gpx": {
+    "enabled": false,
+    "routes_created": 0,
+    "verified_event_boundaries": 0,
+    "coverage": "NOT_CERTIFIABLE",
+    "reason": "Museum reference points do not establish the boundaries of the in-game event area or a route covering that area."
+  },
+  "browser_qa": {
+    "record": "docs/qa/esa-browser-036e0c3-20261004.json",
+    "desktop_dark": "PASSED",
+    "mobile_light_wrapper_390": "PASSED",
+    "six_images_loaded_512": true,
+    "horizontal_overflow": false,
+    "task_table_in_valencia_only": true,
+    "fly_essentials": 20,
+    "fly_all": 28,
+    "taipei_preserved": true,
+    "native_phone": "NOT_TESTED"
+  },
+  "anonymous_access": {
+    "record": "docs/qa/esa-share-anonymous-036e0c3-20261004.json",
+    "initial_cookies": 0,
+    "exact_files": 13,
+    "status": "PASSED_TEMPORARY_SHARE",
+    "expiry_reported": "2026-10-05T11:58:30Z",
+    "permanent_public_access": "PENDING"
+  },
+  "integrity": {
+    "catalog_events": 124,
+    "entire_event_catalog_unchanged": true,
+    "approved_master_entries": 25,
+    "approved_master_files_unchanged": true,
+    "prior_untargeted_blobs_preserved": 716,
+    "main_unchanged": "5178a67272bd25e687032d3aebff494746372c74",
+    "premium_refusals_preserved": [
+      "Applin",
+      "Semana Mundial do Espaço",
+      "Sizzlipede"
+    ]
+  },
+  "proofs": [
+    {
+      "file": "docs/qa/proofs/spidey-esa-first-cities-desktop-036e0c3-20261004.jpg",
+      "sha256": "cda7d38c5e72f5a8ba31d445167deb631f19f08de6b4e7fa334a22365adffe17"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-esa-valencia-research-desktop-036e0c3-20261004.jpg",
+      "sha256": "df95841b750cc1202ff0e86a1673879112f0b62e01d894dda2a5bc3edb6cbb86"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-esa-last-cities-desktop-036e0c3-20261004.jpg",
+      "sha256": "180f7501cc04484d4e2a2a3778fcd41334b9ebbce3c4275511b8d02a70caf365"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-esa-valencia-mobile-036e0c3-20261004.jpg",
+      "sha256": "06c796b1cbca02f0a48aa5e07953365433852b67cdcba51e357df8236f5a80b1"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-esa-last-cities-mobile-036e0c3-20261004.jpg",
+      "sha256": "089073643357b0d0bd73fda2a497c7f2d3c20ba1831159f0849cb8357aa4e95f"
+    }
+  ],
+  "unresolved": [
+    "Full-area GPX for all six museums requires verified event boundaries and a validated useful route.",
+    "Pokémon species per field task and the task lists of the other five cities remain unconfirmed.",
+    "Exact timed research steps remain unconfirmed.",
+    "Physical Android/PWA/install/update/offline/paste/push certification remains pending.",
+    "Permanent tester access and production release remain pending."
+  ]
+}

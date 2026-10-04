@@ -1,0 +1,27 @@
+{
+  "code_commit": "10e28fcb2b785206bfde67116526a97e76a9d145",
+  "preview": "https://spidey-pokemon-k2g2780qx-spidey3.vercel.app/spidey-app/index.html",
+  "captured_at": "2026-10-02T03:39:59.188Z",
+  "progress": {
+    "initial": "0/17",
+    "marked": "1/17",
+    "reopened_next_stop": "2 de 17: Pokémon Center Hiroshima",
+    "physical_android": false,
+    "restored": "0/17"
+  },
+  "gpx": {
+    "button": "Baixar GPX completo",
+    "ui_toast": "GPX completo gerado na ordem dos selos.",
+    "file_captured": false,
+    "status": "PENDING_DOWNLOAD_PROOF",
+    "attempts": 2,
+    "reason": "waitForEvent(download) não retornou arquivo após clique/Enter; toast não prova download."
+  },
+  "incomplete_rally": {
+    "id": "pokexciting-cross-region-2026",
+    "coordinates": "0/5",
+    "download_button_count": 0,
+    "message": "GPX indisponível até confirmação das cinco PokéStops",
+    "status": "PASSED"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "status": "PASSED_PREVIEW_BACKGROUNDS_SCOPED_RESEARCH_GPX_BLOCKED_UNVERIFIED_BOUNDARIES",
+  "verified_at": "2026-10-04T12:54:53.931662+00:00",
+  "scope": "Six museum city backgrounds; Valencia-only field-task report; requested full-area GPX remains unverified",
+  "official_source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/en/news/european-space-agency-event",
+    "confidence": "official"
+  },
+  "museum_dates": [
+    "2026-10-04",
+    "2027-04-30"
+  ],
+  "field_research_dates": [
+    "2026-10-04",
+    "2026-10-10"
+  ],
+  "assets_source": {
+    "name": "PokeMiners — acervo comunitário de arquivos do jogo",
+    "url": "https://github.com/PokeMiners/pogo_assets/tree/master/Images/LocationCards",
+    "confidence": "community_datamine",
+    "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml",
+    "city_mapping_confidence": "community_reference"
+  },
+  "assets": [
+    {
+      "name": "lc_ESA_citeDeEspace.png",
+      "url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_citeDeEspace.png",
+      "git_sha": "308972521ee4202ae23db2546e734677255a9ec2",
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png",
+      "bytes": 507237,
+      "sha256": "e98ae5d1cfcd3a8ba5d351236bc3f77bd140c26a887a7e85afda3caa634ddb4f",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "name": "lc_ESA_ciudadDeLasArtes.png",
+      "url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_ciudadDeLasArtes.png",
+      "git_sha": "3b36530bf997ca41257f47f54f6de00dfe5cc211",
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png",
+      "bytes": 478256,
+      "sha256": "f7e8bf69f6011a6ffed5d19e788216250a7e1cf909b9489cd9514c751b4b1e48",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "name": "lc_ESA_euroSpaceCenter.png",
+      "url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_euroSpaceCenter.png",
+      "git_sha": "025207b119061c8d4919720779c5e98b18b55727",
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png",
+      "bytes": 606666,
+      "sha256": "c60fdac0978ba7a11f13aa98999203570d421b86993076cd8eb96b231488c556",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "name": "lc_ESA_scienceMuseumLondon.png",
+      "url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_scienceMuseumLondon.png",
+      "git_sha": "c2457e8a71cbfa2246978541d2c27b822914d776",
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png",
+      "bytes": 458555,
+      "sha256": "68e449fec0ea5b0affe2ca3332fe1f7871d59740c530a484fb1d9b161990d87e",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "name": "lc_ESA_spaceCenterGermany.png",
+      "url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_spaceCenterGermany.png",
+      "git_sha": "deb2430e91a5b25a9bc6668dee456a617ecf6ec9",
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png",
+      "bytes": 483542,
+      "sha256": "f0516c182e8e2852eaa6d4d1e591b953c264bd8b7797613086358a4f5c728fe2",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "name": "lc_ESA_spaceExpoNL.png",
+      "url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_spaceExpoNL.png",
+      "git_sha": "47516e0ea73ce551f8a1ee9e85235ccaec8c1213",
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png",
+      "bytes": 404084,
+      "sha256": "e9769f0113b68300d5163ed456ccb0ae9fe71a6d0daec36c81cd986deb77a116",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "research": {
+    "primary_report_url": "https://www.reddit.com/r/pokemongo/comments/1wx0pd3/esa_event_is_live_in_valencia/",
+    "confidence": "community_firsthand",
+    "city": "Valência",
+    "tasks": [
+      "Girar 10 Poképaradas",
+      "Ganhar 3 corações com seu companheiro",
+      "Capturar 10 Pokémon"
+    ],
+    "per_task_species_verified": false,
+    "other_five_cities_verified": false,
+    "timed_research_steps_verified": false,
+    "guaranteed_background_claim": "Reported by the Valencia player, not independently or officially certified for these tasks; not generalized."
+  },
+  "gpx": {
+    "enabled": false,
+    "verified_event_boundaries": 0,
+    "verified_full_coverage_routes": 0,
+    "rejected_reference_only_source": "https://swfljohn.com/events?event=local-esa-astronaut-pikachu-2026",
+    "reason": "Six isolated museum points are not six full event-area routes. No city polygon or event boundary verified.",
+    "venues": [
+      {
+        "id": "science-museum-london",
+        "status": "event_area_unverified"
+      },
+      {
+        "id": "cite-espace-toulouse",
+        "status": "event_area_unverified"
+      },
+      {
+        "id": "deutsches-museum-nuremberg",
+        "status": "event_area_unverified"
+      },
+      {
+        "id": "museu-ciencies-valencia",
+        "status": "event_area_unverified"
+      },
+      {
+        "id": "space-expo-noordwijk",
+        "status": "event_area_unverified"
+      },
+      {
+        "id": "euro-space-center-transinne",
+        "status": "event_area_unverified"
+      }
+    ]
+  },
+  "not_inferred": [
+    "Wild encounter species were not converted into task rewards.",
+    "A museum reference coordinate or campus outline was not converted into an event geofence.",
+    "Valencia tasks were not copied to the other cities.",
+    "Datamined game assets were not approved as Premium posters."
+  ],
+  "consulted_sources": [
+    {
+      "url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml",
+      "use": "Six city/background associations; official announcement overrides end-year typo."
+    },
+    {
+      "url": "https://www.nwtv.nl/322395/dit-zijn-de-pokemon-go-world-space-week-field-research-tasks-op-esa-locatie",
+      "use": "Two task names corroborated, no reward species mapping or six-museum verification."
+    },
+    {
+      "url": "https://snacknap.com/events/1526/european-space-agency-event-2026",
+      "use": "No detailed timed research steps."
+    }
+  ],
+  "approved_master_modified": false,
+  "premium_refusals_preserved": true,
+  "qa_record": "docs/qa/ESA_BACKGROUND_RESEARCH_QA_20261004.json",
+  "code_commit": "036e0c3b31eb8946270216aa8049b6e3ff5bcf12",
+  "qa_verified_at": "2026-10-04T13:13:07.498769+00:00"
+}

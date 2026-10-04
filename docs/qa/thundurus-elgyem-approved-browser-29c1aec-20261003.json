@@ -1,0 +1,204 @@
+{
+  "code_commit": "29c1aecf53742de581ea0fc036793d91a859bc60",
+  "app_url": "https://spidey-pokemon-7whircohq-spidey3.vercel.app/spidey-app/index.html",
+  "responsive": true,
+  "physical_android": false,
+  "views": [
+    {
+      "event_id": "2026-10-shadow-thundurus",
+      "viewport": [
+        390,
+        850
+      ],
+      "dialog": {
+        "clientWidth": 360,
+        "scrollTop": 0,
+        "scrollWidth": 360
+      },
+      "focus": "closeDialog",
+      "heading": "Reides Sombrosas: Thundurus (Forma Encarnada)",
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1403,
+        "src": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png?v=eb8141c8220c",
+        "width": 1121
+      },
+      "theme": "light"
+    },
+    {
+      "event_id": "2026-10-08-spotlight-elgyem",
+      "viewport": [
+        390,
+        850
+      ],
+      "dialog": {
+        "clientWidth": 360,
+        "scrollTop": 0,
+        "scrollWidth": 360
+      },
+      "focus": "closeDialog",
+      "heading": "Hora do Holofote: Elgyem",
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1403,
+        "src": "assets/events/premium/elgyem-spotlight-approved-v1.png?v=2ab5e183a146",
+        "width": 1121
+      },
+      "theme": "light"
+    },
+    {
+      "event_id": "2026-10-shadow-thundurus",
+      "viewport": [
+        1280,
+        850
+      ],
+      "dialog": {
+        "clientWidth": 703,
+        "scrollTop": 0,
+        "scrollWidth": 703
+      },
+      "focus": "closeDialog",
+      "heading": "Reides Sombrosas: Thundurus (Forma Encarnada)",
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1403,
+        "src": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png?v=eb8141c8220c",
+        "width": 1121
+      },
+      "theme": "dark"
+    },
+    {
+      "event_id": "2026-10-08-spotlight-elgyem",
+      "viewport": [
+        1280,
+        850
+      ],
+      "dialog": {
+        "clientWidth": 703,
+        "scrollTop": 0,
+        "scrollWidth": 703
+      },
+      "focus": "closeDialog",
+      "heading": "Hora do Holofote: Elgyem",
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1403,
+        "src": "assets/events/premium/elgyem-spotlight-approved-v1.png?v=2ab5e183a146",
+        "width": 1121
+      },
+      "theme": "dark"
+    }
+  ],
+  "downloads": [
+    {
+      "event_id": "2026-10-shadow-thundurus",
+      "browser_path": "/home/oai/share/f7876890-292d-40cf-a9a6-c849220c1021/26303cbc-ce82-489a-8cc2-f104a8bb8b21",
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "bytes": 2519761,
+      "matches_approved": true
+    },
+    {
+      "event_id": "2026-10-08-spotlight-elgyem",
+      "browser_path": "/home/oai/share/f7876890-292d-40cf-a9a6-c849220c1021/fd706bca-f254-4e66-af50-c280a920cff7",
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "bytes": 2455329,
+      "matches_approved": true
+    }
+  ],
+  "screenshots": [
+    "spidey-thundurus-approved-mobile-29c1aec-20261003.jpg",
+    "spidey-elgyem-approved-mobile-29c1aec-20261003.jpg",
+    "spidey-thundurus-approved-desktop-29c1aec-20261003.jpg",
+    "spidey-elgyem-approved-desktop-29c1aec-20261003.jpg",
+    "spidey-elgyem-approved-fly-29c1aec-20261003.jpg"
+  ],
+  "fly": [
+    {
+      "viewport": [
+        1280,
+        850
+      ],
+      "count": 20,
+      "first": "01\nPRÓXIMO\n🇰🇮 Kiritimati, Kiribati\n\nLocal: 08/10 · 18:00 → 19:00\n\nBrasília: 08/10, 01:00 → 08/10, 02:00\n\nLocal aproximado · confira no mapa\n1.987149,-157.477137\nCopiar coordenadas\nAbrir mapa",
+      "horizontal": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1403,
+        "src": "assets/events/premium/elgyem-spotlight-approved-v1.png?v=2ab5e183a146",
+        "width": 1121
+      },
+      "last": "20\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nLocal: 08/10 · 18:00 → 19:00\n\nBrasília: 09/10, 02:00 → 09/10, 03:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa",
+      "saopaulo": "13\nFUTURO\n🇧🇷 Ibirapuera, São Paulo\n\nLocal: 08/10 · 18:00 → 19:00\n\nBrasília: 08/10, 18:00 → 08/10, 19:00\n\nLocal aproximado · confira no mapa\n-23.584171,-46.660725\nCopiar coordenadas\nAbrir mapa",
+      "selected": "2026-10-08-spotlight-elgyem",
+      "text": "FLY • JOGAR PELO MUNDO\nRota Mundial\n\nDo primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.\n\nEscolha o evento\nHora de Reides: Regirock, Regice e Registeel\nSegunda Max: Dinamax Ralts\nHora de Reides: Zacian\nHora do Holofote: Weedle, Kakuna e Beedrill\nDia Comunitário Clássico: Gible\nHora do Holofote: Houndour e Houndoom\nSegunda Max: Dinamax Rhyhorn\nHora de Reides: Zamazenta\nHora do Holofote: Charmander com óculos de Friede\nSegunda Max: Articuno, Zapdos e Moltres Dinamax\nHora de Reides: Ultra Beasts regionais\nHora do Holofote: Rattata\nSegunda Max: Dinamax Sobble\nHora de Reides: Xerneas\nHora do Holofote: Seedot\nDia de Batalhas Max: Cinderace Gigamax\nHora de Reides: Yveltal\nHora do Holofote: Elgyem\nDia Comunitário:"
+    },
+    {
+      "viewport": [
+        390,
+        850
+      ],
+      "count": 28,
+      "first": "01\nPRÓXIMO\n🇰🇮 Kiritimati, Kiribati\n\nLocal: 08/10 · 18:00 → 19:00\n\nBrasília: 08/10, 01:00 → 08/10, 02:00\n\nLocal aproximado · confira no mapa\n1.987149,-157.477137\nCopiar coordenadas\nAbrir mapa",
+      "horizontal": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1403,
+        "src": "assets/events/premium/elgyem-spotlight-approved-v1.png?v=2ab5e183a146",
+        "width": 1121
+      },
+      "last": "28\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nLocal: 08/10 · 18:00 → 19:00\n\nBrasília: 09/10, 02:00 → 09/10, 03:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa",
+      "saopaulo": "19\nFUTURO\n🇧🇷 Ibirapuera, São Paulo\n\nLocal: 08/10 · 18:00 → 19:00\n\nBrasília: 08/10, 18:00 → 08/10, 19:00\n\nLocal aproximado · confira no mapa\n-23.584171,-46.660725\nCopiar coordenadas\nAbrir mapa",
+      "selected": "2026-10-08-spotlight-elgyem",
+      "text": "FLY • JOGAR PELO MUNDO\nRota Mundial\n\nDo primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.\n\nEscolha o evento\nHora de Reides: Regirock, Regice e Registeel\nSegunda Max: Dinamax Ralts\nHora de Reides: Zacian\nHora do Holofote: Weedle, Kakuna e Beedrill\nDia Comunitário Clássico: Gible\nHora do Holofote: Houndour e Houndoom\nSegunda Max: Dinamax Rhyhorn\nHora de Reides: Zamazenta\nHora do Holofote: Charmander com óculos de Friede\nSegunda Max: Articuno, Zapdos e Moltres Dinamax\nHora de Reides: Ultra Beasts regionais\nHora do Holofote: Rattata\nSegunda Max: Dinamax Sobble\nHora de Reides: Xerneas\nHora do Holofote: Seedot\nDia de Batalhas Max: Cinderace Gigamax\nHora de Reides: Yveltal\nHora do Holofote: Elgyem\nDia Comunitário:"
+    }
+  ],
+  "weekly": {
+    "complete": true,
+    "fit": "cover",
+    "height": 1403,
+    "src": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png?v=eb8141c8220c",
+    "width": 1121
+  },
+  "verified_app_url": "https://spidey-pokemon-7whircohq-spidey3.vercel.app/spidey-app/index.html",
+  "checked_at": "2026-10-03T10:45:32.263Z",
+  "status": "PASSED_PREVIEW",
+  "proofs": [
+    {
+      "file": "docs/qa/proofs/spidey-thundurus-approved-mobile-29c1aec-20261003.jpg",
+      "bytes": 106751,
+      "sha256": "43fd8a487fdad8c25f5bf5b4959798375d40e3deb50dafd851267a89c5efb0b8"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-elgyem-approved-mobile-29c1aec-20261003.jpg",
+      "bytes": 102008,
+      "sha256": "975de6a07d0299028903de89b92f70bb2f12ef08bb63237e90441f8a657685d4"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-thundurus-approved-desktop-29c1aec-20261003.jpg",
+      "bytes": 145817,
+      "sha256": "5269c10497b37adcb3a872dce4e263d8f424f14e9e810e437a2c5ba3568364cc"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-elgyem-approved-desktop-29c1aec-20261003.jpg",
+      "bytes": 142311,
+      "sha256": "7d9bea3e38096cf5c75265de10ca78e8b42688a822067ae4c497bd9768263423"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-elgyem-approved-fly-29c1aec-20261003.jpg",
+      "bytes": 65278,
+      "sha256": "0b7098c17a5179522836551c65b21d5c7fd2e94d573257613aa0e5d463181a83"
+    }
+  ]
+}

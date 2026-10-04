@@ -1,0 +1,97 @@
+{
+  "commit": "a2b56386e2eed9ba5cd173c7fb3590e8aa122f88",
+  "mobile": {
+    "dialog": {
+      "clientHeight": 798,
+      "clientWidth": 360,
+      "scrollTop": 0,
+      "scrollWidth": 360
+    },
+    "focused": "closeDialog",
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "objectFit": "contain",
+        "renderedHeight": 450.546875,
+        "renderedWidth": 360,
+        "src": "https://spidey-pokemon-cg9922frj-spidey3.vercel.app/spidey-app/assets/events/review/zorua-community-day-correction-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "viewport": {
+      "height": 850,
+      "scrollWidth": 375,
+      "width": 375
+    }
+  },
+  "desktop": {
+    "dialog": {
+      "clientHeight": 763,
+      "clientWidth": 703,
+      "scrollTop": 0,
+      "scrollWidth": 703
+    },
+    "focused": "",
+    "poster": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "objectFit": "contain",
+        "renderedHeight": 620,
+        "renderedWidth": 703,
+        "src": "https://spidey-pokemon-cg9922frj-spidey3.vercel.app/spidey-app/assets/events/review/zorua-community-day-correction-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "viewport": {
+      "height": 850,
+      "scrollWidth": 1265,
+      "width": 1265
+    }
+  },
+  "fly": {
+    "dialogOpen": false,
+    "image": [
+      {
+        "height": 1403,
+        "loaded": true,
+        "src": "https://spidey-pokemon-cg9922frj-spidey3.vercel.app/spidey-app/assets/events/review/zorua-community-day-correction-v1.png?v=9bdb113f3e0c",
+        "width": 1121
+      }
+    ],
+    "routes": [
+      "01\nPRÓXIMO\n🇰🇮 Kiritimati, Kiribati\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 09/10, 21:00 → 10/10, 00:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n1.987149,-157.477137\nCopiar coordenadas\nAbrir mapa",
+      "02\nFUTURO\n🇳🇿 Auckland, Nova Zelândia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 09/10, 22:00 → 10/10, 01:00\n\nO início cai em outro dia em Brasília.\nLocal aproximado · confira no mapa\n-36.852095,174.76318\nCopiar coordenadas\nAbrir mapa",
+      "03\nFUTURO\n🇦🇺 Sydney, Austrália\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 00:00 → 10/10, 03:00\n\nLocal aproximado · confira no mapa\n-33.866173,151.205945\nCopiar coordenadas\nAbrir mapa",
+      "04\nFUTURO\n🇯🇵 Shinjuku, Japão\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 02:00 → 10/10, 05:00\n\nLocal aproximado · confira no mapa\n35.68895,139.69054\nCopiar coordenadas\nAbrir mapa",
+      "05\nFUTURO\n🇯🇵 Osaka, Japão\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 02:00 → 10/10, 05:00\n\nLocal aproximado · confira no mapa\n34.65011,135.5105\nCopiar coordenadas\nAbrir mapa",
+      "06\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 03:00 → 10/10, 06:00\n\nLocal aproximado · confira no mapa\n25.033964,121.564468\nCopiar coordenadas\nAbrir mapa",
+      "07\nFUTURO\n🇹🇼 Taipei, Taiwan\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 03:00 → 10/10, 06:00\n\nLocal aproximado · confira no mapa\n25.0444,121.5296\nCopiar coordenadas\nAbrir mapa",
+      "08\nFUTURO\n🇭🇰 Hong Kong, Hong Kong\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 03:00 → 10/10, 06:00\n\nLocal aproximado · confira no mapa\n22.277957,114.15616\nCopiar coordenadas\nAbrir mapa",
+      "09\nFUTURO\n🇮🇩 Jacarta, Indonésia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 04:00 → 10/10, 07:00\n\nLocal aproximado · confira no mapa\n-6.175554,106.827587\nCopiar coordenadas\nAbrir mapa",
+      "10\nFUTURO\n🇮🇳 Chennai, Índia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 05:30 → 10/10, 08:30\n\nLocal aproximado · confira no mapa\n13.0403,80.2666\nCopiar coordenadas\nAbrir mapa",
+      "11\nFUTURO\n🇦🇪 Dubai, Emirados Árabes\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 07:00 → 10/10, 10:00\n\nLocal aproximado · confira no mapa\n25.07675,55.13294\nCopiar coordenadas\nAbrir mapa",
+      "12\nFUTURO\n🇹🇷 Istambul, Turquia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 08:00 → 10/10, 11:00\n\nLocal aproximado · confira no mapa\n41.0082,28.9784\nCopiar coordenadas\nAbrir mapa",
+      "13\nFUTURO\n🇬🇷 Tessalônica, Grécia\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 08:00 → 10/10, 11:00\n\nLocal aproximado · confira no mapa\n40.626936,22.952342\nCopiar coordenadas\nAbrir mapa",
+      "14\nFUTURO\n🇪🇸 Zaragoza, Espanha\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 09:00 → 10/10, 12:00\n\nLocal aproximado · confira no mapa\n41.661609,-0.89464\nCopiar coordenadas\nAbrir mapa",
+      "15\nFUTURO\n🇮🇹 Roma, Itália\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 09:00 → 10/10, 12:00\n\nLocal aproximado · confira no mapa\n41.889988,12.493033\nCopiar coordenadas\nAbrir mapa",
+      "16\nFUTURO\n🇬🇧 Londres, Reino Unido\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 10:00 → 10/10, 13:00\n\nLocal aproximado · confira no mapa\n51.501,-0.1246\nCopiar coordenadas\nAbrir mapa",
+      "17\nFUTURO\n🇨🇻 Praia, Cabo Verde\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 12:00 → 10/10, 15:00\n\nLocal aproximado · confira no mapa\n14.910725,-23.527823\nCopiar coordenadas\nAbrir mapa",
+      "18\nFUTURO\n🇧🇷 Fernando de Noronha, Brasil\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 13:00 → 10/10, 16:00\n\nLocal aproximado · confira no mapa\n-3.8401,-32.41181\nCopiar coordenadas\nAbrir mapa",
+      "19\nFUTURO\n🇧🇷 Ibirapuera, São Paulo\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 14:00 → 10/10, 17:00\n\nLocal aproximado · confira no mapa\n-23.584171,-46.660725\nCopiar coordenadas\nAbrir mapa",
+      "20\nFUTURO\n🇧🇷 Ibirapuera, São Paulo, Brasil\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 14:00 → 10/10, 17:00\n\nLocal aproximado · confira no mapa\n-23.5841713,-46.66072464\nCopiar coordenadas\nAbrir mapa",
+      "21\nFUTURO\n🇦🇷 Buenos Aires, Argentina\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 14:00 → 10/10, 17:00\n\nLocal aproximado · confira no mapa\n-34.608403,-58.372164\nCopiar coordenadas\nAbrir mapa",
+      "22\nFUTURO\n🇺🇸 Central Park, Nova York\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 15:00 → 10/10, 18:00\n\nLocal aproximado · confira no mapa\n40.7803,-73.963\nCopiar coordenadas\nAbrir mapa",
+      "23\nFUTURO\n🇺🇸 Chicago, EUA\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 16:00 → 10/10, 19:00\n\nLocal aproximado · confira no mapa\n41.898659,-87.623077\nCopiar coordenadas\nAbrir mapa",
+      "24\nFUTURO\n🇺🇸 Denver, EUA\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 17:00 → 10/10, 20:00\n\nLocal aproximado · confira no mapa\n39.7392,-104.9903\nCopiar coordenadas\nAbrir mapa",
+      "25\nFUTURO\n🇺🇸 Pier 39, São Francisco\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 18:00 → 10/10, 21:00\n\nLocal aproximado · confira no mapa\n37.8095,-122.4101\nCopiar coordenadas\nAbrir mapa",
+      "26\nFUTURO\n🇺🇸 Anchorage, Alasca\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 19:00 → 10/10, 22:00\n\nLocal aproximado · confira no mapa\n61.217019,-149.891609\nCopiar coordenadas\nAbrir mapa",
+      "27\nFUTURO\n🇺🇸 Honolulu, Havaí\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 21:00 → 11/10, 00:00\n\nLocal aproximado · confira no mapa\n21.2658,-157.8213\nCopiar coordenadas\nAbrir mapa",
+      "28\nFUTURO\n🇦🇸 Pago Pago, Samoa Americana\n\nLocal: 10/10 · 14:00 → 17:00\n\nBrasília: 10/10, 22:00 → 11/10, 01:00\n\nLocal aproximado · confira no mapa\n-14.277739,-170.688512\nCopiar coordenadas\nAbrir mapa"
+    ],
+    "scrollWidth": 1265,
+    "selected": "2026-10-zorua-community-day",
+    "viewportWidth": 1265
+  }
+}

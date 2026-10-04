@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/push/*.js": { "maxDuration": 30 }
+  },
+  "redirects": [
+    { "source": "/", "destination": "/spidey-app/", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/spidey-app/sw.js",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }]
+    }
+  ],
+  "rewrites": [
+    { "source": "/spidey-app/api/push/:action", "destination": "/api/push/:action" }
+  ]
+}

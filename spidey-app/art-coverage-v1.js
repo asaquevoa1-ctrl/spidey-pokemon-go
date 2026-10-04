@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-art-coverage-v1-20260929.2-premium-first';
+  const VERSION = 'spidey-art-coverage-v1-20261004-space-v1';
   const BAD_PUBLIC_ART = /(?:assets\/events\/generated\/|generated_vector|placeholder|preview|fallback|festival-das-luzes-approved\.png|festival-das-luzes-2026\.jpg)/i;
   const PREMIUM_ART = /\/assets\/events\/premium\//i;
   const SOURCE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
@@ -106,6 +106,7 @@
   }
 
   function badImage(img, event, role) {
+    if (window.isSpideyApprovedImage?.(img?.currentSrc || img?.src)) return false;
     if (!img) return true;
     const src = String(img.currentSrc || img.src || '');
     if (!src) return true;
@@ -177,20 +178,25 @@
   function removeCover(container) { container?.querySelectorAll?.('.spidey-cover-art').forEach((node) => node.remove()); }
 
   function decorateContainer(container) {
+    // A day agenda lists several events and does not own an event poster.
+    if (container?.id === 'eventDetail' && (container.querySelector('.v24-day-sheet') || container.querySelector('.space-detail'))) {
+      removeCover(container);
+      return;
+    }
     const event = eventFor(container);
     if (!event) return;
     const role = roleFor(container);
     const image = container.querySelector('img:not(.spidey-cover-pokemon)');
     const decide = () => {
       if (image && !badImage(image, event, role)) {
-        image.hidden = false;
+        if (image.hidden !== false) image.hidden = false;
         image.classList.remove('v23-hidden-art');
         delete image.dataset.v23ArtReason;
         removeCover(container);
         removeNoArtState(container);
         return;
       }
-      if (image) { image.hidden = true; image.classList.add('v23-hidden-art'); }
+      if (image) { if (image.hidden !== true) image.hidden = true; image.classList.add('v23-hidden-art'); }
       ensureCover(container, event, role);
     };
     if (image && !image.complete && !BAD_PUBLIC_ART.test(String(image.src || '')) && !PREMIUM_ART.test(String(image.src || ''))) {

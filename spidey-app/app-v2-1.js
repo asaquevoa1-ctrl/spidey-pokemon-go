@@ -38,7 +38,6 @@
       ['DATAHUB / ROTA', 'COORDENADAS'],
       ['Coordenadas em lote', 'Coordenadas da rota'],
       ['Galeria do set', 'Seus selos'],
-      ['imagem pendente', ''],
       ['Visual automático', ''],
       ['Arte Premium ainda não disponível', ''],
       ['Conteúdo factual', ''],
@@ -53,7 +52,7 @@
       if (!replacements.has(current)) return;
       const next = replacements.get(current);
       if (!next) {
-        el.hidden = true;
+        if (el.hidden !== true) el.hidden = true;
         return;
       }
       el.textContent = next;
@@ -80,14 +79,14 @@
 
     const show = () => {
       if (img.src !== expected || !img.naturalWidth) return;
-      img.hidden = false;
+      if (img.hidden !== false) img.hidden = false;
       img.classList.remove('v21-broken-art');
       detail?.classList.remove('v21-no-hero');
     };
 
     const hide = () => {
       if (img.src !== expected) return;
-      img.hidden = true;
+      if (img.hidden !== true) img.hidden = true;
       img.classList.add('v21-broken-art');
       detail?.classList.add('v21-no-hero');
     };
@@ -111,8 +110,8 @@
   }
 
   function compactStamps(root = document) {
-    root.querySelectorAll?.('.stamp-art-placeholder-v2 small').forEach((el) => { el.hidden = true; });
-    root.querySelectorAll?.('.stamp-art-placeholder-v2 > span').forEach((el) => { el.hidden = true; });
+    root.querySelectorAll?.('.stamp-art-placeholder-v2 small').forEach((el) => { if (el.hidden !== false) el.hidden = false; });
+    root.querySelectorAll?.('.stamp-art-placeholder-v2 > span').forEach((el) => { if (el.hidden !== true) el.hidden = true; });
   }
 
   function apply() {

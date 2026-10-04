@@ -1,0 +1,227 @@
+{
+  "schema_version": "spidey-app-art-approval-v1",
+  "status": "APPROVED",
+  "decision": {
+    "authority": "human_editor",
+    "channel": "chat",
+    "text": "Sim, aprovo",
+    "at": "2026-10-01T22:09:17-03:00",
+    "scope": "Somente o PNG Mega Victreebel v2 mostrado diretamente na resposta imediatamente anterior; aprovação exclusiva do eventId listado."
+  },
+  "branch": "spidey-fly-v1",
+  "displayed_checkpoint": "b5df624447ba08d55019e55961fa6467f8cfcf51",
+  "reviewed_code_commit": "282ea97f5f7c3890890ec60249ff4ee9e60e769a",
+  "candidate_record": "docs/qa/MEGA_VICTREEBEL_REVIEW_20261001.json",
+  "event_ids": [
+    "2026-09-mega-victreebel-raids"
+  ],
+  "artworks": [
+    {
+      "event_id": "2026-09-mega-victreebel-raids",
+      "status": "APPROVED",
+      "candidate_file": "spidey-app/assets/events/review/mega-victreebel-rotation-v2.png",
+      "approved_file": "spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+      "revision": 2,
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "bytes": 2612794,
+      "width": 1121,
+      "height": 1403,
+      "display": "full_poster",
+      "source_classification": "community",
+      "source_urls": [
+        "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
+        "https://pokemongohub.net/post/guide/september-2026-events/"
+      ],
+      "factual_review": {
+        "rotation": "30/09–06/10/2026",
+        "community_sources": [
+          "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
+          "https://pokemongohub.net/post/guide/september-2026-events/"
+        ],
+        "primary_appearance": "https://pokemongo.com/en/gofest/megafinale",
+        "poster_source_classification": "COMMUNITY",
+        "no_claims": [
+          "daily window",
+          "shiny boost/debut",
+          "exclusive move",
+          "Dynamax/Gigantamax/Max Battles",
+          "Super Mega Raids",
+          "GO Fest bonus"
+        ]
+      },
+      "displayed_asset": {
+        "file": "spidey-app/assets/events/review/mega-victreebel-rotation-v2.png",
+        "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+        "bytes": 2612794,
+        "via": "PNG completo exibido diretamente no chat na resposta imediatamente anterior à decisão; reenvio após o editor informar que não recebeu a imagem."
+      },
+      "supplementary_preview_proof": {
+        "file": "docs/qa/mega-victreebel-direct-review-282ea97-20261001.jpg",
+        "sha256": "8dc1f2759be7c3137bfad1b3aa91eacba28f51e7e7eaac119b665ce3d2145174",
+        "code_commit": "282ea97f5f7c3890890ec60249ff4ee9e60e769a",
+        "candidate_sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22"
+      }
+    }
+  ],
+  "previous_master_sha256": "ff07481ff91661fddf4a3ab76de9a04b7c4f6301d8f5bc98195b5718ffaab306",
+  "preserved_master_entries": {
+    "2026-10-01-spotlight-seedot": {
+      "file": "assets/events/premium/seedot-spotlight-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "approval_record": "docs/qa/SEEDOT_APPROVAL_20261001.json"
+    },
+    "2026-10-harvest-taken-over": {
+      "file": "assets/events/premium/harvest-invasion-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-gigantamax-cinderace-max-day": {
+      "file": "assets/events/premium/cinderace-max-day-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-xerneas-raids": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "festival-of-lights-2026-pokeminers-e2": {
+      "file": "assets/festival-das-luzes-approved.png",
+      "status": "APPROVED",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda"
+    },
+    "2026-09-raids-xerneas": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "2026-09-30-raid-hour-xerneas": {
+      "file": "assets/events/recovered/1000426235.png",
+      "status": "APPROVED",
+      "width": 1229,
+      "height": 1536,
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c"
+    }
+  },
+  "rendering_qa": "docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.md",
+  "prior_rendering_qa": "docs/qa/NEWS_UPDATE_20261001.md",
+  "excluded_from_decision": [
+    "Outras candidatas ou artes pendentes",
+    "Applin, Semana do Espaço e Zorua",
+    "Lançamento completo / main / produção"
+  ],
+  "preserved": [
+    "PNG v2 aprovado byte a byte, candidata e revisão v1",
+    "Todas as sete entradas anteriores do master e seus arquivos",
+    "Histórico de revisão, prompts e fontes; catálogo de 124 eventos e Novidades"
+  ],
+  "post_approval_qa": {
+    "status": "PREVIEW_VERIFIED",
+    "node_tests_passed": 21,
+    "active_scripts_syntax_passed": 19,
+    "service_worker_syntax_passed": true,
+    "json_precache_hashes_diff_passed": true,
+    "precache_local_audit": {
+      "file_count": 67,
+      "disk_bytes": 21519488,
+      "network_or_offline_test": false
+    },
+    "code_commit": "4b0f3198e62fa50af5fd89b71475350e76d573e8",
+    "deployment_id": "dpl_ALwMEt9AWVpzqn9UZ5iDYmrQShem",
+    "deployment_state": "READY",
+    "preview_url": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/index.html",
+    "browser_evidence": "docs/qa/mega-victreebel-approved-browser-4b0f319-20261001.json",
+    "responsive_viewports": [
+      [
+        390,
+        850
+      ],
+      [
+        1280,
+        850
+      ]
+    ],
+    "actual_document_widths": [
+      375,
+      1265
+    ],
+    "horizontal_overflow": false,
+    "poster_natural_size": [
+      1121,
+      1403
+    ],
+    "close_accessible": true,
+    "dialog_initial_scroll_top": 0,
+    "screens": [
+      "Home",
+      "Semana",
+      "Detalhe"
+    ],
+    "desktop_direct_click": "PASSED",
+    "masters_visible_preserved": [
+      "Xerneas",
+      "Invasão",
+      "Cinderace"
+    ],
+    "earlier_master_entries_and_bytes_preserved": 7,
+    "weekly_raid_hour_xerneas": [
+      1229,
+      1536
+    ],
+    "news_observed": [
+      "Fique por dentro",
+      "Patterns of the Wild • Indonésia",
+      "Minior chega com as chuvas de meteoros"
+    ],
+    "proofs": [
+      {
+        "file": "docs/qa/mega-victreebel-mobile-approved-4b0f319-20261001.jpg",
+        "sha256": "0817747b70109afc3c2f8eb89892eb3bf23866fab8e5a010cbef47271b171a9b",
+        "bytes": 105636,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/mega-victreebel-desktop-approved-4b0f319-20261001.jpg",
+        "sha256": "2bb35722c2a7a9066db16e0dfa5f2024aec3c731a63993e336292be23ad0df9d",
+        "bytes": 150079,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      }
+    ],
+    "limits": [
+      "Android físico e instalação/upgrade/offline/push PWA pendentes.",
+      "GPX pendente; clipboard direto desktop já comprovado no código 282ea97, sem repetição nesta rodada.",
+      "18 eventos sem arquivo Home/FLY; Applin/Espaço sem arquivo por recusa documentada.",
+      "Sem promoção a main/produção."
+    ]
+  }
+}

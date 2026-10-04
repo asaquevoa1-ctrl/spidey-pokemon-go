@@ -1,5 +1,25 @@
-const CACHE = 'spidey-app-v2-20260929-art-coverage-v1';
+const CACHE = 'spidey-app-20261004-malaga-v1';
 const CORE = [
+  './data/local-events.json',
+  './assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png',
+  './space-week.js',
+  './space-week.css',
+  './data/space-museums.json',
+  './assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png',
+  './assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png',
+  './assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png',
+  './assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png',
+  './assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png',
+  './assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png',
+  './assets/events/official/world-space-week-2026.jpg',
+  './assets/events/official/esa-museums-2026.jpg',
+  './assets/events/premium/twilight-trails-season-2026-approved-v1.png',
+  './assets/events/premium/gbl-20260929-1006-approved-v1.png',
+  './assets/events/premium/gbl-mega-20261006-13-approved-v1.png',
+  './assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png',
+  './assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png',
+  './assets/events/premium/go-battle-thursday-20261001-approved-v1.png',
+  './assets/events/premium/friendship-friday-20261002-approved-v1.png',
   './',
   './index.html',
   './styles.css',
@@ -17,6 +37,27 @@ const CORE = [
   './app-v2-3.css',
   './app-v2-4.css',
   './art-coverage-v1.css',
+  './fly-core.js',
+  './fly-v1.js',
+  './fly-v1.css',
+  './news-feed.js',
+  './command-center.js',
+  './player-ui.js',
+  './player-ui.css',
+  './preview-art.js',
+  './assets/events/premium/showcase-tuesday-20261006-approved-v1.png',
+  './assets/events/premium/scenic-sunday-20261004-approved-v1.png',
+  './assets/events/premium/go-pass-september-latios-approved-v1.png',
+  './assets/events/premium/go-pass-october-kyogre-approved-v1.png',
+  './assets/events/premium/thundurus-shadow-weekend-approved-v1.png',
+  './assets/events/premium/elgyem-spotlight-approved-v1.png',
+  './assets/events/review/zorua-community-day-correction-v1.png',
+  './assets/events/premium/zorua-community-day-approved-v1.png',
+  './command-center.css',
+  './premium-approved-master.js',
+  './trust-world-v1.js',
+  './trust-world-v1.css',
+  './assets/festival-das-luzes-approved.png',
   './theme.js',
   './app-v2.js',
   './app-v2-1.js',
@@ -40,7 +81,20 @@ const CORE = [
   './data/weekly.json',
   './data/world-event-points.json',
   './assets/spidey-logo-oficial.jpg',
-  './assets/events/premium/xerneas-premium-approved-v1.avif',
+  './assets/events/premium/xerneas-rotation-approved-v1.png',
+  './assets/events/review/mega-victreebel-rotation-v2.png',
+  './assets/events/premium/yveltal-rotation-approved-v1.png',
+  './assets/events/premium/yveltal-raid-hour-approved-v1.png',
+  './assets/events/premium/mega-blastoise-rotation-approved-v1.png',
+  './assets/events/premium/mega-victreebel-rotation-approved-v1.png',
+  './assets/events/review/seedot-spotlight-correction-v1.png',
+  './assets/events/premium/seedot-spotlight-approved-v1.png',
+  './assets/events/premium/cinderace-max-day-approved-v1.png',
+  './assets/events/premium/harvest-invasion-approved-v1.png',
+  './assets/events/recovered/1000426235.png',
+  './assets/events/recovered/1000431445.png',
+  './assets/events/recovered/1000431441.png',
+  './assets/events/recovered/1000431272.png',
   './assets/events/premium/seedot-premium-approved-v1.avif',
   './assets/events/premium/sizzlipede-premium-approved-v1.avif',
   './assets/events/premium/zorua-premium-approved-v1.avif'
@@ -53,7 +107,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => key.startsWith('spidey-app-') && key !== CACHE).map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });
@@ -63,11 +117,9 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
 
   const url = new URL(request.url);
-  const isAppShell = url.origin === self.location.origin && (
-    request.mode === 'navigate' ||
-    /\/(?:index\.html|app\.js|app-v2\.js|app-v2-1\.js|app-v2-2\.js|app-v2-3\.js|app-v2-4\.js|art-coverage-v1\.js|art-system\.js|weekly\.js|premium-event-art\.js|map\.js|push\.js|calendar-enhancements\.js|experience-v1\.js|qa-corrections-v1\.js|stamps-v2\.js|theme\.js|styles\.css|app-v2\.css|app-v2-1\.css|app-v2-2\.css|app-v2-3\.css|app-v2-4\.css|art-coverage-v1\.css|art-system\.css|stamps\.css|stamps-v2\.css|tabs-v2\.css|experience-v1\.css|visual-v3\.css|theme\.css|qa-corrections-v1\.css)$/.test(url.pathname)
-  );
-  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json');
+  if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
+  const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
+  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json') || request.url.includes('/data/space-museums.json') || request.url.includes('/data/local-events.json');
 
   if (isAppShell || isData) {
     event.respondWith(
@@ -75,20 +127,20 @@ self.addEventListener('fetch', (event) => {
         .then((response) => {
           if (response.ok) {
             const copy = response.clone();
-            caches.open(CACHE).then((cache) => cache.put(request, copy));
+            event.waitUntil(caches.open(CACHE).then((cache) => cache.put(request, copy)));
           }
           return response;
         })
-        .catch(() => caches.match(request))
+        .catch(() => caches.match(request, { ignoreSearch: true }).then(cached => cached || (request.mode === 'navigate' ? caches.match('./index.html') : Response.error())))
     );
     return;
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => cached || fetch(request).then((response) => {
+    caches.match(request, { ignoreSearch: url.origin === self.location.origin && url.pathname.includes('/assets/') }).then((cached) => cached || fetch(request).then((response) => {
       if (response.ok && url.origin === self.location.origin) {
         const copy = response.clone();
-        caches.open(CACHE).then((cache) => cache.put(request, copy));
+        event.waitUntil(caches.open(CACHE).then((cache) => cache.put(request, copy)));
       }
       return response;
     }))
@@ -109,10 +161,12 @@ self.addEventListener('push', (event) => {
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const relativeUrl = event.notification.data?.url || './';
-  const targetUrl = new URL(relativeUrl, self.location.origin).href;
+  const appUrl = new URL('./', self.location.href);
+  const requestedUrl = new URL(relativeUrl, appUrl);
+  const targetUrl = requestedUrl.origin === appUrl.origin ? requestedUrl.href : appUrl.href;
   event.waitUntil(clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
     for (const client of windows) {
-      if ('focus' in client) {
+      if (client.url.startsWith(appUrl.href) && 'focus' in client) {
         client.navigate(targetUrl);
         return client.focus();
       }

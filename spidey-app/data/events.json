@@ -167,8 +167,8 @@
     {
       "id": "2026-09-twilight-trails-season",
       "slug": "2026-09-twilight-trails-season",
-      "title": "Temporada Twilight Trails",
-      "summary": "Temporada Twilight Trails.",
+      "title": "Temporada: Trilhas do Entardecer",
+      "summary": "Temporada com estreias, eventos e rotações de Pokémon; de 8/9 a 1/12, com início e fim às 10h locais.",
       "category": "temporada",
       "tags": [
         "Temporada",
@@ -176,9 +176,9 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/seasons/twilight-trails",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -200,7 +200,10 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Umbreon na arte é ilustrativo; não representa um encontro em destaque ou recompensa garantida.",
+        "Os benefícios do Passe GO dependem dos marcos de Ranque alcançados; não são bônus incondicionais da temporada."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -212,8 +215,8 @@
     {
       "id": "2026-09-go-pass",
       "slug": "2026-09-go-pass",
-      "title": "GO Pass: Setembro",
-      "summary": "GO Pass de setembro com Latios entre as recompensas.",
+      "title": "Passe GO: Setembro",
+      "summary": "Passe GO de setembro com Latios entre as recompensas por progressão e Pontos GO sem limite diário em 3 e 4 de outubro.",
       "category": "go_pass",
       "tags": [
         "GO Pass",
@@ -245,14 +248,25 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Passe gratuito recebido automaticamente; recompensas dependem da progressão.",
+        "Resgate as recompensas desbloqueadas até 8 de outubro, às 10h, horário local.",
+        "Incubadora Temporária do Deluxe expira em 13 de outubro, às 10h, horário local.",
+        "Latios Brilhante somente com sorte; nenhuma probabilidade aumentada anunciada."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Encontro com Latios ao avançar nos Ranques do Passe GO.",
+        "3 e 4 de outubro, horário local: Pontos GO sem limite diário.",
+        "Ao atingir o Ranque 50: 2× duração do Incenso de Aventura Diário.",
+        "Deluxe (versão paga), Ranque 20: Incubadora Temporária."
+      ]
     },
     {
       "id": "2026-09-mega-squads",
@@ -527,7 +541,7 @@
     {
       "id": "2026-09-harvest-festival-applin",
       "slug": "2026-09-harvest-festival-applin",
-      "title": "Festival da Colheita 2026: Applin Picking",
+      "title": "Festival da Colheita: Pomar de Applin",
       "summary": "Festival da Colheita com estreia de Applin Brilhante.",
       "category": "evento_especial",
       "tags": [
@@ -536,9 +550,9 @@
         "Global"
       ],
       "source": {
-        "name": "Leek Duck • fonte oficial referenciada",
-        "url": "https://leekduck.com/events/harvest-festival-2026/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/news/harvest-festival-2026",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -560,14 +574,48 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Os bônus dos ranques 1, 10 e 20 exigem alcançar essas conquistas no Passe GO.",
+        "Módulos Atrair Musgosos atraem maçãs: toque nelas para receber maçãs de evolução ou encontros.",
+        "A Pesquisa temporária permite escolher um de três caminhos de maçãs; conclua e resgate até 05/10, às 20h locais.",
+        "Resgate as recompensas desbloqueadas do Passe GO até 07/10, às 20h locais.",
+        "Applin estreia na versão Brilhante; o anúncio não informa maior chance de Brilhante para Applin."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Smoliv tem maior chance de aparecer Brilhante.",
+        "Passe GO, ranque 1: Applin tem mais chance de carregar maçãs ao ser capturado.",
+        "Passe GO, ranque 10: Módulos Atrair Musgosos duram uma hora.",
+        "Passe GO, ranque 20: mais Poeira Estelar ao derrotar Recrutas e Líderes Rocket."
+      ],
+      "pokemon": [
+        {
+          "name": "Applin",
+          "note": "estreia do Brilhante; pode aparecer na natureza"
+        },
+        {
+          "name": "Smoliv",
+          "note": "maior chance de Brilhante"
+        },
+        {
+          "name": "Skwovet",
+          "note": "encontros na natureza"
+        },
+        {
+          "name": "Lechonk",
+          "note": "encontros na natureza"
+        },
+        {
+          "name": "Cottonee com coroa florida",
+          "note": "pode aparecer ao tocar maçãs atraídas pelo Módulo Atrair Musgoso"
+        }
+      ]
     },
     {
       "id": "2026-09-10-spotlight-weedle",
@@ -1571,8 +1619,8 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
+        "name": "Leek Duck • calendário de Megarreides",
+        "url": "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
         "confidence": "verified"
       },
       "schedule": {
@@ -1595,7 +1643,9 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Rotação e janela local verificadas em Leek Duck; GO Hub também lista as datas de 30/09 a 06/10. Fonte da comunidade."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -1742,8 +1792,8 @@
     {
       "id": "2026-09-gbl-29-1006",
       "slug": "2026-09-gbl-29-1006",
-      "title": "GO Battle League: Master / Mega Color Cup",
-      "summary": "Master League e Mega Color Cup: Great League Edition.",
+      "title": "Liga de Batalha GO: Liga Mestra + Mega Copa das Cores",
+      "summary": "Liga Mestra e Mega Copa das Cores: edição da Grande Liga; troca de rotação às 17h de Brasília.",
       "category": "go_battle_league",
       "tags": [
         "GO Battle League",
@@ -1752,7 +1802,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
         "confidence": "official"
       },
       "schedule": {
@@ -1775,14 +1825,22 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Mega Copa das Cores: limite de 1.500 PC, tipos Planta, Fogo, Água e Elétrico; Pokémon Megaevoluídos permitidos.",
+        "O bônus de 4× desta rotação não se aplica à Liga Mestra.",
+        "A troca é global e simultânea às 17h de Brasília (13h PDT); não às 17h de cada cidade.",
+        "Mega Blastoise e Mega Charizard X na arte são ilustrativos, sem promessa de encontros ou recomendação de equipe."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "4× Poeira Estelar nas recompensas por vitória somente na Mega Copa das Cores; não inclui recompensas de fim de série."
+      ]
     },
     {
       "id": "2026-09-shadow-giratina-05",
@@ -2752,7 +2810,7 @@
       "id": "2026-09-iit-delhi-rendezvous",
       "slug": "2026-09-iit-delhi-rendezvous",
       "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
-      "summary": "Evento oficial no IIT Delhi com bônus, encontros, reides, Collection Challenge e Pesquisa temporária.",
+      "summary": "Evento regional no IIT Delhi com encontros, reides, Pesquisa temporária e Desafio de coleção.",
       "category": "regional_event",
       "tags": [
         "Índia",
@@ -2784,7 +2842,11 @@
         "enabled": false,
         "reason": "Sem coordenada exata necessária para este item de calendário."
       },
-      "notes": [],
+      "notes": [
+        "De 28/9 às 10h até 1/10 às 20h no horário local de Nova Delhi.",
+        "Lapras em reides em 1/10. Brilhante possível com sorte; sem garantia ou multiplicador anunciado.",
+        "Cenário de campus na arte é ilustrativo, sem coordenadas ou condições de acesso confirmadas."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
@@ -2795,7 +2857,7 @@
       "id": "2026-10-harvest-taken-over",
       "slug": "2026-10-harvest-taken-over",
       "title": "Festival da Colheita: A Invasão",
-      "summary": "Invasão da Equipe GO Rocket durante o Festival da Colheita, com Zekrom Sombroso e remoção de Frustração.",
+      "summary": "Resgate Zekrom Sombroso com Giovanni e aproveite a janela para remover Frustração.",
       "category": "team_go_rocket",
       "tags": [
         "Team GO Rocket",
@@ -2827,20 +2889,54 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Começa à meia-noite de 02/10 e termina em 05/10, às 20h locais.",
+        "Avance no Passe GO: Festival da Colheita para obter um Super-radar Rocket.",
+        "Giovanni pode ser encontrado somente em Poképaradas; Zekrom Sombroso não é anunciado em reides.",
+        "Pokémon Sombrosos e Purificados não podem se fundir.",
+        "Resgate as recompensas do Passe GO até 07/10, às 20h locais."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Mais aparições da Equipe GO Rocket em Poképaradas e balões.",
+        "Use uma MT de ataque carregado para remover Frustração de Pokémon Sombrosos.",
+        "Slugma tem maior chance de aparecer Brilhante.",
+        "Capturas em Reides Sombrosas de uma e três estrelas têm maior variação de ataque, defesa e PS."
+      ],
+      "pokemon": [
+        {
+          "name": "Zekrom Sombroso",
+          "note": "resgate com Giovanni usando Super-radar Rocket"
+        },
+        {
+          "name": "Shroodle",
+          "note": "estreia do Brilhante ao chocar"
+        },
+        {
+          "name": "Wimpod Sombroso",
+          "note": "novo Pokémon dos Recrutas Rocket"
+        },
+        {
+          "name": "Fomantis Sombroso",
+          "note": "novo Pokémon dos Recrutas Rocket"
+        },
+        {
+          "name": "Sandygast Sombroso",
+          "note": "novo Pokémon dos Recrutas Rocket"
+        }
+      ]
     },
     {
       "id": "2026-10-patterns-of-the-wild-indonesia",
       "slug": "2026-10-patterns-of-the-wild-indonesia",
       "title": "Patterns of the Wild • Indonésia",
-      "summary": "Evento regional na Indonésia com Pikachu usando camisa batik e Fundo Especial.",
+      "summary": "Evento regional na Indonésia com Pikachu de camisa batik e possibilidade de Fundo Especial.",
       "category": "regional_event",
       "tags": [
         "Indonésia",
@@ -2872,14 +2968,37 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Evento exclusivo da Indonésia: 02/10, das 10h às 20h locais. A conversão mostrada usa Jacarta como referência; a Indonésia possui mais de um fuso.",
+        "Pesquisa temporária na Indonésia: 28/09 às 06h até 10/10 às 23h59 locais; inclui encontros, 1.000 PE e 1.000 de Poeira Estelar.",
+        "Desafio de coleção com PE, Poeira Estelar e adesivos de Pikachu.",
+        "Tire fotos dos seus próprios Pokémon para encontros adicionais de Pikachu de camisa batik.",
+        "A camisa batik da arte usa a imagem oficial do evento como referência; cenário ilustrativo."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "updated_at": "2026-10-01T22:47:56Z",
+      "bonuses": [
+        "Incenso dura duas horas durante o evento.",
+        "Maior chance de encontrar os Pokémon Brilhantes em destaque na natureza; sem garantia.",
+        "Maior frequência de Pikachu de camisa batik e outros Pokémon do evento ao usar Incenso.",
+        "Pikachu de camisa batik com chance de Fundo Especial na natureza; também há encontros por pesquisa e fotos dos próprios Pokémon."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu de camisa batik",
+          "note": "Fundo Especial; pode aparecer Brilhante"
+        },
+        {
+          "name": "Caterpie, Oddish, Gloom, Bellsprout, Ledyba, Ledian, Hoppip, Skiploom, Sunkern e Wurmple",
+          "note": "encontros selvagens em destaque"
+        }
+      ]
     },
     {
       "id": "2026-10-gigantamax-cinderace-max-day",
@@ -2890,11 +3009,12 @@
       "tags": [
         "Cinderace",
         "Gigamax",
-        "Max Battle Day"
+        "Max Battle Day",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
+        "url": "https://pokemongo.com/pt-BR/news/gigantamax-cinderace-max-battle-day-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -2917,20 +3037,39 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "As batalhas acontecem apenas em 03/10, das 14h às 17h no horário de cada região.",
+        "Para ativar os bônus de exploração, recolha primeiro todas as Partículas Max disponíveis no menu Proximidades.",
+        "Ingresso pago opcional: Pesquisa temporária com 1 Cogumelo Max, 25.000 PE e 6.400 Partículas Max; 2× PE em Batalhas Max somente com o ingresso.",
+        "Pesquisa do ingresso: conclua e resgate em 03/10, das 14h às 17h locais.",
+        "Limite de Reides a Distância de 20: de 02/10 às 21h até 04/10 às 00h, em Brasília."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Durante 14h–17h: limite de coleta de Partículas Max de 1.600.",
+        "Durante 14h–17h: 8× Partículas Max nos Pontos de Energia.",
+        "Durante 14h–17h: todos os Pontos de Energia com Batalhas Gigamax, atualizações mais frequentes e pontos adicionais.",
+        "Até três trocas especiais no dia.",
+        "Das 00h às 17h locais: 2× Partículas Max ao explorar e 1/4 da distância para obtê-las."
+      ],
+      "pokemon": [
+        {
+          "name": "Cinderace Gigamax",
+          "note": "Batalhas Max de seis estrelas; estreia do Brilhante"
+        }
+      ]
     },
     {
       "id": "2026-10-world-space-week",
       "slug": "2026-10-world-space-week",
       "title": "Semana Mundial do Espaço 2026",
-      "summary": "Semana Mundial do Espaço com estreia do Pikachu Astronauta em reides e Pesquisa temporária.",
+      "summary": "Pikachu Astronauta em Reides de uma estrela e Pesquisa temporária gratuita; pode aparecer Brilhante.",
       "category": "evento_especial",
       "tags": [
         "Astronaut Pikachu",
@@ -2962,20 +3101,47 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O evento global vai de 04/10 às 00h até 10/10 às 23h59 no horário de cada região.",
+        "Conclua a Pesquisa temporária e resgate suas recompensas até 12/10 às 23h59 locais.",
+        "Os Fundos de Localização pertencem à parceria com os museus europeus; consulte Museus e fundos para locais e prazos próprios."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Pikachu Astronauta em Reides de uma estrela.",
+        "Pesquisa temporária gratuita com encontro de Pikachu Astronauta."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu Astronauta",
+          "note": "estreia em Reides de uma estrela e Pesquisa temporária; pode aparecer Brilhante"
+        }
+      ],
+      "official_media": {
+        "file": "assets/events/official/world-space-week-2026.jpg",
+        "width": 1920,
+        "height": 1080,
+        "sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9",
+        "bytes": 1362600,
+        "alt": "Pikachu Astronauta na ilustração oficial da Semana Mundial do Espaço",
+        "partner": false,
+        "classification": "official_illustration",
+        "source_url": "https://pokemongo.com/en/news/world-space-week-2026",
+        "original_url": "https://lh3.googleusercontent.com/AiDIi-NAxX879TxCAX8X6I6EwjrUUajpCN18w4uPXAwSqgbR1y6_awmrDJFY31ljBfh4flc1v5Ma2by0Mt4y77-Q4LCPLnSBEMZIJSS0hvZx%3Ds0-e365"
+      },
+      "related_world_event_id": "2026-10-esa-museum-collaboration"
     },
     {
       "id": "2026-10-go-pass",
       "slug": "2026-10-go-pass",
-      "title": "GO Pass: Outubro",
-      "summary": "GO Pass de outubro com Kyogre e retorno do Globo da Sorte no Passe Deluxe.",
+      "title": "Passe GO: Outubro",
+      "summary": "Passe GO de outubro com encontro com Kyogre e Globo da Sorte na versão Deluxe.",
       "category": "go_pass",
       "tags": [
         "GO Pass",
@@ -2984,7 +3150,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-pass-october-2026",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-october-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -3007,20 +3173,36 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O Passe GO gratuito é recebido automaticamente; o Deluxe é uma versão paga.",
+        "As recompensas desbloqueadas podem ser resgatadas até 5/11/2026 às 10h, horário local.",
+        "O Globo da Sorte do Deluxe expira em 8/11/2026 às 23h59, horário local.",
+        "Kyogre pode ser Brilhante com sorte; nenhuma chance aumentada é anunciada."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Encontro com Kyogre ao progredir no Passe GO.",
+        "Globo da Sorte como recompensa final do Passe GO Deluxe (versão paga).",
+        "Ao atingir o Ranque 50: 2× duração do Incenso de Aventura Diário."
+      ],
+      "pokemon": [
+        {
+          "name": "Kyogre",
+          "note": "Encontro como recompensa do Passe GO."
+        }
+      ]
     },
     {
       "id": "2026-10-zorua-community-day",
       "slug": "2026-10-zorua-community-day",
       "title": "Dia Comunitário: Zorua",
-      "summary": "Zorua em destaque no Dia Comunitário de outubro, com Soco Enganador para Zoroark ao evoluir.",
+      "summary": "Zorua na natureza, 3× PE e 2× Doces por captura. Evolua para Zoroark com Soco Enganador até as 21h locais.",
       "category": "community_day",
       "tags": [
         "Zorua",
@@ -3052,14 +3234,29 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Evento em 10/10, das 14h às 17h, horário local.",
+        "3× PE e 2× Doces por captura durante o evento.",
+        "Evolua Zorua até as 21h locais para receber Zoroark com o ataque ágil Soco Enganador.",
+        "Módulos Atrair comuns duram uma hora; Zorua atraídos por eles podem aparecer com Fundo Especial. A janela de encontros vai até 21h locais."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "3× PE por captura, das 14h às 17h locais.",
+        "2× Doces por captura, das 14h às 17h locais.",
+        "2× chance de receber Doces GG por captura para Treinadores de nível 31 ou superior.",
+        "Incenso ativado durante o evento dura três horas, exceto o Incenso de Aventura Diário.",
+        "Módulos Atrair ativados duram uma hora; encontros com Zorua em Módulos Atrair comuns ficam disponíveis das 14h às 21h locais.",
+        "Uma troca especial adicional, máximo de duas no dia, das 14h às 21h locais.",
+        "Trocas custam 50% menos Poeira Estelar, das 14h às 21h locais.",
+        "Surpresa ao tirar retratos durante o Dia Comunitário."
+      ]
     },
     {
       "id": "2026-10-fall-marathon-buddy-trek",
@@ -3154,18 +3351,21 @@
     {
       "id": "2026-10-dynamax-max-battle-day",
       "slug": "2026-10-dynamax-max-battle-day",
-      "title": "Dia de Batalhas Max: Dinamax",
-      "summary": "Dia de Batalhas Max anunciado para 24 de outubro; o Pokémon em destaque ainda pode receber atualização oficial.",
+      "title": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax",
+      "summary": "Em 24/10, das 14h às 17h locais, enfrente o trio Dinamax em Batalhas Max de cinco estrelas. O Pokémon disponível depende da região.",
       "category": "max_battle_day",
       "tags": [
+        "Uxie",
+        "Mesprit",
+        "Azelf",
         "Dinamax",
         "Max Battle Day",
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -3188,7 +3388,10 @@
         "reason": "Evento sem coordenada exata específica confirmada."
       },
       "notes": [
-        "Data e janela confirmadas no calendário atual; detalhes do destaque ainda estão sujeitos a anúncio."
+        "Distribuição regional anunciada: Uxie na Ásia-Pacífico; Mesprit na Europa, Oriente Médio, África e Índia; Azelf nas Américas e Groenlândia.",
+        "Para os bônus de exploração, recolha primeiro todas as Partículas Max do menu Proximidades.",
+        "Limite global de Reides a Distância de 20: de 23/10 às 21h até 25/10 às 00h, em Brasília. Esta janela é diferente do horário local das Batalhas Max.",
+        "Ingresso pago opcional: Pesquisa temporária com 1 Cogumelo Max, 25.000 PE e 6.400 Partículas Max; 2× PE em Batalhas Max somente com ingresso. Conclua e resgate em 24/10, das 14h às 17h locais."
       ],
       "notifications": {
         "enabled": true,
@@ -3196,7 +3399,60 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "updated_at": "2026-10-01T22:47:56Z",
+      "bonuses": [
+        "Durante 14h–17h: limite de coleta de 1.600 Partículas Max e 8× Partículas nos Pontos de Energia.",
+        "Durante 14h–17h: todos os Pontos de Energia com Batalhas Dinamax, atualizações mais frequentes e pontos adicionais.",
+        "Até três trocas especiais no dia.",
+        "Das 00h às 17h locais: 2× Partículas Max ao explorar e 1/4 da distância para obtê-las."
+      ],
+      "pokemon": [
+        {
+          "name": "Uxie Dinamax",
+          "note": "Ásia-Pacífico; pode aparecer Brilhante"
+        },
+        {
+          "name": "Mesprit Dinamax",
+          "note": "Europa, Oriente Médio, África e Índia; pode aparecer Brilhante"
+        },
+        {
+          "name": "Azelf Dinamax",
+          "note": "Américas e Groenlândia; pode aparecer Brilhante"
+        }
+      ],
+      "regional_pokemon": {
+        "by_timezone": {
+          "Pacific/Auckland": "Uxie",
+          "Australia/Sydney": "Uxie",
+          "Asia/Tokyo": "Uxie",
+          "Asia/Taipei": "Uxie",
+          "Asia/Hong_Kong": "Uxie",
+          "Asia/Jakarta": "Uxie",
+          "Asia/Kolkata": "Mesprit",
+          "Asia/Dubai": "Mesprit",
+          "Europe/Istanbul": "Mesprit",
+          "Europe/Madrid": "Mesprit",
+          "Europe/London": "Mesprit",
+          "Atlantic/Cape_Verde": "Mesprit",
+          "Europe/Athens": "Mesprit",
+          "Europe/Rome": "Mesprit",
+          "America/Noronha": "Azelf",
+          "America/Sao_Paulo": "Azelf",
+          "America/New_York": "Azelf",
+          "America/Chicago": "Azelf",
+          "America/Denver": "Azelf",
+          "America/Los_Angeles": "Azelf",
+          "America/Anchorage": "Azelf",
+          "America/Argentina/Buenos_Aires": "Azelf"
+        },
+        "unconfirmed_timezones": [
+          "Pacific/Kiritimati",
+          "Pacific/Honolulu",
+          "Pacific/Pago_Pago"
+        ],
+        "source_url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026"
+      }
     },
     {
       "id": "2026-10-halloween-part-1",
@@ -3295,7 +3551,7 @@
     {
       "id": "2026-10-01-spotlight-seedot",
       "slug": "2026-10-01-spotlight-seedot",
-      "title": "Spotlight Hour: Seedot",
+      "title": "Hora do Holofote: Seedot",
       "summary": "2× PE por captura.",
       "category": "spotlight_hour",
       "tags": [
@@ -3304,8 +3560,8 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Pokémon GO Hub • guia Seedot + Leek Duck",
+        "url": "https://pokemongohub.net/post/event/seedot-spotlight-hour-october-2026-last-minute-guide/",
         "confidence": "verified"
       },
       "schedule": {
@@ -3328,19 +3584,30 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O bônus de PE vale para capturas durante a janela do evento."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "2× PE por captura."
+      ],
+      "pokemon": [
+        {
+          "name": "Seedot",
+          "note": "mais aparições na natureza; variação Brilhante disponível"
+        }
+      ]
     },
     {
       "id": "2026-10-08-spotlight-elgyem",
       "slug": "2026-10-08-spotlight-elgyem",
-      "title": "Spotlight Hour: Elgyem",
+      "title": "Hora do Holofote: Elgyem",
       "summary": "2× Doces por captura.",
       "category": "spotlight_hour",
       "tags": [
@@ -3380,7 +3647,10 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "2× Doces por captura."
+      ]
     },
     {
       "id": "2026-10-15-spotlight-stufful",
@@ -3520,7 +3790,7 @@
     {
       "id": "2026-10-07-raid-hour-yveltal",
       "slug": "2026-10-07-raid-hour-yveltal",
-      "title": "Raid Hour: Yveltal",
+      "title": "Hora de Reides: Yveltal",
       "summary": "Yveltal em destaque na Hora de Reides.",
       "category": "raid_hour",
       "tags": [
@@ -3529,8 +3799,8 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Leek Duck • calendário de reides",
+        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
         "confidence": "verified"
       },
       "schedule": {
@@ -3553,7 +3823,10 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Datas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade.",
+        "7 de outubro, 18h às 19h no horário de cada região."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -3889,8 +4162,8 @@
         "Yveltal"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "name": "Leek Duck • calendário de reides",
+        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
         "confidence": "verified"
       },
       "schedule": {
@@ -3913,7 +4186,9 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Datas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -4093,7 +4368,9 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Datas e categoria conferidas em Leek Duck e Pokémon GO Hub; fontes da comunidade."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -4240,8 +4517,8 @@
     {
       "id": "2026-10-gbl-06-13",
       "slug": "2026-10-gbl-06-13",
-      "title": "GO Battle League: Great Mega / Ultra Mega / Master Mega",
-      "summary": "Rotação da Liga de Batalha GO: Great Mega / Ultra Mega / Master Mega.",
+      "title": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições",
+      "summary": "Grande Liga, Ultra-liga e Liga Mestra em Megaedições; de 6 a 13/10, com troca às 17h de Brasília.",
       "category": "go_battle_league",
       "tags": [
         "GO Battle League",
@@ -4250,7 +4527,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
         "confidence": "official"
       },
       "schedule": {
@@ -4273,14 +4550,21 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Grande Liga: Megaedição exige Pokémon Megaevoluídos com até 1.500 PC. Ultra-liga: Megaedição permite Megaevoluídos com até 2.500 PC; Liga Mestra: Megaedição permite Megaevoluídos.",
+        "A troca é global e simultânea às 17h de Brasília (13h PDT), não às 17h locais de cada cidade.",
+        "Mega Lucario e Mega Gardevoir na arte são ilustrativos; não são recompensas de encontro anunciadas."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "4× Poeira Estelar nas recompensas por vitória nas três Megaedições; não inclui recompensas de fim de série."
+      ]
     },
     {
       "id": "2026-10-gbl-13-20",
@@ -4420,7 +4704,7 @@
     {
       "id": "2026-10-shadow-thundurus",
       "slug": "2026-10-shadow-thundurus",
-      "title": "Shadow Raids: Thundurus (Forma Encarnada)",
+      "title": "Reides Sombrosas: Thundurus (Forma Encarnada)",
       "summary": "Thundurus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
       "category": "shadow_raids",
       "tags": [
@@ -4646,7 +4930,7 @@
       "id": "2026-10-04-scenic-sunday",
       "slug": "2026-10-04-scenic-sunday",
       "title": "Descoberta Diária: Domingo Pitoresco",
-      "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
+      "summary": "Mais Pokémon na natureza e nas Rotas; Incenso atrai ainda mais nas Rotas, distância menor para doces de companheiro e até três encontros com Mateo.",
       "category": "daily_discovery",
       "tags": [
         "Domingo Pitoresco",
@@ -4654,7 +4938,7 @@
         "Twilight Trails"
       ],
       "source": {
-        "name": "Twilight Trails • Daily Discoveries",
+        "name": "Leek Duck • Descobertas Diárias da temporada",
         "url": "https://leekduck.com/events/season-24-twilight-trails/",
         "confidence": "verified"
       },
@@ -4678,12 +4962,22 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Eevee na arte é um companheiro ilustrativo; nenhuma espécie específica é anunciada como destaque desta Descoberta Diária.",
+        "O guia atual da Leek Duck informa estes bônus para a temporada; fonte comunitária, sujeita a alterações.",
+        "As Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Mais Pokémon aparecendo na natureza e ao percorrer Rotas.",
+        "Incenso atrai ainda mais Pokémon enquanto você percorre Rotas.",
+        "Distância reduzida para ganhar doces ao explorar Rotas com seu Pokémon companheiro.",
+        "Mateo pode ser encontrado até três vezes no dia ao percorrer Rotas."
+      ]
     },
     {
       "id": "2026-10-11-scenic-sunday",
@@ -4818,7 +5112,7 @@
       "id": "2026-10-06-showcase-tuesday",
       "slug": "2026-10-06-showcase-tuesday",
       "title": "Descoberta Diária: Terça de Vitrine",
-      "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+      "summary": "Participe de até cinco Vitrines de Poképarada no dia; mais Poképaradas poderão sediar Vitrines.",
       "category": "daily_discovery",
       "tags": [
         "Vitrines",
@@ -4826,7 +5120,7 @@
         "Twilight Trails"
       ],
       "source": {
-        "name": "Twilight Trails • Daily Discoveries",
+        "name": "Leek Duck • Descobertas Diárias da temporada",
         "url": "https://leekduck.com/events/season-24-twilight-trails/",
         "confidence": "verified"
       },
@@ -4850,12 +5144,20 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Snorlax na arte é ilustrativo; nenhuma espécie específica foi confirmada como destaque das Vitrines de 06/10 na fonte consultada.",
+        "O guia atual da Leek Duck informa estes benefícios para a temporada; fonte comunitária, sujeita a alterações.",
+        "As Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Participação em até cinco Vitrines de Poképarada no dia.",
+        "Mais Poképaradas poderão sediar Vitrines de Poképarada."
+      ]
     },
     {
       "id": "2026-10-13-showcase-tuesday",
@@ -4990,7 +5292,7 @@
       "id": "2026-10-01-go-battle-thursday",
       "slug": "2026-10-01-go-battle-thursday",
       "title": "Descoberta Diária: Quinta de Batalhas GO",
-      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "summary": "Até 10 séries (50 batalhas) e até 4× Poeira Estelar nas recompensas por vitória.",
       "category": "daily_discovery",
       "tags": [
         "GO Battle",
@@ -4999,7 +5301,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
         "confidence": "official"
       },
       "schedule": {
@@ -5022,12 +5324,19 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Das 00h às 23h59 locais em 1/10/2026. A quantidade se refere a batalhas, não a vitórias.",
+        "Lucario e Garchomp na arte são ilustrativos; sem encontro de recompensa ou equipe recomendada."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Até 10 séries no dia, total de 50 batalhas.",
+        "Até 4× Poeira Estelar nas recompensas por vitória; não inclui recompensas de fim de série."
+      ]
     },
     {
       "id": "2026-10-08-go-battle-thursday",
@@ -5205,7 +5514,7 @@
       "id": "2026-10-02-friendship-friday",
       "slug": "2026-10-02-friendship-friday",
       "title": "Descoberta Diária: Sexta da Amizade",
-      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "summary": "Bônus em trocas presenciais: até duas trocas especiais adicionais, desconto de Poeira e Doces GG para nível 31+.",
       "category": "daily_discovery",
       "tags": [
         "Amizade",
@@ -5213,7 +5522,7 @@
         "Twilight Trails"
       ],
       "source": {
-        "name": "Twilight Trails • Daily Discoveries",
+        "name": "Leek Duck • guia da temporada",
         "url": "https://leekduck.com/events/season-24-twilight-trails/",
         "confidence": "verified"
       },
@@ -5237,12 +5546,22 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Todos estes benefícios são exclusivos de trocas presenciais, das 00h às 23h59 locais em 2/10/2026.",
+        "Benefícios consultados no guia comunitário atual da Leek Duck, sujeitos a alterações.",
+        "Eevee e Pikachu na arte são ilustrativos, sem promessa de recompensa."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Até duas trocas especiais adicionais.",
+        "20% menos Poeira Estelar nas trocas.",
+        "Maior chance de troca sortuda; não é garantida.",
+        "Dois Doces GG (Candy XL) garantidos por troca para Treinadores de nível 31 ou superior."
+      ]
     },
     {
       "id": "2026-10-09-friendship-friday",
@@ -5415,6 +5734,202 @@
         "default_lead_minutes": []
       },
       "status": "published"
+    },
+    {
+      "id": "2026-10-minior-orionids",
+      "slug": "2026-10-minior-orionids",
+      "title": "Minior: chuva de meteoros Orionidas",
+      "summary": "Minior na Forma Meteoro aparece na natureza durante as Orionidas.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Orionidas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-19T17:00:00-03:00",
+        "end_local": "2026-10-24T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-19T17:00:00-03:00",
+        "end_brazil": "2026-10-24T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "published_on": "2026-10-01",
+        "window_label": "Orionidas • 10/2026"
+      },
+      "updated_at": "2026-10-01T22:47:56Z"
+    },
+    {
+      "id": "2026-11-minior-leonids",
+      "slug": "2026-11-minior-leonids",
+      "title": "Minior: chuva de meteoros Leônidas",
+      "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Leônidas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-14T17:00:00-03:00",
+        "end_local": "2026-11-19T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-14T17:00:00-03:00",
+        "end_brazil": "2026-11-19T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "published_on": "2026-10-01",
+        "window_label": "Leônidas • 11/2026"
+      },
+      "updated_at": "2026-10-01T22:47:56Z"
+    },
+    {
+      "id": "2026-12-minior-geminids",
+      "slug": "2026-12-minior-geminids",
+      "title": "Minior: chuva de meteoros Geminidas",
+      "summary": "Minior na Forma Meteoro aparece na natureza durante as Geminidas.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Geminidas",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-11T17:00:00-03:00",
+        "end_local": "2026-12-16T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-11T17:00:00-03:00",
+        "end_brazil": "2026-12-16T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
+        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "published_on": "2026-10-01",
+        "window_label": "Geminidas • 12/2026"
+      },
+      "updated_at": "2026-10-01T22:47:56Z"
     }
   ]
 }

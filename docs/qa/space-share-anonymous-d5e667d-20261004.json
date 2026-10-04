@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-04T12:13:07.274242+00:00",
+  "code_commit": "d5e667dc05340e6fcaaf6a062b5ffcadad2db28f",
+  "cookies_initially_empty": true,
+  "credentials_sent": false,
+  "temporary_share_link_used": true,
+  "share_link_token_persisted": false,
+  "physical_android_tested": false,
+  "results": [
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app",
+      "final_path": "/spidey-app/index.html",
+      "bytes": 10476,
+      "app_found": true,
+      "login_found": false
+    },
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app",
+      "final_path": "/spidey-app/data/space-museums.json",
+      "bytes": 5458,
+      "app_found": false,
+      "login_found": false,
+      "sha256": "cd3aedf8d6f856898898e559da6e346fb051774eefb6819273f6e5fbe48f318e",
+      "matches_local": true,
+      "json_error": null
+    },
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app",
+      "final_path": "/spidey-app/data/events.json",
+      "bytes": 189000,
+      "app_found": false,
+      "login_found": false,
+      "sha256": "02a77dfaa7fbd39fe7892d6cc72499f667ff317f256513607be5a0560d61d0a1",
+      "matches_local": true,
+      "json_error": null
+    },
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app",
+      "final_path": "/spidey-app/assets/events/official/world-space-week-2026.jpg",
+      "bytes": 1362600,
+      "app_found": false,
+      "login_found": false,
+      "sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9",
+      "matches_local": true
+    },
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app",
+      "final_path": "/spidey-app/assets/events/official/esa-museums-2026.jpg",
+      "bytes": 1410996,
+      "app_found": false,
+      "login_found": false,
+      "sha256": "847c9d5db8aad7a1c139f016a19b25dbcf525c5e9a6bc2fcd58d4fb5fdaa1bcb",
+      "matches_local": true
+    },
+    {
+      "status": 503,
+      "final_origin": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app",
+      "final_path": "/spidey-app/api/push/public-key",
+      "bytes": 31,
+      "app_found": false,
+      "login_found": false,
+      "json_error": "push_not_configured"
+    }
+  ],
+  "bare_url_new_session": {
+    "status": 200,
+    "final_origin": "https://vercel.com",
+    "final_path": "/login",
+    "bytes": 341626,
+    "app_found": false,
+    "login_found": true
+  },
+  "status": "TEMPORARY_SHARE_ANONYMOUS_HTTP_PASSED_PHYSICAL_PHONE_NOT_RETESTED"
+}

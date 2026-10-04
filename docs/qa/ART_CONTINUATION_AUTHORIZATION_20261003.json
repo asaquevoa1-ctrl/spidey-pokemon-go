@@ -1,0 +1,26 @@
+{
+  "status": "ACTIVE",
+  "at": "2026-10-03T23:13:44-03:00",
+  "user_text": "Ok, bore\n\nAs artes já estão todas saindo no padrão correto.\nPode seguir sem minha aprovação",
+  "base_commit": "983408c874404ae9e968092ac27bc1ccce428ff3",
+  "scope": "Continuar as artes do app Spidey no padrão Premium já validado sem nova aprovação visual individual.",
+  "individual_visual_confirmation_required": false,
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "required_checks": [
+    "Fonte factual verificada e classificação preservada",
+    "Mesmo padrão Premium e marca oficial",
+    "PNG integral legível e íntegro",
+    "Vínculo eventId/arquivo/hash e registro auditável",
+    "Prévia e QA responsivo antes de consolidar o lote",
+    "Preservar todas as artes e decisões anteriores"
+  ],
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "prior_approvals_changed": false,
+  "production_release_approval": false,
+  "deployment_protection_authorization_changed": false,
+  "push_configuration_authorization_changed": false
+}

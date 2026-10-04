@@ -1,9 +1,13 @@
 (() => {
   const statusEl = document.querySelector('#notificationStatus');
   const notificationButton = document.querySelector('#notificationButton');
+  let subscribing = null;
 
   function setStatus(message) {
-    if (statusEl && message) statusEl.textContent = message;
+    if (statusEl && message) {
+      statusEl.textContent = message;
+      statusEl.hidden = false;
+    }
   }
 
   function urlBase64ToUint8Array(base64String) {
@@ -54,25 +58,35 @@
     }
   }
 
-  async function subscribeRemotePush() {
-    if (!('Notification' in window) || !('serviceWorker' in navigator) || !('PushManager' in window)) return;
-
+  async function activateRemotePush() {
+    if (!('Notification' in window) || !('serviceWorker' in navigator) || !('PushManager' in window)) {
+      setStatus('Este navegador não oferece notificações.');
+      return false;
+    }
+    setStatus('Preparando seus alertas…');
     try {
+      const keyResponse = await fetch('api/push/public-key', { cache: 'no-store' });
+      if (!keyResponse.ok) {
+        setStatus('Notificações indisponíveis no momento.');
+        return false;
+      }
+      const { publicKey } = await keyResponse.json();
+      if (!publicKey) {
+        setStatus('Notificações indisponíveis no momento.');
+        return false;
+      }
       const permission = Notification.permission === 'default'
         ? await Notification.requestPermission()
         : Notification.permission;
-      if (permission !== 'granted') return;
-
-      const keyResponse = await fetch('api/push/public-key', { cache: 'no-store' });
-      if (!keyResponse.ok) {
-        console.info('Spidey Push remoto ainda não configurado:', keyResponse.status);
-        return;
+      if (permission !== 'granted') {
+        setStatus('Notificações não autorizadas neste navegador.');
+        return false;
       }
-
-      const { publicKey } = await keyResponse.json();
-      if (!publicKey) return;
-
-      const registration = await navigator.serviceWorker.ready;
+      let timeout;
+      const registration = await Promise.race([
+        navigator.serviceWorker.ready,
+        new Promise((_, reject) => { timeout = setTimeout(() => reject(new Error('service_worker_timeout')), 10000); }),
+      ]).finally(() => clearTimeout(timeout));
       let subscription = await registration.pushManager.getSubscription();
       if (!subscription) {
         subscription = await registration.pushManager.subscribe({
@@ -96,18 +110,27 @@
 
       if (!saveResponse.ok) throw new Error(`subscribe HTTP ${saveResponse.status}`);
       setStatus('Notificações automáticas ativadas neste aparelho.');
+      if (notificationButton) notificationButton.textContent = 'Alertas ativos';
+      return true;
     } catch (error) {
       console.error('Spidey Push subscribe:', error);
-      setStatus('Permissão ativa. O push remoto ainda está sendo preparado.');
+      setStatus('Não foi possível ativar os alertas. Tente novamente.');
+      return false;
     }
+  }
+
+  function subscribeRemotePush() {
+    if (subscribing) return subscribing;
+    if (notificationButton) notificationButton.disabled = true;
+    subscribing = activateRemotePush().finally(() => {
+      subscribing = null;
+      if (notificationButton) notificationButton.disabled = false;
+    });
+    return subscribing;
   }
 
   window.addEventListener('load', () => {
     openDeepLink();
-  });
-
-  notificationButton?.addEventListener('click', () => {
-    setTimeout(subscribeRemotePush, 0);
   });
 
   window.SpideyPush = {

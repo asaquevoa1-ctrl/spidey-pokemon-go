@@ -1,0 +1,202 @@
+{
+  "code_commit": "4b0f3198e62fa50af5fd89b71475350e76d573e8",
+  "preview_url": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/index.html",
+  "scenarios": [
+    {
+      "viewport": [
+        390,
+        850
+      ],
+      "theme": "light",
+      "document": {
+        "scrollWidth": 375,
+        "theme": "light",
+        "width": 375
+      },
+      "homeImages": [
+        {
+          "alt": "Arte de Reides 5★: Xerneas",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+        },
+        {
+          "alt": "Arte de Megarreides: Mega Victreebel",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        },
+        {
+          "alt": "Arte de Festival da Colheita: A Invasão",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+        },
+        {
+          "alt": "Arte de Dia de Batalhas Max: Cinderace Gigamax",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+        }
+      ],
+      "detail": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 360
+      },
+      "poster": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          360,
+          450.546875
+        ],
+        "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+      },
+      "weeklyImages": [
+        {
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        850
+      ],
+      "theme": "dark",
+      "document": {
+        "scrollWidth": 1265,
+        "theme": "dark",
+        "width": 1265
+      },
+      "homeImages": [
+        {
+          "alt": "Arte de Reides 5★: Xerneas",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+        },
+        {
+          "alt": "Arte de Megarreides: Mega Victreebel",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        },
+        {
+          "alt": "Arte de Festival da Colheita: A Invasão",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+        },
+        {
+          "alt": "Arte de Dia de Batalhas Max: Cinderace Gigamax",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+        }
+      ],
+      "detail": {
+        "focus": "Fechar",
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 703
+      },
+      "poster": {
+        "complete": true,
+        "natural": [
+          1121,
+          1403
+        ],
+        "objectFit": "contain",
+        "rect": [
+          703,
+          620
+        ],
+        "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+      },
+      "weeklyImages": [
+        {
+          "alt": "Hora de Reides: Xerneas",
+          "complete": true,
+          "natural": [
+            1229,
+            1536
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/recovered/1000426235.png?v=2b97e5ae1478"
+        },
+        {
+          "alt": "Megarreides: Mega Victreebel",
+          "complete": true,
+          "natural": [
+            1121,
+            1403
+          ],
+          "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+        }
+      ]
+    }
+  ],
+  "news_summary": {
+    "headings": [
+      "Fique por dentro",
+      "Patterns of the Wild • Indonésia",
+      "Minior chega com as chuvas de meteoros"
+    ],
+    "excerpt": "NOVIDADES\nFique por dentro\n\nVeja o que vem por aí e acompanhe os anúncios de cada evento.\n\nANÚNCIO OFICIAL\n\nPokémon GO • Atualizado 01/10\n\nPatterns of the Wild • Indonésia\n\nEvento regional na Indonésia com Pikachu usando camisa batik e Fundo Especial.\n\n02 de out., 00:00 → 02 de out., 10:00 (Brasília)\n\nVer evento\nConsultar fonte\nANÚNCIO OFICIAL\n\nPokémon GO • Atualizado 01/10\n\nMinior chega com as chuvas de meteoros\n\nMinior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.\n\nMinior: chuva de meteoros Orionidas\n19 de out., 17:00 → 24 de out., 23:59 (Brasília)\n\nMinior: chuva de meteoros Leônidas\n14 de nov., 17:00 → 19 de nov., 23:59 (Brasília)\n\nMinior: chuva de meteoros Geminidas\n11 de dez., 17:00 → 16 de dez., 23:59 (Brasília)\n\nOrionidas • 10/2026\nLeônidas • 11/2026\nGeminidas • 12/2026\nConsultar fonte\nANÚNCIO OFICIAL\n\nPokémon GO • Atualizado 01/10\n\nDia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax\n\nEm 24/10, das 14h às 17h locais, enfrente o trio Dinamax em Batalhas Max de cinco estrelas. O Pokémon disponível depende da região.\n\n24/10 · 14:00 → 17:00 no horário de cada região\n\nVer evento\nConsultar fonte\nINFORMAÇÃO DA COMUNIDADE\n\nPokémon GO • calendário setembro 2026\n\nTemporada Twilight Trails\n\nTemporada Twilight Trails.\n\n08 de set., 10:00 → 01 de dez., 10:00 (Brasília)\n\nVer evento\nConsultar fonte\nANÚNCIO OFICIAL\n\nPokémon GO\n\nGO Pass: Setembro\n\nGO Pass de setembro com Latios entre as recompensas.\n\n08 de set., 10:00 → 06 de out., 10:00 (Brasília)\n\nVer evento\nConsultar fonte\nANÚNCIO OFICIAL\n\nPokémon GO\n\nFestival da Colheita: Pomar de Applin\n\nFestival da Colheita com estreia de Applin Brilhante.\n\n29 de set., 10:00 → 05 de out., 20:00 (Brasília)\n\nVer evento\nConsultar fo"
+  },
+  "interaction": "Enter nas ações do iframe; prova de clique no app direto registrada separadamente.",
+  "direct_app": {
+    "url": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/index.html",
+    "interaction": "Clique no botão da Home abriu o detalhe de Mega Victreebel",
+    "poster": {
+      "complete": true,
+      "natural": [
+        1121,
+        1403
+      ],
+      "objectFit": "contain",
+      "src": "https://spidey-pokemon-lf6sw9hcz-spidey3.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+    },
+    "detail": {
+      "focus": "Fechar",
+      "scrollTop": 0,
+      "scrollWidth": 703,
+      "width": 703
+    }
+  }
+}

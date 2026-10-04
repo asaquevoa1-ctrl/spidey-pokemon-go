@@ -1,0 +1,107 @@
+{
+  "status": "PASSED",
+  "code_commit": "ae4fcd4a2e0d2b69c4ff74c8808d33352a7f4a32",
+  "checked_at": "2026-10-04T14:57:19.650349+00:00",
+  "initial_cookies": 0,
+  "credentials_supplied": false,
+  "share": {
+    "method": "native temporary preview sharing",
+    "secret_saved": false,
+    "expires_vendor_text": "10/5/2026, 1:52:13 PM"
+  },
+  "post_redirect_url": "https://spidey-pokemon-2fh3rg4cq-spidey3.vercel.app/spidey-app/index.html",
+  "exact_files": 13,
+  "files": [
+    {
+      "path": "spidey-app/index.html",
+      "status": 200,
+      "bytes": 10474,
+      "sha256": "34aacc8870e34b11d21779821df3127a760528d636a7265e550489d14f6326a0",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/space-week.js",
+      "status": 200,
+      "bytes": 8214,
+      "sha256": "3b75b8dd87643ff45beedac348077e4c446ccaf19afa6234f1e59f01f48907ed",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/space-week.css",
+      "status": 200,
+      "bytes": 2558,
+      "sha256": "5c68d64005c0f69749c5b71f121c7836bdd26c1275ee59394174e868e73efd1c",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/sw.js",
+      "status": 200,
+      "bytes": 8256,
+      "sha256": "9a97954c3ae880297e8f431040324fafe32d4a150081cfaa51f887e4d8c5cd66",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/data/space-museums.json",
+      "status": 200,
+      "bytes": 10070,
+      "sha256": "88269f0a8c4902536fd2786e49670a3fdc025f2cbca74703aee5a86ff6f38f25",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/data/events.json",
+      "status": 200,
+      "bytes": 189000,
+      "sha256": "02a77dfaa7fbd39fe7892d6cc72499f667ff317f256513607be5a0560d61d0a1",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/premium-approved-master.js",
+      "status": 200,
+      "bytes": 10274,
+      "sha256": "d42cd4614e42ed1e8aadfe268c844f336ec4b54fcab525ec588cf496b2d1b7b5",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png",
+      "status": 200,
+      "bytes": 458555,
+      "sha256": "68e449fec0ea5b0affe2ca3332fe1f7871d59740c530a484fb1d9b161990d87e",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png",
+      "status": 200,
+      "bytes": 507237,
+      "sha256": "e98ae5d1cfcd3a8ba5d351236bc3f77bd140c26a887a7e85afda3caa634ddb4f",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png",
+      "status": 200,
+      "bytes": 483542,
+      "sha256": "f0516c182e8e2852eaa6d4d1e591b953c264bd8b7797613086358a4f5c728fe2",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png",
+      "status": 200,
+      "bytes": 478256,
+      "sha256": "f7e8bf69f6011a6ffed5d19e788216250a7e1cf909b9489cd9514c751b4b1e48",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png",
+      "status": 200,
+      "bytes": 404084,
+      "sha256": "e9769f0113b68300d5163ed456ccb0ae9fe71a6d0daec36c81cd986deb77a116",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png",
+      "status": 200,
+      "bytes": 606666,
+      "sha256": "c60fdac0978ba7a11f13aa98999203570d421b86993076cd8eb96b231488c556",
+      "exact": true
+    }
+  ]
+}

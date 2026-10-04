@@ -1,0 +1,83 @@
+{
+  "status": "PASSED_PREVIEW",
+  "checked_at": "2026-10-04T15:45:04.087879+00:00",
+  "base_commit": "3e02d5b6d9f5f6814d2bea5e6e0d6d89b34a147e",
+  "code_commit": "ff84fe8b344d413d87548f4e083e72ad6ea00ad8",
+  "branch": "spidey-fly-v1",
+  "deployment": {
+    "id": "dpl_D93vSyZ3GNKmMTQ81HpSDYwCS2Qf",
+    "state": "READY",
+    "target": null,
+    "url": "https://spidey-pokemon-pa2fgluuu-spidey3.vercel.app/spidey-app/index.html"
+  },
+  "features": {
+    "malaga_event": "OFFICIAL",
+    "original_location_background": "512x512 exact PokeMiners bytes",
+    "venues": 3,
+    "maps": "Official addresses/region, no invented coordinates",
+    "local_and_brasilia_time": "October 4 20:00 Europe/Madrid = October 4 15:00 America/Sao_Paulo",
+    "end_boundary_test": "EXCLUSIVE_END_PASSED",
+    "home_and_fly_actions": "PASSED",
+    "fixed_daily_quests_and_gpx": "NOT_REINTRODUCED_USER_DISMISSED"
+  },
+  "checks": {
+    "node_tests_passed": 43,
+    "syntax": "PASSED",
+    "desktop_dark": "PASSED",
+    "mobile_light_390_wrapper": "PASSED",
+    "no_horizontal_overflow": true,
+    "copy_address": "Action and Endereço copiado toast observed; physical paste not certified",
+    "anonymous_exact_files": 10,
+    "initial_http_cookies": 0,
+    "fly_essential_all": [
+      20,
+      28
+    ],
+    "taipei_retained": true,
+    "six_museums_and_maps_retained": true
+  },
+  "integrity": {
+    "global_catalog_events": 124,
+    "global_catalog_unchanged": true,
+    "approved_master_entries": 25,
+    "approved_master_assets_unchanged": true,
+    "six_esa_background_assets_unchanged": true,
+    "protected_files_locally_compared": 35,
+    "untargeted_code_tree_blobs_preserved": 744,
+    "original_malaga_asset_sha256": "37bb7561eb4b942f30614bdae8f2e1daa95ead617794f291af37acad409581d5",
+    "original_malaga_asset_bytes": 538698
+  },
+  "sources_record": "docs/qa/MALAGA_SOURCES_20261004.json",
+  "browser_record": "docs/qa/malaga-browser-ff84fe8-20261004.json",
+  "anonymous_record": "docs/qa/malaga-share-anonymous-ff84fe8-20261004.json",
+  "proofs": [
+    {
+      "path": "docs/qa/proofs/spidey-malaga-fundo-desktop-ff84fe8-20261004.jpg",
+      "bytes": 86249,
+      "sha256": "b4794adb93851b3186a688116dd0101359ab72c5cb1e4436e1f86a3a3bea275e"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-malaga-locais-desktop-ff84fe8-20261004.jpg",
+      "bytes": 70189,
+      "sha256": "f2b545e1f6f3eb3dd11e70aec9be36a5ba116e291990bd194931265a11b2adb7"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-malaga-fundo-mobile-ff84fe8-20261004.jpg",
+      "bytes": 87070,
+      "sha256": "6d14db2e2d40c7a45b523710cbf859947bb5ef9531d31214b38c3e2c9bbfc4b3"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-malaga-locais-mobile-ff84fe8-20261004.jpg",
+      "bytes": 57728,
+      "sha256": "915c74cb5254ad439a5bd185f503229ec65da644fa600299cb61f43d900887fc"
+    }
+  ],
+  "limits": {
+    "physical_android_install_update_offline_clipboard_push": "NOT_CERTIFIED",
+    "permanent_tester_access": "PENDING",
+    "push_last_previous_check": "503 push_not_configured; not rechecked in this scope",
+    "premium_generation_refusals": "Applin/Space/Sizzlipede preserved",
+    "production_promotion": false,
+    "main_observed_baseline": "f35b25a145cb4ad1cbc8e1aa872d0e2fb9f4a96b"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "status": "PREVIEW_VERIFIED_APPROVAL_PENDING",
+  "record_date": "2026-10-02",
+  "base_commit": "12209c2dceabc2aad4d3e638c870d02c438f6844",
+  "code_commit": "a17f6d45535758ff2b5a36ef0e4e6e476af933e8",
+  "preview_url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html",
+  "human_approval": null,
+  "production_promoted": false,
+  "local": {
+    "tests": 31,
+    "passed": 31,
+    "failed": 0,
+    "catalog_count": 124,
+    "ids_preserved": true,
+    "schedules_preserved": true,
+    "approved_count": 12,
+    "approved_master_preserved": true,
+    "candidate_roles": [
+      "thumb",
+      "card",
+      "weekly",
+      "hero",
+      "poster"
+    ],
+    "weekly_candidate_urls_verified": true
+  },
+  "browser": {
+    "mode": "RESPONSIVE_BROWSER_NOT_PHYSICAL_ANDROID",
+    "app_url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html",
+    "wrapper_url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/qa-responsive.html",
+    "posters": [
+      {
+        "event_id": "2026-10-shadow-thundurus",
+        "full_poster": true,
+        "image_natural_size": [
+          1121,
+          1403
+        ],
+        "object_fit": "contain",
+        "mobile": {
+          "viewport": [
+            390,
+            850
+          ],
+          "theme": "Claro",
+          "dialog_client_width": 360,
+          "dialog_scroll_width": 360,
+          "scrollTop": 0,
+          "focused": "closeDialog"
+        },
+        "desktop": {
+          "viewport": [
+            1280,
+            850
+          ],
+          "theme": "Escuro",
+          "dialog_client_width": 703,
+          "dialog_scroll_width": 703,
+          "scrollTop": 0,
+          "focused": "closeDialog"
+        }
+      },
+      {
+        "event_id": "2026-10-08-spotlight-elgyem",
+        "full_poster": true,
+        "image_natural_size": [
+          1121,
+          1403
+        ],
+        "object_fit": "contain",
+        "mobile": {
+          "viewport": [
+            390,
+            850
+          ],
+          "theme": "Claro",
+          "dialog_client_width": 360,
+          "dialog_scroll_width": 360,
+          "scrollTop": 0,
+          "focused": "closeDialog"
+        },
+        "desktop": {
+          "viewport": [
+            1280,
+            850
+          ],
+          "theme": "Escuro",
+          "dialog_client_width": 703,
+          "dialog_scroll_width": 703,
+          "scrollTop": 0,
+          "focused": "closeDialog"
+        }
+      }
+    ],
+    "served_images": [
+      {
+        "event_id": "2026-10-shadow-thundurus",
+        "download_path": "/workspace/scratch/f7876890-292d-40cf-a9a6-c849220c1021/fd974736-506b-4b4a-989c-1d0d60aa8356",
+        "bytes": 2519761,
+        "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+        "size": [
+          1121,
+          1403
+        ],
+        "matches_candidate": true,
+        "browser_download_path": "/home/oai/share/f7876890-292d-40cf-a9a6-c849220c1021/fd974736-506b-4b4a-989c-1d0d60aa8356"
+      },
+      {
+        "event_id": "2026-10-08-spotlight-elgyem",
+        "download_path": "/workspace/scratch/f7876890-292d-40cf-a9a6-c849220c1021/7f0b3946-fce6-4eb1-b157-2565277be195",
+        "bytes": 2455329,
+        "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+        "size": [
+          1121,
+          1403
+        ],
+        "matches_candidate": true,
+        "browser_download_path": "/home/oai/share/f7876890-292d-40cf-a9a6-c849220c1021/7f0b3946-fce6-4eb1-b157-2565277be195"
+      }
+    ],
+    "fly": {
+      "event_id": "2026-10-08-spotlight-elgyem",
+      "poster": "assets/events/review/elgyem-spotlight-v2.png?v=2ab5e183a146",
+      "bonus": "2× Doces por captura.",
+      "local": "08/10/2026 18:00–19:00",
+      "essential_points": 20,
+      "all_hotspots": 28,
+      "clock_examples_brazil": [
+        {
+          "location": "Kiritimati, Kiribati",
+          "start": "2026-10-08T01:00:00-03:00",
+          "end": "2026-10-08T02:00:00-03:00",
+          "coordinates": "1.987149,-157.477137"
+        },
+        {
+          "location": "Taipei, Taiwan",
+          "start": "2026-10-08T07:00:00-03:00",
+          "end": "2026-10-08T08:00:00-03:00",
+          "coordinates": "25.033964,121.564468"
+        },
+        {
+          "location": "Pago Pago, Samoa Americana",
+          "start": "2026-10-09T02:00:00-03:00",
+          "end": "2026-10-09T03:00:00-03:00",
+          "coordinates": "-14.277739,-170.688512"
+        }
+      ],
+      "mobile_document": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "desktop_document": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "thundurus_in_selector": false,
+      "reason": "shadow_raids não integra as categorias com janela horária global elegíveis na rota mundial; nenhuma janela foi inventada."
+    },
+    "home": {
+      "date_brt": "2026-10-03",
+      "thundurus_active_card_with_correct_png": true,
+      "prior_approved_cinderace_xerneas_victreebel_invasion_still_present": true,
+      "elgyem_not_in_next_six": true
+    },
+    "weekly": {
+      "range": "2026-09-28/2026-10-04",
+      "thundurus_on_october_3_4": true,
+      "thundurus_png": "assets/events/review/thundurus-shadow-weekend-v1.png?v=eb8141c8220c",
+      "natural_size": [
+        1121,
+        1403
+      ],
+      "elgyem_outside_week": true
+    },
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-thundurus-mobile-a17f6d4-20261003.jpg",
+        "bytes": 106751,
+        "sha256": "43fd8a487fdad8c25f5bf5b4959798375d40e3deb50dafd851267a89c5efb0b8",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-mobile-a17f6d4-20261003.jpg",
+        "bytes": 102066,
+        "sha256": "c918e5f647d366b8bdedec0ec1d73a92c7bcb94ad6e8e01bf680c0dab90bcef7",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-desktop-a17f6d4-20261003.jpg",
+        "bytes": 142311,
+        "sha256": "7d9bea3e38096cf5c75265de10ca78e8b42688a822067ae4c497bd9768263423",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-thundurus-desktop-a17f6d4-20261003.jpg",
+        "bytes": 145817,
+        "sha256": "5269c10497b37adcb3a872dce4e263d8f424f14e9e810e437a2c5ba3568364cc",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-fly-desktop-a17f6d4-20261003.jpg",
+        "bytes": 84341,
+        "sha256": "9011bf0e6b3fbd7e86652a7eacc27fd77fb8b5d55f9f10929609f1c1dffc24bd",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-fly-mobile-a17f6d4-20261003.jpg",
+        "bytes": 65008,
+        "sha256": "f8bb6d6fc5a7ee1a6508577bb2c2713e4970546820b573c2a2b28dcf4c2b0c10",
+        "size": [
+          1363,
+          936
+        ]
+      }
+    ]
+  },
+  "push": {
+    "status": "BLOCKED_DASHBOARD_ACCESS",
+    "configuration_written": false,
+    "notes": [
+      "Connector disponível não expõe operações de variáveis de ambiente.",
+      "Sem Vercel CLI ou credencial disponível no runtime.",
+      "Painel environment-variables redirecionou para login; estado das variáveis não inspecionado.",
+      "Nenhuma assinatura, segredo ou envio push criado nesta rodada."
+    ],
+    "public_key_probe": {
+      "url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/api/push/public-key",
+      "status": 503,
+      "error": "push_not_configured",
+      "cache_control": "no-store",
+      "at": "Sat, 03 Oct 2026 10:20:58 GMT"
+    }
+  },
+  "limitations": [
+    "Browser responsivo não é prova de Android físico, instalação PWA, atualização ou offline real.",
+    "Recebimento push não testado; endpoint continua sem configuração.",
+    "Elgyem de 8/10 está fora da Semana atual e dos seis próximos da Home observada.",
+    "Thundurus é fim de semana de Reides Sombrosas, sem janela global artificial na FLY.",
+    "A aprovação humana das duas candidatas e promoção para produção continuam pendentes."
+  ],
+  "checked_at": "2026-10-03T10:20:58Z",
+  "deployment_id": "dpl_57gGY2xz7ksHTXjZzQSPtudp2V2g",
+  "deployment_state": "READY",
+  "source_classification": "COMMUNITY",
+  "inventory_window_20261001_07": {
+    "events": 23,
+    "approved": 8,
+    "pending_posters": 1,
+    "missing": 14
+  }
+}

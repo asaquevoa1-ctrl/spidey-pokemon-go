@@ -1,0 +1,82 @@
+{
+  "status": "PASSED_RESPONSIVE_PREVIEW",
+  "code_commit": "14fa3ad9c6f13f7c68674204a4673c019c903412",
+  "deployment_id": "dpl_GkvYqVcYvaL4tFBQwzkTEacyxARe",
+  "preview_url": "https://spidey-pokemon-e2uhsymr1-spidey3.vercel.app/spidey-app/index.html",
+  "observed_at": "2026-10-03T19:34:50.955Z",
+  "views": {
+    "mobile": {
+      "dialog": {
+        "clientWidth": 360,
+        "focus": "closeDialog",
+        "scrollTop": 0,
+        "scrollWidth": 360
+      },
+      "image": {
+        "complete": true,
+        "height": 1402,
+        "objectFit": "contain",
+        "src": "https://spidey-pokemon-e2uhsymr1-spidey3.vercel.app/spidey-app/assets/events/review/scenic-sunday-20261004-v2.png?v=0ecff3534586",
+        "width": 1122
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Domingo Pitoresco\n\nMais Pokémon na natureza e nas Rotas; Incenso atrai ainda mais nas Rotas, distância menor para doces de companheiro e até três encontros com Mateo.\n\nHorários e locais\nHorário\n04 de out., 00:00 → 04 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nMais Pokémon aparecendo na natureza e ao percorrer Rotas.\nIncenso atrai ainda mais Pokémon enquanto você percorre Rotas.\nDistância reduzida para ganhar doces ao explorar Rotas com seu Pokémon companheiro.\nMateo pode ser encontrado até três vezes no dia ao percorrer Rotas.\nObservações\nEevee na arte é um companheiro ilustrativo; nenhuma espécie específica é anunciada como destaque desta Descoberta Diária.\nO guia atual da Leek Duck informa estes bônus para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      }
+    },
+    "desktop": {
+      "dialog": {
+        "clientWidth": 703,
+        "focus": "closeDialog",
+        "scrollTop": 0,
+        "scrollWidth": 703
+      },
+      "image": {
+        "complete": true,
+        "height": 1402,
+        "objectFit": "contain",
+        "src": "https://spidey-pokemon-e2uhsymr1-spidey3.vercel.app/spidey-app/assets/events/review/scenic-sunday-20261004-v2.png?v=0ecff3534586",
+        "width": 1122
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Domingo Pitoresco\n\nMais Pokémon na natureza e nas Rotas; Incenso atrai ainda mais nas Rotas, distância menor para doces de companheiro e até três encontros com Mateo.\n\nHorários e locais\nHorário\n04 de out., 00:00 → 04 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nMais Pokémon aparecendo na natureza e ao percorrer Rotas.\nIncenso atrai ainda mais Pokémon enquanto você percorre Rotas.\nDistância reduzida para ganhar doces ao explorar Rotas com seu Pokémon companheiro.\nMateo pode ser encontrado até três vezes no dia ao percorrer Rotas.\nObservações\nEevee na arte é um companheiro ilustrativo; nenhuma espécie específica é anunciada como destaque desta Descoberta Diária.\nO guia atual da Leek Duck informa estes bônus para a temporada; fonte comunitária, sujeita a alterações.\nAs Descobertas Diárias não ficam disponíveis durante as semanas dos eventos globais GO Fest, Área Selvagem GO e GO Tour.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      }
+    }
+  },
+  "served_download": "/home/oai/share/159dc8a2-1163-4c21-9f8d-c357462d4302/699e6115-08f4-4104-8deb-8caf6c92e86e",
+  "week": {
+    "range": "28/09–04/10",
+    "event_present": true,
+    "poster_thumbnail_observed": false
+  },
+  "limits": [
+    "Responsive browser views do not prove physical Android installation, updates, offline or push.",
+    "External tester access remains blocked by the login reported on the user phone.",
+    "Daily discovery has no new FLY eligibility or invented coordinates.",
+    "Existing generic location placeholder remains in the detail.",
+    "The week view shows this event as a text row; no poster thumbnail was observed in that view."
+  ],
+  "proofs": [
+    {
+      "file": "docs/qa/proofs/spidey-scenic-sunday-mobile-14fa3ad-20261003.jpg",
+      "bytes": 117226,
+      "sha256": "8c709fea94178223c3d42a0547b769ba8ebea5adcaf944b2e43150b3dc6b74e8"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-scenic-sunday-desktop-14fa3ad-20261003.jpg",
+      "bytes": 163934,
+      "sha256": "b60adb05c43800c6665757dfefc1c2f8ce99ac7e473fd3e3f21bd26b31984287"
+    }
+  ],
+  "served_png": {
+    "file": "spidey-app/assets/events/review/scenic-sunday-20261004-v2.png",
+    "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+    "bytes": 2739274,
+    "matches_reviewed_candidate": true
+  }
+}

@@ -1,54 +1,8 @@
-window.SPIDEY_PREMIUM_EVENT_ART = {
-  '2026-09-30-raid-hour-xerneas': {
-    standard: 'spidey-premium-v1',
-    alt: 'Hora de Reides — Xerneas — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/xerneas-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  },
-  '2026-10-01-spotlight-seedot': {
-    standard: 'spidey-premium-v1',
-    alt: 'Hora do Holofote — Seedot — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/seedot-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  },
-  '2026-10-05-max-monday-sizzlipede': {
-    standard: 'spidey-premium-v1',
-    alt: 'Segunda Max — Sizzlipede Dynamax — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/sizzlipede-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  },
-  '2026-10-zorua-community-day': {
-    standard: 'spidey-premium-v1',
-    alt: 'Dia Comunitário — Zorua — arte Premium Spidey aprovada',
-    assets: {
-      thumb: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
-      card: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
-      hero: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 },
-      poster: { url: 'assets/events/premium/zorua-premium-approved-v1.avif', width: 960, height: 1200 }
-    }
-  }
-};
-
-// O catálogo aprovado é soberano. Nenhum fallback, pack tardio ou script de
-// compatibilidade pode trocar estas quatro artes por SVG, placeholder ou
-// artwork genérico.
-Object.freeze(window.SPIDEY_PREMIUM_EVENT_ART);
-for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
-  Object.freeze(entry.assets);
-  Object.freeze(entry);
-}
+// Only the canonical approved registry grants visual approval.
+window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(window.SPIDEY_APPROVED_ART_MASTER).map(([id,e])=>{
+ const asset=()=>Object.freeze({url:e.file,width:e.width,height:e.height,sha256:e.sha256});
+ return [id,Object.freeze({standard:'spidey-premium-v1',visualApproved:true,premium_visual_approved:true,assets:Object.freeze({thumb:asset(),card:asset(),hero:asset(),poster:asset()})})];
+})));
 
 (function installSpideyArtPriorityFix() {
   if (typeof spideyResolveEventArt !== 'function' || typeof spideyArtUsable !== 'function') return;
@@ -63,6 +17,14 @@ for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
   };
 
   function premiumAsset(event, role = 'card') {
+    const approved=window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
+    if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file]){
+      const review=window.SpideyReviewArt?.resolve(event);
+      if(!review)return null;
+      const asset={url:review.file,width:review.width,height:review.height,sha256:review.sha256,
+        sourceRole:'preview_correction:poster',status:review.status};
+      return spideyArtUsable(asset,role)?asset:null;
+    }
     const entry = window.SPIDEY_PREMIUM_EVENT_ART?.[event?.id];
     if (!entry?.assets) return null;
     const roles = roleOrder[role] || roleOrder.card;
@@ -83,6 +45,13 @@ for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
   }
 
   spideyResolveEventArt = function spideyResolveEventArtPriorityFixed(event, role = 'card') {
+    if(window.SPIDEY_APPROVED_ART_MASTER?.[event?.id])return premiumAsset(event,role);
+    const review=window.SpideyReviewArt?.poster(event);
+    if(review){
+      const asset={url:review.file,width:review.width,height:review.height,sha256:review.sha256,
+        sourceRole:'preview_candidate:poster',status:review.status};
+      if(spideyArtUsable(asset,role))return asset;
+    }
     return premiumAsset(event, role) || baseResolve(event, role);
   };
 
@@ -121,7 +90,12 @@ for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
     'Shadow Raids': 'Reides Sombrosas',
     'Team GO Rocket': 'Equipe GO Rocket',
     'Community Day': 'Dia Comunitário',
-    'Max Battle Day': 'Dia de Batalhas Max'
+    'Max Battle Day': 'Dia de Batalhas Max',
+    'Harvest': 'Festival da Colheita',
+    'Astronaut Pikachu': 'Pikachu Astronauta',
+    'Space Week': 'Semana do Espaço',
+    'Shadow Raid': 'Reide Sombria',
+    'GO Battle League': 'Liga de Batalha GO'
   };
 
   const CATEGORY_TONE = {
@@ -153,6 +127,10 @@ for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
       .replace(/^Max Monday:/i, 'Segunda Max:')
       .replace(/^Community Day:/i, 'Dia Comunitário:')
       .replace(/^Max Battle Day:/i, 'Dia de Batalhas Max:')
+      .replace(/^Shadow Raids:/i, 'Reides Sombrosas:')
+      .replace(/^GO Battle League:/i, 'Liga de Batalha GO:')
+      .replace(/^Mega Reides:/i, 'Megarreides:')
+      .replace(/\bDynamax\b/gi, 'Dinamax')
       .replace(/\bChoose Your Path\b/gi, 'Escolha seu caminho')
       .replace(/\bRaid Day\b/gi, 'Dia de Reides');
   }
@@ -185,7 +163,7 @@ for (const entry of Object.values(window.SPIDEY_PREMIUM_EVENT_ART)) {
   function isLocalSpecificAsset(asset) {
     const role = String(asset?.sourceRole || '');
     const url = String(asset?.url || '');
-    return role.startsWith('premium_catalog:') || /festival-das-luzes-approved\.png/i.test(url) || /assets\/events\/premium\//i.test(url);
+    return role.startsWith('premium_catalog:') || role.startsWith('preview_correction:') || role.startsWith('preview_candidate:') || /festival-das-luzes-approved\.png/i.test(url) || /assets\/events\/premium\//i.test(url);
   }
 
   function applyResolvedImage(image, event, role) {

@@ -1,0 +1,103 @@
+{
+  "code_commit": "97c6823f1efb180782550ef22bf660416a1aebdc",
+  "total": 23,
+  "counts": {
+    "APPROVED": 9,
+    "PENDING_REVIEW": 1,
+    "MISSING": 13
+  },
+  "rows": [
+    {
+      "id": "2026-09-twilight-trails-season",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-09-go-pass",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-09-harvest-festival-applin",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-09-raids-xerneas",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-09-mega-victreebel-raids",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-09-gbl-29-1006",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-09-iit-delhi-rendezvous",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-harvest-taken-over",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-10-patterns-of-the-wild-indonesia",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-gigantamax-cinderace-max-day",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-10-world-space-week",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-go-pass",
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "id": "2026-10-01-spotlight-seedot",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-10-07-raid-hour-yveltal",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-10-05-max-monday-sizzlipede",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-raids-yveltal",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-10-mega-blastoise-raids",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-10-gbl-06-13",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-shadow-thundurus",
+      "status": "APPROVED"
+    },
+    {
+      "id": "2026-10-04-scenic-sunday",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-06-showcase-tuesday",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-01-go-battle-thursday",
+      "status": "MISSING"
+    },
+    {
+      "id": "2026-10-02-friendship-friday",
+      "status": "MISSING"
+    }
+  ]
+}

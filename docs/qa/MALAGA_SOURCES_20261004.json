@@ -1,0 +1,63 @@
+{
+  "status": "PASSED_PREVIEW",
+  "checked_at": "2026-10-04T15:14:19.506026+00:00",
+  "base_commit": "3e02d5b6d9f5f6814d2bea5e6e0d6d89b34a147e",
+  "branch": "spidey-fly-v1",
+  "user_request": {
+    "text": "Ficou show. Evento em Malga tbm está acontecendo, tem fundo tbm. Bora. Quase acabando heim.",
+    "at": "2026-10-04T12:03:50-03:00"
+  },
+  "event_id": "2026-10-comic-con-malaga",
+  "official": {
+    "url": "https://pokemongo.com/es/news/comic-con-malaga-2026",
+    "published_date": "2026-09-07",
+    "dates": "2026-10-01 09:00 → 2026-10-04 20:00 Europe/Madrid",
+    "end_brasilia": "2026-10-04 15:00 America/Sao_Paulo",
+    "reward": "Pikachu with Málaga Location Background from exclusive Field and Timed Research encounters",
+    "locations": [
+      "FYCMA",
+      "Centro Comercial Larios Centro",
+      "Málaga Historic Centre"
+    ],
+    "convention_entry": "Convention ticket required for FYCMA entry",
+    "larios_booth": "October 2 and 3, 10:00–20:00, per official source; game event window ends October 4 at 20:00"
+  },
+  "background": {
+    "file": "spidey-app/assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 538698,
+    "sha256": "37bb7561eb4b942f30614bdae8f2e1daa95ead617794f291af37acad409581d5",
+    "source_blob_sha": "d5b768a2b40df0e789f6a10746a6ce2c9d78c7b0",
+    "original_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_2026_ComicCon_Malaga.png",
+    "classification": "datamined_game_asset",
+    "city_mapping_url": "https://serebii.net/pokemongo/reallifeevents/sandiegocomicconmalaga.shtml",
+    "pixel_editing": false
+  },
+  "source_priority": {
+    "dittobase": "Used only as independent image identification; date ending October 5 and zero eligible Pokémon are not used. Official announcement controls dates/reward.",
+    "unofficial_larios_booth_dates": "Different community dates/hours not adopted; official source used."
+  },
+  "scope": {
+    "specific_daily_tasks": "DISMISSED_BY_PREVIOUS_USER_INSTRUCTION_NOT_REINTRODUCED",
+    "gpx": "DISMISSED_BY_PREVIOUS_USER_INSTRUCTION_NO_ROUTE_CREATED",
+    "approximate_coordinates_added": 0,
+    "maps": "Three official venue addresses/region names",
+    "global_world_route": "Unchanged; local Málaga card links to its own local details",
+    "premium_art": "Existing 25 masters untouched; original background is not promoted to Premium art",
+    "production_promotion": false
+  },
+  "checks": {
+    "node_tests": 43,
+    "node_syntax": "PASSED",
+    "protected_local_files_compared_to_base": 35,
+    "catalog_events": 124,
+    "masters": 25,
+    "browser": "PASSED_DESKTOP_DARK_MOBILE_LIGHT"
+  },
+  "code_commit": "ff84fe8b344d413d87548f4e083e72ad6ea00ad8",
+  "verified_at": "2026-10-04T15:45:04.087879+00:00",
+  "qa_record": "docs/qa/MALAGA_QA_20261004.json"
+}

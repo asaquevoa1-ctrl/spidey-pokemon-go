@@ -1,0 +1,65 @@
+{
+  "schema_version": "spidey-local-events-v1",
+  "events": [
+    {
+      "id": "2026-10-comic-con-malaga",
+      "title": "Pokémon GO × Comic-Con Málaga 2026",
+      "place": "Málaga, Espanha",
+      "dates": "1–4 out 2026",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Pikachu com Fundo de Localização de Málaga em encontros de Pesquisa de Campo e Pesquisa temporária do evento.",
+      "schedule": {
+        "start_date": "2026-10-01",
+        "start_time": "09:00",
+        "end_date": "2026-10-04",
+        "end_time": "20:00",
+        "timezone": "Europe/Madrid"
+      },
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/es/news/comic-con-malaga-2026",
+        "confidence": "official"
+      },
+      "location_background": {
+        "file": "assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png",
+        "width": 512,
+        "height": 512,
+        "bytes": 538698,
+        "sha256": "37bb7561eb4b942f30614bdae8f2e1daa95ead617794f291af37acad409581d5",
+        "alt": "Fundo de Localização de Málaga no Pokémon GO: panorama da cidade e do porto",
+        "classification": "datamined_game_asset",
+        "source_url": "https://github.com/PokeMiners/pogo_assets/blob/master/Images/LocationCards/lc_2026_ComicCon_Malaga.png",
+        "original_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_2026_ComicCon_Malaga.png",
+        "city_mapping_url": "https://serebii.net/pokemongo/reallifeevents/sandiegocomicconmalaga.shtml"
+      },
+      "bonuses": [
+        "Confetes temáticos no mapa.",
+        "Poképaradas e Ginásios adicionais.",
+        "Encontros surpresa com Smeargle em Retratos GO.",
+        "Pokémon da região de Paldea na natureza."
+      ],
+      "locations": [
+        {
+          "id": "fycma",
+          "name": "FYCMA · Palacio de Ferias y Congresos",
+          "address": "Av. de las Palomas, 29006 Málaga, Espanha",
+          "access_note": "Ingresso da Comic-Con exigido para entrar na convenção."
+        },
+        {
+          "id": "larios-centro",
+          "name": "Centro Comercial Larios Centro",
+          "address": "Av. de la Aurora, 25, 29002 Málaga, Espanha",
+          "access_note": "Stand presencial em 2 e 3/10, das 10h às 20h, sem ingresso da Comic-Con. O período das atividades no jogo termina em 4/10 às 20h."
+        },
+        {
+          "id": "historic-centre",
+          "name": "Centro Histórico de Málaga",
+          "address": "Centro Histórico, Málaga, Espanha",
+          "access_note": "Região anunciada para as atividades no jogo."
+        }
+      ]
+    }
+  ]
+}

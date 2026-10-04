@@ -1,0 +1,141 @@
+{
+  "status": "IMPLEMENTED_VERIFIED_PREVIEW",
+  "date": "2026-10-01",
+  "branch": "spidey-fly-v1",
+  "base_commit": "887a2cd558c65ff86d7cb039ab0a91c23ffc859f",
+  "observed_main_commit": "6045937721658a8c6f01819ec483e0bb53190452",
+  "catalog_count_before": 121,
+  "catalog_count_after": 124,
+  "authority": "spidey-app/data/events.json; Novidades is derived, not a separate catalog",
+  "added_ids": [
+    "2026-10-minior-orionids",
+    "2026-11-minior-leonids",
+    "2026-12-minior-geminids"
+  ],
+  "updated_existing_ids": [
+    "2026-10-dynamax-max-battle-day",
+    "2026-10-patterns-of-the-wild-indonesia",
+    "2026-09-mega-victreebel-raids"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+      "queue_path": "queue/pending/2026-10-01/oficial-noticia-8249a3c8aadb.json",
+      "supports": [
+        "Minior debut; Orionids 19–24/10, Leonids 14–19/11, Geminids 11–16/12",
+        "Overall windows start 17:00 and end 23:59 local; daily increased encounters 17–21",
+        "Geminids different cores by hemisphere; exact colors not assigned"
+      ]
+    },
+    {
+      "url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+      "queue_path": "queue/pending/2026-10-01/oficial-noticia-b22df4c89071.json",
+      "supports": [
+        "24/10 14–17 local, five-star Max Battles; region-dependent Uxie/Mesprit/Azelf",
+        "free particles/trade bonuses and separate paid ticket benefits",
+        "fixed remote raid window PDT converted to Brasília 23/10 21:00 through 25/10 00:00"
+      ]
+    },
+    {
+      "url": "https://pokemongo.com/news/patterns-of-the-wild-2026",
+      "supports": [
+        "Indonesia 02/10 10–20 local; Pikachu batik + Special Background",
+        "incense two hours, shiny chance, timed research 28/09 06 to 10/10 23:59"
+      ]
+    }
+  ],
+  "regional_route": {
+    "status": "PARTIAL_REGION_LABELS",
+    "known_rows": 25,
+    "total_rows": 28,
+    "policy": "Explicit per-timezone association from known geography and official regional list, not a broad Asia-prefix heuristic; India maps to Mesprit.",
+    "unconfirmed_timezones": [
+      "Pacific/Kiritimati",
+      "Pacific/Honolulu",
+      "Pacific/Pago_Pago"
+    ],
+    "reason": "Primary announcement specifies regions, not exact island boundaries; do not guess island allocation."
+  },
+  "news_rules": [
+    "One official article per story, related periods retain separate calendar IDs/actions",
+    "Do not collapse independent community events sharing a calendar URL",
+    "Order by actual catalog update; expired periods drop out",
+    "No generated queue JPG is promoted to Premium or APPROVED"
+  ],
+  "pending_secondary": [
+    {
+      "path": "queue/pending/2026-10-01/g47ix-noticia-36632bffe466.json",
+      "topic": "Rocket leader lineups Arlo/Grimer, Sierra/Pancham, Cliff/Cubone",
+      "reason": "Harvest primary article does not identify those exact lineups; not added as official claims."
+    }
+  ],
+  "pipeline": {
+    "collection": "Official/G47IX/PokeMiners items observed on main",
+    "app_ingestion": "Editorial update in this branch; automatic live news ingestion not newly proved"
+  },
+  "art_review": "docs/qa/MEGA_VICTREEBEL_REVIEW_20261001.json",
+  "qa": {
+    "status": "PASSED_BROWSER_MOBILE_DESKTOP",
+    "node_tests_passed": 21,
+    "active_scripts_syntax": 19,
+    "sw_syntax": true,
+    "unique_event_ids": 124,
+    "precache_files": 66,
+    "precache_local_bytes": 18906598,
+    "master_byte_identical_to_base": true,
+    "code_commit": "282ea97f5f7c3890890ec60249ff4ee9e60e769a",
+    "preview_url": "https://spidey-pokemon-8hxqv2mhj-spidey3.vercel.app/spidey-app/index.html",
+    "deployment_id": "dpl_5z7TiyUrGzgErZSe9ttfvR4vRy7B",
+    "browser_evidence": "docs/qa/news-browser-evidence-282ea97-20261001.json",
+    "proofs": [
+      {
+        "file": "docs/qa/mega-victreebel-desktop-review-282ea97-20261001.jpg",
+        "sha256": "27ea58fca0f9a274ebe1380c55cc7394ff2f1ade020ec45e6d6788d863ee94f4",
+        "bytes": 149911,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/mega-victreebel-direct-review-282ea97-20261001.jpg",
+        "sha256": "8dc1f2759be7c3137bfad1b3aa91eacba28f51e7e7eaac119b665ce3d2145174",
+        "bytes": 132484,
+        "size": [
+          1348,
+          926
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/mega-victreebel-mobile-review-282ea97-20261001.jpg",
+        "sha256": "ecfe214ebac34abce5497c87b8dedc5b5e974a57486994cc6ccf870a700d6c3c",
+        "bytes": 105625,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      },
+      {
+        "file": "docs/qa/news-desktop-282ea97-20261001.jpg",
+        "sha256": "d87c135f0cbd7ae11dcd7fd5668aa0c97cc9bc552644ec7e99cd0eed22c8b98a",
+        "bytes": 108549,
+        "size": [
+          1363,
+          936
+        ],
+        "format": "JPEG"
+      }
+    ],
+    "android_physical": "PENDING",
+    "pwa_install_update_offline_push": "PENDING",
+    "clipboard": {
+      "status": "PASSED_DESKTOP_DIRECT_APP",
+      "expected": "25.033964,121.564468",
+      "actual": "25.033964,121.564468"
+    },
+    "gpx_download": "PENDING"
+  }
+}

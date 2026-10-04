@@ -1,0 +1,158 @@
+{
+  "status": "PASSED_DOWNLOADED_XML",
+  "code_commit": "0433c322c43839f13a36996d52e511475c8739ae",
+  "download_source": "Click on native Baixar GPX completo link in responsive iframe at exact deployed preview; event waiter timed out but newly created shared download was captured on disk.",
+  "preview_url": "https://spidey-pokemon-bwb814dm8-spidey3.vercel.app/spidey-app/index.html",
+  "download_path": "/workspace/scratch/pokemon-centre-stamp-rally-japan-2026 (3).gpx",
+  "download_mtime_utc": "2026-10-02T23:58:30.916905+00:00",
+  "verified_at": "2026-10-03T00:00:00.863712+00:00",
+  "bytes": 1890,
+  "sha256": "8870435145133c11894b923dad8dead2bff056e78a7c79104346fb1e7e12382a",
+  "rally_id": "pokemon-centre-japan-stamp-rally-2026",
+  "xml_namespace": "http://www.topografix.com/GPX/1/1",
+  "gpx_version": "1.1",
+  "creator": "Spidey Pokemon GO",
+  "waypoint_count": 17,
+  "all_coordinates_names_and_order_match_deployed_catalog": true,
+  "catalog_ref": "0433c322c43839f13a36996d52e511475c8739ae",
+  "catalog_sha256": "5ae1372067cfde99a2caaa03315de6d545d0da847c47db21fd1d1e632482cd8c",
+  "points": [
+    {
+      "stop_id": "pokemon-centre-fukuoka",
+      "name": "1 Fukuoka - Pokémon Center Fukuoka",
+      "latitude": "33.5891079",
+      "longitude": "130.4189541",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-hiroshima",
+      "name": "2 Hiroshima - Pokémon Center Hiroshima",
+      "latitude": "34.3975655",
+      "longitude": "132.4760766",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-mega-tokyo",
+      "name": "3 Tóquio - Pokémon Center Mega Tokyo",
+      "latitude": "35.729001",
+      "longitude": "139.719222",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-kanazawa",
+      "name": "4 Kanazawa - Pokémon Center Kanazawa",
+      "latitude": "36.579525",
+      "longitude": "136.6502223",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-kyoto",
+      "name": "5 Kyoto - Pokémon Center Kyoto",
+      "latitude": "35.003299",
+      "longitude": "135.758527",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-nagoya",
+      "name": "6 Nagoya - Pokémon Center Nagoya",
+      "latitude": "35.1634532",
+      "longitude": "136.9080594",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-okinawa",
+      "name": "7 Okinawa - Pokémon Center Okinawa",
+      "latitude": "26.3137481",
+      "longitude": "127.7962646",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-osaka",
+      "name": "8 Osaka - Pokémon Center Osaka",
+      "latitude": "34.7018922",
+      "longitude": "135.4965156",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-osaka-dx",
+      "name": "9 Osaka - Pokémon Center Osaka DX",
+      "latitude": "34.6730521",
+      "longitude": "135.5008889",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-sapporo",
+      "name": "10 Sapporo - Pokémon Center Sapporo",
+      "latitude": "43.0673036",
+      "longitude": "141.3491093",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-shibuya",
+      "name": "11 Tóquio - Pokémon Center Shibuya",
+      "latitude": "35.6618975",
+      "longitude": "139.6984319",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-skytree",
+      "name": "12 Tóquio - Pokémon Center Skytree Town",
+      "latitude": "35.710219",
+      "longitude": "139.81263",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-tohoku",
+      "name": "13 Sendai - Pokémon Center Tohoku",
+      "latitude": "38.262002",
+      "longitude": "140.881438",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-tokyo-bay",
+      "name": "14 Funabashi - Pokémon Center Tokyo-Bay",
+      "latitude": "35.6865458",
+      "longitude": "139.9889456",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-tokyo-dx",
+      "name": "15 Tóquio - Pokémon Center Tokyo DX",
+      "latitude": "35.6802407",
+      "longitude": "139.7744405",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-centre-yokohama",
+      "name": "16 Yokohama - Pokémon Center Yokohama",
+      "latitude": "35.464574",
+      "longitude": "139.624579",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    },
+    {
+      "stop_id": "pokemon-store-takamatsu",
+      "name": "17 Takamatsu - Pokémon Store / ponto temporário Takamatsu",
+      "latitude": "34.3422443",
+      "longitude": "134.0502726",
+      "coordinate_type": "exact_pokestop",
+      "coordinate_confidence": "community_verified"
+    }
+  ],
+  "incomplete_rally_no_full_download_link": true
+}

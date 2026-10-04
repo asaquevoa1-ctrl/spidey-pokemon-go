@@ -1,0 +1,78 @@
+{
+  "status": "PENDING_REVIEW",
+  "approval": null,
+  "date": "2026-10-02",
+  "event_id": "2026-10-zorua-community-day",
+  "candidate": {
+    "file": "spidey-app/assets/events/review/zorua-community-day-correction-v1.png",
+    "display": "full_poster",
+    "tool": "image_gen",
+    "prompt": "Use case: text-localization\nAsset type: pôster vertical completo de evento para o aplicativo Spidey Pokémon GO.\nPrimary request: editar a arte original fornecida, conservando fielmente sua ilustração de Zorua, cenário noturno japonês com folhas vermelhas e lua, acabamento cinematográfico, emblema e marca oficial Spidey já presentes no topo, tipografia premium e contraste azul/vermelho. Corrigir exclusivamente as informações do evento para o Dia Comunitário oficial de Zorua em outubro de 2026. Não redesenhar o emblema Spidey.\nInput image 1: alvo de edição, pôster original recuperado. Os dados antigos impressos nele estão errados e devem ser substituídos.\nText (verbatim):\n\"DIA COMUNITÁRIO\"\n\"ZORUA\"\n\"10 DE OUTUBRO DE 2026\"\n\"DAS 14H ÀS 17H • HORÁRIO LOCAL\"\n\"3× PE POR CAPTURA\"\n\"2× DOCES POR CAPTURA\"\n\"ZOROARK COM SOCO ENGANADOR\"\n\"EVOLUA ATÉ AS 21H\"\n\"Fonte: Pokémon GO oficial\"\nManter a marca Spidey Pokémon GO e assinatura existentes. Substituir os quatro quadros inferiores por três blocos legíveis com os dois bônus de captura e o ataque de Zoroark, com a linha de prazo da evolução junto ao ataque. O texto do evento deve ser exatamente o especificado, em português brasileiro, com acentos corretos. Retirar \"EM DESTAQUE\", data 3–9, horário 10–20h, \"detalhes em breve\" e demais claims genéricos antigos.\nConstraints: arquivo íntegro, pôster vertical completo, marca no topo e fonte no rodapé visíveis, nenhum texto truncado, nada de tabelas corporativas. Manter Zorua como protagonista; não adicionar outros Pokémon, PokéStops, Power Spots, torres Max, logos novos ou bônus não listados. Esta peça será candidata à revisão humana, não representar aprovação automática.",
+    "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+    "width": 1121,
+    "height": 1403,
+    "bytes": 2299199
+  },
+  "input": {
+    "file": "spidey-app/assets/events/recovered/1000431272.png",
+    "sha256": "2ac4a1fd65a1aaed9f792611913584f428c00999fcaf0c81ba2820709dc24af9"
+  },
+  "factual_review": {
+    "source": "Pokémon GO oficial",
+    "url": "https://pokemongo.com/pt-BR/news/communityday-october-2026-zorua",
+    "start_local": "2026-10-10T14:00:00",
+    "end_local": "2026-10-10T17:00:00",
+    "evolution_deadline_local": "2026-10-10T21:00:00",
+    "claims": [
+      "3× PE por captura",
+      "2× Doces por captura",
+      "Zoroark recebe o ataque ágil Soco Enganador ao evoluir até 21h locais"
+    ]
+  },
+  "blocked": [
+    {
+      "event_id": "2026-10-05-max-monday-sizzlipede",
+      "status": "GENERATION_REFUSED",
+      "file": null,
+      "request_id": "b4adb8ce-c10c-4fbd-a61a-52e9b82ddf09",
+      "reason": "moderation_blocked at output, category other",
+      "prompt": "Use case: style-transfer\nAsset type: pôster vertical completo Spidey Pokémon GO, candidato à revisão.\nPrimary request: reconstruir em alta definição o pôster antigo de Sizzlipede, eliminando sua baixa qualidade e textos borrados, mantendo a energia cinematográfica vermelha e azul da identidade Spidey. Usar Sizzlipede Dinamax como protagonista, fiel à anatomia da referência oficial fornecida, com nuvens Dinamax magenta e cenário noturno de Batalhas Max.\nInput image 1: alvo antigo a reconstruir, NÃO é arte aprovada; conservar o tema, melhorar completamente a nitidez e a leitura.\nInput image 2: referência exata da anatomia de Sizzlipede: corpo pequeno, achatado e segmentado, cabeça vermelha e antenas amarelas; não confundir com Centiskorch ou sua forma Gigamax. Dinamax aumenta seu tamanho sem transformar o corpo.\nInput image 3: referência da identidade visual, marca e emblema Spidey que devem ser preservados fielmente, sem inventar outro logo. Usar apenas a marca e o acabamento editorial, não Zorua nem o cenário japonês.\nComposition: retrato vertical completo; cabeçalho Spidey, grande ilustração pictórica original de Sizzlipede em ambiente Max, título impactante, data e horário legíveis, três benefícios curtos e rodapé com fonte. Cores de fogo laranja/vermelho com azul elétrico e magenta. Acabamento Premium de campanha, sem aparência de slide corporativo.\nText (verbatim):\n\"SEGUNDA MAX\"\n\"SIZZLIPEDE\"\n\"DINAMAX\"\n\"5 DE OUTUBRO DE 2026\"\n\"DAS 6H ÀS 21H • HORÁRIO LOCAL\"\n\"PONTOS DE ENERGIA MAIS FREQUENTES\"\n\"MAIS PONTOS DE ENERGIA ATIVOS\"\n\"SIZZLIPEDE NAS BATALHAS MAX\"\n\"Fonte: Leek Duck • comunidade\"\nConstraints: português brasileiro, todas as letras e acentos corretos, fonte identificada como comunidade. Não incluir 'oficial' para a programação, 'exclusivo', probabilidade de Brilhante, bônus de PE/Doces, datas 5–11 como duração da Segunda Max, símbolos de reides convencionais ou outros Pokémon. Marca oficial no topo, fonte no rodapé; arte íntegra e nítida; sem cortes, pixelização ou texto antigo residual.",
+      "sources": [
+        "https://leekduck.com/events/max-mondays-2026-10-05/",
+        "https://pokemongo.com/en/seasons/twilight-trails"
+      ],
+      "note": "Não alterar prompt para contornar a recusa; nenhum novo asset nem aprovação inferida."
+    }
+  ],
+  "preserved": "Master e todos os arquivos aprovados preservados. Original Zorua mantido byte a byte.",
+  "qa": {
+    "status": "PREVIEW_VERIFIED_APPROVAL_PENDING",
+    "code_commit": "a2b56386e2eed9ba5cd173c7fb3590e8aa122f88",
+    "preview_url": "https://spidey-pokemon-cg9922frj-spidey3.vercel.app/spidey-app/index.html",
+    "record": "docs/qa/DOWNLOAD_PUSH_ZORUA_QA_20261002.json",
+    "browser": "docs/qa/spidey-browser-a2b5638-20261002.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-zorua-mobile-verified-a2b5638-20261002.jpg",
+        "sha256": "917df2a4f3b16f1ebdb874e62490d80d96c022f5287f171074a672a53078e2fe",
+        "bytes": 102023
+      },
+      {
+        "file": "docs/qa/proofs/spidey-zorua-desktop-a2b5638-20261002.jpg",
+        "sha256": "d3e9191938bacc94c97967fb77c96f8e1ca45aa496fe953d3be4ba802fe5232c",
+        "bytes": 135012
+      },
+      {
+        "file": "docs/qa/proofs/spidey-zorua-fly-a2b5638-20261002.jpg",
+        "sha256": "d3f43e0ee86f7f910030173beba6b36b3c4e1b8c81280653e8ec0f6b5af5ff5f",
+        "bytes": 97824
+      }
+    ],
+    "served_hash_proof": null,
+    "limits": [
+      "Browser responsivo não é Android físico.",
+      "Imagem servida renderizou 1121×1403 e URI com hash esperado; captura dos bytes expirou, sem prova SHA256 dos bytes servidos nesta rodada.",
+      "Home seis próximos e Semana atual não incluem Zorua de 10/10; não há nova prova visual nessas duas superfícies."
+    ]
+  }
+}

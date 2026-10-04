@@ -1,0 +1,523 @@
+{
+  "status": "PASSED_LOCAL_AUDIT",
+  "created_at": "2026-10-04T02:46:48.448Z",
+  "new_artworks": 7,
+  "master_entries": 25,
+  "previous_master_entries_preserved": 18,
+  "previous_approved_files_preserved": 17,
+  "preview_registry_unchanged_empty": true,
+  "catalog_events": 124,
+  "other_catalog_events_unchanged": 117,
+  "catalog_changed_fields": [
+    {
+      "event_id": "2026-09-twilight-trails-season",
+      "fields": [
+        "title",
+        "summary",
+        "source",
+        "notes"
+      ]
+    },
+    {
+      "event_id": "2026-09-gbl-29-1006",
+      "fields": [
+        "title",
+        "summary",
+        "source",
+        "notes",
+        "bonuses"
+      ]
+    },
+    {
+      "event_id": "2026-09-iit-delhi-rendezvous",
+      "fields": [
+        "summary",
+        "notes"
+      ]
+    },
+    {
+      "event_id": "2026-10-patterns-of-the-wild-indonesia",
+      "fields": [
+        "summary",
+        "notes",
+        "bonuses"
+      ]
+    },
+    {
+      "event_id": "2026-10-gbl-06-13",
+      "fields": [
+        "title",
+        "summary",
+        "source",
+        "notes",
+        "bonuses"
+      ]
+    },
+    {
+      "event_id": "2026-10-01-go-battle-thursday",
+      "fields": [
+        "summary",
+        "source",
+        "notes",
+        "bonuses"
+      ]
+    },
+    {
+      "event_id": "2026-10-02-friendship-friday",
+      "fields": [
+        "summary",
+        "source",
+        "notes",
+        "bonuses"
+      ]
+    }
+  ],
+  "schedules_locations_gpx_notifications_calendar_preserved": true,
+  "new_fly_eligibility": false,
+  "existing_test_assertions_preserved_except_approved_id_sets": true,
+  "cache": "spidey-app-20261004-remaining-approved-v1",
+  "cache_files": 85,
+  "roles": {
+    "2026-09-twilight-trails-season": {
+      "thumb": {
+        "url": "assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+        "sourceRole": "premium_catalog:thumb",
+        "standard": "spidey-premium-v1"
+      },
+      "card": {
+        "url": "assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "weekly": {
+        "url": "assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "hero": {
+        "url": "assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+        "sourceRole": "premium_catalog:hero",
+        "standard": "spidey-premium-v1"
+      },
+      "poster": {
+        "url": "assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+        "sourceRole": "premium_catalog:poster",
+        "standard": "spidey-premium-v1"
+      }
+    },
+    "2026-09-gbl-29-1006": {
+      "thumb": {
+        "url": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+        "sourceRole": "premium_catalog:thumb",
+        "standard": "spidey-premium-v1"
+      },
+      "card": {
+        "url": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "weekly": {
+        "url": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "hero": {
+        "url": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+        "sourceRole": "premium_catalog:hero",
+        "standard": "spidey-premium-v1"
+      },
+      "poster": {
+        "url": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+        "sourceRole": "premium_catalog:poster",
+        "standard": "spidey-premium-v1"
+      }
+    },
+    "2026-10-gbl-06-13": {
+      "thumb": {
+        "url": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+        "sourceRole": "premium_catalog:thumb",
+        "standard": "spidey-premium-v1"
+      },
+      "card": {
+        "url": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "weekly": {
+        "url": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "hero": {
+        "url": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+        "sourceRole": "premium_catalog:hero",
+        "standard": "spidey-premium-v1"
+      },
+      "poster": {
+        "url": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+        "sourceRole": "premium_catalog:poster",
+        "standard": "spidey-premium-v1"
+      }
+    },
+    "2026-09-iit-delhi-rendezvous": {
+      "thumb": {
+        "url": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+        "sourceRole": "premium_catalog:thumb",
+        "standard": "spidey-premium-v1"
+      },
+      "card": {
+        "url": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "weekly": {
+        "url": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "hero": {
+        "url": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+        "sourceRole": "premium_catalog:hero",
+        "standard": "spidey-premium-v1"
+      },
+      "poster": {
+        "url": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+        "sourceRole": "premium_catalog:poster",
+        "standard": "spidey-premium-v1"
+      }
+    },
+    "2026-10-patterns-of-the-wild-indonesia": {
+      "thumb": {
+        "url": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+        "sourceRole": "premium_catalog:thumb",
+        "standard": "spidey-premium-v1"
+      },
+      "card": {
+        "url": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "weekly": {
+        "url": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "hero": {
+        "url": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+        "sourceRole": "premium_catalog:hero",
+        "standard": "spidey-premium-v1"
+      },
+      "poster": {
+        "url": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+        "sourceRole": "premium_catalog:poster",
+        "standard": "spidey-premium-v1"
+      }
+    },
+    "2026-10-01-go-battle-thursday": {
+      "thumb": {
+        "url": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+        "sourceRole": "premium_catalog:thumb",
+        "standard": "spidey-premium-v1"
+      },
+      "card": {
+        "url": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "weekly": {
+        "url": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "hero": {
+        "url": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+        "sourceRole": "premium_catalog:hero",
+        "standard": "spidey-premium-v1"
+      },
+      "poster": {
+        "url": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+        "sourceRole": "premium_catalog:poster",
+        "standard": "spidey-premium-v1"
+      }
+    },
+    "2026-10-02-friendship-friday": {
+      "thumb": {
+        "url": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+        "sourceRole": "premium_catalog:thumb",
+        "standard": "spidey-premium-v1"
+      },
+      "card": {
+        "url": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "weekly": {
+        "url": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+        "sourceRole": "premium_catalog:card",
+        "standard": "spidey-premium-v1"
+      },
+      "hero": {
+        "url": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+        "sourceRole": "premium_catalog:hero",
+        "standard": "spidey-premium-v1"
+      },
+      "poster": {
+        "url": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+        "sourceRole": "premium_catalog:poster",
+        "standard": "spidey-premium-v1"
+      }
+    }
+  },
+  "inventory": {
+    "window": "2026-10-01/2026-10-07",
+    "events": 23,
+    "approved": 20,
+    "pending_posters": 0,
+    "missing": 3,
+    "rows": [
+      {
+        "event_id": "2026-09-twilight-trails-season",
+        "title": "Temporada: Trilhas do Entardecer",
+        "status": "APPROVED",
+        "file": "assets/events/premium/twilight-trails-season-2026-approved-v1.png?v=5814ead04c51"
+      },
+      {
+        "event_id": "2026-09-go-pass",
+        "title": "Passe GO: Setembro",
+        "status": "APPROVED",
+        "file": "assets/events/premium/go-pass-september-latios-approved-v1.png?v=d73632253693"
+      },
+      {
+        "event_id": "2026-09-harvest-festival-applin",
+        "title": "Festival da Colheita: Pomar de Applin",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-09-raids-xerneas",
+        "title": "Reides 5★: Xerneas",
+        "status": "APPROVED",
+        "file": "assets/events/premium/xerneas-rotation-approved-v1.png?v=b9e3b4629234"
+      },
+      {
+        "event_id": "2026-09-mega-victreebel-raids",
+        "title": "Mega Reides: Mega Victreebel",
+        "status": "APPROVED",
+        "file": "assets/events/premium/mega-victreebel-rotation-approved-v1.png?v=6cd064429903"
+      },
+      {
+        "event_id": "2026-09-gbl-29-1006",
+        "title": "Liga de Batalha GO: Liga Mestra + Mega Copa das Cores",
+        "status": "APPROVED",
+        "file": "assets/events/premium/gbl-20260929-1006-approved-v1.png?v=feb2ba30decb"
+      },
+      {
+        "event_id": "2026-09-iit-delhi-rendezvous",
+        "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
+        "status": "APPROVED",
+        "file": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png?v=f7432657d170"
+      },
+      {
+        "event_id": "2026-10-harvest-taken-over",
+        "title": "Festival da Colheita: A Invasão",
+        "status": "APPROVED",
+        "file": "assets/events/premium/harvest-invasion-approved-v1.png?v=918d1a673519"
+      },
+      {
+        "event_id": "2026-10-patterns-of-the-wild-indonesia",
+        "title": "Patterns of the Wild • Indonésia",
+        "status": "APPROVED",
+        "file": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png?v=6c16bdcfaf7d"
+      },
+      {
+        "event_id": "2026-10-gigantamax-cinderace-max-day",
+        "title": "Dia de Batalhas Max: Cinderace Gigamax",
+        "status": "APPROVED",
+        "file": "assets/events/premium/cinderace-max-day-approved-v1.png?v=b8f9b02488e8"
+      },
+      {
+        "event_id": "2026-10-world-space-week",
+        "title": "Semana Mundial do Espaço 2026",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-go-pass",
+        "title": "Passe GO: Outubro",
+        "status": "APPROVED",
+        "file": "assets/events/premium/go-pass-october-kyogre-approved-v1.png?v=c194eee09b62"
+      },
+      {
+        "event_id": "2026-10-01-spotlight-seedot",
+        "title": "Hora do Holofote: Seedot",
+        "status": "APPROVED",
+        "file": "assets/events/premium/seedot-spotlight-approved-v1.png?v=6ac0ebbd5b60"
+      },
+      {
+        "event_id": "2026-10-07-raid-hour-yveltal",
+        "title": "Hora de Reides: Yveltal",
+        "status": "APPROVED",
+        "file": "assets/events/premium/yveltal-raid-hour-approved-v1.png?v=a3881d22755b"
+      },
+      {
+        "event_id": "2026-10-05-max-monday-sizzlipede",
+        "title": "Max Monday: Dynamax Sizzlipede",
+        "status": "MISSING",
+        "file": null
+      },
+      {
+        "event_id": "2026-10-raids-yveltal",
+        "title": "Reides 5★: Yveltal",
+        "status": "APPROVED",
+        "file": "assets/events/premium/yveltal-rotation-approved-v1.png?v=dbed7399b3e3"
+      },
+      {
+        "event_id": "2026-10-mega-blastoise-raids",
+        "title": "Mega Reides: Mega Blastoise",
+        "status": "APPROVED",
+        "file": "assets/events/premium/mega-blastoise-rotation-approved-v1.png?v=474fa9a79395"
+      },
+      {
+        "event_id": "2026-10-gbl-06-13",
+        "title": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições",
+        "status": "APPROVED",
+        "file": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png?v=16bd92ceae7a"
+      },
+      {
+        "event_id": "2026-10-shadow-thundurus",
+        "title": "Reides Sombrosas: Thundurus (Forma Encarnada)",
+        "status": "APPROVED",
+        "file": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png?v=eb8141c8220c"
+      },
+      {
+        "event_id": "2026-10-04-scenic-sunday",
+        "title": "Descoberta Diária: Domingo Pitoresco",
+        "status": "APPROVED",
+        "file": "assets/events/premium/scenic-sunday-20261004-approved-v1.png?v=0ecff3534586"
+      },
+      {
+        "event_id": "2026-10-06-showcase-tuesday",
+        "title": "Descoberta Diária: Terça de Vitrine",
+        "status": "APPROVED",
+        "file": "assets/events/premium/showcase-tuesday-20261006-approved-v1.png?v=ac11ef360b59"
+      },
+      {
+        "event_id": "2026-10-01-go-battle-thursday",
+        "title": "Descoberta Diária: Quinta de Batalhas GO",
+        "status": "APPROVED",
+        "file": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png?v=6e0b6477b336"
+      },
+      {
+        "event_id": "2026-10-02-friendship-friday",
+        "title": "Descoberta Diária: Sexta da Amizade",
+        "status": "APPROVED",
+        "file": "assets/events/premium/friendship-friday-20261002-approved-v1.png?v=225434528606"
+      }
+    ]
+  }
+}

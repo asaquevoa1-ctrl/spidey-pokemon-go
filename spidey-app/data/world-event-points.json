@@ -9,25 +9,285 @@
     "coordinate_role": "timezone_reference"
   },
   "points": [
-    {"order":1,"flag":"🇰🇮","name":"Kiritimati, Kiribati","timezone":"Pacific/Kiritimati","lat":1.987149,"lon":-157.477137},
-    {"order":2,"flag":"🇳🇿","name":"Auckland, Nova Zelândia","timezone":"Pacific/Auckland","lat":-36.852095,"lon":174.763180},
-    {"order":3,"flag":"🇦🇺","name":"Sydney, Austrália","timezone":"Australia/Sydney","lat":-33.866173,"lon":151.205945},
-    {"order":4,"flag":"🇯🇵","name":"Shinjuku, Japão","timezone":"Asia/Tokyo","lat":35.688950,"lon":139.690540},
-    {"order":5,"flag":"🇹🇼","name":"Taipei, Taiwan","timezone":"Asia/Taipei","lat":25.033964,"lon":121.564468},
-    {"order":6,"flag":"🇮🇳","name":"Chennai, Índia","timezone":"Asia/Kolkata","lat":13.040300,"lon":80.266600},
-    {"order":7,"flag":"🇦🇪","name":"Dubai, Emirados Árabes","timezone":"Asia/Dubai","lat":25.076750,"lon":55.132940},
-    {"order":8,"flag":"🇹🇷","name":"Istambul, Turquia","timezone":"Europe/Istanbul","lat":41.008200,"lon":28.978400},
-    {"order":9,"flag":"🇪🇸","name":"Zaragoza, Espanha","timezone":"Europe/Madrid","lat":41.661609,"lon":-0.894640},
-    {"order":10,"flag":"🇬🇧","name":"Londres, Reino Unido","timezone":"Europe/London","lat":51.501000,"lon":-0.124600},
-    {"order":11,"flag":"🇨🇻","name":"Praia, Cabo Verde","timezone":"Atlantic/Cape_Verde","lat":14.910725,"lon":-23.527823},
-    {"order":12,"flag":"🇧🇷","name":"Fernando de Noronha, Brasil","timezone":"America/Noronha","lat":-3.840100,"lon":-32.411810},
-    {"order":13,"flag":"🇧🇷","name":"Ibirapuera, São Paulo","timezone":"America/Sao_Paulo","lat":-23.584171,"lon":-46.660725},
-    {"order":14,"flag":"🇺🇸","name":"Central Park, Nova York","timezone":"America/New_York","lat":40.780300,"lon":-73.963000},
-    {"order":15,"flag":"🇺🇸","name":"Chicago, EUA","timezone":"America/Chicago","lat":41.898659,"lon":-87.623077},
-    {"order":16,"flag":"🇺🇸","name":"Denver, EUA","timezone":"America/Denver","lat":39.739200,"lon":-104.990300},
-    {"order":17,"flag":"🇺🇸","name":"Pier 39, São Francisco","timezone":"America/Los_Angeles","lat":37.809500,"lon":-122.410100},
-    {"order":18,"flag":"🇺🇸","name":"Anchorage, Alasca","timezone":"America/Anchorage","lat":61.217019,"lon":-149.891609},
-    {"order":19,"flag":"🇺🇸","name":"Honolulu, Havaí","timezone":"Pacific/Honolulu","lat":21.265800,"lon":-157.821300},
-    {"order":20,"flag":"🇦🇸","name":"Pago Pago, Samoa Americana","timezone":"Pacific/Pago_Pago","lat":-14.277739,"lon":-170.688512}
+    {
+      "order": 1,
+      "flag": "🇰🇮",
+      "name": "Kiritimati, Kiribati",
+      "timezone": "Pacific/Kiritimati",
+      "lat": 1.987149,
+      "lon": -157.477137,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 2,
+      "flag": "🇳🇿",
+      "name": "Auckland, Nova Zelândia",
+      "timezone": "Pacific/Auckland",
+      "lat": -36.852095,
+      "lon": 174.76318,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 3,
+      "flag": "🇦🇺",
+      "name": "Sydney, Austrália",
+      "timezone": "Australia/Sydney",
+      "lat": -33.866173,
+      "lon": 151.205945,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 4,
+      "flag": "🇯🇵",
+      "name": "Shinjuku, Japão",
+      "timezone": "Asia/Tokyo",
+      "lat": 35.68895,
+      "lon": 139.69054,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 5,
+      "flag": "🇹🇼",
+      "name": "Taipei, Taiwan",
+      "timezone": "Asia/Taipei",
+      "lat": 25.033964,
+      "lon": 121.564468,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 6,
+      "flag": "🇮🇳",
+      "name": "Chennai, Índia",
+      "timezone": "Asia/Kolkata",
+      "lat": 13.0403,
+      "lon": 80.2666,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 7,
+      "flag": "🇦🇪",
+      "name": "Dubai, Emirados Árabes",
+      "timezone": "Asia/Dubai",
+      "lat": 25.07675,
+      "lon": 55.13294,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 8,
+      "flag": "🇹🇷",
+      "name": "Istambul, Turquia",
+      "timezone": "Europe/Istanbul",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 9,
+      "flag": "🇪🇸",
+      "name": "Zaragoza, Espanha",
+      "timezone": "Europe/Madrid",
+      "lat": 41.661609,
+      "lon": -0.89464,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 10,
+      "flag": "🇬🇧",
+      "name": "Londres, Reino Unido",
+      "timezone": "Europe/London",
+      "lat": 51.501,
+      "lon": -0.1246,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 11,
+      "flag": "🇨🇻",
+      "name": "Praia, Cabo Verde",
+      "timezone": "Atlantic/Cape_Verde",
+      "lat": 14.910725,
+      "lon": -23.527823,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 12,
+      "flag": "🇧🇷",
+      "name": "Fernando de Noronha, Brasil",
+      "timezone": "America/Noronha",
+      "lat": -3.8401,
+      "lon": -32.41181,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 13,
+      "flag": "🇧🇷",
+      "name": "Ibirapuera, São Paulo",
+      "timezone": "America/Sao_Paulo",
+      "lat": -23.584171,
+      "lon": -46.660725,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 14,
+      "flag": "🇺🇸",
+      "name": "Central Park, Nova York",
+      "timezone": "America/New_York",
+      "lat": 40.7803,
+      "lon": -73.963,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 15,
+      "flag": "🇺🇸",
+      "name": "Chicago, EUA",
+      "timezone": "America/Chicago",
+      "lat": 41.898659,
+      "lon": -87.623077,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 16,
+      "flag": "🇺🇸",
+      "name": "Denver, EUA",
+      "timezone": "America/Denver",
+      "lat": 39.7392,
+      "lon": -104.9903,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 17,
+      "flag": "🇺🇸",
+      "name": "Pier 39, São Francisco",
+      "timezone": "America/Los_Angeles",
+      "lat": 37.8095,
+      "lon": -122.4101,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 18,
+      "flag": "🇺🇸",
+      "name": "Anchorage, Alasca",
+      "timezone": "America/Anchorage",
+      "lat": 61.217019,
+      "lon": -149.891609,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 19,
+      "flag": "🇺🇸",
+      "name": "Honolulu, Havaí",
+      "timezone": "Pacific/Honolulu",
+      "lat": 21.2658,
+      "lon": -157.8213,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 20,
+      "flag": "🇦🇸",
+      "name": "Pago Pago, Samoa Americana",
+      "timezone": "Pacific/Pago_Pago",
+      "lat": -14.277739,
+      "lon": -170.688512,
+      "coordinate_type": "city_reference",
+      "essential": true
+    },
+    {
+      "order": 21,
+      "flag": "🇯🇵",
+      "name": "Osaka, Japão",
+      "timezone": "Asia/Tokyo",
+      "lat": 34.65011,
+      "lon": 135.5105,
+      "coordinate_type": "city_reference",
+      "essential": false
+    },
+    {
+      "order": 22,
+      "flag": "🇹🇼",
+      "name": "Taipei, Taiwan",
+      "timezone": "Asia/Taipei",
+      "lat": 25.0444,
+      "lon": 121.5296,
+      "coordinate_type": "city_reference",
+      "essential": false
+    },
+    {
+      "order": 23,
+      "flag": "🇭🇰",
+      "name": "Hong Kong, Hong Kong",
+      "timezone": "Asia/Hong_Kong",
+      "lat": 22.277957,
+      "lon": 114.15616,
+      "coordinate_type": "city_reference",
+      "essential": false
+    },
+    {
+      "order": 24,
+      "flag": "🇮🇩",
+      "name": "Jacarta, Indonésia",
+      "timezone": "Asia/Jakarta",
+      "lat": -6.175554,
+      "lon": 106.827587,
+      "coordinate_type": "city_reference",
+      "essential": false
+    },
+    {
+      "order": 25,
+      "flag": "🇬🇷",
+      "name": "Tessalônica, Grécia",
+      "timezone": "Europe/Athens",
+      "lat": 40.626936,
+      "lon": 22.952342,
+      "coordinate_type": "city_reference",
+      "essential": false
+    },
+    {
+      "order": 26,
+      "flag": "🇮🇹",
+      "name": "Roma, Itália",
+      "timezone": "Europe/Rome",
+      "lat": 41.889988,
+      "lon": 12.493033,
+      "coordinate_type": "city_reference",
+      "essential": false
+    },
+    {
+      "order": 27,
+      "flag": "🇧🇷",
+      "name": "Ibirapuera, São Paulo, Brasil",
+      "timezone": "America/Sao_Paulo",
+      "lat": -23.5841713,
+      "lon": -46.66072464,
+      "coordinate_type": "city_reference",
+      "essential": false
+    },
+    {
+      "order": 28,
+      "flag": "🇦🇷",
+      "name": "Buenos Aires, Argentina",
+      "timezone": "America/Argentina/Buenos_Aires",
+      "lat": -34.608403,
+      "lon": -58.372164,
+      "coordinate_type": "city_reference",
+      "essential": false
+    }
   ]
 }

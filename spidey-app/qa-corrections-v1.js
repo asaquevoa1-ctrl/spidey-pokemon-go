@@ -68,23 +68,7 @@
   }
 
   function zonedLocalToDate(dateValue, timeValue, timeZone) {
-    const dateMatch = String(dateValue || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
-    const timeMatch = String(timeValue || '').match(/^(\d{2}):(\d{2})$/);
-    if (!dateMatch || !timeMatch) return null;
-    const desired = {
-      year: Number(dateMatch[1]), month: Number(dateMatch[2]), day: Number(dateMatch[3]),
-      hour: Number(timeMatch[1]), minute: Number(timeMatch[2]), second: 0,
-    };
-    const desiredUtc = Date.UTC(desired.year, desired.month - 1, desired.day, desired.hour, desired.minute, 0);
-    let guess = desiredUtc;
-    for (let i = 0; i < 3; i += 1) {
-      const seen = formatPartsInZone(new Date(guess), timeZone);
-      const seenUtc = Date.UTC(seen.year, seen.month - 1, seen.day, seen.hour, seen.minute, seen.second || 0);
-      const delta = desiredUtc - seenUtc;
-      guess += delta;
-      if (Math.abs(delta) < 1000) break;
-    }
-    return new Date(guess);
+    return window.SpideyFlyCore.localToDate(dateValue, timeValue, timeZone);
   }
 
   function formatBrazil(date) {
@@ -108,26 +92,14 @@
   }
 
   async function loadWorldPoints() {
-    if (!worldPointsPromise) {
-      worldPointsPromise = fetch(WORLD_POINTS_URL, { cache: 'no-store' })
-        .then((response) => {
-          if (!response.ok) throw new Error(`world points HTTP ${response.status}`);
-          return response.json();
-        })
-        .then((data) => data.points || [])
-        .catch((error) => {
-          console.error('Spidey world points', error);
-          return [];
-        });
-    }
-    return worldPointsPromise;
+    return window.SpideyFlyCore.loadPoints().catch(() => []);
   }
 
   function coordinateTypeLabel(location) {
     if (location?.coordinate_type === 'exact_pokestop') return 'PokéStop exata';
-    if (location?.coordinate_type === 'venue_reference') return 'Referência do local';
-    if (location?.coordinate_type === 'city_reference') return 'Referência da cidade';
-    return 'Referência geográfica';
+    if (location?.coordinate_type === 'venue_reference') return 'Local aproximado';
+    if (location?.coordinate_type === 'city_reference') return 'Cidade';
+    return 'Local aproximado';
   }
 
   function eventLocationRows(event) {
@@ -143,11 +115,11 @@
   }
 
   function worldReferenceRows(event, points) {
-    if (!points.length) return '<p class="microcopy">Referências mundiais indisponíveis neste momento.</p>';
+    if (!points.length) return '<p class="microcopy">Não foi possível carregar os horários pelo mundo.</p>';
     const windowText = localWindow(event);
     return `<details class="world-reference-v4">
-      <summary>Ver ${points.length} referências mundiais de horário e coordenadas</summary>
-      <p class="microcopy">São pontos de referência por fuso horário. Não são PokéStops oficiais do evento.</p>
+      <summary>Ver horários em ${points.length} lugares pelo mundo</summary>
+      <p class="microcopy">Escolha uma região para ver quando jogar. Estes locais não são PokéStops do evento.</p>
       <div class="world-reference-list-v4">${points.map((point) => {
         const value = `${Number(point.lat).toFixed(6)},${Number(point.lon).toFixed(6)}`;
         return `<div class="world-reference-row-v4">
@@ -185,18 +157,15 @@
     const section = document.createElement('section');
     section.className = 'event-wherewhen-v4';
     section.innerHTML = `
-      <h3>Horários e locais</h3>
-      ${summary ? `<div class="event-local-window-v4"><span>Horário do evento</span><strong>${summary}</strong><small>No Brasil, eventos globais por horário local também acontecem nesse mesmo relógio local.</small></div>` : `
+      <h3>${actualLocations ? 'Horários e locais' : 'Horários'}</h3>
+      ${summary ? `<div class="event-local-window-v4"><span>Horário do evento</span><strong>${summary}</strong><small>Esse horário vale no relógio da região onde você vai jogar.</small></div>` : `
         <div class="event-local-window-v4"><span>Horário</span><strong>${typeof originalFormatRange === 'function' ? originalFormatRange(event) : 'A confirmar'}</strong></div>`}
-      ${actualLocations || (!isLocalTimeEvent(event) ? '<p class="microcopy">Sem coordenadas específicas confirmadas para este evento.</p>' : '')}
-      ${isLocalTimeEvent(event) ? '<div class="world-reference-loading-v4 microcopy">Carregando referências mundiais…</div>' : ''}
+      ${actualLocations}
+      
     `;
     if (actionRow) actionRow.before(section); else body.appendChild(section);
 
-    if (isLocalTimeEvent(event)) {
-      const points = await loadWorldPoints();
-      section.querySelector('.world-reference-loading-v4')?.replaceWith(document.createRange().createContextualFragment(worldReferenceRows(event, points)));
-    }
+    // The FLY view owns the world route and its timezone calculations.
 
     section.querySelectorAll('.copy-event-ref-v4').forEach((button) => {
       button.addEventListener('click', async () => {
@@ -260,7 +229,7 @@
       <div class="detail-body stamp-detail">
         <span class="eyebrow">GO STAMP RALLY</span>
         <h2>${rally.title}</h2>
-        <p>${rally.summary || ''}</p>
+        <p>${rally.public_summary ?? rally.summary ?? ''}</p>
         <div class="info-grid">
           <div class="info-box"><span>Progresso</span><strong id="rallyProgressText">${progress.size}/${stops.length} selos</strong></div>
           <div class="info-box"><span>Coordenadas confirmadas</span><strong>${exactStops.length}/${stops.length}</strong></div>
@@ -282,7 +251,7 @@
 
         <div class="stamp-stops">${stops.map((stop) => stampStopHtml(rally, stop, progress)).join('')}</div>
         ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
-        ${(rally.notes || []).length ? `<h3>Observações</h3><ul class="bonus-list">${rally.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
+        ${(rally.public_notes ?? rally.notes ?? []).length ? `<h3>Observações</h3><ul class="bonus-list">${(rally.public_notes ?? rally.notes ?? []).map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       </div>`;
 
     detail.querySelectorAll('.stamp-toggle').forEach((input) => {

@@ -1,0 +1,127 @@
+{
+  "status": "MALAGA_LOCAL_EVENT_BACKGROUND_PREVIEW_PASSED",
+  "branch": "spidey-fly-v1",
+  "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
+  "requested_at": "2026-10-01T22:41:59-03:00",
+  "budget_minutes": 140,
+  "target_deadline_brt": "2026-10-02T01:01:59-03:00",
+  "deadline_basis": "Prazo de 2h20 informado pelo editor; alvo aproximado, não garantia de conclusão.",
+  "scope": [
+    "Preservar padrão Premium e todos os masters aprovados",
+    "Avançar arte individual pendente e fatos do catálogo",
+    "Confirmar navegação/ações/GPX e preparar instalação/offline",
+    "Sem novo desenvolvimento de Amigos/Chat antes do núcleo"
+  ],
+  "gates": {
+    "premium_window_20261001_07": {
+      "events": 23,
+      "approved": 20,
+      "pending_posters": 0,
+      "missing": 3,
+      "status": "THREE_GENERATION_REFUSALS_REMAIN"
+    },
+    "blocked_generation": [
+      "Applin",
+      "Semana Mundial do Espaço",
+      "Sizzlipede"
+    ],
+    "android_physical_install_update_offline_push": "PENDING",
+    "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
+    "approved_master_integrity": "25_MASTER_ENTRIES_ALL_301_PROTECTED_FILES_UNCHANGED_FROM_E766DDE",
+    "mobile_desktop_core": "PASSED_MALAGA_AND_SIX_ESA_BACKGROUNDS_FLY20_28_TAIPEI_FF84FE8_43_TESTS_PHYSICAL_PENDING",
+    "launch_approval": "PENDING",
+    "push_live_configuration": "HTTP_503_PUSH_NOT_CONFIGURED_D5E667D_DASHBOARD_AUTH_NOT_COMPLETED",
+    "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
+    "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC",
+    "go_pass_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_FF37843",
+    "tester_shared_preview_access": "TEMPORARY_ANONYMOUS_HTTP_PASSED_FF84FE8_10_EXACT_FILES_PERMANENT_PHONE_ACCESS_PENDING",
+    "latios_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_D14897B",
+    "scenic_sunday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_BFEEB24",
+    "showcase_tuesday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_C3BB225",
+    "remaining_art_batch": "APPROVED_USER_DELEGATED_VISUAL_QA_PASSED_E766DDE",
+    "calendar_date_boundaries": "PASSED_BRAZIL_DAY_KEYS_4_DEVICE_ZONES_BROWSER_D3D26E1",
+    "space_week_museums": "PASSED_OFFICIAL_ILLUSTRATIONS_6_VENUES_4_COORDINATES_2_ADDRESSES_NO_GPX_PREMIUM_REFUSAL_PRESERVED",
+    "space_backgrounds_and_research": "PASSED_SIX_INTEGRAL_GAME_BACKGROUNDS_SPECIFIC_RESEARCH_DISMISSED_BY_USER",
+    "space_full_area_gpx": "DISMISSED_BY_USER_INSTRUCTION_NO_ROUTES_CREATED",
+    "malaga_local_event": "PASSED_OFFICIAL_BACKGROUND_THREE_MAPS_HOME_FLY_LOCAL_BRAZIL_END_TIME_FF84FE8"
+  },
+  "next_batch": [
+    "Comprovar abertura do novo link temporário pelos testadores no celular e organizar acesso durável; URL sem parâmetro continua protegida.",
+    "Configuração e recebimento real de push; endpoint503. Não repetir autenticação administrativa recusada sem nova solicitação.",
+    "QA físico Android/PWA/instalação/atualização/offline/alertas.",
+    "Três artes continuam bloqueadas por recusas registradas; não contornar."
+  ],
+  "completed_public_launch": false,
+  "completed_this_sprint": [
+    "Três PNGs integrais gerados, revisão factual/cenário feita, integração explícita PENDING_REVIEW",
+    "22 testes Node e integridade dos masters passaram",
+    "QA real mobile/desktop dos três PNGs e calendário/detalhe; FLY Hora de Reides conferido",
+    "Progresso Selos persistiu e teste restaurado; GPX incompleto bloqueado",
+    "Acesso temporário Seedot renovado, mesmo master renderizado; falha/recuperação documentadas",
+    "Editor aprovou os três PNGs exatos em 02/10 07:16:30 BRT; cópias premium idênticas, oito entradas anteriores preservadas.",
+    "Retomada 02/10 após limite de conversa: QA pós-aprovação dos três pôsteres no código 18fba5b, mobile Claro/desktop Escuro, hashes servidos iguais aos aprovados; FLY 20/28 e clique direto da Hora de Reides confirmados.",
+    "a2b5638: 31 tests passed; native GPX link, root push API routing and offline worker robustness deployed; real push status and Zorua mobile/desktop/FLY 20/28 verified.",
+    "Zorua aprovado explicitamente em 02/10 18:38:35 BRT; bônus rechecados na fonte oficial e master atualizado com cópia byte a byte.",
+    "0433c32 preview: approved Zorua mobile/desktop/FLY 20/28 verified; served PNG exact approved SHA256; new browser-downloaded Japan GPX parsed with all 17 coordinates, names and order matching catalog.",
+    "a17f6d4: Thundurus Sombroso v1 e Elgyem v2 gerados, comunidade identificada, títulos PT-BR e bônus estruturado de Elgyem; 31 testes passaram; mobile Claro/desktop Escuro e hashes servidos exatos conferidos, FLY Elgyem 20/28 e horários/coords verificados; aprovação humana pendente.",
+    "03/10 07:30:21 BRT: aprovação humana dos PNGs exatos Thundurus v1 e Elgyem v2. 29c1aec: cópias premium idênticas, 14 masters/12 anteriores preservados, catálogo inalterado, 32 testes e QA pós-aprovação novo preview mobile/desktop/hashes servidos e FLY Elgyem 20/28 passaram.",
+    "97c6823: Passe GO/Kyogre v1 gerado e integrado PENDING_REVIEW com fonte oficial PT-BR e condições Deluxe/Ranque 50 explícitas; 33 testes, mobile Claro/desktop Escuro, hash servido e acesso compartilhado anônimo passaram. Masters e outros 123 eventos preservados; aprovação humana e Android físico pendentes.",
+    "03/10 09:04:55 BRT: aprovação explícita do Passe GO/Kyogre v1 entregue em PNG integral. ff37843: cópia premium idêntica, master 15/14 anteriores preservados, preview vazio, catálogo inalterado, 33 testes e QA novo mobile/desktop/hash servido passaram. Acesso de testadores e Android físico permanecem pendentes.",
+    "03/10: Latios v1 PENDING_REVIEW; fonte oficial/bônus condicionais conferidos, 33 testes, 15 masters e 123 outros eventos preservados; QA mobile/desktop e servido hash exato no código 760b117.",
+    "03/10 13:01 BRT: Latios v1 aprovado explicitamente; PNG premium idêntico, 15 masters anteriores e catálogo inteiro preservados; 33 testes e QA novo mobile/desktop/servido exato d14897b passaram.",
+    "03/10: Domingo Pitoresco v2 PENDING_REVIEW; fonte atual comunitária, quatro bônus com condições de Rotas/companheiro e Eevee ilustrativo. 33 testes, 16 masters/15 arquivos e 123 outros eventos preservados. QA 14fa3ad mobile Claro/desktop Escuro e bytes servidos exatos passou; Semana mostra o evento em linha textual.",
+    "03/10 16:52:31 BRT: “Aprovo” consolida somente o PNG Domingo Pitoresco v2, cópia premium exata. bfeeb24: master 17/16 anteriores e 15 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/servido exato passaram. Janela23:12 APPROVED/0 candidatas/11 pendentes; acesso público e Android continuam pendentes.",
+    "03/10: Terça de Vitrine v1 nova candidata PENDING_REVIEW; benefícios do guia comunitário atual conferidos, Snorlax ilustrativo. dbf6956: 33 testes, 17 masters/16 arquivos e 123 outros eventos preservados; mobile Claro/desktop Escuro/PNG servido exato passaram. Janela23:12 APPROVED/1 candidata/10 sem arte. Continuação “Bora” não inferida como aprovação.",
+    "03/10 20:56:01 BRT: “Aprovo” consolida somente a Terça de Vitrine v1. c3bb225: cópia premium exata, master18/17 anteriores e16 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/PNG servido exato passaram. Janela23:13 APPROVED/0 candidatas/10 sem arte. Público e Android pendentes.",
+    "04/10: autorização 03/10 23:13 aplicada ao lote de sete artes, USER_DELEGATED_VISUAL_QA; fontes, PNGs integrais e identidade Premium conferidos. e766dde: 25 masters / 18 anteriores / 17 arquivos preservados, 124 eventos / 117 inalterados e todas as janelas/coords/GPX/notificações preservadas. 33 testes passaram após manter datas dos anúncios para preservar Novidades. QA 14 vistas mobile Claro / desktop Escuro, 14 capturas e 7 PNGs servidos byte a byte idênticos. Janela 23: 20 APPROVED / 0 candidatas / 3 recusas. Público/Android pendentes; fronteiras do calendário observadas exigem validação separada.",
+    "04/10: lote anterior/provas consolidado em de88306; d3d26e1 corrige calendário em Brasília independente de quatro fusos e agenda sem capa herdada. 37 testes passaram; browser mobile Claro/desktop Escuro confirmou01/10 e02/10, sem overflow, PNG Sexta preservado. Novo share efêmero passou com cliente HTTP sem cookies/credenciais; PNG exato e push503. Android físico/acesso permanente/produção pendentes.",
+    "04/10: d5e667d destaca Pikachu Astronauta e integra6 museus/condições/mapas/fontes/relógios; ilustrações oficiais originais, não Premium.40 testes, desktop Escuro/mobile Claro, FLY20/28/Taipei e ambos JSONs/JPEGs servidos byte a byte passaram.25 masters/123 outros eventos e702 blobs anteriores preservados. Novo share temporário HTTP anônimo aprovado, celular físico/acesso durável/push503/produção pendentes. Registros SPACE_WEEK_QA e fontes/provas.",
+    "04/10:036e0c3 integra seis fundos originais512×512 e três missões de relato direto restritas a Valência, sem inventar espécies por tarefa.43 testes, desktop Escuro/mobile Claro, seis imagens integrais/sem overflow, FLY20/28/Taipei e13 arquivos via share anônimo byte a byte passaram.124 eventos/25 masters/716 blobs anteriores fora do escopo preservados. GPX de cobertura total não criado: faltam limites e rota verificados. Fontes/QA/cinco capturas documentados; pendências físicas/push/acesso durável/produção e recusas Premium mantidas.",
+    "04/10 11:44:10 BRT: editor dispensa missões e GPX de área dos museus. ae4fcd4 remove lista fixa e pendências GPX, mantém seis fundos/mapas/relógios. 41 testes e QA desktop Escuro/mobile Claro/13 arquivos via share anônimo passaram; seis assets, catálogo124 e masters25 preservados. Busca encerrada, zero GPX criado; históricos preservados. Produção, URL durável e validação física seguem pendentes.",
+    "04/10:ff84fe8 confirma Málaga oficial e integra fundo original512×512, três endereços/mapas, janela local1/10 09h→4/10 20h e Brasília1/10 04h→4/10 15h. 43 testes, desktop Escuro/mobile Claro/FLY20/28/Taipei e10 arquivos via share anônimo exatos passaram. Seis fundos ESA, catálogo124, masters25 e744 blobs fora do escopo preservados. Missões/GPX dispensados não reintroduzidos. Produção/Android físico/acesso durável permanecem pendentes."
+  ],
+  "updated_at": "2026-10-04T15:45:04.087879+00:00",
+  "code_commit": "ff84fe8b344d413d87548f4e083e72ad6ea00ad8",
+  "preview_url": "https://spidey-pokemon-pa2fgluuu-spidey3.vercel.app/spidey-app/index.html",
+  "unresolved": [
+    "3 eventos sem Premium na janela01–07/10;20 APPROVED/0 candidatas. Espaço agora exibe ilustração oficial creditada, sem modificar recusa/estado Premium de Applin/Espaço/Sizzlipede.",
+    "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
+    "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
+    "Android físico/instalação/atualização/offline/push sem prova",
+    "Lançamento completo e produção não aprovados",
+    "Novo link temporário passou em HTTP anônimo; acesso dos testadores no celular ainda não revalidado após o bloqueio relatado em03/10. URL pública permanente pendente e proteção mantida."
+  ],
+  "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+  "post_approval_qa_record": "docs/qa/remaining-art-batch-browser-e766dde-20261004.json",
+  "pause_requested": {
+    "at": "2026-10-02T18:38:35-03:00",
+    "budget_minutes": 5,
+    "resume": "Somente quando editor acionar novamente.",
+    "ended_at": "2026-10-02T20:49:18-03:00",
+    "active": false
+  },
+  "gpx_qa_record": "docs/qa/japan-rally-browser-download-0433c32-20261002.json",
+  "candidate_review_record": "docs/qa/SHOWCASE_TUESDAY_REVIEW_20261003.json",
+  "candidate_qa_record": "docs/qa/showcase-tuesday-browser-dbf6956-20261003.json",
+  "current_art_review_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+  "current_art_qa_record": "docs/qa/remaining-art-batch-browser-e766dde-20261004.json",
+  "art_delivery_followup": {
+    "reported_at": "2026-10-03T08:48:33-03:00",
+    "event_id": "2026-10-go-pass",
+    "status": "FULL_PNG_RECEIVED_AND_APPROVED",
+    "human_approval": {
+      "text": "Fantástico\nEu aprovo",
+      "at": "2026-10-03T09:04:55-03:00"
+    }
+  },
+  "current_art_approval_record": "docs/qa/SHOWCASE_TUESDAY_APPROVAL_20261003.json",
+  "current_art_decision": {
+    "text": "Aprovo",
+    "at": "2026-10-03T20:56:01-03:00",
+    "context": "Decisão explícita após reenvio do PNG integral Terça de Vitrine v1 na resposta imediatamente anterior. Aprovação exclusiva desta imagem, sem aprovação de lançamento."
+  },
+  "art_continuation_authorization": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_art_approval_required": false,
+  "current_core_qa_record": "docs/qa/MALAGA_QA_20261004.json",
+  "space_scope_update_record": "docs/qa/ESA_SCOPE_UPDATE_20261004.json"
+}

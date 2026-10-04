@@ -1,0 +1,196 @@
+{
+  "status": "PENDING_REVIEW",
+  "approval": null,
+  "date": "2026-10-02",
+  "base_commit": "12209c2dceabc2aad4d3e638c870d02c438f6844",
+  "source_classification": "COMMUNITY",
+  "candidates": [
+    {
+      "event_id": "2026-10-shadow-thundurus",
+      "file": "spidey-app/assets/events/review/thundurus-shadow-weekend-v1.png",
+      "display": "full_poster",
+      "status": "PENDING_REVIEW",
+      "revision": 1,
+      "tool": "image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: new complete vertical Spidey Pokémon GO event poster, mobile first, approximately 1121×1403 composition. Input image 1 is only the established Premium visual/layout reference (approved Yveltal poster); input image 2 is the exact official Spidey logo reference. Create a new THUNDURUS SOMBROSO poster with matching lush cinematic illustration, bold dimensional Portuguese typography, gold/blue Spidey header and complete readable footer. Do not alter either reference file. Preserve official Spidey brand identity and Pokémon GO logo. Subject: recognizable normal-color Incarnate Forme Thundurus as Shadow Pokémon: muscular blue genie-like body, white cloud lower body, white swept hair and moustache, forehead horn, long dark violet segmented spiked tail, crossed strong arms, intense red eyes and purple shadow aura. Not Therian Forme, not Tornadus or Landorus. Scene: immense storm clouds above ancient stone ruins at night, branching electric blue lightning and violet Shadow mist, rich atmospheric depth, cinematic lighting; Thundurus dominant and fully recognizable. Palette deep navy/electric blue/purple/gold. Exact text: \"THUNDURUS SOMBROSO\", \"FORMA ENCARNADA\", \"REIDES SOMBROSAS\", \"3 E 4 DE OUTUBRO DE 2026\". Footer exact: \"Fonte: Pokémon GO Hub • Comunidade\". Clear hierarchy and readable safe margins; all title/date/brand/footer inside the canvas. This is specifically the weekend window, not a one-hour Raid Hour. No daily clock hours, no invented bonuses, no shiny boost, no exclusive move, no debut claim, no ticket, no Max/Dynamax/Gigantamax symbols, no old Yveltal text or character, no extra Pokémon, no generic flat backdrop or vector placeholder. A new review candidate; do not put review/approval status in the image.",
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "width": 1121,
+      "height": 1403,
+      "bytes": 2519761,
+      "factual_review": {
+        "source": "Pokémon GO Hub • Comunidade",
+        "urls": [
+          "https://pokemongohub.net/post/event/october-2026-events/",
+          "https://pokemongohub.net/post/guide/shadow-thundurus-incarnate-raid-counters-guide/"
+        ],
+        "claims": [
+          "Thundurus (Forma Encarnada) Sombroso, reides de 5 estrelas.",
+          "Fins de semana até 6 de outubro de 2026; janela 3 e 4 de outubro inferida do calendário."
+        ],
+        "unclaimed": [
+          "Horário diário fixo",
+          "Bônus de captura",
+          "Taxa de Brilhante aumentada"
+        ],
+        "classification": "COMMUNITY"
+      }
+    },
+    {
+      "event_id": "2026-10-08-spotlight-elgyem",
+      "file": "spidey-app/assets/events/review/elgyem-spotlight-v2.png",
+      "display": "full_poster",
+      "status": "PENDING_REVIEW",
+      "revision": 2,
+      "tool": "image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: new complete vertical Spidey Pokémon GO event poster, mobile first, approximately 1121×1403 composition. Input image 1 is only the established Premium visual/layout reference (approved Yveltal poster); input image 2 is the exact official Spidey logo. Create a NEW ELGYEM HORA DO HOLOFOTE poster at the same cinematic/editorial quality with matching Spidey header and Pokémon GO branding, bold dimensional Portuguese typography, generous safe edges and complete readable footer. Do not alter the reference files. Subject: faithful recognizable normal Elgyem: small pale gray-green alien Pokémon with a large oval head, bright oval green eyes, visible geometric black seams/markings across forehead and torso, short rounded legs and stubby arms; red/yellow/green glowing fingertips. Friendly mysterious pose on mossy rocks in a detailed moonlit forest glade with floating telekinetic lights, fireflies, tall ancient trees and gentle alien aurora, blue-green-teal nocturnal atmosphere, warm gold accents. Elgyem is dominant; no other Pokémon. Fully coherent lush illustration, not a simple character cutout on a generic background. Exact hierarchy and text: \"HORA DO HOLOFOTE\", \"ELGYEM\", \"8 DE OUTUBRO DE 2026\", \"DAS 18H ÀS 19H • HORÁRIO LOCAL\", \"2× DOCES POR CAPTURA\". Footer exact: \"Fonte: Pokémon GO Hub • Comunidade\". The date/time/bonus/brand/footer must remain wholly inside the canvas and readable on mobile. Remove all Yveltal/Thundurus/raid text. No stars row, no raid symbols, no Mega/Max/Dynamax/Gigantamax symbols, no Community Day, no exclusive move, no invented shiny boost, no ticket or research claims, no extra bonuses or coordinates, no technical review/approval labels. New review candidate only.",
+      "edit_prompt": "Edit target: the supplied full Elgyem poster. Make exactly one typography correction in the central title area. Replace the current large two-line 'HORA DO / HOLOFOTE' title with a smaller single-line 'HORA DO HOLOFOTE' above a very large dominant 'ELGYEM', using the same bold dimensional gold/white premium lettering and ornate framing. The species name ELGYEM must be spelled exactly and unmistakably readable. Preserve the character, anatomy, pose, colors, scene, Spidey header and official logo, Pokémon GO logo, date '8 DE OUTUBRO DE 2026', time 'DAS 18H ÀS 19H • HORÁRIO LOCAL', bonus '2× DOCES POR CAPTURA', full source footer, portrait dimensions and safe margins. No other change; no added symbols, characters, promises or approval labels.",
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "width": 1121,
+      "height": 1403,
+      "bytes": 2455329,
+      "factual_review": {
+        "source": "Pokémon GO Hub • Comunidade",
+        "urls": [
+          "https://pokemongohub.net/post/event/october-2026-events/"
+        ],
+        "start_local": "2026-10-08T18:00:00",
+        "end_local": "2026-10-08T19:00:00",
+        "claims": [
+          "2× Doces por captura."
+        ],
+        "classification": "COMMUNITY",
+        "note": "8/10 é quinta-feira; data publicada preservada, sem troca automática para terça."
+      },
+      "revision_history": [
+        {
+          "revision": 1,
+          "file": "spidey-app/assets/events/review/elgyem-spotlight-v1.png",
+          "sha256": "33481d00c565ab9e52b05bf9f0bcc729f79100676519cc2c64f9fdeffc8806a0",
+          "width": 1121,
+          "height": 1403,
+          "bytes": 2517838,
+          "status": "INTERNAL_REVISION_REQUIRED",
+          "reason": "Nome ELGYEM ausente no título; v1 preservada, fora da integração e do precache."
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "file": "spidey-app/assets/events/premium/yveltal-rotation-approved-v1.png",
+      "role": "Somente referência visual; arquivo preservado.",
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328"
+    },
+    {
+      "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+      "role": "Referência da marca oficial Spidey; arquivo preservado.",
+      "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+    }
+  ],
+  "preserved_master_sha256": "961637a56ca28e2b68bb65d7d120b59a0729478d4d06a0f4083ddda77c274fee",
+  "guardrails": [
+    "IDs e horários dos 124 eventos preservados.",
+    "12 masters aprovados e arquivos preservados; Zorua continua aprovado.",
+    "Aprovação humana ainda pendente para estas duas candidatas; nenhuma promoção para produção.",
+    "Recusas anteriores Applin, Space e Sizzlipede não foram contornadas."
+  ],
+  "qa": {
+    "status": "PREVIEW_VERIFIED_APPROVAL_PENDING",
+    "record": "docs/qa/THUNDURUS_ELGYEM_QA_20261002.json",
+    "code_commit": "a17f6d45535758ff2b5a36ef0e4e6e476af933e8",
+    "preview_url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/spidey-app/index.html",
+    "local": {
+      "tests": 31,
+      "passed": 31,
+      "failed": 0,
+      "catalog_count": 124,
+      "ids_preserved": true,
+      "schedules_preserved": true,
+      "approved_count": 12,
+      "approved_master_preserved": true,
+      "candidate_roles": [
+        "thumb",
+        "card",
+        "weekly",
+        "hero",
+        "poster"
+      ],
+      "weekly_candidate_urls_verified": true
+    },
+    "browser_record": "docs/qa/thundurus-elgyem-browser-a17f6d4-20261003.json",
+    "proofs": [
+      {
+        "file": "docs/qa/proofs/spidey-thundurus-mobile-a17f6d4-20261003.jpg",
+        "bytes": 106751,
+        "sha256": "43fd8a487fdad8c25f5bf5b4959798375d40e3deb50dafd851267a89c5efb0b8",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-mobile-a17f6d4-20261003.jpg",
+        "bytes": 102066,
+        "sha256": "c918e5f647d366b8bdedec0ec1d73a92c7bcb94ad6e8e01bf680c0dab90bcef7",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-desktop-a17f6d4-20261003.jpg",
+        "bytes": 142311,
+        "sha256": "7d9bea3e38096cf5c75265de10ca78e8b42688a822067ae4c497bd9768263423",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-thundurus-desktop-a17f6d4-20261003.jpg",
+        "bytes": 145817,
+        "sha256": "5269c10497b37adcb3a872dce4e263d8f424f14e9e810e437a2c5ba3568364cc",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-fly-desktop-a17f6d4-20261003.jpg",
+        "bytes": 84341,
+        "sha256": "9011bf0e6b3fbd7e86652a7eacc27fd77fb8b5d55f9f10929609f1c1dffc24bd",
+        "size": [
+          1363,
+          936
+        ]
+      },
+      {
+        "file": "docs/qa/proofs/spidey-elgyem-fly-mobile-a17f6d4-20261003.jpg",
+        "bytes": 65008,
+        "sha256": "f8bb6d6fc5a7ee1a6508577bb2c2713e4970546820b573c2a2b28dcf4c2b0c10",
+        "size": [
+          1363,
+          936
+        ]
+      }
+    ],
+    "served_hashes_match": true
+  },
+  "push": {
+    "status": "BLOCKED_DASHBOARD_ACCESS",
+    "configuration_written": false,
+    "notes": [
+      "Connector disponível não expõe operações de variáveis de ambiente.",
+      "Sem Vercel CLI ou credencial disponível no runtime.",
+      "Painel environment-variables redirecionou para login; estado das variáveis não inspecionado.",
+      "Nenhuma assinatura, segredo ou envio push criado nesta rodada."
+    ],
+    "public_key_probe": {
+      "url": "https://spidey-pokemon-ko9ywdo8h-spidey3.vercel.app/api/push/public-key",
+      "status": 503,
+      "error": "push_not_configured",
+      "cache_control": "no-store",
+      "at": "Sat, 03 Oct 2026 10:20:58 GMT"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "AUTHORIZED_FOR_PUBLICATION_PENDING_LIVE_QA",
+  "user_instruction": "Bora terminar pra publicar pra galere",
+  "instruction_received_at": "2026-10-04T12:53:25-03:00",
+  "repository": "asaquevoa1-ctrl/spidey-pokemon-go",
+  "reviewed_candidate_commit": "ece3090b2d4c74c11a29533df27de5a110c88f48",
+  "reviewed_code_commit": "ff84fe8b344d413d87548f4e083e72ad6ea00ad8",
+  "production_baseline_commit": "f35b25a145cb4ad1cbc8e1aa872d0e2fb9f4a96b",
+  "integration": "Merge preserving current main queues, generated source media and cursors. Retain the reviewed interactive app index rather than the older main landing page.",
+  "public_entry": "https://spidey-pokemon-go.vercel.app/",
+  "entry_redirect": "/spidey-app/",
+  "deployment_protection": "No protection changes. Production domain was already anonymously accessible; preview remains protected.",
+  "node_tests": {"passed": 43, "failed": 0},
+  "scope_exclusions": ["Fixed daily quest lists", "Full-area museum GPX", "New Amigos/Chat development", "Announcements or push messages to other people"],
+  "known_limits": {
+    "remote_push": "Server environment variables absent. Keep fail-closed unavailable state; do not claim delivery.",
+    "android_physical": "Installation, update, offline and clipboard on a physical Android device not certified.",
+    "premium_generation_refusals": ["Applin", "World Space Week", "Sizzlipede"]
+  },
+  "live_production_qa": "PENDING"
+}

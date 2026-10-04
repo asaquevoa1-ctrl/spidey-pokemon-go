@@ -5,7 +5,7 @@
   let scheduled = false;
 
   const copy = [
-    ['.experience-intro .eyebrow', 'AGORA'],
+    ['.experience-intro .eyebrow', 'SPIDEY COMMAND CENTER'],
     ['.experience-intro h1', 'O que está rolando agora?'],
     ['.experience-intro > p:not(.microcopy)', 'Eventos, horários e o que vem por aí — direto ao ponto.'],
     ['#nowCount + span', 'Agora'],
@@ -13,8 +13,8 @@
     ['#nextCount + span', 'Em breve'],
     ['#todayExperience', null],
     ['#weeklyView .hero-compact .eyebrow', 'SEMANA'],
-    ['#weeklyView .hero-compact h1', 'Sua semana no Pokémon GO'],
-    ['#weeklyView .hero-compact > p:not(.microcopy)', 'Os eventos que importam, organizados por dia.'],
+    ['#weeklyView .hero-compact h1', 'Sua semana'],
+    ['#weeklyView .hero-compact > p:not(.microcopy)', 'Eventos por dia, sem enrolação.'],
     ['#weeklyArtCount + span', 'Com arte'],
     ['#stampsView .hero-compact > p', 'Acompanhe os selos e use coordenadas ou GPX quando a PokéStop estiver confirmada.'],
     ['#mapView .hero-compact h1', 'Locais confirmados'],

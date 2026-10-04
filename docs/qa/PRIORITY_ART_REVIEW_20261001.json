@@ -1,0 +1,77 @@
+{
+  "status": "PENDING_REVIEW",
+  "date": "2026-10-01",
+  "branch": "spidey-fly-v1",
+  "base_commit": "bf345c29b99a490547faa0e24ee131397012c9bb",
+  "tool": "built-in image_gen",
+  "approval_required": "Aprovação humana explícita sobre os arquivos exatos; não equivale à aprovação de produção.",
+  "candidates": [
+    {
+      "event_id": "2026-10-harvest-taken-over",
+      "file": "spidey-app/assets/events/review/harvest-invasion-correction-v1.png",
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "width": 1121,
+      "height": 1403,
+      "input_file": "spidey-app/assets/events/recovered/1000431443.png",
+      "input_sha256": "d729c8a522131c8c6b333149453cacd0c5c46433a2f3af29c95b93804af458a9",
+      "source_url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
+      "factual_review": {
+        "start_local": "2026-10-02T00:00:00",
+        "end_local": "2026-10-05T20:00:00",
+        "claims": [
+          "Zekrom Sombroso com Giovanni, usando Super-radar Rocket do Passe GO.",
+          "Remoção de Frustração com MT de ataque carregado."
+        ],
+        "removed": [
+          "Zekrom em reides",
+          "janela diária 10h–20h",
+          "painéis genéricos sem confirmação"
+        ]
+      },
+      "prompt": "Use case: text-localization.\nEdit the provided premium Spidey Pokémon GO poster for Festival da Colheita: A Invasão. Preserve the gorgeous central Zekrom Sombroso illustration, red eyes and purple shadow aura, autumn city, Team GO Rocket grunts and balloons, Spidey gold spider emblem and brand header, Pokémon GO logo, rich cinematic style and event title. Correct ONLY the factual event text area.\nRetain title \"FESTIVAL DA COLHEITA\" and \"A INVASÃO\".\nReplace the date and time panel with THREE distinct, readable lines:\n\"2 A 5 DE OUTUBRO DE 2026\"\n\"INÍCIO: 02/10 ÀS 00H\"\n\"FIM: 05/10 ÀS 20H • HORÁRIO LOCAL\"\nDelete ALL SIX old lower bonus boxes, including the incorrect Shadow Raid Zekrom claim, research, eggs, wild encounters and generic rewards. Replace them with just TWO large, spacious dark information panels with red and purple edges, appropriate small Zekrom/Giovanni and charged TM icons, and this exact text:\nPanel 1: \"GIOVANNI COM ZEKROM SOMBROSO\"\nPanel 2: \"REMOVA FRUSTRAÇÃO COM MT CARREGADA\"\nFooter \"Fonte: Pokémon GO oficial\"\nPreserve the existing Spidey header and slogan. Use large mobile-legible Portuguese typography, correct accents, balanced panels and generous safe margins. Do not retain 10h–20h. Do not mention Zekrom in reides. No invented rewards or extra claims. Do not change the subject's appearance or replace the scene with a generic background. This is a corrected portrait artwork, not a UI mockup."
+    },
+    {
+      "event_id": "2026-10-gigantamax-cinderace-max-day",
+      "file": "spidey-app/assets/events/review/cinderace-max-day-correction-v1.png",
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "width": 1121,
+      "height": 1403,
+      "input_file": "spidey-app/assets/events/recovered/1000431441.png",
+      "input_sha256": "a24633255c4d22974c9d9cfb6fe6e31237f419075c260bf723d43788311425cd",
+      "source_url": "https://pokemongo.com/pt-BR/news/gigantamax-cinderace-max-battle-day-2026",
+      "factual_review": {
+        "start_local": "2026-10-03T14:00:00",
+        "end_local": "2026-10-03T17:00:00",
+        "claims": [
+          "Cinderace Gigamax em Batalhas Max de seis estrelas.",
+          "Estreia do Brilhante."
+        ],
+        "removed": [
+          "10h–20h",
+          "Doces GG não anunciados",
+          "PE como bônus gratuito",
+          "Poeira Estelar não anunciada"
+        ]
+      },
+      "prompt": "Use case: text-localization.\nEdit the provided Spidey Pokémon GO event poster. Preserve the beautiful fiery character illustration, stadium scene, red and magenta lighting, Spidey spider emblem and brand header, Pokémon GO logo, cinematic premium style and title treatment. Only correct the event information, remove the six inaccurate lower bonus tiles and replace them with two spacious, easy to read information strips.\nExact Portuguese copy in this corrected poster:\nTitle \"CINDERACE GIGAMAX\"\nSubtitle \"DIA DE BATALHAS MAX\"\nDate \"3 DE OUTUBRO DE 2026\"\nTime \"DAS 14H ÀS 17H • HORÁRIO LOCAL\"\nInformation strip 1 \"BATALHAS MAX DE SEIS ESTRELAS\"\nInformation strip 2 \"ESTREIA DO BRILHANTE\"\nFooter \"Fonte: Pokémon GO oficial\"\nPreserve the existing Spidey header and slogan verbatim. The main subject should remain exactly as pictured, retain its appearance and pose. Make the title, date and time large and readable on a phone, with safe margins; no accidentally cropped subject or text. Do not keep the old 10h–20h time. Remove ALL old lower panels claiming XL Candy, XP, Stardust, timed research or rewards. Do not add any extra claims or text. Keep the overall rich premium branded portrait design. No website mockup; deliver the corrected artwork itself."
+    }
+  ],
+  "blocked": [
+    {
+      "event_id": "2026-09-harvest-festival-applin",
+      "status": "GENERATION_BLOCKED",
+      "source_url": "https://pokemongo.com/pt-BR/news/harvest-festival-2026",
+      "error_type": "moderation_blocked",
+      "moderation_stage": "output",
+      "request_id": "7cd320ba-240b-42d9-bea1-a6424e8ddc70",
+      "file": null,
+      "prompt": "Use case: ads-marketing. Asset type: Spidey Pokémon GO premium editorial event poster, portrait 4:5, richly finished game illustration, legible on a mobile screen.\nCreate a NEW corrected Festival da Colheita: Pomar de Applin poster.\nInput images: image 1 is an OLD REVOKED Harvest poster: use its luxurious gold, orange, warm orchard atmosphere, engraved event typography and Spidey header as STYLE ONLY; discard its Pokémon, all its event text and all six bonus boxes. Image 2 is Applin appearance reference, the Pokémon must look exactly recognizably like this small apple Pokémon: red apple body, two green eye stalks with black eyes and tan bottom, NOT an apple with a human face, no arms, not Pumpkaboo. Image 3 is the official Spidey logo reference; preserve the gold spider and blue circular Poké Ball emblem.\nScene: cinematic autumn apple orchard, richly detailed red apples and baskets, sunlit golden leaves, depth, mossy magic and gentle sparkles. One large red Applin, faithfully matched to image 2, is the central protagonist among harvested apples, lit with golden rim light. NO other Pokémon. High quality polished anime game key art with vivid rich light and immersive scene, not a generic character cutout.\nComposition: compact Spidey Pokémon GO brand header at top left and the small slogan at top right; 45% is the gorgeous Applin orchard scene; big beautiful title under the subject; concise luminous gold-framed time panel and TWO clean spacious information strips below. Large readable typography with dark backing; no tiny grids.\nExact Portuguese text only:\nHeader: \"Spidey\" / \"Pokémon GO\"\nSlogan: \"SEMPRE UM PASSO À FRENTE\"\nTitle: \"FESTIVAL DA COLHEITA\"\nSubtitle: \"POMAR DE APPLIN\"\nDate panel, three separate lines: \"29 SET — 5 OUT 2026\" / \"INÍCIO: 29/09 ÀS 10H\" / \"FIM: 05/10 ÀS 20H • HORÁRIO LOCAL\"\nInfo strip 1: \"ESTREIA DE APPLIN BRILHANTE\"\nInfo strip 2: \"MAIOR CHANCE DE SMOLIV BRILHANTE\"\nFooter: \"Fonte: Pokémon GO oficial\"\nConstraints: preserve the recognizable Spidey brand emblem from the references, no enlarged logo as main art. Only the exact provided copy. Do not reuse old \"das 10h às 20h\" daily timing. No claims of increased shiny Applin chance: it is a shiny debut only. No Pumpkaboo, Petilil, Halloween pumpkin, scarecrow or generic mystery. No invented Pokémon, item bonuses, discounts, coordinates, map decoration claims or official approval stamp. Ensure all accents, text and full subject are clear and uncut. Keep all copy within generous print safe margins. This is an app artwork candidate for review, not a screenshot or mockup.",
+      "next_action": "Arte permanece pendente; dados e condições oficiais atualizados. Não usar o antigo Harvest/Pumpkaboo revogado."
+    }
+  ],
+  "preserved": [
+    "Master aprovado de Xerneas e original da Hora de Reides sem edição.",
+    "Originais de Cinderace e Invasão preservados byte a byte.",
+    "Festival das Luzes aprovado sem edição."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "code_commit": "ae4fcd4a2e0d2b69c4ff74c8808d33352a7f4a32",
+  "checked_at": "2026-10-04T14:55:54.403Z",
+  "desktop": {
+    "clocks": 6,
+    "dialogScroll": 703,
+    "dialogWidth": 703,
+    "gpxPanels": 0,
+    "gpxTextPresent": false,
+    "images": [
+      {
+        "alt": "Fundo de Localização de Londres no Pokémon GO: Science Museum",
+        "complete": true,
+        "height": 512,
+        "renderWidth": 285.5,
+        "width": 512
+      },
+      {
+        "alt": "Fundo de Localização de Toulouse no Pokémon GO: Cité de l’espace",
+        "complete": true,
+        "height": 512,
+        "renderWidth": 285.5,
+        "width": 512
+      },
+      {
+        "alt": "Fundo de Localização de Nuremberg no Pokémon GO: Deutsches Museum Nürnberg",
+        "complete": true,
+        "height": 512,
+        "renderWidth": 285.5,
+        "width": 512
+      },
+      {
+        "alt": "Fundo de Localização de Valência no Pokémon GO: Museu de les Ciències",
+        "complete": true,
+        "height": 512,
+        "renderWidth": 285.5,
+        "width": 512
+      },
+      {
+        "alt": "Fundo de Localização de Noordwijk no Pokémon GO: Space Expo",
+        "complete": false,
+        "height": 0,
+        "renderWidth": 285.5,
+        "width": 0
+      },
+      {
+        "alt": "Fundo de Localização de Transinne no Pokémon GO: Euro Space Center",
+        "complete": false,
+        "height": 0,
+        "renderWidth": 285.5,
+        "width": 0
+      }
+    ],
+    "maps": 6,
+    "museums": 6,
+    "open": true,
+    "pageScroll": 1348,
+    "researchPanels": 0,
+    "taskTextPresent": false,
+    "viewport": 1348,
+    "initial_images_observation": "Last two assets were lazy-loaded; final desktop_images verifies all six after scrolling."
+  },
+  "mobile": {
+    "clocks": 6,
+    "dialogScroll": 360,
+    "dialogWidth": 360,
+    "gpxPanels": 0,
+    "gpxTextPresent": false,
+    "maps": 6,
+    "museums": 6,
+    "open": true,
+    "pageScroll": 375,
+    "researchPanels": 0,
+    "viewport": 375
+  },
+  "mobile_images": [
+    {
+      "alt": "Fundo de Localização de Londres no Pokémon GO: Science Museum",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 282,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Toulouse no Pokémon GO: Cité de l’espace",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 282,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Nuremberg no Pokémon GO: Deutsches Museum Nürnberg",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 282,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Valência no Pokémon GO: Museu de les Ciències",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 282,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Noordwijk no Pokémon GO: Space Expo",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 282,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Transinne no Pokémon GO: Euro Space Center",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 282,
+      "width": 512
+    }
+  ],
+  "physical_android_certified": false,
+  "desktop_images": [
+    {
+      "alt": "Fundo de Localização de Londres no Pokémon GO: Science Museum",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 285.5,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Toulouse no Pokémon GO: Cité de l’espace",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 285.5,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Nuremberg no Pokémon GO: Deutsches Museum Nürnberg",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 285.5,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Valência no Pokémon GO: Museu de les Ciències",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 285.5,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Noordwijk no Pokémon GO: Space Expo",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 285.5,
+      "width": 512
+    },
+    {
+      "alt": "Fundo de Localização de Transinne no Pokémon GO: Euro Space Center",
+      "complete": true,
+      "height": 512,
+      "renderWidth": 285.5,
+      "width": 512
+    }
+  ]
+}
