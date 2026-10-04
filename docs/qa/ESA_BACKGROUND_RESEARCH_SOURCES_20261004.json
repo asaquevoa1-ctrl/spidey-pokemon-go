@@ -1,5 +1,5 @@
 {
-  "status": "INTEGRATED_PREVIEW_QA_PENDING",
+  "status": "PASSED_PREVIEW_BACKGROUNDS_SCOPED_RESEARCH_GPX_BLOCKED_UNVERIFIED_BOUNDARIES",
   "verified_at": "2026-10-04T12:54:53.931662+00:00",
   "scope": "Six museum city backgrounds; Valencia-only field-task report; requested full-area GPX remains unverified",
   "official_source": {
@@ -152,5 +152,8 @@
     }
   ],
   "approved_master_modified": false,
-  "premium_refusals_preserved": true
+  "premium_refusals_preserved": true,
+  "qa_record": "docs/qa/ESA_BACKGROUND_RESEARCH_QA_20261004.json",
+  "code_commit": "036e0c3b31eb8946270216aa8049b6e3ff5bcf12",
+  "qa_verified_at": "2026-10-04T13:13:07.498769+00:00"
 }
