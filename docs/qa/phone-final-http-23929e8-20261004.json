@@ -1,0 +1,73 @@
+{
+  "status": "PASSED",
+  "checked_at_utc": "2026-10-04T18:14:41.136268+00:00",
+  "code_commit": "23929e805a976e8fe68fa17ac1dcbca4ca0c8dc2",
+  "deployment_id": "dpl_ELfk6VBnmMfNABPs9nebggugGn2m",
+  "changed_public_files": [
+    {
+      "path": "spidey-app/art-coverage-v1.js",
+      "status": 200,
+      "bytes": 12198,
+      "sha256": "411594b4e1b4bd95c61ee5460d8309c5113ac3b753cc521fa4e5512a7d94c723",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/index.html",
+      "status": 200,
+      "bytes": 10538,
+      "sha256": "f51c5271320a4fbd4693384cf4f25b7a0ff866e6a127777c9cd2f4a645aeb260",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/premium-event-art.js",
+      "status": 200,
+      "bytes": 12319,
+      "sha256": "8dea4c7f8119883dbaae2530b7894ea23f277d0e8fc51695440c34e81404e77d",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/stamps-v2.css",
+      "status": 200,
+      "bytes": 7548,
+      "sha256": "57b2ad8a84d11f30742c96688637418fef77ef844f4b57f85b21e1d272d4c97d",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/stamps-v2.js",
+      "status": 200,
+      "bytes": 15780,
+      "sha256": "aa0fc3c87bd10feff929194bca0249cd1d2531b8710fd7e70b53aef1206b0111",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/sw.js",
+      "status": 200,
+      "bytes": 8423,
+      "sha256": "0e33d7ce3de07e10b5c7aee1c98cc62e55e4b41b197d5e265691e023822f972b",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/weekly-cards.css",
+      "status": 200,
+      "bytes": 1248,
+      "sha256": "4b5be918bd20c0aa4667a9f4d5884df36ad6c820131b2237efb413ce98bc95f4",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/weekly.js",
+      "status": 200,
+      "bytes": 9603,
+      "sha256": "19fda0011133d7d992f1a81d23be57f9408b24a4c97135c3d9c95a78166ab28a",
+      "exact": true
+    }
+  ],
+  "unchanged_assets_proof": "release-final-http-e220251-20261004.json",
+  "gpx": {
+    "http_status": 200,
+    "bytes": 1890,
+    "waypoints": 17,
+    "sha256": "8870435145133c11894b923dad8dead2bff056e78a7c79104346fb1e7e12382a",
+    "same_prior_browser_download": true,
+    "content_disposition": "attachment; filename=\"pokemon-centre-stamp-rally-japan-2026.gpx\""
+  }
+}

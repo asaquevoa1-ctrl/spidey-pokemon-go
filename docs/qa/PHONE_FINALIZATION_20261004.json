@@ -1,0 +1,111 @@
+{
+  "status": "PUBLIC_WEB_FINALIZED_WITH_RECORDED_LIMITS",
+  "checked_at_utc": "2026-10-04T18:19:11.134315+00:00",
+  "code_commit": "23929e805a976e8fe68fa17ac1dcbca4ca0c8dc2",
+  "initial_fix_commit": "5da35bf1e9726cf4d8bb1cd1b141f7737a87a3b4",
+  "deployment_id": "dpl_ELfk6VBnmMfNABPs9nebggugGn2m",
+  "deployment_state": "READY",
+  "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "trigger": "Bora finalizar and seven user Android screenshots showing wrapped coordinates and generic weekly covers",
+  "node_tests": {
+    "passed": 59,
+    "failed": 0,
+    "command": "node --test tests/*.test.cjs"
+  },
+  "auto_publish_gate": "PASSED",
+  "coordinates": {
+    "mobile_viewport": "390x850",
+    "themes_verified": [
+      "light",
+      "dark"
+    ],
+    "dialog_width": 360,
+    "dialog_scroll_width": 360,
+    "latitude": "33.589108",
+    "longitude": "130.418954",
+    "code_height_px": 16,
+    "white_space": "nowrap",
+    "code_width_px": 90,
+    "code_scroll_width_px": 90,
+    "catalog_values_and_copy_pair_unchanged": true,
+    "copy_toast": "Coordenada copiada.",
+    "clipboard_content_verified": false,
+    "clipboard_limit": "Cloud clipboard API returned an empty string despite success toast in both iframe and direct app; exact clipboard contents and physical Android copy are not certified by this run."
+  },
+  "weekly": {
+    "same_approved_master_sources": true,
+    "astronaut_source": "assets/events/official/world-space-week-2026.jpg?v=58ba76163977",
+    "astronaut_credit": "Imagem do anúncio oficial · Pokémon GO",
+    "official_media_promoted_to_premium": false,
+    "generic_cover_count": 0,
+    "unapproved_art_behavior": "Simple date badge, no synthetic or competing poster",
+    "dates_timezone": "America/Sao_Paulo",
+    "older_entries_show_ended": [
+      "2026-09-28-max-monday-sobble",
+      "2026-09-mega-malamar-raids",
+      "2026-09-gbl-22-29"
+    ],
+    "mobile_width": 351,
+    "mobile_scroll_width": 351,
+    "mobile_card_width": 349,
+    "mobile_card_scroll_width": 349,
+    "compact_date_card_columns_px": [
+      82,
+      227
+    ],
+    "desktop_document_width": 1348,
+    "desktop_document_scroll_width": 1348,
+    "desktop_weekly_width": 968,
+    "desktop_weekly_scroll_width": 968,
+    "xerneas_victreebel_and_gbl_images_loaded": true,
+    "lazy_images_not_in_view_are_not_reported_as_failed": true,
+    "legacy_layout_issue_found_and_corrected": "Legacy display:block was overriding the date card grid; final display:grid verified in production."
+  },
+  "gpx": {
+    "http_status": 200,
+    "bytes": 1890,
+    "waypoints": 17,
+    "sha256": "8870435145133c11894b923dad8dead2bff056e78a7c79104346fb1e7e12382a",
+    "same_prior_browser_download": true,
+    "content_disposition": "attachment; filename=\"pokemon-centre-stamp-rally-japan-2026.gpx\""
+  },
+  "preserved": {
+    "catalog_events": 124,
+    "approved_masters": 25,
+    "original_location_backgrounds": 7,
+    "fly_references": "20/28",
+    "taipei": true,
+    "automatic_queues_and_cursors": true,
+    "protected_catalog_and_asset_changes": [],
+    "fixed_daily_quests_excluded": true,
+    "museum_full_area_gpx_excluded": true,
+    "premium_refusals_retained_without_retry": [
+      "Applin",
+      "World Space Week",
+      "Sizzlipede"
+    ]
+  },
+  "limits": [
+    "Remote push remains unavailable: storage, VAPID/dispatch credentials and event scheduling have not been configured.",
+    "Physical Android installation/update/offline/clipboard/push have not been certified.",
+    "No Premium art was created or approved in this UI correction."
+  ],
+  "http_record": "docs/qa/phone-final-http-23929e8-20261004.json",
+  "proofs": [
+    {
+      "path": "docs/qa/proofs/spidey-phone-coordinates-light-5da35bf-20261004.jpg",
+      "bytes": 56937,
+      "sha256": "6745ba5597c55f25b81a7beb08cf66687b0c386c028650f6d054740d9fb44173"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-phone-coordinates-dark-23929e8-20261004.jpg",
+      "bytes": 62401,
+      "sha256": "1e119a7e18166a8eab2f9aaebe8fbbe663ff9e14cd8cd38fda984ff72fb080f6"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-phone-weekly-dark-23929e8-20261004.jpg",
+      "bytes": 76643,
+      "sha256": "0c26f463a6a1a6465e47f48842875f89f043678856b118250eb4959eb7c26bc7"
+    }
+  ]
+}

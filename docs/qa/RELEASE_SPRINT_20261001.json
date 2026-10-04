@@ -44,7 +44,8 @@
     "space_backgrounds_and_research": "PASSED_SIX_INTEGRAL_GAME_BACKGROUNDS_SPECIFIC_RESEARCH_DISMISSED_BY_USER",
     "space_full_area_gpx": "DISMISSED_BY_USER_INSTRUCTION_NO_ROUTES_CREATED",
     "malaga_local_event": "PASSED_OFFICIAL_BACKGROUND_THREE_MAPS_HOME_FLY_LOCAL_BRAZIL_END_TIME_FF84FE8",
-    "production_gpx_download": "NOT_CONFIRMED_CURRENT_CLOUD_BROWSER_TIMEOUT_PRIOR_PREVIEW_PROOF_RETAINED"
+    "production_gpx_download": "PASSED_HTTP_200_1890_BYTES_17_POINTS_SAME_FRESH_BROWSER_FILE",
+    "mobile_coordinates_and_weekly_visuals": "PASSED_PUBLIC_23929E8_NO_OVERFLOW_CANONICAL_MASTERS_OFFICIAL_ASTRONAUT_NO_GENERIC_COVERS"
   },
   "next_batch": [
     "Remote push configuration only with suitable storage and precise event scheduling",
@@ -80,10 +81,11 @@
     "04/10 11:44:10 BRT: editor dispensa missões e GPX de área dos museus. ae4fcd4 remove lista fixa e pendências GPX, mantém seis fundos/mapas/relógios. 41 testes e QA desktop Escuro/mobile Claro/13 arquivos via share anônimo passaram; seis assets, catálogo124 e masters25 preservados. Busca encerrada, zero GPX criado; históricos preservados. Produção, URL durável e validação física seguem pendentes.",
     "04/10:ff84fe8 confirma Málaga oficial e integra fundo original512×512, três endereços/mapas, janela local1/10 09h→4/10 20h e Brasília1/10 04h→4/10 15h. 43 testes, desktop Escuro/mobile Claro/FLY20/28/Taipei e10 arquivos via share anônimo exatos passaram. Seis fundos ESA, catálogo124, masters25 e744 blobs fora do escopo preservados. Missões/GPX dispensados não reintroduzidos. Produção/Android físico/acesso durável permanecem pendentes.",
     "04/10:publicação web autorizada;merge preserva main atual e candidato revisado;75testes e42arquivos públicos exatos,QA desktop/mobile núcleo aprovado;limitações registradas sem certificação falsa.",
-    "04/10: final web polish a7e34e2 READY; fresh Japan GPX browser download verified1890 bytes/17points; alerts availability checked before images finish;52 Node tests; public desktop/mobile390 verified; catalogs/art/backgrounds/queues preserved."
+    "04/10: final web polish a7e34e2 READY; fresh Japan GPX browser download verified1890 bytes/17points; alerts availability checked before images finish;52 Node tests; public desktop/mobile390 verified; catalogs/art/backgrounds/queues preserved.",
+    "04/10:23929e8 READY; user Android screenshot fixes: coordinates no longer wrap, Weekly canonical approved masters and official astronaut, date badges/status;59 Node tests and automatic gate passed;8 changed public files exact;Japan GPX unchanged;limits retained."
   ],
-  "updated_at": "2026-10-04T17:02:02.695755+00:00",
-  "code_commit": "a7e34e278c5ca6b7004a93e88a721a96af3937d6",
+  "updated_at": "2026-10-04T18:19:11.134315+00:00",
+  "code_commit": "23929e805a976e8fe68fa17ac1dcbca4ca0c8dc2",
   "preview_url": "https://spidey-pokemon-pa2fgluuu-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
     "Remote push: storage, VAPID/dispatch credentials and event scheduler missing; HTTP503, UI unavailable",
@@ -121,12 +123,12 @@
   },
   "art_continuation_authorization": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
   "individual_art_approval_required": false,
-  "current_core_qa_record": "docs/qa/FINALIZATION_20261004.json",
+  "current_core_qa_record": "docs/qa/PHONE_FINALIZATION_20261004.json",
   "space_scope_update_record": "docs/qa/ESA_SCOPE_UPDATE_20261004.json",
   "public_launch": {
-    "code_commit": "a7e34e278c5ca6b7004a93e88a721a96af3937d6",
-    "deployment_id": "dpl_B7QXVq4Hf5D67YarTJJKtrGrnHxa",
+    "code_commit": "23929e805a976e8fe68fa17ac1dcbca4ca0c8dc2",
+    "deployment_id": "dpl_ELfk6VBnmMfNABPs9nebggugGn2m",
     "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
-    "scope": "Public web core and Japan GPX download verified; remote push and physical Android not certified"
+    "scope": "Public web core, Japan GPX and responsive coordinate/weekly corrections verified; push and physical Android not certified"
   }
 }
