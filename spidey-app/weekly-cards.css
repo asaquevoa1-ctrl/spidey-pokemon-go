@@ -3,6 +3,11 @@
   grid-template-columns: 82px minmax(0, 1fr) !important;
 }
 
+#weeklyView .weekly-item[data-weekly-art-owner="canonical"] > img {
+  object-fit: contain !important;
+  background: #07162d;
+}
+
 .weekly-date {
   display: grid;
   align-content: center;
