@@ -1,0 +1,86 @@
+{
+  "status": "PASSED",
+  "code_commit": "ff84fe8b344d413d87548f4e083e72ad6ea00ad8",
+  "checked_at": "2026-10-04T15:19:20.264219+00:00",
+  "initial_cookies": 0,
+  "credentials_supplied": false,
+  "post_redirect_url": "https://spidey-pokemon-pa2fgluuu-spidey3.vercel.app/spidey-app/index.html",
+  "exact_files": 10,
+  "files": [
+    {
+      "path": "spidey-app/index.html",
+      "status": 200,
+      "bytes": 10471,
+      "sha256": "1a9e8af041cbef47618de4891fc84eed7081d0f7d96e3875d40c3c1c0de59492",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/trust-world-v1.js",
+      "status": 200,
+      "bytes": 8315,
+      "sha256": "7695e251d45395c906d972f7aa5488cf1f83624720db10e8571102352fce647e",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/trust-world-v1.css",
+      "status": 200,
+      "bytes": 1946,
+      "sha256": "e48bb05f017b454e2f125502b779d05920fb239b99a8d44cdbc59055e78231c5",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/sw.js",
+      "status": 200,
+      "bytes": 8399,
+      "sha256": "c16cf15692e925608d622ebc62eb60d44bb8227307bd81261e7a525ec66a15ce",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/data/local-events.json",
+      "status": 200,
+      "bytes": 2697,
+      "sha256": "3f76df6567112d734205fe043e77a2089194eb639bef367e2096a3ba8db92d41",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png",
+      "status": 200,
+      "bytes": 538698,
+      "sha256": "37bb7561eb4b942f30614bdae8f2e1daa95ead617794f291af37acad409581d5",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/data/space-museums.json",
+      "status": 200,
+      "bytes": 10070,
+      "sha256": "88269f0a8c4902536fd2786e49670a3fdc025f2cbca74703aee5a86ff6f38f25",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/data/events.json",
+      "status": 200,
+      "bytes": 189000,
+      "sha256": "02a77dfaa7fbd39fe7892d6cc72499f667ff317f256513607be5a0560d61d0a1",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/premium-approved-master.js",
+      "status": 200,
+      "bytes": 10274,
+      "sha256": "d42cd4614e42ed1e8aadfe268c844f336ec4b54fcab525ec588cf496b2d1b7b5",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/space-week.js",
+      "status": 200,
+      "bytes": 8214,
+      "sha256": "3b75b8dd87643ff45beedac348077e4c446ccaf19afa6234f1e59f01f48907ed",
+      "exact": true
+    }
+  ],
+  "share": {
+    "method": "Native temporary preview sharing",
+    "secret_saved": false,
+    "expires_vendor_text": "10/5/2026, 2:16:31 PM"
+  }
+}

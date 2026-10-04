@@ -1,5 +1,5 @@
 {
-  "status": "IMPLEMENTED_PREVIEW_QA_PENDING",
+  "status": "PASSED_PREVIEW",
   "checked_at": "2026-10-04T15:14:19.506026+00:00",
   "base_commit": "3e02d5b6d9f5f6814d2bea5e6e0d6d89b34a147e",
   "branch": "spidey-fly-v1",
@@ -55,6 +55,9 @@
     "protected_local_files_compared_to_base": 35,
     "catalog_events": 124,
     "masters": 25,
-    "browser": "PENDING"
-  }
+    "browser": "PASSED_DESKTOP_DARK_MOBILE_LIGHT"
+  },
+  "code_commit": "ff84fe8b344d413d87548f4e083e72ad6ea00ad8",
+  "verified_at": "2026-10-04T15:45:04.087879+00:00",
+  "qa_record": "docs/qa/MALAGA_QA_20261004.json"
 }
