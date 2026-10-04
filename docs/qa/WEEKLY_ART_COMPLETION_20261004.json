@@ -1,7 +1,7 @@
 {
   "status": "APPROVED_DELEGATED_QA_PASSED",
   "date": "2026-10-04",
-  "updated_at": "2026-10-04T20:12:58.017850+00:00",
+  "updated_at": "2026-10-04T20:29:14.522373+00:00",
   "base_commit": "ad1d5caa25d69890489021d645239a9e05b56529",
   "approval_basis": "USER_DELEGATED_VISUAL_QA",
   "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
@@ -783,10 +783,21 @@
     "physical_android_certified": false
   },
   "publication": {
-    "status": "APPROVED_FOR_PUBLICATION",
+    "status": "READY_PUBLIC_VERIFIED",
     "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
     "authorization": "Bora terminar pra publicar pra galere; autorização anterior preservada",
-    "announcements_sent": false
+    "announcements_sent": false,
+    "code_commit": "2008d36ac2c33f8ada556063bd22563400d7d9db",
+    "deployment_id": "dpl_7Me5Do8MRWSJGjPnyorryZecjWWT",
+    "target": "production",
+    "verified_at": "2026-10-04T20:29:14.522373+00:00",
+    "http_proof": "docs/qa/weekly-art-public-http-2008d36-20261004.json",
+    "browser_proof": "docs/qa/weekly-art-public-browser-2008d36-20261004.json",
+    "screenshot": "docs/qa/proofs/weekly-art-public-malamar-dark-2008d36-20261004.jpg",
+    "public_files_exact": 52,
+    "public_files_checked": 52,
+    "japan_gpx_waypoints": 17,
+    "push_status": "push_not_configured"
   },
   "blocked_generations_preserved": [
     "2026-09-harvest-festival-applin",

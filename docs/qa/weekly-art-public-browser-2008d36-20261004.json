@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-04T20:26:11.481Z",
+  "code_commit": "2008d36ac2c33f8ada556063bd22563400d7d9db",
+  "public_url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "desktop_checks": [
+    {
+      "id": "2026-09-mega-malamar-raids",
+      "view": "public_desktop_detail",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "fit": "contain",
+            "height": 1402,
+            "src": "assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png?v=d59fe0c923f8",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "title": "Megarreides: Mega Malamar"
+      }
+    },
+    {
+      "id": "2026-10-halloween-part-1",
+      "view": "public_desktop_news",
+      "story": {
+        "images": [
+          {
+            "complete": true,
+            "fit": "contain",
+            "height": 1402,
+            "src": "assets/events/premium/halloween-mystery-teaser-20261004-approved-v1.png?v=ae832e6af897",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "INFORMAÇÃO DA COMUNIDADE\n\nPrévia • Reprodução da comunidade • Atualizado 04/10\n\nHalloween 2026: novas pistas no ar\n\nUma prévia com silhuetas entrou no clima de Halloween. Pokémon, fantasias e bônus ainda aguardam confirmação. As datas abaixo são do calendário da comunidade.\n\n27 de out., 10:00 → 31 de out., 20:00 (Brasília)\n\nVer evento\nConsultar fonte"
+      }
+    }
+  ],
+  "mobile_detail": {
+    "images": [
+      {
+        "complete": true,
+        "height": 1402,
+        "src": "assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png?v=d59fe0c923f8",
+        "width": 1122
+      }
+    ],
+    "theme": "dark",
+    "title": "Megarreides: Mega Malamar",
+    "viewport": {
+      "scrollWidth": 390,
+      "width": 390
+    }
+  },
+  "mobile_screenshot": "docs/qa/proofs/weekly-art-public-malamar-dark-2008d36-20261004.jpg",
+  "physical_android_certified": false
+}

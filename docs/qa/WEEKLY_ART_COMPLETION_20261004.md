@@ -23,3 +23,5 @@ A janela Início/Semana tinha nove lacunas. Seis foram preenchidas; restam as re
 Alertas automáticos continuam indisponíveis por configuração; Android físico/PWA/offline/clipboard exato não certificados nesta rodada. Missões fixas e GPX de área de museus continuam dispensados. Nenhum anúncio enviado a terceiros. Prompts, entradas, hashes e decisões estão no JSON deste lote.
 
 Validação: 61 testes Node passaram; gate de autopublicação passou; PNGs verificados integralmente.
+
+Publicação concluída: código `2008d36ac2c33f8ada556063bd22563400d7d9db`, deployment `dpl_7Me5Do8MRWSJGjPnyorryZecjWWT` READY em https://spidey-pokemon-go.vercel.app/spidey-app/ . Cliente anônimo confirmou52 arquivos exatos/HTTP200. GPX Japão200,1.890 bytes/17 pontos/hash preservado. Mega Malamar mobile e Halloween desktop carregaram os pôsteres aprovados completos em produção, sem overflow. Provas públicas JSON e screenshot indicadas na propriedade publication deste registro. Push503 `push_not_configured` e limites de Android físico continuam registrados.

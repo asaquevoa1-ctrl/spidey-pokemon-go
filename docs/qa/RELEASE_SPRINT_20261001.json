@@ -84,7 +84,7 @@
     "04/10: final web polish a7e34e2 READY; fresh Japan GPX browser download verified1890 bytes/17points; alerts availability checked before images finish;52 Node tests; public desktop/mobile390 verified; catalogs/art/backgrounds/queues preserved.",
     "04/10:23929e8 READY; user Android screenshot fixes: coordinates no longer wrap, Weekly canonical approved masters and official astronaut, date badges/status;59 Node tests and automatic gate passed;8 changed public files exact;Japan GPX unchanged;limits retained."
   ],
-  "updated_at": "2026-10-04T18:19:11.134315+00:00",
+  "updated_at": "2026-10-04T20:29:14.522373+00:00",
   "code_commit": "23929e805a976e8fe68fa17ac1dcbca4ca0c8dc2",
   "preview_url": "https://spidey-pokemon-pa2fgluuu-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
@@ -126,9 +126,21 @@
   "current_core_qa_record": "docs/qa/PHONE_FINALIZATION_20261004.json",
   "space_scope_update_record": "docs/qa/ESA_SCOPE_UPDATE_20261004.json",
   "public_launch": {
-    "code_commit": "23929e805a976e8fe68fa17ac1dcbca4ca0c8dc2",
-    "deployment_id": "dpl_ELfk6VBnmMfNABPs9nebggugGn2m",
+    "code_commit": "2008d36ac2c33f8ada556063bd22563400d7d9db",
+    "deployment_id": "dpl_7Me5Do8MRWSJGjPnyorryZecjWWT",
     "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
-    "scope": "Public web core, Japan GPX and responsive coordinate/weekly corrections verified; push and physical Android not certified"
+    "scope": "Public web verified with seven new Premium posters; push and physical Android not certified"
+  },
+  "weekly_art_publication_20261004": {
+    "status": "READY_PUBLIC_VERIFIED",
+    "code_commit": "2008d36ac2c33f8ada556063bd22563400d7d9db",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approved_entries": 32,
+    "new_posters": 7,
+    "node_tests_passed": 61,
+    "public_files_exact": 52,
+    "japan_gpx_waypoints": 17,
+    "physical_android_certified": false,
+    "remote_push_configured": false
   }
 }
