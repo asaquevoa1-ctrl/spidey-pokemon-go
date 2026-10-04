@@ -1,0 +1,50 @@
+{
+  "status": "IMPLEMENTED_PENDING_BROWSER_QA",
+  "date": "2026-10-04T21:00:35.811601+00:00",
+  "base_commit": "c1ac3a8362f26bfeceefff14782f5d6ea68e5950",
+  "pokelids": {
+    "official_total": 482,
+    "prefectures": 42,
+    "unique_ids": 482,
+    "source_sha256": "5bc65d425466f52fe9e379fd38657980d3584c6461f6df9b073af40b34055a33",
+    "source_url": "https://local.pokemon.jp/en/manhole/search/?keyword=",
+    "source_index": "https://local.pokemon.jp/en/manhole/",
+    "coordinates": "official_lid_venue_reference_not_exact_pokestop",
+    "all_live_in_game_certified": false,
+    "gpx_enabled": false,
+    "images": "official_lid_artwork_remote_lazy"
+  },
+  "centers": {
+    "before": 17,
+    "after": 18,
+    "old_stops_preserved": true,
+    "added": "Pokémon GO Lab.",
+    "coordinate": [
+      35.72909,
+      139.7187
+    ],
+    "official_url": "https://shop.pokemon.co.jp/ja/shop/common/events/202606/000336.html",
+    "previous_gpx_17_retained_as_history": true
+  },
+  "pwa": {
+    "icon_sizes": [
+      192,
+      512
+    ],
+    "format": "SVG with exact approved JPEG embedded",
+    "logo_sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132",
+    "physical_android_install_certified": false
+  },
+  "preserved": {
+    "apac_rally": true,
+    "approved_masters": 32,
+    "museum_quests_gpx_not_added": true
+  },
+  "nagasaki": {
+    "official_stops": 8,
+    "source": "https://pokemongo.com/news/stamp-rally-nagasaki?hl=en",
+    "coordinate_status": "unconfirmed_named_maps_only",
+    "full_gpx": false
+  },
+  "coverage_limit": "482 official lid locations,18 Center campaign stops and8 Nagasaki official venues; not a certification of all live game stamps or historic Japanese campaigns."
+}

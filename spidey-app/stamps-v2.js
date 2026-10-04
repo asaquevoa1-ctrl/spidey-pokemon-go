@@ -34,6 +34,7 @@
       stop.region,
       stop.venue,
       stop.venue_detail,
+      ...(stop.pokemon || []),
       stop.id,
     ].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   }
@@ -69,7 +70,7 @@
         <div class="stamp-tile-copy-v2">
           <strong>${escapeHtml(stop.venue || stop.city || `Selo ${number}`)}</strong>
           <small>${escapeHtml(stop.city || '')}${stop.prefecture ? ` · ${escapeHtml(stop.prefecture)}` : ''}</small>
-          <span>${exact ? 'Coordenada confirmada' : 'Coordenada pendente'}</span>
+          <span>${stop.image_kind === 'lid_artwork' ? 'Arte original da PokéLid' : exact ? 'Coordenada confirmada' : 'Coordenada pendente'}</span>
         </div>
       </button>`;
   }
@@ -84,6 +85,7 @@
 
   openStampRally = function spideyOpenStampRallyV2(rally) {
     const stops = orderedStops(rally);
+    const isPokelid = rally.collection_type === 'pokelids';
     const publicNotes=rally.public_notes ?? rally.notes ?? [];
     let progress = getStampProgress(rally);
     const exactStops = stops.filter(exactPokestop);
@@ -125,7 +127,7 @@
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
-          <div><strong>${exactStops.length}/${stops.length}</strong><span>coordenadas exatas</span></div>
+          <div><strong>${isPokelid ? stops.filter(validCoordinate).length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais oficiais' : 'coordenadas exatas'}</span></div>
           <div><strong>${stops.length - progress.size}</strong><span>restantes</span></div>
         </div>
 
@@ -134,6 +136,7 @@
             <div><span class="eyebrow">ROTA</span><h3>Próximo selo</h3></div>
             <strong id="stampRoutePosition"></strong>
           </div>
+          ${isPokelid ? `<div class="stamp-prefecture-picker"><label for="stampPrefectureRoute">Escolher prefeitura</label><select id="stampPrefectureRoute"><option value="all">Todas as 42 prefeituras</option>${regions.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}</select><p class="microcopy">A cada dois selos presenciais na mesma prefeitura: Pikachu com fundo local.</p></div>` : ''}
           <div id="stampActiveStop" class="stamp-active-stop-v2"></div>
           <div class="stamp-route-actions-v2">
             <button id="stampPrev" class="action-btn" type="button">← Anterior</button>
@@ -142,7 +145,7 @@
           </div>
         </section>
 
-        <section class="rally-coordinate-bundle-v4 stamp-datahub-v2">
+        <section class="rally-coordinate-bundle-v4 stamp-datahub-v2" ${isPokelid ? 'hidden' : ''}>
           <div class="stamp-section-head-v2">
             <div><span class="eyebrow">COPIAR E BAIXAR</span><h3>Coordenadas em lote</h3></div>
           </div>
@@ -205,13 +208,21 @@
 
     function renderActive() {
       if (!stops.length) return;
-      const index = activeIndex();
-      const stop = stops[index];
+      const visible = filteredStops();
+      if (!visible.length) {
+        activeBox.innerHTML = '<p class="empty">Nenhum selo neste filtro. Escolha outra prefeitura ou busca.</p>';
+        position.textContent = '0 de 0';
+        toggleDone.disabled = true;
+        return;
+      }
+      toggleDone.disabled = false;
+      const stop = visible.find(item => item.id === activeId) || visible.find(item => !progress.has(item.id)) || visible[0];
+      const index = stops.indexOf(stop);
       activeId = stop.id;
       const done = progress.has(stop.id);
       const value = coord(stop);
       const image = stampImage(stop);
-      position.textContent = `${index + 1} de ${stops.length}`;
+      position.textContent = `${visible.indexOf(stop) + 1} de ${visible.length}`;
       toggleDone.textContent = done ? 'Marcar como faltante' : 'Marcar como feito';
       toggleDone.classList.toggle('is-done', done);
       activeBox.innerHTML = `
@@ -223,7 +234,7 @@
           <h3>${escapeHtml(stop.venue || stop.city || `Selo ${index + 1}`)}</h3>
           <p>${escapeHtml(stop.city || '')}${stop.prefecture ? ` · ${escapeHtml(stop.prefecture)}` : ''}${stop.country ? ` · ${escapeHtml(stop.country)}` : ''}</p>
           ${stop.venue_detail ? `<small>${escapeHtml(stop.venue_detail)}</small>` : ''}
-          ${value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
+          ${isPokelid ? `<div class="action-row"><a class="action-btn" href="https://www.google.com/maps?q=${Number(stop.latitude)},${Number(stop.longitude)}" target="_blank" rel="noopener">Mapa da PokéLid</a><a class="action-btn" href="${escapeHtml(stop.official_url)}" target="_blank" rel="noopener">Ver tampa oficial</a></div><small>Local da tampa; posição da PokéStop a conferir no jogo.</small>` : stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener">Ver local no mapa</a><p class="microcopy">PokéStop exata a conferir.</p>` : value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
         </div>
         ${value ? `<div class="coordinates stamp-active-coordinates-v2"><div class="stamp-coordinate-values-v2"><div><small>Latitude</small><code>${value.split(',')[0]}</code></div><div><small>Longitude</small><code>${value.split(',')[1]}</code></div></div><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar coordenadas</button></div>` : ''}`;
       activeBox.querySelector('#copyActiveStampCoord')?.addEventListener('click', () => setClipboard(value, 'Coordenada copiada.'));
@@ -232,8 +243,11 @@
 
     function setActiveByOffset(offset) {
       if (!stops.length) return;
-      const next = Math.max(0, Math.min(stops.length - 1, activeIndex() + offset));
-      activeId = stops[next].id;
+      const visible = filteredStops();
+      if (!visible.length) return;
+      const index = Math.max(0, visible.findIndex(stop => stop.id === activeId));
+      const next = Math.max(0, Math.min(visible.length - 1, index + offset));
+      activeId = visible[next].id;
       renderActive();
       gallery.querySelector(`[data-stamp-stop-id="${CSS.escape(activeId)}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
     }
@@ -285,8 +299,16 @@
       renderGallery();
       renderActive();
     });
+    detail.querySelector('#stampPrefectureRoute')?.addEventListener('change', event => {
+      region = event.target.value || 'all';
+      detail.querySelector('#stampRegionV2').value = region;
+      activeId = '';
+      renderGallery(); renderActive();
+    });
     detail.querySelector('#stampRegionV2')?.addEventListener('change', (event) => {
       region = event.target.value || 'all';
+      if (isPokelid) detail.querySelector('#stampPrefectureRoute').value = region;
+      activeId = '';
       renderGallery();
       renderActive();
     });

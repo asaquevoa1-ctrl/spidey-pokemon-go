@@ -1,5 +1,7 @@
-const CACHE = 'spidey-app-20261004-art-v1';
+const CACHE = 'spidey-app-20261004-stamps-v1';
 const CORE = [
+  './assets/spidey-icon-192.svg',
+  './assets/spidey-icon-512.svg',
   './assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png',
   './assets/events/premium/ultra-beasts-rotation-20260923-29-approved-v1.png',
   './assets/events/premium/sobble-max-monday-20260928-approved-v1.png',

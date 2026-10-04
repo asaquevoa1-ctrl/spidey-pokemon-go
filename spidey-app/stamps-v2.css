@@ -396,3 +396,9 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.stamp-prefecture-picker { margin: 0 0 18px; }
+.stamp-prefecture-picker label { display: block; margin-bottom: 8px; font-weight: 700; }
+.stamp-prefecture-picker select { width: 100%; max-width: 100%; padding: 14px; color: inherit; background: var(--panel, #0c2134); border: 1px solid var(--line, #284554); border-radius: 14px; }
+:root[data-theme="light"] .stamp-prefecture-picker select { background: #f6faff; color: #162c3d; }
+.stamp-datahub-v2[hidden] { display: none !important; }

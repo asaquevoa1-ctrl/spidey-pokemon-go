@@ -17,15 +17,19 @@ function responseRecorder() {
   };
 }
 
-test('Japan download preserves the previously verified 17 waypoints byte for byte', async () => {
+test('Japan download adds GO Lab while preserving the previous17 waypoints byte for byte', async () => {
   const { rallyGpx } = await gpxModule;
   const result = rallyGpx(catalog, japan.id);
   const verified = fs.readFileSync('docs/qa/japan-rally-browser-download-0433c32-20261002.gpx', 'utf8');
   assert.equal(result.status, 200);
-  assert.equal(result.content, verified);
-  assert.equal((result.content.match(/<wpt /g) || []).length, 17);
+  const oldStops = verified.match(/<wpt[^>]*>[\s\S]*?<\/wpt>/g);
+  const newStops = result.content.match(/<wpt[^>]*>[\s\S]*?<\/wpt>/g);
+  assert.deepEqual(newStops.slice(0,17), oldStops);
+  assert.equal(newStops.length,18);
+  assert.match(newStops[17], /lat="35\.72909" lon="139\.7187"/);
+  assert.match(newStops[17], /Pokémon GO Lab/);
   assert.equal(result.filename, 'pokemon-centre-stamp-rally-japan-2026.gpx');
-  assert.equal(rallyGpx(catalog, japan.slug).content, verified);
+  assert.equal(rallyGpx(catalog, japan.slug).content, result.content);
 });
 
 test('partial rally and every unverified or invalid coordinate block the full download', async () => {
@@ -73,7 +77,7 @@ test('HTTP endpoint serves a named GPX attachment and HEAD without a body', asyn
     assert.equal(response.headers['Content-Type'], 'application/gpx+xml;charset=utf-8');
     assert.equal(response.headers['Cache-Control'], 'no-store');
     if (method === 'HEAD') assert.equal(response.body, '');
-    else assert.equal(response.body, fs.readFileSync('docs/qa/japan-rally-browser-download-0433c32-20261002.gpx', 'utf8'));
+    else { const { rallyGpx } = await gpxModule; assert.equal(response.body, rallyGpx(catalog,japan.id).content); }
   }
 });
 

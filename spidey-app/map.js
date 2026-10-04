@@ -59,7 +59,7 @@ function collectSpideyMapPoints() {
 }
 
 function pendingStampVenues() {
-  return state.stamps.flatMap((rally) => (rally.stops || [])
+  return state.stamps.filter(rally => rally.collection_type !== 'pokelids').flatMap((rally) => (rally.stops || [])
     .filter((stop) => !exactPokestop(stop))
     .map((stop) => ({ rally, stop })));
 }

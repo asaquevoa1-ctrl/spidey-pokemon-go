@@ -271,7 +271,7 @@ function renderStamps() {
       </div>
       <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="stamp-progress"><span style="width:${stops.length ? Math.min(100, (progress.size / stops.length) * 100) : 0}%"></span></div>
-      <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> carimbados · <strong>${exact}</strong> coordenadas exatas</div>
+      <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> carimbados · <strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : exact}</strong> ${rally.collection_type === 'pokelids' ? 'locais oficiais · 42 prefeituras' : 'coordenadas exatas'}</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
     card.addEventListener('click', () => openStampRally(rally));
     card.addEventListener('keydown', (e) => { if (e.key === 'Enter') openStampRally(rally); });
@@ -282,6 +282,7 @@ function renderStamps() {
 
 function stampCoordinateLabel(stop) {
   if (stop.coordinate_type === 'exact_pokestop' && exactPokestop(stop)) return 'PokéStop exata';
+  if (stop.image_kind === 'lid_artwork' && validCoordinate(stop)) return 'Local oficial da PokéLid';
   if (stop.coordinate_type === 'venue_reference') return 'Local do evento • coordenada ainda não confirmada';
   return 'Coordenada a confirmar';
 }
@@ -471,17 +472,33 @@ $('#closeDialog').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
 document.querySelectorAll('.app-tab').forEach((tab) => tab.addEventListener('click', () => setView(tab.dataset.view)));
 
+function installedAsApp() {
+  return window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+}
+function showInstallGuide() {
+  detail.innerHTML = `<div class="detail-body"><span class="eyebrow">SPIDEY NO SEU CELULAR</span><h2>Instalar o Spidey</h2><p>Use o ícone na tela inicial para abrir o app.</p><h3>Android · Chrome</h3><ol class="bonus-list"><li>Abra este site no Chrome, fora do navegador interno do WhatsApp ou ChatGPT.</li><li>Toque no menu de três pontos (⋮).</li><li>Escolha <strong>Instalar e criar atalho</strong> e depois <strong>Instalar</strong>.</li><li>Confirme e abra o Spidey pelo novo ícone.</li></ol><p>Dependendo da versão do navegador, a opção pode se chamar “Instalar app” ou “Adicionar à tela inicial”.</p><h3>iPhone · Safari</h3><p>Abra o site no Safari. Toque em Compartilhar e em Adicionar à Tela de Início.</p><p class="microcopy">Alertas automáticos ainda estão indisponíveis. Seu progresso de selos fica salvo neste aparelho e navegador.</p></div>`;
+  dialog.showModal();
+}
+const installButton = $('#installButton');
+installButton.hidden = installedAsApp();
 window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   state.deferredInstall = event;
-  $('#installButton').hidden = false;
+  installButton.hidden = installedAsApp();
 });
-$('#installButton').addEventListener('click', async () => {
-  if (!state.deferredInstall) return;
-  state.deferredInstall.prompt();
-  await state.deferredInstall.userChoice;
+installButton.addEventListener('click', async () => {
+  if (!state.deferredInstall) { showInstallGuide(); return; }
+  const prompt = state.deferredInstall;
   state.deferredInstall = null;
-  $('#installButton').hidden = true;
+  try {
+    await prompt.prompt();
+    const choice = await prompt.userChoice;
+    installButton.hidden = choice.outcome === 'accepted' || installedAsApp();
+  } catch (_) { showInstallGuide(); }
+});
+window.addEventListener('appinstalled', () => {
+  state.deferredInstall = null;
+  installButton.hidden = true;
 });
 
 if ('serviceWorker' in navigator) window.addEventListener('load', async () => { try { const reg = await navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }); await reg.update(); } catch (error) { console.error(error); } });
