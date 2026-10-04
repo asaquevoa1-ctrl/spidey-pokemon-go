@@ -33,3 +33,7 @@ body.spidey-player-ui #eventDetail.player-art-unavailable .spidey-cover-art{disp
 
 .spidey-player-ui .v24-day-sheet{padding-top:30px!important}
 .spidey-player-ui .v24-day-sheet>h2{padding-right:42px}
+
+/* Teaser stories display the complete canonical poster. */
+.cc-news-teaser{max-width:440px;margin:18px auto}
+.cc-news-teaser .player-poster{display:block;width:100%;height:auto;max-height:none;object-fit:contain}

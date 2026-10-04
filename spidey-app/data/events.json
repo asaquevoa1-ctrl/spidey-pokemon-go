@@ -3491,7 +3491,9 @@
         "reason": "Evento sem coordenada exata específica confirmada."
       },
       "notes": [
-        "Detalhes de Pokémon e bônus ainda podem ser ampliados quando a página oficial específica for publicada."
+        "Detalhes de Pokémon e bônus ainda podem ser ampliados quando a página oficial específica for publicada.",
+        "Prévia de Halloween: Pokémon, fantasias e bônus ainda aguardam confirmação; nenhuma identidade foi deduzida das silhuetas.",
+        "A prévia foi reproduzida pela comunidade. O calendário da Parte I continua baseado no Pokémon GO Hub."
       ],
       "notifications": {
         "enabled": true,
@@ -3499,7 +3501,19 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "news": {
+        "title": "Halloween 2026: novas pistas no ar",
+        "summary": "Uma prévia com silhuetas entrou no clima de Halloween. Pokémon, fantasias e bônus ainda aguardam confirmação. As datas abaixo são do calendário da comunidade.",
+        "published_on": "2026-10-03T14:29:08.263Z",
+        "teaser": true,
+        "source": {
+          "name": "Prévia • Reprodução da comunidade",
+          "url": "https://bsky.app/profile/pokemongoappmirror.bsky.social/post/3mwy3wfiuk52n",
+          "confidence": "community"
+        }
+      },
+      "updated_at": "2026-10-04T19:45:07.958130+00:00"
     },
     {
       "id": "2026-10-super-mega-raid-day",
