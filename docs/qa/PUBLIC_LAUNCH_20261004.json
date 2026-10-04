@@ -1,0 +1,31 @@
+{
+  "status": "PUBLIC_WEB_PUBLISHED_CORE_VERIFIED_WITH_LIMITS",
+  "checked_at_utc": "2026-10-04T16:22:54.622940+00:00",
+  "code_commit": "596b302223c898907c67563ac81e68004f15538f",
+  "deployment_id": "dpl_Dbz3cBEMkR1m24ghaCEMi98eddZq",
+  "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "node_tests": 43,
+  "python_tests": 32,
+  "auto_publish_gate": "PASSED",
+  "anonymous_exact_files": 42,
+  "approved_masters": 25,
+  "original_location_backgrounds": 7,
+  "preserved_main_paths": 31,
+  "unchanged_preview_blobs": 755,
+  "limitations": [
+    "Push503notconfigured",
+    "PhysicalAndroidnotcertified",
+    "FreshGPXdownloadnotconfirmed",
+    "ThreePremiumgenerationrefusalsretained"
+  ],
+  "scope_exclusions": [
+    "Fixeddailyquestlists",
+    "Museumfull-areaGPX",
+    "NewAmigosChat",
+    "Announcementstootherpeople"
+  ],
+  "records": [
+    "release-production-http-596b302-20261004.json",
+    "release-production-browser-596b302-20261004.json"
+  ]
+}

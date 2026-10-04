@@ -1,5 +1,5 @@
 {
-  "status": "AUTHORIZED_FOR_PUBLICATION_PENDING_LIVE_QA",
+  "status": "AUTHORIZED_AND_PUBLISHED_PUBLIC_WEB_CORE_QA_PASSED_WITH_LIMITS",
   "user_instruction": "Bora terminar pra publicar pra galere",
   "instruction_received_at": "2026-10-04T12:53:25-03:00",
   "repository": "asaquevoa1-ctrl/spidey-pokemon-go",
@@ -10,12 +10,27 @@
   "public_entry": "https://spidey-pokemon-go.vercel.app/",
   "entry_redirect": "/spidey-app/",
   "deployment_protection": "No protection changes. Production domain was already anonymously accessible; preview remains protected.",
-  "node_tests": {"passed": 43, "failed": 0},
-  "scope_exclusions": ["Fixed daily quest lists", "Full-area museum GPX", "New Amigos/Chat development", "Announcements or push messages to other people"],
+  "node_tests": {
+    "passed": 43,
+    "failed": 0
+  },
+  "scope_exclusions": [
+    "Fixed daily quest lists",
+    "Full-area museum GPX",
+    "New Amigos/Chat development",
+    "Announcements or push messages to other people"
+  ],
   "known_limits": {
     "remote_push": "Server environment variables absent. Keep fail-closed unavailable state; do not claim delivery.",
     "android_physical": "Installation, update, offline and clipboard on a physical Android device not certified.",
-    "premium_generation_refusals": ["Applin", "World Space Week", "Sizzlipede"]
+    "premium_generation_refusals": [
+      "Applin",
+      "World Space Week",
+      "Sizzlipede"
+    ],
+    "production_gpx_download": "No new file confirmed in current cloud browser;two download operation timeouts.Prior17-point preview verification retained."
   },
-  "live_production_qa": "PENDING"
+  "live_production_qa": "PUBLIC_WEB_CORE_PASSED_WITH_RECORDED_LIMITS",
+  "production_commit": "596b302223c898907c67563ac81e68004f15538f",
+  "production_deployment": "dpl_Dbz3cBEMkR1m24ghaCEMi98eddZq"
 }

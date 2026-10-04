@@ -1,0 +1,196 @@
+{
+  "status": "PUBLIC_WEB_CORE_PASSED_WITH_RECORDED_LIMITS",
+  "checkedAtUtc": "2026-10-04T16:19:21.370Z",
+  "codeCommit": "596b302223c898907c67563ac81e68004f15538f",
+  "deploymentId": "dpl_Dbz3cBEMkR1m24ghaCEMi98eddZq",
+  "publicUrl": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "desktop": {
+    "home": {
+      "clientWidth": 1348,
+      "localEvents": "PIKACHU ASTRONAUTA · EUROPA\nMuseus e fundos de localização\n\nSeis museus, reides presenciais e pesquisas. Saiba onde procurar o fundo da sua coleção.\n\n04/10/2026 a 30/04/2027\n\nVer museus e fundos\nEVENTO LOCAL\nOFICIAL\nPokémon GO × Comic-Con Málaga 2026\n\nMálaga, Espanha · 1–4 out 2026\n\nFundo de Localização · Málaga\n\nPikachu com Fundo de Localização de Málaga em encontros de Pesquisa de Campo e Pesquisa temporária do evento.\n\nACONTECENDO AGORA\n\nLocal: 01/10, 09:00 → 04/10, 20:00\n\nBrasília: 01/10, 04:00 → 04/10, 15:00\n\nVer fundo e locais\nEVENTO LOCAL\nAGUARDANDO CONFIRMAÇÃO\nObservatório Astronômico de Pokémon — Toyohashi\n\nToyohashi, Japão · Evento local\n\nMais informações serão exibidas após confirmação.",
+      "mainTitle": "Seu próximo encontro.",
+      "navigation": [
+        "Início",
+        "Semana",
+        "FLY",
+        "Selos",
+        "Mapa",
+        "Novidades"
+      ],
+      "scrollWidth": 1348,
+      "theme": "dark"
+    },
+    "fly": {
+      "essential": "20",
+      "all": "28",
+      "taipei": true
+    },
+    "malaga": {
+      "images": [
+        {
+          "complete": true,
+          "height": 512,
+          "src": "assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png?v=37bb7561eb4b",
+          "width": 512
+        }
+      ],
+      "maps": [
+        "https://www.google.com/maps/search/?api=1&query=FYCMA%20%C2%B7%20Palacio%20de%20Ferias%20y%20Congresos%2C%20Av.%20de%20las%20Palomas%2C%2029006%20M%C3%A1laga%2C%20Espanha",
+        "https://www.google.com/maps/search/?api=1&query=Centro%20Comercial%20Larios%20Centro%2C%20Av.%20de%20la%20Aurora%2C%2025%2C%2029002%20M%C3%A1laga%2C%20Espanha",
+        "https://www.google.com/maps/search/?api=1&query=Centro%20Hist%C3%B3rico%20de%20M%C3%A1laga%2C%20Centro%20Hist%C3%B3rico%2C%20M%C3%A1laga%2C%20Espanha"
+      ],
+      "scrollWidth": 703,
+      "title": "Pikachu · Fundo de Málaga",
+      "venues": 3,
+      "width": 703,
+      "window": "ACONTECENDO AGORA\n\nLocal: 01/10, 09:00 → 04/10, 20:00\n\nBrasília: 01/10, 04:00 → 04/10, 15:00"
+    },
+    "esa": {
+      "fixedQuests": 0,
+      "gpxSection": 0,
+      "maps": [
+        "https://www.google.com/maps/search/?api=1&query=Science%20Museum%2C%20Exhibition%20Road%2C%20South%20Kensington%2C%20London%20SW7%202DD%2C%20Londres%2C%20Reino%20Unido",
+        "https://www.sciencemuseum.org.uk/visit",
+        "https://www.google.com/maps/search/?api=1&query=43.5918308%2C1.4903991",
+        "https://metropole.toulouse.fr/annuaire/cite-de-lespace",
+        "https://www.google.com/maps/search/?api=1&query=49.4535616%2C11.0748903",
+        "https://www.deutsches-museum.de/nuernberg/besuch/anfahrt",
+        "https://www.google.com/maps/search/?api=1&query=Museu%20de%20les%20Ci%C3%A8ncies%2C%20Av.%20Professor%20L%C3%B3pez%20Pi%C3%B1ero%2C%207%2C%2046013%20Val%C3%A8ncia%2C%20Val%C3%AAncia%2C%20Espanha",
+        "https://www.valencia.es/es/-/infociudad-museo-de-las-ciencias",
+        "https://www.google.com/maps/search/?api=1&query=52.2152984%2C4.4208813",
+        "https://www.space-expo.nl/en/contact",
+        "https://www.google.com/maps/search/?api=1&query=50.007%2C5.22",
+        "https://www.eurospacecenter.be/en/infos-tarifs"
+      ],
+      "museums": 6,
+      "scrollWidth": 703,
+      "title": "Pikachu Astronauta · Museus e fundos",
+      "width": 703
+    },
+    "esaImages": [
+      {
+        "complete": true,
+        "height": 512,
+        "src": "assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png?v=68e449fec0ea",
+        "width": 512
+      },
+      {
+        "complete": true,
+        "height": 512,
+        "src": "assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png?v=e98ae5d1cfcd",
+        "width": 512
+      },
+      {
+        "complete": true,
+        "height": 512,
+        "src": "assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png?v=f0516c182e8e",
+        "width": 512
+      },
+      {
+        "complete": true,
+        "height": 512,
+        "src": "assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png?v=f7e8bf69f601",
+        "width": 512
+      },
+      {
+        "complete": true,
+        "height": 512,
+        "src": "assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png?v=e9769f0113b6",
+        "width": 512
+      },
+      {
+        "complete": true,
+        "height": 512,
+        "src": "assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png?v=c60fdac0978b",
+        "width": 512
+      }
+    ],
+    "navigation": [
+      {
+        "activeViews": [
+          {
+            "id": "weeklyView",
+            "title": "Sua semana"
+          }
+        ],
+        "scrollWidth": 1348,
+        "width": 1348
+      },
+      {
+        "activeViews": [
+          {
+            "id": "mapView",
+            "title": "Locais confirmados"
+          }
+        ],
+        "scrollWidth": 1348,
+        "width": 1348
+      },
+      {
+        "activeViews": [
+          {
+            "id": "newsView",
+            "title": "Fique por dentro"
+          }
+        ],
+        "scrollWidth": 1348,
+        "width": 1348
+      }
+    ],
+    "pushMessage": "Notificações indisponíveis no momento."
+  },
+  "mobile": {
+    "method": "390px responsive iframe of the production app; not a physical Android device",
+    "home": {
+      "navigation": [
+        "Início",
+        "Semana",
+        "FLY",
+        "Selos",
+        "Mapa",
+        "Novidades"
+      ],
+      "scrollWidth": 375,
+      "theme": "light",
+      "title": "Seu próximo encontro.",
+      "width": 375
+    },
+    "malaga": {
+      "image": [
+        {
+          "complete": true,
+          "height": 512,
+          "width": 512
+        }
+      ],
+      "scrollWidth": 360,
+      "title": "Pikachu · Fundo de Málaga",
+      "venues": 3,
+      "width": 360,
+      "window": "ACONTECENDO AGORA\n\nLocal: 01/10, 09:00 → 04/10, 20:00\n\nBrasília: 01/10, 04:00 → 04/10, 15:00"
+    },
+    "loadedImageVerification": {
+      "images": [
+        {
+          "complete": true,
+          "height": 512,
+          "width": 512
+        }
+      ],
+      "open": true,
+      "scrollWidth": 360,
+      "width": 360
+    }
+  },
+  "gpx": {
+    "currentProductionDownload": "NOT_CONFIRMED_TWO_CLOUD_BROWSER_DOWNLOAD_OPERATIONS_TIMED_OUT_NO_NEW_FILE_OBSERVED",
+    "priorPreviewVerification": "docs/qa/japan-rally-browser-download-0433c32-20261002.json",
+    "priorFileObservedAt": "2026-10-02T23:58:30.917Z",
+    "diagnosticLimit": "Browser URL policy blocks chrome://downloads; no workaround attempted"
+  },
+  "physicalAndroid": "NOT_CERTIFIED",
+  "proofs": [
+    "docs/qa/proofs/spidey-public-home-596b302-20261004.jpg",
+    "docs/qa/proofs/spidey-public-malaga-mobile-verified-596b302-20261004.jpg"
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "status": "PASSED",
+  "checked_at_utc": "2026-10-04T16:10:20.495649+00:00",
+  "code_commit": "596b302223c898907c67563ac81e68004f15538f",
+  "deployment_id": "dpl_Dbz3cBEMkR1m24ghaCEMi98eddZq",
+  "initial_cookies": 0,
+  "credentials_used": false,
+  "temporary_share_used": false,
+  "production_entry": {
+    "status": 200,
+    "final_url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+    "bytes": 10471
+  },
+  "approved_master_count": 25,
+  "exact_file_count": 42,
+  "files": [
+    {
+      "path": "spidey-app/index.html",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/index.html",
+      "bytes": 10471,
+      "sha256": "1a9e8af041cbef47618de4891fc84eed7081d0f7d96e3875d40c3c1c0de59492",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/manifest.webmanifest",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/manifest.webmanifest",
+      "bytes": 446,
+      "sha256": "cfc1b765a88bac13b3f346e41fb636342da58e230ddc76ec6a10b236a8200398",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/sw.js",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/sw.js",
+      "bytes": 8399,
+      "sha256": "c16cf15692e925608d622ebc62eb60d44bb8227307bd81261e7a525ec66a15ce",
+      "exact": true,
+      "cache_control": "no-cache, no-store, must-revalidate"
+    },
+    {
+      "path": "spidey-app/premium-approved-master.js",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/premium-approved-master.js",
+      "bytes": 10274,
+      "sha256": "d42cd4614e42ed1e8aadfe268c844f336ec4b54fcab525ec588cf496b2d1b7b5",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/trust-world-v1.js",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/trust-world-v1.js",
+      "bytes": 8315,
+      "sha256": "7695e251d45395c906d972f7aa5488cf1f83624720db10e8571102352fce647e",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/trust-world-v1.css",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/trust-world-v1.css",
+      "bytes": 1946,
+      "sha256": "e48bb05f017b454e2f125502b779d05920fb239b99a8d44cdbc59055e78231c5",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/space-week.js",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/space-week.js",
+      "bytes": 8214,
+      "sha256": "3b75b8dd87643ff45beedac348077e4c446ccaf19afa6234f1e59f01f48907ed",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/data/events.json",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/data/events.json",
+      "bytes": 189000,
+      "sha256": "02a77dfaa7fbd39fe7892d6cc72499f667ff317f256513607be5a0560d61d0a1",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/data/local-events.json",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/data/local-events.json",
+      "bytes": 2697,
+      "sha256": "3f76df6567112d734205fe043e77a2089194eb639bef367e2096a3ba8db92d41",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/data/space-museums.json",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/data/space-museums.json",
+      "bytes": 10070,
+      "sha256": "88269f0a8c4902536fd2786e49670a3fdc025f2cbca74703aee5a86ff6f38f25",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/data/stamps.json",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/data/stamps.json",
+      "bytes": 16877,
+      "sha256": "5ae1372067cfde99a2caaa03315de6d545d0da847c47db21fd1d1e632482cd8c",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/yveltal-rotation-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/yveltal-rotation-approved-v1.png",
+      "bytes": 2265106,
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/yveltal-raid-hour-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/yveltal-raid-hour-approved-v1.png",
+      "bytes": 2273727,
+      "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/mega-blastoise-rotation-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/mega-blastoise-rotation-approved-v1.png",
+      "bytes": 2718402,
+      "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+      "bytes": 2612794,
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/seedot-spotlight-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/seedot-spotlight-approved-v1.png",
+      "bytes": 2215863,
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/harvest-invasion-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png",
+      "bytes": 2425578,
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png",
+      "bytes": 2304232,
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png",
+      "bytes": 2181736,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/festival-das-luzes-approved.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/festival-das-luzes-approved.png",
+      "bytes": 2277749,
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/recovered/1000426235.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/recovered/1000426235.png",
+      "bytes": 582854,
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/zorua-community-day-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png",
+      "bytes": 2299199,
+      "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/thundurus-shadow-weekend-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/thundurus-shadow-weekend-approved-v1.png",
+      "bytes": 2519761,
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/elgyem-spotlight-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/elgyem-spotlight-approved-v1.png",
+      "bytes": 2455329,
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/go-pass-october-kyogre-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/go-pass-october-kyogre-approved-v1.png",
+      "bytes": 2848940,
+      "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "bytes": 2757480,
+      "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/scenic-sunday-20261004-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/scenic-sunday-20261004-approved-v1.png",
+      "bytes": 2739274,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+      "bytes": 2636843,
+      "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+      "bytes": 2653181,
+      "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/gbl-20260929-1006-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/gbl-20260929-1006-approved-v1.png",
+      "bytes": 2848103,
+      "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+      "bytes": 2585433,
+      "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+      "bytes": 2688450,
+      "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+      "bytes": 2906525,
+      "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+      "bytes": 2568865,
+      "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/premium/friendship-friday-20261002-approved-v1.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/friendship-friday-20261002-approved-v1.png",
+      "bytes": 2666344,
+      "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceCenterGermany.png",
+      "bytes": 483542,
+      "sha256": "f0516c182e8e2852eaa6d4d1e591b953c264bd8b7797613086358a4f5c728fe2",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/esa-backgrounds/lc_ESA_ciudadDeLasArtes.png",
+      "bytes": 478256,
+      "sha256": "f7e8bf69f6011a6ffed5d19e788216250a7e1cf909b9489cd9514c751b4b1e48",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/esa-backgrounds/lc_ESA_spaceExpoNL.png",
+      "bytes": 404084,
+      "sha256": "e9769f0113b68300d5163ed456ccb0ae9fe71a6d0daec36c81cd986deb77a116",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/esa-backgrounds/lc_ESA_scienceMuseumLondon.png",
+      "bytes": 458555,
+      "sha256": "68e449fec0ea5b0affe2ca3332fe1f7871d59740c530a484fb1d9b161990d87e",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/esa-backgrounds/lc_ESA_euroSpaceCenter.png",
+      "bytes": 606666,
+      "sha256": "c60fdac0978ba7a11f13aa98999203570d421b86993076cd8eb96b231488c556",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/esa-backgrounds/lc_ESA_citeDeEspace.png",
+      "bytes": 507237,
+      "sha256": "e98ae5d1cfcd3a8ba5d351236bc3f77bd140c26a887a7e85afda3caa634ddb4f",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "spidey-app/assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png",
+      "status": 200,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png",
+      "bytes": 538698,
+      "sha256": "37bb7561eb4b942f30614bdae8f2e1daa95ead617794f291af37acad409581d5",
+      "exact": true,
+      "cache_control": "public, max-age=0, must-revalidate"
+    }
+  ],
+  "push": {
+    "status": 503,
+    "payload": {
+      "error": "push_not_configured"
+    }
+  }
+}
