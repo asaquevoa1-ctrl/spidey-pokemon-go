@@ -1,5 +1,7 @@
-const CACHE = 'spidey-app-20261004-space-funds-v3';
+const CACHE = 'spidey-app-20261004-malaga-v1';
 const CORE = [
+  './data/local-events.json',
+  './assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png',
   './space-week.js',
   './space-week.css',
   './data/space-museums.json',
@@ -117,7 +119,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
-  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json') || request.url.includes('/data/space-museums.json');
+  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json') || request.url.includes('/data/space-museums.json') || request.url.includes('/data/local-events.json');
 
   if (isAppShell || isData) {
     event.respondWith(
