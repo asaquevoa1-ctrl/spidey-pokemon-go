@@ -1,5 +1,12 @@
-const CACHE = 'spidey-app-20261003-showcase-approved-v1';
+const CACHE = 'spidey-app-20261004-remaining-approved-v1';
 const CORE = [
+  './assets/events/premium/twilight-trails-season-2026-approved-v1.png',
+  './assets/events/premium/gbl-20260929-1006-approved-v1.png',
+  './assets/events/premium/gbl-mega-20261006-13-approved-v1.png',
+  './assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png',
+  './assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png',
+  './assets/events/premium/go-battle-thursday-20261001-approved-v1.png',
+  './assets/events/premium/friendship-friday-20261002-approved-v1.png',
   './',
   './index.html',
   './styles.css',

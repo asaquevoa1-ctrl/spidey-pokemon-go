@@ -158,6 +158,83 @@
     "height": 1402,
     "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
     "approval_record": "docs/qa/SHOWCASE_TUESDAY_APPROVAL_20261003.json"
+  },
+  "2026-09-twilight-trails-season": {
+    "file": "assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+    "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-gbl-29-1006": {
+    "file": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+    "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-gbl-06-13": {
+    "file": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+    "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-iit-delhi-rendezvous": {
+    "file": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+    "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-patterns-of-the-wild-indonesia": {
+    "file": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+    "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-01-go-battle-thursday": {
+    "file": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+    "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-02-friendship-friday": {
+    "file": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+    "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

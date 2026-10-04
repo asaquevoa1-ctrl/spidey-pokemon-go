@@ -167,8 +167,8 @@
     {
       "id": "2026-09-twilight-trails-season",
       "slug": "2026-09-twilight-trails-season",
-      "title": "Temporada Twilight Trails",
-      "summary": "Temporada Twilight Trails.",
+      "title": "Temporada: Trilhas do Entardecer",
+      "summary": "Temporada com estreias, eventos e rotações de Pokémon; de 8/9 a 1/12, com início e fim às 10h locais.",
       "category": "temporada",
       "tags": [
         "Temporada",
@@ -176,9 +176,9 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO • calendário setembro 2026",
-        "url": "https://pokemongohub.net/post/guide/september-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/pt-BR/seasons/twilight-trails",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -200,7 +200,10 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Umbreon na arte é ilustrativo; não representa um encontro em destaque ou recompensa garantida.",
+        "Os benefícios do Passe GO dependem dos marcos de Ranque alcançados; não são bônus incondicionais da temporada."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
@@ -1789,8 +1792,8 @@
     {
       "id": "2026-09-gbl-29-1006",
       "slug": "2026-09-gbl-29-1006",
-      "title": "GO Battle League: Master / Mega Color Cup",
-      "summary": "Master League e Mega Color Cup: Great League Edition.",
+      "title": "Liga de Batalha GO: Liga Mestra + Mega Copa das Cores",
+      "summary": "Liga Mestra e Mega Copa das Cores: edição da Grande Liga; troca de rotação às 17h de Brasília.",
       "category": "go_battle_league",
       "tags": [
         "GO Battle League",
@@ -1799,7 +1802,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
         "confidence": "official"
       },
       "schedule": {
@@ -1822,14 +1825,22 @@
         "enabled": false,
         "reason": "Evento sem coordenada específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Mega Copa das Cores: limite de 1.500 PC, tipos Planta, Fogo, Água e Elétrico; Pokémon Megaevoluídos permitidos.",
+        "O bônus de 4× desta rotação não se aplica à Liga Mestra.",
+        "A troca é global e simultânea às 17h de Brasília (13h PDT); não às 17h de cada cidade.",
+        "Mega Blastoise e Mega Charizard X na arte são ilustrativos, sem promessa de encontros ou recomendação de equipe."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "4× Poeira Estelar nas recompensas por vitória somente na Mega Copa das Cores; não inclui recompensas de fim de série."
+      ]
     },
     {
       "id": "2026-09-shadow-giratina-05",
@@ -2799,7 +2810,7 @@
       "id": "2026-09-iit-delhi-rendezvous",
       "slug": "2026-09-iit-delhi-rendezvous",
       "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
-      "summary": "Evento oficial no IIT Delhi com bônus, encontros, reides, Collection Challenge e Pesquisa temporária.",
+      "summary": "Evento regional no IIT Delhi com encontros, reides, Pesquisa temporária e Desafio de coleção.",
       "category": "regional_event",
       "tags": [
         "Índia",
@@ -2831,7 +2842,11 @@
         "enabled": false,
         "reason": "Sem coordenada exata necessária para este item de calendário."
       },
-      "notes": [],
+      "notes": [
+        "De 28/9 às 10h até 1/10 às 20h no horário local de Nova Delhi.",
+        "Lapras em reides em 1/10. Brilhante possível com sorte; sem garantia ou multiplicador anunciado.",
+        "Cenário de campus na arte é ilustrativo, sem coordenadas ou condições de acesso confirmadas."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
@@ -2921,7 +2936,7 @@
       "id": "2026-10-patterns-of-the-wild-indonesia",
       "slug": "2026-10-patterns-of-the-wild-indonesia",
       "title": "Patterns of the Wild • Indonésia",
-      "summary": "Evento regional na Indonésia com Pikachu usando camisa batik e Fundo Especial.",
+      "summary": "Evento regional na Indonésia com Pikachu de camisa batik e possibilidade de Fundo Especial.",
       "category": "regional_event",
       "tags": [
         "Indonésia",
@@ -2957,7 +2972,8 @@
         "Evento exclusivo da Indonésia: 02/10, das 10h às 20h locais. A conversão mostrada usa Jacarta como referência; a Indonésia possui mais de um fuso.",
         "Pesquisa temporária na Indonésia: 28/09 às 06h até 10/10 às 23h59 locais; inclui encontros, 1.000 PE e 1.000 de Poeira Estelar.",
         "Desafio de coleção com PE, Poeira Estelar e adesivos de Pikachu.",
-        "Tire fotos dos seus próprios Pokémon para encontros adicionais de Pikachu de camisa batik."
+        "Tire fotos dos seus próprios Pokémon para encontros adicionais de Pikachu de camisa batik.",
+        "A camisa batik da arte usa a imagem oficial do evento como referência; cenário ilustrativo."
       ],
       "notifications": {
         "enabled": true,
@@ -2969,8 +2985,9 @@
       "updated_at": "2026-10-01T22:47:56Z",
       "bonuses": [
         "Incenso dura duas horas durante o evento.",
-        "Maior chance de encontrar os Pokémon Brilhantes em destaque na natureza.",
-        "Pikachu de camisa batik com Fundo Especial na natureza, Pesquisa temporária e encontros ao tirar fotos."
+        "Maior chance de encontrar os Pokémon Brilhantes em destaque na natureza; sem garantia.",
+        "Maior frequência de Pikachu de camisa batik e outros Pokémon do evento ao usar Incenso.",
+        "Pikachu de camisa batik com chance de Fundo Especial na natureza; também há encontros por pesquisa e fotos dos próprios Pokémon."
       ],
       "pokemon": [
         {
@@ -4485,8 +4502,8 @@
     {
       "id": "2026-10-gbl-06-13",
       "slug": "2026-10-gbl-06-13",
-      "title": "GO Battle League: Great Mega / Ultra Mega / Master Mega",
-      "summary": "Rotação da Liga de Batalha GO: Great Mega / Ultra Mega / Master Mega.",
+      "title": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições",
+      "summary": "Grande Liga, Ultra-liga e Liga Mestra em Megaedições; de 6 a 13/10, com troca às 17h de Brasília.",
       "category": "go_battle_league",
       "tags": [
         "GO Battle League",
@@ -4495,7 +4512,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
         "confidence": "official"
       },
       "schedule": {
@@ -4518,14 +4535,21 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Grande Liga: Megaedição exige Pokémon Megaevoluídos com até 1.500 PC. Ultra-liga: Megaedição permite Megaevoluídos com até 2.500 PC; Liga Mestra: Megaedição permite Megaevoluídos.",
+        "A troca é global e simultânea às 17h de Brasília (13h PDT), não às 17h locais de cada cidade.",
+        "Mega Lucario e Mega Gardevoir na arte são ilustrativos; não são recompensas de encontro anunciadas."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "4× Poeira Estelar nas recompensas por vitória nas três Megaedições; não inclui recompensas de fim de série."
+      ]
     },
     {
       "id": "2026-10-gbl-13-20",
@@ -5253,7 +5277,7 @@
       "id": "2026-10-01-go-battle-thursday",
       "slug": "2026-10-01-go-battle-thursday",
       "title": "Descoberta Diária: Quinta de Batalhas GO",
-      "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+      "summary": "Até 10 séries (50 batalhas) e até 4× Poeira Estelar nas recompensas por vitória.",
       "category": "daily_discovery",
       "tags": [
         "GO Battle",
@@ -5262,7 +5286,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
         "confidence": "official"
       },
       "schedule": {
@@ -5285,12 +5309,19 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Das 00h às 23h59 locais em 1/10/2026. A quantidade se refere a batalhas, não a vitórias.",
+        "Lucario e Garchomp na arte são ilustrativos; sem encontro de recompensa ou equipe recomendada."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Até 10 séries no dia, total de 50 batalhas.",
+        "Até 4× Poeira Estelar nas recompensas por vitória; não inclui recompensas de fim de série."
+      ]
     },
     {
       "id": "2026-10-08-go-battle-thursday",
@@ -5468,7 +5499,7 @@
       "id": "2026-10-02-friendship-friday",
       "slug": "2026-10-02-friendship-friday",
       "title": "Descoberta Diária: Sexta da Amizade",
-      "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+      "summary": "Bônus em trocas presenciais: até duas trocas especiais adicionais, desconto de Poeira e Doces GG para nível 31+.",
       "category": "daily_discovery",
       "tags": [
         "Amizade",
@@ -5476,7 +5507,7 @@
         "Twilight Trails"
       ],
       "source": {
-        "name": "Twilight Trails • Daily Discoveries",
+        "name": "Leek Duck • guia da temporada",
         "url": "https://leekduck.com/events/season-24-twilight-trails/",
         "confidence": "verified"
       },
@@ -5500,12 +5531,22 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Todos estes benefícios são exclusivos de trocas presenciais, das 00h às 23h59 locais em 2/10/2026.",
+        "Benefícios consultados no guia comunitário atual da Leek Duck, sujeitos a alterações.",
+        "Eevee e Pikachu na arte são ilustrativos, sem promessa de recompensa."
+      ],
       "notifications": {
         "enabled": false,
         "default_lead_minutes": []
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "Até duas trocas especiais adicionais.",
+        "20% menos Poeira Estelar nas trocas.",
+        "Maior chance de troca sortuda; não é garantida.",
+        "Dois Doces GG (Candy XL) garantidos por troca para Treinadores de nível 31 ou superior."
+      ]
     },
     {
       "id": "2026-10-09-friendship-friday",

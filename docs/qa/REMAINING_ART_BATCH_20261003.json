@@ -1,0 +1,734 @@
+{
+  "status": "APPROVED_DELEGATED_LOCAL_QA_BROWSER_PENDING",
+  "date": "2026-10-03",
+  "updated_at": "2026-10-04T02:44:31.975433+00:00",
+  "branch": "spidey-fly-v1",
+  "base_commit": "82a253754a48a33371255ea1f231cfcd36b913e6",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "event_ids": [
+    "2026-09-twilight-trails-season",
+    "2026-09-gbl-29-1006",
+    "2026-10-gbl-06-13",
+    "2026-09-iit-delhi-rendezvous",
+    "2026-10-patterns-of-the-wild-indonesia",
+    "2026-10-01-go-battle-thursday",
+    "2026-10-02-friendship-friday"
+  ],
+  "artworks": [
+    {
+      "event_id": "2026-09-twilight-trails-season",
+      "file": "spidey-app/assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+      "generated_file": "/workspace/scratch/c0435855b301/generated_images/exec-24b4387e-7ce3-4a7e-9ddb-6c96a12cb8c5.png",
+      "bytes": 2653181,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+      "git_blob_sha": "093aa0ebf2a4f5e9c26d32b9890498f4709a0689",
+      "revision": 1,
+      "status": "APPROVED",
+      "approval_basis": "USER_DELEGATED_VISUAL_QA",
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+      "source_url": "https://pokemongo.com/pt-BR/seasons/twilight-trails",
+      "source_classification": "official",
+      "factual_review": {
+        "status": "PASSED_SOURCE_READ",
+        "notes": [
+          "8 September 10:00 to 1 December 2026 10:00 local time.",
+          "Ordinary Umbreon is an illustrative scenic character, not a claim of a featured encounter or guaranteed reward.",
+          "Seasonal GO Pass rank bonuses are not unconditional bonuses."
+        ]
+      },
+      "visual_qa": {
+        "status": "PASSED_DELEGATED_MANUAL_REVIEW",
+        "checks": [
+          "Exact dates/times and bonus conditions readable",
+          "Official Spidey identity and Premium style",
+          "Canonical illustrative Pokémon and correct event classification",
+          "Full portrait, complete footer and legible Portuguese copy"
+        ]
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: ads-marketing. Create ONE NEW finished Premium Pokémon GO event poster for the Spidey app, portrait 4:5 at approximately 1122×1402 or higher. Input 1 is the official Spidey logo: accurately preserve the black/gold/cyan spider-Poké Ball emblem and Spidey Pokémon GO brand. Input 2 is DESIGN AND QUALITY REFERENCE ONLY: match its lavish cinematic Pokémon illustration, navy/cyan/gold embossed lettering, sparkling depth, gold-rimmed navy information ribbons, integrated branded header and rich scenery. This is a distinct new event poster with a new scene and the exact new copy below, not an edit or a reissue of Tuesday. Render crisp correctly accented Portuguese typography with clear contrast and generous fully visible 40px safe margins. Main Pokémon occupy the upper/middle hero scene; ornate huge title and three compact information ribbons below it, readable on mobile. Keep brand top-left and top-right motto 'SEMPRE UM PASSO À FRENTE'. Use header line 'POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE'. All listed information must be included exactly and legibly; no additional dates, bonuses, rewards, shiny promises, invented locations or game interfaces. No Dynamax clouds, no giant forms, no cut-off text. Footer is part of the fully visible design.\nSCENE: A breathtaking twilight woodland trail with gold leaves, cyan firefly sparkles, distant mountains under a violet dusk sky, two adult backpacked Trainers walking further along the trail, and one beautifully rendered canonical ordinary Umbreon prominently on a rock in the foreground: black quadruped foxlike body, yellow rings on forehead/ears/legs/tail, red eyes. Calm noble exploration, not a battle or promised reward. Gold autumn glow contrasting cool dusk. No duplicate Pokémon.\nEXACT PORTUGUESE COPY (top-to-bottom, group in readable ribbons as appropriate):\nTEMPORADA\nTRILHAS DO ENTARDECER\n8 SET – 1 DEZ 2026\nINÍCIO E FIM ÀS 10H • HORÁRIO LOCAL\nNOVAS ESTREIAS NA TEMPORADA\nEVENTOS E ROTAÇÕES SAZONAIS\nFonte: Pokémon GO • Cena ilustrativa",
+        "references": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "bytes": 8647,
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "bytes": 2636843,
+            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+          }
+        ],
+        "transparent_background": false
+      },
+      "copy": [
+        "TEMPORADA",
+        "TRILHAS DO ENTARDECER",
+        "8 SET – 1 DEZ 2026",
+        "INÍCIO E FIM ÀS 10H • HORÁRIO LOCAL",
+        "NOVAS ESTREIAS NA TEMPORADA",
+        "EVENTOS E ROTAÇÕES SAZONAIS",
+        "Fonte: Pokémon GO • Cena ilustrativa"
+      ]
+    },
+    {
+      "event_id": "2026-09-gbl-29-1006",
+      "file": "spidey-app/assets/events/premium/gbl-20260929-1006-approved-v1.png",
+      "generated_file": "/workspace/scratch/c0435855b301/generated_images/exec-46979e72-6a20-4c68-b464-25fb483288a9.png",
+      "bytes": 2848103,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+      "git_blob_sha": "d50029d2eac0bf424a1ba78bdb4e42a9ca2cc8b3",
+      "revision": 1,
+      "status": "APPROVED",
+      "approval_basis": "USER_DELEGATED_VISUAL_QA",
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+      "source_url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
+      "source_classification": "official",
+      "factual_review": {
+        "status": "PASSED_SOURCE_READ",
+        "notes": [
+          "29 September to 6 October 2026, switches 17:00 Brasília / 13:00 PDT.",
+          "4× Stardust win rewards applies ONLY to Mega Color Cup, not Master League; end-of-set rewards excluded.",
+          "Mega Color Cup: Great League 1500 CP, only Grass/Fire/Water/Electric types; Megas allowed."
+        ]
+      },
+      "visual_qa": {
+        "status": "PASSED_DELEGATED_MANUAL_REVIEW",
+        "checks": [
+          "Exact dates/times and bonus conditions readable",
+          "Official Spidey identity and Premium style",
+          "Canonical illustrative Pokémon and correct event classification",
+          "Full portrait, complete footer and legible Portuguese copy"
+        ]
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: ads-marketing. Create ONE NEW finished Premium Pokémon GO event poster for the Spidey app, portrait 4:5 at approximately 1122×1402 or higher. Input 1 is the official Spidey logo: accurately preserve the black/gold/cyan spider-Poké Ball emblem and Spidey Pokémon GO brand. Input 2 is DESIGN AND QUALITY REFERENCE ONLY: match its lavish cinematic Pokémon illustration, navy/cyan/gold embossed lettering, sparkling depth, gold-rimmed navy information ribbons, integrated branded header and rich scenery. This is a distinct new event poster with a new scene and the exact new copy below, not an edit or a reissue of Tuesday. Render crisp correctly accented Portuguese typography with clear contrast and generous fully visible 40px safe margins. Main Pokémon occupy the upper/middle hero scene; ornate huge title and three compact information ribbons below it, readable on mobile. Keep brand top-left and top-right motto 'SEMPRE UM PASSO À FRENTE'. Use header line 'POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE'. All listed information must be included exactly and legibly; no additional dates, bonuses, rewards, shiny promises, invented locations or game interfaces. No Dynamax clouds, no giant forms, no cut-off text. Footer is part of the fully visible design.\nSCENE: A spectacular Pokémon battle arena with cyan/amber spotlights and dynamic swirling water and blue flame. Canonical Mega Blastoise, bulky blue turtle with brown shell and ONE enormous central back cannon plus TWO forearm cannons, battles canonical Mega Charizard X, black dragon with bright blue inner wings and blue flame at its mouth. Both correctly proportioned, full recognizable forms, no anatomy hybrids. Their Water and Fire types illustrate the Mega Color Cup. Two adult Trainers stand at the arena sides. No trophy claiming a reward and no raid egg. The lower bonus ribbon MUST visibly tie 4× to MEGA COPA DAS CORES, not to Liga Mestra.\nEXACT PORTUGUESE COPY (top-to-bottom, group in readable ribbons as appropriate):\nLIGA DE BATALHA GO\nLIGA MESTRA +\nMEGA COPA DAS CORES\n29 SET – 6 OUT 2026\nTROCA ÀS 17H • BRASÍLIA\n4× POEIRA ESTELAR\nPOR VITÓRIA NA MEGA COPA DAS CORES\nNão inclui recompensas de fim de série.\nFonte: Pokémon GO • Cena ilustrativa",
+        "references": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "bytes": 8647,
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "bytes": 2636843,
+            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+          }
+        ],
+        "transparent_background": false
+      },
+      "copy": [
+        "LIGA DE BATALHA GO",
+        "LIGA MESTRA +",
+        "MEGA COPA DAS CORES",
+        "29 SET – 6 OUT 2026",
+        "TROCA ÀS 17H • BRASÍLIA",
+        "4× POEIRA ESTELAR",
+        "POR VITÓRIA NA MEGA COPA DAS CORES",
+        "Não inclui recompensas de fim de série.",
+        "Fonte: Pokémon GO • Cena ilustrativa"
+      ]
+    },
+    {
+      "event_id": "2026-10-gbl-06-13",
+      "file": "spidey-app/assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+      "generated_file": "/workspace/scratch/c0435855b301/generated_images/exec-c87cdee7-1226-40e0-9891-1fd6cf075fb2.png",
+      "bytes": 2585433,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+      "git_blob_sha": "8e7e6c8929631f3e8145f48a1ddc0977b1d60767",
+      "revision": 1,
+      "status": "APPROVED",
+      "approval_basis": "USER_DELEGATED_VISUAL_QA",
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+      "source_url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
+      "source_classification": "official",
+      "factual_review": {
+        "status": "PASSED_SOURCE_READ",
+        "notes": [
+          "6 to 13 October 2026, switches 17:00 Brasília / 13:00 PDT.",
+          "Great League: Mega Edition, Ultra League: Mega Edition, Master League: Mega Edition.",
+          "4× Stardust from win rewards, excluding end-of-set rewards."
+        ]
+      },
+      "visual_qa": {
+        "status": "PASSED_DELEGATED_MANUAL_REVIEW",
+        "checks": [
+          "Exact dates/times and bonus conditions readable",
+          "Official Spidey identity and Premium style",
+          "Canonical illustrative Pokémon and correct event classification",
+          "Full portrait, complete footer and legible Portuguese copy"
+        ]
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: ads-marketing. Create ONE NEW finished Premium Pokémon GO event poster for the Spidey app, portrait 4:5 at approximately 1122×1402 or higher. Input 1 is the official Spidey logo: accurately preserve the black/gold/cyan spider-Poké Ball emblem and Spidey Pokémon GO brand. Input 2 is DESIGN AND QUALITY REFERENCE ONLY: match its lavish cinematic Pokémon illustration, navy/cyan/gold embossed lettering, sparkling depth, gold-rimmed navy information ribbons, integrated branded header and rich scenery. This is a distinct new event poster with a new scene and the exact new copy below, not an edit or a reissue of Tuesday. Render crisp correctly accented Portuguese typography with clear contrast and generous fully visible 40px safe margins. Main Pokémon occupy the upper/middle hero scene; ornate huge title and three compact information ribbons below it, readable on mobile. Keep brand top-left and top-right motto 'SEMPRE UM PASSO À FRENTE'. Use header line 'POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE'. All listed information must be included exactly and legibly; no additional dates, bonuses, rewards, shiny promises, invented locations or game interfaces. No Dynamax clouds, no giant forms, no cut-off text. Footer is part of the fully visible design.\nSCENE: A dramatic elegant tournament stadium in navy and gold with a cyan Mega Evolution energy motif behind two canonical mega-evolved Pokémon: Mega Lucario on the left, blue/black jackal fighter with long black head appendages, chest spike, red/black forearms and paws, and Mega Gardevoir on the right, green head with tall white ball-gown silhouette, two red chest fins, long white arms. Dynamic poised face-off, one of each character, anatomically faithful, impressive but not giant. Adult Trainers in background, electric cyan rimlight, gold stadium banners, sparks and polished stone. Very distinct from the other water-and-blue-fire poster. No promises of Pokémon encounter rewards.\nEXACT PORTUGUESE COPY (top-to-bottom, group in readable ribbons as appropriate):\nLIGA DE BATALHA GO\nMEGAEDIÇÕES\n6–13 OUT 2026\nTROCA ÀS 17H • BRASÍLIA\nGRANDE LIGA • ULTRA-LIGA • LIGA MESTRA\n4× POEIRA ESTELAR POR VITÓRIA\nNão inclui recompensas de fim de série.\nFonte: Pokémon GO • Cena ilustrativa",
+        "references": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "bytes": 8647,
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "bytes": 2636843,
+            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+          }
+        ],
+        "transparent_background": false
+      },
+      "copy": [
+        "LIGA DE BATALHA GO",
+        "MEGAEDIÇÕES",
+        "6–13 OUT 2026",
+        "TROCA ÀS 17H • BRASÍLIA",
+        "GRANDE LIGA • ULTRA-LIGA • LIGA MESTRA",
+        "4× POEIRA ESTELAR POR VITÓRIA",
+        "Não inclui recompensas de fim de série.",
+        "Fonte: Pokémon GO • Cena ilustrativa"
+      ]
+    },
+    {
+      "event_id": "2026-09-iit-delhi-rendezvous",
+      "file": "spidey-app/assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+      "generated_file": "/workspace/scratch/c0435855b301/generated_images/exec-8a418a8c-6b69-499c-a864-d0fa95cf4ed7.png",
+      "bytes": 2688450,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+      "git_blob_sha": "d16e11499f9c523e464f2bb7eada3354e40df644",
+      "revision": 1,
+      "status": "APPROVED",
+      "approval_basis": "USER_DELEGATED_VISUAL_QA",
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+      "source_url": "https://pokemongo.com/news/pokemongo-iitdelhi-2026",
+      "source_classification": "official",
+      "factual_review": {
+        "status": "PASSED_SOURCE_READ",
+        "notes": [
+          "28 September 10:00 through 1 October 2026 20:00, New Delhi local time (Asia/Kolkata).",
+          "Lapras appears in raids October 1.",
+          "Timed Research and Collection Challenge, no invented multipliers; local campus access/coordinates not asserted.",
+          "Historical art for the already catalogued window event; not a new upcoming event."
+        ]
+      },
+      "visual_qa": {
+        "status": "PASSED_DELEGATED_MANUAL_REVIEW",
+        "checks": [
+          "Exact dates/times and bonus conditions readable",
+          "Official Spidey identity and Premium style",
+          "Canonical illustrative Pokémon and correct event classification",
+          "Full portrait, complete footer and legible Portuguese copy"
+        ]
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: ads-marketing. Create ONE NEW finished Premium Pokémon GO event poster for the Spidey app, portrait 4:5 at approximately 1122×1402 or higher. Input 1 is the official Spidey logo: accurately preserve the black/gold/cyan spider-Poké Ball emblem and Spidey Pokémon GO brand. Input 2 is DESIGN AND QUALITY REFERENCE ONLY: match its lavish cinematic Pokémon illustration, navy/cyan/gold embossed lettering, sparkling depth, gold-rimmed navy information ribbons, integrated branded header and rich scenery. This is a distinct new event poster with a new scene and the exact new copy below, not an edit or a reissue of Tuesday. Render crisp correctly accented Portuguese typography with clear contrast and generous fully visible 40px safe margins. Main Pokémon occupy the upper/middle hero scene; ornate huge title and three compact information ribbons below it, readable on mobile. Keep brand top-left and top-right motto 'SEMPRE UM PASSO À FRENTE'. Use header line 'POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE'. All listed information must be included exactly and legibly; no additional dates, bonuses, rewards, shiny promises, invented locations or game interfaces. No Dynamax clouds, no giant forms, no cut-off text. Footer is part of the fully visible design.\nSCENE: A beautiful festive university campus courtyard inspired broadly by New Delhi, not claimed to be an exact map/photo of IIT. Red sandstone architectural arches, marigold garlands, leafy trees, warm afternoon lanterns and elegant cyan/gold Spidey banners. Canonical ordinary Pikachu (yellow, black ear tips, red cheeks, lightning bolt tail, no costume) and ordinary Eevee (brown foxlike quadruped, cream mane and tail tip, no costume) cheerfully prominent on foreground paving, with two adult Trainers and a clearly recognizable canonical blue Lapras with cream underbelly and gray knobby shell in a stylized water-feature to the rear. Festive high-budget scene, not a combat scene. Do not add fake event items, shiny forms, coordinates or exact campus access claims.\nEXACT PORTUGUESE COPY (top-to-bottom, group in readable ribbons as appropriate):\nRENDEZVOUS 2026\nIIT DELHI • NOVA DELHI, ÍNDIA\n28 SET, 10H → 1 OUT, 20H\n2026 • HORÁRIO LOCAL\n1 OUT: LAPRAS EM REIDES\nPESQUISA TEMPORÁRIA +\nDESAFIO DE COLEÇÃO\nFonte: Pokémon GO • Cena ilustrativa",
+        "references": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "bytes": 8647,
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "bytes": 2636843,
+            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+          }
+        ],
+        "transparent_background": false
+      },
+      "copy": [
+        "RENDEZVOUS 2026",
+        "IIT DELHI • NOVA DELHI, ÍNDIA",
+        "28 SET, 10H → 1 OUT, 20H",
+        "2026 • HORÁRIO LOCAL",
+        "1 OUT: LAPRAS EM REIDES",
+        "PESQUISA TEMPORÁRIA +",
+        "DESAFIO DE COLEÇÃO",
+        "Fonte: Pokémon GO • Cena ilustrativa"
+      ]
+    },
+    {
+      "event_id": "2026-10-patterns-of-the-wild-indonesia",
+      "file": "spidey-app/assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+      "generated_file": "/workspace/scratch/c0435855b301/generated_images/exec-6394b5f4-ffa6-4e9b-b4b0-66a0c1bd785e.png",
+      "bytes": 2906525,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+      "git_blob_sha": "93cd40ea259b7b56aa4db8c536aa8b00bc8a8a0c",
+      "revision": 1,
+      "status": "APPROVED",
+      "approval_basis": "USER_DELEGATED_VISUAL_QA",
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+      "source_url": "https://pokemongo.com/news/patterns-of-the-wild-2026",
+      "source_classification": "official",
+      "factual_review": {
+        "status": "PASSED_SOURCE_READ",
+        "notes": [
+          "2 October 2026 10:00–20:00 local time in Indonesia; no assertion Indonesia has a single time zone.",
+          "Pikachu wears the EXACT official batik shirt, with a chance of Special Background in wild encounters.",
+          "Incense lasts 2 hours; no guaranteed shiny or all-encounter Special Background claim."
+        ]
+      },
+      "visual_qa": {
+        "status": "PASSED_DELEGATED_MANUAL_REVIEW",
+        "checks": [
+          "Exact dates/times and bonus conditions readable",
+          "Official Spidey identity and Premium style",
+          "Canonical illustrative Pokémon and correct event classification",
+          "Full portrait, complete footer and legible Portuguese copy"
+        ]
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: ads-marketing. Create ONE NEW finished Premium Pokémon GO event poster for the Spidey app, portrait 4:5 at approximately 1122×1402 or higher. Input 1 is the official Spidey logo: accurately preserve the black/gold/cyan spider-Poké Ball emblem and Spidey Pokémon GO brand. Input 2 is DESIGN AND QUALITY REFERENCE ONLY: match its lavish cinematic Pokémon illustration, navy/cyan/gold embossed lettering, sparkling depth, gold-rimmed navy information ribbons, integrated branded header and rich scenery. This is a distinct new event poster with a new scene and the exact new copy below, not an edit or a reissue of Tuesday. Render crisp correctly accented Portuguese typography with clear contrast and generous fully visible 40px safe margins. Main Pokémon occupy the upper/middle hero scene; ornate huge title and three compact information ribbons below it, readable on mobile. Keep brand top-left and top-right motto 'SEMPRE UM PASSO À FRENTE'. Use header line 'POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE'. All listed information must be included exactly and legibly; no additional dates, bonuses, rewards, shiny promises, invented locations or game interfaces. No Dynamax clouds, no giant forms, no cut-off text. Footer is part of the fully visible design.\nSCENE: Input 3 is the OFFICIAL EVENT IMAGE, used ONLY for canonical Pikachu and its authentic batik shirt. Faithfully reproduce the exact black sleeveless wrap-style batik top with diagonal black V neckline and intricate white/red/orange/cream pattern, rather than inventing a shirt pattern/costume. One canonical yellow Pikachu wearing that exact shirt is the large hero on a lush sunlit Indonesian garden path, surrounded by tropical flowers, distant traditional architectural silhouettes and a subtle gold batik ornamental border. Small ordinary Oddish and Hoppip in the scenery, two adult Trainers in distant background. Glorious cyan/gold brand accents and warm sparkling foliage. No additional hat or garments on Pikachu. Special Background is text information, not a fake in-game catch UI. No guaranteed background or shiny promise.\nEXACT PORTUGUESE COPY (top-to-bottom, group in readable ribbons as appropriate):\nPATTERNS OF THE WILD\nINDONÉSIA\n2 OUT 2026 • 10H–20H\nHORÁRIO LOCAL\nPIKACHU DE CAMISA BATIK\nCOM CHANCE DE FUNDO ESPECIAL\nINCENSO DURA 2 HORAS\nFonte: Pokémon GO • Cena ilustrativa",
+        "references": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "bytes": 8647,
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "bytes": 2636843,
+            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+          },
+          {
+            "file": "/workspace/scratch/c0435855b301/art-continuation/indonesia-official-reference.png",
+            "bytes": 1898326,
+            "sha256": "8302a3860bab3ded0a2bc970afd769288c67cef56c8b0ae882a1e0c3ecf53172"
+          }
+        ],
+        "transparent_background": false
+      },
+      "copy": [
+        "PATTERNS OF THE WILD",
+        "INDONÉSIA",
+        "2 OUT 2026 • 10H–20H",
+        "HORÁRIO LOCAL",
+        "PIKACHU DE CAMISA BATIK",
+        "COM CHANCE DE FUNDO ESPECIAL",
+        "INCENSO DURA 2 HORAS",
+        "Fonte: Pokémon GO • Cena ilustrativa"
+      ]
+    },
+    {
+      "event_id": "2026-10-01-go-battle-thursday",
+      "file": "spidey-app/assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+      "generated_file": "/workspace/scratch/c0435855b301/generated_images/exec-b84175c6-796b-492c-8feb-9fa9c174e598.png",
+      "bytes": 2568865,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+      "git_blob_sha": "51af0425497d9aa47cf3a374b99bcd9da82a5c30",
+      "revision": 1,
+      "status": "APPROVED",
+      "approval_basis": "USER_DELEGATED_VISUAL_QA",
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+      "source_url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
+      "source_classification": "official",
+      "factual_review": {
+        "status": "PASSED_SOURCE_READ",
+        "notes": [
+          "Thursday October 1, 2026 00:00–23:59 local time.",
+          "Up to 10 sets / 50 battles (not 50 wins).",
+          "Up to 4× Stardust win rewards, excluding end-of-set rewards.",
+          "Pokémon depiction illustrative only; no encounter reward or team recommendation."
+        ]
+      },
+      "visual_qa": {
+        "status": "PASSED_DELEGATED_MANUAL_REVIEW",
+        "checks": [
+          "Exact dates/times and bonus conditions readable",
+          "Official Spidey identity and Premium style",
+          "Canonical illustrative Pokémon and correct event classification",
+          "Full portrait, complete footer and legible Portuguese copy"
+        ]
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: ads-marketing. Create ONE NEW finished Premium Pokémon GO event poster for the Spidey app, portrait 4:5 at approximately 1122×1402 or higher. Input 1 is the official Spidey logo: accurately preserve the black/gold/cyan spider-Poké Ball emblem and Spidey Pokémon GO brand. Input 2 is DESIGN AND QUALITY REFERENCE ONLY: match its lavish cinematic Pokémon illustration, navy/cyan/gold embossed lettering, sparkling depth, gold-rimmed navy information ribbons, integrated branded header and rich scenery. This is a distinct new event poster with a new scene and the exact new copy below, not an edit or a reissue of Tuesday. Render crisp correctly accented Portuguese typography with clear contrast and generous fully visible 40px safe margins. Main Pokémon occupy the upper/middle hero scene; ornate huge title and three compact information ribbons below it, readable on mobile. Keep brand top-left and top-right motto 'SEMPRE UM PASSO À FRENTE'. Use header line 'POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE'. All listed information must be included exactly and legibly; no additional dates, bonuses, rewards, shiny promises, invented locations or game interfaces. No Dynamax clouds, no giant forms, no cut-off text. Footer is part of the fully visible design.\nSCENE: An atmospheric illuminated rooftop Pokémon battle court overlooking a twilight city, clearly distinct from enclosed Mega tournament posters. Canonical ORDINARY Lucario in its familiar blue/black/cream form (NOT Mega; no red forearms or long mega mane) forming a cyan aura sphere, against canonical ordinary Garchomp in dark blue with yellow forehead mark, red chest, cream belly, finlike arms and shark-dragon silhouette. Two adult Trainers on opposite sides, sophisticated navy/gold railings with official Spidey banners, floating particles, rimlighting and deep city perspective. Faithful clean Pokémon anatomy, no giant forms, no raid rewards. Title should dominate lower middle with three compact legible bands.\nEXACT PORTUGUESE COPY (top-to-bottom, group in readable ribbons as appropriate):\nQUINTA DE\nBATALHAS GO\nDESCOBERTA DIÁRIA\n1 OUT 2026\n00H–23H59 • HORÁRIO LOCAL\nATÉ 10 SÉRIES • 50 BATALHAS\nATÉ 4× POEIRA ESTELAR POR VITÓRIA\nNão inclui recompensas de fim de série.\nFonte: Pokémon GO • Cena ilustrativa",
+        "references": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "bytes": 8647,
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "bytes": 2636843,
+            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+          }
+        ],
+        "transparent_background": false
+      },
+      "copy": [
+        "QUINTA DE",
+        "BATALHAS GO",
+        "DESCOBERTA DIÁRIA",
+        "1 OUT 2026",
+        "00H–23H59 • HORÁRIO LOCAL",
+        "ATÉ 10 SÉRIES • 50 BATALHAS",
+        "ATÉ 4× POEIRA ESTELAR POR VITÓRIA",
+        "Não inclui recompensas de fim de série.",
+        "Fonte: Pokémon GO • Cena ilustrativa"
+      ]
+    },
+    {
+      "event_id": "2026-10-02-friendship-friday",
+      "file": "spidey-app/assets/events/premium/friendship-friday-20261002-approved-v1.png",
+      "generated_file": "/workspace/scratch/c0435855b301/generated_images/exec-203ef798-e484-4973-aef3-d62ce13949bb.png",
+      "bytes": 2666344,
+      "width": 1122,
+      "height": 1402,
+      "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+      "git_blob_sha": "b4523b27483b25a49a0a81362e4e4336878fb4fd",
+      "revision": 1,
+      "status": "APPROVED",
+      "approval_basis": "USER_DELEGATED_VISUAL_QA",
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+      "source_url": "https://leekduck.com/events/season-24-twilight-trails/",
+      "source_classification": "community",
+      "factual_review": {
+        "status": "PASSED_SOURCE_READ",
+        "notes": [
+          "Friday October 2, 2026 00:00–23:59 local time.",
+          "Up to 2 additional Special Trades, 20% reduced Stardust trade cost.",
+          "2 guaranteed Candy XL from in-person trades for Trainers level31+.",
+          "ALL benefits apply only to IN-PERSON trades; source is COMMUNITY guide, not official announcement.",
+          "No claim that featured Eevee/Pikachu encounter rewards are given."
+        ]
+      },
+      "visual_qa": {
+        "status": "PASSED_DELEGATED_MANUAL_REVIEW",
+        "checks": [
+          "Exact dates/times and bonus conditions readable",
+          "Official Spidey identity and Premium style",
+          "Canonical illustrative Pokémon and correct event classification",
+          "Full portrait, complete footer and legible Portuguese copy"
+        ]
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: ads-marketing. Create ONE NEW finished Premium Pokémon GO event poster for the Spidey app, portrait 4:5 at approximately 1122×1402 or higher. Input 1 is the official Spidey logo: accurately preserve the black/gold/cyan spider-Poké Ball emblem and Spidey Pokémon GO brand. Input 2 is DESIGN AND QUALITY REFERENCE ONLY: match its lavish cinematic Pokémon illustration, navy/cyan/gold embossed lettering, sparkling depth, gold-rimmed navy information ribbons, integrated branded header and rich scenery. This is a distinct new event poster with a new scene and the exact new copy below, not an edit or a reissue of Tuesday. Render crisp correctly accented Portuguese typography with clear contrast and generous fully visible 40px safe margins. Main Pokémon occupy the upper/middle hero scene; ornate huge title and three compact information ribbons below it, readable on mobile. Keep brand top-left and top-right motto 'SEMPRE UM PASSO À FRENTE'. Use header line 'POKÉMON GO • NOTÍCIAS • EVENTOS • COMUNIDADE'. All listed information must be included exactly and legibly; no additional dates, bonuses, rewards, shiny promises, invented locations or game interfaces. No Dynamax clouds, no giant forms, no cut-off text. Footer is part of the fully visible design.\nSCENE: A heartwarming cinematic sunny park plaza with navy/gold Spidey banners and flower planters. Two clearly adult Trainers, diverse man and woman, smile facing each other with smartphones as if trading in person, surrounded by a subtle elegant cyan/gold connection arc and floating Poké Ball motif. Canonical ordinary Eevee on a foreground park bench and ordinary Pikachu next to it, both accurate natural colors with no costumes and no shiny effect. Rich depth and wonderful warm light. Do not depict Pokemon physically trapped inside opaque balls and do not invent lucky trade guarantees. Large luxurious title with four compact information bands that all remain readable. The in-person limitation must be plainly readable above the source footer.\nEXACT PORTUGUESE COPY (top-to-bottom, group in readable ribbons as appropriate):\nSEXTA DA AMIZADE\nDESCOBERTA DIÁRIA\n2 OUT 2026\n00H–23H59 • HORÁRIO LOCAL\n20% MENOS POEIRA NAS TROCAS\nATÉ 2 TROCAS ESPECIAIS ADICIONAIS\n2 DOCES GG GARANTIDOS • NÍVEL 31+\nBônus somente em trocas presenciais.\nFonte: Leek Duck • Guia da temporada • Cena ilustrativa",
+        "references": [
+          {
+            "file": "spidey-app/assets/spidey-logo-oficial.jpg",
+            "bytes": 8647,
+            "sha256": "1245ab0cdff991782910f183e14f7c789f57e647d01b4620ecd019d19b6e1132"
+          },
+          {
+            "file": "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "bytes": 2636843,
+            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+          }
+        ],
+        "transparent_background": false
+      },
+      "copy": [
+        "SEXTA DA AMIZADE",
+        "DESCOBERTA DIÁRIA",
+        "2 OUT 2026",
+        "00H–23H59 • HORÁRIO LOCAL",
+        "20% MENOS POEIRA NAS TROCAS",
+        "ATÉ 2 TROCAS ESPECIAIS ADICIONAIS",
+        "2 DOCES GG GARANTIDOS • NÍVEL 31+",
+        "Bônus somente em trocas presenciais.",
+        "Fonte: Leek Duck • Guia da temporada • Cena ilustrativa"
+      ]
+    }
+  ],
+  "preserved_master_entries": {
+    "2026-10-raids-yveltal": {
+      "file": "assets/events/premium/yveltal-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+      "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+    },
+    "2026-10-07-raid-hour-yveltal": {
+      "file": "assets/events/premium/yveltal-raid-hour-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+      "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+    },
+    "2026-10-mega-blastoise-raids": {
+      "file": "assets/events/premium/mega-blastoise-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+      "approval_record": "docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json"
+    },
+    "2026-09-mega-victreebel-raids": {
+      "file": "assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "approval_record": "docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json"
+    },
+    "2026-10-01-spotlight-seedot": {
+      "file": "assets/events/premium/seedot-spotlight-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "approval_record": "docs/qa/SEEDOT_APPROVAL_20261001.json"
+    },
+    "2026-10-harvest-taken-over": {
+      "file": "assets/events/premium/harvest-invasion-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-gigantamax-cinderace-max-day": {
+      "file": "assets/events/premium/cinderace-max-day-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261001.json"
+    },
+    "2026-10-xerneas-raids": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "festival-of-lights-2026-pokeminers-e2": {
+      "file": "assets/festival-das-luzes-approved.png",
+      "status": "APPROVED",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda"
+    },
+    "2026-09-raids-xerneas": {
+      "file": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "approval_record": "docs/qa/XERNEAS_ROTATION_APPROVAL_20261001.json"
+    },
+    "2026-09-30-raid-hour-xerneas": {
+      "file": "assets/events/recovered/1000426235.png",
+      "status": "APPROVED",
+      "width": 1229,
+      "height": 1536,
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c"
+    },
+    "2026-10-zorua-community-day": {
+      "file": "assets/events/premium/zorua-community-day-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+      "approval_record": "docs/qa/ZORUA_APPROVAL_20261002.json"
+    },
+    "2026-10-shadow-thundurus": {
+      "file": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json"
+    },
+    "2026-10-08-spotlight-elgyem": {
+      "file": "assets/events/premium/elgyem-spotlight-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1121,
+      "height": 1403,
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "approval_record": "docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json"
+    },
+    "2026-10-go-pass": {
+      "file": "assets/events/premium/go-pass-october-kyogre-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+      "approval_record": "docs/qa/GO_PASS_APPROVAL_20261003.json"
+    },
+    "2026-09-go-pass": {
+      "file": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+      "approval_record": "docs/qa/LATIOS_APPROVAL_20261003.json"
+    },
+    "2026-10-04-scenic-sunday": {
+      "file": "assets/events/premium/scenic-sunday-20261004-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json"
+    },
+    "2026-10-06-showcase-tuesday": {
+      "file": "assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+      "status": "APPROVED",
+      "display": "full_poster",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+      "approval_record": "docs/qa/SHOWCASE_TUESDAY_APPROVAL_20261003.json"
+    }
+  },
+  "preserved_master_assets": {
+    "spidey-app/assets/events/premium/yveltal-rotation-approved-v1.png": {
+      "bytes": 2265106,
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328"
+    },
+    "spidey-app/assets/events/premium/yveltal-raid-hour-approved-v1.png": {
+      "bytes": 2273727,
+      "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b"
+    },
+    "spidey-app/assets/events/premium/mega-blastoise-rotation-approved-v1.png": {
+      "bytes": 2718402,
+      "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321"
+    },
+    "spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png": {
+      "bytes": 2612794,
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22"
+    },
+    "spidey-app/assets/events/premium/seedot-spotlight-approved-v1.png": {
+      "bytes": 2215863,
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f"
+    },
+    "spidey-app/assets/events/premium/harvest-invasion-approved-v1.png": {
+      "bytes": 2425578,
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165"
+    },
+    "spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png": {
+      "bytes": 2304232,
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470"
+    },
+    "spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png": {
+      "bytes": 2181736,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738"
+    },
+    "spidey-app/assets/festival-das-luzes-approved.png": {
+      "bytes": 2277749,
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda"
+    },
+    "spidey-app/assets/events/recovered/1000426235.png": {
+      "bytes": 582854,
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c"
+    },
+    "spidey-app/assets/events/premium/zorua-community-day-approved-v1.png": {
+      "bytes": 2299199,
+      "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b"
+    },
+    "spidey-app/assets/events/premium/thundurus-shadow-weekend-approved-v1.png": {
+      "bytes": 2519761,
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439"
+    },
+    "spidey-app/assets/events/premium/elgyem-spotlight-approved-v1.png": {
+      "bytes": 2455329,
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9"
+    },
+    "spidey-app/assets/events/premium/go-pass-october-kyogre-approved-v1.png": {
+      "bytes": 2848940,
+      "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67"
+    },
+    "spidey-app/assets/events/premium/go-pass-september-latios-approved-v1.png": {
+      "bytes": 2757480,
+      "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50"
+    },
+    "spidey-app/assets/events/premium/scenic-sunday-20261004-approved-v1.png": {
+      "bytes": 2739274,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977"
+    },
+    "spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png": {
+      "bytes": 2636843,
+      "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19"
+    }
+  },
+  "previous_catalog_sha256": "01b81b8daa9d8bc3aeda730aecb76c1884e6153bd021d6b9fc8e6ce4511827d9",
+  "catalog_sha256": "dffabd9451d8034505f7cbca37a80a1e317e756ff7cab9949de3ff64833a4d43",
+  "catalog_edits": {
+    "event_ids": [
+      "2026-09-twilight-trails-season",
+      "2026-09-gbl-29-1006",
+      "2026-10-gbl-06-13",
+      "2026-09-iit-delhi-rendezvous",
+      "2026-10-patterns-of-the-wild-indonesia",
+      "2026-10-01-go-battle-thursday",
+      "2026-10-02-friendship-friday"
+    ],
+    "allowed_fields": [
+      "title",
+      "summary",
+      "source",
+      "notes",
+      "bonuses",
+      "updated_at"
+    ],
+    "event_count_preserved": 124,
+    "schedules_locations_gpx_notifications_calendar_preserved": true,
+    "announcement_dates_preserved": true
+  },
+  "blocked_generation_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "qa": {
+    "visual": "PASSED_DELEGATED_MANUAL_REVIEW",
+    "factual": "PASSED_SOURCE_READ",
+    "browser": "PENDING_NEW_DEPLOYMENT",
+    "node_tests": "PASSED",
+    "regression_correction": "Artwork QA timestamp kept in batch record; original announcement updated_at values restored so artwork integration does not reorder News.",
+    "node_tests_passed": 33,
+    "local_audit": "docs/qa/remaining-art-batch-local-audit-20261003.json",
+    "cache": "spidey-app-20261004-remaining-approved-v1",
+    "cache_files": 85,
+    "inventory": {
+      "events": 23,
+      "approved": 20,
+      "pending_posters": 0,
+      "missing": 3
+    }
+  },
+  "scope_limits": {
+    "production_launch": "NOT_APPROVED",
+    "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
+    "android_physical_install_update_offline_push": "PENDING",
+    "new_fly_routes": false
+  }
+}
