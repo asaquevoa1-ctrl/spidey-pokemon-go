@@ -30,3 +30,6 @@ body.spidey-player-ui #eventDetail.player-art-unavailable .spidey-cover-art{disp
 
 /* Keep the close control visible before the poster and avoid focusing a footer link. */
 .spidey-player-ui .dialog-close{float:none;display:block;width:44px;height:44px;margin:12px 12px -56px auto;z-index:5}
+
+.spidey-player-ui .v24-day-sheet{padding-top:30px!important}
+.spidey-player-ui .v24-day-sheet>h2{padding-right:42px}

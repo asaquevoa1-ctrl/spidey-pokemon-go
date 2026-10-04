@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-app-v2.4-20260929.1-calendar-art';
+  const VERSION = 'spidey-app-v2.4-20261004-calendar-brasil-v2';
   const XERNEAS_ART_URL = 'assets/events/premium/xerneas-premium-approved-v1.avif';
   let scheduled = false;
 
@@ -69,6 +69,9 @@
     }
 
     if (typeof detail === 'undefined' || typeof dialog === 'undefined') return;
+    detail.classList.remove('spidey-detail-v3', 'player-art-unavailable', 'v23-no-hero');
+    delete detail.dataset.visualCategory;
+    delete detail.dataset.visualCharacter;
     detail.innerHTML = `
       <div class="detail-body v24-day-sheet">
         <span class="eyebrow">AGENDA DO DIA</span>
@@ -93,6 +96,9 @@
       });
     });
     if (!dialog.open) dialog.showModal();
+    dialog.scrollTop = 0;
+    detail.scrollTop = 0;
+    document.getElementById('closeDialog')?.focus({ preventScroll: true });
   }
 
   function installCalendarClicks() {
