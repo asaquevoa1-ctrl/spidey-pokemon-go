@@ -21,7 +21,7 @@ test('a day agenda never receives a poster from its first event and removes stal
   const sandbox = vm.createContext({
     window: { addEventListener() {} },
     document: {
-      readyState: 'complete', body: {},
+      readyState: 'complete', body: {}, documentElement: { dataset: {} },
       querySelector: (selector) => selector === '#eventDetail' ? agenda : null,
       querySelectorAll: () => [],
       createElement: () => { created += 1; throw new Error('Agenda must not create an event cover'); },
