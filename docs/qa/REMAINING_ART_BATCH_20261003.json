@@ -1,5 +1,5 @@
 {
-  "status": "APPROVED_DELEGATED_LOCAL_QA_BROWSER_PENDING",
+  "status": "APPROVED_DELEGATED_QA_PASSED",
   "date": "2026-10-03",
   "updated_at": "2026-10-04T02:44:31.975433+00:00",
   "branch": "spidey-fly-v1",
@@ -711,7 +711,7 @@
   "qa": {
     "visual": "PASSED_DELEGATED_MANUAL_REVIEW",
     "factual": "PASSED_SOURCE_READ",
-    "browser": "PENDING_NEW_DEPLOYMENT",
+    "browser": "PASSED_PREVIEW_ART_BATCH",
     "node_tests": "PASSED",
     "regression_correction": "Artwork QA timestamp kept in batch record; original announcement updated_at values restored so artwork integration does not reorder News.",
     "node_tests_passed": 33,
@@ -723,12 +723,35 @@
       "approved": 20,
       "pending_posters": 0,
       "missing": 3
-    }
+    },
+    "browser_record": "docs/qa/remaining-art-batch-browser-e766dde-20261004.json",
+    "mobile": "PASSED_7_ARTWORKS_390x850_CLARO",
+    "desktop": "PASSED_7_ARTWORKS_1280x850_ESCURO",
+    "served_png": "7_DOWNLOADED_EXACT_APPROVED_BYTES",
+    "proofs": [
+      "docs/qa/proofs/spidey-season-mobile-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-season-desktop-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-gbl-current-mobile-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-gbl-current-desktop-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-gbl-next-mobile-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-gbl-next-desktop-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-delhi-mobile-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-delhi-desktop-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-indonesia-mobile-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-indonesia-desktop-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-thursday-mobile-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-thursday-desktop-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-friday-mobile-e766dde-20261004.jpg",
+      "docs/qa/proofs/spidey-friday-desktop-e766dde-20261004.jpg"
+    ]
   },
   "scope_limits": {
     "production_launch": "NOT_APPROVED",
     "external_tester_access": "BLOCKED_USER_PHONE_LOGIN",
     "android_physical_install_update_offline_push": "PENDING",
     "new_fly_routes": false
-  }
+  },
+  "code_commit": "e766dde20f5ec838f212de67e0584e75310509cf",
+  "deployment_id": "dpl_FPMEiWuoeg1Vm1RSk55RsqFda5R6",
+  "preview_url": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/index.html"
 }

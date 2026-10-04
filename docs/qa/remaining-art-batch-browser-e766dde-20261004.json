@@ -1,0 +1,629 @@
+{
+  "status": "PASSED_PREVIEW_ART_BATCH",
+  "observed_at": "2026-10-04T10:51:41.317553+00:00",
+  "code_commit": "e766dde20f5ec838f212de67e0584e75310509cf",
+  "deployment_id": "dpl_FPMEiWuoeg1Vm1RSk55RsqFda5R6",
+  "deployment_state": "READY",
+  "deployment_target": null,
+  "preview_url": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/index.html",
+  "wrapper_url": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/qa-responsive.html",
+  "event_ids": [
+    "2026-09-twilight-trails-season",
+    "2026-09-gbl-29-1006",
+    "2026-10-gbl-06-13",
+    "2026-09-iit-delhi-rendezvous",
+    "2026-10-patterns-of-the-wild-indonesia",
+    "2026-10-01-go-battle-thursday",
+    "2026-10-02-friendship-friday"
+  ],
+  "views": [
+    {
+      "event_id": "2026-09-twilight-trails-season",
+      "mode": "mobile",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/twilight-trails-season-2026-approved-v1.png?v=5814ead04c51",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nTEMPORADA\nANÚNCIO OFICIAL\nTemporada: Trilhas do Entardecer\n\nTemporada com estreias, eventos e rotações de Pokémon; de 8/9 a 1/12, com início e fim às 10h locais.\n\nHorários e locais\nHorário\n08 de set., 10:00 → 01 de dez., 10:00\nFonte\nObservações\nUmbreon na arte é ilustrativo; não representa um encontro em destaque ou recompensa garantida.\nOs benefícios do Passe GO dependem dos marcos de Ranque alcançados; não são bônus incondicionais da temporada.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-season-mobile-e766dde-20261004.jpg",
+      "served_download_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/fe6d1762-e326-4014-9847-bd46b14fabbc"
+    },
+    {
+      "event_id": "2026-09-twilight-trails-season",
+      "mode": "desktop",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/twilight-trails-season-2026-approved-v1.png?v=5814ead04c51",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nTEMPORADA\nANÚNCIO OFICIAL\nTemporada: Trilhas do Entardecer\n\nTemporada com estreias, eventos e rotações de Pokémon; de 8/9 a 1/12, com início e fim às 10h locais.\n\nHorários e locais\nHorário\n08 de set., 10:00 → 01 de dez., 10:00\nFonte\nObservações\nUmbreon na arte é ilustrativo; não representa um encontro em destaque ou recompensa garantida.\nOs benefícios do Passe GO dependem dos marcos de Ranque alcançados; não são bônus incondicionais da temporada.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-season-desktop-e766dde-20261004.jpg",
+      "served_download_path": null
+    },
+    {
+      "event_id": "2026-09-gbl-29-1006",
+      "mode": "mobile",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/gbl-20260929-1006-approved-v1.png?v=feb2ba30decb",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nLIGA DE BATALHA GO\nANÚNCIO OFICIAL\nLiga de Batalha GO: Liga Mestra + Mega Copa das Cores\n\nLiga Mestra e Mega Copa das Cores: edição da Grande Liga; troca de rotação às 17h de Brasília.\n\nHorários e locais\nHorário\n29 de set., 17:00 → 06 de out., 17:00\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\n4× Poeira Estelar nas recompensas por vitória somente na Mega Copa das Cores; não inclui recompensas de fim de série.\nObservações\nMega Copa das Cores: limite de 1.500 PC, tipos Planta, Fogo, Água e Elétrico; Pokémon Megaevoluídos permitidos.\nO bônus de 4× desta rotação não se aplica à Liga Mestra.\nA troca é global e simultânea às 17h de Brasília (13h PDT); não às 17h de cada cidade.\nMega Blastoise e Mega Charizard X na arte são ilustrativos, sem promessa de encontros ou recomendação de equipe.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-gbl-current-mobile-e766dde-20261004.jpg",
+      "served_download_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/48dc1bcf-bda3-4cc1-aabc-a892463e1036"
+    },
+    {
+      "event_id": "2026-09-gbl-29-1006",
+      "mode": "desktop",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/gbl-20260929-1006-approved-v1.png?v=feb2ba30decb",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nLIGA DE BATALHA GO\nANÚNCIO OFICIAL\nLiga de Batalha GO: Liga Mestra + Mega Copa das Cores\n\nLiga Mestra e Mega Copa das Cores: edição da Grande Liga; troca de rotação às 17h de Brasília.\n\nHorários e locais\nHorário\n29 de set., 17:00 → 06 de out., 17:00\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\n4× Poeira Estelar nas recompensas por vitória somente na Mega Copa das Cores; não inclui recompensas de fim de série.\nObservações\nMega Copa das Cores: limite de 1.500 PC, tipos Planta, Fogo, Água e Elétrico; Pokémon Megaevoluídos permitidos.\nO bônus de 4× desta rotação não se aplica à Liga Mestra.\nA troca é global e simultânea às 17h de Brasília (13h PDT); não às 17h de cada cidade.\nMega Blastoise e Mega Charizard X na arte são ilustrativos, sem promessa de encontros ou recomendação de equipe.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-gbl-current-desktop-e766dde-20261004.jpg",
+      "served_download_path": null
+    },
+    {
+      "event_id": "2026-10-gbl-06-13",
+      "mode": "mobile",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/gbl-mega-20261006-13-approved-v1.png?v=16bd92ceae7a",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nLIGA DE BATALHA GO\nANÚNCIO OFICIAL\nLiga de Batalha GO: Grande, Ultra e Mestra — Megaedições\n\nGrande Liga, Ultra-liga e Liga Mestra em Megaedições; de 6 a 13/10, com troca às 17h de Brasília.\n\nHorários e locais\nHorário\n06 de out., 17:00 → 13 de out., 17:00\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\n4× Poeira Estelar nas recompensas por vitória nas três Megaedições; não inclui recompensas de fim de série.\nObservações\nGrande Liga: Megaedição exige Pokémon Megaevoluídos com até 1.500 PC. Ultra-liga: Megaedição permite Megaevoluídos com até 2.500 PC; Liga Mestra: Megaedição permite Megaevoluídos.\nA troca é global e simultânea às 17h de Brasília (13h PDT), não às 17h locais de cada cidade.\nMega Lucario e Mega Gardevoir na arte são ilustrativos; não são recompensas de encontro anunciadas.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-gbl-next-mobile-e766dde-20261004.jpg",
+      "served_download_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/5f603253-5006-478d-be4c-098eadfd887c"
+    },
+    {
+      "event_id": "2026-10-gbl-06-13",
+      "mode": "desktop",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/gbl-mega-20261006-13-approved-v1.png?v=16bd92ceae7a",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nLIGA DE BATALHA GO\nANÚNCIO OFICIAL\nLiga de Batalha GO: Grande, Ultra e Mestra — Megaedições\n\nGrande Liga, Ultra-liga e Liga Mestra em Megaedições; de 6 a 13/10, com troca às 17h de Brasília.\n\nHorários e locais\nHorário\n06 de out., 17:00 → 13 de out., 17:00\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\n4× Poeira Estelar nas recompensas por vitória nas três Megaedições; não inclui recompensas de fim de série.\nObservações\nGrande Liga: Megaedição exige Pokémon Megaevoluídos com até 1.500 PC. Ultra-liga: Megaedição permite Megaevoluídos com até 2.500 PC; Liga Mestra: Megaedição permite Megaevoluídos.\nA troca é global e simultânea às 17h de Brasília (13h PDT), não às 17h locais de cada cidade.\nMega Lucario e Mega Gardevoir na arte são ilustrativos; não são recompensas de encontro anunciadas.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-gbl-next-desktop-e766dde-20261004.jpg",
+      "served_download_path": null
+    },
+    {
+      "event_id": "2026-09-iit-delhi-rendezvous",
+      "mode": "mobile",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png?v=f7432657d170",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nEVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO no Rendezvous 2026 • IIT Delhi\n\nEvento regional no IIT Delhi com encontros, reides, Pesquisa temporária e Desafio de coleção.\n\nHorários e locais\nHorário\n28 de set., 01:30 → 01 de out., 11:30\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDe 28/9 às 10h até 1/10 às 20h no horário local de Nova Delhi.\nLapras em reides em 1/10. Brilhante possível com sorte; sem garantia ou multiplicador anunciado.\nCenário de campus na arte é ilustrativo, sem coordenadas ou condições de acesso confirmadas.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-delhi-mobile-e766dde-20261004.jpg",
+      "served_download_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/45745fd6-89f5-485e-aede-1a1012734eb1"
+    },
+    {
+      "event_id": "2026-09-iit-delhi-rendezvous",
+      "mode": "desktop",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png?v=f7432657d170",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nEVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO no Rendezvous 2026 • IIT Delhi\n\nEvento regional no IIT Delhi com encontros, reides, Pesquisa temporária e Desafio de coleção.\n\nHorários e locais\nHorário\n28 de set., 01:30 → 01 de out., 11:30\n\nO local ainda será confirmado.\n\nFonte\nObservações\nDe 28/9 às 10h até 1/10 às 20h no horário local de Nova Delhi.\nLapras em reides em 1/10. Brilhante possível com sorte; sem garantia ou multiplicador anunciado.\nCenário de campus na arte é ilustrativo, sem coordenadas ou condições de acesso confirmadas.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-delhi-desktop-e766dde-20261004.jpg",
+      "served_download_path": null
+    },
+    {
+      "event_id": "2026-10-patterns-of-the-wild-indonesia",
+      "mode": "mobile",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png?v=6c16bdcfaf7d",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nEVENTO REGIONAL\nPikachu\nANÚNCIO OFICIAL\nPatterns of the Wild • Indonésia\n\nEvento regional na Indonésia com Pikachu de camisa batik e possibilidade de Fundo Especial.\n\nHorários e locais\nHorário\n02 de out., 00:00 → 02 de out., 10:00\n\nO local ainda será confirmado.\n\nFonte\nPokémon em destaque\nPikachu de camisa batik — Fundo Especial; pode aparecer Brilhante\nCaterpie, Oddish, Gloom, Bellsprout, Ledyba, Ledian, Hoppip, Skiploom, Sunkern e Wurmple — encontros selvagens em destaque\nBônus e informações\nIncenso dura duas horas durante o evento.\nMaior chance de encontrar os Pokémon Brilhantes em destaque na natureza; sem garantia.\nMaior frequência de Pikachu de camisa batik e outros Pokémon do evento ao usar Incenso.\nPikachu de camisa batik com chance de Fundo Especial na natureza; também há encontros por pesquisa e fotos dos próprios Pokémon.\nObservações\nEvento exclusivo da Indonésia: 02/10, das 10h às 20h locais. A conversão mostrada usa Jacarta como referência; a Indonésia possui mais de um fuso.\nPesquisa temporária na Indonésia: 28/09 às 06h até 10/10 às 23h59 locais; inclui encontros, 1.000 PE e 1.000 de Poeira Estelar.\nDesafio de coleção com PE, Poeira Estelar e adesivos de Pikachu.\nTire fotos dos seus próprios Pokémon para encontros adicionais de Pikachu de camisa batik.\nA camisa batik da arte usa a imagem oficial do evento como referência; cenário ilustrativo.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-indonesia-mobile-e766dde-20261004.jpg",
+      "served_download_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/8d0be35d-df78-4be5-8546-8256b3c3a735"
+    },
+    {
+      "event_id": "2026-10-patterns-of-the-wild-indonesia",
+      "mode": "desktop",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png?v=6c16bdcfaf7d",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nEVENTO REGIONAL\nPikachu\nANÚNCIO OFICIAL\nPatterns of the Wild • Indonésia\n\nEvento regional na Indonésia com Pikachu de camisa batik e possibilidade de Fundo Especial.\n\nHorários e locais\nHorário\n02 de out., 00:00 → 02 de out., 10:00\n\nO local ainda será confirmado.\n\nFonte\nPokémon em destaque\nPikachu de camisa batik — Fundo Especial; pode aparecer Brilhante\nCaterpie, Oddish, Gloom, Bellsprout, Ledyba, Ledian, Hoppip, Skiploom, Sunkern e Wurmple — encontros selvagens em destaque\nBônus e informações\nIncenso dura duas horas durante o evento.\nMaior chance de encontrar os Pokémon Brilhantes em destaque na natureza; sem garantia.\nMaior frequência de Pikachu de camisa batik e outros Pokémon do evento ao usar Incenso.\nPikachu de camisa batik com chance de Fundo Especial na natureza; também há encontros por pesquisa e fotos dos próprios Pokémon.\nObservações\nEvento exclusivo da Indonésia: 02/10, das 10h às 20h locais. A conversão mostrada usa Jacarta como referência; a Indonésia possui mais de um fuso.\nPesquisa temporária na Indonésia: 28/09 às 06h até 10/10 às 23h59 locais; inclui encontros, 1.000 PE e 1.000 de Poeira Estelar.\nDesafio de coleção com PE, Poeira Estelar e adesivos de Pikachu.\nTire fotos dos seus próprios Pokémon para encontros adicionais de Pikachu de camisa batik.\nA camisa batik da arte usa a imagem oficial do evento como referência; cenário ilustrativo.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-indonesia-desktop-e766dde-20261004.jpg",
+      "served_download_path": null
+    },
+    {
+      "event_id": "2026-10-01-go-battle-thursday",
+      "mode": "mobile",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/go-battle-thursday-20261001-approved-v1.png?v=6e0b6477b336",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nANÚNCIO OFICIAL\nDescoberta Diária: Quinta de Batalhas GO\n\nAté 10 séries (50 batalhas) e até 4× Poeira Estelar nas recompensas por vitória.\n\nHorários e locais\nHorário\n01 de out., 00:00 → 01 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nAté 10 séries no dia, total de 50 batalhas.\nAté 4× Poeira Estelar nas recompensas por vitória; não inclui recompensas de fim de série.\nObservações\nDas 00h às 23h59 locais em 1/10/2026. A quantidade se refere a batalhas, não a vitórias.\nLucario e Garchomp na arte são ilustrativos; sem encontro de recompensa ou equipe recomendada.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-thursday-mobile-e766dde-20261004.jpg",
+      "served_download_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/8fb2a8c2-c600-48f3-b82a-1c01db3f4bb0"
+    },
+    {
+      "event_id": "2026-10-01-go-battle-thursday",
+      "mode": "desktop",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/go-battle-thursday-20261001-approved-v1.png?v=6e0b6477b336",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nANÚNCIO OFICIAL\nDescoberta Diária: Quinta de Batalhas GO\n\nAté 10 séries (50 batalhas) e até 4× Poeira Estelar nas recompensas por vitória.\n\nHorários e locais\nHorário\n01 de out., 00:00 → 01 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nAté 10 séries no dia, total de 50 batalhas.\nAté 4× Poeira Estelar nas recompensas por vitória; não inclui recompensas de fim de série.\nObservações\nDas 00h às 23h59 locais em 1/10/2026. A quantidade se refere a batalhas, não a vitórias.\nLucario e Garchomp na arte são ilustrativos; sem encontro de recompensa ou equipe recomendada.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-thursday-desktop-e766dde-20261004.jpg",
+      "served_download_path": null
+    },
+    {
+      "event_id": "2026-10-02-friendship-friday",
+      "mode": "mobile",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 360,
+        "left": 0,
+        "scrollTop": 0,
+        "scrollWidth": 360,
+        "width": 375
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/friendship-friday-20261002-approved-v1.png?v=225434528606",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Sexta da Amizade\n\nBônus em trocas presenciais: até duas trocas especiais adicionais, desconto de Poeira e Doces GG para nível 31+.\n\nHorários e locais\nHorário\n02 de out., 00:00 → 02 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nAté duas trocas especiais adicionais.\n20% menos Poeira Estelar nas trocas.\nMaior chance de troca sortuda; não é garantida.\nDois Doces GG (Candy XL) garantidos por troca para Treinadores de nível 31 ou superior.\nObservações\nTodos estes benefícios são exclusivos de trocas presenciais, das 00h às 23h59 locais em 2/10/2026.\nBenefícios consultados no guia comunitário atual da Leek Duck, sujeitos a alterações.\nEevee e Pikachu na arte são ilustrativos, sem promessa de recompensa.",
+      "theme": "light",
+      "viewport": {
+        "height": 850,
+        "width": 390
+      },
+      "proof": "docs/qa/proofs/spidey-friday-mobile-e766dde-20261004.jpg",
+      "served_download_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/4bd805e8-c15f-4a77-9631-b5476a810e3e"
+    },
+    {
+      "event_id": "2026-10-02-friendship-friday",
+      "mode": "desktop",
+      "activeElement": "closeDialog",
+      "dialog": {
+        "clientWidth": 703,
+        "left": 272.5,
+        "scrollTop": 0,
+        "scrollWidth": 703,
+        "width": 720
+      },
+      "image": {
+        "complete": true,
+        "fit": "contain",
+        "height": 1402,
+        "src": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/assets/events/premium/friendship-friday-20261002-approved-v1.png?v=225434528606",
+        "width": 1122
+      },
+      "page": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      },
+      "text": "×\nDESCOBERTA DIÁRIA\nINFORMAÇÃO DA COMUNIDADE\nDescoberta Diária: Sexta da Amizade\n\nBônus em trocas presenciais: até duas trocas especiais adicionais, desconto de Poeira e Doces GG para nível 31+.\n\nHorários e locais\nHorário\n02 de out., 00:00 → 02 de out., 23:59\n\nO local ainda será confirmado.\n\nFonte\nBônus e informações\nAté duas trocas especiais adicionais.\n20% menos Poeira Estelar nas trocas.\nMaior chance de troca sortuda; não é garantida.\nDois Doces GG (Candy XL) garantidos por troca para Treinadores de nível 31 ou superior.\nObservações\nTodos estes benefícios são exclusivos de trocas presenciais, das 00h às 23h59 locais em 2/10/2026.\nBenefícios consultados no guia comunitário atual da Leek Duck, sujeitos a alterações.\nEevee e Pikachu na arte são ilustrativos, sem promessa de recompensa.",
+      "theme": "dark",
+      "viewport": {
+        "height": 850,
+        "width": 1280
+      },
+      "proof": "docs/qa/proofs/spidey-friday-desktop-e766dde-20261004.jpg",
+      "served_download_path": null
+    }
+  ],
+  "served_images": [
+    {
+      "event_id": "2026-09-twilight-trails-season",
+      "browser_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/fe6d1762-e326-4014-9847-bd46b14fabbc",
+      "bytes": 2653181,
+      "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+      "matches_approved_file": true
+    },
+    {
+      "event_id": "2026-09-gbl-29-1006",
+      "browser_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/48dc1bcf-bda3-4cc1-aabc-a892463e1036",
+      "bytes": 2848103,
+      "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+      "matches_approved_file": true
+    },
+    {
+      "event_id": "2026-10-gbl-06-13",
+      "browser_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/5f603253-5006-478d-be4c-098eadfd887c",
+      "bytes": 2585433,
+      "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+      "matches_approved_file": true
+    },
+    {
+      "event_id": "2026-09-iit-delhi-rendezvous",
+      "browser_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/45745fd6-89f5-485e-aede-1a1012734eb1",
+      "bytes": 2688450,
+      "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+      "matches_approved_file": true
+    },
+    {
+      "event_id": "2026-10-patterns-of-the-wild-indonesia",
+      "browser_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/8d0be35d-df78-4be5-8546-8256b3c3a735",
+      "bytes": 2906525,
+      "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+      "matches_approved_file": true
+    },
+    {
+      "event_id": "2026-10-01-go-battle-thursday",
+      "browser_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/8fb2a8c2-c600-48f3-b82a-1c01db3f4bb0",
+      "bytes": 2568865,
+      "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+      "matches_approved_file": true
+    },
+    {
+      "event_id": "2026-10-02-friendship-friday",
+      "browser_path": "/home/oai/share/923f1e5e-b807-403a-977c-19d2f9e52048/4bd805e8-c15f-4a77-9631-b5476a810e3e",
+      "bytes": 2666344,
+      "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+      "matches_approved_file": true
+    }
+  ],
+  "proof_metadata": [
+    {
+      "file": "docs/qa/proofs/spidey-season-mobile-e766dde-20261004.jpg",
+      "bytes": 111527,
+      "sha256": "84d05d8fb02a8d55b8326db52395a43e0da7cfa7db641e650f7ee5ed19ce069b",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "d4de9172d0d4d0b6cd490512b6abcb05893592ac"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-season-desktop-e766dde-20261004.jpg",
+      "bytes": 157090,
+      "sha256": "212639bac40f1af53b0770cbc131ef91f481bf2dca8dd9e27952db3f49ce878b",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "06f2f1c9d5e91dec56746cece4f8b0f5d5280283"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-gbl-current-mobile-e766dde-20261004.jpg",
+      "bytes": 118750,
+      "sha256": "41b3beb77aa8c4be517dcdb08cfa90d27c51163aa0be6db425ba3e845b02e46b",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "65f951ae3b4f242aec785563618212ea55633635"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-gbl-current-desktop-e766dde-20261004.jpg",
+      "bytes": 167186,
+      "sha256": "f1fc9d4f4975a06eb8a4085c7d934e9351dc7cf187ae3ba698cf5084eb38c054",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "da998d4a79ae4678beaa6c7aeaf7a88bb152f3fb"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-gbl-next-mobile-e766dde-20261004.jpg",
+      "bytes": 111534,
+      "sha256": "9748de8361295561bfc59b0ea94202acc2a21577c07a0faa5a7a5cdae4c517f3",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "9282b29325294a650306e4472673ac7652039264"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-gbl-next-desktop-e766dde-20261004.jpg",
+      "bytes": 154682,
+      "sha256": "0ca5b445f85bd68f87200c2f78e6b3a8ff8296c2419dbac42e42f06c617a9c98",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "8af768ab367ca4376b962e85bf88a634e1d9ecde"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-delhi-mobile-e766dde-20261004.jpg",
+      "bytes": 111824,
+      "sha256": "0968de3930795d9461d0e0292bca421ea7e331d7109a3597b5bfb75ea636cded",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "c46fe68c5c8b11cb4cb7275b426bb4034a15ee34"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-delhi-desktop-e766dde-20261004.jpg",
+      "bytes": 159352,
+      "sha256": "20391dc30839939cb9a14803537b56752f25607d80f4ba0ced16f5139bbc2230",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "e573c744f92daeaa9bfcbf801374e24436f9d833"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-indonesia-mobile-e766dde-20261004.jpg",
+      "bytes": 117453,
+      "sha256": "b5bf38020ef7a7c2b5b8a2208c9be78536ef6dd0d1da2221fdd5ee84ea731ac8",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "3c734d3537a55ca52daeb73aa3162da2dde65e83"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-indonesia-desktop-e766dde-20261004.jpg",
+      "bytes": 169523,
+      "sha256": "60b40e8261b10ff06f060465c33a8b86523bce8cdf2e5bba9d8e10e0f8c2cacd",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "406ea762f92f3a5ed55cda05fdd378d9fa7afccc"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-thursday-mobile-e766dde-20261004.jpg",
+      "bytes": 111033,
+      "sha256": "007a80dfee94036ff2cd92b549414019899f9d6502254ed1a35b81425785afab",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "4f9e309b683ac321bd8ca3b5d1f36af55df7afa5"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-thursday-desktop-e766dde-20261004.jpg",
+      "bytes": 153861,
+      "sha256": "8609cd9daf1bb57e0645ee38ce5da69a462cbc6cae5c6cd56ef63066745ddfad",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "b35fc60b616c852350fd5ad893b0c43d209e58f7"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-friday-mobile-e766dde-20261004.jpg",
+      "bytes": 114282,
+      "sha256": "78f060ee285dd1886652e77d42542822ac88c375fb622ba88153e10485343e86",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "f420374bfb34842ade70e7aad659f3723bb365be"
+    },
+    {
+      "file": "docs/qa/proofs/spidey-friday-desktop-e766dde-20261004.jpg",
+      "bytes": 160037,
+      "sha256": "cbc785787f7eea4f85a24d7b33ce7fe20646648a2695d20f57b265f528df2e10",
+      "width": 1363,
+      "height": 936,
+      "git_blob_sha": "28563a3a19d8b550623a962b919d18b515e74df7"
+    }
+  ],
+  "coverage": "Seven distinct new artworks opened through Home or Calendar; each measured and visually inspected in mobile Claro390x850 and desktop Escuro1280x850. Every served PNG downloaded and matched exact approved bytes.",
+  "access_scope": "Temporary own QA access; external tester access remains BLOCKED_USER_PHONE_LOGIN.",
+  "android": "PENDING_PHYSICAL_TEST",
+  "weekly": "All seven roles and Weekly hash-versioned URLs checked locally; no new Week thumbnail proof in this round.",
+  "fly": "Seven added artworks are season/GBL/local regional/daily events without FLY world-route eligibility; no coordinates/GPX invented.",
+  "known_limits": [
+    "Detail retains generic location placeholder where locations[] is empty.",
+    "Calendar agenda headed 01/10 in cloud session listed some rows whose displayed Brazil dates start 02/10; date-boundary behavior needs separate verification and is not certified by this art QA."
+  ]
+}
