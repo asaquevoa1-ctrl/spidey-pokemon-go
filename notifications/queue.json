@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-world-space-week:start:60",
-      "event_id": "2026-10-world-space-week",
-      "event_title": "Semana Mundial do Espaço 2026",
-      "category": "evento_especial",
-      "scheduled_for": "2026-10-03T23:00:00-03:00",
-      "event_start": "2026-10-04T00:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Semana Mundial do Espaço 2026 começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-world-space-week",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/en/news/world-space-week-2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-05-max-monday-sizzlipede:start:60",
       "event_id": "2026-10-05-max-monday-sizzlipede",
       "event_title": "Max Monday: Dynamax Sizzlipede",
@@ -671,7 +653,7 @@
     }
   ],
   "meta": {
-    "pending_count": 37,
+    "pending_count": 36,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
