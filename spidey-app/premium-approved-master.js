@@ -149,6 +149,15 @@
     "height": 1402,
     "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
     "approval_record": "docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json"
+  },
+  "2026-10-06-showcase-tuesday": {
+    "file": "assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+    "approval_record": "docs/qa/SHOWCASE_TUESDAY_APPROVAL_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
