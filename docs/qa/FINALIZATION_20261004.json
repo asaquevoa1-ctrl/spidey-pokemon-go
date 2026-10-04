@@ -1,0 +1,76 @@
+{
+  "status": "PUBLIC_WEB_FINALIZED_WITH_RECORDED_LIMITS",
+  "checked_at_utc": "2026-10-04T17:00:52.112893+00:00",
+  "code_commit": "a7e34e278c5ca6b7004a93e88a721a96af3937d6",
+  "deployment_id": "dpl_B7QXVq4Hf5D67YarTJJKtrGrnHxa",
+  "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "node_tests": 52,
+  "auto_publish_gate": "PASSED",
+  "python_tests": {
+    "count": 32,
+    "scope": "Prior production launch verification; not repeated for this JS change"
+  },
+  "gpx": {
+    "scope": "Existing Japan Stamp Rally only",
+    "http_status": 200,
+    "fresh_browser_download": true,
+    "browser_download_commit": "e2202516c8d90d484668278926143c9f4b477225",
+    "waypoints": 17,
+    "bytes": 1890,
+    "sha256": "8870435145133c11894b923dad8dead2bff056e78a7c79104346fb1e7e12382a",
+    "same_historical_waypoints": true,
+    "partial_rally_status": 409,
+    "unknown_rally_status": 404,
+    "offline_blob_retained_but_not_physically_certified": true,
+    "file": "japan-rally-browser-download-e220251-20261004.gpx"
+  },
+  "alerts": {
+    "http_status": 503,
+    "error": "push_not_configured",
+    "automatic_availability_check": "DOM ready",
+    "desktop_button": "Alertas indisponíveis",
+    "mobile_button": "Alertas indisponíveis",
+    "button_disabled": true,
+    "permission_requested": false,
+    "push_delivered": false,
+    "missing": [
+      "Server storage",
+      "VAPID and dispatch credentials",
+      "Event scheduler"
+    ],
+    "paid_service_created": false
+  },
+  "browser": {
+    "desktop_width": 1348,
+    "desktop_scroll_width": 1348,
+    "mobile_viewport_width": 390,
+    "mobile_document_width": 375,
+    "mobile_document_scroll_width": 375,
+    "mobile_dialog_width": 360,
+    "mobile_dialog_scroll_width": 360,
+    "mobile_gpx_href": "api/gpx?rally=pokemon-centre-japan-stamp-rally-2026",
+    "physical_android_certified": false
+  },
+  "preserved": {
+    "catalog_events": 124,
+    "approved_masters": 25,
+    "original_location_backgrounds": 7,
+    "fly_references": "20/28",
+    "taipei": true,
+    "automatic_queues_and_cursors": true,
+    "fixed_daily_quests_excluded": true,
+    "museum_full_area_gpx_excluded": true,
+    "premium_refusals_retained": [
+      "Applin",
+      "World Space Week",
+      "Sizzlipede"
+    ]
+  },
+  "records": [
+    "release-final-http-e220251-20261004.json",
+    "release-final-http-a7e34e2-20261004.json",
+    "japan-rally-browser-download-e220251-20261004.gpx",
+    "proofs/spidey-final-public-a7e34e2-20261004.jpg",
+    "proofs/spidey-final-japan-mobile-verified-a7e34e2-20261004.jpg"
+  ]
+}

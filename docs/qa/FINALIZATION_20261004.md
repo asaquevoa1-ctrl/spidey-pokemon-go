@@ -1,4 +1,4 @@
-# Spidey — lançamento web de 04/10/2026
+# Spidey — versão web finalizada em 04/10/2026
 
 Estado corrente — 04/10: versão web pública finalizada no código `a7e34e2`, produção READY em https://spidey-pokemon-go.vercel.app/spidey-app/ , sem login ou link temporário, sob a autorização explícita de publicação do editor e a continuidade “Bora finalizar”. GPX de Selos do Japão agora usa download HTTP direto; arquivo novo baixado pelo browser em `e220251`, 1.890 bytes, 17 pontos e conteúdo idêntico à prova anterior. Endpoint preservado e reconferido em `a7e34e2`. Alertas consultados assim que a interface fica pronta; botão desabilitado “Alertas indisponíveis” confirmado em desktop e viewport390, sem pedido de permissão. 52 testes Node e gate automático passaram; 32 testes Python pertencem à verificação anterior do lançamento. 44 arquivos públicos exatos em `e220251`; os três arquivos públicos alterados depois foram reconferidos em `a7e34e2`. Catálogo124,25 masters,sete fundos originais e FLY20/28/Taipei preservados. Push remoto continua503/push_not_configured; faltam armazenamento, chaves e agendamento. Android físico/instalação/atualização/offline/push não certificados. Missões fixas e GPX de área dos museus seguem dispensados; recusas Premium Applin/Espaço/Sizzlipede mantidas, sem nova tentativa. Registro corrente: `docs/qa/FINALIZATION_20261004.md/json`.
 
@@ -15,19 +15,3 @@ A disponibilidade de push é consultada sem pedir permissão. O botão mostra �
 Provas e limites atuais estão em `docs/qa/FINALIZATION_20261004.json`, `release-final-http-e220251-20261004.json`, `release-final-http-a7e34e2-20261004.json`, `japan-rally-browser-download-e220251-20261004.gpx` e capturas em `proofs/`. A limitação histórica “FreshGPXdownloadnotconfirmed” foi resolvida para Selos do Japão. Android físico/PWA/offline/push e três recusas Premium continuam registrados. Amigos/Chat não foi implementado. Missões diárias fixas e GPX de área dos museus continuam dispensados, sem nova busca.
 
 Documentação técnica do limite cron consultada: https://vercel.com/docs/cron-jobs/usage-and-pricing . Configuração Node/includeFiles: https://vercel.com/docs/project-configuration/vercel-json#functions .
-
-
-
-## 04/10/2026 — publicação web autorizada e conferida
-
-O editor aprovou a prévia (“Perfeito”,12:52:45 BRT) e solicitou publicar (“Bora terminar pra publicar pra galere”,12:53:25 BRT). Esta instrução autoriza a promoção atual; as pendências de aprovação nas seções históricas não descrevem mais o lançamento web.
-
-Código `596b302223c898907c67563ac81e68004f15538f`, merge do candidato `ece3090b2d4c74c11a29533df27de5a110c88f48` com main `f35b25a145cb4ad1cbc8e1aa872d0e2fb9f4a96b`. Os31 caminhos de filas,cursores e mídia adicionados/modificados em main foram preservados. O conflito de index manteve a interface revisada. 755dos760 blobs do candidato têm o mesmo SHA; quatro alterações são cursores/fila de main e uma é o redirecionamento de `/` para `/spidey-app/`.
-
-Produção Vercel `dpl_Dbz3cBEMkR1m24ghaCEMi98eddZq` READY,target production,SHA596b302. URL final verificada em browser e HTTP: https://spidey-pokemon-go.vercel.app/spidey-app/ . O domínio principal já abria anonimamente; nenhuma proteção foi desativada e a prévia mantém sua proteção. Compartilhar esta URL permanente,sem parâmetros temporários. Atualizações automáticas posteriores de filas/cursores devem ser preservadas.
-
-Verificação:43 testes Node,32 testes Python e gate de autopublicação passaram. Cliente HTTP com zero cookies iniciais,sem credenciais ou share:42 arquivos200 e bytes exatos,incluindo25 masters,7fundos,manifest,service worker,catálogos e scripts de integração. Home,FLY,Selos,Semana,Mapa eNovidades abriram no domínio público. FLY20/28/Taipei,Málaga512×512/três mapas/janela Brasil-local e seis museus/fundos512×512 completos observados. Desktop1348 Escuro e iframe móvel390 Claro sem overflow lateral; não é certificação de Android físico.
-
-Limites:push público503 `push_not_configured`,sem variáveis de servidor configuradas; botão mostra “Notificações indisponíveis no momento.”,sem entrega alegada. Duas operações de download no browser de nuvem expiraram e nenhum arquivo novo foi observado; não declarar o GPX novo como conferido. A prova anterior de17pontos em0433c32 continua histórica; o código de Selos foi preservado. A página interna de downloads foi bloqueada pela política de URL do browser e nenhum contorno foi tentado. Instalação/atualização/offline/colagem/push em Android físico não certificados. Amigos/Chat não implementado. Recusas Premium Applin/Espaço/Sizzlipede mantidas. Missões fixas e GPX da área dos museus seguem fora do escopo por instrução do editor.
-
-Registros:`RELEASE_AUTHORIZATION_20261004.json`,`PUBLIC_LAUNCH_20261004.md/json`,`release-production-http-596b302-20261004.json`,`release-production-browser-596b302-20261004.json` e duas provas em `proofs/`. Atualizações documentais posteriores preservam o código publicado.

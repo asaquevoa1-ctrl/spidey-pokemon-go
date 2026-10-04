@@ -1,13 +1,13 @@
 {
   "status": "PUBLIC_WEB_PUBLISHED_CORE_VERIFIED_WITH_LIMITS",
-  "checked_at_utc": "2026-10-04T16:22:54.622940+00:00",
-  "code_commit": "596b302223c898907c67563ac81e68004f15538f",
-  "deployment_id": "dpl_Dbz3cBEMkR1m24ghaCEMi98eddZq",
+  "checked_at_utc": "2026-10-04T17:00:52.112893+00:00",
+  "code_commit": "a7e34e278c5ca6b7004a93e88a721a96af3937d6",
+  "deployment_id": "dpl_B7QXVq4Hf5D67YarTJJKtrGrnHxa",
   "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
-  "node_tests": 43,
+  "node_tests": 52,
   "python_tests": 32,
   "auto_publish_gate": "PASSED",
-  "anonymous_exact_files": 42,
+  "anonymous_exact_files": 44,
   "approved_masters": 25,
   "original_location_backgrounds": 7,
   "preserved_main_paths": 31,
@@ -15,7 +15,6 @@
   "limitations": [
     "Push503notconfigured",
     "PhysicalAndroidnotcertified",
-    "FreshGPXdownloadnotconfirmed",
     "ThreePremiumgenerationrefusalsretained"
   ],
   "scope_exclusions": [
@@ -26,6 +25,13 @@
   ],
   "records": [
     "release-production-http-596b302-20261004.json",
-    "release-production-browser-596b302-20261004.json"
-  ]
+    "release-production-browser-596b302-20261004.json",
+    "release-final-http-e220251-20261004.json",
+    "release-final-http-a7e34e2-20261004.json",
+    "japan-rally-browser-download-e220251-20261004.gpx",
+    "proofs/spidey-final-public-a7e34e2-20261004.jpg"
+  ],
+  "anonymous_exact_files_scope": "44 checked at e220251; three subsequently changed public files rechecked at a7e34e2",
+  "gpx_download_verified": true,
+  "current_record": "FINALIZATION_20261004.json"
 }

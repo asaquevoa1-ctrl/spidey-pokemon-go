@@ -1,5 +1,5 @@
 {
-  "status": "PUBLIC_WEB_PUBLISHED_CORE_VERIFIED_WITH_LIMITS",
+  "status": "PUBLIC_WEB_FINALIZED_WITH_RECORDED_LIMITS",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -47,9 +47,9 @@
     "production_gpx_download": "NOT_CONFIRMED_CURRENT_CLOUD_BROWSER_TIMEOUT_PRIOR_PREVIEW_PROOF_RETAINED"
   },
   "next_batch": [
-    "Configurar servidor e comprovar entrega de push se solicitado.",
-    "QA físico Android/PWA/instalação/atualização/offline/colagem e download GPX.",
-    "Três artes mantêm recusas registradas; não contornar."
+    "Remote push configuration only with suitable storage and precise event scheduling",
+    "Physical Android/PWA verification when a test device is available",
+    "Premium refusals retained; do not retry automatically"
   ],
   "completed_public_launch": true,
   "completed_this_sprint": [
@@ -79,18 +79,16 @@
     "04/10:036e0c3 integra seis fundos originais512×512 e três missões de relato direto restritas a Valência, sem inventar espécies por tarefa.43 testes, desktop Escuro/mobile Claro, seis imagens integrais/sem overflow, FLY20/28/Taipei e13 arquivos via share anônimo byte a byte passaram.124 eventos/25 masters/716 blobs anteriores fora do escopo preservados. GPX de cobertura total não criado: faltam limites e rota verificados. Fontes/QA/cinco capturas documentados; pendências físicas/push/acesso durável/produção e recusas Premium mantidas.",
     "04/10 11:44:10 BRT: editor dispensa missões e GPX de área dos museus. ae4fcd4 remove lista fixa e pendências GPX, mantém seis fundos/mapas/relógios. 41 testes e QA desktop Escuro/mobile Claro/13 arquivos via share anônimo passaram; seis assets, catálogo124 e masters25 preservados. Busca encerrada, zero GPX criado; históricos preservados. Produção, URL durável e validação física seguem pendentes.",
     "04/10:ff84fe8 confirma Málaga oficial e integra fundo original512×512, três endereços/mapas, janela local1/10 09h→4/10 20h e Brasília1/10 04h→4/10 15h. 43 testes, desktop Escuro/mobile Claro/FLY20/28/Taipei e10 arquivos via share anônimo exatos passaram. Seis fundos ESA, catálogo124, masters25 e744 blobs fora do escopo preservados. Missões/GPX dispensados não reintroduzidos. Produção/Android físico/acesso durável permanecem pendentes.",
-    "04/10:publicação web autorizada;merge preserva main atual e candidato revisado;75testes e42arquivos públicos exatos,QA desktop/mobile núcleo aprovado;limitações registradas sem certificação falsa."
+    "04/10:publicação web autorizada;merge preserva main atual e candidato revisado;75testes e42arquivos públicos exatos,QA desktop/mobile núcleo aprovado;limitações registradas sem certificação falsa.",
+    "04/10: final web polish a7e34e2 READY; fresh Japan GPX browser download verified1890 bytes/17points; alerts availability checked before images finish;52 Node tests; public desktop/mobile390 verified; catalogs/art/backgrounds/queues preserved."
   ],
-  "updated_at": "2026-10-04T15:45:04.087879+00:00",
-  "code_commit": "ff84fe8b344d413d87548f4e083e72ad6ea00ad8",
+  "updated_at": "2026-10-04T17:02:02.695755+00:00",
+  "code_commit": "a7e34e278c5ca6b7004a93e88a721a96af3937d6",
   "preview_url": "https://spidey-pokemon-pa2fgluuu-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
-    "3 eventos sem Premium na janela01–07/10;20 APPROVED/0 candidatas. Espaço agora exibe ilustração oficial creditada, sem modificar recusa/estado Premium de Applin/Espaço/Sizzlipede.",
-    "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
-    "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
-    "Android físico/instalação/atualização/offline/push sem prova",
-    "Lançamento completo e produção não aprovados",
-    "Novo link temporário passou em HTTP anônimo; acesso dos testadores no celular ainda não revalidado após o bloqueio relatado em03/10. URL pública permanente pendente e proteção mantida."
+    "Remote push: storage, VAPID/dispatch credentials and event scheduler missing; HTTP503, UI unavailable",
+    "Physical Android installation/update/offline/clipboard/push not certified",
+    "Three Premium generation refusals retained: Applin/World Space Week/Sizzlipede; no retry authorized"
   ],
   "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
   "post_approval_qa_record": "docs/qa/remaining-art-batch-browser-e766dde-20261004.json",
@@ -101,7 +99,7 @@
     "ended_at": "2026-10-02T20:49:18-03:00",
     "active": false
   },
-  "gpx_qa_record": "docs/qa/japan-rally-browser-download-0433c32-20261002.json",
+  "gpx_qa_record": "docs/qa/FINALIZATION_20261004.json",
   "candidate_review_record": "docs/qa/SHOWCASE_TUESDAY_REVIEW_20261003.json",
   "candidate_qa_record": "docs/qa/showcase-tuesday-browser-dbf6956-20261003.json",
   "current_art_review_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
@@ -123,12 +121,12 @@
   },
   "art_continuation_authorization": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
   "individual_art_approval_required": false,
-  "current_core_qa_record": "docs/qa/MALAGA_QA_20261004.json",
+  "current_core_qa_record": "docs/qa/FINALIZATION_20261004.json",
   "space_scope_update_record": "docs/qa/ESA_SCOPE_UPDATE_20261004.json",
   "public_launch": {
-    "code_commit": "596b302223c898907c67563ac81e68004f15538f",
-    "deployment_id": "dpl_Dbz3cBEMkR1m24ghaCEMi98eddZq",
+    "code_commit": "a7e34e278c5ca6b7004a93e88a721a96af3937d6",
+    "deployment_id": "dpl_B7QXVq4Hf5D67YarTJJKtrGrnHxa",
     "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
-    "scope": "Public web core; remote push and physical Android not certified"
+    "scope": "Public web core and Japan GPX download verified; remote push and physical Android not certified"
   }
 }

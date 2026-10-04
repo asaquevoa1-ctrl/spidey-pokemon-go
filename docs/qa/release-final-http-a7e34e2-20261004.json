@@ -1,0 +1,32 @@
+{
+  "status": "PASSED",
+  "code_commit": "a7e34e278c5ca6b7004a93e88a721a96af3937d6",
+  "deployment_id": "dpl_B7QXVq4Hf5D67YarTJJKtrGrnHxa",
+  "checked_at_utc": "2026-10-04T16:57:30.674409+00:00",
+  "changed_public_files": [
+    {
+      "path": "spidey-app/index.html",
+      "status": 200,
+      "bytes": 10469,
+      "sha256": "d5fd9d7da577262806cc25efe8b47ec656f7f33d4e937f50e20d067714d86a2c",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/push.js",
+      "status": 200,
+      "bytes": 7188,
+      "sha256": "0046f714433dda9abc6ee7099471cf57163d5f41aa9905a29235d5bb3b1488d0",
+      "exact": true
+    },
+    {
+      "path": "spidey-app/sw.js",
+      "status": 200,
+      "bytes": 8398,
+      "sha256": "7956882a6bf4e7d801c9f6f11b2e71c7be069989b55d34fee9acff558ce162a9",
+      "exact": true
+    }
+  ],
+  "unchanged_files_proof": "release-final-http-e220251-20261004.json",
+  "gpx_http_exact": true,
+  "gpx_waypoints": 17
+}
