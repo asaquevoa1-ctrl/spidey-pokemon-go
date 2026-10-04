@@ -60,19 +60,6 @@
         "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_scienceMuseumLondon.png",
         "source_git_sha": "c2457e8a71cbfa2246978541d2c27b822914d776",
         "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
-      },
-      "research": {
-        "status": "exact_tasks_unconfirmed",
-        "field_tasks": [],
-        "timed_steps": [],
-        "report": null,
-        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
-      },
-      "gpx": {
-        "status": "event_area_unverified",
-        "coverage_polygon": null,
-        "route_points": [],
-        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -104,19 +91,6 @@
         "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_citeDeEspace.png",
         "source_git_sha": "308972521ee4202ae23db2546e734677255a9ec2",
         "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
-      },
-      "research": {
-        "status": "exact_tasks_unconfirmed",
-        "field_tasks": [],
-        "timed_steps": [],
-        "report": null,
-        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
-      },
-      "gpx": {
-        "status": "event_area_unverified",
-        "coverage_polygon": null,
-        "route_points": [],
-        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -148,19 +122,6 @@
         "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_spaceCenterGermany.png",
         "source_git_sha": "deb2430e91a5b25a9bc6668dee456a617ecf6ec9",
         "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
-      },
-      "research": {
-        "status": "exact_tasks_unconfirmed",
-        "field_tasks": [],
-        "timed_steps": [],
-        "report": null,
-        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
-      },
-      "gpx": {
-        "status": "event_area_unverified",
-        "coverage_polygon": null,
-        "route_points": [],
-        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -186,62 +147,6 @@
         "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_ciudadDeLasArtes.png",
         "source_git_sha": "3b36530bf997ca41257f47f54f6de00dfe5cc211",
         "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
-      },
-      "research": {
-        "status": "community_report_valencia_only",
-        "field_tasks": [
-          {
-            "id": "spin-10",
-            "title": "Girar 10 Poképaradas",
-            "reported_title": "Spin 10 PokéStops",
-            "confidence": "community_firsthand",
-            "reward": {
-              "type": "encounter",
-              "description": "Encontro do evento com fundo (relatado)",
-              "species": null,
-              "background": "reported_guaranteed_not_officially_verified"
-            }
-          },
-          {
-            "id": "buddy-hearts-3",
-            "title": "Ganhar 3 corações com seu companheiro",
-            "reported_title": "Earn 3 hearts with your buddy",
-            "confidence": "community_firsthand",
-            "reward": {
-              "type": "encounter",
-              "description": "Encontro do evento com fundo (relatado)",
-              "species": null,
-              "background": "reported_guaranteed_not_officially_verified"
-            }
-          },
-          {
-            "id": "catch-10",
-            "title": "Capturar 10 Pokémon",
-            "reported_title": "Catch 10 Pokémon",
-            "confidence": "community_firsthand",
-            "reward": {
-              "type": "encounter",
-              "description": "Encontro do evento com fundo (relatado)",
-              "species": null,
-              "background": "reported_guaranteed_not_officially_verified"
-            }
-          }
-        ],
-        "timed_steps": [],
-        "report": {
-          "url": "https://www.reddit.com/r/pokemongo/comments/1wx0pd3/esa_event_is_live_in_valencia/",
-          "name": "Relato direto de jogador em Valência",
-          "confidence": "community_firsthand",
-          "reported_date": "2026-10-04",
-          "scope_venue_id": "museu-ciencies-valencia"
-        },
-        "note": "O relato informa encontros com fundo nas três tarefas. Espécies por tarefa ainda não confirmadas; a informação não se estende aos demais museus."
-      },
-      "gpx": {
-        "status": "event_area_unverified",
-        "coverage_polygon": null,
-        "route_points": [],
-        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -273,19 +178,6 @@
         "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_spaceExpoNL.png",
         "source_git_sha": "47516e0ea73ce551f8a1ee9e85235ccaec8c1213",
         "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
-      },
-      "research": {
-        "status": "exact_tasks_unconfirmed",
-        "field_tasks": [],
-        "timed_steps": [],
-        "report": null,
-        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
-      },
-      "gpx": {
-        "status": "event_area_unverified",
-        "coverage_polygon": null,
-        "route_points": [],
-        "note": "Limites do evento ainda não confirmados."
       }
     },
     {
@@ -317,27 +209,9 @@
         "source_url": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/LocationCards/lc_ESA_euroSpaceCenter.png",
         "source_git_sha": "025207b119061c8d4919720779c5e98b18b55727",
         "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml"
-      },
-      "research": {
-        "status": "exact_tasks_unconfirmed",
-        "field_tasks": [],
-        "timed_steps": [],
-        "report": null,
-        "note": "As tarefas específicas e as espécies de recompensa deste museu ainda não foram confirmadas."
-      },
-      "gpx": {
-        "status": "event_area_unverified",
-        "coverage_polygon": null,
-        "route_points": [],
-        "note": "Limites do evento ainda não confirmados."
       }
     }
   ],
-  "gpx": {
-    "enabled": false,
-    "reason": "Nenhum limite da área do evento nem rota de cobertura integral foi verificado para os seis museus. Pontos de referência isolados não comprovam a cobertura solicitada.",
-    "public_note": "GPX de cobertura total pendentes: ainda faltam limites confirmados da área do evento em cada museu."
-  },
   "verified_at": "2026-10-04T12:54:53.931662+00:00",
   "background_assets_source": {
     "name": "PokeMiners — acervo comunitário de arquivos do jogo",
@@ -345,11 +219,5 @@
     "confidence": "community_datamine",
     "city_mapping_url": "https://www.serebii.net/pokemongo/reallifeevents/pokemongoxesa.shtml",
     "city_mapping_confidence": "community_reference"
-  },
-  "research": {
-    "timed_instruction": "Entre no museu participante para receber a pesquisa do evento. As etapas e espécies de recompensa deste local ainda não foram confirmadas.",
-    "field_instruction": "Gire as Poképaradas da área participante para procurar tarefas do evento.",
-    "official_reward_rule": "O anúncio oficial informa que alguns encontros de pesquisas podem ter o Fundo de Localização. Os Pokémon dos encontros selvagens não definem as recompensas das tarefas.",
-    "source_url": "https://pokemongo.com/en/news/european-space-agency-event"
   }
 }

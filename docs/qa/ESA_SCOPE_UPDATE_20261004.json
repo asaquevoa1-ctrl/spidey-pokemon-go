@@ -1,0 +1,21 @@
+{
+  "status": "USER_SCOPE_UPDATED_PREVIEW_QA_PENDING",
+  "instruction": "As missões resetem todos os dias. Então pode deixar de lado essas. Se não conseguir os gpx, pode deixar de lado também.",
+  "user_at": "2026-10-04T11:44:10-03:00",
+  "recorded_at": "2026-10-04T14:47:00.174926+00:00",
+  "base_commit": "a23ebf4c6b9fe96f1b030011519620e512c37eb4",
+  "decision": {
+    "research_and_gpx_search": "STOPPED",
+    "specific_research_tasks": "REMOVED_FROM_CURRENT_APP",
+    "museum_gpx_pending_notices": "REMOVED_FROM_CURRENT_APP",
+    "retained": [
+      "Six original location backgrounds",
+      "Six museum addresses, maps and IANA clocks",
+      "Official general ways to obtain backgrounds",
+      "Historical source and QA records"
+    ]
+  },
+  "daily_reset": "User-supplied reason for scope change; not added as a new independently verified gameplay guarantee.",
+  "full_area_gpx_created": 0,
+  "production_promotion": false
+}

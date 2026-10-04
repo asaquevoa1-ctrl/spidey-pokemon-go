@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261004-space-backgrounds-v2';
+const CACHE = 'spidey-app-20261004-space-funds-v3';
 const CORE = [
   './space-week.js',
   './space-week.css',

@@ -43,28 +43,6 @@ test('museum content escapes text and copy values so a venue name cannot inject 
   assert.ok(!html.includes('data-open-space-museums="injected'));
 });
 
-test('museum field tasks remain specific to the Valencia report and never infer species from wild spawns',()=> {
-  const space = setup();
-  const data = JSON.parse(fs.readFileSync('spidey-app/data/space-museums.json','utf8'));
-  const valencia = data.museums.find(venue=>venue.id==='museu-ciencies-valencia');
-  const html = space.researchSection(valencia,data);
-  assert.equal(valencia.research.report.confidence,'community_firsthand');
-  assert.equal(valencia.research.field_tasks.length,3);
-  assert.ok(html.includes('Relato de jogadores · Valência'));
-  assert.ok(html.includes('Espécies por tarefa ainda não confirmadas'));
-  assert.ok(html.includes('não se estende aos demais museus'));
-  for (const task of valencia.research.field_tasks) {
-    assert.equal(task.reward.species,null);
-    assert.equal(task.reward.background,'reported_guaranteed_not_officially_verified');
-  }
-  for (const venue of data.museums.filter(venue=>venue!==valencia)) {
-    assert.equal(venue.research.field_tasks.length,0);
-    const other = space.researchSection(venue,data);
-    assert.ok(other.includes('A confirmar'));
-    assert.ok(!other.includes('Girar 10 Poképaradas'));
-    assert.ok(!other.includes('relatadas'));
-  }
-});
 
 test('each city displays its own original background bytes without promoting them to Premium art',()=> {
   const space = setup();
@@ -82,16 +60,3 @@ test('each city displays its own original background bytes without promoting the
   }
 });
 
-test('unverified event boundaries cannot expose a downloadable route or claim complete area coverage',()=> {
-  const space = setup();
-  const data = JSON.parse(fs.readFileSync('spidey-app/data/space-museums.json','utf8'));
-  assert.equal(data.gpx.enabled,false);
-  for (const venue of data.museums) {
-    assert.equal(venue.gpx.status,'event_area_unverified');
-    assert.equal(venue.gpx.coverage_polygon,null);
-    assert.deepEqual(venue.gpx.route_points,[]);
-  }
-  const html = space.museumRows(data);
-  assert.equal((html.match(/GPX da área:/g)||[]).length,6);
-  assert.ok(!/download|href="[^"]*\.gpx/.test(html));
-});
