@@ -1,5 +1,10 @@
-const CACHE = 'spidey-app-20261004-calendar-brasil-v2';
+const CACHE = 'spidey-app-20261004-space-museums-v1';
 const CORE = [
+  './space-week.js',
+  './space-week.css',
+  './data/space-museums.json',
+  './assets/events/official/world-space-week-2026.jpg',
+  './assets/events/official/esa-museums-2026.jpg',
   './assets/events/premium/twilight-trails-season-2026-approved-v1.png',
   './assets/events/premium/gbl-20260929-1006-approved-v1.png',
   './assets/events/premium/gbl-mega-20261006-13-approved-v1.png',

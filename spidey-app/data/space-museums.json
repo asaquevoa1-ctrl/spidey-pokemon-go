@@ -1,0 +1,148 @@
+{
+  "id": "2026-10-esa-museum-collaboration",
+  "status": "official",
+  "related_event_id": "2026-10-world-space-week",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/en/news/european-space-agency-event",
+    "confidence": "official"
+  },
+  "date_window": {
+    "start_date": "2026-10-04",
+    "end_date": "2027-04-30",
+    "hours_announced": false
+  },
+  "field_research_window": {
+    "start_date": "2026-10-04",
+    "end_date": "2026-10-10"
+  },
+  "background_rules": [
+    "Reides presenciais de uma estrela nos museus podem render Pikachu Astronauta com Fundo de Localização.",
+    "Pesquisas temporárias nos museus: alguns encontros também podem vir com o fundo.",
+    "De 4 a 10/10, alguns encontros das Pesquisas de Campo dos museus podem ter o fundo.",
+    "Fundo e Brilhante não são garantidos."
+  ],
+  "weekly_gameplay": "De 4 a 10/10, mais encontros com Pikachu, Clefairy, Magnemite, Starmie, Lunatone, Solrock, Elgyem e Blipbug ao redor dos locais participantes.",
+  "esa_note": "As unidades da ESA oferecem atividades de 4 a 10/10, sem Fundos de Localização.",
+  "official_media": {
+    "file": "assets/events/official/esa-museums-2026.jpg",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "847c9d5db8aad7a1c139f016a19b25dbcf525c5e9a6bc2fcd58d4fb5fdaa1bcb",
+    "bytes": 1410996,
+    "alt": "Pikachu Astronauta e os seis museus na ilustração oficial Pokémon GO e ESA",
+    "partner": true,
+    "classification": "official_illustration",
+    "source_url": "https://pokemongo.com/en/news/european-space-agency-event",
+    "original_url": "https://lh3.googleusercontent.com/7CITEYsKb4CAwdYOln7q7h5K6U1cIVu2cnWRbDZtixs10PkfYfHzPn5Iz9wwbMFE3bosgBEiKnZlEZJZmGiyl-YqYRKHlIL8d7VAzR4DjA%3Ds0-e365"
+  },
+  "museums": [
+    {
+      "id": "science-museum-london",
+      "name": "Science Museum",
+      "city": "Londres",
+      "country": "Reino Unido",
+      "address": "Exhibition Road, South Kensington, London SW7 2DD",
+      "timezone": "Europe/London",
+      "coordinate": null,
+      "source": {
+        "url": "https://www.sciencemuseum.org.uk/visit",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "cite-espace-toulouse",
+      "name": "Cité de l’espace",
+      "city": "Toulouse",
+      "country": "França",
+      "address": "Avenue Jean Gonord, 31500 Toulouse",
+      "timezone": "Europe/Paris",
+      "coordinate": {
+        "latitude": 43.5918308,
+        "longitude": 1.4903991,
+        "type": "venue_reference",
+        "source_url": "https://metropole.toulouse.fr/annuaire/cite-de-lespace",
+        "map_source_url": "https://www.openstreetmap.org/?lat=43.591830800&layers=M&lon=1.490399100&zoom=20"
+      },
+      "source": {
+        "url": "https://metropole.toulouse.fr/annuaire/cite-de-lespace",
+        "confidence": "official_municipal"
+      }
+    },
+    {
+      "id": "deutsches-museum-nuremberg",
+      "name": "Deutsches Museum Nürnberg",
+      "city": "Nuremberg",
+      "country": "Alemanha",
+      "address": "Augustinerhof 4, 90403 Nürnberg",
+      "timezone": "Europe/Berlin",
+      "coordinate": {
+        "latitude": 49.4535616,
+        "longitude": 11.0748903,
+        "type": "venue_reference",
+        "source_url": "https://www.deutsches-museum.de/nuernberg/besuch/anfahrt",
+        "map_source_url": "https://www.google.de/maps/place/Deutsches%2BMuseum%2BN%C3%BCrnberg/@49.4535616,11.0727016,17z/data=!3m1!4b1!4m5!3m4!1s0x479f57af0c2bbadb:0xb87effd178e000b5!8m2!3d49.4535616!4d11.0748903"
+      },
+      "source": {
+        "url": "https://www.deutsches-museum.de/nuernberg/besuch/anfahrt",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "museu-ciencies-valencia",
+      "name": "Museu de les Ciències",
+      "city": "Valência",
+      "country": "Espanha",
+      "address": "Av. Professor López Piñero, 7, 46013 València",
+      "timezone": "Europe/Madrid",
+      "coordinate": null,
+      "source": {
+        "url": "https://www.valencia.es/es/-/infociudad-museo-de-las-ciencias",
+        "confidence": "official_municipal"
+      }
+    },
+    {
+      "id": "space-expo-noordwijk",
+      "name": "Space Expo",
+      "city": "Noordwijk",
+      "country": "Países Baixos",
+      "address": "Keplerlaan 3, 2201 AZ Noordwijk",
+      "timezone": "Europe/Amsterdam",
+      "coordinate": {
+        "latitude": 52.2152984,
+        "longitude": 4.4208813,
+        "type": "venue_reference",
+        "source_url": "https://www.space-expo.nl/en/contact",
+        "map_source_url": "https://maps.app.goo.gl/nXeegQhQuJMnQmwJA"
+      },
+      "source": {
+        "url": "https://www.space-expo.nl/en/contact",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "euro-space-center-transinne",
+      "name": "Euro Space Center",
+      "city": "Transinne",
+      "country": "Bélgica",
+      "address": "1, rue devant les Hêtres, B-6890 Transinne",
+      "timezone": "Europe/Brussels",
+      "coordinate": {
+        "latitude": 50.007,
+        "longitude": 5.22,
+        "type": "venue_reference",
+        "precision": "rounded_by_official_source",
+        "source_url": "https://www.eurospacecenter.be/en/infos-tarifs"
+      },
+      "source": {
+        "url": "https://www.eurospacecenter.be/en/infos-tarifs",
+        "confidence": "official"
+      }
+    }
+  ],
+  "gpx": {
+    "enabled": false,
+    "reason": "Referências de museus não são PokéStops exatas."
+  },
+  "verified_at": "2026-10-04T11:56:17.646150+00:00"
+}

@@ -1,7 +1,7 @@
 (() => {
   const STORAGE_KEY='spidey-theme';
   const media=window.matchMedia('(prefers-color-scheme: dark)');
-  const APP_UI_VERSION='20260929-art-coverage-v1';
+  const APP_UI_VERSION=window.SPIDEY_BUILD || '20261004-space1';
   function hasAsset(selector,name){return[...document.querySelectorAll(selector)].some((el)=>String(el.href||el.src||'').includes(name))}
   function loadStyle(name,marker){if(hasAsset('link[rel="stylesheet"]',name))return;const link=document.createElement('link');link.rel='stylesheet';link.href=`${name}?v=${APP_UI_VERSION}`;link.dataset[marker]='1';document.head.appendChild(link)}
   function loadScript(name,marker){if(hasAsset('script[src]',name))return;const script=document.createElement('script');script.src=`${name}?v=${APP_UI_VERSION}`;script.dataset[marker]='1';script.async=false;document.head.appendChild(script)}

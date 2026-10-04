@@ -3069,7 +3069,7 @@
       "id": "2026-10-world-space-week",
       "slug": "2026-10-world-space-week",
       "title": "Semana Mundial do Espaço 2026",
-      "summary": "Semana Mundial do Espaço com estreia do Pikachu Astronauta em reides e Pesquisa temporária.",
+      "summary": "Pikachu Astronauta em Reides de uma estrela e Pesquisa temporária gratuita; pode aparecer Brilhante.",
       "category": "evento_especial",
       "tags": [
         "Astronaut Pikachu",
@@ -3078,7 +3078,7 @@
       ],
       "source": {
         "name": "Pokémon GO",
-        "url": "https://pokemongo.com/pt-BR/news/world-space-week-2026",
+        "url": "https://pokemongo.com/en/news/world-space-week-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -3102,8 +3102,9 @@
         "reason": "Evento sem coordenada exata específica confirmada."
       },
       "notes": [
-        "O evento acontece de 04/10 às 00h até 10/10 às 23h59 locais.",
-        "Conclua a Pesquisa temporária e resgate suas recompensas até 12/10 às 23h59 locais."
+        "O evento global vai de 04/10 às 00h até 10/10 às 23h59 no horário de cada região.",
+        "Conclua a Pesquisa temporária e resgate suas recompensas até 12/10 às 23h59 locais.",
+        "Os Fundos de Localização pertencem à parceria com os museus europeus; consulte Museus e fundos para locais e prazos próprios."
       ],
       "notifications": {
         "enabled": true,
@@ -3113,6 +3114,7 @@
       },
       "status": "published",
       "bonuses": [
+        "Pikachu Astronauta em Reides de uma estrela.",
         "Pesquisa temporária gratuita com encontro de Pikachu Astronauta."
       ],
       "pokemon": [
@@ -3120,7 +3122,20 @@
           "name": "Pikachu Astronauta",
           "note": "estreia em Reides de uma estrela e Pesquisa temporária; pode aparecer Brilhante"
         }
-      ]
+      ],
+      "official_media": {
+        "file": "assets/events/official/world-space-week-2026.jpg",
+        "width": 1920,
+        "height": 1080,
+        "sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9",
+        "bytes": 1362600,
+        "alt": "Pikachu Astronauta na ilustração oficial da Semana Mundial do Espaço",
+        "partner": false,
+        "classification": "official_illustration",
+        "source_url": "https://pokemongo.com/en/news/world-space-week-2026",
+        "original_url": "https://lh3.googleusercontent.com/AiDIi-NAxX879TxCAX8X6I6EwjrUUajpCN18w4uPXAwSqgbR1y6_awmrDJFY31ljBfh4flc1v5Ma2by0Mt4y77-Q4LCPLnSBEMZIJSS0hvZx%3Ds0-e365"
+      },
+      "related_world_event_id": "2026-10-esa-museum-collaboration"
     },
     {
       "id": "2026-10-go-pass",

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-art-coverage-v1-20261004-agenda-v1';
+  const VERSION = 'spidey-art-coverage-v1-20261004-space-v1';
   const BAD_PUBLIC_ART = /(?:assets\/events\/generated\/|generated_vector|placeholder|preview|fallback|festival-das-luzes-approved\.png|festival-das-luzes-2026\.jpg)/i;
   const PREMIUM_ART = /\/assets\/events\/premium\//i;
   const SOURCE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
@@ -179,7 +179,7 @@
 
   function decorateContainer(container) {
     // A day agenda lists several events and does not own an event poster.
-    if (container?.id === 'eventDetail' && container.querySelector('.v24-day-sheet')) {
+    if (container?.id === 'eventDetail' && (container.querySelector('.v24-day-sheet') || container.querySelector('.space-detail'))) {
       removeCover(container);
       return;
     }
