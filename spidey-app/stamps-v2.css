@@ -402,3 +402,6 @@
 .stamp-prefecture-picker select { width: 100%; max-width: 100%; padding: 14px; color: inherit; background: var(--panel, #0c2134); border: 1px solid var(--line, #284554); border-radius: 14px; }
 :root[data-theme="light"] .stamp-prefecture-picker select { background: #f6faff; color: #162c3d; }
 .stamp-datahub-v2[hidden] { display: none !important; }
+.stamp-detail-pokelids .stamp-active-art-v2 { min-height: 0; aspect-ratio: 1; align-self: start; }
+.stamp-detail-pokelids .stamp-active-art-v2 img,
+.stamp-detail-pokelids .stamp-tile-art-v2 img { object-fit: contain; }

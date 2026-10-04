@@ -119,7 +119,7 @@
 
     const cover = rallyCover(rally);
     detail.innerHTML = `
-      <div class="detail-body stamp-detail stamp-detail-v2">
+      <div class="detail-body stamp-detail stamp-detail-v2 ${isPokelid ? 'stamp-detail-pokelids' : ''}">
         ${cover ? `<img class="stamp-rally-cover-v2" src="${escapeHtml(cover)}" alt="${escapeHtml(rally.title)}" loading="eager">` : ''}
         <span class="eyebrow">${isPokelid ? 'POKÉLIDS · JAPÃO' : 'GO STAMP RALLY · ROTA SPIDEY'}</span>
         <h2>${escapeHtml(rally.title)}</h2>
