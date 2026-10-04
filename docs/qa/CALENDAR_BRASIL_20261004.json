@@ -1,0 +1,79 @@
+{
+  "status": "PASSED_PREVIEW_CALENDAR_ANDROID_AND_RELEASE_PENDING",
+  "recorded_at": "2026-10-04T11:31:00.274166+00:00",
+  "branch": "spidey-fly-v1",
+  "code_commit": "d3d26e100a060b26b4731dc6aea2046b18e41662",
+  "previous_art_checkpoint": "de88306d5b17cbbe959fa0f36762f4c62c230b9c",
+  "preview_url": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app/spidey-app/index.html",
+  "deployment_id": "dpl_6TegdHKSHaAY5UAnuvaENWb8Fp5E",
+  "deployment_target": null,
+  "tests": {
+    "node_passed": 37,
+    "syntax_and_diff_check": "PASSED",
+    "calendar_device_zones": [
+      "UTC",
+      "America/Sao_Paulo",
+      "Asia/Taipei",
+      "America/Los_Angeles"
+    ]
+  },
+  "browser": {
+    "mobile": "390x850 light",
+    "desktop": "direct desktop dark",
+    "october_1_events": 4,
+    "october_2_events": 4,
+    "horizontal_overflow": false,
+    "agenda_generic_cover": false,
+    "focus": "closeDialog",
+    "agenda_initial_scroll_top": 0,
+    "friday_approved_png": "1122x1402 complete",
+    "unconfirmed_location_placeholder": false
+  },
+  "protected_files_unchanged_from_e766dde": 301,
+  "event_catalog_unchanged": true,
+  "approved_art_master_unchanged": true,
+  "temporary_share_status": "ANONYMOUS_HTTP_PASSED_USER_PHONE_NOT_RETESTED",
+  "bare_preview_access": "VERCEL_LOGIN",
+  "physical_android_tested": false,
+  "push_status": "HTTP_503_push_not_configured",
+  "production_approved": false,
+  "production_promoted": false,
+  "generation_refusals_preserved": [
+    "Applin",
+    "Semana Mundial do Espaço",
+    "Sizzlipede"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/qa/proofs/spidey-calendar-before-20261004.jpg",
+      "bytes": 54694,
+      "sha256": "5541128bc21188b6d828d581e3fcb7352924538c730fcd19bc80e9a0a2c8a2d3"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-calendar-desktop-d3d26e1-20261004.jpg",
+      "bytes": 74038,
+      "sha256": "bc3557e920666ca41ecfc5e78496f51aeed4f56521ea6f78536464517db41307"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-calendar-mobile-d3d26e1-20261004.jpg",
+      "bytes": 52525,
+      "sha256": "548a595327b133ce0c3ff1a055360098656efc7804e8641675bce1bc2df38c09"
+    },
+    {
+      "path": "docs/qa/calendar-browser-d3d26e1-20261004.json",
+      "bytes": 5150,
+      "sha256": "bf8120f81da05beb022b8a8e4e9c4c67cd892135af91c941cea072d13e6c1446"
+    },
+    {
+      "path": "docs/qa/calendar-share-anonymous-d3d26e1-20261004.json",
+      "bytes": 1774,
+      "sha256": "3fe428e93df67fa4eee51f495d759495fb68b9d7e001a1192d578a82b225cafe"
+    }
+  ],
+  "remaining": [
+    "Confirmar novo link no celular dos testadores e acesso durável",
+    "Configurar e comprovar recebimento push",
+    "QA Android físico instalação/atualização/offline",
+    "Três artes com recusas documentadas"
+  ]
+}

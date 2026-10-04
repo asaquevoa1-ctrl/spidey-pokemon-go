@@ -1,5 +1,5 @@
 {
-  "status": "SEVEN_DELEGATED_ARTS_QA_PASSED_PUBLIC_BLOCKED",
+  "status": "CALENDAR_PREVIEW_QA_PASSED_PHYSICAL_PUBLIC_RELEASE_PENDING",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -27,25 +27,25 @@
     ],
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
-    "approved_master_integrity": "25_MASTER_ENTRIES_18_PREVIOUS_ENTRIES_17_FILES_PRESERVED_E766DDE",
-    "mobile_desktop_core": "SEVEN_ARTWORKS_MOBILE_CLARO_DESKTOP_ESCURO_14_VIEWS_7_SERVED_EXACT_E766DDE_PHYSICAL_PENDING",
+    "approved_master_integrity": "25_MASTER_ENTRIES_ALL_301_PROTECTED_FILES_UNCHANGED_FROM_E766DDE",
+    "mobile_desktop_core": "PASSED_CALENDAR_AGENDA_MOBILE_LIGHT_DESKTOP_DARK_D3D26E1_37_TESTS_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
-    "push_live_configuration": "BLOCKED_DASHBOARD_LOGIN_HTTP_503_PUSH_NOT_CONFIGURED_A17F6D4",
+    "push_live_configuration": "HTTP_503_PUSH_NOT_CONFIGURED_D3D26E1_DASHBOARD_AUTH_NOT_COMPLETED",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
     "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC",
     "go_pass_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_FF37843",
-    "tester_shared_preview_access": "BLOCKED_USER_PHONE_LOGIN_20261003_0847_BRT_DASHBOARD_AUTH_NOT_COMPLETED",
+    "tester_shared_preview_access": "TEMPORARY_ANONYMOUS_HTTP_PASSED_D3D26E1_USER_PHONE_NOT_RETESTED_PERMANENT_URL_PENDING",
     "latios_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_D14897B",
     "scenic_sunday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_BFEEB24",
     "showcase_tuesday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_C3BB225",
     "remaining_art_batch": "APPROVED_USER_DELEGATED_VISUAL_QA_PASSED_E766DDE",
-    "calendar_date_boundaries": "OBSERVED_CLOUD_AGENDA_LABEL_ROW_DATE_MISMATCH_NEEDS_SEPARATE_VERIFICATION"
+    "calendar_date_boundaries": "PASSED_BRAZIL_DAY_KEYS_4_DEVICE_ZONES_BROWSER_D3D26E1"
   },
   "next_batch": [
-    "Verificar e corrigir fronteiras de dia do calendário observadas na sessão cloud, mantendo horários/identidades do catálogo.",
-    "Três artes faltantes continuam bloqueadas por recusas registradas da geração; não contornar ou substituir por artes reprovadas.",
-    "Acesso público Vercel e alertas: painel não autenticado; nenhuma proteção/segredo alterado. Não repetir autenticação sem nova solicitação.",
-    "QA físico Android/PWA/atualização/offline/recebimento push."
+    "Comprovar abertura do novo link temporário pelos testadores no celular e organizar acesso durável; URL sem parâmetro continua protegida.",
+    "Configuração e recebimento real de push; endpoint503. Não repetir autenticação administrativa recusada sem nova solicitação.",
+    "QA físico Android/PWA/instalação/atualização/offline/alertas.",
+    "Três artes continuam bloqueadas por recusas registradas; não contornar."
   ],
   "completed_public_launch": false,
   "completed_this_sprint": [
@@ -69,19 +69,19 @@
     "03/10 16:52:31 BRT: “Aprovo” consolida somente o PNG Domingo Pitoresco v2, cópia premium exata. bfeeb24: master 17/16 anteriores e 15 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/servido exato passaram. Janela23:12 APPROVED/0 candidatas/11 pendentes; acesso público e Android continuam pendentes.",
     "03/10: Terça de Vitrine v1 nova candidata PENDING_REVIEW; benefícios do guia comunitário atual conferidos, Snorlax ilustrativo. dbf6956: 33 testes, 17 masters/16 arquivos e 123 outros eventos preservados; mobile Claro/desktop Escuro/PNG servido exato passaram. Janela23:12 APPROVED/1 candidata/10 sem arte. Continuação “Bora” não inferida como aprovação.",
     "03/10 20:56:01 BRT: “Aprovo” consolida somente a Terça de Vitrine v1. c3bb225: cópia premium exata, master18/17 anteriores e16 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/PNG servido exato passaram. Janela23:13 APPROVED/0 candidatas/10 sem arte. Público e Android pendentes.",
-    "04/10: autorização 03/10 23:13 aplicada ao lote de sete artes, USER_DELEGATED_VISUAL_QA; fontes, PNGs integrais e identidade Premium conferidos. e766dde: 25 masters / 18 anteriores / 17 arquivos preservados, 124 eventos / 117 inalterados e todas as janelas/coords/GPX/notificações preservadas. 33 testes passaram após manter datas dos anúncios para preservar Novidades. QA 14 vistas mobile Claro / desktop Escuro, 14 capturas e 7 PNGs servidos byte a byte idênticos. Janela 23: 20 APPROVED / 0 candidatas / 3 recusas. Público/Android pendentes; fronteiras do calendário observadas exigem validação separada."
+    "04/10: autorização 03/10 23:13 aplicada ao lote de sete artes, USER_DELEGATED_VISUAL_QA; fontes, PNGs integrais e identidade Premium conferidos. e766dde: 25 masters / 18 anteriores / 17 arquivos preservados, 124 eventos / 117 inalterados e todas as janelas/coords/GPX/notificações preservadas. 33 testes passaram após manter datas dos anúncios para preservar Novidades. QA 14 vistas mobile Claro / desktop Escuro, 14 capturas e 7 PNGs servidos byte a byte idênticos. Janela 23: 20 APPROVED / 0 candidatas / 3 recusas. Público/Android pendentes; fronteiras do calendário observadas exigem validação separada.",
+    "04/10: lote anterior/provas consolidado em de88306; d3d26e1 corrige calendário em Brasília independente de quatro fusos e agenda sem capa herdada. 37 testes passaram; browser mobile Claro/desktop Escuro confirmou01/10 e02/10, sem overflow, PNG Sexta preservado. Novo share efêmero passou com cliente HTTP sem cookies/credenciais; PNG exato e push503. Android físico/acesso permanente/produção pendentes."
   ],
-  "updated_at": "2026-10-04T10:53:56.744395+00:00",
-  "code_commit": "e766dde20f5ec838f212de67e0584e75310509cf",
-  "preview_url": "https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-04T11:31:00.273391+00:00",
+  "code_commit": "d3d26e100a060b26b4731dc6aea2046b18e41662",
+  "preview_url": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
     "3 eventos sem arte Home/FLY na janela 01–07/10; 20 APPROVED e nenhuma candidata ativa. Applin/Espaço/Sizzlipede preservam recusas anteriores.",
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
     "Lançamento completo e produção não aprovados",
-    "Link de compartilhamento ainda bloqueia testador no celular; teste HTTP anterior não confirma acesso real. Painel exige login e formulário seguro não concluído. Não repetir autenticação sem nova solicitação.",
-    "Fronteiras de dia no calendário: agenda 01/10 na sessão cloud listou algumas linhas com início exibido 02/10; comportamento ainda não certificado."
+    "Novo link temporário passou em HTTP anônimo; acesso dos testadores no celular ainda não revalidado após o bloqueio relatado em03/10. URL pública permanente pendente e proteção mantida."
   ],
   "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
   "post_approval_qa_record": "docs/qa/remaining-art-batch-browser-e766dde-20261004.json",
@@ -113,5 +113,6 @@
     "context": "Decisão explícita após reenvio do PNG integral Terça de Vitrine v1 na resposta imediatamente anterior. Aprovação exclusiva desta imagem, sem aprovação de lançamento."
   },
   "art_continuation_authorization": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
-  "individual_art_approval_required": false
+  "individual_art_approval_required": false,
+  "current_core_qa_record": "docs/qa/CALENDAR_BRASIL_20261004.json"
 }

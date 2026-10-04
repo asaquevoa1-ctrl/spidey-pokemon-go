@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-04T11:27:40.602493+00:00",
+  "code_commit": "d3d26e100a060b26b4731dc6aea2046b18e41662",
+  "cookies_initially_empty": true,
+  "credentials_sent": false,
+  "temporary_share_link_used": true,
+  "share_link_token_persisted": false,
+  "physical_android_tested": false,
+  "results": [
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app",
+      "final_path": "/spidey-app/index.html",
+      "bytes": 10358,
+      "app_found": true,
+      "login_found": false
+    },
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app",
+      "final_path": "/spidey-app/data/events.json",
+      "bytes": 188022,
+      "app_found": false,
+      "login_found": false,
+      "json_error": null
+    },
+    {
+      "status": 200,
+      "final_origin": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app",
+      "final_path": "/spidey-app/assets/events/premium/friendship-friday-20261002-approved-v1.png",
+      "bytes": 2666344,
+      "app_found": false,
+      "login_found": false,
+      "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+      "matches_approved_local_png": true
+    },
+    {
+      "status": 503,
+      "final_origin": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app",
+      "final_path": "/spidey-app/api/push/public-key",
+      "bytes": 31,
+      "app_found": false,
+      "login_found": false,
+      "json_error": "push_not_configured"
+    }
+  ],
+  "bare_url_new_session": {
+    "status": 200,
+    "final_origin": "https://vercel.com",
+    "final_path": "/login",
+    "bytes": 341626,
+    "app_found": false,
+    "login_found": true
+  },
+  "status": "TEMPORARY_SHARE_ANONYMOUS_HTTP_PASSED_PHYSICAL_PHONE_NOT_RETESTED"
+}

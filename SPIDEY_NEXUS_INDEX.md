@@ -3,7 +3,7 @@
 Status: OBRIGATÓRIO
 Data: 2026-10-04
 
-Estado corrente — 04/10: Sete novos pôsteres APPROVED por USER_DELEGATED_VISUAL_QA, sob a autorização explícita de 03/10 23:13 BRT para seguir sem confirmação individual. QA de artes PASSED_PREVIEW_ART_BATCH no código `e766dde`: 33 testes, sete peças abertas em mobile Claro 390×850 e desktop Escuro 1280×850, 14 capturas e sete PNGs servidos idênticos aos arquivos aprovados. Master com 25 entradas; todas as 18 entradas/17 arquivos anteriores preservados. Janela 01–07/10: 23 eventos, 20 APPROVED, 0 candidatas e 3 sem arte (Applin/Espaço/Sizzlipede, recusas anteriores mantidas). Público BLOCKED_USER_PHONE_LOGIN; Android/PWA/push pendentes. Registros: `docs/qa/REMAINING_ART_BATCH_20261003.json` e `docs/qa/remaining-art-batch-browser-e766dde-20261004.json`.
+Estado corrente — 04/10: Calendário e agenda corrigidos no código `d3d26e1`, com dia de Brasília independente do fuso do aparelho; 37 testes passaram e QA real mobile Claro/desktop Escuro confirmou 01/10 e 02/10 nos dias corretos, sem capa genérica na agenda ou overflow. Lote anterior de sete artes consolidado em `de88306`; 25 masters preservados. Janela 01–07/10: 23 eventos, 20 APPROVED, 0 candidatas e 3 recusas de geração preservadas (Applin/Espaço/Sizzlipede). Novo link temporário passou em cliente HTTP anônimo; celular do usuário/testadores ainda não revalidado, URL permanente não liberada. Push HTTP 503 `push_not_configured`; Android físico/PWA/atualização/offline e produção pendentes. Registro corrente: `docs/qa/CALENDAR_BRASIL_20261004.md`.
 
 ## Função
 Este índice existe para impedir perda de decisões entre chats, branches e versões.
@@ -319,3 +319,9 @@ As 124 identidades/janelas/calendários/coords/GPX/notificações permanecem pre
 Preview verificado: https://spidey-pokemon-hwhcvl3n1-spidey3.vercel.app/spidey-app/index.html. Deployment `dpl_FPMEiWuoeg1Vm1RSk55RsqFda5R6` READY, target null, código `e766dde20f5ec838f212de67e0584e75310509cf`. Acesso temporário próprio foi usado para QA; o link ainda não está confirmado como público para testadores. Android físico/instalação/atualização/offline/push permanecem pendentes. Produção não aprovada.
 
 Limitações observadas no QA: detalhes ainda exibem o texto genérico de local quando locations[] está vazio. A agenda do calendário com cabeçalho 01/10 mostrou algumas linhas com início exibido 02/10 na sessão cloud; fronteiras de data precisam de verificação separada. O PASS desta rodada certifica as sete artes e seus arquivos, não o calendário inteiro ou lançamento público.
+
+## Handoff corrente — 04/10/2026 — calendário/agenda validados
+
+Código `d3d26e1` em `spidey-fly-v1`: calendário usa Brasília independentemente do aparelho, agenda diária sem capa herdada, título de horários coerente com os locais existentes. 37 testes passaram; QA mobile Claro/desktop Escuro confirmou quatro eventos em 01/10 e quatro em 02/10, sem overflow. Master25/20 artes aprovadas na janela23 preservados; três recusas anteriores continuam bloqueadas. Checkpoint documental do lote anterior: `de88306`.
+
+Relatório corrente `docs/qa/CALENDAR_BRASIL_20261004.md` e JSON homônimo; observações `docs/qa/calendar-browser-d3d26e1-20261004.json`; acesso `docs/qa/calendar-share-anonymous-d3d26e1-20261004.json`. Preview READY https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app/spidey-app/index.html. Novo link efêmero passou no cliente HTTP anônimo; URL sem token exige login e celular dos testadores ainda não revalidado. Push503/Android físico/PWA/atualização/offline e produção continuam pendentes. Proteção mantida, sem login administrativo novo, dispatch ou mensagens externas. Ler última seção do NEXUS e RELEASE_SPRINT corrente antes de continuar.

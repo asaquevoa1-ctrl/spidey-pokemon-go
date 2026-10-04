@@ -1,0 +1,119 @@
+{
+  "codeCommit": "d3d26e100a060b26b4731dc6aea2046b18e41662",
+  "previewUrl": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app/spidey-app/index.html",
+  "desktopDayOne": {
+    "coverCount": 0,
+    "dialogScrollWidth": 718,
+    "dialogWidth": 718,
+    "focus": "closeDialog",
+    "pageScrollWidth": 1348,
+    "pageWidth": 1348,
+    "rows": [
+      {
+        "id": "2026-09-iit-delhi-rendezvous",
+        "text": "28 de set., 01:30 → 01 de out., 11:30\n              Pokémon GO no Rendezvous 2026 • IIT Delhi\n              Evento regional no IIT Delhi com encontros, reides, Pesquisa temporária e Desafio de coleção."
+      },
+      {
+        "id": "2026-09-harvest-festival-applin",
+        "text": "29 de set., 10:00 → 05 de out., 20:00\n              Festival da Colheita: Pomar de Applin\n              Festival da Colheita com estreia de Applin Brilhante."
+      },
+      {
+        "id": "2026-10-01-go-battle-thursday",
+        "text": "01 de out., 00:00 → 01 de out., 23:59\n              Descoberta Diária: Quinta de Batalhas GO\n              Até 10 séries (50 batalhas) e até 4× Poeira Estelar nas recompensas por vitória."
+      },
+      {
+        "id": "2026-10-01-spotlight-seedot",
+        "text": "01 de out. · 18:00–19:00 · horário local\n              Hora do Holofote: Seedot\n              2× PE por captura."
+      }
+    ],
+    "scrollTop": 0,
+    "theme": "dark",
+    "title": "Quinta-feira, 01 de outubro de 2026"
+  },
+  "mobileDayOne": {
+    "coverCount": 0,
+    "dialogScrollWidth": 375,
+    "dialogWidth": 375,
+    "focus": "closeDialog",
+    "pageScrollWidth": 375,
+    "pageWidth": 375,
+    "rows": [
+      {
+        "id": "2026-09-iit-delhi-rendezvous",
+        "text": "28 de set., 01:30 → 01 de out., 11:30\n              Pokémon GO no Rendezvous 2026 • IIT Delhi\n              Evento regional no IIT Delhi com encontros, reides, Pesquisa temporária e Desafio de coleção."
+      },
+      {
+        "id": "2026-09-harvest-festival-applin",
+        "text": "29 de set., 10:00 → 05 de out., 20:00\n              Festival da Colheita: Pomar de Applin\n              Festival da Colheita com estreia de Applin Brilhante."
+      },
+      {
+        "id": "2026-10-01-go-battle-thursday",
+        "text": "01 de out., 00:00 → 01 de out., 23:59\n              Descoberta Diária: Quinta de Batalhas GO\n              Até 10 séries (50 batalhas) e até 4× Poeira Estelar nas recompensas por vitória."
+      },
+      {
+        "id": "2026-10-01-spotlight-seedot",
+        "text": "01 de out. · 18:00–19:00 · horário local\n              Hora do Holofote: Seedot\n              2× PE por captura."
+      }
+    ],
+    "scrollTop": 0,
+    "theme": "light",
+    "title": "Quinta-feira, 01 de outubro de 2026"
+  },
+  "mobileDayTwo": {
+    "dialogScrollWidth": 375,
+    "dialogWidth": 375,
+    "rows": [
+      {
+        "id": "2026-09-harvest-festival-applin",
+        "text": "\n              29 de set., 10:00 → 05 de out., 20:00\n              Festival da Colheita: Pomar de Applin\n              Festival da Colheita com estreia de Applin Brilhante.\n            "
+      },
+      {
+        "id": "2026-10-harvest-taken-over",
+        "text": "\n              02 de out., 00:00 → 05 de out., 20:00\n              Festival da Colheita: A Invasão\n              Resgate Zekrom Sombroso com Giovanni e aproveite a janela para remover Frustração.\n            "
+      },
+      {
+        "id": "2026-10-patterns-of-the-wild-indonesia",
+        "text": "\n              02 de out., 00:00 → 02 de out., 10:00\n              Patterns of the Wild • Indonésia\n              Evento regional na Indonésia com Pikachu de camisa batik e possibilidade de Fundo Especial.\n            "
+      },
+      {
+        "id": "2026-10-02-friendship-friday",
+        "text": "\n              02 de out., 00:00 → 02 de out., 23:59\n              Descoberta Diária: Sexta da Amizade\n              Bônus em trocas presenciais: até duas trocas especiais adicionais, desconto de Poeira e Doces GG para nível 31+.\n            "
+      }
+    ],
+    "scrollTop": 0,
+    "title": "Sexta-feira, 02 de outubro de 2026"
+  },
+  "mobileFridayDetail": {
+    "dialogScrollWidth": 360,
+    "dialogWidth": 360,
+    "images": [
+      {
+        "alt": "Arte de Descoberta Diária: Sexta da Amizade",
+        "complete": true,
+        "naturalHeight": 1402,
+        "naturalWidth": 1122,
+        "src": "assets/events/premium/friendship-friday-20261002-approved-v1.png?v=225434528606"
+      }
+    ],
+    "scheduleHeading": [
+      "Horários",
+      "Bônus e informações",
+      "Observações"
+    ],
+    "title": "Descoberta Diária: Sexta da Amizade",
+    "unconfirmedLocationPlaceholder": false
+  },
+  "physicalAndroidTested": false,
+  "agendaCoverCheckDirectDesktop": {
+    "coverCount": 0,
+    "coverSelector": ".spidey-cover-art",
+    "renderedImageCount": 0,
+    "rows": [
+      "2026-09-harvest-festival-applin",
+      "2026-10-harvest-taken-over",
+      "2026-10-patterns-of-the-wild-indonesia",
+      "2026-10-02-friendship-friday"
+    ],
+    "title": "Sexta-feira, 02 de outubro de 2026"
+  }
+}
