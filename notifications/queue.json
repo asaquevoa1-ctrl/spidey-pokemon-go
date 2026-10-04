@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-gigantamax-cinderace-max-day:start:60",
-      "event_id": "2026-10-gigantamax-cinderace-max-day",
-      "event_title": "Dia de Batalhas Max: Cinderace Gigamax",
-      "category": "max_battle_day",
-      "scheduled_for": "2026-10-03T13:00:00-03:00",
-      "event_start": "2026-10-03T14:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Dia de Batalhas Max: Cinderace Gigamax começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-gigantamax-cinderace-max-day",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/gigantamax-cinderace-max-battle-day-2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-world-space-week:start:60",
       "event_id": "2026-10-world-space-week",
       "event_title": "Semana Mundial do Espaço 2026",
@@ -689,7 +671,7 @@
     }
   ],
   "meta": {
-    "pending_count": 38,
+    "pending_count": 37,
     "delivery_backend": "not_configured",
     "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery."
   }
