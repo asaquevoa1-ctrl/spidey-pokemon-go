@@ -223,8 +223,9 @@
           <h3>${escapeHtml(stop.venue || stop.city || `Selo ${index + 1}`)}</h3>
           <p>${escapeHtml(stop.city || '')}${stop.prefecture ? ` · ${escapeHtml(stop.prefecture)}` : ''}${stop.country ? ` · ${escapeHtml(stop.country)}` : ''}</p>
           ${stop.venue_detail ? `<small>${escapeHtml(stop.venue_detail)}</small>` : ''}
-          ${value ? `<div class="coordinates"><code>${value}</code><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar</button></div>` : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
-        </div>`;
+          ${value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
+        </div>
+        ${value ? `<div class="coordinates stamp-active-coordinates-v2"><div class="stamp-coordinate-values-v2"><div><small>Latitude</small><code>${value.split(',')[0]}</code></div><div><small>Longitude</small><code>${value.split(',')[1]}</code></div></div><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar coordenadas</button></div>` : ''}`;
       activeBox.querySelector('#copyActiveStampCoord')?.addEventListener('click', () => setClipboard(value, 'Coordenada copiada.'));
       gallery.querySelectorAll('.stamp-tile-v2').forEach((tile) => tile.classList.toggle('is-active', tile.dataset.stampStopId === stop.id));
     }

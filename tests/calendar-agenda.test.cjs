@@ -36,3 +36,26 @@ test('a day agenda never receives a poster from its first event and removes stal
   assert.equal(created, 0);
   assert.equal(removed, 1);
 });
+
+test('the weekly renderer owns its visuals and removes a stale generic cover without making another', async () => {
+  let removed = 0;
+  let created = 0;
+  const weekly = {
+    dataset: { weeklyArtOwner: 'canonical' },
+    querySelectorAll: () => [{ remove() { removed++; } }],
+  };
+  const context = vm.createContext({
+    window: { addEventListener() {} },
+    document: {
+      readyState: 'complete', body: {}, documentElement: { dataset: {} },
+      querySelector: () => null, querySelectorAll: () => [weekly],
+      createElement: () => { created++; throw new Error('Unexpected cover'); },
+    },
+    state: { events: [{ id: 'known', title: 'Known' }] },
+    MutationObserver: class { observe() {} }, requestAnimationFrame: callback => callback(),
+  });
+  vm.runInContext(fs.readFileSync('spidey-app/art-coverage-v1.js', 'utf8'), context);
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(created, 0);
+  assert.equal(removed, 1);
+});

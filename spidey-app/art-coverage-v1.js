@@ -178,6 +178,10 @@
   function removeCover(container) { container?.querySelectorAll?.('.spidey-cover-art').forEach((node) => node.remove()); }
 
   function decorateContainer(container) {
+    if (container?.dataset?.weeklyArtOwner === 'canonical') {
+      removeCover(container);
+      return;
+    }
     // A day agenda lists several events and does not own an event poster.
     if (container?.id === 'eventDetail' && (container.querySelector('.v24-day-sheet') || container.querySelector('.space-detail'))) {
       removeCover(container);

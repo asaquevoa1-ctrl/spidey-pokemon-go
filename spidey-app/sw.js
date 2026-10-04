@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261004-final-v2';
+const CACHE = 'spidey-app-20261004-mobile-v1';
 const CORE = [
   './data/local-events.json',
   './assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png',
@@ -68,6 +68,7 @@ const CORE = [
   './app.js',
   './art-system.js',
   './weekly.js',
+  './weekly-cards.css',
   './premium-event-art.js',
   './map.js',
   './push.js',

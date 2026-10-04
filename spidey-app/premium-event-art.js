@@ -189,7 +189,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
     const pokemon = findPokemon(event);
     if (pokemon) node.dataset.visualCharacter = pokemon.label;
     const image = node.matches?.('img') ? node : node.querySelector?.('img');
-    if (image) applyResolvedImage(image, event, role);
+    if (image && node.dataset.weeklyArtOwner !== 'canonical') applyResolvedImage(image, event, role);
   }
 
   function decorateEventCards() {
@@ -254,11 +254,6 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
       if (item) {
         item.title = localizeTitle(item.title);
         if (Array.isArray(item.tags)) item.tags = item.tags.map((tag) => TAG_PTBR[tag] || tag);
-      }
-      const event = typeof weeklyFindEvent === 'function' ? weeklyFindEvent(item?.id) : null;
-      if (event && typeof spideyResolveEventArt === 'function') {
-        const asset = spideyResolveEventArt(event, 'weekly');
-        if (asset?.url) return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(asset) : asset.url;
       }
       return previousWeeklyArtUrl(item);
     };

@@ -1,0 +1,60 @@
+#weeklyView .weekly-item[data-weekly-art-owner="canonical"] {
+  grid-template-columns: 82px minmax(0, 1fr) !important;
+}
+
+.weekly-date {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 98px;
+  border-radius: 14px;
+  background: rgba(67, 155, 215, .12);
+  color: var(--text);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.weekly-date small {
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+.weekly-date-range {
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+#weeklyView .weekly-item[data-weekly-art-owner="canonical"].has-official-media {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.weekly-official-media {
+  margin: 0;
+  min-width: 0;
+}
+
+#weeklyView .weekly-item .weekly-official-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.weekly-official-media figcaption {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .65rem;
+}
+
+#weeklyView .weekly-item[data-weekly-art-owner="canonical"].compact {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.weekly-item.compact .weekly-date,
+.weekly-item.compact .weekly-official-media {
+  display: none;
+}

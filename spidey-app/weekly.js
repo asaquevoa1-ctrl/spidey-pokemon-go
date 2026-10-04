@@ -37,12 +37,13 @@ function weeklyTimeLabel(item) {
 }
 
 function weeklyArtUrl(item) {
-  const event = weeklyFindEvent(item?.id);
-
-  // Arte Premium aprovada do catálogo é a única preferência visual automática.
-  const premium = window.SpideyPremiumArt?.resolve?.(event, 'weekly');
-  if (premium?.url) {
-    return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(premium) : premium.url;
+  const event = weeklyFindEvent(item?.id) || item;
+  const approved = window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
+  if (approved) {
+    const asset = window.SpideyReviewArt?.resolve
+      ? window.SpideyReviewArt.resolve(event)
+      : window.SPIDEY_UNAVAILABLE_ART?.[approved.file] ? null : approved;
+    return asset?.file ? `${asset.file}?v=${String(asset.sha256 || '').slice(0, 12)}` : '';
   }
 
   // Explicit full-poster candidates on this preview branch; never grants approval.
@@ -51,22 +52,23 @@ function weeklyArtUrl(item) {
     if (review?.sourceRole === 'preview_candidate:poster') return spideyVersionedArtUrl(review);
   }
 
-  // Fail-closed: weekly_art técnico, vetor gerado, placeholder ou fallback nunca
-  // entra na interface pública só para preencher espaço.
-  const art = item?.weekly_art || {};
-  const url = String(art.url || '').trim();
-  const technical = /(?:^|\/)assets\/events\/generated\//i.test(url)
-    || /generated_vector|placeholder|preview|fallback/i.test(`${art.source_role || ''} ${art.kind || ''}`);
-
-  if (
-    art.premium === true
-    && url
-    && !technical
-    && !/spidey-logo/i.test(url)
-    && !/^data:/i.test(url)
-  ) return url;
-
   return '';
+}
+
+function weeklyEsc(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}
+
+function weeklySchedule(item, reference = new Date()) {
+  const event = weeklyFindEvent(item?.id);
+  const start = new Date(event?.schedule?.start_brazil || item?.start_brazil || '');
+  const end = new Date(event?.schedule?.end_brazil || item?.end_brazil || '');
+  if (!Number.isFinite(start.getTime()) || !Number.isFinite(end.getTime()) || end < start) return null;
+  const format = date => new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: 'short' }).format(date);
+  const startLabel = format(start), endLabel = format(end);
+  const status = reference > end ? 'Encerrado' : reference < start ? 'Vem por aí' : 'Acontecendo agora';
+  const parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo', day: '2-digit', month: '2-digit' }).formatToParts(start);
+  return { label: `${startLabel}${startLabel === endLabel ? '' : ` → ${endLabel}`} · ${status}`, day: parts.find(p => p.type === 'day').value, month: parts.find(p => p.type === 'month').value };
 }
 
 function weeklyFindEvent(id) {
@@ -84,15 +86,24 @@ function weeklyOpenItem(item) {
 
 function weeklyItemCard(item, compact = false) {
   const art = weeklyArtUrl(item);
+  const event = weeklyFindEvent(item?.id);
+  const official = !art && !window.SPIDEY_APPROVED_ART_MASTER?.[item?.id]
+    && event?.id === '2026-10-world-space-week' && event.official_media?.classification === 'official_illustration'
+    ? event.official_media : null;
+  const schedule = weeklySchedule(item);
   const tags = (item.tags || []).slice(0, compact ? 1 : 2);
+  const visual = art ? `<img src="${weeklyEsc(art)}" alt="${weeklyEsc(item.title || 'Evento')}" loading="lazy" onerror="this.hidden=true">`
+    : official ? `<figure class="weekly-official-media"><img src="${weeklyEsc(official.file)}?v=${weeklyEsc(official.sha256.slice(0,12))}" width="${official.width}" height="${official.height}" alt="${weeklyEsc(official.alt)}" loading="lazy"><figcaption>Imagem do anúncio oficial · Pokémon GO</figcaption></figure>`
+    : `<span class="weekly-date" aria-hidden="true">${schedule?.day || '—'}<small>${schedule?.month || ''}</small></span>`;
   return `
-    <article class="weekly-item ${compact ? 'compact' : ''}" tabindex="0" data-weekly-event="${item.id || ''}">
-      ${art ? `<img src="${art}" alt="${item.title || 'Evento'}" loading="lazy" onerror="this.hidden=true">` : ''}
+    <article class="weekly-item ${compact ? 'compact' : ''} ${official ? 'has-official-media' : ''}" tabindex="0" data-weekly-event="${weeklyEsc(item.id || '')}" data-weekly-art-owner="canonical">
+      ${visual}
       <div class="weekly-item-copy">
-        <span class="weekly-time">${weeklyTimeLabel(item)}</span>
-        <strong>${item.title || 'Evento'}</strong>
-        ${!compact && item.summary ? `<p>${item.summary}</p>` : ''}
-        ${tags.length ? `<div class="weekly-tags">${tags.map((tag) => `<span>${tag}</span>`).join('')}</div>` : ''}
+        ${schedule ? `<span class="weekly-date-range">${weeklyEsc(schedule.label)}</span>` : ''}
+        <span class="weekly-time">${weeklyEsc(weeklyTimeLabel(item))}</span>
+        <strong>${weeklyEsc(item.title || 'Evento')}</strong>
+        ${!compact && item.summary ? `<p>${weeklyEsc(item.summary)}</p>` : ''}
+        ${tags.length ? `<div class="weekly-tags">${tags.map((tag) => `<span>${weeklyEsc(tag)}</span>`).join('')}</div>` : ''}
       </div>
     </article>`;
 }
