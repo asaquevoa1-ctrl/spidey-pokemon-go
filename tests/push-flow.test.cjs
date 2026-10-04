@@ -13,7 +13,7 @@ function setup(options = {}) {
   const window = { addEventListener() {}, Notification, PushManager: function () {} };
   const context = vm.createContext({
     window, Notification, navigator: { serviceWorker: { ready: options.timeout ? new Promise(() => {}) : Promise.resolve(registration) }, language: 'pt-BR', userAgent: 'QA' },
-    document: { querySelector: s => s === '#notificationStatus' ? status : button, addEventListener() {} },
+    document: { querySelector: s => s === '#notificationStatus' ? status : button, readyState: options.readyState || 'loading', addEventListener() {} },
     console: { error() {} }, Intl, Uint8Array, atob, URLSearchParams,
     setTimeout: options.timeout ? fn => { queueMicrotask(fn); return 1; } : setTimeout, clearTimeout,
     async fetch(url) {
@@ -60,6 +60,15 @@ test('temporary network failure leaves a retry and a subsequent availability che
   assert.equal(await s.check(), 'AQ');
   assert.equal(s.button.textContent, 'Ativar alertas');
   assert.equal(s.calls.permission, 0);
+});
+test('an interactive page checks alerts before slow images finish loading', async () => {
+  const s = setup({ readyState: 'interactive', unconfigured: true });
+  assert.equal(s.button.disabled, true);
+  assert.equal(s.button.textContent, 'Verificando alertas…');
+  await s.check();
+  assert.equal(s.button.textContent, 'Alertas indisponíveis');
+  assert.equal(s.button.disabled, true);
+  assert.deepEqual(s.calls, { permission: 0, subscribe: 0, saved: 0 });
 });
 test('denied permission and failed storage never report active alerts', async () => {
   const denied = setup({ answer: 'denied' }); assert.equal(await denied.run(), false); assert.equal(denied.calls.saved, 0);

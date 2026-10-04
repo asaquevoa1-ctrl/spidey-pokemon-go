@@ -167,14 +167,16 @@
     return subscribing;
   }
 
-  window.addEventListener('load', () => {
-    openDeepLink();
+  function prepareAlerts() {
     if (notificationButton) {
       notificationButton.disabled = true;
       notificationButton.textContent = 'Verificando alertas…';
     }
     checkRemotePushAvailability();
-  });
+  }
+  window.addEventListener('load', openDeepLink);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', prepareAlerts, { once: true });
+  else prepareAlerts();
   window.addEventListener('online', () => {
     if (!active && !subscribing) checkRemotePushAvailability();
   });
