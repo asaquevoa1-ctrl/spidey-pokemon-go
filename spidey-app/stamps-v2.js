@@ -61,7 +61,7 @@
     return `
       <button class="stamp-tile-v2 ${done ? 'is-done' : ''}" type="button" data-stamp-stop-id="${escapeHtml(stop.id)}" aria-label="Abrir selo ${number}: ${escapeHtml(stop.venue || stop.city || '')}">
         <div class="stamp-tile-art-v2">
-          ${image ? `<img src="${escapeHtml(image)}" alt="Selo ${number} · ${escapeHtml(stop.venue || stop.city || '')}" loading="lazy" decoding="async">` : `
+          ${image ? `<img src="${escapeHtml(image)}" alt="${stop.image_kind === 'lid_artwork' ? 'PokéLid' : 'Selo'} ${number} · ${escapeHtml(stop.venue || stop.city || '')}" loading="lazy" decoding="async">` : `
             <div class="stamp-art-placeholder-v2" aria-label="Imagem do selo ainda não disponível">
               <span>SELO</span><strong>${number}</strong><small>imagem pendente</small>
             </div>`}
@@ -121,9 +121,10 @@
     detail.innerHTML = `
       <div class="detail-body stamp-detail stamp-detail-v2">
         ${cover ? `<img class="stamp-rally-cover-v2" src="${escapeHtml(cover)}" alt="${escapeHtml(rally.title)}" loading="eager">` : ''}
-        <span class="eyebrow">GO STAMP RALLY · ROTA SPIDEY</span>
+        <span class="eyebrow">${isPokelid ? 'POKÉLIDS · JAPÃO' : 'GO STAMP RALLY · ROTA SPIDEY'}</span>
         <h2>${escapeHtml(rally.title)}</h2>
         <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
+        ${isPokelid ? '<p class="microcopy">As imagens são as artes das tampas. Novas PokéLids podem aparecer neste catálogo antes de receber um selo no jogo.</p>' : ''}
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
@@ -133,7 +134,7 @@
 
         <section class="stamp-route-panel-v2" aria-label="Navegação da rota">
           <div class="stamp-route-title-v2">
-            <div><span class="eyebrow">ROTA</span><h3>Próximo selo</h3></div>
+            <div><span class="eyebrow">${isPokelid ? 'EXPLORAR' : 'ROTA'}</span><h3>${isPokelid ? 'Próxima PokéLid' : 'Próximo selo'}</h3></div>
             <strong id="stampRoutePosition"></strong>
           </div>
           ${isPokelid ? `<div class="stamp-prefecture-picker"><label for="stampPrefectureRoute">Escolher prefeitura</label><select id="stampPrefectureRoute"><option value="all">Todas as 42 prefeituras</option>${regions.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}</select><p class="microcopy">A cada dois selos presenciais na mesma prefeitura: Pikachu com fundo local.</p></div>` : ''}
@@ -162,7 +163,7 @@
 
         <section class="stamp-gallery-section-v2">
           <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">SELO POR SELO</span><h3>Seus selos</h3></div>
+            <div><span class="eyebrow">${isPokelid ? 'TAMPA POR TAMPA' : 'SELO POR SELO'}</span><h3>${isPokelid ? 'Sua coleção' : 'Seus selos'}</h3></div>
             <span id="stampVisibleCount" class="stamp-visible-count-v2"></span>
           </div>
           <div class="stamp-filterbar-v2">
@@ -175,7 +176,7 @@
               <button class="active" type="button" data-stamp-filter="all">Todos</button>
               <button type="button" data-stamp-filter="remaining">Faltam</button>
               <button type="button" data-stamp-filter="done">Feitos</button>
-              <button type="button" data-stamp-filter="exact">Com coordenada</button>
+              ${isPokelid ? '' : '<button type="button" data-stamp-filter="exact">Com coordenada</button>'}
             </div>
           </div>
           <div id="stampGalleryV2" class="stamp-gallery-v2"></div>
@@ -227,7 +228,7 @@
       toggleDone.classList.toggle('is-done', done);
       activeBox.innerHTML = `
         <div class="stamp-active-art-v2">
-          ${image ? `<img src="${escapeHtml(image)}" alt="Selo ${escapeHtml(stop.stamp_number || index + 1)}" loading="eager">` : `<div class="stamp-art-placeholder-v2"><span>SELO</span><strong>${escapeHtml(stop.stamp_number || index + 1)}</strong><small>imagem pendente</small></div>`}
+          ${image ? `<img src="${escapeHtml(image)}" alt="${isPokelid ? 'PokéLid' : 'Selo'} ${escapeHtml(stop.stamp_number || index + 1)}" loading="eager">` : `<div class="stamp-art-placeholder-v2"><span>SELO</span><strong>${escapeHtml(stop.stamp_number || index + 1)}</strong><small>imagem pendente</small></div>`}
         </div>
         <div class="stamp-active-copy-v2">
           <span class="coordinate-state ${exactPokestop(stop) ? 'confirmed' : 'pending'}">${escapeHtml(stampCoordinateLabel(stop))}</span>

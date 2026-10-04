@@ -265,13 +265,13 @@ function renderStamps() {
       <div class="stamp-card-top">
         <span class="stamp-icon">◎</span>
         <div>
-          <span class="eyebrow">${rally.stamp_count || stops.length} SELOS</span>
+          <span class="eyebrow">${rally.stamp_count || stops.length} ${rally.collection_type === 'pokelids' ? 'POKÉLIDS' : 'SELOS'}</span>
           <h3>${rally.title}</h3>
         </div>
       </div>
       <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="stamp-progress"><span style="width:${stops.length ? Math.min(100, (progress.size / stops.length) * 100) : 0}%"></span></div>
-      <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> carimbados · <strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : exact}</strong> ${rally.collection_type === 'pokelids' ? 'locais oficiais · 42 prefeituras' : 'coordenadas exatas'}</div>
+      <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> ${rally.collection_type === 'pokelids' ? 'registradas' : 'carimbados'} · <strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : 'coordenadas exatas'}</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
     card.addEventListener('click', () => openStampRally(rally));
     card.addEventListener('keydown', (e) => { if (e.key === 'Enter') openStampRally(rally); });
