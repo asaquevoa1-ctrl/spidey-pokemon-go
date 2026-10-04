@@ -1,5 +1,5 @@
 {
-  "status": "CALENDAR_PREVIEW_QA_PASSED_PHYSICAL_PUBLIC_RELEASE_PENDING",
+  "status": "SPACE_MUSEUMS_PREVIEW_QA_PASSED_PHYSICAL_PUBLIC_RELEASE_PENDING",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -28,18 +28,19 @@
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
     "approved_master_integrity": "25_MASTER_ENTRIES_ALL_301_PROTECTED_FILES_UNCHANGED_FROM_E766DDE",
-    "mobile_desktop_core": "PASSED_CALENDAR_AGENDA_MOBILE_LIGHT_DESKTOP_DARK_D3D26E1_37_TESTS_PHYSICAL_PENDING",
+    "mobile_desktop_core": "PASSED_SPACE_MUSEUMS_MOBILE_LIGHT_DESKTOP_DARK_D5E667D_40_TESTS_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
-    "push_live_configuration": "HTTP_503_PUSH_NOT_CONFIGURED_D3D26E1_DASHBOARD_AUTH_NOT_COMPLETED",
+    "push_live_configuration": "HTTP_503_PUSH_NOT_CONFIGURED_D5E667D_DASHBOARD_AUTH_NOT_COMPLETED",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
     "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC",
     "go_pass_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_FF37843",
-    "tester_shared_preview_access": "TEMPORARY_ANONYMOUS_HTTP_PASSED_D3D26E1_USER_PHONE_NOT_RETESTED_PERMANENT_URL_PENDING",
+    "tester_shared_preview_access": "TEMPORARY_ANONYMOUS_HTTP_PASSED_D5E667D_USER_PHONE_NOT_RETESTED_PERMANENT_URL_PENDING",
     "latios_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_D14897B",
     "scenic_sunday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_BFEEB24",
     "showcase_tuesday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_C3BB225",
     "remaining_art_batch": "APPROVED_USER_DELEGATED_VISUAL_QA_PASSED_E766DDE",
-    "calendar_date_boundaries": "PASSED_BRAZIL_DAY_KEYS_4_DEVICE_ZONES_BROWSER_D3D26E1"
+    "calendar_date_boundaries": "PASSED_BRAZIL_DAY_KEYS_4_DEVICE_ZONES_BROWSER_D3D26E1",
+    "space_week_museums": "PASSED_OFFICIAL_ILLUSTRATIONS_6_VENUES_4_COORDINATES_2_ADDRESSES_NO_GPX_PREMIUM_REFUSAL_PRESERVED"
   },
   "next_batch": [
     "Comprovar abertura do novo link temporário pelos testadores no celular e organizar acesso durável; URL sem parâmetro continua protegida.",
@@ -70,13 +71,14 @@
     "03/10: Terça de Vitrine v1 nova candidata PENDING_REVIEW; benefícios do guia comunitário atual conferidos, Snorlax ilustrativo. dbf6956: 33 testes, 17 masters/16 arquivos e 123 outros eventos preservados; mobile Claro/desktop Escuro/PNG servido exato passaram. Janela23:12 APPROVED/1 candidata/10 sem arte. Continuação “Bora” não inferida como aprovação.",
     "03/10 20:56:01 BRT: “Aprovo” consolida somente a Terça de Vitrine v1. c3bb225: cópia premium exata, master18/17 anteriores e16 arquivos preservados, preview vazio, catálogo inteiro inalterado; 33 testes e QA novo mobile/desktop/PNG servido exato passaram. Janela23:13 APPROVED/0 candidatas/10 sem arte. Público e Android pendentes.",
     "04/10: autorização 03/10 23:13 aplicada ao lote de sete artes, USER_DELEGATED_VISUAL_QA; fontes, PNGs integrais e identidade Premium conferidos. e766dde: 25 masters / 18 anteriores / 17 arquivos preservados, 124 eventos / 117 inalterados e todas as janelas/coords/GPX/notificações preservadas. 33 testes passaram após manter datas dos anúncios para preservar Novidades. QA 14 vistas mobile Claro / desktop Escuro, 14 capturas e 7 PNGs servidos byte a byte idênticos. Janela 23: 20 APPROVED / 0 candidatas / 3 recusas. Público/Android pendentes; fronteiras do calendário observadas exigem validação separada.",
-    "04/10: lote anterior/provas consolidado em de88306; d3d26e1 corrige calendário em Brasília independente de quatro fusos e agenda sem capa herdada. 37 testes passaram; browser mobile Claro/desktop Escuro confirmou01/10 e02/10, sem overflow, PNG Sexta preservado. Novo share efêmero passou com cliente HTTP sem cookies/credenciais; PNG exato e push503. Android físico/acesso permanente/produção pendentes."
+    "04/10: lote anterior/provas consolidado em de88306; d3d26e1 corrige calendário em Brasília independente de quatro fusos e agenda sem capa herdada. 37 testes passaram; browser mobile Claro/desktop Escuro confirmou01/10 e02/10, sem overflow, PNG Sexta preservado. Novo share efêmero passou com cliente HTTP sem cookies/credenciais; PNG exato e push503. Android físico/acesso permanente/produção pendentes.",
+    "04/10: d5e667d destaca Pikachu Astronauta e integra6 museus/condições/mapas/fontes/relógios; ilustrações oficiais originais, não Premium.40 testes, desktop Escuro/mobile Claro, FLY20/28/Taipei e ambos JSONs/JPEGs servidos byte a byte passaram.25 masters/123 outros eventos e702 blobs anteriores preservados. Novo share temporário HTTP anônimo aprovado, celular físico/acesso durável/push503/produção pendentes. Registros SPACE_WEEK_QA e fontes/provas."
   ],
-  "updated_at": "2026-10-04T11:31:00.273391+00:00",
-  "code_commit": "d3d26e100a060b26b4731dc6aea2046b18e41662",
-  "preview_url": "https://spidey-pokemon-n6qdbrhqj-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-04T12:18:32.247440+00:00",
+  "code_commit": "d5e667dc05340e6fcaaf6a062b5ffcadad2db28f",
+  "preview_url": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
-    "3 eventos sem arte Home/FLY na janela 01–07/10; 20 APPROVED e nenhuma candidata ativa. Applin/Espaço/Sizzlipede preservam recusas anteriores.",
+    "3 eventos sem Premium na janela01–07/10;20 APPROVED/0 candidatas. Espaço agora exibe ilustração oficial creditada, sem modificar recusa/estado Premium de Applin/Espaço/Sizzlipede.",
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
@@ -114,5 +116,5 @@
   },
   "art_continuation_authorization": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
   "individual_art_approval_required": false,
-  "current_core_qa_record": "docs/qa/CALENDAR_BRASIL_20261004.json"
+  "current_core_qa_record": "docs/qa/SPACE_WEEK_QA_20261004.json"
 }

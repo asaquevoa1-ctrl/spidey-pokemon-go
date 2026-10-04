@@ -1,5 +1,5 @@
 {
-  "status": "INTEGRATED_QA_PENDING",
+  "status": "PASSED_PREVIEW_OFFICIAL_ILLUSTRATIONS_PREMIUM_REFUSAL_PRESERVED",
   "verified_at": "2026-10-04T11:56:17.646150+00:00",
   "global_event_source": {
     "name": "Pokémon GO",
@@ -161,5 +161,8 @@
         "confidence": "official"
       }
     }
-  ]
+  ],
+  "code_commit": "d5e667dc05340e6fcaaf6a062b5ffcadad2db28f",
+  "qa_record": "docs/qa/SPACE_WEEK_QA_20261004.json",
+  "qa_completed_at": "2026-10-04T12:18:32.247440+00:00"
 }

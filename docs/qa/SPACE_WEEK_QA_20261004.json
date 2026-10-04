@@ -1,0 +1,172 @@
+{
+  "status": "PASSED_PREVIEW_SPACE_MUSEUMS_ANDROID_AND_RELEASE_PENDING",
+  "recorded_at": "2026-10-04T12:18:32.247440+00:00",
+  "branch": "spidey-fly-v1",
+  "code_commit": "d5e667dc05340e6fcaaf6a062b5ffcadad2db28f",
+  "previous_checkpoint": "9960afaf9df2d283a8900e1cd4f14863afa80fb6",
+  "preview_url": "https://spidey-pokemon-ijs2y7r8s-spidey3.vercel.app/spidey-app/index.html",
+  "deployment_id": "dpl_BEMqhYaVsZLXUpttidS7Q99LXyws",
+  "deployment_state": "READY",
+  "deployment_target": null,
+  "tests": {
+    "node_passed": 40,
+    "syntax_and_diff_check": "PASSED",
+    "new_regressions": [
+      "European daylight saving and Brasília dates",
+      "Verified maps and address fallback",
+      "HTML escaping of venue labels and copy values"
+    ]
+  },
+  "browser": {
+    "mobile": "390x850 light, inner width375",
+    "desktop": "1348 dark",
+    "horizontal_overflow": false,
+    "museum_count": 6,
+    "coordinate_buttons": 4,
+    "address_buttons": 2,
+    "map_links": 6,
+    "museum_dialog_initial_scroll_top": 0,
+    "official_images_complete": "1920x1080 both",
+    "global_claim_deadline_visible": "12/10 23:59 local",
+    "fly_essential": 20,
+    "fly_all": 28,
+    "taipei_preserved": true,
+    "copy_clicks": "Coordinate/address success toasts observed",
+    "native_clipboard_read_verified": false,
+    "clipboard_limitation": "CUA readText returned empty; native Android paste not tested."
+  },
+  "catalog": {
+    "count": 124,
+    "ids_unchanged": true,
+    "other_events_unchanged": 123,
+    "global_schedule_locations_notifications_unchanged": true,
+    "museum_collaboration": "Separate world data, not a calendar duplicate"
+  },
+  "integrity": {
+    "unchanged_prior_blobs": 702,
+    "approved_art_master_unchanged": true,
+    "approved_master_count": 25,
+    "previous_art_files_unchanged": true,
+    "main_head_unchanged": "5178a67272bd25e687032d3aebff494746372c74"
+  },
+  "media": {
+    "classification": "official_illustration",
+    "pixel_editing": false,
+    "premium_approval_claimed": false,
+    "in_game_background_gallery_claimed": false,
+    "files": {
+      "global": {
+        "file": "assets/events/official/world-space-week-2026.jpg",
+        "width": 1920,
+        "height": 1080,
+        "sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9",
+        "bytes": 1362600,
+        "alt": "Pikachu Astronauta na ilustração oficial da Semana Mundial do Espaço",
+        "partner": false,
+        "classification": "official_illustration",
+        "source_url": "https://pokemongo.com/en/news/world-space-week-2026",
+        "original_url": "https://lh3.googleusercontent.com/AiDIi-NAxX879TxCAX8X6I6EwjrUUajpCN18w4uPXAwSqgbR1y6_awmrDJFY31ljBfh4flc1v5Ma2by0Mt4y77-Q4LCPLnSBEMZIJSS0hvZx%3Ds0-e365"
+      },
+      "museums": {
+        "file": "assets/events/official/esa-museums-2026.jpg",
+        "width": 1920,
+        "height": 1080,
+        "sha256": "847c9d5db8aad7a1c139f016a19b25dbcf525c5e9a6bc2fcd58d4fb5fdaa1bcb",
+        "bytes": 1410996,
+        "alt": "Pikachu Astronauta e os seis museus na ilustração oficial Pokémon GO e ESA",
+        "partner": true,
+        "classification": "official_illustration",
+        "source_url": "https://pokemongo.com/en/news/european-space-agency-event",
+        "original_url": "https://lh3.googleusercontent.com/7CITEYsKb4CAwdYOln7q7h5K6U1cIVu2cnWRbDZtixs10PkfYfHzPn5Iz9wwbMFE3bosgBEiKnZlEZJZmGiyl-YqYRKHlIL8d7VAzR4DjA%3Ds0-e365"
+      }
+    }
+  },
+  "venues": {
+    "count": 6,
+    "verified_coordinates": 4,
+    "address_maps": 2,
+    "exact_pokestops_verified": 0,
+    "gpx_enabled": false,
+    "coordinates_type": "venue_reference",
+    "hours_announced": false
+  },
+  "factual_scope": {
+    "global_event_dates": [
+      "2026-10-04",
+      "2026-10-10"
+    ],
+    "global_research_claim_deadline": "2026-10-12T23:59 local",
+    "museum_dates": [
+      "2026-10-04",
+      "2027-04-30"
+    ],
+    "field_research_wild_dates": [
+      "2026-10-04",
+      "2026-10-10"
+    ],
+    "background_guaranteed": false,
+    "shiny_guaranteed": false,
+    "esa_facilities_have_backgrounds": false
+  },
+  "temporary_share_status": "ANONYMOUS_HTTP_PASSED_USER_PHONE_NOT_RETESTED",
+  "bare_preview_access": "VERCEL_LOGIN",
+  "share_token_persisted": false,
+  "physical_android_tested": false,
+  "push_status": "HTTP_503_push_not_configured",
+  "production_approved": false,
+  "production_promoted": false,
+  "generation_refusals_preserved": [
+    "Applin",
+    "Semana Mundial do Espaço",
+    "Sizzlipede"
+  ],
+  "art_window_20261001_07": {
+    "events": 23,
+    "approved": 20,
+    "candidates": 0,
+    "premium_missing": 3,
+    "world_space_week_has_official_illustration": true
+  },
+  "artifacts": [
+    {
+      "path": "docs/qa/proofs/spidey-space-museums-desktop-d5e667d-20261004.jpg",
+      "bytes": 110363,
+      "sha256": "ba98dd43eab953e32492fb4be6e2c02ad30f0c9be4c742cd927398adb7c40a90"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-space-home-mobile-d5e667d-20261004.jpg",
+      "bytes": 60276,
+      "sha256": "2db880c9207c54f0bed93eb35ec3b15e24aeadc4d74dacca25b9bcf9d19ebe8e"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-space-museums-mobile-d5e667d-20261004.jpg",
+      "bytes": 63154,
+      "sha256": "012d9109fd47d796fba7a55c1b2eda9545bb749d1bcb8d15e98b1eaa4e1c4a67"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-space-locations-mobile-d5e667d-20261004.jpg",
+      "bytes": 46826,
+      "sha256": "614bbf6c00b50942d6a82026fd8c999d33f0ce3d62943bb7db7f3db20b45c796"
+    },
+    {
+      "path": "docs/qa/space-browser-d5e667d-20261004.json",
+      "bytes": 17125,
+      "sha256": "6fd3689a086d0c8d542811a6244fa0984fe85377a809a8f0283f8ca0b9c73ed5"
+    },
+    {
+      "path": "docs/qa/space-share-anonymous-d5e667d-20261004.json",
+      "bytes": 2621,
+      "sha256": "d5898abc9e0cc3857c7b6d6b6ed5538b5013600cfdf511b202351824df26c2f6"
+    },
+    {
+      "path": "docs/qa/SPACE_WEEK_SOURCES_20261004.json",
+      "bytes": 6119,
+      "sha256": "6b9979671421a87b94f77a2b6f0addd1b5f95b4ddd7461358b98173a0760b9a0"
+    }
+  ],
+  "remaining": [
+    "Physical Android installation/update/offline/push and paste",
+    "Durable tester access and user phone revalidation",
+    "Three Premium generation refusals remain blocked"
+  ]
+}
