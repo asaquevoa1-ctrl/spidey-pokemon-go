@@ -758,6 +758,35 @@
     ],
     "also_happening": [
       {
+        "id": "2026-09-tcg-30th-us-retail",
+        "title": "Celebração de 30 anos do Pokémon TCG",
+        "summary": "Mega Gengar e Pesquisa temporária em lojas participantes dos Estados Unidos.",
+        "category": "evento_especial",
+        "tags": [
+          "Pokémon TCG",
+          "Mega Gengar",
+          "Estados Unidos",
+          "regional"
+        ],
+        "start_brazil": "2026-09-27T11:00:00-03:00",
+        "end_brazil": "2026-10-20T23:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
         "id": "2026-09-iit-delhi-rendezvous",
         "title": "Pokémon GO no Rendezvous 2026 • IIT Delhi",
         "summary": "Evento oficial no IIT Delhi com bônus, encontros, reides, Collection Challenge e Pesquisa temporária.",
@@ -829,7 +858,7 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 21,
+    "calendar_events_in_week": 22,
     "events_with_weekly_art": 21,
     "events_with_premium_weekly_art": 0,
     "events_with_generated_weekly_art": 21,

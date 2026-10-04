@@ -1,0 +1,64 @@
+{
+  "schema_version": "spidey-official-news-check-v1",
+  "checked_at": "2026-10-04T20:22:12-03:00",
+  "base_main_sha": "bfc1d288ff611fdd9fdf4180ccddb36ef20ef936",
+  "base_production_deployment": "dpl_GGFwM7UyDQAH5i6BkhFPoYATAoJH",
+  "base_production_state": "READY",
+  "official_sources": [
+    "https://pokemongo.com/news",
+    "https://pokemongo.com/news/pokemon-x-adidas-2026",
+    "https://pokemongo.com/news/tcg-30th-celebration-event",
+    "https://pokemongo.com/news/apac-mall-exploration-2026",
+    "https://pokemongo.com/en/news/fall-marathon-buddy-trek-2026",
+    "https://pokemongo.com/news/pokemon-night-out-twitch-drops2026",
+    "https://pokemongo.com/news/city-safari-boston-rescheduled",
+    "https://pokemongo.com/news/festival-of-lights-2026",
+    "https://pokemongo.com/news/save-the-date-go-tour-2027",
+    "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+    "https://pokemongo.com/news/minior-meteor-showers-2026",
+    "https://pokemongo.com/en/news/world-space-week-2026"
+  ],
+  "community_sources": [
+    "https://leekduck.com/events/super-mega-raid-day-october-2026/",
+    "https://pokemongohub.net/post/event/october-2026-events/"
+  ],
+  "added_event_ids": [
+    "2026-09-adidas-avatar-research",
+    "2026-09-tcg-30th-us-retail",
+    "2026-10-apac-mall-exploration",
+    "2026-10-pokemon-night-out-twitch",
+    "2026-10-city-safari-boston-rescheduled",
+    "2027-02-go-tour-alola-save-the-date"
+  ],
+  "updated_event_ids": [
+    "2026-10-fall-marathon-buddy-trek",
+    "festival-of-lights-2026-pokeminers-e2"
+  ],
+  "preserved_confirming_ids": [
+    "2026-10-world-space-week",
+    "2026-10-dynamax-max-battle-day",
+    "2026-10-minior-orionids",
+    "2026-11-minior-leonids",
+    "2026-12-minior-geminids"
+  ],
+  "still_unrevealed": [
+    {
+      "event_id": "2026-10-super-mega-raid-day",
+      "confirmed_window": "2026-10-31 14:00-17:00 local",
+      "official_pokemon": null,
+      "official_bonuses": null
+    }
+  ],
+  "protected": {
+    "art_refusals": [
+      "Applin",
+      "Pikachu Astronauta/Espaço",
+      "Sizzlipede"
+    ],
+    "assets_changed": false,
+    "gpx_changed": false,
+    "coordinates_changed": false,
+    "stamps_changed": false,
+    "backgrounds_changed": false
+  }
+}

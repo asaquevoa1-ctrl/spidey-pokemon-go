@@ -6,17 +6,19 @@
       "slug": "festival-das-luzes-2026-india",
       "status": "published",
       "title": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta",
-      "summary": "Evento exclusivo para Treinadores na Índia, com Pikachu usando trajes temáticos.",
+      "summary": "Evento exclusivo da Índia com Pikachu usando sari ou kurta e chance de Fundo Especial.",
       "category": "evento_especial",
       "tags": [
-        "Índia",
+        "Festival of Lights",
         "Pikachu",
-        "Evento especial"
+        "Índia",
+        "regional"
       ],
       "source": {
         "name": "Pokémon GO",
         "captured_via": "PokeMiners",
-        "url": "https://pokemongo.com/news/festival-of-lights-2026"
+        "url": "https://pokemongo.com/news/festival-of-lights-2026",
+        "confidence": "official"
       },
       "art": {
         "url": "assets/festival-das-luzes-approved.png",
@@ -49,16 +51,23 @@
       "pokemon": [
         {
           "name": "Pikachu com saree",
-          "note": "traje temático"
+          "note": "reides, Pesquisa temporária e aparições do Sparkle O'Clock; pode ser Brilhante"
         },
         {
           "name": "Pikachu com kurta",
-          "note": "traje temático"
+          "note": "reides, Pesquisa temporária e aparições do Sparkle O'Clock; pode ser Brilhante"
         }
       ],
-      "bonuses": [],
+      "bonuses": [
+        "Módulos Atrair duram três vezes mais.",
+        "PokéStops entregam adesivos com Pikachu usando sari ou kurta.",
+        "Alguns Pokémon temáticos brilham durante o evento."
+      ],
       "notes": [
-        "As coordenadas exibidas são uma referência geográfica da Índia, não um ponto oficial específico do evento."
+        "As coordenadas exibidas são uma referência geográfica da Índia, não um ponto oficial específico do evento.",
+        "Evento exclusivo para Treinadores na Índia, de 06/11 às 10h até 08/11 às 20h locais.",
+        "A Pesquisa temporária ramificada fica disponível a partir de 01/11 às 06h locais.",
+        "Pikachu com sari e Pikachu com kurta podem aparecer Brilhantes; o Fundo Especial é uma possibilidade, não garantia."
       ],
       "gpx": {
         "enabled": false,
@@ -70,6 +79,11 @@
         "default_lead_minutes": [
           60
         ]
+      },
+      "news": {
+        "title": "Festival das Luzes volta à Índia",
+        "summary": "Pikachu com sari e Pikachu com kurta retornam de 6 a 8/11, com chance de Fundo Especial.",
+        "published_on": "2026-09-30"
       }
     },
     {
@@ -3066,6 +3080,177 @@
       ]
     },
     {
+      "id": "2026-09-adidas-avatar-research",
+      "slug": "2026-09-adidas-avatar-research",
+      "title": "Pesquisa adidas × Pokémon",
+      "summary": "Pesquisa temporária em lojas participantes com jaqueta e boné adidas para o avatar.",
+      "category": "timed_research",
+      "tags": [
+        "adidas",
+        "Avatar",
+        "Lojas participantes",
+        "regional"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/pokemon-x-adidas-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-09-25T00:00:00-03:00",
+        "end_local": "2027-01-15T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-25T00:00:00-03:00",
+        "end_brazil": "2027-01-15T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "A lista oficial de lojas participantes deve ser consultada na página da promoção."
+      },
+      "notes": [
+        "Visite uma loja participante e abra o Pokémon GO para receber a Pesquisa temporária.",
+        "A pesquisa pode ser obtida até 15/01/2027 às 20h locais e concluída até 13/02/2027 às 20h locais.",
+        "O código ADIDASxPOKEMON libera calçados para o avatar e pode ser resgatado até 15/01/2027."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "pokemon": [
+        {
+          "name": "Lucario",
+          "note": "encontro entre as recompensas da Pesquisa temporária"
+        }
+      ],
+      "news": {
+        "title": "Itens adidas chegam ao Pokémon GO",
+        "summary": "Lojas participantes liberam uma Pesquisa temporária com itens de avatar, encontro com Lucario e Energia de Mega Lucario.",
+        "published_on": "2026-09-25"
+      }
+    },
+    {
+      "id": "2026-09-tcg-30th-us-retail",
+      "slug": "2026-09-tcg-30th-us-retail",
+      "title": "Celebração de 30 anos do Pokémon TCG",
+      "summary": "Mega Gengar e Pesquisa temporária em lojas participantes dos Estados Unidos.",
+      "category": "evento_especial",
+      "tags": [
+        "Pokémon TCG",
+        "Mega Gengar",
+        "Estados Unidos",
+        "regional"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/New_York",
+        "start_local": "2026-09-27T10:00:00-04:00",
+        "end_local": "2026-10-20T22:00:00-04:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-27T11:00:00-03:00",
+        "end_brazil": "2026-10-20T23:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento restrito a lojas participantes; nenhuma coordenada individual foi adicionada sem confirmação."
+      },
+      "notes": [
+        "A janela é sempre das 10h de 27/09 às 22h de 20/10 no horário local da loja participante nos Estados Unidos.",
+        "A Pesquisa temporária pode ser obtida até 20/10 às 22h locais e concluída até 20/11 às 22h locais.",
+        "O Gengar Knit Cap é oferecido no resgate de gift cards elegíveis de Target, GameStop ou Best Buy entre 27/09 e 31/10; limite de um por conta."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "pokemon": [
+        {
+          "name": "Mega Gengar",
+          "note": "mais frequente em Mega Reides nas lojas participantes; pode aparecer Brilhante"
+        }
+      ],
+      "news": {
+        "title": "Celebração de 30 anos do Pokémon TCG",
+        "summary": "Lojas participantes dos Estados Unidos recebem Mega Gengar e Pesquisa temporária até 20/10.",
+        "published_on": "2026-09-27"
+      }
+    },
+    {
+      "id": "2026-10-apac-mall-exploration",
+      "slug": "2026-10-apac-mall-exploration",
+      "title": "Pokémon 30: exploração de shoppings na Ásia",
+      "summary": "Pesquisa temporária com Pokémon temáticos em shoppings participantes da Ásia-Pacífico.",
+      "category": "evento_especial",
+      "tags": [
+        "Pikachu com chapéu de festa",
+        "Shopping",
+        "Ásia-Pacífico",
+        "regional"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/apac-mall-exploration-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Kuala_Lumpur",
+        "start_local": "2026-10-01T00:00:00+08:00",
+        "end_local": "2027-03-28T23:59:59+08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-30T13:00:00-03:00",
+        "end_brazil": "2027-03-28T12:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Cada shopping tem sua própria janela; nenhum ponto foi incluído sem coordenada exata validada."
+      },
+      "notes": [
+        "A pesquisa pode ser recebida uma vez em um dos shoppings participantes e expira dez dias após o recebimento.",
+        "Janelas confirmadas incluem Ombak KLCC a partir de 01/10, SM Mall of Asia a partir de 01/10 e SM East Ortigas de 23/10 a 08/11.",
+        "Outras datas confirmadas seguem até março de 2027; Hong Kong e Tailândia ainda aguardam detalhes oficiais."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "bonuses": [
+        "Módulos Atrair duram quatro horas nas áreas indicadas durante cada período local."
+      ],
+      "news": {
+        "title": "Pokémon GO entra na exploração de shoppings",
+        "summary": "Shoppings participantes da Ásia-Pacífico oferecem Pesquisa temporária e Módulos Atrair de quatro horas em datas próprias.",
+        "published_on": "2026-09-24"
+      }
+    },
+    {
       "id": "2026-10-world-space-week",
       "slug": "2026-10-world-space-week",
       "title": "Semana Mundial do Espaço 2026",
@@ -3302,6 +3487,37 @@
         ]
       },
       "status": "published"
+      ,
+      "bonuses": [
+        "Chance aumentada de Electrike Brilhante.",
+        "De 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.",
+        "No Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.",
+        "No Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez."
+      ],
+      "pokemon": [
+        {
+          "name": "Bramblin",
+          "note": "estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo"
+        },
+        {
+          "name": "Pikachu com viseira de maratona",
+          "note": "recompensa da Pesquisa temporária gratuita"
+        },
+        {
+          "name": "Mega Manectric",
+          "note": "estreia do nível Super Max e do ataque carregado Discharge+"
+        }
+      ],
+      "notes": [
+        "O primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.",
+        "A Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.",
+        "Recompensas liberadas no Passe GO expiram em 21/10 às 20h locais."
+      ],
+      "news": {
+        "title": "Bramblin estreia na Maratona das Folhas",
+        "summary": "Bramblin chega pelo Passe GO e Incenso; Mega Manectric recebe nível Super Max e Discharge+.",
+        "published_on": "2026-09-23"
+      }
     },
     {
       "id": "2026-10-sandile-hatch-day",
@@ -3455,6 +3671,125 @@
       }
     },
     {
+      "id": "2026-10-pokemon-night-out-twitch",
+      "slug": "2026-10-pokemon-night-out-twitch",
+      "title": "Pokémon Night Out: recompensa na Twitch",
+      "summary": "Assista 30 minutos da transmissão oficial para receber um código de Pesquisa temporária.",
+      "category": "timed_research",
+      "tags": [
+        "Pokémon Night Out",
+        "Twitch Drops",
+        "Avatar",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/pokemon-night-out-twitch-drops2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-10-24T19:30:00-07:00",
+        "end_local": "2026-10-24T19:30:00-07:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-24T23:30:00-03:00",
+        "end_brazil": "2026-10-24T23:30:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Recompensa global por transmissão; não exige coordenada de jogo."
+      },
+      "notes": [
+        "A transmissão de Pokémon GO começa em 24/10 às 19h30 PDT, equivalente a 23h30 em Brasília.",
+        "É necessário assistir 30 minutos à transmissão oficial e vincular a conta Pokémon Trainer Central à Twitch.",
+        "O anúncio não informa horário de encerramento da transmissão; o calendário mostra somente o início confirmado.",
+        "O código pode ser obtido uma vez por jogador."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "news": {
+        "title": "Pokémon Night Out terá recompensa global",
+        "summary": "Assista 30 minutos na Twitch em 24/10 para obter uma camisa de beisebol exclusiva para o avatar.",
+        "published_on": "2026-10-02"
+      }
+    },
+    {
+      "id": "2026-10-city-safari-boston-rescheduled",
+      "slug": "2026-10-city-safari-boston-rescheduled",
+      "title": "City Safari Boston remarcado",
+      "summary": "Jogabilidade global em 24 e 25/10, exclusiva para quem já possui ingresso válido de Boston.",
+      "category": "city_safari",
+      "tags": [
+        "City Safari",
+        "Boston",
+        "Somente ingressos atuais",
+        "exclusive"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-24T10:00:00-03:00",
+        "end_local": "2026-10-25T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-24T10:00:00-03:00",
+        "end_brazil": "2026-10-25T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "A jogabilidade principal foi remarcada como global para titulares dos ingressos atuais."
+      },
+      "notes": [
+        "A jogabilidade acontece das 10h às 18h no horário local de cada jogador, nos dias 24 e 25/10.",
+        "Somente titulares atuais dos ingressos podem participar; não haverá nova venda de ingressos.",
+        "A Pesquisa temporária traz Flabébé Flor Laranja, Hawlucha, Mudbray e Komala, além dos bônus ramificados.",
+        "A pesquisa suplementar de Boston pode render até nove Eevee com chapéu de explorador e Fundo de Localização de Boston.",
+        "Não haverá GO Stamp Rally de Boston."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "pokemon": [
+        {
+          "name": "Eevee com chapéu de explorador",
+          "note": "até nove encontros com Fundo de Localização de Boston na pesquisa suplementar elegível"
+        }
+      ],
+      "news": {
+        "title": "City Safari Boston foi remarcado",
+        "summary": "A experiência passa a ser global em 24 e 25/10, mas continua exclusiva para titulares dos ingressos originais.",
+        "published_on": "2026-10-01"
+      }
+    },
+    {
       "id": "2026-10-halloween-part-1",
       "slug": "2026-10-halloween-part-1",
       "title": "Halloween 2026: Parte I",
@@ -3561,6 +3896,59 @@
         ]
       },
       "status": "published"
+    },
+    {
+      "id": "2027-02-go-tour-alola-save-the-date",
+      "slug": "2027-02-go-tour-alola-save-the-date",
+      "title": "Pokémon GO Tour 2027: Alola",
+      "summary": "Datas oficiais anunciadas para Kaohsiung, Los Angeles e para o evento global.",
+      "category": "go_fest",
+      "tags": [
+        "GO Tour",
+        "Alola",
+        "Kaohsiung",
+        "Los Angeles",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-02-19T00:00:00-03:00",
+        "end_local": "2027-02-28T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-02-19T00:00:00-03:00",
+        "end_brazil": "2027-02-28T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Locais gerais foram anunciados, mas nenhuma rota ou coordenada oficial foi adicionada."
+      },
+      "notes": [
+        "Eventos presenciais: Kaohsiung e Los Angeles, de 19 a 21/02/2027.",
+        "Evento global: 27 e 28/02/2027.",
+        "Ingressos, horários e detalhes de jogabilidade ainda serão divulgados."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "news": {
+        "title": "GO Tour 2027 celebrará Alola",
+        "summary": "Kaohsiung e Los Angeles recebem eventos presenciais de 19 a 21/02; o evento global será em 27 e 28/02.",
+        "published_on": "2026-09-25"
+      }
     },
     {
       "id": "2026-10-01-spotlight-seedot",
