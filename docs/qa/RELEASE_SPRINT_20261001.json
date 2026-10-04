@@ -1,5 +1,5 @@
 {
-  "status": "ESA_BACKGROUNDS_SCOPED_RESEARCH_PREVIEW_PASSED_FULL_AREA_GPX_UNVERIFIED",
+  "status": "PASSED_PREVIEW_USER_SCOPE_UPDATED",
   "branch": "spidey-fly-v1",
   "base_commit": "68a616ade563ff2a2cad704bbcf4368f2774f350",
   "requested_at": "2026-10-01T22:41:59-03:00",
@@ -28,24 +28,23 @@
     "android_physical_install_update_offline_push": "PENDING",
     "gpx_download_browser": "PASSED_DOWNLOADED_XML_17_MATCH_CATALOG_0433C32",
     "approved_master_integrity": "25_MASTER_ENTRIES_ALL_301_PROTECTED_FILES_UNCHANGED_FROM_E766DDE",
-    "mobile_desktop_core": "PASSED_6_ESA_BACKGROUNDS_VALENCIA_ONLY_RESEARCH_036E0C3_43_TESTS_PHYSICAL_PENDING",
+    "mobile_desktop_core": "PASSED_SIX_CITY_BACKGROUNDS_NO_FIXED_QUESTS_OR_GPX_NOTICES_AE4FCD4_41_TESTS_PHYSICAL_PENDING",
     "launch_approval": "PENDING",
     "push_live_configuration": "HTTP_503_PUSH_NOT_CONFIGURED_D5E667D_DASHBOARD_AUTH_NOT_COMPLETED",
     "zorua_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_0433C32",
     "thundurus_elgyem_posters": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_29C1AEC",
     "go_pass_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_FF37843",
-    "tester_shared_preview_access": "TEMPORARY_ANONYMOUS_HTTP_PASSED_036E0C3_13_EXACT_FILES_USER_PHONE_NOT_RETESTED_PERMANENT_URL_PENDING",
+    "tester_shared_preview_access": "TEMPORARY_ANONYMOUS_HTTP_PASSED_AE4FCD4_13_EXACT_FILES_USER_PHONE_NOT_RETESTED_PERMANENT_URL_PENDING",
     "latios_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_D14897B",
     "scenic_sunday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_BFEEB24",
     "showcase_tuesday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_C3BB225",
     "remaining_art_batch": "APPROVED_USER_DELEGATED_VISUAL_QA_PASSED_E766DDE",
     "calendar_date_boundaries": "PASSED_BRAZIL_DAY_KEYS_4_DEVICE_ZONES_BROWSER_D3D26E1",
     "space_week_museums": "PASSED_OFFICIAL_ILLUSTRATIONS_6_VENUES_4_COORDINATES_2_ADDRESSES_NO_GPX_PREMIUM_REFUSAL_PRESERVED",
-    "space_backgrounds_and_research": "PASSED_SIX_INTEGRAL_GAME_BACKGROUNDS_THREE_VALENCIA_COMMUNITY_TASKS_SPECIES_UNKNOWN",
-    "space_full_area_gpx": "BLOCKED_UNVERIFIED_EVENT_BOUNDARIES_NO_ROUTES_CREATED"
+    "space_backgrounds_and_research": "PASSED_SIX_INTEGRAL_GAME_BACKGROUNDS_SPECIFIC_RESEARCH_DISMISSED_BY_USER",
+    "space_full_area_gpx": "DISMISSED_BY_USER_INSTRUCTION_NO_ROUTES_CREATED"
   },
   "next_batch": [
-    "Buscar limites da área do evento e rotas verificáveis antes de habilitar seis GPX de cobertura integral; confirmar espécies por tarefa e missões dos demais museus.",
     "Comprovar abertura do novo link temporário pelos testadores no celular e organizar acesso durável; URL sem parâmetro continua protegida.",
     "Configuração e recebimento real de push; endpoint503. Não repetir autenticação administrativa recusada sem nova solicitação.",
     "QA físico Android/PWA/instalação/atualização/offline/alertas.",
@@ -76,20 +75,19 @@
     "04/10: autorização 03/10 23:13 aplicada ao lote de sete artes, USER_DELEGATED_VISUAL_QA; fontes, PNGs integrais e identidade Premium conferidos. e766dde: 25 masters / 18 anteriores / 17 arquivos preservados, 124 eventos / 117 inalterados e todas as janelas/coords/GPX/notificações preservadas. 33 testes passaram após manter datas dos anúncios para preservar Novidades. QA 14 vistas mobile Claro / desktop Escuro, 14 capturas e 7 PNGs servidos byte a byte idênticos. Janela 23: 20 APPROVED / 0 candidatas / 3 recusas. Público/Android pendentes; fronteiras do calendário observadas exigem validação separada.",
     "04/10: lote anterior/provas consolidado em de88306; d3d26e1 corrige calendário em Brasília independente de quatro fusos e agenda sem capa herdada. 37 testes passaram; browser mobile Claro/desktop Escuro confirmou01/10 e02/10, sem overflow, PNG Sexta preservado. Novo share efêmero passou com cliente HTTP sem cookies/credenciais; PNG exato e push503. Android físico/acesso permanente/produção pendentes.",
     "04/10: d5e667d destaca Pikachu Astronauta e integra6 museus/condições/mapas/fontes/relógios; ilustrações oficiais originais, não Premium.40 testes, desktop Escuro/mobile Claro, FLY20/28/Taipei e ambos JSONs/JPEGs servidos byte a byte passaram.25 masters/123 outros eventos e702 blobs anteriores preservados. Novo share temporário HTTP anônimo aprovado, celular físico/acesso durável/push503/produção pendentes. Registros SPACE_WEEK_QA e fontes/provas.",
-    "04/10:036e0c3 integra seis fundos originais512×512 e três missões de relato direto restritas a Valência, sem inventar espécies por tarefa.43 testes, desktop Escuro/mobile Claro, seis imagens integrais/sem overflow, FLY20/28/Taipei e13 arquivos via share anônimo byte a byte passaram.124 eventos/25 masters/716 blobs anteriores fora do escopo preservados. GPX de cobertura total não criado: faltam limites e rota verificados. Fontes/QA/cinco capturas documentados; pendências físicas/push/acesso durável/produção e recusas Premium mantidas."
+    "04/10:036e0c3 integra seis fundos originais512×512 e três missões de relato direto restritas a Valência, sem inventar espécies por tarefa.43 testes, desktop Escuro/mobile Claro, seis imagens integrais/sem overflow, FLY20/28/Taipei e13 arquivos via share anônimo byte a byte passaram.124 eventos/25 masters/716 blobs anteriores fora do escopo preservados. GPX de cobertura total não criado: faltam limites e rota verificados. Fontes/QA/cinco capturas documentados; pendências físicas/push/acesso durável/produção e recusas Premium mantidas.",
+    "04/10 11:44:10 BRT: editor dispensa missões e GPX de área dos museus. ae4fcd4 remove lista fixa e pendências GPX, mantém seis fundos/mapas/relógios. 41 testes e QA desktop Escuro/mobile Claro/13 arquivos via share anônimo passaram; seis assets, catálogo124 e masters25 preservados. Busca encerrada, zero GPX criado; históricos preservados. Produção, URL durável e validação física seguem pendentes."
   ],
-  "updated_at": "2026-10-04T13:13:07.498769+00:00",
-  "code_commit": "036e0c3b31eb8946270216aa8049b6e3ff5bcf12",
-  "preview_url": "https://spidey-pokemon-50c311k5g-spidey3.vercel.app/spidey-app/index.html",
+  "updated_at": "2026-10-04T14:59:11.616263+00:00",
+  "code_commit": "ae4fcd4a2e0d2b69c4ff74c8808d33352a7f4a32",
+  "preview_url": "https://spidey-pokemon-2fh3rg4cq-spidey3.vercel.app/spidey-app/index.html",
   "unresolved": [
     "3 eventos sem Premium na janela01–07/10;20 APPROVED/0 candidatas. Espaço agora exibe ilustração oficial creditada, sem modificar recusa/estado Premium de Applin/Espaço/Sizzlipede.",
     "Applin/Espaço/Sizzlipede bloqueados por recusas registradas da geração",
     "Push: HTTP 503 push_not_configured; painel exige login e estado das variáveis não inspecionado",
     "Android físico/instalação/atualização/offline/push sem prova",
     "Lançamento completo e produção não aprovados",
-    "Novo link temporário passou em HTTP anônimo; acesso dos testadores no celular ainda não revalidado após o bloqueio relatado em03/10. URL pública permanente pendente e proteção mantida.",
-    "Seis GPX de cobertura integral dos museus pendentes: nenhum limite da área do evento nem rota integral verificado.",
-    "Espécies por tarefa, tarefas dos demais cinco museus e etapas das pesquisas temporárias ainda não confirmadas."
+    "Novo link temporário passou em HTTP anônimo; acesso dos testadores no celular ainda não revalidado após o bloqueio relatado em03/10. URL pública permanente pendente e proteção mantida."
   ],
   "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
   "post_approval_qa_record": "docs/qa/remaining-art-batch-browser-e766dde-20261004.json",
@@ -122,5 +120,6 @@
   },
   "art_continuation_authorization": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
   "individual_art_approval_required": false,
-  "current_core_qa_record": "docs/qa/ESA_BACKGROUND_RESEARCH_QA_20261004.json"
+  "current_core_qa_record": "docs/qa/ESA_FUNDS_SCOPE_QA_20261004.json",
+  "space_scope_update_record": "docs/qa/ESA_SCOPE_UPDATE_20261004.json"
 }

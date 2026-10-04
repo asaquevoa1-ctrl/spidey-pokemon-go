@@ -1,0 +1,83 @@
+{
+  "status": "PASSED_PREVIEW_USER_SCOPE_UPDATED",
+  "checked_at": "2026-10-04T14:59:11.616263+00:00",
+  "branch": "spidey-fly-v1",
+  "base_commit": "a23ebf4c6b9fe96f1b030011519620e512c37eb4",
+  "code_commit": "ae4fcd4a2e0d2b69c4ff74c8808d33352a7f4a32",
+  "deployment": {
+    "id": "dpl_EktNZkCDq5d6vx95YTH6b3krnyEF",
+    "state": "READY",
+    "target": null,
+    "url": "https://spidey-pokemon-2fh3rg4cq-spidey3.vercel.app/spidey-app/index.html"
+  },
+  "authorization": "docs/qa/ESA_SCOPE_UPDATE_20261004.json",
+  "scope": {
+    "missions_and_gpx": "DISMISSED_BY_USER_INSTRUCTION",
+    "research_search": "STOPPED",
+    "fixed_tasks_in_app": 0,
+    "museum_gpx_pending_notices": 0,
+    "full_area_gpx_created": 0,
+    "museum_backgrounds": 6,
+    "maps": 6,
+    "clocks": 6
+  },
+  "checks": {
+    "node_tests_passed": 41,
+    "node_syntax_space_week_and_sw": "PASSED",
+    "desktop_dark": "PASSED",
+    "mobile_light_390_wrapper": "PASSED",
+    "horizontal_overflow": false,
+    "six_original_images_loaded_at_512_square": true,
+    "anonymous_share": "PASSED",
+    "anonymous_exact_files": 13
+  },
+  "integrity": {
+    "catalog_events": 124,
+    "entire_catalog_unchanged": true,
+    "approved_master_entries": 25,
+    "approved_master_assets_unchanged": true,
+    "six_city_background_assets_unchanged": true,
+    "existing_untargeted_blobs_preserved_in_code_tree": 733,
+    "historical_source_and_qa_records_preserved": true
+  },
+  "production": {
+    "promotion_performed": false,
+    "main_observed_before_and_after_code_delivery": "f35b25a145cb4ad1cbc8e1aa872d0e2fb9f4a96b",
+    "main_was_already_at_this_sha_when_read_this_turn": true,
+    "production_approval": "PENDING"
+  },
+  "limits": {
+    "android_physical_install_update_offline_clipboard_push": "NOT_CERTIFIED",
+    "permanent_tester_access": "PENDING",
+    "push_last_previous_check": "503 push_not_configured; not rechecked in this change",
+    "premium_generation_refusals": [
+      "Applin",
+      "World Space Week",
+      "Sizzlipede"
+    ]
+  },
+  "browser_record": "docs/qa/esa-scope-browser-ae4fcd4-20261004.json",
+  "anonymous_record": "docs/qa/esa-scope-anonymous-ae4fcd4-20261004.json",
+  "proofs": [
+    {
+      "path": "docs/qa/proofs/spidey-esa-fundos-desktop-ae4fcd4-20261004.jpg",
+      "bytes": 98058,
+      "sha256": "97240e8ab6c70ae9316c0a22cf4ba3567e81a6b77641c09d3efb920b4e4a5461"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-esa-fundos-ultimas-cidades-ae4fcd4-20261004.jpg",
+      "bytes": 100800,
+      "sha256": "a699a524203221fed35075ebab62e0956614198cc846dd2376f43a69f8963b17"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-esa-fundos-mobile-ae4fcd4-20261004.jpg",
+      "bytes": 67551,
+      "sha256": "115dfdd7287ea1c1d0b9935dea99fe1e4880464f16b32dbda8b164622bbc764a"
+    },
+    {
+      "path": "docs/qa/proofs/spidey-esa-fundos-mobile-final-ae4fcd4-20261004.jpg",
+      "bytes": 72726,
+      "sha256": "f476459fa4819fba085b5c32d23f229362a119d8909eec54590b559f856b3628"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "status": "USER_SCOPE_UPDATED_PREVIEW_QA_PENDING",
+  "status": "PASSED_PREVIEW_USER_SCOPE_UPDATED",
   "instruction": "As missões resetem todos os dias. Então pode deixar de lado essas. Se não conseguir os gpx, pode deixar de lado também.",
   "user_at": "2026-10-04T11:44:10-03:00",
   "recorded_at": "2026-10-04T14:47:00.174926+00:00",
@@ -17,5 +17,8 @@
   },
   "daily_reset": "User-supplied reason for scope change; not added as a new independently verified gameplay guarantee.",
   "full_area_gpx_created": 0,
-  "production_promotion": false
+  "production_promotion": false,
+  "code_commit": "ae4fcd4a2e0d2b69c4ff74c8808d33352a7f4a32",
+  "verified_at": "2026-10-04T14:59:11.616263+00:00",
+  "qa_record": "docs/qa/ESA_FUNDS_SCOPE_QA_20261004.json"
 }

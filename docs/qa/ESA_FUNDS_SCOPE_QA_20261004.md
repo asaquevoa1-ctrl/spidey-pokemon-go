@@ -1,0 +1,15 @@
+# Fundos por cidade — revisão de escopo de 04/10/2026
+
+Estado corrente — 04/10: Por orientação do editor, a busca de missões e GPX foi encerrada e esses itens saíram do escopo atual. Código `ae4fcd4` remove listas fixas de tarefas e avisos de GPX pendente; mantém os seis fundos originais 512×512, museus, endereços/mapas, relógios locais e orientações oficiais gerais para obter os fundos. 41 testes e QA desktop Escuro/mobile Claro passaram, seis imagens completas e sem overflow; 13 arquivos via share temporário anônimo byte a byte conferidos. Catálogo de 124 eventos, 25 masters e seis fundos preservados; 733 blobs anteriores fora do escopo intactos. Nenhum GPX de área total criado. Registros históricos de pesquisas preservados, sem nova busca pendente. Acesso durável, Android físico/PWA/push e promoção à produção continuam pendentes; recusas Premium de Applin/Espaço/Sizzlipede mantidas. Registro corrente: `docs/qa/ESA_FUNDS_SCOPE_QA_20261004.md`.
+
+O editor dispensou as missões e autorizou deixar os GPX de lado se não fosse possível obtê-los. A decisão de 11:44:10 BRT está em `ESA_SCOPE_UPDATE_20261004.json`. A justificativa de reset diário é atribuída ao editor, sem nova garantia de gameplay publicada.
+
+Código: `ae4fcd4a2e0d2b69c4ff74c8808d33352a7f4a32` na branch `spidey-fly-v1`, base `a23ebf4c6b9fe96f1b030011519620e512c37eb4`. Deploy `dpl_EktNZkCDq5d6vx95YTH6b3krnyEF` READY, target preview. URL verificada: https://spidey-pokemon-2fh3rg4cq-spidey3.vercel.app/spidey-app/index.html.
+
+Verificações: 41 testes Node e sintaxe dos dois scripts passaram. Browser desktop 1348px / Escuro e wrapper móvel 390px / Claro: seis cartões, seis mapas, seis relógios, nenhuma seção fixa de missões ou aviso de GPX; seis imagens originais 512×512 completas após rolagem. Documento e diálogo sem overflow horizontal. Cliente HTTP com zero cookies iniciais, sem credenciais: 13 arquivos 200, bytes idênticos ao código local. Share nativo temporário; a informação de validade fornecida pela Vercel foi “10/5/2026, 1:52:13 PM”. Token não salvo no repositório.
+
+Integridade: catálogo inteiro de 124 eventos, master com 25 entradas e todos os assets nele referenciados, seis fundos por cidade e registros históricos preservados. No commit de código, 733 blobs fora do escopo mantêm o mesmo SHA. O commit documental posterior preserva o código testado.
+
+Esta entrega não promoveu produção e não alterou `main`; o SHA observado antes e depois foi `f35b25a145cb4ad1cbc8e1aa872d0e2fb9f4a96b`, que já era o estado lido nesta retomada. Não atribuir a esta entrega movimentos anteriores de `main`. Android físico, instalação/atualização/offline/colagem/push, URL permanente e aprovação de lançamento não foram certificados aqui. Último push anterior: 503 `push_not_configured`. Recusas de geração Premium permanecem.
+
+Provas e registros: `ESA_FUNDS_SCOPE_QA_20261004.json`, `esa-scope-browser-ae4fcd4-20261004.json`, `esa-scope-anonymous-ae4fcd4-20261004.json` e quatro JPEGs em `proofs/`. As provas anteriores de tarefas/GPX permanecem históricas; não retomar essas buscas por causa delas.
