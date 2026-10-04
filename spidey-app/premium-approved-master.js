@@ -235,6 +235,83 @@
     "approval_record": "docs/qa/REMAINING_ART_BATCH_20261003.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-mega-malamar-raids": {
+    "file": "assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "d59fe0c923f8e20515ec9bfd01826fecdcb9305fe9e9fcad45c65880e95e9ccd",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-raids-ultra-beasts": {
+    "file": "assets/events/premium/ultra-beasts-rotation-20260923-29-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "ec1e146bd1c202829f79c02c78efbc535dd801bf194fcb24699ad0a1435049bf",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-28-max-monday-sobble": {
+    "file": "assets/events/premium/sobble-max-monday-20260928-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "45e7e9c3ce431d71d3b36108c35410a3ed1e905e5e24efaaa588242174aadd21",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-29-showcase-tuesday": {
+    "file": "assets/events/premium/showcase-tuesday-20260929-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "7bb48bbc6bfac1cce90a2883f5f94747f385e4262dfbc5b408683643dde6a94a",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-choose-your-path": {
+    "file": "assets/events/premium/choose-your-path-20260923-28-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "c56c6b40fab56055a7208ddf34f9bc958535d170e0ca847005d5cdddecf93fa1",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-gbl-22-29": {
+    "file": "assets/events/premium/gbl-ultra-master-retro-20260922-29-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "4a17d1311b97a88444f0dc82bf677aee29cca3edec3bd7672d51f78cd266cf6e",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-halloween-part-1": {
+    "file": "assets/events/premium/halloween-mystery-teaser-20261004-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "ae832e6af897db82ebcc437fff9893049fc09869aa0114964fa97d2a554293db",
+    "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

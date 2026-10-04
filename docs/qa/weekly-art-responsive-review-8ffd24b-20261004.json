@@ -1,0 +1,217 @@
+{
+  "artworks": [
+    {
+      "id": "2026-09-mega-malamar-raids",
+      "theme": "light",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "contain",
+            "src": "assets/events/review/mega-malamar-rotation-20260923-29-v1.png?v=d59fe0c923f8",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "title": "Megarreides: Mega Malamar"
+      },
+      "card": {
+        "image": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "cover",
+            "src": "assets/events/review/mega-malamar-rotation-20260923-29-v1.png?v=d59fe0c923f8",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "23 de set. → 29 de set. · Encerrado\n06:00\nMegarreides: Mega Malamar\n\nMega Malamar na rotação de Mega Reides.\n\nMega Reide\nRotação"
+      }
+    },
+    {
+      "id": "2026-09-28-max-monday-sobble",
+      "theme": "light",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "contain",
+            "src": "assets/events/review/sobble-max-monday-20260928-v1.png?v=45e7e9c3ce43",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "title": "Segunda Max: Dinamax Sobble"
+      },
+      "card": {
+        "image": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "cover",
+            "src": "assets/events/review/sobble-max-monday-20260928-v1.png?v=45e7e9c3ce43",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "28 de set. · Encerrado\n06:00–21:00 local\nSegunda Max: Dinamax Sobble\n\nSobble Dynamax em destaque nos Power Spots.\n\nSegunda Max\nDynamax"
+      }
+    },
+    {
+      "id": "2026-09-choose-your-path",
+      "theme": "light",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "contain",
+            "src": "assets/events/review/choose-your-path-20260923-28-v1.png?v=c56c6b40fab5",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "title": "Escolha seu caminho • Twilight Trails"
+      },
+      "card": {
+        "image": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "cover",
+            "src": "assets/events/review/choose-your-path-20260923-28-v1.png?v=c56c6b40fab5",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "23 de set. → 28 de set. · Encerrado\n10:00\nEscolha seu caminho • Twilight Trails\n\nPesquisa temporária ramificada com caminhos de exploração, captura ou batalha.\n\nPesquisa\nTwilight Trails"
+      }
+    },
+    {
+      "id": "2026-09-gbl-22-29",
+      "theme": "light",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "contain",
+            "src": "assets/events/review/gbl-ultra-master-retro-20260922-29-v1.png?v=4a17d1311b97",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "title": "Liga de Batalha GO: Ultra / Master Mega / Retro Cup"
+      },
+      "card": {
+        "image": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "cover",
+            "src": "assets/events/review/gbl-ultra-master-retro-20260922-29-v1.png?v=4a17d1311b97",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "22 de set. → 29 de set. · Encerrado\n17:00\nLiga de Batalha GO: Ultra / Master Mega / Retro Cup\n\nUltra League, Master League: Mega Edition e Retro Cup: Great League Edition.\n\nLiga de Batalha GO\nPvP"
+      }
+    },
+    {
+      "id": "2026-09-29-showcase-tuesday",
+      "theme": "light",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "height": 1402,
+            "objectFit": "contain",
+            "src": "assets/events/review/showcase-tuesday-20260929-v1.png?v=7bb48bbc6bfa",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "title": "Descoberta Diária: Terça de Vitrine"
+      },
+      "card": {
+        "images": [
+          {
+            "complete": false,
+            "height": 1402,
+            "src": "assets/events/review/showcase-tuesday-20260929-v1.png?v=7bb48bbc6bfa",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "29 de set. · Encerrado\n00:00\nDescoberta Diária: Terça de Vitrine"
+      }
+    },
+    {
+      "id": "2026-10-halloween-part-1",
+      "theme": "dark",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "fit": "contain",
+            "height": 1402,
+            "src": "assets/events/review/halloween-mystery-teaser-20261004-v1.png?v=ae832e6af897",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "HALLOWEEN\nINFORMAÇÃO DA COMUNIDADE\nHalloween 2026: Parte I\n\nPrimeira parte do evento de Halloween 2026.\n\nHorários\nHorário\n27 de out., 10:00 → 31 de out., 20:00\nFonte\nObservações\nDetalhes de Pokémon e bônus ainda podem ser ampliados quando a página oficial específica for publicada.\nPrévia de Halloween: Pokémon, fantasias e bônus ainda aguardam confirmação; nenhuma identidade foi deduzida das silhuetas.\nA prévia foi reproduzida pela comunidade. O calendário da Parte I continua baseado no Pokémon GO Hub.",
+        "title": "Halloween 2026: Parte I"
+      }
+    },
+    {
+      "id": "2026-09-raids-ultra-beasts",
+      "theme": "dark",
+      "detail": {
+        "images": [
+          {
+            "complete": true,
+            "fit": "contain",
+            "height": 1402,
+            "src": "assets/events/review/ultra-beasts-rotation-20260923-29-v1.png?v=ec1e146bd1c2",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "title": "Reides 5★: Xurkitree / Buzzwole / Pheromosa"
+      },
+      "card": {
+        "images": [
+          {
+            "complete": true,
+            "fit": "contain",
+            "height": 1402,
+            "src": "assets/events/review/ultra-beasts-rotation-20260923-29-v1.png?v=ec1e146bd1c2",
+            "width": 1122
+          }
+        ],
+        "overflow": false,
+        "text": "23 de set. → 29 de set. · Encerrado\n06:00\nReides 5★: Xurkitree / Buzzwole / Pheromosa\n\nUltra Beasts regionais: Xurkitree (APAC), Buzzwole (Américas/Greenland) e Pheromosa (Europa/Oriente Médio/África/Índia).\n\nReide 5★\nRotação"
+      }
+    }
+  ],
+  "viewports": [
+    {
+      "overflow": false,
+      "scrollWidth": 375,
+      "theme": "light",
+      "width": 375
+    },
+    {
+      "overflow": false,
+      "scrollWidth": 1265,
+      "theme": "dark",
+      "width": 1265
+    }
+  ],
+  "review_url": "https://spidey-pokemon-go.vercel.app/spidey-app/qa-weekly-art-responsive.html",
+  "physical_android_certified": false
+}

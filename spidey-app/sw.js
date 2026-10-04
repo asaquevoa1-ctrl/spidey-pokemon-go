@@ -1,5 +1,12 @@
-const CACHE = 'spidey-app-20261004-mobile-v2';
+const CACHE = 'spidey-app-20261004-art-v1';
 const CORE = [
+  './assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png',
+  './assets/events/premium/ultra-beasts-rotation-20260923-29-approved-v1.png',
+  './assets/events/premium/sobble-max-monday-20260928-approved-v1.png',
+  './assets/events/premium/showcase-tuesday-20260929-approved-v1.png',
+  './assets/events/premium/choose-your-path-20260923-28-approved-v1.png',
+  './assets/events/premium/gbl-ultra-master-retro-20260922-29-approved-v1.png',
+  './assets/events/premium/halloween-mystery-teaser-20261004-approved-v1.png',
   './data/local-events.json',
   './assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png',
   './space-week.js',

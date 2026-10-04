@@ -1,7 +1,7 @@
 {
-  "status": "PENDING_RESPONSIVE_QA",
+  "status": "APPROVED_DELEGATED_QA_PASSED",
   "date": "2026-10-04",
-  "updated_at": "2026-10-04T19:45:07.955636+00:00",
+  "updated_at": "2026-10-04T20:12:58.017850+00:00",
   "base_commit": "ad1d5caa25d69890489021d645239a9e05b56529",
   "approval_basis": "USER_DELEGATED_VISUAL_QA",
   "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
@@ -265,7 +265,7 @@
       "sha256": "d59fe0c923f8e20515ec9bfd01826fecdcb9305fe9e9fcad45c65880e95e9ccd",
       "git_blob_sha": "65bbeba62ca73e511000a687eafa240403257890",
       "revision": 1,
-      "status": "PENDING_RESPONSIVE_QA",
+      "status": "APPROVED",
       "approval_basis": "USER_DELEGATED_VISUAL_QA",
       "source_url": "https://pokemongohub.net/post/guide/September-2026-events/",
       "source_classification": "community",
@@ -318,7 +318,14 @@
           }
         ],
         "transparent_background": false
-      }
+      },
+      "responsive_qa": {
+        "status": "PASSED_BROWSER_REVIEW",
+        "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+        "full_poster_loaded": true,
+        "detail_overflow": false
+      },
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
     },
     {
       "event_id": "2026-09-raids-ultra-beasts",
@@ -331,7 +338,7 @@
       "sha256": "ec1e146bd1c202829f79c02c78efbc535dd801bf194fcb24699ad0a1435049bf",
       "git_blob_sha": "71f33d48bab9e47b92ce4b93e7ef8ac750434f82",
       "revision": 1,
-      "status": "PENDING_RESPONSIVE_QA",
+      "status": "APPROVED",
       "approval_basis": "USER_DELEGATED_VISUAL_QA",
       "source_url": "https://pokemongohub.net/post/guide/September-2026-events/",
       "source_classification": "community",
@@ -399,7 +406,14 @@
           }
         ],
         "transparent_background": false
-      }
+      },
+      "responsive_qa": {
+        "status": "PASSED_BROWSER_REVIEW",
+        "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+        "full_poster_loaded": true,
+        "detail_overflow": false
+      },
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
     },
     {
       "event_id": "2026-09-28-max-monday-sobble",
@@ -412,7 +426,7 @@
       "sha256": "45e7e9c3ce431d71d3b36108c35410a3ed1e905e5e24efaaa588242174aadd21",
       "git_blob_sha": "205b396e546df54b3788f38bad144710729bb42f",
       "revision": 1,
-      "status": "PENDING_RESPONSIVE_QA",
+      "status": "APPROVED",
       "approval_basis": "USER_DELEGATED_VISUAL_QA",
       "source_url": "https://pokemongohub.net/post/guide/September-2026-events/",
       "source_classification": "community",
@@ -466,7 +480,14 @@
           }
         ],
         "transparent_background": false
-      }
+      },
+      "responsive_qa": {
+        "status": "PASSED_BROWSER_REVIEW",
+        "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+        "full_poster_loaded": true,
+        "detail_overflow": false
+      },
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
     },
     {
       "event_id": "2026-09-29-showcase-tuesday",
@@ -479,7 +500,7 @@
       "sha256": "7bb48bbc6bfac1cce90a2883f5f94747f385e4262dfbc5b408683643dde6a94a",
       "git_blob_sha": "28d0baebe27735200deb291520161e7658ad833b",
       "revision": 1,
-      "status": "PENDING_RESPONSIVE_QA",
+      "status": "APPROVED",
       "approval_basis": "USER_DELEGATED_VISUAL_QA",
       "source_url": "https://leekduck.com/events/season-24-twilight-trails/",
       "source_classification": "community",
@@ -524,7 +545,14 @@
           }
         ],
         "transparent_background": false
-      }
+      },
+      "responsive_qa": {
+        "status": "PASSED_BROWSER_REVIEW",
+        "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+        "full_poster_loaded": true,
+        "detail_overflow": false
+      },
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
     },
     {
       "event_id": "2026-09-choose-your-path",
@@ -537,7 +565,7 @@
       "sha256": "c56c6b40fab56055a7208ddf34f9bc958535d170e0ca847005d5cdddecf93fa1",
       "git_blob_sha": "747a0dfbe9c293a24284f78fb19fca48fd8734d3",
       "revision": 1,
-      "status": "PENDING_RESPONSIVE_QA",
+      "status": "APPROVED",
       "approval_basis": "USER_DELEGATED_VISUAL_QA",
       "source_url": "https://pokemongohub.net/post/guide/September-2026-events/",
       "source_classification": "community",
@@ -587,7 +615,14 @@
           }
         ],
         "transparent_background": false
-      }
+      },
+      "responsive_qa": {
+        "status": "PASSED_BROWSER_REVIEW",
+        "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+        "full_poster_loaded": true,
+        "detail_overflow": false
+      },
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
     },
     {
       "event_id": "2026-09-gbl-22-29",
@@ -600,7 +635,7 @@
       "sha256": "4a17d1311b97a88444f0dc82bf677aee29cca3edec3bd7672d51f78cd266cf6e",
       "git_blob_sha": "104d7d2457f214bfde93e577f2f9622cc404333d",
       "revision": 1,
-      "status": "PENDING_RESPONSIVE_QA",
+      "status": "APPROVED",
       "approval_basis": "USER_DELEGATED_VISUAL_QA",
       "source_url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
       "source_classification": "official",
@@ -651,7 +686,14 @@
           }
         ],
         "transparent_background": false
-      }
+      },
+      "responsive_qa": {
+        "status": "PASSED_BROWSER_REVIEW",
+        "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+        "full_poster_loaded": true,
+        "detail_overflow": false
+      },
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
     },
     {
       "event_id": "2026-10-halloween-part-1",
@@ -664,7 +706,7 @@
       "sha256": "ae832e6af897db82ebcc437fff9893049fc09869aa0114964fa97d2a554293db",
       "git_blob_sha": "f6494dc23920933db7f2caf600280ec90e3bacda",
       "revision": 1,
-      "status": "PENDING_RESPONSIVE_QA",
+      "status": "APPROVED",
       "approval_basis": "USER_DELEGATED_VISUAL_QA",
       "source_url": "https://bsky.app/profile/pokemongoappmirror.bsky.social/post/3mwy3wfiuk52n",
       "source_classification": "community_mirror",
@@ -716,15 +758,35 @@
           }
         ],
         "transparent_background": false
-      }
+      },
+      "responsive_qa": {
+        "status": "PASSED_BROWSER_REVIEW",
+        "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+        "full_poster_loaded": true,
+        "detail_overflow": false
+      },
+      "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
     }
   ],
   "responsive_qa": {
-    "status": "PENDING",
+    "status": "PASSED_BROWSER_REVIEW",
+    "proof_record": "docs/qa/weekly-art-responsive-review-8ffd24b-20261004.json",
+    "viewport_mobile": 390,
+    "viewport_desktop": 1280,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "full_poster_details_loaded": 7,
+    "no_horizontal_overflow": true,
+    "weekly_thumbnail_fix": "object-fit: contain; confirmed after correction",
     "physical_android_certified": false
   },
   "publication": {
-    "status": "PENDING"
+    "status": "APPROVED_FOR_PUBLICATION",
+    "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+    "authorization": "Bora terminar pra publicar pra galere; autorização anterior preservada",
+    "announcements_sent": false
   },
   "blocked_generations_preserved": [
     "2026-09-harvest-festival-applin",
@@ -743,5 +805,27 @@
   },
   "catalog_schedule_modified": false,
   "fixed_quests_or_museum_gpx_added": false,
-  "user_steering": "Saiu essa pata o halowen também"
+  "user_steering": "Saiu essa pata o halowen também",
+  "review_commit": "8ffd24bf5b4eafaa69c9310b9aab9c1dff8ac0b9",
+  "review_deployment": {
+    "id": "dpl_BHSgsavikUiC1p5p4HNf3YFqG6G1",
+    "url": "https://spidey-pokemon-go.vercel.app/spidey-app/qa-weekly-art-responsive.html"
+  },
+  "catalog_integrity": {
+    "events": 124,
+    "schedules_preserved": 124,
+    "unchanged_events": 123,
+    "changed_event_ids": [
+      "2026-10-halloween-part-1"
+    ],
+    "change_scope": "news, notes, updated_at; source, schedule, Pokémon e bônus preservados"
+  },
+  "validation": {
+    "node_tests": 61,
+    "node_pass": 61,
+    "node_fail": 0,
+    "autopublish_gate": "PASSED",
+    "png_integrity": "PASSED",
+    "previous_master_preservation": "PASSED"
+  }
 }

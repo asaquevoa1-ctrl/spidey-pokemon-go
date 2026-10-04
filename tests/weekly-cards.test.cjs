@@ -20,7 +20,7 @@ function setup() {
 
 test('every approved weekly card uses the same original file and version as the canonical master', () => {
   const { window, context } = setup();
-  assert.equal(Object.keys(window.SPIDEY_APPROVED_ART_MASTER).length, 25);
+  assert.equal(Object.keys(window.SPIDEY_APPROVED_ART_MASTER).length, 32);
   for (const [id, asset] of Object.entries(window.SPIDEY_APPROVED_ART_MASTER)) {
     const html = context.weeklyItemCard({ id, title: 'Event', weekly_art: { premium: true, url: 'competing.png' } });
     assert.ok(html.includes(`${asset.file}?v=${asset.sha256.slice(0, 12)}`), id);

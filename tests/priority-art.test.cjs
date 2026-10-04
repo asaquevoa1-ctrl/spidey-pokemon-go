@@ -11,6 +11,32 @@ const latiosApproval=JSON.parse(fs.readFileSync('docs/qa/LATIOS_APPROVAL_2026100
 const scenicSundayApproval=JSON.parse(fs.readFileSync('docs/qa/SCENIC_SUNDAY_APPROVAL_20261003.json','utf8'));
 const showcaseTuesdayApproval=JSON.parse(fs.readFileSync('docs/qa/SHOWCASE_TUESDAY_APPROVAL_20261003.json','utf8'));
 const remainingArtBatch=JSON.parse(fs.readFileSync('docs/qa/REMAINING_ART_BATCH_20261003.json','utf8'));
+const weeklyArtCompletion=JSON.parse(fs.readFileSync('docs/qa/WEEKLY_ART_COMPLETION_20261004.json','utf8'));
+test('the weekly completion binds seven original posters across roles, preserves all 25 earlier masters and respects generation refusals',()=>{
+ const {window:w,context}=setup(),batch=weeklyArtCompletion;
+ const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+ assert.equal(batch.status,'APPROVED_DELEGATED_QA_PASSED');
+ assert.equal(batch.approval_basis,'USER_DELEGATED_VISUAL_QA');
+ assert.equal(batch.artworks.length,7);assert.equal(Object.keys(batch.preserved_master_entries).length,25);
+ assert.equal(hash(batch.authorization_record),batch.authorization_sha256);
+ for(const [id,old] of Object.entries(batch.preserved_master_entries)){
+  assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
+  assert.equal(hash('spidey-app/'+old.file),old.sha256);
+ }
+ for(const a of batch.artworks){
+  const master=w.SPIDEY_APPROVED_ART_MASTER[a.event_id],bytes=fs.readFileSync(a.approved_file);
+  assert.deepEqual(bytes,fs.readFileSync(a.candidate_file));assert.equal(hash(a.approved_file),a.sha256);
+  assert.equal(bytes.length,a.bytes);assert.equal(bytes.readUInt32BE(16),a.width);assert.equal(bytes.readUInt32BE(20),a.height);
+  assert.equal('spidey-app/'+master.file,a.approved_file);assert.equal(master.status,'APPROVED');assert.equal(master.display,'full_poster');
+  for(const role of ['thumb','card','weekly','hero','poster']){
+   const asset=w.SpideyArt.resolve({id:a.event_id},role);assert.equal(asset.url,master.file);assert.equal(asset.sha256,a.sha256);
+  }
+  assert.equal(context.weeklyArtUrl({id:a.event_id}),master.file+'?v='+a.sha256.slice(0,12));
+  for(const ref of a.generation.references)assert.equal(hash(ref.file),ref.sha256);
+ }
+ for(const id of batch.blocked_generations_preserved)assert.equal(w.SPIDEY_APPROVED_ART_MASTER[id],undefined);
+ assert.equal(batch.artworks.find(a=>a.event_id==='2026-10-halloween-part-1').source_classification,'community_mirror');
+});
 test('October GO Pass approval binds the displayed PNG, preserves earlier masters and keeps paid/rank conditions explicit',()=>{
  const {window:w,context}=setup(),record=JSON.parse(fs.readFileSync('docs/qa/GO_PASS_REVIEW_20261003.json','utf8'));
  const c=record.candidates[0],events=JSON.parse(fs.readFileSync('spidey-app/data/events.json','utf8')).events,e=events.find(e=>e.id===c.event_id);
@@ -38,7 +64,7 @@ test('October GO Pass approval binds the displayed PNG, preserves earlier master
  assert.equal(context.weeklyArtUrl(e),master.file+'?v='+c.sha256.slice(0,12));
  assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);assert.equal(Object.keys(approval.preserved_master_entries).length,14);
  assert.deepEqual(approval.preserved_master_entries,record.preserved_master_entries);
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids,...weeklyArtCompletion.event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries))assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
  for(const old of Object.values(record.preserved_master_entries))assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
 });
@@ -112,7 +138,7 @@ test('Seedot human decision binds the exact reviewed PNG and preserves earlier m
  assert.equal(approval.previous_master_sha256,review.preserved_master_sha256);
  const subsequentApproval=JSON.parse(fs.readFileSync('docs/qa/MEGA_VICTREEBEL_APPROVAL_20261001.json','utf8'));
  const octoberApproval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json','utf8'));
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...subsequentApproval.event_ids,...octoberApproval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...subsequentApproval.event_ids,...octoberApproval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids,...weeklyArtCompletion.event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
@@ -154,7 +180,7 @@ test('Mega Victreebel human approval binds the directly displayed v2 PNG and pre
  assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);
  assert.equal(Object.keys(approval.preserved_master_entries).length,7);
  const octoberApproval=JSON.parse(fs.readFileSync('docs/qa/OCTOBER_RAIDS_APPROVAL_20261002.json'));
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...octoberApproval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),e.id,...octoberApproval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids,...weeklyArtCompletion.event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
@@ -187,7 +213,7 @@ test('October human approval binds the three exact resent PNGs across roles and 
  }
  assert.equal(files.size,3);
  assert.equal(approval.previous_master_sha256,record.preserved_master_sha256);assert.equal(Object.keys(approval.preserved_master_entries).length,8);
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids,'2026-10-zorua-community-day',...JSON.parse(fs.readFileSync('docs/qa/THUNDURUS_ELGYEM_APPROVAL_20261003.json')).event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids,...weeklyArtCompletion.event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){
   assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+old.file)).digest('hex'),old.sha256);
@@ -203,7 +229,7 @@ test('Thundurus and Elgyem approval binds the displayed revisions while preservi
  assert.equal(review.status,'PENDING_REVIEW');assert.equal(review.approval,null);assert.equal(hash(approval.candidate_record),approval.candidate_record_sha256);
  assert.deepEqual(approval.event_ids,['2026-10-shadow-thundurus','2026-10-08-spotlight-elgyem']);assert.equal(approval.artworks.length,2);
  assert.equal(Object.keys(approval.preserved_master_entries).length,12);
- assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids].sort());
+ assert.deepEqual(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).sort(),[...Object.keys(approval.preserved_master_entries),...approval.event_ids,...goPassApproval.event_ids,...latiosApproval.event_ids,...scenicSundayApproval.event_ids,...showcaseTuesdayApproval.event_ids,...remainingArtBatch.event_ids,...weeklyArtCompletion.event_ids].sort());
  for(const [id,old] of Object.entries(approval.preserved_master_entries)){assert.deepEqual(JSON.parse(JSON.stringify(w.SPIDEY_APPROVED_ART_MASTER[id])),old);assert.equal(hash('spidey-app/'+old.file),old.sha256);}
  for(const a of approval.artworks){
   const c=review.candidates.find(c=>c.event_id===a.event_id),e={id:a.event_id},master=w.SPIDEY_APPROVED_ART_MASTER[e.id];
