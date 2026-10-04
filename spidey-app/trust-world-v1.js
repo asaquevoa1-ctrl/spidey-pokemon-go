@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const STATUS = {official:['OFICIAL','Informação confirmada em fonte primária'],datamine:['DATAMINE','Descoberta técnica ainda não confirmada oficialmente'],awaiting:['AGUARDANDO CONFIRMAÇÃO','Aguardando confirmação em fonte primária'],local:['EVENTO LOCAL','Disponível somente no local indicado']};
+  const STATUS = {official:['OFICIAL','Informação do anúncio oficial'],datamine:['PRÉVIA DA COMUNIDADE','Informação da comunidade que ainda aguarda anúncio oficial'],awaiting:['AGUARDANDO CONFIRMAÇÃO','Aguardando anúncio oficial'],local:['EVENTO LOCAL','Disponível somente no local indicado']};
   window.SPIDEY_EVENT_TRUST={version:'2026-10-04-malaga-v1',statuses:STATUS,failClosed:true};
   const worldEvents=[{id:'2026-toyohashi-observatory',title:'Observatório Astronômico de Pokémon — Toyohashi',place:'Toyohashi, Japão',dates:'Evento local',status:'awaiting',locality:'local',note:'Mais informações serão exibidas após confirmação.',artApproved:false}];window.SPIDEY_WORLD_EVENTS=worldEvents;
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -44,11 +44,12 @@
   }
   function openLocalEvent(id) {
     const event=worldEvents.find(e=>e.id===id);if(!event?.schedule)return;
+    beginAppDialog();
     if(dialog.open)dialog.close();
     detail.classList.remove('spidey-detail-v3','player-art-unavailable','v23-no-hero');
     delete detail.dataset.visualCategory;delete detail.dataset.visualCharacter;
     detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · MÁLAGA, ESPANHA</span><h2>Pikachu · Fundo de Málaga</h2>${backgroundFigure(event)}<p>${esc(event.note)}</p><div class="world-event-window">${scheduleText(event)}</div><p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener">Anúncio oficial ↗</a><p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener">Serebii ↗</a>.</p></div>`;
-    dialog.showModal();dialog.scrollTop=0;detail.scrollTop=0;
+    showAppDialog();dialog.scrollTop=0;detail.scrollTop=0;
     document.getElementById('closeDialog')?.focus({preventScroll:true});
   }
   function liveClock(event,now=new Date()) {
@@ -66,7 +67,7 @@
   function loadFly(){if(document.querySelector('script[data-spidey-fly]'))return;const s=document.createElement('script');s.src='fly-v1.js?v=20260930-fly3';s.defer=true;s.dataset.spideyFly='1';document.head.append(s)}
   function apply(){
     renderWorldEvents();exposeApprovedPremium();
-    fetch('data/local-events.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw Error('Eventos locais indisponíveis');return response.json()}).then(data=>{worldEvents.unshift(...data.events);renderWorldEvents();mountLocalFly()}).catch(()=>{
+    window.SpideyCatalog.load('local-events').then(data=>{worldEvents.splice(0,worldEvents.length,...data.events,{id:'2026-toyohashi-observatory',title:'Observatório Astronômico de Pokémon — Toyohashi',place:'Toyohashi, Japão',dates:'Evento local',status:'awaiting',locality:'local',note:'Mais informações serão exibidas após confirmação.'});renderWorldEvents();mountLocalFly()}).catch(()=>{
       document.getElementById('worldEvents')?.insertAdjacentHTML('beforeend','<p class="empty">Não foi possível carregar os eventos locais. Recarregue para tentar novamente.</p>');
     });
     document.addEventListener('click',async event=>{

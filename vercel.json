@@ -1,20 +1,47 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "api/push/*.js": { "maxDuration": 30 },
-    "api/gpx.js": { "maxDuration": 10, "includeFiles": "spidey-app/data/stamps.json" }
+    "api/push/*.js": {
+      "maxDuration": 30
+    },
+    "api/gpx.js": {
+      "maxDuration": 10,
+      "includeFiles": "spidey-app/data/stamps.json"
+    },
+    "api/catalog.js": {
+      "maxDuration": 10
+    }
   },
   "redirects": [
-    { "source": "/", "destination": "/spidey-app/", "permanent": false }
+    {
+      "source": "/",
+      "destination": "/spidey-app/",
+      "permanent": false
+    }
   ],
   "headers": [
     {
       "source": "/spidey-app/sw.js",
-      "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
     }
   ],
   "rewrites": [
-    { "source": "/spidey-app/api/push/:action", "destination": "/api/push/:action" },
-    { "source": "/spidey-app/api/gpx", "destination": "/api/gpx" }
+    {
+      "source": "/spidey-app/api/push/:action",
+      "destination": "/api/push/:action"
+    },
+    {
+      "source": "/spidey-app/api/gpx",
+      "destination": "/api/gpx"
+    },
+    {
+      "source": "/spidey-app/api/catalog",
+      "destination": "/api/catalog"
+    }
   ]
 }

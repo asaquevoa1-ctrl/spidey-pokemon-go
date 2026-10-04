@@ -1,0 +1,54 @@
+name: Spidey App - entregar alertas
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/spidey-push-dispatch.yml"
+      - "spidey-app/api/push/**"
+      - "api/push/**"
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: spidey-push-delivery
+  cancel-in-progress: false
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Verificar envio com autenticação temporária
+        env:
+          PUSH_URL: https://spidey-pokemon-go.vercel.app/api/push/dispatch
+          VERIFY_ONLY: ${{ github.event_name == 'push' && 'true' || 'false' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PYCODE'
+          import os, json, time, urllib.request, urllib.error
+          from urllib.parse import quote
+          audience = os.environ['PUSH_URL']
+          oidc_url = os.environ['ACTIONS_ID_TOKEN_REQUEST_URL'] + '&audience=' + quote(audience, safe='')
+          oidc_req = urllib.request.Request(oidc_url, headers={'Authorization': 'Bearer ' + os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']})
+          with urllib.request.urlopen(oidc_req, timeout=15) as result:
+              token = json.load(result)['value']
+          dry_run = os.environ['VERIFY_ONLY'] == 'true'
+          body = json.dumps({'dry_run': dry_run}).encode()
+          request = urllib.request.Request(audience, data=body, headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'}, method='POST')
+          for attempt in range(6):
+              try:
+                  with urllib.request.urlopen(request, timeout=40) as result:
+                      response = json.load(result)
+                  if not response.get('ok'):
+                      raise RuntimeError('Dispatcher did not confirm execution')
+                  print(json.dumps(response))
+                  break
+              except urllib.error.HTTPError as error:
+                  if error.code not in (401, 503) or not dry_run or attempt == 5:
+                      print('Dispatch HTTP', error.code)
+                      raise SystemExit(1)
+                  time.sleep(20)
+          PYCODE

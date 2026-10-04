@@ -55,6 +55,7 @@
   async function openMuseums() {
     try {
       const data = await load();
+      beginAppDialog();
       if (dialog.open) dialog.close();
       detail.classList.remove('spidey-detail-v3', 'player-art-unavailable', 'v23-no-hero');
       delete detail.dataset.visualCategory;
@@ -70,7 +71,7 @@
         <p class="space-background-credit">Fundos do jogo: <a href="${esc(data.background_assets_source.url)}" target="_blank" rel="noopener">acervo comunitário PokeMiners ↗</a>. Cidades conferidas no <a href="${esc(data.background_assets_source.city_mapping_url)}" target="_blank" rel="noopener">Serebii ↗</a>.</p>
         <a class="action-btn" href="${esc(data.source.url)}" target="_blank" rel="noopener">Anúncio oficial ↗</a>
       </div>`;
-      dialog.showModal();
+      showAppDialog();
       dialog.scrollTop = 0;
       detail.scrollTop = 0;
       document.getElementById('closeDialog')?.focus({preventScroll:true});

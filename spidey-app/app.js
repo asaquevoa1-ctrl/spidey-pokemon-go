@@ -309,6 +309,7 @@ function stampStopHtml(rally, stop, progress) {
 }
 
 function openStampRally(rally) {
+  beginAppDialog();
   const stops = rally.stops || [];
   const progress = getStampProgress(rally);
   const exactStops = stops.filter(exactPokestop);
@@ -344,7 +345,7 @@ function openStampRally(rally) {
   detail.querySelectorAll('.copy-stamp-coord').forEach((button) => {
     button.addEventListener('click', async () => {
       await navigator.clipboard.writeText(button.dataset.value);
-      showToast('Coordenada da Stop copiada.');
+      showToast('Coordenada da Poképarada copiada.');
     });
   });
   detail.querySelectorAll('.download-stop-gpx').forEach((button) => {
@@ -352,24 +353,24 @@ function openStampRally(rally) {
       const stop = stops.find((item) => item.id === button.dataset.stopId);
       if (!stop || !exactPokestop(stop)) return;
       downloadText(`${rally.slug}-${stop.city.toLowerCase().replace(/[^a-z0-9]+/gi, '-')}.gpx`, gpxDocument(`${rally.title} - ${stop.city}`, [{ ...stop, name: stop.venue || stop.city }]));
-      showToast('GPX da Stop gerado.');
+      showToast('Rota da Poképarada baixada.');
     });
   });
   detail.querySelector('#downloadRallyGpx')?.addEventListener('click', () => {
     if (!fullGpx) return;
     downloadText(`${rally.slug}.gpx`, gpxDocument(rally.title, exactStops.map((stop) => ({ ...stop, name: `${stop.city} - ${stop.venue}` }))));
-    showToast('GPX completo do rally gerado.');
+    showToast('Rota completa baixada.');
   });
-  dialog.showModal();
+  showAppDialog();
 }
 
 function renderMapSummary() {
   const exact = state.stamps.flatMap((rally) => (rally.stops || []).map((stop) => ({ rally, stop }))).filter(({ stop }) => exactPokestop(stop));
   if (!exact.length) {
-    mapSummary.innerHTML = '<span class="eyebrow">SEM PONTOS FALSOS</span><h2>Mapa aguardando coordenadas exatas</h2><p>A estrutura está pronta, mas nenhuma venue será convertida em PokéStop por aproximação. Quando uma Stop for confirmada, ela aparecerá aqui.</p>';
+    mapSummary.innerHTML = '<span class="eyebrow">SEM PONTOS FALSOS</span><h2>Mapa aguardando coordenadas exatas</h2><p>A estrutura está pronta, mas nenhuma local será convertida em PokéStop por aproximação. Quando uma Stop for confirmada, ela aparecerá aqui.</p>';
     return;
   }
-  mapSummary.innerHTML = `<span class="eyebrow">COORDENADAS CONFIRMADAS</span><h2>${exact.length} Stops no mapa</h2><div class="map-point-list">${exact.map(({ rally, stop }) => `<div class="coordinates"><div><strong>${stop.city} · ${rally.title}</strong><br><code>${Number(stop.latitude).toFixed(6)}, ${Number(stop.longitude).toFixed(6)}</code></div><button class="action-btn copy-map-coord" data-value="${Number(stop.latitude).toFixed(6)}, ${Number(stop.longitude).toFixed(6)}">Copiar</button></div>`).join('')}</div>`;
+  mapSummary.innerHTML = `<span class="eyebrow">COORDENADAS CONFIRMADAS</span><h2>${exact.length} Poképaradas no mapa</h2><div class="map-point-list">${exact.map(({ rally, stop }) => `<div class="coordinates"><div><strong>${stop.city} · ${rally.title}</strong><br><code>${Number(stop.latitude).toFixed(6)}, ${Number(stop.longitude).toFixed(6)}</code></div><button class="action-btn copy-map-coord" data-value="${Number(stop.latitude).toFixed(6)}, ${Number(stop.longitude).toFixed(6)}">Copiar</button></div>`).join('')}</div>`;
   mapSummary.querySelectorAll('.copy-map-coord').forEach((button) => button.addEventListener('click', async () => {
     await navigator.clipboard.writeText(button.dataset.value);
     showToast('Coordenada copiada.');
@@ -377,6 +378,8 @@ function renderMapSummary() {
 }
 
 function openEvent(event) {
+  if (!event) return;
+  beginAppDialog();
   const localStart = parseDate(event.schedule?.start_local);
   const localEnd = parseDate(event.schedule?.end_local);
   const brazilStart = parseDate(event.schedule?.start_brazil || event.schedule?.start_local);
@@ -389,7 +392,7 @@ function openEvent(event) {
     <img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
-      <h2>${event.title}</h2><p>${event.summary || ''}</p>
+      <h2>${event.public_title || event.title}</h2><p>${event.public_summary || event.summary || ''}</p>
       <div class="info-grid">
         <div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div>
         <div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>
@@ -408,10 +411,11 @@ function openEvent(event) {
     showToast('Coordenadas copiadas.');
   }));
   detail.querySelector('#downloadGpx')?.addEventListener('click', () => downloadGpx(event));
-  dialog.showModal();
+  showAppDialog();
 }
 
 function setView(viewId) {
+  window.SpideyNavigation?.trackView(viewId);
   document.querySelectorAll('.app-view').forEach((view) => { view.hidden = view.id !== viewId; });
   document.querySelectorAll('.app-tab').forEach((tab) => {
     const active = tab.dataset.view === viewId;
@@ -427,31 +431,55 @@ function setView(viewId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-async function loadContent() {
-  try {
-    const [eventsResponse, stampsResponse] = await Promise.all([
-      fetch('data/events.json', { cache: 'no-store' }),
-      fetch('data/stamps.json', { cache: 'no-store' }),
-    ]);
-    if (!eventsResponse.ok) throw new Error(`events HTTP ${eventsResponse.status}`);
-    if (!stampsResponse.ok) throw new Error(`stamps HTTP ${stampsResponse.status}`);
-    const [eventsData, stampsData] = await Promise.all([eventsResponse.json(), stampsResponse.json()]);
-    state.events = (eventsData.events || []).filter((event) => event.status === 'published');
-    state.stamps = (stampsData.rallies || []).filter((rally) => rally.status === 'published');
-    window.dispatchEvent(new Event('spideycontentready'));
-    renderCalendar();
-    renderEvents();
-    renderStamps();
-    if (typeof renderWeeklyView === 'function') renderWeeklyView();
-    if (typeof renderMapV2 === 'function') renderMapV2();
-    else renderMapSummary();
-  } catch (error) {
-    console.error(error);
-    eventList.innerHTML = '<p class="empty">Não foi possível carregar os eventos.</p>';
-    if (stampList) stampList.innerHTML = '<p class="empty">Não foi possível carregar os Stamps.</p>';
-    showToast('Falha ao carregar dados do Spidey.');
-  }
+let contentLoading = null;
+let catalogFingerprint = '';
+let lastContentCheck = 0;
+function beginAppDialog() { window.SpideyNavigation?.beginDialog(); }
+function showAppDialog() {
+  if (window.SpideyNavigation) window.SpideyNavigation.openDialog();
+  else if (!dialog.open) dialog.showModal();
 }
+async function loadContent({ refresh = false } = {}) {
+  if (contentLoading) return contentLoading;
+  contentLoading = (async () => {
+    try {
+      const [eventsData, stampsData] = await Promise.all([
+        window.SpideyCatalog.load('events'), window.SpideyCatalog.load('stamps'),
+      ]);
+      const events = eventsData.events.filter(event => event.status === 'published');
+      const stamps = stampsData.rallies.filter(rally => rally.status === 'published');
+      const fingerprint = JSON.stringify([events, stamps]);
+      lastContentCheck = Date.now();
+      const status = document.getElementById('calendarUpdateStatus');
+      if (status) status.textContent = 'Agenda em dia. As novidades aparecem aqui automaticamente.';
+      window.dispatchEvent(new Event('spideycatalogchecked'));
+      if (fingerprint === catalogFingerprint) return;
+      catalogFingerprint = fingerprint;
+      state.events = events; state.stamps = stamps;
+      renderCalendar(); renderEvents(); renderStamps();
+      if (typeof renderWeeklyView === 'function') renderWeeklyView();
+      if (typeof renderMapV2 === 'function') renderMapV2(); else renderMapSummary();
+      window.dispatchEvent(new Event('spideycontentready'));
+      if (refresh) window.dispatchEvent(new Event('spideycatalogupdated'));
+    } catch (error) {
+      console.error('Spidey agenda indisponível');
+      const status = document.getElementById('calendarUpdateStatus');
+      if (status) status.textContent = state.events.length ? 'Mostrando a última agenda salva. Tentaremos atualizar quando houver conexão.' : 'Não foi possível atualizar a agenda. Tente novamente quando estiver online.';
+      if (!state.events.length) {
+        eventList.innerHTML = '<p class="empty">Não foi possível carregar os eventos.</p>';
+        if (stampList) stampList.innerHTML = '<p class="empty">Não foi possível carregar os selos.</p>';
+      }
+    }
+  })().finally(() => { contentLoading = null; });
+  return contentLoading;
+}
+function refreshContent() {
+  if (Date.now() - lastContentCheck >= 60000) loadContent({ refresh: true });
+}
+setInterval(() => { if (document.visibilityState === 'visible') refreshContent(); }, 15 * 60000);
+window.addEventListener('online', refreshContent);
+window.addEventListener('focus', refreshContent);
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refreshContent(); });
 
 async function enableNotifications() {
   if (window.SpideyPush?.subscribeRemotePush) return window.SpideyPush.subscribeRemotePush();
@@ -476,8 +504,9 @@ function installedAsApp() {
   return window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 }
 function showInstallGuide() {
-  detail.innerHTML = `<div class="detail-body"><span class="eyebrow">SPIDEY NO SEU CELULAR</span><h2>Instalar o Spidey</h2><p>Use o ícone na tela inicial para abrir o app.</p><h3>Android · Chrome</h3><ol class="bonus-list"><li>Abra este site no Chrome, fora do navegador interno do WhatsApp ou ChatGPT.</li><li>Toque no menu de três pontos (⋮).</li><li>Escolha <strong>Instalar e criar atalho</strong> e depois <strong>Instalar</strong>.</li><li>Confirme e abra o Spidey pelo novo ícone.</li></ol><p>Dependendo da versão do navegador, a opção pode se chamar “Instalar app” ou “Adicionar à tela inicial”.</p><h3>iPhone · Safari</h3><p>Abra o site no Safari. Toque em Compartilhar e em Adicionar à Tela de Início.</p><p class="microcopy">Alertas automáticos ainda estão indisponíveis. Seu progresso de selos fica salvo neste aparelho e navegador.</p></div>`;
-  dialog.showModal();
+  beginAppDialog();
+  detail.innerHTML = `<div class="detail-body"><span class="eyebrow">SPIDEY NO SEU CELULAR</span><h2>Instalar o Spidey</h2><p>Use o ícone na tela inicial para abrir o app.</p><h3>Android · Chrome</h3><ol class="bonus-list"><li>Abra este site no Chrome, fora do navegador interno do WhatsApp ou ChatGPT.</li><li>Toque no menu de três pontos (⋮).</li><li>Escolha <strong>Instalar e criar atalho</strong> e depois <strong>Instalar</strong>.</li><li>Confirme e abra o Spidey pelo novo ícone.</li></ol><p>Dependendo da versão do navegador, a opção pode se chamar “Instalar app” ou “Adicionar à tela inicial”.</p><h3>iPhone · Safari</h3><p>Abra o site no Safari. Toque em Compartilhar e em Adicionar à Tela de Início.</p><p class="microcopy">Para receber avisos, toque em Ativar alertas e permita as notificações. No iPhone, abra o Spidey pelo ícone instalado. Seu progresso de selos fica salvo neste aparelho e navegador.</p></div>`;
+  showAppDialog();
 }
 const installButton = $('#installButton');
 installButton.hidden = installedAsApp();

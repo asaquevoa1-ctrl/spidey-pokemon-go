@@ -1,10 +1,21 @@
 (() => {
   const statusEl = document.querySelector('#notificationStatus');
   const notificationButton = document.querySelector('#notificationButton');
+  const testButton = document.querySelector('#testNotificationButton');
+  const stopButton = document.querySelector('#stopNotificationButton');
   let subscribing = null;
   let checking = null;
   let availability = null;
   let active = false;
+  let availableKey = null;
+  let currentSubscription = null;
+
+  function setActive(value) {
+    active = value;
+    if (testButton) testButton.hidden = !value;
+    if (stopButton) stopButton.hidden = !value;
+    if (notificationButton) notificationButton.textContent = value ? 'Alertas ativos' : 'Ativar alertas';
+  }
 
   function setStatus(message) {
     if (statusEl && message) {
@@ -28,9 +39,7 @@
 
     try {
       if (eventId) {
-        const response = await fetch('data/events.json', { cache: 'no-store' });
-        if (!response.ok) return;
-        const payload = await response.json();
+        const payload = await window.SpideyCatalog.load('events');
         const event = (payload.events || []).find((item) => item.id === eventId || item.slug === eventId);
         if (event && typeof window.openEvent === 'function') {
           const start = event.schedule?.start_brazil || event.schedule?.start_local;
@@ -47,9 +56,7 @@
       }
 
       if (stampId) {
-        const response = await fetch('data/stamps.json', { cache: 'no-store' });
-        if (!response.ok) return;
-        const payload = await response.json();
+        const payload = await window.SpideyCatalog.load('stamps');
         const rally = (payload.rallies || []).find((item) => item.id === stampId || item.slug === stampId);
         if (rally && typeof window.openStampRally === 'function') {
           document.querySelector('[data-view="stampsView"]')?.click();
@@ -68,7 +75,9 @@
         notificationButton.disabled = true;
         notificationButton.textContent = 'Alertas indisponíveis';
       }
-      setStatus('Este navegador não oferece notificações.');
+      setStatus(/iPhone|iPad/i.test(navigator.userAgent || '')
+        ? 'No iPhone, instale o Spidey pelo Safari e abra pelo ícone na tela inicial para ativar os avisos.'
+        : 'Para receber avisos, abra o Spidey no Chrome ou em outro navegador com notificações.');
       return null;
     }
     try {
@@ -84,6 +93,7 @@
         return null;
       }
       availability = true;
+      availableKey = payload.publicKey;
       if (notificationButton && !active) {
         notificationButton.disabled = Boolean(subscribing);
         notificationButton.textContent = 'Ativar alertas';
@@ -108,7 +118,7 @@
   }
 
   async function activateRemotePush() {
-    const publicKey = await checkRemotePushAvailability();
+    const publicKey = availableKey || await checkRemotePushAvailability();
     if (!publicKey) return false;
     setStatus('Preparando seus alertas…');
     try {
@@ -116,7 +126,7 @@
         ? await Notification.requestPermission()
         : Notification.permission;
       if (permission !== 'granted') {
-        setStatus('Notificações não autorizadas neste navegador.');
+        setStatus('Os avisos estão bloqueados. Permita as notificações do Spidey nas configurações deste navegador e tente novamente.');
         return false;
       }
       let timeout;
@@ -125,6 +135,10 @@
         new Promise((_, reject) => { timeout = setTimeout(() => reject(new Error('service_worker_timeout')), 10000); }),
       ]).finally(() => clearTimeout(timeout));
       let subscription = await registration.pushManager.getSubscription();
+      const previousKey = subscription?.options?.applicationServerKey;
+      if (previousKey && String(new Uint8Array(previousKey)) !== String(urlBase64ToUint8Array(publicKey))) {
+        await subscription.unsubscribe(); subscription = null;
+      }
       if (!subscription) {
         subscription = await registration.pushManager.subscribe({
           userVisibleOnly: true,
@@ -140,15 +154,14 @@
           device: {
             locale: navigator.language || 'pt-BR',
             timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Sao_Paulo',
-            userAgent: navigator.userAgent,
           },
         }),
       });
 
       if (!saveResponse.ok) throw new Error(`subscribe HTTP ${saveResponse.status}`);
-      active = true;
-      setStatus('Notificações automáticas ativadas neste aparelho.');
-      if (notificationButton) notificationButton.textContent = 'Alertas ativos';
+      currentSubscription = subscription;
+      setActive(true);
+      setStatus('Alertas ativados. Toque em Testar alerta e confira o aviso neste aparelho.');
       return true;
     } catch (error) {
       console.error('Spidey Push subscribe:', error);
@@ -172,8 +185,39 @@
       notificationButton.disabled = true;
       notificationButton.textContent = 'Verificando alertas…';
     }
-    checkRemotePushAvailability();
+    checkRemotePushAvailability().then(async key => {
+      if (!key || Notification.permission !== 'granted') return;
+      try {
+        const registration = await navigator.serviceWorker.ready;
+        if (await registration.pushManager.getSubscription()) subscribeRemotePush();
+      } catch { /* A user can retry with the visible activation button. */ }
+    });
   }
+  async function testAlert() {
+    if (!currentSubscription || !active) return;
+    if (testButton) testButton.disabled = true;
+    try {
+      const response = await fetch('api/push/test', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: currentSubscription.toJSON() }) });
+      if (response.status === 429) { setStatus('Aguarde um minuto antes de enviar outro teste.'); return; }
+      if (!response.ok) throw new Error('test_failed');
+      setStatus('Enviamos o alerta de teste. Confira as notificações deste aparelho.');
+    } catch { setStatus('Não foi possível enviar o teste. Confira sua conexão e tente novamente.'); }
+    finally { if (testButton) testButton.disabled = false; }
+  }
+  async function stopAlerts() {
+    if (!currentSubscription) return;
+    if (stopButton) stopButton.disabled = true;
+    try {
+      const response = await fetch('api/push/unsubscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ endpoint: currentSubscription.endpoint || currentSubscription.toJSON().endpoint }) });
+      if (!response.ok) throw new Error('remove_failed');
+      await currentSubscription.unsubscribe();
+      currentSubscription = null; setActive(false);
+      setStatus('Alertas desativados neste aparelho. Você pode ativá-los novamente quando quiser.');
+    } catch { setStatus('Não foi possível desativar agora. Confira a conexão e tente novamente.'); }
+    finally { if (stopButton) stopButton.disabled = false; }
+  }
+  testButton?.addEventListener?.('click', testAlert);
+  stopButton?.addEventListener?.('click', stopAlerts);
   window.addEventListener('load', openDeepLink);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', prepareAlerts, { once: true });
   else prepareAlerts();
@@ -188,5 +232,7 @@
     openDeepLink,
     subscribeRemotePush,
     checkRemotePushAvailability,
+    testAlert,
+    stopAlerts,
   };
 })();

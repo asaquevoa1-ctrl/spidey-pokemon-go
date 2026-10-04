@@ -84,6 +84,7 @@
   }
 
   openStampRally = function spideyOpenStampRallyV2(rally) {
+    beginAppDialog();
     const stops = orderedStops(rally);
     const isPokelid = rally.collection_type === 'pokelids';
     const publicNotes=rally.public_notes ?? rally.notes ?? [];
@@ -121,14 +122,14 @@
     detail.innerHTML = `
       <div class="detail-body stamp-detail stamp-detail-v2 ${isPokelid ? 'stamp-detail-pokelids' : ''}">
         ${cover ? `<img class="stamp-rally-cover-v2" src="${escapeHtml(cover)}" alt="${escapeHtml(rally.title)}" loading="eager">` : ''}
-        <span class="eyebrow">${isPokelid ? 'POKÉLIDS · JAPÃO' : 'GO STAMP RALLY · ROTA SPIDEY'}</span>
+        <span class="eyebrow">${isPokelid ? 'POKÉLIDS · JAPÃO' : 'COLEÇÃO DE SELOS · SPIDEY'}</span>
         <h2>${escapeHtml(rally.title)}</h2>
         <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
         ${isPokelid ? '<p class="microcopy">As imagens são as artes das tampas. Novas PokéLids podem aparecer neste catálogo antes de receber um selo no jogo.</p>' : ''}
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
-          <div><strong>${isPokelid ? stops.filter(validCoordinate).length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais oficiais' : 'coordenadas exatas'}</span></div>
+          <div><strong>${isPokelid ? stops.filter(validCoordinate).length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais oficiais' : 'pontos confirmados'}</span></div>
           <div><strong>${stops.length - progress.size}</strong><span>restantes</span></div>
         </div>
 
@@ -148,9 +149,9 @@
 
         <section class="rally-coordinate-bundle-v4 stamp-datahub-v2" ${isPokelid ? 'hidden' : ''}>
           <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">COPIAR E BAIXAR</span><h3>Coordenadas em lote</h3></div>
+            <div><span class="eyebrow">COPIAR E BAIXAR</span><h3>Coordenadas da coleção</h3></div>
           </div>
-          <p class="microcopy">Formato <strong>latitude,longitude</strong>, uma coordenada por linha e na mesma ordem dos selos.</p>
+          <p class="microcopy">Cada linha mostra a localização de um selo, na ordem da coleção.</p>
           <textarea id="rallyAllCoordinates" readonly rows="8">${copySet(exactStops)}</textarea>
           <div class="action-row stamp-bulk-actions-v2">
             <button id="copyAllStampCoords" class="action-btn gold" type="button">Copiar todas</button>
@@ -235,7 +236,7 @@
           <h3>${escapeHtml(stop.venue || stop.city || `Selo ${index + 1}`)}</h3>
           <p>${escapeHtml(stop.city || '')}${stop.prefecture ? ` · ${escapeHtml(stop.prefecture)}` : ''}${stop.country ? ` · ${escapeHtml(stop.country)}` : ''}</p>
           ${stop.venue_detail ? `<small>${escapeHtml(stop.venue_detail)}</small>` : ''}
-          ${isPokelid ? `<div class="action-row"><a class="action-btn" href="https://www.google.com/maps?q=${Number(stop.latitude)},${Number(stop.longitude)}" target="_blank" rel="noopener">Mapa da PokéLid</a><a class="action-btn" href="${escapeHtml(stop.official_url)}" target="_blank" rel="noopener">Ver tampa oficial</a></div><small>Local da tampa; posição da PokéStop a conferir no jogo.</small>` : stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener">Ver local no mapa</a><p class="microcopy">PokéStop exata a conferir.</p>` : value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
+          ${isPokelid ? `<div class="action-row"><a class="action-btn" href="https://www.google.com/maps?q=${Number(stop.latitude)},${Number(stop.longitude)}" target="_blank" rel="noopener">Mapa da PokéLid</a><a class="action-btn" href="${escapeHtml(stop.official_url)}" target="_blank" rel="noopener">Ver tampa oficial</a></div><small>Local da tampa; posição da PokéStop a conferir no jogo.</small>` : stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener">Ver local no mapa</a><p class="microcopy">Poképarada confirmada a conferir.</p>` : value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
         </div>
         ${value ? `<div class="coordinates stamp-active-coordinates-v2"><div class="stamp-coordinate-values-v2"><div><small>Latitude</small><code>${value.split(',')[0]}</code></div><div><small>Longitude</small><code>${value.split(',')[1]}</code></div></div><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar coordenadas</button></div>` : ''}`;
       activeBox.querySelector('#copyActiveStampCoord')?.addEventListener('click', () => setClipboard(value, 'Coordenada copiada.'));
@@ -324,6 +325,6 @@
 
     renderGallery();
     renderActive();
-    dialog.showModal();
+    showAppDialog();
   };
 })();

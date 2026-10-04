@@ -1,6 +1,8 @@
 name: Spidey App - autopublicação validada
 
 on:
+  schedule:
+    - cron: "11 * * * *"
   push:
     branches:
       - main

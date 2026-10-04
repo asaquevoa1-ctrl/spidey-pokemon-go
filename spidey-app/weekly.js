@@ -26,7 +26,7 @@ function weeklyDateLabel(value) {
 }
 
 function weeklyTimeLabel(item) {
-  const value = item?.start_brazil;
+  const value = item?.schedule?.start_brazil || item?.start_brazil;
   if (!value) return 'Horário a confirmar';
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return 'Horário a confirmar';
@@ -100,7 +100,7 @@ function weeklyItemCard(item, compact = false) {
       ${visual}
       <div class="weekly-item-copy">
         ${schedule ? `<span class="weekly-date-range">${weeklyEsc(schedule.label)}</span>` : ''}
-        <span class="weekly-time">${weeklyEsc(weeklyTimeLabel(item))}</span>
+        <span class="weekly-time">${weeklyEsc(weeklyTimeLabel(weeklyFindEvent(item?.id) || item))}</span>
         <strong>${weeklyEsc(item.title || 'Evento')}</strong>
         ${!compact && item.summary ? `<p>${weeklyEsc(item.summary)}</p>` : ''}
         ${tags.length ? `<div class="weekly-tags">${tags.map((tag) => `<span>${weeklyEsc(tag)}</span>`).join('')}</div>` : ''}
@@ -189,7 +189,8 @@ function renderWeeklyView() {
   const root = document.querySelector('#weeklyView');
   if (!root) return;
   if (!spideyWeeklyData) {
-    if (!spideyWeeklyLoading) loadWeeklyData();
+    if (!spideyWeeklyLoading) window.addEventListener?.('spideycatalogchecked', loadWeeklyData);
+loadWeeklyData();
     return;
   }
   const data = spideyWeeklyData;
@@ -212,9 +213,12 @@ async function loadWeeklyData() {
   const status = document.querySelector('#weeklyLoadStatus');
   if (status) status.textContent = 'Carregando semana…';
   try {
-    const response = await fetch('data/weekly.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`weekly HTTP ${response.status}`);
-    spideyWeeklyData = await response.json();
+    if (window.SpideyCatalog) spideyWeeklyData = await window.SpideyCatalog.load('weekly');
+    else {
+      const response = await fetch('data/weekly.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Resumo indisponível');
+      spideyWeeklyData = await response.json();
+    }
     if (status) status.textContent = '';
     renderWeeklyView();
   } catch (error) {
@@ -225,4 +229,5 @@ async function loadWeeklyData() {
   }
 }
 
+window.addEventListener?.('spideycatalogchecked', loadWeeklyData);
 loadWeeklyData();

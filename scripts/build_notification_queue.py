@@ -106,8 +106,8 @@ def build(now: datetime) -> dict:
         "jobs": jobs,
         "meta": {
             "pending_count": len(jobs),
-            "delivery_backend": "not_configured",
-            "note": "Fila preparada. Envio push de produção ainda depende do backend de subscriptions/delivery.",
+            "delivery_backend": "web_push",
+            "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho.",
         },
     }
 

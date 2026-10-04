@@ -1,0 +1,9 @@
+.app-back-row { padding: 8px clamp(16px, 4vw, 42px) 0; }
+.app-back-row:has(button[hidden]) { display: none; }
+.dialog-navigation { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px; background: var(--surface, #fff); border-bottom: 1px solid var(--line, #d8e0e8); }
+#eventDialog .dialog-close { position: static; float: none; margin: 0; flex: 0 0 44px; width: 44px; height: 44px; padding: 0; }
+#eventDialog .dialog-back { min-height: 44px; font-weight: 700; }
+.notification-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.notification-controls [hidden] { display: none !important; }
+#notificationStatus { width: 100%; margin: 0; }
+.calendar-update-status { padding: 0 clamp(16px, 4vw, 42px); margin: 6px 0 0; }

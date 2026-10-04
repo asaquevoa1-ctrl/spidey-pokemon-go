@@ -96,7 +96,7 @@
   }
 
   function coordinateTypeLabel(location) {
-    if (location?.coordinate_type === 'exact_pokestop') return 'PokéStop exata';
+    if (location?.coordinate_type === 'exact_pokestop') return 'Poképarada confirmada';
     if (location?.coordinate_type === 'venue_reference') return 'Local aproximado';
     if (location?.coordinate_type === 'city_reference') return 'Cidade';
     return 'Local aproximado';
@@ -217,6 +217,7 @@
   };
 
   openStampRally = function spideyOpenStampRallyV4(rally) {
+    beginAppDialog();
     const stops = rally.stops || [];
     const progress = getStampProgress(rally);
     const exactStops = stops.filter(exactPokestop);
@@ -227,7 +228,7 @@
 
     detail.innerHTML = `
       <div class="detail-body stamp-detail">
-        <span class="eyebrow">GO STAMP RALLY</span>
+        <span class="eyebrow">COLEÇÃO DE SELOS</span>
         <h2>${rally.title}</h2>
         <p>${rally.public_summary ?? rally.summary ?? ''}</p>
         <div class="info-grid">
@@ -244,9 +245,9 @@
             ${fullGpx ? '<button id="downloadRallyGpx" class="action-btn">Baixar GPX completo</button>' : ''}
             ${rally.source?.url ? `<a class="action-btn" href="${rally.source.url}" target="_blank" rel="noopener">Fonte oficial</a>` : ''}
           </div>
-          ${!fullGpx ? `<p class="microcopy">O GPX completo só será liberado quando todas as ${stops.length} PokéStops tiverem coordenadas exatas. O campo acima contém apenas as ${exactStops.length} já confirmadas.</p>` : ''}
+          ${!fullGpx ? `<p class="microcopy">O GPX completo só será liberado quando todas as ${stops.length} PokéStops tiverem pontos confirmados. O campo acima contém apenas as ${exactStops.length} já confirmadas.</p>` : ''}
         </section>` : `
-          <p class="microcopy">Ainda não há coordenadas exatas confirmadas para copiar ou gerar GPX.</p>
+          <p class="microcopy">Ainda não há pontos confirmados confirmadas para copiar ou gerar GPX.</p>
           ${rally.source?.url ? `<div class="action-row"><a class="action-btn" href="${rally.source.url}" target="_blank" rel="noopener">Fonte oficial</a></div>` : ''}`}
 
         <div class="stamp-stops">${stops.map((stop) => stampStopHtml(rally, stop, progress)).join('')}</div>
@@ -284,7 +285,7 @@
       showToast('GPX completo do rally gerado.');
     });
 
-    dialog.showModal();
+    showAppDialog();
   };
 
   function refreshRenderedViews() {

@@ -2,14 +2,16 @@ name: Spidey Weekly - resumo semanal
 
 on:
   schedule:
-    # Segunda-feira, 07:05 no horário de Brasília (10:05 UTC).
-    - cron: '5 10 * * 1'
+    # Atualiza também quando o catálogo muda sem um novo push de usuário.
+    - cron: '29 * * * *'
   workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - "scripts/build_spidey_weekly.py"
+      - "spidey-app/data/events.json"
+      - "spidey-app/data/stamps.json"
       - ".github/workflows/spidey-weekly.yml"
 
 permissions:

@@ -136,7 +136,7 @@ function renderMapPointList(points) {
     const value = mapCoordinateText(point);
     const action = point.type === 'event'
       ? `<button class="action-btn" data-open-map-event="${point.event.id}">Detalhes</button>`
-      : `<button class="action-btn" data-open-map-stamp="${point.rally.id}">Rally</button>`;
+      : `<button class="action-btn" data-open-map-stamp="${point.rally.id}">Ver selos</button>`;
     return `
       <article class="map-location-card">
         <div class="map-location-type">${point.type === 'stamp' ? 'STAMP' : 'EVENTO'}</div>
@@ -158,12 +158,12 @@ function renderPendingVenues() {
   if (!root) return;
   const pending = pendingStampVenues();
   if (!pending.length) {
-    root.innerHTML = '<p class="empty">Nenhum venue pendente.</p>';
+    root.innerHTML = '<p class="empty">Todos os locais disponíveis estão confirmados.</p>';
     return;
   }
   root.innerHTML = pending.map(({ rally, stop }) => `
     <article class="map-pending-card">
-      <span class="coordinate-state pending">Aguardando coordenada exata</span>
+      <span class="coordinate-state pending">Localização a confirmar</span>
       <strong>${stop.city} · ${stop.country}</strong>
       <span>${stop.venue || 'Local a confirmar'}</span>
       <small>${rally.title}</small>
@@ -221,7 +221,7 @@ async function drawLeafletMap(points) {
       bounds.push([point.latitude, point.longitude]);
     });
     fitSpideyMap(bounds);
-    if (fallback) fallback.textContent = `${points.length} ponto(s) exato(s) no mapa.`;
+    if (fallback) fallback.textContent = `${points.length} locais confirmados no mapa.`;
   } catch (error) {
     console.error(error);
     if (fallback) fallback.textContent = 'O mapa visual não carregou, mas a lista de coordenadas continua disponível abaixo.';

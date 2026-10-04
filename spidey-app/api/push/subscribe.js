@@ -1,39 +1,20 @@
 import { saveSubscription, storageReady } from './_store.js';
-
-function validSubscription(subscription) {
-  return Boolean(
-    subscription &&
-    typeof subscription.endpoint === 'string' &&
-    subscription.endpoint.startsWith('https://') &&
-    subscription.keys &&
-    typeof subscription.keys.p256dh === 'string' &&
-    typeof subscription.keys.auth === 'string'
-  );
-}
-
+import { parseBody, sameOrigin, validSubscription, vapidReady } from './_config.js';
 export default async function handler(request, response) {
+  response.setHeader('Cache-Control', 'no-store');
   if (request.method !== 'POST') return response.status(405).json({ error: 'method_not_allowed' });
-  if (!storageReady()) return response.status(503).json({ error: 'push_storage_not_configured' });
-
-  const body = typeof request.body === 'string' ? JSON.parse(request.body || '{}') : (request.body || {});
-  if (!validSubscription(body.subscription)) return response.status(400).json({ error: 'invalid_subscription' });
-
-  const record = {
-    subscription: body.subscription,
-    device: {
-      locale: String(body.device?.locale || '').slice(0, 32),
-      timezone: String(body.device?.timezone || '').slice(0, 80),
-      userAgent: String(body.device?.userAgent || '').slice(0, 500),
-    },
-    created_at: new Date().toISOString(),
-  };
-
+  if (!storageReady() || !vapidReady()) return response.status(503).json({ error: 'push_not_configured' });
+  if (!sameOrigin(request)) return response.status(403).json({ error: 'invalid_origin' });
+  const body = parseBody(request);
+  if (!validSubscription(body?.subscription)) return response.status(400).json({ error: 'invalid_subscription' });
   try {
-    const id = await saveSubscription(record);
-    response.setHeader('Cache-Control', 'no-store');
+    const id = await saveSubscription({
+      subscription: { endpoint: body.subscription.endpoint, keys: body.subscription.keys },
+      device: { locale: String(body.device?.locale || 'pt-BR').slice(0, 40), timezone: String(body.device?.timezone || 'America/Sao_Paulo').slice(0, 80) },
+    });
     return response.status(201).json({ ok: true, id });
-  } catch (error) {
-    console.error('push subscribe', error);
-    return response.status(500).json({ error: 'subscription_store_failed' });
+  } catch {
+    console.error('push subscription store unavailable');
+    return response.status(503).json({ error: 'subscription_save_failed' });
   }
 }

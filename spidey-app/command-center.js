@@ -25,7 +25,7 @@
     const nav=document.querySelector('.app-tabs'),main=document.querySelector('main');if(!nav||!main)return;
     document.body.classList.add('spidey-command-center');
     const intro=document.querySelector('.experience-intro');
-    intro.querySelector('.eyebrow').textContent='SPIDEY COMMAND CENTER';
+    intro.querySelector('.eyebrow').textContent='SEU GUIA POKÉMON GO';
     const shortcuts=document.createElement('div');shortcuts.className='cc-shortcuts';shortcuts.innerHTML='<button class="action-btn" data-cc-view="flyView">Jogar pelo mundo</button><button class="action-btn" data-cc-view="stampsView">Explorar selos</button><button class="action-btn" data-cc-view="newsView">Novidades</button>';intro.append(shortcuts);
     const news=document.createElement('section');news.id='newsView';news.hidden=true;news.className='app-view';news.innerHTML='<section class="hero hero-compact"><span class="eyebrow">NOVIDADES</span><h1>Fique por dentro</h1><p>Veja o que vem por aí e acompanhe os anúncios de cada evento.</p></section><section class="section"><div id="newsList" class="cc-news-list"></div></section>';main.append(news);
     const b=document.createElement('button');b.className='app-tab';b.dataset.view='newsView';b.textContent='Novidades';nav.append(b);b.addEventListener('click',()=>{renderNews();setView('newsView')});

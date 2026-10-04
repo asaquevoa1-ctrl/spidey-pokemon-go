@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261004-stamps-v1';
+const CACHE = 'spidey-app-20261004-functional-v1';
 const CORE = [
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
@@ -81,6 +81,9 @@ const CORE = [
   './premium-event-art.js',
   './map.js',
   './push.js',
+  './catalog.js',
+  './navigation.js',
+  './navigation.css',
   './calendar-enhancements.js',
   './experience-v1.js',
   './qa-corrections-v1.js',
