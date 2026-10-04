@@ -265,9 +265,18 @@
     if (fullGpx && gpxLink) {
       const content = gpxDocument(rally.title, stops.map((stop) => ({ ...stop, name: `${stop.stamp_number || ''} ${stop.city || ''} - ${stop.venue || ''}`.trim() })));
       const url = URL.createObjectURL(new Blob([content], { type: 'application/gpx+xml;charset=utf-8' }));
-      gpxLink.href = url;
+      const updateGpxLink = () => {
+        gpxLink.href = navigator.onLine === false ? url : `api/gpx?rally=${encodeURIComponent(rally.id)}`;
+      };
+      updateGpxLink();
       gpxLink.download = `${rally.slug}.gpx`;
-      dialog.addEventListener('close', () => URL.revokeObjectURL(url), { once: true });
+      window.addEventListener('online', updateGpxLink);
+      window.addEventListener('offline', updateGpxLink);
+      dialog.addEventListener('close', () => {
+        URL.revokeObjectURL(url);
+        window.removeEventListener('online', updateGpxLink);
+        window.removeEventListener('offline', updateGpxLink);
+      }, { once: true });
     }
 
     detail.querySelector('#stampSearchV2')?.addEventListener('input', (event) => {

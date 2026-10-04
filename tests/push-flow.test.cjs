@@ -13,7 +13,7 @@ function setup(options = {}) {
   const window = { addEventListener() {}, Notification, PushManager: function () {} };
   const context = vm.createContext({
     window, Notification, navigator: { serviceWorker: { ready: options.timeout ? new Promise(() => {}) : Promise.resolve(registration) }, language: 'pt-BR', userAgent: 'QA' },
-    document: { querySelector: s => s === '#notificationStatus' ? status : button },
+    document: { querySelector: s => s === '#notificationStatus' ? status : button, addEventListener() {} },
     console: { error() {} }, Intl, Uint8Array, atob, URLSearchParams,
     setTimeout: options.timeout ? fn => { queueMicrotask(fn); return 1; } : setTimeout, clearTimeout,
     async fetch(url) {
@@ -25,16 +25,41 @@ function setup(options = {}) {
   });
   if (options.unsupported) delete window.PushManager;
   vm.runInContext(fs.readFileSync('spidey-app/push.js', 'utf8'), context);
-  return { run: window.SpideyPush.subscribeRemotePush, status, button, calls };
+  return { run: window.SpideyPush.subscribeRemotePush, check: window.SpideyPush.checkRemotePushAvailability, status, button, calls };
 }
 
 test('unavailable server or missing key never requests permission or claims activation', async () => {
   for (const options of [{ unconfigured: true }, { emptyKey: true }, { networkError: true }, { unsupported: true }]) {
     const s = setup(options); assert.equal(await s.run(), false);
     assert.equal(s.calls.permission, 0); assert.equal(s.calls.subscribe, 0); assert.equal(s.calls.saved, 0);
-    assert.equal(s.button.disabled, false); assert.equal(s.status.hidden, false);
+    assert.equal(s.button.disabled, !options.networkError); assert.equal(s.status.hidden, false);
+    assert.equal(s.button.textContent, options.networkError ? 'Verificar alertas' : 'Alertas indisponíveis');
     assert.doesNotMatch(s.status.textContent, /ativadas/);
   }
+});
+test('availability check never subscribes or asks permission, and recovers when the server becomes ready', async () => {
+  const options = { unconfigured: true };
+  const s = setup(options);
+  assert.equal(await s.check(), null);
+  assert.equal(s.button.disabled, true);
+  assert.equal(s.button.textContent, 'Alertas indisponíveis');
+  assert.deepEqual(s.calls, { permission: 0, subscribe: 0, saved: 0 });
+  options.unconfigured = false;
+  assert.equal(await s.check(), 'AQ');
+  assert.equal(s.button.disabled, false);
+  assert.equal(s.button.textContent, 'Ativar alertas');
+  assert.deepEqual(s.calls, { permission: 0, subscribe: 0, saved: 0 });
+});
+test('temporary network failure leaves a retry and a subsequent availability check succeeds', async () => {
+  const options = { networkError: true };
+  const s = setup(options);
+  assert.equal(await s.check(), null);
+  assert.equal(s.button.disabled, false);
+  assert.equal(s.button.textContent, 'Verificar alertas');
+  options.networkError = false;
+  assert.equal(await s.check(), 'AQ');
+  assert.equal(s.button.textContent, 'Ativar alertas');
+  assert.equal(s.calls.permission, 0);
 });
 test('denied permission and failed storage never report active alerts', async () => {
   const denied = setup({ answer: 'denied' }); assert.equal(await denied.run(), false); assert.equal(denied.calls.saved, 0);

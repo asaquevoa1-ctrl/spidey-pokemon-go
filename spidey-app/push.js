@@ -2,6 +2,9 @@
   const statusEl = document.querySelector('#notificationStatus');
   const notificationButton = document.querySelector('#notificationButton');
   let subscribing = null;
+  let checking = null;
+  let availability = null;
+  let active = false;
 
   function setStatus(message) {
     if (statusEl && message) {
@@ -58,23 +61,57 @@
     }
   }
 
-  async function activateRemotePush() {
+  async function readAvailability() {
     if (!('Notification' in window) || !('serviceWorker' in navigator) || !('PushManager' in window)) {
+      availability = false;
+      if (notificationButton) {
+        notificationButton.disabled = true;
+        notificationButton.textContent = 'Alertas indisponíveis';
+      }
       setStatus('Este navegador não oferece notificações.');
-      return false;
+      return null;
     }
-    setStatus('Preparando seus alertas…');
     try {
       const keyResponse = await fetch('api/push/public-key', { cache: 'no-store' });
-      if (!keyResponse.ok) {
+      const payload = keyResponse.ok ? await keyResponse.json() : {};
+      if (!payload.publicKey) {
+        availability = false;
+        if (notificationButton) {
+          notificationButton.disabled = true;
+          notificationButton.textContent = 'Alertas indisponíveis';
+        }
         setStatus('Notificações indisponíveis no momento.');
-        return false;
+        return null;
       }
-      const { publicKey } = await keyResponse.json();
-      if (!publicKey) {
-        setStatus('Notificações indisponíveis no momento.');
-        return false;
+      availability = true;
+      if (notificationButton && !active) {
+        notificationButton.disabled = Boolean(subscribing);
+        notificationButton.textContent = 'Ativar alertas';
       }
+      if (!active && !subscribing) setStatus('Ative os alertas para receber avisos neste aparelho.');
+      return payload.publicKey;
+    } catch (error) {
+      availability = null;
+      if (notificationButton && !active) {
+        notificationButton.disabled = Boolean(subscribing);
+        notificationButton.textContent = 'Verificar alertas';
+      }
+      setStatus('Não foi possível verificar os alertas. Tente novamente quando estiver online.');
+      return null;
+    }
+  }
+
+  function checkRemotePushAvailability() {
+    if (checking) return checking;
+    checking = readAvailability().finally(() => { checking = null; });
+    return checking;
+  }
+
+  async function activateRemotePush() {
+    const publicKey = await checkRemotePushAvailability();
+    if (!publicKey) return false;
+    setStatus('Preparando seus alertas…');
+    try {
       const permission = Notification.permission === 'default'
         ? await Notification.requestPermission()
         : Notification.permission;
@@ -109,6 +146,7 @@
       });
 
       if (!saveResponse.ok) throw new Error(`subscribe HTTP ${saveResponse.status}`);
+      active = true;
       setStatus('Notificações automáticas ativadas neste aparelho.');
       if (notificationButton) notificationButton.textContent = 'Alertas ativos';
       return true;
@@ -124,17 +162,29 @@
     if (notificationButton) notificationButton.disabled = true;
     subscribing = activateRemotePush().finally(() => {
       subscribing = null;
-      if (notificationButton) notificationButton.disabled = false;
+      if (notificationButton) notificationButton.disabled = availability === false;
     });
     return subscribing;
   }
 
   window.addEventListener('load', () => {
     openDeepLink();
+    if (notificationButton) {
+      notificationButton.disabled = true;
+      notificationButton.textContent = 'Verificando alertas…';
+    }
+    checkRemotePushAvailability();
+  });
+  window.addEventListener('online', () => {
+    if (!active && !subscribing) checkRemotePushAvailability();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && !active && !subscribing) checkRemotePushAvailability();
   });
 
   window.SpideyPush = {
     openDeepLink,
     subscribeRemotePush,
+    checkRemotePushAvailability,
   };
 })();

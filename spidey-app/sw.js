@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261004-malaga-v1';
+const CACHE = 'spidey-app-20261004-final-v1';
 const CORE = [
   './data/local-events.json',
   './assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png',
