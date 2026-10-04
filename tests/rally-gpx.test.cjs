@@ -17,14 +17,15 @@ function responseRecorder() {
   };
 }
 
-test('Japan download adds GO Lab while preserving the previous17 waypoints byte for byte', async () => {
+test('Japan download preserves the previous17 coordinates and adds GO Lab, correcting the Kagawa venue name', async () => {
   const { rallyGpx } = await gpxModule;
   const result = rallyGpx(catalog, japan.id);
   const verified = fs.readFileSync('docs/qa/japan-rally-browser-download-0433c32-20261002.gpx', 'utf8');
   assert.equal(result.status, 200);
   const oldStops = verified.match(/<wpt[^>]*>[\s\S]*?<\/wpt>/g);
   const newStops = result.content.match(/<wpt[^>]*>[\s\S]*?<\/wpt>/g);
-  assert.deepEqual(newStops.slice(0,17), oldStops);
+  assert.deepEqual(newStops.slice(0,16), oldStops.slice(0,16));
+  assert.equal(newStops[16], oldStops[16].replace('Pokémon Store / ponto temporário Takamatsu', 'Pokémon Center Kagawa'));
   assert.equal(newStops.length,18);
   assert.match(newStops[17], /lat="35\.72909" lon="139\.7187"/);
   assert.match(newStops[17], /Pokémon GO Lab/);
