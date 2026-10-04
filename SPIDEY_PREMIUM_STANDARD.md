@@ -150,7 +150,7 @@ Se o sistema não conseguir produzir uma arte que realmente atinja o padrão `sp
 
 Esses materiais podem existir exclusivamente como apoio técnico e devem ser identificados como tal. Eles não podem registrar `art_ready_for_review=true`, `gold_standard_visual=true` nem usar `spidey-premium-v1` como se tivessem atingido o padrão.
 
-**Ausência temporária de arte Premium é preferível a baixar o padrão.** Uma nova tentativa/revisão deve preservar o histórico R1/R2/R3/... e exigir nova decisão humana quando houver nova arte.
+**Ausência temporária de arte Premium é preferível a baixar o padrão.** Uma nova tentativa/revisão deve preservar o histórico R1/R2/R3/... e exigir nova decisão humana quando houver nova arte, salvo autorização explícita vigente para delegar o QA visual no padrão já validado.
 
 ## 10. Critérios de reprovação humana
 
@@ -208,3 +208,9 @@ Fonte atual continua comunitária (Leek Duck); condições de Rotas/companheiro 
 Nova conferência Home → detalhe em mobile/desktop: pôster inteiro/contain, foco Fechar, scrollTop 0 e sem overflow horizontal; PNG servido byte a byte igual ao aprovado. Provas: `docs/qa/scenic-sunday-approved-browser-bfeeb24-20261003.json`, auditoria `docs/qa/scenic-sunday-approved-local-audit-20261003.json`. Semana: resolver conferido localmente; a linha textual de 4/10 foi observada no QA histórico da candidata, sem nova alegação visual de miniatura. O detalhe mantém o placeholder genérico de local.
 
 Preview de QA verificado: https://spidey-pokemon-jtmdvu1t9-spidey3.vercel.app/spidey-app/index.html. Cookie temporário usado somente nesta conferência, sem validar acesso público de terceiros. Sem promoção a main/produção ou alteração de proteção/segredos/push. Próximo: cobertura das 11 artes restantes e resolução independente das pendências de acesso/Android.
+
+## Continuação das artes sem confirmação individual — 03/10/2026, 23:13 BRT
+
+O responsável declarou: “As artes já estão todas saindo no padrão correto. Pode seguir sem minha aprovação.” Autorização explícita em `docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json`, recebida às 23:13:44 BRT. A aprovação visual individual deixa de ser bloqueio para as próximas peças no padrão Premium já validado. O agente pode consolidar o PNG exato após revisão factual, visual e técnica, registrando `USER_DELEGATED_VISUAL_QA`; não apresentar essa decisão como uma aprovação humana individual de uma imagem ainda não mostrada.
+
+Continuam obrigatórios fontes corretas, identificação de comunidade/oficial, padrão Premium, marca, texto legível, integridade/hash/eventId, prévia responsiva e preservação das artes anteriores. Se uma peça falhar, corrigir ou manter bloqueada; não promover fallback ou recusa de geração a Premium. As recusas anteriores de Applin, Espaço e Sizzlipede permanecem registradas. Esta autorização não modifica decisões passadas nem concede aprovação ao lançamento completo, proteção Vercel ou configuração push.

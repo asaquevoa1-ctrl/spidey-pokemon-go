@@ -40,7 +40,7 @@
     "showcase_tuesday_poster": "APPROVED_POST_APPROVAL_PREVIEW_QA_PASSED_C3BB225"
   },
   "next_batch": [
-    "Cobertura dos dez eventos ainda sem arte Home/FLY na janela 01–07/10, preservando fontes e recusas registradas; Terça de Vitrine aprovada",
+    "Completar as artes restantes possíveis, sem confirmação individual; revisar fatos/visual/QA e registrar USER_DELEGATED_VISUAL_QA. Dez sem arte, dos quais três têm recusa de geração registrada.",
     "Acesso público Vercel e alertas; painel não autenticado, nenhuma proteção/segredo alterado",
     "QA físico Android/PWA/atualização/offline/recebimento push"
   ],
@@ -106,5 +106,7 @@
     "text": "Aprovo",
     "at": "2026-10-03T20:56:01-03:00",
     "context": "Decisão explícita após reenvio do PNG integral Terça de Vitrine v1 na resposta imediatamente anterior. Aprovação exclusiva desta imagem, sem aprovação de lançamento."
-  }
+  },
+  "art_continuation_authorization": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_art_approval_required": false
 }

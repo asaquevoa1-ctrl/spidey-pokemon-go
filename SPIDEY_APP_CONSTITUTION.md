@@ -58,7 +58,7 @@ A lista histórica fornecida pelo projeto (Kiritimati, Samoa, Nova Zelândia, Au
 - Nenhum fallback, heurística, thumbnail, IA, script de confiança ou correção posterior pode substituir uma arte APPROVED.
 - A mesma arte aprovada deve ser reutilizada em Hoje, Semana, Calendário e Detalhes, respeitando apenas crop/layout apropriado.
 - Variações horizontal/vertical são assets distintos quando aprovadas separadamente.
-- Uma arte só recebe APPROVED após validação factual e aprovação visual humana.
+- Uma arte recebe APPROVED após validação factual e aprovação visual humana ou QA visual delegado por autorização explícita vigente do responsável. Registrar a origem da decisão; a autorização de 03/10, 23:13 BRT dispensa confirmação individual para as próximas peças no padrão validado.
 - Uma arte factualmente incorreta perde o estado APPROVED, mesmo que visualmente boa.
 
 ## 7. Identidade visual
@@ -216,3 +216,9 @@ O material visual anteriormente tratado como Harvest Festival, com Pumpkaboo em 
 7. Manter GPX condicionado a dados validados.
 8. Testar isoladamente sem alterar Home/artes Premium.
 9. Gerar preview para aprovação antes de integração definitiva.
+
+## Continuação das artes sem confirmação individual — 03/10/2026, 23:13 BRT
+
+O responsável declarou: “As artes já estão todas saindo no padrão correto. Pode seguir sem minha aprovação.” Autorização explícita em `docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json`, recebida às 23:13:44 BRT. A aprovação visual individual deixa de ser bloqueio para as próximas peças no padrão Premium já validado. O agente pode consolidar o PNG exato após revisão factual, visual e técnica, registrando `USER_DELEGATED_VISUAL_QA`; não apresentar essa decisão como uma aprovação humana individual de uma imagem ainda não mostrada.
+
+Continuam obrigatórios fontes corretas, identificação de comunidade/oficial, padrão Premium, marca, texto legível, integridade/hash/eventId, prévia responsiva e preservação das artes anteriores. Se uma peça falhar, corrigir ou manter bloqueada; não promover fallback ou recusa de geração a Premium. As recusas anteriores de Applin, Espaço e Sizzlipede permanecem registradas. Esta autorização não modifica decisões passadas nem concede aprovação ao lançamento completo, proteção Vercel ou configuração push.
