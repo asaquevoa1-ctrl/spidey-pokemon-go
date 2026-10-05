@@ -10,8 +10,10 @@ on:
       - main
     paths:
       - "scripts/build_spidey_weekly.py"
+      - "scripts/test_spidey_weekly.py"
       - "spidey-app/data/events.json"
       - "spidey-app/data/stamps.json"
+      - "spidey-app/premium-approved-master.js"
       - ".github/workflows/spidey-weekly.yml"
 
 permissions:
@@ -41,6 +43,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m py_compile scripts/build_spidey_weekly.py
+          python -m scripts.test_spidey_weekly
           python -m json.tool spidey-app/data/events.json >/dev/null
           python -m json.tool spidey-app/data/stamps.json >/dev/null
 
@@ -55,37 +58,19 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
+          from scripts.build_spidey_weekly import validate_weekly
           data=json.load(open('weekly/current.json', encoding='utf-8'))
           app_data=json.load(open('spidey-app/data/weekly.json', encoding='utf-8'))
           assert data == app_data, 'weekly.json do app divergiu do pacote canônico'
-          assert data['schema_version'] == 'spidey-weekly-v1'
-          assert data['status'] == 'ready_for_art'
-          assert len(data['days']) == 7
-          assert data['week_start'] <= data['week_end']
+          validate_weekly(data)
           archive=Path('weekly/archive') / f"{data['week_start']}.json"
           assert archive.exists(), archive
 
-          items=[]
-          for day in data['days']:
-              items.extend(day.get('items') or [])
-          for group in data['sections'].values():
-              items.extend(group or [])
-
-          unique={item['id']:item for item in items if item.get('id')}
-          assert unique, 'Weekly sem eventos estruturados'
-          for item in unique.values():
-              art=item.get('weekly_art') or {}
-              assert art.get('url'), f"{item['id']} sem weekly_art"
-              assert 'spidey-logo-oficial' not in art['url'].lower(), f"{item['id']} usando logo como arte"
-              assert not art['url'].lower().startswith('data:'), f"{item['id']} usando data URI"
-              assert int(art.get('width') or 0) >= 720
-              assert int(art.get('height') or 0) >= 900
-
-          assert data['meta']['events_with_weekly_art'] == len(unique)
           print('Spidey Weekly OK:', data['title'])
-          print('Eventos visuais únicos:', len(unique))
+          print('Eventos da agenda:', data['meta']['events_in_weekly'])
           print('Premium:', data['meta']['events_with_premium_weekly_art'])
-          print('Vetoriais:', data['meta']['events_with_generated_weekly_art'])
+          print('Imagens oficiais:', data['meta']['events_with_official_weekly_art'])
+          print('Sem arte:', data['meta']['events_without_weekly_art'])
           PY
 
       - name: Gravar pacote semanal

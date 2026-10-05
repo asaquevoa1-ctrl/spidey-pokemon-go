@@ -1,6 +1,7 @@
 # SPIDEY WEEKLY — padrão oficial
 
-Versão: `spidey-weekly-premium-v1`
+Versão visual: `spidey-weekly-premium-v1`
+Regras de dados e resolução de imagens atualizadas em 05/10/2026.
 
 Aprovado pelo usuário em 28/09/2026.
 
@@ -41,25 +42,27 @@ Fonte canônica do Weekly:
 
 - `spidey-app/data/events.json`
 - `spidey-app/data/stamps.json`
+- `spidey-app/premium-approved-master.js` (arquivos e hashes aprovados)
 
 Pacote estruturado gerado automaticamente:
 
 - `weekly/current.json`
+- `spidey-app/data/weekly.json` (cópia idêntica para o app)
 - `weekly/archive/YYYY-MM-DD.json`
 
 Schema atual: `spidey-weekly-v1`.
 
 Cada item de evento do pacote semanal deve incluir `weekly_art`, resolvida pelo **Spidey Art System v1**.
 
-Prioridade visual por evento:
+Prioridade visual por evento, alinhada ao app publicado:
 
-1. arte individual própria/Premium válida (`card`, `thumb`, `hero` ou `poster`);
-2. arte legada válida em resolução suficiente;
-3. fallback vetorial individual `1080×1620` em `spidey-app/assets/events/generated/`.
+1. Arquivo exato do master com status `APPROVED`, conferido pelo SHA256. O mesmo original serve Início, Semana, detalhes e FLY.
+2. Na Semana do Espaço, a ilustração oficial original já registrada, com crédito. Essa imagem não é arte Premium aprovada.
+3. Sem arquivo aprovado disponível, `weekly_art.kind = missing`, URL vazia e a data simples usada pela interface. O evento continua na agenda; não gerar ou selecionar capa substituta.
 
-O fallback vetorial mantém o Weekly nítido e específico por evento, mas **não é classificado como arte Premium**. O logo oficial nunca pode ocupar o lugar de `weekly_art`.
+Não usar artes legadas concorrentes, logo ou fallback vetorial como substitutos do master. Uma referência Premium cujo arquivo falhou na conferência também não pode cair em outra imagem. A qualidade mínima dos pôsteres aprovados permanece `720×900`; a ilustração oficial possui seu formato original `1920×1080`.
 
-Qualidade mínima de `weekly_art`: `720×900`.
+A validação confere período de segunda a domingo, sete dias, eventos publicados e visíveis, arquivos/hashes e contagens de cobertura. `events_in_weekly` conta os IDs únicos realmente incluídos; `calendar_events_in_week` conta todos os eventos elegíveis no período. Contagens de Premium, imagem oficial e ausência de arte são separadas e não podem declarar cobertura integral quando faltam peças.
 
 ## Regras editoriais
 
@@ -75,10 +78,10 @@ Qualidade mínima de `weekly_art`: `720×900`.
 
 Workflow: `.github/workflows/spidey-weekly.yml`.
 
-Execução automática: toda segunda-feira, aproximadamente 07:05 no horário de Brasília.
+Execução automática: cron horário no minuto 29, além de alterações do catálogo, master ou gerador em `main` e execução manual. O horário de execução depende do GitHub Actions; conferir o resultado do run, sem prometer pontualidade.
 
 Fluxo alvo:
 
-`Calendário estruturado → Art System v1 → build_spidey_weekly.py → weekly/current.json → gerador de arte → validação → publicação/compartilhamento`
+`Calendário publicado + master aprovado → build_spidey_weekly.py → validação → current.json + weekly.json + arquivo semanal → commit → publicação do app`
 
-A geração dos dados e a resolução de arte individual já estão operacionais. A próxima etapa visual do Weekly é automatizar a renderização da peça final usando o padrão aprovado.
+A agenda semanal é exibida no app. A renderização automática de uma peça independente para compartilhamento continua uma etapa futura; o pacote `ready_for_art` não comprova a criação dessa peça.

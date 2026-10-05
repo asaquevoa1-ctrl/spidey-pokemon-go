@@ -1,5 +1,6 @@
 .app-back-row { position: sticky; top: 0; z-index: 30; background: var(--surface); padding: 8px clamp(16px, 4vw, 42px) 0; }
 .app-back-row:has(button[hidden]) { display: none; }
+#appBackButton { min-height: 44px; }
 .dialog-navigation { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px; background: var(--surface, #fff); border-bottom: 1px solid var(--line, #d8e0e8); }
 #eventDialog .dialog-close { position: static; float: none; margin: 0; flex: 0 0 44px; width: 44px; height: 44px; padding: 0; }
 #eventDialog .dialog-back { min-height: 44px; font-weight: 700; }
@@ -7,3 +8,10 @@
 .notification-controls [hidden] { display: none !important; }
 #notificationStatus { width: 100%; margin: 0; }
 .calendar-update-status { padding: 0 clamp(16px, 4vw, 42px); margin: 6px 0 0; }
+@media (min-width: 1100px) {
+  .spidey-command-center .app-back-row,
+  .spidey-command-center .calendar-update-status {
+    padding-left: max(216px, calc((100vw - 1000px) / 2 + 16px));
+    padding-right: 32px;
+  }
+}

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 import re
 from datetime import date, datetime, timedelta
@@ -10,7 +11,8 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 EVENTS_FILE = ROOT / "spidey-app" / "data" / "events.json"
 STAMPS_FILE = ROOT / "spidey-app" / "data" / "stamps.json"
-GENERATED_ART_DIR = ROOT / "spidey-app" / "assets" / "events" / "generated"
+APP_ROOT = ROOT / "spidey-app"
+ART_MASTER_FILE = APP_ROOT / "premium-approved-master.js"
 WEEKLY_DIR = ROOT / "weekly"
 CURRENT_FILE = WEEKLY_DIR / "current.json"
 APP_WEEKLY_FILE = ROOT / "spidey-app" / "data" / "weekly.json"
@@ -76,83 +78,51 @@ def event_range(event: dict) -> tuple[datetime | None, datetime | None]:
     return parse_dt(schedule.get("start_brazil") or schedule.get("start_local")), parse_dt(schedule.get("end_brazil") or schedule.get("end_local"))
 
 
-def slugify(value: str) -> str:
-    value = value.lower().strip()
-    value = re.sub(r"[^a-z0-9._-]+", "-", value)
-    return value.strip("-") or "evento"
-
-
-def normalize_art(raw, art: dict, source_role: str) -> dict | None:
-    if not raw:
-        return None
-    if isinstance(raw, str):
-        return {
-            "url": raw,
-            "width": int(art.get(f"{source_role}_width") or art.get("web_width") or art.get("width") or 0),
-            "height": int(art.get(f"{source_role}_height") or art.get("web_height") or art.get("height") or 0),
-            "sha256": art.get(f"{source_role}_sha256") or art.get("web_sha256") or art.get("sha256") or "",
-            "source_role": source_role,
-        }
-    if not isinstance(raw, dict):
-        return None
-    return {
-        "url": raw.get("url") or raw.get("src") or "",
-        "width": int(raw.get("width") or 0),
-        "height": int(raw.get("height") or 0),
-        "sha256": raw.get("sha256") or raw.get("web_sha256") or "",
-        "source_role": source_role,
-    }
-
-
-def weekly_art_usable(asset: dict | None) -> bool:
-    if not asset:
+def verified_asset(asset: dict) -> bool:
+    name = str(asset.get("file") or "")
+    digest = str(asset.get("sha256") or "")
+    if not name.startswith("assets/") or not re.fullmatch(r"[a-f0-9]{64}", digest):
         return False
-    url = str(asset.get("url") or "").strip()
-    if not url or url.lower().startswith("data:") or ".b64" in url.lower() or "spidey-logo-oficial" in url.lower():
+    path = (APP_ROOT / name).resolve()
+    if not path.is_relative_to(APP_ROOT.resolve()) or not path.is_file():
         return False
-    return int(asset.get("width") or 0) >= 720 and int(asset.get("height") or 0) >= 900
+    return hashlib.sha256(path.read_bytes()).hexdigest() == digest
 
 
-def resolve_weekly_art(event: dict) -> dict:
-    art = event.get("art") or {}
-    assets = art.get("assets") or {}
-    candidates: list[dict] = []
-    for role in ("card", "thumb", "hero", "poster"):
-        for raw in (assets.get(role), art.get(role)):
-            item = normalize_art(raw, art, role)
-            if item:
-                candidates.append(item)
-    if art.get("url"):
-        candidates.append({
-            "url": art.get("url"),
-            "width": int(art.get("web_width") or art.get("width") or 0),
-            "height": int(art.get("web_height") or art.get("height") or 0),
-            "sha256": art.get("web_sha256") or art.get("sha256") or "",
-            "source_role": "legacy",
-        })
+def load_art_master() -> dict:
+    # Read the JSON literal already used by the browser; no second approval list.
+    source = ART_MASTER_FILE.read_text(encoding="utf-8")
+    match = re.search(r"\bconst\s+master\s*=\s*", source)
+    if not match:
+        raise ValueError("Approved art master is unavailable")
+    master, _ = json.JSONDecoder().raw_decode(source[match.end():])
+    if not isinstance(master, dict):
+        raise ValueError("Invalid approved art master")
+    return master
 
-    for candidate in candidates:
-        if weekly_art_usable(candidate):
+
+def resolve_weekly_art(event: dict, master: dict) -> dict:
+    approved = master.get(event.get("id"))
+    if approved:
+        if approved.get("status") == "APPROVED" and verified_asset(approved):
             return {
-                **candidate,
-                "kind": "premium_or_source_art",
-                "premium": art.get("standard") == "spidey-premium-v1",
+                "url": approved["file"],
+                "width": approved["width"], "height": approved["height"],
+                "sha256": approved["sha256"],
+                "source_role": "canonical_master", "kind": "approved_master", "premium": True,
             }
-
-    event_id = str(event.get("id") or "").strip()
-    generated_name = f"{slugify(event_id)}.svg" if event_id else ""
-    generated_path = GENERATED_ART_DIR / generated_name if generated_name else None
-    if generated_path and generated_path.exists():
-        return {
-            "url": f"assets/events/generated/{generated_name}",
-            "width": 1080,
-            "height": 1620,
-            "sha256": "",
-            "source_role": "generated_vector",
-            "kind": "generated_vector",
-            "premium": False,
-        }
-
+        # A missing approved original must never fall through to another image.
+    else:
+        media = event.get("official_media") or {}
+        if (event.get("id") == "2026-10-world-space-week"
+                and media.get("classification") == "official_illustration" and verified_asset(media)):
+            return {
+                "url": media["file"], "width": media["width"], "height": media["height"],
+                "sha256": media["sha256"],
+                "source_role": "official_media", "kind": "official_illustration", "premium": False,
+            }
+    # The existing UI uses a date for these entries. Missing artwork does not
+    # prevent a verified event from appearing in the current week's agenda.
     return {
         "url": "",
         "width": 0,
@@ -164,7 +134,7 @@ def resolve_weekly_art(event: dict) -> dict:
     }
 
 
-def clean_event(event: dict) -> dict:
+def clean_event(event: dict, master: dict) -> dict:
     start, end = event_range(event)
     return {
         "id": event.get("id"),
@@ -176,7 +146,7 @@ def clean_event(event: dict) -> dict:
         "end_brazil": end.isoformat() if end else None,
         "source": event.get("source") or {},
         "art": event.get("art") or {},
-        "weekly_art": resolve_weekly_art(event),
+        "weekly_art": resolve_weekly_art(event, master),
     }
 
 
@@ -229,6 +199,7 @@ def build(anchor: date) -> dict:
     _, end_dt = day_window(week_end)
 
     events_doc = load(EVENTS_FILE)
+    master = load_art_master()
     events = []
     for event in events_doc.get("events", []):
         if event.get("status") not in (None, "published"):
@@ -246,7 +217,7 @@ def build(anchor: date) -> dict:
         group = group_for(event)
         if group == "daily":
             continue
-        sections[group].append(clean_event(event))
+        sections[group].append(clean_event(event, master))
 
     days = []
     for offset in range(7):
@@ -258,7 +229,7 @@ def build(anchor: date) -> dict:
             if start and end and overlaps(start, end, d_start, d_end):
                 group = group_for(event)
                 if group in {"daily", "featured", "raids", "max_pvp"} and (end - start) <= timedelta(days=2):
-                    active.append(clean_event(event))
+                    active.append(clean_event(event, master))
         active.sort(key=lambda item: item.get("start_brazil") or "")
         days.append({"date": day.isoformat(), "weekday": day.strftime("%A").lower(), "items": active[:5]})
 
@@ -299,17 +270,56 @@ def build(anchor: date) -> dict:
             "calendar_events_in_week": len(events),
             "events_with_weekly_art": sum(1 for art in unique_art.values() if art.get("url")),
             "events_with_premium_weekly_art": sum(1 for art in unique_art.values() if art.get("premium")),
-            "events_with_generated_weekly_art": sum(1 for art in unique_art.values() if art.get("kind") == "generated_vector"),
+            "events_with_official_weekly_art": sum(1 for art in unique_art.values() if art.get("kind") == "official_illustration"),
+            "events_without_weekly_art": sum(1 for art in unique_art.values() if not art.get("url")),
+            "events_in_weekly": len(unique_art),
+            "events_with_generated_weekly_art": 0,
             "generated_at": datetime.now(BR).isoformat(),
-            "source": "spidey-app/data/events.json + stamps.json + Art System v1",
+            "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js",
         },
     }
+
+
+def validate_weekly(payload: dict) -> None:
+    if payload.get("schema_version") != "spidey-weekly-v1" or payload.get("status") != "ready_for_art":
+        raise ValueError("Invalid weekly schema")
+    start = date.fromisoformat(payload["week_start"])
+    if start.weekday() != 0 or payload["week_end"] != (start + timedelta(days=6)).isoformat():
+        raise ValueError("Invalid weekly period")
+    if [day["date"] for day in payload["days"]] != [(start + timedelta(days=n)).isoformat() for n in range(7)]:
+        raise ValueError("Invalid weekly days")
+    events = {event["id"]: event for event in load(EVENTS_FILE).get("events", [])}
+    master = load_art_master()
+    items = [item for day in payload["days"] for item in day["items"]]
+    items += [item for group in payload["sections"].values() for item in group]
+    unique = {}
+    for item in items:
+        event = events.get(item.get("id"))
+        if not event or event.get("status") not in (None, "published") or (event.get("calendar") or {}).get("mode") == "hidden":
+            raise ValueError("Weekly item is not a published calendar event")
+        expected = resolve_weekly_art(event, master)
+        if item.get("weekly_art") != expected:
+            raise ValueError(f"{item['id']}: artwork differs from approved source")
+        if expected["kind"] == "approved_master" and (expected["width"] < 720 or expected["height"] < 900):
+            raise ValueError(f"{item['id']}: approved poster is too small")
+        unique[item["id"]] = expected
+    counts = {
+        "events_in_weekly": len(unique),
+        "events_with_weekly_art": sum(bool(art["url"]) for art in unique.values()),
+        "events_without_weekly_art": sum(not art["url"] for art in unique.values()),
+        "events_with_premium_weekly_art": sum(art["premium"] for art in unique.values()),
+        "events_with_official_weekly_art": sum(art["kind"] == "official_illustration" for art in unique.values()),
+        "events_with_generated_weekly_art": 0,
+    }
+    if not unique or any(payload["meta"].get(key) != value for key, value in counts.items()):
+        raise ValueError("Weekly artwork counts do not match its entries")
 
 
 def main() -> int:
     override = os.getenv("SPIDEY_WEEKLY_DATE", "").strip()
     anchor = date.fromisoformat(override) if override else datetime.now(BR).date()
     payload = build(anchor)
+    validate_weekly(payload)
     save(CURRENT_FILE, payload)
     save(APP_WEEKLY_FILE, payload)
     save(ARCHIVE_DIR / f"{payload['week_start']}.json", payload)

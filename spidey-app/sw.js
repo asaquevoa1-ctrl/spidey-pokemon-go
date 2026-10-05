@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261004-functional-v1';
+const CACHE = 'spidey-app-20261005-continuity-v1';
 const CORE = [
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
