@@ -8,7 +8,7 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1556715321241510010",
-  "status": "aguardando_curadoria_premium",
+  "status": "duplicado",
   "etapa_editorial": "aguardando_curadoria_premium",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
@@ -17,5 +17,6 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-10-05T17:18:35.684181+00:00"
+  "created_at_utc": "2026-10-05T17:18:35.684181+00:00",
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/halloween-part-1-2026"
 }
