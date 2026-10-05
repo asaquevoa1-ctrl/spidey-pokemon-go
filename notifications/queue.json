@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-05-max-monday-sizzlipede:start:60",
-      "event_id": "2026-10-05-max-monday-sizzlipede",
-      "event_title": "Max Monday: Dynamax Sizzlipede",
-      "category": "max_monday",
-      "scheduled_for": "2026-10-05T05:00:00-03:00",
-      "event_start": "2026-10-05T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Max Monday: Dynamax Sizzlipede começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-05-max-monday-sizzlipede",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-go-pass:start:60",
       "event_id": "2026-10-go-pass",
       "event_title": "Passe GO: Outubro",
@@ -726,7 +708,7 @@
     }
   ],
   "meta": {
-    "pending_count": 40,
+    "pending_count": 39,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
