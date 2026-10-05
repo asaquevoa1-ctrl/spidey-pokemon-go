@@ -1,4 +1,4 @@
-const FILES = { events: 'events', stamps: 'rallies', weekly: 'days', 'local-events': 'events' };
+const FILES = { events: 'events', stamps: 'rallies', weekly: 'days', 'local-events': 'events', pvp: 'leagues' };
 export default async function handler(request, response) {
   if (request.method !== 'GET') return response.status(405).json({ error: 'method_not_allowed' });
   const file = request.query?.file;

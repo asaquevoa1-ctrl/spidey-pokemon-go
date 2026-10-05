@@ -1,5 +1,5 @@
 (() => {
-  const fields = { events: 'events', stamps: 'rallies', weekly: 'days', 'local-events': 'events' };
+  const fields = { events: 'events', stamps: 'rallies', weekly: 'days', 'local-events': 'events', pvp: 'leagues' };
   async function load(file) {
     if (!Object.hasOwn(fields, file)) throw new Error('Unknown catalog');
     let response;

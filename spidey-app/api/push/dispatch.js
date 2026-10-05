@@ -1,5 +1,5 @@
 import webpush from 'web-push';
-import { listSubscriptions, readReceipt, writeReceipt, removeSubscription, storageReady } from './_store.js';
+import { listSubscriptions, readReceipt, writeReceipt, removeSubscription, storageReady, minimizeStoredMetadata } from './_store.js';
 import { authorized } from './_auth.js';
 import { env, parseBody, vapidReady, validSubscription } from './_config.js';
 
@@ -44,13 +44,14 @@ export default async function handler(request, response) {
   if (!storageReady() || !vapidReady()) return response.status(503).json({ error: 'push_not_configured' });
   if (!await authorized(request)) return response.status(401).json({ error: 'unauthorized' });
   try {
+    const dryRun = parseBody(request)?.dry_run === true;
+    const metadataCleaned = dryRun ? 0 : await minimizeStoredMetadata();
     const queueResponse = await fetch(env('SPIDEY_NOTIFICATION_QUEUE_URL') || DEFAULT_QUEUE_URL, { cache: 'no-store', signal: AbortSignal.timeout(5000) });
     if (!queueResponse.ok) throw new Error('queue_unavailable');
     const queue = await queueResponse.json();
     if (queue.schema_version !== 'spidey-notification-queue-v1' || !Array.isArray(queue.jobs)) throw new Error('invalid_queue');
     const due = dueJobs(queue);
-    const dryRun = parseBody(request)?.dry_run === true;
-    if (dryRun || !due.length) return response.status(200).json({ ok: true, dry_run: dryRun, due: due.length, deliveries: 0, storage_configured: true });
+    if (dryRun || !due.length) return response.status(200).json({ ok: true, dry_run: dryRun, due: due.length, deliveries: 0, storage_configured: true, metadata_cleaned: metadataCleaned });
     const pending = [];
     for (const job of due) {
       const receipt = await readReceipt(job.id);

@@ -1,0 +1,25 @@
+name: Spidey - testar aplicativo
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['spidey-app/**', 'api/**', 'tests/**', 'scripts/sync_pvpoke.py', 'scripts/check_app_health.py', 'scripts/test_app_health.py', 'vercel.json', '.github/workflows/spidey-app-tests.yml']
+  push:
+    branches: [main]
+    paths: ['spidey-app/**', 'api/**', 'tests/**', 'scripts/sync_pvpoke.py', 'scripts/check_app_health.py', 'vercel.json']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --ignore-scripts
+      - run: node --test tests/*.test.cjs
+      - run: python -m scripts.test_spidey_weekly
+      - run: python -m scripts.test_app_health

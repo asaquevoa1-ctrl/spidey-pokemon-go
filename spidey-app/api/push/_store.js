@@ -41,8 +41,9 @@ export async function readSubscription(endpoint) {
 export async function saveSubscription(record) {
   const id = subscriptionId(record.subscription.endpoint);
   const previous = await readSubscription(record.subscription.endpoint);
-  if (previous && JSON.stringify(previous.subscription.keys) === JSON.stringify(record.subscription.keys)) return id;
-  const saved = { ...record, id, created_at: previous?.created_at || new Date().toISOString(), updated_at: new Date().toISOString() };
+  if (previous && JSON.stringify(previous.subscription.keys) === JSON.stringify(record.subscription.keys)
+    && Object.keys(previous).every(key => ['subscription', 'id', 'created_at', 'updated_at', 'last_test_at'].includes(key))) return id;
+  const saved = minimalSubscriptionRecord({ ...record, id, created_at: previous?.created_at || new Date().toISOString(), updated_at: new Date().toISOString(), last_test_at: previous?.last_test_at });
   if (redisReady()) {
     const key = `${SUBSCRIPTION_PREFIX}${id}`;
     await redis(['SET', key, JSON.stringify(saved)]); await redis(['SADD', SUBSCRIPTIONS_SET, key]);
@@ -92,7 +93,27 @@ export async function writeReceipt(jobId, receipt) {
   else await write(`receipts/${subscriptionId(jobId)}`, record);
 }
 export async function markTested(record) {
-  const saved = { ...record, last_test_at: new Date().toISOString() };
+  const saved = minimalSubscriptionRecord({ ...record, last_test_at: new Date().toISOString() });
   if (redisReady()) await redis(['SET', `${SUBSCRIPTION_PREFIX}${record.id}`, JSON.stringify(saved)]);
   else await write(`subscriptions/${record.id}`, saved);
+}
+
+export function minimalSubscriptionRecord(record) {
+  const keys = record.subscription.keys;
+  return { subscription: { endpoint: record.subscription.endpoint, keys: { p256dh: keys.p256dh, auth: keys.auth } }, id: record.id,
+    created_at: record.created_at, updated_at: record.updated_at, ...(record.last_test_at ? { last_test_at: record.last_test_at } : {}) };
+}
+
+// Runs under the existing authenticated dispatch workflow; no data is exported.
+export async function minimizeStoredMetadata() {
+  const key = 'privacy-minimize-v1';
+  if ((await readReceipt(key)).complete) return 0;
+  let cleaned = 0;
+  for (const record of await listSubscriptions()) {
+    if (Object.keys(record).some(key => !['subscription', 'id', 'created_at', 'updated_at', 'last_test_at'].includes(key))) {
+      await saveSubscription(record); cleaned++;
+    }
+  }
+  await writeReceipt(key, { complete: true });
+  return cleaned;
 }
