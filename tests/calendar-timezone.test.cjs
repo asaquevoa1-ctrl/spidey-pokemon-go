@@ -31,6 +31,7 @@ test('October 1 agenda stays in Brasília and excludes all three October 2 event
     assert.deepEqual(Array.from(ids), [
       '2026-09-harvest-festival-applin',
       '2026-09-iit-delhi-rendezvous',
+      '2026-09-tcg-30th-us-retail',
       '2026-10-01-go-battle-thursday',
       '2026-10-01-spotlight-seedot',
     ], zone);
@@ -69,4 +70,19 @@ test('today uses Brasília at a month or year boundary regardless of the device 
       assert.equal(vm.runInContext('calendarDateKey(calendarToday(new Date(instant)))', sandbox), day, zone);
     }
   });
+});
+
+test('official October updates keep their confirmed Brasília windows and unrevealed boss empty', () => {
+  const byId = id => events.find(event => event.id === id);
+  const nightOut = byId('2026-10-pokemon-night-out-twitch');
+  const boston = byId('2026-10-city-safari-boston-rescheduled');
+  const unrevealed = byId('2026-10-super-mega-raid-day');
+  assert.equal(nightOut.schedule.start_local, '2026-10-24T19:30:00-07:00');
+  assert.equal(nightOut.schedule.start_brazil, '2026-10-24T23:30:00-03:00');
+  assert.equal(nightOut.calendar.mode, 'start');
+  assert.equal(boston.schedule.start_brazil, '2026-10-24T10:00:00-03:00');
+  assert.equal(boston.schedule.end_brazil, '2026-10-25T18:00:00-03:00');
+  assert.match(boston.summary, /exclusiva para quem já possui ingresso/i);
+  assert.equal(unrevealed.pokemon?.length || 0, 0);
+  assert.equal(unrevealed.bonuses?.length || 0, 0);
 });

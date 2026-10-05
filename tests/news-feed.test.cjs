@@ -38,3 +38,13 @@ test('Halloween teaser stays separate from the community calendar and invents no
  assert.equal(event.schedule.end_local,'2026-10-31T20:00:00-03:00');
  assert.equal(event.pokemon?.length||0,0);assert.equal(event.bonuses?.length||0,0);
 });
+
+test('official Boston, Night Out and TCG announcements are available without merging unrelated events',()=>{
+ const stories=build(events,range,new Date('2026-10-04T20:00Z'));
+ for(const id of ['2026-10-city-safari-boston-rescheduled','2026-10-pokemon-night-out-twitch','2026-09-tcg-30th-us-retail']){
+  const story=stories.find(item=>item.events.some(event=>event.id===id));
+  assert.ok(story,id);
+  assert.equal(story.events.length,1,id);
+  assert.equal(story.event.source.confidence,'official',id);
+ }
+});
