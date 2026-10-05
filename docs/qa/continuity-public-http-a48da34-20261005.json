@@ -1,0 +1,436 @@
+{
+  "observed_at_brazil": "2026-10-05T09:19:04.135110-03:00",
+  "commit": "a48da342fdb3281d8503cac3a4ff9f2d15461275",
+  "base_commit": "29ad1de19d0e56f655e2947d5fb656b5d4e2f1d9",
+  "public_url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "credentials_or_cookies_used": false,
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 11371,
+      "sha256": "c9d76cd74059431a7e953476a467b02dd47d3b8361737a866a7fa15975088277",
+      "expected_sha256": "c9d76cd74059431a7e953476a467b02dd47d3b8361737a866a7fa15975088277",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/index.html"
+    },
+    {
+      "path": "navigation.css",
+      "status": 200,
+      "bytes": 1146,
+      "sha256": "aa970999b38264135b71a4ee8ca3003bb0421bcc0c14f39b7d7e533fc6cee176",
+      "expected_sha256": "aa970999b38264135b71a4ee8ca3003bb0421bcc0c14f39b7d7e533fc6cee176",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/navigation.css"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "bytes": 9090,
+      "sha256": "46906b9418b0eb70d1b4ab6185b9a2975c6669acbbbcc9ef0b262a6750faebc9",
+      "expected_sha256": "46906b9418b0eb70d1b4ab6185b9a2975c6669acbbbcc9ef0b262a6750faebc9",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/sw.js"
+    },
+    {
+      "path": "premium-approved-master.js",
+      "status": 200,
+      "bytes": 13787,
+      "sha256": "029e18311037a2858c3f7bc6d4c941563afa06a30486b32e9ff66a68ee795f8e",
+      "expected_sha256": "029e18311037a2858c3f7bc6d4c941563afa06a30486b32e9ff66a68ee795f8e",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/premium-approved-master.js"
+    },
+    {
+      "path": "data/events.json",
+      "status": 200,
+      "bytes": 206107,
+      "sha256": "6e75a5e888a1a0c4db5f3de19db0b161d62279eb0c7fb42adf69307a65f59c04",
+      "expected_sha256": "6e75a5e888a1a0c4db5f3de19db0b161d62279eb0c7fb42adf69307a65f59c04",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/data/events.json"
+    },
+    {
+      "path": "data/stamps.json",
+      "status": 200,
+      "bytes": 655574,
+      "sha256": "6e62ceddb4ff4fe2cdc057d2d6c837ac337d8e7bd6e894244aa1ff72b2bda39d",
+      "expected_sha256": "6e62ceddb4ff4fe2cdc057d2d6c837ac337d8e7bd6e894244aa1ff72b2bda39d",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/data/stamps.json"
+    },
+    {
+      "path": "data/weekly.json",
+      "status": 200,
+      "bytes": 27141,
+      "sha256": "71a6dc2bf785323c807a6723f4f0cb63b53cc3bfeb7301200bea456998dff231",
+      "expected_sha256": "71a6dc2bf785323c807a6723f4f0cb63b53cc3bfeb7301200bea456998dff231",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/data/weekly.json"
+    },
+    {
+      "path": "assets/events/official/world-space-week-2026.jpg",
+      "status": 200,
+      "bytes": 1362600,
+      "sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9",
+      "expected_sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/official/world-space-week-2026.jpg"
+    },
+    {
+      "path": "assets/events/premium/choose-your-path-20260923-28-approved-v1.png",
+      "status": 200,
+      "bytes": 2805008,
+      "sha256": "c56c6b40fab56055a7208ddf34f9bc958535d170e0ca847005d5cdddecf93fa1",
+      "expected_sha256": "c56c6b40fab56055a7208ddf34f9bc958535d170e0ca847005d5cdddecf93fa1",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/choose-your-path-20260923-28-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/cinderace-max-day-approved-v1.png",
+      "status": 200,
+      "bytes": 2304232,
+      "sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "expected_sha256": "b8f9b02488e8817bdb250c676a04e6503f4492d84a55836124f7ae94bd34e470",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/cinderace-max-day-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/elgyem-spotlight-approved-v1.png",
+      "status": 200,
+      "bytes": 2455329,
+      "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "expected_sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/elgyem-spotlight-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+      "status": 200,
+      "bytes": 2666344,
+      "sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+      "expected_sha256": "2254345286060be310fbee286d00c78ce317da26feec3c6767469d6bceedb31f",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/friendship-friday-20261002-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
+      "status": 200,
+      "bytes": 2848103,
+      "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+      "expected_sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/gbl-20260929-1006-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/gbl-mega-20261006-13-approved-v1.png",
+      "status": 200,
+      "bytes": 2585433,
+      "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+      "expected_sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/gbl-mega-20261006-13-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/gbl-ultra-master-retro-20260922-29-approved-v1.png",
+      "status": 200,
+      "bytes": 2873580,
+      "sha256": "4a17d1311b97a88444f0dc82bf677aee29cca3edec3bd7672d51f78cd266cf6e",
+      "expected_sha256": "4a17d1311b97a88444f0dc82bf677aee29cca3edec3bd7672d51f78cd266cf6e",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/gbl-ultra-master-retro-20260922-29-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/go-battle-thursday-20261001-approved-v1.png",
+      "status": 200,
+      "bytes": 2568865,
+      "sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+      "expected_sha256": "6e0b6477b336ddf827741986ed2f07df6d779436906beaeec27f80c496ca257e",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/go-battle-thursday-20261001-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/go-pass-october-kyogre-approved-v1.png",
+      "status": 200,
+      "bytes": 2848940,
+      "sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+      "expected_sha256": "c194eee09b62380da61a5dfa8a2f804685fff6b0f2882b32435fc4225cc51a67",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/go-pass-october-kyogre-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/go-pass-september-latios-approved-v1.png",
+      "status": 200,
+      "bytes": 2757480,
+      "sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+      "expected_sha256": "d7363225369300a593e4154019bf2b12a1aae056d1157e8a902fe7e9eacc4f50",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/go-pass-september-latios-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/halloween-mystery-teaser-20261004-approved-v1.png",
+      "status": 200,
+      "bytes": 2869847,
+      "sha256": "ae832e6af897db82ebcc437fff9893049fc09869aa0114964fa97d2a554293db",
+      "expected_sha256": "ae832e6af897db82ebcc437fff9893049fc09869aa0114964fa97d2a554293db",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/halloween-mystery-teaser-20261004-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/harvest-invasion-approved-v1.png",
+      "status": 200,
+      "bytes": 2425578,
+      "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "expected_sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/harvest-invasion-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png",
+      "status": 200,
+      "bytes": 2688450,
+      "sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+      "expected_sha256": "f7432657d170f1fbfae39a60198bd26edfba030b3ab266d16b96c46b38e90848",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/iit-delhi-rendezvous-2026-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/mega-blastoise-rotation-approved-v1.png",
+      "status": 200,
+      "bytes": 2718402,
+      "sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+      "expected_sha256": "474fa9a793959d9dcac7a8f42840267695f12b2d561d8e16bb0129b9182bf321",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/mega-blastoise-rotation-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png",
+      "status": 200,
+      "bytes": 2781530,
+      "sha256": "d59fe0c923f8e20515ec9bfd01826fecdcb9305fe9e9fcad45c65880e95e9ccd",
+      "expected_sha256": "d59fe0c923f8e20515ec9bfd01826fecdcb9305fe9e9fcad45c65880e95e9ccd",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/mega-victreebel-rotation-approved-v1.png",
+      "status": 200,
+      "bytes": 2612794,
+      "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "expected_sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/mega-victreebel-rotation-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+      "status": 200,
+      "bytes": 2906525,
+      "sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+      "expected_sha256": "6c16bdcfaf7d56582f0c60bdb2da37f67ba175d588278713ae419f7decba62c8",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/scenic-sunday-20261004-approved-v1.png",
+      "status": 200,
+      "bytes": 2739274,
+      "sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "expected_sha256": "0ecff3534586f2387869aaf343298dab7377c421c598e5591f2e27133f6ba977",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/scenic-sunday-20261004-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/seedot-spotlight-approved-v1.png",
+      "status": 200,
+      "bytes": 2215863,
+      "sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "expected_sha256": "6ac0ebbd5b6032f731efd3edbd4209443b7df6ba7e9c1ed098485feefa2d882f",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/seedot-spotlight-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/showcase-tuesday-20260929-approved-v1.png",
+      "status": 200,
+      "bytes": 2603341,
+      "sha256": "7bb48bbc6bfac1cce90a2883f5f94747f385e4262dfbc5b408683643dde6a94a",
+      "expected_sha256": "7bb48bbc6bfac1cce90a2883f5f94747f385e4262dfbc5b408683643dde6a94a",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/showcase-tuesday-20260929-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+      "status": 200,
+      "bytes": 2636843,
+      "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+      "expected_sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/showcase-tuesday-20261006-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/sobble-max-monday-20260928-approved-v1.png",
+      "status": 200,
+      "bytes": 2464303,
+      "sha256": "45e7e9c3ce431d71d3b36108c35410a3ed1e905e5e24efaaa588242174aadd21",
+      "expected_sha256": "45e7e9c3ce431d71d3b36108c35410a3ed1e905e5e24efaaa588242174aadd21",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/sobble-max-monday-20260928-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/thundurus-shadow-weekend-approved-v1.png",
+      "status": 200,
+      "bytes": 2519761,
+      "sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "expected_sha256": "eb8141c8220c4acf4c3a962aaf12ee07b7c37085d5e8f6a1f1d233e25b6a4439",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/thundurus-shadow-weekend-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/twilight-trails-season-2026-approved-v1.png",
+      "status": 200,
+      "bytes": 2653181,
+      "sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+      "expected_sha256": "5814ead04c51ae826f4ececeaa9bb74d00b510f7b53a4e01d426076aef74f657",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/twilight-trails-season-2026-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/ultra-beasts-rotation-20260923-29-approved-v1.png",
+      "status": 200,
+      "bytes": 2749228,
+      "sha256": "ec1e146bd1c202829f79c02c78efbc535dd801bf194fcb24699ad0a1435049bf",
+      "expected_sha256": "ec1e146bd1c202829f79c02c78efbc535dd801bf194fcb24699ad0a1435049bf",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/ultra-beasts-rotation-20260923-29-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/xerneas-rotation-approved-v1.png",
+      "status": 200,
+      "bytes": 2181736,
+      "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "expected_sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/xerneas-rotation-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/yveltal-raid-hour-approved-v1.png",
+      "status": 200,
+      "bytes": 2273727,
+      "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+      "expected_sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/yveltal-raid-hour-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/yveltal-rotation-approved-v1.png",
+      "status": 200,
+      "bytes": 2265106,
+      "sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+      "expected_sha256": "dbed7399b3e32400db94db90f98c7b23af0029c91a55b568e18948cd828e5328",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/yveltal-rotation-approved-v1.png"
+    },
+    {
+      "path": "assets/events/premium/zorua-community-day-approved-v1.png",
+      "status": 200,
+      "bytes": 2299199,
+      "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+      "expected_sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/premium/zorua-community-day-approved-v1.png"
+    },
+    {
+      "path": "assets/events/recovered/1000426235.png",
+      "status": 200,
+      "bytes": 582854,
+      "sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c",
+      "expected_sha256": "2b97e5ae1478060889cc4503e4a66c1fe5cb85be2b365062023851943312900c",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/events/recovered/1000426235.png"
+    },
+    {
+      "path": "assets/festival-das-luzes-approved.png",
+      "status": 200,
+      "bytes": 2277749,
+      "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
+      "expected_sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
+      "matches": true,
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/assets/festival-das-luzes-approved.png"
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/api/push/public-key",
+      "status": 200,
+      "bytes": 103,
+      "sha256": "8ce906f206336359c38eebbd08a700b8171a5c378d908f4a44762f8a277c6f1f",
+      "public_key_available": true
+    },
+    {
+      "path": "/api/push/dispatch",
+      "status": 401,
+      "bytes": 24,
+      "sha256": "782eeaa7f1915f6783146f8180751785584f0f24bd4e503165c7fc4a597da600"
+    },
+    {
+      "path": "/spidey-app/api/catalog?file=events",
+      "status": 200,
+      "bytes": 151433,
+      "sha256": "f19cbc436fc4ffe11862b87a708e3761c34483523842e95d0b966510b1b9b55d",
+      "matches_catalog": true,
+      "summary": {
+        "events": 130,
+        "rallies": 0,
+        "week_start": null,
+        "week_end": null
+      }
+    },
+    {
+      "path": "/spidey-app/api/catalog?file=weekly",
+      "status": 200,
+      "bytes": 18723,
+      "sha256": "b406b277ed2ab7bb17a2d414ed828fff320d1dfcd84889ff7222af6fac7c99c5",
+      "matches_catalog": true,
+      "summary": {
+        "events": 0,
+        "rallies": 0,
+        "week_start": "2026-10-05",
+        "week_end": "2026-10-11"
+      }
+    },
+    {
+      "path": "/spidey-app/api/catalog?file=stamps",
+      "status": 200,
+      "bytes": 456488,
+      "sha256": "7e1cc7cb6a73a5ac54d5053e1274125b4be6082137c9ac0071900c8fcb5fd5e9",
+      "matches_catalog": true,
+      "summary": {
+        "events": 0,
+        "rallies": 4,
+        "week_start": null,
+        "week_end": null
+      }
+    },
+    {
+      "path": "/spidey-app/api/gpx?rally=pokemon-centre-japan-stamp-rally-2026",
+      "status": 200,
+      "bytes": 1952,
+      "sha256": "020ffdf31f736d6583d60b74d39c231ce3ffcb62b8af990fcc5f4af56fbcf606",
+      "waypoints": 18
+    },
+    {
+      "path": "/spidey-app/api/gpx?rally=pokelids-japan-2026",
+      "status": 404,
+      "bytes": 27,
+      "sha256": "8a4e755a9b7baed426527e8558f74bf8231c9558fab512ce60c0c48a967d85d0"
+    },
+    {
+      "url": "https://spidey-pokemon-go.vercel.app/spidey-app/api/gpx?rally=pokelids-japan-national",
+      "status": 409,
+      "body": {
+        "error": "exact_coordinates_required"
+      }
+    }
+  ],
+  "approved_entries": 32,
+  "approved_original_files": 31
+}

@@ -1,0 +1,223 @@
+{
+  "observed_at_brazil": "2026-10-05T09:22:28.730098-03:00",
+  "base_commit": "29ad1de19d0e56f655e2947d5fb656b5d4e2f1d9",
+  "preview_commit": "bf0592486d822098f0682c013e956a7887047cf4",
+  "merge_commit": "d08b6cd53fdbab9c0443dd15ffae1ccfd16b1d24",
+  "published_commit": "a48da342fdb3281d8503cac3a4ff9f2d15461275",
+  "pull_request": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/21",
+  "public_url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "deployment": {
+    "id": "dpl_8kT8Nvmy5tGyUyLmPtawbbM8t61S",
+    "state": "READY",
+    "target": "production",
+    "alias_matches": true
+  },
+  "changes": [
+    "Weekly gate accepts published events without approved artwork; no replacement image is generated.",
+    "Weekly art uses verified canonical master files/hashes or the already registered official Space Week illustration.",
+    "Desktop Back and calendar status are positioned outside the sidebar; Back touch height is at least44px.",
+    "App shell and service-worker version updated."
+  ],
+  "preservation": {
+    "catalog_events": 130,
+    "approved_entries": 32,
+    "approved_original_files": 31,
+    "changed_assets": [],
+    "catalog_events_stamps_queue_unchanged_from_base": true,
+    "fly_essential_points": 20,
+    "fly_all_points": 28,
+    "taipei_preserved": true,
+    "portugal_column_added": false
+  },
+  "weekly": {
+    "start": "2026-10-05",
+    "end": "2026-10-11",
+    "coverage": {
+      "calendar_events_in_week": 19,
+      "events_with_weekly_art": 12,
+      "events_with_premium_weekly_art": 11,
+      "events_with_official_weekly_art": 1,
+      "events_without_weekly_art": 7,
+      "events_in_weekly": 19,
+      "events_with_generated_weekly_art": 0,
+      "generated_at": "2026-10-05T09:14:57.653457-03:00",
+      "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
+    },
+    "missing_art": {
+      "2026-10-05-max-monday-sizzlipede": "Max Monday: Dynamax Sizzlipede",
+      "2026-10-08-go-battle-thursday": "Descoberta Diária: Quinta de Batalhas GO",
+      "2026-10-09-friendship-friday": "Descoberta Diária: Sexta da Amizade",
+      "2026-10-shadow-landorus-10": "Shadow Raids: Landorus (Forma Encarnada)",
+      "2026-10-11-scenic-sunday": "Descoberta Diária: Domingo Pitoresco",
+      "2026-09-harvest-festival-applin": "Festival da Colheita: Pomar de Applin",
+      "2026-09-tcg-30th-us-retail": "Celebração de 30 anos do Pokémon TCG"
+    }
+  },
+  "checks": {
+    "node_tests": {
+      "passed": 70,
+      "failed": 0
+    },
+    "weekly_generator_tests": {
+      "passed": 4,
+      "failed": 0
+    },
+    "autopublication_gate": "PASS",
+    "weekly_copies_equal": true,
+    "diff_check": "PASS",
+    "public_http_files_exact": 39,
+    "public_http_report": "docs/qa/continuity-public-http-a48da34-20261005.json"
+  },
+  "workflows": {
+    "previous_weekly_failure": {
+      "run_id": 37304877373,
+      "job_id": 111746035488,
+      "reason": "2026-09-tcg-30th-us-retail sem weekly_art"
+    },
+    "fixed_weekly": {
+      "run_id": 37308191466,
+      "job_id": 111756870644,
+      "conclusion": "success",
+      "generated_commit": "a48da342fdb3281d8503cac3a4ff9f2d15461275",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37308191466"
+    },
+    "pipeline": {
+      "run_id": 37308191375,
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37308191375"
+    }
+  },
+  "alerts": {
+    "public_key_http_status": 200,
+    "vapid_configuration_present": true,
+    "private_blob_configuration_present": true,
+    "unauthenticated_dispatch_status": 401,
+    "automatic_dispatch": {
+      "run_id": 37304404859,
+      "job_id": 111744499690,
+      "event": "schedule",
+      "observed_at_utc": "2026-10-05T11:40:13Z",
+      "response": {
+        "ok": true,
+        "dry_run": false,
+        "due": 0,
+        "deliveries": 0,
+        "storage_configured": true
+      }
+    },
+    "observed_runtime_dispatch_http_status": 200,
+    "cadence": {
+      "workflow_cron": "*/5 * * * *",
+      "observed_utc": [
+        "2026-10-05T10:57:35Z",
+        "2026-10-05T11:19:34Z",
+        "2026-10-05T11:40:12Z"
+      ],
+      "punctual_delivery_proven": false
+    },
+    "device_subscription_storage_and_delivery_test_proven": false,
+    "cloud_browser_notification_permission": "denied",
+    "physical_android_received": false,
+    "test_notifications_sent_by_this_resume": 0
+  },
+  "browser": {
+    "preview_mobile_iframe": {
+      "width": 390,
+      "height": 850,
+      "document_width": 375,
+      "document_scroll_width": 375,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "weekly_period": "05 de out. → 11 de out.",
+      "back_height": 44,
+      "xerneas_modal_width": 360,
+      "xerneas_modal_scroll_width": 360,
+      "full_original_poster_visible": true,
+      "modal_back_closed": true
+    },
+    "preview_desktop": {
+      "width": 1348,
+      "document_scroll_width": 1348,
+      "back_hit_target": "appBackButton",
+      "back_to_home": true,
+      "browser_history_closed_xerneas_modal": true
+    },
+    "production_desktop": {
+      "width": 1348,
+      "document_scroll_width": 1348,
+      "weekly_period": "05 de out. → 11 de out.",
+      "back_hit_target": "appBackButton",
+      "back_to_home": true
+    },
+    "fly_ultra_beasts": {
+      "date": "2026-09-23",
+      "local_window": "18:00–19:00",
+      "taipei_brazil_window": "23/09 07:00–08:00",
+      "last_window_pago_pago_end_brazil": "24/09 03:00",
+      "essential_points": 20,
+      "taipei_visible": true,
+      "portugal_visible": false,
+      "source_label": "Informação da comunidade",
+      "event_ended": true
+    },
+    "stamps": {
+      "collections": 4,
+      "places": 513,
+      "ready_gpx_routes": 1,
+      "pokelids": 482,
+      "prefectures": 42,
+      "centers_campaign_locations": 18,
+      "nagasaki_locations": 8,
+      "pokelids_gpx_http_status": 409,
+      "pokelids_error": "exact_coordinates_required"
+    }
+  },
+  "proofs": [
+    {
+      "path": "docs/qa/proofs/continuity-preview-weekly-dark-bf05924-20261005.jpg",
+      "bytes": 58877,
+      "sha256": "5e6cf4cc0f7c1bd0844ea29fc92da89c2d2a69c530ee6156ae0647ea78a88ef9"
+    },
+    {
+      "path": "docs/qa/proofs/continuity-preview-weekly-desktop-bf05924-20261005.jpg",
+      "bytes": 89935,
+      "sha256": "1f57063fa968822c4185f896eace40cf64a28ad38e28049554cd38933c6edf24"
+    },
+    {
+      "path": "docs/qa/proofs/continuity-preview-weekly-light-bf05924-20261005.jpg",
+      "bytes": 59055,
+      "sha256": "7b74d308657d8d3395c62f98f7dca260fe9dc666cb77b507f1cfbac49330e30e"
+    },
+    {
+      "path": "docs/qa/proofs/continuity-preview-xerneas-dark-bf05924-20261005.jpg",
+      "bytes": 93538,
+      "sha256": "a9d6114f85c2ad7454d5944960e31c388d27716495fd76ebdadd3c55eabc7f78"
+    },
+    {
+      "path": "docs/qa/proofs/continuity-production-weekly-a48da34-20261005.jpg",
+      "bytes": 84124,
+      "sha256": "cc69e367801b2be1570135828ceb8c58201a835b0478a2ea989b73124136fcec"
+    }
+  ],
+  "pending": [
+    "Android Back button and real touch navigation",
+    "Real alert subscription, test received, deactivation and timed alert on Android",
+    "PWA install, upgrade, opening and offline behavior on physical Android",
+    "New official announcement through the complete publication/update flow",
+    "Full public wording review",
+    "Premium artwork gaps, with prior refusal protections preserved",
+    "PokéLids visualization/coverage and exact in-game PokéStop verification",
+    "Friends/profile/chat implementation and interaction between accounts",
+    "ChatGPT Project creation, conversations and guide placement (not performed by this repository update)"
+  ],
+  "not_claimed": [
+    "Real Android notification delivery",
+    "Guaranteed5minute cron execution",
+    "Complete Premium coverage",
+    "All482 PokéLids active in game",
+    "Exact PokéStop coordinates for PokéLids",
+    "Physical PWA certification"
+  ]
+}
