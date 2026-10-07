@@ -6785,7 +6785,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
@@ -6854,7 +6855,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
@@ -6923,7 +6925,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
@@ -6992,7 +6995,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
@@ -7061,7 +7065,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
@@ -7130,7 +7135,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
@@ -7175,7 +7181,7 @@
       "slug": "2026-11-go-wild-area-global-14",
       "title": "GO Wild Area 2026 • Global • 14/11",
       "summary": "Duraludon Gigamax estreia no Global, junto ao retorno das fusões de Kyurem.",
-      "category": "global_event",
+      "category": "evento_especial",
       "tags": [
         "Global",
         "GO Wild Area",
@@ -7199,7 +7205,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
@@ -7244,7 +7251,7 @@
       "slug": "2026-11-go-wild-area-global-15",
       "title": "GO Wild Area 2026 • Global • 15/11",
       "summary": "Duraludon Gigamax estreia no Global, junto ao retorno das fusões de Kyurem.",
-      "category": "global_event",
+      "category": "evento_especial",
       "tags": [
         "Global",
         "GO Wild Area",
@@ -7268,7 +7275,8 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "no_hero": true
       },
       "locations": [],
       "gpx": {
