@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-gbl-06-13:start:60",
-      "event_id": "2026-10-gbl-06-13",
-      "event_title": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições",
-      "category": "go_battle_league",
-      "scheduled_for": "2026-10-06T16:00:00-03:00",
-      "event_start": "2026-10-06T17:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-gbl-06-13",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-mega-blastoise-raids:start:60",
       "event_id": "2026-10-mega-blastoise-raids",
       "event_title": "Mega Reides: Mega Blastoise",
@@ -690,7 +672,7 @@
     }
   ],
   "meta": {
-    "pending_count": 38,
+    "pending_count": 37,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
