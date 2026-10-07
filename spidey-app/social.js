@@ -13,7 +13,7 @@ let identity, current, busy = false, poll, chatPeer, messageVersion = '';
 const toast = error => window.showToast(ERRORS[error.message] || ERRORS.network);
 async function api(action,data = {}) {
   if (!navigator.onLine) throw Error('network');
-  const response = await fetch('api/social',{method:'POST',credentials:'omit',cache:'no-store',headers:{'Content-Type':'application/json'},
+  const response = await fetch('api/social',{method:'POST',credentials:'same-origin',cache:'no-store',headers:{'Content-Type':'application/json'},
     body:JSON.stringify(await envelope(identity,action,data)),signal:AbortSignal.timeout(15000)});
   const result = await response.json(); if(!response.ok)throw Error(result.error || 'network');return result;
 }
@@ -127,3 +127,4 @@ root?.addEventListener('click',async event=>{
 dialog?.addEventListener('close',()=>{clearInterval(poll);chatPeer=null;});
 window.addEventListener('online',()=>{if(!document.getElementById('friendsView')?.hidden)load();refreshChat();});
 window.SpideySocial=Object.freeze({load});
+if (!document.getElementById('friendsView')?.hidden) load();

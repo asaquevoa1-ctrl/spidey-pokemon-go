@@ -2,7 +2,7 @@ import { blobStore, socialReady } from '../spidey-app/api/social/store.js';
 import { createSocialService } from '../spidey-app/api/social/service.js';
 export default async function handler(request,response) {
   response.setHeader('Cache-Control','no-store, private');
-  if (request.method === 'GET') return response.status(200).json({ok:true,available:socialReady(),version:'spidey-social-v1'});
+  if (request.method === 'GET') return response.status(200).json({ok:true,available:socialReady(),version:'spidey-social-v1',mode:process.env.VERCEL_ENV === 'preview'?'preview':'production'});
   if (request.method !== 'POST') return response.status(405).json({error:'method_not_allowed'});
   const origin = request.headers?.origin;
   if (!origin || origin !== `https://${request.headers.host}` && origin !== 'https://spidey-pokemon-go.vercel.app') return response.status(403).json({error:'origin_denied'});
