@@ -3493,15 +3493,18 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.",
+        "A Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.",
+        "Recompensas liberadas no Passe GO expiram em 21/10 às 20h locais."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
-      ,
+      "status": "published",
       "bonuses": [
         "Chance aumentada de Electrike Brilhante.",
         "De 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.",
@@ -3521,11 +3524,6 @@
           "name": "Mega Manectric",
           "note": "estreia do nível Super Max e do ataque carregado Discharge+"
         }
-      ],
-      "notes": [
-        "O primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.",
-        "A Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.",
-        "Recompensas liberadas no Passe GO expiram em 21/10 às 20h locais."
       ],
       "news": {
         "title": "Bramblin estreia na Maratona das Folhas",
@@ -3807,25 +3805,27 @@
       "id": "2026-10-halloween-part-1",
       "slug": "2026-10-halloween-part-1",
       "title": "Halloween 2026: Parte I",
-      "summary": "Primeira parte do evento de Halloween 2026.",
+      "summary": "Halloween Parte I com novos trajes, surpresas no mapa e bônus liberados pelo Passe GO.",
       "category": "halloween",
       "tags": [
         "Halloween",
-        "Evento",
+        "Pikachu",
+        "Zubat",
+        "Sinistea",
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/halloween-part-1-2026",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2026-10-27T10:00:00-03:00",
-        "end_local": "2026-10-31T20:00:00-03:00",
+        "end_local": "2026-11-01T10:00:00-03:00",
         "brazil_timezone": "America/Sao_Paulo",
         "start_brazil": "2026-10-27T10:00:00-03:00",
-        "end_brazil": "2026-10-31T20:00:00-03:00"
+        "end_brazil": "2026-11-01T10:00:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -3840,9 +3840,10 @@
         "reason": "Evento sem coordenada exata específica confirmada."
       },
       "notes": [
-        "Detalhes de Pokémon e bônus ainda podem ser ampliados quando a página oficial específica for publicada.",
-        "Prévia de Halloween: Pokémon, fantasias e bônus ainda aguardam confirmação; nenhuma identidade foi deduzida das silhuetas.",
-        "A prévia foi reproduzida pela comunidade. O calendário da Parte I continua baseado no Pokémon GO Hub."
+        "Os bônus de Doces e Poeira Estelar exigem alcançar os ranques indicados no Passe GO do evento.",
+        "Toque nas surpresas deixadas no mapa para tentar receber encontros, Doces de Pikachu, Zubat ou Sinistea e, com sorte, Doce Raro.",
+        "Pikachu com chapéu e capa curta e Sinistea com laço aparecem em reides de uma estrela.",
+        "A música remixada de Lavender Town toca à noite; Poképaradas e Ginásios recebem decoração nas duas partes do Halloween."
       ],
       "notifications": {
         "enabled": true,
@@ -3852,17 +3853,147 @@
       },
       "status": "published",
       "news": {
-        "title": "Halloween 2026: novas pistas no ar",
-        "summary": "Uma prévia com silhuetas entrou no clima de Halloween. Pokémon, fantasias e bônus ainda aguardam confirmação. As datas abaixo são do calendário da comunidade.",
-        "published_on": "2026-10-03T14:29:08.263Z",
-        "teaser": true,
-        "source": {
-          "name": "Prévia • Reprodução da comunidade",
-          "url": "https://bsky.app/profile/pokemongoappmirror.bsky.social/post/3mwy3wfiuk52n",
-          "confidence": "community"
-        }
+        "title": "Halloween Parte I confirma três novos trajes",
+        "summary": "Pikachu com chapéu e capa curta, Zubat com cartola e Sinistea com laço estreiam no Halloween Parte I, com bônus liberados pelo Passe GO.",
+        "published_on": "2026-10-06"
       },
-      "updated_at": "2026-10-04T19:45:07.958130+00:00"
+      "updated_at": "2026-10-07T04:08:25Z",
+      "bonuses": [
+        "Passe GO, ranque 10: 2× Doces por captura; no Deluxe, 3× Doces.",
+        "Passe GO, ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3× Poeira Estelar.",
+        "Pesquisas de campo temáticas concedem encontros com Pokémon do evento."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu com chapéu e capa curta",
+          "note": "novo traje; pode aparecer Brilhante; reides de uma estrela"
+        },
+        {
+          "name": "Zubat com cartola",
+          "note": "novo traje; pode aparecer Brilhante; encontros na natureza"
+        },
+        {
+          "name": "Sinistea com laço",
+          "note": "novo traje; pode aparecer Brilhante; reides de uma estrela"
+        },
+        {
+          "name": "Piplup com traje Travessuras de Halloween",
+          "note": "pode aparecer Brilhante na natureza"
+        },
+        {
+          "name": "Drifblim com traje Travessuras de Halloween",
+          "note": "encontro mais raro na natureza; pode aparecer Brilhante"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-halloween-go-pass",
+      "slug": "2026-10-halloween-go-pass",
+      "title": "Passe GO: Halloween 2026",
+      "summary": "Passe GO temático com encontros, Doces e recompensas; a versão Deluxe inclui itens extras.",
+      "category": "go_pass",
+      "tags": [
+        "GO Pass",
+        "Halloween",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/halloween-part-1-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-27T10:00:00-03:00",
+        "end_local": "2026-11-05T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-27T10:00:00-03:00",
+        "end_brazil": "2026-11-05T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Passe global sem coordenada específica confirmada."
+      },
+      "notes": [
+        "O Passe GO gratuito é recebido automaticamente; o Deluxe é uma versão paga.",
+        "As recompensas desbloqueadas podem ser resgatadas até 7/11/2026 às 20h, horário local.",
+        "A disponibilidade do Passe GO Deluxe e os preços variam conforme a região."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Recompensas gratuitas incluem encontros temáticos, Doces, Doce Raro e Bolas Ultra.",
+        "O Deluxe inclui encontros extras, conjunto de confeiteiro, Doce Raro GG e Passes de Batalha Premium."
+      ],
+      "updated_at": "2026-10-07T04:08:25Z"
+    },
+    {
+      "id": "2026-11-halloween-part-2",
+      "slug": "2026-11-halloween-part-2",
+      "title": "Halloween 2026: Parte II (em confirmação)",
+      "summary": "O perfil oficial publicou um teaser; a janela indicada pela comunidade ainda aguarda confirmação no anúncio completo.",
+      "category": "halloween",
+      "tags": [
+        "Halloween",
+        "Global",
+        "Em confirmação"
+      ],
+      "source": {
+        "name": "Leek Duck • agenda comunitária",
+        "url": "https://leekduck.com/events/halloween-2026-part-2/",
+        "confidence": "community"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-01T10:00:00-03:00",
+        "end_local": "2026-11-05T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-01T10:00:00-03:00",
+        "end_brazil": "2026-11-05T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem coordenada específica; detalhes oficiais ainda pendentes."
+      },
+      "notes": [
+        "A janela de 1º a 5 de novembro vem da agenda comunitária e ainda precisa de confirmação no anúncio oficial.",
+        "O perfil oficial do Pokémon GO publicou somente um teaser: https://x.com/pokemongoapp/status/2107621979507343857",
+        "Nenhum Pokémon, traje, bônus ou recompensa foi confirmado para esta parte."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "news": {
+        "title": "Halloween Parte II recebe teaser oficial",
+        "summary": "Há um teaser oficial, mas datas detalhadas, Pokémon e bônus ainda aguardam o anúncio completo.",
+        "published_on": "2026-10-07"
+      },
+      "updated_at": "2026-10-07T14:38:08Z"
     },
     {
       "id": "2026-10-super-mega-raid-day",
@@ -6346,6 +6477,284 @@
         "window_label": "Geminidas • 12/2026"
       },
       "updated_at": "2026-10-01T22:47:56Z"
+    },
+    {
+      "id": "2026-11-pokexciting-singapore",
+      "slug": "2026-11-pokexciting-singapore",
+      "title": "PokéXciting! Singapura 2026",
+      "summary": "Evento em toda Singapura com Pikachu PokéXciting! azul, Rally de Selos, pesquisas e Batalhas Gigamax.",
+      "category": "evento_especial",
+      "tags": [
+        "PokéXciting!",
+        "Singapura",
+        "Rally de Selos",
+        "Pikachu",
+        "Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Singapore",
+        "start_local": "2026-11-07T10:00:00+08:00",
+        "end_local": "2026-11-08T22:00:00+08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T23:00:00-03:00",
+        "end_brazil": "2026-11-08T11:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "As páginas oficiais informam as áreas e o Terminal 3, mas não publicam coordenadas exatas dos PokéStops do Rally."
+      },
+      "notes": [
+        "A jogabilidade acontece das 10h às 22h no horário de Singapura em cada um dos dois dias.",
+        "O conteúdo do evento vale em toda Singapura; o estande fica no Terminal 3 do Aeroporto de Changi.",
+        "O Rally regional tem cinco selos inspirados em Bulbasaur, Charmander, Squirtle, Pikachu e Lapras. Completar os cinco rende Pikachu PokéXciting! azul com Fundo de Localização.",
+        "O selo de Singapura do Rally entre regiões já está disponível no Terminal 3, área de embarque, e a agenda oficial desse selo vai de 12/09/2026 a 11/09/2029.",
+        "O Pikachu PokéXciting! azul continua aparecendo na natureza em Singapura por um mês após o evento.",
+        "Há duas Pesquisas temporárias gratuitas, Pesquisa de campo temática, cinco encontros-surpresa no Retrato GO por dia e um balão de bônus por hora.",
+        "Guia oficial completo: https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+        "Agenda oficial do Rally entre regiões: https://pokemongo.com/news/event-apac-stamp-rally-2026",
+        "Informações oficiais conferidas em 07/10/2026."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "2× PE ao girar Poképaradas.",
+        "Metade do custo de Poeira Estelar nas trocas.",
+        "Duas Trocas Especiais adicionais.",
+        "Módulos Atrair duram uma hora.",
+        "2× PE por capturas com jogadas Boas ou melhores.",
+        "Mais Doces por capturas com jogadas Boas ou melhores.",
+        "Efeito especial no mapa e Poképaradas temáticas do Rally de Selos."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu PokéXciting! azul",
+          "note": "estreia em Singapura; natureza, pesquisas e Rally de Selos; pode ter Fundo de Localização; pode aparecer Brilhante"
+        },
+        {
+          "name": "Bulbasaur com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Charmander com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Squirtle com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Raticate com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Jigglypuff com laço",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Meowth",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Psyduck",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Slowpoke",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Grimer com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Eevee com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Snorlax",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Dratini",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Chikorita",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Cyndaquil",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Totodile",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Togetic",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Treecko",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Torchic",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Mudkip",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Ralts",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Beldum",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Buneary",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gible",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gengar com chapéu de festa",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gyarados",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Ampharos",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Tyranitar",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gardevoir",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Altaria",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Garchomp",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Rowlet",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Litten",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Popplio",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Grookey",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Scorbunny",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Sobble",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Unown S",
+          "note": "Incenso em Singapura; pode aparecer Brilhante"
+        },
+        {
+          "name": "Unown G",
+          "note": "Incenso em Singapura; pode aparecer Brilhante"
+        },
+        {
+          "name": "Turtwig",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Chimchar",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Piplup",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Snivy",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Tepig",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Oshawott",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Chespin",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Fennekin",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Froakie",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Venusaur Gigamax",
+          "note": "Batalhas Gigamax; pode aparecer Brilhante"
+        },
+        {
+          "name": "Charizard Gigamax",
+          "note": "Batalhas Gigamax; pode aparecer Brilhante"
+        },
+        {
+          "name": "Blastoise Gigamax",
+          "note": "Batalhas Gigamax; pode aparecer Brilhante"
+        }
+      ],
+      "news": {
+        "title": "PokéXciting! chega a Changi e Jewel",
+        "summary": "Singapura recebe Pikachu PokéXciting! azul, dois Rallies de Selos, pesquisas gratuitas e Batalhas Gigamax em 7 e 8 de novembro.",
+        "published_on": "2026-10-07"
+      },
+      "updated_at": "2026-10-07T05:26:14.212Z"
     }
   ]
 }

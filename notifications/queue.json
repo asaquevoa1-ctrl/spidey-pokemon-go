@@ -4,96 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-05-max-monday-sizzlipede:start:60",
-      "event_id": "2026-10-05-max-monday-sizzlipede",
-      "event_title": "Max Monday: Dynamax Sizzlipede",
-      "category": "max_monday",
-      "scheduled_for": "2026-10-05T05:00:00-03:00",
-      "event_start": "2026-10-05T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Max Monday: Dynamax Sizzlipede começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-05-max-monday-sizzlipede",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
-      "id": "2026-10-go-pass:start:60",
-      "event_id": "2026-10-go-pass",
-      "event_title": "Passe GO: Outubro",
-      "category": "go_pass",
-      "scheduled_for": "2026-10-06T09:00:00-03:00",
-      "event_start": "2026-10-06T10:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Passe GO: Outubro começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-go-pass",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/pt-BR/news/go-pass-october-2026",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "2026-10-gbl-06-13:start:60",
-      "event_id": "2026-10-gbl-06-13",
-      "event_title": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições",
-      "category": "go_battle_league",
-      "scheduled_for": "2026-10-06T16:00:00-03:00",
-      "event_start": "2026-10-06T17:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Liga de Batalha GO: Grande, Ultra e Mestra — Megaedições começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-gbl-06-13",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "2026-10-mega-blastoise-raids:start:60",
-      "event_id": "2026-10-mega-blastoise-raids",
-      "event_title": "Mega Reides: Mega Blastoise",
-      "category": "mega_raid_rotation",
-      "scheduled_for": "2026-10-07T05:00:00-03:00",
-      "event_start": "2026-10-07T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Mega Reides: Mega Blastoise começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-mega-blastoise-raids",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
-      "id": "2026-10-raids-yveltal:start:60",
-      "event_id": "2026-10-raids-yveltal",
-      "event_title": "Reides 5★: Yveltal",
-      "category": "raid_rotation",
-      "scheduled_for": "2026-10-07T05:00:00-03:00",
-      "event_start": "2026-10-07T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Reides 5★: Yveltal começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-raids-yveltal",
-      "status": "pending",
-      "source": {
-        "name": "Leek Duck • calendário de reides",
-        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-07-raid-hour-yveltal:start:60",
       "event_id": "2026-10-07-raid-hour-yveltal",
       "event_title": "Hora de Reides: Yveltal",
@@ -544,6 +454,24 @@
       }
     },
     {
+      "id": "2026-10-halloween-go-pass:start:60",
+      "event_id": "2026-10-halloween-go-pass",
+      "event_title": "Passe GO: Halloween 2026",
+      "category": "go_pass",
+      "scheduled_for": "2026-10-27T09:00:00-03:00",
+      "event_start": "2026-10-27T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Passe GO: Halloween 2026 começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-10-halloween-go-pass",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/halloween-part-1-2026",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-10-halloween-part-1:start:60",
       "event_id": "2026-10-halloween-part-1",
       "event_title": "Halloween 2026: Parte I",
@@ -556,9 +484,9 @@
       "url": "./?event=2026-10-halloween-part-1",
       "status": "pending",
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/halloween-part-1-2026",
+        "confidence": "official"
       }
     },
     {
@@ -688,6 +616,24 @@
       }
     },
     {
+      "id": "2026-11-halloween-part-2:start:60",
+      "event_id": "2026-11-halloween-part-2",
+      "event_title": "Halloween 2026: Parte II (em confirmação)",
+      "category": "halloween",
+      "scheduled_for": "2026-11-01T09:00:00-03:00",
+      "event_start": "2026-11-01T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Halloween 2026: Parte II (em confirmação) começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-halloween-part-2",
+      "status": "pending",
+      "source": {
+        "name": "Leek Duck • agenda comunitária",
+        "url": "https://leekduck.com/events/halloween-2026-part-2/",
+        "confidence": "community"
+      }
+    },
+    {
       "id": "festival-of-lights-2026-pokeminers-e2:start:60",
       "event_id": "festival-of-lights-2026-pokeminers-e2",
       "event_title": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta",
@@ -703,6 +649,24 @@
         "name": "Pokémon GO",
         "captured_via": "PokeMiners",
         "url": "https://pokemongo.com/news/festival-of-lights-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-11-pokexciting-singapore:start:60",
+      "event_id": "2026-11-pokexciting-singapore",
+      "event_title": "PokéXciting! Singapura 2026",
+      "category": "evento_especial",
+      "scheduled_for": "2026-11-06T22:00:00-03:00",
+      "event_start": "2026-11-06T23:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "PokéXciting! Singapura 2026 começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-pokexciting-singapore",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
         "confidence": "official"
       }
     },
@@ -726,7 +690,7 @@
     }
   ],
   "meta": {
-    "pending_count": 40,
+    "pending_count": 38,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
