@@ -3941,6 +3941,61 @@
       "updated_at": "2026-10-07T04:08:25Z"
     },
     {
+      "id": "2026-11-halloween-part-2",
+      "slug": "2026-11-halloween-part-2",
+      "title": "Halloween 2026: Parte II (em confirmação)",
+      "summary": "O perfil oficial publicou um teaser; a janela indicada pela comunidade ainda aguarda confirmação no anúncio completo.",
+      "category": "halloween",
+      "tags": [
+        "Halloween",
+        "Global",
+        "Em confirmação"
+      ],
+      "source": {
+        "name": "Leek Duck • agenda comunitária",
+        "url": "https://leekduck.com/events/halloween-2026-part-2/",
+        "confidence": "community"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-01T10:00:00-03:00",
+        "end_local": "2026-11-05T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-01T10:00:00-03:00",
+        "end_brazil": "2026-11-05T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem coordenada específica; detalhes oficiais ainda pendentes."
+      },
+      "notes": [
+        "A janela de 1º a 5 de novembro vem da agenda comunitária e ainda precisa de confirmação no anúncio oficial.",
+        "O perfil oficial do Pokémon GO publicou somente um teaser: https://x.com/pokemongoapp/status/2107621979507343857",
+        "Nenhum Pokémon, traje, bônus ou recompensa foi confirmado para esta parte."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "news": {
+        "title": "Halloween Parte II recebe teaser oficial",
+        "summary": "Há um teaser oficial, mas datas detalhadas, Pokémon e bônus ainda aguardam o anúncio completo.",
+        "published_on": "2026-10-07"
+      },
+      "updated_at": "2026-10-07T14:38:08Z"
+    },
+    {
       "id": "2026-10-super-mega-raid-day",
       "slug": "2026-10-super-mega-raid-day",
       "title": "Dia de Super Megarreides",
