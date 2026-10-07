@@ -39,6 +39,10 @@ Ao receber `SPIDEYNEXUS`, consultar nesta ordem:
 8. `SPIDEY_PRODUCT_EXPERIENCE.md` e `SPIDEY_STAMPS_V2.md` — experiência e regras de Selos/Amigos.
 9. Código e dados atuais da branch/main aplicável — verdade técnica da implementação.
 
+## Entregas de 07/10/2026
+
+PvP/Chicago/privacidade e monitoramento publicados pela PR 22; ler `docs/qa/PVP_RELEASE_20261007.md`. Amigos/chat em implementação com perfil por apelido autorizado nesta retomada; ler `SPIDEY_SOCIAL.md` e exigir prova de acesso entre perfis antes de declarar publicação. Os registros de 04/10 e 05/10 são históricos; o código de main continua sendo a referência.
+
 ## Regra de consolidação
 Uma decisão relevante NÃO está consolidada apenas porque foi discutida em chat.
 

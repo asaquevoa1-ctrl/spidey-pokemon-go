@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-07T17:15:52.972815+00:00",
+  "base_url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+  "checks": [
+    {
+      "path": "index.html",
+      "ok": true,
+      "bytes": 13881
+    },
+    {
+      "path": "pvp.js",
+      "ok": true,
+      "bytes": 10204
+    },
+    {
+      "path": "pvp.css",
+      "ok": true,
+      "bytes": 4921
+    },
+    {
+      "path": "navigation.js",
+      "ok": true,
+      "bytes": 3777
+    },
+    {
+      "path": "sw.js",
+      "ok": true,
+      "bytes": 8951
+    },
+    {
+      "path": "premium-approved-master.js",
+      "ok": true,
+      "bytes": 13787
+    },
+    {
+      "path": "api/push/public-key",
+      "ok": true,
+      "bytes": 103
+    },
+    {
+      "path": "api/catalog?file=events",
+      "ok": true,
+      "bytes": 161408
+    },
+    {
+      "path": "api/catalog?file=weekly",
+      "ok": true,
+      "bytes": 18723
+    },
+    {
+      "path": "api/catalog?file=local-events",
+      "ok": true,
+      "bytes": 3825
+    },
+    {
+      "path": "api/catalog?file=pvp",
+      "ok": true,
+      "bytes": 700497
+    },
+    {
+      "path": "assets/events/premium/patterns-wild-indonesia-20261002-approved-v1.png",
+      "ok": true,
+      "sha256_checked": false
+    }
+  ],
+  "failures": [],
+  "ok": true
+}

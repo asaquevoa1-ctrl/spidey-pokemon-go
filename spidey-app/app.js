@@ -425,6 +425,7 @@ function setView(viewId) {
   if (viewId === 'weeklyView' && typeof renderWeeklyView === 'function') renderWeeklyView();
   if (viewId === 'stampsView') renderStamps();
   if (viewId === 'pvpView') window.SpideyPvp?.load(true);
+  if (viewId === 'friendsView') window.SpideySocial?.load();
   if (viewId === 'mapView') {
     if (typeof renderMapV2 === 'function') renderMapV2();
     else renderMapSummary();
