@@ -1,7 +1,7 @@
 (() => {
   'use strict';
-  const STATUS = {official:['OFICIAL','Informação do anúncio oficial'],datamine:['PRÉVIA DA COMUNIDADE','Informação da comunidade que ainda aguarda anúncio oficial'],awaiting:['AGUARDANDO CONFIRMAÇÃO','Aguardando anúncio oficial'],local:['EVENTO LOCAL','Disponível somente no local indicado']};
-  window.SPIDEY_EVENT_TRUST={version:'2026-10-04-malaga-v1',statuses:STATUS,failClosed:true};
+  const STATUS = {official:['OFICIAL','Informação do anúncio oficial'],community:['COMUNIDADE','Informação relatada pela comunidade'],datamine:['PRÉVIA DA COMUNIDADE','Informação da comunidade que ainda aguarda anúncio oficial'],awaiting:['AGUARDANDO CONFIRMAÇÃO','Aguardando anúncio oficial'],local:['EVENTO LOCAL','Disponível somente no local indicado']};
+  window.SPIDEY_EVENT_TRUST={version:'2026-10-07-news-v1',statuses:STATUS,failClosed:true};
   const worldEvents=[{id:'2026-toyohashi-observatory',title:'Observatório Astronômico de Pokémon — Toyohashi',place:'Toyohashi, Japão',dates:'Evento local',status:'awaiting',locality:'local',note:'Mais informações serão exibidas após confirmação.',artApproved:false}];window.SPIDEY_WORLD_EVENTS=worldEvents;
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   function badge(k){const [l]=STATUS[k]||STATUS.awaiting;return `<span class="trust-badge trust-${esc(k)}">${esc(l)}</span>`}
@@ -42,10 +42,15 @@
     });
   }
   function mapUrl(location) {
-    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${location.name}, ${location.address}`)}`;
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coordinateText(location)||`${location.name}, ${location.address}`)}`;
+  }
+  function coordinateText(location) {
+    const value=location.coordinates;
+    if(!value||!Number.isFinite(value.lat)||!Number.isFinite(value.lng)||Math.abs(value.lat)>90||Math.abs(value.lng)>180)return '';
+    return `${value.lat.toFixed(4)}, ${value.lng.toFixed(4)}`;
   }
   function locationRows(event) {
-    return event.locations.map(location=>`<article class="world-location" data-local-venue="${esc(location.id)}"><h3>${esc(location.name)}</h3><p>${esc(location.address)}</p><p class="microcopy">${esc(location.access_note)}</p><div class="world-location-actions"><button class="action-btn" data-local-copy="${esc(location.address)}">Copiar endereço</button><a class="action-btn" href="${esc(mapUrl(location))}" target="_blank" rel="noopener">Abrir mapa</a></div></article>`).join('');
+    return event.locations.map(location=>`<article class="world-location" data-local-venue="${esc(location.id)}"><h3>${esc(location.name)}</h3><p>${esc(location.address)}</p><p class="microcopy">${esc(location.access_note)}</p>${coordinateText(location)?`<p class="microcopy">Referência do local: ${esc(coordinateText(location))}</p>`:''}<div class="world-location-actions"><button class="action-btn" data-local-copy="${esc(location.address)}">Copiar endereço</button>${coordinateText(location)?`<button class="action-btn" data-local-copy="${esc(coordinateText(location))}" data-copy-coordinates="true">Copiar coordenadas</button>`:''}<a class="action-btn" href="${esc(mapUrl(location))}" target="_blank" rel="noopener">Abrir mapa</a></div></article>`).join('');
   }
   function openLocalEvent(id) {
     const event=worldEvents.find(e=>e.id===id);if(!event?.schedule)return;
@@ -53,7 +58,7 @@
     if(dialog.open)dialog.close();
     detail.classList.remove('spidey-detail-v3','player-art-unavailable','v23-no-hero');
     delete detail.dataset.visualCategory;delete detail.dataset.visualCharacter;
-    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · ${esc(event.place.toUpperCase())}</span><h2>${esc(event.detail_title||event.title)}</h2>${backgroundFigure(event)}<p>${esc(event.note)}</p><p>${esc(event.dates)}</p><div class="world-event-window" data-local-window="${esc(event.id)}">${scheduleText(event)}</div>${event.schedule.recurrence==='daily'?'<p class="microcopy">Atividades no jogo: 9h–21h no horário de Chicago. Brasília é calculada para cada dia, incluindo as mudanças de horário de verão dos EUA.</p>':''}<p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener noreferrer">Anúncio oficial ↗</a>${event.location_background?`<p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener noreferrer">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener noreferrer">Serebii ↗</a>.</p>`:''}</div>`;
+    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · ${esc(event.place.toUpperCase())}</span><h2>${esc(event.detail_title||event.title)}</h2>${backgroundFigure(event)}<p>${esc(event.note)}</p><p>${esc(event.dates)}</p><div class="world-event-window" data-local-window="${esc(event.id)}">${scheduleText(event)}</div>${event.schedule.recurrence==='daily'?'<p class="microcopy">Atividades no jogo: 9h–21h no horário de Chicago. Brasília é calculada para cada dia, incluindo as mudanças de horário de verão dos EUA.</p>':''}<p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener noreferrer">${event.source.confidence==='official'?'Anúncio oficial':'Fonte da comunidade'} ↗</a>${event.location_background?`<p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener noreferrer">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener noreferrer">Serebii ↗</a>.</p>`:''}</div>`;
     showAppDialog();dialog.scrollTop=0;detail.scrollTop=0;
     document.getElementById('closeDialog')?.focus({preventScroll:true});
   }
@@ -79,7 +84,7 @@
     document.addEventListener('click',async event=>{
       const open=event.target.closest('[data-open-local-event]');if(open){openLocalEvent(open.dataset.openLocalEvent);return}
       const copy=event.target.closest('[data-local-copy]');if(!copy)return;
-      try{await navigator.clipboard.writeText(copy.dataset.localCopy);showToast('Endereço copiado.')}catch{showToast('Não foi possível copiar. Use o mapa do local.')}
+      try{await navigator.clipboard.writeText(copy.dataset.localCopy);showToast(copy.dataset.copyCoordinates?'Coordenadas copiadas.':'Endereço copiado.')}catch{showToast('Não foi possível copiar. Use o mapa do local.')}
     });
     window.addEventListener('spideycontentready',mountLocalFly);
     setInterval(updateClocks,60000);

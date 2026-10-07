@@ -1,5 +1,7 @@
-const CACHE = 'spidey-app-20261005-pvp-privacy-v1';
+const CACHE = 'spidey-app-20261007-news-v1';
 const CORE = [
+  './data/news.json',
+  './assets/events/official/halloween-part-2-teaser-20261007.jpg',
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
   './assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png',

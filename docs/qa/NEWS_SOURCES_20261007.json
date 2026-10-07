@@ -1,0 +1,76 @@
+{
+  "checked_at": "2026-10-07T18:17:37.236408+00:00",
+  "scope": "Public announcements only; no player data or push calls",
+  "halloween": {
+    "url": "https://x.com/PokemonGoApp/status/2107621979507343857",
+    "verified_via": "https://cdn.syndication.twimg.com/tweet-result?id=2107621979507343857&lang=en&token=0",
+    "account": "PokemonGoApp",
+    "tweet_id": "2107621979507343857",
+    "published_at": "2026-10-07T00:00:12Z",
+    "media_url": "https://pbs.twimg.com/media/HT_HBJYW4AAPQ2w.jpg?format=jpg&name=orig",
+    "asset": {
+      "classification": "official_teaser",
+      "file": "assets/events/official/halloween-part-2-teaser-20261007.jpg",
+      "sha256": "75075a8ba783729614458f52493bc5e7fbb63c59be0d5eb82509367bf7e62b05",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Teaser oficial de Halloween com silhuetas em uma paisagem noturna.",
+      "credit": "Imagem original do Pokémon GO • teaser oficial"
+    }
+  },
+  "eternatus": {
+    "url": "https://www.reddit.com/r/TheSilphRoad/comments/1wzr1kg/eternatus_returns_to_pok%C3%A9mon_go_for_go_wild_area/",
+    "classification": "datamine_unconfirmed",
+    "corroboration": "https://www.nwtv.nl/322562/dataminers-weten-het-zeker-eternatus-keert-dit-jaar-nog-terug-op-reeds-bekende-datum",
+    "calendar_added": false,
+    "push_targets_added": false
+  },
+  "mewtwo": {
+    "status": "No recent primary announcement located",
+    "user_choice": "Proceed with available sources",
+    "historical_announcements_not_republished": true
+  },
+  "go_lab": {
+    "sources": [
+      "https://9db.jp/pokemongo/data/26561",
+      "https://serebii.net/pokemongo/reallifeevents/pokemongolab...bigadventure.shtml"
+    ],
+    "classification": "community_observation",
+    "user_reported_period": "2026-10-07 to 2026-12-31",
+    "unconfirmed_claims": [
+      "end date Dec31",
+      "one raid daily",
+      "guaranteed raid background",
+      "Kanto starters snapshots"
+    ],
+    "confirmed_in_community_sources": [
+      "raid return Oct7",
+      "up to100raidparticipants",
+      "timedresearchPikachuwithbackground"
+    ],
+    "schedule_invented": false,
+    "venue_coordinates": "35.7290, 139.7186",
+    "coordinate_type": "venue_reference",
+    "gpx_added": false
+  },
+  "go_wild_area": {
+    "sources": [
+      "https://pokemongo.com/gowildarea/global",
+      "https://pokemongo.com/gowildarea/sendai/gameplay",
+      "https://pokemongo.com/gowildarea/mexico-city/gameplay"
+    ],
+    "classification": "official",
+    "new_daily_windows": [
+      "2026-11-go-wild-area-sendai-06",
+      "2026-11-go-wild-area-sendai-07",
+      "2026-11-go-wild-area-sendai-08",
+      "2026-11-go-wild-area-mexico-city-06",
+      "2026-11-go-wild-area-mexico-city-07",
+      "2026-11-go-wild-area-mexico-city-08",
+      "2026-11-go-wild-area-global-14",
+      "2026-11-go-wild-area-global-15"
+    ],
+    "original_events_preserved": 133,
+    "notifications_enabled": false
+  }
+}

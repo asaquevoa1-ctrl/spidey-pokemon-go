@@ -17,7 +17,15 @@
     if(draft&&draft.display!=='full_poster'&&!window.SPIDEY_APPROVED_ART_MASTER?.[e.id])return `<span class="player-art-window ${thumb?'player-thumbnail':''}"><img src="${esc(url)}" alt="Ilustração de ${esc(title(e))}"></span>`;
     return `<img class="${thumb?'player-thumbnail':'player-poster'}" src="${esc(url)}" alt="Arte de ${esc(title(e))}" ${size} ${thumb?'loading="lazy"':''}>`;
   }
-  function source(e){try{return /(^|\.)(pokemongo\.com|pokemongolive\.com)$/.test(new URL(e.source.url).hostname)?'Anúncio oficial':/pokeminers|datamine/i.test(e.source.name||'')?'Prévia • ainda não confirmada':'Informação da comunidade'}catch{return 'Informação em confirmação'}}
+  function source(e){
+    try{
+      const url=new URL(e.source.url);
+      const officialSite=/(^|\.)(pokemongo\.com|pokemongolive\.com)$/.test(url.hostname);
+      const officialPost=e.source.confidence==='official'&&['x.com','twitter.com'].includes(url.hostname)&&/^\/pokemongoapp\/status\/\d+\/?$/i.test(url.pathname);
+      if(officialSite||officialPost)return 'Anúncio oficial';
+      return e.source.confidence==='datamine'||/pokeminers|datamine/i.test(e.source.name||'')?'Prévia • ainda não confirmada':'Informação da comunidade';
+    }catch{return 'Informação em confirmação'}
+  }
   function facts(e){
     const bonuses=Array.isArray(e.bonuses)?e.bonuses.filter(x=>typeof x==='string'):[];
     return [...new Set([e.summary,...bonuses].filter(Boolean))];
