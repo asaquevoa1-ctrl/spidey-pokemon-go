@@ -1,4 +1,4 @@
-import { get, put, list, del, BlobPreconditionFailedError } from '@vercel/blob';
+import { get, put, list, del, head, BlobNotFoundError, BlobPreconditionFailedError } from '@vercel/blob';
 import { createHash } from 'node:crypto';
 
 // Reuse the existing private store. Preview identities never enter production.
@@ -9,22 +9,30 @@ export function socialPrefix() {
     ? `spidey-social/preview-${createHash('sha256').update(env('VERCEL_GIT_COMMIT_REF') || env('VERCEL_GIT_COMMIT_SHA')).digest('hex').slice(0,16)}/`
     : 'spidey-social/v1/';
 }
-export function blobStore() {
+export function blobStore(sdk = {get,put,list,del,head}) {
   const options = () => ({ access: 'private', token: env('BLOB_READ_WRITE_TOKEN') });
   const path = key => `${socialPrefix()}${key}.json`;
-  async function read(key) {
-    const result = await get(path(key), { ...options(), useCache: false });
-    return result ? { value: JSON.parse(await new Response(result.stream).text()), etag: result.blob.etag } : null;
+  async function read(key, forWrite = false) {
+    let metadata;
+    if (forWrite) {
+      try { metadata = await sdk.head(path(key), {token:env('BLOB_READ_WRITE_TOKEN'),abortSignal:AbortSignal.timeout(6000)}); }
+      catch(error) { if (error instanceof BlobNotFoundError) return null; throw error; }
+    }
+    const result = await sdk.get(path(key), { ...options(), useCache: false, abortSignal:AbortSignal.timeout(6000) });
+    // The metadata API supplies the canonical write ETag. Some HTTP delivery
+    // responses use a different representation tag. Read metadata BEFORE data;
+    // an intervening write makes the subsequent conditional put fail and retry.
+    return result ? { value: JSON.parse(await new Response(result.stream).text()), etag: metadata?.etag || result.blob.etag } : null;
   }
   return {
     async read(key) { return (await read(key))?.value || null; },
     async mutate(key, transform) {
       for (let attempt = 0; attempt < 5; attempt++) {
-        const previous = await read(key);
+        const previous = await read(key,true);
         const value = transform(previous ? structuredClone(previous.value) : null);
         if (value === undefined) return previous?.value || null;
         try {
-          await put(path(key), JSON.stringify(value), { ...options(), contentType: 'application/json',
+          await sdk.put(path(key), JSON.stringify(value), { ...options(), contentType: 'application/json',abortSignal:AbortSignal.timeout(6000),
             addRandomSuffix: false, allowOverwrite: Boolean(previous), ...(previous ? { ifMatch: previous.etag } : {}), cacheControlMaxAge: 60 });
           return value;
         } catch (error) {
@@ -36,13 +44,13 @@ export function blobStore() {
     async keys(prefix) {
       const keys = []; let cursor;
       do {
-        const page = await list({ token: env('BLOB_READ_WRITE_TOKEN'), prefix: socialPrefix()+prefix, cursor, limit: 100 });
+        const page = await sdk.list({ token: env('BLOB_READ_WRITE_TOKEN'), prefix: socialPrefix()+prefix, cursor, limit: 100 });
         keys.push(...page.blobs.map(b => b.pathname.slice(socialPrefix().length).replace(/\.json$/, '')));
         cursor = page.hasMore ? page.cursor : undefined;
       } while (cursor && keys.length < 1000);
       return keys;
     },
-    async remove(key) { await del(path(key), { token: env('BLOB_READ_WRITE_TOKEN') }); },
+    async remove(key) { await sdk.del(path(key), { token: env('BLOB_READ_WRITE_TOKEN') }); },
   };
 }
 
