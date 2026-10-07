@@ -11,7 +11,12 @@
     const start=s&&core?.localToDate(s.start_date,s.start_time,s.timezone);
     const end=s&&core?.localToDate(s.end_date,s.end_time,s.timezone);
     if(!start||!end||end<=start)return {status:'HORÁRIO A CONFIRMAR'};
-    return {start,end,status:now>=end?'ENCERRADO':now>=start?'ACONTECENDO AGORA':'EM BREVE'};
+    if(s.recurrence!=='daily'||now<start||now>=end)return {start,end,status:now>=end?'ENCERRADO':now>=start?'ACONTECENDO AGORA':'EM BREVE'};
+    const parts=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:s.timezone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now).filter(p=>p.type!=='literal').map(p=>[p.type,p.value]));
+    const today=`${parts.year}-${parts.month}-${parts.day}`;
+    let day=today,dailyStart=core.localToDate(day,s.start_time,s.timezone),dailyEnd=core.localToDate(day,s.end_time,s.timezone);
+    if(now>=dailyEnd){day=new Date(Date.parse(`${day}T12:00:00Z`)+86400000).toISOString().slice(0,10);dailyStart=core.localToDate(day,s.start_time,s.timezone);dailyEnd=core.localToDate(day,s.end_time,s.timezone)}
+    return {start:dailyStart,end:dailyEnd,status:now>=dailyStart&&now<dailyEnd?'ACONTECENDO AGORA':day===today?'ABRE HOJE':'ABRE AMANHÃ'};
   }
   function scheduleText(event,now=new Date()) {
     const period=eventWindow(event,now),s=event.schedule;
@@ -20,10 +25,10 @@
   }
   function backgroundFigure(event) {
     const media=event.location_background;
-    return media?`<figure class="world-location-background"><img src="${esc(media.file)}?v=${esc(media.sha256.slice(0,12))}" width="${media.width}" height="${media.height}" alt="${esc(media.alt)}" loading="lazy" decoding="async"><figcaption>Fundo de Localização · Málaga</figcaption></figure>`:'';
+    return media?`<figure class="world-location-background"><img src="${esc(media.file)}?v=${esc(media.sha256.slice(0,12))}" width="${media.width}" height="${media.height}" alt="${esc(media.alt)}" loading="lazy" decoding="async"><figcaption>Fundo de Localização · ${esc(event.place.split(',')[0])}</figcaption></figure>`:'';
   }
   function eventCard(event) {
-    return `<article class="world-event-card" data-world-event="${esc(event.id)}"><div class="world-event-meta">${badge(event.locality)} ${badge(event.status)}</div><h3>${esc(event.title)}</h3><p><strong>${esc(event.place)}</strong> · ${esc(event.dates)}</p>${backgroundFigure(event)}<p>${esc(event.note)}</p>${event.schedule?`<div class="world-event-window">${scheduleText(event)}</div><button class="action-btn gold" data-open-local-event="${esc(event.id)}">Ver fundo e locais</button>`:''}</article>`;
+    return `<article class="world-event-card" data-world-event="${esc(event.id)}"><div class="world-event-meta">${badge(event.locality)} ${badge(event.status)}</div><h3>${esc(event.title)}</h3><p><strong>${esc(event.place)}</strong> · ${esc(event.dates)}</p>${backgroundFigure(event)}<p>${esc(event.note)}</p>${event.schedule?`<div class="world-event-window" data-local-window="${esc(event.id)}">${event.schedule.recurrence==='daily'?'<p>Todos os dias · 9h–21h no local</p>':''}${scheduleText(event)}</div><button class="action-btn gold" data-open-local-event="${esc(event.id)}">${event.location_background?'Ver fundo e locais':'Ver evento e local'}</button>`:''}</article>`;
   }
   function renderWorldEvents() {
     const r=document.getElementById('worldEvents');if(!r)return;
@@ -48,17 +53,16 @@
     if(dialog.open)dialog.close();
     detail.classList.remove('spidey-detail-v3','player-art-unavailable','v23-no-hero');
     delete detail.dataset.visualCategory;delete detail.dataset.visualCharacter;
-    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · MÁLAGA, ESPANHA</span><h2>Pikachu · Fundo de Málaga</h2>${backgroundFigure(event)}<p>${esc(event.note)}</p><div class="world-event-window">${scheduleText(event)}</div><p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener">Anúncio oficial ↗</a><p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener">Serebii ↗</a>.</p></div>`;
+    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · ${esc(event.place.toUpperCase())}</span><h2>${esc(event.detail_title||event.title)}</h2>${backgroundFigure(event)}<p>${esc(event.note)}</p><p>${esc(event.dates)}</p><div class="world-event-window" data-local-window="${esc(event.id)}">${scheduleText(event)}</div>${event.schedule.recurrence==='daily'?'<p class="microcopy">Atividades no jogo: 9h–21h no horário de Chicago. Brasília é calculada para cada dia, incluindo as mudanças de horário de verão dos EUA.</p>':''}<p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener noreferrer">Anúncio oficial ↗</a>${event.location_background?`<p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener noreferrer">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener noreferrer">Serebii ↗</a>.</p>`:''}</div>`;
     showAppDialog();dialog.scrollTop=0;detail.scrollTop=0;
     document.getElementById('closeDialog')?.focus({preventScroll:true});
   }
   function liveClock(event,now=new Date()) {
-    return `Agora em Málaga: <strong>${esc(clock(now,event.schedule.timezone))}</strong><br>Brasília: ${esc(clock(now,'America/Sao_Paulo'))}`;
+    return `Agora em ${esc(event.place.split(',')[0])}: <strong>${esc(clock(now,event.schedule.timezone))}</strong><br>Brasília: ${esc(clock(now,'America/Sao_Paulo'))}`;
   }
   function updateClocks() {
     worldEvents.filter(e=>e.schedule).forEach(event=>{
-      const status=eventWindow(event).status;
-      document.querySelectorAll(`[data-local-event-status="${event.id}"]`).forEach(element=>element.textContent=status);
+      document.querySelectorAll(`[data-local-window="${event.id}"]`).forEach(element=>element.innerHTML=scheduleText(event));
       const open=detail.querySelector(`[data-local-detail="${event.id}"] .world-local-clock`);
       if(dialog.open&&open)open.innerHTML=liveClock(event);
     });
@@ -67,9 +71,11 @@
   function loadFly(){if(document.querySelector('script[data-spidey-fly]'))return;const s=document.createElement('script');s.src='fly-v1.js?v=20260930-fly3';s.defer=true;s.dataset.spideyFly='1';document.head.append(s)}
   function apply(){
     renderWorldEvents();exposeApprovedPremium();
-    window.SpideyCatalog.load('local-events').then(data=>{worldEvents.splice(0,worldEvents.length,...data.events,{id:'2026-toyohashi-observatory',title:'Observatório Astronômico de Pokémon — Toyohashi',place:'Toyohashi, Japão',dates:'Evento local',status:'awaiting',locality:'local',note:'Mais informações serão exibidas após confirmação.'});renderWorldEvents();mountLocalFly()}).catch(()=>{
+    let reloading;
+    function reload(){if(reloading)return reloading;return reloading=window.SpideyCatalog.load('local-events').then(data=>{worldEvents.splice(0,worldEvents.length,...data.events,{id:'2026-toyohashi-observatory',title:'Observatório Astronômico de Pokémon — Toyohashi',place:'Toyohashi, Japão',dates:'Evento local',status:'awaiting',locality:'local',note:'Mais informações serão exibidas após confirmação.'});renderWorldEvents();mountLocalFly()}).catch(()=>{
       document.getElementById('worldEvents')?.insertAdjacentHTML('beforeend','<p class="empty">Não foi possível carregar os eventos locais. Recarregue para tentar novamente.</p>');
-    });
+    }).finally(()=>{reloading=null})}
+    reload();window.addEventListener('spideycatalogchecked',reload);
     document.addEventListener('click',async event=>{
       const open=event.target.closest('[data-open-local-event]');if(open){openLocalEvent(open.dataset.openLocalEvent);return}
       const copy=event.target.closest('[data-local-copy]');if(!copy)return;

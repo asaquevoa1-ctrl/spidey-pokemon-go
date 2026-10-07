@@ -1,0 +1,33 @@
+name: Spidey - monitorar aplicativo
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '2/5 * * * *'
+  push:
+    branches: [main]
+    paths: ['spidey-app/**', 'api/**', 'vercel.json', 'scripts/check_app_health.py', '.github/workflows/spidey-app-health.yml']
+permissions:
+  contents: read
+concurrency:
+  group: spidey-public-health
+  cancel-in-progress: false
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Aguardar a publicação após mudanças
+        if: github.event_name == 'push'
+        run: sleep 45
+      - name: Conferir link público, agenda, PvP, imagens e alertas sem telemetria
+        run: python scripts/check_app_health.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: spidey-app-health
+          path: app-health.json
+          retention-days: 7

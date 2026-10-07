@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261005-continuity-v1';
+const CACHE = 'spidey-app-20261005-pvp-privacy-v1';
 const CORE = [
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
@@ -10,6 +10,9 @@ const CORE = [
   './assets/events/premium/gbl-ultra-master-retro-20260922-29-approved-v1.png',
   './assets/events/premium/halloween-mystery-teaser-20261004-approved-v1.png',
   './data/local-events.json',
+  './data/pvp.json',
+  './pvp.js',
+  './pvp.css',
   './assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png',
   './space-week.js',
   './space-week.css',
@@ -132,7 +135,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
-  const isData = request.url.includes('/data/events.json') || request.url.includes('/data/stamps.json') || request.url.includes('/data/weekly.json') || request.url.includes('/data/world-event-points.json') || request.url.includes('/data/space-museums.json') || request.url.includes('/data/local-events.json');
+  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp)\.json$/.test(url.pathname);
 
   if (isAppShell || isData) {
     event.respondWith(
@@ -209,7 +212,7 @@ self.addEventListener('pushsubscriptionchange', (event) => {
       await fetch('api/push/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subscription: subscription.toJSON(), device: { source: 'pushsubscriptionchange' } }),
+        body: JSON.stringify({ subscription: subscription.toJSON() }),
       });
     } catch (error) {
       console.error('Spidey pushsubscriptionchange', error);

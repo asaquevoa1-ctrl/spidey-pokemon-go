@@ -10,7 +10,6 @@ export default async function handler(request, response) {
   try {
     const id = await saveSubscription({
       subscription: { endpoint: body.subscription.endpoint, keys: body.subscription.keys },
-      device: { locale: String(body.device?.locale || 'pt-BR').slice(0, 40), timezone: String(body.device?.timezone || 'America/Sao_Paulo').slice(0, 80) },
     });
     return response.status(201).json({ ok: true, id });
   } catch {

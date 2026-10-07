@@ -1,0 +1,61 @@
+{
+  "id": "2026-10-halloween-part-1",
+  "slug": "2026-10-halloween-part-1",
+  "title": "Halloween 2026: Parte I",
+  "summary": "Primeira parte do evento de Halloween 2026.",
+  "category": "halloween",
+  "tags": [
+    "Halloween",
+    "Evento",
+    "Global"
+  ],
+  "source": {
+    "name": "Pokémon GO Hub • calendário outubro 2026",
+    "url": "https://pokemongohub.net/post/event/october-2026-events/",
+    "confidence": "verified"
+  },
+  "schedule": {
+    "local_timezone": "America/Sao_Paulo",
+    "start_local": "2026-10-27T10:00:00-03:00",
+    "end_local": "2026-10-31T20:00:00-03:00",
+    "brazil_timezone": "America/Sao_Paulo",
+    "start_brazil": "2026-10-27T10:00:00-03:00",
+    "end_brazil": "2026-10-31T20:00:00-03:00"
+  },
+  "calendar": {
+    "mode": "span"
+  },
+  "presentation": {
+    "requires_art": false,
+    "fallback_visual": "spidey-logo"
+  },
+  "locations": [],
+  "gpx": {
+    "enabled": false,
+    "reason": "Evento sem coordenada exata específica confirmada."
+  },
+  "notes": [
+    "Detalhes de Pokémon e bônus ainda podem ser ampliados quando a página oficial específica for publicada.",
+    "Prévia de Halloween: Pokémon, fantasias e bônus ainda aguardam confirmação; nenhuma identidade foi deduzida das silhuetas.",
+    "A prévia foi reproduzida pela comunidade. O calendário da Parte I continua baseado no Pokémon GO Hub."
+  ],
+  "notifications": {
+    "enabled": true,
+    "default_lead_minutes": [
+      60
+    ]
+  },
+  "status": "published",
+  "news": {
+    "title": "Halloween 2026: novas pistas no ar",
+    "summary": "Uma prévia com silhuetas entrou no clima de Halloween. Pokémon, fantasias e bônus ainda aguardam confirmação. As datas abaixo são do calendário da comunidade.",
+    "published_on": "2026-10-03T14:29:08.263Z",
+    "teaser": true,
+    "source": {
+      "name": "Prévia • Reprodução da comunidade",
+      "url": "https://bsky.app/profile/pokemongoappmirror.bsky.social/post/3mwy3wfiuk52n",
+      "confidence": "community"
+    }
+  },
+  "updated_at": "2026-10-04T19:45:07.958130+00:00"
+}

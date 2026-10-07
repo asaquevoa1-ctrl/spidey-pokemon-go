@@ -2,6 +2,52 @@
   "schema_version": "spidey-local-events-v1",
   "events": [
     {
+      "id": "2026-chicago-fossil-museum",
+      "title": "Pokémon Fossil Museum · Chicago",
+      "place": "Chicago, Estados Unidos",
+      "dates": "22 maio 2026 – 11 abr 2027",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Pikachu Escavador estreia no Pokémon GO nesta parceria com o Field Museum. Atividades disponíveis na região do museu.",
+      "schedule": {
+        "start_date": "2026-05-22",
+        "start_time": "09:00",
+        "end_date": "2027-04-11",
+        "end_time": "21:00",
+        "timezone": "America/Chicago",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/pgo-pokemon-fossil-musuem-chicago-2026",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pikachu Escavador em Pesquisas de Campo e Pesquisa temporária da colaboração.",
+        "Reides presenciais de Pikachu Escavador e Mega Aerodactyl.",
+        "Pokémon fósseis na natureza, com possibilidade de variocolor.",
+        "Adesivos temáticos em Poképaradas, Desafio de Coleção e surpresa nos Retratos GO.",
+        "Recursos do jogo sem custo na área do museu durante o horário do evento. Substituem outros bônus na região; bônus semelhantes não acumulam."
+      ],
+      "locations": [
+        {
+          "id": "field-museum",
+          "name": "Field Museum",
+          "address": "1400 S. DuSable Lake Shore Drive, Chicago, IL 60605, Estados Unidos",
+          "access_note": "A visita à exposição exige ingresso. Confira os horários de abertura e os dias de fechamento no site do museu. Horário do jogo e abertura do prédio podem ser diferentes.",
+          "source_url": "https://www.fieldmuseum.org/exhibition/pokemon",
+          "coordinate_type": "venue_address",
+          "exact_pokestop_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Coordenadas exatas de Poképaradas não comprovadas."
+      },
+      "verified_at": "2026-10-05"
+    },
+    {
       "id": "2026-10-comic-con-malaga",
       "title": "Pokémon GO × Comic-Con Málaga 2026",
       "place": "Málaga, Espanha",
@@ -59,7 +105,8 @@
           "address": "Centro Histórico, Málaga, Espanha",
           "access_note": "Região anunciada para as atividades no jogo."
         }
-      ]
+      ],
+      "detail_title": "Pikachu · Fundo de Málaga"
     }
   ]
 }

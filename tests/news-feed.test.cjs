@@ -27,8 +27,10 @@ test('official locale/tracking variants deduplicate; unsafe or unpublished entri
 });
 
 test('Halloween teaser stays separate from the community calendar and invents no Pokémon, costumes or bonuses',()=>{
- const event=events.find(e=>e.id==='2026-10-halloween-part-1');
- const story=build(events,range,new Date('2026-10-04T20:00Z'))[0];
+ const event=JSON.parse(fs.readFileSync('tests/fixtures/halloween-community-teaser.json'));
+ // Fixed historical preview: the live catalog is allowed to gain official details later.
+ const story=build([event,...events.filter(e=>e.id!==event.id)],range,new Date('2026-10-04T20:00Z')).find(item=>item.events.some(e=>e.id===event.id));
+ assert.ok(story,'The Halloween teaser must remain accessible when newer announcements arrive');
  assert.equal(story.event.id,event.id);
  assert.match(story.summary,/aguardam confirmação/);
  assert.equal(event.news.source.confidence,'community');

@@ -98,7 +98,7 @@
         notificationButton.disabled = Boolean(subscribing);
         notificationButton.textContent = 'Ativar alertas';
       }
-      if (!active && !subscribing) setStatus('Ative os alertas para receber avisos neste aparelho.');
+      if (!active && !subscribing) setStatus('Alertas são opcionais. Ao ativar, guardamos só a assinatura técnica para enviar os avisos.');
       return payload.publicKey;
     } catch (error) {
       availability = null;
@@ -151,10 +151,6 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           subscription: subscription.toJSON(),
-          device: {
-            locale: navigator.language || 'pt-BR',
-            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || 'America/Sao_Paulo',
-          },
         }),
       });
 

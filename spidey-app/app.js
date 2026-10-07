@@ -424,6 +424,7 @@ function setView(viewId) {
   });
   if (viewId === 'weeklyView' && typeof renderWeeklyView === 'function') renderWeeklyView();
   if (viewId === 'stampsView') renderStamps();
+  if (viewId === 'pvpView') window.SpideyPvp?.load(true);
   if (viewId === 'mapView') {
     if (typeof renderMapV2 === 'function') renderMapV2();
     else renderMapSummary();
@@ -532,3 +533,5 @@ window.addEventListener('appinstalled', () => {
 
 if ('serviceWorker' in navigator) window.addEventListener('load', async () => { try { const reg = await navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }); await reg.update(); } catch (error) { console.error(error); } });
 loadContent();
+
+$('#privacyButton')?.addEventListener('click', () => setView('privacyView'));
