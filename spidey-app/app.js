@@ -23,6 +23,7 @@ const initialCalendarDay = calendarToday();
 const state = {
   events: [],
   stamps: [],
+  news: [],
   month: new Date(initialCalendarDay.getFullYear(), initialCalendarDay.getMonth(), 1),
   deferredInstall: null,
 };
@@ -444,19 +445,21 @@ async function loadContent({ refresh = false } = {}) {
   if (contentLoading) return contentLoading;
   contentLoading = (async () => {
     try {
-      const [eventsData, stampsData] = await Promise.all([
+      const [eventsData, stampsData, newsData] = await Promise.all([
         window.SpideyCatalog.load('events'), window.SpideyCatalog.load('stamps'),
+        window.SpideyCatalog.load('news').catch(() => ({ articles: state.news })),
       ]);
       const events = eventsData.events.filter(event => event.status === 'published');
       const stamps = stampsData.rallies.filter(rally => rally.status === 'published');
-      const fingerprint = JSON.stringify([events, stamps]);
+      const news = newsData.articles.filter(article => article.status === 'published');
+      const fingerprint = JSON.stringify([events, stamps, news]);
       lastContentCheck = Date.now();
       const status = document.getElementById('calendarUpdateStatus');
       if (status) status.textContent = 'Novidades no mesmo link. A agenda é atualizada automaticamente.';
       window.dispatchEvent(new Event('spideycatalogchecked'));
       if (fingerprint === catalogFingerprint) return;
       catalogFingerprint = fingerprint;
-      state.events = events; state.stamps = stamps;
+      state.events = events; state.stamps = stamps; state.news = news;
       renderCalendar(); renderEvents(); renderStamps();
       if (typeof renderWeeklyView === 'function') renderWeeklyView();
       if (typeof renderMapV2 === 'function') renderMapV2(); else renderMapSummary();

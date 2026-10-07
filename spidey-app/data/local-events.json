@@ -107,6 +107,52 @@
         }
       ],
       "detail_title": "Pikachu · Fundo de Málaga"
+    },
+    {
+      "id": "2026-10-pokemon-go-lab-big-adventure",
+      "title": "Pikachu Assistente do Willow · Pokémon GO Lab",
+      "detail_title": "Pokémon GO Lab… Big Adventure",
+      "place": "Tóquio, Japão",
+      "dates": "Retorno relatado em 7 out 2026 · término em confirmação",
+      "status": "community",
+      "locality": "local",
+      "artApproved": false,
+      "note": "O Pikachu Assistente do Professor Willow voltou ao GO Lab em Ikebukuro. A pesquisa temporária inclui um encontro com Fundo de Localização desta unidade.",
+      "schedule": {
+        "start_date": "2026-10-07",
+        "timezone": "Asia/Tokyo"
+      },
+      "source": {
+        "name": "みんポケ (MinPoke)",
+        "url": "https://9db.jp/pokemongo/data/26561",
+        "confidence": "community"
+      },
+      "bonuses": [
+        "Reides de Pikachu Assistente do Willow no Ginásio do GO Lab; a fonte japonesa relata capacidade de até 100 participantes e encerramento às 18h em 7/10, no horário do Japão.",
+        "Pesquisa temporária local com encontro de Pikachu e Fundo de Localização do Pokémon GO Lab.",
+        "O período de 7/10 a 31/12 e o limite de uma reide por dia foram divulgados pela comunidade, mas ainda aguardam confirmação nas fontes consultadas.",
+        "A garantia de fundo em reides e os encontros de iniciais de Kanto por Retratos GO também aguardam confirmação. O fundo da pesquisa já foi relatado."
+      ],
+      "locations": [
+        {
+          "id": "pokemon-go-lab-ikebukuro",
+          "name": "Pokémon GO Lab · Pokémon Center Mega Tokyo",
+          "address": "Sunshine City alpa 2F, 3-1-2 Higashi-Ikebukuro, Toshima, Tóquio, Japão",
+          "coordinates": {
+            "lat": 35.729,
+            "lng": 139.7186
+          },
+          "coordinate_type": "venue_reference",
+          "exact_pokestop_verified": false,
+          "access_note": "Coordenadas de referência do local. Confira a disponibilidade no Ginásio e na pesquisa do jogo; horários das atividades e da loja podem ser diferentes.",
+          "source_url": "https://shop.pokemon.co.jp/ja/shop/pokemoncenter-megatokyo/go-lab/"
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Referência do local; não há coordenada exata de Poképarada comprovada para esta atividade."
+      },
+      "verified_at": "2026-10-07"
     }
   ]
 }

@@ -6755,6 +6755,558 @@
         "published_on": "2026-10-07"
       },
       "updated_at": "2026-10-07T05:26:14.212Z"
+    },
+    {
+      "id": "2026-11-go-wild-area-sendai-06",
+      "slug": "2026-11-go-wild-area-sendai-06",
+      "title": "GO Wild Area 2026 • Sendai • Tohoku • 06/11",
+      "summary": "Duraludon Gigamax estreia no presencial, com retorno de Zacian e Zamazenta Coroados.",
+      "category": "regional_event",
+      "tags": [
+        "Local",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/sendai/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Tokyo",
+        "start_local": "2026-11-06T10:00:00+09:00",
+        "end_local": "2026-11-06T18:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-05T22:00:00-03:00",
+        "end_brazil": "2026-11-06T06:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento presencial de 6 a 8/11. O ingresso principal inclui um dia de jogo; dias extras dependem do adicional adquirido.",
+        "Duraludon Gigamax e as formas Coroadas de Zacian/Zamazenta podem receber o Fundo de Localização em batalhas presenciais. Participação remota não concede esse fundo."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Zacian Espada Coroada",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        },
+        {
+          "name": "Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia Espada Coroada/Escudo Coroado ao derrotar Zacian/Zamazenta nas respectivas formas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Sendai • Tohoku • 06/11"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-sendai-07",
+      "slug": "2026-11-go-wild-area-sendai-07",
+      "title": "GO Wild Area 2026 • Sendai • Tohoku • 07/11",
+      "summary": "Duraludon Gigamax estreia no presencial, com retorno de Zacian e Zamazenta Coroados.",
+      "category": "regional_event",
+      "tags": [
+        "Local",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/sendai/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Tokyo",
+        "start_local": "2026-11-07T10:00:00+09:00",
+        "end_local": "2026-11-07T18:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T22:00:00-03:00",
+        "end_brazil": "2026-11-07T06:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento presencial de 6 a 8/11. O ingresso principal inclui um dia de jogo; dias extras dependem do adicional adquirido.",
+        "Duraludon Gigamax e as formas Coroadas de Zacian/Zamazenta podem receber o Fundo de Localização em batalhas presenciais. Participação remota não concede esse fundo."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Zacian Espada Coroada",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        },
+        {
+          "name": "Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia Espada Coroada/Escudo Coroado ao derrotar Zacian/Zamazenta nas respectivas formas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Sendai • Tohoku • 07/11"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-sendai-08",
+      "slug": "2026-11-go-wild-area-sendai-08",
+      "title": "GO Wild Area 2026 • Sendai • Tohoku • 08/11",
+      "summary": "Duraludon Gigamax estreia no presencial, com retorno de Zacian e Zamazenta Coroados.",
+      "category": "regional_event",
+      "tags": [
+        "Local",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/sendai/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Tokyo",
+        "start_local": "2026-11-08T10:00:00+09:00",
+        "end_local": "2026-11-08T18:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-07T22:00:00-03:00",
+        "end_brazil": "2026-11-08T06:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento presencial de 6 a 8/11. O ingresso principal inclui um dia de jogo; dias extras dependem do adicional adquirido.",
+        "Duraludon Gigamax e as formas Coroadas de Zacian/Zamazenta podem receber o Fundo de Localização em batalhas presenciais. Participação remota não concede esse fundo."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Zacian Espada Coroada",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        },
+        {
+          "name": "Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia Espada Coroada/Escudo Coroado ao derrotar Zacian/Zamazenta nas respectivas formas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Sendai • Tohoku • 08/11"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-mexico-city-06",
+      "slug": "2026-11-go-wild-area-mexico-city-06",
+      "title": "GO Wild Area 2026 • Cidade do México • 06/11",
+      "summary": "Duraludon Gigamax estreia no presencial, com retorno de Zacian e Zamazenta Coroados.",
+      "category": "regional_event",
+      "tags": [
+        "Local",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Mexico_City",
+        "start_local": "2026-11-06T10:00:00-06:00",
+        "end_local": "2026-11-06T18:00:00-06:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T13:00:00-03:00",
+        "end_brazil": "2026-11-06T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento presencial de 6 a 8/11. O ingresso principal inclui um dia de jogo; dias extras dependem do adicional adquirido.",
+        "Duraludon Gigamax e as formas Coroadas de Zacian/Zamazenta podem receber o Fundo de Localização em batalhas presenciais. Participação remota não concede esse fundo."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Zacian Espada Coroada",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        },
+        {
+          "name": "Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia Espada Coroada/Escudo Coroado ao derrotar Zacian/Zamazenta nas respectivas formas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Cidade do México • 06/11"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-mexico-city-07",
+      "slug": "2026-11-go-wild-area-mexico-city-07",
+      "title": "GO Wild Area 2026 • Cidade do México • 07/11",
+      "summary": "Duraludon Gigamax estreia no presencial, com retorno de Zacian e Zamazenta Coroados.",
+      "category": "regional_event",
+      "tags": [
+        "Local",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Mexico_City",
+        "start_local": "2026-11-07T10:00:00-06:00",
+        "end_local": "2026-11-07T18:00:00-06:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-07T13:00:00-03:00",
+        "end_brazil": "2026-11-07T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento presencial de 6 a 8/11. O ingresso principal inclui um dia de jogo; dias extras dependem do adicional adquirido.",
+        "Duraludon Gigamax e as formas Coroadas de Zacian/Zamazenta podem receber o Fundo de Localização em batalhas presenciais. Participação remota não concede esse fundo."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Zacian Espada Coroada",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        },
+        {
+          "name": "Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia Espada Coroada/Escudo Coroado ao derrotar Zacian/Zamazenta nas respectivas formas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Cidade do México • 07/11"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-mexico-city-08",
+      "slug": "2026-11-go-wild-area-mexico-city-08",
+      "title": "GO Wild Area 2026 • Cidade do México • 08/11",
+      "summary": "Duraludon Gigamax estreia no presencial, com retorno de Zacian e Zamazenta Coroados.",
+      "category": "regional_event",
+      "tags": [
+        "Local",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Mexico_City",
+        "start_local": "2026-11-08T10:00:00-06:00",
+        "end_local": "2026-11-08T18:00:00-06:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-08T13:00:00-03:00",
+        "end_brazil": "2026-11-08T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento presencial de 6 a 8/11. O ingresso principal inclui um dia de jogo; dias extras dependem do adicional adquirido.",
+        "Duraludon Gigamax e as formas Coroadas de Zacian/Zamazenta podem receber o Fundo de Localização em batalhas presenciais. Participação remota não concede esse fundo."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Zacian Espada Coroada",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        },
+        {
+          "name": "Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; Energia Coroada"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia Espada Coroada/Escudo Coroado ao derrotar Zacian/Zamazenta nas respectivas formas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Cidade do México • 08/11"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-global-14",
+      "slug": "2026-11-go-wild-area-global-14",
+      "title": "GO Wild Area 2026 • Global • 14/11",
+      "summary": "Duraludon Gigamax estreia no Global, junto ao retorno das fusões de Kyurem.",
+      "category": "global_event",
+      "tags": [
+        "Global",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/global",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-14T10:00:00-03:00",
+        "end_local": "2026-11-14T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-14T10:00:00-03:00",
+        "end_brazil": "2026-11-14T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento Global: sábado 14/11 com Dialga Dinamax, Zekrom e Kyurem Branco; domingo 15/11 com Palkia Dinamax, Reshiram e Kyurem Preto. Duraludon Gigamax aparece nos dois dias.",
+        "Há recursos gratuitos e pesquisa/bônus exclusivos para quem possui ingresso. A Pesquisa Especial com ingresso recompensa Duraludon Gigamax com Fundo Especial."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Dialga Dinamax",
+          "note": "Batalhas Max; pode ser Brilhante"
+        },
+        {
+          "name": "Kyurem Branco",
+          "note": "Reides de cinco estrelas com Energia de Fusão"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia de Fusão em reides de Kyurem Preto e Kyurem Branco."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Global • 14/11"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-global-15",
+      "slug": "2026-11-go-wild-area-global-15",
+      "title": "GO Wild Area 2026 • Global • 15/11",
+      "summary": "Duraludon Gigamax estreia no Global, junto ao retorno das fusões de Kyurem.",
+      "category": "global_event",
+      "tags": [
+        "Global",
+        "GO Wild Area",
+        "Duraludon Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/global",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-15T10:00:00-03:00",
+        "end_local": "2026-11-15T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-15T10:00:00-03:00",
+        "end_brazil": "2026-11-15T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento sem coordenada exata específica confirmada."
+      },
+      "notes": [
+        "Das 10h às 18h no horário local em cada dia do evento. A janela exibida em Brasília respeita o fuso do local.",
+        "Evento Global: sábado 14/11 com Dialga Dinamax, Zekrom e Kyurem Branco; domingo 15/11 com Palkia Dinamax, Reshiram e Kyurem Preto. Duraludon Gigamax aparece nos dois dias.",
+        "Há recursos gratuitos e pesquisa/bônus exclusivos para quem possui ingresso. A Pesquisa Especial com ingresso recompensa Duraludon Gigamax com Fundo Especial."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "Batalhas Max de seis estrelas; pode ser Brilhante"
+        },
+        {
+          "name": "Palkia Dinamax",
+          "note": "Batalhas Max; pode ser Brilhante"
+        },
+        {
+          "name": "Kyurem Preto",
+          "note": "Reides de cinco estrelas com Energia de Fusão"
+        }
+      ],
+      "bonuses": [
+        "Duraludon Gigamax em Batalhas Max de seis estrelas.",
+        "Energia de Fusão em reides de Kyurem Preto e Kyurem Branco."
+      ],
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": []
+      },
+      "status": "published",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "news": {
+        "window_label": "Global • 15/11"
+      }
     }
   ]
 }

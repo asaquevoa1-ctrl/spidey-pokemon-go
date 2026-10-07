@@ -1,0 +1,118 @@
+{
+  "schema_version": "spidey-news-v1",
+  "updated_at": "2026-10-07T18:09:56.084202+00:00",
+  "articles": [
+    {
+      "id": "2026-10-07-halloween-official-teaser",
+      "title": "Halloween Parte II: nova prévia oficial",
+      "summary": "O perfil oficial do Pokémon GO divulgou uma nova imagem de Halloween. Veja a arte original do teaser.",
+      "details": [
+        "Pokémon, trajes e bônus da Parte II ainda aguardam o anúncio completo.",
+        "A janela de 1º a 5 de novembro indicada na agenda vem da comunidade e continua em confirmação."
+      ],
+      "source": {
+        "name": "Pokémon GO • perfil oficial",
+        "url": "https://x.com/PokemonGoApp/status/2107621979507343857",
+        "confidence": "official"
+      },
+      "published_at": "2026-10-07T00:00:12Z",
+      "updated_at": "2026-10-07T18:09:56.084202+00:00",
+      "status": "published",
+      "event_ids": [
+        "2026-11-halloween-part-2"
+      ],
+      "media": {
+        "classification": "official_teaser",
+        "file": "assets/events/official/halloween-part-2-teaser-20261007.jpg",
+        "sha256": "75075a8ba783729614458f52493bc5e7fbb63c59be0d5eb82509367bf7e62b05",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Teaser oficial de Halloween com silhuetas em uma paisagem noturna.",
+        "credit": "Imagem original do Pokémon GO • teaser oficial"
+      }
+    },
+    {
+      "id": "2026-10-07-eternatus-return-preview",
+      "title": "Eternatus: possível retorno aparece nos arquivos do jogo",
+      "summary": "A comunidade encontrou referências ao retorno de Eternatus no GO Wild Area: Lead Out. A informação ainda não foi confirmada pelo Pokémon GO.",
+      "details": [
+        "Os dados apontam 14 a 23 de novembro. Datas, horários, recompensas e forma de obter Eternatus aguardam confirmação oficial."
+      ],
+      "source": {
+        "name": "The Silph Road • datamine",
+        "url": "https://www.reddit.com/r/TheSilphRoad/comments/1wzr1kg/eternatus_returns_to_pok%C3%A9mon_go_for_go_wild_area/",
+        "confidence": "datamine"
+      },
+      "published_at": "2026-10-07",
+      "updated_at": "2026-10-07T18:09:56.084202+00:00",
+      "status": "published",
+      "event_ids": []
+    },
+    {
+      "id": "2026-10-07-pokemon-go-lab-return",
+      "title": "Pikachu Assistente do Willow retorna ao Pokémon GO Lab",
+      "summary": "Relatos de 7 de outubro mostram reides no GO Lab de Tóquio e uma pesquisa temporária com o Fundo de Localização exclusivo da unidade.",
+      "details": [
+        "Local: Pokémon GO Lab, Ikebukuro, Japão. Referência: 35.7290, 139.7186.",
+        "A fonte japonesa relata até 100 participantes nas reides e confirma o fundo do encontro final da pesquisa.",
+        "O período divulgado de 7/10 a 31/12, o limite de uma reide diária, o fundo garantido em reides e os iniciais de Kanto em Retratos GO ainda aguardam confirmação. A fonte japonesa informa encerramento das reides às 18h em 7/10; confira a disponibilidade no jogo."
+      ],
+      "source": {
+        "name": "みんポケ (MinPoke)",
+        "url": "https://9db.jp/pokemongo/data/26561",
+        "confidence": "community"
+      },
+      "related_sources": [
+        {
+          "name": "Conferir pesquisa (Serebii)",
+          "url": "https://serebii.net/pokemongo/reallifeevents/pokemongolab...bigadventure.shtml"
+        }
+      ],
+      "published_at": "2026-10-07",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "status": "published",
+      "event_ids": [],
+      "local_event_ids": [
+        "2026-10-pokemon-go-lab-big-adventure"
+      ]
+    },
+    {
+      "id": "2026-10-07-go-wild-area-new-pokemon",
+      "title": "GO Wild Area 2026: Duraludon Gigamax, Coroados e fusões de Kyurem",
+      "summary": "As páginas oficiais confirmam a estreia de Duraludon Gigamax nos eventos presenciais e no Global, com chefes de batalha diferentes em cada etapa.",
+      "details": [
+        "Sendai • Tohoku e Cidade do México: 6 a 8 de novembro, das 10h às 18h locais. Duraludon Gigamax em Batalhas Max de seis estrelas; Zacian Espada Coroada e Zamazenta Escudo Coroado em reides de cinco estrelas.",
+        "Global: 14 e 15 de novembro, das 10h às 18h locais. Duraludon Gigamax nos dois dias; Kyurem Branco no sábado e Kyurem Preto no domingo, com Energia de Fusão.",
+        "No Global, Dialga Dinamax aparece no sábado e Palkia Dinamax no domingo. A Pesquisa Especial com ingresso recompensa um Duraludon Gigamax com Fundo Especial."
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/gowildarea/global",
+        "confidence": "official"
+      },
+      "related_sources": [
+        {
+          "name": "Anúncio de Sendai",
+          "url": "https://pokemongo.com/gowildarea/sendai/gameplay"
+        },
+        {
+          "name": "Anúncio da Cidade do México",
+          "url": "https://pokemongo.com/gowildarea/mexico-city/gameplay"
+        }
+      ],
+      "published_at": "2026-10-07",
+      "updated_at": "2026-10-07T18:17:37.236408+00:00",
+      "status": "published",
+      "event_ids": [
+        "2026-11-go-wild-area-sendai-06",
+        "2026-11-go-wild-area-sendai-07",
+        "2026-11-go-wild-area-sendai-08",
+        "2026-11-go-wild-area-mexico-city-06",
+        "2026-11-go-wild-area-mexico-city-07",
+        "2026-11-go-wild-area-mexico-city-08",
+        "2026-11-go-wild-area-global-14",
+        "2026-11-go-wild-area-global-15"
+      ]
+    }
+  ]
+}

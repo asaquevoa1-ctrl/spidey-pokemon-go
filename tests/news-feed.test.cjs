@@ -50,3 +50,69 @@ test('official Boston, Night Out and TCG announcements are available without mer
   assert.equal(story.event.source.confidence,'official',id);
  }
 });
+
+test('recent announcements without confirmed dates appear without creating calendar events',()=>{
+ const articles=JSON.parse(fs.readFileSync('spidey-app/data/news.json')).articles;
+ const before=JSON.stringify(events);
+ const stories=build(events,range,new Date('2026-10-08T00:00Z'),articles);
+ const eternatus=stories.find(story=>story.event.id==='2026-10-07-eternatus-return-preview');
+ assert.ok(eternatus);
+ assert.equal(eternatus.event.source.confidence,'datamine');
+ assert.equal(eternatus.events.length,0);
+ assert.equal(eternatus.event.schedule,undefined);
+ assert.match(eternatus.summary,/não foi confirmada/);
+ assert.equal(JSON.stringify(events),before);
+});
+
+test('official Halloween image and the existing community event share one story while keeping their different confidence',()=>{
+ const articles=JSON.parse(fs.readFileSync('spidey-app/data/news.json')).articles;
+ const stories=build(events,range,new Date('2026-10-08T00:00Z'),articles);
+ const linked=stories.filter(story=>story.events.some(event=>event.id==='2026-11-halloween-part-2'));
+ assert.equal(linked.length,1);
+ assert.equal(linked[0].event.source.confidence,'official');
+ assert.equal(linked[0].events[0].source.confidence,'community');
+ assert.equal(linked[0].media.classification,'official_teaser');
+ const image=fs.readFileSync('spidey-app/'+linked[0].media.file);
+ assert.equal(require('node:crypto').createHash('sha256').update(image).digest('hex'),linked[0].media.sha256);
+ assert.ok(stories.some(story=>story.events.some(event=>event.id==='2026-10-halloween-part-1')));
+});
+
+test('drafts, future posts and unsafe news URLs stay out of the public feed',()=>{
+ const article=JSON.parse(fs.readFileSync('spidey-app/data/news.json')).articles[1];
+ for(const change of [{status:'draft'},{published_at:'2027-01-01'},{source:{url:'javascript:alert(1)'}},{published_at:'invalid'}]){
+  const stories=build([],range,new Date('2026-10-08T00:00Z'),[{...article,...change}]);
+  assert.equal(stories.length,0);
+ }
+});
+
+test('Wild Area news groups eight daily windows and keeps crowned raids separate from global Kyurem raids',()=>{
+ const articles=JSON.parse(fs.readFileSync('spidey-app/data/news.json')).articles;
+ const stories=build(events,range,new Date('2026-10-08T00:00Z'),articles);
+ const story=stories.find(item=>item.event.id==='2026-10-07-go-wild-area-new-pokemon');
+ assert.equal(story.events.length,8);
+ assert.equal(story.event.source.confidence,'official');
+ assert.equal(story.relatedSources.length,2);
+ const sendai=story.events.find(e=>e.id==='2026-11-go-wild-area-sendai-06');
+ assert.equal(sendai.schedule.start_brazil,'2026-11-05T22:00:00-03:00');
+ assert.equal(sendai.schedule.end_brazil,'2026-11-06T06:00:00-03:00');
+ assert.ok(sendai.pokemon.some(p=>p.name==='Zacian Espada Coroada'));
+ assert.ok(!sendai.pokemon.some(p=>p.name.includes('Kyurem')));
+ const saturday=story.events.find(e=>e.id==='2026-11-go-wild-area-global-14');
+ const sunday=story.events.find(e=>e.id==='2026-11-go-wild-area-global-15');
+ assert.ok(saturday.pokemon.some(p=>p.name==='Kyurem Branco'));
+ assert.ok(sunday.pokemon.some(p=>p.name==='Kyurem Preto'));
+ assert.ok(!saturday.pokemon.some(p=>p.name.includes('Coroada')));
+ for(const e of story.events){
+  assert.equal(range(e).end-range(e).start,8*3600000);
+  assert.equal(e.notifications.enabled,false);
+ }
+});
+
+test('GO Lab news opens the regional event without adding an unconfirmed global calendar window',()=>{
+ const articles=JSON.parse(fs.readFileSync('spidey-app/data/news.json')).articles;
+ const story=build(events,range,new Date('2026-10-08T00:00Z'),articles).find(item=>item.event.id==='2026-10-07-pokemon-go-lab-return');
+ assert.equal(story.event.source.confidence,'community');
+ assert.equal(story.events.length,0);
+ assert.deepEqual(Array.from(story.localEventIds),['2026-10-pokemon-go-lab-big-adventure']);
+ assert.match(story.details.join(' '),/aguardam confirmação/);
+});

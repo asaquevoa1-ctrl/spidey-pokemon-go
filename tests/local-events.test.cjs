@@ -38,3 +38,16 @@ test('missing, reversed or invalid local hours remain unconfirmed instead of inv
   for(const schedule of [{...event.schedule,timezone:'invalid/zone'},{...event.schedule,end_date:'2026-09-30'},{...event.schedule,end_time:'25:00'}])
     assert.equal(world.eventWindow({...event,schedule}).status,'HORÁRIO A CONFIRMAR');
 });
+
+test('GO Lab keeps unconfirmed hours and copies the supplied venue reference without enabling GPX',()=>{
+ const lab=events.find(e=>e.id==='2026-10-pokemon-go-lab-big-adventure');
+ assert.equal(world.eventWindow(lab,new Date('2026-10-07T12:00:00Z')).status,'HORÁRIO A CONFIRMAR');
+ assert.equal(lab.source.confidence,'community');
+ assert.equal(lab.schedule.end_date,undefined);
+ assert.equal(lab.gpx.enabled,false);
+ assert.equal(lab.locations[0].exact_pokestop_verified,false);
+ assert.match(world.locationRows(lab),/data-local-copy="35\.7290, 139\.7186"/);
+ assert.match(world.mapUrl(lab.locations[0]),/query=35\.7290%2C%20139\.7186$/);
+ const unsafe={...lab.locations[0],coordinates:{lat:120,lng:139}};
+ assert.ok(!world.locationRows({...lab,locations:[unsafe]}).includes('Copiar coordenadas'));
+});

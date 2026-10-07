@@ -12,13 +12,14 @@
   }
   function renderNews(){
     const target=document.getElementById('newsList');if(!target)return;
-    const items=window.SpideyNews.build(state.events,getBrazilRange);
+    const items=window.SpideyNews.build(state.events,getBrazilRange,new Date(),state.news);
     target.innerHTML=items.slice(0,24).map(story=>{
       const e=story.event,multiple=story.events.length>1;
       const newsSource=e.news?.source||e.source;
       const newsEvent={...e,source:newsSource};
-      const teaser=e.news?.teaser?`<div class="cc-news-teaser">${window.SpideyPlayer.image(e)}</div>`:'';
-      return `<article class="cc-news-card" data-news-story="${esc(story.key)}"><span class="eyebrow">${esc(sourceLabel(newsEvent))}</span><p class="microcopy">${esc(newsSource.name||'Fonte do evento')}${story.updated?' • Atualizado '+esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit'}).format(new Date(story.updated))):''}</p><h2>${esc(story.title)}</h2>${teaser}<p>${esc(story.summary||'Veja os detalhes e a fonte deste evento.')}</p>${story.events.map(item=>`<p class="microcopy">${multiple?'<strong>'+esc(item.title)+'</strong><br>':''}${esc(window.SpideyPlayer.time(item))}</p>`).join('')}<div class="action-row">${story.events.map(item=>`<button class="action-btn" data-news-event="${esc(item.id)}">${multiple?esc(item.news?.window_label||item.title):'Ver evento'}</button>`).join('')}<a class="action-btn" href="${esc(newsSource.url)}" target="_blank" rel="noopener">Consultar fonte</a></div></article>`;
+      const media=story.media;
+      const teaser=media&&/^assets\/events\/(?!.*(?:^|\/)\.\.\/)[a-z0-9/_.-]+$/i.test(media.file)&&/^[a-f0-9]{64}$/.test(media.sha256)?`<figure class="cc-news-media"><img src="${esc(media.file)}?v=${media.sha256.slice(0,12)}" alt="${esc(media.alt)}" width="${Number(media.width)||1920}" height="${Number(media.height)||1080}" loading="lazy"><figcaption>${esc(media.credit)}</figcaption></figure>`:e.news?.teaser?`<div class="cc-news-teaser">${window.SpideyPlayer.image(e)}</div>`:'';
+      return `<article class="cc-news-card" data-news-story="${esc(story.key)}"><span class="eyebrow">${esc(sourceLabel(newsEvent))}</span><p class="microcopy">${esc(newsSource.name||'Fonte do evento')}${story.updated?' • Atualizado '+esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit'}).format(new Date(story.updated))):''}</p><h2>${esc(story.title)}</h2>${teaser}<p>${esc(story.summary||'Veja os detalhes e a fonte deste evento.')}</p>${(story.details||[]).map(text=>`<p class="microcopy">${esc(text)}</p>`).join('')}${story.events.map(item=>`<p class="microcopy">${multiple?'<strong>'+esc(item.title)+'</strong><br>':''}${esc(window.SpideyPlayer.time(item))}</p>`).join('')}<div class="action-row">${story.events.map(item=>`<button class="action-btn" data-news-event="${esc(item.id)}">${multiple?esc(item.news?.window_label||item.title):'Ver evento'}</button>`).join('')}${(story.localEventIds||[]).map(id=>`<button class="action-btn" data-open-local-event="${esc(id)}">Ver evento e local</button>`).join('')}<a class="action-btn" href="${esc(newsSource.url)}" target="_blank" rel="noopener">Consultar fonte</a>${(story.relatedSources||[]).map(source=>`<a class="action-btn" href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.name)}</a>`).join('')}</div></article>`;
     }).join('')||'<p class="empty">Nenhuma novidade por enquanto.</p>';
   }
   function mount(){
