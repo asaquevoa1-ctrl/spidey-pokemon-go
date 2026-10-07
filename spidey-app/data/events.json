@@ -6514,6 +6514,18 @@
           "note": "natureza; pode aparecer Brilhante"
         },
         {
+          "name": "Meowth",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Psyduck",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Slowpoke",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
           "name": "Grimer com chapéu de festa",
           "note": "natureza; pode aparecer Brilhante"
         },
@@ -6522,7 +6534,107 @@
           "note": "natureza; pode aparecer Brilhante"
         },
         {
+          "name": "Snorlax",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Dratini",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Chikorita",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Cyndaquil",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Totodile",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Togetic",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Treecko",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Torchic",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Mudkip",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Ralts",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Beldum",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Buneary",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gible",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
           "name": "Gengar com chapéu de festa",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gyarados",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Ampharos",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Tyranitar",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gardevoir",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Altaria",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Garchomp",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Rowlet",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Litten",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Popplio",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Grookey",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Scorbunny",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Sobble",
           "note": "Módulo Atrair; pode aparecer Brilhante"
         },
         {
@@ -6532,6 +6644,42 @@
         {
           "name": "Unown G",
           "note": "Incenso em Singapura; pode aparecer Brilhante"
+        },
+        {
+          "name": "Turtwig",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Chimchar",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Piplup",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Snivy",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Tepig",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Oshawott",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Chespin",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Fennekin",
+          "note": "Incenso; pode aparecer Brilhante"
+        },
+        {
+          "name": "Froakie",
+          "note": "Incenso; pode aparecer Brilhante"
         },
         {
           "name": "Venusaur Gigamax",
@@ -6551,7 +6699,7 @@
         "summary": "Singapura recebe Pikachu PokéXciting! azul, dois Rallies de Selos, pesquisas gratuitas e Batalhas Gigamax em 7 e 8 de novembro.",
         "published_on": "2026-10-07"
       },
-      "updated_at": "2026-10-07T05:24:18.242Z"
+      "updated_at": "2026-10-07T05:26:14.212Z"
     }
   ]
 }
