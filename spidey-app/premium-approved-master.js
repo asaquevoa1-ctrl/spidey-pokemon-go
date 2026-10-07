@@ -312,6 +312,39 @@
     "approval_record": "docs/qa/WEEKLY_ART_COMPLETION_20261004.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-11-go-wild-area-sendai": {
+    "file": "assets/events/premium/wild-area-sendai-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "18b4d7237129c9ab4cea402c2cc5d4fa33dc7f44e28b06d6d48c0bf83f4e4eee",
+    "approval_record": "docs/qa/WILD_AREA_ART_APPROVAL_20261007.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-11-go-wild-area-mexico-city": {
+    "file": "assets/events/premium/wild-area-mexico-city-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "b508a6e00b627eb515d747e35092330cd901d35214af7aa61c04e00fe9650789",
+    "approval_record": "docs/qa/WILD_AREA_ART_APPROVAL_20261007.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-11-go-wild-area-global": {
+    "file": "assets/events/premium/wild-area-global-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "772cd973f35942f42d6d55565d6d4c68f81bc7799b993f3a333e31fc7d440770",
+    "approval_record": "docs/qa/WILD_AREA_ART_APPROVAL_20261007.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
