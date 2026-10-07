@@ -1,5 +1,6 @@
 import { blobStore, socialReady } from '../spidey-app/api/social/store.js';
 import { createSocialService } from '../spidey-app/api/social/service.js';
+import { BlobError } from '@vercel/blob';
 export default async function handler(request,response) {
   response.setHeader('Cache-Control','no-store, private');
   if (request.method === 'GET') return response.status(200).json({ok:true,available:socialReady(),version:'spidey-social-v1',mode:process.env.VERCEL_ENV === 'preview'?'preview':'production'});
@@ -15,9 +16,11 @@ export default async function handler(request,response) {
     return response.status(200).json(result);
   } catch(error) {
     // Never log request envelopes, profile fields, keys or conversations.
-    const type = /^[A-Za-z]+(?:Error|Exception)$/.test(error?.name || '') ? error.name : 'UnexpectedError';
+    const type = error instanceof BlobError ? 'BlobError' : ['TypeError','SyntaxError','OperationError','DataError','Error'].includes(error?.name) ? error.name : 'UnexpectedError';
+    const status = /Failed to fetch blob: (\d{3})/.exec(error?.message || '')?.[1];
+    const reason = status ? `blob_http_${status}` : /private|public/i.test(error?.message || '') ? 'blob_access' : /token/i.test(error?.message || '') ? 'blob_token' : /ETag|Precondition/i.test(error?.message || '') ? 'blob_conflict' : 'unspecified';
     if (!error.status) console.error('social unavailable',type);
     return response.status(error.status || 503).json({error:error.status?error.message:'social_unavailable',
-      ...(!error.status && process.env.VERCEL_ENV === 'preview' ? {diagnostic:type} : {})});
+      ...(!error.status && process.env.VERCEL_ENV === 'preview' ? {diagnostic:`${type}:${reason}`} : {})});
   }
 }

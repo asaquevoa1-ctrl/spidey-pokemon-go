@@ -1,4 +1,4 @@
-import { get, put, list, del } from '@vercel/blob';
+import { get, put, list, del, BlobPreconditionFailedError } from '@vercel/blob';
 import { createHash } from 'node:crypto';
 
 // Reuse the existing private store. Preview identities never enter production.
@@ -28,7 +28,7 @@ export function blobStore() {
             addRandomSuffix: false, allowOverwrite: Boolean(previous), ...(previous ? { ifMatch: previous.etag } : {}), cacheControlMaxAge: 60 });
           return value;
         } catch (error) {
-          const conflict = error?.name === 'BlobPreconditionFailedError' || !previous && /already exists/i.test(error?.message || '');
+          const conflict = error instanceof BlobPreconditionFailedError || !previous && /already exists/i.test(error?.message || '');
           if (!conflict || attempt === 4) throw error;
         }
       }
