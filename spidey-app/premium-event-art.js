@@ -64,6 +64,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
     { keys: ['giratina forma origem', 'giratina origin'], id: 10007, label: 'Giratina (Forma Origem)' },
     { keys: ['xerneas'], id: 716, label: 'Xerneas' },
     { keys: ['yveltal'], id: 717, label: 'Yveltal' },
+    { keys: ['duraludon gigamax', 'gigantamax duraludon'], id: 884, label: 'Duraludon Gigamax' },
     { keys: ['dialga'], id: 483, label: 'Dialga' },
     { keys: ['palkia'], id: 484, label: 'Palkia' },
     { keys: ['seedot'], id: 273, label: 'Seedot' },
