@@ -2,6 +2,8 @@
 
 ## 07/10/2026 — artes Premium do GO Wild Area
 
+Publicação conferida em 07/10: código `d470ffb`, produção READY no endereço permanente https://spidey-pokemon-go.vercel.app/spidey-app/ . Os três detalhes públicos carregam os PNGs aprovados completos; 39 arquivos HTTP200 com bytes exatos, incluindo as 35 entradas do master. Workflow de testes e monitor de saúde concluídos com sucesso. Conferência responsiva no navegador; teste físico Android permanece pendente.
+
 Os eventos existentes de Sendai/Tohoku, Cidade do México e Global receberam três pôsteres Premium próprios, consolidados com QA visual delegado pela autorização de 03/10. O mesmo PNG integral atende miniatura, card, Semana e detalhe; o destaque passou a Duraludon Gigamax. Fontes oficiais, datas, horários locais, marca e anatomia foram conferidos. Master com 35 entradas/34 originais: as 32 entradas anteriores e seus arquivos permanecem exatos. Catálogo de 136 eventos e agendas preservados. Prévia validada em mobile390 Claro/Escuro e desktop1280 Escuro, com nove medições, pôsteres completos e sem overflow. Cache e versões foram atualizados. O estado da publicação e as provas estão em `docs/qa/WILD_AREA_ART_APPROVAL_20261007.json`; a aprovação da arte não certifica teste físico Android, PWA/offline/push ou Amigos/chat.
 
 Status: OBRIGATÓRIO

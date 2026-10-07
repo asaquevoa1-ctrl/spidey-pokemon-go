@@ -1,0 +1,54 @@
+{
+  "commit": "96c00934439358c05c4367bcfc5049ac12e6335b",
+  "measurements": [
+    {
+      "event": "sendai",
+      "title": "Pokémon GO Wild Area 2026: Sendai e Tohoku",
+      "view": "approved-mobile-dark",
+      "complete": true,
+      "dialogScrollTop": 0,
+      "imageHeight": 449.828125,
+      "imageWidth": 360,
+      "naturalHeight": 1402,
+      "naturalWidth": 1122,
+      "objectFit": "contain",
+      "ribbon": "Evento regionalDuraludon Gigamax",
+      "scrollWidth": 375,
+      "src": "assets/events/premium/wild-area-sendai-2026-approved-v1.png?v=18b4d7237129",
+      "width": 375
+    },
+    {
+      "event": "mexico",
+      "title": "Pokémon GO Wild Area 2026: Cidade do México",
+      "view": "approved-mobile-dark",
+      "complete": true,
+      "dialogScrollTop": 0,
+      "imageHeight": 449.828125,
+      "imageWidth": 360,
+      "naturalHeight": 1402,
+      "naturalWidth": 1122,
+      "objectFit": "contain",
+      "ribbon": "Evento regionalDuraludon Gigamax",
+      "scrollWidth": 375,
+      "src": "assets/events/premium/wild-area-mexico-city-2026-approved-v1.png?v=b508a6e00b62",
+      "width": 375
+    },
+    {
+      "event": "global",
+      "title": "Pokémon GO Wild Area 2026: Global",
+      "view": "approved-mobile-dark",
+      "complete": true,
+      "dialogScrollTop": 0,
+      "imageHeight": 449.828125,
+      "imageWidth": 360,
+      "naturalHeight": 1402,
+      "naturalWidth": 1122,
+      "objectFit": "contain",
+      "ribbon": "Evento especialDuraludon Gigamax",
+      "scrollWidth": 375,
+      "src": "assets/events/premium/wild-area-global-2026-approved-v1.png?v=772cd973f359",
+      "width": 375
+    }
+  ],
+  "physical_android_certified": false
+}

@@ -441,18 +441,33 @@
     "screenshots": [
       "docs/qa/proofs/wild-area-global-mobile-dark-20261007.jpg",
       "docs/qa/proofs/wild-area-global-mobile-light-20261007.jpg",
-      "docs/qa/proofs/wild-area-mexico-mobile-dark-20261007.jpg",
       "docs/qa/proofs/wild-area-mexico-mobile-light-20261007.jpg",
       "docs/qa/proofs/wild-area-sendai-desktop-dark-20261007.jpg",
-      "docs/qa/proofs/wild-area-sendai-mobile-dark-20261007.jpg"
-    ]
+      "docs/qa/proofs/wild-area-sendai-mobile-dark-20261007.jpg",
+      "docs/qa/proofs/wild-area-mexico-public-mobile-dark-20261007.jpg"
+    ],
+    "screenshot_note": "A captura inicial mexico-mobile-dark mostra a aba Novidades e não foi usada como prova do pôster. A medição DOM deste detalhe passou; a captura pública complementar confirma o pôster.",
+    "approved_preview_proof": "docs/qa/proofs/wild-area-approved-preview-browser-20261007.json"
   },
   "publication": {
-    "status": "READY_FOR_PUBLICATION",
+    "status": "READY_PUBLIC_VERIFIED",
     "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
     "authorization": "Autorização de publicação anterior preservada no SPIDEY_NEXUS_INDEX.md",
     "announcements_sent": false,
-    "push_dispatched": false
+    "push_dispatched": false,
+    "code_commit": "d470ffbbeda3f1602dfd37311ded95bb1a92897f",
+    "deployment_id": "dpl_LQZVVMis4ZmKVAPSqGeP4m5yrrCa",
+    "target": "production",
+    "verified_at": "2026-10-07T23:08:52.009318+00:00",
+    "http_proof": "docs/qa/proofs/wild-area-public-http-20261007.json",
+    "browser_proof": "docs/qa/proofs/wild-area-public-browser-20261007.json",
+    "screenshot": "docs/qa/proofs/wild-area-global-public-20261007.jpg",
+    "public_files_exact": 39,
+    "public_files_checked": 39,
+    "tests_workflow": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37700454860",
+    "health_workflow": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37700454936",
+    "health_conclusion": "success",
+    "mobile_browser_proof": "docs/qa/proofs/wild-area-public-mobile-browser-20261007.json"
   },
   "scope": "Three existing GO Wild Area events; no schedule, catalog, coordinate, GPX, push or social changes.",
   "validation": {

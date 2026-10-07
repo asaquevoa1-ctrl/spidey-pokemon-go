@@ -1,0 +1,22 @@
+{
+  "code_commit": "d470ffbbeda3f1602dfd37311ded95bb1a92897f",
+  "url": "https://spidey-pokemon-go.vercel.app/spidey-app/qa-responsive.html",
+  "measurement": {
+    "event": "mexico",
+    "title": "Pokémon GO Wild Area 2026: Cidade do México",
+    "view": "public-mobile-dark",
+    "complete": true,
+    "dialogScrollTop": 0,
+    "imageHeight": 449.828125,
+    "imageWidth": 360,
+    "naturalHeight": 1402,
+    "naturalWidth": 1122,
+    "objectFit": "contain",
+    "ribbon": "Evento regionalDuraludon Gigamax",
+    "scrollWidth": 375,
+    "src": "assets/events/premium/wild-area-mexico-city-2026-approved-v1.png?v=b508a6e00b62",
+    "width": 375
+  },
+  "physical_android_certified": false,
+  "screenshot": "docs/qa/proofs/wild-area-mexico-public-mobile-dark-20261007.jpg"
+}
