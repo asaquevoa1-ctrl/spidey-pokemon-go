@@ -671,6 +671,24 @@
       }
     },
     {
+      "id": "2026-11-pokexciting-singapore:start:60",
+      "event_id": "2026-11-pokexciting-singapore",
+      "event_title": "PokéXciting! Singapura 2026",
+      "category": "evento_especial",
+      "scheduled_for": "2026-11-06T22:00:00-03:00",
+      "event_start": "2026-11-06T23:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "PokéXciting! Singapura 2026 começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-pokexciting-singapore",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-11-minior-leonids:start:60",
       "event_id": "2026-11-minior-leonids",
       "event_title": "Minior: chuva de meteoros Leônidas",
@@ -690,7 +708,7 @@
     }
   ],
   "meta": {
-    "pending_count": 38,
+    "pending_count": 39,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
