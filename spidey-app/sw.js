@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261007-wild-area-review-v1';
+const CACHE = 'spidey-app-20261007-wild-area-approved-v1';
 const CORE = [
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
@@ -66,9 +66,9 @@ const CORE = [
   './assets/events/review/zorua-community-day-correction-v1.png',
   './assets/events/premium/zorua-community-day-approved-v1.png',
   './command-center.css',
-  './assets/events/review/wild-area-sendai-2026-v1.png',
-  './assets/events/review/wild-area-mexico-city-2026-v1.png',
-  './assets/events/review/wild-area-global-2026-v1.png',
+  './assets/events/premium/wild-area-sendai-2026-approved-v1.png',
+  './assets/events/premium/wild-area-mexico-city-2026-approved-v1.png',
+  './assets/events/premium/wild-area-global-2026-approved-v1.png',
   './premium-approved-master.js',
   './trust-world-v1.js',
   './trust-world-v1.css',
