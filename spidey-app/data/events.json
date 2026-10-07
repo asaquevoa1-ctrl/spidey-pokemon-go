@@ -6422,6 +6422,136 @@
         "window_label": "Geminidas • 12/2026"
       },
       "updated_at": "2026-10-01T22:47:56Z"
+    },
+    {
+      "id": "2026-11-pokexciting-singapore",
+      "slug": "2026-11-pokexciting-singapore",
+      "title": "PokéXciting! Singapura 2026",
+      "summary": "Evento em toda Singapura com Pikachu PokéXciting! azul, Rally de Selos, pesquisas e Batalhas Gigamax.",
+      "category": "evento_especial",
+      "tags": [
+        "PokéXciting!",
+        "Singapura",
+        "Rally de Selos",
+        "Pikachu",
+        "Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Singapore",
+        "start_local": "2026-11-07T10:00:00+08:00",
+        "end_local": "2026-11-08T22:00:00+08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T23:00:00-03:00",
+        "end_brazil": "2026-11-08T11:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "As páginas oficiais informam as áreas e o Terminal 3, mas não publicam coordenadas exatas dos PokéStops do Rally."
+      },
+      "notes": [
+        "A jogabilidade acontece das 10h às 22h no horário de Singapura em cada um dos dois dias.",
+        "O conteúdo do evento vale em toda Singapura; o estande fica no Terminal 3 do Aeroporto de Changi.",
+        "O Rally regional tem cinco selos inspirados em Bulbasaur, Charmander, Squirtle, Pikachu e Lapras. Completar os cinco rende Pikachu PokéXciting! azul com Fundo de Localização.",
+        "O selo de Singapura do Rally entre regiões já está disponível no Terminal 3, área de embarque, e a agenda oficial desse selo vai de 12/09/2026 a 11/09/2029.",
+        "O Pikachu PokéXciting! azul continua aparecendo na natureza em Singapura por um mês após o evento.",
+        "Há duas Pesquisas temporárias gratuitas, Pesquisa de campo temática, cinco encontros-surpresa no Retrato GO por dia e um balão de bônus por hora.",
+        "Guia oficial completo: https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+        "Agenda oficial do Rally entre regiões: https://pokemongo.com/news/event-apac-stamp-rally-2026",
+        "Informações oficiais conferidas em 07/10/2026."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "2× PE ao girar Poképaradas.",
+        "Metade do custo de Poeira Estelar nas trocas.",
+        "Duas Trocas Especiais adicionais.",
+        "Módulos Atrair duram uma hora.",
+        "2× PE por capturas com jogadas Boas ou melhores.",
+        "Mais Doces por capturas com jogadas Boas ou melhores.",
+        "Efeito especial no mapa e Poképaradas temáticas do Rally de Selos."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu PokéXciting! azul",
+          "note": "estreia em Singapura; natureza, pesquisas e Rally de Selos; pode ter Fundo de Localização; pode aparecer Brilhante"
+        },
+        {
+          "name": "Bulbasaur com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Charmander com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Squirtle com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Raticate com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Jigglypuff com laço",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Grimer com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Eevee com chapéu de festa",
+          "note": "natureza; pode aparecer Brilhante"
+        },
+        {
+          "name": "Gengar com chapéu de festa",
+          "note": "Módulo Atrair; pode aparecer Brilhante"
+        },
+        {
+          "name": "Unown S",
+          "note": "Incenso em Singapura; pode aparecer Brilhante"
+        },
+        {
+          "name": "Unown G",
+          "note": "Incenso em Singapura; pode aparecer Brilhante"
+        },
+        {
+          "name": "Venusaur Gigamax",
+          "note": "Batalhas Gigamax; pode aparecer Brilhante"
+        },
+        {
+          "name": "Charizard Gigamax",
+          "note": "Batalhas Gigamax; pode aparecer Brilhante"
+        },
+        {
+          "name": "Blastoise Gigamax",
+          "note": "Batalhas Gigamax; pode aparecer Brilhante"
+        }
+      ],
+      "news": {
+        "title": "PokéXciting! chega a Changi e Jewel",
+        "summary": "Singapura recebe Pikachu PokéXciting! azul, dois Rallies de Selos, pesquisas gratuitas e Batalhas Gigamax em 7 e 8 de novembro.",
+        "published_on": "2026-10-07"
+      },
+      "updated_at": "2026-10-07T05:24:18.242Z"
     }
   ]
 }
