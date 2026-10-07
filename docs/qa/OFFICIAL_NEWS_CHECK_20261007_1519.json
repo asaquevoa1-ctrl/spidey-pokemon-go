@@ -1,0 +1,69 @@
+{
+  "schema_version": "spidey-official-news-check-v1",
+  "checked_at": "2026-10-07T15:19:00-03:00",
+  "base_main_sha": "1df42e7e756482bc9bd09f5a8e2631abc62f3efb",
+  "base_production_deployment": "dpl_HNieSZtiqmDngoNe2LQAJQtC93m2",
+  "base_production_state": "READY",
+  "official_sources": [
+    {
+      "url": "https://pokemongo.com/en/gowildarea/sendai/gameplay",
+      "classification": "official_event_page",
+      "finding": "Confirma 06–08/11, 10h–18h JST, Duraludon Gigamax, Dialga e Palkia Dinamax, formas Coroadas, Sliggoo e Goodra de Hisui, Fundos de Localização e bônus do ingresso."
+    },
+    {
+      "url": "https://pokemongo.com/en/gowildarea/mexico-city/gameplay",
+      "classification": "official_event_page",
+      "finding": "Confirma 06–08/11, 10h–18h GMT−6, Duraludon Gigamax, Dialga e Palkia Dinamax, formas Coroadas, Sliggoo e Goodra de Hisui, Fundos de Localização e bônus do ingresso."
+    },
+    {
+      "url": "https://pokemongo.com/en/gowildarea/global",
+      "classification": "official_event_page",
+      "finding": "Confirma 14–15/11, 10h–18h locais, Duraludon Gigamax, Dialga e Palkia Dinamax, Kyurem Branco/Preto, chefes por dia, Fundos Especiais e bônus gratuitos e pagos."
+    },
+    {
+      "url": "https://www.pokemoncenter-online.com/?main_page=content&id=go-lab",
+      "classification": "official_pokemon_center_page",
+      "finding": "Confirma o Pokémon GO Lab e atividades presenciais, mas não a janela de 07/10 a 31/12 para a Reide do Pikachu Assistente."
+    },
+    {
+      "url": "https://www.pokemon.co.jp/ex/pokemoncenter_30th/event/go_lab/",
+      "classification": "official_pokemon_30th_page",
+      "finding": "Informa que o Pikachu Assistente do Professor Willow seria disponibilizado depois no GO Lab, sem confirmar a janela atual nem horários."
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://pokemongohub.net/post/news/professor-willows-assistant-pikachu-returns-to-pokemon-go-lab-japan/",
+      "classification": "community_report",
+      "finding": "Relata 07/10–31/12 e Reide no GO Lab, mas a janela exata não foi localizada em uma página oficial pública."
+    },
+    {
+      "url": "https://g47ix.com/",
+      "classification": "community_alert_queue",
+      "finding": "A fila comunitária antecipou Duraludon Gigamax, formas Coroadas e fusões de Kyurem; os detalhes publicados no catálogo foram conferidos nas páginas oficiais."
+    }
+  ],
+  "added_event_ids": [
+    "2026-11-go-wild-area-sendai",
+    "2026-11-go-wild-area-mexico-city",
+    "2026-11-go-wild-area-global"
+  ],
+  "kept_in_confirmation": [
+    {
+      "topic": "Pikachu Assistente do Professor Willow no Pokémon GO Lab",
+      "reason": "A página oficial pública não confirma a janela exata relatada pela comunidade; nenhuma coordenada foi adicionada."
+    }
+  ],
+  "protected": {
+    "art_refusals": [
+      "Applin",
+      "Pikachu Astronauta/Espaço",
+      "Sizzlipede"
+    ],
+    "assets_changed": false,
+    "gpx_changed": false,
+    "coordinates_changed": false,
+    "stamps_changed": false,
+    "backgrounds_changed": false
+  }
+}

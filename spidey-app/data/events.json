@@ -6755,6 +6755,292 @@
         "published_on": "2026-10-07"
       },
       "updated_at": "2026-10-07T05:26:14.212Z"
+    },
+    {
+      "id": "2026-11-go-wild-area-sendai",
+      "slug": "2026-11-go-wild-area-sendai",
+      "title": "Pokémon GO Wild Area 2026: Sendai e Tohoku",
+      "summary": "Evento presencial com Duraludon Gigamax, Dialga e Palkia Dinamax, formas Coroadas e estreias de Sliggoo e Goodra de Hisui.",
+      "category": "regional_event",
+      "tags": [
+        "GO Wild Area",
+        "Sendai",
+        "Duraludon Gigamax",
+        "Zacian Espada Coroada",
+        "Zamazenta Escudo Coroado",
+        "Regional"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/gowildarea/sendai/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Tokyo",
+        "start_local": "2026-11-06T10:00:00+09:00",
+        "end_local": "2026-11-08T18:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-05T22:00:00-03:00",
+        "end_brazil": "2026-11-08T06:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio confirma Sendai e Tohoku, mas não publica uma rota nem coordenadas exatas de Poképaradas."
+      },
+      "notes": [
+        "Jogabilidade exclusiva para quem tiver ingresso, das 10h às 18h JST no dia escolhido entre 6 e 8 de novembro.",
+        "Zacian Espada Coroada e Zamazenta Escudo Coroado aparecem em Reides de cinco estrelas e entregam suas respectivas Energias Coroadas ao serem derrotados.",
+        "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Duraludon Gigamax e as duas formas Coroadas podem vir com Fundo de Localização de Sendai; Reides e Batalhas Max remotas não concedem esse fundo.",
+        "Sliggoo de Hisui estreia na natureza. Goodra de Hisui pode ser obtido ao evoluir Sliggoo de Hisui com 100 Doces Goomy.",
+        "O Rally de Selos da cidade funciona das 9h às 20h no dia principal do ingresso. Não foram adicionadas coordenadas sem confirmação oficial.",
+        "Informações oficiais conferidas em 07/10/2026."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Pokémon Brilhantes para participantes com ingresso.",
+        "Metade da distância para chocar Ovos colocados em incubadoras durante o evento.",
+        "Até 10 Passes de Reide por dia ao girar fotodiscos de Ginásios.",
+        "Custo de 3/4 das Partículas Max para liberar e fortalecer Golpes Max; limite diário de 8.000 Partículas Max.",
+        "Módulos Atrair e Incenso comum duram duas horas.",
+        "2× Doces por captura, oito horas de Jogar em Grupo e três encontros-surpresa no Retrato GO por dia.",
+        "Até seis Trocas Especiais e metade do custo de Poeira Estelar nas trocas no dia do ingresso."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "estreia em Batalhas Max de seis estrelas; pode aparecer Brilhante"
+        },
+        {
+          "name": "Dialga Dinamax e Palkia Dinamax",
+          "note": "estreias Dinamax; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Zacian Espada Coroada e Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Machamp com jaqueta moderna",
+          "note": "Reides de três estrelas e encontros poderosos; pode aparecer Brilhante"
+        },
+        {
+          "name": "Sliggoo de Hisui e Goodra de Hisui",
+          "note": "estreias em Pokémon GO; Sliggoo de Hisui aparece na natureza"
+        },
+        {
+          "name": "Latias e Latios poderosos",
+          "note": "atraídos por Incenso comum; podem aparecer Brilhantes"
+        }
+      ],
+      "news": {
+        "title": "GO Wild Area revela as novidades de Sendai",
+        "summary": "Duraludon Gigamax estreia, as formas Coroadas voltam às Reides e Sliggoo e Goodra de Hisui chegam ao jogo.",
+        "published_on": "2026-10-07"
+      },
+      "updated_at": "2026-10-07T18:19:00Z"
+    },
+    {
+      "id": "2026-11-go-wild-area-mexico-city",
+      "slug": "2026-11-go-wild-area-mexico-city",
+      "title": "Pokémon GO Wild Area 2026: Cidade do México",
+      "summary": "Evento presencial com Duraludon Gigamax, Dialga e Palkia Dinamax, formas Coroadas e estreias de Sliggoo e Goodra de Hisui.",
+      "category": "regional_event",
+      "tags": [
+        "GO Wild Area",
+        "Cidade do México",
+        "Duraludon Gigamax",
+        "Zacian Espada Coroada",
+        "Zamazenta Escudo Coroado",
+        "Regional"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Mexico_City",
+        "start_local": "2026-11-06T10:00:00-06:00",
+        "end_local": "2026-11-08T18:00:00-06:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T13:00:00-03:00",
+        "end_brazil": "2026-11-08T21:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio confirma a Cidade do México, mas não publica uma rota nem coordenadas exatas de Poképaradas."
+      },
+      "notes": [
+        "Jogabilidade exclusiva para quem tiver ingresso, das 10h às 18h GMT−6 no dia escolhido entre 6 e 8 de novembro.",
+        "Zacian Espada Coroada e Zamazenta Escudo Coroado aparecem em Reides de cinco estrelas e entregam suas respectivas Energias Coroadas ao serem derrotados.",
+        "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Duraludon Gigamax e as duas formas Coroadas podem vir com Fundo de Localização da Cidade do México; Reides e Batalhas Max remotas não concedem esse fundo.",
+        "Sliggoo de Hisui estreia na natureza. Goodra de Hisui pode ser obtido ao evoluir Sliggoo de Hisui com 100 Doces Goomy.",
+        "O Rally de Selos da cidade funciona das 9h às 20h no dia principal do ingresso. Não foram adicionadas coordenadas sem confirmação oficial.",
+        "Informações oficiais conferidas em 07/10/2026."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Pokémon Brilhantes para participantes com ingresso.",
+        "Metade da distância para chocar Ovos colocados em incubadoras durante o evento.",
+        "Até 10 Passes de Reide por dia ao girar fotodiscos de Ginásios.",
+        "Custo de 3/4 das Partículas Max para liberar e fortalecer Golpes Max; limite diário de 8.000 Partículas Max.",
+        "Módulos Atrair e Incenso comum duram duas horas.",
+        "2× Doces por captura, oito horas de Jogar em Grupo e três encontros-surpresa no Retrato GO por dia.",
+        "Até seis Trocas Especiais e metade do custo de Poeira Estelar nas trocas no dia do ingresso."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "estreia em Batalhas Max de seis estrelas; pode aparecer Brilhante"
+        },
+        {
+          "name": "Dialga Dinamax e Palkia Dinamax",
+          "note": "estreias Dinamax; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Zacian Espada Coroada e Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Machamp com jaqueta moderna",
+          "note": "Reides de três estrelas e encontros poderosos; pode aparecer Brilhante"
+        },
+        {
+          "name": "Sliggoo de Hisui e Goodra de Hisui",
+          "note": "estreias em Pokémon GO; Sliggoo de Hisui aparece na natureza"
+        },
+        {
+          "name": "Latias e Latios poderosos",
+          "note": "atraídos por Incenso comum; podem aparecer Brilhantes"
+        }
+      ],
+      "news": {
+        "title": "GO Wild Area revela as novidades da Cidade do México",
+        "summary": "Duraludon Gigamax estreia, as formas Coroadas voltam às Reides e Sliggoo e Goodra de Hisui chegam ao jogo.",
+        "published_on": "2026-10-07"
+      },
+      "updated_at": "2026-10-07T18:19:00Z"
+    },
+    {
+      "id": "2026-11-go-wild-area-global",
+      "slug": "2026-11-go-wild-area-global",
+      "title": "Pokémon GO Wild Area 2026: Global",
+      "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
+      "category": "evento_especial",
+      "tags": [
+        "GO Wild Area",
+        "Duraludon Gigamax",
+        "Kyurem Branco",
+        "Kyurem Preto",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/gowildarea/global",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-14T10:00:00-03:00",
+        "end_local": "2026-11-15T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-14T10:00:00-03:00",
+        "end_brazil": "2026-11-15T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global por horário local, sem rota ou coordenada específica."
+      },
+      "notes": [
+        "O evento funciona das 10h às 18h no horário local em 14 e 15 de novembro; não fica ativo durante a madrugada entre os dois dias.",
+        "Sábado: Zekrom e Kyurem Branco em Reides; Dialga Dinamax em Batalhas Max.",
+        "Domingo: Reshiram e Kyurem Preto em Reides; Palkia Dinamax em Batalhas Max.",
+        "As Reides de Kyurem Branco e Kyurem Preto concedem Energia de Fusão correspondente.",
+        "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Reshiram, Zekrom, Kyurem, Duraludon Gigamax e outros encontros indicados podem vir com o novo Fundo Especial do evento.",
+        "Os bônus do ingresso estão identificados separadamente; a compra não garante Pokémon Brilhante.",
+        "Informações oficiais conferidas em 07/10/2026."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Para todos: chance de receber Bolas de Safari GO em Poképaradas e Ginásios, até três Passes de Reide por dia e limite diário de 1.600 Partículas Max.",
+        "Para todos: três encontros-surpresa no Retrato GO por dia, oito horas de Jogar em Grupo e chance de Pokémon poderosos em Rotas.",
+        "Com ingresso: maior chance de Brilhantes, limite diário de 3.200 Partículas Max e até seis Passes de Reide por dia.",
+        "Com ingresso: 2× Doces por captura, Incenso com duração dobrada, Módulos Atrair por duas horas e mais chance de Ovos de 10 km.",
+        "Com ingresso: até seis Trocas Especiais por dia e metade do custo de Poeira Estelar nas trocas."
+      ],
+      "pokemon": [
+        {
+          "name": "Duraludon Gigamax",
+          "note": "estreia em Batalhas Max de seis estrelas nos dois dias; pode aparecer Brilhante"
+        },
+        {
+          "name": "Dialga Dinamax e Palkia Dinamax",
+          "note": "estreias Dinamax; Dialga no sábado e Palkia no domingo; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Kyurem Branco e Kyurem Preto",
+          "note": "retorno em Reides; Kyurem Branco no sábado e Kyurem Preto no domingo; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Zekrom e Reshiram",
+          "note": "Zekrom em Reides no sábado e Reshiram no domingo; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Machamp com jaqueta moderna",
+          "note": "Reides de três estrelas; pode aparecer Brilhante e conhece Golpe Karatê"
+        },
+        {
+          "name": "Latias e Latios poderosos",
+          "note": "atraídos por Incenso comum para quem tiver ingresso; podem aparecer Brilhantes"
+        }
+      ],
+      "news": {
+        "title": "GO Wild Area Global traz Duraludon Gigamax e Kyurem",
+        "summary": "Duraludon Gigamax estreia e Kyurem Branco e Kyurem Preto voltam às Reides em dias diferentes.",
+        "published_on": "2026-10-07"
+      },
+      "updated_at": "2026-10-07T18:19:00Z"
     }
   ]
 }

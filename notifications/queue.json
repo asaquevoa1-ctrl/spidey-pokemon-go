@@ -634,6 +634,24 @@
       }
     },
     {
+      "id": "2026-11-go-wild-area-sendai:start:60",
+      "event_id": "2026-11-go-wild-area-sendai",
+      "event_title": "Pokémon GO Wild Area 2026: Sendai e Tohoku",
+      "category": "regional_event",
+      "scheduled_for": "2026-11-05T21:00:00-03:00",
+      "event_start": "2026-11-05T22:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Pokémon GO Wild Area 2026: Sendai e Tohoku começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-go-wild-area-sendai",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/gowildarea/sendai/gameplay",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "festival-of-lights-2026-pokeminers-e2:start:60",
       "event_id": "festival-of-lights-2026-pokeminers-e2",
       "event_title": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta",
@@ -653,6 +671,24 @@
       }
     },
     {
+      "id": "2026-11-go-wild-area-mexico-city:start:60",
+      "event_id": "2026-11-go-wild-area-mexico-city",
+      "event_title": "Pokémon GO Wild Area 2026: Cidade do México",
+      "category": "regional_event",
+      "scheduled_for": "2026-11-06T12:00:00-03:00",
+      "event_start": "2026-11-06T13:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Pokémon GO Wild Area 2026: Cidade do México começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-go-wild-area-mexico-city",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-11-pokexciting-singapore:start:60",
       "event_id": "2026-11-pokexciting-singapore",
       "event_title": "PokéXciting! Singapura 2026",
@@ -667,6 +703,24 @@
       "source": {
         "name": "Pokémon GO",
         "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-11-go-wild-area-global:start:60",
+      "event_id": "2026-11-go-wild-area-global",
+      "event_title": "Pokémon GO Wild Area 2026: Global",
+      "category": "evento_especial",
+      "scheduled_for": "2026-11-14T09:00:00-03:00",
+      "event_start": "2026-11-14T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Pokémon GO Wild Area 2026: Global começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-go-wild-area-global",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/gowildarea/global",
         "confidence": "official"
       }
     },
@@ -690,7 +744,7 @@
     }
   ],
   "meta": {
-    "pending_count": 38,
+    "pending_count": 41,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
