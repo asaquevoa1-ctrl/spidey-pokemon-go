@@ -16,7 +16,7 @@ for(let i=0;i<4;i++){
 async function request(body){
   const response=await fetch(origin+'/spidey-app/api/social',{method:body?'POST':'GET',headers:{Cookie:[...cookies.values()].join('; '),Origin:origin,...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(25000)});
   if(!response.headers.get('content-type')?.includes('application/json'))throw Error('preview_api_not_json');
-  const result=await response.json();if(!response.ok)throw Object.assign(Error(result.error || 'api_failed'),{status:response.status});return result;
+  const result=await response.json();if(!response.ok)throw Object.assign(Error(result.error || 'api_failed'),{status:response.status,...(result.diagnostic?{diagnostic:result.diagnostic}:{})});return result;
 }
 const status=await request();assert.equal(status.mode,'preview');assert.equal(status.available,true);
 const actors=await Promise.all([createIdentity(),createIdentity(),createIdentity()]);

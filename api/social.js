@@ -15,6 +15,9 @@ export default async function handler(request,response) {
     return response.status(200).json(result);
   } catch(error) {
     // Never log request envelopes, profile fields, keys or conversations.
-    return response.status(error.status || 503).json({error:error.status?error.message:'social_unavailable'});
+    const type = /^[A-Za-z]+(?:Error|Exception)$/.test(error?.name || '') ? error.name : 'UnexpectedError';
+    if (!error.status) console.error('social unavailable',type);
+    return response.status(error.status || 503).json({error:error.status?error.message:'social_unavailable',
+      ...(!error.status && process.env.VERCEL_ENV === 'preview' ? {diagnostic:type} : {})});
   }
 }
