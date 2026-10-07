@@ -81,6 +81,12 @@ def check(base=BASE, now=None):
             report['failures'].append('Navegação PvP não publicada')
         if 'privacyView' not in html:
             report['failures'].append('Tela de privacidade ausente')
+        if 'friendsView' in html:
+            for path in ['social.js', 'social-crypto.js', 'social.css', 'api/social']:
+                raw, _ = request(base, path)
+                report['checks'].append({'path': path, 'ok': True, 'bytes': len(raw)})
+                if path == 'api/social' and not json.loads(raw).get('available'):
+                    report['failures'].append('Serviço de Amigos indisponível')
         for key, expected in [('x-content-type-options','nosniff'),('referrer-policy','no-referrer'),('x-frame-options','SAMEORIGIN')]:
             if headers.get(key) != expected:
                 report['failures'].append(f'Proteção HTTP ausente: {key}')

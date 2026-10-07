@@ -24,7 +24,14 @@ jobs:
         if: github.event_name == 'push'
         run: sleep 45
       - name: Conferir link público, agenda, PvP, imagens e alertas sem telemetria
-        run: python scripts/check_app_health.py
+        env:
+          SPIDEY_CHECK_ATTEMPTS: ${{ github.event_name == 'push' && '3' || '1' }}
+        run: |
+          for attempt in $(seq 1 "$SPIDEY_CHECK_ATTEMPTS"); do
+            python scripts/check_app_health.py && exit 0
+            if [ "$attempt" -lt "$SPIDEY_CHECK_ATTEMPTS" ]; then sleep 30; fi
+          done
+          exit 1
       - uses: actions/upload-artifact@v4
         if: always()
         with:

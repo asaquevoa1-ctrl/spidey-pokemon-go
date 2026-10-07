@@ -10,6 +10,9 @@
     },
     "api/catalog.js": {
       "maxDuration": 10
+    },
+    "api/social.js": {
+      "maxDuration": 30
     }
   },
   "redirects": [
@@ -67,6 +70,10 @@
     {
       "source": "/spidey-app/api/catalog",
       "destination": "/api/catalog"
+    },
+    {
+      "source": "/spidey-app/api/social",
+      "destination": "/api/social"
     }
   ]
 }

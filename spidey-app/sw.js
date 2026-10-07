@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261005-pvp-privacy-v1';
+const CACHE = 'spidey-app-20261007-friends-chat-v1';
 const CORE = [
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
@@ -13,6 +13,9 @@ const CORE = [
   './data/pvp.json',
   './pvp.js',
   './pvp.css',
+  './social.js',
+  './social-crypto.js',
+  './social.css',
   './assets/events/local-backgrounds/lc_2026_ComicCon_Malaga.png',
   './space-week.js',
   './space-week.css',

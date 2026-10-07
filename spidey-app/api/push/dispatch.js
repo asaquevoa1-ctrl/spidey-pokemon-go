@@ -2,6 +2,7 @@ import webpush from 'web-push';
 import { listSubscriptions, readReceipt, writeReceipt, removeSubscription, storageReady, minimizeStoredMetadata } from './_store.js';
 import { authorized } from './_auth.js';
 import { env, parseBody, vapidReady, validSubscription } from './_config.js';
+import { pruneSocialData } from '../social/store.js';
 
 const DEFAULT_QUEUE_URL = 'https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/notifications/queue.json';
 export function dueJobs(queue, now = Date.now()) {
@@ -46,6 +47,7 @@ export default async function handler(request, response) {
   try {
     const dryRun = parseBody(request)?.dry_run === true;
     const metadataCleaned = dryRun ? 0 : await minimizeStoredMetadata();
+    if (!dryRun) { try { await pruneSocialData(); } catch { console.error('social cleanup postponed'); } }
     const queueResponse = await fetch(env('SPIDEY_NOTIFICATION_QUEUE_URL') || DEFAULT_QUEUE_URL, { cache: 'no-store', signal: AbortSignal.timeout(5000) });
     if (!queueResponse.ok) throw new Error('queue_unavailable');
     const queue = await queueResponse.json();
