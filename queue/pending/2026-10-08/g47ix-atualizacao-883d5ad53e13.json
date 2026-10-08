@@ -1,0 +1,19 @@
+{
+  "titulo": "🔄 G47IX • ATUALIZAÇÃO",
+  "mensagem": "Pokémon GO Gameplay and QoL Updates available right now!\n#pokemongo\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2108317801568178401",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2108317801568178401",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-08T22:20:30.783483+00:00"
+}
