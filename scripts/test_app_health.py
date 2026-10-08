@@ -72,7 +72,7 @@ class AppHealthTests(unittest.TestCase):
             'data/stamps.json': b'{"rallies":[{"id":"public-rally"}]}',
             'assets/events/approved.png': image,
         })
-        for path in ['pvp.js', 'pvp.css', 'navigation.js', 'sw.js', 'catalog.js', 'stamps-v2.js', 'manifest.webmanifest']:
+        for path in ['pvp.js', 'pvp.css', 'navigation.js', 'sw.js', 'catalog.js', 'stamps-v2.js', 'manifest.webmanifest', 'player-ui.js', 'world-route-preview.js']:
             files[path] = b'public static file'
         now = datetime.fromisoformat(data['weekly']['week_start'] + 'T12:00:00+00:00')
         return files, now

@@ -74,6 +74,12 @@ function getBrazilRange(event) {
   };
 }
 
+function isEventActive(event, now = new Date()) {
+  const sessions = event.schedule?.sessions;
+  return sessions?.length ? sessions.some(session => new Date(session.start) <= now && now < new Date(session.end))
+    : getBrazilRange(event).start <= now && now < getBrazilRange(event).end;
+}
+
 function overlapsDay(event, day) {
   const { start, end } = getBrazilRange(event);
   if (!start || !end) return false;
@@ -84,6 +90,8 @@ function overlapsDay(event, day) {
 }
 
 function formatRange(event) {
+  if (event.schedule?.sessions?.length) return event.schedule.sessions.map(session =>
+    `${formatDateTime(new Date(session.start))} → ${formatDateTime(new Date(session.end))}`).join('; ');
   const { start, end } = getBrazilRange(event);
   if (!start || !end) return 'Horário a confirmar';
   const zone = event.schedule?.brazil_timezone || 'America/Sao_Paulo';
@@ -100,6 +108,9 @@ function generatedEventArtUrl(event) {
 }
 
 function eventImage(event) {
+  if (!window.SPIDEY_APPROVED_ART_MASTER?.[event.id] && event.official_media?.classification === 'official_illustration') {
+    return `${event.official_media.file}?v=${event.official_media.sha256.slice(0, 12)}`;
+  }
   const artUrl = String(event.art?.url || '').trim();
   const forbidden = !artUrl || /^data:/i.test(artUrl) || /spidey-logo/i.test(artUrl) || /fallback.*logo/i.test(artUrl);
   const url = forbidden ? generatedEventArtUrl(event) : artUrl;
@@ -126,7 +137,7 @@ function renderStats() {
   const monthEnd = calendarDateKey(new Date(state.month.getFullYear(), state.month.getMonth() + 1, 0));
   $('#nowCount').textContent = state.events.filter((event) => {
     const { start, end } = getBrazilRange(event);
-    return start && end && start <= now && end >= now;
+    return start && end && isEventActive(event, now);
   }).length;
   $('#monthCount').textContent = state.events.filter((event) => {
     const { start, end } = getBrazilRange(event);

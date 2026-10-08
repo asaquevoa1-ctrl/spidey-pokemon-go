@@ -110,6 +110,8 @@
     if (!img) return true;
     const src = String(img.currentSrc || img.src || '');
     if (!src) return true;
+    if (!window.SPIDEY_APPROVED_ART_MASTER?.[event?.id] && event?.official_media?.classification === 'official_illustration'
+        && src.includes(event.official_media.file) && img.complete && img.naturalWidth) return false;
     if (PREMIUM_ART.test(src)) return false;
     if (img.hidden || img.classList.contains('v23-hidden-art')) return true;
     if (BAD_PUBLIC_ART.test(src)) return true;

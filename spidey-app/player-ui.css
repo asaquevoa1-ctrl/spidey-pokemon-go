@@ -37,3 +37,9 @@ body.spidey-player-ui #eventDetail.player-art-unavailable .spidey-cover-art{disp
 /* Teaser stories display the complete canonical poster. */
 .cc-news-teaser{max-width:440px;margin:18px auto}
 .cc-news-teaser .player-poster{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+
+.player-world-route{margin:16px 0 0;padding:20px;border:1px solid var(--player-line);border-radius:18px;color:var(--player-ink)}
+.spidey-player-ui #eventDetail .detail-hero.official-illustration{max-width:500px;width:100%;height:auto;object-fit:contain;margin:0 auto;background:#fff}
+.player-world-route>header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.player-world-route h3{font-size:1.05rem;margin:22px 0 12px}.player-route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.player-route-place{padding:16px;border:1px solid var(--player-line);border-radius:12px;min-width:0}.player-route-active{border-left:3px solid var(--player-accent);background:#edf2f8}[data-theme=dark] .player-route-active{background:#0b192c}.player-route-place h4{font-size:1.1rem;margin:9px 0}.player-route-place p{font-size:.85rem;line-height:1.5;margin:8px 0}.player-route-place code{display:block;overflow-wrap:anywhere}.player-route-place>small{display:block;margin-top:6px;opacity:.8}.player-route-place .player-actions{margin:14px 0 0}.player-route-place .action-btn{flex:1 1 135px}.player-route-last{font-size:.85rem;line-height:1.5;margin-bottom:0}
+@media(max-width:760px){.player-world-route{padding:16px}.player-world-route>header>.action-btn{width:100%}}

@@ -107,6 +107,12 @@ function spideyArtUsable(asset, role) {
 }
 
 function spideyResolveEventArt(event, role = 'card') {
+  const official = event?.official_media;
+  if (!window.SPIDEY_APPROVED_ART_MASTER?.[event?.id] && official?.classification === 'official_illustration'
+      && /^assets\/events\/official\//.test(official.file || '') && /^[a-f0-9]{64}$/.test(official.sha256 || '')
+      && official.width >= 360 && official.height >= 360) {
+    return {url: official.file, width: official.width, height: official.height, sha256: official.sha256, sourceRole: 'official_illustration'};
+  }
   const art = event?.art || {};
   const assets = art.assets || {};
   const roles = SPIDEY_ART_ROLE_ORDER[role] || SPIDEY_ART_ROLE_ORDER.card;
@@ -193,6 +199,7 @@ openEvent = function openEventWithPremiumArt(event) {
   spideyBaseOpenEvent(event);
   const image = detail.querySelector('.detail-hero');
   if (image) spideyApplyImageAsset(image, event, 'hero');
+  if (image && !window.SPIDEY_APPROVED_ART_MASTER?.[event.id] && event.official_media?.classification === 'official_illustration') image.classList.add('official-illustration');
 };
 
 const spideyArtObserver = new MutationObserver(() => {

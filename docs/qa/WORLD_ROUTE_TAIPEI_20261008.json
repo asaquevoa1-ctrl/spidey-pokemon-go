@@ -1,0 +1,134 @@
+{
+  "status": "CANDIDATE_TESTS_PASSED_PUBLIC_UI_QA_PENDING",
+  "date": "2026-10-08",
+  "baseline_main": "fb83ef0032dcc201d1064489064d508e4075d29c",
+  "request": "Restaurar visibilidade imediata da rota mundial e incluir PokéXciting! Taipei no app existente.",
+  "changes": [
+    "Home exibe localidades ativas, próxima janela, horário local/Brasília, coordenadas e mapa abaixo do destaque.",
+    "Evento global continua em destaque enquanto houver janela mundial ativa, mesmo após seu encerramento em Brasília.",
+    "Taipei incluído no calendário, Semana e eventos locais, com duas janelas diárias e ilustração oficial creditada.",
+    "Monitor Pages verifica disponibilidade dos componentes da Home e rota."
+  ],
+  "preservation": {
+    "previous_events": 136,
+    "all_previous_events_unchanged": true,
+    "baseline_catalog_sha256": "851aa2c5e6c2f8e410fa2da0525b3b4a45d7c15002b5aa7b2196979138bc9c9f",
+    "events_now": 137,
+    "approved_entries": 35,
+    "approved_unique_files": 34,
+    "approved_master_changed": false,
+    "geography_points": 28,
+    "essential_points": 20,
+    "stamps_collections": 4,
+    "pvp_counts": {
+      "great": 1152,
+      "ultra": 849,
+      "master": 409
+    }
+  },
+  "taipei": {
+    "id": "2026-10-pokexciting-taipei",
+    "official_sources": [
+      "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+      "https://tw.portal-pokemon.com/30th/topics/pokexciting_news0/"
+    ],
+    "local_dates": [
+      "2026-10-10",
+      "2026-10-11"
+    ],
+    "timezone": "Asia/Taipei",
+    "daily_local_hours": [
+      "10:00",
+      "22:00"
+    ],
+    "brazil_windows": [
+      [
+        "2026-10-09T23:00:00-03:00",
+        "2026-10-10T11:00:00-03:00"
+      ],
+      [
+        "2026-10-10T23:00:00-03:00",
+        "2026-10-11T11:00:00-03:00"
+      ]
+    ],
+    "stamp_gpx_enabled": false,
+    "illustration": {
+      "file": "assets/events/official/pokexciting-taipei-2026.jpg",
+      "width": 500,
+      "height": 500,
+      "bytes": 23254,
+      "sha256": "023d446abcee817d95bf8eb3c76bb81a7a63397ff84d78548b7e8e3d61d90153",
+      "alt": "Ilustração oficial do Pikachu PokéXciting! com adorno rosa de Taipei",
+      "classification": "official_illustration",
+      "credit": "Pokémon Asia",
+      "source_url": "https://tw.portal-pokemon.com/30th/topics/pokexciting_news0/",
+      "original_url": "https://tw.portal-pokemon.com/images/c513648ddbd085c61cddcfd7c869f535.jpg"
+    },
+    "community_flyer_promoted_to_official": false
+  },
+  "validation": {
+    "node_tests_passed": 86,
+    "python_tests_passed": 21,
+    "static_package": {
+      "events": 137,
+      "art_entries": 35,
+      "week": [
+        "2026-10-05",
+        "2026-10-11"
+      ],
+      "pvp": {
+        "great": 1152,
+        "ultra": 849,
+        "master": 409
+      },
+      "web_analytics": {
+        "enabled": true,
+        "provider": "cloudflare"
+      },
+      "files": 279,
+      "bytes": 102869844
+    },
+    "static_http_ok": false,
+    "static_http_all_approved_images": false,
+    "static_http_failures": [
+      "index.html: URLError",
+      "pvp.js: URLError",
+      "pvp.css: URLError",
+      "navigation.js: URLError",
+      "sw.js: URLError",
+      "premium-approved-master.js: URLError",
+      "api/push/public-key: URLError",
+      "data/events.json: URLError",
+      "data/weekly.json: URLError",
+      "data/local-events.json: URLError",
+      "data/pvp.json: URLError",
+      "catalog.js: URLError",
+      "stamps-v2.js: URLError",
+      "manifest.webmanifest: URLError",
+      "data/stamps.json: URLError",
+      "player-ui.js: URLError",
+      "world-route-preview.js: URLError",
+      "Validação dos dados: KeyError"
+    ],
+    "public_browser_before_merge": false,
+    "preview_limitation": "O navegador remoto não alcança o servidor local e bloqueia URLs file. Testes funcionais e integridade concluídos; interface pública será conferida após publicação.",
+    "all_approved_hashes_verified_by_build": true,
+    "static_http_limitation": "Servidor local inacessível entre as execuções; os erros URLError referem-se somente à prévia local, não ao endereço público."
+  },
+  "health_before_change": {
+    "workflow_run": 37806849650,
+    "checked_at": "2026-10-08T16:11:49.579365+00:00",
+    "hosting": "github-pages",
+    "ok": true,
+    "failures": []
+  },
+  "limitations": [
+    "Push e Amigos/chat continuam indisponíveis no Pages.",
+    "Alertas não foram disparados e dados pessoais não foram consultados.",
+    "Instalação Android físico, PWA, offline e recebimento de push não foram testados.",
+    "Coordenadas do resumo mundial são referências geográficas; não são Poképaradas exatas."
+  ],
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "integrated_main": "251be48016cb744ce6f25242917ec3912dc6fb59",
+  "integration_note": "Atualização simultânea de generated_at no Weekly foi incorporada, regenerando a semana com os 20 eventos atuais."
+}

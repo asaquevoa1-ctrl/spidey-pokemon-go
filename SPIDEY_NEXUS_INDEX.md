@@ -1,5 +1,12 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
+## 08/10/2026 — candidato: rota imediata na Home e PokéXciting! Taipei
+
+Correção da perda de visibilidade apontada por Anderson: a Home mostra localidades ativas e próximas, relógios local/Brasília, coordenadas e mapa imediatamente abaixo do destaque. O evento global permanece visível enquanto existir uma janela mundial ativa. Taipei (10–11/10, 10h–22h locais) entrou no calendário, Semana e eventos locais com duas janelas diárias, Pikachu rosa, selos e Gigamax confirmados nas fontes oficiais. Ilustração original Pokémon Asia, creditada e sem promoção a Premium; cinco coordenadas de selos não confirmadas mantêm GPX bloqueado. Os 136 eventos anteriores, 35 entradas aprovadas/34 originais, geografia 20/28, quatro coleções e PvP permanecem preservados.
+
+86 testes Node e 21 testes Python passaram; pacote estático validado. A prévia local não foi acessível no navegador remoto; publicação e conferência da interface no link público ainda pendentes neste registro. Não houve teste físico Android/PWA/offline/push, envio de alertas ou leitura de dados pessoais. Push e Amigos/chat continuam indisponíveis nesta hospedagem. Provas e limites: [WORLD_ROUTE_TAIPEI_20261008.json](docs/qa/WORLD_ROUTE_TAIPEI_20261008.json). O endereço vigente continua https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ .
+
+
 ## 08/10/2026 — estatísticas gratuitas publicadas; números no painel pendentes
 
 Cloudflare Web Analytics publicado no mesmo endereço Pages às 13:06 BRT, main `5981a7e`, [execução 37806075539](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37806075539). O monitor vivo [37806075463](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37806075463) e uma conferência pública independente às 13:08 BRT confirmaram `ok=true`, configuração publicada, 136 eventos, semana 05–11/10, PvP 1152/849/409 e quatro coleções; auditoria pública de artes por amostragem, sem falhas. O build preservou todos os originais aprovados. No navegador, foram observados o carregador e o elemento do beacon oficial, com o identificador fornecido por Anderson e `spa:false`; isso não certifica recebimento no painel. Nenhum número de pessoas, visitas ou instalações é alegado. [SPIDEY_WEB_ANALYTICS.md](SPIDEY_WEB_ANALYTICS.md) e [provas](docs/qa/WEB_ANALYTICS_ACTIVATION_20261008.json) registram privacidade e limites. Não Rastrear/GPC respeitados, estado pessoal do app excluído. Android físico/PWA/offline/push permanecem sem certificação.

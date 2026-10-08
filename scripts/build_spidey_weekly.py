@@ -114,7 +114,7 @@ def resolve_weekly_art(event: dict, master: dict) -> dict:
         # A missing approved original must never fall through to another image.
     else:
         media = event.get("official_media") or {}
-        if (event.get("id") == "2026-10-world-space-week"
+        if (event.get("id") in {"2026-10-world-space-week", "2026-10-pokexciting-taipei"}
                 and media.get("classification") == "official_illustration" and verified_asset(media)):
             return {
                 "url": media["file"], "width": media["width"], "height": media["height"],
