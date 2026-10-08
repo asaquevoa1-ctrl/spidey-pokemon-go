@@ -80,6 +80,12 @@ Workflow: `.github/workflows/spidey-weekly.yml`.
 
 Execução automática: cron horário no minuto 29, além de alterações do catálogo, master ou gerador em `main` e execução manual. O horário de execução depende do GitHub Actions; conferir o resultado do run, sem prometer pontualidade.
 
+### Correção preparada em 08/10/2026 — publicação somente quando há mudança
+
+Candidato de revisão na branch `fix/weekly-idempotent-20261008`, baseado em main `5fa3f195ad6bbf32a0ece63af516683bcb54b7db`, ainda sem integração ou implantação. Mantém a execução horária e os gatilhos atuais. No candidato, `meta.generated_at` representa a geração da última mudança de conteúdo: quando o pacote validado continua igual, o horário anterior é preservado. A comparação ignora somente esse campo; mudanças no período, eventos, imagens ou demais metadados continuam produzindo um pacote novo.
+
+As três cópias continuam idênticas. Um arquivo só é gravado quando seus bytes precisam mudar; cópias ausentes ou corrompidas são reconstruídas. JSON canônico inválido também é regenerado. O log informa `files_changed`; zero alterações deixa o passo de commit existente sem diferenças para publicar. Esta otimização não libera cotas já consumidas na Vercel.
+
 Fluxo alvo:
 
 `Calendário publicado + master aprovado → build_spidey_weekly.py → validação → current.json + weekly.json + arquivo semanal → commit → publicação do app`

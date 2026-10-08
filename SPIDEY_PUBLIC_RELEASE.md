@@ -1,5 +1,13 @@
 # Spidey — versão web publicada, estado de 04/10/2026
 
+## 08/10/2026 — acesso pausado e candidato de redução de publicações
+
+Estado observado: a produção exibe `This deployment is temporarily paused`. O painel da equipe mostrou CDN Requests 1,1M/1M e Deployment Storage 10,07GB/10GB; READY não certifica disponibilidade. Main `5fa3f195ad6bbf32a0ece63af516683bcb54b7db` recebeu `Account is blocked.` da Vercel em 08/10/2026 às 06:44:08 Brasília. Prazo de liberação ainda desconhecido; a orientação geral Hobby menciona uma espera de 30 dias em muitos casos, sem fornecer a data desta equipe: https://vercel.com/docs/plans/hobby .
+
+O candidato de revisão na branch `fix/weekly-idempotent-20261008` corrige o gerador Weekly para salvar/publicar somente mudanças reais, mantendo verificação horária e gatilhos atuais. Preserva `generated_at` quando o conteúdo é igual e repara cópias ausentes/corrompidas. Nove testes locais passaram; repetição sem mudanças reproduziu a falha de horário no código original e passa no corrigido. Nenhum catálogo, master ou imagem aprovada é alterado. Detalhe da regra em `SPIDEY_WEEKLY_STANDARD.md`.
+
+Ainda NÃO integrado ao main ou implantado; é uma proposta para revisão. Não certifica recuperação do endereço público nem testes físicos Android/PWA/push/Amigos/chat. Não houve contratação, rollback ou remoção de publicações. Corrigir o desperdício não restaura automaticamente a cota já consumida.
+
 ## 07/10/2026 — artes Premium do GO Wild Area
 
 Publicação conferida em 07/10: código `d470ffb`, produção READY no endereço permanente https://spidey-pokemon-go.vercel.app/spidey-app/ . Os três detalhes públicos carregam os PNGs aprovados completos; 39 arquivos HTTP200 com bytes exatos, incluindo as 35 entradas do master. Workflow de testes e monitor de saúde concluídos com sucesso. Conferência responsiva no navegador; teste físico Android permanece pendente.
