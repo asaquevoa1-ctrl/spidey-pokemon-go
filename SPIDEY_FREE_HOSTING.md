@@ -1,5 +1,8 @@
 # Spidey — recuperação gratuita em GitHub Pages
 
+
+Monitor público confirmado em 08/10 às 10:32 BRT: [execução 37785079185](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37785079185), código `ef4a9ed`, perfil `github-pages`, `ok=true`, sem falhas. Auditoria completa dos 34 originais correspondentes às 35 entradas aprovadas passou por SHA256; 136 eventos, Semana 05–11/10, quatro coleções e rankings 1152/849/409 conferidos. Artefato `spidey-app-health` ID11554770206. Isso certifica o acesso e a integridade pública, sem certificar Android físico ou renderização de todas as artes. O acompanhamento de saúde e a atualização de calendário foram apontados para o endereço Pages, preservando suas regras.
+
 ## Publicado e acessível em 08/10/2026
 
 Endereço público verificado sem login: https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . Pages já foi ativado pelo editor. A execução [37781681069](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37781681069) publicou o main `1d8adba72cd3e206e97f651f5594651d8076abba` às 10:06 BRT, após a primeira recuperação das 09:15 BRT. Calendário, Semana, FLY, Selos, PvP, três novas artes do GO Wild Area e um novo download GPX completo foram conferidos no navegador. Evidências e limites em [docs/qa/PAGES_RECOVERY_20261008.json](docs/qa/PAGES_RECOVERY_20261008.json).
