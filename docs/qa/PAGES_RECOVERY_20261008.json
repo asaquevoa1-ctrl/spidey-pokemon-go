@@ -1,0 +1,105 @@
+{
+  "date_brasilia": "2026-10-08",
+  "repository": "asaquevoa1-ctrl/spidey-pokemon-go",
+  "source_main": "1d8adba72cd3e206e97f651f5594651d8076abba",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "deployment": {
+    "workflow": "spidey-pages.yml",
+    "run_id": 37781681069,
+    "result": "success",
+    "completed_at": "2026-10-08T13:06:19Z",
+    "first_recovery_run": 37773783794
+  },
+  "old_host": {
+    "url": "https://spidey-pokemon-go.vercel.app/spidey-app/",
+    "result": "HTTP 402",
+    "evidence_run": 37781758877,
+    "checked_at": "2026-10-08T13:06:37Z"
+  },
+  "public_browser": {
+    "authentication_wall": false,
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "home_calendar": "2026-10",
+    "week": [
+      "2026-10-05",
+      "2026-10-11"
+    ],
+    "weekly_events": 19,
+    "pvp": {
+      "great": 1152,
+      "ultra": 849,
+      "master": 409
+    },
+    "wild_area_details": [
+      {
+        "event": "Sendai e Tohoku",
+        "file": "assets/events/premium/wild-area-sendai-2026-approved-v1.png",
+        "complete": true,
+        "natural_width": 1122,
+        "natural_height": 1402
+      },
+      {
+        "event": "Cidade do México",
+        "file": "assets/events/premium/wild-area-mexico-city-2026-approved-v1.png",
+        "complete": true,
+        "natural_width": 1122,
+        "natural_height": 1402,
+        "object_fit": "contain"
+      },
+      {
+        "event": "Global",
+        "file": "assets/events/premium/wild-area-global-2026-approved-v1.png",
+        "complete": true,
+        "natural_width": 1122,
+        "natural_height": 1402,
+        "object_fit": "contain",
+        "poster_visually_observed": true
+      }
+    ],
+    "fly": {
+      "essentials": 20,
+      "taipei_present": true,
+      "local_and_brasilia_times": true,
+      "chicago": "09:00–21:00 America/Chicago / 11:00–23:00 Brasília em 08/10"
+    },
+    "stamps": {
+      "rallies": 4,
+      "locations": 513,
+      "gpx_ready": 1,
+      "pokelids": 482
+    },
+    "push_button": "disabled: Alertas indisponíveis"
+  },
+  "gpx": {
+    "rally": "pokemon-centre-japan-stamp-rally-2026",
+    "new_browser_download": true,
+    "bytes": 1952,
+    "waypoints": 18,
+    "sha256": "020ffdf31f736d6583d60b74d39c231ce3ffcb62b8af990fcc5f4af56fbcf606",
+    "all_names_order_coordinates_precision_match_current_catalog": true
+  },
+  "health_monitor": {
+    "hosting_profile": "github-pages",
+    "catalog_source": "public static JSON",
+    "regression_tests_passed": 10,
+    "live_new_profile": "Consultar a execução mais recente de spidey-app-health.yml e o artefato app-health.json; não presumir resultado antes da execução."
+  },
+  "limitations": [
+    "Android físico, instalação PWA, atualização e uso offline não certificados",
+    "Nenhuma entrega de push; Amigos/chat indisponíveis nesta hospedagem",
+    "Hashes não certificam renderização de todas as artes; o AVIF histórico de Xerneas permanece sob as proteções existentes do app",
+    "Novo domínio não migra automaticamente progresso armazenado na origem Vercel",
+    "GPX completo de PokéLids não é liberado sem coordenadas de PokéStops exatas confirmadas"
+  ],
+  "privacy": {
+    "visitor_stores_read": false,
+    "subscriptions_read": false,
+    "conversations_read": false,
+    "push_sent": false,
+    "external_messages_sent": false,
+    "paid_services_created": false
+  }
+}

@@ -1,11 +1,18 @@
 name: Spidey - monitorar aplicativo
 on:
   workflow_dispatch:
+    inputs:
+      all_images:
+        description: Conferir hashes de todos os originais aprovados
+        type: boolean
+        default: false
   schedule:
     - cron: '2/5 * * * *'
   push:
     branches: [main]
-    paths: ['spidey-app/**', 'api/**', 'vercel.json', 'scripts/check_app_health.py', '.github/workflows/spidey-app-health.yml']
+    paths: ['spidey-app/**', 'api/**', 'vercel.json', 'scripts/check_app_health.py', 'scripts/test_app_health.py', '.github/workflows/spidey-app-health.yml']
+  pull_request:
+    paths: ['scripts/check_app_health.py', 'scripts/test_app_health.py', '.github/workflows/spidey-app-health.yml']
 permissions:
   contents: read
 concurrency:
@@ -20,14 +27,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Testar detecção de falhas nos dois tipos de hospedagem
+        run: python -m unittest scripts.test_app_health -v
       - name: Aguardar a publicação após mudanças
         if: github.event_name == 'push'
         run: sleep 45
-      - name: Conferir link público, agenda, PvP, imagens e alertas sem telemetria
-        run: python scripts/check_app_health.py
+      - name: Conferir link público, agenda, PvP, imagens e disponibilidade de alertas sem telemetria
+        if: github.event_name != 'pull_request'
+        env:
+          FULL_ART_AUDIT: ${{ (github.event_name == 'push' && contains(github.event.head_commit.message, 'health-pages-initial-audit')) || inputs.all_images }}
+        run: |
+          audit_args=()
+          if [ "$FULL_ART_AUDIT" = "true" ]; then audit_args+=(--all-images); fi
+          python scripts/check_app_health.py --hosting github-pages --base-url https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ "${audit_args[@]}"
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && github.event_name != 'pull_request'
         with:
           name: spidey-app-health
           path: app-health.json
           retention-days: 7
+

@@ -1,5 +1,15 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
+## 08/10/2026 — recuperado em GitHub Pages; novo endereço público
+
+Endereço público atual e verificado: https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . A ativação de Pages foi feita pelo editor; a primeira publicação terminou às 09:15 BRT ([execução 37773783794](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37773783794)). A publicação seguinte do main `1d8adba72cd3e206e97f651f5594651d8076abba` terminou às 10:06 BRT ([execução 37781681069](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37781681069)). O app abriu sem login. O endereço Vercel continua retornando HTTP402; a falha do monitor anterior às 10:06 BRT pertence a esse host ([execução 37781758877](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37781758877)). Os registros de candidato pendente abaixo são históricos.
+
+Conferido no navegador público: calendário de outubro, Semana 05–11/10 com 19 eventos, PvP Grande/Ultra/Mestra com 1152/849/409 entradas, FLY com horários local/Brasília e Taipei, quatro coleções/513 locais e três artes do GO Wild Area carregadas em seus detalhes. O download novo do GPX dos Centers do Japão contém os 18 pontos, nomes, ordem e precisão exatos do catálogo atual. Prova e limites: [docs/qa/PAGES_RECOVERY_20261008.json](docs/qa/PAGES_RECOVERY_20261008.json).
+
+O monitor `spidey-app-health.yml` passa a conferir esse endereço com o perfil `github-pages`: JSON público direto, políticas meta do pacote e indisponibilidade de push declarada explicitamente. Dez testes verificam semana, catálogos, perfis de hospedagem, arquivos ausentes e hashes divergentes. Resultado vivo deve vir da execução/artefato mais recente, sem confundir CI ou implantação com teste físico. A auditoria completa de originais é explícita; o ciclo normal mantém amostragem leve. Não apontar os acompanhamentos para o host Vercel pausado como se fosse o serviço atual.
+
+GitHub Pages não fornece os servidores de push/Amigos/chat. Android físico, PWA/offline e transferência de progresso entre origens não são certificados. A recuperação gratuita não altera artes, calendário, coordenadas, filas ou dados de visitantes. Próximas atualizações continuam no mesmo novo endereço; o domínio Vercel não pode ser transferido.
+
 ## 08/10/2026 — indisponibilidade e recuperação sem plano pago
 
 O monitor público das 08:21 BRT terminou com falha no workflow `spidey-app-health.yml` ([execução 37769448280](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37769448280)). O main consultado é `5f84f37f1f75e8afa13eaee7d5c9c9fdd8ba0f17`. Os registros de acesso normal de 07/10 são históricos; READY não certifica disponibilidade enquanto a Vercel estiver pausada por cotas.
@@ -450,3 +460,4 @@ Alertas já possuem VAPID/Blob e agendamento: public-key 200, dispatch autentica
 70 testes Node, quatro testes Weekly, gate e workflows passaram. Acesso anônimo: 39 arquivos 200 exatos, 130 eventos e quatro coleções. Centers/GO Lab. possui 18 locais e GPX de 18 pontos; a prova de 17 pontos é histórica. PokéLids mantém 482 referências em 42 prefeituras; GPX 409, sem comprovação de todas as PokéStops ativas ou exatas. FLY mantém 20/28, Taipei, horário local/Brasília e fonte da comunidade para as Ultracriaturas.
 
 Guia: [SPIDEYNEXUS_CONTINUIDADE.md](SPIDEYNEXUS_CONTINUIDADE.md). Relatório e pendências: [CONTINUITY_20261005.md](docs/qa/CONTINUITY_20261005.md), JSON homônimo, `continuity-public-http-a48da34-20261005.json` e capturas em `docs/qa/proofs/`. Todas as frentes do guia continuam rastreadas, inclusive PWA/Android, revisão de textos, cobertura de artes, precisão dos locais e Amigos/chat. Organizar o Projeto do ChatGPT e mover conversas não foi realizado por esta atualização do repositório.
+

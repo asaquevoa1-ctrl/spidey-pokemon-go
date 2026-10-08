@@ -1,5 +1,13 @@
 # Spidey — recuperação gratuita em GitHub Pages
 
+## Publicado e acessível em 08/10/2026
+
+Endereço público verificado sem login: https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . Pages já foi ativado pelo editor. A execução [37781681069](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37781681069) publicou o main `1d8adba72cd3e206e97f651f5594651d8076abba` às 10:06 BRT, após a primeira recuperação das 09:15 BRT. Calendário, Semana, FLY, Selos, PvP, três novas artes do GO Wild Area e um novo download GPX completo foram conferidos no navegador. Evidências e limites em [docs/qa/PAGES_RECOVERY_20261008.json](docs/qa/PAGES_RECOVERY_20261008.json).
+
+`spidey-app-health.yml` acompanha esse link com `--hosting github-pages`. A indisponibilidade declarada de push é uma limitação do pacote, e arquivos ausentes, semana atrasada ou arte divergente continuam sendo falhas. O resultado real de cada execução fica no artefato `app-health.json`. O cron mantém a frequência existente; atrasos do GitHub Actions não são garantia de pontualidade. Auditoria completa: `--all-images` ou entrada manual `all_images`; ciclos usuais usam amostragem leve.
+
+As instruções de ativação abaixo explicam o procedimento realizado. Não é necessário habilitar Pages novamente. A origem Vercel permanece pausada; nenhum upgrade pago foi contratado.
+
 Preparado em 08/10/2026 a partir do main `5f84f37f1f75e8afa13eaee7d5c9c9fdd8ba0f17`. A Vercel continua pausada por cotas excedidas; a alternativa não contrata plano, remove versões nem altera a conta Vercel.
 
 ## Publicação
@@ -21,3 +29,4 @@ O service worker publicado mantém caminhos relativos, compatíveis com o subdir
 GitHub Pages não permite personalizar todos os cabeçalhos HTTP da Vercel. A cópia recebe política de conteúdo em meta com conexões somente ao próprio domínio e referrer-policy no-referrer; isso não equivale aos cabeçalhos de permissões e de enquadramento do servidor anterior.
 
 GitHub registra IPs de acesso para segurança na infraestrutura; o app não adiciona telemetria ou coleta de visitantes. https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+
