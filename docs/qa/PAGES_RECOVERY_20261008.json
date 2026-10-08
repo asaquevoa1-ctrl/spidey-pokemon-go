@@ -63,7 +63,8 @@
       "essentials": 20,
       "taipei_present": true,
       "local_and_brasilia_times": true,
-      "chicago": "09:00–21:00 America/Chicago / 11:00–23:00 Brasília em 08/10"
+      "chicago": "09:00–21:00 America/Chicago / 11:00–23:00 Brasília em 08/10",
+      "all_locations": 28
     },
     "stamps": {
       "rallies": 4,
@@ -85,7 +86,32 @@
     "hosting_profile": "github-pages",
     "catalog_source": "public static JSON",
     "regression_tests_passed": 10,
-    "live_new_profile": "Consultar a execução mais recente de spidey-app-health.yml e o artefato app-health.json; não presumir resultado antes da execução."
+    "live_new_profile": {
+      "status": "success",
+      "run_id": 37785079185,
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37785079185",
+      "source_commit": "ef4a9ed4ac8e195b615f1f13a632661323d95e17",
+      "checked_at": "2026-10-08T13:32:56.545310+00:00",
+      "ok": true,
+      "approved_art": {
+        "entries": 35,
+        "unique_files": 34,
+        "audit": "all"
+      },
+      "catalogs": {
+        "events": 136,
+        "week_start": "2026-10-05",
+        "week_end": "2026-10-11",
+        "pvp": {
+          "great": 1152,
+          "ultra": 849,
+          "master": 409
+        },
+        "rallies": 4
+      },
+      "artifact_id": 11554770206,
+      "failures": []
+    }
   },
   "limitations": [
     "Android físico, instalação PWA, atualização e uso offline não certificados",
