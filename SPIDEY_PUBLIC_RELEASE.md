@@ -1,4 +1,14 @@
-# Spidey — versão web publicada, estado de 04/10/2026
+# Spidey — versão web publicada, estado de 08/10/2026
+
+## 08/10/2026 — acesso público recuperado sem plano pago
+
+Link atual verificado sem login: https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . GitHub Pages publicou o main `1d8adba72cd3e206e97f651f5594651d8076abba`, com conclusão às 10:06 BRT em [37781681069](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37781681069); a primeira recuperação já havia ocorrido às 09:15 BRT em [37773783794](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37773783794). Vercel continua HTTP402: a disponibilidade do host novo não implica recuperação da conta anterior.
+
+Navegador público: Home/calendário de outubro, Semana 05–11/10 com 19 eventos, FLY e os horários de Chicago, três ligas PvP com 1152/849/409 entradas, Selos com quatro coleções/513 locais e artes de Sendai/Tohoku, Cidade do México e Global carregadas (1122×1402). O pôster Global completo foi observado visualmente. GPX novo do Japão: 1.952 bytes, 18 pontos, SHA256 `020ffdf31f736d6583d60b74d39c231ce3ffcb62b8af990fcc5f4af56fbcf606`; nomes, ordem e coordenadas com a precisão do catálogo preservados. Registro: [docs/qa/PAGES_RECOVERY_20261008.json](docs/qa/PAGES_RECOVERY_20261008.json).
+
+O monitor de saúde usa o perfil explícito de hospedagem estática e o link acima. Verifica catálogos JSON públicos, semana atual em Brasília, três ligas, Selos, arquivos essenciais, política meta e artes aprovadas. Push ausente é registrado como capacidade indisponível desta versão; não é tratado como serviço funcional. Dez testes locais passaram; a primeira execução viva deve ser confirmada no workflow/artefato, não inferida dos testes. Perfil Vercel continua exigindo seus cabeçalhos e chave de push quando selecionado.
+
+Limites: conferência em navegador desktop, sem certificação Android físico/PWA/offline/clipboard. Integridade SHA256 não certifica renderização de todos os originais; permanecem proteções para o AVIF histórico de Xerneas e recusas de geração existentes. Amigos/chat e push não são fornecidos por Pages. Novo domínio exige usar o novo link e pode exigir nova instalação PWA; progresso local da origem anterior não é migrado automaticamente. Atualizações futuras usam esse mesmo endereço. Não houve upgrade pago, exclusão de versões ou leitura/transmissão de dados de usuários.
 
 ## 08/10/2026 — acesso interrompido; candidato gratuito
 
@@ -539,3 +549,4 @@ Alertas já possuem VAPID/Blob e agendamento: public-key 200, dispatch autentica
 70 testes Node, quatro testes Weekly, gate e workflows passaram. Acesso anônimo: 39 arquivos 200 exatos, 130 eventos e quatro coleções. Centers/GO Lab. possui 18 locais e GPX de 18 pontos; a prova de 17 pontos é histórica. PokéLids mantém 482 referências em 42 prefeituras; GPX 409, sem comprovação de todas as PokéStops ativas ou exatas. FLY mantém 20/28, Taipei, horário local/Brasília e fonte da comunidade para as Ultracriaturas.
 
 Guia: [SPIDEYNEXUS_CONTINUIDADE.md](SPIDEYNEXUS_CONTINUIDADE.md). Relatório e pendências: [CONTINUITY_20261005.md](docs/qa/CONTINUITY_20261005.md), JSON homônimo, `continuity-public-http-a48da34-20261005.json` e capturas em `docs/qa/proofs/`. Todas as frentes do guia continuam rastreadas, inclusive PWA/Android, revisão de textos, cobertura de artes, precisão dos locais e Amigos/chat. Organizar o Projeto do ChatGPT e mover conversas não foi realizado por esta atualização do repositório.
+
