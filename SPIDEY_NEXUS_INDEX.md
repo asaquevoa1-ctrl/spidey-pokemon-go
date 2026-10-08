@@ -1,5 +1,9 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
+## 08/10/2026 — estatísticas de acesso preparadas, ativação pendente
+
+Por autorização de Anderson, o candidato integra Cloudflare Web Analytics gratuito no pacote Pages. [SPIDEY_WEB_ANALYTICS.md](SPIDEY_WEB_ANALYTICS.md) registra os limites e a ativação pelo identificador público do site. A configuração permanece desativada até receber o identificador da conta do responsável; não há medição, número de usuários ou recebimento no painel alegados. O painel Cloudflare exigiu login e apresentou falha de verificação neste navegador. O carregador exclui prévias, respeita Não Rastrear/GPC e desativa a medição de navegação interna; não lê ou envia dados pessoais do app. O link, catálogos e artes permanecem preservados. Monitor distingue configuração publicada de recebimento real. Esta nota pertence à branch candidata, sem certificar publicação ou teste Android físico.
+
 
 Monitor público confirmado em 08/10 às 10:32 BRT: [execução 37785079185](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37785079185), código `ef4a9ed`, perfil `github-pages`, `ok=true`, sem falhas. Auditoria completa dos 34 originais correspondentes às 35 entradas aprovadas passou por SHA256; 136 eventos, Semana 05–11/10, quatro coleções e rankings 1152/849/409 conferidos. Artefato `spidey-app-health` ID11554770206. Isso certifica o acesso e a integridade pública, sem certificar Android físico ou renderização de todas as artes. O acompanhamento de saúde e a atualização de calendário foram apontados para o endereço Pages, preservando suas regras.
 

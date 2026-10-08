@@ -18,6 +18,50 @@ POLICY = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self
 CATALOG_REQUEST = "fetch(`api/catalog?file=${encodeURIComponent(file)}`,"
 STATIC_REQUEST = "fetch(`data/${file}.json`,"
 GPX_REQUEST = "gpxLink.href = navigator.onLine === false ? url : `api/gpx?rally=${encodeURIComponent(rally.id)}`;"
+ANALYTICS_HOST = 'asaquevoa1-ctrl.github.io'
+ANALYTICS_SCRIPT = 'https://static.cloudflareinsights.com/beacon.min.js'
+ANALYTICS_ENDPOINT = 'https://cloudflareinsights.com'
+NO_ANALYTICS_COPY = 'Não instalamos anúncios, rastreadores de comportamento nem ferramentas de análise de visitantes.'
+ANALYTICS_COPY = ('Não instalamos anúncios nem rastreadores de comportamento. '
+                  'Usamos Cloudflare Web Analytics para contar visitas e visualizações e acompanhar o carregamento. '
+                  'A Cloudflare declara que esse recurso não coleta nem usa dados pessoais dos visitantes. '
+                  'Não enviamos seus times, progresso dos selos, buscas ou coordenadas copiadas para essa medição. '
+                  'Respeitamos as preferências Não Rastrear e Global Privacy Control do navegador. '
+                  'Visitas não equivalem ao número de pessoas diferentes ou de instalações do app.')
+
+
+def read_analytics(root: Path) -> dict:
+    path = root / 'config/spidey-web-analytics.json'
+    data = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {
+        'enabled': False, 'hostname': ANALYTICS_HOST, 'site_token': None}
+    if not isinstance(data, dict) or set(data) != {'enabled', 'hostname', 'site_token'} or type(data['enabled']) is not bool:
+        raise ValueError('Configuração de estatísticas inválida')
+    if data['hostname'] != ANALYTICS_HOST:
+        raise ValueError('Estatísticas restritas ao endereço público atual')
+    if data['enabled'] and (not isinstance(data['site_token'], str) or not re.fullmatch('[a-f0-9]{32}', data['site_token'])):
+        raise ValueError('Falta o identificador público do site no Cloudflare Web Analytics')
+    if not data['enabled'] and data['site_token'] is not None:
+        raise ValueError('Estatísticas desativadas devem manter site_token nulo')
+    return data
+
+
+def prepare_shell(text: str, analytics: dict) -> str:
+    if text.count('</head>') != 1 or text.count('</body>') != 1 or 'http-equiv="Content-Security-Policy"' in text:
+        raise ValueError('Cabeçalho HTML mudou; revisar a política de segurança')
+    policy, provider = POLICY, 'off'
+    if analytics['enabled']:
+        if text.count(NO_ANALYTICS_COPY) != 1:
+            raise ValueError('Texto de privacidade mudou; revisar antes de ativar estatísticas')
+        text = text.replace(NO_ANALYTICS_COPY, ANALYTICS_COPY)
+        policy = policy.replace("script-src 'self' 'unsafe-inline'", "script-src 'self' 'unsafe-inline' " + ANALYTICS_SCRIPT)
+        policy = policy.replace("connect-src 'self'", "connect-src 'self' " + ANALYTICS_ENDPOINT)
+        provider = 'cloudflare'
+        loader = '<script src="web-analytics.js?v=20261008-analytics1" data-site-token="' + analytics['site_token'] + '" defer></script>\n'
+        text = text.replace('</body>', loader + '</body>')
+    metadata = ('<meta name="referrer" content="no-referrer">\n'
+                '<meta name="spidey-web-analytics" content="' + provider + '">\n'
+                '<meta http-equiv="Content-Security-Policy" content="' + html.escape(policy, quote=True) + '">\n')
+    return text.replace('</head>', metadata + '</head>')
 
 
 def verify_public_data(app: Path, today: date | None = None) -> dict:
@@ -54,6 +98,7 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     if output == root or output in root.parents or output == app or output.is_relative_to(app):
         raise ValueError('Diretório de saída precisa ser separado da fonte')
     result = verify_public_data(app, today)
+    analytics = read_analytics(root)
     if output.exists() and any(output.iterdir()) and not (output / '.spidey-pages-generated').is_file():
         raise ValueError('A saída contém arquivos que não foram gerados por este script')
     if output.exists():
@@ -96,10 +141,8 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
                       + text[core_match.end(1):], encoding='utf-8')
     index = published / 'index.html'
     text = index.read_text(encoding='utf-8')
-    if text.count('</head>') != 1 or 'http-equiv="Content-Security-Policy"' in text:
-        raise ValueError('Cabeçalho HTML mudou; revisar a política de segurança')
-    metadata = '<meta name="referrer" content="no-referrer">\n<meta http-equiv="Content-Security-Policy" content="' + html.escape(POLICY, quote=True) + '">\n'
-    index.write_text(text.replace('</head>', metadata + '</head>'), encoding='utf-8')
+    index.write_text(prepare_shell(text, analytics), encoding='utf-8')
+    result['web_analytics'] = {'enabled': analytics['enabled'], 'provider': 'cloudflare' if analytics['enabled'] else None}
     # Public availability only. No subscription store, registration or dispatch exists here.
     key = published / 'api/push/public-key'
     key.parent.mkdir(parents=True, exist_ok=True)

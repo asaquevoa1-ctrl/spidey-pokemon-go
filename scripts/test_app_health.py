@@ -37,6 +37,20 @@ class AppHealthTests(unittest.TestCase):
         self.assertIn('Política de conexões do app ausente ou ampliada', validate_shell(broad, {}, 'github-pages'))
         self.assertIn('Política de referência do app ausente', validate_shell(PAGES_SHELL.replace('no-referrer', 'unsafe-url'), {}, 'github-pages'))
 
+    def test_monitor_checks_analytics_code_but_never_sends_or_reads_visitor_data(self):
+        from scripts.build_spidey_pages import ROOT, prepare_shell
+        files, now = self.fake_public_files()
+        files['index.html'] = prepare_shell((ROOT / 'spidey-app/index.html').read_text(), {
+            'enabled': True, 'hostname': 'asaquevoa1-ctrl.github.io', 'site_token': 'a' * 32,
+        }).encode()
+        files['web-analytics.js'] = b'public loader'
+        report = self.run_fake_site(files, now)
+        self.assertTrue(report['ok'], report['failures'])
+        self.assertTrue(report['capabilities']['web_analytics_configured'])
+        self.assertFalse(any('cloudflareinsights.com' in row['path'] for row in report['checks']))
+        del files['web-analytics.js']
+        self.assertIn('web-analytics.js: 404', self.run_fake_site(files, now)['failures'])
+
     def test_vercel_still_requires_server_headers_and_configured_push(self):
         self.assertIn('Proteção HTTP ausente: x-frame-options', validate_shell(PAGES_SHELL, {}, 'vercel'))
         self.assertEqual(validate_push({'publicKey': None}, 'vercel'), ['Serviço de alertas indisponível'])

@@ -1,5 +1,9 @@
 # Spidey — versão web publicada, estado de 08/10/2026
 
+## Candidato de estatísticas gratuitas — pendente de conta/identificador
+
+Integração Cloudflare Web Analytics preparada para o endereço Pages atual, sem mudança de link. Estado `enabled: false`, `site_token: null`: não há medição ativa. O candidato atualiza o aviso de privacidade somente quando ativado, libera os destinos oficiais de forma restrita e preserva calendários, artes, PvP e GPX. Conta/identificador público e recebimento no painel ainda pendentes; falha de verificação foi observada no login Cloudflare deste navegador. [SPIDEY_WEB_ANALYTICS.md](SPIDEY_WEB_ANALYTICS.md) explica a ativação, a diferença entre visitas e pessoas e as exclusões de coleta. Resultado de testes/CI não certifica medição viva nem aparelho físico. Esta seção descreve a branch candidata, ainda não publicada.
+
 
 Monitor público confirmado em 08/10 às 10:32 BRT: [execução 37785079185](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37785079185), código `ef4a9ed`, perfil `github-pages`, `ok=true`, sem falhas. Auditoria completa dos 34 originais correspondentes às 35 entradas aprovadas passou por SHA256; 136 eventos, Semana 05–11/10, quatro coleções e rankings 1152/849/409 conferidos. Artefato `spidey-app-health` ID11554770206. Isso certifica o acesso e a integridade pública, sem certificar Android físico ou renderização de todas as artes. O acompanhamento de saúde e a atualização de calendário foram apontados para o endereço Pages, preservando suas regras.
 
