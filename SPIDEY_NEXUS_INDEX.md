@@ -1,5 +1,12 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
+## 08/10/2026 — indisponibilidade e recuperação sem plano pago
+
+O monitor público das 08:21 BRT terminou com falha no workflow `spidey-app-health.yml` ([execução 37769448280](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37769448280)). O main consultado é `5f84f37f1f75e8afa13eaee7d5c9c9fdd8ba0f17`. Os registros de acesso normal de 07/10 são históricos; READY não certifica disponibilidade enquanto a Vercel estiver pausada por cotas.
+
+Por solicitação do editor de uma alternativa sem custo, o candidato `spidey-pages.yml` prepara somente o app público para GitHub Pages. Regras e ativação em [SPIDEY_FREE_HOSTING.md](SPIDEY_FREE_HOSTING.md): calendário, Semana, FLY, catálogos, PvP, artes exatas e GPX no cliente; nenhuma API de perfis, chat ou assinaturas é publicada. Testes de empacotamento e sintaxe passaram, 136 eventos, 35 entradas do master, semana 05–11/10 e três ligas preservados. Ativação de Pages e implantação pública ainda pendentes; não divulgar endereço como funcional antes da prova de acesso. Android físico/PWA/offline/push e Amigos/chat não certificados. Não contratar serviços nem apagar versões para esta recuperação.
+
+
 ## 07/10/2026 — artes Premium do GO Wild Area
 
 Publicação conferida em 07/10: código `d470ffb`, produção READY no endereço permanente https://spidey-pokemon-go.vercel.app/spidey-app/ . Os três detalhes públicos carregam os PNGs aprovados completos; 39 arquivos HTTP200 com bytes exatos, incluindo as 35 entradas do master. Workflow de testes e monitor de saúde concluídos com sucesso. Conferência responsiva no navegador; teste físico Android permanece pendente.

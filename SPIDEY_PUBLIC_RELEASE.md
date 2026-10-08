@@ -1,5 +1,14 @@
 # Spidey — versão web publicada, estado de 04/10/2026
 
+## 08/10/2026 — acesso interrompido; candidato gratuito
+
+Estado corrente: o domínio Vercel está indisponível, e o monitor de 08:21 BRT confirmou falha ([execução](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37769448280)). O main consultado foi `5f84f37f1f75e8afa13eaee7d5c9c9fdd8ba0f17`; disponibilidade registrada em datas anteriores não descreve o serviço atual.
+
+O editor solicitou alternativa sem gasto. O workflow candidato `spidey-pages.yml` valida e publica um pacote estático exclusivo do app em GitHub Pages, gratuito para este repositório público. [SPIDEY_FREE_HOSTING.md](SPIDEY_FREE_HOSTING.md) registra ativação, novo domínio, limites e restrições. Verificação local: dois testes passaram e sintaxe de catalog.js, stamps-v2.js e sw.js válida; pacote de 276 arquivos/102.827.551 bytes, 136 eventos, semana 05–11/10, três ligas com 1152/849/409 entradas e hashes das 35 entradas de arte preservados. Integridade dos arquivos não equivale a nova prova de renderização de todas as imagens.
+
+A cópia carrega catálogos diretamente de JSON, baixa GPX pelo Blob completo já existente e retira do pré-cache apenas candidatas em revisão que não são publicadas. APIs de servidor não são copiadas; disponibilidade de alertas é explicitamente falsa. Publicação/ativação Pages e acesso público ainda não confirmados. O domínio Vercel não pode ser movido para Pages; instalação PWA e armazenamento local pertencem ao novo endereço. Android físico/offline/push não foram testados, Amigos/chat continuam pendentes. A recuperação não lê nem transfere dados de visitantes e não contrata plano.
+
+
 ## 07/10/2026 — artes Premium do GO Wild Area
 
 Publicação conferida em 07/10: código `d470ffb`, produção READY no endereço permanente https://spidey-pokemon-go.vercel.app/spidey-app/ . Os três detalhes públicos carregam os PNGs aprovados completos; 39 arquivos HTTP200 com bytes exatos, incluindo as 35 entradas do master. Workflow de testes e monitor de saúde concluídos com sucesso. Conferência responsiva no navegador; teste físico Android permanece pendente.
