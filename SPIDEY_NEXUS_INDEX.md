@@ -1,5 +1,13 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
+## 08/10/2026 — Vercel bloqueada; correção de Weekly em revisão
+
+O acesso público foi observado com `This deployment is temporarily paused`; READY é estado da versão construída e não prova acesso público. O painel apresentado pelo responsável mostra a equipe Spidey pausada e duas cotas excedidas: CDN Requests 1,1M/1M e Deployment Storage 10,07GB/10GB. O commit público `5fa3f195ad6bbf32a0ece63af516683bcb54b7db`, de 08/10 às 06:44:05 Brasília, recebeu status Vercel `failure` / `Account is blocked.` às 06:44:08. Nenhuma data exata de liberação foi obtida. A política Hobby informa que muitos limites podem exigir esperar 30 dias: https://vercel.com/docs/plans/hobby . Não assumir reinício no primeiro dia do mês ou recuperação por rollback.
+
+Proposta na branch `fix/weekly-idempotent-20261008`, baseada nos arquivos exatos desse main, sem integração ao main ou implantação. O gerador deixa de criar diferenças somente pela passagem do tempo, preserva o horário anterior quando o conteúdo é igual e repara as três cópias quando necessário. Mantém cron horário, gatilhos de catálogo/master e validação das artes aprovadas. O teste de repetição falhou no gerador original pela troca isolada de `generated_at`; os nove testes passam no candidato corrigido, incluindo mudança real, troca de semana e reparação de cópias. Fontes canônicas e 35 arquivos de imagens conferidos por hash; não são modificados pela correção.
+
+Estado: CANDIDATO TESTADO PARA REVISÃO. Reduz novas publicações desnecessárias; não apaga versões, não altera plano e não libera a cota usada. A aplicação no main e a recuperação pública permanecem pendentes. Não declarar QA físico Android, PWA, push ou Amigos/chat a partir destes testes do gerador.
+
 ## 07/10/2026 — artes Premium do GO Wild Area
 
 Publicação conferida em 07/10: código `d470ffb`, produção READY no endereço permanente https://spidey-pokemon-go.vercel.app/spidey-app/ . Os três detalhes públicos carregam os PNGs aprovados completos; 39 arquivos HTTP200 com bytes exatos, incluindo as 35 entradas do master. Workflow de testes e monitor de saúde concluídos com sucesso. Conferência responsiva no navegador; teste físico Android permanece pendente.

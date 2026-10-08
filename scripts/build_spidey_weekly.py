@@ -56,9 +56,33 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def save(path: Path, payload: dict) -> None:
+def save(path: Path, payload: dict) -> bool:
+    content = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    try:
+        if path.read_text(encoding="utf-8") == content:
+            return False
+    except FileNotFoundError:
+        pass
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(content, encoding="utf-8")
+    return True
+
+
+def preserve_generation_time(payload: dict) -> None:
+    # The hourly check must not publish again just because the clock advanced.
+    try:
+        previous = load(CURRENT_FILE)
+    except (OSError, json.JSONDecodeError):
+        return
+    if not isinstance(previous, dict) or not isinstance(previous.get("meta"), dict):
+        return
+    generated_at = previous["meta"].get("generated_at")
+    if not isinstance(generated_at, str) or parse_dt(generated_at) is None:
+        return
+    previous_meta = {key: value for key, value in previous["meta"].items() if key != "generated_at"}
+    current_meta = {key: value for key, value in payload["meta"].items() if key != "generated_at"}
+    if {**previous, "meta": previous_meta} == {**payload, "meta": current_meta}:
+        payload["meta"]["generated_at"] = generated_at
 
 
 def parse_dt(value: str | None) -> datetime | None:
@@ -320,10 +344,11 @@ def main() -> int:
     anchor = date.fromisoformat(override) if override else datetime.now(BR).date()
     payload = build(anchor)
     validate_weekly(payload)
-    save(CURRENT_FILE, payload)
-    save(APP_WEEKLY_FILE, payload)
-    save(ARCHIVE_DIR / f"{payload['week_start']}.json", payload)
+    preserve_generation_time(payload)
+    paths = (CURRENT_FILE, APP_WEEKLY_FILE, ARCHIVE_DIR / f"{payload['week_start']}.json")
+    files_changed = sum(save(path, payload) for path in paths)
     print(json.dumps({
+        "files_changed": files_changed,
         "week": f"{payload['week_start']}..{payload['week_end']}",
         "events": payload["meta"]["calendar_events_in_week"],
         "weekly_art": payload["meta"]["events_with_weekly_art"],
