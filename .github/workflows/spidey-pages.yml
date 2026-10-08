@@ -1,0 +1,62 @@
+name: Spidey - hospedagem gratuita
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['spidey-app/**', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', '.github/workflows/spidey-pages.yml']
+  pull_request:
+    paths: ['spidey-app/**', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', '.github/workflows/spidey-pages.yml']
+  workflow_run:
+    workflows: ['Spidey Weekly - resumo semanal']
+    types: [completed]
+    branches: [main]
+  # Captures catalog commits made by GITHUB_TOKEN, which don't trigger push workflows.
+  schedule:
+    - cron: '47 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: spidey-pages-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'public' }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Conferir empacotamento e integridade
+        run: python -m unittest scripts.test_spidey_pages
+      - name: Preparar somente os arquivos públicos
+        run: python scripts/build_spidey_pages.py --output pages-public
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: pages-public
+          retention-days: 1
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Publicar Spidey
+        id: deployment
+        uses: actions/deploy-pages@v4
