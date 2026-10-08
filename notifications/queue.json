@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-07-raid-hour-yveltal:start:60",
-      "event_id": "2026-10-07-raid-hour-yveltal",
-      "event_title": "Hora de Reides: Yveltal",
-      "category": "raid_hour",
-      "scheduled_for": "2026-10-07T17:00:00-03:00",
-      "event_start": "2026-10-07T18:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Hora de Reides: Yveltal começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-07-raid-hour-yveltal",
-      "status": "pending",
-      "source": {
-        "name": "Leek Duck • calendário de reides",
-        "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-08-spotlight-elgyem:start:60",
       "event_id": "2026-10-08-spotlight-elgyem",
       "event_title": "Hora do Holofote: Elgyem",
@@ -744,7 +726,7 @@
     }
   ],
   "meta": {
-    "pending_count": 41,
+    "pending_count": 40,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
