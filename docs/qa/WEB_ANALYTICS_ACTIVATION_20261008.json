@@ -8,8 +8,8 @@
   "authorization": "Integração gratuita autorizada em 08/10/2026 às 12:06 BRT; trecho oficial público fornecido por Anderson às 12:59 BRT",
   "public_site_identifier_confirmed": true,
   "configuration_enabled": true,
-  "status": "CONFIGURED_PENDING_PUBLICATION_AND_DASHBOARD_PROOF",
-  "publication_verified": false,
+  "status": "PUBLISHED_CONFIGURATION_VERIFIED_DASHBOARD_RECEIPT_PENDING",
+  "publication_verified": true,
   "dashboard_receipt_verified": false,
   "account_created_by_agent": false,
   "private_user_data_accessed": false,
@@ -44,5 +44,155 @@
       "analytics_enabled": true
     },
     "preservation": "Todos os hashes aprovados e bytes dos assets/catálogos do pacote conferidos; GPX no cliente preservado"
-  }
+  },
+  "publication": {
+    "commit": "5981a7e6cc92da1d70af5dfe6391cba34e3c8316",
+    "run_id": 37806075539,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37806075539",
+    "conclusion": "success",
+    "finished_at_utc": "2026-10-08T16:06:32Z"
+  },
+  "workflow_health": {
+    "run_id": 37806075463,
+    "job_id": 113410573663,
+    "artifact_id": 11563142353,
+    "checked_at_utc": "2026-10-08T16:06:40.476125+00:00",
+    "ok": true,
+    "web_analytics_configured": true,
+    "failures": []
+  },
+  "independent_public_health": {
+    "checked_at": "2026-10-08T16:08:12.791497+00:00",
+    "base_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+    "hosting": "github-pages",
+    "checks": [
+      {
+        "path": "index.html",
+        "ok": true,
+        "bytes": 15032
+      },
+      {
+        "path": "pvp.js",
+        "ok": true,
+        "bytes": 10204
+      },
+      {
+        "path": "pvp.css",
+        "ok": true,
+        "bytes": 4921
+      },
+      {
+        "path": "navigation.js",
+        "ok": true,
+        "bytes": 3777
+      },
+      {
+        "path": "sw.js",
+        "ok": true,
+        "bytes": 8975
+      },
+      {
+        "path": "premium-approved-master.js",
+        "ok": true,
+        "bytes": 15285
+      },
+      {
+        "path": "api/push/public-key",
+        "ok": true,
+        "bytes": 67
+      },
+      {
+        "path": "data/events.json",
+        "ok": true,
+        "bytes": 232935
+      },
+      {
+        "path": "data/weekly.json",
+        "ok": true,
+        "bytes": 27141
+      },
+      {
+        "path": "data/local-events.json",
+        "ok": true,
+        "bytes": 4823
+      },
+      {
+        "path": "data/pvp.json",
+        "ok": true,
+        "bytes": 700498
+      },
+      {
+        "path": "catalog.js",
+        "ok": true,
+        "bytes": 940
+      },
+      {
+        "path": "stamps-v2.js",
+        "ok": true,
+        "bytes": 18441
+      },
+      {
+        "path": "manifest.webmanifest",
+        "ok": true,
+        "bytes": 776
+      },
+      {
+        "path": "data/stamps.json",
+        "ok": true,
+        "bytes": 655574
+      },
+      {
+        "path": "web-analytics.js",
+        "ok": true,
+        "bytes": 946
+      },
+      {
+        "path": "assets/events/premium/friendship-friday-20261002-approved-v1.png",
+        "ok": true,
+        "sha256_checked": false
+      }
+    ],
+    "failures": [],
+    "capabilities": {
+      "push": false,
+      "web_analytics_configured": true
+    },
+    "limitations": [
+      "Push e Amigos/chat não são fornecidos pela hospedagem estática",
+      "Políticas meta não equivalem a todos os cabeçalhos HTTP da Vercel",
+      "Verificação HTTP não certifica Android físico, PWA/offline ou renderização de todas as imagens",
+      "Configuração de estatísticas não comprova recebimento no painel Cloudflare ou número de pessoas"
+    ],
+    "catalogs": {
+      "events": 136,
+      "week_start": "2026-10-05",
+      "week_end": "2026-10-11",
+      "pvp": {
+        "great": 1152,
+        "ultra": 849,
+        "master": 409
+      },
+      "rallies": 4
+    },
+    "approved_art": {
+      "entries": 35,
+      "unique_files": 34,
+      "audit": "sample"
+    },
+    "ok": true
+  },
+  "browser": {
+    "url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+    "public_home_opened": true,
+    "provider_meta": "cloudflare",
+    "loader_token_matches_official_snippet": true,
+    "beacon_element_inserted": true,
+    "beacon_src": "https://static.cloudflareinsights.com/beacon.min.js",
+    "beacon_type": "module",
+    "spa": false,
+    "cloudflare_specific_console_errors_observed": false,
+    "outbound_network_receipt_verified": false,
+    "dashboard_receipt_verified": false
+  },
+  "verification_limit": "O DOM confirma inserção do script; não fornece prova de resposta do beacon ou métricas no painel. Nenhum número de visitas, pessoas ou instalações é alegado."
 }
