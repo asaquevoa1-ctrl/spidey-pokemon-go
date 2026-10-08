@@ -2,9 +2,9 @@
 
 ## Estado de 08/10/2026
 
-Anderson autorizou a configuração gratuita após perguntar como acompanhar o uso do link público. Integração preparada; ativação e recebimento no painel continuam **PENDENTES**. Não existe contagem anterior recuperada, conta Cloudflare criada pelo agente ou identificador de site confirmado. O painel Cloudflare apresentou uma falha de verificação na tela de login deste navegador, inclusive após uma única recarga.
+Anderson autorizou a configuração gratuita após perguntar como acompanhar o uso do link público e forneceu o trecho oficial de instalação em 08/10/2026 às 12:59 BRT. O identificador público do site está confirmado e a configuração está habilitada. Publicação e recebimento no painel ainda precisam de prova; não existe contagem anterior recuperada. O responsável concluiu o cadastro do site na própria conta Cloudflare. O agente não criou conta nem acessou credenciais; a falha de verificação anteriormente observada no login deste navegador não impede a publicação do trecho público fornecido.
 
-A configuração versionada permanece `enabled: false` e `site_token: null`. Nesta condição a publicação não carrega o serviço de estatísticas, não libera conexões adicionais e mantém o aviso de ausência de análise de visitantes.
+A configuração versionada está `enabled: true`, com o identificador público extraído de `data-cf-beacon`. O pacote Pages habilita o carregador oficial e o aviso de privacidade correspondente. Habilitação versionada não equivale a métricas recebidas no painel.
 
 O endereço continua https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . A hospedagem permanece GitHub Pages; não é necessário migrar o app, alterar DNS, contratar plano ou mudar de link.
 
@@ -17,7 +17,7 @@ O endereço continua https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-
 5. Em `config/spidey-web-analytics.json`, definir `enabled: true` e preencher `site_token` com esse identificador confirmado. Hostname permanece igual.
 6. Validar a branch, publicar e conferir o site e o recebimento no painel antes de declarar a medição ativa. A alteração deste arquivo dispara `spidey-pages.yml`.
 
-Sem login/identificador confirmado não há ativação. Não substituir o identificador por exemplo de teste nem registrar falsa contagem zero.
+Sem identificador confirmado não há ativação. Não substituir o identificador por exemplo de teste nem registrar falsa contagem zero.
 
 ## Limites de dados e medição
 
@@ -41,7 +41,7 @@ Push e Amigos/chat continuam indisponíveis nesta hospedagem. Testes de código 
 
 O empacotamento valida todos os originais aprovados e preserva catálogos, imagens e GPX. Os testes adicionais cobrem configuração ausente/inválida, destino inesperado, aviso de privacidade, política restrita, preferências de privacidade, exclusão de prévios e acesso indevido a estado pessoal. Nenhum teste envia medições reais.
 
-Verificação local concluída: 17 testes Python e quatro testes Node passaram. Os builds desativado e ativado com identificador fictício somente local passaram. Registro: [docs/qa/WEB_ANALYTICS_PREPARATION_20261008.json](docs/qa/WEB_ANALYTICS_PREPARATION_20261008.json). A configuração versionada permanece desativada; o resultado não certifica recebimento na Cloudflare.
+Na preparação, 17 testes Python e quatro testes Node passaram, com builds desativado e ativado usando identificador fictício somente local. Registro histórico: [docs/qa/WEB_ANALYTICS_PREPARATION_20261008.json](docs/qa/WEB_ANALYTICS_PREPARATION_20261008.json). A ativação usa o identificador público fornecido por Anderson e a semana do main atual; provas de publicação e limites são registradas separadamente em [docs/qa/WEB_ANALYTICS_ACTIVATION_20261008.json](docs/qa/WEB_ANALYTICS_ACTIVATION_20261008.json).
 
 ## Referências oficiais consultadas em 08/10/2026
 

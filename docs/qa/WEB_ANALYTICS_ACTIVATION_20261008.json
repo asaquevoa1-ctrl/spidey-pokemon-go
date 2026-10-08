@@ -1,0 +1,48 @@
+{
+  "date_brt": "2026-10-08",
+  "base_main": "8fcd7f18f6c9cfa70dbeee37154576326ace5d71",
+  "preparation_pr": 30,
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "hosting": "github-pages",
+  "provider": "Cloudflare Web Analytics",
+  "authorization": "Integração gratuita autorizada em 08/10/2026 às 12:06 BRT; trecho oficial público fornecido por Anderson às 12:59 BRT",
+  "public_site_identifier_confirmed": true,
+  "configuration_enabled": true,
+  "status": "CONFIGURED_PENDING_PUBLICATION_AND_DASHBOARD_PROOF",
+  "publication_verified": false,
+  "dashboard_receipt_verified": false,
+  "account_created_by_agent": false,
+  "private_user_data_accessed": false,
+  "referrer_policy": "no-referrer",
+  "custom_events": false,
+  "spa_measurement": false,
+  "respects_do_not_track_and_global_privacy_control": true,
+  "limits": [
+    "Visitas e visualizações não equivalem a pessoas únicas ou instalações",
+    "Sem métricas históricas recuperadas",
+    "Publicação não certifica recebimento no painel",
+    "Sem teste físico Android, PWA/offline ou push"
+  ],
+  "tests": {
+    "python_passed": 17,
+    "node_passed": 4,
+    "diff_check": "passed",
+    "package": {
+      "events": 136,
+      "approved_art_entries": 35,
+      "week": [
+        "2026-10-05",
+        "2026-10-11"
+      ],
+      "pvp": {
+        "great": 1152,
+        "ultra": 849,
+        "master": 409
+      },
+      "files": 277,
+      "bytes": 102829170,
+      "analytics_enabled": true
+    },
+    "preservation": "Todos os hashes aprovados e bytes dos assets/catálogos do pacote conferidos; GPX no cliente preservado"
+  }
+}
