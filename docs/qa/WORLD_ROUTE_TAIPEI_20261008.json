@@ -128,5 +128,7 @@
     "Instalação Android físico, PWA, offline e recebimento de push não foram testados.",
     "Coordenadas do resumo mundial são referências geográficas; não são Poképaradas exatas."
   ],
-  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/"
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "integrated_main": "251be48016cb744ce6f25242917ec3912dc6fb59",
+  "integration_note": "Atualização simultânea de generated_at no Weekly foi incorporada, regenerando a semana com os 20 eventos atuais."
 }
