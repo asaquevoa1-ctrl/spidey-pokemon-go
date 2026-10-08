@@ -730,6 +730,37 @@
           "kind": "missing",
           "premium": false
         }
+      },
+      {
+        "id": "2026-10-pokexciting-taipei",
+        "title": "PokéXciting! Taipei · Pikachu rosa",
+        "summary": "Celebração gratuita em áreas do distrito de Xinyi, Taipei, com Pikachu PokéXciting! rosa, selos e batalhas Gigamax.",
+        "category": "regional_event",
+        "tags": [
+          "Regional",
+          "Taipei",
+          "PokéXciting!",
+          "Pikachu",
+          "GO Stamp Rally",
+          "Gigamax"
+        ],
+        "start_brazil": "2026-10-09T23:00:00-03:00",
+        "end_brazil": "2026-10-11T11:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO · anúncio oficial",
+          "url": "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/official/pokexciting-taipei-2026.jpg",
+          "width": 500,
+          "height": 500,
+          "sha256": "023d446abcee817d95bf8eb3c76bb81a7a63397ff84d78548b7e8e3d61d90153",
+          "source_role": "official_media",
+          "kind": "official_illustration",
+          "premium": false
+        }
       }
     ]
   },
@@ -780,14 +811,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 19,
-    "events_with_weekly_art": 12,
+    "calendar_events_in_week": 20,
+    "events_with_weekly_art": 13,
     "events_with_premium_weekly_art": 11,
-    "events_with_official_weekly_art": 1,
+    "events_with_official_weekly_art": 2,
     "events_without_weekly_art": 7,
-    "events_in_weekly": 19,
+    "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-08T12:45:13.209786-03:00",
+    "generated_at": "2026-10-08T13:33:53.093882-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

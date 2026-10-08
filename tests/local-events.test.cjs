@@ -38,3 +38,16 @@ test('missing, reversed or invalid local hours remain unconfirmed instead of inv
   for(const schedule of [{...event.schedule,timezone:'invalid/zone'},{...event.schedule,end_date:'2026-09-30'},{...event.schedule,end_time:'25:00'}])
     assert.equal(world.eventWindow({...event,schedule}).status,'HORÁRIO A CONFIRMAR');
 });
+
+test('Taipei has two daily windows, closes overnight and never offers an unverified stamp GPX',()=>{
+  const taipei=events.find(e=>e.id==='2026-10-pokexciting-taipei');assert.ok(taipei);
+  const first=world.eventWindow(taipei,new Date('2026-10-10T02:00:00Z'));
+  assert.equal(first.status,'ACONTECENDO AGORA');assert.equal(first.end.toISOString(),'2026-10-10T14:00:00.000Z');
+  const night=world.eventWindow(taipei,new Date('2026-10-10T14:00:00Z'));
+  assert.equal(night.status,'ABRE AMANHÃ');assert.equal(night.start.toISOString(),'2026-10-11T02:00:00.000Z');
+  assert.equal(world.eventWindow(taipei,new Date('2026-10-11T14:00:00Z')).status,'ENCERRADO');
+  assert.equal(taipei.gpx.enabled,false);assert.equal(taipei.locations[0].exact_pokestop_verified,false);
+  const crypto=require('node:crypto'),image=fs.readFileSync('spidey-app/'+taipei.official_media.file);
+  assert.equal(crypto.createHash('sha256').update(image).digest('hex'),taipei.official_media.sha256);
+  assert.equal(image.length,taipei.official_media.bytes);
+});

@@ -133,7 +133,7 @@ def check(base=BASE, now=None, hosting='github-pages', all_images=False):
     catalog_paths = {name: f'data/{name}.json' if hosting == 'github-pages' else f'api/catalog?file={name}' for name in CATALOGS}
     paths = ['index.html', 'pvp.js', 'pvp.css', 'navigation.js', 'sw.js', 'premium-approved-master.js', 'api/push/public-key'] + list(catalog_paths.values())
     if hosting == 'github-pages':
-        paths += ['catalog.js', 'stamps-v2.js', 'manifest.webmanifest', 'data/stamps.json']
+        paths += ['catalog.js', 'stamps-v2.js', 'manifest.webmanifest', 'data/stamps.json', 'player-ui.js', 'world-route-preview.js']
         report['limitations'] = ['Push e Amigos/chat não são fornecidos pela hospedagem estática', 'Políticas meta não equivalem a todos os cabeçalhos HTTP da Vercel', 'Verificação HTTP não certifica Android físico, PWA/offline ou renderização de todas as imagens']
     results = {}
     with ThreadPoolExecutor(max_workers=4) as pool:

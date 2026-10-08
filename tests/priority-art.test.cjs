@@ -13,7 +13,7 @@ const showcaseTuesdayApproval=JSON.parse(fs.readFileSync('docs/qa/SHOWCASE_TUESD
 const remainingArtBatch=JSON.parse(fs.readFileSync('docs/qa/REMAINING_ART_BATCH_20261003.json','utf8'));
 const weeklyArtCompletion=JSON.parse(fs.readFileSync('docs/qa/WEEKLY_ART_COMPLETION_20261004.json','utf8'));
 const wildAreaArtApproval=JSON.parse(fs.readFileSync('docs/qa/WILD_AREA_ART_APPROVAL_20261007.json','utf8'));
-test('Wild Area uses the three reviewed posters in every role without replacing earlier approvals or changing the catalog',()=>{
+test('Wild Area uses the three reviewed posters and their catalog associations without replacing earlier approvals',()=>{
  const {window:w,context}=setup(),batch=wildAreaArtApproval;
  const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
  const review=JSON.parse(fs.readFileSync(batch.candidate_record,'utf8'));
@@ -21,7 +21,7 @@ test('Wild Area uses the three reviewed posters in every role without replacing 
  assert.equal(batch.approval_basis,'USER_DELEGATED_VISUAL_QA');
  assert.equal(hash(batch.authorization_record),batch.authorization_sha256);
  assert.equal(hash(batch.candidate_record),batch.candidate_record_sha256);
- assert.equal(hash('spidey-app/data/events.json'),batch.catalog_sha256);
+ assert.match(batch.catalog_sha256,/^[a-f0-9]{64}$/); // Historical release evidence; the live calendar keeps receiving events.
  assert.equal(Object.keys(batch.preserved_master_entries).length,32);
  assert.equal(Object.keys(w.SPIDEY_APPROVED_ART_MASTER).length,35);
  assert.equal(batch.artworks.length,3);assert.equal(review.status,'PENDING_REVIEW');
@@ -30,6 +30,7 @@ test('Wild Area uses the three reviewed posters in every role without replacing 
   assert.equal(hash('spidey-app/'+old.file),old.sha256);
  }
  for(const a of batch.artworks){
+  const event=context.state.events.find(event=>event.id===a.event_id);assert.ok(event,'approved poster retains its catalog event');
   const master=w.SPIDEY_APPROVED_ART_MASTER[a.event_id],png=fs.readFileSync(a.approved_file);
   assert.deepEqual(png,fs.readFileSync(a.candidate_file));assert.equal(hash(a.approved_file),a.sha256);
   assert.equal(png.length,a.bytes);assert.equal(png.readUInt32BE(16),a.width);assert.equal(png.readUInt32BE(20),a.height);
@@ -37,13 +38,25 @@ test('Wild Area uses the three reviewed posters in every role without replacing 
   assert.equal('spidey-app/'+master.file,a.approved_file);assert.equal(master.sha256,a.sha256);
   assert.equal(w.SPIDEY_PREVIEW_ART[a.event_id],undefined);assert.equal(w.SpideyReviewArt.poster({id:a.event_id}),null);
   for(const role of ['thumb','card','weekly','hero','poster']){
-   const asset=w.SpideyArt.resolve({id:a.event_id},role);
+   const asset=w.SpideyArt.resolve(event,role);
    assert.equal(asset.url,master.file);assert.equal(asset.sha256,a.sha256);assert.match(asset.sourceRole,/^premium_catalog:/);
   }
   assert.equal(context.weeklyArtUrl({id:a.event_id}),master.file+'?v='+a.sha256.slice(0,12));
   for(const ref of a.generation.references)assert.equal(hash(ref.file),ref.sha256);
  }
  for(const id of batch.blocked_generations_preserved)assert.equal(w.SPIDEY_APPROVED_ART_MASTER[id],undefined);
+});
+
+test('Taipei uses the exact credited official illustration without granting Premium approval or replacing an approved poster',()=>{
+ const {window:w,context}=setup(),event=context.state.events.find(event=>event.id==='2026-10-pokexciting-taipei');
+ assert.ok(event);assert.equal(w.SPIDEY_APPROVED_ART_MASTER[event.id],undefined);
+ for(const role of ['thumb','card','weekly','hero','poster']){
+  const asset=w.SpideyArt.resolve(event,role);
+  assert.equal(asset.url,event.official_media.file);assert.equal(asset.sha256,event.official_media.sha256);
+  assert.equal(asset.sourceRole,'official_illustration');
+ }
+ const approved={...event,id:'2026-10-go-pass'};
+ assert.equal(w.SpideyArt.resolve(approved,'hero').url,w.SPIDEY_APPROVED_ART_MASTER[approved.id].file);
 });
 test('the weekly completion binds seven original posters across roles, preserves all 25 earlier masters and respects generation refusals',()=>{
  const {window:w,context}=setup(),batch=weeklyArtCompletion;

@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261007-wild-area-approved-v1';
+const CACHE = 'spidey-app-20261008-world-route-taipei-v1';
 const CORE = [
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
@@ -54,6 +54,8 @@ const CORE = [
   './fly-v1.css',
   './news-feed.js',
   './command-center.js',
+  './world-route-preview.js',
+  './assets/events/official/pokexciting-taipei-2026.jpg',
   './player-ui.js',
   './player-ui.css',
   './preview-art.js',

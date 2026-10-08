@@ -7041,6 +7041,120 @@
         "published_on": "2026-10-07"
       },
       "updated_at": "2026-10-07T18:19:00Z"
+    },
+    {
+      "id": "2026-10-pokexciting-taipei",
+      "slug": "2026-10-pokexciting-taipei",
+      "title": "PokéXciting! Taipei · Pikachu rosa",
+      "summary": "Celebração gratuita em áreas do distrito de Xinyi, Taipei, com Pikachu PokéXciting! rosa, selos e batalhas Gigamax.",
+      "category": "regional_event",
+      "tags": [
+        "Regional",
+        "Taipei",
+        "PokéXciting!",
+        "Pikachu",
+        "GO Stamp Rally",
+        "Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon Asia · Taipei",
+          "url": "https://tw.portal-pokemon.com/30th/topics/pokexciting_news0/",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "Asia/Taipei",
+        "local_place": "Taipei",
+        "start_local": "2026-10-10T10:00:00+08:00",
+        "end_local": "2026-10-11T22:00:00+08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-09T23:00:00-03:00",
+        "end_brazil": "2026-10-11T11:00:00-03:00",
+        "sessions": [
+          {
+            "start": "2026-10-10T10:00:00+08:00",
+            "end": "2026-10-10T22:00:00+08:00"
+          },
+          {
+            "start": "2026-10-11T10:00:00+08:00",
+            "end": "2026-10-11T22:00:00+08:00"
+          }
+        ],
+        "recurrence": "daily"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "official_media": {
+        "file": "assets/events/official/pokexciting-taipei-2026.jpg",
+        "width": 500,
+        "height": 500,
+        "bytes": 23254,
+        "sha256": "023d446abcee817d95bf8eb3c76bb81a7a63397ff84d78548b7e8e3d61d90153",
+        "alt": "Ilustração oficial do Pikachu PokéXciting! com adorno rosa de Taipei",
+        "classification": "official_illustration",
+        "credit": "Pokémon Asia",
+        "source_url": "https://tw.portal-pokemon.com/30th/topics/pokexciting_news0/",
+        "original_url": "https://tw.portal-pokemon.com/images/c513648ddbd085c61cddcfd7c869f535.jpg"
+      },
+      "locations": [
+        {
+          "label": "Xinyi · referência em Taipei",
+          "latitude": 25.033964,
+          "longitude": 121.564468,
+          "coordinate_type": "city_reference",
+          "coordinate_confidence": "reference",
+          "note": "Referência aproximada do distrito; consulte o mapa oficial da área. Não é uma Poképarada de selo."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Coordenadas exatas das cinco Poképaradas do evento ainda não verificadas."
+      },
+      "bonuses": [
+        "Duas Pesquisas temporárias gratuitas, incluindo encontro com Pikachu PokéXciting!, Passe de Batalha Premium e adesivo; Pesquisa de Campo temática.",
+        "GO Stamp Rally: cinco selos nas Poképaradas designadas dão encontro com Pikachu PokéXciting! com Fundo de Localização.",
+        "Cinco encontros surpresa em Retratos GO por dia.",
+        "Balões de bônus a cada hora.",
+        "Batalhas Gigamax com Venusaur, Charizard e Blastoise; variocolor possível."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu PokéXciting! rosa",
+          "note": "variante de Taipei, com variocolor possível"
+        },
+        {
+          "name": "Unown T e W",
+          "note": "atraídos por Incenso em Taipei; variocolor possível"
+        },
+        {
+          "name": "Venusaur, Charizard e Blastoise",
+          "note": "Gigamax"
+        }
+      ],
+      "notes": [
+        "10 e 11/10, das 10h às 22h em Taipei. Brasília: 09/10 às 23h até 10/10 às 11h; e 10/10 às 23h até 11/10 às 11h.",
+        "Local presencial: Xiangti Avenue Plaza e arredores. Área de jogo: partes de Xinyi, excluindo regiões montanhosas.",
+        "O rally continua por um mês a partir do início local; o Pikachu regional permanece na natureza por um mês após o evento.",
+        "Ilustração original do anúncio oficial Pokémon Asia, sem alterações."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Push indisponível na hospedagem estática."
+      },
+      "status": "published",
+      "verified_at": "2026-10-08",
+      "updated_at": "2026-10-08"
     }
   ]
 }

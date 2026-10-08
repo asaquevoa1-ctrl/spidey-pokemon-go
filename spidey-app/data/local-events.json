@@ -107,6 +107,66 @@
         }
       ],
       "detail_title": "Pikachu · Fundo de Málaga"
+    },
+    {
+      "id": "2026-10-pokexciting-taipei",
+      "title": "PokéXciting! Taipei · Pikachu rosa",
+      "place": "Taipei, Taiwan",
+      "dates": "10–11 out 2026 · 10h–22h por dia",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Celebração gratuita em áreas do distrito de Xinyi, Taipei, com Pikachu PokéXciting! rosa, selos e batalhas Gigamax.",
+      "schedule": {
+        "start_date": "2026-10-10",
+        "start_time": "10:00",
+        "end_date": "2026-10-11",
+        "end_time": "22:00",
+        "timezone": "Asia/Taipei",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+        "confidence": "official"
+      },
+      "official_media": {
+        "file": "assets/events/official/pokexciting-taipei-2026.jpg",
+        "width": 500,
+        "height": 500,
+        "bytes": 23254,
+        "sha256": "023d446abcee817d95bf8eb3c76bb81a7a63397ff84d78548b7e8e3d61d90153",
+        "alt": "Ilustração oficial do Pikachu PokéXciting! com adorno rosa de Taipei",
+        "classification": "official_illustration",
+        "credit": "Pokémon Asia",
+        "source_url": "https://tw.portal-pokemon.com/30th/topics/pokexciting_news0/",
+        "original_url": "https://tw.portal-pokemon.com/images/c513648ddbd085c61cddcfd7c869f535.jpg"
+      },
+      "bonuses": [
+        "Duas Pesquisas temporárias gratuitas, incluindo encontro com Pikachu PokéXciting!, Passe de Batalha Premium e adesivo; Pesquisa de Campo temática.",
+        "GO Stamp Rally: cinco selos nas Poképaradas designadas dão encontro com Pikachu PokéXciting! com Fundo de Localização.",
+        "Cinco encontros surpresa em Retratos GO por dia.",
+        "Balões de bônus a cada hora.",
+        "Batalhas Gigamax com Venusaur, Charizard e Blastoise; variocolor possível.",
+        "Unown T e W atraídos por Incenso.",
+        "Pikachu rosa exclusivo de Taipei."
+      ],
+      "locations": [
+        {
+          "id": "xiangti-avenue",
+          "name": "Xiangti Avenue Plaza e arredores · Xinyi",
+          "address": "Xiangti Avenue Plaza, Xinyi District, Taipei, Taiwan",
+          "access_note": "A celebração é gratuita. A área de jogo inclui somente partes de Xinyi e exclui regiões montanhosas; confira o mapa do evento.",
+          "source_url": "https://tw.portal-pokemon.com/30th/topics/pokexciting_news0/",
+          "coordinate_type": "venue_address",
+          "exact_pokestop_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Coordenadas exatas das cinco Poképaradas do evento ainda não verificadas."
+      },
+      "verified_at": "2026-10-08"
     }
   ]
 }
