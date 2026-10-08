@@ -22,12 +22,15 @@ class MetaPolicies(HTMLParser):
     def __init__(self):
         super().__init__()
         self.policies = {}
+        self.scripts = []
 
     def handle_starttag(self, tag, attrs):
         if tag == 'meta':
             attrs = dict(attrs)
             key = attrs.get('http-equiv', attrs.get('name', '')).lower()
             self.policies[key] = attrs.get('content', '')
+        elif tag == 'script':
+            self.scripts.append(dict(attrs))
 
 
 def validate_shell(html, headers, hosting):
@@ -41,7 +44,22 @@ def validate_shell(html, headers, hosting):
         meta.feed(html)
         directives = [part.strip().split() for part in meta.policies.get('content-security-policy', '').split(';')]
         connections = [part for part in directives if part and part[0] == 'connect-src']
-        if connections != [['connect-src', "'self'"]]:
+        provider = meta.policies.get('spidey-web-analytics', 'off')
+        expected_connections = ['connect-src', "'self'"]
+        loaders = [script for script in meta.scripts if script.get('src', '').split('?')[0] == 'web-analytics.js']
+        if provider == 'cloudflare':
+            expected_connections.append('https://cloudflareinsights.com')
+            script_policy = [part for part in directives if part and part[0] == 'script-src']
+            expected_scripts = ['script-src', "'self'", "'unsafe-inline'", 'https://static.cloudflareinsights.com/beacon.min.js']
+            if script_policy != [expected_scripts]:
+                issues.append('Política do script de estatísticas ausente ou ampliada')
+            if len(loaders) != 1 or not re.fullmatch('[a-f0-9]{32}', loaders[0].get('data-site-token', '')):
+                issues.append('Identificador público de estatísticas ausente ou inválido')
+            if 'Cloudflare Web Analytics' not in html:
+                issues.append('Medição de acessos não declarada na privacidade')
+        elif provider != 'off' or loaders:
+            issues.append('Configuração de estatísticas incompatível com a política publicada')
+        if connections != [expected_connections]:
             issues.append('Política de conexões do app ausente ou ampliada')
         if meta.policies.get('referrer') != 'no-referrer':
             issues.append('Política de referência do app ausente')
@@ -136,6 +154,18 @@ def check(base=BASE, now=None, hosting='github-pages', all_images=False):
         report['catalogs'] = {'events': len(catalogs['events']['events']), 'week_start': catalogs['weekly']['week_start'], 'week_end': catalogs['weekly']['week_end'], 'pvp': {league['id']: len(league.get('entries', [])) for league in catalogs['pvp'].get('leagues', [])}}
         report['failures'].extend(validate_push(json.loads(results['api/push/public-key'][0]), hosting))
         if hosting == 'github-pages':
+            meta = MetaPolicies(); meta.feed(html)
+            analytics = meta.policies.get('spidey-web-analytics') == 'cloudflare'
+            report['capabilities']['web_analytics_configured'] = analytics
+            if analytics:
+                # Only public code availability; never query analytics or send a beacon.
+                try:
+                    raw, _ = request(base, 'web-analytics.js')
+                    report['checks'].append({'path': 'web-analytics.js', 'ok': True, 'bytes': len(raw)})
+                except Exception as error:
+                    report['checks'].append({'path': 'web-analytics.js', 'ok': False})
+                    report['failures'].append(str(error))
+                report['limitations'].append('Configuração de estatísticas não comprova recebimento no painel Cloudflare ou número de pessoas')
             rallies = json.loads(results['data/stamps.json'][0]).get('rallies', [])
             if not rallies:
                 report['failures'].append('Catálogo de Selos vazio')

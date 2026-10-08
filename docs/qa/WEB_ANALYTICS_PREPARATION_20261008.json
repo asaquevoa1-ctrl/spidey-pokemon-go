@@ -1,0 +1,39 @@
+{
+  "date_brt": "2026-10-08",
+  "base_main": "681a29d5e96cc118d82e5f2e6e2f62a0282897e5",
+  "status": "PREPARED_PENDING_ACCOUNT_AND_PUBLIC_SITE_IDENTIFIER",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "hosting": "github-pages",
+  "provider": "Cloudflare Web Analytics",
+  "authorization": "Anderson confirmou a integração gratuita com Então, bore em 08/10/2026 às 12:06:31 BRT",
+  "live_measurement": false,
+  "site_identifier_confirmed": false,
+  "account_created": false,
+  "browser_blocker": "Cloudflare login: There was a problem with verification. Persistiu após uma recarga; não foram informadas credenciais ou aceitos termos.",
+  "tests": {
+    "python": { "command": "python -m unittest scripts.test_spidey_pages scripts.test_app_health -v", "passed": 17 },
+    "node": { "command": "node --test tests/web-analytics.test.cjs", "passed": 4 },
+    "package": "Build desativado e build ativado com identificador de teste somente local passaram; nenhum beacon real enviado",
+    "preservation": "Catálogos e GPX preservados; verificação de todos os hashes das artes aprovadas e bytes dos assets no pacote desativado passou"
+  },
+  "privacy": {
+    "app_state_read_or_sent": false,
+    "custom_events": false,
+    "spa_measurement": false,
+    "respects_do_not_track_and_global_privacy_control": true,
+    "previews_measured": false,
+    "referrer_policy": "no-referrer",
+    "external_destinations_only_when_enabled": [
+      "https://static.cloudflareinsights.com/beacon.min.js",
+      "https://cloudflareinsights.com"
+    ]
+  },
+  "limits": [
+    "Visitas não equivalem a pessoas únicas ou instalações",
+    "Identificador de teste não deve ser publicado ou tratado como conta real",
+    "Teste unitário ou configuração publicada não comprovam recebimento no painel",
+    "A compatibilidade do recebimento com no-referrer precisa de conferência real",
+    "Nenhum teste físico Android, PWA/offline ou push certificado",
+    "Push e Amigos/chat seguem indisponíveis nesta hospedagem"
+  ]
+}

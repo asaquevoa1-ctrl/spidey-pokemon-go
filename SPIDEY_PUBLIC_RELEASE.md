@@ -1,5 +1,9 @@
 # Spidey — versão web publicada, estado de 08/10/2026
 
+## 08/10/2026 — ativação gratuita de estatísticas; publicação em verificação
+
+O trecho público oficial foi fornecido por Anderson às 12:59 BRT. Cloudflare Web Analytics está habilitado na configuração do pacote Pages; publicação e recebimento no painel continuam em verificação. O aviso de privacidade passa a explicar visitas, visualizações e desempenho, as preferências Não Rastrear/GPC e a exclusão de estado pessoal do app. O link permanece https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . Catálogos, artes aprovadas, PvP e GPX preservados. Não há contagem histórica recuperada, número de pessoas ou teste físico alegados. [SPIDEY_WEB_ANALYTICS.md](SPIDEY_WEB_ANALYTICS.md) e [provas de ativação](docs/qa/WEB_ANALYTICS_ACTIVATION_20261008.json) registram resultados e limites.
+
 
 Monitor público confirmado em 08/10 às 10:32 BRT: [execução 37785079185](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/37785079185), código `ef4a9ed`, perfil `github-pages`, `ok=true`, sem falhas. Auditoria completa dos 34 originais correspondentes às 35 entradas aprovadas passou por SHA256; 136 eventos, Semana 05–11/10, quatro coleções e rankings 1152/849/409 conferidos. Artefato `spidey-app-health` ID11554770206. Isso certifica o acesso e a integridade pública, sem certificar Android físico ou renderização de todas as artes. O acompanhamento de saúde e a atualização de calendário foram apontados para o endereço Pages, preservando suas regras.
 
