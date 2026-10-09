@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "Not sure if anyone needs this, but you can Quick Catch using just one hand - once you master it it’s really fast 👊 #pokemongo\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2108580122102038840",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2108580122102038840",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-09T15:45:59.861301+00:00"
+}
