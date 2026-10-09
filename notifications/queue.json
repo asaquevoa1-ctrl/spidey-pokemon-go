@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-08-spotlight-elgyem:start:60",
-      "event_id": "2026-10-08-spotlight-elgyem",
-      "event_title": "Hora do Holofote: Elgyem",
-      "category": "spotlight_hour",
-      "scheduled_for": "2026-10-08T17:00:00-03:00",
-      "event_start": "2026-10-08T18:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Hora do Holofote: Elgyem começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-08-spotlight-elgyem",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-shadow-landorus-10:start:60",
       "event_id": "2026-10-shadow-landorus-10",
       "event_title": "Shadow Raids: Landorus (Forma Encarnada)",
@@ -726,7 +708,7 @@
     }
   ],
   "meta": {
-    "pending_count": 40,
+    "pending_count": 39,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
