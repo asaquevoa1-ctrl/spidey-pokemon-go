@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-shadow-landorus-10:start:60",
-      "event_id": "2026-10-shadow-landorus-10",
-      "event_title": "Shadow Raids: Landorus (Forma Encarnada)",
-      "category": "shadow_raids",
-      "scheduled_for": "2026-10-09T23:00:00-03:00",
-      "event_start": "2026-10-10T00:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Shadow Raids: Landorus (Forma Encarnada) começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-shadow-landorus-10",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-zorua-community-day:start:60",
       "event_id": "2026-10-zorua-community-day",
       "event_title": "Dia Comunitário: Zorua",
@@ -708,7 +690,7 @@
     }
   ],
   "meta": {
-    "pending_count": 39,
+    "pending_count": 38,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
