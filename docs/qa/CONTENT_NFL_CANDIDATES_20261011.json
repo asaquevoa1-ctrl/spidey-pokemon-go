@@ -1,0 +1,112 @@
+{
+  "schema_version": "spidey-content-candidate-v1",
+  "status": "PENDING_RESPONSIVE_QA",
+  "base_main": "f71f9a2aecc20a2f18e6a4d5ce02b8f24f9a9fde",
+  "artworks": [
+    {
+      "key": "scenic",
+      "event_ids": [
+        "2026-10-11-scenic-sunday",
+        "2026-10-18-scenic-sunday",
+        "2026-10-25-scenic-sunday"
+      ],
+      "file": "spidey-app/assets/events/review/scenic-sunday-october-2026-v1.png",
+      "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2833953,
+      "factual_review": "PASSED",
+      "visual_image_review": "PASSED",
+      "responsive_browser_review": "PENDING",
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "key": "showcase",
+      "event_ids": [
+        "2026-10-13-showcase-tuesday",
+        "2026-10-20-showcase-tuesday",
+        "2026-10-27-showcase-tuesday"
+      ],
+      "file": "spidey-app/assets/events/review/showcase-tuesday-october-2026-v1.png",
+      "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2659732,
+      "factual_review": "PASSED",
+      "visual_image_review": "PASSED",
+      "responsive_browser_review": "PENDING",
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "key": "battlethursday",
+      "event_ids": [
+        "2026-10-15-go-battle-thursday",
+        "2026-10-22-go-battle-thursday",
+        "2026-10-29-go-battle-thursday"
+      ],
+      "file": "spidey-app/assets/events/review/go-battle-thursday-october-2026-v1.png",
+      "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2521083,
+      "factual_review": "PASSED",
+      "visual_image_review": "PASSED",
+      "responsive_browser_review": "PENDING",
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "key": "friendship",
+      "event_ids": [
+        "2026-10-16-friendship-friday",
+        "2026-10-23-friendship-friday",
+        "2026-10-30-friendship-friday"
+      ],
+      "file": "spidey-app/assets/events/review/friendship-friday-october-2026-v1.png",
+      "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2718613,
+      "factual_review": "PASSED",
+      "visual_image_review": "PASSED",
+      "responsive_browser_review": "PENDING",
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "key": "nfl",
+      "event_ids": [
+        "2026-10-11-nfl-cardinals-pokemon-go-day"
+      ],
+      "file": "spidey-app/assets/events/review/nfl-cardinals-20261011-v1.png",
+      "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2614079,
+      "factual_review": "PASSED",
+      "visual_image_review": "PASSED",
+      "responsive_browser_review": "PENDING",
+      "status": "PENDING_REVIEW"
+    }
+  ],
+  "published": false,
+  "approved_master_changed": false,
+  "catalog_count": 138,
+  "pending": [
+    "Browser QA of date-only NFL event across Home/calendar/Week/FLY",
+    "Browser QA of all five integral posters in mobile light/dark and desktop",
+    "Regenerate current weekly with NFL date-only item",
+    "Audit remaining art gaps; preserve all existing 35 approvals and protected refusals",
+    "Run existing catalog/health/art/pages regression checks",
+    "No production publishing until QA passes"
+  ],
+  "official_nfl_sources": [
+    "https://www.azcardinals.com/tickets/group-tickets/special-events",
+    "https://www.azcardinals.com/schedule/",
+    "https://www.statefarmstadium.com/plan-your-visit"
+  ],
+  "date_only_rule": "The NFL sports kickoff is not the Pokémon GO activity start/end. Calendar date confirmed; activity hours unknown. No push/GPX.",
+  "existing_generation_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ]
+}

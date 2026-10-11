@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-art-coverage-v1-20261004-space-v1';
+  const VERSION = 'spidey-art-coverage-v1-20261011-canonical-only';
   const BAD_PUBLIC_ART = /(?:assets\/events\/generated\/|generated_vector|placeholder|preview|fallback|festival-das-luzes-approved\.png|festival-das-luzes-2026\.jpg)/i;
   const PREMIUM_ART = /\/assets\/events\/premium\//i;
   const SOURCE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
@@ -106,41 +106,26 @@
   }
 
   function badImage(img, event, role) {
-    if (window.isSpideyApprovedImage?.(img?.currentSrc || img?.src)) return false;
     if (!img) return true;
     const src = String(img.currentSrc || img.src || '');
     if (!src) return true;
+    const path=src.split(/[?#]/,1)[0];
+    const matches=file=>file&&(path===file||path.endsWith('/'+file));
+    const expected=window.SpideyReviewArt?.resolve(event)||window.SpideyReviewArt?.poster(event);
+    if(expected&&matches(expected.file))return img.complete?!img.naturalWidth||!img.naturalHeight:false;
     if (!window.SPIDEY_APPROVED_ART_MASTER?.[event?.id] && event?.official_media?.classification === 'official_illustration'
-        && src.includes(event.official_media.file) && img.complete && img.naturalWidth) return false;
-    if (PREMIUM_ART.test(src)) return false;
-    if (img.hidden || img.classList.contains('v23-hidden-art')) return true;
-    if (BAD_PUBLIC_ART.test(src)) return true;
-    if (/festival[- ]das[- ]luzes|festival of lights/i.test(`${src} ${event?.title || ''}`)) return true;
-    if (!img.complete) return false;
-    if (!img.naturalWidth || !img.naturalHeight) return true;
-    const min = role === 'hero' ? 760 : role === 'card' ? 560 : 360;
-    return Math.max(img.naturalWidth, img.naturalHeight) < min;
+        && matches(event.official_media.file) && img.complete && img.naturalWidth) return false;
+    return true;
   }
 
   function coverNode(event, role) {
-    const [tone, mark] = toneFor(event);
-    const pokemon = primaryPokemon(event);
     const node = document.createElement('div');
-    node.className = `spidey-cover-art spidey-cover-art--${role} tone-${tone}`;
+    node.className = `spidey-cover-art spidey-cover-art--${role} spidey-art-pending`;
     node.dataset.coverageEvent = event?.id || normalize(event?.title);
-    node.setAttribute('role', 'img');
-    node.setAttribute('aria-label', `Arte de ${event?.title || 'evento Pokémon GO'}`);
-    node.innerHTML = `<span class="spidey-cover-orbit" aria-hidden="true"></span><span class="spidey-cover-mark" aria-hidden="true">${mark}</span><span class="spidey-cover-brand" aria-hidden="true">SPIDEY</span>${pokemon ? `<img class="spidey-cover-pokemon" src="${pokemon.url}" alt="" loading="lazy" decoding="async">` : '<span class="spidey-cover-emblem" aria-hidden="true">◈</span>'}`;
-    node.querySelector('.spidey-cover-pokemon')?.addEventListener('error', (e) => {
-      e.currentTarget.remove();
-      if (!node.querySelector('.spidey-cover-emblem')) {
-        const emblem = document.createElement('span');
-        emblem.className = 'spidey-cover-emblem';
-        emblem.setAttribute('aria-hidden', 'true');
-        emblem.textContent = '◈';
-        node.appendChild(emblem);
-      }
-    });
+    const label = document.createElement('span');
+    label.className = 'spidey-art-pending-label';
+    label.textContent = 'Arte Premium pendente';
+    node.appendChild(label);
     return node;
   }
 

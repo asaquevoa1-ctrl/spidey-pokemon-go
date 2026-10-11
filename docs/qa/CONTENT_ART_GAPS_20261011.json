@@ -1,0 +1,224 @@
+{
+  "schema_version": "spidey-art-gap-audit-v1",
+  "checked_at": "2026-10-11T20:05:41.154452+00:00",
+  "scope": "2026-10-11..2026-10-18 inclusive (calendar dates)",
+  "approved_entries": 48,
+  "unique_approved_files": 39,
+  "new_batch_event_ids": [
+    "2026-10-11-scenic-sunday",
+    "2026-10-18-scenic-sunday",
+    "2026-10-25-scenic-sunday",
+    "2026-10-13-showcase-tuesday",
+    "2026-10-20-showcase-tuesday",
+    "2026-10-27-showcase-tuesday",
+    "2026-10-15-go-battle-thursday",
+    "2026-10-22-go-battle-thursday",
+    "2026-10-29-go-battle-thursday",
+    "2026-10-16-friendship-friday",
+    "2026-10-23-friendship-friday",
+    "2026-10-30-friendship-friday",
+    "2026-10-11-nfl-cardinals-pokemon-go-day"
+  ],
+  "missing_premium_art": [
+    {
+      "event_id": "2026-09-adidas-avatar-research",
+      "title": "Pesquisa adidas × Pokémon",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/pokemon-x-adidas-2026",
+        "confidence": "official"
+      },
+      "precision": null,
+      "start_date": "2026-09-25",
+      "end_date": "2027-01-15",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-09-tcg-30th-us-retail",
+      "title": "Celebração de 30 anos do Pokémon TCG",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+        "confidence": "official"
+      },
+      "precision": null,
+      "start_date": "2026-09-27",
+      "end_date": "2026-10-20",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-apac-mall-exploration",
+      "title": "Pokémon 30: exploração de shoppings na Ásia",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/apac-mall-exploration-2026",
+        "confidence": "official"
+      },
+      "precision": null,
+      "start_date": "2026-09-30",
+      "end_date": "2027-03-28",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "title": "Maratona das Folhas: Caminhada Companheira",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/fall-marathon-buddy-trek-2026",
+        "confidence": "official"
+      },
+      "precision": null,
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-19",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-sandile-hatch-day",
+      "title": "Dia de Chocar: Sandile",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+        "confidence": "official"
+      },
+      "precision": null,
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-17",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-15-spotlight-stufful",
+      "title": "Spotlight Hour: Stufful",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "precision": null,
+      "start_date": "2026-10-15",
+      "end_date": "2026-10-15",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-14-raid-hour-dialga",
+      "title": "Raid Hour: Dialga",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "precision": null,
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-14",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-12-max-monday-rookidee",
+      "title": "Max Monday: Dynamax Rookidee",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "precision": null,
+      "start_date": "2026-10-12",
+      "end_date": "2026-10-12",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-raids-dialga",
+      "title": "Reides 5★: Dialga",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "precision": null,
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-mega-dragonite-raids",
+      "title": "Mega Reides: Mega Dragonite",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "precision": null,
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-gbl-13-20",
+      "title": "GO Battle League: Great / Ultra Mega / Little Cup",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+        "confidence": "official"
+      },
+      "precision": null,
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-20",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-shadow-landorus-10",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "precision": null,
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-11",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-shadow-landorus-17",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "source": {
+        "name": "Pokémon GO Hub • calendário outubro 2026",
+        "url": "https://pokemongohub.net/post/event/october-2026-events/",
+        "confidence": "verified"
+      },
+      "precision": null,
+      "start_date": "2026-10-17",
+      "end_date": "2026-10-18",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": false
+    },
+    {
+      "event_id": "2026-10-pokexciting-taipei",
+      "title": "PokéXciting! Taipei · Pikachu rosa",
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+        "confidence": "official"
+      },
+      "precision": null,
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-11",
+      "state": "PENDING_PREMIUM_ART",
+      "official_media_preserved": true
+    }
+  ],
+  "pending_count": 14,
+  "coverage_complete": false,
+  "existing_approval_records_unchanged": true,
+  "physical_android_tested": false
+}

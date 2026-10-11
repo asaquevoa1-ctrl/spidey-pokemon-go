@@ -68,6 +68,7 @@ function startOfDay(date) { return new Date(date.getFullYear(), date.getMonth(),
 function endOfDay(date) { return new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59, 999); }
 
 function getBrazilRange(event) {
+  if (typeof window !== 'undefined' && window.SpideyDateOnly?.valid(event)) return window.SpideyDateOnly.bounds(event);
   return {
     start: parseDate(event.schedule?.start_brazil || event.schedule?.start_local),
     end: parseDate(event.schedule?.end_brazil || event.schedule?.end_local),
@@ -75,6 +76,7 @@ function getBrazilRange(event) {
 }
 
 function isEventActive(event, now = new Date()) {
+  if (window.SpideyDateOnly?.valid(event)) return false;
   const sessions = event.schedule?.sessions;
   return sessions?.length ? sessions.some(session => new Date(session.start) <= now && now < new Date(session.end))
     : getBrazilRange(event).start <= now && now < getBrazilRange(event).end;
@@ -90,6 +92,7 @@ function overlapsDay(event, day) {
 }
 
 function formatRange(event) {
+  if (window.SpideyDateOnly?.valid(event)) return window.SpideyDateOnly.label(event);
   if (event.schedule?.sessions?.length) return event.schedule.sessions.map(session =>
     `${formatDateTime(new Date(session.start))} → ${formatDateTime(new Date(session.end))}`).join('; ');
   const { start, end } = getBrazilRange(event);
@@ -189,6 +192,7 @@ function renderEvents(events = state.events) {
   sorted.forEach((event) => {
     const card = document.createElement('article');
     card.className = 'event-card';
+    card.dataset.eventId = event.id;
     card.tabIndex = 0;
     card.innerHTML = `
       <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">
@@ -391,6 +395,7 @@ function renderMapSummary() {
 function openEvent(event) {
   if (!event) return;
   beginAppDialog();
+  detail.dataset.eventId = event.id;
   const localStart = parseDate(event.schedule?.start_local);
   const localEnd = parseDate(event.schedule?.end_local);
   const brazilStart = parseDate(event.schedule?.start_brazil || event.schedule?.start_local);

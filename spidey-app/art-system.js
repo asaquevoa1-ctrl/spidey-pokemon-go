@@ -211,7 +211,8 @@ const spideyArtObserver = new MutationObserver(() => {
     const image = card.querySelector('.event-thumb');
     if (!image) return;
     const title = visibleTitles[index];
-    const event = state.events.find((item) => item.title === title);
+    const event = state.events.find((item) => item.id === card.dataset.eventId)
+      || state.events.find((item) => item.title === title);
     if (event) spideyApplyImageAsset(image, event, 'thumb');
   });
 });

@@ -1,5 +1,17 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
+## 11/10/2026 — NFL e cinco artes validadas para publicação
+
+Branch `fix/content-nfl-20261011`, base main `ad0f9a5`. Pokémon GO Day no jogo Arizona Cardinals × Detroit Lions de 11/10, no State Farm Stadium, Glendale, confirmado nas fontes oficiais do time e do estádio. Catálogo com 138 eventos; a data entra no calendário sem inventar uma janela de atividade. Kickoff: 13h25 Arizona/17h25 Brasília, identificado como horário da partida. Evento local no FLY oferece endereço e mapa; coordenadas de Poképaradas/GPX permanecem não verificados.
+
+Cinco PNGs integrais Premium validados (NFL, Domingo Pitoresco, Terça de Vitrine, Quinta de Batalhas GO e Sexta da Amizade), associados a 13 identidades de eventos de outubro. Master: 48 entradas/39 originais; as 35 entradas/34 originais anteriores permanecem exatos. Consolidação segue a delegação visual vigente de 03/10, sem atribuir aprovação humana individual. Capas genéricas com recortes de Pokémon retiradas; cards e detalhes agora usam o eventId para impedir a troca por artes de outra data com título repetido.
+
+QA do pacote Pages em Chromium: mobile 390px Claro/Escuro e desktop 1280px; 15 conferências de pôster e 12 navegações por rodada, repetidas após consolidação. Pôster inteiro/contain, bytes SHA256 exatos, foco no controle Voltar/Fechar, nenhum overflow ou exceção. Início/calendário/Semana/FLY local da NFL conferidos. 91 testes Node e 22 Python passaram; Weekly atualizada. Prévia e validação do pacote estático local, sem alegar teste físico Android/PWA/offline/push. Publicação e validação pública são etapas posteriores a este checkpoint; o endereço vigente permanece https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ .
+
+Ainda há 14 eventos sem Premium no recorte 11–18/10, discriminados em [CONTENT_ART_GAPS_20261011.json](docs/qa/CONTENT_ART_GAPS_20261011.json); portanto a cobertura inteira não está concluída. Taipei mantém a ilustração oficial creditada e a pendência Premium da frente paralela. Applin/Espaço/Sizzlipede mantêm recusas protegidas. Push e Amigos/chat continuam indisponíveis na hospedagem estática; a proposta de serviço gratuito permanece separada no PR32, sem ativação.
+
+Provas: [aprovação delegada](docs/qa/CONTENT_NFL_APPROVAL_20261011.json), [candidata preservada](docs/qa/CONTENT_NFL_CANDIDATES_20261011.json), [browser do pacote aprovado](docs/qa/CONTENT_NFL_APPROVED_BROWSER_20261011.json), [validação](docs/qa/CONTENT_NFL_VALIDATION_20261011.json).
+
 ## 08/10/2026 — candidato: rota imediata na Home e PokéXciting! Taipei
 
 Correção da perda de visibilidade apontada por Anderson: a Home mostra localidades ativas e próximas, relógios local/Brasília, coordenadas e mapa imediatamente abaixo do destaque. O evento global permanece visível enquanto existir uma janela mundial ativa. Taipei (10–11/10, 10h–22h locais) entrou no calendário, Semana e eventos locais com duas janelas diárias, Pikachu rosa, selos e Gigamax confirmados nas fontes oficiais. Ilustração original Pokémon Asia, creditada e sem promoção a Premium; cinco coordenadas de selos não confirmadas mantêm GPX bloqueado. Os 136 eventos anteriores, 35 entradas aprovadas/34 originais, geografia 20/28, quatro coleções e PvP permanecem preservados.

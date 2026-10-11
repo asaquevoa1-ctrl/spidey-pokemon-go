@@ -18,12 +18,13 @@
     if(draft&&draft.display!=='full_poster'&&!window.SPIDEY_APPROVED_ART_MASTER?.[e.id])return `<span class="player-art-window ${thumb?'player-thumbnail':''}"><img src="${esc(url)}" alt="Ilustração de ${esc(title(e))}"></span>`;
     return `<img class="${thumb?'player-thumbnail':'player-poster'}" src="${esc(url)}" alt="Arte de ${esc(title(e))}" ${size} ${thumb?'loading="lazy"':''}>`;
   }
-  function source(e){try{return /(^|\.)(pokemongo\.com|pokemongolive\.com)$/.test(new URL(e.source.url).hostname)?'Anúncio oficial':/pokeminers|datamine/i.test(e.source.name||'')?'Prévia • ainda não confirmada':'Informação da comunidade'}catch{return 'Informação em confirmação'}}
+  function source(e){try{return /(^|\.)(pokemongo\.com|pokemongolive\.com|azcardinals\.com)$/.test(new URL(e.source.url).hostname)?'Anúncio oficial':/pokeminers|datamine/i.test(e.source.name||'')?'Prévia • ainda não confirmada':'Informação da comunidade'}catch{return 'Informação em confirmação'}}
   function facts(e){
     const bonuses=Array.isArray(e.bonuses)?e.bonuses.filter(x=>typeof x==='string'):[];
     return [...new Set([e.summary,...bonuses].filter(Boolean))];
   }
   function time(e){
+    if(window.SpideyDateOnly?.valid(e))return window.SpideyDateOnly.label(e);
     const s=e.schedule||{};if(!s.start_local||!s.end_local)return 'Horário a confirmar';
     if(s.sessions?.length)return `${s.start_local.slice(8,10)}–${s.end_local.slice(8,10)}/${s.start_local.slice(5,7)} · ${s.start_local.slice(11,16)}–${s.end_local.slice(11,16)} em ${s.local_place||s.local_timezone}. Brasília: ${formatRange(e)}.`;
     if(!window.SpideyFlyCore?.eligible(e))return `${formatRange(e)} (Brasília)`;
@@ -42,16 +43,19 @@
   function row(e){const image=art(e);return `<button class="player-row" data-play-detail="${esc(e.id)}">${image?window.SpideyPlayer.image(e,true):`<span class="player-date" aria-hidden="true">${esc(e.schedule?.start_local?.slice(8,10)||'—')}<small>${esc(e.schedule?.start_local?.slice(5,7)||'')}</small></span>`}<span><small>${esc(spideyCategoryLabel(e))}</small><strong>${esc(title(e))}</strong><span>${esc(time(e))}</span>${facts(e)[0]?`<span class="player-row-bonus">${esc(facts(e)[0])}</span>`:''}</span><span aria-hidden="true">›</span></button>`}
   function homeSelection(events,points,now=new Date()){
     const today=brazilDateKey(now),route=window.SpideyWorldRoute;
+    const dateOnly=e=>window.SpideyDateOnly?.valid(e);
+    const dateToday=e=>dateOnly(e)&&window.SpideyDateOnly.status(e,now).startsWith('Hoje');
     const periods=e=>route?.windows(e,points||[])||[getBrazilRange(e)];
-    const activeAt=e=>periods(e).some(p=>p.start<=now&&now<p.end);
-    const live=events.filter(e=>periods(e).some(p=>p.end>now)).sort((a,b)=>getBrazilRange(a).start-getBrazilRange(b).start);
-    const focus=live.find(e=>window.SpideyFlyCore?.eligible(e)&&activeAt(e))||live.find(e=>e.schedule?.start_local?.slice(0,10)===today&&window.SpideyFlyCore?.eligible(e))||live.find(e=>e.id==='2026-10-world-space-week'&&activeAt(e))||live.find(e=>art(e))||live[0];
-    return {focus,active:live.filter(e=>e.id!==focus?.id&&activeAt(e)),upcoming:live.filter(e=>e.id!==focus?.id&&!activeAt(e)).slice(0,6)};
+    const activeAt=e=>!dateOnly(e)&&periods(e).some(p=>p.start<=now&&now<p.end);
+    const live=events.filter(e=>dateOnly(e)?window.SpideyDateOnly.status(e,now)!=='Data encerrada':periods(e).some(p=>p.end>now)).sort((a,b)=>getBrazilRange(a).start-getBrazilRange(b).start);
+    const scheduled=live.filter(e=>!dateOnly(e));
+    const focus=scheduled.find(e=>window.SpideyFlyCore?.eligible(e)&&activeAt(e))||scheduled.find(e=>e.schedule?.start_local?.slice(0,10)===today&&window.SpideyFlyCore?.eligible(e))||scheduled.find(e=>e.id==='2026-10-world-space-week'&&activeAt(e))||scheduled.find(e=>art(e))||scheduled[0];
+    return {focus,dated:live.filter(dateToday),active:live.filter(e=>e.id!==focus?.id&&activeAt(e)),upcoming:live.filter(e=>e.id!==focus?.id&&!dateToday(e)&&!activeAt(e)).slice(0,6)};
   }
   function renderHome(){
     const root=document.getElementById('playerHome');if(!root||!state.events.length)return;
-    const now=new Date(),{focus,active,upcoming}=homeSelection(state.events,worldPoints,now);
-    root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${panel(focus)}${window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''}</section><div class="player-feed">${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
+    const now=new Date(),{focus,dated,active,upcoming}=homeSelection(state.events,worldPoints,now);
+    root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${panel(focus)}${window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
   }
   function mount(){
     const home=document.getElementById('calendarView');if(!home)return;

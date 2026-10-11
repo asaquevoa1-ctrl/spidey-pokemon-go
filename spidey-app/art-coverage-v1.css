@@ -188,3 +188,13 @@
   .v22-event:hover .spidey-cover-pokemon,
   .weekly-item:hover .spidey-cover-pokemon { transform: scale(1.035); filter: drop-shadow(0 22px 20px rgba(0,0,0,.56)); }
 }
+
+/* A missing Premium poster stays a plain label, without generated character art. */
+.spidey-cover-art.spidey-art-pending {
+  display: flex !important; align-items: center; justify-content: center;
+  background: var(--panel, #0e1c2f) !important; box-shadow: none !important;
+  min-height: 76px !important; padding: 12px; color: var(--muted, #a4b2c5);
+  text-align: center;
+}
+.spidey-art-pending::before, .spidey-art-pending::after {display: none !important;}
+.spidey-art-pending-label {font-size: .75rem; line-height: 1.4;}

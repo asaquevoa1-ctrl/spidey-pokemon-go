@@ -196,7 +196,8 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   function decorateEventCards() {
     document.querySelectorAll('#eventList .event-card').forEach((card) => {
       const title = card.querySelector('h3')?.textContent || '';
-      const event = state?.events?.find((item) => localizeTitle(item.title) === title || item.title === title);
+      const event = state?.events?.find((item) => item.id === card.dataset.eventId)
+        || state?.events?.find((item) => localizeTitle(item.title) === title || item.title === title);
       if (event) decorateNode(card, event, 'card');
     });
   }

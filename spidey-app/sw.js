@@ -1,5 +1,12 @@
-const CACHE = 'spidey-app-20261008-world-route-taipei-v1';
+const CACHE = 'spidey-app-20261011-content-premium-v1';
 const CORE = [
+  './date-only.js',
+  './assets/events/premium/scenic-sunday-october-2026-approved-v1.png',
+  './assets/events/premium/showcase-tuesday-october-2026-approved-v1.png',
+  './assets/events/premium/go-battle-thursday-october-2026-approved-v1.png',
+  './assets/events/premium/friendship-friday-october-2026-approved-v1.png',
+  './assets/events/premium/nfl-cardinals-20261011-approved-v1.png',
+
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
   './assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png',
