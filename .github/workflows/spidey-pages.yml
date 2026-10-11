@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-backend.json', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
   pull_request:
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-backend.json', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
   workflow_run:
     workflows: ['Spidey Weekly - resumo semanal']
     types: [completed]

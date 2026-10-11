@@ -4,7 +4,7 @@ import unittest
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from unittest.mock import patch
-from scripts.check_app_health import check, validate_catalogs, validate_shell, validate_push
+from scripts.check_app_health import check, validate_catalogs, validate_shell, validate_push, validate_backend_health, BASE
 
 PAGES_SHELL = '<button data-view="pvpView"></button><section id="privacyView"></section><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos;; connect-src &apos;self&apos;">'
 
@@ -59,6 +59,18 @@ class AppHealthTests(unittest.TestCase):
     def test_pages_reports_push_unavailable_instead_of_promising_delivery(self):
         self.assertEqual(validate_push({'available': False, 'publicKey': None, 'error': 'push_not_configured'}, 'github-pages'), [])
         self.assertTrue(validate_push({'available': True, 'publicKey': 'unexpected'}, 'github-pages'))
+
+    def test_backend_monitor_detects_disabled_stale_and_failed_scheduler_without_user_data(self):
+        now = datetime(2026, 10, 11, 19, tzinfo=timezone.utc)
+        health = {'ok': True, 'version': 'spidey-backend-v1', 'app_url': BASE, 'social': {'available': True},
+                  'push': {'available': True, 'scheduler': {'status': 'ok', 'checked_at': now.isoformat()}}}
+        self.assertEqual(validate_backend_health(health, now), [])
+        health['push']['scheduler']['checked_at'] = (now - timedelta(minutes=46)).isoformat()
+        self.assertTrue(any('45 minutos' in issue for issue in validate_backend_health(health, now)))
+        health['push']['scheduler'] = {'status': 'delivery_error', 'checked_at': now.isoformat()}
+        self.assertTrue(any('execução normal' in issue for issue in validate_backend_health(health, now)))
+        health['push']['available'] = False
+        self.assertTrue(any('desativados' in issue for issue in validate_backend_health(health, now)))
 
     def fake_public_files(self):
         data = self.catalogs()

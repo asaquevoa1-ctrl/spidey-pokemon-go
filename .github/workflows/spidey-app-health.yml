@@ -10,7 +10,7 @@ on:
     - cron: '2/5 * * * *'
   push:
     branches: [main]
-    paths: ['spidey-app/**', 'api/**', 'vercel.json', 'scripts/check_app_health.py', 'scripts/test_app_health.py', '.github/workflows/spidey-app-health.yml']
+    paths: ['spidey-app/**', 'api/**', 'config/spidey-backend.json', 'vercel.json', 'scripts/check_app_health.py', 'scripts/test_app_health.py', '.github/workflows/spidey-app-health.yml']
   pull_request:
     paths: ['scripts/check_app_health.py', 'scripts/test_app_health.py', '.github/workflows/spidey-app-health.yml']
 permissions:

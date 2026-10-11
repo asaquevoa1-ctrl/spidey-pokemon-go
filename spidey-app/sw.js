@@ -1,5 +1,11 @@
-const CACHE = 'spidey-app-20261008-world-route-taipei-v1';
+const CACHE = 'spidey-app-20261011-optional-backend-v1';
 const CORE = [
+  './backend-config.json',
+  './backend-config.js',
+  './backend.js',
+  './social.js',
+  './social-crypto.js',
+  './social.css',
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
   './assets/events/premium/mega-malamar-rotation-20260923-29-approved-v1.png',
@@ -138,7 +144,7 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
 
   const url = new URL(request.url);
-  if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
+  if (url.origin !== self.location.origin || url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
   const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp)\.json$/.test(url.pathname);
 
@@ -206,7 +212,9 @@ function urlBase64ToUint8Array(base64String) {
 self.addEventListener('pushsubscriptionchange', (event) => {
   event.waitUntil((async () => {
     try {
-      const keyResponse = await fetch('api/push/public-key', { cache: 'no-store' });
+      const configuration = await fetch(new URL('backend-config.json', self.location.href), {cache:'no-store'}).then(r => r.json());
+      const endpoint = path => configuration.enabled ? new URL(path, configuration.url + '/').href : new URL(path, self.location.href).href;
+      const keyResponse = await fetch(endpoint('api/push/public-key'), { cache: 'no-store', credentials: 'omit' });
       if (!keyResponse.ok) return;
       const { publicKey } = await keyResponse.json();
       if (!publicKey) return;
@@ -214,8 +222,9 @@ self.addEventListener('pushsubscriptionchange', (event) => {
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(publicKey),
       });
-      await fetch('api/push/subscribe', {
+      await fetch(endpoint('api/push/subscribe'), {
         method: 'POST',
+        credentials: 'omit',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subscription: subscription.toJSON() }),
       });

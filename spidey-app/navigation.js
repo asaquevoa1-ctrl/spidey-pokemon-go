@@ -69,6 +69,11 @@
   // dialog with another in the same task does not close the new dialog.
   modal.addEventListener('close', () => { if (!replaying && !modal.open && entry()?.modal) back(); });
   window.addEventListener('popstate', restore);
-  window.SpideyNavigation = Object.freeze({ trackView, beginDialog, openDialog, back });
+  function forgetSocialDialogs() {
+    for (const [id, saved] of snapshots) {
+      if (saved.nodes.some(node => node.id === 'socialChat' || node.querySelector?.('#socialChat'))) snapshots.delete(id);
+    }
+  }
+  window.SpideyNavigation = Object.freeze({ trackView, beginDialog, openDialog, back, forgetSocialDialogs });
   updateBack();
 })();

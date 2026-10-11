@@ -7,7 +7,7 @@ import unittest
 from datetime import date, timedelta
 from pathlib import Path
 
-from scripts.build_spidey_pages import ROOT, build, verify_public_data, prepare_shell, read_analytics
+from scripts.build_spidey_pages import ROOT, build, verify_public_data, prepare_shell, read_analytics, read_backend
 from scripts.check_app_health import validate_shell
 
 
@@ -117,6 +117,26 @@ class StaticPublicationTests(unittest.TestCase):
                 path.write_text(json.dumps(config))
                 with self.assertRaises(ValueError):
                     read_analytics(root)
+
+    def test_worker_connection_is_exact_optional_and_has_no_credentials(self):
+        source = (ROOT / 'spidey-app/index.html').read_text()
+        config = {'enabled': True, 'url': 'https://spidey-backend.example.workers.dev', 'hosting': 'cloudflare-workers'}
+        shell = prepare_shell(source, {'enabled': False}, config)
+        self.assertEqual(validate_shell(shell, {}, 'github-pages'), [])
+        self.assertIn('connect-src &#x27;self&#x27; ' + config['url'], shell)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'config').mkdir()
+            path = root / 'config/spidey-backend.json'
+            path.write_text(json.dumps(config))
+            self.assertEqual(read_backend(root), config)
+            for bad in ['http://localhost:8787', config['url'] + '/api', 'https://elsewhere.example', config['url'] + '?token=secret']:
+                path.write_text(json.dumps({**config, 'url': bad}))
+                with self.assertRaises(ValueError):
+                    read_backend(root)
+            path.write_text(json.dumps({**config, 'enabled': False}))
+            with self.assertRaises(ValueError):
+                read_backend(root)
 
 
 if __name__ == '__main__':

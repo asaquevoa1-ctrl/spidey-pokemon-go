@@ -46,6 +46,12 @@ def validate_shell(html, headers, hosting):
         connections = [part for part in directives if part and part[0] == 'connect-src']
         provider = meta.policies.get('spidey-web-analytics', 'off')
         expected_connections = ['connect-src', "'self'"]
+        backend = meta.policies.get('spidey-backend', 'off')
+        if backend != 'off':
+            if not re.fullmatch(r'https://[a-z0-9-]+\.[a-z0-9-]+\.workers\.dev', backend):
+                issues.append('Endereço do serviço adicional inválido')
+            else:
+                expected_connections.append(backend)
         loaders = [script for script in meta.scripts if script.get('src', '').split('?')[0] == 'web-analytics.js']
         if provider == 'cloudflare':
             expected_connections.append('https://cloudflareinsights.com')
@@ -155,6 +161,26 @@ def check(base=BASE, now=None, hosting='github-pages', all_images=False):
         report['failures'].extend(validate_push(json.loads(results['api/push/public-key'][0]), hosting))
         if hosting == 'github-pages':
             meta = MetaPolicies(); meta.feed(html)
+            backend_url = meta.policies.get('spidey-backend', 'off')
+            if backend_url != 'off' and re.fullmatch(r'https://[a-z0-9-]+\.[a-z0-9-]+\.workers\.dev', backend_url):
+                # Public health and availability only: never inspect subscriptions, profiles or messages.
+                raw_config, _ = request(base, 'backend-config.json')
+                config = json.loads(raw_config)
+                if config != {'enabled': True, 'url': backend_url, 'hosting': 'cloudflare-workers'}:
+                    report['failures'].append('Configuração pública do serviço diverge da política')
+                raw_health, _ = request(backend_url + '/', 'health')
+                health = json.loads(raw_health)
+                report['failures'].extend(validate_backend_health(health, now))
+                raw_key, _ = request(backend_url + '/', 'api/push/public-key')
+                public_key = json.loads(raw_key)
+                if public_key.get('available') is not True or not re.fullmatch('[A-Za-z0-9_-]{87}', public_key.get('publicKey', '')):
+                    report['failures'].append('Serviço adicional de alertas indisponível')
+                raw_social, _ = request(backend_url + '/', 'api/social')
+                if json.loads(raw_social).get('available') is not True:
+                    report['failures'].append('Serviço adicional de Amigos indisponível')
+                report['capabilities'].update(push=public_key.get('available') is True, social_configured=True)
+                report['limitations'][0] = 'Alertas e Amigos dependem do serviço adicional; disponibilidade não comprova recebimento ou teste físico'
+                report['backend'] = {'url': backend_url, 'scheduler': health.get('push', {}).get('scheduler')}
             analytics = meta.policies.get('spidey-web-analytics') == 'cloudflare'
             report['capabilities']['web_analytics_configured'] = analytics
             if analytics:
@@ -197,6 +223,25 @@ def check(base=BASE, now=None, hosting='github-pages', all_images=False):
         report['failures'].append('Validação dos dados: ' + type(error).__name__)
     report['ok'] = not report['failures']
     return report
+
+
+def validate_backend_health(health, now):
+    issues = []
+    if health.get('ok') is not True or health.get('version') != 'spidey-backend-v1' or health.get('app_url') != BASE:
+        issues.append('Serviço adicional sem confirmação de saúde')
+    if health.get('social', {}).get('available') is not True or health.get('push', {}).get('available') is not True:
+        issues.append('Alertas ou Amigos desativados no serviço adicional')
+    scheduler = health.get('push', {}).get('scheduler', {})
+    if scheduler.get('status') != 'ok':
+        issues.append('Agendamento de alertas não confirmou execução normal')
+    try:
+        checked = datetime.fromisoformat(scheduler['checked_at'].replace('Z', '+00:00'))
+        delay = (now - checked).total_seconds()
+        if delay > 45 * 60 or delay < -5 * 60:
+            issues.append('Agendamento de alertas atrasado mais de 45 minutos ou data inválida')
+    except (KeyError, ValueError, TypeError):
+        issues.append('Agendamento de alertas sem data verificável')
+    return issues
 
 
 def main():

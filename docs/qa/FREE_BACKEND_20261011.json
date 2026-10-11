@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-11T19:02:18.590Z",
+  "state": "tested_candidate_not_activated",
+  "branch": "feat/free-backend-20261011",
+  "source_main": "0997c9b82293e7c49acfdf75f1c505fd2b3d8a2e",
+  "app_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "backend_provider": "Cloudflare Workers Free + SQLite Durable Objects",
+  "backend_deployed": false,
+  "app_backend_enabled": false,
+  "validation": {
+    "app_node_tests_passed": 101,
+    "worker_runtime_and_sqlite_tests_passed": 8,
+    "python_pages_and_health_tests_passed": 19,
+    "wrangler_dry_run": true,
+    "synthetic_browser_passed": true,
+    "native_alarm_continuation": "24 + 6 synthetic subscriptions; all 30 acknowledged once"
+  },
+  "preserved": {
+    "events": 137,
+    "approved_art_entries": 35,
+    "approved_original_files": 34,
+    "pvp": {
+      "great": 1152,
+      "ultra": 849,
+      "master": 409
+    },
+    "stamp_collections": 4
+  },
+  "privacy": {
+    "profiles_read_from_production": 0,
+    "subscriptions_read_from_production": 0,
+    "messages_read_from_production": 0,
+    "external_push_sends": 0,
+    "synthetic_browser_profiles": 2
+  },
+  "public_check_before_changes": {
+    "checked_at": "2026-10-11T18:56:55.561150+00:00",
+    "ok": true,
+    "hosting": "github-pages",
+    "push": false
+  },
+  "limits": [
+    "Cloudflare publication access missing",
+    "Preview review and publication still pending",
+    "No physical Android test, PWA/offline certification or actual device push receipt",
+    "Free account quotas apply; no paid plan or service created"
+  ],
+  "proof": "docs/qa/FREE_BACKEND_BROWSER_20261011.json",
+  "rebased_onto_current_main": "f71f9a2aecc20a2f18e6a4d5ce02b8f24f9a9fde",
+  "preserved_files_after_rebase": "No differences from current main in catalogs, assets or approved art master"
+}
