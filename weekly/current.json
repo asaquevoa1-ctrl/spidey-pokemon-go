@@ -318,13 +318,13 @@
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/scenic-sunday-october-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         }
       ]
@@ -761,6 +761,38 @@
           "kind": "official_illustration",
           "premium": false
         }
+      },
+      {
+        "id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+        "title": "Pokémon GO Day · NFL Cardinals × Lions",
+        "summary": "Evento presencial em Glendale, Arizona, no State Farm Stadium. Data confirmada: 11/10; horários da atividade no Pokémon GO ainda a confirmar.",
+        "category": "regional_event",
+        "tags": [
+          "Regional",
+          "Presencial",
+          "NFL",
+          "Arizona",
+          "Pokémon GO Day"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-10-11",
+        "source": {
+          "name": "Arizona Cardinals · Pokémon GO Day",
+          "url": "https://www.azcardinals.com/tickets/group-tickets/special-events",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
       }
     ]
   },
@@ -811,14 +843,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 20,
-    "events_with_weekly_art": 13,
-    "events_with_premium_weekly_art": 11,
+    "calendar_events_in_week": 21,
+    "events_with_weekly_art": 15,
+    "events_with_premium_weekly_art": 13,
     "events_with_official_weekly_art": 2,
-    "events_without_weekly_art": 7,
-    "events_in_weekly": 20,
+    "events_without_weekly_art": 6,
+    "events_in_weekly": 21,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-11T17:42:52.738947-03:00",
+    "generated_at": "2026-10-11T17:52:23.601739-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

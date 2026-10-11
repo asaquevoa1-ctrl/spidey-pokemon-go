@@ -1,0 +1,657 @@
+{
+  "checked_at": "2026-10-11T20:02:25.927Z",
+  "status": "PASSED",
+  "mode": "candidate_preview",
+  "physical_android_tested": false,
+  "external_push_sends": 0,
+  "art_checks": [
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-10-11-scenic-sunday",
+      "src": "assets/events/review/scenic-sunday-october-2026-v1.png?v=6aa367e2b114",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        }
+      ],
+      "served_sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-10-13-showcase-tuesday",
+      "src": "assets/events/review/showcase-tuesday-october-2026-v1.png?v=70c6b42ee42b",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        }
+      ],
+      "served_sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-10-15-go-battle-thursday",
+      "src": "assets/events/review/go-battle-thursday-october-2026-v1.png?v=b880105dbd86",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        }
+      ],
+      "served_sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-10-16-friendship-friday",
+      "src": "assets/events/review/friendship-friday-october-2026-v1.png?v=325a96fee7a7",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        }
+      ],
+      "served_sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+      "src": "assets/events/review/nfl-cardinals-20261011-v1.png?v=5b560b3de9f2",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        }
+      ],
+      "served_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-10-11-scenic-sunday",
+      "src": "assets/events/review/scenic-sunday-october-2026-v1.png?v=6aa367e2b114",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        }
+      ],
+      "served_sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-10-13-showcase-tuesday",
+      "src": "assets/events/review/showcase-tuesday-october-2026-v1.png?v=70c6b42ee42b",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        }
+      ],
+      "served_sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-10-15-go-battle-thursday",
+      "src": "assets/events/review/go-battle-thursday-october-2026-v1.png?v=b880105dbd86",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        }
+      ],
+      "served_sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-10-16-friendship-friday",
+      "src": "assets/events/review/friendship-friday-october-2026-v1.png?v=325a96fee7a7",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        }
+      ],
+      "served_sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+      "src": "assets/events/review/nfl-cardinals-20261011-v1.png?v=5b560b3de9f2",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 487.3125,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        }
+      ],
+      "served_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+    },
+    {
+      "width": 718,
+      "theme": "light",
+      "event_id": "2026-10-11-scenic-sunday",
+      "src": "assets/events/review/scenic-sunday-october-2026-v1.png?v=6aa367e2b114",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 620,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        },
+        {
+          "file": "assets/events/review/scenic-sunday-october-2026-v1.png",
+          "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+        }
+      ],
+      "served_sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0"
+    },
+    {
+      "width": 718,
+      "theme": "light",
+      "event_id": "2026-10-13-showcase-tuesday",
+      "src": "assets/events/review/showcase-tuesday-october-2026-v1.png?v=70c6b42ee42b",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 620,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        },
+        {
+          "file": "assets/events/review/showcase-tuesday-october-2026-v1.png",
+          "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+        }
+      ],
+      "served_sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7"
+    },
+    {
+      "width": 718,
+      "theme": "light",
+      "event_id": "2026-10-15-go-battle-thursday",
+      "src": "assets/events/review/go-battle-thursday-october-2026-v1.png?v=b880105dbd86",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 620,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        },
+        {
+          "file": "assets/events/review/go-battle-thursday-october-2026-v1.png",
+          "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+        }
+      ],
+      "served_sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a"
+    },
+    {
+      "width": 718,
+      "theme": "light",
+      "event_id": "2026-10-16-friendship-friday",
+      "src": "assets/events/review/friendship-friday-october-2026-v1.png?v=325a96fee7a7",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 620,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        },
+        {
+          "file": "assets/events/review/friendship-friday-october-2026-v1.png",
+          "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+        }
+      ],
+      "served_sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c"
+    },
+    {
+      "width": 718,
+      "theme": "light",
+      "event_id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+      "src": "assets/events/review/nfl-cardinals-20261011-v1.png?v=5b560b3de9f2",
+      "naturalWidth": 1122,
+      "naturalHeight": 1402,
+      "objectFit": "contain",
+      "hidden": false,
+      "height": 620,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "roles": [
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        },
+        {
+          "file": "assets/events/review/nfl-cardinals-20261011-v1.png",
+          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+        }
+      ],
+      "served_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b"
+    }
+  ],
+  "views": [
+    {
+      "width": 390,
+      "theme": "light",
+      "view": "Home",
+      "count": 1,
+      "text": "Evento regionalPokémon GO Day · NFL Cardinals × Lions11/10/2026 · horário do evento a confirmarEvento presencial em Glendale, Arizona, no State Farm Stadium. Data confirmada: 11/10; horários da atividade no Pokémon GO ainda a confirmar.›",
+      "section": "Eventos de hoje · horário a confirmar",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "view": "Calendar → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "view": "Week → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "view": "FLY local venue → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "view": "Home",
+      "count": 1,
+      "text": "Evento regionalPokémon GO Day · NFL Cardinals × Lions11/10/2026 · horário do evento a confirmarEvento presencial em Glendale, Arizona, no State Farm Stadium. Data confirmada: 11/10; horários da atividade no Pokémon GO ainda a confirmar.›",
+      "section": "Eventos de hoje · horário a confirmar",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "view": "Calendar → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "view": "Week → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "view": "FLY local venue → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "view": "Home",
+      "count": 1,
+      "text": "Evento regionalPokémon GO Day · NFL Cardinals × Lions11/10/2026 · horário do evento a confirmarEvento presencial em Glendale, Arizona, no State Farm Stadium. Data confirmada: 11/10; horários da atividade no Pokémon GO ainda a confirmar.›",
+      "section": "Eventos de hoje · horário a confirmar",
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "view": "Calendar → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "view": "Week → NFL detail",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "view": "FLY local venue → NFL detail",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "docs/qa/proofs/content-candidate-scenic-light-390-20261011.png",
+    "docs/qa/proofs/content-candidate-showcase-light-390-20261011.png",
+    "docs/qa/proofs/content-candidate-battlethursday-light-390-20261011.png",
+    "docs/qa/proofs/content-candidate-friendship-light-390-20261011.png",
+    "docs/qa/proofs/content-candidate-nfl-light-390-20261011.png",
+    "docs/qa/proofs/content-candidate-nfl-dark-390-20261011.png",
+    "docs/qa/proofs/content-candidate-nfl-light-1280-20261011.png"
+  ]
+}

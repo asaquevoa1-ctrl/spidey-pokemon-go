@@ -345,6 +345,123 @@
     "approval_record": "docs/qa/WILD_AREA_ART_APPROVAL_20261007.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-11-scenic-sunday": {
+    "file": "assets/events/premium/scenic-sunday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-18-scenic-sunday": {
+    "file": "assets/events/premium/scenic-sunday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-25-scenic-sunday": {
+    "file": "assets/events/premium/scenic-sunday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-13-showcase-tuesday": {
+    "file": "assets/events/premium/showcase-tuesday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-20-showcase-tuesday": {
+    "file": "assets/events/premium/showcase-tuesday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-27-showcase-tuesday": {
+    "file": "assets/events/premium/showcase-tuesday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-15-go-battle-thursday": {
+    "file": "assets/events/premium/go-battle-thursday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-22-go-battle-thursday": {
+    "file": "assets/events/premium/go-battle-thursday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-29-go-battle-thursday": {
+    "file": "assets/events/premium/go-battle-thursday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-16-friendship-friday": {
+    "file": "assets/events/premium/friendship-friday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-23-friendship-friday": {
+    "file": "assets/events/premium/friendship-friday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-30-friendship-friday": {
+    "file": "assets/events/premium/friendship-friday-october-2026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-11-nfl-cardinals-pokemon-go-day": {
+    "file": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+    "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

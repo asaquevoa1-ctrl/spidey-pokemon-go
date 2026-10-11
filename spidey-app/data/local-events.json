@@ -167,6 +167,69 @@
         "reason": "Coordenadas exatas das cinco Poképaradas do evento ainda não verificadas."
       },
       "verified_at": "2026-10-08"
+    },
+    {
+      "id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+      "title": "Pokémon GO Day · NFL Cardinals × Lions",
+      "detail_title": "Pokémon GO Day · Arizona Cardinals × Detroit Lions",
+      "place": "Glendale, Arizona, Estados Unidos",
+      "dates": "11 out 2026",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Evento presencial em Glendale, Arizona, no State Farm Stadium. Data confirmada: 11/10; horários da atividade no Pokémon GO ainda a confirmar.",
+      "schedule": {
+        "precision": "date",
+        "start_date": "2026-10-11",
+        "end_date": "2026-10-11",
+        "timezone": "America/Phoenix"
+      },
+      "schedule_note": "Início da partida de futebol americano: 13h25 no Arizona (America/Phoenix), equivalente a 17h25 em Brasília. Isso não confirma o início ou o término dos recursos do Pokémon GO.",
+      "source": {
+        "name": "Arizona Cardinals · Pokémon GO Day",
+        "url": "https://www.azcardinals.com/tickets/group-tickets/special-events",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Arizona Cardinals · calendário oficial 2026",
+          "url": "https://www.azcardinals.com/schedule/",
+          "confidence": "official"
+        },
+        {
+          "name": "State Farm Stadium · endereço oficial",
+          "url": "https://www.statefarmstadium.com/plan-your-visit",
+          "confidence": "official"
+        },
+        {
+          "name": "Dittobase · registro comunitário do fundo",
+          "url": "https://www.dittobase.com/pokemon-go/backgrounds/lc-nfl-cardinals-2026",
+          "confidence": "community"
+        }
+      ],
+      "bonuses": [
+        "A data do Pokémon GO Day é oficial: 11/10/2026, no jogo Arizona Cardinals × Detroit Lions.",
+        "Início da partida de futebol americano: 13h25 no Arizona (America/Phoenix), equivalente a 17h25 em Brasília. Isso não confirma o início ou o término dos recursos do Pokémon GO.",
+        "A fonte oficial consultada ainda não detalha horários, bônus, Pesquisas ou método de obtenção dos encontros no jogo.",
+        "Dittobase (comunidade) registra Pikachu com o Fundo de Localização NFL Cardinals 2026. Essa informação não está detalhada no anúncio primário do time: https://www.dittobase.com/pokemon-go/backgrounds/lc-nfl-cardinals-2026",
+        "Endereço oficial: 1 Cardinals Drive, Glendale, Arizona 85305. Coordenadas exatas de Poképaradas não verificadas; GPX indisponível."
+      ],
+      "locations": [
+        {
+          "id": "state-farm-stadium",
+          "name": "State Farm Stadium",
+          "address": "1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos",
+          "source_url": "https://www.statefarmstadium.com/plan-your-visit",
+          "coordinate_type": "venue_address",
+          "exact_pokestop_verified": false,
+          "access_note": "Acesso ao estádio sujeito às regras e ingressos do jogo; confira o anúncio do organizador."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Coordenadas exatas de Poképaradas não verificadas."
+      },
+      "verified_at": "2026-10-11"
     }
   ]
 }

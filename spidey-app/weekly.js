@@ -26,6 +26,7 @@ function weeklyDateLabel(value) {
 }
 
 function weeklyTimeLabel(item) {
+  if (item?.schedule?.precision === 'date' || item?.schedule_precision === 'date') return 'Horário a confirmar';
   const value = item?.schedule?.start_brazil || item?.start_brazil;
   if (!value) return 'Horário a confirmar';
   const date = new Date(value);
@@ -61,6 +62,10 @@ function weeklyEsc(value) {
 
 function weeklySchedule(item, reference = new Date()) {
   const event = weeklyFindEvent(item?.id);
+  if (window.SpideyDateOnly?.valid(event)) {
+    const s = event.schedule;
+    return {label: `${window.SpideyDateOnly.label(event)} · ${window.SpideyDateOnly.status(event, reference)}`, day: s.start_date.slice(8), month: s.start_date.slice(5, 7)};
+  }
   const start = new Date(event?.schedule?.start_brazil || item?.start_brazil || '');
   const end = new Date(event?.schedule?.end_brazil || item?.end_brazil || '');
   if (!Number.isFinite(start.getTime()) || !Number.isFinite(end.getTime()) || end < start) return null;

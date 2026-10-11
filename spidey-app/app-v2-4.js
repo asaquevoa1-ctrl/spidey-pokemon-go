@@ -72,6 +72,7 @@
     detail.classList.remove('spidey-detail-v3', 'player-art-unavailable', 'v23-no-hero');
     delete detail.dataset.visualCategory;
     delete detail.dataset.visualCharacter;
+    delete detail.dataset.eventId;
     detail.innerHTML = `
       <div class="detail-body v24-day-sheet">
         <span class="eyebrow">AGENDA DO DIA</span>

@@ -6,6 +6,15 @@ from scripts.build_spidey_weekly import build, load, EVENTS_FILE, load_art_maste
 
 
 class WeeklyPublicationTests(unittest.TestCase):
+    def test_confirmed_date_with_unknown_hours_is_visible_without_an_invented_activity_window(self):
+        weekly = build(date(2026, 10, 11))
+        validate_weekly(weekly)
+        item = next(item for item in weekly["sections"]["also_happening"] if item["id"] == "2026-10-11-nfl-cardinals-pokemon-go-day")
+        self.assertEqual(item["calendar_date"], "2026-10-11")
+        self.assertEqual(item["schedule_precision"], "date")
+        self.assertIsNone(item["start_brazil"])
+        self.assertIsNone(item["end_brazil"])
+
     def test_october_week_is_current_even_with_events_without_art(self):
         weekly = build(date(2026, 10, 5))
         validate_weekly(weekly)

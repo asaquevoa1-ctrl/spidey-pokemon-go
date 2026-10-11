@@ -75,6 +75,16 @@ def parse_dt(value: str | None) -> datetime | None:
 
 def event_range(event: dict) -> tuple[datetime | None, datetime | None]:
     schedule = event.get("schedule") or {}
+    if schedule.get("precision") == "date":
+        try:
+            # Analytical calendar indexes, not hours of the Pokémon GO activity.
+            start = date.fromisoformat(schedule["start_date"])
+            end = date.fromisoformat(schedule["end_date"])
+            if end < start:
+                return None, None
+            return datetime(start.year, start.month, start.day, tzinfo=BR), datetime(end.year, end.month, end.day, 23, 59, 59, tzinfo=BR)
+        except (ValueError, KeyError, TypeError):
+            return None, None
     return parse_dt(schedule.get("start_brazil") or schedule.get("start_local")), parse_dt(schedule.get("end_brazil") or schedule.get("end_local"))
 
 
@@ -136,14 +146,16 @@ def resolve_weekly_art(event: dict, master: dict) -> dict:
 
 def clean_event(event: dict, master: dict) -> dict:
     start, end = event_range(event)
+    date_only = (event.get("schedule") or {}).get("precision") == "date"
     return {
         "id": event.get("id"),
         "title": event.get("title"),
         "summary": event.get("summary") or "",
         "category": event.get("category") or "evento",
         "tags": event.get("tags") or [],
-        "start_brazil": start.isoformat() if start else None,
-        "end_brazil": end.isoformat() if end else None,
+        "start_brazil": start.isoformat() if start and not date_only else None,
+        "end_brazil": end.isoformat() if end and not date_only else None,
+        **({"schedule_precision": "date", "calendar_date": event["schedule"]["start_date"]} if date_only else {}),
         "source": event.get("source") or {},
         "art": event.get("art") or {},
         "weekly_art": resolve_weekly_art(event, master),

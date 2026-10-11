@@ -8,6 +8,7 @@
   const clock=(date,zone)=>new Intl.DateTimeFormat('pt-BR',{timeZone:zone,day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(date);
   const dailyHours=event=>`${event.schedule.start_time}–${event.schedule.end_time} no horário de ${event.place.split(',')[0]}`;
   function eventWindow(event,now=new Date()) {
+    if(window.SpideyDateOnly?.valid(event))return {status:window.SpideyDateOnly.status(event,now).toUpperCase(),dateOnly:true};
     const s=event.schedule,core=window.SpideyFlyCore;
     const start=s&&core?.localToDate(s.start_date,s.start_time,s.timezone);
     const end=s&&core?.localToDate(s.end_date,s.end_time,s.timezone);
@@ -21,6 +22,7 @@
   }
   function scheduleText(event,now=new Date()) {
     const period=eventWindow(event,now),s=event.schedule;
+    if(period.dateOnly)return `<strong data-local-event-status="${esc(event.id)}">${esc(period.status)}</strong><p>${esc(event.schedule_note||'A data está confirmada; os horários da atividade no Pokémon GO ainda não foram publicados.')}</p>`;
     if(!period.start)return `<span data-local-event-status="${esc(event.id)}">${esc(period.status)}</span>`;
     return `<strong data-local-event-status="${esc(event.id)}">${esc(period.status)}</strong><p>Local: ${esc(clock(period.start,s.timezone))} → ${esc(clock(period.end,s.timezone))}</p><p><strong>Brasília: ${esc(clock(period.start,'America/Sao_Paulo'))} → ${esc(clock(period.end,'America/Sao_Paulo'))}</strong></p>`;
   }
@@ -28,8 +30,15 @@
     const media=event.location_background;
     return media?`<figure class="world-location-background"><img src="${esc(media.file)}?v=${esc(media.sha256.slice(0,12))}" width="${media.width}" height="${media.height}" alt="${esc(media.alt)}" loading="lazy" decoding="async"><figcaption>Fundo de Localização · ${esc(event.place.split(',')[0])}</figcaption></figure>`:'';
   }
+  function posterFigure(event) {
+    const approved=window.SpideyReviewArt?.resolve(event);
+    const draft=window.SpideyReviewArt?.poster(event);
+    const asset=approved||draft;
+    if(!asset)return '';
+    return `<figure class="world-premium-poster"><img src="${esc(asset.file)}?v=${esc(asset.sha256.slice(0,12))}" width="${asset.width}" height="${asset.height}" alt="Pôster Spidey de ${esc(event.title)}" loading="lazy"></figure>`;
+  }
   function eventCard(event) {
-    return `<article class="world-event-card" data-world-event="${esc(event.id)}"><div class="world-event-meta">${badge(event.locality)} ${badge(event.status)}</div><h3>${esc(event.title)}</h3><p><strong>${esc(event.place)}</strong> · ${esc(event.dates)}</p>${backgroundFigure(event)}<p>${esc(event.note)}</p>${event.schedule?`<div class="world-event-window" data-local-window="${esc(event.id)}">${event.schedule.recurrence==='daily'?`<p>Todos os dias · ${esc(dailyHours(event))}</p>`:''}${scheduleText(event)}</div><button class="action-btn gold" data-open-local-event="${esc(event.id)}">${event.location_background?'Ver fundo e locais':'Ver evento e local'}</button>`:''}</article>`;
+    return `<article class="world-event-card" data-world-event="${esc(event.id)}"><div class="world-event-meta">${badge(event.locality)} ${badge(event.status)}</div><h3>${esc(event.title)}</h3><p><strong>${esc(event.place)}</strong> · ${esc(event.dates)}</p>${posterFigure(event)}${backgroundFigure(event)}<p>${esc(event.note)}</p>${event.schedule?`<div class="world-event-window" data-local-window="${esc(event.id)}">${event.schedule.recurrence==='daily'?`<p>Todos os dias · ${esc(dailyHours(event))}</p>`:''}${scheduleText(event)}</div><button class="action-btn gold" data-open-local-event="${esc(event.id)}">${event.location_background?'Ver fundo e locais':'Ver evento e local'}</button>`:''}</article>`;
   }
   function renderWorldEvents() {
     const r=document.getElementById('worldEvents');if(!r)return;
@@ -52,9 +61,10 @@
     const event=worldEvents.find(e=>e.id===id);if(!event?.schedule)return;
     beginAppDialog();
     if(dialog.open)dialog.close();
+    detail.dataset.eventId = event.id;
     detail.classList.remove('spidey-detail-v3','player-art-unavailable','v23-no-hero');
     delete detail.dataset.visualCategory;delete detail.dataset.visualCharacter;
-    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · ${esc(event.place.toUpperCase())}</span><h2>${esc(event.detail_title||event.title)}</h2>${backgroundFigure(event)}${event.official_media?`<figure class="space-official-figure"><img src="${esc(event.official_media.file)}?v=${esc(event.official_media.sha256.slice(0,12))}" width="${event.official_media.width}" height="${event.official_media.height}" alt="${esc(event.official_media.alt)}"><figcaption>Ilustração oficial · ${esc(event.official_media.credit)}</figcaption></figure>`:''}<p>${esc(event.note)}</p><p>${esc(event.dates)}</p><div class="world-event-window" data-local-window="${esc(event.id)}">${scheduleText(event)}</div>${event.schedule.recurrence==='daily'?`<p class="microcopy">Atividades no jogo: ${esc(dailyHours(event))}. Brasília é calculada para cada dia, respeitando o fuso e o horário de verão quando aplicável.</p>`:''}<p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener noreferrer">Anúncio oficial ↗</a>${event.location_background?`<p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener noreferrer">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener noreferrer">Serebii ↗</a>.</p>`:''}</div>`;
+    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · ${esc(event.place.toUpperCase())}</span><h2>${esc(event.detail_title||event.title)}</h2>${posterFigure(event)}${backgroundFigure(event)}${event.official_media?`<figure class="space-official-figure"><img src="${esc(event.official_media.file)}?v=${esc(event.official_media.sha256.slice(0,12))}" width="${event.official_media.width}" height="${event.official_media.height}" alt="${esc(event.official_media.alt)}"><figcaption>Ilustração oficial · ${esc(event.official_media.credit)}</figcaption></figure>`:''}<p>${esc(event.note)}</p><p>${esc(event.dates)}</p><div class="world-event-window" data-local-window="${esc(event.id)}">${scheduleText(event)}</div>${event.schedule.recurrence==='daily'?`<p class="microcopy">Atividades no jogo: ${esc(dailyHours(event))}. Brasília é calculada para cada dia, respeitando o fuso e o horário de verão quando aplicável.</p>`:''}<p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener noreferrer">Anúncio oficial ↗</a>${event.location_background?`<p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener noreferrer">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener noreferrer">Serebii ↗</a>.</p>`:''}</div>`;
     showAppDialog();dialog.scrollTop=0;detail.scrollTop=0;
     document.getElementById('closeDialog')?.focus({preventScroll:true});
   }

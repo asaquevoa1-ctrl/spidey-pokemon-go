@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "node_tests": 91,
+  "python_tests": 22,
+  "candidate_browser_checks": 15,
+  "approved_browser_checks": 15,
+  "browser_views_per_package": 12,
+  "no_browser_exceptions": true,
+  "pages_package": {
+    "events": 138,
+    "art_entries": 48,
+    "unique_approved_images": 39,
+    "pvp": [
+      1152,
+      849,
+      409
+    ]
+  },
+  "physical_android_tested": false,
+  "push_activated": false,
+  "prior_35_master_entries_preserved": true
+}

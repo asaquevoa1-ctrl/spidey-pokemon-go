@@ -58,6 +58,7 @@
   }
 
   function activeNow(event, reference = new Date()) {
+    if (window.SpideyDateOnly?.valid(event)) return false;
     const { start, end } = eventRange(event);
     return Boolean(start && end && start <= reference && end >= reference);
   }
@@ -80,6 +81,7 @@
   }
 
   function relativeLabel(event, reference = new Date()) {
+    if (window.SpideyDateOnly?.valid(event)) return window.SpideyDateOnly.status(event, reference);
     const { start, end } = eventRange(event);
     if (!start || !end) return 'Horário a confirmar';
     if (start <= reference && end >= reference) return 'Acontecendo agora';
