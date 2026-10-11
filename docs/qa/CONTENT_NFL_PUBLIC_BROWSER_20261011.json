@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-10-11T20:55:31.011Z",
+  "status": "BLOCKED_QA_ENVIRONMENT",
+  "mode": "public_github_pages",
+  "deployment_commit": "b1625151053c392a7cc0fc0762b430fbf5ff02ef",
+  "physical_android_tested": false,
+  "external_push_sends": 0,
+  "art_checks": [],
+  "views": [],
+  "errors": [],
+  "screenshots": [],
+  "failure": "page.goto: net::ERR_EMPTY_RESPONSE at https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/\nCall log:\n\u001b[2m  - navigating to \"https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at /workspace/scratch/88fdfe9751d3/content-public-browser-qa.mjs:34:16",
+  "app_failure_confirmed": false,
+  "limitation": "Public Chromium verification was interrupted by automatic access review: a GitHub Pages connection was incorrectly associated with a concurrent git fetch origin main command. Independent public HTTP checks and GitHub Actions health check passed; candidate browser QA remains valid only for the predeployment Pages package."
+}

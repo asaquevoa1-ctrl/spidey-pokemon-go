@@ -1,5 +1,13 @@
 # SPIDEY — REGISTRO CANÔNICO DE ARTES
 
+## 11/10/2026 — NFL e cinco artes publicadas no GitHub Pages
+
+PR [33](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/33) integrado no código `b1625151053c392a7cc0fc0762b430fbf5ff02ef`; atualização automática da Semana em main `4082f45b7ee69e76296cbbbb11ce18a7bc06a082`. [Publicação Pages](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38174166446) concluída com sucesso no mesmo endereço permanente: https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . O conflito com a atualização automática da agenda foi resolvido, preservando a fila e o cursor G47IX de main.
+
+[Monitor público](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38174166439) passou em 11/10 às 17:55:37 BRT, perfil `github-pages`: 138 eventos, semana 05–11/10, PvP 1152/849/409, quatro coleções, master 48 entradas/39 originais e nenhuma falha. Acessos HTTP anônimos posteriores confirmaram a NFL no catálogo e oito arquivos 200 byte a byte exatos: os cinco PNGs novos e três scripts de data/arte/master, conferidos às 17:58:12 BRT. Provas: [HTTP público](docs/qa/CONTENT_NFL_PUBLIC_HTTP_20261011.json) e [monitor público](docs/qa/CONTENT_NFL_PUBLIC_HEALTH_20261011.json).
+
+91 testes Node e 22 Python passaram após integrar a agenda atual; três workflows do PR e testes/pacote de main passaram. A prova visual responsiva continua a do pacote Pages antes da publicação; nesta rodada a confirmação pública é por HTTP e execução do monitor. Não alegar nova certificação visual pública ou Android físico/PWA/offline/push. As 35 entradas/34 originais anteriores foram preservadas. Cobertura restante: 14 eventos sem Premium entre 11 e 18/10, conforme o inventário abaixo; recusas protegidas permanecem válidas. Push e Amigos/chat seguem indisponíveis na hospedagem estática; PR32 permanece separado, sem ativação ou disparo externo.
+
 ## 07/10/2026 — artes Premium do GO Wild Area
 
 Publicação conferida em 07/10: código `d470ffb`, produção READY no endereço permanente https://spidey-pokemon-go.vercel.app/spidey-app/ . Os três detalhes públicos carregam os PNGs aprovados completos; 39 arquivos HTTP200 com bytes exatos, incluindo as 35 entradas do master. Workflow de testes e monitor de saúde concluídos com sucesso. Conferência responsiva no navegador; teste físico Android permanece pendente.

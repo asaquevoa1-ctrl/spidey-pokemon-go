@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-11T20:58:12.150957+00:00",
+  "base_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "deployment_commit": "b1625151053c392a7cc0fc0762b430fbf5ff02ef",
+  "status": "PASSED",
+  "checks": [
+    {
+      "file": "assets/events/premium/scenic-sunday-october-2026-approved-v1.png",
+      "status": 200,
+      "bytes": 2833953,
+      "sha256": "6aa367e2b114b8a530061e1dff59abef3cd3b342c10e144382ea39bb9e57b4e0",
+      "matches_candidate": true
+    },
+    {
+      "file": "assets/events/premium/showcase-tuesday-october-2026-approved-v1.png",
+      "status": 200,
+      "bytes": 2659732,
+      "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7",
+      "matches_candidate": true
+    },
+    {
+      "file": "assets/events/premium/go-battle-thursday-october-2026-approved-v1.png",
+      "status": 200,
+      "bytes": 2521083,
+      "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a",
+      "matches_candidate": true
+    },
+    {
+      "file": "assets/events/premium/friendship-friday-october-2026-approved-v1.png",
+      "status": 200,
+      "bytes": 2718613,
+      "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c",
+      "matches_candidate": true
+    },
+    {
+      "file": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png",
+      "status": 200,
+      "bytes": 2614079,
+      "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "matches_candidate": true
+    },
+    {
+      "file": "date-only.js",
+      "status": 200,
+      "bytes": 2061,
+      "sha256": "c5291e36ebd984adcb8265e9de150f6cf2ffd81a82c244bef3ec7f68ac3bbf5b",
+      "matches_candidate": true
+    },
+    {
+      "file": "art-coverage-v1.js",
+      "status": 200,
+      "bytes": 11332,
+      "sha256": "e8f3b473b82095856e8343a088eabc59576a513df533e20c310e08a761e11bba",
+      "matches_candidate": true
+    },
+    {
+      "file": "premium-approved-master.js",
+      "status": 200,
+      "bytes": 20074,
+      "sha256": "815f4f80aaa40b78144e4db19fbf3ee640353123e3f4178a36fba3bd05a7a2a8",
+      "matches_candidate": true
+    }
+  ],
+  "health_run": 38174166439,
+  "health_checked_at": "2026-10-11T20:55:37.754166+00:00",
+  "physical_android_tested": false,
+  "external_push_sends": 0
+}

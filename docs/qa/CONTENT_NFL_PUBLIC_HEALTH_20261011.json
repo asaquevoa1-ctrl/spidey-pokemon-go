@@ -1,0 +1,37 @@
+{
+  "workflow_run": 38174166439,
+  "workflow_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38174166439",
+  "deployment_run": 38174166446,
+  "deployment_commit": "b1625151053c392a7cc0fc0762b430fbf5ff02ef",
+  "checked_at": "2026-10-11T20:55:37.754166+00:00",
+  "base_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "hosting": "github-pages",
+  "ok": true,
+  "catalogs": {
+    "events": 138,
+    "week_start": "2026-10-05",
+    "week_end": "2026-10-11",
+    "pvp": {
+      "great": 1152,
+      "ultra": 849,
+      "master": 409
+    },
+    "rallies": 4
+  },
+  "approved_art": {
+    "entries": 48,
+    "unique_files": 39,
+    "audit": "sample"
+  },
+  "capabilities": {
+    "push": false,
+    "web_analytics_configured": true
+  },
+  "limitations": [
+    "Push e Amigos/chat não são fornecidos pela hospedagem estática",
+    "Políticas meta não equivalem a todos os cabeçalhos HTTP da Vercel",
+    "Verificação HTTP não certifica Android físico, PWA/offline ou renderização de todas as imagens",
+    "Configuração de estatísticas não comprova recebimento no painel Cloudflare ou número de pessoas"
+  ],
+  "failures": []
+}
