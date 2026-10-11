@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-10-11T21:28:58.121513+00:00",
+  "checked_at_brazil": "2026-10-11T18:28:58.121709-03:00",
+  "base_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "main_sha": "4db7cc6630666767008b9a944a8aeed823cb7f81",
+  "profile": "github-pages",
+  "checks": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "bytes": 15254,
+      "sha256": "d6f1fac44175b5b84cd7182ba358344bf7e039605a5c3277c339f2e846a0c57c",
+      "expected_sha256": "d6f1fac44175b5b84cd7182ba358344bf7e039605a5c3277c339f2e846a0c57c",
+      "matches_main": true,
+      "comparison": "Generated Pages package with hosting policy and analytics loader."
+    },
+    {
+      "path": "styles.css",
+      "http_status": 200,
+      "bytes": 9194,
+      "sha256": "ee5d792fbf0c0b2c92858cce9de331e3c9d02b558b05a9c35300f2e652a1986c",
+      "expected_sha256": "ee5d792fbf0c0b2c92858cce9de331e3c9d02b558b05a9c35300f2e652a1986c",
+      "matches_main": true
+    },
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "bytes": 29497,
+      "sha256": "4cef1078a833dac7058f56114b273966cebc29c09ab088d5dfcc9af365a613bc",
+      "expected_sha256": "4cef1078a833dac7058f56114b273966cebc29c09ab088d5dfcc9af365a613bc",
+      "matches_main": true
+    },
+    {
+      "path": "qa-corrections-v1.js",
+      "http_status": 200,
+      "bytes": 14638,
+      "sha256": "8a78cd5a7ca8423d47c7209ead7924c265be3ad3a2f86f195c33c906f1d953cf",
+      "expected_sha256": "8a78cd5a7ca8423d47c7209ead7924c265be3ad3a2f86f195c33c906f1d953cf",
+      "matches_main": true
+    },
+    {
+      "path": "trust-world-v1.js",
+      "http_status": 200,
+      "bytes": 11871,
+      "sha256": "6cdb3d41a305ba69fa76d5ed65ae1bfe93c0dc6dc2fd6fdf876f572d7fdceace",
+      "expected_sha256": "6cdb3d41a305ba69fa76d5ed65ae1bfe93c0dc6dc2fd6fdf876f572d7fdceace",
+      "matches_main": true
+    },
+    {
+      "path": "event-locations.js",
+      "http_status": 200,
+      "bytes": 848,
+      "sha256": "0bc5f4c1c6ae53146f134b9178740f458dbb6aac8aa5b16df38bc6d37d34b56b",
+      "expected_sha256": "0bc5f4c1c6ae53146f134b9178740f458dbb6aac8aa5b16df38bc6d37d34b56b",
+      "matches_main": true
+    },
+    {
+      "path": "sw.js",
+      "http_status": 200,
+      "bytes": 9470,
+      "sha256": "bdbdd042f4f057a432296533a21271be70ffd20cca817b6df24349531a2e1794",
+      "expected_sha256": "bdbdd042f4f057a432296533a21271be70ffd20cca817b6df24349531a2e1794",
+      "matches_main": true,
+      "comparison": "Generated Pages package; the builder removes unpublished review assets from the service worker."
+    },
+    {
+      "path": "data/events.json",
+      "http_status": 200,
+      "bytes": 241024,
+      "sha256": "4f7e1e5b92cb32d25e51820c06cf22f7567e050e8ede94dd0625a32e17ce186b",
+      "expected_sha256": "4f7e1e5b92cb32d25e51820c06cf22f7567e050e8ede94dd0625a32e17ce186b",
+      "matches_main": true
+    },
+    {
+      "path": "data/local-events.json",
+      "http_status": 200,
+      "bytes": 10603,
+      "sha256": "a4a74e79a6238f5782567fdd89a4f27c92c79cf3fbe7f08e3b4661f8bcd1ab6e",
+      "expected_sha256": "a4a74e79a6238f5782567fdd89a4f27c92c79cf3fbe7f08e3b4661f8bcd1ab6e",
+      "matches_main": true
+    },
+    {
+      "path": "data/weekly.json",
+      "http_status": 200,
+      "bytes": 29612,
+      "sha256": "23ede3dea206882517a842c440ca8556f24b7bcdcfa3aa023eafa4ee50188ea1",
+      "expected_sha256": "23ede3dea206882517a842c440ca8556f24b7bcdcfa3aa023eafa4ee50188ea1",
+      "matches_main": true
+    },
+    {
+      "path": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png",
+      "http_status": 200,
+      "bytes": 2614079,
+      "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "expected_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "matches_main": true
+    }
+  ],
+  "failures": [],
+  "physical_android_tested": false,
+  "browser_mode": "Visual QA was performed on the local Pages package; this check confirms public HTTP bytes.",
+  "push_sends": 0,
+  "personal_data_read": false,
+  "event": {
+    "id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+    "venue_name": "State Farm Stadium",
+    "address": "1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos",
+    "coordinate": "33.527056,-112.262363",
+    "coordinate_label": "Ponto do estádio",
+    "copy_and_map_source_match": true,
+    "notes": [
+      "Partida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.",
+      "Pikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time."
+    ],
+    "activity_hours_confirmed": false,
+    "gpx_enabled": false,
+    "calendar_and_local_data_equal": true
+  },
+  "ok": true,
+  "completed_at": "2026-10-11T21:30:23.728423+00:00",
+  "completed_at_brazil": "2026-10-11T18:30:23.728630-03:00"
+}

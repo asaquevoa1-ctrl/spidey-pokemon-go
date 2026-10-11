@@ -1,0 +1,76 @@
+{
+  "status": "PUBLICATION_VERIFIED",
+  "published_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "public_main_sha": "4db7cc6630666767008b9a944a8aeed823cb7f81",
+  "merge_sha": "a3e3694171992c3381cc8d0e4c58e2eb90a88c9d",
+  "pull_request": 34,
+  "pull_request_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/34",
+  "deployment": {
+    "id": 38176404152,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38176404152",
+    "head_sha": "4db7cc6630666767008b9a944a8aeed823cb7f81",
+    "conclusion": "success",
+    "updated_at": "2026-10-11T21:27:58Z"
+  },
+  "public_http_verified_at": "2026-10-11T21:30:23.728423+00:00",
+  "public_http_files": 11,
+  "independent_health_checked_at": "2026-10-11T21:28:22.858283+00:00",
+  "independent_health_ok": true,
+  "workflow_health": {
+    "id": 38176381399,
+    "job_id": 114579544008,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38176381399",
+    "summary": {
+      "checked_at": "2026-10-11T21:27:35.927053+00:00",
+      "base_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+      "hosting": "github-pages",
+      "ok": true,
+      "catalogs": {
+        "events": 138,
+        "week_start": "2026-10-05",
+        "week_end": "2026-10-11",
+        "pvp": {
+          "great": 1152,
+          "ultra": 849,
+          "master": 409
+        },
+        "rallies": 4
+      },
+      "approved_art": {
+        "entries": 48,
+        "unique_files": 39,
+        "audit": "sample"
+      },
+      "capabilities": {
+        "push": false,
+        "web_analytics_configured": true
+      },
+      "limitations": [
+        "Push e Amigos/chat não são fornecidos pela hospedagem estática",
+        "Políticas meta não equivalem a todos os cabeçalhos HTTP da Vercel",
+        "Verificação HTTP não certifica Android físico, PWA/offline ou renderização de todas as imagens",
+        "Configuração de estatísticas não comprova recebimento no painel Cloudflare ou número de pessoas"
+      ],
+      "failures": []
+    }
+  },
+  "venue_coordinate": "33.527056,-112.262363",
+  "coordinate_label": "Ponto do estádio",
+  "source_proof": "docs/qa/NFL_VENUE_SOURCE_20261011.json",
+  "browser_proof": "docs/qa/NFL_VENUE_BROWSER_20261011.json",
+  "public_http_proof": "docs/qa/NFL_VENUE_PUBLIC_HTTP_20261011.json",
+  "public_health_proof": "docs/qa/NFL_VENUE_PUBLIC_HEALTH_20261011.json",
+  "local_test_counts": {
+    "node": 94,
+    "python": 22,
+    "browser_details": 16,
+    "navigations": 12
+  },
+  "approved_art_unchanged": true,
+  "physical_android_tested": false,
+  "clipboard_validation": "Simulated clipboard in local browser QA",
+  "gpx_enabled": false,
+  "activity_hours_confirmed": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

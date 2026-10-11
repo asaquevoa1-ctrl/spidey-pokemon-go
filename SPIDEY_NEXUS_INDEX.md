@@ -1,5 +1,17 @@
 # SPIDEYNEXUS — ÍNDICE MESTRE DE CONTINUIDADE
 
+## 11/10/2026 — coordenadas e textos corrigidos no evento NFL
+
+PR [34](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/34) integrado em `a3e3694171992c3381cc8d0e4c58e2eb90a88c9d`; Semana automática atualizada em main `4db7cc6630666767008b9a944a8aeed823cb7f81`. [GitHub Pages](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38176404152) concluiu a publicação no mesmo endereço permanente: https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ .
+
+O detalhe pelo Início/calendário/Semana e o FLY local mostram o State Farm Stadium, endereço, coordenadas `33.527056,-112.262363`, botão **Copiar coordenadas** e **Abrir mapa**. O ponto é identificado como **Ponto do estádio**, conferido no mapa público do Waze e separado de Poképaradas do jogo; não libera GPX. Endereço confirmado no site oficial do estádio. As cinco notas de pesquisa foram substituídas por informações curtas para o jogador, sem IANA ou URLs por extenso na tela. Horários da partida local/Brasília e incerteza sobre as atividades do Pokémon GO preservados; informação comunitária do fundo de Pikachu continua identificada como não confirmada pelo time.
+
+94 testes Node e 22 Python passaram. Pacote Pages conferido em Chromium local: 16 detalhes e 12 navegações, Claro/Escuro, 360/390/1280px, sem overflow ou exceção; clipboard simulado copiou o valor exato usado pelo mapa. O pôster aprovado permaneceu integral e com o mesmo SHA256. Não houve teste físico Android/PWA/offline/push. A conferência pública é HTTP e resultado de execução, sem nova certificação visual no host público.
+
+HTTP anônimo confirmou 11 arquivos exatos às 18:30 BRT, incluindo HTML/worker gerados pelo empacotador, scripts, catálogos e PNG da NFL. [Monitor](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38176381399) passou às 18:27 BRT no perfil `github-pages`; conferência pública independente passou às 18:28 BRT: 138 eventos, Semana 05–11/10, PvP 1152/849/409, quatro coleções, master 48 entradas/39 originais, sem falhas. A auditoria de saúde é amostral; o arquivo NFL foi conferido integralmente por SHA256.
+
+Provas: [fonte do ponto](docs/qa/NFL_VENUE_SOURCE_20261011.json), [tela local](docs/qa/NFL_VENUE_BROWSER_20261011.json), [HTTP público](docs/qa/NFL_VENUE_PUBLIC_HTTP_20261011.json), [saúde pública](docs/qa/NFL_VENUE_PUBLIC_HEALTH_20261011.json) e [publicação](docs/qa/NFL_VENUE_PUBLICATION_20261011.json). Artes e demais 137 eventos preservados; a pendência de 14 eventos sem Premium entre 11 e 18/10 permanece, assim como as recusas protegidas. Push e Amigos/chat seguem indisponíveis nesta hospedagem; nenhum disparo externo nem leitura de dados pessoais foi realizado nesta correção.
+
 ## 11/10/2026 — NFL e cinco artes publicadas no GitHub Pages
 
 PR [33](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/33) integrado no código `b1625151053c392a7cc0fc0762b430fbf5ff02ef`; atualização automática da Semana em main `4082f45b7ee69e76296cbbbb11ce18a7bc06a082`. [Publicação Pages](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38174166446) concluída com sucesso no mesmo endereço permanente: https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ . O conflito com a atualização automática da agenda foi resolvido, preservando a fila e o cursor G47IX de main.
