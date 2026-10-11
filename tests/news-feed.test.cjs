@@ -65,3 +65,14 @@ test('the confirmed Halloween Part II supersedes its community preview and keeps
  const story=build(events,range,new Date('2026-10-11T22:00:00Z')).find(s=>s.events.some(x=>x.id===e.id));
  assert.ok(story);assert.equal(story.event.source.confidence,'official');
 });
+
+test('undated news stays in News and never becomes a calendar event',()=>{
+ const stories=build(events,range,new Date('2026-10-11T22:00:00Z'));
+ for(const id of ['2026-10-08-gameplay-quality-of-life','2026-10-08-dynamax-forms-datamine']){
+  const event=events.find(e=>e.id===id),story=stories.find(s=>s.events.some(e=>e.id===id));
+  assert.ok(event&&story,id);assert.equal(event.content_type,'news');assert.equal(event.calendar.mode,'hidden');
+  assert.equal(event.schedule,undefined);assert.equal(event.notifications.enabled,false);
+ }
+ const datamine=events.find(e=>e.id==='2026-10-08-dynamax-forms-datamine');
+ assert.equal(datamine.source.confidence,'community');assert.match(datamine.summary,/confirmar/i);
+});
