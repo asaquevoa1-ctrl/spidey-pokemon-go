@@ -1,5 +1,6 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
 const sandbox=vm.createContext({window:{addEventListener(){}},document:{readyState:'loading',addEventListener(){}},Intl,Date,Set,Object,Math});
+vm.runInContext(fs.readFileSync('spidey-app/event-locations.js','utf8'),sandbox);
 vm.runInContext(fs.readFileSync('spidey-app/fly-core.js','utf8'),sandbox);
 vm.runInContext(fs.readFileSync('spidey-app/trust-world-v1.js','utf8'),sandbox);
 const events=JSON.parse(fs.readFileSync('spidey-app/data/local-events.json','utf8')).events;
@@ -50,4 +51,36 @@ test('Taipei has two daily windows, closes overnight and never offers an unverif
   const crypto=require('node:crypto'),image=fs.readFileSync('spidey-app/'+taipei.official_media.file);
   assert.equal(crypto.createHash('sha256').update(image).digest('hex'),taipei.official_media.sha256);
   assert.equal(image.length,taipei.official_media.bytes);
+});
+
+test('the NFL venue copies the same point in the calendar and local event without becoming a PokéStop route',()=>{
+  const nfl=events.find(e=>e.id==='2026-10-11-nfl-cardinals-pokemon-go-day');
+  const main=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events.find(e=>e.id===nfl.id);
+  assert.deepEqual(main.locations,nfl.locations);
+  const location=nfl.locations[0],coordinates=sandbox.window.SpideyLocations.coordinateText(location);
+  assert.equal(location.coordinate_type,'venue_reference');
+  assert.equal(location.exact_pokestop_verified,false);
+  assert.equal(main.gpx.enabled,false);assert.equal(nfl.gpx.enabled,false);
+  assert.equal(sandbox.window.SpideyFlyCore.eligible(main),false);
+  assert.equal(new URL(world.mapUrl(location)).searchParams.get('query'),coordinates);
+  const html=world.locationRows(nfl);
+  assert.ok(html.includes(`data-local-coord="${coordinates}"`));
+  assert.ok(html.includes('Ponto do estádio'));
+  assert.ok(html.includes(location.address));
+});
+
+test('missing or invalid coordinates only offer the venue address, never a made-up zero point',()=>{
+  const base={id:'venue',name:'Local',address:'Endereço',access_note:'',coordinate_type:'venue_reference'};
+  for(const pair of [[null,null],['',''],['  ','  '],[true,false],['invalid',10],[91,10],[10,181],[Infinity,10]]){
+    const location={...base,latitude:pair[0],longitude:pair[1]};
+    assert.equal(sandbox.window.SpideyLocations.coordinateText(location),'');
+    assert.equal(new URL(world.mapUrl(location)).searchParams.get('query'),'Local, Endereço');
+    assert.ok(!world.locationRows({locations:[location]}).includes('data-local-coord'));
+  }
+});
+
+test('a valid equator point and negative longitude keep all six decimals in the map and copy value',()=>{
+  const location={latitude:0,longitude:-112.262363};
+  assert.equal(sandbox.window.SpideyLocations.coordinateText(location),'0.000000,-112.262363');
+  assert.equal(new URL(world.mapUrl(location)).searchParams.get('query'),'0.000000,-112.262363');
 });

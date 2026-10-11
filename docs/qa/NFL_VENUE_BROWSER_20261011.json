@@ -1,0 +1,456 @@
+{
+  "checked_at": "2026-10-11T21:21:54.586Z",
+  "mode": "local_static_pages_package",
+  "physical_android_tested": false,
+  "clipboard_check": "Browser click handler with a simulated clipboard; not physical Android.",
+  "external_requests_allowed": false,
+  "external_push_sends": 0,
+  "status": "PASSED",
+  "details": [
+    {
+      "width": 390,
+      "theme": "light",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "entry": "FLY local",
+      "text": "PRESENCIAL · GLENDALE, ARIZONA, ESTADOS UNIDOS\nPokémon GO Day · Arizona Cardinals × Detroit Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\n11 out 2026\n\nHOJE · HORÁRIO A CONFIRMAR\n\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\n\nAgora em Glendale: 11/10, 14:00\nBrasília: 11/10, 18:00\n\nOnde jogar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nCopiar coordenadas\nCopiar endereço\nAbrir mapa\nMais informações\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.\nAnúncio oficial ↗",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 1,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "entry": "FLY local",
+      "text": "PRESENCIAL · GLENDALE, ARIZONA, ESTADOS UNIDOS\nPokémon GO Day · Arizona Cardinals × Detroit Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\n11 out 2026\n\nHOJE · HORÁRIO A CONFIRMAR\n\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\n\nAgora em Glendale: 11/10, 14:00\nBrasília: 11/10, 18:00\n\nOnde jogar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nCopiar coordenadas\nCopiar endereço\nAbrir mapa\nMais informações\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.\nAnúncio oficial ↗",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 1,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "entry": "FLY local",
+      "text": "PRESENCIAL · GLENDALE, ARIZONA, ESTADOS UNIDOS\nPokémon GO Day · Arizona Cardinals × Detroit Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\n11 out 2026\n\nHOJE · HORÁRIO A CONFIRMAR\n\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\n\nAgora em Glendale: 11/10, 14:00\nBrasília: 11/10, 18:00\n\nOnde jogar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nCopiar coordenadas\nCopiar endereço\nAbrir mapa\nMais informações\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.\nAnúncio oficial ↗",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 1,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "entry": "Home/calendar/week",
+      "text": "EVENTO REGIONAL\nANÚNCIO OFICIAL\nPokémon GO Day · NFL Cardinals × Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\nHorários e locais\nHorário\n11/10/2026 · horário do evento a confirmar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\nCopiar coordenadas\nAbrir mapa\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nAnúncio oficial\nMais informações\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 2,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "entry": "FLY local",
+      "text": "PRESENCIAL · GLENDALE, ARIZONA, ESTADOS UNIDOS\nPokémon GO Day · Arizona Cardinals × Detroit Lions\n\nPokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.\n\n11 out 2026\n\nHOJE · HORÁRIO A CONFIRMAR\n\nPartida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.\n\nAgora em Glendale: 11/10, 14:00\nBrasília: 11/10, 18:00\n\nOnde jogar\nState Farm Stadium\n\n1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos\n\nPonto do estádio\n\n33.527056,-112.262363\n\nEntrada sujeita às regras e aos ingressos do estádio.\n\nCopiar coordenadas\nCopiar endereço\nAbrir mapa\nMais informações\nPikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time.\nAnúncio oficial ↗",
+      "coordinate": "33.527056,-112.262363",
+      "copy_value": "33.527056,-112.262363",
+      "map_query": "33.527056,-112.262363",
+      "coordinate_count": 1,
+      "gpx_buttons": 0,
+      "notes_count": 1,
+      "boxed_notes": 0,
+      "poster": {
+        "src": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png?v=5b560b3de9f2",
+        "width": 1122,
+        "height": 1402,
+        "objectFit": "contain"
+      },
+      "overflow": false,
+      "served_poster_sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
+      "clipboard_handler_passed": true
+    }
+  ],
+  "navigation": [
+    {
+      "width": 390,
+      "theme": "light",
+      "entry": "Calendar → NFL",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "entry": "Week → NFL",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "entry": "FLY local → NFL",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "entry": "Calendar → NFL",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "entry": "Week → NFL",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "entry": "FLY local → NFL",
+      "passed": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "entry": "Calendar → NFL",
+      "passed": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "entry": "Week → NFL",
+      "passed": true
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "entry": "FLY local → NFL",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "entry": "Calendar → NFL",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "entry": "Week → NFL",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "entry": "FLY local → NFL",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "docs/qa/proofs/nfl-venue-calendar-light-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-light-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-light-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-local-light-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-dark-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-dark-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-dark-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-local-dark-390-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-light-360-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-light-360-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-light-360-20261011.png",
+    "docs/qa/proofs/nfl-venue-local-light-360-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-dark-1280-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-dark-1280-20261011.png",
+    "docs/qa/proofs/nfl-venue-calendar-dark-1280-20261011.png",
+    "docs/qa/proofs/nfl-venue-local-dark-1280-20261011.png"
+  ]
+}
