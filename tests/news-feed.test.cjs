@@ -50,3 +50,18 @@ test('official Boston, Night Out and TCG announcements are available without mer
   assert.equal(story.event.source.confidence,'official',id);
  }
 });
+
+test('the confirmed Halloween Part II supersedes its community preview and keeps pass bonuses conditional',()=>{
+ const e=events.find(e=>e.id==='2026-11-halloween-part-2');
+ assert.equal(e.source.confidence,'official');
+ assert.equal(e.source.url,'https://pokemongo.com/pt-BR/news/halloween-part-2-2026');
+ assert.equal(e.schedule.start_local,'2026-11-01T10:00:00-03:00');
+ assert.equal(e.schedule.end_local,'2026-11-05T20:00:00-03:00');
+ assert.ok(!e.title.includes('em confirmação'));
+ assert.ok(e.pokemon.some(p=>p.name==='Greavard'&&p.note.includes('Brilhante')));
+ assert.ok(e.pokemon.some(p=>p.name==='Mega Sableye'&&p.note.includes('Sombra Noturna+')));
+ assert.match(e.bonuses[0],/Ranque 10/);assert.match(e.bonuses[1],/Ranque 20/);
+ assert.equal(e.gpx.enabled,false);
+ const story=build(events,range,new Date('2026-10-11T22:00:00Z')).find(s=>s.events.some(x=>x.id===e.id));
+ assert.ok(story);assert.equal(story.event.source.confidence,'official');
+});

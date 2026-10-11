@@ -546,19 +546,19 @@
     {
       "id": "2026-11-halloween-part-2:start:60",
       "event_id": "2026-11-halloween-part-2",
-      "event_title": "Halloween 2026: Parte II (em confirmação)",
+      "event_title": "Halloween 2026: Parte II",
       "category": "halloween",
       "scheduled_for": "2026-11-01T09:00:00-03:00",
       "event_start": "2026-11-01T10:00:00-03:00",
       "lead_minutes": 60,
       "title": "Spidey Pokémon GO",
-      "body": "Halloween 2026: Parte II (em confirmação) começa em cerca de 1 hora(s).",
+      "body": "Halloween 2026: Parte II começa em cerca de 1 hora(s).",
       "url": "./?event=2026-11-halloween-part-2",
       "status": "pending",
       "source": {
-        "name": "Leek Duck • agenda comunitária",
-        "url": "https://leekduck.com/events/halloween-2026-part-2/",
-        "confidence": "community"
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
+        "confidence": "official"
       }
     },
     {
@@ -620,7 +620,7 @@
       "id": "2026-11-pokexciting-singapore:start:60",
       "event_id": "2026-11-pokexciting-singapore",
       "event_title": "PokéXciting! Singapura 2026",
-      "category": "evento_especial",
+      "category": "regional_event",
       "scheduled_for": "2026-11-06T22:00:00-03:00",
       "event_start": "2026-11-06T23:00:00-03:00",
       "lead_minutes": 60,
