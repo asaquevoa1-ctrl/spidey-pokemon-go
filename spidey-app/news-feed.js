@@ -14,17 +14,19 @@
   function build(events,range,now=new Date()){
     const groups=new Map();
     for(const event of events){
-      const key=articleKey(event),dates=range(event);
-      if(event.status!=='published'||!key||!dates?.start||!dates?.end||dates.end<now)continue;
+      const newsOnly=event.content_type==='news';
+      const key=articleKey(event),dates=newsOnly?null:range(event);
+      if(event.status!=='published'||!key||(!newsOnly&&(!dates?.start||!dates?.end||dates.end<now)))continue;
       if(!groups.has(key))groups.set(key,{key,events:[]});
       groups.get(key).events.push(event);
     }
     return [...groups.values()].map(group=>{
-      group.events.sort((a,b)=>range(a).start-range(b).start||a.id.localeCompare(b.id));
+      const dated=e=>e.content_type==='news'?null:range(e);
+      group.events.sort((a,b)=>(dated(a)?.start?.getTime?.()||Number.MAX_SAFE_INTEGER)-(dated(b)?.start?.getTime?.()||Number.MAX_SAFE_INTEGER)||a.id.localeCompare(b.id));
       const event=group.events.find(e=>e.news?.title)||group.events[0];
       const updated=Math.max(0,...group.events.map(e=>Date.parse(e.updated_at||e.published_at||e.news?.published_on||'')||0));
       return {...group,event,title:event.news?.title||event.title,summary:event.news?.summary||event.summary,updated};
-    }).sort((a,b)=>b.updated-a.updated||range(a.events[0]).start-range(b.events[0]).start||a.key.localeCompare(b.key));
+    }).sort((a,b)=>b.updated-a.updated||a.key.localeCompare(b.key));
   }
   window.SpideyNews=Object.freeze({build});
 })();

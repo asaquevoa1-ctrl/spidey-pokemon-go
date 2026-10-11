@@ -182,7 +182,7 @@ function renderCalendar() {
   renderStats();
 }
 
-function renderEvents(events = state.events) {
+function renderEvents(events = state.events.filter((event) => event.content_type !== 'news')) {
   const sorted = [...events].sort((a, b) => (getBrazilRange(a).start?.getTime() || Number.MAX_SAFE_INTEGER) - (getBrazilRange(b).start?.getTime() || Number.MAX_SAFE_INTEGER));
   eventList.innerHTML = '';
   if (!sorted.length) {
@@ -395,6 +395,7 @@ function renderMapSummary() {
 function openEvent(event) {
   if (!event) return;
   beginAppDialog();
+  const newsOnly = event.content_type === 'news';
   detail.dataset.eventId = event.id;
   const localStart = parseDate(event.schedule?.start_local);
   const localEnd = parseDate(event.schedule?.end_local);
@@ -405,15 +406,15 @@ function openEvent(event) {
   const bonuses = event.bonuses || [];
   const pokemon = event.pokemon || [];
   detail.innerHTML = `
-    <img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">
+    ${newsOnly ? '' : `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">`}
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
       <h2>${event.public_title || event.title}</h2><p>${event.public_summary || event.summary || ''}</p>
-      <div class="info-grid">
+      ${newsOnly ? '' : `<div class="info-grid">
         <div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div>
         <div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>
       </div>
-      <h3>Coordenadas</h3>${locationRows(event)}
+      <h3>Coordenadas</h3>${locationRows(event)}`}
       <div class="action-row">
         ${event.gpx?.enabled !== false && (event.locations || []).length ? '<button id="downloadGpx" class="action-btn gold">Baixar GPX</button>' : ''}
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">${event.source.confidence === 'official' ? 'Anúncio oficial' : 'Ver fonte'}</a>` : ''}

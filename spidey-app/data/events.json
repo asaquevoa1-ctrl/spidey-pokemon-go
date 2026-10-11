@@ -2,6 +2,73 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-10-08-gameplay-quality-of-life",
+      "slug": "2026-10-08-gameplay-quality-of-life",
+      "content_type": "news",
+      "title": "Melhorias de jogabilidade já disponíveis",
+      "summary": "Células de Zygarde agora são entregues ao concluir a Rota, e o jogo ganhou proteção para transferências de Pokémon 100% IV e melhorias no mapa.",
+      "category": "game_update",
+      "tags": ["Novidade", "Rotas", "Zygarde", "Qualidade de vida"],
+      "source": {
+        "name": "Pokémon GO · anúncio oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/pgo-gameplay-update-oct-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [{"name": "Pokémon GO · anúncio oficial em inglês", "url": "https://pokemongo.com/news/pgo-gameplay-update-oct-2026", "confidence": "official"}],
+      "calendar": {"mode": "hidden"},
+      "presentation": {"requires_art": false, "fallback_visual": "none"},
+      "news": {
+        "title": "Pokémon GO recebe melhorias de jogabilidade",
+        "summary": "Células de Zygarde são entregues ao fim da Rota; transferências de Pokémon 100% IV pedem confirmação; mapa, ícones e check-in de encontros foram ajustados.",
+        "published_on": "2026-10-08"
+      },
+      "notes": [
+        "A chance de receber Células de Zygarde não mudou; uma Rota ainda pode terminar sem Célula.",
+        "Bússola e clima agora usam um único ícone dinâmico.",
+        "O mapa reduz sobreposição entre Pokémon, Ginásios, Pontos de Poder e Poképaradas.",
+        "O check-in de encontros de Embaixadores da Comunidade abre 15 minutos antes do início, no mapa do jogo ou no navegador."
+      ],
+      "notifications": {"enabled": false, "reason": "Novidade sem evento ou horário de início."},
+      "status": "published",
+      "verified_at": "2026-10-11",
+      "updated_at": "2026-10-11T23:17:00Z",
+      "audit": {"checked_on": "2026-10-11", "official_languages_checked": ["pt-BR", "en"]}
+    },
+    {
+      "id": "2026-10-08-dynamax-forms-datamine",
+      "slug": "2026-10-08-dynamax-forms-datamine",
+      "content_type": "news",
+      "title": "Meltan, Melmetal e Regidrago Dinamax · estreia a confirmar",
+      "summary": "A comunidade encontrou referências às formas Dinamax de Meltan, Melmetal e Regidrago. Não há anúncio oficial; estreia a confirmar.",
+      "category": "community_discovery",
+      "tags": ["Novidade", "Comunidade", "Dinamax", "A confirmar"],
+      "source": {
+        "name": "The PokéMod Group · repercussão comunitária no TheSilphRoad",
+        "url": "https://www.reddit.com/r/TheSilphRoad/comments/1x117ql/dynamax_forms_for_meltan_melmetal_and_regidrago/",
+        "confidence": "community"
+      },
+      "verification_sources": [{"name": "Pokémon GO Hub · acompanhamento comunitário de outubro", "url": "https://pokemongohub.net/post/event/october-2026-events/", "confidence": "community"}],
+      "calendar": {"mode": "hidden"},
+      "presentation": {"requires_art": false, "fallback_visual": "none"},
+      "news": {
+        "title": "Formas Dinamax encontradas nos dados do jogo",
+        "summary": "Meltan, Melmetal e Regidrago Dinamax aparecem em descoberta comunitária. Estreia, disponibilidade e detalhes continuam a confirmar.",
+        "published_on": "2026-10-08",
+        "source": {"name": "The PokéMod Group · fonte comunitária", "url": "https://www.reddit.com/r/TheSilphRoad/comments/1x117ql/dynamax_forms_for_meltan_melmetal_and_regidrago/", "confidence": "community"}
+      },
+      "notes": ["Não é anúncio oficial.", "Sem data, horário, bônus ou formato de obtenção confirmados."],
+      "pokemon": [
+        {"name": "Meltan Dinamax", "note": "referência comunitária; estreia a confirmar"},
+        {"name": "Melmetal Dinamax", "note": "referência comunitária; estreia a confirmar"},
+        {"name": "Regidrago Dinamax", "note": "referência comunitária; estreia a confirmar"}
+      ],
+      "notifications": {"enabled": false, "reason": "Descoberta comunitária sem data oficial; não gerar alerta."},
+      "status": "published",
+      "verified_at": "2026-10-11",
+      "updated_at": "2026-10-11T23:17:00Z",
+      "audit": {"checked_on": "2026-10-11", "classification": "community_unconfirmed"}
+    },
+    {
       "id": "festival-of-lights-2026-pokeminers-e2",
       "slug": "festival-das-luzes-2026-india",
       "status": "published",
