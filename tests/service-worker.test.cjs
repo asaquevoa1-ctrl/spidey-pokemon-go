@@ -38,3 +38,11 @@ test('notification clicks open the application scope and focus its own window', 
   w.listeners.notificationclick({ notification: { close() {}, data: { url: '?event=zorua' } }, waitUntil: p => { done = p; } }); await done;
   assert.deepEqual(navigated, ['https://spidey.test/spidey-app/?event=zorua']); assert.equal(focused, 1);
 });
+test('external backend availability and private API responses never enter the offline cache', () => {
+  const w = worker(); let handled = false;
+  for (const path of ['health', 'api/social', 'api/push/public-key']) {
+    w.listeners.fetch({ request: { method: 'GET', url: 'https://spidey-backend.example.workers.dev/' + path }, respondWith: () => { handled = true; } });
+  }
+  assert.equal(handled, false);
+  assert.equal(w.matches.length, 0);
+});

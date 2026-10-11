@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-11T19:02:18.590Z",
+  "environment": "local Chromium + local Workers runtime, synthetic data only",
+  "profiles": 2,
+  "checks": [
+    "optional consent, browser-generated keys and saved identity",
+    "friend invitation remains pending until accepted by recipient",
+    "both synthetic profiles encrypt, send, retrieve and decrypt messages in the browser",
+    "non-exportable identity survives page reload through IndexedDB",
+    "blocking removes the other profile conversation entry",
+    "both fictional profiles and conversation are removed by the UI"
+  ],
+  "screenshots": [
+    "spidey-backend-chat-dark-390-20261011.png",
+    "spidey-backend-chat-light-390-20261011.png",
+    "spidey-backend-friends-light-1280-20261011.png"
+  ],
+  "external_push_sends": 0,
+  "physical_android_tested": false,
+  "page_errors": [],
+  "ok": true
+}

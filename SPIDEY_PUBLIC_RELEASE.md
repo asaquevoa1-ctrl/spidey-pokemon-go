@@ -1,5 +1,9 @@
 # Spidey — versão web publicada, estado de 08/10/2026
 
+## 11/10/2026 — candidato: alertas e Amigos/chat com serviço adicional
+
+Código preparado na branch `feat/free-backend-20261011`, mantendo o endereço GitHub Pages. Servidor Cloudflare Workers Free/SQLite, cron e retomada de lotes, cadastro opcional e chat cifrado; integração continua desativada até publicação e saúde verificadas. Testes de runtime com dados fictícios e prévia Chromium com dois perfis passaram; nenhum envio real ou leitura de dados de jogadores. Acesso à conta Cloudflare, revisão/publicação da prévia e teste físico Android continuam pendentes. O candidato não equivale a recuperação dos alertas em produção. Guia: [SPIDEY_FREE_BACKEND.md](SPIDEY_FREE_BACKEND.md), implantação: [services/spidey-backend/README.md](services/spidey-backend/README.md).
+
 ## 08/10/2026 — candidato: rota imediata na Home e PokéXciting! Taipei
 
 Correção da perda de visibilidade apontada por Anderson: a Home mostra localidades ativas e próximas, relógios local/Brasília, coordenadas e mapa imediatamente abaixo do destaque. O evento global permanece visível enquanto existir uma janela mundial ativa. Taipei (10–11/10, 10h–22h locais) entrou no calendário, Semana e eventos locais com duas janelas diárias, Pikachu rosa, selos e Gigamax confirmados nas fontes oficiais. Ilustração original Pokémon Asia, creditada e sem promoção a Premium; cinco coordenadas de selos não confirmadas mantêm GPX bloqueado. Os 136 eventos anteriores, 35 entradas aprovadas/34 originais, geografia 20/28, quatro coleções e PvP permanecem preservados.

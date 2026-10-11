@@ -45,7 +45,20 @@ def read_analytics(root: Path) -> dict:
     return data
 
 
-def prepare_shell(text: str, analytics: dict) -> str:
+def read_backend(root: Path) -> dict:
+    path = root / 'config/spidey-backend.json'
+    data = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {
+        'enabled': False, 'url': None, 'hosting': 'cloudflare-workers'}
+    if not isinstance(data, dict) or set(data) != {'enabled', 'url', 'hosting'} or type(data['enabled']) is not bool or data['hosting'] != 'cloudflare-workers':
+        raise ValueError('Configuração do serviço adicional inválida')
+    if data['enabled'] and (not isinstance(data['url'], str) or not re.fullmatch(r'https://[a-z0-9-]+\.[a-z0-9-]+\.workers\.dev', data['url'])):
+        raise ValueError('O serviço exige um endereço HTTPS permanente de Cloudflare Workers')
+    if not data['enabled'] and data['url'] is not None:
+        raise ValueError('Serviço desativado deve manter URL nula')
+    return data
+
+
+def prepare_shell(text: str, analytics: dict, backend: dict | None = None) -> str:
     if text.count('</head>') != 1 or text.count('</body>') != 1 or 'http-equiv="Content-Security-Policy"' in text:
         raise ValueError('Cabeçalho HTML mudou; revisar a política de segurança')
     policy, provider = POLICY, 'off'
@@ -58,7 +71,11 @@ def prepare_shell(text: str, analytics: dict) -> str:
         provider = 'cloudflare'
         loader = '<script src="web-analytics.js?v=20261008-analytics1" data-site-token="' + analytics['site_token'] + '" defer></script>\n'
         text = text.replace('</body>', loader + '</body>')
+    backend_url = backend['url'] if backend and backend['enabled'] else 'off'
+    if backend_url != 'off':
+        policy = policy.replace("connect-src 'self'", "connect-src 'self' " + backend_url)
     metadata = ('<meta name="referrer" content="no-referrer">\n'
+                '<meta name="spidey-backend" content="' + backend_url + '">\n'
                 '<meta name="spidey-web-analytics" content="' + provider + '">\n'
                 '<meta http-equiv="Content-Security-Policy" content="' + html.escape(policy, quote=True) + '">\n')
     return text.replace('</head>', metadata + '</head>')
@@ -99,6 +116,7 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
         raise ValueError('Diretório de saída precisa ser separado da fonte')
     result = verify_public_data(app, today)
     analytics = read_analytics(root)
+    backend = read_backend(root)
     if output.exists() and any(output.iterdir()) and not (output / '.spidey-pages-generated').is_file():
         raise ValueError('A saída contém arquivos que não foram gerados por este script')
     if output.exists():
@@ -115,6 +133,9 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
         target = published / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(file, target)
+    public_config = json.dumps(backend, ensure_ascii=False, separators=(',', ':'))
+    (published / 'backend-config.json').write_text(public_config + '\n', encoding='utf-8')
+    (published / 'backend-config.js').write_text('self.SPIDEY_BACKEND = Object.freeze(' + public_config + ');\n', encoding='utf-8')
     catalog = published / 'catalog.js'
     text = catalog.read_text(encoding='utf-8')
     if text.count(CATALOG_REQUEST) != 1:
@@ -141,8 +162,9 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
                       + text[core_match.end(1):], encoding='utf-8')
     index = published / 'index.html'
     text = index.read_text(encoding='utf-8')
-    index.write_text(prepare_shell(text, analytics), encoding='utf-8')
+    index.write_text(prepare_shell(text, analytics, backend), encoding='utf-8')
     result['web_analytics'] = {'enabled': analytics['enabled'], 'provider': 'cloudflare' if analytics['enabled'] else None}
+    result['backend'] = backend
     # Public availability only. No subscription store, registration or dispatch exists here.
     key = published / 'api/push/public-key'
     key.parent.mkdir(parents=True, exist_ok=True)

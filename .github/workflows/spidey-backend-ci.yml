@@ -1,0 +1,31 @@
+name: Spidey Backend - validar sem publicar
+on:
+  push:
+    branches: [main, 'feat/free-backend-*']
+    paths: ['services/spidey-backend/**', 'spidey-app/social*', 'spidey-app/backend*', 'scripts/*spidey_backend.py', '.github/workflows/spidey-backend-ci.yml']
+  pull_request:
+    paths: ['services/spidey-backend/**', 'spidey-app/social*', 'spidey-app/backend*', 'scripts/*spidey_backend.py', '.github/workflows/spidey-backend-ci.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: services/spidey-backend/package-lock.json
+      - name: Instalar ferramentas fixadas
+        run: npm ci --no-audit --no-fund --prefix services/spidey-backend
+      - name: Compilar sem publicar
+        run: npm run check --prefix services/spidey-backend
+        env:
+          WRANGLER_SEND_METRICS: 'false'
+      - name: Testar Worker com armazenamento e entregas fictícios
+        run: npm test --prefix services/spidey-backend
+      - name: Testar interface, criptografia e pacote estático
+        run: |
+          node --test tests/social.test.cjs tests/push-flow.test.cjs tests/service-worker.test.cjs tests/backend-client.test.cjs
+          python -m unittest scripts.test_spidey_pages scripts.test_app_health
