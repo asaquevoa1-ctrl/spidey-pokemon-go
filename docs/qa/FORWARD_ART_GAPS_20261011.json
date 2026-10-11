@@ -1,0 +1,869 @@
+{
+  "checked_at": "2026-10-11T19:16:14.292693-03:00",
+  "scope": "All public catalog entries overlapping Brazilian calendar dates, including catalog entries hidden from the calendar; events can overlap several periods.",
+  "approved_entries": 50,
+  "unique_approved_images": 41,
+  "periods": [
+    {
+      "period": "11–18/10",
+      "start_date": "2026-10-11",
+      "end_date": "2026-10-18",
+      "all_catalog_events": 25,
+      "with_premium": 12,
+      "without_premium": 13,
+      "missing": [
+        {
+          "event_id": "2026-09-adidas-avatar-research",
+          "title": "Pesquisa adidas × Pokémon",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/pokemon-x-adidas-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-25",
+            "2027-01-15"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-09-tcg-30th-us-retail",
+          "title": "Celebração de 30 anos do Pokémon TCG",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-27",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-apac-mall-exploration",
+          "title": "Pokémon 30: exploração de shoppings na Ásia",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/apac-mall-exploration-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-30",
+            "2027-03-28"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-sandile-hatch-day",
+          "title": "Dia de Chocar: Sandile",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-17",
+            "2026-10-17"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-15-spotlight-stufful",
+          "title": "Spotlight Hour: Stufful",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-15",
+            "2026-10-15"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-14-raid-hour-dialga",
+          "title": "Raid Hour: Dialga",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-14",
+            "2026-10-14"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-12-max-monday-rookidee",
+          "title": "Max Monday: Dynamax Rookidee",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-12",
+            "2026-10-12"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-raids-dialga",
+          "title": "Reides 5★: Dialga",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-14",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-mega-dragonite-raids",
+          "title": "Mega Reides: Mega Dragonite",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-14",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-gbl-13-20",
+          "title": "GO Battle League: Great / Ultra Mega / Little Cup",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-13",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-shadow-landorus-10",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-10",
+            "2026-10-11"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-shadow-landorus-17",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-17",
+            "2026-10-18"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-pokexciting-taipei",
+          "title": "PokéXciting! Taipei · Pikachu rosa",
+          "source": {
+            "name": "Pokémon GO · anúncio oficial",
+            "url": "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-09",
+            "2026-10-11"
+          ],
+          "calendar_hidden": false,
+          "official_media": true
+        }
+      ]
+    },
+    {
+      "period": "outubro restante",
+      "start_date": "2026-10-11",
+      "end_date": "2026-10-31",
+      "all_catalog_events": 53,
+      "with_premium": 20,
+      "without_premium": 33,
+      "missing": [
+        {
+          "event_id": "2026-09-adidas-avatar-research",
+          "title": "Pesquisa adidas × Pokémon",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/pokemon-x-adidas-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-25",
+            "2027-01-15"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-09-tcg-30th-us-retail",
+          "title": "Celebração de 30 anos do Pokémon TCG",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-27",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-apac-mall-exploration",
+          "title": "Pokémon 30: exploração de shoppings na Ásia",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/apac-mall-exploration-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-30",
+            "2027-03-28"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-sandile-hatch-day",
+          "title": "Dia de Chocar: Sandile",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-17",
+            "2026-10-17"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-dynamax-max-battle-day",
+          "title": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-24",
+            "2026-10-24"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-pokemon-night-out-twitch",
+          "title": "Pokémon Night Out: recompensa na Twitch",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/pokemon-night-out-twitch-drops2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-24",
+            "2026-10-24"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-city-safari-boston-rescheduled",
+          "title": "City Safari Boston remarcado",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-24",
+            "2026-10-25"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-halloween-go-pass",
+          "title": "Passe GO: Halloween 2026",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/halloween-part-1-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-27",
+            "2026-11-05"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-super-mega-raid-day",
+          "title": "Dia de Super Megarreides",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-31",
+            "2026-10-31"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-15-spotlight-stufful",
+          "title": "Spotlight Hour: Stufful",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-15",
+            "2026-10-15"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-22-spotlight-morelull",
+          "title": "Spotlight Hour: Morelull",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-22",
+            "2026-10-22"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-29-spotlight-gastly",
+          "title": "Spotlight Hour: Gastly",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-29",
+            "2026-10-29"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-14-raid-hour-dialga",
+          "title": "Raid Hour: Dialga",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-14",
+            "2026-10-14"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-21-raid-hour-palkia",
+          "title": "Raid Hour: Palkia",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-21",
+            "2026-10-21"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
+          "title": "Raid Hour: Giratina Forma Origem",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-28",
+            "2026-10-28"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-12-max-monday-rookidee",
+          "title": "Max Monday: Dynamax Rookidee",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-12",
+            "2026-10-12"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-19-max-monday-sneasel",
+          "title": "Max Monday: Dynamax Sneasel",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-19",
+            "2026-10-19"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-26-max-monday-sableye",
+          "title": "Max Monday: Dynamax Sableye",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-26",
+            "2026-10-26"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-raids-dialga",
+          "title": "Reides 5★: Dialga",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-14",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-raids-palkia",
+          "title": "Reides 5★: Palkia",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-21",
+            "2026-10-27"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-raids-giratina-origin",
+          "title": "Reides 5★: Giratina (Forma Origem)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-28",
+            "2026-11-03"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-mega-dragonite-raids",
+          "title": "Mega Reides: Mega Dragonite",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-14",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-mega-charizard-xy-raids",
+          "title": "Mega Reides: Mega Charizard X e Y",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-21",
+            "2026-10-27"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-mega-sableye-raids",
+          "title": "Mega Reides: Mega Sableye",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-28",
+            "2026-11-03"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-gbl-13-20",
+          "title": "GO Battle League: Great / Ultra Mega / Little Cup",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-13",
+            "2026-10-20"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-gbl-20-27",
+          "title": "GO Battle League: Ultra / Master Mega / Fantasy Cup",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-20",
+            "2026-10-27"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-gbl-27-1103",
+          "title": "GO Battle League: Master / Mega Halloween Cup",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-27",
+            "2026-11-03"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-shadow-landorus-10",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-10",
+            "2026-10-11"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-shadow-landorus-17",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-17",
+            "2026-10-18"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-shadow-landorus-24",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-24",
+            "2026-10-25"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-shadow-landorus-31",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-minior-orionids",
+          "title": "Minior: chuva de meteoros Orionidas",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-19",
+            "2026-10-24"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-pokexciting-taipei",
+          "title": "PokéXciting! Taipei · Pikachu rosa",
+          "source": {
+            "name": "Pokémon GO · anúncio oficial",
+            "url": "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-09",
+            "2026-10-11"
+          ],
+          "calendar_hidden": false,
+          "official_media": true
+        }
+      ]
+    },
+    {
+      "period": "novembro",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-30",
+      "all_catalog_events": 17,
+      "with_premium": 8,
+      "without_premium": 9,
+      "missing": [
+        {
+          "event_id": "2026-09-adidas-avatar-research",
+          "title": "Pesquisa adidas × Pokémon",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/pokemon-x-adidas-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-25",
+            "2027-01-15"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-apac-mall-exploration",
+          "title": "Pokémon 30: exploração de shoppings na Ásia",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/apac-mall-exploration-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-09-30",
+            "2027-03-28"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-halloween-go-pass",
+          "title": "Passe GO: Halloween 2026",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/halloween-part-1-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-27",
+            "2026-11-05"
+          ],
+          "calendar_hidden": true,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-raids-giratina-origin",
+          "title": "Reides 5★: Giratina (Forma Origem)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-28",
+            "2026-11-03"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-mega-sableye-raids",
+          "title": "Mega Reides: Mega Sableye",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-28",
+            "2026-11-03"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-gbl-27-1103",
+          "title": "GO Battle League: Master / Mega Halloween Cup",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-10-27",
+            "2026-11-03"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-10-shadow-landorus-31",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "dates": [
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-11-minior-leonids",
+          "title": "Minior: chuva de meteoros Leônidas",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-11-14",
+            "2026-11-19"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        },
+        {
+          "event_id": "2026-11-pokexciting-singapore",
+          "title": "PokéXciting! Singapura 2026",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+            "confidence": "official"
+          },
+          "dates": [
+            "2026-11-06",
+            "2026-11-08"
+          ],
+          "calendar_hidden": false,
+          "official_media": false
+        }
+      ]
+    }
+  ],
+  "remaining_work": true,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ]
+}

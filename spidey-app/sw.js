@@ -1,5 +1,8 @@
-const CACHE = 'spidey-app-20261011-player-text-v1';
+const CACHE = 'spidey-app-20261011-forward-art-v1';
 const CORE = [
+  './assets/events/premium/bramblin-20261011-approved-v1.png',
+  './assets/events/premium/halloween2-20261011-approved-v1.png',
+
   './date-only.js',
   './event-locations.js',
   './assets/events/premium/scenic-sunday-october-2026-approved-v1.png',

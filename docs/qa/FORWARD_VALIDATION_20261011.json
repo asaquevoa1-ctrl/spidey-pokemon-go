@@ -1,0 +1,44 @@
+{
+  "status": "VALIDATED_FOR_PUBLICATION",
+  "checked_at": "2026-10-11T22:18:26.430490+00:00",
+  "base_sha": "feb1c716a3288b387d5441147e6f85789fa208aa",
+  "node_tests": {
+    "passed": 97,
+    "failed": 0
+  },
+  "python_tests": {
+    "passed": 22,
+    "failed": 0
+  },
+  "browser": {
+    "candidate_checks": 18,
+    "approved_checks": 18,
+    "candidate_navigations": 12,
+    "approved_navigations": 12,
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "mode": "Local static package with future Weekly fixtures; not public visual certification"
+  },
+  "changed_event_ids": [
+    "2026-10-fall-marathon-buddy-trek",
+    "2026-11-halloween-part-2",
+    "2026-11-pokexciting-singapore"
+  ],
+  "event_count": 138,
+  "master_entries": 50,
+  "unique_images": 41,
+  "prior_master_entries_preserved": 48,
+  "new_artworks": 2,
+  "physical_android_tested": false,
+  "public_deployment_verified": false,
+  "push_sends": 0,
+  "personal_data_read": false,
+  "source_record": "docs/qa/FORWARD_SCAN_20261011.json",
+  "remaining_work_record": "docs/qa/FORWARD_ART_GAPS_20261011.json"
+}

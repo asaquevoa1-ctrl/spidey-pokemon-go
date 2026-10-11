@@ -462,6 +462,28 @@
     "height": 1402,
     "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
     "approval_record": "docs/qa/CONTENT_NFL_APPROVAL_20261011.json"
+  },
+  "2026-10-fall-marathon-buddy-trek": {
+    "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+    "approval_record": "docs/qa/FORWARD_ART_APPROVAL_20261011.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-11-halloween-part-2": {
+    "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+    "approval_record": "docs/qa/FORWARD_ART_APPROVAL_20261011.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

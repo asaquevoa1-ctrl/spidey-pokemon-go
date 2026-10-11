@@ -53,3 +53,20 @@ test('missing points and invalid event hours cannot claim a locality is active',
   assert.equal(world.model(invalid,points).rows.length,0);
   assert.ok(world.render(invalid,points).includes('ainda não estão confirmados'));
 });
+
+test('Singapore keeps two local daytime sessions and never stays active overnight or opens a global route',()=>{
+  const w=setup(),singapore=events.find(e=>e.id==='2026-11-pokexciting-singapore');
+  const windows=w.SpideyWorldRoute.windows(singapore,points);
+  assert.equal(windows.length,2);
+  assert.equal(windows[0].start.toISOString(),'2026-11-07T02:00:00.000Z');
+  assert.equal(windows[0].end.toISOString(),'2026-11-07T14:00:00.000Z');
+  assert.equal(windows[1].start.toISOString(),'2026-11-08T02:00:00.000Z');
+  assert.equal(windows[1].end.toISOString(),'2026-11-08T14:00:00.000Z');
+  assert.equal(w.SpideyFlyCore.eligible(singapore),false);
+  const ongoing={...events.find(e=>e.id==='2026-10-world-space-week'),schedule:{start_local:'2026-11-06T10:00:00-03:00',end_local:'2026-11-09T20:00:00-03:00',start_brazil:'2026-11-06T10:00:00-03:00',end_brazil:'2026-11-09T20:00:00-03:00'}};
+  const night=w.SpideyPlayer.homeSelection([singapore,ongoing],points,new Date('2026-11-07T18:00:00Z'));
+  assert.ok(!night.active.some(e=>e.id===singapore.id));assert.ok(night.upcoming.some(e=>e.id===singapore.id));
+  const next=w.SpideyPlayer.homeSelection([singapore,ongoing],points,new Date('2026-11-08T02:00:00Z'));
+  assert.ok(next.active.some(e=>e.id===singapore.id));
+  assert.ok(!w.SpideyPlayer.time(singapore).includes('Asia/Singapore'));
+});

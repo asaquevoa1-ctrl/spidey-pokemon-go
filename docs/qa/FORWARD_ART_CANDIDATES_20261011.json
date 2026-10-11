@@ -1,0 +1,48 @@
+{
+  "schema_version": "spidey-forward-candidates-v1",
+  "status": "PENDING_REVIEW",
+  "created_at": "2026-10-11T22:09:00.409930+00:00",
+  "generation": "builtin imagegen, derivative copies of the approved layout; no prior original was overwritten",
+  "artworks": [
+    {
+      "key": "bramblin",
+      "event_ids": [
+        "2026-10-fall-marathon-buddy-trek"
+      ],
+      "file": "spidey-app/assets/events/review/forward-bramblin-20261011-v1.png",
+      "candidate_file": "spidey-app/assets/events/review/forward-bramblin-20261011-v1.png",
+      "approved_file": "spidey-app/assets/events/premium/bramblin-20261011-approved-v1.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+      "bytes": 2685727,
+      "initial_visual_check": "PASS: correct subject anatomy, official brand, accurate dates/local hours, legible full poster, no URLs or unverified claims."
+    },
+    {
+      "key": "halloween2",
+      "event_ids": [
+        "2026-11-halloween-part-2"
+      ],
+      "file": "spidey-app/assets/events/review/forward-halloween2-20261011-v1.png",
+      "candidate_file": "spidey-app/assets/events/review/forward-halloween2-20261011-v1.png",
+      "approved_file": "spidey-app/assets/events/premium/halloween2-20261011-approved-v1.png",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+      "bytes": 2452101,
+      "initial_visual_check": "PASS: correct subject anatomy, official brand, accurate dates/local hours, legible full poster, no URLs or unverified claims."
+    }
+  ],
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "individual_human_approval_claimed": false,
+  "source_record": "docs/qa/FORWARD_SCAN_20261011.json",
+  "prompt_record": "docs/qa/FORWARD_ART_PROMPTS_20261011.json",
+  "public_deployment_verified": false,
+  "physical_android_tested": false
+}

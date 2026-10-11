@@ -1,0 +1,880 @@
+{
+  "checked_at": "2026-10-11T22:14:02.841Z",
+  "mode": "approved_static_pages_package",
+  "future_weekly_fixtures": true,
+  "physical_android_tested": false,
+  "external_requests_allowed": false,
+  "push_sends": 0,
+  "status": "PASSED",
+  "art_checks": [
+    {
+      "width": 1122,
+      "theme": "light",
+      "entry": "detail",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "light",
+      "entry": "calendar",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "light",
+      "entry": "weekly",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "light",
+      "entry": "detail",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "light",
+      "entry": "calendar",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "light",
+      "entry": "weekly",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "detail",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "calendar",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "weekly",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "detail",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "calendar",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "weekly",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "detail",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "calendar",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "weekly",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "src": "assets/events/premium/bramblin-20261011-approved-v1.png?v=a967e70072fc",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "EVENTO ESPECIAL\nPikachu\nANÚNCIO OFICIAL\nMaratona das Folhas: Caminhada Companheira\n\nEvento com estreia de Bramblin e progressão do GO Pass temático.\n\nHorários\nHorário\n13 de out., 10:00 → 19 de out., 20:00\nAnúncio oficial\nPokémon em destaque\nBramblin — estreia em tarefas do Passe GO, Incenso e algumas Pesquisas de campo\nPikachu com viseira de maratona — recompensa da Pesquisa temporária gratuita\nMega Manectric — estreia do nível Super Max e do ataque carregado Discharge+\nBônus e informações\nChance aumentada de Electrike Brilhante.\nDe 16/10 às 10h até 19/10 às 20h locais: chance aumentada de Growlithe de Hisui Brilhante pelo Incenso.\nNo Ranque 10 do Passe: Incenso comum ativado durante o evento dura duas horas.\nNo Ranque 20 do Passe: 5× Energia de Mega Manectric ao explorar com Electrike ou Manectric como companheiro, após Mega Evoluir Manectric ao menos uma vez.\nMais informações\nO primeiro grupo do Incenso vai de 13/10 às 10h até 16/10 às 10h locais; o segundo vai até 19/10 às 20h locais.\nA Pesquisa temporária gratuita entrega 16.800 PE e Pikachu com viseira de maratona; conclua e resgate até 19/10 às 20h locais.\nRecompensas liberadas no Passe GO expiram em 21/10 às 20h locais.",
+      "roles": [
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "detail",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "calendar",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    },
+    {
+      "width": 1122,
+      "theme": "dark",
+      "entry": "weekly",
+      "event_id": "2026-11-halloween-part-2",
+      "src": "assets/events/premium/halloween2-20261011-approved-v1.png?v=c26d617a61c7",
+      "height": 1402,
+      "fit": "contain",
+      "hidden": false,
+      "overflow": false,
+      "focus": "dialogBackButton",
+      "scrollTop": 0,
+      "text": "HALLOWEEN\nSableye\nANÚNCIO OFICIAL\nHalloween 2026: Parte II\n\nGreavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.\n\nHorários\nHorário\n01 de nov., 10:00 → 05 de nov., 20:00\nAnúncio oficial\nPokémon em destaque\nGreavard — estreia da versão Brilhante; natureza, Passe GO e Pesquisa de campo\nMega Sableye — Super Nível Máximo e Sombra Noturna+\nLitwick — natureza; pode aparecer Brilhante\nRowlet com fantasia de Dia das Bruxas — natureza; pode aparecer Brilhante\nGengar com fantasia do Festival Arrepiante — encontro mais raro na natureza; pode aparecer Brilhante\nPikachu com chapéu e pelerine — reides de uma estrela; pode aparecer Brilhante\nSinistea com laço — reides de uma estrela; pode aparecer Brilhante\nBônus e informações\nPasse GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.\nPasse GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.\nPesquisas de campo temáticas dão encontros com Pokémon do evento.\nMais informações\nGreavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.\nMega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.\nResgate as recompensas do Passe GO até 7/11 às 20h, no horário local.",
+      "roles": [
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:thumb"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:card"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:hero"
+        },
+        {
+          "file": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "sourceRole": "premium_catalog:poster"
+        }
+      ],
+      "approved": true,
+      "served_sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8"
+    }
+  ],
+  "navigation": [
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "entry": "Calendar",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "entry": "Week with future generated fixture",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-11-halloween-part-2",
+      "entry": "Calendar",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "event_id": "2026-11-halloween-part-2",
+      "entry": "Week with future generated fixture",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "entry": "Calendar",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "entry": "Week with future generated fixture",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-11-halloween-part-2",
+      "entry": "Calendar",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "event_id": "2026-11-halloween-part-2",
+      "entry": "Week with future generated fixture",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "entry": "Calendar",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "event_id": "2026-10-fall-marathon-buddy-trek",
+      "entry": "Week with future generated fixture",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "event_id": "2026-11-halloween-part-2",
+      "entry": "Calendar",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "event_id": "2026-11-halloween-part-2",
+      "entry": "Week with future generated fixture",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "docs/qa/proofs/forward-approved-bramblin-light-390-20261011.png",
+    "docs/qa/proofs/forward-approved-halloween2-light-390-20261011.png",
+    "docs/qa/proofs/forward-approved-bramblin-dark-390-20261011.png",
+    "docs/qa/proofs/forward-approved-halloween2-dark-390-20261011.png",
+    "docs/qa/proofs/forward-approved-bramblin-dark-1280-20261011.png",
+    "docs/qa/proofs/forward-approved-halloween2-dark-1280-20261011.png"
+  ]
+}
