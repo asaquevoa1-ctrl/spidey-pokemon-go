@@ -1,6 +1,7 @@
-const CACHE = 'spidey-app-20261011-content-premium-v1';
+const CACHE = 'spidey-app-20261011-player-text-v1';
 const CORE = [
   './date-only.js',
+  './event-locations.js',
   './assets/events/premium/scenic-sunday-october-2026-approved-v1.png',
   './assets/events/premium/showcase-tuesday-october-2026-approved-v1.png',
   './assets/events/premium/go-battle-thursday-october-2026-approved-v1.png',

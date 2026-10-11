@@ -52,10 +52,10 @@
     });
   }
   function mapUrl(location) {
-    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${location.name}, ${location.address}`)}`;
+    return window.SpideyLocations.mapUrl(location);
   }
   function locationRows(event) {
-    return event.locations.map(location=>`<article class="world-location" data-local-venue="${esc(location.id)}"><h3>${esc(location.name)}</h3><p>${esc(location.address)}</p><p class="microcopy">${esc(location.access_note)}</p><div class="world-location-actions"><button class="action-btn" data-local-copy="${esc(location.address)}">Copiar endereço</button><a class="action-btn" href="${esc(mapUrl(location))}" target="_blank" rel="noopener">Abrir mapa</a></div></article>`).join('');
+    return event.locations.map(location=>{const coordinates=window.SpideyLocations.coordinateText(location);return `<article class="world-location" data-local-venue="${esc(location.id)}"><h3>${esc(location.name)}</h3><p>${esc(location.address)}</p>${coordinates?`<p class="microcopy">${esc(location.coordinate_label||'Local do evento')}</p><code class="venue-coordinate-value">${esc(coordinates)}</code>`:''}<p class="microcopy">${esc(location.access_note)}</p><div class="world-location-actions">${coordinates?`<button class="action-btn" data-local-coord="${esc(coordinates)}">Copiar coordenadas</button>`:''}<button class="action-btn" data-local-copy="${esc(location.address)}">Copiar endereço</button><a class="action-btn" href="${esc(mapUrl(location))}" target="_blank" rel="noopener">Abrir mapa</a></div></article>`}).join('');
   }
   function openLocalEvent(id) {
     const event=worldEvents.find(e=>e.id===id);if(!event?.schedule)return;
@@ -64,7 +64,7 @@
     detail.dataset.eventId = event.id;
     detail.classList.remove('spidey-detail-v3','player-art-unavailable','v23-no-hero');
     delete detail.dataset.visualCategory;delete detail.dataset.visualCharacter;
-    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · ${esc(event.place.toUpperCase())}</span><h2>${esc(event.detail_title||event.title)}</h2>${posterFigure(event)}${backgroundFigure(event)}${event.official_media?`<figure class="space-official-figure"><img src="${esc(event.official_media.file)}?v=${esc(event.official_media.sha256.slice(0,12))}" width="${event.official_media.width}" height="${event.official_media.height}" alt="${esc(event.official_media.alt)}"><figcaption>Ilustração oficial · ${esc(event.official_media.credit)}</figcaption></figure>`:''}<p>${esc(event.note)}</p><p>${esc(event.dates)}</p><div class="world-event-window" data-local-window="${esc(event.id)}">${scheduleText(event)}</div>${event.schedule.recurrence==='daily'?`<p class="microcopy">Atividades no jogo: ${esc(dailyHours(event))}. Brasília é calculada para cada dia, respeitando o fuso e o horário de verão quando aplicável.</p>`:''}<p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div><h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener noreferrer">Anúncio oficial ↗</a>${event.location_background?`<p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener noreferrer">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener noreferrer">Serebii ↗</a>.</p>`:''}</div>`;
+    detail.innerHTML=`<div class="detail-body world-local-detail" data-local-detail="${esc(id)}"><span class="eyebrow">PRESENCIAL · ${esc(event.place.toUpperCase())}</span><h2>${esc(event.detail_title||event.title)}</h2>${posterFigure(event)}${backgroundFigure(event)}${event.official_media?`<figure class="space-official-figure"><img src="${esc(event.official_media.file)}?v=${esc(event.official_media.sha256.slice(0,12))}" width="${event.official_media.width}" height="${event.official_media.height}" alt="${esc(event.official_media.alt)}"><figcaption>Ilustração oficial · ${esc(event.official_media.credit)}</figcaption></figure>`:''}<p>${esc(event.note)}</p><p>${esc(event.dates)}</p><div class="world-event-window" data-local-window="${esc(event.id)}">${scheduleText(event)}</div>${event.schedule.recurrence==='daily'?`<p class="microcopy">Atividades no jogo: ${esc(dailyHours(event))}.</p>`:''}<p class="world-local-clock">${liveClock(event)}</p><h3>Onde jogar</h3><div class="world-location-list">${locationRows(event)}</div>${event.bonuses?.length?`<h3>Também acontece no evento</h3><ul class="bonus-list">${event.bonuses.map(text=>`<li>${esc(text)}</li>`).join('')}</ul>`:''}${event.notes?.length?`<h3>Mais informações</h3><ul class="event-notes">${event.notes.map(text=>`<li>${esc(text)}</li>`).join('')}</ul>`:''}<a class="action-btn" href="${esc(event.source.url)}" target="_blank" rel="noopener noreferrer">Anúncio oficial ↗</a>${event.location_background?`<p class="world-background-credit">Fundo do jogo: <a href="${esc(event.location_background.source_url)}" target="_blank" rel="noopener noreferrer">PokeMiners ↗</a>. Cidade conferida no <a href="${esc(event.location_background.city_mapping_url)}" target="_blank" rel="noopener noreferrer">Serebii ↗</a>.</p>`:''}</div>`;
     showAppDialog();dialog.scrollTop=0;detail.scrollTop=0;
     document.getElementById('closeDialog')?.focus({preventScroll:true});
   }
@@ -89,8 +89,8 @@
     reload();window.addEventListener('spideycatalogchecked',reload);
     document.addEventListener('click',async event=>{
       const open=event.target.closest('[data-open-local-event]');if(open){openLocalEvent(open.dataset.openLocalEvent);return}
-      const copy=event.target.closest('[data-local-copy]');if(!copy)return;
-      try{await navigator.clipboard.writeText(copy.dataset.localCopy);showToast('Endereço copiado.')}catch{showToast('Não foi possível copiar. Use o mapa do local.')}
+      const copy=event.target.closest('[data-local-copy], [data-local-coord]');if(!copy)return;
+      try{await navigator.clipboard.writeText(copy.dataset.localCoord||copy.dataset.localCopy);showToast(copy.dataset.localCoord?'Coordenadas copiadas.':'Endereço copiado.')}catch{showToast('Não foi possível copiar. Use o mapa do local.')}
     });
     window.addEventListener('spideycontentready',mountLocalFly);
     setInterval(updateClocks,60000);

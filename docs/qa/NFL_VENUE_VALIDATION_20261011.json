@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-11T21:22:42.656653+00:00",
+  "status": "VALIDATED_FOR_PUBLICATION",
+  "base_sha": "9a13df4f01fb12a1d5fa0262b5def6a2663f72a3",
+  "node_tests": {
+    "passed": 94,
+    "failed": 0
+  },
+  "python_tests": {
+    "passed": 22,
+    "failed": 0
+  },
+  "browser": {
+    "mode": "local static Pages package",
+    "details_checked": 16,
+    "navigation_checked": 12,
+    "widths": [
+      360,
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "errors": [],
+    "clipboard": "Simulated clipboard; click handler confirmed exact venue value."
+  },
+  "venue_coordinate": "33.527056,-112.262363",
+  "venue_kind": "stadium map reference",
+  "physical_android_tested": false,
+  "public_deployment_verified": false,
+  "changed_event_ids": [
+    "2026-10-11-nfl-cardinals-pokemon-go-day"
+  ],
+  "total_events": 138,
+  "art_master_entries": 48,
+  "approved_binaries_changed": false,
+  "gpx_enabled": false,
+  "activity_hours_confirmed": false,
+  "push_sends": 0,
+  "personal_data_read": false,
+  "source_proof": "docs/qa/NFL_VENUE_SOURCE_20261011.json",
+  "browser_proof": "docs/qa/NFL_VENUE_BROWSER_20261011.json"
+}

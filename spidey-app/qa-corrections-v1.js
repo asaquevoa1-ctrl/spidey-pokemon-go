@@ -103,10 +103,20 @@
   }
 
   function eventLocationRows(event) {
-    const locations = (event?.locations || []).filter((location) => validCoordinate(location));
+    const locations = (event?.locations || []).filter((location) => window.SpideyLocations.coordinateText(location));
     if (!locations.length) return '';
     return `<div class="event-location-list-v4">${locations.map((location, index) => {
-      const value = `${Number(location.latitude).toFixed(6)},${Number(location.longitude).toFixed(6)}`;
+      const value = window.SpideyLocations.coordinateText(location);
+      if (location.coordinate_type === 'venue_reference' && location.address) {
+        return `<article class="event-venue" data-event-venue="${location.id}">
+          <strong>${location.name || location.label}</strong>
+          <p class="event-venue-address">${location.address}</p>
+          <p class="microcopy">${location.coordinate_label || 'Local do evento'}</p>
+          <code class="venue-coordinate-value">${window.SpideyLocations.coordinateText(location)}</code>
+          <div class="action-row"><button class="action-btn copy-event-ref-v4" data-value="${value}">Copiar coordenadas</button><a class="action-btn" href="${window.SpideyLocations.mapUrl(location)}" target="_blank" rel="noopener">Abrir mapa</a></div>
+          ${location.access_note ? `<p class="microcopy">${location.access_note}</p>` : ''}
+        </article>`;
+      }
       return `<div class="event-location-row-v4">
         <div><strong>${location.label || `Local ${index + 1}`}</strong><small>${coordinateTypeLabel(location)}</small><code>${value}</code></div>
         <button class="action-btn copy-event-ref-v4" data-value="${value}">Copiar</button>

@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-11T21:19:45.097501+00:00",
+  "source_url": "https://www.waze.com/pt-BR/live-map/directions/state-farm-stadium-w-cardinals-dr-1-glendale?to=place.w.162333007.1623592217.345740",
+  "source_provider": "Waze public venue map",
+  "http_status": 200,
+  "venue_name": "State Farm Stadium",
+  "venue_address": "W Cardinals Dr, 1, Glendale, Arizona, United States",
+  "source_latitude": 33.527055807249454,
+  "source_longitude": -112.2623631051953,
+  "display_and_copy": "33.527056,-112.262363",
+  "representation": "Venue map point rounded to six decimal places; not a verified in-game PokéStop.",
+  "official_address_source": "https://www.statefarmstadium.com/plan-your-visit/directions-parking",
+  "official_address_checked": "1 Cardinals Drive, Glendale, Arizona 85305",
+  "public_html_sha256": "d8fee26cf5be9499e746da3da5a543993e315c07f4b8d620972ee42e6fe7ba41",
+  "gpx_enabled": false,
+  "activity_hours_confirmed": false
+}

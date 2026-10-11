@@ -765,7 +765,7 @@
       {
         "id": "2026-10-11-nfl-cardinals-pokemon-go-day",
         "title": "Pokémon GO Day · NFL Cardinals × Lions",
-        "summary": "Evento presencial em Glendale, Arizona, no State Farm Stadium. Data confirmada: 11/10; horários da atividade no Pokémon GO ainda a confirmar.",
+        "summary": "Pokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.",
         "category": "regional_event",
         "tags": [
           "Regional",
@@ -850,7 +850,7 @@
     "events_without_weekly_art": 6,
     "events_in_weekly": 21,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-11T17:54:50.235537-03:00",
+    "generated_at": "2026-10-11T18:18:39.158351-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

@@ -88,6 +88,10 @@ h2 { margin: 5px 0 0; font-size: 1.55rem; letter-spacing: -.025em; }
 .action-btn.gold { background:linear-gradient(135deg, var(--gold), #ffe997); color:#172033; border:none; }
 .bonus-list { display:grid; gap:8px; padding:0; list-style:none; }
 .bonus-list li { padding:11px 12px; border-radius:12px; background:rgba(255,255,255,.035); color:#dce7f5; }
+.event-notes { display:grid; gap:10px; padding-left:20px; color:var(--text); line-height:1.5; }
+.event-venue { min-width:0; }
+.event-venue .event-venue-address { margin:6px 0; color:var(--text); }
+.venue-coordinate-value { display:block; margin:6px 0; color:var(--text); font-size:1rem; overflow-wrap:anywhere; }
 .toast { position:fixed; left:50%; bottom:calc(18px + env(safe-area-inset-bottom)); transform:translate(-50%, 30px); opacity:0; pointer-events:none; background:#111f36; color:#fff; border:1px solid rgba(67,214,255,.25); border-radius:13px; padding:10px 14px; transition:.2s ease; z-index:30; font-size:.82rem; box-shadow:0 14px 30px rgba(0,0,0,.35); }
 .toast.show { opacity:1; transform:translate(-50%,0); }
 @media (max-width:560px) {
