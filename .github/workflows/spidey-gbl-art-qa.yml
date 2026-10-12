@@ -1,0 +1,32 @@
+name: Spidey - QA responsivo GBL
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/gbl-20261013-20-v1.png'
+      - 'spidey-app/assets/events/premium/gbl-20261013-20-approved-v1.png'
+      - 'spidey-app/preview-art.js'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/data/weekly.json'
+      - 'scripts/qa_gbl_art_browser.mjs'
+      - '.github/workflows/spidey-gbl-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/gbl-art
+          command -v google-chrome | tee test-results/gbl-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_gbl_art_browser.mjs 2>&1 | tee test-results/gbl-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbl-responsive-preview
+          path: test-results/gbl-art

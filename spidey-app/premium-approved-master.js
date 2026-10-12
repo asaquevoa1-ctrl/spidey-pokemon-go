@@ -484,6 +484,17 @@
     "approval_record": "docs/qa/FORWARD_ART_APPROVAL_20261011.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-gbl-13-20": {
+    "file": "assets/events/premium/gbl-20261013-20-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "96ea72ba2099a3f81ad7f433d317d9f2b59e63a831f7b7a558a1360567a167f8",
+    "approval_record": "docs/qa/GBL_ART_APPROVAL_20261012.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

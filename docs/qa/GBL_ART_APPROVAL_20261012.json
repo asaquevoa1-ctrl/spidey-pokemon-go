@@ -1,0 +1,43 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-gbl-13-20",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/GBL_ART_CANDIDATE_20261012.json",
+  "candidate_file": "spidey-app/assets/events/review/gbl-20261013-20-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/gbl-20261013-20-approved-v1.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 2950112,
+  "sha256": "96ea72ba2099a3f81ad7f433d317d9f2b59e63a831f7b7a558a1360567a167f8",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_brazil": "2026-10-13T17:00:00-03:00",
+    "end_brazil": "2026-10-20T17:00:00-03:00"
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38197655754,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38197655754",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 50,
+  "prior_unique_images_preserved": 41,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
