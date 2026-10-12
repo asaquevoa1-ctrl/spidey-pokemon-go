@@ -256,13 +256,13 @@
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/sandile-hatch-day-20261017-approved-v1.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "2085f79cf371bd14cad7f6388b8eb84050a87b4266bb3e859290bdaee05062ae",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         }
       ]
@@ -351,13 +351,13 @@
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/sandile-hatch-day-20261017-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "2085f79cf371bd14cad7f6388b8eb84050a87b4266bb3e859290bdaee05062ae",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       },
       {
@@ -725,13 +725,13 @@
   ],
   "meta": {
     "calendar_events_in_week": 17,
-    "events_with_weekly_art": 10,
-    "events_with_premium_weekly_art": 10,
+    "events_with_weekly_art": 11,
+    "events_with_premium_weekly_art": 11,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 7,
+    "events_without_weekly_art": 6,
     "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-12T11:50:09.974077-03:00",
+    "generated_at": "2026-10-12T11:55:17.183829-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
