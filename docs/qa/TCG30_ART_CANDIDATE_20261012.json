@@ -1,0 +1,48 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-09-tcg-30th-us-retail",
+  "title": "Celebração de 30 anos do Pokémon TCG",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+    "confidence": "official"
+  },
+  "official_local_schedule": {
+    "start": "2026-09-27T10:00:00",
+    "end": "2026-10-20T22:00:00",
+    "timezone_rule": "local time at participating United States retail locations"
+  },
+  "catalog_schedule_brazil": {
+    "start_brazil": "2026-09-27T11:00:00-03:00",
+    "end_brazil": "2026-10-20T23:00:00-03:00"
+  },
+  "scope": "Participating retail locations in the United States; not a global event.",
+  "official_featured_pokemon": "Mega Gengar",
+  "candidate_visual": "Abstract card arena without characters; no unverified species, bonuses, retailers or coordinates.",
+  "candidate_file": "spidey-app/assets/events/review/tcg-30th-20260927-1020-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/tcg-30th-20260927-1020-approved-v1.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 3127186,
+  "sha256": "a1a45247a9b31d58e820421929fc1b4c5cb9f973dd291c9bbc395105963634b6",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Arena abstrata cinematografica e luminosa de cartas, sem personagens, com marca SpideyNexus, periodo, horario local e restricao a lojas participantes nos EUA; sem bonus, coordenadas, varejistas ou URLs.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "generation_block_before_candidate": {
+    "result": "moderation_blocked",
+    "request_id": "e3e289e0-d105-4bd0-8994-491db2590c87",
+    "discarded_asset": true
+  },
+  "base_main_sha": "8d2b5cd77b5e9bc09191b06b6e3d695513469f5e",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

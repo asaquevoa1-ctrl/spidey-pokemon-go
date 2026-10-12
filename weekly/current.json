@@ -666,13 +666,13 @@
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/tcg-30th-20260927-1020-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "a1a45247a9b31d58e820421929fc1b4c5cb9f973dd291c9bbc395105963634b6",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       }
     ]
@@ -725,13 +725,13 @@
   ],
   "meta": {
     "calendar_events_in_week": 17,
-    "events_with_weekly_art": 9,
-    "events_with_premium_weekly_art": 9,
+    "events_with_weekly_art": 10,
+    "events_with_premium_weekly_art": 10,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 8,
+    "events_without_weekly_art": 7,
     "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-12T04:48:23.311501-03:00",
+    "generated_at": "2026-10-12T04:51:30.928064-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
