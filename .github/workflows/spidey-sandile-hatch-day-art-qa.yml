@@ -1,0 +1,35 @@
+name: Spidey - QA responsivo Sandile Hatch Day
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/sandile-hatch-day-20261017-v1.png'
+      - 'spidey-app/assets/events/premium/sandile-hatch-day-20261017-approved-v1.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_sandile_hatch_day_art_browser.mjs'
+      - 'docs/qa/SANDILE_HATCH_DAY_ART_CANDIDATE_20261012.json'
+      - 'docs/qa/SANDILE_HATCH_DAY_ART_APPROVAL_20261012.json'
+      - 'tests/sandile-hatch-day-art-approval.test.cjs'
+      - '.github/workflows/spidey-sandile-hatch-day-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/sandile-hatch-day-art
+          command -v google-chrome | tee test-results/sandile-hatch-day-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_sandile_hatch_day_art_browser.mjs 2>&1 | tee test-results/sandile-hatch-day-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sandile-hatch-day-responsive-preview
+          path: test-results/sandile-hatch-day-art

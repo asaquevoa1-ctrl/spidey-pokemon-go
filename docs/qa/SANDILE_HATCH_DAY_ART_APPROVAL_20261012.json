@@ -1,0 +1,39 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-sandile-hatch-day",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/SANDILE_HATCH_DAY_ART_CANDIDATE_20261012.json",
+  "candidate_file": "spidey-app/assets/events/review/sandile-hatch-day-20261017-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/sandile-hatch-day-20261017-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2744458,
+  "sha256": "2085f79cf371bd14cad7f6388b8eb84050a87b4266bb3e859290bdaee05062ae",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+    "confidence": "official"
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38265663606,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38265663606",
+    "week_fixture": "2026-10-12..2026-10-18",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 55,
+  "protected_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
