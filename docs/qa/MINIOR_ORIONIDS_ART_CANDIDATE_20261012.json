@@ -1,0 +1,38 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-10-minior-orionids",
+  "title": "Minior: chuva de meteoros Orionidas",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_brazil": "2026-10-19T17:00:00-03:00",
+    "end_brazil": "2026-10-24T23:59:59-03:00",
+    "enhanced_sky_window_local": "17:00-21:00 daily"
+  },
+  "official_character_context": "Minior debuts in Meteor Form; the announcement does not identify which Core colors appear during Orionids.",
+  "candidate_visual": "Abstract cinematic meteor shower without characters; no unverified species, Core colors, bonuses or coordinates.",
+  "candidate_file": "spidey-app/assets/events/review/minior-orionids-20261019-24-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v1.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 2972280,
+  "sha256": "f2947ec83675c57f1ef3698100140869d3d4b3d1a6fb828681205d5ef6630dbf",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Chuva de meteoros cinematografica e luminosa, sem personagens, com marca SpideyNexus, periodo, horario local e janela de ceu estrelado oficiais; sem bonus, coordenadas, especies adicionais, cores de nucleo ou URLs.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "2679c62198564b7975d91cc6ebaeae811e4b667b",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
