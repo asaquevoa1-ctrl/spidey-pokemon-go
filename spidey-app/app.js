@@ -111,6 +111,12 @@ function generatedEventArtUrl(event) {
 }
 
 function eventImage(event) {
+  // Keep calendar cards and event details aligned with the canonical Premium registry.
+  // Never use stale event.art.url when an approved replacement exists.
+  const approved = window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
+  if (approved?.file && !window.SPIDEY_UNAVAILABLE_ART?.[approved.file]) {
+    return approved.file + (approved.sha256 ? '?v=' + approved.sha256.slice(0, 12) : '');
+  }
   if (!window.SPIDEY_APPROVED_ART_MASTER?.[event.id] && event.official_media?.classification === 'official_illustration') {
     return `${event.official_media.file}?v=${event.official_media.sha256.slice(0, 12)}`;
   }
