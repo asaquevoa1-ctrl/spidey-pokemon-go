@@ -1,0 +1,39 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-halloween-go-pass",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/HALLOWEEN_GO_PASS_ART_CANDIDATE_20261012.json",
+  "candidate_file": "spidey-app/assets/events/review/halloween-go-pass-20261027-1105-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/halloween-go-pass-20261027-1105-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2748572,
+  "sha256": "815bc9b7b1b70364b7e17b47a1d11a87307f956815f5f2ed4929dd55d91924ce",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/halloween-part-1-2026",
+    "confidence": "official"
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": null,
+    "url": null,
+    "week_fixture": "2026-10-26..2026-11-01",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 54,
+  "protected_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

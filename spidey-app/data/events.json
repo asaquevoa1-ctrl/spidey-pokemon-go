@@ -3978,11 +3978,11 @@
         "end_brazil": "2026-11-05T20:00:00-03:00"
       },
       "calendar": {
-        "mode": "hidden"
+        "mode": "span"
       },
       "presentation": {
-        "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "requires_art": true,
+        "fallback_visual": "date"
       },
       "locations": [],
       "gpx": {
