@@ -1,0 +1,42 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-10-halloween-go-pass",
+  "title": "Passe GO: Halloween 2026",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/halloween-part-1-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_local": "2026-10-27T10:00:00-03:00",
+    "end_local": "2026-11-05T20:00:00-03:00",
+    "reward_claim_deadline_local": "2026-11-07T20:00:00-03:00"
+  },
+  "official_scope": [
+    "Free GO Pass received automatically",
+    "Optional paid GO Pass Deluxe",
+    "Rewards expire November 7 at 8:00 p.m. local time"
+  ],
+  "candidate_visual": "Cinematic luminous Halloween progression portal with pumpkins, candy lights and pass cards; no species, characters, prices, coordinates or invented bonuses.",
+  "candidate_file": "spidey-app/assets/events/review/halloween-go-pass-20261027-1105-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/halloween-go-pass-20261027-1105-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2748572,
+  "sha256": "815bc9b7b1b70364b7e17b47a1d11a87307f956815f5f2ed4929dd55d91924ce",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Premium Halloween GO Pass poster with the official user-supplied Spidey Pokémon GO logo, official period and reward deadline; no Pokémon species, prices, coordinates, URLs or unverified bonuses.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "protected_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "386fccea2bde4a7db7bb1df86238bfae6a3ec853",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
