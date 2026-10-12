@@ -1,0 +1,35 @@
+name: Spidey - QA responsivo Lake Trio Max Battle
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/lake-trio-max-battle-day-20261024-v1.png'
+      - 'spidey-app/assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_lake_trio_max_battle_art_browser.mjs'
+      - 'docs/qa/LAKE_TRIO_MAX_BATTLE_ART_CANDIDATE_20261012.json'
+      - 'docs/qa/LAKE_TRIO_MAX_BATTLE_ART_APPROVAL_20261012.json'
+      - 'tests/lake-trio-max-battle-art-approval.test.cjs'
+      - '.github/workflows/spidey-lake-trio-max-battle-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/lake-trio-max-battle-art
+          command -v google-chrome | tee test-results/lake-trio-max-battle-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_lake_trio_max_battle_art_browser.mjs 2>&1 | tee test-results/lake-trio-max-battle-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lake-trio-max-battle-responsive-preview
+          path: test-results/lake-trio-max-battle-art
