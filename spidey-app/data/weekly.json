@@ -1,28 +1,28 @@
 {
   "schema_version": "spidey-weekly-v1",
-  "week_start": "2026-10-05",
-  "week_end": "2026-10-11",
+  "week_start": "2026-10-12",
+  "week_end": "2026-10-18",
   "timezone": "America/Sao_Paulo",
-  "title": "Spidey Weekly • 05/10 a 11/10",
+  "title": "Spidey Weekly • 12/10 a 18/10",
   "visual_standard": "spidey-weekly-premium-v1",
   "status": "ready_for_art",
   "days": [
     {
-      "date": "2026-10-05",
+      "date": "2026-10-12",
       "weekday": "monday",
       "items": [
         {
-          "id": "2026-10-05-max-monday-sizzlipede",
-          "title": "Max Monday: Dynamax Sizzlipede",
-          "summary": "Sizzlipede Dynamax em destaque nos Power Spots durante a Segunda Max.",
+          "id": "2026-10-12-max-monday-rookidee",
+          "title": "Max Monday: Dynamax Rookidee",
+          "summary": "Rookidee Dynamax em destaque nos Power Spots durante a Segunda Max.",
           "category": "max_monday",
           "tags": [
             "Max Monday",
             "Dynamax",
-            "Sizzlipede"
+            "Rookidee"
           ],
-          "start_brazil": "2026-10-05T06:00:00-03:00",
-          "end_brazil": "2026-10-05T21:00:00-03:00",
+          "start_brazil": "2026-10-12T06:00:00-03:00",
+          "end_brazil": "2026-10-12T21:00:00-03:00",
           "source": {
             "name": "Pokémon GO Hub • calendário outubro 2026",
             "url": "https://pokemongohub.net/post/event/october-2026-events/",
@@ -42,32 +42,32 @@
       ]
     },
     {
-      "date": "2026-10-06",
+      "date": "2026-10-13",
       "weekday": "tuesday",
       "items": [
         {
-          "id": "2026-10-06-showcase-tuesday",
+          "id": "2026-10-13-showcase-tuesday",
           "title": "Descoberta Diária: Terça de Vitrine",
-          "summary": "Participe de até cinco Vitrines de Poképarada no dia; mais Poképaradas poderão sediar Vitrines.",
+          "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
           "category": "daily_discovery",
           "tags": [
             "Vitrines",
             "PokéStop",
             "Twilight Trails"
           ],
-          "start_brazil": "2026-10-06T00:00:00-03:00",
-          "end_brazil": "2026-10-06T23:59:59-03:00",
+          "start_brazil": "2026-10-13T00:00:00-03:00",
+          "end_brazil": "2026-10-13T23:59:59-03:00",
           "source": {
-            "name": "Leek Duck • Descobertas Diárias da temporada",
+            "name": "Twilight Trails • Daily Discoveries",
             "url": "https://leekduck.com/events/season-24-twilight-trails/",
             "confidence": "verified"
           },
           "art": {},
           "weekly_art": {
-            "url": "assets/events/premium/showcase-tuesday-20261006-approved-v1.png",
+            "url": "assets/events/premium/showcase-tuesday-october-2026-approved-v1.png",
             "width": 1122,
             "height": 1402,
-            "sha256": "ac11ef360b595bfad180c918d6c655c08863d7f01ff36dca4a667ad0e8334c19",
+            "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7",
             "source_role": "canonical_master",
             "kind": "approved_master",
             "premium": true
@@ -76,45 +76,45 @@
       ]
     },
     {
-      "date": "2026-10-07",
+      "date": "2026-10-14",
       "weekday": "wednesday",
       "items": [
         {
-          "id": "2026-10-07-raid-hour-yveltal",
-          "title": "Hora de Reides: Yveltal",
-          "summary": "Yveltal em destaque na Hora de Reides.",
+          "id": "2026-10-14-raid-hour-dialga",
+          "title": "Raid Hour: Dialga",
+          "summary": "Dialga em destaque na Hora de Reides.",
           "category": "raid_hour",
           "tags": [
             "Raid Hour",
             "5 estrelas",
             "Global"
           ],
-          "start_brazil": "2026-10-07T18:00:00-03:00",
-          "end_brazil": "2026-10-07T19:00:00-03:00",
+          "start_brazil": "2026-10-14T18:00:00-03:00",
+          "end_brazil": "2026-10-14T19:00:00-03:00",
           "source": {
-            "name": "Leek Duck • calendário de reides",
-            "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
             "confidence": "verified"
           },
           "art": {},
           "weekly_art": {
-            "url": "assets/events/premium/yveltal-raid-hour-approved-v1.png",
-            "width": 1121,
-            "height": 1403,
-            "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
-            "source_role": "canonical_master",
-            "kind": "approved_master",
-            "premium": true
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
           }
         }
       ]
     },
     {
-      "date": "2026-10-08",
+      "date": "2026-10-15",
       "weekday": "thursday",
       "items": [
         {
-          "id": "2026-10-08-go-battle-thursday",
+          "id": "2026-10-15-go-battle-thursday",
           "title": "Descoberta Diária: Quinta de Batalhas GO",
           "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
           "category": "daily_discovery",
@@ -123,12 +123,40 @@
             "PvP",
             "Twilight Trails"
           ],
-          "start_brazil": "2026-10-08T00:00:00-03:00",
-          "end_brazil": "2026-10-08T23:59:59-03:00",
+          "start_brazil": "2026-10-15T00:00:00-03:00",
+          "end_brazil": "2026-10-15T23:59:59-03:00",
           "source": {
             "name": "Pokémon GO",
             "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
             "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/premium/go-battle-thursday-october-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
+          }
+        },
+        {
+          "id": "2026-10-15-spotlight-stufful",
+          "title": "Spotlight Hour: Stufful",
+          "summary": "2× Doces por transferência.",
+          "category": "spotlight_hour",
+          "tags": [
+            "Spotlight Hour",
+            "Stufful",
+            "Global"
+          ],
+          "start_brazil": "2026-10-15T18:00:00-03:00",
+          "end_brazil": "2026-10-15T19:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
           },
           "art": {},
           "weekly_art": {
@@ -140,43 +168,15 @@
             "kind": "missing",
             "premium": false
           }
-        },
-        {
-          "id": "2026-10-08-spotlight-elgyem",
-          "title": "Hora do Holofote: Elgyem",
-          "summary": "2× Doces por captura.",
-          "category": "spotlight_hour",
-          "tags": [
-            "Spotlight Hour",
-            "Elgyem",
-            "Global"
-          ],
-          "start_brazil": "2026-10-08T18:00:00-03:00",
-          "end_brazil": "2026-10-08T19:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO Hub • calendário outubro 2026",
-            "url": "https://pokemongohub.net/post/event/october-2026-events/",
-            "confidence": "verified"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "assets/events/premium/elgyem-spotlight-approved-v1.png",
-            "width": 1121,
-            "height": 1403,
-            "sha256": "2ab5e183a146654848b962d4e02603561cccfa5b20ad34ddbeacdaef3b913df9",
-            "source_role": "canonical_master",
-            "kind": "approved_master",
-            "premium": true
-          }
         }
       ]
     },
     {
-      "date": "2026-10-09",
+      "date": "2026-10-16",
       "weekday": "friday",
       "items": [
         {
-          "id": "2026-10-09-friendship-friday",
+          "id": "2026-10-16-friendship-friday",
           "title": "Descoberta Diária: Sexta da Amizade",
           "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
           "category": "daily_discovery",
@@ -185,8 +185,8 @@
             "Trocas",
             "Twilight Trails"
           ],
-          "start_brazil": "2026-10-09T00:00:00-03:00",
-          "end_brazil": "2026-10-09T23:59:59-03:00",
+          "start_brazil": "2026-10-16T00:00:00-03:00",
+          "end_brazil": "2026-10-16T23:59:59-03:00",
           "source": {
             "name": "Twilight Trails • Daily Discoveries",
             "url": "https://leekduck.com/events/season-24-twilight-trails/",
@@ -194,72 +194,10 @@
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
-          }
-        }
-      ]
-    },
-    {
-      "date": "2026-10-10",
-      "weekday": "saturday",
-      "items": [
-        {
-          "id": "2026-10-shadow-landorus-10",
-          "title": "Shadow Raids: Landorus (Forma Encarnada)",
-          "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
-          "category": "shadow_raids",
-          "tags": [
-            "Shadow Raid",
-            "Landorus (Forma Encarnada)",
-            "Fim de semana"
-          ],
-          "start_brazil": "2026-10-10T00:00:00-03:00",
-          "end_brazil": "2026-10-11T23:59:59-03:00",
-          "source": {
-            "name": "Pokémon GO Hub • calendário outubro 2026",
-            "url": "https://pokemongohub.net/post/event/october-2026-events/",
-            "confidence": "verified"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
-          }
-        },
-        {
-          "id": "2026-10-zorua-community-day",
-          "title": "Dia Comunitário: Zorua",
-          "summary": "Zorua na natureza, 3× PE e 2× Doces por captura. Evolua para Zoroark com Soco Enganador até as 21h locais.",
-          "category": "community_day",
-          "tags": [
-            "Zorua",
-            "Community Day",
-            "Global"
-          ],
-          "start_brazil": "2026-10-10T14:00:00-03:00",
-          "end_brazil": "2026-10-10T17:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO",
-            "url": "https://pokemongo.com/pt-BR/news/communityday-october-2026-zorua",
-            "confidence": "official"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "assets/events/premium/zorua-community-day-approved-v1.png",
-            "width": 1121,
-            "height": 1403,
-            "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
+            "url": "assets/events/premium/friendship-friday-october-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c",
             "source_role": "canonical_master",
             "kind": "approved_master",
             "premium": true
@@ -268,11 +206,11 @@
       ]
     },
     {
-      "date": "2026-10-11",
-      "weekday": "sunday",
+      "date": "2026-10-17",
+      "weekday": "saturday",
       "items": [
         {
-          "id": "2026-10-shadow-landorus-10",
+          "id": "2026-10-shadow-landorus-17",
           "title": "Shadow Raids: Landorus (Forma Encarnada)",
           "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
           "category": "shadow_raids",
@@ -281,8 +219,8 @@
             "Landorus (Forma Encarnada)",
             "Fim de semana"
           ],
-          "start_brazil": "2026-10-10T00:00:00-03:00",
-          "end_brazil": "2026-10-11T23:59:59-03:00",
+          "start_brazil": "2026-10-17T00:00:00-03:00",
+          "end_brazil": "2026-10-18T23:59:59-03:00",
           "source": {
             "name": "Pokémon GO Hub • calendário outubro 2026",
             "url": "https://pokemongohub.net/post/event/october-2026-events/",
@@ -300,7 +238,69 @@
           }
         },
         {
-          "id": "2026-10-11-scenic-sunday",
+          "id": "2026-10-sandile-hatch-day",
+          "title": "Dia de Chocar: Sandile",
+          "summary": "Sandile chocará com muito mais frequência em Ovos de 2 km, com chance aumentada de Brilhante.",
+          "category": "hatch_day",
+          "tags": [
+            "Sandile",
+            "Hatch Day",
+            "Global"
+          ],
+          "start_brazil": "2026-10-17T11:00:00-03:00",
+          "end_brazil": "2026-10-17T17:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "sunday",
+      "items": [
+        {
+          "id": "2026-10-shadow-landorus-17",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Shadow Raid",
+            "Landorus (Forma Encarnada)",
+            "Fim de semana"
+          ],
+          "start_brazil": "2026-10-17T00:00:00-03:00",
+          "end_brazil": "2026-10-18T23:59:59-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        },
+        {
+          "id": "2026-10-18-scenic-sunday",
           "title": "Descoberta Diária: Domingo Pitoresco",
           "summary": "Mais Pokémon na natureza e em Rotas, bônus de companheiro e mais encontros com Mateo.",
           "category": "daily_discovery",
@@ -309,8 +309,8 @@
             "Rotas",
             "Twilight Trails"
           ],
-          "start_brazil": "2026-10-11T00:00:00-03:00",
-          "end_brazil": "2026-10-11T23:59:59-03:00",
+          "start_brazil": "2026-10-18T00:00:00-03:00",
+          "end_brazil": "2026-10-18T23:59:59-03:00",
           "source": {
             "name": "Twilight Trails • Daily Discoveries",
             "url": "https://leekduck.com/events/season-24-twilight-trails/",
@@ -333,48 +333,20 @@
   "sections": {
     "featured": [
       {
-        "id": "2026-10-zorua-community-day",
-        "title": "Dia Comunitário: Zorua",
-        "summary": "Zorua na natureza, 3× PE e 2× Doces por captura. Evolua para Zoroark com Soco Enganador até as 21h locais.",
-        "category": "community_day",
+        "id": "2026-10-sandile-hatch-day",
+        "title": "Dia de Chocar: Sandile",
+        "summary": "Sandile chocará com muito mais frequência em Ovos de 2 km, com chance aumentada de Brilhante.",
+        "category": "hatch_day",
         "tags": [
-          "Zorua",
-          "Community Day",
+          "Sandile",
+          "Hatch Day",
           "Global"
         ],
-        "start_brazil": "2026-10-10T14:00:00-03:00",
-        "end_brazil": "2026-10-10T17:00:00-03:00",
+        "start_brazil": "2026-10-17T11:00:00-03:00",
+        "end_brazil": "2026-10-17T17:00:00-03:00",
         "source": {
           "name": "Pokémon GO",
-          "url": "https://pokemongo.com/pt-BR/news/communityday-october-2026-zorua",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/zorua-community-day-approved-v1.png",
-          "width": 1121,
-          "height": 1403,
-          "sha256": "9bdb113f3e0c2c6d837797b6ee951778f9605c2ba38d74967837885ebe72778b",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      },
-      {
-        "id": "2026-09-harvest-festival-applin",
-        "title": "Festival da Colheita: Pomar de Applin",
-        "summary": "Festival da Colheita com estreia de Applin Brilhante.",
-        "category": "evento_especial",
-        "tags": [
-          "Harvest",
-          "Applin",
-          "Global"
-        ],
-        "start_brazil": "2026-09-29T10:00:00-03:00",
-        "end_brazil": "2026-10-05T20:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/pt-BR/news/harvest-festival-2026",
+          "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
           "confidence": "official"
         },
         "art": {},
@@ -389,56 +361,28 @@
         }
       },
       {
-        "id": "2026-10-world-space-week",
-        "title": "Semana Mundial do Espaço 2026",
-        "summary": "Pikachu Astronauta em Reides de uma estrela e Pesquisa temporária gratuita; pode aparecer Brilhante.",
+        "id": "2026-10-fall-marathon-buddy-trek",
+        "title": "Maratona das Folhas: Caminhada Companheira",
+        "summary": "Evento com estreia de Bramblin e progressão do GO Pass temático.",
         "category": "evento_especial",
         "tags": [
-          "Astronaut Pikachu",
-          "Space Week",
+          "Bramblin",
+          "Buddy",
           "Global"
         ],
-        "start_brazil": "2026-10-04T00:00:00-03:00",
-        "end_brazil": "2026-10-10T23:59:59-03:00",
+        "start_brazil": "2026-10-13T10:00:00-03:00",
+        "end_brazil": "2026-10-19T20:00:00-03:00",
         "source": {
           "name": "Pokémon GO",
-          "url": "https://pokemongo.com/en/news/world-space-week-2026",
+          "url": "https://pokemongo.com/news/fall-marathon-buddy-trek-2026",
           "confidence": "official"
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/official/world-space-week-2026.jpg",
-          "width": 1920,
-          "height": 1080,
-          "sha256": "58ba761639773eb7df746888d0750b1fc517f9b4a5dedc6c07971e12c6dc2da9",
-          "source_role": "official_media",
-          "kind": "official_illustration",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-10-harvest-taken-over",
-        "title": "Festival da Colheita: A Invasão",
-        "summary": "Resgate Zekrom Sombroso com Giovanni e aproveite a janela para remover Frustração.",
-        "category": "team_go_rocket",
-        "tags": [
-          "Team GO Rocket",
-          "Zekrom Sombroso",
-          "Global"
-        ],
-        "start_brazil": "2026-10-02T00:00:00-03:00",
-        "end_brazil": "2026-10-05T20:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/pt-BR/news/harvest-festival-tgr-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/harvest-invasion-approved-v1.png",
-          "width": 1121,
-          "height": 1403,
-          "sha256": "918d1a6735191636a5f26cee9d3a8ae61c8fc6a1d2c09e70e894bb6f70570165",
+          "url": "assets/events/premium/bramblin-20261011-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "a967e70072fc8a09e195ca364a426d64e3b8b3abdd915eacd8a807d8b25f1b3d",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
@@ -447,59 +391,31 @@
     ],
     "raids": [
       {
-        "id": "2026-10-07-raid-hour-yveltal",
-        "title": "Hora de Reides: Yveltal",
-        "summary": "Yveltal em destaque na Hora de Reides.",
+        "id": "2026-10-14-raid-hour-dialga",
+        "title": "Raid Hour: Dialga",
+        "summary": "Dialga em destaque na Hora de Reides.",
         "category": "raid_hour",
         "tags": [
           "Raid Hour",
           "5 estrelas",
           "Global"
         ],
-        "start_brazil": "2026-10-07T18:00:00-03:00",
-        "end_brazil": "2026-10-07T19:00:00-03:00",
+        "start_brazil": "2026-10-14T18:00:00-03:00",
+        "end_brazil": "2026-10-14T19:00:00-03:00",
         "source": {
-          "name": "Leek Duck • calendário de reides",
-          "url": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
+          "name": "Pokémon GO Hub • calendário outubro 2026",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
           "confidence": "verified"
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/premium/yveltal-raid-hour-approved-v1.png",
-          "width": 1121,
-          "height": 1403,
-          "sha256": "a3881d22755b5c326f02f45ab456af3eaa024ad99427be36c9ff1bfd9c8d436b",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      },
-      {
-        "id": "2026-09-raids-xerneas",
-        "title": "Reides 5★: Xerneas",
-        "summary": "Xerneas fecha setembro e segue no início de outubro.",
-        "category": "raid_rotation",
-        "tags": [
-          "Reide 5★",
-          "Rotação",
-          "Global"
-        ],
-        "start_brazil": "2026-09-30T06:00:00-03:00",
-        "end_brazil": "2026-10-06T22:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • calendário setembro 2026",
-          "url": "https://pokemongohub.net/post/guide/september-2026-events/",
-          "confidence": "verified"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/xerneas-rotation-approved-v1.png",
-          "width": 1121,
-          "height": 1403,
-          "sha256": "b9e3b46292347a95deb2536503915cc0e3dd51faa527d1037e46ccdc9e69a738",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
         }
       },
       {
@@ -531,31 +447,31 @@
         }
       },
       {
-        "id": "2026-09-mega-victreebel-raids",
-        "title": "Mega Reides: Mega Victreebel",
-        "summary": "Mega Victreebel fecha setembro e segue no início de outubro.",
-        "category": "mega_raid_rotation",
+        "id": "2026-10-raids-dialga",
+        "title": "Reides 5★: Dialga",
+        "summary": "Dialga na rotação de Reides de cinco estrelas.",
+        "category": "raid_rotation",
         "tags": [
-          "Mega Reide",
+          "Reide 5★",
           "Rotação",
-          "Global"
+          "Dialga"
         ],
-        "start_brazil": "2026-09-30T06:00:00-03:00",
-        "end_brazil": "2026-10-06T22:00:00-03:00",
+        "start_brazil": "2026-10-14T06:00:00-03:00",
+        "end_brazil": "2026-10-20T22:00:00-03:00",
         "source": {
-          "name": "Leek Duck • calendário de Megarreides",
-          "url": "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
+          "name": "Pokémon GO Hub • calendário outubro 2026",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
           "confidence": "verified"
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/premium/mega-victreebel-rotation-approved-v1.png",
-          "width": 1121,
-          "height": 1403,
-          "sha256": "6cd064429903e0dce435990ce45e297a3d970fffb91dc7920c99f703220d6e22",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
         }
       },
       {
@@ -587,7 +503,35 @@
         }
       },
       {
-        "id": "2026-10-shadow-landorus-10",
+        "id": "2026-10-mega-dragonite-raids",
+        "title": "Mega Reides: Mega Dragonite",
+        "summary": "Mega Dragonite na rotação de Mega Reides.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Mega Reide",
+          "Rotação",
+          "Mega Dragonite"
+        ],
+        "start_brazil": "2026-10-14T06:00:00-03:00",
+        "end_brazil": "2026-10-20T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO Hub • calendário outubro 2026",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-10-shadow-landorus-17",
         "title": "Shadow Raids: Landorus (Forma Encarnada)",
         "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
         "category": "shadow_raids",
@@ -596,8 +540,8 @@
           "Landorus (Forma Encarnada)",
           "Fim de semana"
         ],
-        "start_brazil": "2026-10-10T00:00:00-03:00",
-        "end_brazil": "2026-10-11T23:59:59-03:00",
+        "start_brazil": "2026-10-17T00:00:00-03:00",
+        "end_brazil": "2026-10-18T23:59:59-03:00",
         "source": {
           "name": "Pokémon GO Hub • calendário outubro 2026",
           "url": "https://pokemongohub.net/post/event/october-2026-events/",
@@ -617,17 +561,17 @@
     ],
     "max_pvp": [
       {
-        "id": "2026-10-05-max-monday-sizzlipede",
-        "title": "Max Monday: Dynamax Sizzlipede",
-        "summary": "Sizzlipede Dynamax em destaque nos Power Spots durante a Segunda Max.",
+        "id": "2026-10-12-max-monday-rookidee",
+        "title": "Max Monday: Dynamax Rookidee",
+        "summary": "Rookidee Dynamax em destaque nos Power Spots durante a Segunda Max.",
         "category": "max_monday",
         "tags": [
           "Max Monday",
           "Dynamax",
-          "Sizzlipede"
+          "Rookidee"
         ],
-        "start_brazil": "2026-10-05T06:00:00-03:00",
-        "end_brazil": "2026-10-05T21:00:00-03:00",
+        "start_brazil": "2026-10-12T06:00:00-03:00",
+        "end_brazil": "2026-10-12T21:00:00-03:00",
         "source": {
           "name": "Pokémon GO Hub • calendário outubro 2026",
           "url": "https://pokemongohub.net/post/event/october-2026-events/",
@@ -642,34 +586,6 @@
           "source_role": "missing",
           "kind": "missing",
           "premium": false
-        }
-      },
-      {
-        "id": "2026-09-gbl-29-1006",
-        "title": "Liga de Batalha GO: Liga Mestra + Mega Copa das Cores",
-        "summary": "Liga Mestra e Mega Copa das Cores: edição da Grande Liga; troca de rotação às 17h de Brasília.",
-        "category": "go_battle_league",
-        "tags": [
-          "GO Battle League",
-          "PvP",
-          "Twilight Trails"
-        ],
-        "start_brazil": "2026-09-29T17:00:00-03:00",
-        "end_brazil": "2026-10-06T17:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/pt-BR/news/go-battle-league-twilight-trails",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/gbl-20260929-1006-approved-v1.png",
-          "width": 1122,
-          "height": 1402,
-          "sha256": "feb2ba30decb85082116b216ae7c8096950e015ded97434d3540c7517057cafb",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
         }
       },
       {
@@ -695,6 +611,34 @@
           "width": 1122,
           "height": 1402,
           "sha256": "16bd92ceae7a725965c1236b09583ec3be9fbcc41f284eab9e108555d02b71bd",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-gbl-13-20",
+        "title": "GO Battle League: Great / Ultra Mega / Little Cup",
+        "summary": "Rotação da Liga de Batalha GO: Great / Ultra Mega / Little Cup.",
+        "category": "go_battle_league",
+        "tags": [
+          "GO Battle League",
+          "PvP",
+          "Twilight Trails"
+        ],
+        "start_brazil": "2026-10-13T17:00:00-03:00",
+        "end_brazil": "2026-10-20T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/gbl-20261013-20-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "96ea72ba2099a3f81ad7f433d317d9f2b59e63a831f7b7a558a1360567a167f8",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
@@ -729,69 +673,6 @@
           "source_role": "missing",
           "kind": "missing",
           "premium": false
-        }
-      },
-      {
-        "id": "2026-10-pokexciting-taipei",
-        "title": "PokéXciting! Taipei · Pikachu rosa",
-        "summary": "Celebração gratuita em áreas do distrito de Xinyi, Taipei, com Pikachu PokéXciting! rosa, selos e batalhas Gigamax.",
-        "category": "regional_event",
-        "tags": [
-          "Regional",
-          "Taipei",
-          "PokéXciting!",
-          "Pikachu",
-          "GO Stamp Rally",
-          "Gigamax"
-        ],
-        "start_brazil": "2026-10-09T23:00:00-03:00",
-        "end_brazil": "2026-10-11T11:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO · anúncio oficial",
-          "url": "https://pokemongo.com/news/event-apac-30th-anniversary-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/official/pokexciting-taipei-2026.jpg",
-          "width": 500,
-          "height": 500,
-          "sha256": "023d446abcee817d95bf8eb3c76bb81a7a63397ff84d78548b7e8e3d61d90153",
-          "source_role": "official_media",
-          "kind": "official_illustration",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-10-11-nfl-cardinals-pokemon-go-day",
-        "title": "Pokémon GO Day · NFL Cardinals × Lions",
-        "summary": "Pokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.",
-        "category": "regional_event",
-        "tags": [
-          "Regional",
-          "Presencial",
-          "NFL",
-          "Arizona",
-          "Pokémon GO Day"
-        ],
-        "start_brazil": null,
-        "end_brazil": null,
-        "schedule_precision": "date",
-        "calendar_date": "2026-10-11",
-        "source": {
-          "name": "Arizona Cardinals · Pokémon GO Day",
-          "url": "https://www.azcardinals.com/tickets/group-tickets/special-events",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/nfl-cardinals-20261011-approved-v1.png",
-          "width": 1122,
-          "height": 1402,
-          "sha256": "5b560b3de9f2b6eb40c550621e93fb59bf9b2b956339ec928a5b8ee5149aef9b",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
         }
       }
     ]
@@ -843,14 +724,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 21,
-    "events_with_weekly_art": 15,
-    "events_with_premium_weekly_art": 13,
-    "events_with_official_weekly_art": 2,
-    "events_without_weekly_art": 6,
-    "events_in_weekly": 21,
+    "calendar_events_in_week": 17,
+    "events_with_weekly_art": 9,
+    "events_with_premium_weekly_art": 9,
+    "events_with_official_weekly_art": 0,
+    "events_without_weekly_art": 8,
+    "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-11T23:45:40.775626-03:00",
+    "generated_at": "2026-10-11T23:57:49.939654-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

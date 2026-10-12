@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import { chromium } from 'playwright-core';
 
 const eventId='2026-10-gbl-13-20';
-const expected='assets/events/review/gbl-20261013-20-v1.png';
+const expected='assets/events/premium/gbl-20261013-20-approved-v1.png';
 const output='test-results/gbl-art';
 fs.mkdirSync(output,{recursive:true});
 const server=spawn('python3',['-m','http.server','4173','--directory','.'],{stdio:'ignore'});
