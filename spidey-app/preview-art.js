@@ -1,5 +1,15 @@
 // Review candidates and recovered illustration crops. This never grants approval.
-window.SPIDEY_PREVIEW_ART=Object.freeze({});
+window.SPIDEY_PREVIEW_ART=Object.freeze({
+  "2026-10-gbl-20-27": Object.freeze({
+    file: "assets/events/review/gbl-20261020-27-v1.png",
+    status: "PENDING_REVIEW",
+    display: "full_poster",
+    width: 1024,
+    height: 1536,
+    sha256: "ed18cfe6a0408101426b4629c1477d763f09707f1f43470011d9a13ef079ce3c",
+    candidate_record: "docs/qa/GBL_20_27_ART_CANDIDATE_20261012.json"
+  })
+});
 
 // All screens share this explicit exception for a known unavailable original.
 // A healthy approved original always wins; unrelated drafts never substitute it.
