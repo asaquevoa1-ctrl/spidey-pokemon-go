@@ -486,13 +486,13 @@
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-gbl-13-20": {
-    "file": "assets/events/premium/gbl-20261013-20-approved-v1.png",
+    "file": "assets/events/premium/gbl-20261013-20-approved-v2.png",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1122,
     "height": 1402,
-    "sha256": "96ea72ba2099a3f81ad7f433d317d9f2b59e63a831f7b7a558a1360567a167f8",
-    "approval_record": "docs/qa/GBL_ART_APPROVAL_20261012.json",
+    "sha256": "aef26676479526526a6675eae8539b2949093f05426e02f18368b2ba0f05fab6",
+    "approval_record": "docs/qa/LOGO_CORRECTION_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
@@ -508,24 +508,24 @@
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-minior-orionids": {
-    "file": "assets/events/premium/minior-orionids-20261019-24-approved-v1.png",
+    "file": "assets/events/premium/minior-orionids-20261019-24-approved-v2.png",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1122,
     "height": 1402,
-    "sha256": "f2947ec83675c57f1ef3698100140869d3d4b3d1a6fb828681205d5ef6630dbf",
-    "approval_record": "docs/qa/MINIOR_ORIONIDS_ART_APPROVAL_20261012.json",
+    "sha256": "1f383e1b6d0651873a6cb8e21df8ad643b23a70a88fe315634e2e417f4ee42a1",
+    "approval_record": "docs/qa/LOGO_CORRECTION_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-gbl-20-27": {
-    "file": "assets/events/premium/gbl-20261020-27-approved-v1.png",
+    "file": "assets/events/premium/gbl-20261020-27-approved-v2.png",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1024,
     "height": 1536,
-    "sha256": "ed18cfe6a0408101426b4629c1477d763f09707f1f43470011d9a13ef079ce3c",
-    "approval_record": "docs/qa/GBL_20_27_ART_APPROVAL_20261012.json",
+    "sha256": "bfaef8a26cbb1184a56249e8ae5762344f5b3c2e6277f7b9dadd20c45fc1446e",
+    "approval_record": "docs/qa/LOGO_CORRECTION_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }

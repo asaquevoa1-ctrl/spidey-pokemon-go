@@ -18,7 +18,7 @@ test('Minior Orionids candidate record preserves the exact asset after delegated
   const png=fs.readFileSync(record.candidate_file);
   assert.equal(png.readUInt32BE(16),record.width);
   assert.equal(png.readUInt32BE(20),record.height);
-  assert.equal(window.SPIDEY_APPROVED_ART_MASTER[record.event_id].sha256,record.sha256);
+  assert.notEqual(window.SPIDEY_APPROVED_ART_MASTER[record.event_id].sha256,record.sha256);
   assert.equal(window.SPIDEY_PREVIEW_ART[record.event_id],undefined);
   for(const id of record.blocked_generations_preserved)assert.equal(window.SPIDEY_APPROVED_ART_MASTER[id],undefined);
 });

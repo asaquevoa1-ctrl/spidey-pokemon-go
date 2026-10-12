@@ -3,8 +3,8 @@ import fs from 'node:fs';
 import { chromium } from 'playwright-core';
 
 const eventId='2026-10-gbl-20-27';
-const review='assets/events/review/gbl-20261020-27-v1.png';
-const approved='assets/events/premium/gbl-20261020-27-approved-v1.png';
+const review='assets/events/review/gbl-20261020-27-v2.png';
+const approved='assets/events/premium/gbl-20261020-27-approved-v2.png';
 const output='test-results/gbl-20-27-art';
 fs.mkdirSync(output,{recursive:true});
 const futureWeekly=JSON.parse(execFileSync('python3',['-c',"from datetime import date; import json; from scripts.build_spidey_weekly import build; print(json.dumps(build(date(2026,10,19))))"],{encoding:'utf8'}));

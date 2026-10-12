@@ -4,6 +4,8 @@ on:
     paths:
       - 'spidey-app/assets/events/review/minior-orionids-20261019-24-v1.png'
       - 'spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v1.png'
+      - 'spidey-app/assets/events/review/minior-orionids-20261019-24-v2.png'
+      - 'spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v2.png'
       - 'spidey-app/preview-art.js'
       - 'spidey-app/premium-approved-master.js'
       - 'scripts/qa_minior_orionids_art_browser.mjs'

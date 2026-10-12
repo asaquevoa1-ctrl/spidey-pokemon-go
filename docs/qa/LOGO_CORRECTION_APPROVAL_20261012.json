@@ -1,0 +1,57 @@
+{
+  "schema_version": "spidey-art-correction-approval-v1",
+  "status": "APPROVED",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/LOGO_CORRECTION_CANDIDATE_20261012.json",
+  "items": [
+    {
+      "event_id": "2026-10-gbl-13-20",
+      "candidate_file": "spidey-app/assets/events/review/gbl-20261013-20-v2.png",
+      "approved_file": "spidey-app/assets/events/premium/gbl-20261013-20-approved-v2.png",
+      "prior_file_preserved": "spidey-app/assets/events/premium/gbl-20261013-20-approved-v1.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2588780,
+      "sha256": "aef26676479526526a6675eae8539b2949093f05426e02f18368b2ba0f05fab6"
+    },
+    {
+      "event_id": "2026-10-minior-orionids",
+      "candidate_file": "spidey-app/assets/events/review/minior-orionids-20261019-24-v2.png",
+      "approved_file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v2.png",
+      "prior_file_preserved": "spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v1.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2657184,
+      "sha256": "1f383e1b6d0651873a6cb8e21df8ad643b23a70a88fe315634e2e417f4ee42a1"
+    },
+    {
+      "event_id": "2026-10-gbl-20-27",
+      "candidate_file": "spidey-app/assets/events/review/gbl-20261020-27-v2.png",
+      "approved_file": "spidey-app/assets/events/premium/gbl-20261020-27-approved-v2.png",
+      "prior_file_preserved": "spidey-app/assets/events/premium/gbl-20261020-27-approved-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2773194,
+      "sha256": "bfaef8a26cbb1184a56249e8ae5762344f5b3c2e6277f7b9dadd20c45fc1446e"
+    }
+  ],
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 36,
+    "workflow_run": 38252746105,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38252746105"
+  },
+  "protected_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
