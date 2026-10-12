@@ -19,8 +19,8 @@
   },
   "browser_qa": {
     "status": "PASSED_PREVIEW",
-    "workflow_run": null,
-    "url": null,
+    "workflow_run": 38257048518,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38257048518",
     "week_fixture": "2026-10-26..2026-11-01",
     "views": ["calendar", "weekly", "detail"],
     "widths": [390, 1280],
