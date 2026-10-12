@@ -550,6 +550,17 @@
     "approval_record": "docs/qa/SANDILE_HATCH_DAY_ART_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-dynamax-max-battle-day": {
+    "file": "assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "1a1dce9ce9152870542e675feb472ed5c1f49db1b29e3b6f6638e1c53da1ea7a",
+    "approval_record": "docs/qa/LAKE_TRIO_MAX_BATTLE_ART_APPROVAL_20261012.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

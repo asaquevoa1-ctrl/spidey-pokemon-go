@@ -1,0 +1,43 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-10-dynamax-max-battle-day",
+  "title": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_local": "2026-10-24T14:00:00-03:00",
+    "end_local": "2026-10-24T17:00:00-03:00"
+  },
+  "official_scope": [
+    "Dynamax Uxie in Asia-Pacific",
+    "Dynamax Mesprit in Europe, the Middle East, Africa and India",
+    "Dynamax Azelf in the Americas and Greenland",
+    "Five-star Max Battles",
+    "Max Particle collection limit increased to 1600"
+  ],
+  "candidate_visual": "Cinematic three-region lake composition with Uxie, Mesprit and Azelf in official Dynamax forms; no other species, coordinates, prices or invented bonuses.",
+  "candidate_file": "spidey-app/assets/events/review/lake-trio-max-battle-day-20261024-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2872772,
+  "sha256": "1a1dce9ce9152870542e675feb472ed5c1f49db1b29e3b6f6638e1c53da1ea7a",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Premium regional Dynamax Lake Trio poster using the official Spidey logo and official Pokémon GO event illustration, with official schedule, region mapping and selected confirmed event facts only.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "protected_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "b30c6d06bbc2e6b62500cddb7c0bc94e764672b5",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

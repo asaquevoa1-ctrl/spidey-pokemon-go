@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261012-sandile-hatch-day-v1';
+const CACHE = 'spidey-app-20261012-lake-trio-max-day-v1';
 const CORE = [
+  './assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png',
   './assets/events/premium/sandile-hatch-day-20261017-approved-v1.png',
   './assets/events/premium/halloween-go-pass-20261027-1105-approved-v1.png',
   './assets/events/premium/gbl-20261020-27-approved-v2.png',

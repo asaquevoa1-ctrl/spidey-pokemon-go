@@ -1,0 +1,39 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-dynamax-max-battle-day",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/LAKE_TRIO_MAX_BATTLE_ART_CANDIDATE_20261012.json",
+  "candidate_file": "spidey-app/assets/events/review/lake-trio-max-battle-day-20261024-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2872772,
+  "sha256": "1a1dce9ce9152870542e675feb472ed5c1f49db1b29e3b6f6638e1c53da1ea7a",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/en/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+    "confidence": "official"
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": null,
+    "url": null,
+    "week_fixture": "2026-10-19..2026-10-25",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 56,
+  "protected_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
