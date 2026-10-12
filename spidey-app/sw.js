@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261012-minior-art-v1';
+const CACHE = 'spidey-app-20261012-gbl20-art-v1';
 const CORE = [
+  './assets/events/premium/gbl-20261020-27-approved-v1.png',
   './assets/events/premium/minior-orionids-20261019-24-approved-v1.png',
   './assets/events/premium/tcg-30th-20260927-1020-approved-v1.png',
   './assets/events/premium/gbl-20261013-20-approved-v1.png',
