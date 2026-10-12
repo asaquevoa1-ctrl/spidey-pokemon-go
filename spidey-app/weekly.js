@@ -41,9 +41,10 @@ function weeklyArtUrl(item) {
   const event = weeklyFindEvent(item?.id) || item;
   const approved = window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
   if (approved) {
-    const asset = window.SpideyReviewArt?.resolve
-      ? window.SpideyReviewArt.resolve(event)
-      : window.SPIDEY_UNAVAILABLE_ART?.[approved.file] ? null : approved;
+    // The canonical approved poster wins over review candidates; never replace approved bytes.
+    const asset = window.SPIDEY_UNAVAILABLE_ART?.[approved.file]
+      ? (window.SpideyReviewArt?.resolve?.(event) || null)
+      : approved;
     return asset?.file ? `${asset.file}?v=${String(asset.sha256 || '').slice(0, 12)}` : '';
   }
 
