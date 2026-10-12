@@ -7,6 +7,12 @@ const expected='assets/events/review/gbl-20261013-20-v1.png';
 const output='test-results/gbl-art';
 fs.mkdirSync(output,{recursive:true});
 const server=spawn('python3',['-m','http.server','4173','--directory','.'],{stdio:'ignore'});
+let ready=false;
+for(let attempt=0;attempt<40;attempt+=1){
+  try{const response=await fetch('http://127.0.0.1:4173/spidey-app/index.html');if(response.ok){ready=true;break;}}catch{}
+  await new Promise(resolve=>setTimeout(resolve,250));
+}
+if(!ready){server.kill('SIGTERM');throw new Error('static preview server did not become ready');}
 const fixed='2026-10-13T12:00:00-03:00';
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome'});
 const checks=[];
