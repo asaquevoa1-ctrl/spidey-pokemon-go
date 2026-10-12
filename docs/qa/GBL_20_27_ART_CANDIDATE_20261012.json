@@ -1,0 +1,42 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-10-gbl-20-27",
+  "title": "GO Battle League: Ultra / Master Mega / Fantasy Cup",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_brazil": "2026-10-20T17:00:00-03:00",
+    "end_brazil": "2026-10-27T17:00:00-03:00"
+  },
+  "official_leagues": [
+    "Ultra League",
+    "Master League: Mega Edition",
+    "Fantasy Cup: Great League Edition"
+  ],
+  "official_bonus": "4x Stardust from win rewards; excludes end-of-set rewards.",
+  "candidate_visual": "Abstract cinematic three-tier battle arena without characters or species; no bonuses beyond the official rotation bonus and no coordinates.",
+  "candidate_file": "spidey-app/assets/events/review/gbl-20261020-27-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/gbl-20261020-27-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2992399,
+  "sha256": "ed18cfe6a0408101426b4629c1477d763f09707f1f43470011d9a13ef079ce3c",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Arena PvP abstrata cinematografica e luminosa em tres niveis, sem personagens, com marca SpideyNexus, periodo, horario de Brasilia, ligas e bonus oficiais; sem especies, coordenadas, URLs ou alegacoes extras.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "bc76c5d2a456585a0dd608d31def95a69ba75974",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

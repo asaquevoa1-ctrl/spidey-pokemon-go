@@ -517,6 +517,17 @@
     "approval_record": "docs/qa/MINIOR_ORIONIDS_ART_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-gbl-20-27": {
+    "file": "assets/events/premium/gbl-20261020-27-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "ed18cfe6a0408101426b4629c1477d763f09707f1f43470011d9a13ef079ce3c",
+    "approval_record": "docs/qa/GBL_20_27_ART_APPROVAL_20261012.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
