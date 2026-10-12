@@ -4,6 +4,8 @@ on:
     paths:
       - 'spidey-app/assets/events/review/gbl-20261020-27-v1.png'
       - 'spidey-app/assets/events/premium/gbl-20261020-27-approved-v1.png'
+      - 'spidey-app/assets/events/review/gbl-20261020-27-v2.png'
+      - 'spidey-app/assets/events/premium/gbl-20261020-27-approved-v2.png'
       - 'spidey-app/preview-art.js'
       - 'spidey-app/premium-approved-master.js'
       - 'scripts/qa_gbl_20_27_art_browser.mjs'

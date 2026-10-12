@@ -1,0 +1,59 @@
+{
+  "schema_version": "spidey-art-correction-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "reason": "Replace the non-official SPIDEYNEXUS wordmark with the user-supplied official Spidey Pokémon GO logo.",
+  "official_logo_reference": {
+    "name": "1000409718(4).png",
+    "source": "user supplied",
+    "sha256": "50a70e2a873d62aa83bcb441a7b668fd0271b11752d646012f10dc4f92521162"
+  },
+  "items": [
+    {
+      "event_id": "2026-10-gbl-13-20",
+      "source_record": "docs/qa/GBL_ART_CANDIDATE_20261012.json",
+      "candidate_file": "spidey-app/assets/events/review/gbl-20261013-20-v2.png",
+      "approved_file": "spidey-app/assets/events/premium/gbl-20261013-20-approved-v2.png",
+      "supersedes_file": "spidey-app/assets/events/premium/gbl-20261013-20-approved-v1.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2588780,
+      "sha256": "aef26676479526526a6675eae8539b2949093f05426e02f18368b2ba0f05fab6"
+    },
+    {
+      "event_id": "2026-10-minior-orionids",
+      "source_record": "docs/qa/MINIOR_ORIONIDS_ART_CANDIDATE_20261012.json",
+      "candidate_file": "spidey-app/assets/events/review/minior-orionids-20261019-24-v2.png",
+      "approved_file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v2.png",
+      "supersedes_file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v1.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2657184,
+      "sha256": "1f383e1b6d0651873a6cb8e21df8ad643b23a70a88fe315634e2e417f4ee42a1"
+    },
+    {
+      "event_id": "2026-10-gbl-20-27",
+      "source_record": "docs/qa/GBL_20_27_ART_CANDIDATE_20261012.json",
+      "candidate_file": "spidey-app/assets/events/review/gbl-20261020-27-v2.png",
+      "approved_file": "spidey-app/assets/events/premium/gbl-20261020-27-approved-v2.png",
+      "supersedes_file": "spidey-app/assets/events/premium/gbl-20261020-27-approved-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2773194,
+      "sha256": "bfaef8a26cbb1184a56249e8ae5762344f5b3c2e6277f7b9dadd20c45fc1446e"
+    }
+  ],
+  "generation": "builtin imagegen edit",
+  "edit_scope": "Logo replacement only; existing event facts, composition, titles, dates, times and source labels retained.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "protected_refusals_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "1c2ba1ecf70ca45e88bbd8107a884a7961688c9c",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

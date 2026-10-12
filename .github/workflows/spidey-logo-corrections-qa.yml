@@ -1,0 +1,33 @@
+name: Spidey - QA correcoes do logo oficial
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/*-v2.png'
+      - 'spidey-app/assets/events/premium/*-approved-v2.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_logo_corrections_browser.mjs'
+      - 'docs/qa/LOGO_CORRECTION_*.json'
+      - 'tests/logo-correction-approval.test.cjs'
+      - '.github/workflows/spidey-logo-corrections-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/logo-corrections
+          command -v google-chrome | tee test-results/logo-corrections/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_logo_corrections_browser.mjs 2>&1 | tee test-results/logo-corrections/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-logo-responsive-preview
+          path: test-results/logo-corrections
