@@ -539,6 +539,17 @@
     "approval_record": "docs/qa/HALLOWEEN_GO_PASS_ART_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-sandile-hatch-day": {
+    "file": "assets/events/premium/sandile-hatch-day-20261017-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "2085f79cf371bd14cad7f6388b8eb84050a87b4266bb3e859290bdaee05062ae",
+    "approval_record": "docs/qa/SANDILE_HATCH_DAY_ART_APPROVAL_20261012.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

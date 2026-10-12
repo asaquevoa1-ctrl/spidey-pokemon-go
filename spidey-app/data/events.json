@@ -3626,8 +3626,8 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "requires_art": true,
+        "fallback_visual": "date"
       },
       "locations": [],
       "gpx": {
