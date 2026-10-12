@@ -1,0 +1,49 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-10-gbl-13-20",
+  "title": "Liga de Batalha GO",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_brazil": "2026-10-13T17:00:00-03:00",
+    "end_brazil": "2026-10-20T17:00:00-03:00"
+  },
+  "leagues": [
+    "Liga Grande",
+    "Ultra Mega",
+    "Copinha"
+  ],
+  "candidate_file": "spidey-app/assets/events/review/gbl-20261013-20-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/gbl-20261013-20-approved-v1.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 2950112,
+  "sha256": "96ea72ba2099a3f81ad7f433d317d9f2b59e63a831f7b7a558a1360567a167f8",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Arena PvP cinematográfica e luminosa, sem personagens, com marca SpideyNexus, período, horário de Brasília e ligas do catálogo oficial; sem bônus, coordenadas, URLs ou alegações extras.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "sandile_generation_block": {
+    "event_id": "2026-10-sandile-hatch-day",
+    "result": "moderation_blocked",
+    "request_ids": [
+      "5b3cf986-ee70-4b99-aa3e-9c2b90a3c974",
+      "3eae2e27-0e94-49fa-95f3-d64de3996234"
+    ],
+    "published_asset": false
+  },
+  "base_main_sha": "d998ee80eb10bbdc80acd4f3cfc6fdbc20982929",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
