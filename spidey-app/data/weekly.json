@@ -635,10 +635,10 @@
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/premium/gbl-20261013-20-approved-v1.png",
+          "url": "assets/events/premium/gbl-20261013-20-approved-v2.png",
           "width": 1122,
           "height": 1402,
-          "sha256": "96ea72ba2099a3f81ad7f433d317d9f2b59e63a831f7b7a558a1360567a167f8",
+          "sha256": "aef26676479526526a6675eae8539b2949093f05426e02f18368b2ba0f05fab6",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
@@ -731,7 +731,7 @@
     "events_without_weekly_art": 7,
     "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-12T08:46:47.930992-03:00",
+    "generated_at": "2026-10-12T10:06:30.361447-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
