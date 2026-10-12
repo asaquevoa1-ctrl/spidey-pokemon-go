@@ -1,0 +1,32 @@
+name: Spidey - QA responsivo TCG 30
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/tcg-30th-20260927-1020-v1.png'
+      - 'spidey-app/assets/events/premium/tcg-30th-20260927-1020-approved-v1.png'
+      - 'spidey-app/preview-art.js'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/data/weekly.json'
+      - 'scripts/qa_tcg30_art_browser.mjs'
+      - '.github/workflows/spidey-tcg30-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/tcg30-art
+          command -v google-chrome | tee test-results/tcg30-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_tcg30_art_browser.mjs 2>&1 | tee test-results/tcg30-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tcg30-responsive-preview
+          path: test-results/tcg30-art

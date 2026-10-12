@@ -1,0 +1,46 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-09-tcg-30th-us-retail",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/TCG30_ART_CANDIDATE_20261012.json",
+  "candidate_file": "spidey-app/assets/events/review/tcg-30th-20260927-1020-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/tcg-30th-20260927-1020-approved-v1.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 3127186,
+  "sha256": "a1a45247a9b31d58e820421929fc1b4c5cb9f973dd291c9bbc395105963634b6",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+    "confidence": "official"
+  },
+  "official_local_schedule": {
+    "start": "2026-09-27T10:00:00",
+    "end": "2026-10-20T22:00:00",
+    "timezone_rule": "local time at participating United States retail locations"
+  },
+  "scope": "Participating retail locations in the United States; not a global event.",
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38219777030,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38219777030",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "candidate_integrity_run": 38219777001,
+  "prior_master_entries_preserved": 51,
+  "prior_unique_images_preserved": 42,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

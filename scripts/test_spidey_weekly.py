@@ -21,8 +21,9 @@ class WeeklyPublicationTests(unittest.TestCase):
         self.assertEqual((weekly["week_start"], weekly["week_end"]), ("2026-10-05", "2026-10-11"))
         items = [item for group in weekly["sections"].values() for item in group]
         tcg = next(item for item in items if item["id"] == "2026-09-tcg-30th-us-retail")
-        self.assertEqual(tcg["weekly_art"]["kind"], "missing")
-        self.assertFalse(tcg["weekly_art"]["premium"])
+        self.assertEqual(tcg["weekly_art"]["kind"], "approved_master")
+        self.assertTrue(tcg["weekly_art"]["premium"])
+        self.assertEqual(tcg["weekly_art"]["sha256"], "a1a45247a9b31d58e820421929fc1b4c5cb9f973dd291c9bbc395105963634b6")
         self.assertGreater(weekly["meta"]["events_without_weekly_art"], 0)
         self.assertGreater(weekly["meta"]["events_with_premium_weekly_art"], 0)
         self.assertEqual(weekly["meta"]["events_with_generated_weekly_art"], 0)

@@ -495,6 +495,17 @@
     "approval_record": "docs/qa/GBL_ART_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-tcg-30th-us-retail": {
+    "file": "assets/events/premium/tcg-30th-20260927-1020-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "a1a45247a9b31d58e820421929fc1b4c5cb9f973dd291c9bbc395105963634b6",
+    "approval_record": "docs/qa/TCG30_ART_APPROVAL_20261012.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
