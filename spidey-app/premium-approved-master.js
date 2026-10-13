@@ -561,6 +561,17 @@
     "approval_record": "docs/qa/LAKE_TRIO_MAX_BATTLE_ART_APPROVAL_20261012.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-gbl-27-1103": {
+    "file": "assets/events/premium/gbl-20261027-1103-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "067e6acf5437b3baf450382ac3830cbf17aa0055c8ff304f8bdb2bb5dc188021",
+    "approval_record": "docs/qa/GBL_27_1103_ART_APPROVAL_20261013.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

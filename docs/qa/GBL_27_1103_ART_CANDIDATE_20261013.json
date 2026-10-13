@@ -1,0 +1,46 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-10-gbl-27-1103",
+  "title": "GO Battle League: Master / Mega Halloween Cup",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_brazil": "2026-10-27T17:00:00-03:00",
+    "end_brazil": "2026-11-03T18:00:00-03:00"
+  },
+  "official_leagues": [
+    "Master League",
+    "Mega Halloween Cup: Great League Edition"
+  ],
+  "official_rules": [
+    "CP must be at or below 1,500 to enter the Mega Halloween Cup.",
+    "Mega-Evolved Pokémon are eligible.",
+    "Only Bug-, Poison-, Ghost-, Dark-, and Fairy-type Pokémon are eligible."
+  ],
+  "official_bonus": "4x Stardust from win rewards; excludes end-of-set rewards.",
+  "candidate_visual": "Abstract cinematic Halloween battle arena without characters or species; no coordinates and no claims beyond the official rotation.",
+  "candidate_file": "spidey-app/assets/events/review/gbl-20261027-1103-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/gbl-20261027-1103-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2902127,
+  "sha256": "067e6acf5437b3baf450382ac3830cbf17aa0055c8ff304f8bdb2bb5dc188021",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Arena PvP de Halloween cinematografica e luminosa, sem personagens ou especies, com marca Spidey oficial sobreposta, periodo, ligas, limite de CP, elegibilidade Mega e bonus oficiais; sem coordenadas ou URLs.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "e69731ddd6bcaad6e74821ea63cf4c99637e641e",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
