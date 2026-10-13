@@ -8,7 +8,7 @@ test('GBL Halloween delegated approval promotes the exact reviewed PNG and prese
   const master=window.SPIDEY_APPROVED_ART_MASTER;
   assert.equal(approval.approval_basis,'USER_DELEGATED_VISUAL_QA');
   assert.equal(approval.individual_human_approval_claimed,false);
-  assert.ok(['PENDING_CI','PASSED_PREVIEW'].includes(approval.browser_qa.status));
+  assert.equal(approval.browser_qa.status,'PASSED_PREVIEW');
   assert.equal(approval.browser_qa.checks,12);
   assert.equal(candidate.generation,'builtin imagegen');
   assert.equal(hash(approval.candidate_file),approval.sha256);
