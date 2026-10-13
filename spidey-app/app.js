@@ -201,7 +201,7 @@ function renderEvents(events = state.events.filter((event) => event.content_type
     card.dataset.eventId = event.id;
     card.tabIndex = 0;
     card.innerHTML = `
-      <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">
+      <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">
       <div>
         <span class="eyebrow">${event.location_label || event.locations?.[0]?.label || 'Evento'}</span>
         <h3>${event.title}</h3>
@@ -216,8 +216,9 @@ function renderEvents(events = state.events.filter((event) => event.content_type
 
 function locationRows(event) {
   const locations = event.locations || [];
-  if (!locations.length) return '<p class="empty">Sem coordenadas cadastradas.</p>';
-  return locations.map((loc, index) => {
+  const verified = locations.filter(validCoordinate);
+  if (!verified.length) return '<p class="empty">Coordenadas não confirmadas para este evento. Consulte o endereço oficial; nenhum ponto foi inventado.</p>';
+  return verified.map((loc, index) => {
     const value = `${Number(loc.latitude).toFixed(4)}, ${Number(loc.longitude).toFixed(4)}`;
     return `<div class="coordinates"><div><strong>${loc.label || `Ponto ${index + 1}`}</strong><br><code>${value}</code></div><button class="action-btn copy-coord" data-value="${value}">Copiar</button></div>`;
   }).join('');
@@ -412,7 +413,7 @@ function openEvent(event) {
   const bonuses = event.bonuses || [];
   const pokemon = event.pokemon || [];
   detail.innerHTML = `
-    ${newsOnly ? '' : `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=generatedEventArtUrl(event)">`}
+    ${newsOnly ? '' : `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">`}
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
       <h2>${event.public_title || event.title}</h2><p>${event.public_summary || event.summary || ''}</p>
