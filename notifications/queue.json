@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-fall-marathon-buddy-trek:start:60",
-      "event_id": "2026-10-fall-marathon-buddy-trek",
-      "event_title": "Maratona das Folhas: Caminhada Companheira",
-      "category": "evento_especial",
-      "scheduled_for": "2026-10-13T09:00:00-03:00",
-      "event_start": "2026-10-13T10:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Maratona das Folhas: Caminhada Companheira começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-fall-marathon-buddy-trek",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/fall-marathon-buddy-trek-2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-gbl-13-20:start:60",
       "event_id": "2026-10-gbl-13-20",
       "event_title": "GO Battle League: Great / Ultra Mega / Little Cup",
@@ -654,7 +636,7 @@
     }
   ],
   "meta": {
-    "pending_count": 36,
+    "pending_count": 35,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
