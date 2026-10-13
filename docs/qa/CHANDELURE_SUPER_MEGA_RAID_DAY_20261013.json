@@ -1,0 +1,48 @@
+{
+  "schema_version": "spidey-forward-scan-v1",
+  "checked_at": "2026-10-13T19:00:48-03:00",
+  "base_main_sha": "a429f20cf84bc9188e3ff79c508067fbc8fc245c",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "official_sources": [
+    {
+      "url": "https://pokemongo.com/en/news/chandelure-super-mega-raid-day-2026",
+      "language": "en",
+      "result": "Anúncio completo confirmado: Mega Chandelure, 31/10 das 14h às 17h locais, bônus, pesquisa, ingresso e Desafio Global."
+    },
+    {
+      "url": "https://pokemongo.com/pt-BR/news",
+      "language": "pt-BR",
+      "result": "Índice oficial conferido; a versão localizada do artigo não foi encontrada nesta checagem."
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://pokemongohub.net/post/event/october-2026-events/",
+      "result": "Fonte anterior da janela do evento; substituída como fonte principal pelo anúncio oficial."
+    }
+  ],
+  "changed_event_ids": [
+    "2026-10-super-mega-raid-day"
+  ],
+  "identity_policy": {
+    "preserved_id": "2026-10-super-mega-raid-day",
+    "new_calendar_event_created": false,
+    "news_is_catalog_view": true
+  },
+  "timezone_checks": {
+    "event_local": "2026-10-31 14:00–17:00 local",
+    "challenge_pdt_to_brt": "2026-10-30 17:00 PDT → 2026-10-30 21:00 BRT; 2026-10-31 20:00 PDT → 2026-11-01 00:00 BRT",
+    "reward_pst_to_brt": "2026-11-02 12:00 PST → 2026-11-02 17:00 BRT; 2026-11-15 12:00 PST → 2026-11-15 17:00 BRT"
+  },
+  "protected": {
+    "assets_changed": false,
+    "premium_master_changed": false,
+    "pokedex_changed": false,
+    "pvp_changed": false,
+    "gpx_changed": false,
+    "coordinates_changed": false,
+    "stamps_changed": false,
+    "push_dispatched": false,
+    "rejected_art_ids_retried": []
+  }
+}

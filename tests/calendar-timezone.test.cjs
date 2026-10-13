@@ -72,17 +72,19 @@ test('today uses Brasília at a month or year boundary regardless of the device 
   });
 });
 
-test('official October updates keep their confirmed Brasília windows and unrevealed boss empty', () => {
+test('official October updates keep their confirmed Brasília windows and Mega Chandelure reveal', () => {
   const byId = id => events.find(event => event.id === id);
   const nightOut = byId('2026-10-pokemon-night-out-twitch');
   const boston = byId('2026-10-city-safari-boston-rescheduled');
-  const unrevealed = byId('2026-10-super-mega-raid-day');
+  const chandelure = byId('2026-10-super-mega-raid-day');
   assert.equal(nightOut.schedule.start_local, '2026-10-24T19:30:00-07:00');
   assert.equal(nightOut.schedule.start_brazil, '2026-10-24T23:30:00-03:00');
   assert.equal(nightOut.calendar.mode, 'start');
   assert.equal(boston.schedule.start_brazil, '2026-10-24T10:00:00-03:00');
   assert.equal(boston.schedule.end_brazil, '2026-10-25T18:00:00-03:00');
   assert.match(boston.summary, /exclusiva para quem já possui ingresso/i);
-  assert.equal(unrevealed.pokemon?.length || 0, 0);
-  assert.equal(unrevealed.bonuses?.length || 0, 0);
+  assert.equal(chandelure.schedule.start_brazil, '2026-10-31T14:00:00-03:00');
+  assert.equal(chandelure.schedule.end_brazil, '2026-10-31T17:00:00-03:00');
+  assert.ok(chandelure.pokemon.some(pokemon => pokemon.name === 'Mega Chandelure'));
+  assert.ok(chandelure.bonuses.some(bonus => /seis Passes de Reide gratuitos/.test(bonus)));
 });

@@ -492,19 +492,19 @@
     {
       "id": "2026-10-super-mega-raid-day:start:60",
       "event_id": "2026-10-super-mega-raid-day",
-      "event_title": "Dia de Super Megarreides",
+      "event_title": "Dia de Super Megarreides de Mega Chandelure",
       "category": "raid_day",
       "scheduled_for": "2026-10-31T13:00:00-03:00",
       "event_start": "2026-10-31T14:00:00-03:00",
       "lead_minutes": 60,
       "title": "Spidey Pokémon GO",
-      "body": "Dia de Super Megarreides começa em cerca de 1 hora(s).",
+      "body": "Dia de Super Megarreides de Mega Chandelure começa em cerca de 1 hora(s).",
       "url": "./?event=2026-10-super-mega-raid-day",
       "status": "pending",
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO · anúncio oficial em inglês",
+        "url": "https://pokemongo.com/en/news/chandelure-super-mega-raid-day-2026",
+        "confidence": "official"
       }
     },
     {
