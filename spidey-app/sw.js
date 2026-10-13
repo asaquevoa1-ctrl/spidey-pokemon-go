@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261013-gbl-halloween-art-v1';
+const CACHE = 'spidey-app-20261013-city-safari-boston-art-v1';
 const CORE = [
+  './assets/events/premium/city-safari-boston-20261024-25-approved-v1.png',
   './assets/events/premium/gbl-20261027-1103-approved-v1.png',
   './assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png',
   './assets/events/premium/sandile-hatch-day-20261017-approved-v1.png',

@@ -572,6 +572,17 @@
     "approval_record": "docs/qa/GBL_27_1103_ART_APPROVAL_20261013.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-city-safari-boston-rescheduled": {
+    "file": "assets/events/premium/city-safari-boston-20261024-25-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "7e32527389bbd741cb9675a9ef7594ff050216c82dc96beee951466a219e3e1c",
+    "approval_record": "docs/qa/CITY_SAFARI_BOSTON_ART_APPROVAL_20261013.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
