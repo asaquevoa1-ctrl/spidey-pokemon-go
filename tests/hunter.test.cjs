@@ -32,6 +32,8 @@ test('hunter: coordinates reject unsafe, out-of-bounds or incomplete input',()=>
 test('hunter: external search is clearly identified, no hidden provider requests',()=>{
   assert.match(source,/pogocoordinates\.com\/feeds\/high-cp-100iv/);
   assert.match(source,/pogocoordinates\.com\/feeds\/zero-iv/);
+  for (const slug of ['rare-100iv','regional-100iv','level-35-100iv']) assert.ok(source.includes(slug));
+  assert.match(source,/hunterPaste/);
   assert.doesNotMatch(source,/\bfetch\s*\(/);
   assert.match(source,/rel="noopener noreferrer"/);
 });
