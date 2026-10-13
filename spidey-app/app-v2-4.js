@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-app-v2.4-20261004-calendar-brasil-v2';
+  const VERSION = 'spidey-app-v2.4-20261012-calendar-premium-art-v1';
   const XERNEAS_ART_URL = 'assets/events/premium/xerneas-premium-approved-v1.avif';
   let scheduled = false;
 
@@ -58,6 +58,20 @@
     }).format(day).replace(/^./, (char) => char.toUpperCase());
   }
 
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    }[char]));
+  }
+
+  function approvedDayArt(event) {
+    const approved = window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
+    if (!approved?.file || window.SPIDEY_UNAVAILABLE_ART?.[approved.file]) return '';
+    const version = String(approved.sha256 || '').slice(0, 12);
+    const source = `${approved.file}${version ? `?v=${version}` : ''}`;
+    return `<img class="v24-day-event-art" src="${escapeHtml(source)}" alt="Arte de ${escapeHtml(event.title || 'evento Pokémon GO')}" width="${Number(approved.width || 0)}" height="${Number(approved.height || 0)}" loading="lazy">`;
+  }
+
   function openDay(day, events) {
     if (!events.length) {
       if (typeof showToast === 'function') showToast('Nenhum evento neste dia.');
@@ -79,12 +93,16 @@
         <h2>${formatDayTitle(day)}</h2>
         <p>${events.length} eventos neste dia. Toque para abrir.</p>
         <div class="v24-day-events">
-          ${events.map((event) => `
-            <button type="button" class="v24-day-event" data-event-id="${String(event.id).replace(/"/g, '&quot;')}">
-              <span>${typeof formatRange === 'function' ? formatRange(event) : ''}</span>
-              <strong>${event.title || 'Evento Pokémon GO'}</strong>
-              ${event.summary ? `<small>${event.summary}</small>` : ''}
-            </button>`).join('')}
+          ${events.map((event) => {
+            const art = approvedDayArt(event);
+            return `
+            <button type="button" class="v24-day-event${art ? ' has-art' : ''}" data-event-id="${escapeHtml(event.id)}">
+              ${art}
+              <span>${escapeHtml(typeof formatRange === 'function' ? formatRange(event) : '')}</span>
+              <strong>${escapeHtml(event.title || 'Evento Pokémon GO')}</strong>
+              ${event.summary ? `<small>${escapeHtml(event.summary)}</small>` : ''}
+            </button>`;
+          }).join('')}
         </div>
       </div>`;
 

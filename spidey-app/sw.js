@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261012-premium-detail-fix-v1';
+const CACHE = 'spidey-app-20261013-premium-visibility-v2';
 const CORE = [
   './assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png',
   './assets/events/premium/sandile-hatch-day-20261017-approved-v1.png',
