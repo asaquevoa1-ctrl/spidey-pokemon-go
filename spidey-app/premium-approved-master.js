@@ -594,6 +594,17 @@
     "approval_record": "docs/qa/POKEMON_NIGHT_OUT_ART_APPROVAL_20261013.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-09-adidas-avatar-research": {
+    "file": "assets/events/premium/adidas-avatar-research-20260925-20270115-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "a6700a4b30ef03c89e8f9cc7d37276a92ddc06a30d80f94d671a91260d984dd5",
+    "approval_record": "docs/qa/ADIDAS_AVATAR_RESEARCH_ART_APPROVAL_20261013.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261013-pokemon-night-out-art-v1';
+const CACHE = 'spidey-app-20261013-adidas-avatar-art-v1';
 const CORE = [
+  './assets/events/premium/adidas-avatar-research-20260925-20270115-approved-v1.png',
   './assets/events/premium/pokemon-night-out-20261024-approved-v1.png',
   './assets/events/premium/city-safari-boston-20261024-25-approved-v1.png',
   './assets/events/premium/gbl-20261027-1103-approved-v1.png',
