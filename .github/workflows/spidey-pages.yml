@@ -43,6 +43,13 @@ jobs:
         run: node --test tests/web-analytics.test.cjs
       - name: Preparar somente os arquivos públicos
         run: python scripts/build_spidey_pages.py --output pages-public
+      - name: Disponibilizar pacote de prévia gratuito para a PR
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: spidey-preview-pr-${{ github.event.pull_request.number }}
+          path: pages-public
+          retention-days: 7
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
