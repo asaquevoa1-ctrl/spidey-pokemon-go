@@ -28,6 +28,7 @@
     document.querySelectorAll('[data-hunter-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hunterCategory===selected)));
     el('hunterTip').textContent=item.tip;
     el('hunterExternal').href=item.url;
+    el('hunterHundoFeeds').hidden=selected!=='hundo';
   }
   function renderIV(){
     const values=['hunterAttack','hunterDefense','hunterStamina'].map(id=>el(id).value.trim());
@@ -55,12 +56,13 @@
       categories.map(c=>'<button class="hunter-category" type="button" data-hunter-category="'+c.id+'" aria-pressed="false">'+c.label+'</button>').join(''),
       '</div><p id="hunterTip" class="hunter-tip" role="status" aria-live="polite"></p>',
       '<a id="hunterExternal" class="action-btn hunter-outbound" href="https://pogocoordinates.com/search" target="_blank" rel="noopener noreferrer">Buscar no PoGo Coordinates ↗</a>',
+      '<div id="hunterHundoFeeds" class="hunter-feed-shortcuts" hidden><span>Outros 100%:</span><a href="https://pogocoordinates.com/feeds/rare-100iv" target="_blank" rel="noopener noreferrer">Raros ↗</a><a href="https://pogocoordinates.com/feeds/regional-100iv" target="_blank" rel="noopener noreferrer">Regionais ↗</a><a href="https://pogocoordinates.com/feeds/level-35-100iv" target="_blank" rel="noopener noreferrer">Nível 35+ ↗</a></div>',
       '<p class="microcopy">A pesquisa abre no site original. O Spidey não importa aparições nem recebe seus dados de login.</p>',
       '<details class="hunter-checker"><summary>Conferir uma coordenada ou IV</summary><div class="hunter-checker-body"><p class="microcopy">Use dados de uma aparição encontrada para verificar os valores e a localização.</p>',
       '<div class="hunter-iv-row"><label>Ataque <input id="hunterAttack" type="number" inputmode="numeric" min="0" max="15" placeholder="0–15"></label><label>Defesa <input id="hunterDefense" type="number" inputmode="numeric" min="0" max="15" placeholder="0–15"></label><label>PS <input id="hunterStamina" type="number" inputmode="numeric" min="0" max="15" placeholder="0–15"></label></div>',
       '<p id="hunterIvStatus" role="status" aria-live="polite"></p><label class="hunter-coord-label" for="hunterCoords">Coordenadas (latitude, longitude)</label>',
       '<input id="hunterCoords" type="text" autocomplete="off" spellcheck="false" placeholder="Ex.: -25.4221,-49.2717"><p id="hunterCoordStatus" class="microcopy" role="status" aria-live="polite"></p>',
-      '<div class="hunter-actions"><button id="hunterCopy" type="button" class="action-btn" disabled>Copiar coordenadas</button><a id="hunterMap" class="action-btn" href="#" target="_blank" rel="noopener noreferrer" hidden>Abrir no mapa ↗</a></div></div></details>',
+      '<div class="hunter-actions"><button id="hunterPaste" type="button" class="action-btn">Colar coordenadas</button><button id="hunterCopy" type="button" class="action-btn" disabled>Copiar coordenadas</button><a id="hunterMap" class="action-btn" href="#" target="_blank" rel="noopener noreferrer" hidden>Abrir no mapa ↗</a></div></div></details>',
       '<p class="microcopy">O Shiny é individual por conta. Encontrar 100% não garante Shundo. Confira as regras do jogo.</p>'
     ].join('');
     const hero=fly.querySelector('.hero');
@@ -68,6 +70,15 @@
     s.addEventListener('click',async event=>{
       const category=event.target.closest('[data-hunter-category]');
       if(category){selected=category.dataset.hunterCategory;renderCategory();return;}
+      if(event.target.id==='hunterPaste'){
+        try{
+          if(!navigator.clipboard?.readText)throw Error('Sem acesso');
+          const pasted=(await navigator.clipboard.readText()).trim();
+          if(!parseCoords(pasted)){el('hunterCoordStatus').textContent='O texto copiado não contém uma coordenada válida. Cole latitude,longitude manualmente.';return;}
+          el('hunterCoords').value=pasted;renderCoords();
+        }catch{el('hunterCoords').focus();el('hunterCoordStatus').textContent='Seu navegador não permitiu a colagem automática. Toque no campo e escolha Colar.';}
+        return;
+      }
       if(event.target.id!=='hunterCopy')return;
       const coords=parseCoords(el('hunterCoords').value);
       if(!coords)return;
