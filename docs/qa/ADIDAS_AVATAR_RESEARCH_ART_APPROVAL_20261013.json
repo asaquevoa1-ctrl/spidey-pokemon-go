@@ -23,9 +23,9 @@
     "complete_until_local": "2027-02-13T20:00:00-03:00"
   },
   "browser_qa": {
-    "status": "PENDING_CI",
-    "workflow_run": null,
-    "url": null,
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38426464161,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38426464161",
     "week_fixture": "2026-10-12..2026-10-18",
     "fixture_note": "The catalog event is intentionally hidden from the production calendar; Calendar and Weekly are previewed with a QA-only visibility fixture.",
     "views": ["calendar", "weekly", "detail"],
