@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261013-premium-visibility-v2';
+const CACHE = 'spidey-app-20261013-gbl-halloween-art-v1';
 const CORE = [
+  './assets/events/premium/gbl-20261027-1103-approved-v1.png',
   './assets/events/premium/lake-trio-max-battle-day-20261024-approved-v1.png',
   './assets/events/premium/sandile-hatch-day-20261017-approved-v1.png',
   './assets/events/premium/halloween-go-pass-20261027-1105-approved-v1.png',
