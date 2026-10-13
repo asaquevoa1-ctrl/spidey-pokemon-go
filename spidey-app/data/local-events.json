@@ -37,8 +37,12 @@
           "address": "1400 S. DuSable Lake Shore Drive, Chicago, IL 60605, Estados Unidos",
           "access_note": "A visita à exposição exige ingresso. Confira os horários de abertura e os dias de fechamento no site do museu. Horário do jogo e abertura do prédio podem ser diferentes.",
           "source_url": "https://www.fieldmuseum.org/exhibition/pokemon",
-          "coordinate_type": "venue_address",
-          "exact_pokestop_verified": false
+          "coordinate_type": "community_venue_reference",
+          "exact_pokestop_verified": false,
+          "latitude": 41.866333,
+          "longitude": -87.61792,
+          "coordinate_label": "Referência enviada pela comunidade · não é Poképarada verificada",
+          "coordinate_confidence": "community_supplied"
         }
       ],
       "gpx": {
