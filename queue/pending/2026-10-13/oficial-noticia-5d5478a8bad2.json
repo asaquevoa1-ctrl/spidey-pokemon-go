@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 OFICIAL • NOTÍCIA",
+  "mensagem": "Um brilho assustador nos aguarda no Dia de Super Megarreides: Chandelure!\n\n📌 Fonte: Pokémon GO oficial",
+  "url": "https://pokemongo.com/pt-BR/news/chandelure-super-mega-raid-day-2026",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "oficial-https://pokemongo.com/pt-BR/news/chandelure-super-mega-raid-day-2026",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-13T20:31:37.596693+00:00"
+}
