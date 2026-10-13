@@ -1,0 +1,48 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-apac-mall-exploration",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/APAC_MALL_EXPLORATION_ART_CANDIDATE_20261013.json",
+  "candidate_file": "spidey-app/assets/events/review/apac-mall-exploration-20261001-20270328-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/apac-mall-exploration-20261001-20270328-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 331173,
+  "sha256": "b9d7f2107198fe5fec8826c3ac6ff383c4c3e3be05bae34fe7c9113ed1893ff9",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/apac-mall-exploration-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "first_confirmed_local_date": "2026-10-01",
+    "last_confirmed_local_date": "2027-03-28",
+    "per_mall_windows": true
+  },
+  "browser_qa": {
+    "status": "PENDING_CI",
+    "workflow_run": null,
+    "url": null,
+    "week_fixture": "2026-10-12..2026-10-18",
+    "fixture_note": "O evento permanece oculto no calendário de produção; Calendário e Semana usam somente uma fixture de visibilidade para conferir a arte.",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 61,
+  "prior_unique_images_preserved": 52,
+  "remaining_premium_gaps_after_publication": 23,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

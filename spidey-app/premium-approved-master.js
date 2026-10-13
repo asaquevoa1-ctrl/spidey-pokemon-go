@@ -605,6 +605,17 @@
     "approval_record": "docs/qa/ADIDAS_AVATAR_RESEARCH_ART_APPROVAL_20261013.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-apac-mall-exploration": {
+    "file": "assets/events/premium/apac-mall-exploration-20261001-20270328-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "b9d7f2107198fe5fec8826c3ac6ff383c4c3e3be05bae34fe7c9113ed1893ff9",
+    "approval_record": "docs/qa/APAC_MALL_EXPLORATION_ART_APPROVAL_20261013.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

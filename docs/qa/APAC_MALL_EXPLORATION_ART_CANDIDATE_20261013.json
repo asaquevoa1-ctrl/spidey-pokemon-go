@@ -1,0 +1,55 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-apac-mall-exploration",
+  "title": "Pokémon 30: exploração de shoppings na Ásia",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/apac-mall-exploration-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "first_confirmed_local_date": "2026-10-01",
+    "last_confirmed_local_date": "2027-03-28",
+    "note": "Cada shopping participante possui sua própria janela oficial. O pôster não atribui horário único ao evento."
+  },
+  "art_rules": [
+    "official_source_only",
+    "official_spidey_logo",
+    "no_unverified_mall_or_coordinates",
+    "no_unverified_species_or_reward",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "O primeiro período confirmado começa em 1 de outubro de 2026 e a última janela publicada termina em 28 de março de 2027.",
+    "A Pesquisa temporária é recebida em um shopping participante, uma única vez por Treinador, e expira dez dias após o recebimento.",
+    "O anúncio oficial destaca Pikachu usando chapéu de festa.",
+    "Módulos Atrair duram quatro horas nas áreas designadas durante os períodos locais.",
+    "Nenhum horário único, endereço, coordenada ou shopping não confirmado aparece no pôster."
+  ],
+  "candidate_visual": "Átrio cinematográfico, luminoso e festivo de shopping da Ásia-Pacífico, com profundidade, confetes, fitas e marca Spidey; Pikachu de chapéu de festa é citado apenas no texto factual.",
+  "candidate_file": "spidey-app/assets/events/review/apac-mall-exploration-20261001-20270328-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/apac-mall-exploration-20261001-20270328-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 331173,
+  "sha256": "b9d7f2107198fe5fec8826c3ac6ff383c4c3e3be05bae34fe7c9113ed1893ff9",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Átrio festivo cinematográfico em dourado, azul e magenta, sem personagens, texto ou marcas gerados; título, fatos oficiais e marca Spidey foram aplicados deterministicamente.",
+  "generation_notes": "A geração integrada produziu somente o cenário; nenhuma API ou CLI paga foi usada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "c8c7fb93353a140b89234f2179efff287756e9c2",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
