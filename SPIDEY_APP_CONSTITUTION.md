@@ -174,9 +174,11 @@ O FLY deve consumir os dados existentes de eventos e localização; não criar u
 
 ## 12. Preview, QA e produção
 Fluxo obrigatório:
-branch de trabalho -> preview Vercel -> QA mobile -> validação factual -> validação visual -> aprovação -> produção/main.
-Build READY não significa produto aprovado.
-Main não deve receber mudanças antes da aprovação da preview.
+branch de trabalho -> pacote de prévia gratuito via GitHub Actions -> QA responsivo e mobile -> validação factual -> validação visual -> aprovação -> produção em main/GitHub Pages.
+Não depender de Vercel, plano pago ou conta de hospedagem do jogador. A prévia inicial é um artefato de teste do GitHub Actions, não um site público; somente chamar de link navegável quando a publicação independente tiver sido comprovada.
+Teste/empacotamento com sucesso não significa produto aprovado. Teste automatizado de mobile não substitui validação em dispositivo físico.
+Main não deve receber mudanças antes da aprovação da experiência. Após aprovação, publicar via fluxo GitHub Pages já existente, mantendo o endereço público estável.
+Notificações push e Amigos/chat precisam de backend separado, sujeito a permissão, privacidade e viabilidade sem custos; GitHub Pages estático não os executa.
 
 ## 13. REGRA MÁXIMA DE NÃO REGRESSÃO
 Nenhuma versão nova pode regredir algo já aprovado.
