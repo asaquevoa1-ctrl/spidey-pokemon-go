@@ -1,0 +1,19 @@
+{
+  "titulo": "🔄 G47IX • ATUALIZAÇÃO",
+  "mensagem": "Big Change! ℹ️\n\nWayfarer warnings and suspensions will only apply to your Wayfarer account and will remain separate from your Pokémon GO account, except in cases of severe violations.\n\nhttps://community.wayfarer.scopely.com/t/wayfarer-abuse-enforcement-ladder-policy-update/117572\n\n#pokemongo\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2110126030757179505",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2110126030757179505",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-13T21:55:52.679616+00:00"
+}
