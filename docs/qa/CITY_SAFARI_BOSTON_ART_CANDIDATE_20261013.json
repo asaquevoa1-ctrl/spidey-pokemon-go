@@ -1,0 +1,41 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "status": "PENDING_REVIEW",
+  "event_id": "2026-10-city-safari-boston-rescheduled",
+  "title": "City Safari Boston remarcado",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_brazil": "2026-10-24T10:00:00-03:00",
+    "end_brazil": "2026-10-25T18:00:00-03:00",
+    "time_mode": "local"
+  },
+  "official_eligibility": [
+    "Global gameplay is exclusive to current Boston ticket holders.",
+    "No new tickets will be sold."
+  ],
+  "candidate_visual": "Cinematic luminous Boston autumn waterfront with explorer hat and compass; no Pokemon characters, species, coordinates, bonuses, or raw URL.",
+  "candidate_file": "spidey-app/assets/events/review/city-safari-boston-20261024-25-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/city-safari-boston-20261024-25-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 641676,
+  "sha256": "7e32527389bbd741cb9675a9ef7594ff050216c82dc96beee951466a219e3e1c",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Poster vertical cinematografico e luminoso de Boston no outono, com chapeu de explorador e bussola, marca oficial Spidey sobreposta, periodo, horario local e elegibilidade oficiais; sem personagens, especies, coordenadas, bonus ou URLs.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "5f03087a8b4e99dbe7ee49032534f37e73231fda",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
