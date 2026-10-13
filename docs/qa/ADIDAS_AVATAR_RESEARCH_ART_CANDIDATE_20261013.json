@@ -1,0 +1,53 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-09-adidas-avatar-research",
+  "title": "Pesquisa adidas × Pokémon",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/pokemon-x-adidas-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_local": "2026-09-25T00:00:00-03:00",
+    "obtain_until_local": "2027-01-15T20:00:00-03:00",
+    "complete_until_local": "2027-02-13T20:00:00-03:00"
+  },
+  "art_rules": [
+    "official_source_only",
+    "no_unverified_store_or_coordinates",
+    "no_unverified_bonus_or_species",
+    "no_commercial_logo_lockup",
+    "official_spidey_logo"
+  ],
+  "fact_checks": [
+    "The Timed Research is obtained by visiting participating adidas stores and opening Pokémon GO.",
+    "The official rewards include an avatar jacket and cap, an encounter with Lucario, and Lucario Mega Energy.",
+    "The research can be obtained until January 15, 2027 at 8:00 p.m. local time.",
+    "No store address or coordinate is claimed by the poster."
+  ],
+  "candidate_visual": "Cinematic abstract blue athletic plaza with integrated official facts and Spidey branding; no character illustration, commercial logo lockup, store, coordinate, or invented reward.",
+  "candidate_file": "spidey-app/assets/events/review/adidas-avatar-research-20260925-20270115-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/adidas-avatar-research-20260925-20270115-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 269419,
+  "sha256": "a6700a4b30ef03c89e8f9cc7d37276a92ddc06a30d80f94d671a91260d984dd5",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Cenário esportivo abstrato cinematográfico em azul e grafite, sem personagens, marcas ou texto gerados; tipografia oficial e marca Spidey foram aplicadas deterministicamente após a geração integrada.",
+  "generation_notes": "Two subject-specific outputs were refused by the integrated safety system before producing files. The accepted integrated output contains no characters or trademarks; no paid API or CLI was used.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "e2325698509ea9d88e8b87f6c5c879aac8a55c62",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
