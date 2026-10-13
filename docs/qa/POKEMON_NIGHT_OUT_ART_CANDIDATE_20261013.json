@@ -1,0 +1,52 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-pokemon-night-out-twitch",
+  "title": "Pokémon Night Out: recompensa na Twitch",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/pokemon-night-out-twitch-drops2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_local": "2026-10-24T19:30:00-07:00",
+    "start_brazil": "2026-10-24T23:30:00-03:00",
+    "end_confirmed": false
+  },
+  "art_rules": [
+    "official_source_only",
+    "no_unverified_characters_or_species",
+    "no_unverified_venue_or_team_branding",
+    "no_coordinates",
+    "official_spidey_logo"
+  ],
+  "fact_checks": [
+    "Official Pokémon GO stream starts October 24, 2026 at 7:30 p.m. PDT.",
+    "Watching 30 minutes grants a code for exclusive Timed Research.",
+    "Completing the Timed Research awards a Pokémon Night Out baseball jersey for the avatar.",
+    "The official announcement does not state an end time."
+  ],
+  "candidate_visual": "Cinematic luminous abstract livestream arena with a plain baseball jersey; no species, coordinates, venue, team branding, end time, or bonus claim.",
+  "candidate_file": "spidey-app/assets/events/review/pokemon-night-out-20261024-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 504621,
+  "sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Arena de transmissao noturna cinematografica em azul e roxo, camisa de beisebol sem marca, identidade Spidey oficial sobreposta e somente horario, duracao de audiencia e recompensa confirmados pela fonte oficial.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "097673da51d9a8280ca6eb728ea3f02815b18cb2",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
