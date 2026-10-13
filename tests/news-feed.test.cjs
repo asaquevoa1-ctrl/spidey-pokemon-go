@@ -76,3 +76,17 @@ test('undated news stays in News and never becomes a calendar event',()=>{
  const datamine=events.find(e=>e.id==='2026-10-08-dynamax-forms-datamine');
  assert.equal(datamine.source.confidence,'community');assert.match(datamine.summary,/confirmar/i);
 });
+
+test('Mega Chandelure keeps the existing calendar identity and publishes the official reveal in News',()=>{
+ const event=events.find(e=>e.id==='2026-10-super-mega-raid-day');
+ assert.equal(event.slug,event.id);assert.equal(event.source.confidence,'official');
+ assert.match(event.source.url,/chandelure-super-mega-raid-day-2026/);
+ assert.equal(event.schedule.start_local,'2026-10-31T14:00:00-03:00');
+ assert.equal(event.schedule.end_local,'2026-10-31T17:00:00-03:00');
+ assert.ok(event.pokemon.some(p=>p.name==='Mega Chandelure'));
+ assert.ok(event.bonuses.some(b=>/seis Passes de Reide gratuitos/.test(b)));
+ assert.ok(event.bonuses.some(b=>/^Ingresso pago:/.test(b)));
+ assert.equal(event.gpx.enabled,false);assert.equal(event.presentation.requires_art,false);
+ const story=build(events,range,new Date('2026-10-13T22:00:48Z')).find(s=>s.events.some(e=>e.id===event.id));
+ assert.ok(story);assert.match(story.title,/Mega Chandelure/);assert.equal(story.events.length,1);
+});

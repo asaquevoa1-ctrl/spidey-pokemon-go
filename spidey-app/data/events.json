@@ -4109,19 +4109,27 @@
     {
       "id": "2026-10-super-mega-raid-day",
       "slug": "2026-10-super-mega-raid-day",
-      "title": "Dia de Super Megarreides",
-      "summary": "Dia de Super Megarreides de Halloween; chefe em destaque ainda sujeito a anúncio oficial.",
+      "title": "Dia de Super Megarreides de Mega Chandelure",
+      "summary": "Mega Chandelure estreia em Super Megarreides em 31 de outubro, das 14h às 17h, no horário local.",
       "category": "raid_day",
       "tags": [
         "Super Mega",
         "Raid Day",
+        "Mega Chandelure",
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO · anúncio oficial em inglês",
+        "url": "https://pokemongo.com/en/news/chandelure-super-mega-raid-day-2026",
+        "confidence": "official"
       },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub · calendário comunitário anterior",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "community"
+        }
+      ],
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2026-10-31T14:00:00-03:00",
@@ -4140,10 +4148,14 @@
       "locations": [],
       "gpx": {
         "enabled": false,
-        "reason": "Evento sem coordenada exata específica confirmada."
+        "reason": "Evento global; o anúncio não confirma uma rota ou Poképarada específica."
       },
       "notes": [
-        "Data e janela confirmadas; o chefe pode ser atualizado automaticamente após anúncio."
+        "Mega Chandelure estreia em Super Megarreides e pode chegar ao Super Nível Máximo.",
+        "Mega Chandelure pode usar Vento Sinistro+: 50 de força em Batalhas de Treinador, com chance de aumentar Ataque e Defesa em um estágio; 145 de força em Ginásios e Reides.",
+        "Desafio Global: de 30/10 às 21h até 1/11 à 0h, no horário de Brasília. Os níveis concluídos definem os bônus de Mega Chandelure.",
+        "Os bônus do Desafio Global ficam ativos de 2/11 às 17h até 15/11 às 17h, no horário de Brasília.",
+        "A Pesquisa temporária dá um Passe de Batalha Premium e um encontro com Tyranitar; conclua e resgate antes do fim do evento."
       ],
       "notifications": {
         "enabled": true,
@@ -4151,7 +4163,43 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "news": {
+        "title": "Mega Chandelure estreia no Dia de Super Megarreides",
+        "summary": "Em 31/10, das 14h às 17h: Mega Chandelure, Super Nível Máximo, Vento Sinistro+ e maior chance de Chandelure Brilhante.",
+        "published_on": "2026-10-13"
+      },
+      "updated_at": "2026-10-13T22:00:48Z",
+      "verified_at": "2026-10-13",
+      "bonuses": [
+        "Limite de Reides a Distância aumentado para 20, de 30/10 às 21h até 1/11 à 0h, no horário de Brasília.",
+        "Até seis Passes de Reide gratuitos ao girar fotodiscos de Ginásios.",
+        "Chandelure capturado em Super Megarreides já terá o Meganível 1 desbloqueado.",
+        "Maior chance de encontrar Chandelure Brilhante em Super Megarreides.",
+        "Ingresso pago: até 14 Passes de Reide em Ginásios, maior chance de Doce Raro GG e mais 5.000 PE e 5.000 Poeira Estelar por Super Megarreide."
+      ],
+      "pokemon": [
+        {
+          "name": "Mega Chandelure",
+          "note": "estreia em Super Megarreides; Super Nível Máximo e Vento Sinistro+"
+        },
+        {
+          "name": "Chandelure",
+          "note": "maior chance de Brilhante em Super Megarreides; Meganível 1 desbloqueado após a captura"
+        },
+        {
+          "name": "Tyranitar",
+          "note": "encontro da Pesquisa temporária"
+        }
+      ],
+      "audit": {
+        "checked_on": "2026-10-13",
+        "official_languages_checked": [
+          "en",
+          "pt-BR"
+        ],
+        "pt_br_status": "Artigo localizado em inglês; versão pt-BR ainda não encontrada na checagem."
+      }
     },
     {
       "id": "2027-02-go-tour-alola-save-the-date",
