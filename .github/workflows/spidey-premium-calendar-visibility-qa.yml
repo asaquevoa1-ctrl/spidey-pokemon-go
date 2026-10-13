@@ -1,0 +1,31 @@
+name: Spidey - QA artes Premium no calendário
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/app-v2-4.js'
+      - 'spidey-app/app-v2-4.css'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_premium_calendar_visibility_browser.mjs'
+      - '.github/workflows/spidey-premium-calendar-visibility-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/premium-calendar-visibility
+          command -v google-chrome | tee test-results/premium-calendar-visibility/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_premium_calendar_visibility_browser.mjs 2>&1 | tee test-results/premium-calendar-visibility/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: premium-calendar-responsive-preview
+          path: test-results/premium-calendar-visibility
