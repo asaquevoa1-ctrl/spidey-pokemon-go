@@ -568,7 +568,7 @@
     "display": "full_poster",
     "width": 1024,
     "height": 1536,
-    "sha256": "067e6acf5437b3baf450382ac3830cbf17aa0055c8ff304f8bdb2bb5dc188021",
+    "sha256": "fa15e558b19e02802422f1c7b14e2b24fa63f0857e6e89e2f991428e557ae14d",
     "approval_record": "docs/qa/GBL_27_1103_ART_APPROVAL_20261013.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
