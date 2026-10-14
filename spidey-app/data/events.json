@@ -7525,7 +7525,7 @@
         "end_brazil": "2027-08-31T08:00:00-03:00"
       },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": true,
@@ -7637,6 +7637,7 @@
         "reason": "Locais cadastrados são referências aproximadas de aeroportos. Coordenadas exatas dos Ginásios ANA não foram verificadas."
       },
       "notes": [
+        "Dados exibidos na seção ANA do FLY; card do calendário aguarda o pôster Premium correspondente.",
         "Fase 1 • 6 aeroportos participantes no Japão; 7 referências de terminal ou aeroporto disponíveis para copiar.",
         "As coordenadas exibidas são referências de aeroportos divulgadas por fontes da comunidade; não representam Ginásios especiais nem Poképaradas exatas confirmadas.",
         "Nos Ginásios especiais do aeroporto participante: limite de 1 Reide por Ginásio por dia, por treinador.",
@@ -7662,7 +7663,7 @@
         "enabled": false,
         "reason": "Evento de longa duração, sem janela diária de Reides confirmada; não enviar avisos repetitivos."
       },
-      "status": "published",
+      "status": "draft",
       "verified_at": "2026-10-14",
       "updated_at": "2026-10-14T18:20:00-03:00",
       "verification_sources": [
@@ -7707,7 +7708,7 @@
         "end_brazil": "2027-08-31T08:00:00-03:00"
       },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": true,
@@ -7917,6 +7918,7 @@
         "reason": "Locais cadastrados são referências aproximadas de aeroportos. Coordenadas exatas dos Ginásios ANA não foram verificadas."
       },
       "notes": [
+        "Dados exibidos na seção ANA do FLY; card do calendário aguarda o pôster Premium correspondente.",
         "Fase 2 • 14 aeroportos participantes no Japão; 14 referências de terminal ou aeroporto disponíveis para copiar.",
         "As coordenadas exibidas são referências de aeroportos divulgadas por fontes da comunidade; não representam Ginásios especiais nem Poképaradas exatas confirmadas.",
         "Nos Ginásios especiais do aeroporto participante: limite de 1 Reide por Ginásio por dia, por treinador.",
@@ -7942,7 +7944,7 @@
         "enabled": false,
         "reason": "Evento de longa duração, sem janela diária de Reides confirmada; não enviar avisos repetitivos."
       },
-      "status": "published",
+      "status": "draft",
       "verified_at": "2026-10-14",
       "updated_at": "2026-10-14T18:20:00-03:00",
       "verification_sources": [
