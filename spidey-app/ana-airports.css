@@ -20,3 +20,7 @@
 .ana-event-summary{display:grid;gap:6px;padding:15px;margin:12px 0;border-radius:14px;border:1px solid rgba(99,194,162,.55);background:linear-gradient(125deg,rgba(12,99,112,.15),rgba(15,121,78,.09))}
 .ana-event-summary strong{font-size:1.15rem}
 .ana-event-summary span{font-size:.84rem;line-height:1.4}
+
+.ana-fly-jump{display:block;width:min(100%,490px);margin:16px auto;border:2px solid #4bb9bd!important;border-radius:14px!important;padding:14px!important;font-weight:900!important;background:linear-gradient(100deg,#d9f8e8,#e1f0ff)!important;color:#063944!important;box-shadow:0 8px 24px rgba(29,160,155,.13)}
+.ana-fly-jump:focus-visible{outline:3px solid #d2a644;outline-offset:3px}
+#anaAirportPanel{scroll-margin-top:15px}

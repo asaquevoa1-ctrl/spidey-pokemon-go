@@ -51,6 +51,14 @@
       '<div id="anaAirportList" class="ana-airport-list"></div>'+
       '<p class="microcopy">A localização exata do Ginásio ANA precisa ser conferida no mapa do Pokémon GO. GPX de Ginásios não será gerado a partir destes pontos.</p>';
     fly.appendChild(section);
+    const jump=document.createElement('button');
+    jump.type='button';jump.className='action-btn ana-fly-jump';
+    jump.textContent='✈️ ANA • Aeroportos e coordenadas';
+    jump.setAttribute('aria-label','Ir diretamente às coordenadas dos aeroportos ANA');
+    jump.addEventListener('click',()=>section.scrollIntoView({behavior:'smooth',block:'start'}));
+    const hero=fly.querySelector('.hero');
+    if(hero)hero.insertAdjacentElement('afterend',jump);
+    else fly.prepend(jump);
     section.addEventListener('click',async event=>{
       const chosen=event.target.closest('[data-ana-phase]');
       if(chosen){phase=chosen.dataset.anaPhase;render();return;}
