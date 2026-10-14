@@ -4,42 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-mega-dragonite-raids:start:60",
-      "event_id": "2026-10-mega-dragonite-raids",
-      "event_title": "Mega Reides: Mega Dragonite",
-      "category": "mega_raid_rotation",
-      "scheduled_for": "2026-10-14T05:00:00-03:00",
-      "event_start": "2026-10-14T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Mega Reides: Mega Dragonite começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-mega-dragonite-raids",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
-      "id": "2026-10-raids-dialga:start:60",
-      "event_id": "2026-10-raids-dialga",
-      "event_title": "Reides 5★: Dialga",
-      "category": "raid_rotation",
-      "scheduled_for": "2026-10-14T05:00:00-03:00",
-      "event_start": "2026-10-14T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Reides 5★: Dialga começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-raids-dialga",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-14-raid-hour-dialga:start:60",
       "event_id": "2026-10-14-raid-hour-dialga",
       "event_title": "Raid Hour: Dialga",
@@ -618,7 +582,7 @@
     }
   ],
   "meta": {
-    "pending_count": 34,
+    "pending_count": 32,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
