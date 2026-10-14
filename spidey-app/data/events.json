@@ -8,15 +8,31 @@
       "title": "Melhorias de jogabilidade já disponíveis",
       "summary": "Células de Zygarde agora são entregues ao concluir a Rota, e o jogo ganhou proteção para transferências de Pokémon 100% IV e melhorias no mapa.",
       "category": "game_update",
-      "tags": ["Novidade", "Rotas", "Zygarde", "Qualidade de vida"],
+      "tags": [
+        "Novidade",
+        "Rotas",
+        "Zygarde",
+        "Qualidade de vida"
+      ],
       "source": {
         "name": "Pokémon GO · anúncio oficial em português",
         "url": "https://pokemongo.com/pt-BR/news/pgo-gameplay-update-oct-2026",
         "confidence": "official"
       },
-      "verification_sources": [{"name": "Pokémon GO · anúncio oficial em inglês", "url": "https://pokemongo.com/news/pgo-gameplay-update-oct-2026", "confidence": "official"}],
-      "calendar": {"mode": "hidden"},
-      "presentation": {"requires_art": false, "fallback_visual": "none"},
+      "verification_sources": [
+        {
+          "name": "Pokémon GO · anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/pgo-gameplay-update-oct-2026",
+          "confidence": "official"
+        }
+      ],
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
       "news": {
         "title": "Pokémon GO recebe melhorias de jogabilidade",
         "summary": "Células de Zygarde são entregues ao fim da Rota; transferências de Pokémon 100% IV pedem confirmação; mapa, ícones e check-in de encontros foram ajustados.",
@@ -28,11 +44,20 @@
         "O mapa reduz sobreposição entre Pokémon, Ginásios, Pontos de Poder e Poképaradas.",
         "O check-in de encontros de Embaixadores da Comunidade abre 15 minutos antes do início, no mapa do jogo ou no navegador."
       ],
-      "notifications": {"enabled": false, "reason": "Novidade sem evento ou horário de início."},
+      "notifications": {
+        "enabled": false,
+        "reason": "Novidade sem evento ou horário de início."
+      },
       "status": "published",
       "verified_at": "2026-10-11",
       "updated_at": "2026-10-11T23:17:00Z",
-      "audit": {"checked_on": "2026-10-11", "official_languages_checked": ["pt-BR", "en"]}
+      "audit": {
+        "checked_on": "2026-10-11",
+        "official_languages_checked": [
+          "pt-BR",
+          "en"
+        ]
+      }
     },
     {
       "id": "2026-10-08-dynamax-forms-datamine",
@@ -41,32 +66,70 @@
       "title": "Meltan, Melmetal e Regidrago Dinamax · estreia a confirmar",
       "summary": "A comunidade encontrou referências às formas Dinamax de Meltan, Melmetal e Regidrago. Não há anúncio oficial; estreia a confirmar.",
       "category": "community_discovery",
-      "tags": ["Novidade", "Comunidade", "Dinamax", "A confirmar"],
+      "tags": [
+        "Novidade",
+        "Comunidade",
+        "Dinamax",
+        "A confirmar"
+      ],
       "source": {
         "name": "The PokéMod Group · repercussão comunitária no TheSilphRoad",
         "url": "https://www.reddit.com/r/TheSilphRoad/comments/1x117ql/dynamax_forms_for_meltan_melmetal_and_regidrago/",
         "confidence": "community"
       },
-      "verification_sources": [{"name": "Pokémon GO Hub · acompanhamento comunitário de outubro", "url": "https://pokemongohub.net/post/event/october-2026-events/", "confidence": "community"}],
-      "calendar": {"mode": "hidden"},
-      "presentation": {"requires_art": false, "fallback_visual": "none"},
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub · acompanhamento comunitário de outubro",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "community"
+        }
+      ],
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
       "news": {
         "title": "Formas Dinamax encontradas nos dados do jogo",
         "summary": "Meltan, Melmetal e Regidrago Dinamax aparecem em descoberta comunitária. Estreia, disponibilidade e detalhes continuam a confirmar.",
         "published_on": "2026-10-08",
-        "source": {"name": "The PokéMod Group · fonte comunitária", "url": "https://www.reddit.com/r/TheSilphRoad/comments/1x117ql/dynamax_forms_for_meltan_melmetal_and_regidrago/", "confidence": "community"}
+        "source": {
+          "name": "The PokéMod Group · fonte comunitária",
+          "url": "https://www.reddit.com/r/TheSilphRoad/comments/1x117ql/dynamax_forms_for_meltan_melmetal_and_regidrago/",
+          "confidence": "community"
+        }
       },
-      "notes": ["Não é anúncio oficial.", "Sem data, horário, bônus ou formato de obtenção confirmados."],
-      "pokemon": [
-        {"name": "Meltan Dinamax", "note": "referência comunitária; estreia a confirmar"},
-        {"name": "Melmetal Dinamax", "note": "referência comunitária; estreia a confirmar"},
-        {"name": "Regidrago Dinamax", "note": "referência comunitária; estreia a confirmar"}
+      "notes": [
+        "Não é anúncio oficial.",
+        "Sem data, horário, bônus ou formato de obtenção confirmados."
       ],
-      "notifications": {"enabled": false, "reason": "Descoberta comunitária sem data oficial; não gerar alerta."},
+      "pokemon": [
+        {
+          "name": "Meltan Dinamax",
+          "note": "referência comunitária; estreia a confirmar"
+        },
+        {
+          "name": "Melmetal Dinamax",
+          "note": "referência comunitária; estreia a confirmar"
+        },
+        {
+          "name": "Regidrago Dinamax",
+          "note": "referência comunitária; estreia a confirmar"
+        }
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Descoberta comunitária sem data oficial; não gerar alerta."
+      },
       "status": "published",
       "verified_at": "2026-10-11",
       "updated_at": "2026-10-11T23:17:00Z",
-      "audit": {"checked_on": "2026-10-11", "classification": "community_unconfirmed"}
+      "audit": {
+        "checked_on": "2026-10-11",
+        "classification": "community_unconfirmed"
+      }
     },
     {
       "id": "festival-of-lights-2026-pokeminers-e2",
@@ -7432,6 +7495,468 @@
       "status": "published",
       "verified_at": "2026-10-11",
       "updated_at": "2026-10-11"
+    },
+    {
+      "id": "2026-ana-pokemon-jet-red",
+      "slug": "2026-ana-pokemon-jet-red",
+      "title": "ANA × Pokémon GO: Pokémon Jet Vermelho",
+      "summary": "Charmander nas Reides especiais em seis aeroportos do Japão, com fundo de localização do Pokémon Jet Vermelho; referências de terminais para copiar.",
+      "category": "regional_event",
+      "tags": [
+        "ANA",
+        "Pokémon Jet",
+        "Vermelho",
+        "Japão",
+        "Charmander",
+        "Reides especiais",
+        "Fundo de Localização"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/ja/news/2026_ana_red",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Tokyo",
+        "start_local": "2026-07-28T16:00:00+09:00",
+        "end_local": "2027-08-31T20:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-07-28T04:00:00-03:00",
+        "end_brazil": "2027-08-31T08:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "locations": [
+        {
+          "label": "Aeroporto Novo Chitose (CTS)",
+          "airport": "Novo Chitose",
+          "airport_code": "CTS",
+          "region": "Hokkaido",
+          "latitude": 42.786787,
+          "longitude": 141.68296,
+          "coordinate_text": "42.786787,141.682960",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Hakodate (HKD)",
+          "airport": "Hakodate",
+          "airport_code": "HKD",
+          "region": "Hokkaido",
+          "latitude": 41.769876,
+          "longitude": 140.825017,
+          "coordinate_text": "41.769876,140.825017",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Akita (AXT)",
+          "airport": "Akita",
+          "airport_code": "AXT",
+          "region": "Akita",
+          "latitude": 39.614368,
+          "longitude": 140.220187,
+          "coordinate_text": "39.614368,140.220187",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Sendai (SDJ)",
+          "airport": "Sendai",
+          "airport_code": "SDJ",
+          "region": "Miyagi",
+          "latitude": 38.137791,
+          "longitude": 140.921611,
+          "coordinate_text": "38.137791,140.921611",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Haneda · Terminal 2 (HND)",
+          "airport": "Haneda · Terminal 2",
+          "airport_code": "HND",
+          "region": "Tóquio",
+          "latitude": 35.550815,
+          "longitude": 139.788233,
+          "coordinate_text": "35.550815,139.788233",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Haneda · Terminal 3 (HND)",
+          "airport": "Haneda · Terminal 3",
+          "airport_code": "HND",
+          "region": "Tóquio",
+          "latitude": 35.543887,
+          "longitude": 139.768652,
+          "coordinate_text": "35.543887,139.768652",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Narita · Terminal 1 (NRT)",
+          "airport": "Narita · Terminal 1",
+          "airport_code": "NRT",
+          "region": "Chiba",
+          "latitude": 35.764185,
+          "longitude": 140.385024,
+          "coordinate_text": "35.764185,140.385024",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        }
+      ],
+      "location_label": "Japão • 6 aeroportos",
+      "gpx": {
+        "enabled": false,
+        "reason": "Locais cadastrados são referências aproximadas de aeroportos. Coordenadas exatas dos Ginásios ANA não foram verificadas."
+      },
+      "notes": [
+        "Fase 1 • 6 aeroportos participantes no Japão; 7 referências de terminal ou aeroporto disponíveis para copiar.",
+        "As coordenadas exibidas são referências de aeroportos divulgadas por fontes da comunidade; não representam Ginásios especiais nem Poképaradas exatas confirmadas.",
+        "Nos Ginásios especiais do aeroporto participante: limite de 1 Reide por Ginásio por dia, por treinador.",
+        "Pokémon capturados nas Reides ANA especiais recebem fundo temático de localização, conforme anúncio oficial.",
+        "Pesquisa Temporária recebida ao visitar um aeroporto participante, no máximo uma vez nesta fase, e expira três dias após o recebimento.",
+        "Os horários das Reides seguem a programação regular depois do início da fase; não há uma reide ativa permanente.",
+        "A participação remota não confirma a obtenção do fundo; confira as regras oficiais antes de usar passe remoto."
+      ],
+      "bonuses": [
+        "Charmander com Fundo de Localização do Pokémon Jet Vermelho nas Reides dos Ginásios ANA participantes.",
+        "Possibilidade de encontrar Charmander Brilhante.",
+        "Uma participação por Ginásio especial por dia, por treinador.",
+        "Pesquisa Temporária em aeroportos participantes, recebida uma vez por fase e válida por três dias após o recebimento.",
+        "6 aeroportos participantes • pontos aproximados dos terminais para copiar; Ginásio ainda não verificado."
+      ],
+      "pokemon": [
+        {
+          "name": "Charmander",
+          "note": "Reides ANA com Fundo de Localização do Pokémon Jet Vermelho, com chance de Brilhante."
+        }
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evento de longa duração, sem janela diária de Reides confirmada; não enviar avisos repetitivos."
+      },
+      "status": "published",
+      "verified_at": "2026-10-14",
+      "updated_at": "2026-10-14T18:20:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • oficial",
+          "url": "https://pokemongo.com/ja/news/2026_ana_red",
+          "confidence": "official"
+        },
+        {
+          "name": "Fonte comunitária • aeroportos, não Ginásios",
+          "url": "https://note.com/pogoskilljp/n/n2e19205188e3",
+          "confidence": "community_reference"
+        }
+      ]
+    },
+    {
+      "id": "2026-ana-pokemon-jet-green",
+      "slug": "2026-ana-pokemon-jet-green",
+      "title": "ANA × Pokémon GO: Pokémon Jet Verde",
+      "summary": "Bulbasaur nas Reides especiais de 14 aeroportos japoneses, com fundo temático ANA; referências dos aeroportos disponíveis para copiar.",
+      "category": "regional_event",
+      "tags": [
+        "ANA",
+        "Pokémon Jet",
+        "Verde",
+        "Japão",
+        "Bulbasaur",
+        "Reides especiais",
+        "Fundo de Localização"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/ja/news/2026_ana_green",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Tokyo",
+        "start_local": "2026-09-18T14:00:00+09:00",
+        "end_local": "2027-08-31T20:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-09-18T02:00:00-03:00",
+        "end_brazil": "2027-08-31T08:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "locations": [
+        {
+          "label": "Aeroporto Kochi (KCZ)",
+          "airport": "Kochi",
+          "airport_code": "KCZ",
+          "region": "Kochi",
+          "latitude": 33.5463,
+          "longitude": 133.6694,
+          "coordinate_text": "33.5463,133.6694",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Matsuyama (MYJ)",
+          "airport": "Matsuyama",
+          "airport_code": "MYJ",
+          "region": "Ehime",
+          "latitude": 33.8272,
+          "longitude": 132.6997,
+          "coordinate_text": "33.8272,132.6997",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Takamatsu (TAK)",
+          "airport": "Takamatsu",
+          "airport_code": "TAK",
+          "region": "Kagawa",
+          "latitude": 34.2142,
+          "longitude": 134.0156,
+          "coordinate_text": "34.2142,134.0156",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Tokushima (TKS)",
+          "airport": "Tokushima",
+          "airport_code": "TKS",
+          "region": "Tokushima",
+          "latitude": 34.1328,
+          "longitude": 134.6067,
+          "coordinate_text": "34.1328,134.6067",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Fukuoka (FUK)",
+          "airport": "Fukuoka",
+          "airport_code": "FUK",
+          "region": "Fukuoka",
+          "latitude": 33.5859,
+          "longitude": 130.4507,
+          "coordinate_text": "33.5859,130.4507",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Saga (HSG)",
+          "airport": "Saga",
+          "airport_code": "HSG",
+          "region": "Saga",
+          "latitude": 33.1497,
+          "longitude": 130.3022,
+          "coordinate_text": "33.1497,130.3022",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Miyazaki (KMI)",
+          "airport": "Miyazaki",
+          "airport_code": "KMI",
+          "region": "Miyazaki",
+          "latitude": 31.8772,
+          "longitude": 131.4486,
+          "coordinate_text": "31.8772,131.4486",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Kumamoto (KMJ)",
+          "airport": "Kumamoto",
+          "airport_code": "KMJ",
+          "region": "Kumamoto",
+          "latitude": 32.8372,
+          "longitude": 130.8569,
+          "coordinate_text": "32.8372,130.8569",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Kagoshima (KOJ)",
+          "airport": "Kagoshima",
+          "airport_code": "KOJ",
+          "region": "Kagoshima",
+          "latitude": 31.8033,
+          "longitude": 130.7194,
+          "coordinate_text": "31.8033,130.7194",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Nagasaki (NGS)",
+          "airport": "Nagasaki",
+          "airport_code": "NGS",
+          "region": "Nagasaki",
+          "latitude": 32.9169,
+          "longitude": 129.9136,
+          "coordinate_text": "32.9169,129.9136",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Oita (OIT)",
+          "airport": "Oita",
+          "airport_code": "OIT",
+          "region": "Oita",
+          "latitude": 33.4794,
+          "longitude": 131.7378,
+          "coordinate_text": "33.4794,131.7378",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Ishigaki (ISG)",
+          "airport": "Ishigaki",
+          "airport_code": "ISG",
+          "region": "Okinawa",
+          "latitude": 24.3964,
+          "longitude": 124.245,
+          "coordinate_text": "24.3964,124.2450",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Miyako (MMY)",
+          "airport": "Miyako",
+          "airport_code": "MMY",
+          "region": "Okinawa",
+          "latitude": 24.7828,
+          "longitude": 125.2953,
+          "coordinate_text": "24.7828,125.2953",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        },
+        {
+          "label": "Aeroporto Naha (OKA)",
+          "airport": "Naha",
+          "airport_code": "OKA",
+          "region": "Okinawa",
+          "latitude": 26.2064,
+          "longitude": 127.6465,
+          "coordinate_text": "26.2064,127.6465",
+          "coordinate_type": "airport_terminal_reference",
+          "coordinate_confidence": "community_reference",
+          "coordinate_source": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "exact_raid_gym_verified": false,
+          "note": "Referência do terminal ou área do aeroporto, NÃO do Ginásio especial ANA."
+        }
+      ],
+      "location_label": "Japão • 14 aeroportos",
+      "gpx": {
+        "enabled": false,
+        "reason": "Locais cadastrados são referências aproximadas de aeroportos. Coordenadas exatas dos Ginásios ANA não foram verificadas."
+      },
+      "notes": [
+        "Fase 2 • 14 aeroportos participantes no Japão; 14 referências de terminal ou aeroporto disponíveis para copiar.",
+        "As coordenadas exibidas são referências de aeroportos divulgadas por fontes da comunidade; não representam Ginásios especiais nem Poképaradas exatas confirmadas.",
+        "Nos Ginásios especiais do aeroporto participante: limite de 1 Reide por Ginásio por dia, por treinador.",
+        "Pokémon capturados nas Reides ANA especiais recebem fundo temático de localização, conforme anúncio oficial.",
+        "Pesquisa Temporária recebida ao visitar um aeroporto participante, no máximo uma vez nesta fase, e expira três dias após o recebimento.",
+        "Os horários das Reides seguem a programação regular depois do início da fase; não há uma reide ativa permanente.",
+        "A participação remota não confirma a obtenção do fundo; confira as regras oficiais antes de usar passe remoto."
+      ],
+      "bonuses": [
+        "Bulbasaur com Fundo de Localização do Pokémon Jet Verde nas Reides dos Ginásios ANA participantes.",
+        "Possibilidade de encontrar Bulbasaur Brilhante.",
+        "Uma participação por Ginásio especial por dia, por treinador.",
+        "Pesquisa Temporária em aeroportos participantes, recebida uma vez por fase e válida por três dias após o recebimento.",
+        "14 aeroportos participantes • pontos aproximados dos terminais para copiar; Ginásio ainda não verificado."
+      ],
+      "pokemon": [
+        {
+          "name": "Bulbasaur",
+          "note": "Reides ANA com Fundo de Localização do Pokémon Jet Verde, com chance de Brilhante."
+        }
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evento de longa duração, sem janela diária de Reides confirmada; não enviar avisos repetitivos."
+      },
+      "status": "published",
+      "verified_at": "2026-10-14",
+      "updated_at": "2026-10-14T18:20:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • oficial",
+          "url": "https://pokemongo.com/ja/news/2026_ana_green",
+          "confidence": "official"
+        },
+        {
+          "name": "Fonte comunitária • aeroportos, não Ginásios",
+          "url": "https://tomchun.tw/tomchun/2026/09/06/ana-bulbasaur/",
+          "confidence": "community_reference"
+        }
+      ]
     }
   ]
 }
