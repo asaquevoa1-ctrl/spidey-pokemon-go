@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261014-reference-premium-five-v1';
+const CACHE = 'spidey-app-20261014-ana-airports1';
 const CORE = [
   './assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp',
   './assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp',
@@ -85,6 +85,8 @@ const CORE = [
   './art-coverage-v1.css',
   './fly-core.js',
   './fly-v1.js',
+  './ana-airports.js',
+  './ana-airports.css',
   './fly-v1.css',
   './hunter-v1.js',
   './hunter-v1.css',
