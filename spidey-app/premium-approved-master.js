@@ -627,6 +627,17 @@
     "approval_record": "docs/qa/MEGA_CHANDELURE_ART_APPROVAL_20261014.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-11-minior-leonids": {
+    "file": "assets/events/premium/minior-leonids-20261114-19-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "6b6d66ef674b4207253944b7e1a1ab515bd2958cb365d4af8b755c54217eef7e",
+    "approval_record": "docs/qa/MINIOR_LEONIDS_ART_APPROVAL_20261014.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

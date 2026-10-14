@@ -1,0 +1,34 @@
+name: Spidey - QA responsivo Minior Leonidas
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/minior-leonids-20261114-19-v1.png'
+      - 'spidey-app/assets/events/premium/minior-leonids-20261114-19-approved-v1.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'docs/qa/MINIOR_LEONIDS_ART_*.json'
+      - 'tests/minior-leonids-art-approval.test.cjs'
+      - 'scripts/qa_minior_leonids_art_browser.mjs'
+      - '.github/workflows/spidey-minior-leonids-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/minior-leonids-art
+          command -v google-chrome | tee test-results/minior-leonids-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_minior_leonids_art_browser.mjs 2>&1 | tee test-results/minior-leonids-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: minior-leonids-responsive-preview
+          path: test-results/minior-leonids-art

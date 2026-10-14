@@ -1,0 +1,47 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-11-minior-leonids",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/MINIOR_LEONIDS_ART_CANDIDATE_20261014.json",
+  "candidate_file": "spidey-app/assets/events/review/minior-leonids-20261114-19-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/minior-leonids-20261114-19-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 758251,
+  "sha256": "6b6d66ef674b4207253944b7e1a1ab515bd2958cb365d4af8b755c54217eef7e",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_local": "2026-11-14T17:00:00-03:00",
+    "end_local": "2026-11-19T23:59:59-03:00",
+    "local_time": true
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38530909242,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38530909242",
+    "week_fixture": "2026-11-09..2026-11-15",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 63,
+  "prior_unique_images_preserved": 54,
+  "remaining_premium_gaps_after_publication": 21,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
