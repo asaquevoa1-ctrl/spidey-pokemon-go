@@ -33,6 +33,22 @@
     const a=Number(m[1]),b=Number(m[2]);
     return Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a)<=90&&Math.abs(b)<=180?m[1]+','+m[2]:null;
   }
+  // Interpret community posts on-device: do not fetch posts or invent expiration times.
+  function parseSpawnMessage(message){
+    const raw=String(message||'').slice(0,3000);
+    const coords=parseMessageCoords(raw);
+    if(!coords)return null;
+    const tag=/(?:^|\s)#([A-Za-z][A-Za-z0-9.'’-]{1,32})(?=\s|$|[^\w])/u.exec(raw);
+    const pokemon=tag?tag[1]:null;
+    const statLine=raw.split(/\r?\n/).find(line=>/^\s*\d{1,5}\s+[♂♀]\s+\d{1,2}(?:\s|$|[^\d])/.test(line));
+    const stats=statLine?/^\s*(\d{1,5})\s+([♂♀])\s+(\d{1,2})(?=\s|$|[^\d])/.exec(statLine):null;
+    const cp=stats&&Number(stats[1])>=1&&Number(stats[1])<=10000?Number(stats[1]):null;
+    const level=stats&&Number(stats[3])>=1&&Number(stats[3])<=50?Number(stats[3]):null;
+    const gender=stats?(stats[2]==='♂'?'Macho':'Fêmea'):null;
+    const claimedIV=/💯|(?:^|[^\w])100\s*%/u.test(raw)?100:null;
+    const source=/(?:^|\s)iv100\.cc(?=\s|∙|$)/i.test(raw)?'iv100.cc':null;
+    return {pokemon,cp,level,gender,claimedIV,source,coords,despawn:null};
+  }
   function renderCategory(){
     const item=categories.find(x=>x.id===selected);
     if(!item)return;
@@ -75,7 +91,7 @@
       '<a id="hunterExternal" class="action-btn hunter-outbound" href="https://pogocoordinates.com/search" target="_blank" rel="noopener noreferrer">Buscar no PoGo Coordinates ↗</a>',
       '<div id="hunterHundoFeeds" class="hunter-feed-shortcuts" hidden><span>Outros 100%:</span><a href="https://pogocoordinates.com/feeds/rare-100iv" target="_blank" rel="noopener noreferrer">Raros ↗</a><a href="https://pogocoordinates.com/feeds/regional-100iv" target="_blank" rel="noopener noreferrer">Regionais ↗</a><a href="https://pogocoordinates.com/feeds/level-35-100iv" target="_blank" rel="noopener noreferrer">Nível 35+ ↗</a></div>',
       '<p class="microcopy">As buscas abrem no site original. O Spidey não recebe seu login, código de treinador ou mensagens.</p>',
-      '<section class="hunter-message-card" aria-labelledby="hunterMessageTitle"><span class="eyebrow">DISCORD E TELEGRAM</span><h2 id="hunterMessageTitle">Recebeu uma coordenada?</h2><p>Cole a mensagem de um canal para identificar latitude e longitude. Tudo é analisado neste aparelho, sem enviar mensagens para o Spidey.</p><div class="hunter-community-links"><a href="https://discord.gg/pokedex100" target="_blank" rel="noopener noreferrer">Pokedex100 • Discord ↗</a><a href="https://t.me/pokemon_pogo_iv100_100iv_100_pvp" target="_blank" rel="noopener noreferrer">Canal IV100 • Telegram ↗</a></div><p class="hunter-community-sources">Canais enviados pela comunidade. Ainda não importamos mensagens automaticamente nem verificamos aparições em tempo real.</p><label for="hunterMessage">Mensagem com coordenadas</label><textarea id="hunterMessage" rows="3" maxlength="3000" placeholder="Ex.: Pokémon 100% • -25.4221,-49.2717"></textarea><div class="hunter-message-actions"><button type="button" id="hunterExtract" class="action-btn">Extrair coordenadas</button><span class="hunter-message-caption">Ainda não há canais conectados automaticamente.</span></div><p id="hunterExtractStatus" role="status" aria-live="polite" class="microcopy"></p></section>',
+      '<section class="hunter-message-card" aria-labelledby="hunterMessageTitle"><span class="eyebrow">DISCORD E TELEGRAM</span><h2 id="hunterMessageTitle">Recebeu uma coordenada?</h2><p>Cole a mensagem de um canal para identificar latitude e longitude. Tudo é analisado neste aparelho, sem enviar mensagens para o Spidey.</p><div class="hunter-community-links"><a href="https://discord.gg/pokedex100" target="_blank" rel="noopener noreferrer">Pokedex100 • Discord ↗</a><a href="https://t.me/pokemon_pogo_iv100_100iv_100_pvp" target="_blank" rel="noopener noreferrer">Canal IV100 • Telegram ↗</a></div><p class="hunter-community-sources">Canais enviados pela comunidade. Ainda não importamos mensagens automaticamente nem verificamos aparições em tempo real.</p><label for="hunterMessage">Mensagem com coordenadas</label><textarea id="hunterMessage" rows="3" maxlength="3000" placeholder="Ex.: Pokémon 100% • -25.4221,-49.2717"></textarea><div class="hunter-message-actions"><button type="button" id="hunterExtract" class="action-btn">Ler mensagem</button><span class="hunter-message-caption">Ainda não há canais conectados automaticamente.</span></div><p id="hunterExtractStatus" role="status" aria-live="polite" class="microcopy"></p><div id="hunterParsed" class="hunter-parsed" hidden><span class="eyebrow">CAPTURA IDENTIFICADA</span><strong id="hunterParsedPokemon"></strong><span id="hunterParsedIV" class="hunter-parsed-iv"></span><div class="hunter-parsed-fields"><span id="hunterParsedCP" hidden></span><span id="hunterParsedGender" hidden></span><span id="hunterParsedLevel" hidden></span></div><code id="hunterParsedCoords"></code><small id="hunterParsedSource"></small><small>Sem horário de desaparecimento informado. Confira a aparição na origem.</small></div></section>',
       '<details id="hunterChecker" class="hunter-checker"><summary>Conferir uma coordenada ou IV</summary><div class="hunter-checker-body"><p class="microcopy">Use dados de uma aparição encontrada para verificar os valores e a localização.</p>',
       '<div class="hunter-iv-row"><label>Ataque <input id="hunterAttack" type="number" inputmode="numeric" min="0" max="15" placeholder="0–15"></label><label>Defesa <input id="hunterDefense" type="number" inputmode="numeric" min="0" max="15" placeholder="0–15"></label><label>PS <input id="hunterStamina" type="number" inputmode="numeric" min="0" max="15" placeholder="0–15"></label></div>',
       '<p id="hunterIvStatus" role="status" aria-live="polite"></p><label class="hunter-coord-label" for="hunterCoords">Coordenadas (latitude, longitude)</label>',
@@ -105,13 +121,28 @@
         return;
       }
       if(event.target.id==='hunterExtract'){
-        const coords=parseMessageCoords(el('hunterMessage').value);
-        if(!coords){el('hunterExtractStatus').textContent='Não encontrei latitude e longitude válidas. Confira a mensagem ou cole as coordenadas manualmente.';return;}
+        const report=parseSpawnMessage(el('hunterMessage').value);
+        const preview=el('hunterParsed');
+        if(!report){
+          preview.hidden=true;
+          el('hunterExtractStatus').textContent='Não encontrei latitude e longitude válidas. Confira a mensagem ou cole as coordenadas manualmente.';
+          return;
+        }
+        el('hunterParsedPokemon').textContent=report.pokemon||'Pokémon não identificado';
+        el('hunterParsedIV').textContent=report.claimedIV===100?'💯 100% informado pelo canal — não verificado':'IV não especificado na mensagem';
+        const details=[
+          ['hunterParsedCP',report.cp===null?'':'PC '+report.cp],
+          ['hunterParsedGender',report.gender||''],
+          ['hunterParsedLevel',report.level===null?'':'Nível '+report.level]
+        ];
+        details.forEach(([id,value])=>{el(id).textContent=value;el(id).hidden=!value;});
+        el('hunterParsedCoords').textContent=report.coords;
+        el('hunterParsedSource').textContent=report.source?'Fonte indicada: '+report.source:'Fonte não identificada na mensagem';
+        preview.hidden=false;
         el('hunterChecker').open=true;
-        el('hunterCoords').value=coords;
+        el('hunterCoords').value=report.coords;
         renderCoords();
-        el('hunterExtractStatus').textContent='Coordenadas encontradas. Confira se o Pokémon ainda está disponível antes de usar.';
-        el('hunterCoords').focus();
+        el('hunterExtractStatus').textContent='Dados identificados no texto. Você pode copiar as coordenadas abaixo.';
         return;
       }
       if(event.target.id!=='hunterCopy')return;
@@ -124,6 +155,6 @@
     el('hunterCoords').addEventListener('input',renderCoords);
     renderCategory();renderIV();renderCoords();
   }
-  window.SpideyHunterCore=Object.freeze({classifyIV,parseCoords,parseMessageCoords});
+  window.SpideyHunterCore=Object.freeze({classifyIV,parseCoords,parseMessageCoords,parseSpawnMessage});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();
