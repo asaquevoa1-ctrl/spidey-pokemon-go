@@ -45,7 +45,10 @@ class PushOnlyPagesTests(unittest.TestCase):
         shell=prepare_shell(source,analytics,{'enabled':True,'url':worker,'hosting':'cloudflare-workers'})
         self.assertEqual(validate_shell(shell,{},'github-pages'), [])
         self.assertIn(worker,shell)
-        extra=shell.replace("connect-src 'self' " + worker, "connect-src 'self' " + worker + " https://thirdparty.example")
+        token="connect-src &#x27;self&#x27; " + worker
+        self.assertIn(token, shell)
+        extra=shell.replace(token, token + " https://thirdparty.example")
+        self.assertNotEqual(extra,shell)
         self.assertIn('Política de conexões do app ausente ou ampliada',validate_shell(extra,{},'github-pages'))
 
     def test_disabled_package_has_exact_false_config(self):
