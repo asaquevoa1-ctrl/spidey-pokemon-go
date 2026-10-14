@@ -1,5 +1,10 @@
-const CACHE = 'spidey-app-20261014-dialga-raids-art-v1';
+const CACHE = 'spidey-app-20261014-reference-premium-five-v1';
 const CORE = [
+  './assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp',
+  './assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp',
+  './assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp',
+  './assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-spidey-reference-approved-v2.webp',
+  './assets/events/premium/dialga-five-star-raids-20261014-20-spidey-reference-approved-v2.webp',
   './assets/events/premium/dialga-five-star-raids-20261014-20-approved-v1.png',
   './assets/events/premium/minior-leonids-20261114-19-approved-v1.png',
   './assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png',

@@ -12,8 +12,15 @@ test('official-logo corrections promote reviewed v2 PNGs while preserving every 
   for(const item of approval.items){
     assert.equal(hash(item.candidate_file),item.sha256);
     assert.equal(hash(item.approved_file),item.sha256);
+    const upgraded=JSON.parse(fs.readFileSync('docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json')).assets.find(x=>x.event_id===item.event_id);
+    if(upgraded){
+      assert.equal(upgraded.old_file,item.approved_file.replace('spidey-app/',''));
+      assert.equal(master[item.event_id].file,upgraded.file.replace('spidey-app/',''));
+      assert.equal(master[item.event_id].sha256,upgraded.sha256);
+    }else{
     assert.equal(master[item.event_id].file,item.approved_file.replace('spidey-app/',''));
     assert.equal(master[item.event_id].sha256,item.sha256);
+    }
     assert.ok(fs.existsSync(item.prior_file_preserved));
   }
   for(const id of approval.protected_refusals_preserved)assert.equal(master[id],undefined);
