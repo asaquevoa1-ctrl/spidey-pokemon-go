@@ -8,7 +8,7 @@ const source=fs.readFileSync(path.join(__dirname,'..','spidey-app','hunter-v1.js
 const window={};
 const document={readyState:'loading',addEventListener(){}};
 vm.runInNewContext(source,{window,document});
-const {classifyIV,parseCoords}=window.SpideyHunterCore;
+const {classifyIV,parseCoords,parseMessageCoords}=window.SpideyHunterCore;
 
 test('hunter: 100% and 0% IV are classified exactly',()=>{
   assert.equal(classifyIV([15,15,15]).hundo,true);
@@ -36,4 +36,21 @@ test('hunter: external search is clearly identified, no hidden provider requests
   assert.match(source,/hunterPaste/);
   assert.doesNotMatch(source,/\bfetch\s*\(/);
   assert.match(source,/rel="noopener noreferrer"/);
+});
+test('hunter: parses coordinate messages locally without fetching personal data',()=>{
+  assert.equal(parseMessageCoords('100 IV • 40.712345,-73.987654 • desparece em 8 min'),'40.712345,-73.987654');
+  assert.equal(parseMessageCoords('Poke #025\nLat: -25.4221\nLon: -49.2717'),'-25.4221,-49.2717');
+  assert.equal(parseMessageCoords('IV 15,15,15 | PC 891'),null);
+  assert.equal(parseMessageCoords('teste (91.12,-73.88)'),null);
+  assert.equal(parseMessageCoords('Visit https://evil.example/login'),null);
+  assert.equal(parseMessageCoords('<script>alert(1)</script>'),null);
+  assert.doesNotMatch(source,/\b(?:localStorage|sessionStorage)\.setItem\s*\(/);
+  assert.doesNotMatch(source,/\bfetch\s*\(/);
+});
+test('hunter: independent Filtro page and tab, no longer mounted inside FLY',()=>{
+  assert.match(source,/s\.id='hunterView'/);
+  assert.match(source,/tab\.dataset\.view='hunterView'/);
+  assert.match(source,/tab\.textContent='Filtro'/);
+  assert.match(source,/setView\('hunterView'\)/);
+  assert.doesNotMatch(source,/fly\.prepend\(s\)|hero\.insertAdjacentElement\('afterend',s\)/);
 });

@@ -14,14 +14,27 @@ if (!ready) {server.kill('SIGTERM');throw Error('Caçador preview server unavail
 const browser = await chromium.launch({headless:true, executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome'});
 const checks = [];
 try {
-  for (const width of [390,1280]) for (const theme of ['light','dark']) {
+  for (const width of [360,390,1280]) for (const theme of ['light','dark']) {
     const page = await browser.newPage({viewport:{width,height:900},timezoneId:'America/Sao_Paulo'});
     await page.addInitScript(value=>localStorage.setItem('spidey-theme',value),theme);
     await page.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
     await page.locator('[data-view="flyView"]').first().waitFor({state:'attached',timeout:20000});
+    const shortcut=page.locator('.cc-shortcuts [data-cc-view="hunterView"]');
+    await shortcut.waitFor({state:'visible',timeout:10000});
+    await shortcut.click();
+    if(!await page.locator('#hunterView').isVisible()) throw Error('Home shortcut did not navigate to Filtro');
     await page.locator('[data-view="flyView"]').first().click();
+    if(await page.locator('#hunterPanel').isVisible())throw Error('Caçador must not appear inside FLY');
+    const filterTab=page.locator('.app-tabs [data-view="hunterView"]');
+    if(await filterTab.count()!==1)throw Error('Dedicated Filtro tab missing');
+    if((await filterTab.textContent()).trim()!=='Filtro')throw Error('Filtro tab label missing');
+    await filterTab.click();
     const panel=page.locator('#hunterPanel');
     await panel.waitFor({state:'visible',timeout:10000});
+    const hunterScreen=page.locator('#hunterView');
+    if(!await hunterScreen.isVisible()||await page.locator('#flyView').isVisible())throw Error('Separate screen navigation failed');
+    const navStyle=await filterTab.evaluate(el=>({background:getComputedStyle(el).backgroundImage,width:el.getBoundingClientRect().width}));
+    if(!String(navStyle.background).includes('gradient')||navStyle.width<55) throw Error('Tab not highlighted');
     const cats=page.locator('[data-hunter-category]');
     if(await cats.count()!==6)throw Error('The six Caçador filters are missing');
     await page.locator('[data-hunter-category="nundo"]').click();
@@ -42,13 +55,20 @@ try {
     if(await page.locator('#hunterCopy').isDisabled())throw Error('Valid coordinates not copyable');
     const map=page.locator('#hunterMap');
     if(!await map.isVisible()||!String(await map.getAttribute('href')).includes('maps/search/'))throw Error('Location map URL missing');
+    const intake=page.locator('#hunterMessage');
+    await intake.fill('Discord: Pokémon 100% ✨ | 40.712345,-73.987654 | expires in 10m');
+    await page.locator('#hunterExtract').click();
+    if(await page.locator('#hunterCoords').inputValue()!=='40.712345,-73.987654')throw Error('Message extraction failed');
+    await intake.fill('CP 891 IV 15,15,15');
+    await page.locator('#hunterExtract').click();
+    if(!String(await page.locator('#hunterExtractStatus').textContent()).includes('Não encontrei'))throw Error('IV triples misread as coordinates');
     await page.locator('#hunterCoords').fill('91,0');
     if(!await page.locator('#hunterCopy').isDisabled()||await map.isVisible())throw Error('Invalid coordinates were accepted');
     await page.locator('#hunterCoords').fill('-25.4221,-49.2717');
     const sizes=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth, push:!!document.getElementById('notificationButton'), fly:!!document.getElementById('flyRouteList'), pvp:!!document.getElementById('pvpView'), disabledNetwork:document.querySelector('[data-hunter-category="shiny"]')!==null}));
     if(sizes.overflow||!sizes.push||!sizes.fly||!sizes.pvp||!sizes.disabledNetwork) throw Error('Regression or horizontal scroll '+JSON.stringify(sizes));
     await page.screenshot({path:`${output}/${width}-${theme}.png`,fullPage:true});
-    checks.push({width,theme,filters:6,iv:'100% + 0%',coord:'valid + invalid',pushPreserved:true,pvpPreserved:true,overflow:false});
+    checks.push({width,theme,dedicatedTab:true,highlighted:true,flyFreeOfHunter:true,filters:6,message:'Discord/Telegram local parsing',iv:'100% + 0%',coord:'valid + invalid',pushPreserved:true,pvpPreserved:true,overflow:false});
     await page.close();
   }
   fs.writeFileSync(output+'/results.json', JSON.stringify({status:'PASSED_PREVIEW',checks,physical_android_tested:false},null,2)+'\n');
