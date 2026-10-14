@@ -19,6 +19,10 @@ try {
     await page.addInitScript(value=>localStorage.setItem('spidey-theme',value),theme);
     await page.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
     await page.locator('[data-view="flyView"]').first().waitFor({state:'attached',timeout:20000});
+    const shortcut=page.locator('.cc-shortcuts [data-cc-view="hunterView"]');
+    await shortcut.waitFor({state:'visible',timeout:10000});
+    await shortcut.click();
+    if(!await page.locator('#hunterView').isVisible()) throw Error('Home shortcut did not navigate to Filtro');
     await page.locator('[data-view="flyView"]').first().click();
     if(await page.locator('#hunterPanel').isVisible())throw Error('Caçador must not appear inside FLY');
     const filterTab=page.locator('.app-tabs [data-view="hunterView"]');
