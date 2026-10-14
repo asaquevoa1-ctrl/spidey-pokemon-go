@@ -23,10 +23,19 @@ test('Mega Chandelure delegated approval promotes the exact reviewed PNG and pre
   assert.equal(hash(approval.candidate_file),approval.sha256);
   assert.equal(hash(approval.approved_file),approval.sha256);
   assert.equal(fs.statSync(approval.approved_file).size,approval.bytes);
+  const upgraded=JSON.parse(fs.readFileSync('docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json')).assets.find(x=>x.event_id===approval.event_id);
+  if(upgraded){
+    assert.equal(upgraded.old_file,approval.approved_file.replace('spidey-app/',''));
+    assert.equal(master[approval.event_id].file,upgraded.file.replace('spidey-app/',''));
+    assert.equal(master[approval.event_id].sha256,upgraded.sha256);
+    assert.equal(master[approval.event_id].width,upgraded.width);
+    assert.equal(master[approval.event_id].height,upgraded.height);
+  }else{
   assert.equal(master[approval.event_id].file,approval.approved_file.replace('spidey-app/',''));
   assert.equal(master[approval.event_id].sha256,approval.sha256);
   assert.equal(master[approval.event_id].width,approval.width);
   assert.equal(master[approval.event_id].height,approval.height);
+  }
   assert.ok(Object.keys(master).length>=approval.prior_master_entries_preserved+1);
   for(const id of approval.blocked_generations_preserved)assert.equal(master[id],undefined);
 });
