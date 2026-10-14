@@ -23,9 +23,9 @@
     "poster_precision": "date_only"
   },
   "browser_qa": {
-    "status": "PENDING_CI",
-    "workflow_run": null,
-    "url": null,
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38537742716,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38537742716",
     "week_fixture": "2026-10-12..2026-10-18",
     "views": ["calendar", "weekly", "detail"],
     "widths": [390, 1280],
