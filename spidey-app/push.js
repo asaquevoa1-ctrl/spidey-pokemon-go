@@ -1,4 +1,5 @@
 (() => {
+  const endpoint = path => window.SpideyPushBackend?.endpoint(path) || path;
   const statusEl = document.querySelector('#notificationStatus');
   const notificationButton = document.querySelector('#notificationButton');
   const testButton = document.querySelector('#testNotificationButton');
@@ -81,7 +82,7 @@
       return null;
     }
     try {
-      const keyResponse = await fetch('api/push/public-key', { cache: 'no-store' });
+      const keyResponse = await fetch(endpoint('api/push/public-key'), { cache: 'no-store' });
       const payload = keyResponse.ok ? await keyResponse.json() : {};
       if (!payload.publicKey) {
         availability = false;
@@ -146,7 +147,7 @@
         });
       }
 
-      const saveResponse = await fetch('api/push/subscribe', {
+      const saveResponse = await fetch(endpoint('api/push/subscribe'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -193,7 +194,7 @@
     if (!currentSubscription || !active) return;
     if (testButton) testButton.disabled = true;
     try {
-      const response = await fetch('api/push/test', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: currentSubscription.toJSON() }) });
+      const response = await fetch(endpoint('api/push/test'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: currentSubscription.toJSON() }) });
       if (response.status === 429) { setStatus('Aguarde um minuto antes de enviar outro teste.'); return; }
       if (!response.ok) throw new Error('test_failed');
       setStatus('Enviamos o alerta de teste. Confira as notificações deste aparelho.');
@@ -204,7 +205,7 @@
     if (!currentSubscription) return;
     if (stopButton) stopButton.disabled = true;
     try {
-      const response = await fetch('api/push/unsubscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ endpoint: currentSubscription.endpoint || currentSubscription.toJSON().endpoint }) });
+      const response = await fetch(endpoint('api/push/unsubscribe'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: currentSubscription.toJSON() }) });
       if (!response.ok) throw new Error('remove_failed');
       await currentSubscription.unsubscribe();
       currentSubscription = null; setActive(false);
