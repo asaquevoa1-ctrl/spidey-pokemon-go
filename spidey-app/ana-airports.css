@@ -1,0 +1,22 @@
+
+/* ANA airport navigation: geographic references, never verified raid gyms. */
+.ana-airport-panel{margin-top:18px}
+.ana-airport-panel h2{font-size:1.5rem;margin:7px 0}
+.ana-airport-panel p{max-width:60rem;line-height:1.55}
+.ana-phase-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.ana-phase-tabs .action-btn{min-height:48px;border-radius:13px}
+.ana-phase-tabs .action-btn[aria-pressed=true]{background:#d9f2ef;border:2px solid #149d90;color:#0b3342}
+.ana-airport-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:12px}
+.ana-airport-row{border:1px solid rgba(65,157,170,.35);border-radius:15px;padding:15px;background:var(--surface,#fff);display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ana-airport-row>div{flex:1 1 100%;min-width:0}
+.ana-airport-row strong,.ana-airport-row small,.ana-airport-row code{display:block;margin-bottom:7px}
+.ana-airport-row strong{font-size:1.02rem}
+.ana-airport-row small{font-size:.75rem;color:var(--muted,#526575);line-height:1.4}
+.ana-airport-row code{font-size:.96rem;overflow-wrap:anywhere;user-select:text}
+.ana-airport-row .action-btn{flex:1 1 auto;min-height:44px;text-align:center}
+[data-theme=dark] .ana-airport-row{background:#101e33;color:#edfafa}
+@media(max-width:550px){.ana-airport-list{grid-template-columns:1fr}.ana-phase-tabs .action-btn{flex:1 1 100%}}
+
+.ana-event-summary{display:grid;gap:6px;padding:15px;margin:12px 0;border-radius:14px;border:1px solid rgba(99,194,162,.55);background:linear-gradient(125deg,rgba(12,99,112,.15),rgba(15,121,78,.09))}
+.ana-event-summary strong{font-size:1.15rem}
+.ana-event-summary span{font-size:.84rem;line-height:1.4}
