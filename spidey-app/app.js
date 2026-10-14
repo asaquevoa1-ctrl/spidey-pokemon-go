@@ -219,8 +219,11 @@ function locationRows(event) {
   const verified = locations.filter(validCoordinate);
   if (!verified.length) return '<p class="empty">Coordenadas não confirmadas para este evento. Consulte o endereço oficial; nenhum ponto foi inventado.</p>';
   return verified.map((loc, index) => {
-    const value = `${Number(loc.latitude).toFixed(4)}, ${Number(loc.longitude).toFixed(4)}`;
-    return `<div class="coordinates"><div><strong>${loc.label || `Ponto ${index + 1}`}</strong><br><code>${value}</code></div><button class="action-btn copy-coord" data-value="${value}">Copiar</button></div>`;
+    const airportReference = loc.coordinate_type === 'airport_terminal_reference' && loc.exact_raid_gym_verified === false;
+    const value = airportReference && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
+      ? loc.coordinate_text : `${Number(loc.latitude).toFixed(4)}, ${Number(loc.longitude).toFixed(4)}`;
+    const description = airportReference ? '<small>Referência do aeroporto/terminal • NÃO é Ginásio ANA verificado</small><br>' : '';
+    return `<div class="coordinates"><div><strong>${loc.label || `Ponto ${index + 1}`}</strong><br>${description}<code>${value}</code></div><button class="action-btn copy-coord" data-value="${value}">Copiar</button></div>`;
   }).join('');
 }
 
