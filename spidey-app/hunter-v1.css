@@ -40,3 +40,70 @@
 /* Discoverability: a direct command-center shortcut without mixing FLY contents. */
 .spidey-command-center .cc-shortcuts .cc-hunter-link{font-weight:900;color:#082235!important;background:linear-gradient(135deg,#8cebf4,#edce8e)!important;border:1px solid rgba(31,152,167,.65);box-shadow:0 5px 20px rgba(66,190,206,.18)}
 .spidey-command-center .cc-shortcuts .cc-hunter-link:focus-visible{outline:3px solid #eeaf53;outline-offset:3px}
+
+/* Samsung Android QA: one continuous bar for seven tabs, with no row wrap. */
+@media (max-width: 760px) {
+  body.spidey-command-center nav.app-tabs {
+    display:flex!important;
+    flex-direction:row!important;
+    flex-wrap:nowrap!important;
+    grid-template-columns:none!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    column-gap:6px!important;
+    row-gap:0!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    width:calc(100% - 20px)!important;
+    max-width:calc(100% - 20px)!important;
+    min-height:62px!important;
+    height:62px!important;
+    max-height:62px!important;
+    padding:5px 9px!important;
+    box-sizing:border-box!important;
+    white-space:nowrap!important;
+    overscroll-behavior-x:contain;
+    scrollbar-width:none;
+    touch-action:pan-x;
+    -webkit-overflow-scrolling:touch;
+  }
+  body.spidey-command-center nav.app-tabs::-webkit-scrollbar{display:none}
+  body.spidey-command-center nav.app-tabs > .app-tab {
+    flex:0 0 auto!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:auto!important;
+    min-width:64px!important;
+    max-width:none!important;
+    height:48px!important;
+    min-height:48px!important;
+    margin:0!important;
+    padding:0 10px!important;
+    box-sizing:border-box!important;
+    white-space:nowrap!important;
+    line-height:1.1!important;
+    font-size:.76rem!important;
+    scroll-snap-align:center;
+  }
+  body.spidey-command-center nav.app-tabs > .hunter-tab {
+    min-width:74px!important;
+    margin:0 2px!important;
+    border-radius:13px!important;
+    isolation:isolate;
+  }
+}
+/* Never inherit light-theme heading ink on the dark Caçador hero. */
+:root[data-theme="light"] .hunter-intro h1,
+:root[data-theme="dark"] .hunter-intro h1,
+body.spidey-command-center .hunter-intro h1 {
+  color:#f7fbff!important;
+  opacity:1!important;
+  -webkit-text-fill-color:#f7fbff!important;
+  text-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.hunter-community-links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+.hunter-community-links a{display:inline-flex;align-items:center;min-height:42px;padding:8px 12px;box-sizing:border-box;border-radius:11px;border:1px solid rgba(39,139,167,.45);background:var(--surface,#fff);color:var(--text,#123047);font-size:.87rem;font-weight:750;text-decoration:none}
+.hunter-community-links a:focus-visible{outline:3px solid #f0b756;outline-offset:2px}
+.hunter-community-sources{font-size:.79rem;line-height:1.5;opacity:.8}
+[data-theme=dark] .hunter-community-links a{background:#102e45;color:#e9f7fd}
