@@ -9,6 +9,10 @@ A base é o componente de notificações da PR #32, isolado nesta branch para n�
 
 ## Implantação no Cloudflare Workers Free
 
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/tree/feat/push-only-free-20261013/services/spidey-backend)
+
+**Na primeira implantação pelo celular:** abra o botão, autorize a conexão GitHub/Cloudflare e confira que o plano continua Workers Free. O sistema copiará somente esta pasta para um novo projeto e criará o Worker. Ao concluir, mantenha o nome e envie **apenas a URL pública `*.workers.dev`**, nunca senha, token nem capturas contendo chaves. O servidor não envia notificações antes de `DISPATCH_ENABLED=true`.
+
 1. Entre em sua própria conta Cloudflare gratuita. O titular precisará autorizar a primeira implantação.
 2. Publique **a pasta `services/spidey-backend` desta branch** no Workers, com configuração do arquivo `wrangler.jsonc`. Com um ambiente de desenvolvimento autenticado, é possível usar `npm ci && npx wrangler deploy` dentro dessa pasta. Não compartilhar senha/token no chat ou repositório.
 3. O servidor começa com **`DISPATCH_ENABLED=false`** e não envia alertas.
