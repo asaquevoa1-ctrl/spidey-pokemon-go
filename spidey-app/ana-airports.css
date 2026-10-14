@@ -16,3 +16,7 @@
 .ana-airport-row .action-btn{flex:1 1 auto;min-height:44px;text-align:center}
 [data-theme=dark] .ana-airport-row{background:#101e33;color:#edfafa}
 @media(max-width:550px){.ana-airport-list{grid-template-columns:1fr}.ana-phase-tabs .action-btn{flex:1 1 100%}}
+
+.ana-event-summary{display:grid;gap:6px;padding:15px;margin:12px 0;border-radius:14px;border:1px solid rgba(99,194,162,.55);background:linear-gradient(125deg,rgba(12,99,112,.15),rgba(15,121,78,.09))}
+.ana-event-summary strong{font-size:1.15rem}
+.ana-event-summary span{font-size:.84rem;line-height:1.4}
