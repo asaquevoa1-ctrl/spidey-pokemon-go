@@ -10,10 +10,11 @@ from scripts.check_app_health import validate_shell
 class PushOnlyPagesTests(unittest.TestCase):
     def test_disabled_by_default(self):
         with tempfile.TemporaryDirectory() as temp:
-            self.assertEqual(read_push(Path(temp)), {
+            disabled=read_push(Path(temp))
+            self.assertEqual(disabled, {
                 'enabled':False, 'url':None, 'hosting':'cloudflare-workers'})
         source=(ROOT/'spidey-app/index.html').read_text(encoding='utf-8')
-        shell=prepare_shell(source,read_analytics(ROOT),read_push(ROOT))
+        shell=prepare_shell(source,read_analytics(ROOT),disabled)
         self.assertEqual(validate_shell(shell,{},'github-pages'), [])
         self.assertIn('name="spidey-push" content="off"', shell)
 
