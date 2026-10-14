@@ -79,7 +79,8 @@ try {
     if(await page.locator('[data-hunter-category="nundo"]').getAttribute('aria-pressed')!=='true') throw Error('Nundo filter not selectable');
     if(!String(await page.locator('#hunterExternal').getAttribute('href')).includes('/feeds/zero-iv'))throw Error('0% target wrong');
     await page.locator('[data-hunter-category="hundo"]').click();
-    if(!await page.locator('#hunterHundoFeeds').isVisible())throw Error('100% shortcuts not visible');
+    await page.locator('.hunter-feed-alternatives summary').first().click();
+    if(!await page.locator('#hunterHundoFeeds').isVisible())throw Error('100% shortcuts not visible in optional search');
     await page.locator('.hunter-checker summary').click();
     await page.locator('#hunterAttack').fill('15');
     await page.locator('#hunterDefense').fill('15');
