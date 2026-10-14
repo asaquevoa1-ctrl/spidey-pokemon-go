@@ -220,9 +220,12 @@ function locationRows(event) {
   if (!verified.length) return '<p class="empty">Coordenadas não confirmadas para este evento. Consulte o endereço oficial; nenhum ponto foi inventado.</p>';
   return verified.map((loc, index) => {
     const airportReference = loc.coordinate_type === 'airport_terminal_reference' && loc.exact_raid_gym_verified === false;
-    const value = airportReference && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
+    const stadiumReference = loc.coordinate_type === 'stadium_venue_reference' && loc.exact_raid_gym_verified === false;
+    const venueReference = airportReference || stadiumReference;
+    const value = venueReference && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
       ? loc.coordinate_text : `${Number(loc.latitude).toFixed(4)}, ${Number(loc.longitude).toFixed(4)}`;
-    const description = airportReference ? '<small>Referência do aeroporto/terminal • NÃO é Ginásio ANA verificado</small><br>' : '';
+    const description = airportReference ? '<small>Referência do aeroporto/terminal • NÃO é Ginásio ANA verificado</small><br>'
+      : stadiumReference ? '<small>Referência do Estádio de Seul • NÃO é Ginásio de reide verificado</small><br>' : '';
     return `<div class="coordinates"><div><strong>${loc.label || `Ponto ${index + 1}`}</strong><br>${description}<code>${value}</code></div><button class="action-btn copy-coord" data-value="${value}">Copiar</button></div>`;
   }).join('');
 }

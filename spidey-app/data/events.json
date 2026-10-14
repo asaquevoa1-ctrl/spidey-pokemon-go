@@ -2,6 +2,117 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-10-24-fc-seoul",
+      "slug": "2026-10-24-fc-seoul",
+      "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
+      "summary": "Evento presencial em 24 de outubro, das 9h às 20h, perto do Estádio da Copa do Mundo de Seul. Charmander em reides de 1★ e Charizard na Pesquisa Temporária, ambos com Fundo de Localização.",
+      "category": "local_event",
+      "tags": [
+        "Coreia do Sul",
+        "Evento local",
+        "FC Seoul",
+        "Charmander",
+        "Charizard",
+        "Fundo de Localização",
+        "Reides presenciais"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/ko/news/fc-seoul-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Seoul",
+        "start_local": "2026-10-24T09:00:00+09:00",
+        "end_local": "2026-10-24T20:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-23T21:00:00-03:00",
+        "end_brazil": "2026-10-24T08:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "location_label": "Estádio da Copa do Mundo de Seul · Coreia do Sul",
+      "locations": [
+        {
+          "label": "Referência do Estádio da Copa do Mundo de Seul — não é Ginásio de reide verificado",
+          "latitude": 37.568222,
+          "longitude": 126.897361,
+          "coordinate_text": "37.568222,126.897361",
+          "coordinate_type": "stadium_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "source_note": "Coordenada compartilhada pela comunidade; o anúncio oficial confirma a região do estádio, não um Ginásio nesta posição."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Coordenada compartilhada é referência do estádio; nenhuma localização exata de Ginásio ou Poképarada foi verificada."
+      },
+      "notes": [
+        "EVENTO PRESENCIAL: somente na região do Estádio da Copa do Mundo de Seul, Coreia do Sul, em 24/10/2026, das 9h às 20h (horário local).",
+        "Reides de 1 estrela com Charmander podem oferecer Fundo de Localização temático; chance de Shiny aumentada, não garantida.",
+        "IMPORTANTE: Passes de Reide a Distância NÃO podem ser usados nas Reides especiais de Charmander deste evento.",
+        "Pesquisa Temporária gratuita deve ser recebida na área do estádio durante o evento. A recompensa inclui Charizard com Fundo de Localização e possibilidade aumentada de Shiny.",
+        "Prazo da Pesquisa Temporária: concluir tarefas E resgatar recompensas até 7/11/2026 às 20h na Coreia (8h de Brasília).",
+        "Recompensas da Pesquisa Temporária: 8.042 PE, 5.997 Poeira Estelar, 50 Doces de Charmander, 1 Passe de Batalha Premium e encontro com Charizard.",
+        "Estande presencial Pokémon GO: 24/10, das 9h às 14h, horário local (termina antes do evento no jogo).",
+        "Coordenada 37.568222,126.897361 enviada pela comunidade: ponto de referência do estádio, NÃO comprovação da posição de qualquer Ginásio de reide."
+      ],
+      "bonuses": [
+        "Charmander com Fundo de Localização nas Reides 1★ presenciais; reides remotas indisponíveis.",
+        "Charizard com Fundo de Localização como recompensa da Pesquisa Temporária gratuita.",
+        "Chance aumentada de Charmander Brilhante e Charizard Brilhante (não garantida).",
+        "2 horas de duração de Módulos Atrair.",
+        "Mais Doces por captura ao acertar lançamentos Bons, Ótimos ou Excelentes.",
+        "Growlithe, Flareon, Torchic, Houndour, Litleo e Litten com aparições aumentadas na natureza; Flareon pode ser Brilhante.",
+        "Confetes temáticos no mapa e estande presencial das 9h às 14h."
+      ],
+      "pokemon": [
+        {
+          "name": "Charmander",
+          "note": "Reides 1★ presenciais com Fundo de Localização; maior chance de Brilhante."
+        },
+        {
+          "name": "Charizard",
+          "note": "Recompensa de Pesquisa Temporária gratuita com Fundo de Localização; maior chance de Brilhante."
+        },
+        {
+          "name": "Growlithe, Flareon, Torchic, Houndour, Litleo e Litten",
+          "note": "Mais aparições na natureza; condições de Shiny dependem da espécie."
+        }
+      ],
+      "news": {
+        "title": "FC Seoul 2026: Charmander e Charizard com fundo especial",
+        "summary": "24/10 na Coreia do Sul: reides presenciais de Charmander, Pesquisa Temporária com Charizard e coordenadas do estádio para copiar.",
+        "published_on": "2026-10-14"
+      },
+      "notifications": {
+        "enabled": false,
+        "default_lead_minutes": [],
+        "reason": "Não adicionar automaticamente envio ao servidor de alertas sem revisão de fila."
+      },
+      "status": "published",
+      "verified_at": "2026-10-14",
+      "updated_at": "2026-10-14T20:00:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/ko/news/fc-seoul-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Coordenada enviada pelo usuário",
+          "url": null,
+          "confidence": "community_supplied"
+        }
+      ]
+    },
+    {
       "id": "2026-10-08-gameplay-quality-of-life",
       "slug": "2026-10-08-gameplay-quality-of-life",
       "content_type": "news",
