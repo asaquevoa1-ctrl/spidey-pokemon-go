@@ -51,19 +51,23 @@ class PushOnlyPagesTests(unittest.TestCase):
         self.assertNotEqual(extra,shell)
         self.assertIn('Política de conexões do app ausente ou ampliada',validate_shell(extra,{},'github-pages'))
 
-    def test_disabled_package_has_exact_false_config(self):
+    def test_package_has_exact_push_config_and_no_static_subscription_endpoint(self):
         info=json.loads((ROOT/'config/spidey-push.json').read_text())
-        self.assertEqual(info['enabled'],False)
         weekly=json.loads((ROOT/'spidey-app/data/weekly.json').read_text())
         from datetime import date
         with tempfile.TemporaryDirectory() as temp:
             output=Path(temp)/'pages'
             report=build(output,today=date.fromisoformat(weekly['week_start']))
-            self.assertFalse(report['push']['configured'])
+            self.assertEqual(report['push']['configured'],info['enabled'])
             app=output/'spidey-app'
             self.assertEqual(json.loads((app/'push-config.json').read_text()),info)
             self.assertIn('SpideyPushBackend', (app/'push-endpoint.js').read_text())
             self.assertFalse(json.loads((app/'api/push/public-key').read_text())['available'])
+            shell=(app/'index.html').read_text()
+            if info['enabled']:
+                self.assertIn('name="spidey-push" content="' + info['url'] + '"', shell)
+            else:
+                self.assertIn('name="spidey-push" content="off"', shell)
 
 
 if __name__=='__main__':
