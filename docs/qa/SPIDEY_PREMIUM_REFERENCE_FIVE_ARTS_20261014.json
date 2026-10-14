@@ -1,0 +1,71 @@
+{
+  "schema_version": "spidey-premium-style-publication-v1",
+  "publication_requested_on": "2026-10-14",
+  "publication_authorization": "User explicitly asked 'Agora publique no app' after inspecting five newly generated Spidey Premium reference-style posters.",
+  "status": "PUBLISH_REQUESTED",
+  "quality_baseline": "User-provided reference posters with fixed Spidey logo, top navigation, slogan, Pokémon protagonist, gold/neon event title, date ribbon, lower feature cards and footer",
+  "format": "image/webp",
+  "original_versions_preserved": true,
+  "no_other_event_image_overwritten": true,
+  "existing_master_count": 65,
+  "new_master_count": 66,
+  "assets": [
+    {
+      "event_id": "2026-12-minior-geminids",
+      "file": "spidey-app/assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp",
+      "width": 1056,
+      "height": 1320,
+      "sha256": "184849e1cb34325f91fcc8b5f37cd378fc4e67548ba795d1935071f2a201fe49",
+      "git_blob_sha": "acf14c20bb460872ebacf1c9acff760894c7b900",
+      "old_file": null,
+      "source": "ChatGPT image generation based on user-provided Spidey Premium examples",
+      "visual_release": "Requested by user"
+    },
+    {
+      "event_id": "2026-11-minior-leonids",
+      "file": "spidey-app/assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp",
+      "width": 1056,
+      "height": 1320,
+      "sha256": "a8dbf8e9b2988493e61b75ef4f351b6b4ebdc9c734714304e7c16d7fe39aed35",
+      "git_blob_sha": "1f49faf5f586e210fad80a72dae1d8630ffe60a9",
+      "old_file": "assets/events/premium/minior-leonids-20261114-19-approved-v1.png",
+      "source": "ChatGPT image generation based on user-provided Spidey Premium examples",
+      "visual_release": "Requested by user"
+    },
+    {
+      "event_id": "2026-10-minior-orionids",
+      "file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp",
+      "width": 1056,
+      "height": 1320,
+      "sha256": "1e6f7df00e04933a569329009b04da1e7122685af1e91073dc34fd0f47254582",
+      "git_blob_sha": "29bd5f405acb976ce11eca134927d9b21536ab65",
+      "old_file": "assets/events/premium/minior-orionids-20261019-24-approved-v2.png",
+      "source": "ChatGPT image generation based on user-provided Spidey Premium examples",
+      "visual_release": "Requested by user"
+    },
+    {
+      "event_id": "2026-10-super-mega-raid-day",
+      "file": "spidey-app/assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-spidey-reference-approved-v2.webp",
+      "width": 1056,
+      "height": 1320,
+      "sha256": "a9286379f7358bbc7344d7a67a810d9776d34347c60713a1467b8d867bfefce2",
+      "git_blob_sha": "dd092a6413256ae6c5b7465884e72cb3afc88926",
+      "old_file": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png",
+      "source": "ChatGPT image generation based on user-provided Spidey Premium examples",
+      "visual_release": "Requested by user"
+    },
+    {
+      "event_id": "2026-10-raids-dialga",
+      "file": "spidey-app/assets/events/premium/dialga-five-star-raids-20261014-20-spidey-reference-approved-v2.webp",
+      "width": 1056,
+      "height": 1320,
+      "sha256": "b26eddb70aaa275fc00392db6c5aa8ed3866f829da02b2f22776ae1cac8b0b4c",
+      "git_blob_sha": "0b10fb9f7f96f6e3b5eb9020c8042229b48fe133",
+      "old_file": "assets/events/premium/dialga-five-star-raids-20261014-20-approved-v1.png",
+      "source": "ChatGPT image generation based on user-provided Spidey Premium examples",
+      "visual_release": "Requested by user"
+    }
+  ],
+  "physical_android_qa": "PENDING",
+  "push_service_modified": false
+}

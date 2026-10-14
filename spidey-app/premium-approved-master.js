@@ -508,15 +508,14 @@
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-minior-orionids": {
-    "file": "assets/events/premium/minior-orionids-20261019-24-approved-v2.png",
+    "file": "assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp",
     "status": "APPROVED",
     "display": "full_poster",
-    "width": 1122,
-    "height": 1402,
-    "sha256": "1f383e1b6d0651873a6cb8e21df8ad643b23a70a88fe315634e2e417f4ee42a1",
-    "approval_record": "docs/qa/LOGO_CORRECTION_APPROVAL_20261012.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+    "width": 1056,
+    "height": 1320,
+    "sha256": "1e6f7df00e04933a569329009b04da1e7122685af1e91073dc34fd0f47254582",
+    "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
+    "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
   },
   "2026-10-gbl-20-27": {
     "file": "assets/events/premium/gbl-20261020-27-approved-v2.png",
@@ -618,37 +617,44 @@
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-super-mega-raid-day": {
-    "file": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png",
+    "file": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-spidey-reference-approved-v2.webp",
     "status": "APPROVED",
     "display": "full_poster",
-    "width": 1024,
-    "height": 1536,
-    "sha256": "6c4a56bde58f88914f175f1cf22d026cd4955c1ec14ca4bfe46d1f88aea2c992",
-    "approval_record": "docs/qa/MEGA_CHANDELURE_ART_APPROVAL_20261014.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+    "width": 1056,
+    "height": 1320,
+    "sha256": "a9286379f7358bbc7344d7a67a810d9776d34347c60713a1467b8d867bfefce2",
+    "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
+    "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
   },
   "2026-11-minior-leonids": {
-    "file": "assets/events/premium/minior-leonids-20261114-19-approved-v1.png",
+    "file": "assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp",
     "status": "APPROVED",
     "display": "full_poster",
-    "width": 1024,
-    "height": 1536,
-    "sha256": "6b6d66ef674b4207253944b7e1a1ab515bd2958cb365d4af8b755c54217eef7e",
-    "approval_record": "docs/qa/MINIOR_LEONIDS_ART_APPROVAL_20261014.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+    "width": 1056,
+    "height": 1320,
+    "sha256": "a8dbf8e9b2988493e61b75ef4f351b6b4ebdc9c734714304e7c16d7fe39aed35",
+    "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
+    "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
   },
   "2026-10-raids-dialga": {
-    "file": "assets/events/premium/dialga-five-star-raids-20261014-20-approved-v1.png",
+    "file": "assets/events/premium/dialga-five-star-raids-20261014-20-spidey-reference-approved-v2.webp",
     "status": "APPROVED",
     "display": "full_poster",
-    "width": 1024,
-    "height": 1536,
-    "sha256": "680327d84b50ccec3044cf5077f4dbd22528fefb10ad6f01708fb91e57cb9299",
-    "approval_record": "docs/qa/DIALGA_RAIDS_ART_APPROVAL_20261014.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+    "width": 1056,
+    "height": 1320,
+    "sha256": "b26eddb70aaa275fc00392db6c5aa8ed3866f829da02b2f22776ae1cac8b0b4c",
+    "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
+    "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
+  },
+  "2026-12-minior-geminids": {
+    "file": "assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1056,
+    "height": 1320,
+    "sha256": "184849e1cb34325f91fcc8b5f37cd378fc4e67548ba795d1935071f2a201fe49",
+    "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
+    "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
