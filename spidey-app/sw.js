@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261013-apac-mall-art-v1';
+const CACHE = 'spidey-app-20261013-push-only-preview1';
 const CORE = [
   './assets/events/premium/apac-mall-exploration-20261001-20270328-approved-v1.png',
   './assets/events/premium/adidas-avatar-research-20260925-20270115-approved-v1.png',
@@ -114,6 +114,9 @@ const CORE = [
   './weekly-cards.css',
   './premium-event-art.js',
   './map.js',
+  './push-config.json',
+  './push-config.js',
+  './push-endpoint.js',
   './push.js',
   './catalog.js',
   './navigation.js',
@@ -232,7 +235,10 @@ function urlBase64ToUint8Array(base64String) {
 self.addEventListener('pushsubscriptionchange', (event) => {
   event.waitUntil((async () => {
     try {
-      const keyResponse = await fetch('api/push/public-key', { cache: 'no-store' });
+      const config = await fetch(new URL('push-config.json', self.location.href), {cache:'no-store'}).then(r=>r.json());
+      if (config?.enabled !== true || !/^https:\/\/[a-z0-9-]+(?:\.[a-z0-9-]+)*\.workers\.dev$/.test(config.url || '')) return;
+      const endpoint = path => new URL(path, config.url + '/').href;
+      const keyResponse = await fetch(endpoint('api/push/public-key'), { cache: 'no-store', credentials:'omit' });
       if (!keyResponse.ok) return;
       const { publicKey } = await keyResponse.json();
       if (!publicKey) return;
@@ -240,7 +246,7 @@ self.addEventListener('pushsubscriptionchange', (event) => {
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(publicKey),
       });
-      await fetch('api/push/subscribe', {
+      await fetch(endpoint('api/push/subscribe'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subscription: subscription.toJSON() }),
