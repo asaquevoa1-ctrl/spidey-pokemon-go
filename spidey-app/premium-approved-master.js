@@ -616,6 +616,17 @@
     "approval_record": "docs/qa/APAC_MALL_EXPLORATION_ART_APPROVAL_20261013.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-super-mega-raid-day": {
+    "file": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "6c4a56bde58f88914f175f1cf22d026cd4955c1ec14ca4bfe46d1f88aea2c992",
+    "approval_record": "docs/qa/MEGA_CHANDELURE_ART_APPROVAL_20261014.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

@@ -1,0 +1,58 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-super-mega-raid-day",
+  "title": "Dia de Super Megarreides de Mega Chandelure",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/en/news/chandelure-super-mega-raid-day-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "local_date": "2026-10-31",
+    "start_local": "14:00",
+    "end_local": "17:00",
+    "timezone_note": "Horário local, conforme o anúncio oficial."
+  },
+  "art_rules": [
+    "official_source_only",
+    "mega_chandelure_as_main_subject",
+    "official_spidey_logo",
+    "no_unverified_coordinates",
+    "no_unverified_species_or_bonus",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "O evento ocorre em 31 de outubro de 2026, das 14h às 17h no horário local.",
+    "Mega Chandelure estreia em Super Megarreides.",
+    "É possível receber até seis Passes de Reide gratuitos ao girar fotodiscos de Ginásios.",
+    "Há maior chance de encontrar Chandelure Brilhante em Super Megarreides.",
+    "Chandelure capturado em Super Megarreides terá o Meganível 1 desbloqueado.",
+    "Nenhuma coordenada, espécie ou bônus não confirmado aparece no pôster."
+  ],
+  "candidate_visual": "Mega Chandelure em primeiro plano, arena noturna de reide, fogo espectral violeta e azul, profundidade cinematográfica, marca Spidey e informações oficiais em alta legibilidade.",
+  "candidate_file": "spidey-app/assets/events/review/mega-chandelure-super-mega-raid-day-20261031-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 506117,
+  "sha256": "6c4a56bde58f88914f175f1cf22d026cd4955c1ec14ca4bfe46d1f88aea2c992",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Key art vertical com Mega Chandelure central, arena de reide noturna, fogo espectral violeta e espaço editorial; título, data, horário, fatos oficiais e marca Spidey aplicados deterministicamente.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "96d9408b92803c6c2992de15f4c88a421e93e2db",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
