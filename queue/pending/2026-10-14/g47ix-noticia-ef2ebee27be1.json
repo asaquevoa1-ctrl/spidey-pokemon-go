@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "⏳ Dialga will be available in five-star raids from October 14 to 20!\n\n✨ If you’re lucky, you might find a Shiny!\n\nMore counters ➡️ @Pokebattler_com\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2110219545390502034",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2110219545390502034",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-14T04:44:43.090550+00:00"
+}
