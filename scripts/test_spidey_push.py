@@ -15,7 +15,7 @@ class PushOnlyPagesTests(unittest.TestCase):
         source=(ROOT/'spidey-app/index.html').read_text(encoding='utf-8')
         shell=prepare_shell(source,read_analytics(ROOT),read_push(ROOT))
         self.assertEqual(validate_shell(shell,{},'github-pages'), [])
-        self.assertIn('spidey-push&quot;', shell.replace('"', '&quot;')) if False else None
+        self.assertIn('name="spidey-push" content="off"', shell)
 
     def test_source_contains_no_social_hooks(self):
         app=ROOT/'spidey-app'
