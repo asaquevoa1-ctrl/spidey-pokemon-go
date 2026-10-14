@@ -1,0 +1,34 @@
+name: Spidey - alertas gratuitos isolados
+on:
+  pull_request:
+    paths:
+      - 'services/spidey-backend/**'
+      - 'spidey-app/push.js'
+      - 'spidey-app/push-config*'
+      - 'spidey-app/push-endpoint.js'
+      - 'spidey-app/sw.js'
+      - 'scripts/*spidey_push.py'
+      - '.github/workflows/spidey-push-free-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  push-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: services/spidey-backend/package-lock.json
+      - name: Instalar dependências do serviço isolado
+        run: npm ci --ignore-scripts
+        working-directory: services/spidey-backend
+      - name: Testar Web Push (sem dados de jogadores)
+        run: npm test
+        working-directory: services/spidey-backend
+      - name: Verificar empacotamento Cloudflare sem publicar
+        run: npm run check
+        working-directory: services/spidey-backend
