@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "url": "https://spidey-push.spursander.workers.dev",
+  "hosting": "cloudflare-workers"
+}

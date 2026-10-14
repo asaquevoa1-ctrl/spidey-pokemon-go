@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "spidey-push",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "vars": {
+    "APP_URL": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+    "QUEUE_URL": "https://raw.githubusercontent.com/asaquevoa1-ctrl/spidey-pokemon-go/main/notifications/queue.json",
+    "DISPATCH_ENABLED": "false"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "PUSH",
+        "class_name": "PushHub"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "PushHub"
+      ]
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "*/5 * * * *"
+    ]
+  },
+  "observability": {
+    "enabled": false
+  }
+}

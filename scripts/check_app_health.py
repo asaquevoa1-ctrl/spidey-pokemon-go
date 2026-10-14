@@ -46,6 +46,12 @@ def validate_shell(html, headers, hosting):
         connections = [part for part in directives if part and part[0] == 'connect-src']
         provider = meta.policies.get('spidey-web-analytics', 'off')
         expected_connections = ['connect-src', "'self'"]
+        push_url = meta.policies.get('spidey-push', 'off')
+        if push_url != 'off':
+            if not re.fullmatch(r'https://[a-z0-9-]+(?:\.[a-z0-9-]+)*\.workers\.dev', push_url):
+                issues.append('Servidor de alertas com endereço inválido')
+            else:
+                expected_connections.append(push_url)
         loaders = [script for script in meta.scripts if script.get('src', '').split('?')[0] == 'web-analytics.js']
         if provider == 'cloudflare':
             expected_connections.append('https://cloudflareinsights.com')
