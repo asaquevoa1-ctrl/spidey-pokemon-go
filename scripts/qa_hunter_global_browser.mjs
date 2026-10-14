@@ -82,9 +82,19 @@ try {
     await intake.fill('Discord: Pokémon 100% ✨ | 40.712345,-73.987654 | expires in 10m');
     await page.locator('#hunterExtract').click();
     if(await page.locator('#hunterCoords').inputValue()!=='40.712345,-73.987654')throw Error('Message extraction failed');
+    await intake.fill('👽 #Shieldon 💯\n827 ♂ 35 👈🏼\niv100.cc ∙ ΔΓΞΔ ⁵¹\n50.105208,8.7271780');
+    await page.locator('#hunterExtract').click();
+    const parsed=page.locator('#hunterParsed');
+    if(!await parsed.isVisible())throw Error('IV100 preview not displayed');
+    if((await page.locator('#hunterParsedPokemon').textContent())!=='Shieldon')throw Error('Shieldon species not extracted');
+    for(const [id,match] of [['hunterParsedIV','100% informado'],['hunterParsedCP','827'],['hunterParsedGender','Macho'],['hunterParsedLevel','35'],['hunterParsedSource','iv100.cc'],['hunterParsedCoords','50.105208,8.7271780']]){
+      if(!String(await page.locator('#'+id).textContent()).includes(match))throw Error('IV100 field '+id+' not extracted');
+    }
+    if(!String(await parsed.textContent()).includes('Sem horário de desaparecimento'))throw Error('Unknown expiry was incorrectly claimed');
+    if((await page.locator('#hunterCoords').inputValue())!=='50.105208,8.7271780')throw Error('Shieldon precise coordinates not copied into editor');
     await intake.fill('CP 891 IV 15,15,15');
     await page.locator('#hunterExtract').click();
-    if(!String(await page.locator('#hunterExtractStatus').textContent()).includes('Não encontrei'))throw Error('IV triples misread as coordinates');
+    if(!String(await page.locator('#hunterExtractStatus').textContent()).includes('Não encontrei')||await page.locator('#hunterParsed').isVisible())throw Error('Invalid IV-only message was incorrectly accepted');
     await page.locator('#hunterCoords').fill('91,0');
     if(!await page.locator('#hunterCopy').isDisabled()||await map.isVisible())throw Error('Invalid coordinates were accepted');
     await page.locator('#hunterCoords').fill('-25.4221,-49.2717');

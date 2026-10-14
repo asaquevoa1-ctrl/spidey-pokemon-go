@@ -8,7 +8,7 @@ const source=fs.readFileSync(path.join(__dirname,'..','spidey-app','hunter-v1.js
 const window={};
 const document={readyState:'loading',addEventListener(){}};
 vm.runInNewContext(source,{window,document});
-const {classifyIV,parseCoords,parseMessageCoords}=window.SpideyHunterCore;
+const {classifyIV,parseCoords,parseMessageCoords,parseSpawnMessage}=window.SpideyHunterCore;
 
 test('hunter: 100% and 0% IV are classified exactly',()=>{
   assert.equal(classifyIV([15,15,15]).hundo,true);
@@ -53,4 +53,36 @@ test('hunter: independent Filtro page and tab, no longer mounted inside FLY',()=
   assert.match(source,/tab\.textContent='Filtro'/);
   assert.match(source,/setView\('hunterView'\)/);
   assert.doesNotMatch(source,/fly\.prepend\(s\)|hero\.insertAdjacentElement\('afterend',s\)/);
+});
+
+test('hunter: understands real IV100 Telegram format without inventing expiry',()=>{
+  const report=parseSpawnMessage('👽 #Shieldon 💯\n827 ♂ 35 👈🏼\niv100.cc ∙ ΔΓΞΔ ⁵¹\n50.105208,8.7271780');
+  assert.equal(report.pokemon,'Shieldon');
+  assert.equal(report.cp,827);
+  assert.equal(report.gender,'Macho');
+  assert.equal(report.level,35);
+  assert.equal(report.claimedIV,100);
+  assert.equal(report.source,'iv100.cc');
+  assert.equal(report.coords,'50.105208,8.7271780');
+  assert.equal(report.despawn,null);
+  assert.equal(parseMessageCoords('👽 #Shieldon 💯\n827 ♂ 35 👈🏼\niv100.cc ∙ ΔΓΞΔ ⁵¹\n50.105208,8.7271780'),'50.105208,8.7271780');
+});
+test('hunter: distinguishes user claims from independently verified IV and missing details',()=>{
+  const noStats=parseSpawnMessage('#Pikachu\n40.712345,-73.987654');
+  assert.equal(noStats.pokemon,'Pikachu');
+  assert.equal(noStats.claimedIV,null);
+  assert.equal(noStats.cp,null);
+  assert.equal(noStats.gender,null);
+  assert.equal(noStats.level,null);
+  assert.equal(noStats.source,null);
+  assert.equal(noStats.despawn,null);
+  const female=parseSpawnMessage('#Eevee 💯\n1000 ♀ 25\n-23.5505,-46.6333');
+  assert.equal(female.gender,'Fêmea');
+  assert.equal(female.level,25);
+  assert.equal(female.claimedIV,100);
+  assert.equal(parseSpawnMessage('IV 15,15,15'),null);
+  assert.equal(parseSpawnMessage('<img src=x onerror=alert(1)>'),null);
+  assert.match(source,/hunterParsedPokemon'\)\.textContent/);
+  assert.match(source,/hunterParsedCoords'\)\.textContent/);
+  assert.doesNotMatch(source,/hunterParsedPokemon'\)\.innerHTML/);
 });
