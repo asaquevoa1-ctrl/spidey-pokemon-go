@@ -107,3 +107,14 @@ body.spidey-command-center .hunter-intro h1 {
 .hunter-community-links a:focus-visible{outline:3px solid #f0b756;outline-offset:2px}
 .hunter-community-sources{font-size:.79rem;line-height:1.5;opacity:.8}
 [data-theme=dark] .hunter-community-links a{background:#102e45;color:#e9f7fd}
+
+/* Structured preview of a user-pasted report. It never claims independent IV verification. */
+.hunter-parsed:not([hidden]){display:grid;gap:9px;margin:16px 0 4px;padding:16px;border-radius:16px;border:1px solid rgba(36,173,187,.45);background:linear-gradient(145deg,rgba(47,180,192,.12),rgba(45,100,161,.06));overflow-wrap:anywhere}
+.hunter-parsed[hidden],.hunter-parsed [hidden]{display:none!important}
+.hunter-parsed strong{display:block;font-size:1.35rem;font-weight:850;letter-spacing:-.02em}
+.hunter-parsed-iv{font-size:.91rem;font-weight:750;color:var(--text,#142e42)}
+.hunter-parsed-fields{display:flex;flex-wrap:wrap;gap:8px}
+.hunter-parsed-fields span{padding:7px 10px;border:1px solid rgba(70,148,165,.33);border-radius:10px;font-size:.9rem;font-weight:750}
+.hunter-parsed code{display:block;padding:9px 11px;border-radius:10px;background:rgba(69,146,177,.13);font-size:.95rem;user-select:text;overflow-wrap:anywhere}
+.hunter-parsed small{display:block;line-height:1.4;opacity:.84}
+[data-theme=dark] .hunter-parsed-iv{color:#dcf7f6}
