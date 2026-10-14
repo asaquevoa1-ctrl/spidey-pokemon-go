@@ -638,6 +638,17 @@
     "approval_record": "docs/qa/MINIOR_LEONIDS_ART_APPROVAL_20261014.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-raids-dialga": {
+    "file": "assets/events/premium/dialga-five-star-raids-20261014-20-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "680327d84b50ccec3044cf5077f4dbd22528fefb10ad6f01708fb91e57cb9299",
+    "approval_record": "docs/qa/DIALGA_RAIDS_ART_APPROVAL_20261014.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

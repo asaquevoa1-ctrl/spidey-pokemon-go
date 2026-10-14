@@ -1,0 +1,46 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-raids-dialga",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/DIALGA_RAIDS_ART_CANDIDATE_20261014.json",
+  "candidate_file": "spidey-app/assets/events/review/dialga-five-star-raids-20261014-20-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/dialga-five-star-raids-20261014-20-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 821761,
+  "sha256": "680327d84b50ccec3044cf5077f4dbd22528fefb10ad6f01708fb91e57cb9299",
+  "sources": {
+    "official_schedule": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+    "community_detail": "https://pokemongohub.net/post/event/this-week-in-pokemon-go-12-18-october-2026/"
+  },
+  "schedule": {
+    "start_local": "2026-10-14T06:00:00-03:00",
+    "end_local": "2026-10-20T22:00:00-03:00",
+    "poster_precision": "date_only"
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38537742716,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38537742716",
+    "week_fixture": "2026-10-12..2026-10-18",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 64,
+  "prior_unique_images_preserved": 55,
+  "remaining_premium_gaps_after_publication": 20,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
