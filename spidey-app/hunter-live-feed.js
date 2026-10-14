@@ -155,6 +155,10 @@
     for(const id of ['hunterExternal','hunterHundoFeeds']){
       const node=el(id);if(node)alt.append(node);
     }
+    const searchNote=panel.querySelector('.hunter-community-sources');
+    // Keep legacy source disclaimer with the optional external-search links.
+    const outboundDisclaimer=[...panel.querySelectorAll('.microcopy')].find(node=>node.textContent?.startsWith('As buscas abrem'));
+    if(outboundDisclaimer)alt.append(outboundDisclaimer);
     const old=panel.querySelector('.hunter-message-card');
     if(old)old.remove();
     const checker=el('hunterChecker');
