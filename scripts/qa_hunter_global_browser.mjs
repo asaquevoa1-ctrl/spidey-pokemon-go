@@ -35,6 +35,29 @@ try {
     if(!await hunterScreen.isVisible()||await page.locator('#flyView').isVisible())throw Error('Separate screen navigation failed');
     const navStyle=await filterTab.evaluate(el=>({background:getComputedStyle(el).backgroundImage,width:el.getBoundingClientRect().width}));
     if(!String(navStyle.background).includes('gradient')||navStyle.width<55) throw Error('Tab not highlighted');
+    const visual=await page.evaluate(()=>{
+      const nav=document.querySelector('nav.app-tabs');
+      const tabs=[...nav.querySelectorAll('.app-tab')];
+      const navRect=nav.getBoundingClientRect(),rects=tabs.map(tab=>tab.getBoundingClientRect());
+      const hero=document.querySelector('.hunter-intro h1');
+      return {
+        navDisplay:getComputedStyle(nav).display,navWrap:getComputedStyle(nav).flexWrap,
+        navHeight:navRect.height,tabRows:new Set(rects.map(r=>Math.round(r.top))).size,
+        overlap:rects.some((r,i)=>rects.some((q,j)=>i!==j&&Math.min(r.right,q.right)-Math.max(r.left,q.left)>3&&Math.min(r.bottom,q.bottom)-Math.max(r.top,q.top)>3)),
+        heroColor:getComputedStyle(hero).color,
+        heroTextFill:getComputedStyle(hero).webkitTextFillColor,
+        mobileScroll:nav.scrollWidth>nav.clientWidth,
+        sources:[...document.querySelectorAll('.hunter-community-links a')].map(a=>a.href)
+      };
+    });
+    if(width<=760){
+      if(visual.navDisplay!=='flex'||visual.navWrap!=='nowrap'||visual.tabRows!==1||visual.navHeight>85||visual.overlap)
+        throw Error('Mobile nav wrapped or collided '+JSON.stringify(visual));
+    }
+    if(visual.heroColor!=='rgb(247, 251, 255)'||visual.heroTextFill!=='rgb(247, 251, 255)')
+      throw Error('Poor hero contrast '+JSON.stringify(visual));
+    if(!visual.sources.some(v=>v.includes('discord.gg/pokedex100'))||!visual.sources.some(v=>v.includes('t.me/pokemon_pogo_iv100_100iv_100_pvp')))
+      throw Error('Community links missing');
     const cats=page.locator('[data-hunter-category]');
     if(await cats.count()!==6)throw Error('The six Caçador filters are missing');
     await page.locator('[data-hunter-category="nundo"]').click();
