@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261014-fc-seoul-official1';
+const CACHE = 'spidey-app-20261014-ana-search3';
 const CORE = [
   './assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp',
   './assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp',
