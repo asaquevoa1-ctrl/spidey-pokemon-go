@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261013-iv100-reader1-push1';
+const CACHE = 'spidey-app-20261013-feed-ready1-push1';
 const CORE = [
   './assets/events/premium/apac-mall-exploration-20261001-20270328-approved-v1.png',
   './assets/events/premium/adidas-avatar-research-20260925-20270115-approved-v1.png',
@@ -79,6 +79,8 @@ const CORE = [
   './fly-v1.js',
   './fly-v1.css',
   './hunter-v1.js',
+  './hunter-live-feed.js',
+  './data/hunter-feed.json',
   './hunter-v1.css',
   './news-feed.js',
   './command-center.js',
@@ -171,7 +173,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
-  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp)\.json$/.test(url.pathname);
+  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp|hunter-feed)\.json$/.test(url.pathname);
 
   if (isAppShell || isData) {
     event.respondWith(

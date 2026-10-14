@@ -14,8 +14,23 @@ if (!ready) {server.kill('SIGTERM');throw Error('Caçador preview server unavail
 const browser = await chromium.launch({headless:true, executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome'});
 const checks = [];
 try {
+  // Production data starts empty: never advertise yesterday's Shieldon as live.
+  const empty=await browser.newPage({viewport:{width:390,height:850}});
+  await empty.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
+  await empty.locator('.app-tabs [data-view="hunterView"]').click();
+  await empty.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
+  await empty.waitForFunction(()=>document.getElementById('hunterLiveStatus')?.textContent.includes('Aguardando uma fonte'),null,{timeout:10000});
+  if(await empty.locator('.hunter-live-card').count()!==0)throw Error('Historical or fake card present with unauthorized source');
+  if(await empty.locator('#hunterMessage').count()!==0)throw Error('Manual message paste should not be primary UI');
+  await empty.close();
   for (const width of [360,390,1280]) for (const theme of ['light','dark']) {
     const page = await browser.newPage({viewport:{width,height:900},timezoneId:'America/Sao_Paulo'});
+    const time=Date.now(),iso=t=>new Date(t).toISOString();
+    const fixture={schema:'spidey-hunter-feed-v1',source_status:'connected',generated_at:iso(time),items:[
+      {pokemon:'Shieldon',iv_percent:100,cp:827,level:35,gender:'Macho',coordinates:'50.105208,8.7271780',reported_at:iso(time-60000),expires_at:iso(time+8*60000),source:'Teste autorizado (sintético)',pvp_rank:null,shiny_eligible:false},
+      {pokemon:'Magikarp',iv_percent:0,cp:10,level:1,gender:null,coordinates:'-23.5505,-46.6333',reported_at:iso(time-30000),expires_at:iso(time+6*60000),source:'Teste autorizado (sintético)',pvp_rank:null,shiny_eligible:false}
+    ]};
+    await page.route('**/data/hunter-feed.json',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(fixture)}));
     await page.addInitScript(value=>localStorage.setItem('spidey-theme',value),theme);
     await page.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
     await page.locator('[data-view="flyView"]').first().waitFor({state:'attached',timeout:20000});
@@ -64,7 +79,8 @@ try {
     if(await page.locator('[data-hunter-category="nundo"]').getAttribute('aria-pressed')!=='true') throw Error('Nundo filter not selectable');
     if(!String(await page.locator('#hunterExternal').getAttribute('href')).includes('/feeds/zero-iv'))throw Error('0% target wrong');
     await page.locator('[data-hunter-category="hundo"]').click();
-    if(!await page.locator('#hunterHundoFeeds').isVisible())throw Error('100% shortcuts not visible');
+    await page.locator('.hunter-feed-alternatives summary').first().click();
+    if(!await page.locator('#hunterHundoFeeds').isVisible())throw Error('100% shortcuts not visible in optional search');
     await page.locator('.hunter-checker summary').click();
     await page.locator('#hunterAttack').fill('15');
     await page.locator('#hunterDefense').fill('15');
@@ -78,30 +94,29 @@ try {
     if(await page.locator('#hunterCopy').isDisabled())throw Error('Valid coordinates not copyable');
     const map=page.locator('#hunterMap');
     if(!await map.isVisible()||!String(await map.getAttribute('href')).includes('maps/search/'))throw Error('Location map URL missing');
-    const intake=page.locator('#hunterMessage');
-    await intake.fill('Discord: Pokémon 100% ✨ | 40.712345,-73.987654 | expires in 10m');
-    await page.locator('#hunterExtract').click();
-    if(await page.locator('#hunterCoords').inputValue()!=='40.712345,-73.987654')throw Error('Message extraction failed');
-    await intake.fill('👽 #Shieldon 💯\n827 ♂ 35 👈🏼\niv100.cc ∙ ΔΓΞΔ ⁵¹\n50.105208,8.7271780');
-    await page.locator('#hunterExtract').click();
-    const parsed=page.locator('#hunterParsed');
-    if(!await parsed.isVisible())throw Error('IV100 preview not displayed');
-    if((await page.locator('#hunterParsedPokemon').textContent())!=='Shieldon')throw Error('Shieldon species not extracted');
-    for(const [id,match] of [['hunterParsedIV','100% informado'],['hunterParsedCP','827'],['hunterParsedGender','Macho'],['hunterParsedLevel','35'],['hunterParsedSource','iv100.cc'],['hunterParsedCoords','50.105208,8.7271780']]){
-      if(!String(await page.locator('#'+id).textContent()).includes(match))throw Error('IV100 field '+id+' not extracted');
-    }
-    if(!String(await parsed.textContent()).includes('Sem horário de desaparecimento'))throw Error('Unknown expiry was incorrectly claimed');
-    if((await page.locator('#hunterCoords').inputValue())!=='50.105208,8.7271780')throw Error('Shieldon precise coordinates not copied into editor');
-    await intake.fill('CP 891 IV 15,15,15');
-    await page.locator('#hunterExtract').click();
-    if(!String(await page.locator('#hunterExtractStatus').textContent()).includes('Não encontrei')||await page.locator('#hunterParsed').isVisible())throw Error('Invalid IV-only message was incorrectly accepted');
+    await page.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
+    await page.waitForFunction(()=>document.querySelectorAll('.hunter-live-card').length===1,null,{timeout:10000});
+    if(!String(await page.locator('.hunter-live-card').textContent()).includes('Shieldon'))throw Error('Fresh 100% Shieldon card missing');
+    if(!String(await page.locator('.hunter-live-card').textContent()).includes('50.105208,8.7271780'))throw Error('Shieldon precise coordinate missing');
+    if(!String(await page.locator('.hunter-live-card').textContent()).includes('min restantes'))throw Error('Valid expiry missing');
+    await page.evaluate(()=>{window.__copied=null;navigator.clipboard.writeText=async function(v){window.__copied=v;};});
+    await page.locator('.hunter-live-copy').first().click();
+    if(await page.evaluate(()=>window.__copied)!=='50.105208,8.7271780')throw Error('One-tap copy failed');
+    await page.locator('[data-hunter-category="nundo"]').click();
+    await page.waitForFunction(()=>document.querySelector('.hunter-live-name')?.textContent==='Magikarp',null,{timeout:10000});
+    if(await page.locator('.hunter-live-card').count()!==1)throw Error('0% filter includes wrong species');
+    await page.locator('[data-hunter-category="shundo"]').click();
+    if(await page.locator('.hunter-live-card').count()!==0)throw Error('Incorrect fake Shundo from Hundo');
+    await page.locator('[data-hunter-category="hundo"]').click();
+    await page.waitForFunction(()=>document.querySelector('.hunter-live-name')?.textContent==='Shieldon',null,{timeout:10000});
+    if(await page.locator('#hunterMessage').count()!==0)throw Error('Paste box still shown as primary feature');
     await page.locator('#hunterCoords').fill('91,0');
     if(!await page.locator('#hunterCopy').isDisabled()||await map.isVisible())throw Error('Invalid coordinates were accepted');
     await page.locator('#hunterCoords').fill('-25.4221,-49.2717');
     const sizes=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth, push:!!document.getElementById('notificationButton'), fly:!!document.getElementById('flyRouteList'), pvp:!!document.getElementById('pvpView'), disabledNetwork:document.querySelector('[data-hunter-category="shiny"]')!==null}));
     if(sizes.overflow||!sizes.push||!sizes.fly||!sizes.pvp||!sizes.disabledNetwork) throw Error('Regression or horizontal scroll '+JSON.stringify(sizes));
     await page.screenshot({path:`${output}/${width}-${theme}.png`,fullPage:true});
-    checks.push({width,theme,dedicatedTab:true,highlighted:true,flyFreeOfHunter:true,filters:6,message:'Discord/Telegram local parsing',iv:'100% + 0%',coord:'valid + invalid',pushPreserved:true,pvpPreserved:true,overflow:false});
+    checks.push({width,theme,dedicatedTab:true,highlighted:true,flyFreeOfHunter:true,filters:6,message:'automatic feed cards, source status and one-tap copy',iv:'100% + 0%',coord:'valid + invalid',pushPreserved:true,pvpPreserved:true,overflow:false});
     await page.close();
   }
   fs.writeFileSync(output+'/results.json', JSON.stringify({status:'PASSED_PREVIEW',checks,physical_android_tested:false},null,2)+'\n');
