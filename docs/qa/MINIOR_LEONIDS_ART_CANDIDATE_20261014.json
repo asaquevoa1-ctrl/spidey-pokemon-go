@@ -1,0 +1,56 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-11-minior-leonids",
+  "title": "Minior: chuva de meteoros Leônidas",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+    "confidence": "official"
+  },
+  "schedule": {
+    "start_local": "2026-11-14T17:00:00-03:00",
+    "end_local": "2026-11-19T23:59:59-03:00",
+    "timezone_note": "Horário local, conforme o anúncio oficial."
+  },
+  "art_rules": [
+    "official_source_only",
+    "closed_meteor_form_minior_as_main_subject",
+    "official_spidey_logo",
+    "no_unverified_core_color",
+    "no_unverified_coordinates_species_or_bonus",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "A janela das Leônidas ocorre de 14 de novembro de 2026 às 17h a 19 de novembro às 23h59, no horário local.",
+    "Minior na Forma Meteoro aparece na natureza durante a chuva de meteoros.",
+    "A chance de encontrar Minior aumenta diariamente das 17h às 21h locais.",
+    "Capturas de Minior rendem mais Poeira Estelar, sem quantidade inventada.",
+    "Nenhuma cor de núcleo, coordenada, espécie ou bônus não confirmado aparece no pôster."
+  ],
+  "candidate_visual": "Minior em Forma Meteoro fechada, chuva luminosa de meteoros, profundidade cinematográfica, marca Spidey e fatos oficiais com leitura móvel.",
+  "candidate_file": "spidey-app/assets/events/review/minior-leonids-20261114-19-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/minior-leonids-20261114-19-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 758251,
+  "sha256": "6b6d66ef674b4207253944b7e1a1ab515bd2958cb365d4af8b755c54217eef7e",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Key art vertical com Minior fechado em Forma Meteoro sob as Leônidas; título, data, horário, fatos oficiais e marca Spidey aplicados deterministicamente.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "1a4225b9fdbdb6844b00a2cb122288a67f99d881",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

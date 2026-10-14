@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261014-mega-chandelure-art-v1';
+const CACHE = 'spidey-app-20261014-minior-leonids-art-v1';
 const CORE = [
+  './assets/events/premium/minior-leonids-20261114-19-approved-v1.png',
   './assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png',
   './assets/events/premium/apac-mall-exploration-20261001-20270328-approved-v1.png',
   './assets/events/premium/adidas-avatar-research-20260925-20270115-approved-v1.png',
