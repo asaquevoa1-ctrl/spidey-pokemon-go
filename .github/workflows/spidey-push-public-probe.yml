@@ -16,26 +16,36 @@ jobs:
         run: |
           python - <<'PY'
           import json
+          import time
           import urllib.request
           import urllib.error
           host = "https://spidey-push.spursander.workers.dev"
-          for path in ("/health", "/api/push/public-key"):
-              req = urllib.request.Request(host + path, headers={"User-Agent": "Spidey-public-health-probe/1.0"})
-              try:
-                  with urllib.request.urlopen(req, timeout=14) as response:
-                      raw = response.read(4096)
-                      print(f"{path} HTTP {response.status}")
-                  doc = json.loads(raw.decode("utf-8"))
-                  if path == "/health":
-                      status = doc.get("push", {}).get("scheduler", {})
-                      print("available:", doc.get("push", {}).get("available"))
-                      print("scheduler:", status.get("status"))
-                      print("checked_at:", status.get("checked_at"))
-                      print("version:", doc.get("version"))
-                  else:
-                      print("key_available:", bool(doc.get("publicKey")))
-              except urllib.error.HTTPError as error:
-                  print(f"{path} HTTP {error.code}")
-              except Exception as error:
-                  print(f"{path} ERROR {type(error).__name__}: {str(error)[:140]}")
+          for attempt in range(1, 7):
+              status = {}
+              for path in ("/health", "/api/push/public-key"):
+                  req = urllib.request.Request(host + path, headers={"User-Agent": "Spidey-public-health-probe/1.0", "Cache-Control": "no-cache"})
+                  try:
+                      with urllib.request.urlopen(req, timeout=12) as response:
+                          raw = response.read(4096)
+                          print(f"try {attempt}: {path} HTTP {response.status}")
+                      doc = json.loads(raw.decode("utf-8"))
+                      if path == "/health":
+                          scheduler = doc.get("push", {}).get("scheduler", {})
+                          status["available"] = doc.get("push", {}).get("available")
+                          status["scheduler"] = scheduler.get("status")
+                          status["checked_at"] = scheduler.get("checked_at")
+                      else:
+                          status["key_available"] = bool(doc.get("publicKey"))
+                  except urllib.error.HTTPError as error:
+                      print(f"try {attempt}: {path} HTTP {error.code}")
+                  except Exception as error:
+                      print(f"try {attempt}: {path} ERROR {type(error).__name__}: {str(error)[:120]}")
+              print(f"try {attempt} public-state: available={status.get('available')}, key_available={status.get('key_available')}, scheduler={status.get('scheduler')}, last={status.get('checked_at')}", flush=True)
+              if status.get("available") is True and status.get("key_available") is True:
+                  print("PUSH_PUBLIC_ENDPOINTS_ENABLED", flush=True)
+                  break
+              if attempt < 6:
+                  time.sleep(12)
+          else:
+              raise SystemExit("PUSH_NOT_READY")
           PY
