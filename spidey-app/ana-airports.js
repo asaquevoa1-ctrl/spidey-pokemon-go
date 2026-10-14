@@ -16,6 +16,15 @@
     const refs=(event.locations||[]).filter(p=>
       p.coordinate_type==='airport_terminal_reference'&&
       p.exact_raid_gym_verified===false&&parse(p.coordinate_text));
+    const hero=root.querySelector('#anaEventSummary');
+    if(hero){
+      const who=phase.endsWith('-red')?'Charmander':'Bulbasaur';
+      const since=phase.endsWith('-red')?'28/07/2026 às 16h':'18/09/2026 às 14h';
+      const origin=phase.endsWith('-red')?'Vermelho':'Verde';
+      hero.innerHTML='<strong>Pokémon Jet '+origin+' • '+who+'</strong>'+
+        '<span>'+since+' até 31/08/2027 às 20h • horário do Japão</span>'+
+        '<span>Reides especiais, fundo de localização ANA e Pesquisa Temporária de 3 dias.</span>';
+    }
     root.querySelector('#anaAirportStatus').textContent=refs.length+
       ' pontos de aeroportos • nenhum Ginásio especial confirmado';
     root.querySelector('#anaAirportList').innerHTML=refs.map(p=>{
@@ -34,11 +43,11 @@
     const section=document.createElement('section');
     section.id='anaAirportPanel';section.className='section ana-airport-panel';
     section.innerHTML='<span class="eyebrow">JAPÃO • ANA × POKÉMON GO</span>'+
-      '<h2>Pontos dos aeroportos</h2><p>Copie a referência do aeroporto em um toque. Estes pontos <strong>não são coordenadas verificadas dos Ginásios das Reides</strong>.</p>'+
+      '<h2>Pokémon Jet • eventos ANA</h2><p>Charmander e Bulbasaur com fundos exclusivos em Reides no Japão. Copie as referências dos aeroportos; estes pontos <strong>não são coordenadas verificadas dos Ginásios das Reides</strong>.</p>'+
       '<div class="ana-phase-tabs" role="group" aria-label="Fase do evento">'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-red" aria-pressed="true" type="button">🔴 Charmander • 6 aeroportos</button>'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-green" aria-pressed="false" type="button">🟢 Bulbasaur • 14 aeroportos</button></div>'+
-      '<p id="anaAirportStatus" role="status" class="microcopy">Carregando pontos…</p>'+
+      '<div id="anaEventSummary" class="ana-event-summary" aria-live="polite"></div>'+      '<p id="anaAirportStatus" role="status" class="microcopy">Carregando pontos…</p>'+
       '<div id="anaAirportList" class="ana-airport-list"></div>'+
       '<p class="microcopy">A localização exata do Ginásio ANA precisa ser conferida no mapa do Pokémon GO. GPX de Ginásios não será gerado a partir destes pontos.</p>';
     fly.appendChild(section);
