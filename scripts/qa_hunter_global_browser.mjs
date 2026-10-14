@@ -24,6 +24,17 @@ try {
     await shortcut.click();
     if(!await page.locator('#hunterView').isVisible()) throw Error('Home shortcut did not navigate to Filtro');
     await page.locator('[data-view="flyView"]').first().click();
+    const ana=page.locator('#anaAirportPanel');
+    await ana.waitFor({state:'visible',timeout:10000});
+    await page.waitForFunction(()=>document.querySelectorAll('#anaAirportList .ana-airport-row').length===7,null,{timeout:10000});
+    if(!String(await page.locator('#anaAirportStatus').textContent()).includes('nenhum Ginásio'))throw Error('ANA source disclaimer missing');
+    if(!String(await page.locator('#anaAirportList').textContent()).includes('35.550815,139.788233'))throw Error('Haneda T2 reference missing');
+    if(!String(await page.locator('#anaAirportList').textContent()).includes('35.543887,139.768652'))throw Error('Haneda T3 reference missing');
+    await page.locator('[data-ana-phase="2026-ana-pokemon-jet-green"]').click();
+    if(await page.locator('.ana-airport-row').count()!==14)throw Error('Green 14 airport points missing');
+    if(!String(await page.locator('#anaAirportList').textContent()).includes('26.2064,127.6465'))throw Error('Naha reference missing');
+    await page.locator('[data-ana-phase="2026-ana-pokemon-jet-red"]').click();
+    if(await page.locator('.ana-airport-row').count()!==7)throw Error('Red 7 terminal points missing');
     if(await page.locator('#hunterPanel').isVisible())throw Error('Caçador must not appear inside FLY');
     const filterTab=page.locator('.app-tabs [data-view="hunterView"]');
     if(await filterTab.count()!==1)throw Error('Dedicated Filtro tab missing');
