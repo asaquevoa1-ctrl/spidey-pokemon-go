@@ -24,3 +24,9 @@
 .ana-fly-jump{display:block;width:min(100%,490px);margin:16px auto;border:2px solid #4bb9bd!important;border-radius:14px!important;padding:14px!important;font-weight:900!important;background:linear-gradient(100deg,#d9f8e8,#e1f0ff)!important;color:#063944!important;box-shadow:0 8px 24px rgba(29,160,155,.13)}
 .ana-fly-jump:focus-visible{outline:3px solid #d2a644;outline-offset:3px}
 #anaAirportPanel{scroll-margin-top:15px}
+
+/* Samsung video finding: direct airport search avoids scrolling 21 reference points. */
+.ana-search-label{display:block;margin:12px 0 7px;font-weight:800;font-size:.9rem}
+.ana-search{display:block;box-sizing:border-box;width:100%;min-height:48px;border-radius:13px;border:1px solid rgba(76,153,175,.65);padding:12px 15px;font:inherit;font-size:1rem;color:var(--text,#102b42);background:var(--surface,#fff)}
+.ana-search:focus-visible{outline:3px solid #15adb6;outline-offset:2px}
+[data-theme=dark] .ana-search{background:#11253c;color:#f1f9fc}
