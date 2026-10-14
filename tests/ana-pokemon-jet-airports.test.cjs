@@ -51,6 +51,8 @@ test('FLY airport panel shows all source-labelled coordinates without implying g
  assert.equal(w.SpideyAnaAirportCore.parse('35.550815,139.788233'),'35.550815,139.788233');
  assert.equal(w.SpideyAnaAirportCore.parse('91.55,139.788233'),null);
  assert.match(js,/data-ana-coord/);
+ assert.match(js,/ana-fly-jump/);
+ assert.match(js,/scrollIntoView/);
  assert.match(js,/navigator\.clipboard\.writeText/);
  assert.match(js,/Ginásio NÃO verificado/);
  assert.match(app,/Referência do aeroporto\/terminal/);
