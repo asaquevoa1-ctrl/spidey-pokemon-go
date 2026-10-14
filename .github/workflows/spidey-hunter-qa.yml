@@ -1,0 +1,32 @@
+name: Spidey - Caçador global QA responsivo
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/hunter-v1.js'
+      - 'spidey-app/hunter-v1.css'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_hunter_global_browser.mjs'
+      - '.github/workflows/spidey-hunter-qa.yml'
+permissions:
+  contents: read
+jobs:
+  responsive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - name: Conferir Caçador em celular e desktop simulados
+        run: |
+          mkdir -p test-results/hunter-global
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_hunter_global_browser.mjs 2>&1 | tee test-results/hunter-global/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hunter-global-responsive-preview
+          path: test-results/hunter-global
