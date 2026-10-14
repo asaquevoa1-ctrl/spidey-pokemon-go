@@ -54,7 +54,7 @@ try {
       if(visual.navDisplay!=='flex'||visual.navWrap!=='nowrap'||visual.tabRows!==1||visual.navHeight>85||visual.overlap)
         throw Error('Mobile nav wrapped or collided '+JSON.stringify(visual));
     }
-    if(!/rgb\\(247, 251, 255\\)/.test(visual.heroColor)||visual.heroTextFill!=='rgb(247, 251, 255)')
+    if(visual.heroColor!=='rgb(247, 251, 255)'||visual.heroTextFill!=='rgb(247, 251, 255)')
       throw Error('Poor hero contrast '+JSON.stringify(visual));
     if(!visual.sources.some(v=>v.includes('discord.gg/pokedex100'))||!visual.sources.some(v=>v.includes('t.me/pokemon_pogo_iv100_100iv_100_pvp')))
       throw Error('Community links missing');
