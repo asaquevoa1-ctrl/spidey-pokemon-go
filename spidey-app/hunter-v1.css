@@ -36,3 +36,7 @@
   .spidey-command-center .app-tab{flex:0 0 auto!important;min-width:62px!important;padding:12px 5px!important;scroll-snap-align:start}
   .spidey-command-center .app-tab.hunter-tab{min-width:78px!important}
 }
+
+/* Discoverability: a direct command-center shortcut without mixing FLY contents. */
+.spidey-command-center .cc-shortcuts .cc-hunter-link{font-weight:900;color:#082235!important;background:linear-gradient(135deg,#8cebf4,#edce8e)!important;border:1px solid rgba(31,152,167,.65);box-shadow:0 5px 20px rgba(66,190,206,.18)}
+.spidey-command-center .cc-shortcuts .cc-hunter-link:focus-visible{outline:3px solid #eeaf53;outline-offset:3px}
