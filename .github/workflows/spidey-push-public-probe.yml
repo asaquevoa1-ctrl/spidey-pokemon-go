@@ -1,0 +1,41 @@
+name: Spidey - verificar Worker publicado
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/spidey-push-public-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-public-worker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Conferir somente endpoints públicos (sem dados de usuários)
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          import urllib.error
+          host = "https://spidey-push.spursander.workers.dev"
+          for path in ("/health", "/api/push/public-key"):
+              req = urllib.request.Request(host + path, headers={"User-Agent": "Spidey-public-health-probe/1.0"})
+              try:
+                  with urllib.request.urlopen(req, timeout=14) as response:
+                      raw = response.read(4096)
+                      print(f"{path} HTTP {response.status}")
+                  doc = json.loads(raw.decode("utf-8"))
+                  if path == "/health":
+                      status = doc.get("push", {}).get("scheduler", {})
+                      print("available:", doc.get("push", {}).get("available"))
+                      print("scheduler:", status.get("status"))
+                      print("checked_at:", status.get("checked_at"))
+                      print("version:", doc.get("version"))
+                  else:
+                      print("key_available:", bool(doc.get("publicKey")))
+              except urllib.error.HTTPError as error:
+                  print(f"{path} HTTP {error.code}")
+              except Exception as error:
+                  print(f"{path} ERROR {type(error).__name__}: {str(error)[:140]}")
+          PY
