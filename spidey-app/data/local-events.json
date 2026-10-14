@@ -2,6 +2,58 @@
   "schema_version": "spidey-local-events-v1",
   "events": [
     {
+      "id": "2026-10-24-fc-seoul",
+      "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
+      "place": "Estádio da Copa do Mundo de Seul, Coreia do Sul",
+      "dates": "24 out 2026 • 09h–20h (Seul)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Charmander com Fundo de Localização nas Reides presenciais 1★ (Reide Remota indisponível) e Charizard com Fundo de Localização na Pesquisa Temporária.",
+      "schedule": {
+        "start_date": "2026-10-24",
+        "start_time": "09:00",
+        "end_date": "2026-10-24",
+        "end_time": "20:00",
+        "timezone": "Asia/Seoul"
+      },
+      "source": {
+        "name": "Pokémon GO • oficial",
+        "url": "https://pokemongo.com/ko/news/fc-seoul-2026",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Charmander com Fundo de Localização nas Reides 1★ presenciais; reides remotas indisponíveis.",
+        "Charizard com Fundo de Localização como recompensa da Pesquisa Temporária gratuita.",
+        "Chance aumentada de Charmander Brilhante e Charizard Brilhante (não garantida).",
+        "2 horas de duração de Módulos Atrair.",
+        "Mais Doces por captura ao acertar lançamentos Bons, Ótimos ou Excelentes.",
+        "Growlithe, Flareon, Torchic, Houndour, Litleo e Litten com aparições aumentadas na natureza; Flareon pode ser Brilhante.",
+        "Confetes temáticos no mapa e estande presencial das 9h às 14h."
+      ],
+      "locations": [
+        {
+          "id": "seoul-world-cup-stadium-reference",
+          "name": "Seoul World Cup Stadium",
+          "address": "240 World Cup-ro, Mapo-gu, Seoul, Coreia do Sul",
+          "latitude": 37.568222,
+          "longitude": 126.897361,
+          "coordinate_text": "37.568222,126.897361",
+          "coordinate_type": "community_venue_reference",
+          "coordinate_label": "Referência do estádio • Ginásios de reide não verificados",
+          "coordinate_confidence": "community_supplied",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Referência geográfica do estádio, não um Ginásio confirmado."
+      },
+      "verified_at": "2026-10-14",
+      "detail_title": "2026 FC Seoul • Charmander e Charizard"
+    },
+    {
       "id": "2026-chicago-fossil-museum",
       "title": "Pokémon Fossil Museum · Chicago",
       "place": "Chicago, Estados Unidos",
