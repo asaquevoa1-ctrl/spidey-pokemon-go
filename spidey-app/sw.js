@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261013-push-only-preview1';
+const CACHE = 'spidey-app-20261013-hunter2-push1';
 const CORE = [
   './assets/events/premium/apac-mall-exploration-20261001-20270328-approved-v1.png',
   './assets/events/premium/adidas-avatar-research-20260925-20270115-approved-v1.png',
@@ -78,6 +78,8 @@ const CORE = [
   './fly-core.js',
   './fly-v1.js',
   './fly-v1.css',
+  './hunter-v1.js',
+  './hunter-v1.css',
   './news-feed.js',
   './command-center.js',
   './world-route-preview.js',
