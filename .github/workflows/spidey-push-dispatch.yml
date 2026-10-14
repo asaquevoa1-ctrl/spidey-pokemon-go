@@ -1,54 +1,54 @@
-name: Spidey App - entregar alertas
+name: Spidey - verificar alertas Cloudflare
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "17 */6 * * *"
   workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/spidey-push-dispatch.yml"
   push:
     branches: [main]
     paths:
       - ".github/workflows/spidey-push-dispatch.yml"
-      - "spidey-app/api/push/**"
-      - "api/push/**"
 permissions:
   contents: read
-  id-token: write
 concurrency:
-  group: spidey-push-delivery
-  cancel-in-progress: false
+  group: spidey-push-health-watch
+  cancel-in-progress: true
 jobs:
-  deliver:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 3
     steps:
-      - name: Verificar envio com autenticação temporária
-        env:
-          PUSH_URL: https://spidey-pokemon-go.vercel.app/api/push/dispatch
-          VERIFY_ONLY: ${{ github.event_name == 'push' && 'true' || 'false' }}
+      - name: Consultar status publico sem acionar envios
         shell: bash
+        env:
+          PUSH_BASE: https://spidey-push.spursander.workers.dev
         run: |
           set -euo pipefail
-          python - <<'PYCODE'
-          import os, json, time, urllib.request, urllib.error
-          from urllib.parse import quote
-          audience = os.environ['PUSH_URL']
-          oidc_url = os.environ['ACTIONS_ID_TOKEN_REQUEST_URL'] + '&audience=' + quote(audience, safe='')
-          oidc_req = urllib.request.Request(oidc_url, headers={'Authorization': 'Bearer ' + os.environ['ACTIONS_ID_TOKEN_REQUEST_TOKEN']})
-          with urllib.request.urlopen(oidc_req, timeout=15) as result:
-              token = json.load(result)['value']
-          dry_run = os.environ['VERIFY_ONLY'] == 'true'
-          body = json.dumps({'dry_run': dry_run}).encode()
-          request = urllib.request.Request(audience, data=body, headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'}, method='POST')
-          for attempt in range(6):
-              try:
-                  with urllib.request.urlopen(request, timeout=40) as result:
-                      response = json.load(result)
-                  if not response.get('ok'):
-                      raise RuntimeError('Dispatcher did not confirm execution')
-                  print(json.dumps(response))
-                  break
-              except urllib.error.HTTPError as error:
-                  if error.code not in (401, 503) or not dry_run or attempt == 5:
-                      print('Dispatch HTTP', error.code)
-                      raise SystemExit(1)
-                  time.sleep(20)
-          PYCODE
+          python - <<'PY'
+          import json, os, urllib.request
+          from datetime import datetime, timezone
+          base = os.environ['PUSH_BASE'].rstrip('/')
+          headers = {'User-Agent':'Spidey-public-health-probe/1.0','Cache-Control':'no-cache'}
+          def read(path):
+              request = urllib.request.Request(base+path,headers=headers)
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  if response.status != 200:
+                      raise RuntimeError(f'{path} returned {response.status}')
+                  return json.load(response)
+          health = read('/health')
+          public_key = read('/api/push/public-key')
+          scheduler = health.get('push',{}).get('scheduler') or {}
+          enabled = health.get('push',{}).get('available') is True
+          key = isinstance(public_key.get('publicKey'),str) and bool(public_key['publicKey'])
+          checked = scheduler.get('checked_at')
+          age = float('inf')
+          if checked:
+              age = (datetime.now(timezone.utc) - datetime.fromisoformat(checked.replace('Z','+00:00'))).total_seconds()
+          print(json.dumps({'service_reachable':True,'push_enabled':enabled,
+              'public_key_available':key,'cron_status':scheduler.get('status'),
+              'cron_age_seconds':round(age) if age!=float('inf') else None}))
+          if not (enabled and key and scheduler.get('status')=='ok' and -60<=age<=2700):
+              raise SystemExit('Alertas Cloudflare nao saudaveis')
+          PY
