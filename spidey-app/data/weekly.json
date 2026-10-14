@@ -465,13 +465,13 @@
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/dialga-five-star-raids-20261014-20-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "680327d84b50ccec3044cf5077f4dbd22528fefb10ad6f01708fb91e57cb9299",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       },
       {
@@ -725,13 +725,13 @@
   ],
   "meta": {
     "calendar_events_in_week": 17,
-    "events_with_weekly_art": 11,
-    "events_with_premium_weekly_art": 11,
+    "events_with_weekly_art": 12,
+    "events_with_premium_weekly_art": 12,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 6,
+    "events_without_weekly_art": 5,
     "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-14T05:01:55.723567-03:00",
+    "generated_at": "2026-10-14T05:52:38.131671-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
