@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261014-ana-search3';
+const CACHE = 'spidey-app-20261014-national-trust-27-sites1';
 const CORE = [
   './assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp',
   './assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp',
@@ -87,6 +87,9 @@ const CORE = [
   './fly-v1.js',
   './ana-airports.js',
   './ana-airports.css',
+  './national-trust-v1.js',
+  './national-trust-v1.css',
+  './data/national-trust-2026.json',
   './fly-v1.css',
   './hunter-v1.js',
   './hunter-v1.css',
@@ -181,7 +184,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
-  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp)\.json$/.test(url.pathname);
+  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp|national-trust-2026)\.json$/.test(url.pathname);
 
   if (isAppShell || isData) {
     event.respondWith(
