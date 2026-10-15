@@ -655,6 +655,17 @@
     "sha256": "184849e1cb34325f91fcc8b5f37cd378fc4e67548ba795d1935071f2a201fe49",
     "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
     "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
+  },
+  "2026-10-15-spotlight-stufful": {
+    "file": "assets/events/premium/stufful-spotlight-hour-20261015-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "5db2b32f4dd0c81c8cc49d6034f2d60b8e2afdb734499f00826a8ad1c10443e2",
+    "approval_record": "docs/qa/STUFFUL_SPOTLIGHT_ART_APPROVAL_20261015.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

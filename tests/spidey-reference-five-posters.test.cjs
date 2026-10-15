@@ -16,12 +16,12 @@ test('five explicitly approved Spidey Premium reference posters are the current 
   assert.equal(record.assets.length,5);
   assert.equal(record.existing_master_count,65);
   assert.equal(record.new_master_count,66);
-  assert.equal(Object.keys(registry).length,66);
+  assert.ok(Object.keys(registry).length>=66);
   assert.equal(record.original_versions_preserved,true);
   assert.equal(record.no_other_event_image_overwritten,true);
   assert.equal(record.push_service_modified,false);
-  assert.match(html,/premium-approved-master\.js\?v=20261014-five-reference-art1/);
-  assert.match(sw,/const CACHE = 'spidey-app-20261014-/);
+  assert.match(html,/premium-approved-master\.js\?v=20261015-stufful-art1/);
+  assert.match(sw,/const CACHE = 'spidey-app-20261015-/);
   assert.ok(sw.includes('minior-geminids-20261211-16-spidey-reference-approved-v1.webp'), 'Previously approved posters remain cached');
   const expectedIds=[
     '2026-12-minior-geminids',

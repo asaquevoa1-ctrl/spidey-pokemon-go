@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261014-national-trust-27-sites1';
+const CACHE = 'spidey-app-20261015-stufful-art1';
 const CORE = [
+  './assets/events/premium/stufful-spotlight-hour-20261015-approved-v1.png',
   './assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp',
   './assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp',
   './assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp',

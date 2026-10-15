@@ -1,0 +1,34 @@
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto'),vm=require('node:vm');
+const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+
+test('Stufful Spotlight delegated approval promotes the exact reviewed PNG and preserves protected refusals',()=>{
+  const approval=JSON.parse(fs.readFileSync('docs/qa/STUFFUL_SPOTLIGHT_ART_APPROVAL_20261015.json'));
+  const candidate=JSON.parse(fs.readFileSync(approval.candidate_record));
+  const events=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events;
+  const event=events.find(item=>item.id===approval.event_id);
+  const window={};vm.runInNewContext(fs.readFileSync('spidey-app/premium-approved-master.js','utf8'),{window});
+  const master=window.SPIDEY_APPROVED_ART_MASTER;
+  assert.equal(approval.approval_basis,'USER_DELEGATED_VISUAL_QA');
+  assert.equal(approval.individual_human_approval_claimed,false);
+  assert.ok(['PENDING_CI','PASSED_PREVIEW'].includes(approval.browser_qa.status));
+  assert.equal(approval.browser_qa.checks,12);
+  assert.equal(candidate.art_standard_version,'spidey-premium-v1');
+  assert.equal(candidate.generation,'builtin imagegen');
+  assert.equal(candidate.sources.official_schedule.confidence,'official');
+  assert.equal(candidate.sources.community_catalog.confidence,'verified_community');
+  assert.equal(event.source.confidence,'verified');
+  assert.equal(event.source.url,candidate.sources.community_catalog.url);
+  assert.equal(event.schedule.start_local,approval.schedule.start_local);
+  assert.equal(event.schedule.end_local,approval.schedule.end_local);
+  assert.equal(hash(approval.authorization_record),approval.authorization_sha256);
+  assert.equal(hash(approval.candidate_file),approval.sha256);
+  assert.equal(hash(approval.approved_file),approval.sha256);
+  assert.equal(fs.statSync(approval.approved_file).size,approval.bytes);
+  assert.equal(master[approval.event_id].file,approval.approved_file.replace('spidey-app/',''));
+  assert.equal(master[approval.event_id].sha256,approval.sha256);
+  assert.equal(master[approval.event_id].width,approval.width);
+  assert.equal(master[approval.event_id].height,approval.height);
+  assert.ok(Object.keys(master).length>=approval.prior_master_entries_preserved+1);
+  assert.ok(new Set(Object.values(master).map(item=>item.file)).size>=approval.prior_unique_images_preserved+1);
+  for(const id of approval.blocked_generations_preserved)assert.equal(master[id],undefined);
+});
