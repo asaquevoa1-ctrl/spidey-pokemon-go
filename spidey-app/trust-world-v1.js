@@ -40,14 +40,23 @@
   function eventCard(event) {
     return `<article class="world-event-card" data-world-event="${esc(event.id)}"><div class="world-event-meta">${badge(event.locality)} ${badge(event.status)}</div><h3>${esc(event.title)}</h3><p><strong>${esc(event.place)}</strong> · ${esc(event.dates)}</p>${posterFigure(event)}${backgroundFigure(event)}<p>${esc(event.note)}</p>${event.schedule?`<div class="world-event-window" data-local-window="${esc(event.id)}">${event.schedule.recurrence==='daily'?`<p>Todos os dias · ${esc(dailyHours(event))}</p>`:''}${scheduleText(event)}</div><button class="action-btn gold" data-open-local-event="${esc(event.id)}">${event.location_background?'Ver fundo e locais':'Ver evento e local'}</button>`:''}</article>`;
   }
+  function visibleWorldEvent(event,now=new Date()){
+    if(!event.schedule)return false; // No placeholder cards without published dates.
+    const status=eventWindow(event,now).status;
+    return status!=='ENCERRADO'&&status!=='EXPIRADO';
+  }
   function renderWorldEvents() {
     const r=document.getElementById('worldEvents');if(!r)return;
     r.querySelectorAll('.world-event-card').forEach(card=>card.remove());
-    r.insertAdjacentHTML('beforeend',worldEvents.map(eventCard).join(''));
+    r.insertAdjacentHTML('beforeend',worldEvents.filter(event=>visibleWorldEvent(event)).map(eventCard).join(''));
   }
   function mountLocalFly() {
     const fly=document.getElementById('flyView');if(!fly)return;
-    worldEvents.filter(e=>e.schedule).forEach(event=>{
+    const available=worldEvents.filter(event=>visibleWorldEvent(event));
+    fly.querySelectorAll('.world-event-card[data-world-event]').forEach(card=>{
+      if(!available.some(event=>event.id===card.dataset.worldEvent))card.remove();
+    });
+    available.forEach(event=>{
       if(!fly.querySelector(`[data-world-event="${event.id}"]`))fly.querySelector('.hero')?.insertAdjacentHTML('afterend',eventCard(event));
     });
   }
