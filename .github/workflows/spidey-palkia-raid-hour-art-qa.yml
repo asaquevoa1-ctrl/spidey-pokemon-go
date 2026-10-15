@@ -1,0 +1,35 @@
+name: Spidey - QA responsivo Hora de Reides Palkia
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/palkia-raid-hour-20261021-v1.png'
+      - 'spidey-app/assets/events/premium/palkia-raid-hour-20261021-approved-v1.png'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'docs/qa/PALKIA_RAID_HOUR_ART_*.json'
+      - 'tests/palkia-raid-hour-art-approval.test.cjs'
+      - 'scripts/qa_palkia_raid_hour_art_browser.mjs'
+      - '.github/workflows/spidey-palkia-raid-hour-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/palkia-raid-hour-art
+          command -v google-chrome | tee test-results/palkia-raid-hour-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_palkia_raid_hour_art_browser.mjs 2>&1 | tee test-results/palkia-raid-hour-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: palkia-raid-hour-responsive-preview
+          path: test-results/palkia-raid-hour-art

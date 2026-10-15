@@ -666,6 +666,17 @@
     "approval_record": "docs/qa/STUFFUL_SPOTLIGHT_ART_APPROVAL_20261015.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-21-raid-hour-palkia": {
+    "file": "assets/events/premium/palkia-raid-hour-20261021-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "cf47fdc2b6e7743caa206ec47e07d03e2b9c36fa57593bef2ca1da46fc1cc9d6",
+    "approval_record": "docs/qa/PALKIA_RAID_HOUR_ART_APPROVAL_20261015.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

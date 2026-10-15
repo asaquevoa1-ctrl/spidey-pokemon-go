@@ -1,0 +1,46 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-21-raid-hour-palkia",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/PALKIA_RAID_HOUR_ART_CANDIDATE_20261015.json",
+  "candidate_file": "spidey-app/assets/events/review/palkia-raid-hour-20261021-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/palkia-raid-hour-20261021-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 3004768,
+  "sha256": "cf47fdc2b6e7743caa206ec47e07d03e2b9c36fa57593bef2ca1da46fc1cc9d6",
+  "sources": {
+    "official_schedule": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+    "community_catalog": "https://pokemongohub.net/post/event/october-2026-events/"
+  },
+  "schedule": {
+    "start_local": "2026-10-21T18:00:00-03:00",
+    "end_local": "2026-10-21T19:00:00-03:00",
+    "local_time": true
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38701066247,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38701066247",
+    "week_fixture": "2026-10-19..2026-10-25",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 67,
+  "prior_unique_images_preserved": 58,
+  "remaining_premium_gaps_after_publication": 18,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261015-stufful-art1';
+const CACHE = 'spidey-app-20261015-palkia-raid-hour-art1';
 const CORE = [
+  './assets/events/premium/palkia-raid-hour-20261021-approved-v1.png',
   './assets/events/premium/stufful-spotlight-hour-20261015-approved-v1.png',
   './assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp',
   './assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp',
