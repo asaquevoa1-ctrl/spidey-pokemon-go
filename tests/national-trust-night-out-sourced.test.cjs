@@ -48,3 +48,9 @@ test('Night Out concerts: local times are verified and game rumors are explicitl
  assert.equal(get('2026-10-pokemon-night-out-twitch').length,1);
  assert.equal(get('2026-10-24-fc-seoul').length,1);
 });
+
+test('unreleased editorial drafts stay out of the app calendar and default event cards',()=>{
+ const source=fs.readFileSync('spidey-app/calendar-enhancements.js','utf8');
+ assert.match(source,/if \(event\.status === 'draft'\) return false;/);
+ assert.match(source,/const visible = state\.events\.filter\(\(event\) => \{\s*if \(event\.status === 'draft'\) return false;/);
+});
