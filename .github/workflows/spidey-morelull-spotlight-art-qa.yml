@@ -1,0 +1,35 @@
+name: Spidey - QA responsivo Morelull Holofote
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/morelull-spotlight-hour-20261022-v1.png'
+      - 'spidey-app/assets/events/premium/morelull-spotlight-hour-20261022-approved-v1.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'docs/qa/MORELULL_SPOTLIGHT_ART_*.json'
+      - 'tests/morelull-spotlight-art-approval.test.cjs'
+      - 'scripts/qa_morelull_spotlight_art_browser.mjs'
+      - '.github/workflows/spidey-morelull-spotlight-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          set -o pipefail
+          mkdir -p test-results/morelull-spotlight-art
+          command -v google-chrome | tee test-results/morelull-spotlight-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_morelull_spotlight_art_browser.mjs 2>&1 | tee test-results/morelull-spotlight-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: morelull-spotlight-responsive-preview
+          path: test-results/morelull-spotlight-art
