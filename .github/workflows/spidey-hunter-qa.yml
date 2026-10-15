@@ -1,4 +1,4 @@
-name: Spidey - Caçador global QA responsivo
+name: Spidey - navegação enxuta QA responsivo
 on:
   pull_request:
     paths:
@@ -6,7 +6,11 @@ on:
       - 'spidey-app/hunter-v1.css'
       - 'spidey-app/index.html'
       - 'spidey-app/sw.js'
-      - 'scripts/qa_hunter_global_browser.mjs'
+      - 'scripts/qa_nav_partnerships_browser.mjs'
+      - 'spidey-app/ana-airports.js'
+      - 'spidey-app/national-trust-v1.js'
+      - 'spidey-app/nav-partnerships.css'
+      - 'spidey-app/app.js'
       - '.github/workflows/spidey-hunter-qa.yml'
 permissions:
   contents: read
@@ -21,12 +25,12 @@ jobs:
           node-version: '24'
       - run: npm ci --ignore-scripts
       - run: npm install --no-save playwright-core@1.56.1
-      - name: Conferir Caçador em celular e desktop simulados
+      - name: Conferir ANA, National Trust, expiração e Caçador retirado
         run: |
-          mkdir -p test-results/hunter-global
-          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_hunter_global_browser.mjs 2>&1 | tee test-results/hunter-global/run.log
+          mkdir -p test-results/nav-partnerships
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_nav_partnerships_browser.mjs 2>&1 | tee test-results/nav-partnerships/run.log
       - if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: hunter-global-responsive-preview
-          path: test-results/hunter-global
+          name: nav-partnerships-responsive-preview
+          path: test-results/nav-partnerships

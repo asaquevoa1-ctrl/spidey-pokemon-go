@@ -43,8 +43,11 @@
     }
   }
   function mount(){
-    const fly=document.getElementById('flyView');
-    if(!fly||root())return;
+    const main=document.querySelector('main');
+    if(!main||root())return;
+    const view=document.createElement('section');
+    view.id='nationalTrustView';view.className='app-view national-trust-standalone';view.hidden=true;
+    view.innerHTML='<section class="hero hero-compact"><span class="eyebrow">REINO UNIDO • NATIONAL TRUST</span><h1>27 localidades</h1><p>Pesquisas Temporárias e referências geográficas para copiar.</p></section>';
     const details=document.createElement('details');details.id='nationalTrustGuide';details.className='section nt-guide';
     details.innerHTML='<summary><span class="eyebrow">REINO UNIDO • NATIONAL TRUST</span><strong>27 locais • pesquisas com Passe Premium</strong><span class="nt-more">Abrir lista de coordenadas</span></summary>'+
       '<div class="nt-intro"><p><strong>Até 27 Passes Premium potenciais.</strong> São 27 Pesquisas Temporárias locais, de 3 etapas. Na terceira etapa, a tarefa de <strong>30 lançamentos bons de bola curva</strong> recompensa 1 Passe de Batalha Premium por pesquisa.</p>'+
@@ -60,12 +63,7 @@
       '<option value="Londres e Sudeste">Londres e Sudeste (6)</option></select></div>'+
       '<p id="nationalTrustCount" role="status" class="microcopy">Carregando 27 locais…</p>'+
       '<div id="nationalTrustPlaces" class="nt-place-list"></div></div>';
-    fly.append(details);
-    const jump=document.createElement('button');jump.className='action-btn nt-jump';jump.type='button';
-    jump.textContent='🎫 National Trust • 27 pesquisas e coordenadas';
-    jump.addEventListener('click',()=>{details.open=true;details.scrollIntoView({behavior:'smooth',block:'start'});});
-    const hero=fly.querySelector('.hero');
-    if(hero)hero.insertAdjacentElement('afterend',jump);else fly.prepend(jump);
+    details.open=true;view.append(details);main.appendChild(view);
     details.querySelector('#ntSearch').addEventListener('input',e=>{search=e.target.value;draw()});
     details.querySelector('#ntGroup').addEventListener('change',e=>{group=e.target.value;draw()});
     details.addEventListener('click',async e=>{

@@ -45,8 +45,11 @@
     root.querySelectorAll('[data-ana-phase]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.anaPhase===phase)));
   }
   function mount(){
-    const fly=document.getElementById('flyView');
-    if(!fly||document.getElementById('anaAirportPanel'))return;
+    const main=document.querySelector('main');
+    if(!main||document.getElementById('anaAirportPanel'))return;
+    const view=document.createElement('section');
+    view.id='anaView';view.className='app-view ana-standalone';view.hidden=true;
+    view.innerHTML='<section class="hero hero-compact"><span class="eyebrow">ANA × POKÉMON GO • JAPÃO</span><h1>Pokémon Jet</h1><p>Reides especiais, aeroportos e coordenadas de referência para copiar.</p></section>';
     const section=document.createElement('section');
     section.id='anaAirportPanel';section.className='section ana-airport-panel';
     section.innerHTML='<span class="eyebrow">JAPÃO • ANA × POKÉMON GO</span>'+
@@ -60,15 +63,7 @@
       '<p id="anaAirportStatus" role="status" class="microcopy">Carregando pontos…</p>'+
       '<div id="anaAirportList" class="ana-airport-list"></div>'+
       '<p class="microcopy">A localização exata do Ginásio ANA precisa ser conferida no mapa do Pokémon GO. GPX de Ginásios não será gerado a partir destes pontos.</p>';
-    fly.appendChild(section);
-    const jump=document.createElement('button');
-    jump.type='button';jump.className='action-btn ana-fly-jump';
-    jump.textContent='✈️ ANA • Aeroportos e coordenadas';
-    jump.setAttribute('aria-label','Ir diretamente às coordenadas dos aeroportos ANA');
-    jump.addEventListener('click',()=>section.scrollIntoView({behavior:'smooth',block:'start'}));
-    const hero=fly.querySelector('.hero');
-    if(hero)hero.insertAdjacentElement('afterend',jump);
-    else fly.prepend(jump);
+    view.appendChild(section);main.appendChild(view);
     section.addEventListener('click',async event=>{
       const chosen=event.target.closest('[data-ana-phase]');
       if(chosen){phase=chosen.dataset.anaPhase;search='';section.querySelector('#anaAirportSearch').value='';render();return;}

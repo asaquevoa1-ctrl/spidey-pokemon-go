@@ -130,11 +130,19 @@ function bindWeeklyItems(root) {
   });
 }
 
+function weeklyVisibleItem(item,now=new Date()){
+  const event=weeklyFindEvent(item?.id);
+  if(event)return true; // Active/upcoming published events are already filtered in the main catalog.
+  const end=item?.end_brazil||item?.schedule?.end_brazil;
+  const date=end?new Date(end):null;
+  return Boolean(date&&Number.isFinite(date.getTime())&&date>now);
+}
+
 function renderWeeklyDays(data) {
   const strip = document.querySelector('#weeklyDays');
   if (!strip) return;
   strip.innerHTML = (data.days || []).map((day) => {
-    const items = day.items || [];
+    const items = (day.items || []).filter(item=>weeklyVisibleItem(item));
     return `
       <article class="weekly-day ${items.length ? 'has-items' : ''}">
         <div class="weekly-day-head">
@@ -154,7 +162,7 @@ function renderWeeklySections(data) {
   if (!root) return;
   const sections = data.sections || {};
   const html = Object.entries(WEEKLY_SECTION_LABELS).map(([key, label]) => {
-    const items = sections[key] || [];
+    const items = (sections[key] || []).filter(item=>weeklyVisibleItem(item));
     if (!items.length) return '';
     return `
       <section class="weekly-block">

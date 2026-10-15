@@ -43,7 +43,7 @@ test('All 21 coordinates are copyable airport/terminal references, not purported
  assert.ok(haneda.some(p=>p.label.includes('Terminal 2')));
  assert.ok(haneda.some(p=>p.label.includes('Terminal 3')));
 });
-test('FLY airport panel shows all source-labelled coordinates without implying gym precision',()=>{
+test('dedicated ANA view shows source-labelled coordinates without implying gym precision',()=>{
  const js=fs.readFileSync('spidey-app/ana-airports.js','utf8');
  const app=fs.readFileSync('spidey-app/app.js','utf8');
  const w={},document={readyState:'loading',addEventListener(){}};
@@ -51,8 +51,8 @@ test('FLY airport panel shows all source-labelled coordinates without implying g
  assert.equal(w.SpideyAnaAirportCore.parse('35.550815,139.788233'),'35.550815,139.788233');
  assert.equal(w.SpideyAnaAirportCore.parse('91.55,139.788233'),null);
  assert.match(js,/data-ana-coord/);
- assert.match(js,/ana-fly-jump/);
- assert.match(js,/scrollIntoView/);
+ assert.match(js,/id='anaView'/);
+ assert.match(js,/main.appendChild\(view\)/);
  assert.match(js,/navigator\.clipboard\.writeText/);
  assert.match(js,/Ginásio NÃO verificado/);
  assert.match(app,/Referência do aeroporto\/terminal/);

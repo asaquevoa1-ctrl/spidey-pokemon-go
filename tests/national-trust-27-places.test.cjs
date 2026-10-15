@@ -60,10 +60,12 @@ test('one-tap copy, official sources, no GPS modification or fake no-cooldown gu
  assert.match(js,/NÃO|não são pontos exatos/i);
  assert.doesNotMatch(js,/navigator\.geolocation\.|watchPosition\(|getCurrentPosition\(/);
  assert.doesNotMatch(js,/innerHTML\s*=\s*(?:p\.name|p\.coordinates)/);
- assert.ok(html.includes('national-trust-v1.js?v=20261014-trust27a'));
+ assert.ok(html.includes('national-trust-v1.js?v=20261015-tab1'));
  assert.ok(html.includes('national-trust-v1.css?v=20261014-trust27a'));
  assert.ok(sw.includes('./data/national-trust-2026.json'));
  assert.ok(sw.includes('./national-trust-v1.js'));
+ assert.match(js,/id='nationalTrustView'/);
+ assert.match(html,/data-view="nationalTrustView"/);
  assert.ok(sw.includes('./national-trust-v1.css'));
  assert.match(sw,/pvp\|national-trust-2026/);
  assert.match(sw,/pushsubscriptionchange/);

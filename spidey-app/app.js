@@ -75,6 +75,13 @@ function getBrazilRange(event) {
   };
 }
 
+function eventVisibleInPublicAgenda(event, now = new Date()) {
+  if (event?.status !== 'published') return false;
+  const { end } = getBrazilRange(event);
+  // Events with no trustworthy end should not be deleted by date inference.
+  return !end || !Number.isFinite(end.getTime()) || end.getTime() > now.getTime();
+}
+
 function isEventActive(event, now = new Date()) {
   if (window.SpideyDateOnly?.valid(event)) return false;
   const sessions = event.schedule?.sessions;
@@ -166,6 +173,8 @@ function renderCalendar() {
   const first = new Date(year, month, 1);
   const gridStart = new Date(year, month, 1 - first.getDay());
   const today = calendarDateKey(calendarToday());
+  const current=calendarToday();
+  $('#prevMonth').disabled=state.month.getFullYear()<=current.getFullYear() && state.month.getMonth()<=current.getMonth();
 
   for (let i = 0; i < 42; i += 1) {
     const day = new Date(gridStart);
@@ -445,6 +454,7 @@ function openEvent(event) {
 }
 
 function setView(viewId) {
+  if (!document.getElementById(viewId) || document.getElementById(viewId)?.classList.contains('app-view') === false) viewId='calendarView';
   window.SpideyNavigation?.trackView(viewId);
   document.querySelectorAll('.app-view').forEach((view) => { view.hidden = view.id !== viewId; });
   document.querySelectorAll('.app-tab').forEach((tab) => {
@@ -477,9 +487,9 @@ async function loadContent({ refresh = false } = {}) {
       const [eventsData, stampsData] = await Promise.all([
         window.SpideyCatalog.load('events'), window.SpideyCatalog.load('stamps'),
       ]);
-      const events = eventsData.events.filter(event => event.status === 'published');
+      const events = eventsData.events.filter(event => eventVisibleInPublicAgenda(event));
       const stamps = stampsData.rallies.filter(rally => rally.status === 'published');
-      const fingerprint = JSON.stringify([events, stamps]);
+      const fingerprint = JSON.stringify([events.map(e => [e.id,e.updated_at,e.status]), stamps.map(s => [s.id,s.status])]);
       lastContentCheck = Date.now();
       const status = document.getElementById('calendarUpdateStatus');
       if (status) status.textContent = 'Novidades no mesmo link. A agenda é atualizada automaticamente.';
@@ -517,7 +527,11 @@ async function enableNotifications() {
   $('#notificationStatus').textContent = 'Notificações indisponíveis no momento.';
 }
 
-$('#prevMonth').addEventListener('click', () => { state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); renderCalendar(); });
+$('#prevMonth').addEventListener('click', () => {
+  const current=calendarToday();
+  if (state.month.getFullYear()<current.getFullYear()||(state.month.getFullYear()===current.getFullYear()&&state.month.getMonth()<=current.getMonth()))return;
+  state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); renderCalendar();
+});
 $('#nextMonth').addEventListener('click', () => { state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1); renderCalendar(); });
 $('#todayButton').addEventListener('click', () => {
   const now = calendarToday();
