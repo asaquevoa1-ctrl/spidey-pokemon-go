@@ -2,6 +2,8 @@
 (function () {
   const baseOverlapsDay = overlapsDay;
   overlapsDay = function (event, day) {
+    // Unreviewed drafts must never appear as published events in the calendar.
+    if (event.status === 'draft') return false;
     const mode = event.calendar?.mode || (event.calendar?.enabled === false ? 'hidden' : 'span');
     if (mode === 'hidden') return false;
 
@@ -20,6 +22,7 @@
     if (arguments.length === 0 || events === state.events) {
       const now = new Date();
       const visible = state.events.filter((event) => {
+        if (event.status === 'draft') return false;
         const { end } = getBrazilRange(event);
         return end && end >= now;
       });
