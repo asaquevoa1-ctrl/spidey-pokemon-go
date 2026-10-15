@@ -13,13 +13,45 @@
   "height": 1536,
   "bytes": 736282,
   "sha256": "1a33d0993ae33f97ab1617f9241d145610d3aac98650db184c6ec6b5924c47e3",
-  "sources": {"official_schedule": "https://www.facebook.com/PokemonGO/posts/1624593199024711/", "community_catalog": "https://pokemongohub.net/post/event/october-2026-events/"},
-  "schedule": {"start_local": "2026-10-22T18:00:00-03:00", "end_local": "2026-10-22T19:00:00-03:00", "local_time": true},
-  "browser_qa": {"status": "PENDING_CI", "week_fixture": "2026-10-19..2026-10-25", "views": ["calendar", "weekly", "detail"], "widths": [390, 1280], "themes": ["light", "dark"], "checks": 12},
+  "sources": {
+    "official_schedule": "https://www.facebook.com/PokemonGO/posts/1624593199024711/",
+    "community_catalog": "https://pokemongohub.net/post/event/october-2026-events/"
+  },
+  "schedule": {
+    "start_local": "2026-10-22T18:00:00-03:00",
+    "end_local": "2026-10-22T19:00:00-03:00",
+    "local_time": true
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "week_fixture": "2026-10-19..2026-10-25",
+    "views": [
+      "calendar",
+      "weekly",
+      "detail"
+    ],
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "checks": 12,
+    "workflow_run": 38812769738,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38812769738",
+    "artifact_id": 12009610790,
+    "artifact_sha256": "02f2ad97f7a6b19dc78e2bf0d550e9f98f7d9ae84d01a592ff12f033a886815c"
+  },
   "prior_master_entries_preserved": 70,
   "prior_unique_images_preserved": 61,
   "remaining_premium_gaps_after_publication": 15,
-  "blocked_generations_preserved": ["2026-09-harvest-festival-applin", "2026-10-world-space-week", "2026-10-05-max-monday-sizzlipede"],
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
   "physical_android_tested": false,
   "push_sends": 0,
   "personal_data_read": false
