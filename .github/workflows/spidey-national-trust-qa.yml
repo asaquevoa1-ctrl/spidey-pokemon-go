@@ -7,7 +7,7 @@ on:
       - 'spidey-app/data/national-trust-2026.json'
       - 'spidey-app/index.html'
       - 'spidey-app/sw.js'
-      - 'scripts/qa_national_trust_browser.mjs'
+      - 'scripts/qa_nav_partnerships_browser.mjs'\n      - 'spidey-app/nav-partnerships.css'
       - '.github/workflows/spidey-national-trust-qa.yml'
 permissions:
   contents: read
@@ -22,12 +22,12 @@ jobs:
           node-version: '24'
       - run: npm ci --ignore-scripts
       - run: npm install --no-save playwright-core@1.56.1
-      - name: Verificar 27 pontos e cópia em mobile e desktop
+      - name: Verificar ANA e National Trust nas guias próprias
         run: |
-          mkdir -p test-results/national-trust-27
-          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_national_trust_browser.mjs 2>&1 | tee test-results/national-trust-27/run.log
+          mkdir -p test-results/nav-partnerships
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_national_trust_browser.mjs 2>&1 | tee test-results/nav-partnerships/run.log
       - if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: national-trust-mobile-preview
-          path: test-results/national-trust-27
+          name: partnerships-mobile-preview
+          path: test-results/nav-partnerships
