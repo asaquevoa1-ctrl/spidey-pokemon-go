@@ -5683,9 +5683,9 @@
         "Fim de semana"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO • programação oficial de outubro de 2026",
+        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -5699,7 +5699,7 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": false,
+        "requires_art": true,
         "fallback_visual": "spidey-logo"
       },
       "locations": [],

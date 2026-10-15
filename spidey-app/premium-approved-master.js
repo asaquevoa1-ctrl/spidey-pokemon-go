@@ -688,6 +688,17 @@
     "approval_record": "docs/qa/SNEASEL_MAX_MONDAY_ART_APPROVAL_20261015.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-shadow-landorus-17": {
+    "file": "assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1122,
+    "height": 1402,
+    "sha256": "082d1076c8400ce45cf73fc72eef5f5b2bb3cac64e2f4a6b8b70e388f36b381c",
+    "approval_record": "docs/qa/LANDORUS_SHADOW_RAIDS_ART_APPROVAL_20261015.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
