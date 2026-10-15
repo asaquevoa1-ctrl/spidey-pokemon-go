@@ -8515,6 +8515,178 @@
           "confidence": "community_supplied_venue_reference"
         }
       ]
+    },
+    {
+      "id": "2026-pokemon-night-out-la",
+      "slug": "2026-pokemon-night-out-la",
+      "title": "Pokémon Night Out — Los Angeles",
+      "summary": "Show oficial comemorativo dos 30 anos de Pokémon com Marshmello e Alison Wonderland. Local presencial; coordenada de referência da arena.",
+      "category": "local_event",
+      "tags": [
+        "Pokémon 30",
+        "Pokémon Night Out",
+        "EDM",
+        "Marshmello",
+        "Alison Wonderland",
+        "Evento presencial",
+        "Localização"
+      ],
+      "source": {
+        "name": "Pokémon 30 • página oficial Night Out",
+        "url": "https://30.pokemon.com/pt-br/night-out/",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-10-24T19:30:00-07:00",
+        "end_local": "2026-10-24T19:30:00-07:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-24T23:30:00-03:00",
+        "end_brazil": "2026-10-24T23:30:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "location_label": "Intuit Dome • Inglewood, Califórnia, EUA",
+      "locations": [
+        {
+          "label": "Intuit Dome • Inglewood, Califórnia, EUA",
+          "latitude": 33.94403,
+          "longitude": -118.34218,
+          "coordinate_text": "33.94403,-118.34218",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Coordenada aproximada de local de show fornecida por publicação da comunidade. Não confirma Ginásio ou Poképarada do Pokémon GO."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Local de concerto, não localização verificada de Ginásio ou Poképarada."
+      },
+      "notes": [
+        "Início do show às 19h30, horário do Pacífico, em 24/10/2026",
+        "O show de Los Angeles também será transmitido oficialmente pela Twitch e YouTube. Recompensa em Pokémon GO via Twitch Drop exige 30 minutos de transmissão e vinculação da conta Pokémon Trainer Central. A notícia da recompensa já está cadastrada separadamente no Spidey.",
+        "Mewtwo Sombroso, fundo de localização e Pesquisa Temporária com Toxtricity foram mencionados no Discord, mas NÃO foram confirmados nos anúncios oficiais consultados; não anunciar como bônus do jogo.",
+        "Ingressos e regras para o evento presencial: consulte os organizadores oficiais.",
+        "A coordenada é referência do local do concerto. Não é coordenada exata de Reide especial Pokémon GO."
+      ],
+      "bonuses": [],
+      "pokemon": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Shows de música: não agendar notificação de conteúdo Pokémon GO sem confirmação da programação."
+      },
+      "status": "draft",
+      "verified_at": "2026-10-15",
+      "updated_at": "2026-10-15T20:05:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon 30 • Night Out oficial",
+          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "confidence": "official"
+        },
+        {
+          "name": "The O2 • horário de Londres",
+          "url": "https://www.theo2.co.uk/events/detail/pokemon-night-out",
+          "confidence": "official"
+        },
+        {
+          "name": "Coordenada divulgada no Discord",
+          "url": null,
+          "confidence": "community_supplied_venue_reference"
+        }
+      ]
+    },
+    {
+      "id": "2026-pokemon-night-out-london",
+      "slug": "2026-pokemon-night-out-london",
+      "title": "Pokémon Night Out — Londres",
+      "summary": "Show oficial comemorativo dos 30 anos de Pokémon com Marshmello e Alison Wonderland. Local presencial; coordenada de referência da arena.",
+      "category": "local_event",
+      "tags": [
+        "Pokémon 30",
+        "Pokémon Night Out",
+        "EDM",
+        "Marshmello",
+        "Alison Wonderland",
+        "Evento presencial",
+        "Localização"
+      ],
+      "source": {
+        "name": "Pokémon 30 • página oficial Night Out",
+        "url": "https://30.pokemon.com/pt-br/night-out/",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/London",
+        "start_local": "2026-11-10T18:00:00+00:00",
+        "end_local": "2026-11-10T18:00:00+00:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-10T15:00:00-03:00",
+        "end_brazil": "2026-11-10T15:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "location_label": "The O2 Arena • Londres, Reino Unido",
+      "locations": [
+        {
+          "label": "The O2 Arena • Londres, Reino Unido",
+          "latitude": 51.502949,
+          "longitude": 0.002369,
+          "coordinate_text": "51.502949,0.002369",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Coordenada aproximada de local de show fornecida por publicação da comunidade. Não confirma Ginásio ou Poképarada do Pokémon GO."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Local de concerto, não localização verificada de Ginásio ou Poképarada."
+      },
+      "notes": [
+        "Abertura das portas às 18h, horário de Londres, em 10/11/2026; início e término do show não confirmados.",
+        "The O2 confirma abertura de portas às 18h, horário de Londres (GMT em novembro). O Discord mostrava incorretamente PDT para Londres: não usar essa hora. O horário exibido nesta ficha é a abertura das portas, NÃO o início do espetáculo.",
+        "Mewtwo Sombroso, fundo de localização e Pesquisa Temporária com Toxtricity foram mencionados no Discord, mas NÃO foram confirmados nos anúncios oficiais consultados; não anunciar como bônus do jogo.",
+        "Ingressos e regras para o evento presencial: consulte os organizadores oficiais.",
+        "A coordenada é referência do local do concerto. Não é coordenada exata de Reide especial Pokémon GO."
+      ],
+      "bonuses": [],
+      "pokemon": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Shows de música: não agendar notificação de conteúdo Pokémon GO sem confirmação da programação."
+      },
+      "status": "draft",
+      "verified_at": "2026-10-15",
+      "updated_at": "2026-10-15T20:05:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon 30 • Night Out oficial",
+          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "confidence": "official"
+        },
+        {
+          "name": "The O2 • horário de Londres",
+          "url": "https://www.theo2.co.uk/events/detail/pokemon-night-out",
+          "confidence": "official"
+        },
+        {
+          "name": "Coordenada divulgada no Discord",
+          "url": null,
+          "confidence": "community_supplied_venue_reference"
+        }
+      ]
     }
   ]
 }
