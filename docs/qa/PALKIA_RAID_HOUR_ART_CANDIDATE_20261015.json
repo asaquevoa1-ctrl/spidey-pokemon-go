@@ -1,0 +1,61 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-21-raid-hour-palkia",
+  "title": "Raid Hour: Palkia",
+  "sources": {
+    "official_schedule": {
+      "name": "Pokémon GO — programação de outubro de 2026",
+      "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+      "confidence": "official"
+    },
+    "community_catalog": {
+      "name": "Pokémon GO Hub — calendário de outubro de 2026",
+      "url": "https://pokemongohub.net/post/event/october-2026-events/",
+      "confidence": "verified_community"
+    }
+  },
+  "schedule": {
+    "start_local": "2026-10-21T18:00:00-03:00",
+    "end_local": "2026-10-21T19:00:00-03:00",
+    "local_time": true
+  },
+  "art_rules": [
+    "approved_spidey_reference_collection",
+    "palkia_as_only_featured_pokemon_species",
+    "official_title_date_time_and_character",
+    "no_unverified_bonus_coordinates_species_or_shiny_claim",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Palkia na Hora de Reides de 21 de outubro de 2026.",
+    "O horário publicado é das 18h às 19h no horário local.",
+    "O pôster não anuncia bônus, coordenadas, local específico, shiny boost, itens ou outras espécies em destaque.",
+    "A fonte comunitária do catálogo é complementar; os fatos publicados na arte vêm da programação oficial."
+  ],
+  "candidate_visual": "Palkia monumental em arena dimensional luminosa, com ruínas flutuantes, rasgos cósmicos magenta e acabamento cinematográfico da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/palkia-raid-hour-20261021-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/palkia-raid-hour-20261021-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 3004768,
+  "sha256": "cf47fdc2b6e7743caa206ec47e07d03e2b9c36fa57593bef2ca1da46fc1cc9d6",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo com Palkia em arena dimensional luminosa, marca, título, data e horário integrados à composição da coleção de referência.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "7209e10d8796f8ade4482fd2ee98bcffdb4b71fe",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
