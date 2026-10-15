@@ -4952,17 +4952,17 @@
         "Sneasel"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO • programação oficial de outubro de 2026",
+        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+        "confidence": "official"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
-        "start_local": "2026-10-19T06:00:00-03:00",
-        "end_local": "2026-10-19T21:00:00-03:00",
+        "start_local": "2026-10-19T18:00:00-03:00",
+        "end_local": "2026-10-19T19:00:00-03:00",
         "brazil_timezone": "America/Sao_Paulo",
-        "start_brazil": "2026-10-19T06:00:00-03:00",
-        "end_brazil": "2026-10-19T21:00:00-03:00"
+        "start_brazil": "2026-10-19T18:00:00-03:00",
+        "end_brazil": "2026-10-19T19:00:00-03:00"
       },
       "calendar": {
         "mode": "span"

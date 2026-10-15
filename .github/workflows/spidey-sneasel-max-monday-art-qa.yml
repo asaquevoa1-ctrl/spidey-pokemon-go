@@ -1,0 +1,35 @@
+name: Spidey - QA responsivo Segunda Max Sneasel
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/sneasel-max-monday-20261019-v1.png'
+      - 'spidey-app/assets/events/premium/sneasel-max-monday-20261019-approved-v1.png'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'docs/qa/SNEASEL_MAX_MONDAY_ART_*.json'
+      - 'tests/sneasel-max-monday-art-approval.test.cjs'
+      - 'scripts/qa_sneasel_max_monday_art_browser.mjs'
+      - '.github/workflows/spidey-sneasel-max-monday-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/sneasel-max-monday-art
+          command -v google-chrome | tee test-results/sneasel-max-monday-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_sneasel_max_monday_art_browser.mjs 2>&1 | tee test-results/sneasel-max-monday-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sneasel-max-monday-responsive-preview
+          path: test-results/sneasel-max-monday-art

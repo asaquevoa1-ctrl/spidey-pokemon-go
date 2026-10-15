@@ -1,0 +1,66 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-19-max-monday-sneasel",
+  "title": "Max Monday: Dynamax Sneasel",
+  "sources": {
+    "official_schedule": {
+      "name": "Pokémon GO — programação de outubro de 2026",
+      "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+      "confidence": "official"
+    },
+    "official_season": {
+      "name": "Pokémon GO — Twilight Trails",
+      "url": "https://pokemongo.com/en/seasons",
+      "confidence": "official"
+    },
+    "community_catalog": {
+      "name": "Pokémon GO Hub — calendário de outubro de 2026",
+      "url": "https://pokemongohub.net/post/event/october-2026-events/",
+      "confidence": "verified_community"
+    }
+  },
+  "schedule": {
+    "start_local": "2026-10-19T18:00:00-03:00",
+    "end_local": "2026-10-19T19:00:00-03:00",
+    "local_time": true
+  },
+  "art_rules": [
+    "approved_spidey_reference_collection",
+    "normal_sneasel_as_only_featured_pokemon_species",
+    "official_title_date_time_and_character",
+    "no_unverified_bonus_coordinates_species_or_shiny_claim",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Sneasel Dinamax no período de 19 a 25 de outubro e a Segunda Max de 19 de outubro de 2026 das 18h às 19h no horário local.",
+    "A página oficial da temporada confirma Sneasel Dinamax entre as estreias de Pokémon Dinamax em Power Spots.",
+    "O pôster não anuncia bônus, coordenadas, local específico, shiny boost, itens ou outras espécies em destaque.",
+    "A fonte comunitária do catálogo é complementar e está identificada como comunidade; os fatos do pôster vêm das fontes oficiais."
+  ],
+  "candidate_visual": "Sneasel normal monumental em arena de Power Spot luminosa, envolto pela aura vermelho-magenta Dinamax e acabamento cinematográfico da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/sneasel-max-monday-20261019-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/sneasel-max-monday-20261019-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2849962,
+  "sha256": "7571804d165f32cc332941d057934e84728209d25edd3cbb8db2386c0d8c3d03",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo com Sneasel normal Dinamax em arena de Power Spot, marca, título, data e horário integrados à coleção de referência.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "818c4bce536b0d818bfd013307e8e6b238aa78b2",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
