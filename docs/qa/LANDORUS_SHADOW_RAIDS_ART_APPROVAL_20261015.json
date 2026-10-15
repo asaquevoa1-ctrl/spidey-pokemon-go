@@ -1,0 +1,46 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-shadow-landorus-17",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/LANDORUS_SHADOW_RAIDS_ART_CANDIDATE_20261015.json",
+  "candidate_file": "spidey-app/assets/events/review/landorus-shadow-raids-20261017-18-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 757122,
+  "sha256": "082d1076c8400ce45cf73fc72eef5f5b2bb3cac64e2f4a6b8b70e388f36b381c",
+  "sources": {
+    "official_schedule": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+    "community_calendar": "https://pokemongohub.net/post/event/october-2026-events/"
+  },
+  "schedule": {
+    "start_local": "2026-10-17T00:00:00-03:00",
+    "end_local": "2026-10-18T23:59:59-03:00",
+    "local_time": true
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run": 38737758958,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38737758958",
+    "week_fixture": "2026-10-12..2026-10-18",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 69,
+  "prior_unique_images_preserved": 60,
+  "remaining_premium_gaps_after_publication": 16,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

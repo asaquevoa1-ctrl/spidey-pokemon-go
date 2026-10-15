@@ -1,0 +1,61 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-shadow-landorus-17",
+  "title": "Reides Sombrosas: Landorus (Forma Encarnada)",
+  "sources": {
+    "official_schedule": {
+      "name": "Pokémon GO — programação de outubro de 2026",
+      "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+      "confidence": "official"
+    },
+    "community_calendar": {
+      "name": "Pokémon GO Hub — calendário de outubro de 2026",
+      "url": "https://pokemongohub.net/post/event/october-2026-events/",
+      "confidence": "verified_community"
+    }
+  },
+  "schedule": {
+    "start_local": "2026-10-17T00:00:00-03:00",
+    "end_local": "2026-10-18T23:59:59-03:00",
+    "local_time": true
+  },
+  "art_rules": [
+    "approved_spidey_reference_collection",
+    "incarnate_forme_shadow_landorus_as_only_featured_pokemon",
+    "official_title_character_and_october_schedule",
+    "community_dates_marked_as_complementary",
+    "no_unverified_bonus_coordinates_species_or_shiny_claim",
+    "no_raw_url",
+    "no_generic_corporate_boxes"
+  ],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Landorus Sombroso em Forma Encarnada nas Reides Sombrosas de fim de semana.",
+    "O calendário comunitário complementa a janela de 17 a 18 de outubro e não é apresentado como fonte oficial.",
+    "O pôster não anuncia bônus, coordenadas, horário fixo, shiny boost, itens, movimento, ingresso ou outras espécies."
+  ],
+  "candidate_visual": "Landorus Sombroso em Forma Encarnada monumental em santuário de terra e tempestade, com aura violeta e acabamento cinematográfico da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/landorus-shadow-raids-20261017-18-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png",
+  "width": 1122,
+  "height": 1402,
+  "bytes": 757122,
+  "sha256": "082d1076c8400ce45cf73fc72eef5f5b2bb3cac64e2f4a6b8b70e388f36b381c",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo com Landorus Sombroso em Forma Encarnada, marca, título e datas integrados à coleção de referência.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada. O PNG final recebeu apenas otimização local de paleta e compressão, sem regeneração ou alteração editorial.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "d8aff914888398c1e9a8b3be4ad7ca8351bb00bb",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

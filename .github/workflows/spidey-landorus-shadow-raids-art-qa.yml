@@ -1,0 +1,35 @@
+name: Spidey - QA responsivo Landorus Sombroso
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/landorus-shadow-raids-20261017-18-v1.png'
+      - 'spidey-app/assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'docs/qa/LANDORUS_SHADOW_RAIDS_ART_*.json'
+      - 'tests/landorus-shadow-raids-art-approval.test.cjs'
+      - 'scripts/qa_landorus_shadow_raids_art_browser.mjs'
+      - '.github/workflows/spidey-landorus-shadow-raids-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          mkdir -p test-results/landorus-shadow-raids-art
+          command -v google-chrome | tee test-results/landorus-shadow-raids-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_landorus_shadow_raids_art_browser.mjs 2>&1 | tee test-results/landorus-shadow-raids-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: landorus-shadow-raids-responsive-preview
+          path: test-results/landorus-shadow-raids-art
