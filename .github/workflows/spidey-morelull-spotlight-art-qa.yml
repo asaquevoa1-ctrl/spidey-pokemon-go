@@ -24,6 +24,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm install --no-save playwright-core@1.56.1
       - run: |
+          set -o pipefail
           mkdir -p test-results/morelull-spotlight-art
           command -v google-chrome | tee test-results/morelull-spotlight-art/chrome-path.txt
           CHROME_PATH="$(command -v google-chrome)" node scripts/qa_morelull_spotlight_art_browser.mjs 2>&1 | tee test-results/morelull-spotlight-art/run.log
