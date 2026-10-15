@@ -27,7 +27,7 @@ try{
     await page.locator('#calendar .calendar-day').first().waitFor({state:'attached'});
     const expected=await page.evaluate(id=>window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,eventId);
     if(expected!==approved)throw new Error(`unexpected artwork ${expected}`);
-    await page.evaluate(()=>{state.month=new Date(2026,9,1);renderCalendar();});
+    await page.evaluate(()=>{setView('calendarView');state.month=new Date(2026,9,1);renderCalendar();});
     const index=await page.evaluate(()=>{const first=new Date(2026,9,1);const gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,22)-gridStart)/86400000);});
     await page.locator('#calendar .calendar-day').nth(index).click();
     const dayEvent=page.locator(`#eventDetail [data-event-id="${eventId}"]`);await dayEvent.waitFor();
