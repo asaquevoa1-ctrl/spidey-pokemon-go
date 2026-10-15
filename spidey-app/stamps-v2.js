@@ -44,6 +44,27 @@
     return `${Number(stop.latitude).toFixed(6)},${Number(stop.longitude).toFixed(6)}`;
   }
 
+  // A PokéLid has a verified physical lid position, but this does NOT establish
+  // the exact Pokémon GO PokéStop. Never feed these coordinates to GPX export.
+  function pokelidVenueCoord(stop) {
+    if (stop?.image_kind !== 'lid_artwork' || stop.coordinate_type !== 'venue_reference' || !validCoordinate(stop)) return '';
+    return `${Number(stop.latitude).toFixed(6)},${Number(stop.longitude).toFixed(6)}`;
+  }
+
+  // The official host sometimes fails to display on a mobile device; avoid the
+  // broken-image icon and keep the official-page link available for the player.
+  function installImageFallback(root) {
+    root.addEventListener('error', event => {
+      const img = event.target;
+      if (!img || img.tagName !== 'IMG' || !img.closest('.stamp-tile-art-v2, .stamp-active-art-v2')) return;
+      const placeholder = document.createElement('div');
+      placeholder.className = 'stamp-art-placeholder-v2 stamp-art-load-failed';
+      placeholder.setAttribute('role', 'status');
+      placeholder.textContent = 'Imagem não carregou • veja a tampa oficial';
+      img.replaceWith(placeholder);
+    }, true);
+  }
+
   function escapeHtml(value) {
     return String(value ?? '')
       .replace(/&/g, '&amp;')
@@ -61,7 +82,7 @@
     return `
       <button class="stamp-tile-v2 ${done ? 'is-done' : ''}" type="button" data-stamp-stop-id="${escapeHtml(stop.id)}" aria-label="Abrir selo ${number}: ${escapeHtml(stop.venue || stop.city || '')}">
         <div class="stamp-tile-art-v2">
-          ${image ? `<img src="${escapeHtml(image)}" alt="${stop.image_kind === 'lid_artwork' ? 'PokéLid' : 'Selo'} ${number} · ${escapeHtml(stop.venue || stop.city || '')}" loading="lazy" decoding="async">` : `
+          ${image ? `<img src="${escapeHtml(image)}" alt="${stop.image_kind === 'lid_artwork' ? 'PokéLid' : 'Selo'} ${number} · ${escapeHtml(stop.venue || stop.city || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : `
             <div class="stamp-art-placeholder-v2" aria-label="Imagem do selo ainda não disponível">
               <span>SELO</span><strong>${number}</strong><small>imagem pendente</small>
             </div>`}
@@ -90,6 +111,7 @@
     const publicNotes=rally.public_notes ?? rally.notes ?? [];
     let progress = getStampProgress(rally);
     const exactStops = stops.filter(exactPokestop);
+    const lidPlaces = isPokelid ? stops.filter(pokelidVenueCoord) : [];
     const fullGpx = exactStops.length === stops.length && stops.length > 0;
     const regions = [...new Set(stops.map(regionLabel).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
     let search = '';
@@ -129,7 +151,7 @@
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
-          <div><strong>${isPokelid ? stops.filter(validCoordinate).length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais oficiais' : 'pontos confirmados'}</span></div>
+          <div><strong>${isPokelid ? lidPlaces.length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais das tampas' : 'pontos confirmados'}</span></div>
           <div><strong>${stops.length - progress.size}</strong><span>restantes</span></div>
         </div>
 
@@ -190,6 +212,7 @@
 
     const gallery = detail.querySelector('#stampGalleryV2');
     const activeBox = detail.querySelector('#stampActiveStop');
+    installImageFallback(detail);
     const position = detail.querySelector('#stampRoutePosition');
     const toggleDone = detail.querySelector('#stampToggleDone');
 
@@ -222,24 +245,26 @@
       const index = stops.indexOf(stop);
       activeId = stop.id;
       const done = progress.has(stop.id);
-      const value = coord(stop);
+      const lidValue = isPokelid ? pokelidVenueCoord(stop) : '';
+      const value = lidValue || coord(stop);
       const image = stampImage(stop);
       position.textContent = `${visible.indexOf(stop) + 1} de ${visible.length}`;
       toggleDone.textContent = done ? 'Marcar como faltante' : 'Marcar como feito';
       toggleDone.classList.toggle('is-done', done);
       activeBox.innerHTML = `
         <div class="stamp-active-art-v2">
-          ${image ? `<img src="${escapeHtml(image)}" alt="${isPokelid ? 'PokéLid' : 'Selo'} ${escapeHtml(stop.stamp_number || index + 1)}" loading="eager">` : `<div class="stamp-art-placeholder-v2"><span>SELO</span><strong>${escapeHtml(stop.stamp_number || index + 1)}</strong><small>imagem pendente</small></div>`}
+          ${image ? `<img src="${escapeHtml(image)}" alt="${isPokelid ? 'PokéLid' : 'Selo'} ${escapeHtml(stop.stamp_number || index + 1)}" loading="eager" referrerpolicy="no-referrer">` : `<div class="stamp-art-placeholder-v2"><span>SELO</span><strong>${escapeHtml(stop.stamp_number || index + 1)}</strong><small>imagem pendente</small></div>`}
         </div>
         <div class="stamp-active-copy-v2">
           <span class="coordinate-state ${exactPokestop(stop) ? 'confirmed' : 'pending'}">${escapeHtml(stampCoordinateLabel(stop))}</span>
           <h3>${escapeHtml(stop.venue || stop.city || `Selo ${index + 1}`)}</h3>
           <p>${escapeHtml(stop.city || '')}${stop.prefecture ? ` · ${escapeHtml(stop.prefecture)}` : ''}${stop.country ? ` · ${escapeHtml(stop.country)}` : ''}</p>
           ${stop.venue_detail ? `<small>${escapeHtml(stop.venue_detail)}</small>` : ''}
-          ${isPokelid ? `<div class="action-row"><a class="action-btn" href="https://www.google.com/maps?q=${Number(stop.latitude)},${Number(stop.longitude)}" target="_blank" rel="noopener">Mapa da PokéLid</a><a class="action-btn" href="${escapeHtml(stop.official_url)}" target="_blank" rel="noopener">Ver tampa oficial</a></div><small>Local da tampa; posição da PokéStop a conferir no jogo.</small>` : stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener">Ver local no mapa</a><p class="microcopy">Poképarada confirmada a conferir.</p>` : value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
+          ${lidValue ? `<div class="pokelid-place-copy"><small>LOCAL DA TAMPA • NÃO É POKÉSTOP VERIFICADA</small><code>${lidValue}</code><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar local da tampa</button></div>` : ''}
+          ${isPokelid ? `<div class="action-row"><a class="action-btn" href="https://www.google.com/maps?q=${Number(stop.latitude)},${Number(stop.longitude)}" target="_blank" rel="noopener noreferrer">Mapa da PokéLid</a><a class="action-btn" href="${escapeHtml(stop.official_url)}" target="_blank" rel="noopener noreferrer">Ver tampa oficial</a></div><small>Este ponto é da tampa física. A PokéStop no jogo pode ter outra posição.</small>` : stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener">Ver local no mapa</a><p class="microcopy">Poképarada confirmada a conferir.</p>` : value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
         </div>
-        ${value ? `<div class="coordinates stamp-active-coordinates-v2"><div class="stamp-coordinate-values-v2"><div><small>Latitude</small><code>${value.split(',')[0]}</code></div><div><small>Longitude</small><code>${value.split(',')[1]}</code></div></div><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar coordenadas</button></div>` : ''}`;
-      activeBox.querySelector('#copyActiveStampCoord')?.addEventListener('click', () => setClipboard(value, 'Coordenada copiada.'));
+        ${value && !isPokelid ? `<div class="coordinates stamp-active-coordinates-v2"><div class="stamp-coordinate-values-v2"><div><small>Latitude</small><code>${value.split(',')[0]}</code></div><div><small>Longitude</small><code>${value.split(',')[1]}</code></div></div><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar coordenadas</button></div>` : ''}`;
+      activeBox.querySelector('#copyActiveStampCoord')?.addEventListener('click', () => setClipboard(value, lidValue ? 'Local da tampa copiado (não é PokéStop verificada).' : 'Coordenada copiada.'));
       gallery.querySelectorAll('.stamp-tile-v2').forEach((tile) => tile.classList.toggle('is-active', tile.dataset.stampStopId === stop.id));
     }
 
