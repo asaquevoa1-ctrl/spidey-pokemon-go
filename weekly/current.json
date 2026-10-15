@@ -222,19 +222,19 @@
           "start_brazil": "2026-10-17T00:00:00-03:00",
           "end_brazil": "2026-10-18T23:59:59-03:00",
           "source": {
-            "name": "Pokémon GO Hub • calendário outubro 2026",
-            "url": "https://pokemongohub.net/post/event/october-2026-events/",
-            "confidence": "verified"
+            "name": "Pokémon GO • programação oficial de outubro de 2026",
+            "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+            "confidence": "official"
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "082d1076c8400ce45cf73fc72eef5f5b2bb3cac64e2f4a6b8b70e388f36b381c",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         },
         {
@@ -284,19 +284,19 @@
           "start_brazil": "2026-10-17T00:00:00-03:00",
           "end_brazil": "2026-10-18T23:59:59-03:00",
           "source": {
-            "name": "Pokémon GO Hub • calendário outubro 2026",
-            "url": "https://pokemongohub.net/post/event/october-2026-events/",
-            "confidence": "verified"
+            "name": "Pokémon GO • programação oficial de outubro de 2026",
+            "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+            "confidence": "official"
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "082d1076c8400ce45cf73fc72eef5f5b2bb3cac64e2f4a6b8b70e388f36b381c",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         },
         {
@@ -543,19 +543,19 @@
         "start_brazil": "2026-10-17T00:00:00-03:00",
         "end_brazil": "2026-10-18T23:59:59-03:00",
         "source": {
-          "name": "Pokémon GO Hub • calendário outubro 2026",
-          "url": "https://pokemongohub.net/post/event/october-2026-events/",
-          "confidence": "verified"
+          "name": "Pokémon GO • programação oficial de outubro de 2026",
+          "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+          "confidence": "official"
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "082d1076c8400ce45cf73fc72eef5f5b2bb3cac64e2f4a6b8b70e388f36b381c",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       }
     ],
@@ -725,13 +725,13 @@
   ],
   "meta": {
     "calendar_events_in_week": 17,
-    "events_with_weekly_art": 13,
-    "events_with_premium_weekly_art": 13,
+    "events_with_weekly_art": 14,
+    "events_with_premium_weekly_art": 14,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 4,
+    "events_without_weekly_art": 3,
     "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-15T12:59:59.259312-03:00",
+    "generated_at": "2026-10-15T13:47:05.039632-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
