@@ -1,0 +1,25 @@
+
+/* National Trust 2026: responsive read-only community site references in FLY. */
+.nt-jump{display:block;width:calc(100% - 44px);margin:12px auto;min-height:48px;text-align:center;border-radius:13px}
+.nt-guide{margin-top:20px;border:1px solid rgba(67,151,165,.38);border-radius:18px;scroll-margin-top:25px}
+.nt-guide>summary{cursor:pointer;display:grid;gap:7px;padding:12px 4px;min-height:54px}
+.nt-guide>summary strong{font-size:1.28rem}
+.nt-more{font-size:.86rem;opacity:.78}
+.nt-intro{padding:12px 2px}
+.nt-intro p{line-height:1.58}
+.nt-caution{padding:14px;border-left:4px solid #dd9c33;background:rgba(233,178,70,.1);border-radius:7px}
+.nt-actions{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}
+.nt-actions a{min-height:44px;display:inline-flex;align-items:center}
+.nt-toolbar{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin:18px 0}
+.nt-toolbar label{grid-row:1;font-size:.87rem;font-weight:750}
+.nt-toolbar input,.nt-toolbar select{width:100%;min-height:46px;padding:9px;border:1px solid rgba(67,151,165,.43);border-radius:11px;background:var(--surface,#fff);color:var(--text,#10283b);box-sizing:border-box}
+.nt-place-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,325px),1fr));gap:11px;margin:14px 0}
+.nt-place{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:13px;border-radius:14px;border:1px solid rgba(67,151,165,.35);background:var(--surface,#fff);color:var(--text,#10283b)}
+.nt-place-text{flex:1 1 100%;min-width:0}
+.nt-place-text strong,.nt-place-text small,.nt-place-text code{display:block;margin:0 0 7px}
+.nt-place-text strong{font-size:1.05rem}
+.nt-place-text small{font-size:.76rem;line-height:1.45;opacity:.83}
+.nt-place-text code{overflow-wrap:anywhere;font-size:.94rem;user-select:text}
+.nt-place .action-btn{flex:1 1 auto;min-height:44px;text-align:center}
+[data-theme=dark] .nt-place{background:#102338;color:#f0faff}
+@media(max-width:560px){.nt-toolbar{grid-template-columns:1fr}.nt-toolbar label{grid-row:auto}.nt-toolbar input{grid-row:auto}.nt-place-list{grid-template-columns:1fr}}
