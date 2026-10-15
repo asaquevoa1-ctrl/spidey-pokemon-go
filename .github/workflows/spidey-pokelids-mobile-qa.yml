@@ -1,0 +1,33 @@
+name: Spidey - PokéLids mobile imagens e coordenadas
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/stamps-v2.js'
+      - 'spidey-app/stamps-v2.css'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'tests/pokelids.test.cjs'
+      - 'scripts/qa_pokelids_mobile_browser.mjs'
+      - '.github/workflows/spidey-pokelids-mobile-qa.yml'
+permissions:
+  contents: read
+jobs:
+  samsung-layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - name: Validar fonte oficial, copiar, avisos e fallback de imagem
+        run: |
+          node --test tests/pokelids.test.cjs
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_pokelids_mobile_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokelids-mobile-qa
+          path: test-results/pokelids-mobile
