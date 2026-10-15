@@ -24,7 +24,7 @@ try{
     await page.route('**/data/weekly.json*',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(weekly)}));
     await page.addInitScript(({fixed,theme})=>{const NativeDate=Date,now=new NativeDate(fixed).valueOf();class FixedDate extends NativeDate{constructor(...args){super(...(args.length?args:[now]));}static now(){return now;}}Object.setPrototypeOf(FixedDate,NativeDate);window.Date=FixedDate;localStorage.setItem('spidey-theme',theme);},{fixed,theme});
     await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'networkidle'});
-    await page.locator('#calendar .calendar-day').first().waitFor();
+    await page.locator('#calendar .calendar-day').first().waitFor({state:'attached'});
     const expected=await page.evaluate(id=>window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,eventId);
     if(expected!==approved)throw new Error(`unexpected artwork ${expected}`);
     await page.evaluate(()=>{state.month=new Date(2026,9,1);renderCalendar();});
