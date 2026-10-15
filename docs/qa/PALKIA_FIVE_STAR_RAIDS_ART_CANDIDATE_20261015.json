@@ -1,0 +1,38 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-raids-palkia",
+  "title": "Reides 5★: Palkia",
+  "sources": {
+    "official_schedule": {"name": "Pokémon GO — programação de outubro de 2026", "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/", "confidence": "official"},
+    "community_catalog": {"name": "Pokémon GO Hub — calendário de outubro de 2026", "url": "https://pokemongohub.net/post/event/october-2026-events/", "confidence": "verified_community"}
+  },
+  "schedule": {"start_local": "2026-10-21T06:00:00-03:00", "end_local": "2026-10-27T22:00:00-03:00", "local_time": true},
+  "art_rules": ["approved_spidey_reference_collection", "palkia_as_only_pokemon_species", "official_title_date_time_and_character", "no_unverified_bonus_coordinates_species_or_shiny_claim", "no_raw_url", "no_corporate_boxes"],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Palkia na rotação de Reides de cinco estrelas de 21 a 27 de outubro de 2026.",
+    "A programação oficial informa que as trocas de chefes de Reide ocorrem às 06h; o catálogo público registra o encerramento às 22h no horário local.",
+    "O pôster não anuncia bônus, coordenadas, local específico, chance de Brilhante, itens ou outras espécies.",
+    "A fonte comunitária do catálogo é complementar e está identificada como tal."
+  ],
+  "candidate_visual": "Palkia em cenário cósmico violeta e azul, com arquitetura dimensional, energia luminosa e acabamento cinematográfico da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/palkia-five-star-raids-20261021-27-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/palkia-five-star-raids-20261021-27-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 745546,
+  "sha256": "f82bfa44e3e3d47de2289889c5ae5cf02a1917a45bf7fb368c80053804648eab",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo no sistema visual das referências Spidey aprovadas, com Palkia, marca, título, datas e horário integrados.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada. O PNG recebeu apenas otimização local de paleta e compressão, sem regeneração ou alteração editorial; os bytes finais são idênticos na candidatura e na versão aprovada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": ["2026-09-harvest-festival-applin", "2026-10-world-space-week", "2026-10-05-max-monday-sizzlipede"],
+  "base_main_sha": "778907cccf4aeb6928aa6ecf5fbd2542befe7b1f",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

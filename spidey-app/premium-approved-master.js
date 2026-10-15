@@ -710,6 +710,17 @@
     "approval_record": "docs/qa/LANDORUS_SHADOW_RAIDS_ART_APPROVAL_20261015.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-raids-palkia": {
+    "file": "assets/events/premium/palkia-five-star-raids-20261021-27-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "f82bfa44e3e3d47de2289889c5ae5cf02a1917a45bf7fb368c80053804648eab",
+    "approval_record": "docs/qa/PALKIA_FIVE_STAR_RAIDS_ART_APPROVAL_20261015.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
