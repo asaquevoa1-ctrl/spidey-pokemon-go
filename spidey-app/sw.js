@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261015-nav-partnerships-archive-v1';
+const CACHE = 'spidey-app-20261015-sneasel-max-monday-art1';
 const CORE = [
+  './assets/events/premium/sneasel-max-monday-20261019-approved-v1.png',
   './assets/events/premium/palkia-raid-hour-20261021-approved-v1.png',
   './assets/events/premium/stufful-spotlight-hour-20261015-approved-v1.png',
   './assets/events/premium/minior-geminids-20261211-16-spidey-reference-approved-v1.webp',

@@ -677,6 +677,17 @@
     "approval_record": "docs/qa/PALKIA_RAID_HOUR_ART_APPROVAL_20261015.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-19-max-monday-sneasel": {
+    "file": "assets/events/premium/sneasel-max-monday-20261019-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "7571804d165f32cc332941d057934e84728209d25edd3cbb8db2386c0d8c3d03",
+    "approval_record": "docs/qa/SNEASEL_MAX_MONDAY_ART_APPROVAL_20261015.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
