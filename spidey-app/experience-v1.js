@@ -237,7 +237,7 @@
     renderWeek(reference);
     const note = document.querySelector('#calendarFocusNote');
     if (note) {
-      note.textContent = `O calendário abre no próximo mês relevante quando o mês atual já está no fim. Setembro permanece disponível como histórico.`;
+      note.textContent = `Eventos encerrados saem automaticamente da agenda. As notícias permanecem disponíveis para consulta.`;
     }
   }
 
