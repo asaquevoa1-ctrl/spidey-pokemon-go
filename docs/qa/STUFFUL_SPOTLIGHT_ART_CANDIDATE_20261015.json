@@ -1,0 +1,61 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-15-spotlight-stufful",
+  "title": "Spotlight Hour: Stufful",
+  "sources": {
+    "official_schedule": {
+      "name": "Pokémon GO — programação de outubro de 2026",
+      "url": "https://www.facebook.com/PokemonGO/posts/1624593199024711/",
+      "confidence": "official"
+    },
+    "community_catalog": {
+      "name": "Pokémon GO Hub — calendário de outubro de 2026",
+      "url": "https://pokemongohub.net/post/event/october-2026-events/",
+      "confidence": "verified_community"
+    }
+  },
+  "schedule": {
+    "start_local": "2026-10-15T18:00:00-03:00",
+    "end_local": "2026-10-15T19:00:00-03:00",
+    "local_time": true
+  },
+  "art_rules": [
+    "approved_spidey_reference_collection",
+    "stufful_as_only_pokemon_species",
+    "official_date_time_character_and_bonus",
+    "no_unverified_bonus_coordinates_species_or_shiny_claim",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "A publicação oficial de outubro identifica Stufful em 15 de outubro, das 18h às 19h no horário local.",
+    "A mesma programação oficial informa 2× Doces por transferência.",
+    "O pôster não anuncia coordenadas, local específico, shiny boost, itens ou outras espécies.",
+    "A fonte comunitária do catálogo é complementar; os fatos publicados na arte vêm da programação oficial."
+  ],
+  "candidate_visual": "Stufful em praça urbana ao entardecer, holofotes rosa e dourados, acabamento cinematográfico e identidade da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/stufful-spotlight-hour-20261015-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/stufful-spotlight-hour-20261015-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2679825,
+  "sha256": "5db2b32f4dd0c81c8cc49d6034f2d60b8e2afdb734499f00826a8ad1c10443e2",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo com Stufful em cena urbana luminosa, marca, título, data, horário e bônus integrados à composição da coleção de referência.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "760723644d91d2e9ee18471f73646ecd1fda8304",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
