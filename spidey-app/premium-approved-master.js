@@ -667,6 +667,17 @@
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
+  "2026-10-22-spotlight-morelull": {
+    "file": "assets/events/premium/morelull-spotlight-hour-20261022-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "1a33d0993ae33f97ab1617f9241d145610d3aac98650db184c6ec6b5924c47e3",
+    "approval_record": "docs/qa/MORELULL_SPOTLIGHT_ART_APPROVAL_20261015.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
   "2026-10-21-raid-hour-palkia": {
     "file": "assets/events/premium/palkia-raid-hour-20261021-approved-v1.png",
     "status": "APPROVED",
