@@ -405,3 +405,23 @@
 .stamp-detail-pokelids .stamp-active-art-v2 { min-height: 0; aspect-ratio: 1; align-self: start; }
 .stamp-detail-pokelids .stamp-active-art-v2 img,
 .stamp-detail-pokelids .stamp-tile-art-v2 img { object-fit: contain; }
+
+/* Explicitly separate official PokéLid site coordinates from unverified GO PokéStops. */
+.stamp-detail-pokelids .pokelid-place-copy{
+  display:grid;gap:9px;margin:15px 0;padding:13px;border-radius:13px;
+  border:1px solid rgba(62,178,199,.48);
+  background:rgba(41,145,166,.10);overflow-wrap:anywhere;
+}
+.stamp-detail-pokelids .pokelid-place-copy small{
+  line-height:1.35;letter-spacing:.02em;font-size:.76rem;font-weight:800;
+}
+.stamp-detail-pokelids .pokelid-place-copy code{
+  user-select:text;font-size:1.02rem;letter-spacing:.01em;overflow-wrap:anywhere;
+}
+.stamp-detail-pokelids .pokelid-place-copy button{
+  min-height:48px;font-weight:800;max-width:100%;
+}
+.stamp-art-load-failed{
+  display:flex;justify-content:center;align-items:center;text-align:center;
+  font-size:.78rem;line-height:1.35;padding:9px;box-sizing:border-box;
+}
