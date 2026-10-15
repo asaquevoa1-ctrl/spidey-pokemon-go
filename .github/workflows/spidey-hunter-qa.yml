@@ -6,7 +6,11 @@ on:
       - 'spidey-app/hunter-v1.css'
       - 'spidey-app/index.html'
       - 'spidey-app/sw.js'
-      - 'scripts/qa_nav_partnerships_browser.mjs'\n      - 'spidey-app/ana-airports.js'\n      - 'spidey-app/national-trust-v1.js'\n      - 'spidey-app/nav-partnerships.css'\n      - 'spidey-app/app.js'
+      - 'scripts/qa_nav_partnerships_browser.mjs'
+      - 'spidey-app/ana-airports.js'
+      - 'spidey-app/national-trust-v1.js'
+      - 'spidey-app/nav-partnerships.css'
+      - 'spidey-app/app.js'
       - '.github/workflows/spidey-hunter-qa.yml'
 permissions:
   contents: read
