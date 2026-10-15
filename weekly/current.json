@@ -160,13 +160,13 @@
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/stufful-spotlight-hour-20261015-approved-v1.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "5db2b32f4dd0c81c8cc49d6034f2d60b8e2afdb734499f00826a8ad1c10443e2",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         }
       ]
@@ -725,13 +725,13 @@
   ],
   "meta": {
     "calendar_events_in_week": 17,
-    "events_with_weekly_art": 12,
-    "events_with_premium_weekly_art": 12,
+    "events_with_weekly_art": 13,
+    "events_with_premium_weekly_art": 13,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 5,
+    "events_without_weekly_art": 4,
     "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-15T02:56:36.741148-03:00",
+    "generated_at": "2026-10-15T03:51:58.013230-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
