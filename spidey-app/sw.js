@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261015-palkia-raid-hour-art1';
+const CACHE = 'spidey-app-20261015-nav-partnerships-archive-v1';
 const CORE = [
   './assets/events/premium/palkia-raid-hour-20261021-approved-v1.png',
   './assets/events/premium/stufful-spotlight-hour-20261015-approved-v1.png',
