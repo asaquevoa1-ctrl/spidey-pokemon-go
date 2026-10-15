@@ -7,7 +7,8 @@ on:
       - 'spidey-app/data/national-trust-2026.json'
       - 'spidey-app/index.html'
       - 'spidey-app/sw.js'
-      - 'scripts/qa_nav_partnerships_browser.mjs'\n      - 'spidey-app/nav-partnerships.css'
+      - 'scripts/qa_nav_partnerships_browser.mjs'
+      - 'spidey-app/nav-partnerships.css'
       - '.github/workflows/spidey-national-trust-qa.yml'
 permissions:
   contents: read
@@ -25,7 +26,7 @@ jobs:
       - name: Verificar ANA e National Trust nas guias próprias
         run: |
           mkdir -p test-results/nav-partnerships
-          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_national_trust_browser.mjs 2>&1 | tee test-results/nav-partnerships/run.log
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_nav_partnerships_browser.mjs 2>&1 | tee test-results/nav-partnerships/run.log
       - if: always()
         uses: actions/upload-artifact@v4
         with:
