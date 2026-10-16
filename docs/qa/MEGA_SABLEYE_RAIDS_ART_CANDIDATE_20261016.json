@@ -1,0 +1,38 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-mega-sableye-raids",
+  "title": "Mega Reides: Mega Sableye",
+  "sources": {
+    "official_schedule": {"name": "Pokémon GO — programação de outubro de 2026", "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/", "confidence": "official"},
+    "community_catalog": {"name": "Leek Duck — Mega Sableye em Mega-Reides", "url": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/", "confidence": "verified_community"}
+  },
+  "schedule": {"start_local": "2026-10-28T06:00:00-03:00", "end_local": "2026-11-03T22:00:00-03:00", "local_time": true},
+  "art_rules": ["approved_spidey_reference_collection", "mega_sableye_as_only_pokemon_species", "official_title_date_and_character", "community_time_detail_clearly_marked", "no_unverified_bonus_coordinates_species_or_shiny_claim", "no_raw_url", "no_corporate_boxes"],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Mega Sableye na rotação de Mega-Reides de 28 de outubro a 3 de novembro de 2026.",
+    "O catálogo comunitário complementar registra a janela de 06h a 22h no horário local.",
+    "O pôster não anuncia bônus, coordenadas, local específico, chance de Brilhante, itens, ataques ou outras espécies.",
+    "A arte é própria desta rotação e não substitui a arte aprovada de Halloween 2026 Parte II."
+  ],
+  "candidate_visual": "Mega Sableye e sua grande gema vermelha em arena noturna luminosa, com lua violeta, lanternas, folhas e energia de Mega Evolução, no acabamento ornamental da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/mega-sableye-raids-20261028-1103-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 906267,
+  "sha256": "b47a296119ee93c2d4c7273424df19f083a9e7f13b33e8e1219fa728dc30773d",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo no sistema visual da referência Spidey aprovada, com Mega Sableye, marca, título, datas e horário integrados.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada. O PNG recebeu apenas otimização local de paleta e compressão, sem regeneração ou alteração editorial; os bytes finais são idênticos na candidatura e na versão aprovada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": ["2026-09-harvest-festival-applin", "2026-10-world-space-week", "2026-10-05-max-monday-sizzlipede"],
+  "base_main_sha": "99b5ceba3a95e797b6db1cf52fc461bdcaf7251e",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

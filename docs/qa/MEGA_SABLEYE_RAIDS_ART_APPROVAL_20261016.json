@@ -1,0 +1,40 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-mega-sableye-raids",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/MEGA_SABLEYE_RAIDS_ART_CANDIDATE_20261016.json",
+  "candidate_file": "spidey-app/assets/events/review/mega-sableye-raids-20261028-1103-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 906267,
+  "sha256": "b47a296119ee93c2d4c7273424df19f083a9e7f13b33e8e1219fa728dc30773d",
+  "sources": {
+    "official_schedule": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+    "community_catalog": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/"
+  },
+  "schedule": {"start_local": "2026-10-28T06:00:00-03:00", "end_local": "2026-11-03T22:00:00-03:00", "local_time": true},
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "week_fixture": "2026-10-26..2026-11-01",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12,
+    "workflow_run": 38857591381,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/38857591381",
+    "artifact_id": 12027882001,
+    "artifact_sha256": "52d4e1fbe8038e0053312a3b66a8ee71ab94444d2c2a127ac396bb5f0dab9ab3"
+  },
+  "prior_master_entries_preserved": 72,
+  "prior_unique_images_preserved": 63,
+  "remaining_premium_gaps_after_publication": 13,
+  "blocked_generations_preserved": ["2026-09-harvest-festival-applin", "2026-10-world-space-week", "2026-10-05-max-monday-sizzlipede"],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

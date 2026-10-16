@@ -5361,10 +5361,17 @@
         "Mega Sableye"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO • programação oficial de outubro de 2026",
+        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+        "confidence": "official"
       },
+      "verification_sources": [
+        {
+          "name": "Leek Duck • catálogo comunitário de eventos",
+          "url": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/",
+          "confidence": "community"
+        }
+      ],
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2026-10-28T06:00:00-03:00",
@@ -5377,8 +5384,8 @@
         "mode": "start"
       },
       "presentation": {
-        "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "requires_art": true,
+        "fallback_visual": "date"
       },
       "locations": [],
       "gpx": {

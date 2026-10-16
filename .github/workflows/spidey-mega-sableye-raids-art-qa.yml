@@ -1,0 +1,36 @@
+name: Spidey - QA responsivo Mega Sableye Mega-Reides
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/mega-sableye-raids-20261028-1103-v1.png'
+      - 'spidey-app/assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'spidey-app/data/events.json'
+      - 'docs/qa/MEGA_SABLEYE_RAIDS_ART_*.json'
+      - 'tests/mega-sableye-raids-art-approval.test.cjs'
+      - 'scripts/qa_mega_sableye_raids_art_browser.mjs'
+      - '.github/workflows/spidey-mega-sableye-raids-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          set -o pipefail
+          mkdir -p test-results/mega-sableye-raids-art
+          command -v google-chrome | tee test-results/mega-sableye-raids-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_mega_sableye_raids_art_browser.mjs 2>&1 | tee test-results/mega-sableye-raids-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mega-sableye-raids-responsive-preview
+          path: test-results/mega-sableye-raids-art
