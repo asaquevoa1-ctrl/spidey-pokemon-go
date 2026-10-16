@@ -721,6 +721,17 @@
     "approval_record": "docs/qa/PALKIA_FIVE_STAR_RAIDS_ART_APPROVAL_20261015.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-mega-sableye-raids": {
+    "file": "assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "b47a296119ee93c2d4c7273424df19f083a9e7f13b33e8e1219fa728dc30773d",
+    "approval_record": "docs/qa/MEGA_SABLEYE_RAIDS_ART_APPROVAL_20261016.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

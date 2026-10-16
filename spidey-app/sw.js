@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261015-expiry-allviews-v2';
+const CACHE = 'spidey-app-20261016-mega-sableye-raids-art1';
 const CORE = [
+  './assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png',
   './assets/events/premium/palkia-five-star-raids-20261021-27-approved-v1.png',
   './assets/events/premium/morelull-spotlight-hour-20261022-approved-v1.png',
   './assets/events/premium/landorus-shadow-raids-20261017-18-approved-v1.png',
