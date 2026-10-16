@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261015-palkia-raids-art1';
+const CACHE = 'spidey-app-20261015-expiry-allviews-v2';
 const CORE = [
   './assets/events/premium/palkia-five-star-raids-20261021-27-approved-v1.png',
   './assets/events/premium/morelull-spotlight-hour-20261022-approved-v1.png',

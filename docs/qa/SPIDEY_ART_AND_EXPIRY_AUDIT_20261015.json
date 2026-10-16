@@ -1,0 +1,143 @@
+{
+  "audit": "spidey-premium-gap-audit-20261015",
+  "audited_at_local": "2026-10-15T20:49:00-03:00",
+  "scope": "published current/future event data only (not historical archived events)",
+  "approved_master_entries": 72,
+  "missing_original_premium_posters": 12,
+  "editorial_rule": "User-approved Spidey Premium layout: official logo top left, Pokémon protagonist, gold/neon title, date ribbon, event bonus cards and footer; no text SpideyNexus. Do not treat database APPROVED as user acceptance for explicitly challenged posters.",
+  "missing_posters": [
+    {
+      "event_id": "2026-10-mega-dragonite-raids",
+      "title": "Mega Reides: Mega Dragonite",
+      "starts_at": "2026-10-14T06:00:00-03:00",
+      "ends_at": "2026-10-20T22:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-mega-charizard-xy-raids",
+      "title": "Mega Reides: Mega Charizard X e Y",
+      "starts_at": "2026-10-21T06:00:00-03:00",
+      "ends_at": "2026-10-27T22:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-24-fc-seoul",
+      "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
+      "starts_at": "2026-10-23T21:00:00-03:00",
+      "ends_at": "2026-10-24T08:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-shadow-landorus-24",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "starts_at": "2026-10-24T00:00:00-03:00",
+      "ends_at": "2026-10-25T23:59:59-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-26-max-monday-sableye",
+      "title": "Max Monday: Dynamax Sableye",
+      "starts_at": "2026-10-26T06:00:00-03:00",
+      "ends_at": "2026-10-26T21:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-raids-giratina-origin",
+      "title": "Reides 5★: Giratina (Forma Origem)",
+      "starts_at": "2026-10-28T06:00:00-03:00",
+      "ends_at": "2026-11-03T22:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-mega-sableye-raids",
+      "title": "Mega Reides: Mega Sableye",
+      "starts_at": "2026-10-28T06:00:00-03:00",
+      "ends_at": "2026-11-03T22:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "title": "Raid Hour: Giratina Forma Origem",
+      "starts_at": "2026-10-28T18:00:00-03:00",
+      "ends_at": "2026-10-28T19:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-29-spotlight-gastly",
+      "title": "Spotlight Hour: Gastly",
+      "starts_at": "2026-10-29T18:00:00-03:00",
+      "ends_at": "2026-10-29T19:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-10-shadow-landorus-31",
+      "title": "Shadow Raids: Landorus (Forma Encarnada)",
+      "starts_at": "2026-10-31T00:00:00-03:00",
+      "ends_at": "2026-11-01T23:59:59-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2026-11-pokexciting-singapore",
+      "title": "PokéXciting! Singapura 2026",
+      "starts_at": "2026-11-06T23:00:00-03:00",
+      "ends_at": "2026-11-08T11:00:00-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    },
+    {
+      "event_id": "2027-02-go-tour-alola-save-the-date",
+      "title": "Pokémon GO Tour 2027: Alola",
+      "starts_at": "2027-02-19T00:00:00-03:00",
+      "ends_at": "2027-02-28T23:59:59-03:00",
+      "art_master": "MISSING",
+      "visual_status": "PENDING_PREMIUM_SPIDEY_STYLE",
+      "action": "CREAR_POSTER_ORIGINAL_WITH_OFFICIAL_LOGO_AND_EVENT_DETAILS"
+    }
+  ],
+  "requested_visual_corrections": [
+    {
+      "reference": "Pokémon Night Out — composição v1",
+      "event_id": "2026-10-pokemon-night-out-twitch",
+      "current_master": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
+      "change": "Replace the first visual draft's branding/composition to match user-approved Spidey reference. Preserve original bytes.",
+      "state": "CORRECTION_REQUESTED_NOT_YET_REPLACED"
+    },
+    {
+      "reference": "Pokémon Night Out — composição v2 cinematográfica",
+      "event_id": "2026-10-pokemon-night-out-twitch",
+      "current_master": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
+      "change": "Review second proposed visual (not distinct event) for official logo/quality consistency; select only one final poster.",
+      "state": "CORRECTION_REQUESTED_NOT_YET_REPLACED"
+    },
+    {
+      "reference": "City Safari Boston",
+      "event_id": "2026-10-city-safari-boston-rescheduled",
+      "current_master": "assets/events/premium/city-safari-boston-20261024-25-approved-v1.png",
+      "change": "Restore Pokémon GO identity, official Spidey logo and structured premium event information; preserve original file.",
+      "state": "CORRECTION_REQUESTED_NOT_YET_REPLACED"
+    }
+  ],
+  "archive_policy": "Hide events after authoritative local end across all public views, keep source history, and leave unrelated news archived.",
+  "release_policy": "Do not declare a new Premium poster published until its exact asset, registry entry and mobile appearance are checked. Preserve user-approved source references and all previous versions."
+}

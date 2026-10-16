@@ -132,7 +132,8 @@ function bindWeeklyItems(root) {
 
 function weeklyVisibleItem(item,now=new Date()){
   const event=weeklyFindEvent(item?.id);
-  if(event)return true; // Active/upcoming published events are already filtered in the main catalog.
+  if(event)return eventVisibleInPublicAgenda(event,now);
+  // Weekly snapshots can outlive their event; never revive an archived card.
   const end=item?.end_brazil||item?.schedule?.end_brazil;
   const date=end?new Date(end):null;
   return Boolean(date&&Number.isFinite(date.getTime())&&date>now);

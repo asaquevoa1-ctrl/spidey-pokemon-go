@@ -77,9 +77,15 @@ function getBrazilRange(event) {
 
 function eventVisibleInPublicAgenda(event, now = new Date()) {
   if (event?.status !== 'published') return false;
+  // News is an announcement, not a live event. Its archive is separate.
+  if (event.content_type === 'news') return true;
+  // Date-only events end after their last LOCAL calendar day, not BRT midnight.
+  if (window.SpideyDateOnly?.valid(event)) {
+    return window.SpideyDateOnly.localDay(event, now) <= event.schedule.end_date;
+  }
   const { end } = getBrazilRange(event);
-  // Events with no trustworthy end should not be deleted by date inference.
-  return !end || !Number.isFinite(end.getTime()) || end.getTime() > now.getTime();
+  // Never advertise an event with an unknown end as active indefinitely.
+  return Boolean(end && Number.isFinite(end.getTime()) && end.getTime() > now.getTime());
 }
 
 function isEventActive(event, now = new Date()) {
@@ -198,7 +204,8 @@ function renderCalendar() {
 }
 
 function renderEvents(events = state.events.filter((event) => event.content_type !== 'news')) {
-  const sorted = [...events].sort((a, b) => (getBrazilRange(a).start?.getTime() || Number.MAX_SAFE_INTEGER) - (getBrazilRange(b).start?.getTime() || Number.MAX_SAFE_INTEGER));
+  const now = new Date();
+  const sorted = events.filter(event => event.content_type !== 'news' && eventVisibleInPublicAgenda(event, now)).sort((a, b) => (getBrazilRange(a).start?.getTime() || Number.MAX_SAFE_INTEGER) - (getBrazilRange(b).start?.getTime() || Number.MAX_SAFE_INTEGER));
   eventList.innerHTML = '';
   if (!sorted.length) {
     eventList.innerHTML = '<p class="empty">Nenhum evento disponível.</p>';
@@ -514,9 +521,28 @@ async function loadContent({ refresh = false } = {}) {
   })().finally(() => { contentLoading = null; });
   return contentLoading;
 }
+function pruneExpiredPublicEvents() {
+  if (!state.events.length) return 0;
+  const now = new Date();
+  const remaining = state.events.filter(event => eventVisibleInPublicAgenda(event, now));
+  const removed = state.events.length - remaining.length;
+  if (!removed) return 0;
+  state.events = remaining;
+  renderCalendar();
+  renderEvents();
+  if (typeof renderWeeklyView === 'function') renderWeeklyView();
+  if (typeof renderMapV2 === 'function') renderMapV2(); else renderMapSummary();
+  window.dispatchEvent(new Event('spideycontentready'));
+  return removed;
+}
 function refreshContent() {
+  // Remove finished events even on an offline Samsung with a cached catalog.
+  pruneExpiredPublicEvents();
   if (Date.now() - lastContentCheck >= 60000) loadContent({ refresh: true });
 }
+setInterval(() => {
+  if (document.visibilityState === 'visible') pruneExpiredPublicEvents();
+}, 60 * 1000);
 setInterval(() => { if (document.visibilityState === 'visible') refreshContent(); }, 15 * 60000);
 window.addEventListener('online', refreshContent);
 window.addEventListener('focus', refreshContent);

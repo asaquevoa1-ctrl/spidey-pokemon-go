@@ -37,7 +37,9 @@ try{
       if(navigator.clipboard)Object.defineProperty(navigator.clipboard,'writeText',{value:copy,configurable:true});
       else Object.defineProperty(navigator,'clipboard',{value:{writeText:copy},configurable:true});
     });
-    await page.locator('#copyActiveStampCoord').click();
+    // Clipboard copying must be tested by the observed payload, not by waiting
+    // on unrelated pending page navigation triggered in Chromium headless.
+    await page.locator('#copyActiveStampCoord').click({noWaitAfter:true});
     if(await page.evaluate(()=>window.__lastCopied)!=='43.585848,141.423898')throw Error('One-tap lid coordinate copy failed');
     await page.locator('#stampActiveStop .stamp-art-load-failed').waitFor({state:'visible',timeout:15000});
     if(await page.locator('#stampActiveStop img').count())throw Error('Broken external image icon remained');
