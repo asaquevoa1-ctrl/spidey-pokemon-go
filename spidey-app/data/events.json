@@ -5488,10 +5488,17 @@
         "Mega Charizard X e Y"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
+        "name": "Pokémon GO • programação oficial de outubro de 2026",
+        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+        "confidence": "official"
       },
+      "verification_sources": [
+        {
+          "name": "Leek Duck • Mega Charizard X e Y em Mega-Reides",
+          "url": "https://leekduck.com/events/mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026/",
+          "confidence": "community"
+        }
+      ],
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2026-10-21T06:00:00-03:00",
@@ -5504,15 +5511,17 @@
         "mode": "start"
       },
       "presentation": {
-        "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "requires_art": true,
+        "fallback_visual": "approved-premium"
       },
       "locations": [],
       "gpx": {
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Datas e protagonistas confirmados na programação oficial; janela diária de 06h a 22h complementada por catálogo comunitário verificado."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
