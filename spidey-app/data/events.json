@@ -8077,6 +8077,623 @@
           "confidence": "community_reference"
         }
       ]
+    },
+    {
+      "id": "2026-national-trust-27-sites",
+      "slug": "2026-national-trust-27-sites",
+      "title": "Pokémon GO × National Trust — 27 locais no Reino Unido",
+      "summary": "Parceria oficial prorrogada até 31/12/2026. Pesquisa Temporária local, reides com fundo especial e referências dos 27 locais participantes para copiar.",
+      "category": "regional_event",
+      "tags": [
+        "National Trust",
+        "Reino Unido",
+        "27 locais",
+        "Pesquisa Temporária",
+        "Passe de Reide Premium",
+        "Fundo de Localização"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial atualizado",
+        "url": "https://pokemongo.com/news/nationaltrust-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/London",
+        "start_local": "2026-07-18T00:00:00+01:00",
+        "end_local": "2026-12-31T23:59:00+00:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-07-17T20:00:00-03:00",
+        "end_brazil": "2026-12-31T20:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "locations": [
+        {
+          "label": "Chirk Castle and Garden · Wrexham, País de Gales",
+          "name": "Chirk Castle and Garden",
+          "region": "Wrexham, País de Gales",
+          "event_region": "South West and Wales",
+          "latitude": 52.93539,
+          "longitude": -3.08941,
+          "coordinate_text": "52.93539,-3.08941",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Killerton · Devon, Inglaterra",
+          "name": "Killerton",
+          "region": "Devon, Inglaterra",
+          "event_region": "South West and Wales",
+          "latitude": 50.79128,
+          "longitude": -3.45763,
+          "coordinate_text": "50.79128,-3.45763",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Kingston Lacy · Dorset, Inglaterra",
+          "name": "Kingston Lacy",
+          "region": "Dorset, Inglaterra",
+          "event_region": "South West and Wales",
+          "latitude": 50.81096,
+          "longitude": -2.03171,
+          "coordinate_text": "50.81096,-2.03171",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Lacock · Wiltshire, Inglaterra",
+          "name": "Lacock",
+          "region": "Wiltshire, Inglaterra",
+          "event_region": "South West and Wales",
+          "latitude": 51.41496,
+          "longitude": -2.1176,
+          "coordinate_text": "51.41496,-2.11760",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Stourhead · Wiltshire, Inglaterra",
+          "name": "Stourhead",
+          "region": "Wiltshire, Inglaterra",
+          "event_region": "South West and Wales",
+          "latitude": 51.10507,
+          "longitude": -2.31787,
+          "coordinate_text": "51.10507,-2.31787",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Tredegar House · Newport, País de Gales",
+          "name": "Tredegar House",
+          "region": "Newport, País de Gales",
+          "event_region": "South West and Wales",
+          "latitude": 51.56176,
+          "longitude": -3.02789,
+          "coordinate_text": "51.56176,-3.02789",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Trelissick · Cornwall, Inglaterra",
+          "name": "Trelissick",
+          "region": "Cornwall, Inglaterra",
+          "event_region": "South West and Wales",
+          "latitude": 50.21718,
+          "longitude": -5.03393,
+          "coordinate_text": "50.21718,-5.03393",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Tyntesfield · North Somerset, Inglaterra",
+          "name": "Tyntesfield",
+          "region": "North Somerset, Inglaterra",
+          "event_region": "South West and Wales",
+          "latitude": 51.44079,
+          "longitude": -2.71242,
+          "coordinate_text": "51.44079,-2.71242",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Dunham Massey · Greater Manchester, Inglaterra",
+          "name": "Dunham Massey",
+          "region": "Greater Manchester, Inglaterra",
+          "event_region": "North and Northern Ireland",
+          "latitude": 53.38284,
+          "longitude": -2.40014,
+          "coordinate_text": "53.38284,-2.40014",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Fountains Abbey · North Yorkshire, Inglaterra",
+          "name": "Fountains Abbey",
+          "region": "North Yorkshire, Inglaterra",
+          "event_region": "North and Northern Ireland",
+          "latitude": 54.10948,
+          "longitude": -1.58184,
+          "coordinate_text": "54.10948,-1.58184",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Gibside · Tyne & Wear, Inglaterra",
+          "name": "Gibside",
+          "region": "Tyne & Wear, Inglaterra",
+          "event_region": "North and Northern Ireland",
+          "latitude": 54.9205,
+          "longitude": -1.73195,
+          "coordinate_text": "54.92050,-1.73195",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Lyme · Cheshire, Inglaterra",
+          "name": "Lyme",
+          "region": "Cheshire, Inglaterra",
+          "event_region": "North and Northern Ireland",
+          "latitude": 53.33804,
+          "longitude": -2.0547,
+          "coordinate_text": "53.33804,-2.05470",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Mount Stewart · County Down, Irlanda do Norte",
+          "name": "Mount Stewart",
+          "region": "County Down, Irlanda do Norte",
+          "event_region": "North and Northern Ireland",
+          "latitude": 54.55165,
+          "longitude": -5.60212,
+          "coordinate_text": "54.55165,-5.60212",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Anglesey Abbey · Cambridgeshire, Inglaterra",
+          "name": "Anglesey Abbey",
+          "region": "Cambridgeshire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 52.23649,
+          "longitude": 0.24398,
+          "coordinate_text": "52.23649,0.24398",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Attingham Park · Shropshire, Inglaterra",
+          "name": "Attingham Park",
+          "region": "Shropshire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 52.68634,
+          "longitude": -2.66441,
+          "coordinate_text": "52.68634,-2.66441",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Belton Estate · Lincolnshire, Inglaterra",
+          "name": "Belton Estate",
+          "region": "Lincolnshire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 52.94307,
+          "longitude": -0.617821,
+          "coordinate_text": "52.94307,-0.617821",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Calke Abbey · Derbyshire, Inglaterra",
+          "name": "Calke Abbey",
+          "region": "Derbyshire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 52.79976,
+          "longitude": -1.45609,
+          "coordinate_text": "52.79976,-1.45609",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Clumber Park · Nottinghamshire, Inglaterra",
+          "name": "Clumber Park",
+          "region": "Nottinghamshire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 53.27095,
+          "longitude": -1.05191,
+          "coordinate_text": "53.27095,-1.051910",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Hanbury Hall · Worcestershire, Inglaterra",
+          "name": "Hanbury Hall",
+          "region": "Worcestershire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 52.27179,
+          "longitude": -2.08332,
+          "coordinate_text": "52.27179,-2.08332",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Hardwick · Derbyshire, Inglaterra",
+          "name": "Hardwick",
+          "region": "Derbyshire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 53.16877,
+          "longitude": -1.30873,
+          "coordinate_text": "53.16877,-1.30873",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Wimpole Estate · Cambridgeshire, Inglaterra",
+          "name": "Wimpole Estate",
+          "region": "Cambridgeshire, Inglaterra",
+          "event_region": "Midlands and East of England",
+          "latitude": 52.14105,
+          "longitude": -0.04978,
+          "coordinate_text": "52.14105,-0.04978",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Cliveden · Buckinghamshire, Inglaterra",
+          "name": "Cliveden",
+          "region": "Buckinghamshire, Inglaterra",
+          "event_region": "London and South East",
+          "latitude": 51.55685,
+          "longitude": -0.68172,
+          "coordinate_text": "51.55685,-0.68172",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Mottisfont · Hampshire, Inglaterra",
+          "name": "Mottisfont",
+          "region": "Hampshire, Inglaterra",
+          "event_region": "London and South East",
+          "latitude": 51.04112,
+          "longitude": -1.535211,
+          "coordinate_text": "51.04112,-1.535211",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Nymans · West Sussex, Inglaterra",
+          "name": "Nymans",
+          "region": "West Sussex, Inglaterra",
+          "event_region": "London and South East",
+          "latitude": 51.04923,
+          "longitude": -0.19526,
+          "coordinate_text": "51.04923,-0.19526",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Polesden Lacey · Surrey, Inglaterra",
+          "name": "Polesden Lacey",
+          "region": "Surrey, Inglaterra",
+          "event_region": "London and South East",
+          "latitude": 51.25884,
+          "longitude": -0.37418,
+          "coordinate_text": "51.25884,-0.37418",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Scotney Castle · Kent, Inglaterra",
+          "name": "Scotney Castle",
+          "region": "Kent, Inglaterra",
+          "event_region": "London and South East",
+          "latitude": 51.09283,
+          "longitude": 0.40826,
+          "coordinate_text": "51.09283,0.40826",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        },
+        {
+          "label": "Stowe Gardens · Buckinghamshire, Inglaterra",
+          "name": "Stowe Gardens",
+          "region": "Buckinghamshire, Inglaterra",
+          "event_region": "London and South East",
+          "latitude": 52.02206,
+          "longitude": -1.00813,
+          "coordinate_text": "52.02206,-1.00813",
+          "coordinate_type": "national_trust_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Referência geográfica enviada pela comunidade. A posição do Ginásio ou ponto que ativa a pesquisa NÃO foi confirmada."
+        }
+      ],
+      "location_label": "27 propriedades National Trust • Reino Unido",
+      "gpx": {
+        "enabled": false,
+        "reason": "Referências de locais enviadas pela comunidade, não Ginásios/Poképaradas exatos confirmados; não criar GPX de Ginásios."
+      },
+      "notes": [
+        "Parceira Pokémon GO × National Trust prorrogada oficialmente até 31/12/2026.",
+        "27 propriedades participantes com Reides temáticas e Pesquisas Temporárias locais. Cada local tem fundo temático próprio para Pokémon elegíveis, de acordo com o anúncio oficial.",
+        "Pokémon GO Hub descreve uma Pesquisa Temporária local de 3 etapas; uma tarefa da 3ª etapa pode conceder 1 Passe de Reide Premium.",
+        "O relato da comunidade de '27 passes' considera a obtenção e conclusão de 27 pesquisas locais. NÃO é recompensa automática de 27 passes nem benefício garantido a qualquer conta.",
+        "As tarefas publicadas incluem fazer 30 lançamentos curvos Bons e vencer 3 reides, entre outras. Tarefas e recompensas podem mudar até dezembro.",
+        "As coordenadas abaixo são referências das PROPRIEDADES, enviadas pela comunidade, e NÃO localizações verificadas do Ginásio ou do ponto de ativação da pesquisa.",
+        "Não há comprovação oficial de que apenas carregar o mapa sem visitar presencialmente a propriedade ative a pesquisa. Não prometer ausência de tempo de espera/cooldown.",
+        "Reides especiais: Hoppip no Sudeste, Sewaddle em Midlands/Leste, Pineco no Norte/Irlanda do Norte e Seedot no Sudoeste/Gales, conforme anúncio oficial.",
+        "Antes de viajar, confirme regras de acesso ao National Trust; alguns locais podem exigir ingresso.",
+        "Fonte de tarefas: https://pokemongohub.net/post/event/national-trust-x-pokemon-go-events/"
+      ],
+      "bonuses": [
+        "Pesquisas Temporárias locais e encontros com Treecko, Grovyle e Sceptile com fundo de localização temática, conforme as regras oficiais.",
+        "Passe de Reide Premium documentado como uma das recompensas de tarefa na terceira etapa da pesquisa local; não entregue instantaneamente.",
+        "Reides de uma estrela com Pokémon regionais do evento e fundos de localização próprios.",
+        "27 referências geográficas para copiar; Ginásios exatos ainda não verificados."
+      ],
+      "pokemon": [
+        {
+          "name": "Treecko, Grovyle e Sceptile",
+          "note": "Encontros em pesquisas locais com fundos especiais."
+        },
+        {
+          "name": "Hoppip, Sewaddle, Pineco e Seedot",
+          "note": "Reides de uma estrela conforme a região; fundos temáticos por propriedade."
+        }
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evento de longo período: impedir alerta repetitivo até cadência verificada."
+      },
+      "status": "draft",
+      "verified_at": "2026-10-15",
+      "updated_at": "2026-10-15T19:55:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial e extensão",
+          "url": "https://pokemongo.com/news/nationaltrust-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub • estrutura histórica da pesquisa",
+          "url": "https://pokemongohub.net/post/event/national-trust-x-pokemon-go-events/",
+          "confidence": "community_verified_historical"
+        },
+        {
+          "name": "27 coordenadas fornecidas pelo usuário",
+          "url": null,
+          "confidence": "community_supplied_venue_reference"
+        }
+      ]
+    },
+    {
+      "id": "2026-pokemon-night-out-la",
+      "slug": "2026-pokemon-night-out-la",
+      "title": "Pokémon Night Out — Los Angeles",
+      "summary": "Show oficial comemorativo dos 30 anos de Pokémon com Marshmello e Alison Wonderland. Local presencial; coordenada de referência da arena.",
+      "category": "local_event",
+      "tags": [
+        "Pokémon 30",
+        "Pokémon Night Out",
+        "EDM",
+        "Marshmello",
+        "Alison Wonderland",
+        "Evento presencial",
+        "Localização"
+      ],
+      "source": {
+        "name": "Pokémon 30 • página oficial Night Out",
+        "url": "https://30.pokemon.com/pt-br/night-out/",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-10-24T19:30:00-07:00",
+        "end_local": "2026-10-24T19:30:00-07:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-24T23:30:00-03:00",
+        "end_brazil": "2026-10-24T23:30:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "location_label": "Intuit Dome • Inglewood, Califórnia, EUA",
+      "locations": [
+        {
+          "label": "Intuit Dome • Inglewood, Califórnia, EUA",
+          "latitude": 33.94403,
+          "longitude": -118.34218,
+          "coordinate_text": "33.94403,-118.34218",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Coordenada aproximada de local de show fornecida por publicação da comunidade. Não confirma Ginásio ou Poképarada do Pokémon GO."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Local de concerto, não localização verificada de Ginásio ou Poképarada."
+      },
+      "notes": [
+        "Início do show às 19h30, horário do Pacífico, em 24/10/2026",
+        "O show de Los Angeles também será transmitido oficialmente pela Twitch e YouTube. Recompensa em Pokémon GO via Twitch Drop exige 30 minutos de transmissão e vinculação da conta Pokémon Trainer Central. A notícia da recompensa já está cadastrada separadamente no Spidey.",
+        "Mewtwo Sombroso, fundo de localização e Pesquisa Temporária com Toxtricity foram mencionados no Discord, mas NÃO foram confirmados nos anúncios oficiais consultados; não anunciar como bônus do jogo.",
+        "Ingressos e regras para o evento presencial: consulte os organizadores oficiais.",
+        "A coordenada é referência do local do concerto. Não é coordenada exata de Reide especial Pokémon GO."
+      ],
+      "bonuses": [],
+      "pokemon": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Shows de música: não agendar notificação de conteúdo Pokémon GO sem confirmação da programação."
+      },
+      "status": "draft",
+      "verified_at": "2026-10-15",
+      "updated_at": "2026-10-15T20:05:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon 30 • Night Out oficial",
+          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "confidence": "official"
+        },
+        {
+          "name": "The O2 • horário de Londres",
+          "url": "https://www.theo2.co.uk/events/detail/pokemon-night-out",
+          "confidence": "official"
+        },
+        {
+          "name": "Coordenada divulgada no Discord",
+          "url": null,
+          "confidence": "community_supplied_venue_reference"
+        }
+      ]
+    },
+    {
+      "id": "2026-pokemon-night-out-london",
+      "slug": "2026-pokemon-night-out-london",
+      "title": "Pokémon Night Out — Londres",
+      "summary": "Show oficial comemorativo dos 30 anos de Pokémon com Marshmello e Alison Wonderland. Local presencial; coordenada de referência da arena.",
+      "category": "local_event",
+      "tags": [
+        "Pokémon 30",
+        "Pokémon Night Out",
+        "EDM",
+        "Marshmello",
+        "Alison Wonderland",
+        "Evento presencial",
+        "Localização"
+      ],
+      "source": {
+        "name": "Pokémon 30 • página oficial Night Out",
+        "url": "https://30.pokemon.com/pt-br/night-out/",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/London",
+        "start_local": "2026-11-10T18:00:00+00:00",
+        "end_local": "2026-11-10T18:00:00+00:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-10T15:00:00-03:00",
+        "end_brazil": "2026-11-10T15:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "location_label": "The O2 Arena • Londres, Reino Unido",
+      "locations": [
+        {
+          "label": "The O2 Arena • Londres, Reino Unido",
+          "latitude": 51.502949,
+          "longitude": 0.002369,
+          "coordinate_text": "51.502949,0.002369",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "note": "Coordenada aproximada de local de show fornecida por publicação da comunidade. Não confirma Ginásio ou Poképarada do Pokémon GO."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Local de concerto, não localização verificada de Ginásio ou Poképarada."
+      },
+      "notes": [
+        "Abertura das portas às 18h, horário de Londres, em 10/11/2026; início e término do show não confirmados.",
+        "The O2 confirma abertura de portas às 18h, horário de Londres (GMT em novembro). O Discord mostrava incorretamente PDT para Londres: não usar essa hora. O horário exibido nesta ficha é a abertura das portas, NÃO o início do espetáculo.",
+        "Mewtwo Sombroso, fundo de localização e Pesquisa Temporária com Toxtricity foram mencionados no Discord, mas NÃO foram confirmados nos anúncios oficiais consultados; não anunciar como bônus do jogo.",
+        "Ingressos e regras para o evento presencial: consulte os organizadores oficiais.",
+        "A coordenada é referência do local do concerto. Não é coordenada exata de Reide especial Pokémon GO."
+      ],
+      "bonuses": [],
+      "pokemon": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Shows de música: não agendar notificação de conteúdo Pokémon GO sem confirmação da programação."
+      },
+      "status": "draft",
+      "verified_at": "2026-10-15",
+      "updated_at": "2026-10-15T20:05:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon 30 • Night Out oficial",
+          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "confidence": "official"
+        },
+        {
+          "name": "The O2 • horário de Londres",
+          "url": "https://www.theo2.co.uk/events/detail/pokemon-night-out",
+          "confidence": "official"
+        },
+        {
+          "name": "Coordenada divulgada no Discord",
+          "url": null,
+          "confidence": "community_supplied_venue_reference"
+        }
+      ]
     }
   ]
 }
