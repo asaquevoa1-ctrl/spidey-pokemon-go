@@ -1,0 +1,43 @@
+{
+  "schema": "spidey-premium-art-batch-20261017",
+  "status": "APPROVED_DELEGATED_QA_PASSED",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "visual_note": "Novos pôsteres SVG com sprites oficiais incorporados, logo original incorporado byte a byte e paisagens originais; QA Chromium renderizou os quatro em 390 px e registrou capturas. Avaliação estética física Android e comparação humana ainda pendentes.",
+  "prior_versions_preserved": true,
+  "poster_preview_run": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39062551187",
+  "checks": {
+    "node": 3,
+    "chrome_can_render_4": true,
+    "android_physical": false,
+    "actual_png_user_asset_not_used": true
+  },
+  "artworks": [
+    {
+      "id": "2026-ana-pokemon-jet-red",
+      "file": "spidey-app/assets/events/premium/ana-pokemon-jet-red-2026-spidey-premium-v1.svg",
+      "sha256": "b16ef43b001658bd09ca764d1e43b59619a5607a4b2d5fd84ec2a8bc0fd5a882"
+    },
+    {
+      "id": "2026-ana-pokemon-jet-green",
+      "file": "spidey-app/assets/events/premium/ana-pokemon-jet-green-2026-spidey-premium-v1.svg",
+      "sha256": "5ccc98d84e5920b075d85a81c902274e630ddfd7b25500c820a4943456f5c526"
+    },
+    {
+      "id": "2026-10-24-fc-seoul",
+      "file": "spidey-app/assets/events/premium/fc-seoul-20261024-spidey-premium-v1.svg",
+      "sha256": "8364afe92d6a9b66ede5f10cb25e334c47e9b0431484fc7314638310047c68d4"
+    },
+    {
+      "id": "2026-national-trust-27-sites",
+      "file": "spidey-app/assets/events/premium/national-trust-27-2026-spidey-premium-v1.svg",
+      "sha256": "67805438e457ee977e9a4214680850884422c95efddad917e0287aef351f18ef"
+    }
+  ],
+  "safety": [
+    "Não conter string SpideyNexus nas artes.",
+    "Preservar arquivos anteriores de master.",
+    "Pontos ANA e National Trust são referências, não Ginásios nem gatilhos de pesquisa verificados.",
+    "Reversão apenas via nova versão ou revert do PR; não sobrescrever imagens anteriores."
+  ]
+}
