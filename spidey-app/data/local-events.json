@@ -2,6 +2,62 @@
   "schema_version": "spidey-local-events-v1",
   "events": [
     {
+      "id": "2026-10-17-nice-regional",
+      "title": "Regional Pokémon de Nice • 17–18 de outubro",
+      "place": "Palais des Expositions, Nice, França",
+      "dates": "17 out 09h – 18 out 20h (Nice; horário final comunitário)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Campeonato oficial; informações sobre pesquisas e bônus locais vieram da comunidade McFly, não de anúncio oficial do Pokémon GO.",
+      "schedule": {
+        "start_date": "2026-10-17",
+        "start_time": "09:00",
+        "end_date": "2026-10-18",
+        "end_time": "20:00",
+        "timezone": "Europe/Paris"
+      },
+      "source": {
+        "name": "Play! Pokémon • agenda oficial",
+        "url": "https://championships.pokemon.com/en-us/events/regionals",
+        "confidence": "official"
+      },
+      "bonuses": [],
+      "community_reports": {
+        "source": "McFly • imagem e texto enviados pelo usuário, não oficial",
+        "verified": false,
+        "claims": [
+          "Pesquisa temporária por batalhas na Liga de Batalha GO",
+          "Pesquisa Fazer um novo amigo",
+          "MT Élite e Megaenergia",
+          "Corsola de Galar perto de Módulos Atrair",
+          "3 trocas especiais por dia; duração de Cebos de 3h"
+        ],
+        "disclaimer": "Bônus descritos por fãs, não confirmados oficialmente; disponibilidade apenas nas proximidades da sede."
+      },
+      "locations": [
+        {
+          "id": "nice-palais-expositions-community-reference",
+          "name": "Palais des Expositions de Nice",
+          "address": "Parvis de l'Europe, 06000 Nice, França",
+          "latitude": 43.7081,
+          "longitude": 7.2827,
+          "coordinate_text": "43.708100,7.282700",
+          "coordinate_type": "community_venue_reference",
+          "coordinate_label": "Referência da sede • Ginásios não verificados",
+          "coordinate_confidence": "community_supplied",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Coordenada da sede, não Ginásio ou Poképarada exata."
+      },
+      "verified_at": "2026-10-17",
+      "detail_title": "Regional de Nice • 2026"
+    },
+    {
       "id": "2026-10-24-fc-seoul",
       "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
       "place": "Estádio da Copa do Mundo de Seul, Coreia do Sul",
