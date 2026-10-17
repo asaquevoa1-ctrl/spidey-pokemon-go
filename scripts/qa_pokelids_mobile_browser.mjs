@@ -2,9 +2,6 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import { chromium } from 'playwright-core';
 
-// Avoid indefinite screenshot waits on remote font readiness in CI; DOM, labels and coordinates are asserted separately.
-process.env.PW_TEST_SCREENSHOT_NO_FONTS_READY = '1';
-
 const output = 'test-results/pokelids-mobile';
 fs.mkdirSync(output,{recursive:true});
 const server=spawn('python3',['-m','http.server','4178','--directory','.'],{stdio:'ignore'});
@@ -17,10 +14,7 @@ if(!ready){server.kill('SIGTERM');throw Error('Pokelids local preview not availa
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome'});
 const results=[];
 try{
-  // Keep all four viewport/theme checks, but limit Chrome concurrency to two mobile contexts.
-  const scenarios=[390,430].flatMap(width=>['light','dark'].map(theme=>({width,theme})));
-  for(let offset=0;offset<scenarios.length;offset+=2){
-    await Promise.all(scenarios.slice(offset,offset+2).map(async ({width,theme})=>{
+  for(const width of [390,430])for(const theme of ['light','dark']){
     const context=await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
     const page=await context.newPage();
     await page.addInitScript(v=>localStorage.setItem('spidey-theme',v),theme);
@@ -45,17 +39,12 @@ try{
     });
     // Clipboard copying must be tested by the observed payload, not by waiting
     // on unrelated pending page navigation triggered in Chromium headless.
-    await page.locator('#copyActiveStampCoord').click({noWaitAfter:true,force:true});
+    await page.locator('#copyActiveStampCoord').click({noWaitAfter:true});
     if(await page.evaluate(()=>window.__lastCopied)!=='43.585848,141.423898')throw Error('One-tap lid coordinate copy failed');
     await page.locator('#stampActiveStop .stamp-art-load-failed').waitFor({state:'visible',timeout:15000});
     if(await page.locator('#stampActiveStop img').count())throw Error('Broken external image icon remained');
     if(!await page.locator('#stampActiveStop a').filter({hasText:'Ver tampa oficial'}).count())throw Error('Official link missing');
-    // Changing a lid is an in-app action, not a page navigation.
-    await page.locator('#stampNext').click({noWaitAfter:true,force:true});
-    await page.waitForFunction((previous) => {
-      const code=document.querySelector('#stampActiveStop .pokelid-place-copy code');
-      return code && code.textContent.trim() && code.textContent.trim() !== previous;
-    }, v.trim(), {timeout:12000});
+    await page.locator('#stampNext').click();
     const other=await page.locator('#stampActiveStop .pokelid-place-copy code').textContent();
     if(!other.trim()||other.trim()===v.trim())throw Error('Next lid coordinate missing');
     const box=await page.locator('#stampActiveStop .pokelid-place-copy').boundingBox();
@@ -63,7 +52,6 @@ try{
     await page.screenshot({path:`${output}/pokelids-${width}-${theme}.png`,fullPage:false});
     results.push({width,theme,copy:'ok',coordinates:'ok',imageFallback:'ok',gpx:'blocked'});
     await context.close();
-    }));
   }
   console.log(JSON.stringify({passed:results.length,checks:results}));
 }finally{
