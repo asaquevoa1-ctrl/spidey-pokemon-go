@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-shadow-landorus-17:start:60",
-      "event_id": "2026-10-shadow-landorus-17",
-      "event_title": "Shadow Raids: Landorus (Forma Encarnada)",
-      "category": "shadow_raids",
-      "scheduled_for": "2026-10-16T23:00:00-03:00",
-      "event_start": "2026-10-17T00:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Shadow Raids: Landorus (Forma Encarnada) começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-shadow-landorus-17",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • programação oficial de outubro de 2026",
-        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-sandile-hatch-day:start:60",
       "event_id": "2026-10-sandile-hatch-day",
       "event_title": "Dia de Chocar: Sandile",
@@ -546,7 +528,7 @@
     }
   ],
   "meta": {
-    "pending_count": 30,
+    "pending_count": 29,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
