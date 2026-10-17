@@ -22,6 +22,17 @@
     const refs=(event.locations||[]).filter(p=>
       p.coordinate_type==='airport_terminal_reference'&&
       p.exact_raid_gym_verified===false&&parse(p.coordinate_text));
+    const approved=window.SPIDEY_APPROVED_ART_MASTER?.[phase];
+    const poster=root.querySelector('#anaEventPoster');
+    const posterStage=root.querySelector('#anaPosterStage');
+    if(poster&&posterStage){
+      posterStage.hidden=!approved;
+      if(approved){
+        const src=approved.file+'?v='+approved.sha256.slice(0,12);
+        poster.alt=phase.endsWith('-red')?'ANA Pokémon Jet Vermelho • Charmander':'ANA Pokémon Jet Verde • Bulbasaur';
+        if(poster.getAttribute('src')!==src)poster.src=src;
+      }
+    }
     const hero=root.querySelector('#anaEventSummary');
     if(hero){
       const who=phase.endsWith('-red')?'Charmander':'Bulbasaur';
@@ -57,6 +68,7 @@
       '<div class="ana-phase-tabs" role="group" aria-label="Fase do evento">'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-red" aria-pressed="true" type="button">🔴 Charmander • 6 aeroportos</button>'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-green" aria-pressed="false" type="button">🟢 Bulbasaur • 14 aeroportos</button></div>'+
+      '<div id="anaPosterStage" class="ana-poster-stage" hidden><img id="anaEventPoster" alt="Pôster do evento ANA" loading="lazy" onerror="this.parentElement.hidden=true"></div>'+
       '<div id="anaEventSummary" class="ana-event-summary" aria-live="polite"></div>'+
       '<label class="ana-search-label" for="anaAirportSearch">Buscar aeroporto</label>'+
       '<input id="anaAirportSearch" class="ana-search" type="search" autocomplete="off" placeholder="Ex.: Haneda, Narita, HND, FUK" aria-controls="anaAirportList">'+
