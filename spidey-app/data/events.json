@@ -2,6 +2,68 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-national-trust-27-sites",
+      "slug": "2026-national-trust-27-sites",
+      "title": "Pokémon GO × National Trust — 27 locais",
+      "summary": "Parceria presencial de Pokémon GO e National Trust com 27 locais participantes no Reino Unido, Reides com Fundo de Localização e Pesquisas Temporárias locais; guia de referências na aba Trust.",
+      "category": "regional_event",
+      "tags": [
+        "National Trust",
+        "Reino Unido",
+        "27 locais",
+        "Pesquisas Temporárias",
+        "Reides presenciais"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/news/nationaltrust-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/London",
+        "start_local": "2026-07-18T00:00:00+01:00",
+        "end_local": "2026-12-31T23:59:59+00:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-07-17T20:00:00-03:00",
+        "end_brazil": "2026-12-31T20:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "location_label": "Reino Unido • 27 propriedades National Trust",
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "27 coordenadas no guia dedicado são referências comunitárias de propriedades, não Ginásios, Poképaradas ou pontos exatos de ativação de pesquisas."
+      },
+      "notes": [
+        "A parceria foi estendida até 31/12/2026 em anúncio oficial.",
+        "Consulte os 27 locais, suas regiões e botões de cópia na aba Trust; não divulgar pontos exatos de Ginásio sem verificação.",
+        "Reides locais e Pesquisas Temporárias disponíveis em locais participantes, conforme anúncio oficial.",
+        "O tutorial comunitário de 27 Passes Premium é uma possibilidade condicionada à disponibilidade e conclusão das pesquisas, não uma garantia.",
+        "Horário exato de término em 31/12 não foi divulgado na atualização oficial; final do dia em Londres usado apenas para delimitar a validade do cadastro sem promover o card ao calendário."
+      ],
+      "bonuses": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evento longo atendido na aba própria Trust; não enviar alertas repetitivos."
+      },
+      "status": "draft",
+      "verified_at": "2026-10-17",
+      "updated_at": "2026-10-17T16:00:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO oficial",
+          "url": "https://pokemongo.com/news/nationaltrust-2026",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
       "id": "2026-10-17-nice-regional",
       "slug": "2026-10-17-nice-regional",
       "title": "Regional Pokémon de Nice, França • 2026",
@@ -134,7 +196,7 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": false,
+        "requires_art": true,
         "fallback_visual": "date"
       },
       "location_label": "Estádio da Copa do Mundo de Seul · Coreia do Sul",

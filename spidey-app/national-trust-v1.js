@@ -63,6 +63,17 @@
       '<option value="Londres e Sudeste">Londres e Sudeste (6)</option></select></div>'+
       '<p id="nationalTrustCount" role="status" class="microcopy">Carregando 27 locais…</p>'+
       '<div id="nationalTrustPlaces" class="nt-place-list"></div></div>';
+    // O guia de 27 localidades mantém seu próprio pôster, sem inventar Ginásios.
+    const approved=window.SPIDEY_APPROVED_ART_MASTER?.['2026-national-trust-27-sites'];
+    if(approved){
+      const intro=details.querySelector('.nt-intro');
+      const stage=document.createElement('div');stage.className='nt-poster-stage';
+      const poster=document.createElement('img');
+      poster.alt='Pokémon GO × National Trust — 27 locais com pesquisas presenciais';
+      poster.loading='lazy';poster.src=approved.file+'?v='+approved.sha256.slice(0,12);
+      poster.addEventListener('error',()=>{stage.hidden=true;});
+      stage.append(poster);intro.prepend(stage);
+    }
     details.open=true;view.append(details);main.appendChild(view);
     details.querySelector('#ntSearch').addEventListener('input',e=>{search=e.target.value;draw()});
     details.querySelector('#ntGroup').addEventListener('change',e=>{group=e.target.value;draw()});

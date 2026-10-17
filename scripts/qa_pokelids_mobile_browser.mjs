@@ -1,6 +1,8 @@
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import { chromium } from 'playwright-core';
+// Avoid indefinite screenshot waits on remote fonts during the offline Android simulation.
+process.env.PW_TEST_SCREENSHOT_NO_FONTS_READY = '1';
 
 const output = 'test-results/pokelids-mobile';
 fs.mkdirSync(output,{recursive:true});
@@ -49,7 +51,7 @@ try{
     if(!other.trim()||other.trim()===v.trim())throw Error('Next lid coordinate missing');
     const box=await page.locator('#stampActiveStop .pokelid-place-copy').boundingBox();
     if(!box||box.width<120)throw Error('Mobile layout broken');
-    await page.screenshot({path:`${output}/pokelids-${width}-${theme}.png`,fullPage:false});
+    await page.screenshot({path:`${output}/pokelids-${width}-${theme}.png`,fullPage:false,animations:'disabled',timeout:15000});
     results.push({width,theme,copy:'ok',coordinates:'ok',imageFallback:'ok',gpx:'blocked'});
     await context.close();
   }
