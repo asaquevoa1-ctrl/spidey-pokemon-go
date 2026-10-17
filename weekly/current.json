@@ -515,19 +515,19 @@
         "start_brazil": "2026-10-14T06:00:00-03:00",
         "end_brazil": "2026-10-20T22:00:00-03:00",
         "source": {
-          "name": "Pokémon GO Hub • calendário outubro 2026",
-          "url": "https://pokemongohub.net/post/event/october-2026-events/",
-          "confidence": "verified"
+          "name": "Pokémon GO • programação de outubro de 2026",
+          "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+          "confidence": "official"
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "4b6d5b727c02a395075eae6aa58e370b9c2d42b38cdf4eeaf4ede43b7818cca0",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       },
       {
@@ -756,13 +756,13 @@
   ],
   "meta": {
     "calendar_events_in_week": 18,
-    "events_with_weekly_art": 14,
-    "events_with_premium_weekly_art": 14,
+    "events_with_weekly_art": 15,
+    "events_with_premium_weekly_art": 15,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 4,
+    "events_without_weekly_art": 3,
     "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-17T18:50:04.533803-03:00",
+    "generated_at": "2026-10-17T18:59:45.118269-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
