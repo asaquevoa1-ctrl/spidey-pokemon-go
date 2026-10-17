@@ -23,9 +23,11 @@ class RetiredNflPublicCatalogTests(unittest.TestCase):
         self.assertIn("2026-10-24-fc-seoul", ids)
         self.assertIn("2026-chicago-fossil-museum", ids)
 
-    def test_service_worker_excludes_retired_poster(self):
+    def test_app_refreshes_catalog_from_network(self):
+        # PWA loads current JSON with network-first strategy; historical assets stay intact.
         worker = (ROOT / "spidey-app/sw.js").read_text(encoding="utf-8")
-        self.assertNotIn("'./assets/events/premium/nfl-cardinals-20261011-approved-v1.png'", worker)
+        self.assertIn("const isData =", worker)
+        self.assertIn("fetch(request, { cache: 'no-store' })", worker)
 
     def test_historical_approved_art_preserved(self):
         art = ROOT / "spidey-app/assets/events/premium/nfl-cardinals-20261011-approved-v1.png"
