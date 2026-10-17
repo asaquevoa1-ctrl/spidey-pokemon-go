@@ -52,7 +52,7 @@
         "enabled": false,
         "reason": "Evento longo atendido na aba própria Trust; não enviar alertas repetitivos."
       },
-      "status": "published",
+      "status": "draft",
       "verified_at": "2026-10-17",
       "updated_at": "2026-10-17T16:00:00-03:00",
       "verification_sources": [
