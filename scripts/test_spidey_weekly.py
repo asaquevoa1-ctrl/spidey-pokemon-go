@@ -1,15 +1,28 @@
 import copy
+import json
 import unittest
 from datetime import date
+from pathlib import Path
+from unittest.mock import patch
+
+import scripts.build_spidey_weekly as weekly_module
 
 from scripts.build_spidey_weekly import build, load, EVENTS_FILE, load_art_master, resolve_weekly_art, validate_weekly
 
 
 class WeeklyPublicationTests(unittest.TestCase):
     def test_confirmed_date_with_unknown_hours_is_visible_without_an_invented_activity_window(self):
-        weekly = build(date(2026, 10, 11))
-        validate_weekly(weekly)
-        item = next(item for item in weekly["sections"]["also_happening"] if item["id"] == "2026-10-11-nfl-cardinals-pokemon-go-day")
+        # Exercise the archived NFL date-only example without restoring it to production data.
+        fixture = json.loads(Path("tests/fixtures/nfl-retired-20261011.json").read_text(encoding="utf-8"))["event"]
+        def load_with_archived_fixture(path):
+            data = load(path)
+            if path == EVENTS_FILE:
+                return {**data, "events": [*data["events"], fixture]}
+            return data
+        with patch.object(weekly_module, "load", side_effect=load_with_archived_fixture):
+            weekly = build(date(2026, 10, 11))
+            validate_weekly(weekly)
+        item = next(item for item in weekly["sections"]["also_happening"] if item["id"] == fixture["id"])
         self.assertEqual(item["calendar_date"], "2026-10-11")
         self.assertEqual(item["schedule_precision"], "date")
         self.assertIsNone(item["start_brazil"])

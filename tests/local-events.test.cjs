@@ -54,8 +54,10 @@ test('Taipei has two daily windows, closes overnight and never offers an unverif
 });
 
 test('the NFL venue copies the same point in the calendar and local event without becoming a PokéStop route',()=>{
-  const nfl=events.find(e=>e.id==='2026-10-11-nfl-cardinals-pokemon-go-day');
-  const main=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events.find(e=>e.id===nfl.id);
+  // Keep historical venue-reference behavior covered without re-publishing the retired event.
+  const fixture=JSON.parse(fs.readFileSync('tests/fixtures/nfl-retired-20261011.json','utf8'));
+  const nfl=fixture.localEvent;
+  const main=fixture.event;
   assert.deepEqual(main.locations,nfl.locations);
   const location=nfl.locations[0],coordinates=sandbox.window.SpideyLocations.coordinateText(location);
   assert.equal(location.coordinate_type,'venue_reference');
