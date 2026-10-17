@@ -2,6 +2,107 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-10-17-nice-regional",
+      "slug": "2026-10-17-nice-regional",
+      "title": "Regional Pokémon de Nice, França • 2026",
+      "summary": "Campeonatos Regionais de Pokémon em Nice, França, nos dias 17 e 18 de outubro de 2026. Atividades presenciais de Pokémon GO nos arredores do Palais des Expositions; pesquisas e bônus de jogo divulgados por fonte comunitária, ainda não confirmados oficialmente.",
+      "category": "local_event",
+      "tags": [
+        "Nice",
+        "França",
+        "Play! Pokémon",
+        "Regional Championships",
+        "Campeonato presencial",
+        "Pesquisa Temporária"
+      ],
+      "source": {
+        "name": "Play! Pokémon • calendário oficial",
+        "url": "https://championships.pokemon.com/en-us/events/regionals",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Europe/Paris",
+        "start_local": "2026-10-17T09:00:00+02:00",
+        "end_local": "2026-10-18T20:00:00+02:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-17T04:00:00-03:00",
+        "end_brazil": "2026-10-18T15:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "location_label": "Palais des Expositions • Nice, França",
+      "locations": [
+        {
+          "label": "Palais des Expositions de Nice • referência da sede, não Ginásio verificado",
+          "name": "Palais des Expositions de Nice",
+          "address": "Parvis de l'Europe, 06000 Nice, França",
+          "latitude": 43.7081,
+          "longitude": 7.2827,
+          "coordinate_text": "43.708100,7.282700",
+          "coordinate_type": "community_venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "exact_pokestop_verified": false,
+          "source_note": "Ponto de referência enviado pela comunidade para a sede; não representa Ginásio ou Poképarada comprovada."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Coordenada de referência da sede, sem verificação de Ginásio, Poképarada ou região de ativação das pesquisas."
+      },
+      "notes": [
+        "EVENTO PRESENCIAL: programação confirmada de 17 a 18/10/2026 no Palais des Expositions, Nice (França).",
+        "Horário de início 09h de 17/10 confirmado no registro da competição de Pokémon GO; término 20h de 18/10 informado pela comunidade, não confirmado pelo organizador nas fontes consultadas.",
+        "FONTE COMUNITÁRIA (McFly, não oficial): pesquisas temporárias locais incluem tarefas de 2, 4, 6, 8 e 10 batalhas na Liga de Batalha GO e uma pesquisa para fazer um novo amigo, conforme captura enviada.",
+        "FONTE COMUNITÁRIA: alegações de MT de ataque de elite, Megaenergia, encontros regionais, Corsola de Galar em Módulos Atrair, 3 trocas especiais por dia e Módulos Atrair de 3h — ainda não validadas em anúncio oficial do Pokémon GO.",
+        "Bônus e pesquisas descritos na postagem comunitária valeriam apenas no entorno do local do campeonato; não confundir com toda a cidade de Nice.",
+        "A postagem menciona restrição de uma pesquisa de MT Élite já concluída em outro campeonato regional; sujeito a confirmação no jogo.",
+        "O campeonato Play! Pokémon é oficial, mas a postagem de bônus é conteúdo de fãs não oficial; confira os bônus diretamente no jogo antes de planejar viagem.",
+        "Coordenada de referência 43.708100,7.282700 enviada pela comunidade; NÃO é Ginásio confirmado nem justificativa para GPX de Poképaradas."
+      ],
+      "bonuses": [],
+      "pokemon": [],
+      "news": {
+        "title": "Regional de Nice (França) • 17 e 18 de outubro",
+        "summary": "Campeonato oficial em Nice; pesquisa e bônus locais divulgados por fãs, ainda sem confirmação oficial do jogo.",
+        "published_on": "2026-10-17"
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Evento local em andamento e bônus comunitários ainda não verificados; evitar notificação tardia ou não solicitada."
+      },
+      "status": "published",
+      "verified_at": "2026-10-17",
+      "updated_at": "2026-10-17T15:20:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Play! Pokémon • calendário",
+          "url": "https://championships.pokemon.com/en-us/events/regionals",
+          "confidence": "official"
+        },
+        {
+          "name": "Trainer Championships • sede e datas",
+          "url": "https://www.trainerchampionships.com/event/nice-2027/",
+          "confidence": "official"
+        },
+        {
+          "name": "RK9 • início 09h",
+          "url": "https://www.rk9.gg/tournament/NC003-UTcpkBmvfQW1G0",
+          "confidence": "official"
+        },
+        {
+          "name": "McFly • postagem e imagem compartilhadas pelo usuário",
+          "url": null,
+          "confidence": "community_supplied"
+        }
+      ]
+    },
+    {
       "id": "2026-10-24-fc-seoul",
       "slug": "2026-10-24-fc-seoul",
       "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
