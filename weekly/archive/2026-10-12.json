@@ -674,6 +674,37 @@
           "kind": "approved_master",
           "premium": true
         }
+      },
+      {
+        "id": "2026-10-17-nice-regional",
+        "title": "Regional Pokémon de Nice, França • 2026",
+        "summary": "Campeonatos Regionais de Pokémon em Nice, França, nos dias 17 e 18 de outubro de 2026. Atividades presenciais de Pokémon GO nos arredores do Palais des Expositions; pesquisas e bônus de jogo divulgados por fonte comunitária, ainda não confirmados oficialmente.",
+        "category": "local_event",
+        "tags": [
+          "Nice",
+          "França",
+          "Play! Pokémon",
+          "Regional Championships",
+          "Campeonato presencial",
+          "Pesquisa Temporária"
+        ],
+        "start_brazil": "2026-10-17T04:00:00-03:00",
+        "end_brazil": "2026-10-18T15:00:00-03:00",
+        "source": {
+          "name": "Play! Pokémon • calendário oficial",
+          "url": "https://championships.pokemon.com/en-us/events/regionals",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
       }
     ]
   },
@@ -724,14 +755,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 17,
+    "calendar_events_in_week": 18,
     "events_with_weekly_art": 14,
     "events_with_premium_weekly_art": 14,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 3,
-    "events_in_weekly": 17,
+    "events_without_weekly_art": 4,
+    "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-17T15:54:30.340655-03:00",
+    "generated_at": "2026-10-17T16:20:13.406437-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
