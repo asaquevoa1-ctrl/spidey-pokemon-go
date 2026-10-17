@@ -1,0 +1,165 @@
+{
+  "description": "Fixture histórica para testar horário por data e coordenadas de referência, sem republicar a NFL.",
+  "event": {
+    "id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+    "slug": "2026-10-11-nfl-cardinals-pokemon-go-day",
+    "title": "Pokémon GO Day · NFL Cardinals × Lions",
+    "summary": "Pokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.",
+    "category": "regional_event",
+    "tags": [
+      "Regional",
+      "Presencial",
+      "NFL",
+      "Arizona",
+      "Pokémon GO Day"
+    ],
+    "source": {
+      "name": "Arizona Cardinals · Pokémon GO Day",
+      "url": "https://www.azcardinals.com/tickets/group-tickets/special-events",
+      "confidence": "official"
+    },
+    "verification_sources": [
+      {
+        "name": "Arizona Cardinals · calendário oficial 2026",
+        "url": "https://www.azcardinals.com/schedule/",
+        "confidence": "official"
+      },
+      {
+        "name": "State Farm Stadium · endereço oficial",
+        "url": "https://www.statefarmstadium.com/plan-your-visit",
+        "confidence": "official"
+      },
+      {
+        "name": "Dittobase · registro comunitário do fundo",
+        "url": "https://www.dittobase.com/pokemon-go/backgrounds/lc-nfl-cardinals-2026",
+        "confidence": "community"
+      },
+      {
+        "name": "Waze · ponto do State Farm Stadium",
+        "url": "https://www.waze.com/pt-BR/live-map/directions/state-farm-stadium-w-cardinals-dr-1-glendale?to=place.w.162333007.1623592217.345740",
+        "confidence": "community",
+        "kind": "venue_map"
+      }
+    ],
+    "schedule": {
+      "precision": "date",
+      "start_date": "2026-10-11",
+      "end_date": "2026-10-11",
+      "local_timezone": "America/Phoenix",
+      "local_place": "Glendale, Arizona",
+      "brazil_timezone": "America/Sao_Paulo",
+      "game_start_local": "2026-10-11T13:25:00-07:00",
+      "game_start_brazil": "2026-10-11T17:25:00-03:00",
+      "game_time_source_url": "https://www.azcardinals.com/schedule/"
+    },
+    "calendar": {
+      "mode": "span"
+    },
+    "presentation": {
+      "requires_art": true,
+      "fallback_visual": "date"
+    },
+    "locations": [
+      {
+        "id": "state-farm-stadium",
+        "name": "State Farm Stadium",
+        "label": "State Farm Stadium",
+        "address": "1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos",
+        "latitude": 33.527056,
+        "longitude": -112.262363,
+        "source_url": "https://www.statefarmstadium.com/plan-your-visit",
+        "coordinate_source_url": "https://www.waze.com/pt-BR/live-map/directions/state-farm-stadium-w-cardinals-dr-1-glendale?to=place.w.162333007.1623592217.345740",
+        "coordinate_type": "venue_reference",
+        "coordinate_label": "Ponto do estádio",
+        "exact_pokestop_verified": false,
+        "access_note": "Entrada sujeita às regras e aos ingressos do estádio."
+      }
+    ],
+    "gpx": {
+      "enabled": false,
+      "reason": "Coordenadas exatas de Poképaradas não verificadas."
+    },
+    "notes": [
+      "Partida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.",
+      "Pikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time."
+    ],
+    "notifications": {
+      "enabled": false,
+      "reason": "Janela da atividade no jogo ainda não confirmada; push indisponível na hospedagem estática."
+    },
+    "status": "published",
+    "verified_at": "2026-10-11",
+    "updated_at": "2026-10-11"
+  },
+  "localEvent": {
+    "id": "2026-10-11-nfl-cardinals-pokemon-go-day",
+    "title": "Pokémon GO Day · NFL Cardinals × Lions",
+    "detail_title": "Pokémon GO Day · Arizona Cardinals × Detroit Lions",
+    "place": "Glendale, Arizona, Estados Unidos",
+    "dates": "11 out 2026",
+    "status": "official",
+    "locality": "local",
+    "artApproved": false,
+    "note": "Pokémon GO Day no State Farm Stadium, em Glendale (Arizona), em 11/10. Horário das atividades no jogo a confirmar.",
+    "schedule": {
+      "precision": "date",
+      "start_date": "2026-10-11",
+      "end_date": "2026-10-11",
+      "timezone": "America/Phoenix"
+    },
+    "schedule_note": "Partida de futebol americano: 13h25 no Arizona · 17h25 em Brasília.",
+    "source": {
+      "name": "Arizona Cardinals · Pokémon GO Day",
+      "url": "https://www.azcardinals.com/tickets/group-tickets/special-events",
+      "confidence": "official"
+    },
+    "verification_sources": [
+      {
+        "name": "Arizona Cardinals · calendário oficial 2026",
+        "url": "https://www.azcardinals.com/schedule/",
+        "confidence": "official"
+      },
+      {
+        "name": "State Farm Stadium · endereço oficial",
+        "url": "https://www.statefarmstadium.com/plan-your-visit",
+        "confidence": "official"
+      },
+      {
+        "name": "Dittobase · registro comunitário do fundo",
+        "url": "https://www.dittobase.com/pokemon-go/backgrounds/lc-nfl-cardinals-2026",
+        "confidence": "community"
+      },
+      {
+        "name": "Waze · ponto do State Farm Stadium",
+        "url": "https://www.waze.com/pt-BR/live-map/directions/state-farm-stadium-w-cardinals-dr-1-glendale?to=place.w.162333007.1623592217.345740",
+        "confidence": "community",
+        "kind": "venue_map"
+      }
+    ],
+    "bonuses": [],
+    "locations": [
+      {
+        "id": "state-farm-stadium",
+        "name": "State Farm Stadium",
+        "label": "State Farm Stadium",
+        "address": "1 Cardinals Drive, Glendale, Arizona 85305, Estados Unidos",
+        "latitude": 33.527056,
+        "longitude": -112.262363,
+        "source_url": "https://www.statefarmstadium.com/plan-your-visit",
+        "coordinate_source_url": "https://www.waze.com/pt-BR/live-map/directions/state-farm-stadium-w-cardinals-dr-1-glendale?to=place.w.162333007.1623592217.345740",
+        "coordinate_type": "venue_reference",
+        "coordinate_label": "Ponto do estádio",
+        "exact_pokestop_verified": false,
+        "access_note": "Entrada sujeita às regras e aos ingressos do estádio."
+      }
+    ],
+    "gpx": {
+      "enabled": false,
+      "reason": "Coordenadas exatas de Poképaradas não verificadas."
+    },
+    "verified_at": "2026-10-11",
+    "notes": [
+      "Pikachu com fundo dos Cardinals: informado pela comunidade, ainda sem confirmação do time."
+    ]
+  }
+}
