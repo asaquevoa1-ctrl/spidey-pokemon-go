@@ -30,3 +30,8 @@
 .ana-search{display:block;box-sizing:border-box;width:100%;min-height:48px;border-radius:13px;border:1px solid rgba(76,153,175,.65);padding:12px 15px;font:inherit;font-size:1rem;color:var(--text,#102b42);background:var(--surface,#fff)}
 .ana-search:focus-visible{outline:3px solid #15adb6;outline-offset:2px}
 [data-theme=dark] .ana-search{background:#11253c;color:#f1f9fc}
+
+/* Fases ANA: imagem aprovada exibida inteira antes das coordenadas. */
+.ana-poster-stage{margin:16px auto 20px;width:min(100%,465px)}
+.ana-poster-stage[hidden]{display:none}
+.ana-poster-stage img{display:block;width:100%;height:auto;aspect-ratio:1122/1402;object-fit:contain;border-radius:18px;border:1px solid rgba(106,169,188,.45);box-shadow:0 18px 38px rgba(9,21,39,.22)}
