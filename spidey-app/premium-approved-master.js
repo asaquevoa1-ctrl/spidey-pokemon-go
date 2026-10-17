@@ -722,6 +722,17 @@
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
+  "2026-10-mega-dragonite-raids": {
+    "file": "assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "4b6d5b727c02a395075eae6aa58e370b9c2d42b38cdf4eeaf4ede43b7818cca0",
+    "approval_record": "docs/qa/MEGA_DRAGONITE_RAIDS_ART_APPROVAL_20261016.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
   "2026-10-mega-sableye-raids": {
     "file": "assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png",
     "status": "APPROVED",
