@@ -14,7 +14,8 @@ if(!ready){server.kill('SIGTERM');throw Error('Pokelids local preview not availa
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome'});
 const results=[];
 try{
-  for(const width of [390,430])for(const theme of ['light','dark']){
+  // Each viewport/theme is independent; parallel browser contexts keep all four checks within CI timeout.
+  await Promise.all([390,430].flatMap(width=>['light','dark'].map(theme=>({width,theme}))).map(async ({width,theme})=>{
     const context=await browser.newContext({viewport:{width,height:900},serviceWorkers:'block'});
     const page=await context.newPage();
     await page.addInitScript(v=>localStorage.setItem('spidey-theme',v),theme);
@@ -57,7 +58,7 @@ try{
     await page.screenshot({path:`${output}/pokelids-${width}-${theme}.png`,fullPage:false});
     results.push({width,theme,copy:'ok',coordinates:'ok',imageFallback:'ok',gpx:'blocked'});
     await context.close();
-  }
+  }));
   console.log(JSON.stringify({passed:results.length,checks:results}));
 }finally{
   await browser.close();server.kill('SIGTERM');
