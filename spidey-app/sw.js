@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261016-mega-sableye-raids-art1';
+const CACHE = 'spidey-app-20261017-retire-nfl-catalog';
 const CORE = [
   './assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png',
   './assets/events/premium/palkia-five-star-raids-20261021-27-approved-v1.png',
@@ -39,7 +39,6 @@ const CORE = [
   './assets/events/premium/showcase-tuesday-october-2026-approved-v1.png',
   './assets/events/premium/go-battle-thursday-october-2026-approved-v1.png',
   './assets/events/premium/friendship-friday-october-2026-approved-v1.png',
-  './assets/events/premium/nfl-cardinals-20261011-approved-v1.png',
 
   './assets/spidey-icon-192.svg',
   './assets/spidey-icon-512.svg',
