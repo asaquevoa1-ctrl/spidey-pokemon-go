@@ -1,0 +1,30 @@
+name: Spidey - QA artes ANA Seoul Trust
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/*spidey-candidate-v1.svg'
+      - 'scripts/qa_ana_seoul_trust_art_browser.mjs'
+      - 'tests/priority-20261017-art-candidates.test.cjs'
+      - '.github/workflows/spidey-ana-seoul-trust-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  candidate-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - name: Testar integridade e navegador
+        run: |
+          node --test tests/priority-20261017-art-candidates.test.cjs
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_ana_seoul_trust_art_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spidey-ana-seoul-trust-visual-qa
+          path: test-results/spidey-priority-art
