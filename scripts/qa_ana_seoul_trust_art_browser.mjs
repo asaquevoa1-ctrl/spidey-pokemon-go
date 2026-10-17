@@ -24,9 +24,11 @@ try {
  for(const filename of files){
   const page=await browser.newPage({viewport:{width:390,height:800},deviceScaleFactor:1,locale:'pt-BR'});
   page.setDefaultTimeout(20000);
-  const response=await page.goto('http://127.0.0.1:4173/spidey-app/assets/events/review/'+filename,{waitUntil:'domcontentloaded',timeout:20000});
-  if(!response?.ok())throw new Error('SVG endpoint failed: '+filename);
   const imageUrl='http://127.0.0.1:4173/spidey-app/assets/events/review/'+filename;
+  const response=await fetch(imageUrl);
+  if(!response.ok)throw new Error('SVG endpoint failed: '+filename);
+  // setContent requires an HTML document; a directly navigated SVG is XML.
+  await page.goto('http://127.0.0.1:4173/',{waitUntil:'domcontentloaded',timeout:20000});
   await page.setContent('<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#030813;display:grid;place-items:center;min-height:100vh"><img id="poster" alt="Pôster candidato" style="width:390px;max-width:100%;height:auto" src="'+imageUrl+'"></body></html>',{waitUntil:'domcontentloaded'});
   await page.locator('#poster').evaluate(async image=>{if(!image.complete)await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=reject});if(image.decode)await image.decode();});
   const info=await page.locator('#poster').evaluate(image=>{
