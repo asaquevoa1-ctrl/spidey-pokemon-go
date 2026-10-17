@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 
-const event = JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events.find(e => e.id === '2026-10-11-nfl-cardinals-pokemon-go-day');
+const event = JSON.parse(fs.readFileSync('tests/fixtures/nfl-retired-20261011.json', 'utf8')).event;
 function setup() {
   const window = {addEventListener() {}, SPIDEY_APPROVED_ART_MASTER: {}, SPIDEY_PREVIEW_ART: {}};
   const context = vm.createContext({window, URL, Date, Intl, Set, Object, Math,
