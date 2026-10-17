@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-sandile-hatch-day:start:60",
-      "event_id": "2026-10-sandile-hatch-day",
-      "event_title": "Dia de Chocar: Sandile",
-      "category": "hatch_day",
-      "scheduled_for": "2026-10-17T10:00:00-03:00",
-      "event_start": "2026-10-17T11:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Dia de Chocar: Sandile começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-sandile-hatch-day",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/sandile-hatch-day-2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-minior-orionids:start:60",
       "event_id": "2026-10-minior-orionids",
       "event_title": "Minior: chuva de meteoros Orionidas",
@@ -528,7 +510,7 @@
     }
   ],
   "meta": {
-    "pending_count": 29,
+    "pending_count": 28,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
