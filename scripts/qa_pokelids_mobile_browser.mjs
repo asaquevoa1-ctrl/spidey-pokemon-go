@@ -44,7 +44,7 @@ try{
     await page.locator('#stampActiveStop .stamp-art-load-failed').waitFor({state:'visible',timeout:15000});
     if(await page.locator('#stampActiveStop img').count())throw Error('Broken external image icon remained');
     if(!await page.locator('#stampActiveStop a').filter({hasText:'Ver tampa oficial'}).count())throw Error('Official link missing');
-    await page.locator('#stampNext').click();
+    await page.locator('#stampNext').click({noWaitAfter:true});
     const other=await page.locator('#stampActiveStop .pokelid-place-copy code').textContent();
     if(!other.trim()||other.trim()===v.trim())throw Error('Next lid coordinate missing');
     const box=await page.locator('#stampActiveStop .pokelid-place-copy').boundingBox();
