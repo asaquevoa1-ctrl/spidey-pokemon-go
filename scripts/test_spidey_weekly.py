@@ -21,7 +21,7 @@ class WeeklyPublicationTests(unittest.TestCase):
             return data
         with patch.object(weekly_module, "load", side_effect=load_with_archived_fixture):
             weekly = build(date(2026, 10, 11))
-        validate_weekly(weekly)
+            validate_weekly(weekly)
         item = next(item for item in weekly["sections"]["also_happening"] if item["id"] == fixture["id"])
         self.assertEqual(item["calendar_date"], "2026-10-11")
         self.assertEqual(item["schedule_precision"], "date")
