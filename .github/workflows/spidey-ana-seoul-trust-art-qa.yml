@@ -19,6 +19,8 @@ jobs:
           node-version: '24'
       - run: npm ci --ignore-scripts
       - run: npm install --no-save playwright-core@1.56.1
+      - name: Registrar hashes dos candidatos
+        run: sha256sum spidey-app/assets/events/review/*spidey-candidate-v1.svg
       - name: Testar integridade e navegador
         run: |
           node --test tests/priority-20261017-art-candidates.test.cjs
