@@ -27,7 +27,7 @@ test('active, upcoming, date-only and news all honor their appropriate boundarie
   assert.equal(visible(active,when),true);
   const future=events.find(e=>e.id==='2026-10-24-fc-seoul');
   assert.equal(visible(future,when),true);
-  const date=events.find(e=>e.id==='2026-10-11-nfl-cardinals-pokemon-go-day');
+  const date=JSON.parse(fs.readFileSync('tests/fixtures/nfl-retired-20261011.json','utf8')).event;
   assert.equal(visible(date,new Date('2026-10-12T06:50:00Z')),true);
   assert.equal(visible(date,new Date('2026-10-12T08:30:00Z')),false);
   const news=events.find(e=>e.content_type==='news');
