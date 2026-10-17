@@ -1,0 +1,61 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-mega-dragonite-raids",
+  "title": "Mega Reides: Mega Dragonite",
+  "sources": {
+    "official_schedule": {
+      "name": "Pokémon GO — programação de outubro de 2026",
+      "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+      "confidence": "official"
+    },
+    "community_catalog": {
+      "name": "Leek Duck — Mega Dragonite em Mega-Reides",
+      "url": "https://leekduck.com/events/mega-dragonite-in-mega-raids-october-2026/",
+      "confidence": "verified_community"
+    }
+  },
+  "schedule": {
+    "start_local": "2026-10-14T06:00:00-03:00",
+    "end_local": "2026-10-20T22:00:00-03:00",
+    "local_time": true
+  },
+  "art_rules": [
+    "approved_spidey_reference_collection",
+    "mega_dragonite_as_only_pokemon_species",
+    "official_title_date_and_character",
+    "community_time_detail_omitted_from_poster",
+    "no_unverified_bonus_coordinates_species_or_shiny_claim",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Mega Dragonite na rotação de Mega-Reides de 14 a 20 de outubro de 2026.",
+    "O catálogo comunitário complementar registra a janela de 06h a 22h no horário local; esse horário não aparece no pôster.",
+    "O pôster não anuncia bônus, coordenadas, local específico, chance de Brilhante, itens, ataques, CP ou outras espécies."
+  ],
+  "candidate_visual": "Mega Dragonite como protagonista em arena celestial de Mega Reide, com energia azul-turquesa e violeta, pôr do sol e moldura ornamental luminosa da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/mega-dragonite-raids-20261014-20-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 879227,
+  "sha256": "4b6d5b727c02a395075eae6aa58e370b9c2d42b38cdf4eeaf4ede43b7818cca0",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo no sistema visual da referência Spidey aprovada, com Mega Dragonite, marca, título e datas integrados.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada. O PNG recebeu apenas otimização local de paleta e compressão, sem regeneração ou alteração editorial; os bytes finais são idênticos na candidatura e na versão aprovada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "6205f74e64ae322531d4d2bc8d32a31a3f906e8f",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
