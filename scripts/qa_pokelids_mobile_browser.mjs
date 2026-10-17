@@ -2,6 +2,9 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import { chromium } from 'playwright-core';
 
+// Avoid indefinite screenshot waits on remote font readiness in CI; DOM, labels and coordinates are asserted separately.
+process.env.PW_TEST_SCREENSHOT_NO_FONTS_READY = '1';
+
 const output = 'test-results/pokelids-mobile';
 fs.mkdirSync(output,{recursive:true});
 const server=spawn('python3',['-m','http.server','4178','--directory','.'],{stdio:'ignore'});
