@@ -23,3 +23,8 @@
 .nt-place .action-btn{flex:1 1 auto;min-height:44px;text-align:center}
 [data-theme=dark] .nt-place{background:#102338;color:#f0faff}
 @media(max-width:560px){.nt-toolbar{grid-template-columns:1fr}.nt-toolbar label{grid-row:auto}.nt-toolbar input{grid-row:auto}.nt-place-list{grid-template-columns:1fr}}
+
+/* Arte individual da parceria National Trust, sem cortar o cartaz. */
+.nt-poster-stage{margin:4px auto 20px;width:min(100%,465px)}
+.nt-poster-stage[hidden]{display:none}
+.nt-poster-stage img{display:block;width:100%;height:auto;aspect-ratio:1122/1402;object-fit:contain;border-radius:18px;border:1px solid rgba(106,169,188,.45);box-shadow:0 18px 38px rgba(9,21,39,.22)}
