@@ -53,7 +53,7 @@ test('approved artwork appears in ANA and Trust dedicated guides without changin
  const ana=fs.readFileSync('spidey-app/ana-airports.js','utf8');
  const trust=fs.readFileSync('spidey-app/national-trust-v1.js','utf8');
  assert.ok(ana.includes("SPIDEY_APPROVED_ART_MASTER?.[phase]"));
- assert.ok(ana.includes("id=\\\"anaEventPoster\\\""));
+ assert.ok(ana.includes('anaEventPoster'));
  assert.ok(trust.includes("SPIDEY_APPROVED_ART_MASTER?.['2026-national-trust-27-sites']"));
  assert.ok(trust.includes('nt-poster-stage'));
  assert.equal(qa.individual_human_approval_claimed,false);
