@@ -1,0 +1,61 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-mega-charizard-xy-raids",
+  "title": "Mega Reides: Mega Charizard X e Y",
+  "sources": {
+    "official_schedule": {
+      "name": "Pokémon GO — programação de outubro de 2026",
+      "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+      "confidence": "official"
+    },
+    "community_catalog": {
+      "name": "Leek Duck — Mega Charizard X e Y em Mega-Reides",
+      "url": "https://leekduck.com/events/mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026/",
+      "confidence": "verified_community"
+    }
+  },
+  "schedule": {
+    "start_local": "2026-10-21T06:00:00-03:00",
+    "end_local": "2026-10-27T22:00:00-03:00",
+    "local_time": true
+  },
+  "art_rules": [
+    "approved_spidey_reference_collection",
+    "mega_charizard_x_and_y_as_only_pokemon_species",
+    "official_title_date_and_characters",
+    "community_time_detail_omitted_from_poster",
+    "no_unverified_bonus_coordinates_species_or_shiny_claim",
+    "no_raw_url",
+    "no_corporate_boxes"
+  ],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Mega Charizard X e Mega Charizard Y na rotação de Mega-Reides de 21 a 27 de outubro de 2026.",
+    "O catálogo comunitário complementar registra a janela de 06h a 22h no horário local; esse horário não aparece no pôster.",
+    "O pôster não anuncia bônus, coordenadas, local específico, chance de Brilhante, itens, ataques, CP ou outras espécies."
+  ],
+  "candidate_visual": "Mega Charizard X e Mega Charizard Y como protagonistas em arena cinematográfica de Mega Reide, com energias azul e laranja e moldura ornamental luminosa da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/mega-charizard-xy-raids-20261021-27-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 1074462,
+  "sha256": "845873f8e397b7341ca20bd244acb6867ff33fd664d213e99d340bf3f504e965",
+  "generation": "builtin imagegen",
+  "prompt_summary": "Pôster vertical completo no sistema visual da referência Spidey aprovada, com Mega Charizard X e Y, marca, título e datas integrados.",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada. O PNG recebeu apenas otimização local de paleta e compressão, sem regeneração ou alteração editorial; os bytes finais são idênticos na candidatura e na versão aprovada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "0223bfeeb423b681c985c993f668b3613a9c8e40",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
