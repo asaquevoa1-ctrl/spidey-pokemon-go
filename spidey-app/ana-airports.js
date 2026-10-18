@@ -30,7 +30,7 @@
     const stage=root.querySelector('#anaPosterStage');
     if(poster&&link&&stage){
       stage.hidden=true;
-      if(original&&/^assets\\/events\\/premium\\/[a-z0-9-]+\\.png$/.test(original.file)&&/^[a-f0-9]{64}$/.test(original.sha256)){
+      if(original && original.file.startsWith('assets/events/premium/') && original.file.endsWith('.png') && !original.file.includes('..') && /^[a-f0-9]{64}$/.test(original.sha256)){
         const target=original.file+'?v='+original.sha256.slice(0,12);
         poster.dataset.activeFile=original.file;
         poster.alt=original.slot+' — pôster original aprovado pelo usuário';
