@@ -1,0 +1,23 @@
+name: Spidey - ANA arte original verificada
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/ana-airports.js'
+      - 'spidey-app/ana-airports.css'
+      - 'spidey-app/data/ana-pokemon-jet-approved-originals.json'
+      - 'spidey-app/assets/events/premium/ana-pokemon-jet-2026-original-*.png'
+      - 'scripts/test_ana_original_art.py'
+      - '.github/workflows/spidey-ana-original-art-gate.yml'
+permissions:
+  contents: read
+jobs:
+  original-png-bytes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verificar PNGs idênticos aos arquivos aprovados pelo usuário
+        run: python -m unittest discover -s scripts -p test_ana_original_art.py
