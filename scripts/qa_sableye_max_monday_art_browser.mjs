@@ -13,7 +13,7 @@ try{for(const width of [390,1280])for(const theme of ['light','dark']){
  const page=await browser.newPage({viewport:{width,height:900},timezoneId:'America/Sao_Paulo'});
  await page.route('**/data/weekly.json*',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(weekly)}));
  await page.addInitScript(({theme})=>{const N=Date,now=new N('2026-10-26T12:00:00-03:00').valueOf();class F extends N{constructor(...a){super(...(a.length?a:[now]));}static now(){return now;}}Object.setPrototypeOf(F,N);window.Date=F;localStorage.setItem('spidey-theme',theme);},{theme});
- await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'networkidle'});await page.waitForFunction(id=>window.state?.events?.some(x=>x.id===id),eventId);
+ await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'networkidle'});await page.waitForFunction(id=>typeof state!=='undefined'&&state.events.some(x=>x.id===id),eventId);
  if(await page.evaluate(id=>window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,eventId)!==approved)throw new Error('wrong master artwork');
  await page.evaluate(()=>{state.month=new Date(2026,9,1);renderCalendar();});
  const index=await page.evaluate(()=>{const first=new Date(2026,9,1),grid=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,26)-grid)/86400000);});
