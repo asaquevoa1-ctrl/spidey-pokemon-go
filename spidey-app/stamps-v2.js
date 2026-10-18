@@ -1,6 +1,31 @@
 (() => {
   const IMAGE_FIELDS = ['stamp_image_url', 'stamp_image', 'image_url', 'image'];
 
+  // Índice visual dos selos Pokémon Center documentados pelo Serebii (2026).
+  // Não confundir imagens dos selos com banners do evento. Yokohama não possui
+  // imagem individual confirmada na referência consultada: nunca inventar.
+  const POKEMON_CENTER_STAMP_ART = Object.freeze({
+    'pokemon-centre-fukuoka':145,
+    'pokemon-go-lab-japan':146,
+    'pokemon-centre-hiroshima':147,
+    'pokemon-store-takamatsu':148,
+    'pokemon-centre-kanazawa':149,
+    'pokemon-centre-kyoto':150,
+    'pokemon-centre-mega-tokyo':151,
+    'pokemon-centre-nagoya':152,
+    'pokemon-centre-okinawa':153,
+    'pokemon-centre-osaka':154,
+    'pokemon-centre-osaka-dx':155,
+    'pokemon-centre-sapporo':156,
+    'pokemon-centre-shibuya':157,
+    'pokemon-centre-skytree':158,
+    'pokemon-centre-tohoku':159,
+    'pokemon-centre-tokyo-bay':160,
+    'pokemon-centre-tokyo-dx':161
+  });
+  const STAMP_ART_SOURCE = 'https://www.serebii.net/pokemongo/stamprally/pokemoncenterstamprally.shtml';
+
+
   function orderedStops(rally) {
     return (rally.stops || []).map((stop, index) => ({ stop, index })).sort((a, b) => {
       const ao = Number(a.stop.route_order ?? a.stop.stamp_number ?? a.index + 1);
@@ -14,7 +39,8 @@
       const value = String(stop?.[field] || '').trim();
       if (value) return value;
     }
-    return '';
+    const number = POKEMON_CENTER_STAMP_ART[stop?.id];
+    return number ? `https://www.serebii.net/pokemongo/stamps/${number}.png` : '';
   }
 
   function rallyCover(rally) {
@@ -184,6 +210,26 @@
           ${!fullGpx ? `<p class="microcopy">A rota GPX ficará disponível quando todas as ${stops.length} PokéStops estiverem confirmadas. Você já pode copiar os pontos disponíveis.</p>` : ''}
         </section>
 
+        <section class="stamp-datahub-downloads-v2" aria-label="Arquivos TXT de coordenadas para DataHub">
+          <div class="stamp-section-head-v2">
+            <div><span class="eyebrow">EXPORTAR COORDENADAS</span><h3>Arquivos TXT · DataHub</h3></div>
+          </div>
+          <p class="microcopy">Formato: uma latitude,longitude por linha, sem cabeçalho. A compatibilidade com seu DataHub depende do formato de importação aceito por ele.</p>
+          ${isPokelid ? `
+            <p class="microcopy"><strong>Atenção:</strong> os 482 pontos são locais das tampas físicas PokéLids, não coordenadas verificadas das PokéStops no jogo.</p>
+            <div class="action-row"><a class="action-btn gold" href="data/datahub/pokelids-japan-482-lid-locations.txt" download="pokelids-japan-482-lid-locations.txt">Baixar TXT · 482 locais</a></div>
+            <div class="stamp-datahub-filter-v2">
+              <label for="stampDatahubPrefecture">Separar por prefeitura</label>
+              <select id="stampDatahubPrefecture">${regions.map(name => `<option value="${escapeHtml(name)}">${escapeHtml(name)} · ${stops.filter(stop=>regionLabel(stop)===name).length} locais</option>`).join('')}</select>
+              <a id="stampDatahubRegionDownload" class="action-btn" href="#" download>Baixar TXT desta prefeitura</a>
+            </div>
+          ` : rally.id === 'pokemon-centre-japan-stamp-rally-2026' ? `
+            <p class="microcopy">18 PokéStops listadas como confirmadas pela comunidade. A atividade deve ser conferida no Pokémon GO.</p>
+            <div class="action-row"><a class="action-btn gold" href="data/datahub/pokemon-center-japan-18-pokestops.txt" download="pokemon-center-japan-18-pokestops.txt">Baixar TXT · 18 PokéStops</a></div>
+            <p class="microcopy">Artes dos selos: <a href="${STAMP_ART_SOURCE}" target="_blank" rel="noopener noreferrer">referência Serebii</a>. 17 imagens específicas disponíveis; Yokohama ainda sem arte individual conferida.</p>
+          ` : `<p class="microcopy">Nenhum ponto exato verificado nesta coleção. O TXT só será disponibilizado depois da confirmação das coordenadas.</p>`}
+        </section>
+
         <section class="stamp-gallery-section-v2">
           <div class="stamp-section-head-v2">
             <div><span class="eyebrow">${isPokelid ? 'TAMPA POR TAMPA' : 'SELO POR SELO'}</span><h3>${isPokelid ? 'Sua coleção' : 'Seus selos'}</h3></div>
@@ -293,6 +339,27 @@
       renderActive();
       renderStamps();
     });
+
+    // Filtro local: gerar somente as coordenadas dos locais escolhidos, sem
+    // enviar localização ou progresso do jogador a nenhum servidor.
+    const datahubPrefecture=detail.querySelector('#stampDatahubPrefecture');
+    const datahubRegionDownload=detail.querySelector('#stampDatahubRegionDownload');
+    if (isPokelid && datahubPrefecture && datahubRegionDownload) {
+      let currentUrl='';
+      const refreshDatahubRegion=()=>{
+        const name=datahubPrefecture.value;
+        const selected=stops.filter(stop=>regionLabel(stop)===name && pokelidVenueCoord(stop));
+        const txt=selected.map(pokelidVenueCoord).join('\n')+'\n';
+        if(currentUrl) URL.revokeObjectURL(currentUrl);
+        currentUrl=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'}));
+        datahubRegionDownload.href=currentUrl;
+        datahubRegionDownload.download='pokelids-'+name.toLowerCase().replace(/[^a-z0-9-]/g,'-')+'-lugares.txt';
+        datahubRegionDownload.textContent='Baixar TXT · '+selected.length+' locais';
+      };
+      datahubPrefecture.addEventListener('change',refreshDatahubRegion);
+      refreshDatahubRegion();
+      dialog.addEventListener('close',()=>{if(currentUrl) URL.revokeObjectURL(currentUrl);},{once:true});
+    }
 
     detail.querySelector('#copyAllStampCoords')?.addEventListener('click', () => setClipboard(copySet(stops), `${exactStops.length} coordenadas copiadas.`));
     detail.querySelector('#copyRemainingStampCoords')?.addEventListener('click', () => {
