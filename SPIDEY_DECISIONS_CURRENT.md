@@ -48,3 +48,5 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - A galeria de selos deve exibir suas próprias imagens oficiais já referenciadas (PokéLids e Pokémon Center). Não deixar o controlador geral de pôsteres ocultar imagens de selos.
 - Onde não houver desenho individual verificado, usar indicação discreta, sem inventar artes e sem reservar grandes espaços vazios.
 - Downloads DataHub: manter TXT de 18 PokéStops Pokémon Center e 482 locais físicos PokéLids **em categorias separadas**. Não confundir tampas com PokéStops confirmadas.
+
+- **Nagasaki:** único selo Ampharos documentado para a campanha, exibido nas 8 paradas sem inventar 8 artes diferentes; fonte Serebii. PokéXciting segue sem desenho individual verificado. Um link externo de imagem não garante carregamento no Android.

@@ -12,7 +12,8 @@ Formato dos TXT: UTF-8, sem cabeçalho; cada linha é `latitude,longitude` com s
 ## Imagens individuais
 - 482 PokéLids: imagens das tampas fornecidas pelo catálogo oficial `local.pokemon.jp`, já exibidas em cada card/selo. Nenhuma é reapresentada como arte gerada do Spidey.
 - Pokémon Center: 17 selos com desenhos individuais documentados na [referência Serebii](https://www.serebii.net/pokemongo/stamprally/pokemoncenterstamprally.shtml). Mapeamento de imagem por ID incorporado ao `stamps-v2.js`, URLs remotas usadas sem copiar os arquivos. A arte individual de **Yokohama** não estava disponível nessa referência; manter campo visual pendente para não mostrar imagem errada.
-- PokéXciting e Nagasaki: sem coordenadas exatas e sem artes individuais verificadas no catálogo atual; não gerar arquivo vazio nem inventar ilustrações.
+- Nagasaki: a campanha possui um **desenho do selo Ampharos** documentado pelo [Serebii](https://www.serebii.net/pokemongo/stamprally/nagasakistamprally.shtml). O mesmo selo é exibido nas oito paradas, **não são oito desenhos diferentes**. Suas coordenadas exatas de PokéStops ainda não estão confirmadas.
+- PokéXciting: sem coordenadas exatas e sem imagens individuais verificadas; não gerar arquivo vazio nem inventar selos.
 
 ## Manutenção
 - Sempre regenerar os TXT a partir de `spidey-app/data/stamps.json` ao mudar coordenadas; atualizar o catálogo JSON e os testes de correspondência exata.

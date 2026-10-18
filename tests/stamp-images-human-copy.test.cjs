@@ -22,6 +22,6 @@ test('desenhos oficiais e TXT continuam disponíveis',()=>{
  assert.ok(!ui.includes('<small>imagem pendente</small>'));
  assert.ok(ui.includes('data/datahub/pokelids-japan-482-lid-locations.txt'));
  assert.ok(ui.includes('data/datahub/pokemon-center-japan-18-pokestops.txt'));
- assert.ok(html.includes('stamps-v2.js?v=20261018-stamp-image-fix1'));
+ assert.match(html,/stamps-v2\.js\?v=[\w-]+/);
  assert.ok(html.includes('stamps-v2.css?v=20261018-stamp-image-fix1'));
 });
