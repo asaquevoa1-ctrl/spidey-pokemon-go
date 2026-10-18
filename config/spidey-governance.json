@@ -1,0 +1,78 @@
+{
+  "schema": "spidey-governance-v1",
+  "updated_at": "2026-10-18",
+  "canonical_document": "SPIDEY_DECISIONS_CURRENT.md",
+  "coding_agent_document": "AGENTS.md",
+  "product": {
+    "name": "Spidey Pokémon GO",
+    "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+    "primary": "app",
+    "locale": "pt-BR",
+    "mobile_first": true,
+    "no_repeated_individual_art_approvals": true,
+    "no_user_manual_upload_or_deploy": true,
+    "no_art_dumps_in_chat": true
+  },
+  "identity": {
+    "logo": "assets/spidey-logo-oficial.jpg",
+    "banned_word_in_poster": "SpideyNexus",
+    "gold_standard": "SPIDEY_GOLD_STANDARD.md",
+    "premium_standard": "SPIDEY_PREMIUM_STANDARD.md",
+    "visual_comparison_required": true,
+    "render_test_is_visual_approval": false
+  },
+  "approval": {
+    "delegated_qa_source": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+    "new_art_allowed_without_reapprovals": true,
+    "needs_factual_checks": true,
+    "needs_visual_comparison": true,
+    "needs_app_view_qa": true,
+    "old_approved_files_immutable": true
+  },
+  "rejected_batch": {
+    "record": "docs/qa/PRIORITY_ART_ANA_SEOUL_TRUST_20261017.json",
+    "status": "REJECTED_BY_USER_AFTER_PUBLICATION",
+    "pr_rejection": 93,
+    "ids": [
+      "2026-ana-pokemon-jet-red",
+      "2026-ana-pokemon-jet-green",
+      "2026-10-24-fc-seoul",
+      "2026-national-trust-27-sites"
+    ]
+  },
+  "original_ana": {
+    "pr": 95,
+    "state": "DRAFT_AWAITING_EXACT_BINARY_FILES",
+    "visual_reference_approved": true,
+    "not_yet_public_claim": false,
+    "retain_original_bytes": true
+  },
+  "content": {
+    "hide_expired_without_destroying_history": true,
+    "official_source_preferred": true,
+    "community_claims_must_be_labeled": true,
+    "coordinates_not_gym_without_verification": true,
+    "gpx_requires_exact_verified_points": true,
+    "timezones": [
+      "local",
+      "America/Sao_Paulo"
+    ]
+  },
+  "priorities": [
+    "ANA two reference-approved originals",
+    "FC Seoul Premium artwork",
+    "National Trust Premium artwork",
+    "Adidas artwork revision",
+    "APAC Shopping artwork revision",
+    "Pokémon TCG 30th artwork revision",
+    "Nice regional artwork"
+  ],
+  "quality_claims": [
+    "created",
+    "ci_passed",
+    "merged",
+    "deployed",
+    "http_verified",
+    "android_physical_verified"
+  ]
+}
