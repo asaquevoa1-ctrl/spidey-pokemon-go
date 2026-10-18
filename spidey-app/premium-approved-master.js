@@ -743,50 +743,6 @@
     "approval_record": "docs/qa/MEGA_SABLEYE_RAIDS_ART_APPROVAL_20261016.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
-  },
-  "2026-ana-pokemon-jet-red": {
-    "file": "assets/events/premium/ana-pokemon-jet-red-2026-spidey-premium-v1.svg",
-    "status": "APPROVED",
-    "display": "full_poster",
-    "width": 1122,
-    "height": 1402,
-    "sha256": "b16ef43b001658bd09ca764d1e43b59619a5607a4b2d5fd84ec2a8bc0fd5a882",
-    "approval_record": "docs/qa/PRIORITY_ART_ANA_SEOUL_TRUST_20261017.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
-  },
-  "2026-ana-pokemon-jet-green": {
-    "file": "assets/events/premium/ana-pokemon-jet-green-2026-spidey-premium-v1.svg",
-    "status": "APPROVED",
-    "display": "full_poster",
-    "width": 1122,
-    "height": 1402,
-    "sha256": "5ccc98d84e5920b075d85a81c902274e630ddfd7b25500c820a4943456f5c526",
-    "approval_record": "docs/qa/PRIORITY_ART_ANA_SEOUL_TRUST_20261017.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
-  },
-  "2026-10-24-fc-seoul": {
-    "file": "assets/events/premium/fc-seoul-20261024-spidey-premium-v1.svg",
-    "status": "APPROVED",
-    "display": "full_poster",
-    "width": 1122,
-    "height": 1402,
-    "sha256": "8364afe92d6a9b66ede5f10cb25e334c47e9b0431484fc7314638310047c68d4",
-    "approval_record": "docs/qa/PRIORITY_ART_ANA_SEOUL_TRUST_20261017.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
-  },
-  "2026-national-trust-27-sites": {
-    "file": "assets/events/premium/national-trust-27-2026-spidey-premium-v1.svg",
-    "status": "APPROVED",
-    "display": "full_poster",
-    "width": 1122,
-    "height": 1402,
-    "sha256": "67805438e457ee977e9a4214680850884422c95efddad917e0287aef351f18ef",
-    "approval_record": "docs/qa/PRIORITY_ART_ANA_SEOUL_TRUST_20261017.json",
-    "approval_basis": "USER_DELEGATED_VISUAL_QA",
-    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
