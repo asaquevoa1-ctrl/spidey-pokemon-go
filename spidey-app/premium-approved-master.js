@@ -733,6 +733,17 @@
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
+  "2026-10-mega-charizard-xy-raids": {
+    "file": "assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "845873f8e397b7341ca20bd244acb6867ff33fd664d213e99d340bf3f504e965",
+    "approval_record": "docs/qa/MEGA_CHARIZARD_XY_RAIDS_ART_APPROVAL_20261017.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
   "2026-10-mega-sableye-raids": {
     "file": "assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png",
     "status": "APPROVED",
