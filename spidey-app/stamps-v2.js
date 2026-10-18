@@ -24,6 +24,9 @@
     'pokemon-centre-tokyo-dx':161
   });
   const STAMP_ART_SOURCE = 'https://www.serebii.net/pokemongo/stamprally/pokemoncenterstamprally.shtml';
+  // Nagasaki 2025/2026: há uma única arte de Ampharos para a campanha.
+  // Não inventar oito desenhos distintos para oito paradas.
+  const NAGASAKI_STAMP_DESIGN = 'https://www.serebii.net/pokemongo/stamps/61.png';
 
 
   function orderedStops(rally) {
@@ -40,7 +43,9 @@
       if (value) return value;
     }
     const number = POKEMON_CENTER_STAMP_ART[stop?.id];
-    return number ? `https://www.serebii.net/pokemongo/stamps/${number}.png` : '';
+    if (number) return `https://www.serebii.net/pokemongo/stamps/${number}.png`;
+    if (String(stop?.id || '').startsWith('nagasaki-city-')) return NAGASAKI_STAMP_DESIGN;
+    return '';
   }
 
   function rallyCover(rally) {
@@ -174,6 +179,7 @@
         <h2>${escapeHtml(rally.title)}</h2>
         <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
         ${isPokelid ? '<p class="microcopy">Conheça os desenhos das tampas Pokémon pelo Japão. Nem toda PokéLid já virou uma PokéStop no jogo.</p>' : ''}
+        ${rally.id === 'nagasaki-city-stamp-rally' ? '<p class="microcopy">O selo de Nagasaki tem o desenho de Ampharos. Ele aparece nas oito paradas desta coleção.</p>' : ''}
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
