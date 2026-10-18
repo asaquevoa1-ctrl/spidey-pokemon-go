@@ -8,7 +8,7 @@
     const lat=Number(match[1]),lon=Number(match[2]);
     return Math.abs(lat)<=90&&Math.abs(lon)<=180?v:null;
   };
-  let events=[],phase=IDS[0],search='';
+  let events=[],originalPosters=[],phase=IDS[0],search='';
   const clean=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   function matchesAirport(point,term){
     const query=clean(term).trim();
@@ -22,15 +22,26 @@
     const refs=(event.locations||[]).filter(p=>
       p.coordinate_type==='airport_terminal_reference'&&
       p.exact_raid_gym_verified===false&&parse(p.coordinate_text));
-    const approved=window.SPIDEY_APPROVED_ART_MASTER?.[phase];
+    // A imagem exibida precisa ser o PNG ORIGINAL fornecido pelo usuário.
+    // Não reutilizar SVG sintético, gerador automático nem registro delegado de aprovação.
+    const original=originalPosters.find(item=>item.phase===phase);
     const poster=root.querySelector('#anaEventPoster');
-    const posterStage=root.querySelector('#anaPosterStage');
-    if(poster&&posterStage){
-      posterStage.hidden=!approved;
-      if(approved){
-        const src=approved.file+'?v='+approved.sha256.slice(0,12);
-        poster.alt=phase.endsWith('-red')?'ANA Pokémon Jet Vermelho • Charmander':'ANA Pokémon Jet Verde • Bulbasaur';
-        if(poster.getAttribute('src')!==src)poster.src=src;
+    const link=root.querySelector('#anaPosterEnlarge');
+    const stage=root.querySelector('#anaPosterStage');
+    if(poster&&link&&stage){
+      stage.hidden=true;
+      if(original && original.file.startsWith('assets/events/premium/') && original.file.endsWith('.jpg') && !original.file.includes('..') && /^[a-f0-9]{64}$/.test(original.sha256)){
+        const target=original.file+'?v='+original.sha256.slice(0,12);
+        poster.dataset.activeFile=original.file;
+        poster.alt=original.slot+' — pôster original aprovado pelo usuário';
+        poster.onload=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=false;};
+        poster.onerror=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=true;};
+        link.href=target;
+        if(poster.getAttribute('src')!==target)poster.src=target;
+        else if(poster.complete&&poster.naturalWidth>0)stage.hidden=false;
+      }else{
+        poster.removeAttribute('src');
+        link.removeAttribute('href');
       }
     }
     const hero=root.querySelector('#anaEventSummary');
@@ -68,7 +79,7 @@
       '<div class="ana-phase-tabs" role="group" aria-label="Fase do evento">'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-red" aria-pressed="true" type="button">🔴 Charmander • 6 aeroportos</button>'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-green" aria-pressed="false" type="button">🟢 Bulbasaur • 14 aeroportos</button></div>'+
-      '<div id="anaPosterStage" class="ana-poster-stage" hidden><img id="anaEventPoster" alt="Pôster do evento ANA" loading="lazy" onerror="this.parentElement.hidden=true"></div>'+
+      '<div id="anaPosterStage" class="ana-poster-stage" hidden><a id="anaPosterEnlarge" target="_blank" rel="noopener noreferrer" aria-label="Abrir a arte ANA original em tamanho inteiro"><img id="anaEventPoster" alt="Pôster original do evento ANA" loading="eager"></a><p class="ana-poster-caption">Arte original • toque para ampliar. As coordenadas impressas nas artes são referências comunitárias, não Ginásios de reide verificados.</p></div>'+
       '<div id="anaEventSummary" class="ana-event-summary" aria-live="polite"></div>'+
       '<label class="ana-search-label" for="anaAirportSearch">Buscar aeroporto</label>'+
       '<input id="anaAirportSearch" class="ana-search" type="search" autocomplete="off" placeholder="Ex.: Haneda, Narita, HND, FUK" aria-controls="anaAirportList">'+
@@ -88,6 +99,11 @@
     fetch('data/events.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('dados indisponíveis');return r.json();}).then(json=>{
       events=(json.events||[]).filter(e=>IDS.includes(e.id));render();
     }).catch(()=>{const status=document.getElementById('anaAirportStatus');if(status)status.textContent='Não foi possível carregar os pontos ANA.';});
+    // Lista versionada que exige os hashes EXATOS das artes originais do usuário.
+    fetch('data/ana-pokemon-jet-approved-originals.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('original assets manifest unavailable');return r.json();}).then(data=>{
+      originalPosters=Array.isArray(data.user_assets)?data.user_assets:[];
+      render();
+    }).catch(()=>{originalPosters=[];render();});
   }
   window.SpideyAnaAirportCore=Object.freeze({parse,matchesAirport});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();

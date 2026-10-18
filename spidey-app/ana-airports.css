@@ -35,3 +35,9 @@
 .ana-poster-stage{margin:16px auto 20px;width:min(100%,465px)}
 .ana-poster-stage[hidden]{display:none}
 .ana-poster-stage img{display:block;width:100%;height:auto;aspect-ratio:1122/1402;object-fit:contain;border-radius:18px;border:1px solid rgba(106,169,188,.45);box-shadow:0 18px 38px rgba(9,21,39,.22)}
+
+/* Show the user's original 1227/1229×1536 PNG artwork without cropping or regeneration. */
+.ana-poster-stage a{display:block;max-width:100%;outline-offset:5px}
+.ana-poster-stage a:focus-visible{outline:3px solid #d2a644}
+.ana-poster-stage img{aspect-ratio:auto;max-height:none;object-fit:contain;cursor:zoom-in}
+.ana-poster-caption{font-size:.78rem;line-height:1.45;color:var(--muted,#a5b5c8);margin:10px 3px 0}

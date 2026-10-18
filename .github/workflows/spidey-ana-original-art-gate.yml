@@ -1,0 +1,41 @@
+name: Spidey - ANA arte original verificada
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/ana-airports.js'
+      - 'spidey-app/ana-airports.css'
+      - 'spidey-app/data/ana-pokemon-jet-approved-originals.json'
+      - 'spidey-app/assets/events/premium/ana-pokemon-jet-2026-original-*.jpg'
+      - 'scripts/test_ana_original_art.py'
+      - 'scripts/qa_nav_partnerships_browser.mjs'
+      - '.github/workflows/spidey-ana-original-art-gate.yml'
+permissions:
+  contents: read
+jobs:
+  original-png-bytes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verificar imagens idênticas aos arquivos aprovados pelo usuário
+        run: python -m unittest discover -s scripts -p test_ana_original_art.py
+      - name: Instalar dependências de prévia responsiva
+        run: |
+          npm ci --ignore-scripts
+          npm install --no-save playwright-core@1.56.1
+      - name: Validar ANA, calendário e Semana em mobile e desktop
+        run: |
+          set -o pipefail
+          command -v google-chrome
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_nav_partnerships_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ana-originals-responsive-preview
+          path: test-results/nav-partnerships
