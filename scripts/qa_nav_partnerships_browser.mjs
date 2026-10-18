@@ -37,9 +37,25 @@ try {
   if(!await page.locator('#anaView').isVisible())throw Error('ANA did not open its own tab');
   if(await page.locator('#flyView').isVisible())throw Error('ANA incorrectly opens FLY');
   await page.waitForFunction(()=>document.querySelectorAll('#anaAirportList .ana-airport-row').length===7,null,{timeout:15000});
+  await page.locator('#anaPosterStage').waitFor({state:'visible',timeout:15000});
+  const redPoster=await page.locator('#anaEventPoster').evaluate(image=>({
+    src:image.getAttribute('src'),naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight,
+    width:image.getBoundingClientRect().width,viewport:document.documentElement.clientWidth,
+    overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+2
+  }));
+  if(!redPoster.src?.includes('ana-pokemon-jet-2026-original-overview-v1.jpg')||redPoster.naturalWidth!==1227||redPoster.naturalHeight!==1536||redPoster.width>redPoster.viewport||redPoster.overflow)throw Error('ANA red original failed responsive integrity: '+JSON.stringify(redPoster));
+  await page.screenshot({path:output+'/ana-red-'+width+'-'+theme+'.png',fullPage:true});
   if(!String(await page.locator('#anaAirportList').textContent()).includes('Ginásio NÃO verificado'))throw Error('Airport caveat missing');
   await page.locator('[data-ana-phase="2026-ana-pokemon-jet-green"]').click();
   await page.waitForFunction(()=>document.querySelectorAll('#anaAirportList .ana-airport-row').length===14,null,{timeout:10000});
+  await page.waitForFunction(()=>document.querySelector('#anaEventPoster')?.naturalWidth===1229,null,{timeout:15000});
+  const greenPoster=await page.locator('#anaEventPoster').evaluate(image=>({
+    src:image.getAttribute('src'),naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight,
+    width:image.getBoundingClientRect().width,viewport:document.documentElement.clientWidth,
+    overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+2
+  }));
+  if(!greenPoster.src?.includes('ana-pokemon-jet-2026-original-airports-v1.jpg')||greenPoster.naturalWidth!==1229||greenPoster.naturalHeight!==1536||greenPoster.width>greenPoster.viewport||greenPoster.overflow)throw Error('ANA green original failed responsive integrity: '+JSON.stringify(greenPoster));
+  await page.screenshot({path:output+'/ana-green-'+width+'-'+theme+'.png',fullPage:true});
   const search=page.locator('#anaAirportSearch');
   await search.fill('FUK');
   if(await page.locator('#anaAirportList .ana-airport-row').count()!==1)throw Error('ANA airport search not filtered');
@@ -62,8 +78,13 @@ try {
   if(historical.length)throw Error('Expired event on public calendar: '+historical.slice(0,10).join(','));
   const todayDisabled=await page.locator('#prevMonth').isDisabled();
   if(!todayDisabled)throw Error('Historical month still directly browsable');
+  await page.locator('nav.app-tabs [data-view="weeklyView"]').click();
+  if(!await page.locator('#weeklyView').isVisible())throw Error('Week view did not open after ANA integration');
+  if(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2))throw Error('Week view gained horizontal overflow after ANA integration');
+  await page.screenshot({path:output+'/week-'+width+'-'+theme+'.png',fullPage:false});
+  await page.locator('nav.app-tabs [data-view="calendarView"]').click();
   await page.screenshot({path:output+'/main-'+width+'-'+theme+'.png',fullPage:false});
-  results.push({width,theme,ana:7,bulbasaur:14,nationalTrust:27,retiredHunter:true,expiredEvents:0});
+  results.push({width,theme,ana:7,bulbasaur:14,nationalTrust:27,redPoster,greenPoster,calendar:true,week:true,anaGuide:true,retiredHunter:true,expiredEvents:0});
   await page.close();
  }
 } finally{await browser.close();server.kill('SIGTERM');}
