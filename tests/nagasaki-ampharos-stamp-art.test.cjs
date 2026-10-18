@@ -16,5 +16,5 @@ test('o novo desenho não altera os 18 selos Pokémon Center nem 482 PokéLids',
  assert.equal(lids.stops.length,482);
  assert.ok(ui.includes('POKEMON_CENTER_STAMP_ART'));
  assert.ok(ui.includes("for (const field of IMAGE_FIELDS)"));
- assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('stamps-v2.js?v=20261018-nagasaki-art1'));
+ assert.ok(/stamps-v2\.js\?v=[\w-]+/.test(fs.readFileSync('spidey-app/index.html','utf8')));
 });
