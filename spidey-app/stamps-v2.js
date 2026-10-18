@@ -86,7 +86,7 @@
       const placeholder = document.createElement('div');
       placeholder.className = 'stamp-art-placeholder-v2 stamp-art-load-failed';
       placeholder.setAttribute('role', 'status');
-      placeholder.textContent = 'Imagem não carregou • veja a tampa oficial';
+      placeholder.textContent = 'Imagem indisponível. Veja na fonte oficial.';
       img.replaceWith(placeholder);
     }, true);
   }
@@ -109,8 +109,8 @@
       <button class="stamp-tile-v2 ${done ? 'is-done' : ''}" type="button" data-stamp-stop-id="${escapeHtml(stop.id)}" aria-label="Abrir selo ${number}: ${escapeHtml(stop.venue || stop.city || '')}">
         <div class="stamp-tile-art-v2">
           ${image ? `<img src="${escapeHtml(image)}" alt="${stop.image_kind === 'lid_artwork' ? 'PokéLid' : 'Selo'} ${number} · ${escapeHtml(stop.venue || stop.city || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : `
-            <div class="stamp-art-placeholder-v2" aria-label="Imagem do selo ainda não disponível">
-              <span>SELO</span><strong>${number}</strong><small>imagem pendente</small>
+            <div class="stamp-art-placeholder-v2 stamp-art-unavailable-v2" aria-label="Selo ${number} sem desenho individual confirmado">
+              <span>SELO</span><strong>${number}</strong>
             </div>`}
           <span class="stamp-tile-status-v2">${done ? '✓' : number}</span>
         </div>
@@ -173,7 +173,7 @@
         <span class="eyebrow">${isPokelid ? 'POKÉLIDS · JAPÃO' : 'COLEÇÃO DE SELOS · SPIDEY'}</span>
         <h2>${escapeHtml(rally.title)}</h2>
         <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
-        ${isPokelid ? '<p class="microcopy">As imagens são as artes das tampas. Novas PokéLids podem aparecer neste catálogo antes de receber um selo no jogo.</p>' : ''}
+        ${isPokelid ? '<p class="microcopy">Conheça os desenhos das tampas Pokémon pelo Japão. Nem toda PokéLid já virou uma PokéStop no jogo.</p>' : ''}
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
@@ -298,8 +298,8 @@
       toggleDone.textContent = done ? 'Marcar como faltante' : 'Marcar como feito';
       toggleDone.classList.toggle('is-done', done);
       activeBox.innerHTML = `
-        <div class="stamp-active-art-v2">
-          ${image ? `<img src="${escapeHtml(image)}" alt="${isPokelid ? 'PokéLid' : 'Selo'} ${escapeHtml(stop.stamp_number || index + 1)}" loading="eager" referrerpolicy="no-referrer">` : `<div class="stamp-art-placeholder-v2"><span>SELO</span><strong>${escapeHtml(stop.stamp_number || index + 1)}</strong><small>imagem pendente</small></div>`}
+        <div class="stamp-active-art-v2 ${image ? '' : 'stamp-active-art-v2--without-image'}">
+          ${image ? `<img src="${escapeHtml(image)}" alt="${isPokelid ? 'Desenho da PokéLid' : 'Desenho do selo'} ${escapeHtml(stop.stamp_number || index + 1)}" loading="eager" referrerpolicy="no-referrer">` : `<div class="stamp-art-placeholder-v2 stamp-art-unavailable-v2"><span>SELO</span><strong>${escapeHtml(stop.stamp_number || index + 1)}</strong></div>`}
         </div>
         <div class="stamp-active-copy-v2">
           <span class="coordinate-state ${exactPokestop(stop) ? 'confirmed' : 'pending'}">${escapeHtml(stampCoordinateLabel(stop))}</span>

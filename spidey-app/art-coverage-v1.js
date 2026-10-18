@@ -165,6 +165,17 @@
   function removeCover(container) { container?.querySelectorAll?.('.spidey-cover-art').forEach((node) => node.remove()); }
 
   function decorateContainer(container) {
+    // Coleções de selos têm suas próprias imagens, não pôsteres de evento.
+    if (container?.id === 'eventDetail' && container.querySelector('.stamp-detail-v2')) {
+      removeCover(container);
+      removeNoArtState(container);
+      container.querySelectorAll('.stamp-detail-v2 img.v23-hidden-art').forEach(img => {
+        img.classList.remove('v23-hidden-art');
+        if (img.hidden) img.hidden = false;
+        delete img.dataset.v23ArtReason;
+      });
+      return;
+    }
     if (container?.dataset?.weeklyArtOwner === 'canonical') {
       removeCover(container);
       return;

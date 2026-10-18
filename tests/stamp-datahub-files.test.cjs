@@ -39,8 +39,8 @@ test('each of the 42 regions is accurately counted and the app generates prefect
  assert.ok(text.includes("URL.revokeObjectURL(currentUrl)"));
 });
 test('download links load versioned stamp UI and never claim venue coordinates as PokéStops',()=>{
- assert.ok(html.includes('stamps-v2.js?v=20261018-datahub1'));
- assert.ok(html.includes('stamps-v2.css?v=20261018-datahub1'));
+ assert.ok(html.includes('stamps-v2.js?v=20261018-stamp-image-fix1'));
+ assert.ok(html.includes('stamps-v2.css?v=20261018-stamp-image-fix1'));
  assert.ok(text.includes('data/datahub/pokemon-center-japan-18-pokestops.txt'));
  assert.ok(text.includes('data/datahub/pokelids-japan-482-lid-locations.txt'));
  assert.ok(text.includes('não coordenadas verificadas das PokéStops'));
