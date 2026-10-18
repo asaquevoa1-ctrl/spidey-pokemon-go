@@ -62,3 +62,10 @@ test('482 official PokéLid art entries persist, 17 distinct Pokemon Center stam
  assert.ok(text.includes('https://www.serebii.net/pokemongo/stamps/'));
  assert.ok(text.includes('STAMP_ART_SOURCE'));
 });
+test('CSP permite somente os dois hosts de imagens de selos e privacidade informa terceiros',()=>{
+ const build=fs.readFileSync('scripts/build_spidey_pages.py','utf8');
+ assert.ok(build.includes("img-src 'self' data: blob: https://local.pokemon.jp https://www.serebii.net;"));
+ const html=fs.readFileSync('spidey-app/index.html','utf8');
+ assert.ok(html.includes('imagens das PokéLids (local.pokemon.jp) e dos selos Pokémon Center (serebii.net)'));
+ assert.ok(fs.readFileSync('spidey-app/sw.js','utf8').includes('spidey-app-20261018-stamp-datahub1'));
+});
