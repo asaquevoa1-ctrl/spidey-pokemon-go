@@ -42,11 +42,25 @@
     "invented_species_or_bonus_added": false
   },
   "qa": {
-    "calendar": "pending",
-    "week": "pending",
-    "detail_or_ana_guide": "pending",
-    "responsive_viewports": [],
-    "automated_tests": "pending",
-    "pages_hash_verification": "pending"
+    "calendar": "passed_no_regression; ANA remains intentionally hidden from the generic calendar",
+    "week": "passed_no_regression; ANA remains intentionally hidden from the generic Week view",
+    "detail_or_ana_guide": "passed; both phases render the entire original in the dedicated ANA guide",
+    "responsive_viewports": [
+      "390px light",
+      "390px dark",
+      "1280px light",
+      "1280px dark"
+    ],
+    "automated_tests": "2 exact-byte Python tests, 168 Node tests and the dedicated responsive GitHub Actions gate passed",
+    "ci_run": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39128790745",
+    "pages_deploy": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39128984412",
+    "pages_hash_verification": {
+      "verified_at": "2026-10-18T12:52:00Z",
+      "base_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+      "overview_sha256": "2dd41b1d44b6d0cfc5c2872fe2db98eca6f7923d67c5cbda582661fa606d1478",
+      "airports_sha256": "2051314ad4fce50334ef5f7a4ccafd38b6db65c68e7905468a59498cdb69e349",
+      "catalog_binding": "events.json contains both ANA phase ids; ana-airports.js loads the exact-byte manifest and exposes the ANA tab"
+    },
+    "physical_android_tested": false
   }
 }
