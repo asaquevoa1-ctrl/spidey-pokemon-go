@@ -14,7 +14,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTENSIONS = {'.html', '.js', '.css', '.json', '.webmanifest', '.txt', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.avif', '.ico', '.woff', '.woff2'}
-POLICY = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+POLICY = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://local.pokemon.jp https://www.serebii.net; connect-src 'self'; font-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
 CATALOG_REQUEST = "fetch(`api/catalog?file=${encodeURIComponent(file)}`,"
 STATIC_REQUEST = "fetch(`data/${file}.json`,"
 GPX_REQUEST = "gpxLink.href = navigator.onLine === false ? url : `api/gpx?rally=${encodeURIComponent(rally.id)}`;"

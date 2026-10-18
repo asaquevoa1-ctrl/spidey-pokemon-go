@@ -1,5 +1,7 @@
-const CACHE = 'spidey-app-20261018-sableye-max-monday-art1';
+const CACHE = 'spidey-app-20261018-stamp-datahub1';
 const CORE = [
+  './data/datahub/pokemon-center-japan-18-pokestops.txt',
+  './data/datahub/pokelids-japan-482-lid-locations.txt',
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
   './assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png',
