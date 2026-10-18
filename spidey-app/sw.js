@@ -1,5 +1,6 @@
-const CACHE = 'spidey-app-20261017-mega-charizard-xy-raids-art1';
+const CACHE = 'spidey-app-20261018-sableye-max-monday-art1';
 const CORE = [
+  './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
   './assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png',
   './assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png',

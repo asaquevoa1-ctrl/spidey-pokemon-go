@@ -1,0 +1,36 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "PENDING_REVIEW",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-26-max-monday-sableye",
+  "title": "Max Monday: Dynamax Sableye",
+  "sources": {
+    "official_schedule": {"name": "Pokémon GO — programação de outubro de 2026", "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/", "confidence": "official"},
+    "community_catalog": {"name": "Pokémon GO Hub — calendário de outubro de 2026", "url": "https://pokemongohub.net/post/event/october-2026-events/", "confidence": "verified_community"}
+  },
+  "schedule": {"date_local": "2026-10-26", "start_local": "2026-10-26T06:00:00-03:00", "end_local": "2026-10-26T21:00:00-03:00", "daily_window_source": "verified_community", "daily_window_printed_on_poster": false},
+  "art_rules": ["approved_spidey_reference_collection", "normal_sableye_dynamax_as_only_featured_pokemon_species", "official_title_date_and_character", "community_daily_window_omitted_from_poster", "no_unverified_bonus_coordinates_species_or_shiny_claim", "no_raw_url", "no_corporate_boxes"],
+  "fact_checks": [
+    "A programação oficial de outubro identifica Sableye Dinamax para a Segunda Max de 26 de outubro de 2026.",
+    "A janela diária de 06h a 21h vem do catálogo comunitário, está identificada separadamente e não foi impressa no pôster.",
+    "O pôster não anuncia bônus, coordenadas, local específico, shiny boost, estreia, itens ou outras espécies."
+  ],
+  "candidate_visual": "Sableye normal monumental em Power Spot de crepúsculo, com aura magenta Dinamax, cristais roxos e acabamento cinematográfico luminoso da coleção Spidey aprovada.",
+  "candidate_file": "spidey-app/assets/events/review/sableye-max-monday-20261026-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/sableye-max-monday-20261026-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2847025,
+  "sha256": "ceb979cc1b98ff3ec9b9bb7dd9d9f31a75eb14c6c914c8fff1ee8dae45ac83e4",
+  "generation": "builtin imagegen",
+  "generation_notes": "Somente a geração de imagem integrada foi usada; nenhuma API ou CLI paga foi acionada.",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": ["2026-09-harvest-festival-applin", "2026-10-world-space-week", "2026-10-05-max-monday-sizzlipede"],
+  "base_main_sha": "3e288fc762334b2aa42518d49325eaa3f8f68e2b",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
