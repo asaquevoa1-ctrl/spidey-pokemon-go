@@ -1,0 +1,36 @@
+{
+  "schema": "spidey-original-ana-poster-pair-v1",
+  "status": "USER_APPROVED_ORIGINALS__BINARY_UPLOAD_PENDING",
+  "approved_from": "two PNG attachments provided by user 2026-10-18; previous generated SVGs explicitly rejected",
+  "publication_gate": "publish only when BOTH exact original PNG bytes are present and sha256 + dimensions match, then review mobile rendering",
+  "user_assets": [
+    {
+      "phase": "2026-ana-pokemon-jet-red",
+      "slot": "ANA overview • artwork 1",
+      "source_filename": "1000476900.png",
+      "file": "assets/events/premium/ana-pokemon-jet-2026-original-overview-v1.png",
+      "sha256": "2dd41b1d44b6d0cfc5c2872fe2db98eca6f7923d67c5cbda582661fa606d1478",
+      "width": 1227,
+      "height": 1536,
+      "size_bytes": 611428
+    },
+    {
+      "phase": "2026-ana-pokemon-jet-green",
+      "slot": "ANA participating airports • artwork 2",
+      "source_filename": "1000476896.png",
+      "file": "assets/events/premium/ana-pokemon-jet-2026-original-airports-v1.png",
+      "sha256": "2051314ad4fce50334ef5f7a4ccafd38b6db65c68e7905468a59498cdb69e349",
+      "width": 1229,
+      "height": 1536,
+      "size_bytes": 636413
+    }
+  ],
+  "display_rules": [
+    "Show the original images unchanged; no recreated poster, no new typography, no generated vector fallback.",
+    "Image 1 appears by default for ANA Red; image 2 appears for ANA Green; both are two-phase informational posters.",
+    "Tap image to enlarge; fit entire image without cropping; preserve existing two phase buttons and all 21 airport/terminal coordinates.",
+    "The PNGs contain community coordinate claims; live app must warn separately that the official raid gyms are NOT independently verified.",
+    "Never call technical validation or a generated SVG user-approved art. No text SpideyNexus should be added."
+  ],
+  "previous_rejection": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/93"
+}
