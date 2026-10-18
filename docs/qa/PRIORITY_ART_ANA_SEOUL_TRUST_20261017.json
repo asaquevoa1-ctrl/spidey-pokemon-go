@@ -1,9 +1,9 @@
 {
   "schema": "spidey-premium-art-batch-20261017",
-  "status": "APPROVED_DELEGATED_QA_PASSED",
-  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "status": "REJECTED_BY_USER_AFTER_PUBLICATION",
+  "approval_basis": "TECHNICAL_QA_NOT_VISUAL_APPROVAL",
   "individual_human_approval_claimed": false,
-  "visual_note": "Novos pôsteres SVG com sprites oficiais incorporados, logo original incorporado byte a byte e paisagens originais; QA Chromium renderizou os quatro em 390 px e registrou capturas. Avaliação estética física Android e comparação humana ainda pendentes.",
+  "visual_note": "Usuário rejeitou expressamente os quatro cartazes no Samsung por qualidade inferior ao padrão Premium aprovado. Renderização técnica não comprova aprovação estética. Registros históricos preservados; versões publicadas e master de aprovação removidos.",
   "prior_versions_preserved": true,
   "poster_preview_run": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39062551187",
   "checks": {
@@ -39,5 +39,7 @@
     "Preservar arquivos anteriores de master.",
     "Pontos ANA e National Trust são referências, não Ginásios nem gatilhos de pesquisa verificados.",
     "Reversão apenas via nova versão ou revert do PR; não sobrescrever imagens anteriores."
-  ]
+  ],
+  "user_visual_review": "REJECTED",
+  "rejected_at": "2026-10-17"
 }

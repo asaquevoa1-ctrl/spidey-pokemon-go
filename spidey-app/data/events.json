@@ -31,7 +31,7 @@
         "mode": "hidden"
       },
       "presentation": {
-        "requires_art": true,
+        "requires_art": false,
         "fallback_visual": "date"
       },
       "location_label": "Reino Unido • 27 propriedades National Trust",
@@ -196,7 +196,7 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": true,
+        "requires_art": false,
         "fallback_visual": "date"
       },
       "location_label": "Estádio da Copa do Mundo de Seul · Coreia do Sul",
@@ -7727,7 +7727,7 @@
         "mode": "hidden"
       },
       "presentation": {
-        "requires_art": true,
+        "requires_art": false,
         "fallback_visual": "date"
       },
       "locations": [
@@ -7910,7 +7910,7 @@
         "mode": "hidden"
       },
       "presentation": {
-        "requires_art": true,
+        "requires_art": false,
         "fallback_visual": "date"
       },
       "locations": [
