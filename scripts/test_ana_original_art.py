@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Prevent a GitHub merge if the user-approved ANA PNGs were not uploaded byte-for-byte."""
-import hashlib, json, pathlib, struct, unittest
+"""Prevent a GitHub merge if the user-approved ANA image originals were not uploaded byte-for-byte."""
+import hashlib, json, pathlib, unittest
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'spidey-app/data/ana-pokemon-jet-approved-originals.json'
@@ -15,8 +15,10 @@ class OriginalArtworkGate(unittest.TestCase):
             raw=path.read_bytes()
             self.assertEqual(len(raw),a['size_bytes'])
             self.assertEqual(hashlib.sha256(raw).hexdigest(),a['sha256'],f"Do not redraw or recompress: {path}")
-            self.assertTrue(raw.startswith(b'\x89PNG\r\n\x1a\n'))
-            self.assertEqual(struct.unpack('>II',raw[16:24]),(a['width'],a['height']))
+            self.assertTrue(raw.startswith(b'\xff\xd8\xff'), f'Original file encoding is JPEG, not PNG: {path}')
+            self.assertTrue(raw.endswith(b'\xff\xd9'), f'JPEG end marker missing: {path}')
+            self.assertEqual(a['media_type'],'image/jpeg')
+            self.assertEqual(a['actual_encoding'],'JPEG/JFIF (original bytes unchanged)')
     def test_integrated_app_uses_manifest_not_rejected_art(self):
         js=(ROOT/'spidey-app/ana-airports.js').read_text(encoding='utf8')
         self.assertIn('ana-pokemon-jet-approved-originals.json',js)

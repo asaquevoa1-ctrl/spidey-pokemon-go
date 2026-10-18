@@ -5,7 +5,7 @@ on:
       - 'spidey-app/ana-airports.js'
       - 'spidey-app/ana-airports.css'
       - 'spidey-app/data/ana-pokemon-jet-approved-originals.json'
-      - 'spidey-app/assets/events/premium/ana-pokemon-jet-2026-original-*.png'
+      - 'spidey-app/assets/events/premium/ana-pokemon-jet-2026-original-*.jpg'
       - 'scripts/test_ana_original_art.py'
       - '.github/workflows/spidey-ana-original-art-gate.yml'
 permissions:
@@ -19,5 +19,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Verificar PNGs idênticos aos arquivos aprovados pelo usuário
+      - name: Verificar imagens idênticas aos arquivos aprovados pelo usuário
         run: python -m unittest discover -s scripts -p test_ana_original_art.py
