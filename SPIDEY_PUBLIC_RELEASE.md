@@ -1,4 +1,12 @@
-# Spidey — versão web publicada, estado de 11/10/2026
+# Spidey — versão web publicada, estado de 18/10/2026
+
+## 18/10/2026 — originais ANA restaurados sem alteração
+
+PR [95](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/95) integrado em `5d2bce5c928097a7fc00a60e942d491fbf98a48b`. O gate [ANA responsivo e de integridade](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39128790745) e a [publicação GitHub Pages](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39128984412) concluíram com sucesso no endereço permanente https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ .
+
+Os dois arquivos visuais aprovados pelo responsável foram recuperados byte a byte, sem geração, conversão, recompressão ou recorte. O original geral mede 1227×1536, 611428 bytes e tem SHA-256 `2dd41b1d44b6d0cfc5c2872fe2db98eca6f7923d67c5cbda582661fa606d1478`; o original de aeroportos mede 1229×1536, 636413 bytes e tem SHA-256 `2051314ad4fce50334ef5f7a4ccafd38b6db65c68e7905468a59498cdb69e349`. HTTP público confirmou ambos os hashes e o manifesto no Pages. As extensões de origem eram `.png`, mas os bytes aprovados já eram JPEG/JFIF e foram preservados exatamente.
+
+A aba ANA exibe uma peça por fase, inteira e ampliável. O aviso separa as coordenadas comunitárias impressas dos Ginásios de reide não verificados. Calendário e Semana passaram sem regressão; as fases ANA continuam ocultas dessas duas telas por decisão editorial e ficam no guia dedicado. Os SVGs ANA rejeitados continuam ausentes. Não houve teste físico Android, disparo de push ou contato externo. Restam 16 lacunas conhecidas no inventário combinado: seis prioridades visuais atuais após ANA e dez itens da fila histórica ainda não resolvidos; portanto, a cobertura Premium não está completa.
 
 ## 11/10/2026 — varredura de Halloween/novembro retomada e duas artes Premium publicadas
 
