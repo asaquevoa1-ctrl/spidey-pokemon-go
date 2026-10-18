@@ -1,21 +1,13 @@
-# Exportação de selos em TXT — DataHub (Spidey)
+# Listas de coordenadas para copiar — Spidey
 
-## Arquivos persistentes
-- `pokemon-center-japan-18-pokestops.txt`: 18 pontos registrados como PokéStops na base do Spidey com confirmação comunitária. Não são resultados verificados ao vivo dentro do jogo.
-- `pokelids-japan-482-lid-locations.txt`: 482 locais físicos de tampas Pokémon no Japão. **Não são coordenadas exatas verificadas das PokéStops**.
-- `catalogo.json`: tipos, quantidades, confiabilidade e distribuição por 42 prefeituras.
+O Spidey apresenta as coordenadas na própria aba **Selos**, com um botão **Copiar toda a lista**. Não gera arquivos TXT.
 
-Formato dos TXT: UTF-8, sem cabeçalho; cada linha é `latitude,longitude` com seis casas decimais, preservando a ordem do catálogo. O Spidey permite baixar os dois arquivos diretamente na aba **Selos** e filtrar os 482 locais por prefeitura para gerar um TXT regional sem contato com servidor.
+- **Pokémon Center Japão:** uma lista de 18 pontos registrados pela comunidade como PokéStops exatas; ainda deve conferir presença no jogo.
+- **PokéLids Japão:** uma lista geral de 482 lugares e opções para copiar as coordenadas de cada uma das 42 prefeituras. Esses pontos são **as tampas físicas**, não PokéStops confirmadas do Pokémon GO.
+- **Nagasaki e PokéXciting:** não exibir coordenadas inventadas; aviso simples enquanto não existirem pontos exatos suficientes.
 
-**DataHub:** este é o padrão textual genérico, não um formato proprietário atestado. Importar um TXT em qualquer cliente externo não confirma que os selos aparecerão no jogo. Os selos exigem PokéStops participantes e proximidade conforme as regras do Pokémon GO.
+Formato de cópia: uma linha por ponto, `latitude,longitude`, com seis casas decimais e sem cabeçalho. A lista é montada no navegador a partir de `spidey-app/data/stamps.json`. Nenhum dado pessoal é enviado.
 
-## Imagens individuais
-- 482 PokéLids: imagens das tampas fornecidas pelo catálogo oficial `local.pokemon.jp`, já exibidas em cada card/selo. Nenhuma é reapresentada como arte gerada do Spidey.
-- Pokémon Center: 17 selos com desenhos individuais documentados na [referência Serebii](https://www.serebii.net/pokemongo/stamprally/pokemoncenterstamprally.shtml). Mapeamento de imagem por ID incorporado ao `stamps-v2.js`, URLs remotas usadas sem copiar os arquivos. A arte individual de **Yokohama** não estava disponível nessa referência; manter campo visual pendente para não mostrar imagem errada.
-- Nagasaki: a campanha possui um **desenho do selo Ampharos** documentado pelo [Serebii](https://www.serebii.net/pokemongo/stamprally/nagasakistamprally.shtml). O mesmo selo é exibido nas oito paradas, **não são oito desenhos diferentes**. Suas coordenadas exatas de PokéStops ainda não estão confirmadas.
-- PokéXciting: sem coordenadas exatas e sem imagens individuais verificadas; não gerar arquivo vazio nem inventar selos.
+As imagens dos selos e PokéLids são consultadas pelo painel de cada selo, separadamente das listas de coordenadas. Fonte original para as tampas: Pokémon Local Acts.
 
-## Manutenção
-- Sempre regenerar os TXT a partir de `spidey-app/data/stamps.json` ao mudar coordenadas; atualizar o catálogo JSON e os testes de correspondência exata.
-- Não confundir `venue_reference` com `exact_pokestop` e não habilitar GPX em PokéLids apenas por ter a posição da tampa.
-- Manter a identidade Premium Spidey do aplicativo; imagens de selos são conteúdos de coleção e não substituem cartazes de eventos.
+A compatibilidade com um aplicativo externo chamado DataHub não foi testada fisicamente; o Spidey fornece as coordenadas em texto simples para colar.

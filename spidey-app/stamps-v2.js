@@ -127,12 +127,28 @@
       </button>`;
   }
 
-  function setClipboard(text, success) {
+  function setClipboard(text, success, textarea) {
     if (!text) {
-      showToast('Nenhuma coordenada disponível neste filtro.');
+      showToast('Ainda não há coordenadas nesta lista.');
       return;
     }
-    navigator.clipboard.writeText(text).then(() => showToast(success)).catch(() => showToast('Não foi possível copiar.'));
+    const fallback = () => {
+      if (textarea) {
+        textarea.focus();
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+        try {
+          if (document.execCommand && document.execCommand('copy')) {
+            showToast(success);
+            return;
+          }
+        } catch (_) {}
+      }
+      showToast('Selecione as coordenadas acima para copiar.');
+    };
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(() => showToast(success)).catch(fallback);
+    } else fallback();
   }
 
   openStampRally = function spideyOpenStampRallyV2(rally) {
@@ -163,7 +179,7 @@
     }
 
     function copySet(list) {
-      return list.filter(exactPokestop).map(coord).filter(Boolean).join('\n');
+      return list.map(stop => isPokelid ? pokelidVenueCoord(stop) : coord(stop)).filter(Boolean).join('\n');
     }
 
     function activeIndex() {
@@ -201,39 +217,29 @@
           </div>
         </section>
 
-        <section class="rally-coordinate-bundle-v4 stamp-datahub-v2" ${isPokelid ? 'hidden' : ''}>
+        <section class="stamp-datahub-v2 stamp-copy-list-v3" aria-label="Listas de coordenadas para copiar">
           <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">COPIAR E BAIXAR</span><h3>Coordenadas da coleção</h3></div>
+            <div><span class="eyebrow">PRONTO PARA COPIAR</span><h3>Coordenadas ${isPokelid ? 'por prefeitura' : 'da coleção'}</h3></div>
           </div>
-          <p class="microcopy">Cada linha mostra a localização de um selo, na ordem da coleção.</p>
-          <textarea id="rallyAllCoordinates" readonly rows="8">${copySet(exactStops)}</textarea>
-          <div class="action-row stamp-bulk-actions-v2">
-            <button id="copyAllStampCoords" class="action-btn gold" type="button">Copiar todas</button>
-            <button id="copyRemainingStampCoords" class="action-btn" type="button">Copiar só faltantes</button>
-            <button id="copyVisibleStampCoords" class="action-btn" type="button">Copiar filtradas</button>
-            ${fullGpx ? '<a id="downloadRallyGpxV2" class="action-btn">Baixar GPX completo</a>' : ''}
-          </div>
-          ${!fullGpx ? `<p class="microcopy">A rota GPX ficará disponível quando todas as ${stops.length} PokéStops estiverem confirmadas. Você já pode copiar os pontos disponíveis.</p>` : ''}
-        </section>
-
-        <section class="stamp-datahub-downloads-v2" aria-label="Arquivos TXT de coordenadas para DataHub">
-          <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">EXPORTAR COORDENADAS</span><h3>Arquivos TXT · DataHub</h3></div>
-          </div>
-          <p class="microcopy">Formato: uma latitude,longitude por linha, sem cabeçalho. A compatibilidade com seu DataHub depende do formato de importação aceito por ele.</p>
           ${isPokelid ? `
-            <p class="microcopy"><strong>Atenção:</strong> os 482 pontos são locais das tampas físicas PokéLids, não coordenadas verificadas das PokéStops no jogo.</p>
-            <div class="action-row"><a class="action-btn gold" href="data/datahub/pokelids-japan-482-lid-locations.txt" download="pokelids-japan-482-lid-locations.txt">Baixar TXT · 482 locais</a></div>
-            <div class="stamp-datahub-filter-v2">
-              <label for="stampDatahubPrefecture">Separar por prefeitura</label>
-              <select id="stampDatahubPrefecture">${regions.map(name => `<option value="${escapeHtml(name)}">${escapeHtml(name)} · ${stops.filter(stop=>regionLabel(stop)===name).length} locais</option>`).join('')}</select>
-              <a id="stampDatahubRegionDownload" class="action-btn" href="#" download>Baixar TXT desta prefeitura</a>
-            </div>
-          ` : rally.id === 'pokemon-centre-japan-stamp-rally-2026' ? `
-            <p class="microcopy">18 PokéStops listadas como confirmadas pela comunidade. A atividade deve ser conferida no Pokémon GO.</p>
-            <div class="action-row"><a class="action-btn gold" href="data/datahub/pokemon-center-japan-18-pokestops.txt" download="pokemon-center-japan-18-pokestops.txt">Baixar TXT · 18 PokéStops</a></div>
-            <p class="microcopy">Artes dos selos: <a href="${STAMP_ART_SOURCE}" target="_blank" rel="noopener noreferrer">referência Serebii</a>. 17 imagens específicas disponíveis; Yokohama ainda sem arte individual conferida.</p>
-          ` : `<p class="microcopy">Nenhum ponto exato verificado nesta coleção. O TXT só será disponibilizado depois da confirmação das coordenadas.</p>`}
+            <p class="microcopy">Escolha uma prefeitura e copie os locais de uma só vez.</p>
+            <label class="stamp-copy-label-v3" for="stampCoordPrefecture">Prefeitura do Japão</label>
+            <select id="stampCoordPrefecture" aria-label="Prefeitura para copiar coordenadas">
+              <option value="all">Todas as prefeituras · ${lidPlaces.length} locais</option>
+              ${regions.map(name => `<option value="${escapeHtml(name)}">${escapeHtml(name)} · ${stops.filter(stop => regionLabel(stop) === name).length} locais</option>`).join('')}
+            </select>
+          ` : ''}
+          <p id="stampCoordListCount" class="microcopy" aria-live="polite"></p>
+          <textarea id="rallyAllCoordinates" readonly spellcheck="false" rows="9" aria-label="Coordenadas prontas para copiar">${copySet(stops)}</textarea>
+          <div class="action-row stamp-bulk-actions-v2">
+            <button id="copyAllStampCoords" class="action-btn gold" type="button">Copiar toda a lista</button>
+            ${fullGpx ? '<a id="downloadRallyGpxV2" class="action-btn">Baixar GPX</a>' : ''}
+          </div>
+          <p class="microcopy">${isPokelid
+            ? 'Estes pontos indicam onde ficam as tampas Pokémon. A PokéStop dentro do jogo pode estar em outro lugar.'
+            : exactStops.length
+              ? 'Um local por linha. Estes pontos foram conferidos pela comunidade; confirme a PokéStop no jogo.'
+              : 'Ainda não temos coordenadas confirmadas para esta coleção.'}</p>
         </section>
 
         <section class="stamp-gallery-section-v2">
@@ -346,36 +352,38 @@
       renderStamps();
     });
 
-    // Filtro local: gerar somente as coordenadas dos locais escolhidos, sem
-    // enviar localização ou progresso do jogador a nenhum servidor.
-    const datahubPrefecture=detail.querySelector('#stampDatahubPrefecture');
-    const datahubRegionDownload=detail.querySelector('#stampDatahubRegionDownload');
-    if (isPokelid && datahubPrefecture && datahubRegionDownload) {
-      let currentUrl='';
-      const refreshDatahubRegion=()=>{
-        const name=datahubPrefecture.value;
-        const selected=stops.filter(stop=>regionLabel(stop)===name && pokelidVenueCoord(stop));
-        const txt=selected.map(pokelidVenueCoord).join('\n')+'\n';
-        if(currentUrl) URL.revokeObjectURL(currentUrl);
-        currentUrl=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'}));
-        datahubRegionDownload.href=currentUrl;
-        datahubRegionDownload.download='pokelids-'+name.toLowerCase().replace(/[^a-z0-9-]/g,'-')+'-lugares.txt';
-        datahubRegionDownload.textContent='Baixar TXT · '+selected.length+' locais';
-      };
-      datahubPrefecture.addEventListener('change',refreshDatahubRegion);
-      refreshDatahubRegion();
-      dialog.addEventListener('close',()=>{if(currentUrl) URL.revokeObjectURL(currentUrl);},{once:true});
+    // Uma lista por coleção ou prefeitura. Somente copiar; nenhum TXT é criado.
+    const listTextarea = detail.querySelector('#rallyAllCoordinates');
+    const listCount = detail.querySelector('#stampCoordListCount');
+    const listCopy = detail.querySelector('#copyAllStampCoords');
+    const copyPrefecture = detail.querySelector('#stampCoordPrefecture');
+    function selectedCoordinates() {
+      const selected = isPokelid && copyPrefecture?.value !== 'all'
+        ? stops.filter(stop => regionLabel(stop) === copyPrefecture.value)
+        : stops;
+      return copySet(selected);
     }
+    function refreshCoordinateList() {
+      const value = selectedCoordinates();
+      const count = value ? value.split('\n').length : 0;
+      if (listTextarea) listTextarea.value = value;
+      if (listCount) listCount.textContent = count
+        ? count + (isPokelid ? ' locais prontos para copiar.' : ' coordenadas prontas para copiar.')
+        : 'Nenhuma coordenada disponível nesta coleção.';
+      if (listCopy) {
+        listCopy.disabled = count === 0;
+        listCopy.textContent = isPokelid && copyPrefecture?.value !== 'all'
+          ? 'Copiar lista desta prefeitura' : 'Copiar toda a lista';
+      }
+    }
+    copyPrefecture?.addEventListener('change', refreshCoordinateList);
+    listCopy?.addEventListener('click', () => {
+      const value = selectedCoordinates();
+      const count = value ? value.split('\n').length : 0;
+      setClipboard(value, count + ' coordenadas copiadas. É só colar no DataHub.', listTextarea);
+    });
+    refreshCoordinateList();
 
-    detail.querySelector('#copyAllStampCoords')?.addEventListener('click', () => setClipboard(copySet(stops), `${exactStops.length} coordenadas copiadas.`));
-    detail.querySelector('#copyRemainingStampCoords')?.addEventListener('click', () => {
-      const remaining = stops.filter((stop) => !progress.has(stop.id));
-      setClipboard(copySet(remaining), `${remaining.filter(exactPokestop).length} coordenadas restantes copiadas.`);
-    });
-    detail.querySelector('#copyVisibleStampCoords')?.addEventListener('click', () => {
-      const visible = filteredStops();
-      setClipboard(copySet(visible), `${visible.filter(exactPokestop).length} coordenadas filtradas copiadas.`);
-    });
     const gpxLink = detail.querySelector('#downloadRallyGpxV2');
     if (fullGpx && gpxLink) {
       const content = gpxDocument(rally.title, stops.map((stop) => ({ ...stop, name: `${stop.stamp_number || ''} ${stop.city || ''} - ${stop.venue || ''}`.trim() })));
