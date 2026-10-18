@@ -1,21 +1,33 @@
 {
-  "schema": "spidey-datahub-v1",
-  "generated_at": "2026-10-18",
-  "format": "UTF-8 text, one latitude,longitude pair per line, no header",
-  "files": [
+  "schema": "spidey-datahub-clipboard-v2",
+  "updated_at": "2026-10-18",
+  "mode": "copy_and_paste",
+  "format": "latitude,longitude • uma coordenada por linha, 6 casas, sem cabeçalho",
+  "collections": [
     {
-      "file": "pokemon-center-japan-18-pokestops.txt",
+      "id": "pokemon-centre-japan-stamp-rally-2026",
       "count": 18,
       "coordinate_type": "exact_pokestop",
       "confidence": "community_verified",
-      "disclaimer": "Pontos cadastrados como PokéStops por verificação da comunidade; não auditados diretamente no jogo."
+      "note": "PokéStops confirmadas pela comunidade, não auditadas ao vivo no jogo."
     },
     {
-      "file": "pokelids-japan-482-lid-locations.txt",
+      "id": "pokelids-japan-national",
       "count": 482,
+      "groups": 42,
       "coordinate_type": "venue_reference",
       "confidence": "official",
-      "disclaimer": "Posições físicas das PokéLids; não equivalem às PokéStops confirmadas do jogo."
+      "note": "Localização física das tampas; não é garantia da posição da PokéStop."
+    },
+    {
+      "id": "pokexciting-cross-region-2026",
+      "count": 0,
+      "coordinate_type": "unconfirmed"
+    },
+    {
+      "id": "nagasaki-city-stamp-rally",
+      "count": 0,
+      "coordinate_type": "unconfirmed"
     }
   ],
   "prefectures": [
@@ -188,6 +200,5 @@
       "count": 4
     }
   ],
-  "note": "TXT é formato genérico latitude,longitude. Compatibilidade com qualquer app chamado DataHub deve ser testada no próprio aplicativo; nenhum formato proprietário foi confirmado.",
-  "art_status": "482 imagens oficiais de PokéLids ligadas no catálogo; 17 imagens de selo Pokémon Center disponíveis via link externo, 1 pendente."
+  "note": "Nenhum TXT é criado ou baixado. Selecione a coleção ou prefeitura no Spidey e copie toda a lista para colar no DataHub. Compatibilidade com a entrada do DataHub deve ser verificada no próprio aplicativo."
 }

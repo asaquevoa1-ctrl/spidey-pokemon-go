@@ -426,21 +426,33 @@
   font-size:.78rem;line-height:1.35;padding:9px;box-sizing:border-box;
 }
 
-/* DataHub: grupo de arquivos TXT da coleção, separado da exportação GPX. */
-.stamp-datahub-downloads-v2{
+/* Uma lista selecionável por coleção ou prefeitura, pronta para copiar. */
+.stamp-copy-list-v3{
   margin:20px 0;padding:17px;border:1px solid rgba(70,177,200,.46);
   border-radius:18px;background:linear-gradient(150deg,rgba(16,57,81,.28),rgba(9,25,43,.11));
   min-width:0;overflow-wrap:anywhere;
 }
-.stamp-datahub-downloads-v2 h3{margin:4px 0 12px}
-.stamp-datahub-downloads-v2 .action-btn{min-height:48px;text-align:center}
-.stamp-datahub-downloads-v2 .action-row{display:flex;flex-wrap:wrap;gap:10px}
-.stamp-datahub-filter-v2{display:grid;gap:10px;margin-top:14px}
-.stamp-datahub-filter-v2 label{font-weight:800;font-size:.93rem}
-.stamp-datahub-filter-v2 select{width:100%;max-width:100%;min-height:48px;padding:11px;color:inherit;background:var(--panel,#102136);border:1px solid var(--line,#366078);border-radius:13px}
-.stamp-datahub-filter-v2 .action-btn{justify-self:start;max-width:100%;white-space:normal}
-:root[data-theme="light"] .stamp-datahub-downloads-v2{background:#eef8fb;border-color:#86b7c4}
-:root[data-theme="light"] .stamp-datahub-filter-v2 select{background:#fff;color:#162c3d}
+.stamp-copy-list-v3 h3{margin:4px 0 12px}
+.stamp-copy-list-v3 .stamp-copy-label-v3{display:block;margin:10px 0 8px;font-size:.92rem;font-weight:800}
+.stamp-copy-list-v3 select,
+.stamp-copy-list-v3 textarea{
+  width:100%;max-width:100%;box-sizing:border-box;border-radius:13px;
+  padding:12px;border:1px solid rgba(77,162,183,.43);
+  background:rgba(4,18,34,.82);color:var(--text);font:inherit;
+}
+.stamp-copy-list-v3 select{min-height:48px}
+.stamp-copy-list-v3 textarea{
+  display:block;margin:12px 0;line-height:1.55;resize:vertical;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+  font-size:clamp(.78rem,3.2vw,.95rem);font-variant-numeric:tabular-nums;
+  overflow:auto;white-space:pre;
+}
+.stamp-copy-list-v3 #stampCoordListCount{font-weight:800;margin:10px 0}
+.stamp-copy-list-v3 .action-btn{min-height:48px;max-width:100%;flex:1 1 170px}
+.stamp-copy-list-v3 .action-btn[disabled]{opacity:.5;cursor:not-allowed}
+:root[data-theme="light"] .stamp-copy-list-v3{background:#eef8fb;border-color:#86b7c4}
+:root[data-theme="light"] .stamp-copy-list-v3 select,
+:root[data-theme="light"] .stamp-copy-list-v3 textarea{background:#fff;color:#162c3d}
 
 /* A galeria de selos usa as imagens oficiais, não os pôsteres de eventos. */
 #eventDetail:has(.stamp-detail-v2) > .spidey-cover-art,

@@ -14,14 +14,14 @@ test('ANA mostra cartaz sem a nota técnica de arte original',()=>{
  assert.ok(ana.includes('Ampliar o cartaz ANA'));
  assert.ok(ana.includes('não são coordenadas verificadas'));
 });
-test('desenhos oficiais e TXT continuam disponíveis',()=>{
+test('desenhos oficiais e listas copiáveis continuam disponíveis',()=>{
  const lids=rallies.find(r=>r.collection_type==='pokelids');
  assert.equal(lids.stops.filter(s=>s.image_kind==='lid_artwork'&&s.image_url&&s.official_url).length,482);
  assert.ok(ui.includes('https://www.serebii.net/pokemongo/stamps/'));
  assert.ok(ui.includes('Imagem indisponível. Veja na fonte oficial.'));
  assert.ok(!ui.includes('<small>imagem pendente</small>'));
- assert.ok(ui.includes('data/datahub/pokelids-japan-482-lid-locations.txt'));
- assert.ok(ui.includes('data/datahub/pokemon-center-japan-18-pokestops.txt'));
+ assert.ok(ui.includes('id="stampCoordPrefecture"'));
+ assert.ok(ui.includes('Copiar toda a lista'));
  assert.match(html,/stamps-v2\.js\?v=[\w-]+/);
- assert.ok(html.includes('stamps-v2.css?v=20261018-stamp-image-fix1'));
+ assert.ok(html.includes('stamps-v2.css?v=20261018-stamp-copy-lists2'));
 });
