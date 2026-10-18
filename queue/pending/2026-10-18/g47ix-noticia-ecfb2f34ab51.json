@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "☄️ Meteor Showers begin tomorrow in Pokémon GO!\n📅 October 19-24, starting at 5:00 PM local time\n🌠 Minior makes its Pokémon GO debut!\n💫 Extra Stardust for catching Minior\n✨ Falling stars will light up the in-game sky daily from 5-9 PM\n📈 Increased Minior spawns during those hours!\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2111853881546117183",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2111853881546117183",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-18T16:18:26.190727+00:00"
+}
