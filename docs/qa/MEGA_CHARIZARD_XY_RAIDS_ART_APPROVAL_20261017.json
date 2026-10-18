@@ -1,0 +1,48 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-mega-charizard-xy-raids",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/MEGA_CHARIZARD_XY_RAIDS_ART_CANDIDATE_20261017.json",
+  "candidate_file": "spidey-app/assets/events/review/mega-charizard-xy-raids-20261021-27-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 1074462,
+  "sha256": "845873f8e397b7341ca20bd244acb6867ff33fd664d213e99d340bf3f504e965",
+  "sources": {
+    "official_schedule": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+    "community_catalog": "https://leekduck.com/events/mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026/"
+  },
+  "schedule": {
+    "start_local": "2026-10-21T06:00:00-03:00",
+    "end_local": "2026-10-27T22:00:00-03:00",
+    "local_time": true
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "week_fixture": "2026-10-19..2026-10-25",
+    "views": ["calendar", "weekly", "detail"],
+    "widths": [390, 1280],
+    "themes": ["light", "dark"],
+    "checks": 12,
+    "workflow_run": 39076797668,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39076797668",
+    "artifact_id": 12116982697,
+    "artifact_sha256": "773c66b583d9677078cca8c1ec08c51820108f002cde033670925bfa55288730"
+  },
+  "prior_master_entries_preserved": 74,
+  "prior_unique_images_preserved": 65,
+  "remaining_premium_gaps_after_publication": 11,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

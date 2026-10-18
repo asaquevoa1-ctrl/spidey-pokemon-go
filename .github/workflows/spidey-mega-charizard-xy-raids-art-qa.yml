@@ -1,0 +1,36 @@
+name: Spidey - QA responsivo Mega Charizard X e Y Mega-Reides
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/mega-charizard-xy-raids-20261021-27-v1.png'
+      - 'spidey-app/assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'spidey-app/data/events.json'
+      - 'docs/qa/MEGA_CHARIZARD_XY_RAIDS_ART_*.json'
+      - 'tests/mega-charizard-xy-raids-art-approval.test.cjs'
+      - 'scripts/qa_mega_charizard_xy_raids_art_browser.mjs'
+      - '.github/workflows/spidey-mega-charizard-xy-raids-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          set -o pipefail
+          mkdir -p test-results/mega-charizard-xy-raids-art
+          command -v google-chrome | tee test-results/mega-charizard-xy-raids-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_mega_charizard_xy_raids_art_browser.mjs 2>&1 | tee test-results/mega-charizard-xy-raids-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mega-charizard-xy-raids-responsive-preview
+          path: test-results/mega-charizard-xy-raids-art
