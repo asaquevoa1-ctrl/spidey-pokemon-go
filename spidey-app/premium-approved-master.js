@@ -754,6 +754,17 @@
     "approval_record": "docs/qa/MEGA_SABLEYE_RAIDS_ART_APPROVAL_20261016.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-26-max-monday-sableye": {
+    "file": "assets/events/premium/sableye-max-monday-20261026-approved-v1.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "ceb979cc1b98ff3ec9b9bb7dd9d9f31a75eb14c6c914c8fff1ee8dae45ac83e4",
+    "approval_record": "docs/qa/SABLEYE_MAX_MONDAY_ART_APPROVAL_20261018.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

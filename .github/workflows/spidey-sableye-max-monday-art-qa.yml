@@ -1,0 +1,30 @@
+name: Spidey Sableye Max Monday Art QA
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/**'
+      - 'docs/qa/SABLEYE_MAX_MONDAY_ART_*.json'
+      - 'scripts/qa_sableye_max_monday_art_browser.mjs'
+      - 'tests/sableye-max-monday-art-approval.test.cjs'
+      - '.github/workflows/spidey-sableye-max-monday-art-qa.yml'
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: node --test tests/sableye-max-monday-art-approval.test.cjs
+      - run: |
+          set -o pipefail
+          mkdir -p test-results/sableye-max-monday-art
+          command -v google-chrome | tee test-results/sableye-max-monday-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_sableye_max_monday_art_browser.mjs 2>&1 | tee test-results/sableye-max-monday-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sableye-max-monday-art-responsive-preview
+          path: test-results/sableye-max-monday-art

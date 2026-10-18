@@ -22,6 +22,6 @@ test('event and coordinates persist with neutral date fallback',()=>{
 });
 test('invalidated approval and refreshed cache prevents republishing rejections',()=>{
  const html=fs.readFileSync('spidey-app/index.html','utf8');
- assert.ok(html.includes('premium-approved-master.js?v=20261017-mega-charizard-xy-raids-art1'));
+ assert.ok(html.includes('premium-approved-master.js?v=20261018-sableye-max-monday-art1'));
  assert.equal(qa.individual_human_approval_claimed,false);assert.equal(qa.artworks.length,4);
 });

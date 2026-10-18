@@ -1,0 +1,62 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-26-max-monday-sableye",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/SABLEYE_MAX_MONDAY_ART_CANDIDATE_20261018.json",
+  "candidate_file": "spidey-app/assets/events/review/sableye-max-monday-20261026-v1.png",
+  "approved_file": "spidey-app/assets/events/premium/sableye-max-monday-20261026-approved-v1.png",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2847025,
+  "sha256": "ceb979cc1b98ff3ec9b9bb7dd9d9f31a75eb14c6c914c8fff1ee8dae45ac83e4",
+  "sources": {
+    "official_schedule": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+    "community_catalog": "https://pokemongohub.net/post/event/october-2026-events/"
+  },
+  "schedule": {
+    "date_local": "2026-10-26",
+    "start_local": "2026-10-26T06:00:00-03:00",
+    "end_local": "2026-10-26T21:00:00-03:00",
+    "daily_window_source": "verified_community",
+    "daily_window_printed_on_poster": false
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "workflow_run_id": 39109912296,
+    "workflow_run_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39109912296",
+    "artifact_id": 12129637718,
+    "artifact_name": "sableye-max-monday-art-responsive-preview",
+    "artifact_sha256": "b96a963af8c98bb0960bce2e237c37b3ac638ed32b434c58acc14995420ebedf",
+    "artifact_size_bytes": 19621892,
+    "week_fixture": "2026-10-26..2026-11-01",
+    "views": [
+      "calendar",
+      "weekly",
+      "detail"
+    ],
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "checks": 12
+  },
+  "prior_master_entries_preserved": 75,
+  "prior_unique_images_preserved": 66,
+  "remaining_premium_gaps_after_publication": 10,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
