@@ -1,4 +1,6 @@
-> **REGRA DE PRECEDÊNCIA (18/10/2026):** leia primeiro [SPIDEY_DECISIONS_CURRENT.md](SPIDEY_DECISIONS_CURRENT.md) e [AGENTS.md](AGENTS.md). Este documento contém material histórico; quando houver divergência, prevalecem as decisões atuais e os estados reais do código/deploy.\n\n# SPIDEY — REGISTRO CANÔNICO DE ARTES
+> **REGRA DE PRECEDÊNCIA (18/10/2026):** leia primeiro [SPIDEY_DECISIONS_CURRENT.md](SPIDEY_DECISIONS_CURRENT.md) e [AGENTS.md](AGENTS.md). Este documento contém material histórico; quando houver divergência, prevalecem as decisões atuais e os estados reais do código/deploy.
+
+# SPIDEY — REGISTRO CANÔNICO DE ARTES
 
 ## 11/10/2026 — NFL e cinco artes publicadas no GitHub Pages
 
