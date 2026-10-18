@@ -1,0 +1,43 @@
+name: Spidey - proteção das decisões
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'SPIDEY_DECISIONS_CURRENT.md'
+      - 'SPIDEY_APP_CONSTITUTION.md'
+      - 'SPIDEY_APPROVED_ARTS.md'
+      - '.github/copilot-instructions.md'
+      - '.github/workflows/spidey-governance.yml'
+      - 'config/spidey-governance.json'
+      - 'config/spidey-protected-approved-baseline.json'
+      - 'docs/qa/PRIORITY_ART_ANA_SEOUL_TRUST_20261017.json'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/data/national-trust-2026.json'
+      - 'spidey-app/assets/events/premium/**'
+      - 'tests/spidey-governance.test.cjs'
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'SPIDEY_DECISIONS_CURRENT.md'
+      - 'config/spidey-governance.json'
+      - 'config/spidey-protected-approved-baseline.json'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/assets/events/premium/**'
+      - 'tests/spidey-governance.test.cjs'
+permissions:
+  contents: read
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Conferir decisões e bloquear regressões de artes
+        run: node --test tests/spidey-governance.test.cjs
