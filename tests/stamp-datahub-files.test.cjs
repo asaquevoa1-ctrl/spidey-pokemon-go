@@ -32,8 +32,8 @@ test('DataHub uses copy-and-paste lists, never TXT downloads',()=>{
   assert.equal(fs.existsSync(root+'data/datahub/'+name),false,'Do not publish old TXT: '+name);
   assert.equal(sw.includes(name),false,'Do not precache old TXT');
  }
- assert.match(html,/stamps-v2\\.js\\?v=20261018-stamp-copy-lists2/);
- assert.match(html,/stamps-v2\\.css\\?v=20261018-stamp-copy-lists2/);
+ assert.match(html,/stamps-v2\.js\?v=20261018-stamp-copy-lists2/);
+ assert.match(html,/stamps-v2\.css\?v=20261018-stamp-copy-lists2/);
  assert.match(sw,/spidey-app-20261018-stamp-copy-lists2/);
 });
 
@@ -49,7 +49,7 @@ test('482 PokéLid physical locations form 42 independent prefecture copy lists'
  assert.equal(grouped.size,42);
  assert.deepEqual([...grouped].sort(([a],[b])=>a.localeCompare(b)).map(([name,coords])=>[name,coords.length]),manifest.prefectures.map(x=>[x.name,x.count]));
  assert.equal([...grouped.values()].reduce((n,v)=>n+v.length,0),482);
- for(const coords of grouped.values())assert.ok(coords.every(x=>/^-?\\d{1,2}\\.\\d{6},-?\\d{1,3}\\.\\d{6}$/.test(x)));
+ for(const coords of grouped.values())assert.ok(coords.every(x=>/^-?\d{1,2}\.\d{6},-?\d{1,3}\.\d{6}$/.test(x)));
 });
 
 test('Pokémon Center has 18 community-confirmed coordinates and other rallies do not invent missing data',()=>{
