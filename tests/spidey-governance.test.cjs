@@ -31,10 +31,10 @@ test('rejected ANA, Seoul, Trust art never returns to approved master or publish
  assert.deepEqual(Array.from(ids),qa.artworks.map(x=>x.id));
  for(const entry of qa.artworks){
   assert.equal(master[entry.id],undefined,'User explicitly rejected '+entry.id);
-  assert.equal(fs.existsSync(path.join('spidey-app',entry.file)),false,'Rejected file republished: '+entry.file);
+  assert.equal(fs.existsSync(entry.file),false,'Rejected file republished: '+entry.file);
   for(const approved of Object.values(master)){
    assert.notEqual(approved.sha256,entry.sha256,'Rejected SHA republished via another event ID');
-   assert.notEqual(approved.file,entry.file.replace(/^spidey-app\\//,''),'Rejected file redirected in master');
+   assert.notEqual(approved.file,entry.file.replace('spidey-app/',''),'Rejected file redirected in master');
   }
  }
 });
