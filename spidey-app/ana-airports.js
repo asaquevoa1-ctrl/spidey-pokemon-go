@@ -33,7 +33,7 @@
       if(original && original.file.startsWith('assets/events/premium/') && original.file.endsWith('.jpg') && !original.file.includes('..') && /^[a-f0-9]{64}$/.test(original.sha256)){
         const target=original.file+'?v='+original.sha256.slice(0,12);
         poster.dataset.activeFile=original.file;
-        poster.alt=original.slot+' — pôster original aprovado pelo usuário';
+        poster.alt=original.slot+' — ANA Pokémon Jet';
         poster.onload=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=false;};
         poster.onerror=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=true;};
         link.href=target;
@@ -79,7 +79,7 @@
       '<div class="ana-phase-tabs" role="group" aria-label="Fase do evento">'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-red" aria-pressed="true" type="button">🔴 Charmander • 6 aeroportos</button>'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-green" aria-pressed="false" type="button">🟢 Bulbasaur • 14 aeroportos</button></div>'+
-      '<div id="anaPosterStage" class="ana-poster-stage" hidden><a id="anaPosterEnlarge" target="_blank" rel="noopener noreferrer" aria-label="Abrir a arte ANA original em tamanho inteiro"><img id="anaEventPoster" alt="Pôster original do evento ANA" loading="eager"></a><p class="ana-poster-caption">Arte original • toque para ampliar. As coordenadas impressas nas artes são referências comunitárias, não Ginásios de reide verificados.</p></div>'+
+      '<div id="anaPosterStage" class="ana-poster-stage" hidden><a id="anaPosterEnlarge" target="_blank" rel="noopener noreferrer" aria-label="Ampliar o cartaz ANA"><img id="anaEventPoster" alt="Cartaz do evento ANA" loading="eager"></a></div>'+
       '<div id="anaEventSummary" class="ana-event-summary" aria-live="polite"></div>'+
       '<label class="ana-search-label" for="anaAirportSearch">Buscar aeroporto</label>'+
       '<input id="anaAirportSearch" class="ana-search" type="search" autocomplete="off" placeholder="Ex.: Haneda, Narita, HND, FUK" aria-controls="anaAirportList">'+

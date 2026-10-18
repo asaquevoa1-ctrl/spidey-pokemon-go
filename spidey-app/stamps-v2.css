@@ -441,3 +441,12 @@
 .stamp-datahub-filter-v2 .action-btn{justify-self:start;max-width:100%;white-space:normal}
 :root[data-theme="light"] .stamp-datahub-downloads-v2{background:#eef8fb;border-color:#86b7c4}
 :root[data-theme="light"] .stamp-datahub-filter-v2 select{background:#fff;color:#162c3d}
+
+/* A galeria de selos usa as imagens oficiais, não os pôsteres de eventos. */
+#eventDetail:has(.stamp-detail-v2) > .spidey-cover-art,
+#eventDetail:has(.stamp-detail-v2) > .spidey-art-pending { display:none!important; }
+#eventDetail:has(.stamp-detail-v2) .stamp-active-art-v2 img.v23-hidden-art,
+#eventDetail:has(.stamp-detail-v2) .stamp-tile-art-v2 img.v23-hidden-art { display:block!important;visibility:visible!important; }
+.stamp-active-art-v2--without-image{min-height:0!important;width:82px;height:82px;align-self:start;border:1px solid rgba(238,202,116,.3)}
+.stamp-art-unavailable-v2{min-height:0;background:rgba(243,199,90,.08)}
+.stamp-active-art-v2--without-image .stamp-art-placeholder-v2{min-height:0}

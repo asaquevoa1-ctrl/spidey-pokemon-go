@@ -42,3 +42,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 5. Só registrar `CONCLUÍDO` com prova do nível efetivo; documentar pendências reais. Se tool não suporta transferência binária, não inventar uma publicação e não pedir ao responsável um procedimento manual.
 
 **Esta política vale em toda conversa e toda retomada, não só quando o usuário disser uma palavra-chave.** O Github não substitui memória automaticamente: o agente precisa consultar a política em cada nova sessão.
+
+## Ajuste de tom e selos — 18/10/2026
+- Priorizar linguagem natural e direta no app; evitar avisos internos como “arte original aprovada pelo usuário”, “Arte Premium pendente” em telas de selo, notas técnicas de QA e mensagens repetidas de sistema.
+- A galeria de selos deve exibir suas próprias imagens oficiais já referenciadas (PokéLids e Pokémon Center). Não deixar o controlador geral de pôsteres ocultar imagens de selos.
+- Onde não houver desenho individual verificado, usar indicação discreta, sem inventar artes e sem reservar grandes espaços vazios.
+- Downloads DataHub: manter TXT de 18 PokéStops Pokémon Center e 482 locais físicos PokéLids **em categorias separadas**. Não confundir tampas com PokéStops confirmadas.
