@@ -1,0 +1,193 @@
+{
+  "schema": "spidey-datahub-v1",
+  "generated_at": "2026-10-18",
+  "format": "UTF-8 text, one latitude,longitude pair per line, no header",
+  "files": [
+    {
+      "file": "pokemon-center-japan-18-pokestops.txt",
+      "count": 18,
+      "coordinate_type": "exact_pokestop",
+      "confidence": "community_verified",
+      "disclaimer": "Pontos cadastrados como PokéStops por verificação da comunidade; não auditados diretamente no jogo."
+    },
+    {
+      "file": "pokelids-japan-482-lid-locations.txt",
+      "count": 482,
+      "coordinate_type": "venue_reference",
+      "confidence": "official",
+      "disclaimer": "Posições físicas das PokéLids; não equivalem às PokéStops confirmadas do jogo."
+    }
+  ],
+  "prefectures": [
+    {
+      "name": "Aichi",
+      "count": 9
+    },
+    {
+      "name": "Akita",
+      "count": 5
+    },
+    {
+      "name": "Aomori",
+      "count": 2
+    },
+    {
+      "name": "Chiba",
+      "count": 4
+    },
+    {
+      "name": "Ehime",
+      "count": 2
+    },
+    {
+      "name": "Fukui",
+      "count": 17
+    },
+    {
+      "name": "Fukuoka",
+      "count": 8
+    },
+    {
+      "name": "Fukushima",
+      "count": 43
+    },
+    {
+      "name": "Gifu",
+      "count": 5
+    },
+    {
+      "name": "Hokkaido",
+      "count": 50
+    },
+    {
+      "name": "Hyogo",
+      "count": 3
+    },
+    {
+      "name": "Ibaraki",
+      "count": 5
+    },
+    {
+      "name": "Ishikawa",
+      "count": 8
+    },
+    {
+      "name": "Iwate",
+      "count": 36
+    },
+    {
+      "name": "Kagawa",
+      "count": 18
+    },
+    {
+      "name": "Kagoshima",
+      "count": 9
+    },
+    {
+      "name": "Kanagawa",
+      "count": 5
+    },
+    {
+      "name": "Kochi",
+      "count": 18
+    },
+    {
+      "name": "Kyoto",
+      "count": 8
+    },
+    {
+      "name": "Mie",
+      "count": 31
+    },
+    {
+      "name": "Miyagi",
+      "count": 37
+    },
+    {
+      "name": "Miyazaki",
+      "count": 26
+    },
+    {
+      "name": "Nagano",
+      "count": 6
+    },
+    {
+      "name": "Nagasaki",
+      "count": 15
+    },
+    {
+      "name": "Nara",
+      "count": 5
+    },
+    {
+      "name": "Niigata",
+      "count": 4
+    },
+    {
+      "name": "Okayama",
+      "count": 4
+    },
+    {
+      "name": "Okinawa",
+      "count": 17
+    },
+    {
+      "name": "Osaka",
+      "count": 5
+    },
+    {
+      "name": "Saga",
+      "count": 3
+    },
+    {
+      "name": "Saitama",
+      "count": 3
+    },
+    {
+      "name": "Shiga",
+      "count": 5
+    },
+    {
+      "name": "Shimane",
+      "count": 5
+    },
+    {
+      "name": "Shizuoka",
+      "count": 5
+    },
+    {
+      "name": "Tochigi",
+      "count": 3
+    },
+    {
+      "name": "Tokushima",
+      "count": 3
+    },
+    {
+      "name": "Tokyo",
+      "count": 13
+    },
+    {
+      "name": "Tottori",
+      "count": 20
+    },
+    {
+      "name": "Toyama",
+      "count": 3
+    },
+    {
+      "name": "Wakayama",
+      "count": 5
+    },
+    {
+      "name": "Yamagata",
+      "count": 5
+    },
+    {
+      "name": "Yamaguchi",
+      "count": 4
+    }
+  ],
+  "note": "TXT é formato genérico latitude,longitude. Compatibilidade com qualquer app chamado DataHub deve ser testada no próprio aplicativo; nenhum formato proprietário foi confirmado.",
+  "art_status": "482 imagens oficiais de PokéLids ligadas no catálogo; 17 imagens de selo Pokémon Center disponíveis via link externo, 1 pendente."
+}
