@@ -768,6 +768,39 @@
         }
       },
       {
+        "id": "2026-aeon-mall-halloween-japan",
+        "title": "AEON Mall × Pokémon GO — Halloween 2026",
+        "summary": "Evento presencial nos AEON Malls participantes do Japão, de 19 de outubro a 1º de novembro. Duas Pesquisas Temporárias, Pikachu com chapéu de bruxa e Módulos Atrair de 2 horas.",
+        "category": "regional_event",
+        "tags": [
+          "Japão",
+          "AEON Mall",
+          "Halloween",
+          "Pikachu com chapéu de bruxa",
+          "Pesquisa Temporária",
+          "Presencial"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-10-19",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial no Japão",
+          "url": "https://pokemongo.com/ja/news/202610aeonmall-halloween",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
         "id": "2026-10-24-fc-seoul",
         "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
         "summary": "Evento presencial em 24 de outubro, das 9h às 20h, perto do Estádio da Copa do Mundo de Seul. Charmander em reides de 1★ e Charizard na Pesquisa Temporária, ambos com Fundo de Localização.",
@@ -877,14 +910,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 21,
+    "calendar_events_in_week": 22,
     "events_with_weekly_art": 19,
     "events_with_premium_weekly_art": 19,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 2,
-    "events_in_weekly": 21,
+    "events_without_weekly_art": 3,
+    "events_in_weekly": 22,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-19T12:59:15.263153-03:00",
+    "generated_at": "2026-10-19T13:23:41.186818-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
