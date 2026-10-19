@@ -164,6 +164,11 @@
 
   function removeCover(container) { container?.querySelectorAll?.('.spidey-cover-art').forEach((node) => node.remove()); }
 
+  function hasVerifiedDateVisual(container, event) {
+    return event?.presentation?.no_unverified_poster === true
+      && Boolean(container?.querySelector?.('.spidey-verified-date'));
+  }
+
   function decorateContainer(container) {
     // Coleções de selos têm suas próprias imagens, não pôsteres de evento.
     if (container?.id === 'eventDetail' && container.querySelector('.stamp-detail-v2')) {
@@ -190,7 +195,7 @@
     // An intentional verified-date tile already fills the visual slot. Never
     // inject another "Arte Premium pendente" hero that hides the real content.
     // This also repairs a cover left behind by an older cached app session.
-    if (event.presentation?.no_unverified_poster === true && container.querySelector('.spidey-verified-date')) {
+    if (hasVerifiedDateVisual(container, event)) {
       removeCover(container);
       removeNoArtState(container);
       return;
