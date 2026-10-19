@@ -437,6 +437,19 @@ function renderMapSummary() {
   }));
 }
 
+function nightOutBackgroundHighlight(event) {
+  if (event?.location_background?.confirmed !== true) return '';
+  if (!['2026-pokemon-night-out-la','2026-pokemon-night-out-london'].includes(event.id)) return '';
+  const city = event.id.endsWith('-london') ? 'Londres' : 'Los Angeles';
+  return `<section class="spidey-location-reward" data-night-out-city="${city}" aria-label="Fundo de Localização especial confirmado">
+    <span class="spidey-location-reward-eyebrow">✦ Fundo de Localização confirmado</span>
+    <strong>${city} · Exclusivo do evento</strong>
+    <span class="spidey-location-reward-details">Pokémon capturados nas Reides especiais recebem o Fundo de Localização da cidade.</span>
+    <span class="spidey-location-reward-meta"><span>★ 1 · Pikachu</span><span>★ 3 · Gengar</span></span>
+  </section>`;
+}
+window.SpideyNightOutHighlight = nightOutBackgroundHighlight;
+
 function openEvent(event) {
   if (!event) return;
   beginAppDialog();
@@ -456,6 +469,7 @@ function openEvent(event) {
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
       <h2>${event.public_title || event.title}</h2><p>${event.public_summary || event.summary || ''}</p>
+      ${nightOutBackgroundHighlight(event)}
       ${newsOnly ? '' : `<div class="info-grid">
         ${dateOnly ? `<div class="info-box"><span>Período no local</span><strong>${window.SpideyDateOnly.label(event)}</strong></div><div class="info-box"><span>Horário diário</span><strong>Não divulgado</strong></div>` : `<div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div><div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>`}
       </div>
