@@ -123,3 +123,26 @@
   .spidey-verified-date-kicker { font-size: .45rem; }
   .experience-feature-art-wrap > .spidey-verified-date { min-height: 240px; }
 }
+
+/* Mobile QA 19/10: a data confirmada já é a representação visual do evento.
+   A cobertura legada não deve acrescentar um segundo bloco de poster vazio. */
+#eventDetail:has(> .spidey-verified-date) > .spidey-cover-art.spidey-art-pending,
+.event-card:has(> .spidey-verified-date) > .spidey-cover-art.spidey-art-pending,
+.experience-mini:has(> .spidey-verified-date) > .spidey-cover-art.spidey-art-pending,
+.experience-feature-art-wrap:has(> .spidey-verified-date) > .spidey-cover-art.spidey-art-pending,
+.v22-event-main:has(> .spidey-verified-date) > .spidey-cover-art.spidey-art-pending,
+.weekly-item:has(> .spidey-verified-date) > .spidey-cover-art.spidey-art-pending {
+  display: none !important;
+}
+#eventDetail > .spidey-verified-date {
+  flex: none;
+  max-height: 185px;
+}
+@media (max-width: 760px) {
+  #eventDetail > .spidey-verified-date {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    min-height: 115px;
+    max-height: 150px;
+  }
+}
