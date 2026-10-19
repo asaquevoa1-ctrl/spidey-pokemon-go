@@ -833,6 +833,44 @@
         }
       },
       {
+        "id": "2026-pokemon-night-out-la",
+        "title": "Pokémon Night Out — Los Angeles | Fundo especial",
+        "summary": "Evento presencial em Intuit Dome, Los Angeles, em 24 de outubro: reides de Pikachu e Gengar com Fundo de Localização exclusivo de Los Angeles, Toxtricity nas Pesquisas Temporárias e Módulos Atrair de 1 hora.",
+        "category": "regional_event",
+        "tags": [
+          "Fundo Los Angeles",
+          "Pikachu e Gengar",
+          "Evento presencial",
+          "Pesquisa Temporária",
+          "Toxtricity"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-10-24",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial Night Out 2026",
+          "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+          "confidence": "official"
+        },
+        "art": {
+          "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
+          "web_width": 1024,
+          "web_height": 1536,
+          "web_sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
+          "alt": "Pôster Premium previamente aprovado do Pokémon Night Out; consulte o detalhe para o fundo especial de Los Angeles."
+        },
+        "weekly_art": {
+          "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
         "id": "2026-10-city-safari-boston-rescheduled",
         "title": "City Safari Boston remarcado",
         "summary": "Jogabilidade global em 24 e 25/10, exclusiva para quem já possui ingresso válido de Boston.",
@@ -910,14 +948,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 22,
-    "events_with_weekly_art": 19,
-    "events_with_premium_weekly_art": 19,
+    "calendar_events_in_week": 23,
+    "events_with_weekly_art": 20,
+    "events_with_premium_weekly_art": 20,
     "events_with_official_weekly_art": 0,
     "events_without_weekly_art": 3,
-    "events_in_weekly": 22,
+    "events_in_weekly": 23,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-19T18:56:31.290413-03:00",
+    "generated_at": "2026-10-19T18:56:55.083026-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
