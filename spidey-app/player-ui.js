@@ -4,6 +4,7 @@
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const title=e=>window.SpideyVisualV3?.localizeTitle(e.title)||String(e.title||'').replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:');
   function art(e){
+    if(e?.presentation?.hide_poster_until_corrected === true || e?.id === '2026-09-tcg-30th-us-retail') return null;
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.[e.id];
     const review=window.SPIDEY_PREVIEW_ART?.[e.id];
     const a=approved?window.SpideyReviewArt.resolve(e):review;
