@@ -123,7 +123,7 @@ function eventArtVisible(event) {
 
 function verifiedDateVisual(event) {
   const iso = String(event?.schedule?.start_date || event?.schedule?.start_local || '');
-  const match = iso.match(/^\\d{4}-(\\d{2})-(\\d{2})/);
+  const match = iso.match(/^\d{4}-(\d{2})-(\d{2})/);
   const months = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
   const day = match ? match[2] : 'GO';
   const month = match ? months[Number(match[1]) - 1] : 'EVENTO';
