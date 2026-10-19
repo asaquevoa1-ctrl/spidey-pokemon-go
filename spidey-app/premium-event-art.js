@@ -17,6 +17,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   };
 
   function premiumAsset(event, role = 'card') {
+    if(event?.presentation?.hide_poster_until_corrected === true || event?.id === '2026-09-tcg-30th-us-retail') return null;
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
     if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file]){
       const review=window.SpideyReviewArt?.resolve(event);
@@ -45,6 +46,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   }
 
   spideyResolveEventArt = function spideyResolveEventArtPriorityFixed(event, role = 'card') {
+    if(event?.presentation?.hide_poster_until_corrected === true || event?.id === '2026-09-tcg-30th-us-retail') return null;
     if(window.SPIDEY_APPROVED_ART_MASTER?.[event?.id])return premiumAsset(event,role);
     const review=window.SpideyReviewArt?.poster(event);
     if(review){

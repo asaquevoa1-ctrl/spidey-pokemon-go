@@ -1,0 +1,39 @@
+/* QA from actual Samsung video 2026-10-19.
+   An article with no approved artwork must not render a huge technical placeholder.
+   The 30-year TCG poster contains forbidden project branding; preserve its source
+   file and approval record, but do not display it until the editorial correction. */
+
+#eventDetail > .spidey-cover-art.spidey-art-pending,
+#eventDetail .spidey-art-pending,
+#eventDetail .spidey-art-pending-label,
+#eventDetail > .spidey-cover-art[aria-hidden="true"] {
+  display: none !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Defense for cached renderers using the banned TCG poster, anywhere in the app. */
+img[src*="tcg-30th-20260927-1020-approved-v1.png"],
+picture:has(img[src*="tcg-30th-20260927-1020-approved-v1.png"]) {
+  display: none !important;
+}
+
+/* When the poster is withheld, start the event details immediately below the nav. */
+#eventDetail:not(:has(> img.detail-hero:not([hidden]))) > .detail-body {
+  margin-top: 0 !important;
+}
+#eventDetail > .spidey-verified-date {
+  max-height: 180px;
+}
+@media (max-width: 760px) {
+  #eventDetail > .detail-body {
+    scroll-margin-top: 12px;
+  }
+  #eventDetail > .spidey-verified-date {
+    min-height: 110px;
+    max-height: 150px;
+  }
+}

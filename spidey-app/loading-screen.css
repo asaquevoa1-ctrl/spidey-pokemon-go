@@ -18,6 +18,16 @@
     linear-gradient(155deg, #05182f 0%, #060c1d 65%, #050914 100%);
 }
 .spidey-splash[hidden] { display: none !important; }
+/* CSS-only hard stop: guards old/offline Samsung WebViews if JS timers stall.
+   A ready page can fade sooner through .is-leaving. */
+.spidey-splash:not([hidden]) {
+  animation: spidey-splash-failsafe 4.3s steps(1, end) forwards;
+}
+@keyframes spidey-splash-failsafe {
+  0%, 99.9% { visibility: visible; }
+  100% { visibility: hidden; pointer-events: none; opacity: 0; }
+}
+
 .spidey-splash::before {
   content: "";
   position: absolute;

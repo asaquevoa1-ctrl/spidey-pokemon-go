@@ -38,6 +38,7 @@ function weeklyTimeLabel(item) {
 }
 
 function weeklyArtUrl(item) {
+  if(item?.presentation?.hide_poster_until_corrected === true || item?.id === '2026-09-tcg-30th-us-retail') return '';
   const event = weeklyFindEvent(item?.id) || item;
   const approved = window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
   if (approved) {

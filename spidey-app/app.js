@@ -115,6 +115,7 @@ function formatRange(event) {
 }
 
 function eventArtVisible(event) {
+  if (event?.presentation?.hide_poster_until_corrected === true || event?.id === '2026-09-tcg-30th-us-retail') return false;
   if (event?.presentation?.no_unverified_poster !== true) return true;
   return Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[event.id]?.file ||
     event.official_media?.classification === 'official_illustration' ||

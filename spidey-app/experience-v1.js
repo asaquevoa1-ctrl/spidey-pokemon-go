@@ -73,6 +73,7 @@
   }
 
   function artUrl(event, role = 'card') {
+    if(event?.presentation?.hide_poster_until_corrected === true || event?.id === '2026-09-tcg-30th-us-retail') return '';
     if (typeof spideyResolveEventArt === 'function') {
       const asset = spideyResolveEventArt(event, role);
       if (asset?.url) return typeof spideyVersionedArtUrl === 'function' ? spideyVersionedArtUrl(asset) : asset.url;

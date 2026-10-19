@@ -51,7 +51,7 @@ test('loading screen uses approved logo, covers page and is cached for offline',
   assert.ok(html.includes('spidey-splash-logo" src="assets/spidey-logo-oficial.jpg"'));
   assert.ok(html.includes('loading-screen.css?v='));
   assert.ok(html.includes('loading-screen.js?v='));
-  assert.ok(html.includes('8000);</script>'));
+  assert.ok(html.includes('4000);</script>'));
   assert.ok(css.includes('position: fixed;'));
   assert.ok(css.includes('prefers-reduced-motion: reduce'));
   assert.ok(css.includes('.spidey-splash[hidden]'));

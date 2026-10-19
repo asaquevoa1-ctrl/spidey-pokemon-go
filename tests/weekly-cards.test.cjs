@@ -23,6 +23,11 @@ test('every approved weekly card uses the same original file and version as the 
   assert.ok(Object.keys(window.SPIDEY_APPROVED_ART_MASTER).length >= 35 + JSON.parse(fs.readFileSync('docs/qa/CONTENT_NFL_APPROVAL_20261011.json')).event_ids.length);
   for (const [id, asset] of Object.entries(window.SPIDEY_APPROVED_ART_MASTER)) {
     const html = context.weeklyItemCard({ id, title: 'Event', weekly_art: { premium: true, url: 'competing.png' } });
+    if (id === '2026-09-tcg-30th-us-retail') {
+      assert.ok(!html.includes(asset.file), 'Blocked historical TCG poster must not display');
+      assert.ok(!html.includes('competing.png'));
+      continue;
+    }
     assert.ok(html.includes(`${asset.file}?v=${asset.sha256.slice(0, 12)}`), id);
     assert.ok(!html.includes('competing.png'), id);
     assert.ok(!html.includes('weekly-date"'), id);
