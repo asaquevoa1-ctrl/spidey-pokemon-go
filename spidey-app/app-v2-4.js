@@ -65,6 +65,7 @@
   }
 
   function approvedDayArt(event) {
+    if(event?.presentation?.hide_poster_until_corrected === true || event?.id === '2026-09-tcg-30th-us-retail') return '';
     const approved = window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
     if (!approved?.file || window.SPIDEY_UNAVAILABLE_ART?.[approved.file]) return '';
     const version = String(approved.sha256 || '').slice(0, 12);
