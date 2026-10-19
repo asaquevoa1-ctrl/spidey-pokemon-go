@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-art-coverage-v1-20261019-verified-date-once';
+  const VERSION = 'spidey-art-coverage-v1-20261019-detail-no-placeholder';
   const BAD_PUBLIC_ART = /(?:assets\/events\/generated\/|generated_vector|placeholder|preview|fallback|festival-das-luzes-approved\.png|festival-das-luzes-2026\.jpg)/i;
   const PREMIUM_ART = /\/assets\/events\/premium\//i;
   const SOURCE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
@@ -106,7 +106,7 @@
   }
 
   function badImage(img, event, role) {
-    if (!img) return true;
+    if (!img || event?.presentation?.hide_poster_until_corrected === true) return true;
     const src = String(img.currentSrc || img.src || '');
     if (!src) return true;
     const path=src.split(/[?#]/,1)[0];
@@ -188,6 +188,13 @@
     // A day agenda lists several events and does not own an event poster.
     if (container?.id === 'eventDetail' && (container.querySelector('.v24-day-sheet') || container.querySelector('.space-detail'))) {
       removeCover(container);
+      return;
+    }
+    // A detail page must always prioritize the actual article. Missing art is
+    // not a full-screen visual: remove any stale empty hero from the DOM.
+    if (container?.id === 'eventDetail') {
+      removeCover(container);
+      removeNoArtState(container);
       return;
     }
     const event = eventFor(container);
