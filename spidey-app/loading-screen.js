@@ -5,8 +5,8 @@
   const splash = document.getElementById('spideySplash');
   if (!splash) return;
 
-  const MIN_MS = 380;
-  const MAX_MS = 6500;
+  const MIN_MS = 220;
+  const MAX_MS = 2800; // The Samsung recording showed avoidable waiting.
   const start = Date.now();
   const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true;
   let closing = false;
