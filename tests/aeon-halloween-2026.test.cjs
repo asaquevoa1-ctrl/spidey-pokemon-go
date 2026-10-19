@@ -21,10 +21,10 @@ test('AEON Halloween has dates, official source, distinct research windows and n
     assert.equal(aeon.schedule[field], undefined, 'Do not invent ' + field);
   }
   const notes = aeon.notes.join(' ');
-  assert.match(notes, /19 a 25\\/10\\/2026/);
-  assert.match(notes, /26\\/10 a 01\\/11\\/2026/);
-  assert.match(notes, /08\\/11\\/2026 às 20h/);
-  assert.match(notes, /15\\/11\\/2026 às 20h/);
+  assert.match(notes, /19 a 25\/10\/2026/);
+  assert.match(notes, /26\/10 a 01\/11\/2026/);
+  assert.match(notes, /08\/11\/2026 às 20h/);
+  assert.match(notes, /15\/11\/2026 às 20h/);
   assert.ok(aeon.pokemon.some(p => /Pikachu com chapéu de bruxa/.test(p.name)));
   assert.ok(aeon.bonuses.some(p => /2 horas/.test(p)));
 });
@@ -45,7 +45,7 @@ test('AEON date-only state stays within Japanese calendar dates', () => {
   const window = {};
   vm.runInNewContext(fs.readFileSync(root + 'date-only.js', 'utf8'), {window, Date, Intl});
   assert.equal(window.SpideyDateOnly.valid(aeon), true);
-  assert.match(window.SpideyDateOnly.label(aeon), /19\\/10\\/2026.*01\\/11\\/2026/);
+  assert.match(window.SpideyDateOnly.label(aeon), /19\/10\/2026.*01\/11\/2026/);
   assert.match(window.SpideyDateOnly.status(aeon, new Date('2026-10-19T02:00:00Z')), /^Hoje/);
   assert.equal(window.SpideyDateOnly.status(aeon, new Date('2026-11-01T15:00:00Z')), 'Data encerrada');
 });
@@ -56,13 +56,13 @@ test('opening uses exact approved logo, no duplicate brand asset and no unverifi
   const app = fs.readFileSync(root + 'app.js', 'utf8');
   const experience = fs.readFileSync(root + 'experience-v1.js', 'utf8');
   assert.match(html, /spidey-opening-screen/);
-  assert.match(html, /opening-20261019\\.css/);
-  assert.match(html, /spidey-opening-emblem.*assets\\/spidey-logo-oficial\\.jpg/);
+  assert.match(html, /opening-20261019\.css/);
+  assert.match(html, /spidey-opening-emblem.*assets\/spidey-logo-oficial\.jpg/);
   assert.match(css, /prefers-reduced-motion/);
   assert.equal(aeon.presentation.no_unverified_poster, true);
   assert.match(app, /function eventArtVisible/);
   assert.match(app, /function verifiedDateVisual/);
-  assert.match(experience, /eventArtVisible\\(event\\)/);
+  assert.match(experience, /eventArtVisible\(event\)/);
   for (const file of ['app.js','experience-v1.js','player-ui.js']) {
     assert.doesNotThrow(() => new vm.Script(fs.readFileSync(root + file, 'utf8'), {filename: file}));
   }
