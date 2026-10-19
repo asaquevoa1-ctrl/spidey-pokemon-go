@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261019-nightout-backgrounds1';
+const CACHE = 'spidey-app-20261019-aeon-mobile-blank-v2';
 const CORE = [
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
