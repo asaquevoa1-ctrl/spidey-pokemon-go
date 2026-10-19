@@ -534,7 +534,7 @@ async function loadContent({ refresh = false } = {}) {
         if (stampList) stampList.innerHTML = '<p class="empty">Não foi possível carregar os selos.</p>';
       }
     }
-  })().finally(() => { contentLoading = null; });
+  })().finally(() => { window.dispatchEvent(new Event('spideycontentsettled')); contentLoading = null; });
   return contentLoading;
 }
 function pruneExpiredPublicEvents() {

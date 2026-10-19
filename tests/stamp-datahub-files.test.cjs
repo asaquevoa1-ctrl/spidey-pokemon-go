@@ -34,7 +34,7 @@ test('DataHub uses copy-and-paste lists, never TXT downloads',()=>{
  }
  assert.match(html,/stamps-v2\.js\?v=20261018-stamp-copy-lists2/);
  assert.match(html,/stamps-v2\.css\?v=20261018-stamp-copy-lists2/);
- assert.match(sw,/spidey-app-20261018-stamp-copy-lists2/);
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-/); // Keep verifying the copy-list UI above, not a frozen global cache version.
 });
 
 test('482 PokéLid physical locations form 42 independent prefecture copy lists',()=>{

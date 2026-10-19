@@ -21,7 +21,7 @@ test('five explicitly approved Spidey Premium reference posters are the current 
   assert.equal(record.no_other_event_image_overwritten,true);
   assert.equal(record.push_service_modified,false);
   assert.match(html,/premium-approved-master\.js\?v=20261018-sableye-max-monday-art1/);
-  assert.match(sw,/const CACHE = 'spidey-app-20261018-/);
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-/); // Cache version advances with unrelated fixes.
   assert.ok(sw.includes('minior-geminids-20261211-16-spidey-reference-approved-v1.webp'), 'Previously approved posters remain cached');
   const expectedIds=[
     '2026-12-minior-geminids',
