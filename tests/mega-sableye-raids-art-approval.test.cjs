@@ -19,7 +19,11 @@ test('Mega Sableye raids delegated approval promotes the exact reviewed PNG and 
   assert.equal(event.source.url,candidate.sources.official_schedule.url);
   assert.equal(event.verification_sources[0].confidence,'community');
   assert.equal(event.schedule.start_local,approval.schedule.start_local);
-  assert.equal(event.schedule.end_local,approval.schedule.end_local);
+  // The October poster approval remains intact; November's published calendar corrects its outdated end.
+  assert.equal(approval.schedule.end_local,'2026-11-03T22:00:00-03:00');
+  assert.equal(event.schedule.end_local,'2026-11-08T10:00:00-03:00');
+  assert.ok(event.verification_sources.some(source=>source.url==='https://pokemongohub.net/post/event/pokemon-go-november-2026-events/'));
+  assert.ok(event.notes.some(note=>/8 de novembro/.test(note)));
   assert.equal(hash(approval.authorization_record),approval.authorization_sha256);
   assert.equal(hash(approval.candidate_file),approval.sha256);
   assert.equal(hash(approval.approved_file),approval.sha256);
