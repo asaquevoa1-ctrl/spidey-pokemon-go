@@ -41,6 +41,9 @@ test('TCG approved binary/master remain untouched while noncompliant public disp
   assert.ok(premium.includes("event?.id === '2026-09-tcg-30th-us-retail'"));
   assert.ok(load('app-v2-4.js').includes('hide_poster_until_corrected'));
   assert.ok(load('weekly.js').includes('hide_poster_until_corrected'));
+  const coverage=load('art-coverage-v1.js');
+  assert.ok(coverage.includes("event?.presentation?.hide_poster_until_corrected === true"));
+  assert.ok(coverage.includes("container?.querySelector?.('.spidey-verified-date')"));
 });
 test('Startup is bounded and deploy refreshes PWA assets on Samsung',()=>{
   const splash=load('loading-screen.js'),html=load('index.html'),sw=load('sw.js');
