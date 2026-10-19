@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = 'spidey-art-coverage-v1-20261011-canonical-only';
+  const VERSION = 'spidey-art-coverage-v1-20261019-verified-date-once';
   const BAD_PUBLIC_ART = /(?:assets\/events\/generated\/|generated_vector|placeholder|preview|fallback|festival-das-luzes-approved\.png|festival-das-luzes-2026\.jpg)/i;
   const PREMIUM_ART = /\/assets\/events\/premium\//i;
   const SOURCE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork';
@@ -187,6 +187,14 @@
     }
     const event = eventFor(container);
     if (!event) return;
+    // An intentional verified-date tile already fills the visual slot. Never
+    // inject another "Arte Premium pendente" hero that hides the real content.
+    // This also repairs a cover left behind by an older cached app session.
+    if (event.presentation?.no_unverified_poster === true && container.querySelector('.spidey-verified-date')) {
+      removeCover(container);
+      removeNoArtState(container);
+      return;
+    }
     const role = roleFor(container);
     const image = container.querySelector('img:not(.spidey-cover-pokemon)');
     const decide = () => {
