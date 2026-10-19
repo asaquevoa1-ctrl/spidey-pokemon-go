@@ -2,6 +2,248 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-pokemon-night-out-la",
+      "slug": "2026-pokemon-night-out-la",
+      "title": "Pokémon Night Out — Los Angeles | Fundo especial",
+      "summary": "Evento presencial em Intuit Dome, Los Angeles, em 24 de outubro: reides de Pikachu e Gengar com Fundo de Localização exclusivo de Los Angeles, Toxtricity nas Pesquisas Temporárias e Módulos Atrair de 1 hora.",
+      "category": "regional_event",
+      "tags": [
+        "Fundo Los Angeles",
+        "Pikachu e Gengar",
+        "Evento presencial",
+        "Pesquisa Temporária",
+        "Toxtricity"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Night Out 2026",
+        "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Los_Angeles",
+        "start_date": "2026-10-24",
+        "end_date": "2026-10-24",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "uses_existing_approved_event_poster": true
+      },
+      "location_label": "Intuit Dome • Los Angeles",
+      "locations": [
+        {
+          "id": "night-out-la-venue-reference",
+          "name": "Intuit Dome",
+          "label": "Intuit Dome • referência do local, não Poképarada",
+          "address": "Inglewood, Califórnia, EUA",
+          "latitude": 33.94446,
+          "longitude": -118.34337,
+          "coordinate_text": "33.94446,-118.34337",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "exact_pokestop_verified": false,
+          "source_note": "Coordenada informada pela comunidade para o local do evento; não atesta Ginásio ou Poképarada específica."
+        }
+      ],
+      "location_background": {
+        "confirmed": true,
+        "city": "Los Angeles",
+        "label": "Fundo de Localização: Los Angeles",
+        "source": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+        "eligible_pokemon": [
+          "Pikachu",
+          "Gengar"
+        ],
+        "how": "Capturar Pikachu (Reide de 1 estrela) ou Gengar (Reide de 3 estrelas) nas Reides especiais do evento presencial."
+      },
+      "bonuses": [
+        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LOS ANGELES: Pikachu e Gengar capturados nas Reides especiais recebem o fundo da cidade.",
+        "Módulos Atrair (exceto Dourados) ativados durante o evento duram 1 hora.",
+        "Reides de 1 estrela: Pikachu, com possibilidade de Brilhante. Reides de 3 estrelas: Gengar, com possibilidade de Brilhante.",
+        "Até 2 Pesquisas Temporárias ao abrir o Pokémon GO no local. Recompensas podem incluir encontros com Toxtricity (Forma Aguda/Grave) e a camisa de beisebol Pokémon Night Out para avatar."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu",
+          "note": "Reide 1★ • possível Brilhante • Fundo de Localização Los Angeles"
+        },
+        {
+          "name": "Gengar",
+          "note": "Reide 3★ • possível Brilhante • Fundo de Localização Los Angeles"
+        },
+        {
+          "name": "Toxtricity (Formas Aguda e Grave)",
+          "note": "Encontro possível nas Pesquisas Temporárias locais"
+        }
+      ],
+      "notes": [
+        "Los Angeles: 24 de outubro de 2026 em Intuit Dome. Benefícios disponíveis no local, não mundialmente.",
+        "A transmissão oficial de Los Angeles começa às 19h30 PDT; o anúncio não especifica horário separado para cada bônus dentro do local.",
+        "Quem já resgatou a pesquisa de camiseta por assistir à Twitch em Los Angeles não pode resgatar a mesma pesquisa de camiseta novamente no evento.",
+        "Encontros mais frequentes: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne e Rookidee.",
+        "Também poderão aparecer Unown P, N e O; algumas aparições poderão ser Brilhantes, sem garantia.",
+        "Fundo especial confirmado para Pikachu/Gengar de reides, NÃO para Toxtricity ou encontros na natureza.",
+        "A localização é referência da arena; não significa Ginásio ou Poképarada comprovados.",
+        "Uma arte Premium já aprovada para o Pokémon Night Out é reutilizada sem substituição. Essa arte não representa uma captura real do fundo de localização."
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "As coordenadas se referem ao local do evento, sem confirmação de Ginásio ou Poképarada exatos."
+      },
+      "art": {
+        "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
+        "web_width": 1024,
+        "web_height": 1536,
+        "web_sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
+        "alt": "Pôster Premium previamente aprovado do Pokémon Night Out; consulte o detalhe para o fundo especial de Los Angeles."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Sem confirmação de entrega do serviço push para eventos presenciais; evitar notificação falsa."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Night Out, bônus e fundos de localização",
+          "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon 30 • locais e datas",
+          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
+      "id": "2026-pokemon-night-out-london",
+      "slug": "2026-pokemon-night-out-london",
+      "title": "Pokémon Night Out — Londres | Fundo especial",
+      "summary": "Evento presencial em The O2 Arena, Londres, em 10 de novembro: reides de Pikachu e Gengar com Fundo de Localização exclusivo de Londres, Toxtricity nas Pesquisas Temporárias e Módulos Atrair de 1 hora.",
+      "category": "regional_event",
+      "tags": [
+        "Fundo Londres",
+        "Pikachu e Gengar",
+        "Evento presencial",
+        "Pesquisa Temporária",
+        "Toxtricity"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Night Out 2026",
+        "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "Europe/London",
+        "start_date": "2026-11-10",
+        "end_date": "2026-11-10",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "uses_existing_approved_event_poster": true
+      },
+      "location_label": "The O2 Arena • Londres",
+      "locations": [
+        {
+          "id": "night-out-london-venue-reference",
+          "name": "The O2 Arena",
+          "label": "The O2 Arena • referência do local, não Poképarada",
+          "address": "Londres, Reino Unido",
+          "latitude": 51.50299,
+          "longitude": 0.00307,
+          "coordinate_text": "51.50299,0.00307",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_raid_gym_verified": false,
+          "exact_pokestop_verified": false,
+          "source_note": "Coordenada informada pela comunidade para o local do evento; não atesta Ginásio ou Poképarada específica."
+        }
+      ],
+      "location_background": {
+        "confirmed": true,
+        "city": "Londres",
+        "label": "Fundo de Localização: Londres",
+        "source": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+        "eligible_pokemon": [
+          "Pikachu",
+          "Gengar"
+        ],
+        "how": "Capturar Pikachu (Reide de 1 estrela) ou Gengar (Reide de 3 estrelas) nas Reides especiais do evento presencial."
+      },
+      "bonuses": [
+        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LONDRES: Pikachu e Gengar capturados nas Reides especiais recebem o fundo da cidade.",
+        "Módulos Atrair (exceto Dourados) ativados durante o evento duram 1 hora.",
+        "Reides de 1 estrela: Pikachu, com possibilidade de Brilhante. Reides de 3 estrelas: Gengar, com possibilidade de Brilhante.",
+        "Até 2 Pesquisas Temporárias ao abrir o Pokémon GO no local. Recompensas podem incluir encontros com Toxtricity (Forma Aguda/Grave) e a camisa de beisebol Pokémon Night Out para avatar."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu",
+          "note": "Reide 1★ • possível Brilhante • Fundo de Localização Londres"
+        },
+        {
+          "name": "Gengar",
+          "note": "Reide 3★ • possível Brilhante • Fundo de Localização Londres"
+        },
+        {
+          "name": "Toxtricity (Formas Aguda e Grave)",
+          "note": "Encontro possível nas Pesquisas Temporárias locais"
+        }
+      ],
+      "notes": [
+        "Londres: 10 de novembro de 2026 em The O2 Arena. Benefícios disponíveis no local, não mundialmente.",
+        "A arena informa abertura das portas às 18h GMT; isso não estabelece o horário preciso de início das atividades do Pokémon GO.",
+        "Quem já resgatou a pesquisa de camiseta por assistir à Twitch em Los Angeles não pode resgatar a mesma pesquisa de camiseta novamente no evento.",
+        "Encontros mais frequentes: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne e Rookidee.",
+        "Também poderão aparecer Unown P, N e O; algumas aparições poderão ser Brilhantes, sem garantia.",
+        "Fundo especial confirmado para Pikachu/Gengar de reides, NÃO para Toxtricity ou encontros na natureza.",
+        "A localização é referência da arena; não significa Ginásio ou Poképarada comprovados.",
+        "Uma arte Premium já aprovada para o Pokémon Night Out é reutilizada sem substituição. Essa arte não representa uma captura real do fundo de localização."
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "As coordenadas se referem ao local do evento, sem confirmação de Ginásio ou Poképarada exatos."
+      },
+      "art": {
+        "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
+        "web_width": 1024,
+        "web_height": 1536,
+        "web_sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
+        "alt": "Pôster Premium previamente aprovado do Pokémon Night Out; consulte o detalhe para o fundo especial de Londres."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Sem confirmação de entrega do serviço push para eventos presenciais; evitar notificação falsa."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Night Out, bônus e fundos de localização",
+          "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon 30 • locais e datas",
+          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
       "id": "2026-aeon-mall-halloween-japan",
       "slug": "2026-aeon-mall-halloween-japan",
       "title": "AEON Mall × Pokémon GO — Halloween 2026",
