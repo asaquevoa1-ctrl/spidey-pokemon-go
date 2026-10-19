@@ -114,6 +114,22 @@ function formatRange(event) {
   return `${formatDateTime(start, zone)} → ${formatDateTime(end, zone)}`;
 }
 
+function eventArtVisible(event) {
+  if (event?.presentation?.no_unverified_poster !== true) return true;
+  return Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[event.id]?.file ||
+    event.official_media?.classification === 'official_illustration' ||
+    (event.art?.url && !/spidey-logo|fallback/i.test(event.art.url)));
+}
+
+function verifiedDateVisual(event) {
+  const iso = String(event?.schedule?.start_date || event?.schedule?.start_local || '');
+  const match = iso.match(/^\d{4}-(\d{2})-(\d{2})/);
+  const months = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+  const day = match ? match[2] : 'GO';
+  const month = match ? months[Number(match[1]) - 1] : 'EVENTO';
+  return `<span class="spidey-verified-date" role="img" aria-label="Evento confirmado, início em ${day}/${match ? match[1] : '--'}"><span class="spidey-verified-date-kicker">DATA CONFIRMADA</span><strong>${day}</strong><small>${month}</small></span>`;
+}
+
 function generatedEventArtUrl(event) {
   const id = String(event?.id || 'evento')
     .toLowerCase()
@@ -217,7 +233,7 @@ function renderEvents(events = state.events.filter((event) => event.content_type
     card.dataset.eventId = event.id;
     card.tabIndex = 0;
     card.innerHTML = `
-      <img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">
+      ${eventArtVisible(event) ? `<img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event)}
       <div>
         <span class="eyebrow">${event.location_label || event.locations?.[0]?.label || 'Evento'}</span>
         <h3>${event.title}</h3>
@@ -431,17 +447,17 @@ function openEvent(event) {
   const brazilStart = parseDate(event.schedule?.start_brazil || event.schedule?.start_local);
   const brazilEnd = parseDate(event.schedule?.end_brazil || event.schedule?.end_local);
   const localZone = event.schedule?.local_timezone || 'UTC';
+  const dateOnly = window.SpideyDateOnly?.valid(event) === true;
   const brazilZone = event.schedule?.brazil_timezone || 'America/Sao_Paulo';
   const bonuses = event.bonuses || [];
   const pokemon = event.pokemon || [];
   detail.innerHTML = `
-    ${newsOnly ? '' : `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">`}
+    ${newsOnly ? '' : (eventArtVisible(event) ? `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event))}
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
       <h2>${event.public_title || event.title}</h2><p>${event.public_summary || event.summary || ''}</p>
       ${newsOnly ? '' : `<div class="info-grid">
-        <div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div>
-        <div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>
+        ${dateOnly ? `<div class="info-box"><span>Período no local</span><strong>${window.SpideyDateOnly.label(event)}</strong></div><div class="info-box"><span>Horário diário</span><strong>Não divulgado</strong></div>` : `<div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div><div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>`}
       </div>
       <h3>Coordenadas</h3>${locationRows(event)}`}
       <div class="action-row">

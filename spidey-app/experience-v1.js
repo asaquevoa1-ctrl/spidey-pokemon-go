@@ -137,7 +137,7 @@
   function miniCard(event) {
     return `
       <article class="experience-mini experience-event" tabindex="0" data-event-id="${esc(event.id)}">
-        <img src="${esc(artUrl(event, 'card'))}" alt="${esc(event.art?.alt || event.title)}" onerror="this.onerror=null;this.src='${esc(generatedEventArtUrl(event))}'">
+        ${typeof eventArtVisible !== 'function' || eventArtVisible(event) ? `<img src="${esc(artUrl(event, 'card'))}" alt="${esc(event.art?.alt || event.title)}" onerror="this.onerror=null;this.src='${esc(generatedEventArtUrl(event))}'">` : verifiedDateVisual(event)}
         <div class="experience-mini-copy">
           <span class="experience-kicker">${esc(spideyCategoryLabel(event))}</span>
           <strong>${esc(event.title)}</strong>
@@ -169,7 +169,7 @@
       <article class="experience-feature">
         <button class="experience-feature-button experience-event" type="button" data-event-id="${esc(event.id)}">
           <span class="experience-feature-art-wrap">
-            <img class="experience-feature-art" src="${esc(artUrl(event, 'hero'))}" alt="${esc(event.art?.alt || event.title)}" onerror="this.onerror=null;this.src='${esc(generatedEventArtUrl(event))}'">
+            ${typeof eventArtVisible !== 'function' || eventArtVisible(event) ? `<img class="experience-feature-art" src="${esc(artUrl(event, 'hero'))}" alt="${esc(event.art?.alt || event.title)}" onerror="this.onerror=null;this.src='${esc(generatedEventArtUrl(event))}'">` : verifiedDateVisual(event)}
           </span>
           <span class="experience-feature-copy">
             <span class="experience-kicker">${esc(spideyCategoryLabel(event))}</span>
