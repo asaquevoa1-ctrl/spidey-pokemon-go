@@ -2,6 +2,96 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-aeon-mall-halloween-japan",
+      "slug": "2026-aeon-mall-halloween-japan",
+      "title": "AEON Mall × Pokémon GO — Halloween 2026",
+      "summary": "Evento presencial nos AEON Malls participantes do Japão, de 19 de outubro a 1º de novembro. Duas Pesquisas Temporárias, Pikachu com chapéu de bruxa e Módulos Atrair de 2 horas.",
+      "category": "regional_event",
+      "tags": [
+        "Japão",
+        "AEON Mall",
+        "Halloween",
+        "Pikachu com chapéu de bruxa",
+        "Pesquisa Temporária",
+        "Presencial"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial no Japão",
+        "url": "https://pokemongo.com/ja/news/202610aeonmall-halloween",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "Asia/Tokyo",
+        "start_date": "2026-10-19",
+        "end_date": "2026-11-01",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "location_label": "Japão • AEON Malls participantes",
+      "locations": [
+        {
+          "label": "AEON MALL Musashi Murayama • referência enviada pela comunidade",
+          "name": "AEON MALL Musashi Murayama",
+          "latitude": 35.7463,
+          "longitude": 139.3849,
+          "coordinate_text": "35.746300,139.384900",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "note": "Referência de um shopping enviada pela comunidade. Não indica Poképarada nem comprova que essa unidade consta na lista oficial de participantes."
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "Local comunitário é referência de shopping, não Poképarada ou Ginásio verificado; não gerar GPX."
+      },
+      "pokemon": [
+        {
+          "name": "Pikachu com chapéu de bruxa",
+          "note": "Encontro após concluir cada uma das duas Pesquisas Temporárias; não confundir com o Pikachu do Halloween global."
+        }
+      ],
+      "bonuses": [
+        "Módulos Atrair ativados em Poképaradas dentro dos AEON Malls participantes duram 2 horas, com efeito reforçado durante o evento.",
+        "Duas Pesquisas Temporárias locais, cada uma acessível uma vez por conta ao visitar uma unidade participante na respectiva semana."
+      ],
+      "notes": [
+        "Pesquisa Temporária Parte 1: pegar de 19 a 25/10/2026; concluir e resgatar até 08/11/2026 às 20h (horário do Japão).",
+        "Pesquisa Temporária Parte 2: pegar de 26/10 a 01/11/2026; concluir e resgatar até 15/11/2026 às 20h (horário do Japão).",
+        "Para receber cada pesquisa, visite um AEON Mall participante no Japão durante sua janela de disponibilidade.",
+        "Em 31/10, de 14h a 17h do Japão, 20 unidades selecionadas terão ação de Super Mega Reides de Mega Chandelure; consulte a relação oficial antes de se deslocar.",
+        "O anúncio não informa horário diário geral de início e fim do evento, apenas as datas. Não interpretar 00h ou 23h59 como horário jogável.",
+        "A comunidade enviou Musashi Murayama (35.746300,139.384900) como referência física. Não atribuir fundo de localização ou Ginásio especial sem comprovação."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Servidor de avisos não validado para entrega; não sugerir que push foi enviado."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • AEON Halloween 2026",
+          "url": "https://pokemongo.com/ja/news/202610aeonmall-halloween",
+          "confidence": "official"
+        },
+        {
+          "name": "AEON Mall • Halloween 2026",
+          "url": "https://www.aeonmall.com/news/index/16924/",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
       "id": "2026-national-trust-27-sites",
       "slug": "2026-national-trust-27-sites",
       "title": "Pokémon GO × National Trust — 27 locais",
