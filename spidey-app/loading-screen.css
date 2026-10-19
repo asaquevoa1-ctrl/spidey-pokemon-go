@@ -1,0 +1,135 @@
+/* Tela de carregamento SPIDEY: logo oficial existente, nenhuma arte redesenhada. */
+.spidey-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
+  isolation: isolate;
+  color: #f6fbff;
+  background:
+    radial-gradient(ellipse at 50% 38%, rgba(13, 102, 194, .38) 0, transparent 54%),
+    radial-gradient(ellipse at 18% 98%, rgba(143, 70, 214, .2) 0, transparent 48%),
+    linear-gradient(155deg, #05182f 0%, #060c1d 65%, #050914 100%);
+}
+.spidey-splash[hidden] { display: none !important; }
+.spidey-splash::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: -1;
+  background: repeating-conic-gradient(from 15deg at 50% 44%, transparent 0deg 24deg, rgba(109, 221, 255, .055) 24.3deg 24.6deg, transparent 25deg 42deg);
+  mask-image: radial-gradient(ellipse at center, #000 0, transparent 67%);
+  pointer-events: none;
+}
+.spidey-splash-stage {
+  display: flex;
+  width: min(100%, 400px);
+  min-height: 390px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
+}
+.spidey-splash-aura {
+  position: relative;
+  width: clamp(178px, 53vw, 240px);
+  height: clamp(178px, 53vw, 240px);
+  margin-bottom: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.spidey-splash-aura::before,
+.spidey-splash-aura::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.spidey-splash-aura::before {
+  border: 1px solid rgba(100, 215, 255, .42);
+  box-shadow: 0 0 60px rgba(29, 174, 255, .19), inset 0 0 50px rgba(16, 145, 250, .12);
+}
+.spidey-splash-aura::after {
+  inset: -27px;
+  border: 1px solid rgba(104, 205, 255, .11);
+  border-top-color: rgba(175, 231, 255, .67);
+  border-bottom-color: rgba(82, 145, 255, .35);
+}
+.spidey-splash-logo {
+  display: block;
+  width: 79%;
+  height: 79%;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 20px 50px rgba(0, 6, 22, .56), 0 0 35px rgba(90, 220, 255, .22);
+  background: rgba(7, 20, 46, .55);
+}
+.spidey-splash-title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.8rem, 12vw, 4.25rem);
+  font-weight: 950;
+  line-height: 1.03;
+  letter-spacing: .12em;
+  text-indent: .12em;
+  text-shadow: 0 3px 30px rgba(80, 193, 255, .33);
+}
+.spidey-splash-subtitle {
+  margin: 12px 0 0;
+  color: #a5dbf6;
+  font-size: clamp(.67rem, 2.5vw, .8rem);
+  font-weight: 800;
+  letter-spacing: .11em;
+  line-height: 1.5;
+}
+.spidey-splash-track {
+  position: relative;
+  width: min(190px, 65%);
+  height: 3px;
+  margin-top: 42px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(111, 204, 255, .18);
+}
+.spidey-splash-track::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -46%;
+  width: 46%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, #b5ebff, #42bffd);
+  box-shadow: 0 0 18px rgba(132, 222, 255, .8);
+  animation: spidey-splash-progress 1.2s ease-in-out infinite;
+}
+.spidey-splash-label {
+  margin: 13px 0 0;
+  color: #c2d2e6;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.spidey-splash.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 270ms ease-out;
+}
+@keyframes spidey-splash-progress {
+  to { transform: translateX(315%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spidey-splash *,
+  .spidey-splash::before,
+  .spidey-splash::after { animation: none !important; transition: none !important; }
+  .spidey-splash-track::after { left: 26%; }
+  .spidey-splash.is-leaving { transition: none; }
+}
