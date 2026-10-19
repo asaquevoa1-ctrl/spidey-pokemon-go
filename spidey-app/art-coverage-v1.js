@@ -165,7 +165,7 @@
   function removeCover(container) { container?.querySelectorAll?.('.spidey-cover-art').forEach((node) => node.remove()); }
 
   function hasVerifiedDateVisual(container, event) {
-    return event?.presentation?.no_unverified_poster === true
+    return (event?.presentation?.no_unverified_poster === true || event?.presentation?.hide_poster_until_corrected === true)
       && Boolean(container?.querySelector?.('.spidey-verified-date'));
   }
 
