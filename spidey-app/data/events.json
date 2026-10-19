@@ -5364,7 +5364,9 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "spidey-logo"
+        "fallback_visual": "spidey-logo",
+        "hide_poster_until_corrected": true,
+        "hide_reason": "Pôster de 2026 exibe SpideyNexus em desacordo com a identidade vigente; arquivo histórico preservado sem divulgação pública."
       },
       "locations": [],
       "gpx": {
