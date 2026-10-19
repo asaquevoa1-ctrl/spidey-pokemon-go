@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261019-loading-screen1';
+const CACHE = 'spidey-app-20261019-nightout-backgrounds1';
 const CORE = [
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
@@ -38,6 +38,7 @@ const CORE = [
 
   './opening-20261019.css',
   './loading-screen.css',
+  './night-out-location-backgrounds.css',
   './loading-screen.js',
   './date-only.js',
   './event-locations.js',
