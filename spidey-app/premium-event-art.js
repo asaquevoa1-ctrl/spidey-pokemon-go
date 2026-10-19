@@ -1,5 +1,5 @@
 // Only the canonical approved registry grants visual approval.
-window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(window.SPIDEY_APPROVED_ART_MASTER).map(([id,e])=>{
+window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(window.SPIDEY_APPROVED_ART_MASTER).filter(([id])=>id!=='2026-09-tcg-30th-us-retail').map(([id,e])=>{
  const asset=()=>Object.freeze({url:e.file,width:e.width,height:e.height,sha256:e.sha256});
  return [id,Object.freeze({standard:'spidey-premium-v1',visualApproved:true,premium_visual_approved:true,assets:Object.freeze({thumb:asset(),card:asset(),hero:asset(),poster:asset()})})];
 })));
@@ -17,6 +17,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   };
 
   function premiumAsset(event, role = 'card') {
+    if(event?.presentation?.hide_poster_until_corrected === true || event?.id === '2026-09-tcg-30th-us-retail') return null;
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.[event?.id];
     if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file]){
       const review=window.SpideyReviewArt?.resolve(event);
@@ -45,6 +46,7 @@ window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(
   }
 
   spideyResolveEventArt = function spideyResolveEventArtPriorityFixed(event, role = 'card') {
+    if(event?.presentation?.hide_poster_until_corrected === true || event?.id === '2026-09-tcg-30th-us-retail') return null;
     if(window.SPIDEY_APPROVED_ART_MASTER?.[event?.id])return premiumAsset(event,role);
     const review=window.SpideyReviewArt?.poster(event);
     if(review){
