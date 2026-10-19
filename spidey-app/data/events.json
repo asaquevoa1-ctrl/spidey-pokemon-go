@@ -2,6 +2,1451 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-11-04-raids-giratina-altered",
+      "slug": "2026-11-04-raids-giratina-altered",
+      "title": "Reides 5★: Giratina (Forma Alterada)",
+      "summary": "Giratina na Forma Alterada retorna às Reides de cinco estrelas.",
+      "category": "raid_rotation",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-04",
+        "end_date": "2026-11-08",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Giratina Forma Alterada"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "Rotação informada pelo Pokémon GO Hub; troca de chefes normalmente às 10h locais.",
+        "Confira disponibilidade das reides durante o evento Área Selvagem."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-09-raids-cresselia-darkrai",
+      "slug": "2026-11-09-raids-cresselia-darkrai",
+      "title": "Reides 5★: Cresselia e Darkrai",
+      "summary": "Cresselia e Darkrai na rotação mensal; atenção às reides temáticas de 9 a 15/11.",
+      "category": "raid_rotation",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-09",
+        "end_date": "2026-11-24",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Cresselia"
+        },
+        {
+          "name": "Darkrai"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "O Pokémon GO Hub apresenta 9 a 24/11; o infográfico de LucasFLY enviado indica 16 a 24/11.",
+        "De 9 a 15/11, o Into the Wild / GO Wild Area oferece reides temáticas que podem alterar a disponibilidade regular.",
+        "Período de rotação sujeito à confirmação da programação em jogo. Não garantir que ambos apareçam em todos os dias."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-raids-deoxys-four-forms",
+      "slug": "2026-11-25-raids-deoxys-four-forms",
+      "title": "Reides 5★: Deoxys (quatro formas)",
+      "summary": "Deoxys retorna nas formas Normal, Ataque, Defesa e Velocidade.",
+      "category": "raid_rotation",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-25",
+        "end_date": "2026-12-01",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Deoxys Forma Normal"
+        },
+        {
+          "name": "Deoxys Forma Ataque"
+        },
+        {
+          "name": "Deoxys Forma Defesa"
+        },
+        {
+          "name": "Deoxys Forma Velocidade"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "Todas as quatro formas estão listadas na programação comunitária de novembro.",
+        "Sem promessa de Fundo Especial não anunciado."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-mega-banette-raids",
+      "slug": "2026-11-16-mega-banette-raids",
+      "title": "Megarreides: Mega Banette",
+      "summary": "Mega Banette é destaque em Megarreides de 16 a 24 de novembro.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-16",
+        "end_date": "2026-11-24",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Mega Banette"
+        }
+      ],
+      "bonuses": [],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-mega-metagross-raids",
+      "slug": "2026-11-25-mega-metagross-raids",
+      "title": "Megarreides: Mega Metagross",
+      "summary": "Mega Metagross aparece nas Megarreides de 25 de novembro a 1º de dezembro.",
+      "category": "mega_raid_rotation",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-25",
+        "end_date": "2026-12-01",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Mega Metagross"
+        }
+      ],
+      "bonuses": [],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-raid-hour-altered-giratina",
+      "slug": "2026-11-04-raid-hour-altered-giratina",
+      "title": "Hora de Reides: Giratina (Forma Alterada)",
+      "summary": "Das 18h às 19h no horário local: Giratina Forma Alterada.",
+      "category": "raid_hour",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-04T18:00:00-03:00",
+        "end_local": "2026-11-04T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-04T18:00:00-03:00",
+        "end_brazil": "2026-11-04T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Giratina Forma Alterada"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "Horário exibido para Brasília; em outros fusos, ocorre às 18h locais."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18-raid-hour-cresselia-darkrai",
+      "slug": "2026-11-18-raid-hour-cresselia-darkrai",
+      "title": "Hora de Reides: Cresselia e Darkrai",
+      "summary": "Das 18h às 19h no horário local: Cresselia e Darkrai.",
+      "category": "raid_hour",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-18T18:00:00-03:00",
+        "end_local": "2026-11-18T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-18T18:00:00-03:00",
+        "end_brazil": "2026-11-18T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Cresselia"
+        },
+        {
+          "name": "Darkrai"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "Horário exibido para Brasília; em outros fusos, ocorre às 18h locais."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-25-raid-hour-deoxys",
+      "slug": "2026-11-25-raid-hour-deoxys",
+      "title": "Hora de Reides: Deoxys (quatro formas)",
+      "summary": "Das 18h às 19h no horário local: Deoxys nas quatro formas.",
+      "category": "raid_hour",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-25T18:00:00-03:00",
+        "end_local": "2026-11-25T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-25T18:00:00-03:00",
+        "end_brazil": "2026-11-25T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Deoxys Forma Normal"
+        },
+        {
+          "name": "Deoxys Forma Ataque"
+        },
+        {
+          "name": "Deoxys Forma Defesa"
+        },
+        {
+          "name": "Deoxys Forma Velocidade"
+        }
+      ],
+      "bonuses": [],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-02-max-machop",
+      "slug": "2026-11-02-max-machop",
+      "title": "Batalhas Max: Machop Dinamax",
+      "summary": "Machop Dinamax aparece na rotação de Batalhas Max.",
+      "category": "max_monday",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-02",
+        "end_date": "2026-11-08",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Machop Dinamax"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "A rotação semanal não significa que as Batalhas Max estejam disponíveis 24 horas por dia."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-max-surprise",
+      "slug": "2026-11-16-max-surprise",
+      "title": "Batalhas Max: Pokémon surpresa",
+      "summary": "Período reservado para uma rotação Dinamax ainda sem espécie divulgada.",
+      "category": "max_monday",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-16",
+        "end_date": "2026-11-23",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [],
+      "bonuses": [],
+      "notes": [
+        "Espécie NÃO confirmada nas fontes consultadas. Não inventar Pokémon ou silhuetas para o calendário.",
+        "Programação inicial comunitária sujeita a mudanças."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-max-espurr",
+      "slug": "2026-11-23-max-espurr",
+      "title": "Batalhas Max: Espurr Dinamax",
+      "summary": "Espurr Dinamax em destaque nos Pontos de Energia.",
+      "category": "max_monday",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-23",
+        "end_date": "2026-11-29",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Espurr Dinamax"
+        }
+      ],
+      "bonuses": [],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-30-max-cryogonal",
+      "slug": "2026-11-30-max-cryogonal",
+      "title": "Batalhas Max: Cryogonal Dinamax",
+      "summary": "Cryogonal Dinamax em destaque nos Pontos de Energia.",
+      "category": "max_monday",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-30",
+        "end_date": "2026-12-06",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Cryogonal Dinamax"
+        }
+      ],
+      "bonuses": [],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-spotlight-teddiursa",
+      "slug": "2026-11-05-spotlight-teddiursa",
+      "title": "Hora do Holofote: Teddiursa",
+      "summary": "Teddiursa, das 18h às 19h, com 2× XP por evolução.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-05T18:00:00-03:00",
+        "end_local": "2026-11-05T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-05T18:00:00-03:00",
+        "end_brazil": "2026-11-05T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Teddiursa"
+        }
+      ],
+      "bonuses": [
+        "2× XP por evolução."
+      ],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-spotlight-noibat",
+      "slug": "2026-11-26-spotlight-noibat",
+      "title": "Hora do Holofote: Noibat",
+      "summary": "Noibat, das 18h às 19h, com 2× doces por captura.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-26T18:00:00-03:00",
+        "end_local": "2026-11-26T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-26T18:00:00-03:00",
+        "end_brazil": "2026-11-26T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Noibat"
+        }
+      ],
+      "bonuses": [
+        "2× doces por captura."
+      ],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07-shadow-tornadus-weekend",
+      "slug": "2026-11-07-shadow-tornadus-weekend",
+      "title": "Reides Sombrosas: Tornadus (Fim de semana 07–08)",
+      "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-07",
+        "end_date": "2026-11-08",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Tornadus Sombroso Forma Encarnada"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "O calendário comunitário descreve o período de novembro em finais de semana.",
+        "A semana 9–15/11 tem reides especiais da Área Selvagem e não é anunciada aqui como rotação normal.",
+        "Datas de fins de semana sujeitas a ajustes no jogo."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21-shadow-tornadus-weekend",
+      "slug": "2026-11-21-shadow-tornadus-weekend",
+      "title": "Reides Sombrosas: Tornadus (Fim de semana 21–22)",
+      "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-21",
+        "end_date": "2026-11-22",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Tornadus Sombroso Forma Encarnada"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "O calendário comunitário descreve o período de novembro em finais de semana.",
+        "A semana 9–15/11 tem reides especiais da Área Selvagem e não é anunciada aqui como rotação normal.",
+        "Datas de fins de semana sujeitas a ajustes no jogo."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-shadow-tornadus-weekend",
+      "slug": "2026-11-28-shadow-tornadus-weekend",
+      "title": "Reides Sombrosas: Tornadus (Fim de semana 28–29)",
+      "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+      "category": "shadow_raids",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-28",
+        "end_date": "2026-11-29",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Tornadus Sombroso Forma Encarnada"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "O calendário comunitário descreve o período de novembro em finais de semana.",
+        "A semana 9–15/11 tem reides especiais da Área Selvagem e não é anunciada aqui como rotação normal.",
+        "Datas de fins de semana sujeitas a ajustes no jogo."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-09-into-the-wild",
+      "slug": "2026-11-09-into-the-wild",
+      "title": "Natureza Selvagem: Into the Wild 2026",
+      "summary": "9/11 às 10h até 13/11 às 20h: aventura com Regidrago Dinamax e Passe GO: Natureza Selvagem.",
+      "category": "evento_especial",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-09",
+        "end_date": "2026-11-13",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [
+        {
+          "name": "Regidrago Dinamax"
+        },
+        {
+          "name": "Meltan Dinamax (Passe GO)"
+        }
+      ],
+      "bonuses": [
+        "Limite de Reides Remotas aumentado para 30 entre 9 e 13/11.",
+        "Regidrago Dinamax estreia nas Batalhas Max cinco estrelas.",
+        "Possibilidade de encontrar Gimmighoul Brilhante com Bolsa de Moedas em período informado no anúncio."
+      ],
+      "notes": [
+        "Evento de 9/11 às 10h a 13/11 às 20h no horário local.",
+        "O Passe GO: Into the Wild continua até 15/11 às 18h, não confundir com o encerramento do evento principal.",
+        "Durante a Área Selvagem, Reides e Batalhas Max temáticas podem substituir rotações regulares.",
+        "Descobertas Diárias suspensas de 9 a 15/11."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • oficial",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-09-daily-discovery-pause",
+      "slug": "2026-11-09-daily-discovery-pause",
+      "title": "Aviso: Descobertas Diárias suspensas",
+      "summary": "Sem Descobertas Diárias de 9 a 15 de novembro durante a programação da Área Selvagem.",
+      "category": "evento_especial",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO",
+        "Atenção",
+        "Sem Holofote"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-09",
+        "end_date": "2026-11-15",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [],
+      "bonuses": [],
+      "notes": [
+        "Confirmação oficial: não haverá bônus regulares de Descobertas Diárias de 9 a 15/11.",
+        "Inclui a Hora do Holofote regular: não criar evento de destaque em 12/11.",
+        "No sábado e domingo da Área Selvagem Global, há programação própria."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • oficial",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16-dynamax-trails",
+      "slug": "2026-11-16-dynamax-trails",
+      "title": "Trilhas Dinamax (prévia)",
+      "summary": "Janela do evento Trilhas Dinamax informada no calendário comunitário; detalhes ainda serão divulgados.",
+      "category": "evento_especial",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-16",
+        "end_date": "2026-11-23",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [],
+      "bonuses": [],
+      "notes": [
+        "Ainda não há detalhes oficiais suficientes de bônus ou encontros.",
+        "Não atribuir uma espécie à rotação surpresa de Batalhas Max sem confirmação."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-21-community-day-preview",
+      "slug": "2026-11-21-community-day-preview",
+      "title": "Dia Comunitário de novembro — prévia",
+      "summary": "Dia Comunitário previsto para 21/11; Pokémon em destaque e horário ainda não divulgados.",
+      "category": "community_day",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-21",
+        "end_date": "2026-11-21",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [],
+      "bonuses": [],
+      "notes": [
+        "Data informada no calendário comunitário. Pokémon, ataques e bônus aguardam anúncio oficial.",
+        "Sem apresentar este cadastro como anúncio oficial final."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-24-twilight-wishes-preview",
+      "slug": "2026-11-24-twilight-wishes-preview",
+      "title": "Desejos do Entardecer (prévia)",
+      "summary": "Evento Desejos do Entardecer previsto de 24 a 30/11; detalhes ainda não confirmados.",
+      "category": "evento_especial",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-24",
+        "end_date": "2026-11-30",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [],
+      "bonuses": [],
+      "notes": [
+        "Nome e janela informados no calendário comunitário de 19/10.",
+        "Aguardar anúncio oficial antes de divulgar Pokémon e bônus."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-28-super-mega-raid-day-preview",
+      "slug": "2026-11-28-super-mega-raid-day-preview",
+      "title": "Dia de Super Megarreides — prévia",
+      "summary": "Dia de Super Megarreides previsto para 28/11; Pokémon e horários serão anunciados posteriormente.",
+      "category": "raid_day",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-28",
+        "end_date": "2026-11-28",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [],
+      "bonuses": [],
+      "notes": [
+        "Não confundir com as Megarreides de rotação.",
+        "Chefe, mecânica e horário do evento não confirmados na fonte consultada."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • calendário comunitário",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-02-monthly-daily-discoveries-guide",
+      "slug": "2026-11-02-monthly-daily-discoveries-guide",
+      "title": "Guia: bônus semanais de novembro",
+      "summary": "Confira bônus de segunda a domingo e a pausa de 9 a 15 de novembro.",
+      "category": "evento_especial",
+      "tags": [
+        "Novembro 2026",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/en/news/choose-your-path-forever-forward-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-02",
+        "end_date": "2026-11-02",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+      },
+      "pokemon": [],
+      "bonuses": [
+        "Segunda Max: 1 Doce Raro GG por Batalha Max presencial e mais Pontos de Energia.",
+        "Terça de Vitrine: participe de até 5 Vitrines de Poképaradas.",
+        "Quarta: 1 Doce Raro GG em Reides presenciais; Hora de Reides das 18h às 19h.",
+        "Quinta: até 50 batalhas na Liga GO, até 4× Poeira Estelar em prêmios de vitória; Holofote das 18h às 19h.",
+        "Sexta da Amizade: até 2 trocas especiais adicionais, 20% menos Poeira nas trocas, maior chance de troca sortuda e 2 Doces GG garantidos (nível 31+).",
+        "Domingo Pitoresco: mais Pokémon na natureza e em Rotas, incenso melhorado nas Rotas, menos distância para Doces do Companheiro e encontro com Mateo até 3 vezes."
+      ],
+      "notes": [
+        "Bônus diários são do programa da temporada, não específicos de uma única data. A ficha deste dia é um guia.",
+        "9–15/11: Descobertas Diárias suspensas por causa dos eventos Into the Wild / Wild Area.",
+        "Quinta: o bônus de 4× Poeira Estelar não se aplica à recompensa final do conjunto de batalhas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+      },
+      "status": "published",
+      "verified_at": "2026-10-19",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • oficial",
+          "url": "https://pokemongo.com/en/news/choose-your-path-forever-forward-2026",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
       "id": "2026-pokemon-night-out-la",
       "slug": "2026-pokemon-night-out-la",
       "title": "Pokémon Night Out — Los Angeles | Fundo especial",
