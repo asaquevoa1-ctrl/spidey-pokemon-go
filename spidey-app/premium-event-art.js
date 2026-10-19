@@ -1,5 +1,5 @@
 // Only the canonical approved registry grants visual approval.
-window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(window.SPIDEY_APPROVED_ART_MASTER).filter(([id])=>id!=='2026-09-tcg-30th-us-retail').map(([id,e])=>{
+window.SPIDEY_PREMIUM_EVENT_ART=Object.freeze(Object.fromEntries(Object.entries(window.SPIDEY_APPROVED_ART_MASTER).map(([id,e])=>{
  const asset=()=>Object.freeze({url:e.file,width:e.width,height:e.height,sha256:e.sha256});
  return [id,Object.freeze({standard:'spidey-premium-v1',visualApproved:true,premium_visual_approved:true,assets:Object.freeze({thumb:asset(),card:asset(),hero:asset(),poster:asset()})})];
 })));
