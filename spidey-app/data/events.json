@@ -1047,11 +1047,12 @@
         "confidence": "official"
       },
       "schedule": {
-        "precision": "date",
         "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-09",
-        "end_date": "2026-11-13",
-        "brazil_timezone": "America/Sao_Paulo"
+        "start_local": "2026-11-09T10:00:00-03:00",
+        "end_local": "2026-11-13T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-13T20:00:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -1083,7 +1084,8 @@
         "Evento de 9/11 às 10h a 13/11 às 20h no horário local.",
         "O Passe GO: Into the Wild continua até 15/11 às 18h, não confundir com o encerramento do evento principal.",
         "Durante a Área Selvagem, Reides e Batalhas Max temáticas podem substituir rotações regulares.",
-        "Descobertas Diárias suspensas de 9 a 15/11."
+        "Descobertas Diárias suspensas de 9 a 15/11.",
+        "Para o Brasil, o horário local corresponde a Brasília. Em outros países, o evento ocorre nos mesmos horários locais indicados."
       ],
       "notifications": {
         "enabled": false,
@@ -7337,18 +7339,23 @@
           "name": "Leek Duck • catálogo comunitário de eventos",
           "url": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/",
           "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO Hub • calendário novembro 2026",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
         }
       ],
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2026-10-28T06:00:00-03:00",
-        "end_local": "2026-11-03T22:00:00-03:00",
+        "end_local": "2026-11-08T10:00:00-03:00",
         "brazil_timezone": "America/Sao_Paulo",
         "start_brazil": "2026-10-28T06:00:00-03:00",
-        "end_brazil": "2026-11-03T22:00:00-03:00"
+        "end_brazil": "2026-11-08T10:00:00-03:00"
       },
       "calendar": {
-        "mode": "start"
+        "mode": "span"
       },
       "presentation": {
         "requires_art": true,
@@ -7359,7 +7366,9 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "O Pokémon GO Hub e o calendário de novembro enviado pela comunidade indicam a presença do Mega Sableye até 8 de novembro, quando a rotação muda às 10h locais; o encerramento anterior 03/11 estava desatualizado."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
