@@ -1,0 +1,44 @@
+/* Recompensa real do jogo: destaca Fundos de Localização exclusivos, não finge screenshot. */
+.spidey-location-reward {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 20px;
+  padding: clamp(18px, 4vw, 26px);
+  border-radius: 20px;
+  border: 1px solid rgba(131,209,255,.56);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 12px 38px rgba(7,16,40,.32);
+  background: radial-gradient(ellipse at 86% 14%, rgba(255,181,92,.32), transparent 52%), linear-gradient(140deg,#3b2552 0%,#101e48 54%,#081b32 100%);
+  color: #fff;
+}
+.spidey-location-reward[data-night-out-city="Londres"] {
+  background: radial-gradient(ellipse at 90% 15%, rgba(111,223,255,.33),transparent 47%),linear-gradient(140deg,#143e66,#172051 58%,#08152b 100%);
+}
+.spidey-location-reward:before {
+  content: "✦  ✧      ✦    ✧";
+  position: absolute;
+  font-size: 4rem;
+  letter-spacing: .5em;
+  color: rgba(255,228,147,.13);
+  right: -1em;
+  top: -13px;
+  z-index: -1;
+  pointer-events: none;
+}
+.spidey-location-reward-eyebrow {
+  display: block; font-size: .7rem; font-weight: 900; line-height: 1.5;
+  text-transform: uppercase; letter-spacing: .11em; color: #afeafa;
+}
+.spidey-location-reward strong {
+  display:block; max-width: 100%; font-size:clamp(1.4rem,5vw,2.3rem);
+  line-height:1.12; text-shadow:0 5px 16px rgba(0,0,0,.38);
+}
+.spidey-location-reward-details {font-size:.92rem; line-height:1.48; color:#f8f0ff;}
+.spidey-location-reward-meta {display:flex;gap:9px;flex-wrap:wrap;}
+.spidey-location-reward-meta span {
+  border:1px solid rgba(182,224,255,.42);background:rgba(6,15,39,.35);
+  border-radius:999px;padding:6px 10px;font-size:.77rem;font-weight:800;color:#fff;
+}
+:root[data-theme="light"] .spidey-location-reward { color: #fff; }
