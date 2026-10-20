@@ -48,7 +48,7 @@ try {
       assert.ok(elapsed<10500,'Splash did not exit promptly: '+elapsed);
       await page.waitForFunction(()=>document.body.classList.contains('cosmic-inapp-art'),null,{timeout:12000});
       const css=await page.evaluate(()=>getComputedStyle(document.body).backgroundImage);
-      assert.ok(css.includes('spidey-clean-cosmic-20261019.webp'),'Approved clean background not applied');
+      assert.ok(css.includes('spidey-clean-cosmic-20261019.webp'),'Approved clean background not applied; computed='+css.slice(0,600));
       const loaded=await page.evaluate(async()=>{
         const paths=[
           'assets/branding/20261019/spidey-opening-cosmic-20261019.webp',

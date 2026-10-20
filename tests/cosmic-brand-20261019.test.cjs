@@ -24,7 +24,7 @@ test('verified cosmic artwork and launcher safely integrated into app and offlin
   const sw=fs.readFileSync(root+'sw.js','utf8');
   assert.ok(html.includes('window.SPIDEY_COSMIC_ASSETS_VERIFIED=true'));
   assert.ok(html.includes('cosmic-brand-20261019.js?v=20261020-release1'));
-  assert.ok(html.includes('cosmic-brand-20261019.css?v=20261020-release1'));
+  assert.ok(html.includes('cosmic-brand-20261019.css?v=20261020-release2'));
   assert.equal(manifest.icons[0].src,'assets/branding/20261019/spidey-icon-cosmic-192.png');
   assert.equal(manifest.icons[1].src,'assets/branding/20261019/spidey-icon-cosmic-512.png');
   assert.ok(sw.includes("'./assets/spidey-logo-oficial.jpg'"));

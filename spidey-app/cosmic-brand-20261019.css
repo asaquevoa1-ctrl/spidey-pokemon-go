@@ -30,16 +30,16 @@
 @keyframes cosmic-brand-beacon {
   from{opacity:.4}to{opacity:1}
 }
-body.cosmic-inapp-art {
+html body.cosmic-inapp-art {
   background-image:
     linear-gradient(rgba(5,14,31,.84),rgba(5,14,31,.94)),
-    var(--cosmic-brand-clean-image,none);
+    var(--cosmic-brand-clean-image,none) !important;
   background-size:cover;
   background-position:center top;
   background-attachment:fixed;
 }
 html[data-theme="light"] body.cosmic-inapp-art {
-  background-image:linear-gradient(rgba(248,250,255,.94),rgba(250,251,254,.96)),var(--cosmic-brand-clean-image,none);
+  background-image:linear-gradient(rgba(248,250,255,.94),rgba(250,251,254,.96)),var(--cosmic-brand-clean-image,none) !important;
 }
 @media (prefers-reduced-motion:reduce) {
   #spideySplash .cosmic-brand-frame,
