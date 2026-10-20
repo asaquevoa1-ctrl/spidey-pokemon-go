@@ -8,7 +8,7 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1562149576536760454",
-  "status": "aguardando_arte_chatgpt",
+  "status": "duplicado",
   "etapa_editorial": "aguardando_arte_premium_original",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
@@ -33,5 +33,6 @@
     "total_com_deluxe": 1400,
     "encontro": "Groudon (possibilidade de Brilhante, não garantido)"
   },
-  "editorial_dedupe_correction": "Anúncio do Passe GO Groudon erroneamente comparado ao anúncio oficial de Minior; a URL oficial é diferente. Não publicar arte até curadoria Premium original."
+  "editorial_dedupe_correction": "Anúncio do Passe GO Groudon erroneamente comparado ao anúncio oficial de Minior; a URL oficial é diferente. Não publicar arte até curadoria Premium original.",
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/go-pass-november-2026"
 }
