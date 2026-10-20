@@ -60,7 +60,15 @@ try {
     const hunterScreen=page.locator('#hunterView');
     if(!await hunterScreen.isVisible()||await page.locator('#flyView').isVisible())throw Error('Separate screen navigation failed');
     const navStyle=await filterTab.evaluate(el=>({background:getComputedStyle(el).backgroundImage,width:el.getBoundingClientRect().width}));
-    if(!String(navStyle.background).includes('gradient')||navStyle.width<55) throw Error('Tab not highlighted');
+    if(!String(navStyle.background).includes('gradient')||navStyle.width<55) {
+      const diag=await page.evaluate(()=>{
+        const el=document.querySelector('.app-tabs .hunter-tab');
+        const style=el?getComputedStyle(el):null;
+        const home=document.querySelector('.cc-hunter-link'),hero=document.querySelector('.experience-intro');
+        return {body:document.body.className,tab:el?.outerHTML,background:style?.background,backgroundImage:style?.backgroundImage,display:style?.display,visibility:style?.visibility,width:el?.getBoundingClientRect().width,cssLink:!!document.querySelector('link[href*="hunter-v1.css"]'),cssLoaded:[...document.styleSheets].some(x=>String(x.href||'').includes('hunter-v1.css')),heroDisplay:hero?getComputedStyle(hero).display:null,homeVisible:home?getComputedStyle(home).visibility:null};
+      });
+      throw Error('Caçador tab highlight: '+JSON.stringify(diag));
+    }
     const visual=await page.evaluate(()=>{
       const nav=document.querySelector('nav.app-tabs');
       const tabs=[...nav.querySelectorAll('.app-tab')];
