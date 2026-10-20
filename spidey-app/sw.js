@@ -1,5 +1,14 @@
-const CACHE = 'spidey-app-20261019-organic-sharing-v1';
+const CACHE = 'spidey-app-20261020-cosmic-share-v1';
 const CORE = [
+  './cosmic-brand-20261019.js',
+  './cosmic-brand-20261019.css',
+  './assets/branding/20261019/spidey-opening-cosmic-20261019.webp',
+  './assets/branding/20261019/spidey-loading-cosmic-20261019.webp',
+  './assets/branding/20261019/spidey-icon-cosmic-20261019.webp',
+  './assets/branding/20261019/spidey-wallpaper-cosmic-20261019.webp',
+  './assets/branding/20261019/spidey-clean-cosmic-20261019.webp',
+  './assets/branding/20261019/spidey-icon-cosmic-192.png',
+  './assets/branding/20261019/spidey-icon-cosmic-512.png',
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
   './assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png',
@@ -234,7 +243,7 @@ self.addEventListener('push', (event) => {
   try { data = event.data ? event.data.json() : {}; } catch (_) { data = { body: event.data?.text() || '' }; }
   event.waitUntil(self.registration.showNotification(data.title || 'Spidey Pokémon GO', {
     body: data.body || 'Há uma novidade no Spidey.',
-    icon: 'assets/spidey-logo-oficial.jpg', badge: 'assets/spidey-logo-oficial.jpg', tag: data.tag || 'spidey-update',
+    icon: 'assets/branding/20261019/spidey-icon-cosmic-192.png', badge: 'assets/branding/20261019/spidey-icon-cosmic-192.png', tag: data.tag || 'spidey-update',
     data: { url: data.url || './' },
     renotify: false,
   }));

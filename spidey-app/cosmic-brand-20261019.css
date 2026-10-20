@@ -1,0 +1,55 @@
+/* Spidey cosmic brand: image assets are user-approved.
+   CSS is safe until their verified binary files are deployed. */
+#spideySplash .cosmic-brand-frame {
+  position:absolute;inset:0;z-index:2;
+  background-repeat:no-repeat;background-position:center;
+  background-size:cover;
+  opacity:0;pointer-events:none;
+  transition:opacity .18s ease-out;
+}
+#spideySplash.cosmic-brand-ready .spidey-splash-stage {
+  opacity:0;visibility:hidden;
+}
+#spideySplash.cosmic-brand-ready .cosmic-brand-frame.is-visible {
+  opacity:1;
+}
+#spideySplash .cosmic-brand-frame.cosmic-intro.is-visible {
+  animation:cosmic-intro-focus .8s ease-out both;
+}
+#spideySplash .cosmic-brand-frame.cosmic-loading.is-visible::after {
+  content:"";position:absolute;left:50%;top:65.5%;
+  width:4px;height:4px;border-radius:50%;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 18px 7px rgba(244,208,102,.38);
+  animation:cosmic-brand-beacon 1.1s ease-in-out infinite alternate;
+}
+@keyframes cosmic-intro-focus {
+  from {opacity:.08;transform:scale(1.027)}
+  to {opacity:1;transform:scale(1)}
+}
+@keyframes cosmic-brand-beacon {
+  from{opacity:.4}to{opacity:1}
+}
+body.cosmic-inapp-art {
+  background-image:
+    linear-gradient(rgba(5,14,31,.84),rgba(5,14,31,.94)),
+    var(--cosmic-brand-clean-image,none);
+  background-size:cover;
+  background-position:center top;
+  background-attachment:fixed;
+}
+html[data-theme="light"] body.cosmic-inapp-art {
+  background-image:linear-gradient(rgba(248,250,255,.94),rgba(250,251,254,.96)),var(--cosmic-brand-clean-image,none);
+}
+@media (prefers-reduced-motion:reduce) {
+  #spideySplash .cosmic-brand-frame,
+  #spideySplash .cosmic-brand-frame.cosmic-intro.is-visible,
+  #spideySplash .cosmic-brand-frame.cosmic-loading.is-visible::after {
+    animation:none!important;transition:none!important;
+  }
+}
+@media(max-width:560px) {
+  #spideySplash .cosmic-brand-frame {
+    background-size:cover;
+  }
+}

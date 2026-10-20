@@ -1,0 +1,78 @@
+{
+  "version": "2026-10-19",
+  "status": "BINARIES_COMMITTED",
+  "user_instruction": "Use 5 separate approved arts; new launcher icon replaces previous official logo where appropriate. No per-art approval necessary.",
+  "source": "Original five approved compositions recovered from user library 2026-10-20, byte-identical with SHA-256 verified before GitHub upload via secure connected staging.",
+  "release_guard": "CI confirms all seven exact binary files and hashes before merging; GitHub Pages deploy and physical Android verification are separate status checks.",
+  "animation": "Opening transitions briefly into loading; quick exit if content is ready, 4s independent safe exit.",
+  "images": [
+    {
+      "role": "opening",
+      "file": "spidey-opening-cosmic-20261019.webp",
+      "sha256": "434a38c73b53d4077fea75cdf6826b5bceedc5d698271c34f82a3e9d3f950ca4",
+      "size": 537778,
+      "width": 941,
+      "height": 1672,
+      "path": "assets/branding/20261019/spidey-opening-cosmic-20261019.webp"
+    },
+    {
+      "role": "loading",
+      "file": "spidey-loading-cosmic-20261019.webp",
+      "sha256": "d2082b9782e6fb1c9bc4423b1b3549e0f091d2eb94d2c010f423e67b14392019",
+      "size": 540038,
+      "width": 941,
+      "height": 1672,
+      "path": "assets/branding/20261019/spidey-loading-cosmic-20261019.webp"
+    },
+    {
+      "role": "icon",
+      "file": "spidey-icon-cosmic-20261019.webp",
+      "sha256": "bf6dc750f12c5357cc748bf57729757cbe558fabebbe028c6336c5502570dddf",
+      "size": 383454,
+      "width": 1254,
+      "height": 1254,
+      "path": "assets/branding/20261019/spidey-icon-cosmic-20261019.webp"
+    },
+    {
+      "role": "wallpaper",
+      "file": "spidey-wallpaper-cosmic-20261019.webp",
+      "sha256": "3c02483dc0f7a745052521730def10c85a9638f67d977559006694128e31da36",
+      "size": 603198,
+      "width": 941,
+      "height": 1672,
+      "path": "assets/branding/20261019/spidey-wallpaper-cosmic-20261019.webp"
+    },
+    {
+      "role": "clean",
+      "file": "spidey-clean-cosmic-20261019.webp",
+      "sha256": "a0e03459129ddf4bca48b7ea0e7ce1ca18ec3768b5cc0466ab8b243b55ced57b",
+      "size": 530498,
+      "width": 941,
+      "height": 1672,
+      "path": "assets/branding/20261019/spidey-clean-cosmic-20261019.webp"
+    },
+    {
+      "role": "icon-192",
+      "file": "spidey-icon-cosmic-192.png",
+      "sha256": "adbaf09e6ae934b0d09e62e9b0b925c73c41c0953e98c0cbf4639533d3dab7be",
+      "size": 89776,
+      "width": 192,
+      "height": 192,
+      "path": "assets/branding/20261019/spidey-icon-cosmic-192.png"
+    },
+    {
+      "role": "icon-512",
+      "file": "spidey-icon-cosmic-512.png",
+      "sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+      "size": 561348,
+      "width": 512,
+      "height": 512,
+      "path": "assets/branding/20261019/spidey-icon-cosmic-512.png"
+    }
+  ],
+  "exceptions": [
+    "The previous original spidey-logo-oficial.jpg remains in repository as historical preserved asset",
+    "New icon/intro art is explicitly allowed by user approval on 2026-10-19",
+    "Do not place SpideyNexus text on any artwork"
+  ]
+}

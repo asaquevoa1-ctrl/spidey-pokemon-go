@@ -50,3 +50,18 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Downloads DataHub: manter TXT de 18 PokéStops Pokémon Center e 482 locais físicos PokéLids **em categorias separadas**. Não confundir tampas com PokéStops confirmadas.
 
 - **Nagasaki:** único selo Ampharos documentado para a campanha, exibido nas 8 paradas sem inventar 8 artes diferentes; fonte Serebii. PokéXciting segue sem desenho individual verificado. Um link externo de imagem não garante carregamento no Android.
+
+
+## Identidade cósmica autorizada pelo responsável — 19/10/2026
+- O responsável aprovou explicitamente **cinco peças distintas** do pacote visual: (1) abertura, (2) carregamento, (3) ícone/logo do aplicativo, (4) fundo sem textos e (5) versão limpa para uso interno.
+- O **emblema dourado em S** dessa nova identidade pode substituir o ícone e o logo de abertura antigos, por autorização posterior e explícita do responsável. Não tratar a regra antiga de manter o logo como impedimento a essa decisão nova. **Preservar** os bytes dos arquivos de identidade anteriores no Git e não substituir artes editoriais previamente aprovadas.
+- Legendaries solicitados: Rayquaza, Giratina, Xerneas (4 pernas), Hoopa em ambas as formas e Yveltal Shiny. Sem a palavra SpideyNexus na arte.
+- A arte de abertura transmite “O mundo Pokémon GO na palma da mão”. O carregamento deve manter saída rápida, animar apenas quando necessário e nunca segurar a navegação esperando as imagens.
+- Os arquivos finais otimizados, hashes e destinos estão em `spidey-app/data/cosmic-brand-assets-20261019.json`. Em 20/10 os sete binários originais foram recuperados do acervo da conversa, conferidos por SHA-256 e preparados no GitHub; a habilitação `window.SPIDEY_COSMIC_ASSETS_VERIFIED=true` depende da presença dos sete arquivos na mesma árvore Git e da aprovação do CI. Publicação na URL pública e teste físico no Samsung são verificações independentes.
+- Não dizer “aplicado” ou “publicado” só com PR/manifesto. O ZIP gerado na conversa não está automaticamente disponível ao navegador de GitHub Pages. A conexão GitHub não oferece transferência direta de arquivo local binário; manter pendência se essa etapa não tiver mecanismo confiável. Não exigir que o responsável faça upload manual.
+
+
+## Continuidade de divulgação orgânica — 20/10/2026
+- PR #109 incluiu compartilhamento nativo Android/WhatsApp, deep links para eventos públicos, Open Graph, privacidade sem rastreadores, e foi integrado na `main` em 20/10/2026.
+- Preservar essas funcionalidades ao integrar o PR #108. Identidade cósmica pode atualizar prévia social oficial, sem alterar links diretos e sem rastreamento invasivo.
+- Validar separadamente CI, publicação GitHub Pages e Samsung físico; não alegar validação física sem execução no aparelho.
