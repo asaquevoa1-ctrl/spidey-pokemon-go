@@ -1,7 +1,7 @@
 """Regressions for editorial deduplication and fail-closed art policy."""
 from pathlib import Path
 import json
-from scripts.auto_curate_pending import duplicate, canonical_source_url, requires_original_art
+from auto_curate_pending import duplicate, canonical_source_url, requires_original_art
 
 official_minior = {
     "_source_id": "oficial-https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
