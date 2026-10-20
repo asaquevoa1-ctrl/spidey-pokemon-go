@@ -52,9 +52,12 @@ test('Search/social metadata are discoverable in initial HTML and assets are exi
   assert.ok(html.includes('<meta property="og:description"'));
   assert.ok(html.includes('<meta property="og:image"'));
   assert.ok(html.includes('<link rel="canonical"'));
-  assert.ok(html.includes('spidey-share.js?v=20261019-share1'));
+  assert.ok(html.includes('spidey-share.js?v=20261019-share2'));
+  assert.ok(html.includes('spidey-share.css?v=20261019-share2'));
+  assert.ok(read('spidey-share.js').includes("document.querySelector('.notification-controls')"));
   const sw=read('sw.js');
   assert.ok(sw.includes("'./spidey-share.js'"));
+  assert.ok(sw.includes("'./spidey-share.css'"));
   assert.ok(sw.includes("const CACHE = 'spidey-app-20261019-organic-sharing-v1'"));
   assert.ok(fs.existsSync(root+'assets/spidey-logo-oficial.jpg'));
 });
