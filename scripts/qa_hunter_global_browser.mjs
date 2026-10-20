@@ -30,7 +30,8 @@ try {
       {pokemon:'Shieldon',iv_percent:100,cp:827,level:35,gender:'Macho',coordinates:'50.105208,8.7271780',reported_at:iso(time-60000),expires_at:iso(time+8*60000),source:'Teste autorizado (sintético)',pvp_rank:null,shiny_eligible:false},
       {pokemon:'Magikarp',iv_percent:0,cp:10,level:1,gender:null,coordinates:'-23.5505,-46.6333',reported_at:iso(time-30000),expires_at:iso(time+6*60000),source:'Teste autorizado (sintético)',pvp_rank:null,shiny_eligible:false}
     ]};
-    await page.route('**/data/hunter-feed.json',r=>r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(fixture)}));
+    let feedRequests=0;
+    await page.route('**/data/hunter-feed.json',r=>{feedRequests++;return r.fulfill({status:200,contentType:'application/json',body:JSON.stringify(fixture)});});
     await page.addInitScript(value=>localStorage.setItem('spidey-theme',value),theme);
     await page.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
     await page.locator('[data-view="flyView"]').first().waitFor({state:'attached',timeout:20000});
@@ -114,7 +115,18 @@ try {
     const map=page.locator('#hunterMap');
     if(!await map.isVisible()||!String(await map.getAttribute('href')).includes('maps/search/'))throw Error('Location map URL missing');
     await page.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
-    await page.waitForFunction(()=>document.querySelectorAll('.hunter-live-card').length===1 && document.querySelector('.hunter-live-name')?.textContent==='Shieldon',null,{timeout:10000});
+    try {
+      await page.waitForFunction(()=>document.querySelectorAll('.hunter-live-card').length===1 && document.querySelector('.hunter-live-name')?.textContent==='Shieldon',null,{timeout:10000});
+    }catch(error){
+      const diag=await page.evaluate(()=>({
+        status:document.getElementById('hunterLiveStatus')?.textContent,
+        buttons:[...document.querySelectorAll('[data-hunter-category]')].map(x=>({type:x.dataset.hunterCategory,pressed:x.getAttribute('aria-pressed')})),
+        cards:[...document.querySelectorAll('.hunter-live-card')].map(x=>x.textContent.slice(0,170)),
+        api:!!window.SpideyLiveFeedCore,
+        body:document.body.className
+      }));
+      throw Error('Hunter fixture was not displayed; intercepted '+feedRequests+' requests; '+JSON.stringify(diag)+' / '+String(error));
+    }
     if(!String(await page.locator('.hunter-live-card').textContent()).includes('Shieldon'))throw Error('Fresh 100% Shieldon card missing');
     if(!String(await page.locator('.hunter-live-card').textContent()).includes('50.105208,8.7271780'))throw Error('Shieldon precise coordinate missing');
     if(!String(await page.locator('.hunter-live-card').textContent()).includes('min restantes'))throw Error('Valid expiry missing');
