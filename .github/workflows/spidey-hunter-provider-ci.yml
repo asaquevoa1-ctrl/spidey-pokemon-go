@@ -1,0 +1,27 @@
+name: Spidey - validar integracao autorizada Caçador
+on:
+  pull_request:
+    paths:
+      - 'scripts/hunter-provider-import.mjs'
+      - 'tests/hunter-provider-import.test.mjs'
+      - '.github/workflows/spidey-hunter-provider.yml'
+      - '.github/workflows/spidey-hunter-provider-ci.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/hunter-provider-import.mjs'
+      - 'tests/hunter-provider-import.test.mjs'
+      - '.github/workflows/spidey-hunter-provider-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  licensed-feed-unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tests/hunter-provider-import.test.mjs
