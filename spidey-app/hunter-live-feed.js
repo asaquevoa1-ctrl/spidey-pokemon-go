@@ -138,6 +138,7 @@
     links.setAttribute('aria-label','Consultar aparições nas fontes');
     for(const [label,url] of [
       ['Mapa SPS ↗','https://map-s.spsmapping.eu/'],
+      ['Radar iFlowGo ↗','https://pokecoords.iflowgo.com/'],
       ['PoGO Alerts ↗','https://pogoalerts.net/'],
       ['PoGO Coordinates ↗','https://pogocoordinates.com/search']
     ]){

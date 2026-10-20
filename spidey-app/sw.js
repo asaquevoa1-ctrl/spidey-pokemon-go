@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261020-hunter-clean-empty-v6';
+const CACHE = 'spidey-app-20261020-hunter-radar-option-v7';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
