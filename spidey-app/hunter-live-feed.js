@@ -161,9 +161,8 @@
         window.prompt('Copie as coordenadas:',value);
       }
     });
-    panel.addEventListener('click',event=>{
-      if(event.target.closest('[data-hunter-category]'))queueMicrotask(()=>render());
-    });
+    // Dispatch only after the chosen filter has changed to avoid stale cards.
+    document.addEventListener('spideyhuntercategorychange',()=>render());
     // Existing external search and troubleshooting tools remain optional, not the primary flow.
     const alt=make('details','hunter-feed-alternatives');
     const summary=make('summary',null,'Outras opções de busca');

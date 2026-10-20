@@ -110,7 +110,7 @@
     tab.addEventListener('click',()=>setView('hunterView'));
     s.addEventListener('click',async event=>{
       const category=event.target.closest('[data-hunter-category]');
-      if(category){selected=category.dataset.hunterCategory;renderCategory();return;}
+      if(category){selected=category.dataset.hunterCategory;renderCategory();document.dispatchEvent(new Event('spideyhuntercategorychange'));return;}
       if(event.target.id==='hunterPaste'){
         try{
           if(!navigator.clipboard?.readText)throw Error('Sem acesso');
