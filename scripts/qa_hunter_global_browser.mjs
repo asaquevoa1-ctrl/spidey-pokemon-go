@@ -15,7 +15,7 @@ const browser = await chromium.launch({headless:true, executablePath:process.env
 const checks = [];
 try {
   // Production data starts empty: never advertise yesterday's Shieldon as live.
-  const empty=await browser.newPage({viewport:{width:390,height:850}});
+  const empty=await browser.newPage({viewport:{width:390,height:850},serviceWorkers:'block'});
   await empty.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
   await empty.locator('.app-tabs [data-view="hunterView"]').click();
   await empty.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
@@ -24,7 +24,7 @@ try {
   if(await empty.locator('#hunterMessage').count()!==0)throw Error('Manual message paste should not be primary UI');
   await empty.close();
   for (const width of [360,390,1280]) for (const theme of ['light','dark']) {
-    const page = await browser.newPage({viewport:{width,height:900},timezoneId:'America/Sao_Paulo'});
+    const page = await browser.newPage({viewport:{width,height:900},timezoneId:'America/Sao_Paulo',serviceWorkers:'block'});
     const time=Date.now(),iso=t=>new Date(t).toISOString();
     const fixture={schema:'spidey-hunter-feed-v1',source_status:'connected',generated_at:iso(time),items:[
       {pokemon:'Shieldon',iv_percent:100,cp:827,level:35,gender:'Macho',coordinates:'50.105208,8.7271780',reported_at:iso(time-60000),expires_at:iso(time+8*60000),source:'Teste autorizado (sintético)',pvp_rank:null,shiny_eligible:false},
