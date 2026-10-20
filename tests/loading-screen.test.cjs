@@ -42,16 +42,19 @@ function makeHarness(reduced = false) {
   return { handlers, splash, classes, bodyClasses, flush };
 }
 
-test('loading screen uses approved logo, covers page and is cached for offline', () => {
+test('loading screen uses newly approved cosmic logo, covers page briefly and caches assets offline', () => {
   const html = fs.readFileSync(root + 'index.html', 'utf8');
   const css = fs.readFileSync(root + 'loading-screen.css', 'utf8');
   const sw = fs.readFileSync(root + 'sw.js', 'utf8');
   assert.ok(html.includes('id="spideySplash"'));
   assert.ok(html.indexOf('id="spideySplash"') < html.indexOf('<header class="topbar">'));
-  assert.ok(html.includes('spidey-splash-logo" src="assets/spidey-logo-oficial.jpg"'));
+  assert.ok(html.includes('spidey-splash-logo" src="assets/branding/20261019/spidey-icon-cosmic-192.png"'));
   assert.ok(html.includes('loading-screen.css?v='));
   assert.ok(html.includes('loading-screen.js?v='));
-  assert.ok(html.includes('4000);</script>'));
+  assert.ok(html.includes('2100);</script>'));
+  assert.ok(css.includes('2.05s'));
+  assert.ok(html.includes('spidey-critical-exit'));
+  assert.ok(fs.existsSync(root + 'assets/spidey-logo-oficial.jpg'));
   assert.ok(css.includes('position: fixed;'));
   assert.ok(css.includes('prefers-reduced-motion: reduce'));
   assert.ok(css.includes('.spidey-splash[hidden]'));
