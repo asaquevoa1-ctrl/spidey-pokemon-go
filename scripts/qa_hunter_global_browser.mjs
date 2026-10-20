@@ -114,7 +114,7 @@ try {
     const map=page.locator('#hunterMap');
     if(!await map.isVisible()||!String(await map.getAttribute('href')).includes('maps/search/'))throw Error('Location map URL missing');
     await page.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
-    await page.waitForFunction(()=>document.querySelectorAll('.hunter-live-card').length===1,null,{timeout:10000});
+    await page.waitForFunction(()=>document.querySelectorAll('.hunter-live-card').length===1 && document.querySelector('.hunter-live-name')?.textContent==='Shieldon',null,{timeout:10000});
     if(!String(await page.locator('.hunter-live-card').textContent()).includes('Shieldon'))throw Error('Fresh 100% Shieldon card missing');
     if(!String(await page.locator('.hunter-live-card').textContent()).includes('50.105208,8.7271780'))throw Error('Shieldon precise coordinate missing');
     if(!String(await page.locator('.hunter-live-card').textContent()).includes('min restantes'))throw Error('Valid expiry missing');
