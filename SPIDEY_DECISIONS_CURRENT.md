@@ -96,3 +96,7 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Publicar uma mensagem curta **“Nenhuma aparição disponível no momento.”** quando não houver dados reais atuais. Erros de conexão mantêm aviso breve, sem mostrar explicações de backend.
 - Preservar os seis filtros e o botão Atualizar; links externos e ferramentas manuais permanecem disponíveis apenas ao expandir **“Outras opções de busca”**. Remover da abertura do Caçador referências a “Sem busca automática”, “Pesquisa externa” e textos de negociação; manter toda documentação e bloqueios na área técnica do repositório.
 - É permitido mostrar aparições apenas com feed atual e autorizado; não inventar coordenadas, IV ou Shinies. A mudança é de apresentação e não resolve o bloqueio do fornecedor.
+
+## 20/10/2026 — Radar externo: integração adaptável sem autorização presumida
+- Investigar iFlowGo PoGo Radar e Moonani como fontes potenciais. Descoberto cliente MIT em `KernelX-debug/Discord-Bot_Lucario_Moonaniphp` documentando campos técnicos reais; licença do código não concede acesso/licença aos dados. O envio de issue ao repositório de terceiros retornou 403 e não foi realizado.
+- Implementado adaptador de fornecedor `HUNTER_PROVIDER_FORMAT=iflowgo`, preservando os filtros, controle de licença, ausência de coleta e validação de expiração/PII. Nenhuma consulta/credencial iFlowGo ou Moonani ativada no Spidey; exigir acordo de redistribuição.

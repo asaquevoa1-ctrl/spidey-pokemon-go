@@ -48,7 +48,51 @@ export function normalizeFeed(input,{now=Date.now(),providerName}={}){
   entries.sort((a,b)=>a.expires_at.localeCompare(b.expires_at));
   return {schema:CONTRACT,source_status:'connected',generated_at:new Date(generated).toISOString(),items:entries.slice(0,300)};
 }
-export async function importLicensedFeed({url,token,providerName,licenseApproved,output='spidey-app/data/hunter-feed.json'}={}){
+
+// Optional compatibility layer for a licensed partner using a PoGo Radar-style JSON schema.
+// Supports anonymous public scan records only; never guesses guaranteed personal Shiny.
+export function adaptRadarFeed(raw,{now=Date.now()}={}){
+  const rows=Array.isArray(raw?.items)?raw.items:Array.isArray(raw?.spawns)?raw.spawns:null;
+  if(!rows||rows.length>1000)throw Error('invalid_radar_items');
+  const toIso=value=>{
+    if(typeof value==='number'&&Number.isFinite(value))value=value<1e11?value*1000:value;
+    const ts=Date.parse(typeof value==='string'?value:'');
+    const epoch=typeof value==='number'?value:ts;
+    return Number.isFinite(epoch)?new Date(epoch).toISOString():null;
+  };
+  const normalized=[];
+  for(const row of rows){
+    if(!row||typeof row!=='object')continue;
+    const lat=row.lat,lon=row.lon??row.lng;
+    // Treat a sighting without exact expiry as unusable, never guess a despawn time.
+    const expires_at=toIso(row.expires_at??row.despawn_at);
+    if(!expires_at||lat===undefined||lon===undefined)continue;
+    const ident=Number(row.pokemon_id);
+    const candidate=typeof row.pokemon_name==='string'?row.pokemon_name:
+      typeof row.name==='string'?row.name:typeof row.pokemon==='string'?row.pokemon:
+      Number.isInteger(ident)&&ident>=1&&ident<=3000?'Pokémon '+ident:'';
+    if(!candidate)continue;
+    const percent=Number(row.percent_iv??row.iv_percent);
+    const atk=Number(row.attack_iv),def=Number(row.defense_iv),sta=Number(row.stamina_iv);
+    const exact=percent===100||percent===0?percent:
+      [atk,def,sta].every(v=>v===15)?100:[atk,def,sta].every(v=>v===0)?0:null;
+    const rtime=toIso(row.observed_at??row.updated_at??row.reported_at)||
+      new Date(now).toISOString(); // Timestamp of the permitted API poll, NOT original spawn time.
+    normalized.push({
+      pokemon:candidate,iv_percent:exact,
+      cp:row.cp,level:row.level,
+      coordinates:String(lat)+','+String(lon),
+      reported_at:rtime,expires_at,
+      pvp_rank:row.pvp_rank??null,
+      // A global radar cannot assert the user's personal Shiny.
+      shiny_eligible:false,
+      source:'Radar externo'
+    });
+  }
+  return {schema:CONTRACT,source_status:'connected',generated_at:new Date(now).toISOString(),items:normalized};
+}
+
+export async function importLicensedFeed({url,token,providerName,licenseApproved,providerFormat='native',output='spidey-app/data/hunter-feed.json'}={}){
   if(licenseApproved!==true)throw Error('provider_license_not_approved');
   if(!url||typeof url!=='string')throw Error('missing_provider_feed_url');
   const location=new URL(url);
@@ -66,7 +110,10 @@ export async function importLicensedFeed({url,token,providerName,licenseApproved
   if(!response.ok)throw Error('provider_http_'+response.status);
   const body=await response.arrayBuffer();
   if(body.byteLength>1024*1024)throw Error('provider_response_too_large');
-  const feed=normalizeFeed(JSON.parse(new TextDecoder().decode(body)),{providerName});
+  if(providerFormat!=='native'&&providerFormat!=='iflowgo')throw Error('unsupported_provider_format');
+  const providerPayload=JSON.parse(new TextDecoder().decode(body));
+  const prepared=providerFormat==='iflowgo'?adaptRadarFeed(providerPayload):providerPayload;
+  const feed=normalizeFeed(prepared,{providerName});
   await writeFile(output,JSON.stringify(feed,null,2)+'\n','utf8');
   // Never print provider URL, token, account identifiers or raw records.
   process.stdout.write(JSON.stringify({status:'ingested',items:feed.items.length,generated_at:feed.generated_at})+'\n');
@@ -77,6 +124,7 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
     url:process.env.HUNTER_PROVIDER_FEED_URL,
     token:process.env.HUNTER_PROVIDER_BEARER_TOKEN,
     providerName:process.env.HUNTER_PROVIDER_NAME,
+    providerFormat:process.env.HUNTER_PROVIDER_FORMAT||'native',
     licenseApproved:process.env.HUNTER_FEED_LICENSE_APPROVED==='true'
   }).catch(e=>{console.error('Hunter import blocked:',e.message);process.exitCode=1;});
 }

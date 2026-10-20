@@ -17,3 +17,9 @@ Contrato JSON: spidey-hunter-feed-v1, source_status connected, generated_at UTC 
 
 ## Aceite
 (1) autorização comprovada; (2) mínimo de uma captura real válida no feed; (3) verificação de 24h sem expirados ou registros fabricados; (4) testes mobile, sem regressão de FLY/Push/PvP; (5) clareza pública sobre tipo de Shiny e cobertura geográfica.
+
+## Nova pista técnica: iFlowGo / PoGo Radar (20/10/2026)
+- O portal público https://pokecoords.iflowgo.com/ oferece pesquisa de aparições, IV, CP e coordenadas. O software de terceiros MIT em https://github.com/KernelX-debug/Discord-Bot_Lucario_Moonaniphp documenta a estrutura de resposta `items`/`spawns` dos endpoints `pokemon-search` e `nearby`, com `pokemon_id`, `percent_iv`, `lat`, `lon`, `cp`, `level`, `expires_at`. **MIT cobre código de terceiros, não o conteúdo do radar.** Não foi obtida licença para importar/republicar dados iFlowGo.
+- Adaptador `adaptRadarFeed` foi criado **somente para fornecedor com autorização escrita**, removendo campos de treinador, convertendo horários exatos de expiração e só aceitando IV exato 100/0. Não interpreta `shiny_confirmed` como garantia de Shiny pessoal. Registros sem `expires_at` são descartados.
+- Ao validar contrato e formato reais com o operador, configurar `HUNTER_PROVIDER_FORMAT=iflowgo`; `native` (padrão) mantém o contrato antigo. Sem `HUNTER_FEED_LICENSE_APPROVED=true`, nenhuma consulta externa é iniciada.
+- O iFlowGo tem canal de parceria em https://iflowgo.com/iflowgo-partner-program/ (direcionamento ao Discord Ken). A ferramenta GitHub conectada não permite abrir Issues em repositórios de terceiros (403); nenhum pedido a esse operador foi transmitido por GitHub. Solicitar formalmente autorização de dados a esse operador, sem contratar programa de spoofing.
