@@ -16,7 +16,7 @@ test('official dates and separate claim deadline are correct for Brazilian local
 });
 test('free 400 coins are never described as 1400 free and shiny is not guaranteed',()=>{
  const e=ev[0];const all=JSON.stringify(e);
- assert.match(e.summary,/gratuita.*400.*Deluxe.*1\.400/);
+ assert.match(e.summary,/gratuito.*400.*Deluxe.*1\.400/);
  assert.ok(e.notes.some(x=>x.includes('1.000 PokéMoedas adicionais')));
  assert.ok(e.pokemon[0].note.includes('não é garantido'));
  assert.ok(e.bonuses.some(x=>x.includes('Ranque 75')));
