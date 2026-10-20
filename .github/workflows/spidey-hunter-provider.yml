@@ -19,6 +19,7 @@ jobs:
       HUNTER_PROVIDER_FEED_URL: ${{ secrets.HUNTER_PROVIDER_FEED_URL }}
       HUNTER_PROVIDER_BEARER_TOKEN: ${{ secrets.HUNTER_PROVIDER_BEARER_TOKEN }}
       HUNTER_PROVIDER_NAME: ${{ vars.HUNTER_PROVIDER_NAME }}
+      HUNTER_PROVIDER_FORMAT: ${{ vars.HUNTER_PROVIDER_FORMAT }}
     steps:
       - uses: actions/checkout@v5
         with:

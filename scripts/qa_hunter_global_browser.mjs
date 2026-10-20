@@ -93,7 +93,7 @@ try {
     }
     if(visual.heroColor!=='rgb(247, 251, 255)'||visual.heroTextFill!=='rgb(247, 251, 255)')
       throw Error('Poor hero contrast '+JSON.stringify(visual));
-    if(!visual.sources.some(v=>v.includes('map-s.spsmapping.eu'))||!visual.sources.some(v=>v.includes('pogoalerts.net')))
+    if(!visual.sources.some(v=>v.includes('map-s.spsmapping.eu'))||!visual.sources.some(v=>v.includes('pogoalerts.net'))||!visual.sources.some(v=>v.includes('pokecoords.iflowgo.com')))
       throw Error('External source links missing');
     const cats=page.locator('[data-hunter-category]');
     if(await cats.count()!==6)throw Error('The six Caçador filters are missing');
