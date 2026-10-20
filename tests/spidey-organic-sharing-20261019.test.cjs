@@ -58,7 +58,7 @@ test('Search/social metadata are discoverable in initial HTML and assets are exi
   const sw=read('sw.js');
   assert.ok(sw.includes("'./spidey-share.js'"));
   assert.ok(sw.includes("'./spidey-share.css'"));
-  assert.ok(sw.includes("const CACHE = 'spidey-app-20261020-samsung-splash-fast-v3'"));
+  assert.ok(sw.includes("const CACHE = 'spidey-app-20261020-android-cosmic-icon-v4'"));
   assert.ok(fs.existsSync(root+'assets/spidey-logo-oficial.jpg'));
   assert.ok(fs.existsSync(root+'assets/branding/20261019/spidey-icon-cosmic-512.png'));
   assert.ok(html.includes('spidey-icon-cosmic-512.png'));
