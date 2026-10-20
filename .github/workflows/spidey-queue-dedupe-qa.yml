@@ -1,0 +1,28 @@
+name: Spidey - checar deduplicação e curadoria Premium
+on:
+  pull_request:
+    paths:
+      - 'scripts/auto_curate_pending.py'
+      - 'scripts/test_auto_curate_dedupe.py'
+      - 'queue/pending/**'
+      - '.github/workflows/spidey-queue-dedupe-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/auto_curate_pending.py'
+      - 'scripts/test_auto_curate_dedupe.py'
+      - '.github/workflows/spidey-queue-dedupe-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  python-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --quiet requests pillow
+      - run: python scripts/test_auto_curate_dedupe.py
