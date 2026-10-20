@@ -131,7 +131,17 @@
     // Source websites open only after a user's click; no automated extraction.
     const ext=make('div','hunter-trusted-sources');
     ext.id='hunterTrustedSources';
-    ext.innerHTML="<nav class=\"hunter-source-links\" aria-label=\"Consultar aparições nas fontes\"><a href=\"https://map-s.spsmapping.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Mapa SPS ↗</a><a href=\"https://pogoalerts.net/\" target=\"_blank\" rel=\"noopener noreferrer\">PoGO Alerts ↗</a><a href=\"https://pogocoordinates.com/search\" target=\"_blank\" rel=\"noopener noreferrer\">PoGO Coordinates ↗</a></nav><p class=\"hunter-source-disclaimer\">Mapas externos podem exigir conta, assinatura ou autenticação. O Spidey não acessa esses logins nem importa os dados sem autorização.</p>";
+    const links=make('nav','hunter-source-links');
+    links.setAttribute('aria-label','Consultar aparições nas fontes');
+    for(const [label,url] of [
+      ['Mapa SPS ↗','https://map-s.spsmapping.eu/'],
+      ['PoGO Alerts ↗','https://pogoalerts.net/'],
+      ['PoGO Coordinates ↗','https://pogocoordinates.com/search']
+    ]){
+      const a=make('a',null,label);a.href=url;a.target='_blank';a.rel='noopener noreferrer';links.append(a);
+    }
+    const disclaimer=make('p','hunter-source-disclaimer','Mapas externos podem exigir conta, assinatura ou autenticação. O Spidey não acessa esses logins nem importa dados sem autorização.');
+    ext.append(links,disclaimer);
     feed.append(ext);
     const tip=el('hunterTip');
     if(tip)tip.insertAdjacentElement('afterend',feed);
