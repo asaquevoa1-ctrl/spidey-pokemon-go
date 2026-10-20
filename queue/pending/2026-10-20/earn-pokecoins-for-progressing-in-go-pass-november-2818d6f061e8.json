@@ -8,7 +8,7 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1562149576536760454",
-  "status": "aguardando_curadoria_premium",
+  "status": "duplicado",
   "etapa_editorial": "aguardando_curadoria_premium",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
@@ -32,5 +32,6 @@
     "deluxe_adicionais": 1000,
     "total_com_deluxe": 1400,
     "encontro": "Groudon (possibilidade de Brilhante, não garantido)"
-  }
+  },
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026"
 }
