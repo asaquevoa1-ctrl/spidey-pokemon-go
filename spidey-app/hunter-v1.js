@@ -2,12 +2,12 @@
   'use strict';
   // Links go to the source directly. No third-party scraping or fabricated results.
   const categories=[
-    {id:'hundo',label:'💯 100%',url:'https://pogocoordinates.com/feeds/high-cp-100iv',tip:'Aparições 100% disponíveis nas fontes conectadas, quando houver. Cada coordenada pode expirar.'},
-    {id:'nundo',label:'0️⃣ 0%',url:'https://pogocoordinates.com/feeds/zero-iv',tip:'Aparições 0% reportadas nas fontes conectadas, quando houver.'},
-    {id:'shiny',label:'✨ Brilhante',url:'https://pogocoordinates.com/search',tip:'Shiny é individual por conta. Elegibilidade não garante brilhante.'},
-    {id:'pvp',label:'⚔️ PvP',url:'https://pogocoordinates.com/search',tip:'Aparições com classificação PvP informada pela fonte, quando disponíveis.'},
-    {id:'shundo',label:'💯✨ Shundo',url:'https://pogocoordinates.com/search',tip:'100% IV e possível Shiny, sem garantia de brilho para sua conta.'},
-    {id:'shnundo',label:'0️⃣✨ Shnundo',url:'https://pogocoordinates.com/search',tip:'0% IV e possível Shiny, sem garantia de brilho para sua conta.'}
+    {id:'hundo',label:'💯 100%',url:'https://pogocoordinates.com/feeds/high-cp-100iv',tip:'Pokémon com IV 100%.'},
+    {id:'nundo',label:'0️⃣ 0%',url:'https://pogocoordinates.com/feeds/zero-iv',tip:'Pokémon com IV 0%.'},
+    {id:'shiny',label:'✨ Brilhante',url:'https://pogocoordinates.com/search',tip:'Pokémon que podem ser brilhantes. O resultado varia por treinador.'},
+    {id:'pvp',label:'⚔️ PvP',url:'https://pogocoordinates.com/search',tip:'Pokémon com classificação para PvP.'},
+    {id:'shundo',label:'💯✨ Shundo',url:'https://pogocoordinates.com/search',tip:'IV 100% com possibilidade de brilhante. Não é garantido.'},
+    {id:'shnundo',label:'0️⃣✨ Shnundo',url:'https://pogocoordinates.com/search',tip:'IV 0% com possibilidade de brilhante. Não é garantido.'}
   ];
   let selected='hundo';
   // Chat messages are handled locally in the browser; never transmitted or saved.
@@ -82,11 +82,11 @@
     s.setAttribute('aria-labelledby','hunterTitle');
     const hero=document.createElement('section');
     hero.className='hunter-intro';
-    hero.innerHTML='<span class="hunter-kicker">SPIDEY • FILTRO GLOBAL</span><div class="hunter-intro-body"><div><h1 id="hunterTitle">Encontre sua próxima captura.</h1><p>IV perfeito, 0%, PvP e coordenadas de todo o mundo.</p></div><div class="hunter-orbit" aria-hidden="true"><span>◎</span></div></div><div class="hunter-service-note"><span class="hunter-status-dot"></span> Fontes externas • Sem busca automática</div>';
+    hero.innerHTML='<span class="hunter-kicker">SPIDEY • FILTRO GLOBAL</span><div class="hunter-intro-body"><div><h1 id="hunterTitle">Encontre sua próxima captura.</h1><p>IV perfeito, 0%, PvP e coordenadas de todo o mundo.</p></div><div class="hunter-orbit" aria-hidden="true"><span>◎</span></div></div> ';
     const panel=document.createElement('section');
     panel.id='hunterPanel';panel.className='section hunter-panel';panel.setAttribute('aria-label','Filtros de busca de Pokémon');
     panel.innerHTML=[
-      '<div class="hunter-heading"><div><span class="eyebrow">ESCOLHA SEU FILTRO</span><h2>Que Pokémon você procura?</h2><p>Selecione um filtro e abra os resultados na fonte original.</p></div><span class="hunter-source">Pesquisa externa</span></div>',
+      '<div class="hunter-heading"><div><span class="eyebrow">ESCOLHA SEU FILTRO</span><h2>Que Pokémon você procura?</h2><p>Selecione o tipo de Pokémon que você procura.</p></div></div>',
       '<div class="hunter-category-grid" role="group" aria-label="Escolha o tipo de Pokémon">',
       categories.map(c=>'<button class="hunter-category" type="button" data-hunter-category="'+c.id+'" aria-pressed="false">'+c.label+'</button>').join(''),
       '</div><p id="hunterTip" class="hunter-tip" role="status" aria-live="polite"></p>',
@@ -99,7 +99,7 @@
       '<p id="hunterIvStatus" role="status" aria-live="polite"></p><label class="hunter-coord-label" for="hunterCoords">Coordenadas (latitude, longitude)</label>',
       '<input id="hunterCoords" type="text" autocomplete="off" spellcheck="false" placeholder="Ex.: -25.4221,-49.2717"><p id="hunterCoordStatus" class="microcopy" role="status" aria-live="polite"></p>',
       '<div class="hunter-actions"><button id="hunterPaste" type="button" class="action-btn">Colar coordenadas</button><button id="hunterCopy" type="button" class="action-btn" disabled>Copiar coordenadas</button><a id="hunterMap" class="action-btn" href="#" target="_blank" rel="noopener noreferrer" hidden>Abrir no mapa ↗</a></div></div></details>',
-      '<p class="microcopy">O Shiny é individual por conta. Encontrar 100% não garante Shundo. Confira as regras do jogo.</p>'
+      '<p class="microcopy">Brilhantes variam por treinador; IV 100% não garante Shundo.</p>'
     ].join('');
     s.append(hero,panel);
     main.append(s);

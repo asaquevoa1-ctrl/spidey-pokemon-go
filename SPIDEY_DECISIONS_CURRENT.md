@@ -90,3 +90,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Criado importador e ação opt-in no repositório. `HUNTER_FEED_LICENSE_APPROVED` ausente => nenhuma execução externa, nenhuma redistribuição de dados de terceiros. O Pages só faz publicação extra de feeds se essa licença for explicitamente habilitada.
 - Caçador preserva funcionalidade de interface, sem promessa de feed ao vivo. Nenhuma confirmação personalizada de Shiny pode ser inferida do IV.
 - Instruções de ativação em `docs/HUNTER_PROVIDER_ACTIVATION_20261020.md`.
+
+## 20/10/2026 — Caçador: interface pública sem informações internas
+- Captura real do Samsung às 15:05 revela texto longo sobre feed autorizado, links de fornecedores em destaque e explicações técnicas; esses detalhes não fazem parte da experiência que deve ser exibida a todos.
+- Publicar uma mensagem curta **“Nenhuma aparição disponível no momento.”** quando não houver dados reais atuais. Erros de conexão mantêm aviso breve, sem mostrar explicações de backend.
+- Preservar os seis filtros e o botão Atualizar; links externos e ferramentas manuais permanecem disponíveis apenas ao expandir **“Outras opções de busca”**. Remover da abertura do Caçador referências a “Sem busca automática”, “Pesquisa externa” e textos de negociação; manter toda documentação e bloqueios na área técnica do repositório.
+- É permitido mostrar aparições apenas com feed atual e autorizado; não inventar coordenadas, IV ou Shinies. A mudança é de apresentação e não resolve o bloqueio do fornecedor.
