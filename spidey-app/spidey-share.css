@@ -1,0 +1,21 @@
+/* Convite orgânico. No extra tracking, no ad or overlay. */
+.spidey-share-main {
+  white-space: nowrap;
+  border: 1px solid rgba(255,210,115,.44);
+  color: var(--text);
+  background: linear-gradient(115deg,rgba(117,82,18,.22),rgba(40,104,161,.13));
+  min-height: 38px;
+  font-weight: 800;
+}
+.spidey-share-event {
+  font-weight: 900;
+  color: var(--text);
+  border: 1px solid rgba(255,210,115,.44);
+  background: linear-gradient(125deg,rgba(117,82,18,.20),rgba(40,104,161,.13));
+  white-space: normal;
+}
+.notification-controls:has(.spidey-share-main) { display: flex; flex-wrap: wrap; align-items:center; gap:8px; }
+@media (max-width:480px) {
+  .spidey-share-main { font-size: .84rem; padding: 8px 11px; }
+  .spidey-share-event { width:100%; text-align:center; }
+}
