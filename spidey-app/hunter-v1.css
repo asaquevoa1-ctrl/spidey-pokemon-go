@@ -150,3 +150,20 @@ body.spidey-command-center .hunter-intro h1 {
 [data-theme=dark] .hunter-source-links a{color:#d8fcff;background:rgba(35,154,176,.1)}
 .hunter-source-disclaimer{font-size:.78rem;opacity:.8;line-height:1.5;margin:0}
 @media(max-width:480px){.hunter-source-links a{flex:1 0 45%;min-width:125px}}
+
+/* Stable active Caçador tab: highest-specificity override for the current app-v2 theme. */
+body.spidey-command-center.spidey-app-v2 nav.app-tabs button.app-tab.hunter-tab {
+  background-color:#b6f0f5!important;
+  background-image:linear-gradient(140deg,#93eaf6 10%,#efd18b 100%)!important;
+  color:#082235!important;
+  border:1px solid #53b5c6!important;
+  font-weight:900!important;
+  min-width:74px!important;
+  box-shadow:0 2px 12px rgba(61,178,202,.25)!important;
+}
+body.spidey-command-center.spidey-app-v2 nav.app-tabs button.app-tab.hunter-tab[aria-current="page"] {
+  background-image:linear-gradient(140deg,#baf9fa,#f5d99f)!important;
+  border-color:#168ca3!important;
+  outline:2px solid #0d899c;
+  outline-offset:1px;
+}
