@@ -100,3 +100,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 ## 20/10/2026 — Radar externo: integração adaptável sem autorização presumida
 - Investigar iFlowGo PoGo Radar e Moonani como fontes potenciais. Descoberto cliente MIT em `KernelX-debug/Discord-Bot_Lucario_Moonaniphp` documentando campos técnicos reais; licença do código não concede acesso/licença aos dados. O envio de issue ao repositório de terceiros retornou 403 e não foi realizado.
 - Implementado adaptador de fornecedor `HUNTER_PROVIDER_FORMAT=iflowgo`, preservando os filtros, controle de licença, ausência de coleta e validação de expiração/PII. Nenhuma consulta/credencial iFlowGo ou Moonani ativada no Spidey; exigir acordo de redistribuição.
+
+## 20/10/2026 — Passe GO de novembro Groudon confirmado
+- O anúncio encaminhado pelo editor em captura está confirmado pelo Pokémon GO: https://pokemongo.com/en/news/go-pass-november-2026. Período de 03/11 às 10h a 01/12 às 10h, horário local; prazo de resgate 03/12 às 10h.
+- Novos dados no calendário: 400 PokéMoedas no gratuito, mais 1.000 somente no Deluxe pago (total 1.400), Groudon com possibilidade de Brilhante, bônus por ranque, 28–29/11 sem limite diário de Pontos GO. Não confundir com Passe GO Into the Wild.
+- Eventos existentes e arte aprovada de Outubro/Setembro/Halloween devem permanecer intactos. Como arte Premium original de novembro não está aprovada, usar somente visual de calendário de data (sem mídia/fallback genérico) e preservar a fila pendente de arte, com proibição de reaproveitar a captura ou cartaz de outro mês como peça Premium.
+- O registro factual e a notícia no app não certificam arte Premium final. Não fazer divulgação orgânica externa como se o pôster estivesse aprovado.

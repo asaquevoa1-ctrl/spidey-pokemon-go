@@ -5583,6 +5583,97 @@
       ]
     },
     {
+      "id": "2026-11-go-pass-groudon",
+      "slug": "2026-11-go-pass-groudon",
+      "title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
+      "summary": "Passe gratuito: encontro com Groudon (pode ser Brilhante) e até 400 PokéMoedas. Passe Deluxe pago: mais 1.000 PokéMoedas, total de 1.400.",
+      "category": "go_pass",
+      "tags": [
+        "Passe GO",
+        "Novembro 2026",
+        "Groudon",
+        "PokéMoedas",
+        "Deluxe",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/go-pass-november-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-03T10:00:00-03:00",
+        "end_local": "2026-12-01T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-03T10:00:00-03:00",
+        "end_brazil": "2026-12-01T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Passe mundial por horário local; nenhuma coordenada específica é necessária."
+      },
+      "notes": [
+        "Passe GO gratuito recebido automaticamente em 03/11, às 10h locais; realize tarefas para ganhar Pontos GO e subir de ranque.",
+        "Versão gratuita: até 400 PokéMoedas e encontro com Groudon, com possibilidade de Brilhante, além de Ovo da Sorte, Doce Raro GG e Poeira Estelar.",
+        "Somente no Passe GO Deluxe pago: até 1.000 PokéMoedas adicionais, chegando a 1.400 PokéMoedas somando as duas trilhas. Nenhuma das 1.400 é garantida sem avançar nos ranques.",
+        "Deluxe: US$ 7,99 ou preço regional equivalente; versão Deluxe + 10 Ranques: US$ 9,99 ou equivalente. Preços e disponibilidade podem variar por região.",
+        "28 e 29/11: sem limite diário de Pontos GO (de sábado 00h até domingo 23h59, horário local).",
+        "Recompensas desbloqueadas precisam ser resgatadas até 03/12/2026 às 10h, horário local, depois do fim do Passe.",
+        "A prévia de recompensas por ranque não detalha ainda todos os itens; não confundir este Passe GO mensal com o Passe GO Into the Wild, de 9 a 15/11.",
+        "Fonte oficial consultada em 20/10/2026. Arte Premium do evento continua em curadoria; não exibir pôster genérico, a imagem informativa enviada ou imagem de outro Passe GO como se fosse a arte aprovada."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Ranque 1: um Doce adicional por troca e, para treinadores de nível 31+, um Doce GG garantido por troca.",
+        "Ranque 25: abrir até 40 presentes/dia, receber até 125 presentes/dia de Poképaradas e Ginásios, guardar mais 10 presentes.",
+        "Ranque 50: 2× duração do Incenso de Aventura Diário.",
+        "Ranque 75: mais Poeira Estelar e PE ao chocar Ovos.",
+        "Deluxe, ranque 25: até 50 presentes abertos/dia, 150 recebidos/dia e 20 espaços extras na Bolsa para presentes.",
+        "Passe gratuito: até 400 PokéMoedas. Deluxe pago: 1.000 adicionais; total máximo de 1.400 PokéMoedas."
+      ],
+      "pokemon": [
+        {
+          "name": "Groudon",
+          "note": "Encontro no Passe GO; pode aparecer Brilhante; não é garantido."
+        }
+      ],
+      "news": {
+        "title": "Passe GO de novembro: Groudon e até 1.400 PokéMoedas",
+        "summary": "A trilha gratuita oferece Groudon e 400 PokéMoedas; o Deluxe pago acrescenta até 1.000. De 3/11 a 1º/12, com bônus por ranque e resgate até 3/12.",
+        "published_on": "2026-10-20",
+        "window_label": "03/11–01/12 • horário local"
+      },
+      "verified_at": "2026-10-20",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO · anúncio oficial",
+          "url": "https://pokemongo.com/en/news/go-pass-november-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub · guia 20/10/2026",
+          "url": "https://pokemongohub.net/post/guide/go-pass-november-2026/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
       "id": "2026-10-zorua-community-day",
       "slug": "2026-10-zorua-community-day",
       "title": "Dia Comunitário: Zorua",
