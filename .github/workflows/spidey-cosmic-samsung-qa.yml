@@ -1,0 +1,33 @@
+name: Spidey - identidade cósmica Samsung simulado
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'spidey-app/assets/branding/20261019/**'
+      - 'spidey-app/cosmic-brand-20261019.*'
+      - 'spidey-app/index.html'
+      - 'spidey-app/manifest.webmanifest'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_cosmic_samsung_browser.mjs'
+      - '.github/workflows/spidey-cosmic-samsung-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  samsung-cosmic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - name: Simular Galaxy 390px, validar abertura cósmica, imagens e compartilhamento
+        run: CHROME_PATH="$(command -v google-chrome)" node scripts/qa_cosmic_samsung_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spidey-cosmic-samsung-qa
+          path: test-results/cosmic-samsung/
