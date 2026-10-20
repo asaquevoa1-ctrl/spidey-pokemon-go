@@ -26,7 +26,15 @@ unrelated_b={"_source_id":"oficial-456","mensagem":"Kyogre PokéMoedas novembro 
 assert not duplicate(unrelated_a,unrelated_b), "Two common nouns are not strong evidence"
 queue_file=Path("queue/pending/2026-10-20/earn-pokecoins-for-progressing-in-go-pass-november-2818d6f061e8.json")
 queue=json.loads(queue_file.read_text(encoding="utf-8"))
-assert queue["status"]=="aguardando_arte_chatgpt"
 assert requires_original_art(queue)
-assert "duplicate_of" not in queue
-print("PASS: Groudon article deduplication and original Premium art protections")
+assert queue["status"] in {"aguardando_arte_chatgpt", "duplicado"}
+official_file=Path("queue/pending/2026-10-20/oficial-noticia-899939c69e74.json")
+official=json.loads(official_file.read_text(encoding="utf-8"))
+assert official["_source_id"]=="oficial-https://pokemongo.com/pt-BR/news/go-pass-november-2026"
+assert official["status"]=="aguardando_arte_chatgpt"
+assert requires_original_art(official)
+if queue["status"]=="duplicado":
+    assert queue["duplicate_of"]==official["_source_id"], "Must dedupe against the exact official article, never Minior"
+else:
+    assert "duplicate_of" not in queue
+print("PASS: Groudon deduplication, canonical source and Premium art guards")
