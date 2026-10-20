@@ -53,7 +53,7 @@ test('Startup is bounded and deploy refreshes PWA assets on Samsung',()=>{
   assert.ok(html.includes('4000);</script>'));
   assert.ok(html.includes('samsung-video-fixes-20261019.css?v=20261019-samsung3'));
   assert.ok(html.includes('loading-screen.js?v=20261019-splash3'));
-  assert.ok(sw.includes("const CACHE = 'spidey-app-20261019-samsung-video-qa-v3'"));
+  assert.ok(sw.includes("const CACHE = 'spidey-app-20261019-organic-sharing-v1'"));
   assert.ok(sw.includes("'./samsung-video-fixes-20261019.css'"));
 });
 test('all edited runtime scripts parse without breaking tabs, FLY and stamps',()=>{

@@ -1,9 +1,9 @@
 {
   "version": "2026-10-19",
-  "status": "STAGED_AWAITING_BINARY_ASSETS",
+  "status": "BINARIES_COMMITTED",
   "user_instruction": "Use 5 separate approved arts; new launcher icon replaces previous official logo where appropriate. No per-art approval necessary.",
-  "source": "Image generation assets mounted in the current ChatGPT conversation; exact optimized output with matching SHA hashes in /mnt/data/spidey_pacote_visual_completo_20261019.zip",
-  "release_guard": "Do not flip the PWA manifest or cache the binary paths unless all files are uploaded and verified in GitHub. No fake placeholder art.",
+  "source": "Original five approved compositions recovered from user library 2026-10-20, byte-identical with SHA-256 verified before GitHub upload via secure connected staging.",
+  "release_guard": "CI confirms all seven exact binary files and hashes before merging; GitHub Pages deploy and physical Android verification are separate status checks.",
   "animation": "Opening transitions briefly into loading; quick exit if content is ready, 4s independent safe exit.",
   "images": [
     {

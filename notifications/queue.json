@@ -4,42 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-minior-orionids:start:60",
-      "event_id": "2026-10-minior-orionids",
-      "event_title": "Minior: chuva de meteoros Orionidas",
-      "category": "evento_especial",
-      "scheduled_for": "2026-10-19T16:00:00-03:00",
-      "event_start": "2026-10-19T17:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Minior: chuva de meteoros Orionidas começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-minior-orionids",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "2026-10-19-max-monday-sneasel:start:60",
-      "event_id": "2026-10-19-max-monday-sneasel",
-      "event_title": "Max Monday: Dynamax Sneasel",
-      "category": "max_monday",
-      "scheduled_for": "2026-10-19T17:00:00-03:00",
-      "event_start": "2026-10-19T18:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Max Monday: Dynamax Sneasel começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-19-max-monday-sneasel",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • programação oficial de outubro de 2026",
-        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-gbl-20-27:start:60",
       "event_id": "2026-10-gbl-20-27",
       "event_title": "GO Battle League: Ultra / Master Mega / Fantasy Cup",
@@ -510,7 +474,7 @@
     }
   ],
   "meta": {
-    "pending_count": 28,
+    "pending_count": 26,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }

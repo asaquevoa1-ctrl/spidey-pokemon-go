@@ -38,7 +38,7 @@ body.cosmic-inapp-art {
   background-position:center top;
   background-attachment:fixed;
 }
-body.cosmic-inapp-art[data-theme="light"] {
+html[data-theme="light"] body.cosmic-inapp-art {
   background-image:linear-gradient(rgba(248,250,255,.94),rgba(250,251,254,.96)),var(--cosmic-brand-clean-image,none);
 }
 @media (prefers-reduced-motion:reduce) {
