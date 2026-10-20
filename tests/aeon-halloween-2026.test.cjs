@@ -50,14 +50,16 @@ test('AEON date-only state stays within Japanese calendar dates', () => {
   assert.equal(window.SpideyDateOnly.status(aeon, new Date('2026-11-01T15:00:00Z')), 'Data encerrada');
 });
 
-test('opening uses exact approved logo, no duplicate brand asset and no unverified poster', () => {
+test('opening uses newly authorized cosmic icon, retains historic logo and no unverified poster', () => {
   const html = fs.readFileSync(root + 'index.html', 'utf8');
   const css = fs.readFileSync(root + 'opening-20261019.css', 'utf8');
   const app = fs.readFileSync(root + 'app.js', 'utf8');
   const experience = fs.readFileSync(root + 'experience-v1.js', 'utf8');
   assert.match(html, /spidey-opening-screen/);
   assert.match(html, /opening-20261019\.css/);
-  assert.match(html, /spidey-opening-emblem.*assets\/spidey-logo-oficial\.jpg/);
+  assert.match(html, /spidey-opening-emblem.*assets\/branding\/20261019\/spidey-icon-cosmic-192\.png/);
+  assert.ok(fs.existsSync(root+'assets/spidey-logo-oficial.jpg'),'Historical approved logo kept unchanged');
+  assert.ok(!html.includes('src="assets/spidey-logo-oficial.jpg"'),'Old image must not flash during new cosmic startup');
   assert.match(css, /prefers-reduced-motion/);
   assert.equal(aeon.presentation.no_unverified_poster, true);
   assert.match(app, /function eventArtVisible/);
