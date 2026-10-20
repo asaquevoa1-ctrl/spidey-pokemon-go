@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261019-samsung-video-qa-v3';
+const CACHE = 'spidey-app-20261019-organic-sharing-v1';
 const CORE = [
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
@@ -41,6 +41,7 @@ const CORE = [
   './samsung-video-fixes-20261019.css',
   './night-out-location-backgrounds.css',
   './loading-screen.js',
+  './spidey-share.js',
   './date-only.js',
   './event-locations.js',
   './assets/events/premium/scenic-sunday-october-2026-approved-v1.png',
