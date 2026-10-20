@@ -19,7 +19,7 @@ try {
   await empty.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
   await empty.locator('.app-tabs [data-view="hunterView"]').click();
   await empty.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
-  await empty.waitForFunction(()=>document.getElementById('hunterLiveStatus')?.textContent.includes('Aguardando uma fonte'),null,{timeout:10000});
+  await empty.waitForFunction(()=>document.getElementById('hunterLiveStatus')?.textContent.includes('Aguardando acesso autorizado'),null,{timeout:10000});
   if(await empty.locator('.hunter-live-card').count()!==0)throw Error('Historical or fake card present with unauthorized source');
   if(await empty.locator('#hunterMessage').count()!==0)throw Error('Manual message paste should not be primary UI');
   await empty.close();
