@@ -73,13 +73,16 @@
     const region=el('hunterLiveList'),status=el('hunterLiveStatus');
     if(!region||!status)return;
     region.replaceChildren();
+    status.classList.remove('hunter-empty');
     if(lastError){status.textContent='Não foi possível atualizar as aparições. Tente novamente.';return;}
     if(!snapshot||!snapshot.connected){
-      status.textContent=snapshot?.stale?'Fonte sem atualização recente. Nenhuma coordenada antiga será exibida.':'Aguardando acesso autorizado a um feed mundial. Você já pode usar os filtros, consultar os mapas externos e conferir coordenadas, mas ainda não há aparições verificadas dentro do Spidey.';
+      status.classList.add('hunter-empty');
+      status.textContent='Nenhuma aparição disponível no momento.';
       return;
     }
     const items=snapshot.items.filter(x=>x.expires_at>now&&relevant(x,category())).slice(0,70);
-    status.textContent=items.length===0?'Nenhuma aparição atual neste filtro.':'Aparições reportadas por fonte externa • Confira no jogo.';
+    status.classList.toggle('hunter-empty',items.length===0);
+    status.textContent=items.length===0?'Nenhuma aparição disponível no momento.':'Aparições encontradas • Confira os dados no jogo.';
     for(const item of items){
       const card=make('article','hunter-live-card');
       const head=make('div','hunter-live-head');
@@ -140,9 +143,8 @@
     ]){
       const a=make('a',null,label);a.href=url;a.target='_blank';a.rel='noopener noreferrer';links.append(a);
     }
-    const disclaimer=make('p','hunter-source-disclaimer','Mapas externos podem exigir conta, assinatura ou autenticação. O Spidey não acessa esses logins nem importa dados sem autorização.');
+    const disclaimer=make('p','hunter-source-disclaimer','Os links levam a outros serviços, que podem pedir login ou assinatura.');
     ext.append(links,disclaimer);
-    feed.append(ext);
     const tip=el('hunterTip');
     if(tip)tip.insertAdjacentElement('afterend',feed);
     else holder.insertAdjacentElement('afterend',feed);
@@ -166,7 +168,7 @@
     // Existing external search and troubleshooting tools remain optional, not the primary flow.
     const alt=make('details','hunter-feed-alternatives');
     const summary=make('summary',null,'Outras opções de busca');
-    alt.append(summary);
+    alt.append(summary,ext);
     for(const id of ['hunterExternal','hunterHundoFeeds']){
       const node=el(id);if(node)alt.append(node);
     }

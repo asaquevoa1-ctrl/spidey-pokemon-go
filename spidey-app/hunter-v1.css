@@ -171,3 +171,8 @@ body.spidey-command-center.spidey-app-v2 nav.app-tabs button.app-tab.hunter-tab[
 /* Safety: a previous valid map URL must be hidden when the coordinate is invalid. */
 .hunter-screen #hunterMap[hidden],
 .hunter-screen .hunter-actions [hidden]{display:none!important}
+
+/* Public-facing empty state: avoid surfacing supplier negotiations in the app. */
+.hunter-live-status.hunter-empty{margin:4px 0;padding:22px 14px;border:1px dashed rgba(93,167,184,.36);border-radius:16px;text-align:center;font-size:.94rem;font-weight:650;line-height:1.5;opacity:1;background:rgba(63,143,178,.045)}
+[data-theme=dark] .hunter-live-status.hunter-empty{border-color:rgba(119,195,213,.27);background:rgba(54,143,182,.08)}
+.hunter-feed-alternatives .hunter-trusted-sources{margin:10px 0;padding-top:12px}

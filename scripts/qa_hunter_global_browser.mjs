@@ -19,8 +19,10 @@ try {
   await empty.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
   await empty.locator('.app-tabs [data-view="hunterView"]').click();
   await empty.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
-  await empty.waitForFunction(()=>document.getElementById('hunterLiveStatus')?.textContent.includes('Aguardando acesso autorizado'),null,{timeout:10000});
+  await empty.waitForFunction(()=>document.getElementById('hunterLiveStatus')?.textContent.trim()==='Nenhuma aparição disponível no momento.',null,{timeout:10000});
   if(await empty.locator('.hunter-live-card').count()!==0)throw Error('Historical or fake card present with unauthorized source');
+  if(await empty.locator('#hunterTrustedSources').isVisible())throw Error('Vendor links must not dominate the public empty state');
+  if((await empty.locator('#hunterPanel').innerText()).includes('feed mundial'))throw Error('Internal supplier jargon leaked into public app');
   if(await empty.locator('#hunterMessage').count()!==0)throw Error('Manual message paste should not be primary UI');
   await empty.close();
   for (const width of [360,390,1280]) for (const theme of ['light','dark']) {
@@ -99,7 +101,9 @@ try {
     if(await page.locator('[data-hunter-category="nundo"]').getAttribute('aria-pressed')!=='true') throw Error('Nundo filter not selectable');
     if(!String(await page.locator('#hunterExternal').getAttribute('href')).includes('/feeds/zero-iv'))throw Error('0% target wrong');
     await page.locator('[data-hunter-category="hundo"]').click();
+    if(await page.locator('#hunterTrustedSources').isVisible())throw Error('Supplier links must be optional');
     await page.locator('.hunter-feed-alternatives summary').first().click();
+    if(!await page.locator('#hunterTrustedSources').isVisible())throw Error('Useful external maps missing in expanded alternatives');
     if(!await page.locator('#hunterHundoFeeds').isVisible())throw Error('100% shortcuts not visible in optional search');
     await page.locator('.hunter-checker summary').click();
     await page.locator('#hunterAttack').fill('15');
