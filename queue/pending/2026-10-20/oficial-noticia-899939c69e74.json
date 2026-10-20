@@ -1,6 +1,6 @@
 {
-  "titulo": "📰 OFICIAL • NOTÍCIA",
-  "mensagem": "Ganhe Pokémoedas ao avançar no Passe GO: novembro\n\n📌 Fonte: Pokémon GO oficial",
+  "titulo": "🎟️ OFICIAL • Passe GO novembro: Groudon e até 1.400 PokéMoedas",
+  "mensagem": "PASSE GO: NOVEMBRO — de 03/11 às 10h a 01/12 às 10h (horário local). GRATUITO: encontro com Groudon (Brilhante possível, não garantido), 400 PokéMoedas, Doce Raro GG, Ovo da Sorte e Poeira Estelar. DELUXE PAGO: 1.000 PokéMoedas adicionais (máximo 1.400 ao completar as duas trilhas), Superincubadora e encontros extras. Bônus nos ranques 1, 25, 50 e 75. Sem limite diário de Pontos GO em 28 e 29/11. Recompensas até 03/12 às 10h locais. Fonte: https://pokemongo.com/en/news/go-pass-november-2026.",
   "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
   "gerar_gpx": false,
   "aprovar": true,
@@ -15,5 +15,54 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-10-20T20:09:38.065344+00:00"
+  "created_at_utc": "2026-10-20T20:09:38.065344+00:00",
+  "editorial_event_id": "2026-11-go-pass-groudon",
+  "editorial_facts_verified_at": "2026-10-20",
+  "editorial_rewards": {
+    "free_pokecoins": 400,
+    "deluxe_added_pokecoins": 1000,
+    "total_if_deluxe": 1400,
+    "featured_encounter": "Groudon (Shiny possible, not guaranteed)",
+    "free_extra": [
+      "Lucky Egg",
+      "Rare Candy XL",
+      "Stardust"
+    ],
+    "deluxe_extra": [
+      "Super Incubator",
+      "Additional Pokémon encounters"
+    ]
+  },
+  "editorial_schedule": {
+    "start_local": "2026-11-03T10:00:00",
+    "end_local": "2026-12-01T10:00:00",
+    "claim_by_local": "2026-12-03T10:00:00",
+    "timezone": "local time",
+    "no_daily_go_points_cap": [
+      "2026-11-28",
+      "2026-11-29"
+    ]
+  },
+  "art_brief": {
+    "medium": "vertical 9:16 poster, cinematic original Spidey Gold Standard artwork",
+    "composition": "Groudon anatomically accurate as heroic central figure in epic volcanic landscapes, fiery embers, dramatic sky with blue cosmic/gold accents; premium entertainment key art, not a corporate banner, screenshot framing or low-effort thumbnail",
+    "headline": "PASSE GO: NOVEMBRO",
+    "date_line": "03 NOV – 01 DEZ • 10H",
+    "reward_hierarchy": [
+      "400 POKÉMOEDAS • GRÁTIS",
+      "+1.000 POKÉMOEDAS • DELUXE PAGO",
+      "TOTAL DELUXE: ATÉ 1.400"
+    ],
+    "supporting_text": "GROUDON • PODE SER BRILHANTE",
+    "footer": "Fonte: Pokémon GO • 20/10/2026",
+    "branding": "Use exact repository official logo overlay, never redraw logo or write SpideyNexus",
+    "hard_rejections": [
+      "1.400 PokéMoedas grátis",
+      "Shiny garantido",
+      "Pôster de Kyogre/outubro reutilizado",
+      "Captura da fonte emoldurada",
+      "Falso selo de aprovação"
+    ],
+    "status": "artwork_not_created_or_approved"
+  }
 }
