@@ -1,0 +1,41 @@
+name: Spidey - Caçador feed parceiro
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: spidey-hunter-partner-feed
+  cancel-in-progress: false
+jobs:
+  ingest:
+    # No vendor license => no job, costs or external requests.
+    if: vars.HUNTER_FEED_LICENSE_APPROVED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      HUNTER_FEED_LICENSE_APPROVED: 'true'
+      HUNTER_PROVIDER_FEED_URL: ${{ secrets.HUNTER_PROVIDER_FEED_URL }}
+      HUNTER_PROVIDER_BEARER_TOKEN: ${{ secrets.HUNTER_PROVIDER_BEARER_TOKEN }}
+      HUNTER_PROVIDER_NAME: ${{ vars.HUNTER_PROVIDER_NAME }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Normalize authorized feed
+        run: node scripts/hunter-provider-import.mjs
+      - name: Commit only validated reports
+        run: |
+          if git diff --quiet -- spidey-app/data/hunter-feed.json; then
+            echo "Feed unchanged."
+            exit 0
+          fi
+          git config user.name "spidey-hunter-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey-app/data/hunter-feed.json
+          git commit -m "data(hunter): update licensed sightings [skip ci]"
+          git push

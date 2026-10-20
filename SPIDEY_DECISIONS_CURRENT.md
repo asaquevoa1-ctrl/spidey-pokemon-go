@@ -84,3 +84,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - **Não operacional/sem autorização**: feed mundial integrado de Pokémon vivos, verificação pessoal de shiny/shundo/shnundo e alertas baseados nesse feed. O arquivo `hunter-feed.json` permanece vazio com status `awaiting_authorization`. A tela informa corretamente, sem falsificar registros históricos como ativos.
 - Pesquisa SPS/PGAN: SPS fornece mapa autenticado pelo Discord e alertas pessoais vinculados a treinador, **sem API de republicação autorizada no momento**. PGAN diz explicitamente na sua FAQ que não possui API pública e oferece apenas webhooks de comunidade mediante pagamento e análise; verificar sublicenciamento separado. Não transmitir login/código do treinador para o site Spidey.
 - Aceitação de novos fornecedores requer autorização, dados reais, cobertura, expiração e monitoramento contínuo. No PR #65 há evidências de pesquisa e integração futura. Esta entrega não liquida a etapa de dados ao vivo.
+
+## 20/10/2026 — Captação autorizada para o Caçador
+- Contato de parceria enviado pelo Gmail conectado ao `contact@pogoalerts.net`, perguntando sobre feed/API licenciado, preço, abrangência e piloto gratuito. Não há resposta nem contrato confirmados até esta edição.
+- Criado importador e ação opt-in no repositório. `HUNTER_FEED_LICENSE_APPROVED` ausente => nenhuma execução externa, nenhuma redistribuição de dados de terceiros. O Pages só faz publicação extra de feeds se essa licença for explicitamente habilitada.
+- Caçador preserva funcionalidade de interface, sem promessa de feed ao vivo. Nenhuma confirmação personalizada de Shiny pode ser inferida do IV.
+- Instruções de ativação em `docs/HUNTER_PROVIDER_ACTIVATION_20261020.md`.
