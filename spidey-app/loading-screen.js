@@ -5,8 +5,8 @@
   const splash = document.getElementById('spideySplash');
   if (!splash) return;
 
-  const MIN_MS = 220;
-  const MAX_MS = 2800; // The Samsung recording showed avoidable waiting.
+  const MIN_MS = 100;
+  const MAX_MS = 1400; // Real Samsung recording 20/10: do not hold the app behind slow startup.
   const start = Date.now();
   const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches === true;
   let closing = false;

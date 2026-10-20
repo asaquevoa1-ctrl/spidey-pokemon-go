@@ -65,3 +65,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - PR #109 incluiu compartilhamento nativo Android/WhatsApp, deep links para eventos públicos, Open Graph, privacidade sem rastreadores, e foi integrado na `main` em 20/10/2026.
 - Preservar essas funcionalidades ao integrar o PR #108. Identidade cósmica pode atualizar prévia social oficial, sem alterar links diretos e sem rastreamento invasivo.
 - Validar separadamente CI, publicação GitHub Pages e Samsung físico; não alegar validação física sem execução no aparelho.
+
+## Samsung físico — gravação recebida em 20/10/2026, correção de inicialização
+- Vídeo real de aproximadamente 27s enviado pelo responsável mostra a sequência de ícone/logo anterior, Splash antigo e a imagem cósmica de 'Carregando...' por cerca de 14s até a home aparecer. É observação física de lentidão; NÃO equivale a aprovação da experiência.
+- Conservar as cinco artes originais e novo emblema dourado; eliminar referência visual antiga na abertura, cabeçalho e hero sem apagar o arquivo histórico do repositório.
+- A tela de abertura deve terminar independentemente de demora da agenda: JavaScript até 1,4s, fallback HTML até 2,1s, CSS 2,05s; compositor/estados do navegador podem variar. Ícone novo desde o primeiro frame; arte cósmica não deve reaparecer após fechar.
+- Adicionar QA de catálogo atrasado, Android 390px simulado e validação de tema/compartilhamento. CI só prova navegador simulado: novo teste físico depois do deploy permanece pendente.

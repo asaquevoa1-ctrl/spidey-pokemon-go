@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261020-cosmic-share-v2';
+const CACHE = 'spidey-app-20261020-samsung-splash-fast-v3';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
