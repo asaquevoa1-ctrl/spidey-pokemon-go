@@ -5,6 +5,7 @@ import { chromium } from 'playwright-core';
 
 process.env.PW_TEST_SCREENSHOT_NO_FONTS_READY = '1';
 const output = 'test-results/cosmic-samsung';
+// Explicit real-device regression: the Samsung recording spent >14s behind the splash.
 fs.mkdirSync(output,{recursive:true});
 const manifest = JSON.parse(fs.readFileSync('spidey-app/manifest.webmanifest','utf8'));
 const expectedIcon = 'assets/branding/20261019/spidey-icon-cosmic-';
@@ -41,11 +42,13 @@ try {
       },theme);
       const start=Date.now();
       const response=await page.goto(base,{waitUntil:'domcontentloaded',timeout:25000});
+      const domReadyAt=Date.now();
       assert.equal(response.status(),200);
       assert.equal(await page.evaluate(()=>window.SPIDEY_COSMIC_ASSETS_VERIFIED),true);
       await page.waitForFunction(()=>document.getElementById('spideySplash')?.hidden===true,null,{timeout:11000});
       const elapsed=Date.now()-start;
-      assert.ok(elapsed<10500,'Splash did not exit promptly: '+elapsed);
+      assert.ok(Date.now()-domReadyAt<2500,'Splash lingered after document ready: '+(Date.now()-domReadyAt));
+      assert.ok(elapsed<6500,'Total launch took too long in CI: '+elapsed);
       await page.waitForFunction(()=>document.body.classList.contains('cosmic-inapp-art'),null,{timeout:12000});
       const css=await page.evaluate(()=>getComputedStyle(document.body).backgroundImage);
       assert.ok(css.includes('spidey-clean-cosmic-20261019.webp'),'Approved clean background not applied; computed='+css.slice(0,600));
@@ -72,6 +75,24 @@ try {
       checks.push({profile:'Samsung Galaxy Android 14 simulated',width:390,theme,images:loaded.length,splashMs:elapsed,share:'ok',background:'ok'});
     }finally{await context.close();}
   }
+
+  // A deliberately slow catalog must not keep a full-screen loading image on screen.
+  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,serviceWorkers:'block'});
+  const page=await context.newPage();
+  await page.route('**/data/events.json',async route=>{
+    await new Promise(resolve=>setTimeout(resolve,7000));
+    try {await route.continue();}catch {}
+  });
+  const slowStart=Date.now();
+  await page.goto(base,{waitUntil:'domcontentloaded',timeout:20000});
+  const domReadySlow=Date.now();
+  await page.waitForFunction(()=>document.getElementById('spideySplash')?.hidden===true,null,{timeout:5500});
+  const slowSplashMs=Date.now()-slowStart;
+  assert.ok(Date.now()-domReadySlow<2500,'Slow catalog must not trap the Samsung behind splash '+(Date.now()-domReadySlow)+'ms after DOM ready');
+  assert.ok(slowSplashMs<6500,'Unexpected end-to-end delay with slow catalog '+slowSplashMs+'ms');
+  assert.ok(await page.locator('.topbar').isVisible(),'App must be visible before the slow catalog completes');
+  checks.push({profile:'Samsung delayed catalog',splashMs:slowSplashMs,mainAppVisible:true});
+  await context.close();
   console.log(JSON.stringify({passed:checks.length,checks}));
 }finally{
   if(browser)await browser.close();

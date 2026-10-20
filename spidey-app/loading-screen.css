@@ -21,7 +21,7 @@
 /* CSS-only hard stop: guards old/offline Samsung WebViews if JS timers stall.
    A ready page can fade sooner through .is-leaving. */
 .spidey-splash:not([hidden]) {
-  animation: spidey-splash-failsafe 4.3s steps(1, end) forwards;
+  animation: spidey-splash-failsafe 2.05s steps(1, end) forwards;
 }
 @keyframes spidey-splash-failsafe {
   0%, 99.9% { visibility: visible; }

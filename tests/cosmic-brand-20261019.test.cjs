@@ -23,7 +23,7 @@ test('verified cosmic artwork and launcher safely integrated into app and offlin
   const manifest=JSON.parse(fs.readFileSync(root+'manifest.webmanifest','utf8'));
   const sw=fs.readFileSync(root+'sw.js','utf8');
   assert.ok(html.includes('window.SPIDEY_COSMIC_ASSETS_VERIFIED=true'));
-  assert.ok(html.includes('cosmic-brand-20261019.js?v=20261020-release1'));
+  assert.ok(html.includes('cosmic-brand-20261019.js?v=20261020-fast1'));
   assert.ok(html.includes('cosmic-brand-20261019.css?v=20261020-release2'));
   assert.equal(manifest.icons[0].src,'assets/branding/20261019/spidey-icon-cosmic-192.png');
   assert.equal(manifest.icons[1].src,'assets/branding/20261019/spidey-icon-cosmic-512.png');
@@ -34,7 +34,7 @@ test('staged JS respects the fast startup, missing assets and reduced-motion cho
  const js=fs.readFileSync(root+'cosmic-brand-20261019.js','utf8');
  const css=fs.readFileSync(root+'cosmic-brand-20261019.css','utf8');
  assert.ok(js.includes('SPIDEY_COSMIC_ASSETS_VERIFIED !== true'));
- assert.ok(js.includes('Date.now() - started > 1900'));
+ assert.ok(js.includes('Date.now() - started > 900'));
  assert.ok(js.includes("preload(files.opening),preload(files.loading)"));
  assert.ok(js.includes("window.matchMedia?.('(prefers-reduced-motion: reduce)')"));
  assert.ok(css.includes('prefers-reduced-motion:reduce'));

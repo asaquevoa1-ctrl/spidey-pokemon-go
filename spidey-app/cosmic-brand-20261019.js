@@ -37,7 +37,7 @@
   main.then(() => {
     // Never resurrect the intro after the loader has dismissed or faded.
     if (shell.hidden || shell.classList.contains('is-leaving')) return;
-    if (Date.now() - started > 1900) return; // Slow connection: old loader is better.
+    if (Date.now() - started > 900) return; // Slow connection: old loader is better.
     const intro = frame('cosmic-intro',files.opening);
     const loading = frame('cosmic-loading',files.loading);
     shell.classList.add('cosmic-brand-ready');
@@ -46,7 +46,7 @@
       if (shell.hidden || shell.classList.contains('is-leaving')) return;
       intro.classList.remove('is-visible');
       loading.classList.add('is-visible');
-    }, reduced ? 80 : 600);
+    }, reduced ? 40 : 350);
   }).catch(() => { // Never block app opening if an image fails.
     shell.classList.remove('cosmic-brand-ready');
   });

@@ -47,13 +47,13 @@ test('TCG approved binary/master remain untouched while noncompliant public disp
 });
 test('Startup is bounded and deploy refreshes PWA assets on Samsung',()=>{
   const splash=load('loading-screen.js'),html=load('index.html'),sw=load('sw.js');
-  assert.ok(splash.includes('const MAX_MS = 2800'));
-  assert.ok(splash.includes('const MIN_MS = 220'));
+  assert.ok(splash.includes('const MAX_MS = 1400'));
+  assert.ok(splash.includes('const MIN_MS = 100'));
   assert.ok(load('loading-screen.css').includes('spidey-splash-failsafe'));
-  assert.ok(html.includes('4000);</script>'));
+  assert.ok(html.includes('2100);</script>'));
   assert.ok(html.includes('samsung-video-fixes-20261019.css?v=20261019-samsung3'));
-  assert.ok(html.includes('loading-screen.js?v=20261019-splash3'));
-  assert.ok(sw.includes("const CACHE = 'spidey-app-20261020-cosmic-share-v2'"));
+  assert.ok(html.includes('loading-screen.js?v=20261020-fast1'));
+  assert.ok(sw.includes("const CACHE = 'spidey-app-20261020-samsung-splash-fast-v3'"));
   assert.ok(sw.includes("'./samsung-video-fixes-20261019.css'"));
 });
 test('all edited runtime scripts parse without breaking tabs, FLY and stamps',()=>{
