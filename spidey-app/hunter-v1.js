@@ -2,12 +2,12 @@
   'use strict';
   // Links go to the source directly. No third-party scraping or fabricated results.
   const categories=[
-    {id:'hundo',label:'💯 100%',url:'https://pogocoordinates.com/feeds/high-cp-100iv',tip:'Veja aparições 15/15/15 na fonte externa. Nem todas as regiões são monitoradas.'},
-    {id:'nundo',label:'0️⃣ 0%',url:'https://pogocoordinates.com/feeds/zero-iv',tip:'Veja aparições 0/0/0 na fonte externa, quando existirem.'},
-    {id:'shiny',label:'✨ Brilhante',url:'https://pogocoordinates.com/search',tip:'A previsão personalizada de Shiny é uma alegação da fonte, ainda não validada pelo Spidey.'},
-    {id:'pvp',label:'⚔️ PvP',url:'https://pogocoordinates.com/search',tip:'No site, selecione PvP. A melhor combinação de IV depende da espécie e da liga.'},
-    {id:'shundo',label:'💯✨ Shundo',url:'https://pogocoordinates.com/search',tip:'Combine IV 100% com Shiny Only, se disponível. Não há garantia de brilhante.'},
-    {id:'shnundo',label:'0️⃣✨ Shnundo',url:'https://pogocoordinates.com/search',tip:'Combine IV 0% com Shiny Only, se disponível. Não há garantia de brilhante.'}
+    {id:'hundo',label:'💯 100%',url:'https://pogocoordinates.com/feeds/high-cp-100iv',tip:'Aparições 100% disponíveis nas fontes conectadas, quando houver. Cada coordenada pode expirar.'},
+    {id:'nundo',label:'0️⃣ 0%',url:'https://pogocoordinates.com/feeds/zero-iv',tip:'Aparições 0% reportadas nas fontes conectadas, quando houver.'},
+    {id:'shiny',label:'✨ Brilhante',url:'https://pogocoordinates.com/search',tip:'Shiny é individual por conta. Elegibilidade não garante brilhante.'},
+    {id:'pvp',label:'⚔️ PvP',url:'https://pogocoordinates.com/search',tip:'Aparições com classificação PvP informada pela fonte, quando disponíveis.'},
+    {id:'shundo',label:'💯✨ Shundo',url:'https://pogocoordinates.com/search',tip:'100% IV e possível Shiny, sem garantia de brilho para sua conta.'},
+    {id:'shnundo',label:'0️⃣✨ Shnundo',url:'https://pogocoordinates.com/search',tip:'0% IV e possível Shiny, sem garantia de brilho para sua conta.'}
   ];
   let selected='hundo';
   // Chat messages are handled locally in the browser; never transmitted or saved.
