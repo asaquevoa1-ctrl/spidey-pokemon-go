@@ -62,6 +62,7 @@ jobs:
             scripts/discord_publish_bridge.py \
             spidey_geo.py
           python scripts/test_curated_format.py
+          python scripts/test_auto_curate_dedupe.py
 
       - name: Preparar itens curados a partir da mídia da fonte
         env:
