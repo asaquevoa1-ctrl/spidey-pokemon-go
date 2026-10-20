@@ -167,3 +167,7 @@ body.spidey-command-center.spidey-app-v2 nav.app-tabs button.app-tab.hunter-tab[
   outline:2px solid #0d899c;
   outline-offset:1px;
 }
+
+/* Safety: a previous valid map URL must be hidden when the coordinate is invalid. */
+.hunter-screen #hunterMap[hidden],
+.hunter-screen .hunter-actions [hidden]{display:none!important}

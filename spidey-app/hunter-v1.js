@@ -68,8 +68,10 @@
   function renderCoords(){
     const coord=parseCoords(el('hunterCoords').value);
     el('hunterCopy').disabled=!coord;
-    el('hunterMap').hidden=!coord;
-    if(coord)el('hunterMap').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(coord);
+    const map=el('hunterMap');
+    map.hidden=!coord;
+    if(coord)map.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(coord);
+    else map.removeAttribute('href');
     el('hunterCoordStatus').textContent=coord?'Coordenadas válidas. Confira se o Pokémon ainda aparece no jogo.':'Cole latitude e longitude, separadas por vírgula.';
   }
   function mount(){
