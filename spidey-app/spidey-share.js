@@ -86,7 +86,7 @@
     if (window.SpideyOpenSharedEvent?.(id) === true) lastOpened = id;
   }
   function setup() {
-    const header = document.querySelector('.topbar-actions');
+    const header = document.querySelector('.notification-controls') || document.querySelector('.topbar-actions');
     if (header && !header.querySelector('#shareSpideyButton')) {
       const btn = document.createElement('button');
       btn.id = 'shareSpideyButton';
