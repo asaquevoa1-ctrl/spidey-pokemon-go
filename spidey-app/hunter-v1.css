@@ -118,3 +118,56 @@ body.spidey-command-center .hunter-intro h1 {
 .hunter-parsed code{display:block;padding:9px 11px;border-radius:10px;background:rgba(69,146,177,.13);font-size:.95rem;user-select:text;overflow-wrap:anywhere}
 .hunter-parsed small{display:block;line-height:1.4;opacity:.84}
 [data-theme=dark] .hunter-parsed-iv{color:#dcf7f6}
+
+/* Feed first: no need to paste coordinates or visit an external site. */
+.hunter-live-feed{display:grid;gap:10px;margin:16px 0 20px;border-top:1px solid rgba(92,159,173,.22);padding-top:18px}
+.hunter-live-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hunter-live-top h2{margin:0;font-size:1.28rem}
+.hunter-live-reload{min-height:43px;padding:7px 15px;white-space:nowrap}
+.hunter-live-status{font-size:.86rem;line-height:1.5;margin:0;color:var(--text,#14283c);opacity:.84}
+.hunter-live-list{display:grid;gap:12px}
+.hunter-live-card{display:grid;gap:12px;border:1px solid rgba(65,148,170,.42);border-radius:15px;padding:16px;background:var(--surface,#fff)}
+.hunter-live-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.hunter-live-name{font-size:1.2rem}
+.hunter-live-iv{padding:5px 9px;border-radius:18px;background:rgba(42,153,161,.12);font-weight:750;font-size:.83rem}
+.hunter-live-stats{display:flex;flex-wrap:wrap;gap:7px}
+.hunter-live-stat{padding:6px 9px;border:1px solid rgba(102,152,173,.35);border-radius:10px;font-size:.81rem}
+.hunter-live-coords{font-size:.91rem;overflow-wrap:anywhere;user-select:text}
+.hunter-live-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hunter-live-source{font-size:.81rem;opacity:.83}
+.hunter-live-copy{min-height:44px;font-weight:800}
+.hunter-feed-alternatives{border-top:1px solid var(--border,#b7c7d5);margin-top:20px;padding:15px 0}
+.hunter-feed-alternatives summary{cursor:pointer;font-weight:750;min-height:44px;display:flex;align-items:center}
+.hunter-feed-alternatives > *:not(summary){margin-top:12px}
+.hunter-panel > .microcopy{font-size:.82rem}
+[data-theme=dark] .hunter-live-card{background:#10243b;color:#e9f7fa}
+@media(max-width:640px){.hunter-live-card{padding:13px}.hunter-live-head{gap:9px}.hunter-live-foot .hunter-live-copy{width:100%}}
+
+/* Authorized external-source jump points, never auto-scrape or infer shiny odds. */
+.hunter-trusted-sources{display:grid;gap:9px;padding:15px 0 0;border-top:1px solid rgba(99,168,186,.2)}
+.hunter-source-links{display:flex;gap:9px;flex-wrap:wrap}
+.hunter-source-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 12px;box-sizing:border-box;border-radius:12px;text-decoration:none;font-size:.85rem;font-weight:800;border:1px solid rgba(66,168,185,.5);background:rgba(35,154,176,.08);color:var(--text,#143148)}
+[data-theme=dark] .hunter-source-links a{color:#d8fcff;background:rgba(35,154,176,.1)}
+.hunter-source-disclaimer{font-size:.78rem;opacity:.8;line-height:1.5;margin:0}
+@media(max-width:480px){.hunter-source-links a{flex:1 0 45%;min-width:125px}}
+
+/* Stable active Caçador tab: highest-specificity override for the current app-v2 theme. */
+body.spidey-command-center.spidey-app-v2 nav.app-tabs button.app-tab.hunter-tab {
+  background-color:#b6f0f5!important;
+  background-image:linear-gradient(140deg,#93eaf6 10%,#efd18b 100%)!important;
+  color:#082235!important;
+  border:1px solid #53b5c6!important;
+  font-weight:900!important;
+  min-width:74px!important;
+  box-shadow:0 2px 12px rgba(61,178,202,.25)!important;
+}
+body.spidey-command-center.spidey-app-v2 nav.app-tabs button.app-tab.hunter-tab[aria-current="page"] {
+  background-image:linear-gradient(140deg,#baf9fa,#f5d99f)!important;
+  border-color:#168ca3!important;
+  outline:2px solid #0d899c;
+  outline-offset:1px;
+}
+
+/* Safety: a previous valid map URL must be hidden when the coordinate is invalid. */
+.hunter-screen #hunterMap[hidden],
+.hunter-screen .hunter-actions [hidden]{display:none!important}

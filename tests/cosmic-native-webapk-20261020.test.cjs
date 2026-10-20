@@ -25,6 +25,6 @@ test('service worker refreshes manifest from network with offline fallback',()=>
  assert.ok(sw.includes('if (isAppShell || isData || isManifest)'));
  assert.ok(sw.includes("fetch(request, { cache: 'no-store' })"));
  assert.ok(sw.includes('caches.match(request, { ignoreSearch: true })'));
- assert.ok(sw.includes("const CACHE = 'spidey-app-20261020-android-cosmic-icon-v4'"));
+ assert.ok(sw.includes("const CACHE = 'spidey-app-20261020-hunter-global-v5'"));
  assert.ok(sw.includes("'./manifest.webmanifest'"));
 });

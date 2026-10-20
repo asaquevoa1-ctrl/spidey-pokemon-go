@@ -1,0 +1,40 @@
+name: Spidey - Caçador Global Samsung QA
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/hunter*'
+      - 'spidey-app/index.html'
+      - 'spidey-app/data/hunter-feed.json'
+      - 'spidey-app/command-center.js'
+      - 'scripts/qa_hunter_global_browser.mjs'
+      - '.github/workflows/spidey-hunter-samsung-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'spidey-app/hunter*'
+      - 'spidey-app/index.html'
+      - 'spidey-app/data/hunter-feed.json'
+      - 'spidey-app/command-center.js'
+      - 'scripts/qa_hunter_global_browser.mjs'
+      - '.github/workflows/spidey-hunter-samsung-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  hunter-samsung:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - name: Validar Caçador sem fonte e cards simulados somente no QA, Galaxy e desktop
+        run: CHROME_PATH="$(command -v google-chrome)" node scripts/qa_hunter_global_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spidey-hunter-samsung-qa
+          path: test-results/hunter-global/
