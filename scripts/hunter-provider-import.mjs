@@ -73,7 +73,8 @@ export function adaptRadarFeed(raw,{now=Date.now()}={}){
       Number.isInteger(ident)&&ident>=1&&ident<=3000?'Pokémon '+ident:'';
     if(!candidate)continue;
     const percent=Number(row.percent_iv??row.iv_percent);
-    const atk=Number(row.attack_iv),def=Number(row.defense_iv),sta=Number(row.stamina_iv);
+    const ivStat=value=>value===null||value===undefined||value===''?NaN:Number(value);
+    const atk=ivStat(row.attack_iv),def=ivStat(row.defense_iv),sta=ivStat(row.stamina_iv);
     const exact=percent===100||percent===0?percent:
       [atk,def,sta].every(v=>v===15)?100:[atk,def,sta].every(v=>v===0)?0:null;
     const rtime=toIso(row.observed_at??row.updated_at??row.reported_at)||
