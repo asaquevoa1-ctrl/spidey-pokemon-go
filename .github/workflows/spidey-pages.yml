@@ -8,7 +8,7 @@ on:
   pull_request:
     paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
   workflow_run:
-    workflows: ['Spidey Weekly - resumo semanal']
+    workflows: ['Spidey Weekly - resumo semanal', 'Spidey - Caçador feed parceiro']
     types: [completed]
     branches: [main]
   # Captures catalog commits made by GITHUB_TOKEN, which don't trigger push workflows.
@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && (github.event.workflow_run.name != 'Spidey - Caçador feed parceiro' || vars.HUNTER_FEED_LICENSE_APPROVED == 'true'))
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

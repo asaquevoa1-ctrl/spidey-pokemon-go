@@ -16,7 +16,7 @@
   function sanitizeFeed(data,now=Date.now()){
     if(!data||data.schema!=='spidey-hunter-feed-v1'||!Array.isArray(data.items))
       throw Error('invalid_hunter_feed');
-    if(data.source_status!=='connected'||data.items.length===0)
+    if(data.source_status!=='connected')
       return {connected:false,generated_at:null,items:[]};
     const generated=validDate(data.generated_at);
     if(generated===null||generated>now+60000||now-generated>MAX_AGE_MS)
