@@ -4,6 +4,7 @@ import json
 import os
 import re
 import unicodedata
+from urllib.parse import urlsplit
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -105,10 +106,41 @@ def kind(item):
     return "SPIDEY"
 
 
+def canonical_source_url(item):
+    """The same official article can appear with /en/, /pt-BR/ or no locale."""
+    raw_url = str(item.get("url") or "").strip()
+    if not raw_url:
+        return ""
+    try:
+        parsed = urlsplit(raw_url)
+    except ValueError:
+        return ""
+    if parsed.scheme not in {"https", "http"} or not parsed.hostname:
+        return ""
+    host = parsed.hostname.lower().removeprefix("www.")
+    path = re.sub(r"^/(?:en|pt-br|pt_br|es|es-mx|fr|de|ja|ko)/news/",
+                  "/news/", parsed.path.lower(), flags=re.I).rstrip("/")
+    return host + path
+
+
 def duplicate(a, b):
     if (kind(a) == "OFICIAL") == (kind(b) == "OFICIAL"):
         return False
-    return any(len(word) >= 6 for word in words(a.get("mensagem")) & words(b.get("mensagem")))
+    url_a, url_b = canonical_source_url(a), canonical_source_url(b)
+    # Authoritative article URLs take precedence over token similarities.
+    # A shared word like "PokéMoedas" must never merge unrelated events.
+    if url_a and url_b:
+        return url_a == url_b
+    wa, wb = words(a.get("mensagem")), words(b.get("mensagem"))
+    if not wa or not wb:
+        return False
+    shared = wa & wb
+    return len(shared) >= 4 and len(shared) / min(len(wa), len(wb)) >= 0.8
+
+
+def requires_original_art(item):
+    return bool(item.get("arte_obrigatoria") and
+                (item.get("proibir_render_arte") or item.get("proibir_fallback")))
 
 
 def clean_msg(text):
@@ -460,6 +492,16 @@ def main():
     done = 0
     for path, item in rows:
         if path in duplicates:
+            continue
+
+        if requires_original_art(item):
+            # Explicit editorial promise: a screenshot or PIL card is not a
+            # newly created and visually reviewed Premium artwork.
+            item["status"] = "aguardando_arte_chatgpt"
+            item["etapa_editorial"] = "aguardando_arte_premium_original"
+            item.pop("duplicate_of", None)
+            path.write_text(json.dumps(item, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print("AGUARDANDO_ARTE_PREMIUM_ORIGINAL", path.name)
             continue
 
         message = enrich(item)

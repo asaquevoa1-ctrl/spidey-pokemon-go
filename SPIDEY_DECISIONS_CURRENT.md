@@ -106,3 +106,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Novos dados no calendário: 400 PokéMoedas no gratuito, mais 1.000 somente no Deluxe pago (total 1.400), Groudon com possibilidade de Brilhante, bônus por ranque, 28–29/11 sem limite diário de Pontos GO. Não confundir com Passe GO Into the Wild.
 - Eventos existentes e arte aprovada de Outubro/Setembro/Halloween devem permanecer intactos. Como arte Premium original de novembro não está aprovada, usar somente visual de calendário de data (sem mídia/fallback genérico) e preservar a fila pendente de arte, com proibição de reaproveitar a captura ou cartaz de outro mês como peça Premium.
 - O registro factual e a notícia no app não certificam arte Premium final. Não fazer divulgação orgânica externa como se o pôster estivesse aprovado.
+
+## 20/10/2026 — Correção crítica na fila do Passe GO de novembro
+- A auto-curadoria marcou falsamente a notícia de Groudon/PokéMoedas como duplicata da notícia oficial de Minior por aceitar qualquer palavra de seis caracteres compartilhada. O registro publicado no calendário continua correto; a curadoria de arte não foi realizada.
+- A deduplicação agora prioriza o mesmo artigo oficial (URL canônica, incluindo variantes de idioma). Com URLs diferentes não rejeita notícia por similaridade de palavras; sem URLs, exige quatro palavras relevantes e alta similaridade.
+- Itens com arte obrigatória e `proibir_render_arte`/`proibir_fallback` ficam `aguardando_arte_chatgpt`. É proibido a automação antiga renderizar uma imagem de fonte/PIL, rotulá-la como Premium e submetê-la como peça aprovada.
+- A notícia de Groudon foi preservada na fila editorial, com fatos oficiais, sem imagem Premium publicada e sem pedir novamente aprovações individuais de artes já aceitas. Falta gerar, inspecionar e integrar uma arte premium original seguindo o Gold Standard.
