@@ -42,6 +42,7 @@ const CORE = [
   './night-out-location-backgrounds.css',
   './loading-screen.js',
   './spidey-share.js',
+  './spidey-share.css',
   './date-only.js',
   './event-locations.js',
   './assets/events/premium/scenic-sunday-october-2026-approved-v1.png',
