@@ -364,6 +364,24 @@
       }
     },
     {
+      "id": "2026-11-go-pass-groudon:start:60",
+      "event_id": "2026-11-go-pass-groudon",
+      "event_title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
+      "category": "go_pass",
+      "scheduled_for": "2026-11-03T09:00:00-03:00",
+      "event_start": "2026-11-03T10:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-go-pass-groudon",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/go-pass-november-2026",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-11-go-wild-area-sendai:start:60",
       "event_id": "2026-11-go-wild-area-sendai",
       "event_title": "Pokémon GO Wild Area 2026: Sendai e Tohoku",
@@ -474,7 +492,7 @@
     }
   ],
   "meta": {
-    "pending_count": 26,
+    "pending_count": 27,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
