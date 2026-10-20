@@ -491,6 +491,15 @@ function openEvent(event) {
   showAppDialog();
 }
 
+// Safe public lookup for event deep-links. Never expose an unpublished or expired event.
+window.SpideyFindShareEvent = (id) => state.events.find(event => event.id === id && event.status === 'published') || null;
+window.SpideyOpenSharedEvent = (id) => {
+  const event = window.SpideyFindShareEvent(id);
+  if (!event) return false;
+  openEvent(event);
+  return true;
+};
+
 function setView(viewId) {
   if (!document.getElementById(viewId) || document.getElementById(viewId)?.classList.contains('app-view') === false) viewId='calendarView';
   window.SpideyNavigation?.trackView(viewId);
