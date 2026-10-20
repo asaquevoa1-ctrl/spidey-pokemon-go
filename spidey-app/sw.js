@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261020-samsung-splash-fast-v3';
+const CACHE = 'spidey-app-20261020-android-cosmic-icon-v4';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -211,8 +211,10 @@ self.addEventListener('fetch', (event) => {
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
   const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp|national-trust-2026)\.json$/.test(url.pathname);
+  // Update WebAPK/Android launcher metadata from the network, never from a stale offline manifest.
+  const isManifest = url.origin === self.location.origin && url.pathname.endsWith('/manifest.webmanifest');
 
-  if (isAppShell || isData) {
+  if (isAppShell || isData || isManifest) {
     event.respondWith(
       fetch(request, { cache: 'no-store' })
         .then((response) => {
