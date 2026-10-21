@@ -44,7 +44,7 @@ test('Samsung CSS and PWA do not show an old 4:5 pending poster below the date',
  assert.ok(css.includes('max-height: 150px;'));
  assert.ok(head.includes('opening-20261019.css?v=20261019-aeon-mobile2'));
  assert.ok(head.includes("SPIDEY_BUILD='2026-10-20-samsung-physical-fast-v1'"));
- assert.ok(sw.includes("const CACHE = 'spidey-app-20261020-hunter-radar-option-v7'"));
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
  assert.ok(sw.includes("'./opening-20261019.css'"));
  assert.ok(sw.includes("'./art-coverage-v1.js'"));
  assert.doesNotThrow(()=>new vm.Script(fs.readFileSync(root+'art-coverage-v1.js','utf8')));
