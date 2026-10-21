@@ -27,6 +27,10 @@ test('Menu mobile keeps approved cosmic S icon, responsive visibility and no dis
   assert.ok(css.includes('#spideyMobileMenuPanel[hidden]'));
   assert.ok(script.includes('original.click()'), 'existing routes must retain their own side effects');
   assert.ok(script.includes('MutationObserver'), 'new FLY, Hunter and News tabs must join automatically');
+  assert.ok(script.includes("hunterView:'Caçador'"),'Menu needs a short, human Caçador label');
+  assert.ok(script.includes("anaView:'ANA'"),'Avoid double airplane symbol');
+  assert.ok(script.includes("nationalTrustView:'Trust'"),'Avoid double Trust ticket symbol');
+
   assert.ok(script.includes("event.key === 'Escape'"));
   assert.ok(script.includes("event.key === 'Tab'"));
   assert.ok(script.includes('document.getElementById(\'privacyButton\')?.click()'));
