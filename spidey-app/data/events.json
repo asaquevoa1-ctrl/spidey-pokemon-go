@@ -76,8 +76,9 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": false,
-        "fallback_visual": "date"
+        "requires_art": true,
+        "fallback_visual": "none",
+        "uses_existing_approved_event_poster": true
       },
       "notes": [
         "Para tentar o trio inteiro | Os horários das Batalhas Max são locais em cada região. O Uxie da Nova Zelândia começa às 22h de sexta (23/10) em Brasília; no Japão, a janela vai de 02h às 05h de sábado. Essa etapa só é viável do Brasil por participação remota permitida, com amigos nessas regiões, Passe de Reide Remota, Partículas Max e equipe preparada. Não vale sacrificar seu descanso só para completar a coleção.",
@@ -95,7 +96,6 @@
         "23h30 | A transmissão de Pokémon Night Out começa neste horário de Brasília (19h30 em Los Angeles). Assista pelo menos 30 minutos no canal oficial Pokémon na Twitch, resgate o Drop no inventário, obtenha o código em rewards.pokemon.com e use a página de resgate de ofertas. A recompensa é uma pesquisa para ganhar a camiseta temática do avatar.",
         "Se você estiver em Seul | O FC Seoul é presencial no dia 24, das 9h às 20h da Coreia (21h de sexta a 8h de sábado em Brasília). Charmander nas reides locais não aceita Passe de Reide Remota. Aproveite a pesquisa com Charizard se estiver na área — não é um evento jogável do Brasil.",
         "Se estiver em Los Angeles | Pokémon Night Out tem atrações presenciais e bônus no Intuit Dome, com Pikachu e Gengar de Fundo de Localização. Para quem está no Brasil, a alternativa válida é o Drop da transmissão, não as reides locais.",
-        "Outras opções do sábado | Japão e shoppings asiáticos possuem ativações regionais de longa duração. Se você estiver nesses lugares, consulte os detalhes locais; não faz sentido encaixá-los num roteiro brasileiro. O Holofote do Morelull foi na quinta, 22/10, das 18h às 19h — não no sábado.",
         "A regra para o dia dar certo | Priorize janelas curtas: Uxie remota na virada/madrugada (opcional), Mesprit remota pela manhã (opcional), Azelf local das 14h às 17h, Minior das 17h às 21h e Twitch às 23h30. Atividades presenciais em Seul ou Los Angeles são condicionais e não cabem num roteiro brasileiro."
       ],
       "news": {
@@ -109,7 +109,14 @@
       },
       "status": "published",
       "verified_at": "2026-10-21",
-      "updated_at": "2026-10-21T06:30:00-03:00"
+      "updated_at": "2026-10-21T10:30:00-03:00",
+      "art": {
+        "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+        "web_width": 941,
+        "web_height": 1672,
+        "web_sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+        "alt": "Fluxo completo do dia 24 de outubro: trio dos lagos Dinamax, Azelf, FC Seoul, Minior e Twitch — arte cósmica Spidey"
+      }
     },
     {
       "id": "2026-11-04-raids-giratina-altered",
