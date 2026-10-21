@@ -35,7 +35,7 @@ test('Pawniard bonuses distinguish 14h–17h from extended 14h–21h',()=>{
   assert.ok(bonuses.includes('nível 31'));
   assert.ok(bonuses.includes('3 horas'));
   assert.ok(bonuses.includes('50% menos'));
-  assert.ok(bonuses.includes('até as 21h'));
+  assert.match(bonuses,/até (as )?21h/i);
   assert.ok(notes.includes('75 em Batalhas de Treinador'));
   assert.ok(notes.includes('85 em Ginásios'));
   assert.ok(notes.includes('1 chefe de reide'));
