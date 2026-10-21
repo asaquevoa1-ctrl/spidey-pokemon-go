@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261020-hunter-radar-option-v7';
+const CACHE = 'spidey-app-20261021-day24-premium-flow-v1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -13,6 +13,7 @@ const CORE = [
   './assets/branding/20261019/spidey-clean-cosmic-20261019.webp',
   './assets/branding/20261019/spidey-icon-cosmic-192.png',
   './assets/branding/20261019/spidey-icon-cosmic-512.png',
+  './assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp',
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
   './assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png',
