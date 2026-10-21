@@ -19,7 +19,7 @@ test('24 October guide separates globally accessible steps, regional-only activi
   assert.equal(e.presentation.fallback_visual,'date');
   assert.equal(e.notifications.enabled,false);
   const prose=e.notes.join(' ');
-  for(const token of ['14h–17h','17h–21h','23h30','City Safari Boston','FC Seoul','Los Angeles','reide Remota','Morelull']) {
+  for(const token of ['14h–17h','17h–21h','23h30','City Safari Boston','FC Seoul','Los Angeles','Reide Remota','Morelull']) {
     assert.ok(prose.includes(token),'Missing '+token);
   }
   assert.ok(prose.includes('Sem problema:') || prose.includes('Sem problema'));
