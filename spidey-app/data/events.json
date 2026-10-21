@@ -18,8 +18,8 @@
         "Roteiro"
       ],
       "source": {
-        "name": "Spidey • roteiro editorial baseado em anúncios oficiais",
-        "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go",
+        "name": "Spidey • roteiro editorial com fontes oficiais",
+        "url": "https://pokemongo.com/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
         "confidence": "editorial_verified"
       },
       "verification_sources": [
@@ -109,7 +109,7 @@
       },
       "status": "published",
       "verified_at": "2026-10-21",
-      "updated_at": "2026-10-21T10:30:00-03:00",
+      "updated_at": "2026-10-21T13:30:00-03:00",
       "art": {
         "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
         "web_width": 941,
