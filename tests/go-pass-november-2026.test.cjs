@@ -29,7 +29,13 @@ test('approved premium artworks remain untouched and no invented November artwor
  assert.equal(e.presentation.no_unverified_poster,true);
  assert.equal(q.arte_obrigatoria,true);
  assert.equal(q.proibir_fallback,true);
- assert.equal(q.status,'aguardando_curadoria_premium');
+ // A factual article already present in the catalog may be deduped to its own official URL,
+ // while its independent original Premium artwork brief remains pending.
+ const pending=['aguardando_curadoria_premium','aguardando_arte_chatgpt'].includes(q.status);
+ const ownArticleDuplicate=q.status==='duplicado'
+   && q.duplicate_of==='oficial-https://pokemongo.com/pt-BR/news/go-pass-november-2026'
+   && q.etapa_editorial==='aguardando_arte_premium_original';
+ assert.ok(pending || ownArticleDuplicate,'Editorial art brief must not be lost or deduped to an unrelated event');
  const master=fs.readFileSync('spidey-app/premium-approved-master.js','utf8');
  assert.ok(master.includes('go-pass-october-kyogre-approved-v1.png'));
  assert.ok(!master.includes('2026-11-go-pass-groudon'));
