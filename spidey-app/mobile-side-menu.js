@@ -60,7 +60,10 @@
       ico.setAttribute('aria-hidden','true');
       ico.textContent = glyphs[view] || '•';
       const label = document.createElement('span');
-      label.textContent = original.getAttribute('aria-label') || original.textContent.trim();
+      // The original tab sometimes includes an emoji and a verbose accessibility label;
+      // keep the drawer concise and avoid duplicated airplane/ticket icons.
+      const conciseLabels = { hunterView:'Caçador', anaView:'ANA', nationalTrustView:'Trust' };
+      label.textContent = conciseLabels[view] || original.textContent.trim();
       button.append(ico, label);
       button.addEventListener('click', () => {
         close({ restoreFocus:false });
