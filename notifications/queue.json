@@ -435,10 +435,28 @@
         "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
         "confidence": "official"
       }
+    },
+    {
+      "id": "2026-11-21-community-day-preview:start:60",
+      "event_id": "2026-11-21-community-day-preview",
+      "event_title": "Dia Comunitário de novembro: Pawniard",
+      "category": "community_day",
+      "scheduled_for": "2026-11-21T13:00:00-03:00",
+      "event_start": "2026-11-21T14:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Dia Comunitário de novembro: Pawniard começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-21-community-day-preview",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
+        "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+        "confidence": "official"
+      }
     }
   ],
   "meta": {
-    "pending_count": 24,
+    "pending_count": 25,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
