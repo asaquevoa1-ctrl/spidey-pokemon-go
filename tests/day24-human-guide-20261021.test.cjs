@@ -38,6 +38,11 @@ test('24 October guide separates globally accessible steps, regional-only activi
   assert.equal(approved.file,e.art.url);
   assert.equal(approved.sha256,sha);
   assert.equal(approved.status,'APPROVED');
+  const sw=fs.readFileSync('spidey-app/sw.js','utf8');
+  assert.ok(sw.includes('./'+e.art.url),'Offline cache must contain the approved flow image');
+  assert.ok(sw.includes('spidey-app-20261021-day24-premium-flow-v1'),'Service worker cache must update for Android');
+  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261021-day24-premium-flow1'));
+
   const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_FLOW_ART_APPROVAL_20261021.json','utf8'));
   assert.equal(qa.sha256,sha);
   assert.ok(qa.original_logo.file.includes('spidey-icon-cosmic-512.png'));
