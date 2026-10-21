@@ -1336,25 +1336,30 @@
     {
       "id": "2026-11-21-community-day-preview",
       "slug": "2026-11-21-community-day-preview",
-      "title": "Dia Comunitário de novembro — prévia",
-      "summary": "Dia Comunitário previsto para 21/11; Pokémon em destaque e horário ainda não divulgados.",
+      "title": "Dia Comunitário de novembro: Pawniard",
+      "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
       "category": "community_day",
       "tags": [
         "Novembro 2026",
-        "Calendário",
-        "Pokémon GO"
+        "Pawniard",
+        "Kingambit",
+        "Shiny",
+        "Dia Comunitário",
+        "Global",
+        "Anúncio oficial"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-        "confidence": "verified_community"
+        "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
+        "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+        "confidence": "official"
       },
       "schedule": {
-        "precision": "date",
         "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-21",
-        "end_date": "2026-11-21",
-        "brazil_timezone": "America/Sao_Paulo"
+        "start_local": "2026-11-21T14:00:00-03:00",
+        "end_local": "2026-11-21T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-21T14:00:00-03:00",
+        "end_brazil": "2026-11-21T17:00:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -1367,27 +1372,75 @@
       "locations": [],
       "gpx": {
         "enabled": false,
-        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+        "reason": "Dia Comunitário global; não há coordenadas exclusivas de PokéStops confirmadas pelo anúncio."
       },
-      "pokemon": [],
-      "bonuses": [],
+      "pokemon": [
+        {
+          "name": "Pawniard",
+          "note": "Encontros na natureza; chance aumentada de Brilhante e possibilidade de Fundo Especial."
+        },
+        {
+          "name": "Bisharp",
+          "note": "Pode evoluir para Kingambit com requisito temporário reduzido até 21h."
+        },
+        {
+          "name": "Kingambit",
+          "note": "Evolua Bisharp até 21h para receber o ataque carregado Kowtow Cleave (75 no PvP e 85 em reides e Ginásios)."
+        }
+      ],
+      "bonuses": [
+        "1/4 da distância para chocar Ovos colocados em incubadoras durante o evento (14h–17h locais).",
+        "2× Doces por captura durante o evento.",
+        "2× chance de receber Doces GG por captura para treinadores de nível 31 ou superior.",
+        "Incenso ativado durante o evento dura 3 horas, exceto Incenso de Aventura Diário.",
+        "Chance de surpresas ao tirar retratos durante o evento.",
+        "Módulos Atrair comuns duram 1 hora, com Pawniard atraído e chance aumentada de Brilhante, das 14h às 21h locais.",
+        "1 Troca Especial adicional (máximo de 2), das 14h às 21h locais.",
+        "Trocas exigem 50% menos Poeira Estelar, das 14h às 21h locais.",
+        "Até as 21h, evolua Bisharp em Kingambit após vencer apenas 1 chefe de reide do tipo Sombrio ou Aço."
+      ],
       "notes": [
-        "Data informada no calendário comunitário. Pokémon, ataques e bônus aguardam anúncio oficial.",
-        "Sem apresentar este cadastro como anúncio oficial final."
+        "21 de novembro, sábado | Das 14h às 17h, horário local. Pawniard aparece com mais frequência na natureza. Há chance de encontrar Pawniard Brilhante ou com Fundo Especial.",
+        "Até as 21h | Evolua Bisharp para Kingambit e receba o ataque carregado Kowtow Cleave. Potência oficial: 75 em Batalhas de Treinador e 85 em Ginásios e reides.",
+        "Evolução facilitada | Das 14h às 21h, basta derrotar 1 chefe de reide Sombrio ou de tipo Aço para atender o requisito temporário; isso vale para todos os seus Bisharp, mesmo que não sejam seus companheiros.",
+        "Prepare os Ovos | Para aproveitar o bônus de 1/4, coloque os Ovos em incubadoras dentro das três horas do Dia Comunitário.",
+        "Horário estendido | Módulos Atrair comuns continuam oferecendo altas chances de Pawniard das 14h às 21h, mantendo a chance aumentada de Brilhante e Fundo Especial. Cada módulo dura 1 hora.",
+        "Pesquisas de campo | Capturar Pawniard pode render Poeira Estelar, Ultra Bolas e encontros extras com Pawniard, inclusive chance de Fundo Especial.",
+        "Ingresso opcional | A Pesquisa Especial custa US$ 1,99 ou valor equivalente no Brasil. Entre as recompensas anunciadas estão 3 encontros com Fundo Especial, encontros extras, 1 Passe de Batalha Premium e 1 Doce Raro GG."
       ],
       "notifications": {
-        "enabled": false,
-        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-21",
       "verification_sources": [
         {
-          "name": "Pokémon GO Hub • calendário comunitário",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
+          "name": "Pokémon GO • anúncio oficial de Pawniard em novembro",
+          "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • temporada Twilight Trails (data de novembro)",
+          "url": "https://pokemongo.com/en/seasons/twilight-trails",
+          "confidence": "official"
         }
-      ]
+      ],
+      "public_title": "Dia Comunitário: Pawniard — 21 de novembro",
+      "public_summary": "No dia 21/11, capture Pawniard das 14h às 17h e evolua Bisharp até 21h para conseguir Kingambit com Kowtow Cleave. Bônus e requisitos já confirmados pelo Pokémon GO.",
+      "news": {
+        "title": "CONFIRMADO: Pawniard é o Dia Comunitário de novembro!",
+        "summary": "21/11, 14h–17h: Pawniard Shiny, 1/4 de distância dos Ovos e 2× Doces. Kingambit aprende Kowtow Cleave ao evoluir até 21h. Veja como aproveitar o requisito reduzido da evolução.",
+        "published_on": "2026-10-21",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+          "confidence": "official"
+        }
+      },
+      "updated_at": "2026-10-21T14:00:00-03:00"
     },
     {
       "id": "2026-11-24-twilight-wishes-preview",

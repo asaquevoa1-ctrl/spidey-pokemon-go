@@ -20,13 +20,15 @@ try{for(const width of [390,1280])for(const theme of ['light','dark']){
  await page.evaluate(()=>window.SpideyExperience.render());const card=page.locator(`#todayExperience [data-event-id="${eventId}"]`);await card.waitFor({state:'attached'});await card.evaluate(el=>{
   // The future-week fixture is not the currently selected public home feed.
   // Reveal only its test-preview ancestors, not any app content or artwork.
-  for(let node=el;node&&node.id!=='calendarView';node=node.parentElement){
+  for(let node=el;node;node=node.parentElement){
     if(node.hidden)node.hidden=false;
     if(node.style){
       node.style.setProperty('display','block','important');
       node.style.setProperty('opacity','1','important');
       node.style.setProperty('transform','none','important');
     }
+    // Calendar can be hidden by the dynamic feed after the frozen-date fixture.
+    if(node.id==='calendarView')break;
   }
   el.scrollIntoView({block:'center'});
 });await page.waitForTimeout(500);await card.waitFor({state:'visible',timeout:8000});
