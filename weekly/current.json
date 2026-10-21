@@ -259,17 +259,17 @@
             "confidence": "editorial_verified"
           },
           "art": {
-            "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
-            "web_width": 941,
-            "web_height": 1672,
-            "web_sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
-            "alt": "Fluxo completo do dia 24 de outubro: trio dos lagos Dinamax, Azelf, FC Seoul, Minior e Twitch — arte cósmica Spidey"
+            "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+            "web_width": 1024,
+            "web_height": 1536,
+            "web_sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
+            "alt": "Roteiro de 24/10: FC Seoul com Charmander e Charizard; City Safari com Eevee de chapéu de explorador, Flabébé, Hawlucha, Mudbray e Komala; Trio do Lago Dinamax; Night Out com Pikachu sem chapéu, Gengar e Toxtricity. Sem Solgaleo ou Lunala."
           },
           "weekly_art": {
-            "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
-            "width": 941,
-            "height": 1672,
-            "sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+            "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
             "source_role": "canonical_master",
             "kind": "approved_master",
             "premium": true
@@ -509,17 +509,17 @@
           "confidence": "editorial_verified"
         },
         "art": {
-          "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
-          "web_width": 941,
-          "web_height": 1672,
-          "web_sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
-          "alt": "Fluxo completo do dia 24 de outubro: trio dos lagos Dinamax, Azelf, FC Seoul, Minior e Twitch — arte cósmica Spidey"
+          "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+          "web_width": 1024,
+          "web_height": 1536,
+          "web_sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
+          "alt": "Roteiro de 24/10: FC Seoul com Charmander e Charizard; City Safari com Eevee de chapéu de explorador, Flabébé, Hawlucha, Mudbray e Komala; Trio do Lago Dinamax; Night Out com Pikachu sem chapéu, Gengar e Toxtricity. Sem Solgaleo ou Lunala."
         },
         "weekly_art": {
-          "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
-          "width": 941,
-          "height": 1672,
-          "sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+          "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
@@ -1031,7 +1031,7 @@
     "events_without_weekly_art": 3,
     "events_in_weekly": 24,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-21T15:48:37.552522-03:00",
+    "generated_at": "2026-10-21T18:44:35.641894-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
