@@ -112,3 +112,11 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - A deduplicação agora prioriza o mesmo artigo oficial (URL canônica, incluindo variantes de idioma). Com URLs diferentes não rejeita notícia por similaridade de palavras; sem URLs, exige quatro palavras relevantes e alta similaridade.
 - Itens com arte obrigatória e `proibir_render_arte`/`proibir_fallback` ficam `aguardando_arte_chatgpt`. É proibido a automação antiga renderizar uma imagem de fonte/PIL, rotulá-la como Premium e submetê-la como peça aprovada.
 - A notícia de Groudon foi preservada na fila editorial, com fatos oficiais, sem imagem Premium publicada e sem pedir novamente aprovações individuais de artes já aceitas. Falta gerar, inspecionar e integrar uma arte premium original seguindo o Gold Standard.
+
+
+## 21/10/2026 — Roteiro Premium integrado do dia 24
+- O responsável confirmou a integração no aplicativo do fluxo premium de 24/10 com destaque FC Seoul, sem Holofote Morelull no pôster. Horário FC Seoul 23/10 21h → 24/10 08h em Brasília, com Charmander e Charizard como protagonistas; evento presencial sem reides remotas de Charmander.
+- Preservar a identidade cósmica aprovada em 19/10: **imagem original exata** do ícone dourado S `spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png`, sem aranha, foi aplicada ao pôster final. Registro de arte e SHA-256 em `docs/qa/DAY24_FLOW_ART_APPROVAL_20261021.json`.
+- Pôster do fluxo é peça editorial única do **guia do dia** (`2026-10-24-spidey-full-day-guide`), e **não substitui** as artes Premium aprovadas dos eventos individuais. Source e original preservados.
+- Divulgação geral cobre Uxie/Mesprit remotos apenas quando permitidos com recursos e amigos, Azelf local 14h–17h, Minior 17h–21h e Twitch 23h30; City Safari Boston depende de ingresso original. O Morelull continua no calendário de 22/10, mas não aparece no guia ou pôster de 24/10.
+- Documento e commit no GitHub demonstram somente integração técnica. Merge, GitHub Pages e Samsung precisam de verificação independente.
