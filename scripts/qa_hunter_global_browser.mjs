@@ -13,11 +13,17 @@ for (let i=0;i<50;i++) {
 if (!ready) {server.kill('SIGTERM');throw Error('Caçador preview server unavailable');}
 const browser = await chromium.launch({headless:true, executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome'});
 const checks = [];
+async function navigate(page, view, width) {
+  if (width<=760) {
+    await page.locator('#spideyMenuToggle').click();
+    await page.locator(`#spideyMobileMenuLinks [data-menu-view="${view}"]`).click();
+  } else await page.locator(`.app-tabs [data-view="${view}"]`).click();
+}
 try {
   // Production data starts empty: never advertise yesterday's Shieldon as live.
   const empty=await browser.newPage({viewport:{width:390,height:850},serviceWorkers:'block'});
   await empty.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
-  await empty.locator('.app-tabs [data-view="hunterView"]').click();
+  await navigate(empty,'hunterView',390);
   await empty.locator('#hunterLiveStatus').waitFor({state:'visible',timeout:10000});
   await empty.waitForFunction(()=>document.getElementById('hunterLiveStatus')?.textContent.trim()==='Nenhuma aparição disponível no momento.',null,{timeout:10000});
   if(await empty.locator('.hunter-live-card').count()!==0)throw Error('Historical or fake card present with unauthorized source');
@@ -49,20 +55,26 @@ try {
         return {view:a?.id,hidden:a?.hidden,buttonDisplay:b?getComputedStyle(b).display:null};
       });
       console.log('Hunter home shortcut hidden in viewport',width,theme,JSON.stringify(homeStatus));
-      await page.locator('.app-tabs [data-view="hunterView"]').click();
+      await navigate(page,'hunterView',width);
     }
     if(!await page.locator('#hunterView').isVisible()) throw Error('Caçador navigation failed');
-    await page.locator('[data-view="flyView"]').first().click();
+    await navigate(page,'flyView',width);
     if(await page.locator('#hunterPanel').isVisible())throw Error('Caçador must not appear inside FLY');
     const filterTab=page.locator('.app-tabs [data-view="hunterView"]');
     if(await filterTab.count()!==1)throw Error('Dedicated Filtro tab missing');
     if((await filterTab.textContent()).trim()!=='Filtro')throw Error('Filtro tab label missing');
-    await filterTab.click();
+    await navigate(page,'hunterView',width);
     const panel=page.locator('#hunterPanel');
     await panel.waitFor({state:'visible',timeout:10000});
     const hunterScreen=page.locator('#hunterView');
     if(!await hunterScreen.isVisible()||await page.locator('#flyView').isVisible())throw Error('Separate screen navigation failed');
-    const navStyle=await filterTab.evaluate(el=>({background:getComputedStyle(el).backgroundImage,width:el.getBoundingClientRect().width}));
+    if(width<=760) await page.locator('#spideyMenuToggle').click();
+    const displayTab = width<=760 ? page.locator('#spideyMobileMenuLinks [data-menu-view="hunterView"]') : filterTab;
+    const navStyle=await displayTab.evaluate(el=>({background:getComputedStyle(el).backgroundImage,width:el.getBoundingClientRect().width}));
+    if(width<=760) {
+      if(!await displayTab.getAttribute('aria-current')) throw Error('Caçador active item missing in mobile drawer');
+      await page.locator('#spideyMobileMenuClose').click();
+    }
     if(!String(navStyle.background).includes('gradient')||navStyle.width<55) {
       const diag=await page.evaluate(()=>{
         const el=document.querySelector('.app-tabs .hunter-tab');
@@ -87,9 +99,8 @@ try {
         sources:[...document.querySelectorAll('#hunterTrustedSources a')].map(a=>a.href)
       };
     });
-    if(width<=760){
-      if(visual.navDisplay!=='flex'||visual.navWrap!=='nowrap'||visual.tabRows!==1||visual.navHeight>85||visual.overlap)
-        throw Error('Mobile nav wrapped or collided '+JSON.stringify(visual));
+    if(width<=760) {
+      if(visual.navDisplay!=='none' || visual.navHeight!==0) throw Error('Bottom bar is still visible on mobile '+JSON.stringify(visual));
     }
     if(visual.heroColor!=='rgb(247, 251, 255)'||visual.heroTextFill!=='rgb(247, 251, 255)')
       throw Error('Poor hero contrast '+JSON.stringify(visual));
