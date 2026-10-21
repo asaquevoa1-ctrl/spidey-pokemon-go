@@ -31,8 +31,8 @@ test('24 October guide separates globally accessible steps, regional-only activi
   for (const v of e.verification_sources) assert.ok(v.url.startsWith('https://'), 'Cada referência precisa ser link seguro');
 
   assert.ok(e.notes.every(n => !/Morelull/i.test(n)));
-  const approvedPath='spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp';
-  const sha='406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97';
+  const approvedPath='spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp';
+  const sha='fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d';
   assert.equal(e.art.url,approvedPath.replace('spidey-app/',''));
   assert.equal(e.art.web_sha256,sha);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(approvedPath)).digest('hex'),sha);
@@ -45,10 +45,20 @@ test('24 October guide separates globally accessible steps, regional-only activi
   const sw=fs.readFileSync('spidey-app/sw.js','utf8');
   assert.ok(sw.includes('./'+e.art.url),'Offline cache must contain the approved flow image');
   assert.match(sw,/const CACHE = 'spidey-app-2026[0-9]{4}-[^']+'/,'Service worker must version Android updates');
-  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261021-day24-premium-flow1'));
+  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261021-eevee-hat-v2'));
 
-  const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_FLOW_ART_APPROVAL_20261021.json','utf8'));
+  const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_FLOW_EEVEE_HAT_CORRECTION_20261021.json','utf8'));
   assert.equal(qa.sha256,sha);
-  assert.ok(qa.original_logo.file.includes('spidey-icon-cosmic-512.png'));
+  assert.ok(qa.identity.original_s_file.includes('spidey-icon-cosmic-512.png'));
+  assert.equal(qa.facts.pokemon_night_out[0],'Pikachu (SEM CHAPÉU)');
+  assert.ok(qa.facts.city_safari_boston.includes('Eevee com chapéu de explorador'));
+  assert.ok(!qa.facts.city_safari_boston.includes('Pikachu'));
+  assert.equal(qa.identity.used_exact_file,true);
+  assert.ok(e.notes.join(' ').includes('não é a prioridade máxima'));
+  assert.equal(e.art.web_width,1024);
+  assert.equal(e.art.web_height,1536);
+  assert.equal(qa.bytes,fs.statSync(approvedPath).size);
+  assert.ok(fs.existsSync('spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp'), 'Preserve original v1 art');
+
   assert.equal(events.filter(x=>x.id===e.id).length,1);
 });
