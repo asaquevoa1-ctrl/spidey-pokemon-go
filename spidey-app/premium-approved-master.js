@@ -1,6 +1,17 @@
 (() => {
   'use strict';
   const master = {
+  "2026-10-24-spidey-full-day-guide": {
+    "file": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 941,
+    "height": 1672,
+    "sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+    "approval_record": "docs/qa/DAY24_FLOW_ART_APPROVAL_20261021.json",
+    "approval_basis": "USER_APPROVED_COMPOSITION_AND_CURRENT_REQUEST",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
   "2026-10-raids-yveltal": {
     "file": "assets/events/premium/yveltal-rotation-approved-v1.png",
     "status": "APPROVED",
