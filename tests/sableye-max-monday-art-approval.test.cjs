@@ -23,7 +23,9 @@ test('Sableye Max Monday delegated approval promotes exact reviewed PNG and pres
   assert.equal(fs.statSync(approval.approved_file).size,approval.bytes);
   assert.equal(master[approval.event_id].file,approval.approved_file.replace('spidey-app/',''));
   assert.equal(master[approval.event_id].sha256,approval.sha256);
-  assert.equal(Object.keys(master).filter(id=>!['2026-pokemon-night-out-la','2026-pokemon-night-out-london'].includes(id)).length,approval.prior_master_entries_preserved+1); // Reuse of already approved Night Out poster does not create a new art asset.
-  assert.equal(new Set(Object.values(master).map(item=>item.file)).size,approval.prior_unique_images_preserved+1);
+  // This historical baseline predates the independently approved 24 October flow poster.
+  const priorMaster=Object.fromEntries(Object.entries(master).filter(([id])=>id!=='2026-10-24-spidey-full-day-guide'));
+  assert.equal(Object.keys(priorMaster).filter(id=>!['2026-pokemon-night-out-la','2026-pokemon-night-out-london'].includes(id)).length,approval.prior_master_entries_preserved+1); // Reuse of already approved Night Out poster does not create a new art asset.
+  assert.equal(new Set(Object.values(priorMaster).map(item=>item.file)).size,approval.prior_unique_images_preserved+1);
   for(const id of approval.blocked_generations_preserved)assert.equal(master[id],undefined);
 });

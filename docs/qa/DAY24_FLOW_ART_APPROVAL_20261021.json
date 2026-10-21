@@ -1,0 +1,43 @@
+{
+  "schema": "spidey-art-approval-v1",
+  "event_id": "2026-10-24-spidey-full-day-guide",
+  "updated_at": "2026-10-21",
+  "approval_basis": "USER_APPROVED_COMPOSITION_AND_CURRENT_REQUEST",
+  "artifact": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+  "sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+  "git_blob_sha1": "54ed29d2f723c7dab626bb95bd6c0a65430a4d5d",
+  "bytes": 455000,
+  "dimensions": {
+    "width": 941,
+    "height": 1672
+  },
+  "artwork_source": "Approved final conversation 24 October flow poster, rebuilt only to overlay the exact original approved S logo from 2026-10-19 cosmic identity package; no other editorial artwork replaced",
+  "original_logo": {
+    "file": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+    "sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8"
+  },
+  "highlights": [
+    "FC Seoul starring Charmander and Charizard, 23/10 21:00 to 24/10 08:00 Brasília, presencial only",
+    "Azelf 14:00–17:00 local Brazil",
+    "Minior 17:00–21:00 peak window",
+    "Night Out Twitch Drop 23:30 Brasília"
+  ],
+  "excluded": [
+    "Morelull spotlight on 22/10 does not belong to day 24 poster",
+    "Legacy spider logo excluded"
+  ],
+  "date_facts": "Narrative details are documented in the event guide and are independently sourced within spidey-app/data/events.json.",
+  "verified_transfer": {
+    "transport": "Google Drive private authenticated relay to GitHub Git Data create_blob",
+    "public_drive_link": false,
+    "blob_integrity": "Git blob SHA-1 verified against source WebP bytes; file fully added to repository tree"
+  },
+  "qa_scope": {
+    "local_visual_inspection": true,
+    "metadata_and_hash": true,
+    "app_render_ci": "pending",
+    "github_pages": "pending",
+    "samsung_physical": "pending"
+  },
+  "preserve_existing_approved_posters": true
+}
