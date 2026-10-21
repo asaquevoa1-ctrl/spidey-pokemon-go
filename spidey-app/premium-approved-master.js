@@ -2,14 +2,14 @@
   'use strict';
   const master = {
   "2026-10-24-spidey-full-day-guide": {
-    "file": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+    "file": "assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
     "status": "APPROVED",
     "display": "full_poster",
-    "width": 941,
-    "height": 1672,
-    "sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
-    "approval_record": "docs/qa/DAY24_FLOW_ART_APPROVAL_20261021.json",
-    "approval_basis": "USER_APPROVED_COMPOSITION_AND_CURRENT_REQUEST",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
+    "approval_record": "docs/qa/DAY24_FLOW_EEVEE_HAT_CORRECTION_20261021.json",
+    "approval_basis": "USER_CORRECTION_AND_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-raids-yveltal": {
