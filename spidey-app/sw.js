@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261021-guide-source-links-v1';
+const CACHE = 'spidey-app-20261021-drawer-only-v1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',

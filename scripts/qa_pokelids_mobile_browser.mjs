@@ -23,7 +23,9 @@ try{
     // Simulate the official external host being unreachable from Android.
     await page.route('https://local.pokemon.jp/img/p/manhole/**',route=>route.abort('failed'));
     await page.goto('http://127.0.0.1:4178/spidey-app/index.html',{waitUntil:'domcontentloaded'});
-    await page.locator('.app-tabs [data-view="stampsView"]').click();
+    // Em celular, a barra inferior saiu. Exercitar o menu lateral real.
+    await page.locator('#spideyMenuToggle').click();
+    await page.locator('#spideyMobileMenuLinks [data-menu-view="stampsView"]').click();
     const card=page.locator('.stamp-card').filter({hasText:'PokéLids — Japão'});
     await card.waitFor({state:'visible',timeout:15000});
     await card.click();

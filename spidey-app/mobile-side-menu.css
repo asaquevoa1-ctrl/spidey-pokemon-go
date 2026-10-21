@@ -1,4 +1,4 @@
-/* Menu lateral mobile: complemento, nao substitui a navegacao existente. */
+/* Menu lateral como navegacao exclusiva em telas pequenas; desktop sem alteracoes. */
 #spideyMenuToggle { display: none; }
 #spideyMobileMenuShade[hidden], #spideyMobileMenuPanel[hidden] { display: none !important; }
 .spidey-mobile-menu-shade, .spidey-mobile-menu-panel { display: none; }
@@ -134,4 +134,17 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .spidey-mobile-menu-panel, .spidey-mobile-menu-shade { animation: none !important; transition: none !important; }
+}
+
+/* O JS só ativa a substituição depois que os atalhos do drawer estão prontos.
+   Mantemos os botões antigos no DOM para preservar suas ações (FLY, Novidades etc.).
+   Eles deixam de ser exibidos no celular, independentemente dos !important legados. */
+@media (max-width: 760px) {
+  html.spidey-mobile-menu-ready body nav.app-tabs,
+  html.spidey-mobile-menu-ready body.spidey-command-center nav.app-tabs {
+    display: none !important;
+  }
+  html.spidey-mobile-menu-ready body.spidey-command-center main {
+    padding-bottom: calc(28px + env(safe-area-inset-bottom)) !important;
+  }
 }
