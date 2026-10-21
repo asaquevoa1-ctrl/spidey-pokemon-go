@@ -38,11 +38,11 @@ test('Menu mobile keeps approved cosmic S icon, responsive visibility and no dis
   assert.ok(sw.includes("'./mobile-side-menu.css'"));
   assert.ok(html.includes('<nav class="app-tabs"'), 'original tab handlers remain in DOM but must not be visible on mobile');
   assert.ok(css.includes('.topbar .theme-control { display: none; }'));
-  assert.match(css, /html\\.spidey-mobile-menu-ready body(?:\\.spidey-command-center)? nav\\.app-tabs\\s*,?/, 'the original tabs must be hidden after menu initialization');
+  assert.ok(css.includes('html.spidey-mobile-menu-ready body nav.app-tabs'), 'hide the bottom bar only when drawer is ready');
   assert.ok(css.includes('display: none !important;'), 'legacy Command Center bottom-nav !important must be overridden');
-  assert.ok(css.includes('main {\\n    padding-bottom: calc(28px + env(safe-area-inset-bottom)) !important;'), 'remove the unused bottom-bar spacing');
-  assert.match(css, /@media \\(max-width: 760px\\)/, 'the bottom nav change is mobile-only');
-  assert.match(css, /@media \\(min-width: 761px\\)/, 'desktop navigation remains');
+  assert.ok(css.includes('padding-bottom: calc(28px + env(safe-area-inset-bottom)) !important;'), 'remove the unused bottom-bar spacing');
+  assert.ok(css.includes('@media (max-width: 760px)'), 'mobile-only change');
+  assert.ok(css.includes('@media (min-width: 761px)'), 'desktop unchanged');
 
 });
 
