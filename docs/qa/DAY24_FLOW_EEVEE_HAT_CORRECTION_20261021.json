@@ -1,0 +1,72 @@
+{
+  "schema": "spidey-premium-poster-revision-v1",
+  "event_id": "2026-10-24-spidey-full-day-guide",
+  "date": "2026-10-21",
+  "status": "READY_FOR_CI",
+  "original_poster_preserved": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+  "revised_poster": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+  "sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
+  "git_blob_sha": "74af0f6eb1a4af60673a265064aba28c4e89d4d5",
+  "bytes": 547294,
+  "width": 1024,
+  "height": 1536,
+  "format": "webp",
+  "identity": {
+    "original_s_file": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+    "original_s_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+    "used_exact_file": true,
+    "no_spider": true
+  },
+  "facts": {
+    "fc_seoul": [
+      "Charmander",
+      "Charizard",
+      "Growlithe",
+      "Flareon",
+      "Torchic",
+      "Houndour",
+      "Litleo",
+      "Litten"
+    ],
+    "city_safari_boston": [
+      "Flabébé (Flor Laranja)",
+      "Hawlucha",
+      "Mudbray",
+      "Komala",
+      "Eevee com chapéu de explorador"
+    ],
+    "trio_dinamax": [
+      "Uxie",
+      "Mesprit",
+      "Azelf"
+    ],
+    "pokemon_night_out": [
+      "Pikachu (SEM CHAPÉU)",
+      "Gengar",
+      "Toxtricity"
+    ],
+    "solgaleo_lunala": "NÃO aparecem no pôster de eventos. Ideia separada para a tela de carregamento, sem anúncio de encontros."
+  },
+  "corrections": [
+    "Pikachu com chapéu removido de City Safari Boston",
+    "Somente Eevee aparece com chapéu de explorador em Boston",
+    "Boston 10:00–18:00 no horário de Brasília, somente com ingresso pré-existente",
+    "Trio do Lago não é prioridade máxima; eventos exclusivos primeiro",
+    "Logo S original aplicado ao canto superior sem redesenho",
+    "Os quatro eventos mantêm cronologia e janelas, atividades presenciais são condicionais"
+  ],
+  "source_pokemon_go": [
+    "https://pokemongo.com/ko/news/fc-seoul-2026",
+    "https://pokemongo.com/news/city-safari-boston-rescheduled",
+    "https://pokemongo.com/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+    "https://pokemongo.com/news/pokemon-night-out-irl-details2026"
+  ],
+  "review": {
+    "visually_inspected": true,
+    "user_corrected_hat": true,
+    "user_delegated_visual_qa": true,
+    "no_third_party_art_reuse": true,
+    "post_merge_android_physical": "pending"
+  },
+  "note": "O nome Night Out identifica o evento presencial em Los Angeles; a transmissão Twitch para o Brasil é online. Não tratar o quadro como promessa de reides remotas em locais presenciais."
+}
