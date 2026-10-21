@@ -238,6 +238,44 @@
           }
         },
         {
+          "id": "2026-10-24-spidey-full-day-guide",
+          "title": "24 de outubro: seu roteiro para aproveitar todos os eventos",
+          "summary": "Roteiro global de 24/10: Uxie remota na madrugada, Mesprit remota pela manhã, Azelf no Brasil das 14h às 17h, Minior até 21h e Twitch às 23h30.",
+          "category": "day_guide",
+          "tags": [
+            "Guia do dia",
+            "24 de outubro",
+            "Azelf Dinamax",
+            "Minior",
+            "Batalhas Max",
+            "Twitch",
+            "Roteiro"
+          ],
+          "start_brazil": "2026-10-24T09:00:00-03:00",
+          "end_brazil": "2026-10-24T23:59:59-03:00",
+          "source": {
+            "name": "Spidey • roteiro editorial baseado em anúncios oficiais",
+            "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go",
+            "confidence": "editorial_verified"
+          },
+          "art": {
+            "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+            "web_width": 941,
+            "web_height": 1672,
+            "web_sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+            "alt": "Fluxo completo do dia 24 de outubro: trio dos lagos Dinamax, Azelf, FC Seoul, Minior e Twitch — arte cósmica Spidey"
+          },
+          "weekly_art": {
+            "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+            "width": 941,
+            "height": 1672,
+            "sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
+          }
+        },
+        {
           "id": "2026-10-dynamax-max-battle-day",
           "title": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax",
           "summary": "Em 24/10, das 14h às 17h locais, enfrente o trio Dinamax em Batalhas Max de cinco estrelas. O Pokémon disponível depende da região.",
@@ -444,6 +482,44 @@
           "width": 1024,
           "height": 1536,
           "sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-24-spidey-full-day-guide",
+        "title": "24 de outubro: seu roteiro para aproveitar todos os eventos",
+        "summary": "Roteiro global de 24/10: Uxie remota na madrugada, Mesprit remota pela manhã, Azelf no Brasil das 14h às 17h, Minior até 21h e Twitch às 23h30.",
+        "category": "day_guide",
+        "tags": [
+          "Guia do dia",
+          "24 de outubro",
+          "Azelf Dinamax",
+          "Minior",
+          "Batalhas Max",
+          "Twitch",
+          "Roteiro"
+        ],
+        "start_brazil": "2026-10-24T09:00:00-03:00",
+        "end_brazil": "2026-10-24T23:59:59-03:00",
+        "source": {
+          "name": "Spidey • roteiro editorial baseado em anúncios oficiais",
+          "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go",
+          "confidence": "editorial_verified"
+        },
+        "art": {
+          "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+          "web_width": 941,
+          "web_height": 1672,
+          "web_sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
+          "alt": "Fluxo completo do dia 24 de outubro: trio dos lagos Dinamax, Azelf, FC Seoul, Minior e Twitch — arte cósmica Spidey"
+        },
+        "weekly_art": {
+          "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp",
+          "width": 941,
+          "height": 1672,
+          "sha256": "406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
@@ -948,14 +1024,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 23,
-    "events_with_weekly_art": 20,
-    "events_with_premium_weekly_art": 20,
+    "calendar_events_in_week": 24,
+    "events_with_weekly_art": 21,
+    "events_with_premium_weekly_art": 21,
     "events_with_official_weekly_art": 0,
     "events_without_weekly_art": 3,
-    "events_in_weekly": 23,
+    "events_in_weekly": 24,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-21T04:53:41.697461-03:00",
+    "generated_at": "2026-10-21T10:58:40.976031-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
