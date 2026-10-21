@@ -2,6 +2,109 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-10-24-spidey-full-day-guide",
+      "slug": "2026-10-24-spidey-full-day-guide",
+      "title": "24 de outubro: seu roteiro para aproveitar todos os eventos",
+      "summary": "Das Partículas Max pela manhã à estreia de Azelf, última noite de Minior e recompensa da Twitch: um dia inteiro, sem atropelar os horários.",
+      "category": "day_guide",
+      "content_type": "event",
+      "tags": [
+        "Guia do dia",
+        "24 de outubro",
+        "Azelf Dinamax",
+        "Minior",
+        "Batalhas Max",
+        "Twitch",
+        "Roteiro"
+      ],
+      "source": {
+        "name": "Spidey • roteiro editorial baseado em anúncios oficiais",
+        "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go",
+        "confidence": "editorial_verified"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • dia de Batalhas Max do trio dos lagos",
+          "url": "https://pokemongo.com/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • Minior e Orionidas",
+          "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • City Safari Boston remarcado",
+          "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • recompensa Twitch Night Out",
+          "url": "https://pokemongo.com/news/pokemon-night-out-twitch-drops2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • evento presencial Night Out",
+          "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • FC Seoul",
+          "url": "https://pokemongo.com/ko/news/fc-seoul-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • Passe GO de outubro",
+          "url": "https://pokemongo.com/news/go-pass-october-2026",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-10-24T09:00:00-03:00",
+        "end_local": "2026-10-24T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-24T09:00:00-03:00",
+        "end_brazil": "2026-10-24T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "notes": [
+        "09h–10h | Comece com calma: confira espaço na Bolsa, revive seus melhores Pokémon Dinamax, carregue o celular e combine um Ponto de Energia com seus amigos. Hoje vale preparar antes de sair correndo.",
+        "Antes das 14h | Caminhe para juntar Partículas Max. Até 17h, explorar rende o dobro e exige só 1/4 da distância habitual, desde que você primeiro recolha as Partículas disponíveis em Proximidades. Se tiver Passe GO e pesquisa adidas, avance neles durante o caminho.",
+        "10h–13h | Quem já tinha ingresso válido do City Safari Boston pode aproveitar as aparições e bônus globais das 10h às 18h, sem viajar. Não tem ingresso? Sem problema: foque nas tarefas gratuitas, nos Pontos de Energia e em juntar seu grupo. Não há venda de novos ingressos.",
+        "13h–13h50 | Faça uma pausa e forme o time para batalhas de cinco estrelas. No Brasil o destaque é Azelf Dinamax; Uxie aparece na Ásia-Pacífico e Mesprit na Europa, Oriente Médio, África e Índia. Se amigos dessas regiões estiverem jogando, avalie participar das Batalhas Max a distância com Passe de Reide Remota e Partículas Max.",
+        "14h–17h | Essa é a janela que não dá para adiar: concentre as três horas nas Batalhas Max do trio. Procure encontros da comunidade e Pontos de Energia ativos; organize sua equipe e não desperdice recursos entrando sem preparo. O ingresso do evento é opcional.",
+        "No evento Max | Todos os Pontos de Energia recebem batalhas, fornecem 8× Partículas e atualizam com mais frequência. O limite de coleta do evento sobe a 1.600; também são permitidas até três Trocas Especiais no sábado. Confira seus recursos antes de cada batalha.",
+        "17h–18h | Terminou a maratona Max? Respire e escolha uma reide se houver grupo: Landorus Sombroso está na programação do fim de semana, enquanto Palkia e Mega Charizard X/Y seguem na rotação. Se não houver grupo, guarde os passes e vá para as capturas.",
+        "17h–21h | Agora é hora do céu estrelado. Este sábado é a última noite da chuva de meteoros Orionidas: Minior aparece com mais frequência das 17h às 21h e rende Poeira Estelar adicional nas capturas. Aproveite até 21h sem comprometer o horário do próximo compromisso.",
+        "21h–23h15 | Confira o que ficou pendente: pesquisas temporárias, progresso do Passe GO de outubro, recompensas e espaço na Bolsa. O evento Orionidas termina às 23h59 locais, então capturas de Minior ainda podem surgir depois da janela reforçada.",
+        "23h20 | Prepare a Twitch antes da transmissão: entre na conta correta, conecte sua conta Pokémon Trainer Central e confira se o Drop está habilitado. Não deixe para acertar login no meio do programa.",
+        "23h30 | A transmissão de Pokémon Night Out começa neste horário de Brasília (19h30 em Los Angeles). Assista pelo menos 30 minutos no canal oficial Pokémon na Twitch, resgate o Drop no inventário, obtenha o código em rewards.pokemon.com e use a página de resgate de ofertas. A recompensa é uma pesquisa para ganhar a camiseta temática do avatar.",
+        "Se você estiver em Seul | O FC Seoul é presencial no dia 24, das 9h às 20h da Coreia (21h de sexta a 8h de sábado em Brasília). Charmander nas reides locais não aceita Passe de Reide Remota. Aproveite a pesquisa com Charizard se estiver na área — não é um evento jogável do Brasil.",
+        "Se estiver em Los Angeles | Pokémon Night Out tem atrações presenciais e bônus no Intuit Dome, com Pikachu e Gengar de Fundo de Localização. Para quem está no Brasil, a alternativa válida é o Drop da transmissão, não as reides locais.",
+        "Outras opções do sábado | Japão e shoppings asiáticos possuem ativações regionais de longa duração. Se você estiver nesses lugares, consulte os detalhes locais; não faz sentido encaixá-los num roteiro brasileiro. O Holofote do Morelull foi na quinta, 22/10, das 18h às 19h — não no sábado.",
+        "Regra para o dia dar certo | Não tente estar em dois continentes ao mesmo tempo. Faça as atividades globais no seu horário local, trate experiências presenciais como condicionais e priorize janelas curtas: 14h–17h Batalhas Max, 17h–21h Minior e 23h30 Twitch."
+      ],
+      "news": {
+        "title": "Seu sábado 24/10 sem correria: Azelf, Minior, Twitch e eventos pelo mundo",
+        "summary": "Organizamos o dia em um roteiro simples: prepare Partículas pela manhã, enfrente Azelf das 14h às 17h, aproveite a última noite de Minior e pegue o Drop da Twitch às 23h30. Boston só com ingresso; Seul e Los Angeles são presenciais.",
+        "published_on": "2026-10-21"
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Guia editorial consolidado; preservar alertas dos eventos individuais e evitar notificações duplicadas."
+      },
+      "status": "published",
+      "verified_at": "2026-10-21",
+      "updated_at": "2026-10-21T06:30:00-03:00"
+    },
+    {
       "id": "2026-11-04-raids-giratina-altered",
       "slug": "2026-11-04-raids-giratina-altered",
       "title": "Reides 5★: Giratina (Forma Alterada)",
@@ -6647,14 +6750,21 @@
         "enabled": false,
         "reason": "Evento sem coordenada exata específica confirmada."
       },
-      "notes": [],
+      "notes": [
+        "Quinta-feira, 22/10, das 18h às 19h locais: não acontece no sábado, 24/10.",
+        "O bônus de 2× Poeira Estelar vale para capturas de qualquer Pokémon durante o horário, não só Morelull.",
+        "Morelull pode ser Brilhante, mas a aparição Brilhante não é garantida. Se quiser farmar Poeira, prepare Poké Bolas, espaço na Bolsa e Pedaços de Estrela."
+      ],
       "notifications": {
         "enabled": true,
         "default_lead_minutes": [
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "bonuses": [
+        "2× Poeira Estelar por captura, das 18h às 19h de 22/10."
+      ]
     },
     {
       "id": "2026-10-29-spotlight-gastly",
