@@ -17,8 +17,8 @@ test('november 2026 curated batch is present once with no duplicated Halloween o
  }
  assert.ok(nov.length>=30,'Previously published November events and 24 new records are preserved');
 });
-test('no fake hours, posters, Pokemon or GPX for community previews',()=>{
- for(const id of ['2026-11-16-dynamax-trails','2026-11-21-community-day-preview','2026-11-24-twilight-wishes-preview','2026-11-28-super-mega-raid-day-preview','2026-11-16-max-surprise']){
+test('remaining unconfirmed November previews do not invent hours, posters, Pokemon or GPX',()=>{
+ for(const id of ['2026-11-16-dynamax-trails','2026-11-24-twilight-wishes-preview','2026-11-28-super-mega-raid-day-preview','2026-11-16-max-surprise']){
    const e=find(id);
    assert.equal(e.schedule.precision,'date');
    assert.equal(e.schedule.start_local,undefined);
