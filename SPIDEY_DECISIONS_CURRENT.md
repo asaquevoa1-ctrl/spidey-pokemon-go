@@ -120,3 +120,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Pôster do fluxo é peça editorial única do **guia do dia** (`2026-10-24-spidey-full-day-guide`), e **não substitui** as artes Premium aprovadas dos eventos individuais. Source e original preservados.
 - Divulgação geral cobre Uxie/Mesprit remotos apenas quando permitidos com recursos e amigos, Azelf local 14h–17h, Minior 17h–21h e Twitch 23h30; City Safari Boston depende de ingresso original. O Morelull continua no calendário de 22/10, mas não aparece no guia ou pôster de 24/10.
 - Documento e commit no GitHub demonstram somente integração técnica. Merge, GitHub Pages e Samsung precisam de verificação independente.
+
+
+## 21/10/2026 — Menu lateral para celular
+- O responsável perguntou sobre replicar a navegação lateral do computador no celular e autorizou o estudo da melhoria. Implementada uma primeira versão reversível, **sem substituir a barra inferior**: botão ☰ na barra superior abre painel lateral em telas até 760px.
+- Navegação mantém as rotas e ações já existentes, clonando **somente os botões visuais** da aba original: Início, Novidades, Semana, FLY, Caçador, Selos, PvP, ANA, Trust e quaisquer novas abas futuras. O botão original recebe o clique, preservando o carregamento de cada seção.
+- O painel possui emblema S cósmico oficial (arquivo original, sem redesenho), tema claro/escuro/sistema, Privacidade, botão ×, toque externo, Escape, foco de teclado, suporte a gestos para fechar e safe areas Android. Não cria contas, rastreadores nem coleta dados.
+- **Desktop não muda**; bottom nav móvel permanece disponível como atalho rápido. Publicação e teste físico no Samsung são verificações independentes do CI.

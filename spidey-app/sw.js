@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261021-day24-premium-flow-v1';
+const CACHE = 'spidey-app-20261021-mobile-menu-v1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -6,6 +6,8 @@ const CORE = [
   './hunter-live-feed.js',
   './hunter-v1.css',
   './data/hunter-feed.json',
+  './mobile-side-menu.js',
+  './mobile-side-menu.css',
   './assets/branding/20261019/spidey-opening-cosmic-20261019.webp',
   './assets/branding/20261019/spidey-loading-cosmic-20261019.webp',
   './assets/branding/20261019/spidey-icon-cosmic-20261019.webp',
