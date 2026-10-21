@@ -26,6 +26,10 @@ test('24 October guide separates globally accessible steps, regional-only activi
   }
   assert.ok(prose.includes('Sem problema:') || prose.includes('Sem problema'));
   assert.ok(e.verification_sources.length >= 6);
+  assert.equal(e.source.url,'https://pokemongo.com/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026');
+  assert.ok(!e.source.url.includes('github.com'), 'O botão Ver fonte deve abrir Pokémon GO, não o repositório');
+  for (const v of e.verification_sources) assert.ok(v.url.startsWith('https://'), 'Cada referência precisa ser link seguro');
+
   assert.ok(e.notes.every(n => !/Morelull/i.test(n)));
   const approvedPath='spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp';
   const sha='406f5d5b101beaac002adbd15dcb4cfb61fd19a8c9726b19e5c0e7163ade2b97';

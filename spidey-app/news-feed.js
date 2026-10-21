@@ -1,6 +1,9 @@
 (() => {
   'use strict';
   function articleKey(event){
+    // A curated day guide brings together multiple announcements and must remain
+    // separate even when its primary link points to one official Pokémon GO post.
+    if (event.category === 'day_guide' && event.source?.confidence === 'editorial_verified') return `event:${event.id}`;
     try{
       const url=new URL(event.source?.url);
       if(!['https:','http:'].includes(url.protocol))return null;
