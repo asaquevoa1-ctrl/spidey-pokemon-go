@@ -90,3 +90,15 @@ test('Mega Chandelure keeps the existing calendar identity and publishes the off
  const story=build(events,range,new Date('2026-10-13T22:00:48Z')).find(s=>s.events.some(e=>e.id===event.id));
  assert.ok(story);assert.match(story.title,/Mega Chandelure/);assert.equal(story.events.length,1);
 });
+
+
+test('curated 24 October guide stays separate from official Dynamax announcement despite sharing its primary source',()=>{
+ const stories=build(events,range,new Date('2026-10-21T12:00Z'));
+ const guide=stories.filter(story=>story.events.some(e=>e.id==='2026-10-24-spidey-full-day-guide'));
+ const official=stories.filter(story=>story.events.some(e=>e.id==='2026-10-dynamax-max-battle-day'));
+ assert.equal(guide.length,1);
+ assert.equal(official.length,1);
+ assert.notEqual(guide[0].key,official[0].key);
+ assert.equal(guide[0].events.length,1,'guide stays a standalone editorial story');
+ assert.ok(guide[0].event.source.url.startsWith('https://pokemongo.com/news/'));
+});
