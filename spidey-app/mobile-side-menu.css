@@ -1,0 +1,137 @@
+/* Menu lateral mobile: complemento, nao substitui a navegacao existente. */
+#spideyMenuToggle { display: none; }
+#spideyMobileMenuShade[hidden], #spideyMobileMenuPanel[hidden] { display: none !important; }
+.spidey-mobile-menu-shade, .spidey-mobile-menu-panel { display: none; }
+
+@media (max-width: 760px) {
+  .spidey-mobile-menu-ready #spideyMenuToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(212,175,88,.34);
+    border-radius: 14px;
+    background: rgba(14,32,61,.72);
+    color: #f8e9b7;
+    box-shadow: inset 0 0 18px rgba(124,83,226,.1);
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  #spideyMenuToggle svg { width: 23px; height: 23px; }
+  #spideyMenuToggle:focus-visible,
+  #spideyMobileMenuClose:focus-visible,
+  .spidey-menu-item:focus-visible,
+  #spideyMobileTheme:focus-visible {
+    outline: 3px solid #f4cd77;
+    outline-offset: 3px;
+  }
+  body.spidey-mobile-menu-open { overflow: hidden !important; }
+  .spidey-mobile-menu-shade {
+    position: fixed;
+    display: block;
+    inset: 0;
+    z-index: 1900;
+    background: rgba(1,8,19,.72);
+    backdrop-filter: blur(5px);
+  }
+  .spidey-mobile-menu-panel {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 1901;
+    display: flex;
+    flex-direction: column;
+    width: min(352px, calc(100vw - 36px));
+    max-height: 100dvh;
+    border-right: 1px solid rgba(235,196,111,.26);
+    border-radius: 0 20px 20px 0;
+    color: #f3f5ff;
+    background:
+      linear-gradient(175deg, rgba(4,15,32,.92) 0%, rgba(9,20,44,.95) 53%, rgba(4,12,27,.97) 100%),
+      url('assets/branding/20261019/spidey-wallpaper-cosmic-20261019.webp') center / cover;
+    box-shadow: 18px 0 65px rgba(0,0,0,.5);
+    overscroll-behavior: contain;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+  }
+  .spidey-mobile-menu-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 22px 16px 16px;
+    border-bottom: 1px solid rgba(222,194,128,.23);
+  }
+  .spidey-mobile-menu-logo { height: 58px; width: 58px; flex: 0 0 58px; object-fit: contain; filter: drop-shadow(0 0 12px rgba(207,160,75,.34)); }
+  .spidey-mobile-menu-name { min-width: 0; flex: 1 1 auto; }
+  .spidey-mobile-menu-name strong { display: block; font-size: 1.28rem; letter-spacing: .04em; }
+  .spidey-mobile-menu-name small { display: block; color: #dfc388; font-size: .73rem; margin-top: 3px; }
+  #spideyMobileMenuClose {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(225,235,255,.18);
+    border-radius: 13px;
+    background: rgba(255,255,255,.07);
+    color: #fff;
+    font: inherit;
+    font-size: 1.65rem;
+    cursor: pointer;
+  }
+  .spidey-mobile-menu-scroll { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding: 14px 12px 24px; }
+  .spidey-mobile-menu-kicker { display: block; padding: 12px 13px 6px; color: #d6b970; font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
+  .spidey-mobile-menu-links { display: grid; gap: 4px; }
+  .spidey-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background: transparent;
+    color: #e9efff;
+    text-align: left;
+    font: inherit;
+    font-size: .95rem;
+    font-weight: 650;
+    cursor: pointer;
+  }
+  .spidey-menu-item-icon { display: inline-flex; align-items: center; justify-content: center; width: 25px; flex: 0 0 25px; font-size: 1.15rem; }
+  .spidey-menu-item.active,
+  .spidey-menu-item[aria-current="page"] {
+    color: #ffe7ac;
+    border-color: rgba(245,191,85,.48);
+    background: linear-gradient(110deg, rgba(160,109,29,.22), rgba(42,111,173,.15));
+    box-shadow: inset 3px 0 0 #efbd64;
+  }
+  .spidey-mobile-menu-footer { border-top: 1px solid rgba(222,194,128,.2); padding: 14px 12px 22px; }
+  .spidey-mobile-menu-footer .spidey-menu-item { margin-bottom: 10px; }
+  .spidey-mobile-menu-footer label { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 12px; font-size: .88rem; color: #e5ebfa; }
+  #spideyMobileTheme {
+    min-height: 44px;
+    padding: 8px 9px;
+    border: 1px solid rgba(225,235,255,.28);
+    border-radius: 10px;
+    color: #f7f8ff;
+    background: #162c4a;
+    font: inherit;
+  }
+  .topbar .theme-control { display: none; }
+  .topbar .brand { flex: 1 1 auto; }
+  .topbar .brand-logo { width: 40px; height: 40px; flex: 0 0 40px; }
+  .topbar .brand span { max-width: 28vw; }
+  .topbar { gap: 8px; }
+}
+@media (max-width: 365px) {
+  .topbar .brand span { display: none; }
+  .topbar .brand { gap: 7px; }
+  .topbar #installButton { padding: 9px 10px; font-size: .78rem; }
+}
+@media (min-width: 761px) {
+  #spideyMenuToggle, #spideyMobileMenuShade, #spideyMobileMenuPanel { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spidey-mobile-menu-panel, .spidey-mobile-menu-shade { animation: none !important; transition: none !important; }
+}
