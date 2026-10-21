@@ -127,3 +127,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Navegação mantém as rotas e ações já existentes, clonando **somente os botões visuais** da aba original: Início, Novidades, Semana, FLY, Caçador, Selos, PvP, ANA, Trust e quaisquer novas abas futuras. O botão original recebe o clique, preservando o carregamento de cada seção.
 - O painel possui emblema S cósmico oficial (arquivo original, sem redesenho), tema claro/escuro/sistema, Privacidade, botão ×, toque externo, Escape, foco de teclado, suporte a gestos para fechar e safe areas Android. Não cria contas, rastreadores nem coleta dados.
 - **Desktop não muda**; bottom nav móvel permanece disponível como atalho rápido. Publicação e teste físico no Samsung são verificações independentes do CI.
+
+
+## 21/10/2026 — Decisão posterior: retirar barra inferior do celular
+- Após validar o menu lateral por vídeo no Samsung, o responsável determinou **“Não quero mais a barra inferior”**. Esta decisão **substitui** a orientação anterior de manter os atalhos inferiores no celular.
+- Em telas até 760px, **o único menu de navegação principal visível será o menu lateral ☰**. As abas antigas continuam invisíveis no DOM para manter suas ações e links dinâmicos (FLY, Caçador, Novidades, PvP, ANA, Trust etc.), mas não são exibidas na parte inferior. O ocultamento ocorre após inicialização do drawer, preservando uma rota alternativa se JavaScript falhar.
+- Corrigir o espaço vazio antes ocupado pela barra; preservar o menu lateral, a marca cósmica S, o botão voltar e todos os recursos e temas existentes.
+- No desktop, **não alterar** a navegação lateral atual. Preservar as artes Premium, registros de fontes, push, rotas, catálogo e privacidade. Validar GitHub Actions, deploy e observar o Samsung separadamente antes de declarar verificação física.
