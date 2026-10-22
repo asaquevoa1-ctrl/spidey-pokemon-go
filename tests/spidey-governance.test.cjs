@@ -84,3 +84,15 @@ test('governance, agent and Gold Standard require the exact approved cosmic S in
  }
  assert.equal(governance.identity.banned_word_in_poster,'SpideyNexus');
 });
+
+
+test('Gold image generator overlays the original cosmic-S file, never the old spider logo',()=>{
+ const script=fs.readFileSync('scripts/gold_art_upgrade.py','utf8');
+ const original='spidey-app/'+governance.identity.logo;
+ assert.ok(fs.existsSync(original),'Approved original cosmic image must exist');
+ assert.ok(script.includes('LOGO = Path("'+original+'")'));
+ assert.ok(script.includes('Image.open(LOGO).convert("RGBA")'));
+ assert.ok(script.includes('overlay.paste(logo, (lx, ly), logo.getchannel("A"))'));
+ assert.ok(!script.includes('assets/spidey-logo-oficial.jpg'));
+ assert.ok(!script.includes('ImageDraw.Draw(mask).ellipse'));
+});

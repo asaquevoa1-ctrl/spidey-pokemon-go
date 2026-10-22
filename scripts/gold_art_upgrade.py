@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 QUEUE = Path("queue/curated")
 ASSETS = Path("assets/generated")
-LOGO = Path("assets/spidey-logo-oficial.jpg")
+LOGO = Path("spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png")
 REPO = os.getenv("GITHUB_REPOSITORY", "asaquevoa1-ctrl/spidey-pokemon-go").strip()
 BRANCH = os.getenv("SPIDEY_ASSET_BRANCH", "main").strip() or "main"
 MODEL = os.getenv("SPIDEY_IMAGE_MODEL", "gpt-image-2.5-sunburst").strip()
@@ -249,15 +249,12 @@ def overlay_brand(path, item):
 
     # Logo oficial pequeno, como assinatura, não como protagonista.
     if LOGO.exists():
-        logo = Image.open(LOGO).convert("RGB")
+        logo = Image.open(LOGO).convert("RGBA")
         side = min(112, max(82, int(w * 0.105)))
         logo = logo.resize((side, side), Image.Resampling.LANCZOS).convert("RGBA")
-        mask = Image.new("L", (side, side), 0)
-        ImageDraw.Draw(mask).ellipse((0, 0, side - 1, side - 1), fill=255)
         lx = w - margin - side
         ly = h - margin - side
-        draw.ellipse((lx - 4, ly - 4, lx + side + 4, ly + side + 4), outline=(235, 194, 73, 220), width=3)
-        overlay.paste(logo, (lx, ly), mask)
+        overlay.paste(logo, (lx, ly), logo.getchannel("A"))
 
     final = Image.alpha_composite(image, overlay).convert("RGB")
     final.save(path, "JPEG", quality=95, optimize=True)
@@ -303,7 +300,7 @@ def prepare_revision(item):
 
 def generate_one(path, item):
     if not LOGO.exists():
-        raise RuntimeError("logo oficial ausente em assets/spidey-logo-oficial.jpg")
+        raise RuntimeError(f"emblema S cósmico original ausente: {LOGO}")
     if not os.getenv("OPENAI_API_KEY", "").strip():
         raise RuntimeError("OPENAI_API_KEY ausente")
 
