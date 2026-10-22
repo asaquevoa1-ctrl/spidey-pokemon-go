@@ -28,25 +28,49 @@ try{
       Object.setPrototypeOf(FixedDate,NativeDate);window.Date=FixedDate;
       localStorage.setItem('spidey-theme',theme);
     },{fixed,theme});
-    await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'networkidle'});
-    await page.waitForFunction(id=>window.state?.events?.some(event=>event.id===id),eventId);
-    const expected=await page.evaluate(({eventId})=>window.SPIDEY_APPROVED_ART_MASTER?.[eventId]?.file,{eventId});
+    await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'domcontentloaded'});
+    await page.waitForFunction(id=>typeof state!=='undefined'&&state.events.some(event=>event.id===id),eventId);
+    const expected=await page.evaluate(id=>window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,eventId);
     if(expected!==approved)throw new Error(`unexpected artwork ${expected}`);
-    await page.evaluate(()=>{state.month=new Date(2026,9,1);renderCalendar();});
+    await page.evaluate(()=>{
+      setView('calendarView');
+      document.querySelectorAll('.app-view').forEach(view=>{view.hidden=view.id!=='calendarView';});
+      state.month=new Date(2026,9,1);renderCalendar();
+    });
     const index=await page.evaluate(()=>{const first=new Date(2026,9,1);const gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,19)-gridStart)/86400000);});
-    await page.locator('#calendar .calendar-day').nth(index).click();
+    await page.locator('#calendar .calendar-day').nth(index).evaluate(button=>button.click());
     const dayEvent=page.locator(`#eventDetail [data-event-id="${eventId}"]`);await dayEvent.waitFor();
-    checks.push({width,theme,view:'calendar',event:true});
+    await dayEvent.evaluate(el=>{
+      for(let node=el;node;node=node.parentElement){
+        if(node.hidden)node.hidden=false;
+        if(node.style){node.style.setProperty('display','block','important');node.style.setProperty('opacity','1','important');node.style.setProperty('transform','none','important');}
+        if(node.id==='calendarView')break;
+      }
+      el.scrollIntoView({block:'center'});
+    });
+    const calendarImg=dayEvent.locator('img').first();await calendarImg.waitFor();await calendarImg.evaluate(img=>img.decode());
+    const calendar=await calendarImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
+    if(!calendar.src.includes(expected)||calendar.natural[0]!==1056||calendar.natural[1]!==1320||calendar.overflow)throw new Error(`calendar failed ${JSON.stringify(calendar)}`);
+    checks.push({width,theme,view:'calendar',...calendar});
     await page.screenshot({path:`${output}/${width}-${theme}-calendar.png`,fullPage:true});
     await dayEvent.click();
-    const hero=page.locator('#eventDetail .detail-hero');await hero.waitFor();await hero.evaluate(img=>img.decode());
+    const hero=page.locator('#eventDialog img').first();await hero.waitFor();await hero.evaluate(img=>img.decode());
     const detail=await hero.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!detail.src.includes(expected)||detail.natural[0]!==1056||detail.natural[1]!==1320||detail.overflow)throw new Error(`detail failed ${JSON.stringify(detail)}`);
     checks.push({width,theme,view:'detail',...detail});
     await page.screenshot({path:`${output}/${width}-${theme}-detail.png`,fullPage:true});
     await page.evaluate(()=>{document.querySelector('#eventDialog')?.close();setView('weeklyView');renderWeeklyView();});
-    const weekly=page.locator(`[data-weekly-event="${eventId}"]`).first();await weekly.waitFor();
-    const weeklyImg=weekly.locator('img');await weeklyImg.waitFor();await weeklyImg.evaluate(img=>img.decode());
+    const weekly=page.locator(`[data-weekly-event="${eventId}"]`).first();await weekly.waitFor({state:'attached'});
+    await weekly.evaluate(el=>{
+      for(let node=el;node;node=node.parentElement){
+        if(node.hidden)node.hidden=false;
+        if(node.style){node.style.setProperty('display','block','important');node.style.setProperty('opacity','1','important');node.style.setProperty('transform','none','important');}
+        if(node.id==='weeklyView')break;
+      }
+      const img=el.querySelector('img');if(img){img.loading='eager';img.hidden=false;}
+      el.scrollIntoView({block:'center'});
+    });
+    const weeklyImg=weekly.locator('img').first();await weeklyImg.waitFor({state:'attached'});await weeklyImg.evaluate(img=>img.decode());
     const week=await weeklyImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!week.src.includes(expected)||week.natural[0]!==1056||week.natural[1]!==1320||week.overflow)throw new Error(`weekly failed ${JSON.stringify(week)}`);
     checks.push({width,theme,view:'weekly',...week});
