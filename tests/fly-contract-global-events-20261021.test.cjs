@@ -23,7 +23,7 @@ test('Mandatory FLY contract: every published recurring worldwide event with exa
     assert.equal(core.eligible(e),true,'Missing from FLY event selector: '+e.id);
     const local=core.route(e,points,new Date('2026-01-01T00:00:00Z'));
     assert.equal(local.length,points.length,'Missing world route for '+e.id);
-    assert.equal(local.length,28,'Need all 28 world references for '+e.id);
+    assert.ok(local.length>=67,'Need the fully credited global point set for '+e.id);
     assert.ok(local.every(p=>Number.isFinite(+p.start)&&Number.isFinite(+p.end)&&p.start<p.end),'Bad time conversion: '+e.id);
     assert.ok(local.every(p=>Number.isFinite(p.lat)&&Number.isFinite(p.lon)),'Missing coordinates: '+e.id);
     for(let i=1;i<local.length;i++) assert.ok(local[i].start>=local[i-1].start,'Route not chronological: '+e.id);
@@ -36,7 +36,7 @@ test('Different event types automatically appear: Morelull, new November spotlig
     '2026-10-super-mega-raid-day','2026-10-26-max-monday-sableye']){
     const e=all.find(x=>x.id===id);assert.ok(e,id);
     assert.ok(scoped.some(x=>x.id===id),'Event missing from automatic Global coverage: '+id);
-    assert.equal(core.route(e,points,new Date('2026-01-01T00:00Z')).length,28,id);
+    assert.equal(core.route(e,points,new Date('2026-01-01T00:00Z')).length,points.length,id);
   }
 });
 
@@ -66,7 +66,7 @@ test('Permanent global route discovery automatically surfaces every nearby eligi
 });
 
 test('FLY route works as a permanent global event feature without false GPX claims',()=>{
-  assert.equal(points.length,28);
+  assert.ok(points.length>=67);
   assert.ok(points.every(p=>p.coordinate_type==='city_reference'));
   const future=all.filter(e=>e.status==='published'&&recurring.has(e.category)&&!hasExactLocalWindow(e));
   assert.ok(future.length>0);
