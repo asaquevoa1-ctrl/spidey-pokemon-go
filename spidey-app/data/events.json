@@ -100,7 +100,7 @@
       ],
       "news": {
         "title": "24/10 no Pokémon GO: quatro eventos, personagens corretos e prioridades sem correria",
-        "summary": "FC Seoul é presencial; City Safari vale para quem já tem ingresso e começa às 10h em Brasília; Trio Dinamax das 14h às 17h é opcional, sem prioridade máxima; Night Out e Twitch às 23h30. Confira o novo roteiro visual.",
+        "summary": "Roteiro do dia 24 com FC Seoul em destaque e Pokémon identificados corretamente por nome, sem miniaturas deformadas. City Safari Boston exige ingresso, o Trio do Lago não é a prioridade máxima e Twitch Night Out começa às 23h30 em Brasília.",
         "published_on": "2026-10-21"
       },
       "notifications": {
@@ -109,13 +109,13 @@
       },
       "status": "published",
       "verified_at": "2026-10-21",
-      "updated_at": "2026-10-21T18:45:00-03:00",
+      "updated_at": "2026-10-21T20:56:00-03:00",
       "art": {
-        "url": "assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+        "url": "assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
         "web_width": 1024,
         "web_height": 1536,
-        "web_sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
-        "alt": "Roteiro de 24/10: FC Seoul com Charmander e Charizard; City Safari com Eevee de chapéu de explorador, Flabébé, Hawlucha, Mudbray e Komala; Trio do Lago Dinamax; Night Out com Pikachu sem chapéu, Gengar e Toxtricity. Sem Solgaleo ou Lunala."
+        "web_sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
+        "alt": "Roteiro premium 24/10, com painel FC Seoul sem miniaturas distorcidas: Charmander reides, Charizard pesquisa temporária e Growlithe, Flareon, Torchic, Houndour, Litleo e Litten na natureza; Boston com Eevee de chapéu e Night Out com Pikachu sem chapéu."
       }
     },
     {
