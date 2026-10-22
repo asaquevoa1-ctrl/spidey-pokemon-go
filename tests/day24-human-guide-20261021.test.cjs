@@ -57,7 +57,7 @@ test('24 October guide separates globally accessible steps, regional-only activi
   assert.equal(e.locations.length,3);
   assert.deepEqual(e.locations.map(p=>p.coordinate_type),['stadium_venue_reference','landmark_reference','arena_venue_reference']);
   assert.ok(e.locations.every(p=>p.exact_raid_gym_verified===false));
-  for(const loc of e.locations) assert.ok(/^[-]?[0-9]+\\.[0-9]+,[-]?[0-9]+\\.[0-9]+$/.test(loc.coordinate_text));
+  for(const loc of e.locations) assert.ok(/^[-]?[0-9]+\.[0-9]+,[-]?[0-9]+\.[0-9]+$/.test(loc.coordinate_text));
   const companion=qa.artworks.find(a=>a.kind==='companion_coordinates');
   assert.equal(e.companion_art.url,companion.path.replace('spidey-app/',''));
   assert.equal(e.companion_art.web_sha256,companion.sha256);
