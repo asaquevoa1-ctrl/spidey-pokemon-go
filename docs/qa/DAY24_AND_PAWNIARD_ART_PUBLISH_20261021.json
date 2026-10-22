@@ -1,0 +1,89 @@
+{
+  "schema": "spidey-premium-publishing-v1",
+  "date": "2026-10-21",
+  "approval_basis": "USER_APPROVED_ART_AND_DELEGATED_VISUAL_QA",
+  "original_logo_file": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+  "original_logo_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+  "original_logo_overlay": "Exact original approved logo bytes used on each artwork with soft edge; no logo redrawn.",
+  "artworks": [
+    {
+      "event_id": "2026-10-24-spidey-full-day-guide",
+      "kind": "main_hero",
+      "path": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 577428,
+      "sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
+      "source": "User-reviewed final event flow graphic; info text for Seoul avoids distorted small Pokémon."
+    },
+    {
+      "event_id": "2026-10-24-spidey-full-day-guide",
+      "kind": "companion_coordinates",
+      "path": "spidey-app/assets/events/premium/spidey-2026-10-24-coordinates-reference-v1.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 611962,
+      "sha256": "a884a34f9c5b751379a0c407a91d1fe9aad0c14fa2b3b9743276f1e729a1b709",
+      "source": "Landmark reference coordinates verified independently; none claimed to be Gym or Power Spot."
+    },
+    {
+      "event_id": "2026-11-21-community-day-preview",
+      "kind": "event_hero",
+      "path": "spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 498658,
+      "sha256": "3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963",
+      "source": "User-approved original poster based on Pokémon GO official November 21 Pawniard Community Day."
+    }
+  ],
+  "coordinates": {
+    "fc_seoul": {
+      "lat": 37.56825,
+      "lon": 126.89724,
+      "type": "stadium reference, NOT verified raid Gym",
+      "event_access": "in-person only"
+    },
+    "boston_common": {
+      "lat": 42.35509,
+      "lon": -71.06791,
+      "type": "city reference, not required for global event",
+      "event_access": "ticket holders only, global"
+    },
+    "intuit_dome": {
+      "lat": 33.94377,
+      "lon": -118.34229,
+      "type": "arena reference, not verified raid Gym",
+      "event_access": "on-site only for Pokémon raids; Twitch Drop global"
+    },
+    "lake_trio": {
+      "lat": null,
+      "lon": null,
+      "type": "regional event, no unique coordinate"
+    }
+  },
+  "official_sources": [
+    "https://pokemongo.com/ko/news/fc-seoul-2026",
+    "https://pokemongo.com/news/city-safari-boston-rescheduled",
+    "https://pokemongo.com/news/dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+    "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+    "https://pokemongo.com/news/pokemon-night-out-twitch-drops2026",
+    "https://pokemongo.com/en/news/communityday-november-2026-pawniard"
+  ],
+  "regression_protections": [
+    "Old v1/v2/v3 day guide premium artwork remains unchanged",
+    "Mobile uses only left-side menu; desktop unaffected",
+    "Pawniard entry updated in place, not duplicated",
+    "Companion landmarks do not enable GPX or claim game-object coordinates",
+    "Every download is linked from event detail",
+    "City Safari ticket limitation remains explicit"
+  ],
+  "qa": {
+    "binary_sha256": "matched locally before GitHub transfer",
+    "dimensions": "1024x1536 all",
+    "user_visual_feedback": "approved previous three images",
+    "ci_tests": "pending",
+    "github_pages": "pending",
+    "real_samsung": "not physically retested"
+  }
+}

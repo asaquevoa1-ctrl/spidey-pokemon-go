@@ -2,14 +2,25 @@
   'use strict';
   const master = {
   "2026-10-24-spidey-full-day-guide": {
-    "file": "assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
+    "file": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1024,
     "height": 1536,
-    "sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
-    "approval_record": "docs/qa/DAY24_FC_SEOUL_TEXT_REPLACEMENT_20261021.json",
-    "approval_basis": "USER_CORRECTION_AND_DELEGATED_VISUAL_QA",
+    "sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
+    "approval_record": "docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json",
+    "approval_basis": "USER_APPROVED_ART_AND_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-11-21-community-day-preview": {
+    "file": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963",
+    "approval_record": "docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json",
+    "approval_basis": "USER_APPROVED_ART_AND_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-raids-yveltal": {
