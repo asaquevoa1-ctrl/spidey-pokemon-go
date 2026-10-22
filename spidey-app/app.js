@@ -484,6 +484,7 @@ function openEvent(event) {
         <p><small>Referências de locais, não coordenadas de Ginásios ou pontos exclusivos garantidos.</small></p>
       </div>` : ''}`}
       <div class="action-row">
+        ${event.id==='2026-10-22-spotlight-morelull' ? '<button class="action-btn gold" id="openMorelullFly" type="button">🍄 Ver rota mundial no FLY</button>' : ''}
         ${['2026-10-24-spidey-full-day-guide','2026-11-21-community-day-preview'].includes(event.id) && event.art?.url ? `<a class="action-btn gold" download href="${eventImage(event)}">Baixar pôster Premium</a>` : ''}
         ${event.gpx?.enabled !== false && (event.locations || []).length ? '<button id="downloadGpx" class="action-btn gold">Baixar GPX</button>' : ''}
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">${event.source.confidence === 'official' ? 'Anúncio oficial' : 'Ver fonte'}</a>` : ''}
@@ -496,6 +497,7 @@ function openEvent(event) {
     await navigator.clipboard.writeText(button.dataset.value);
     showToast('Coordenadas copiadas.');
   }));
+  detail.querySelector('#openMorelullFly')?.addEventListener('click', () => window.SpideyFly?.open('2026-10-22-spotlight-morelull'));
   detail.querySelector('#downloadGpx')?.addEventListener('click', () => downloadGpx(event));
   showAppDialog();
 }
