@@ -6,6 +6,9 @@ Este documento registra a decisão editorial soberana do projeto Spidey Pokémon
 
 Uma arte não é considerada pronta apenas porque existe um arquivo de imagem. Para entrar no canal de aprovação, precisa cumprir o Gold Standard visual do Spidey.
 
+## Precedência da identidade (22/10/2026)
+A decisão do responsável em 19/10/2026 substituiu a identidade da aranha pelo S cósmico dourado. O arquivo `AGENTS.md` e `config/spidey-governance.json` são a referência atual; nunca voltar à aranha antiga, mesmo em tarefas automáticas. Todas as artes Premium aprovadas anteriormente permanecem intocadas.
+
 ## Identidade obrigatória
 
 - formato vertical e mobile-first;
@@ -17,7 +20,7 @@ Uma arte não é considerada pronta apenas porque existe um arquivo de imagem. P
 - informações factuais em blocos integrados à composição quando houver dados confirmados;
 - cabeçalho editorial SPIDEY / POKÉMON GO / NOTÍCIAS • EVENTOS • COMUNIDADE;
 - slogan SEMPRE UM PASSO À FRENTE quando aplicável;
-- logotipo circular oficial Spidey Pokémon GO, usando o arquivo real `assets/spidey-logo-oficial.jpg`, aplicado pelo sistema e não recriado por IA;
+- emblema **S cósmico dourado original** aprovado em 19/10/2026, usando o arquivo oficial `spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png` (SHA-256 `4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8`), aplicado a partir do arquivo existente e nunca redesenhado por IA; o logotipo circular antigo é preservado apenas como histórico;
 - fonte editorial no rodapé;
 - texto em PT-BR, preservando nomes oficiais, Pokémon e marcas quando necessário.
 
