@@ -17,3 +17,20 @@
 .fly-spotlight-feature .eyebrow{color:#e5c776}
 .fly-spotlight-feature button{min-height:44px}
 @media(max-width:640px){.fly-spotlight-feature{padding:17px}.fly-spotlight-feature button{width:100%}}
+
+
+/* Rotas automáticas para TODOS os eventos globais com horário definido. */
+.fly-upcoming-routes[hidden]{display:none!important}
+.fly-upcoming-routes{margin:18px 0 20px}
+.fly-upcoming-routes h2{font-size:1rem;letter-spacing:.1em;margin:0 0 10px;color:var(--text,#eff5ff)}
+.fly-upcoming-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}
+.fly-upcoming-item{
+  display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:6px;
+  padding:15px 17px;min-height:74px;border-radius:14px;
+  border:1px solid rgba(130,181,228,.48);background:linear-gradient(140deg,#092442,#123253);
+  color:#fff;font:inherit;cursor:pointer
+}
+.fly-upcoming-item span{font-weight:800}
+.fly-upcoming-item small{color:#c5dcf3;line-height:1.45}
+.fly-upcoming-item:focus-visible{outline:3px solid #e7bd66;outline-offset:2px}
+@media(max-width:640px){.fly-upcoming-items{grid-template-columns:1fr}}
