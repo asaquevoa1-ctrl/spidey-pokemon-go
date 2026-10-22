@@ -478,7 +478,8 @@
       "tags": [
         "Novembro 2026",
         "Calendário",
-        "Pokémon GO"
+        "Pokémon GO",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
@@ -527,7 +528,14 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-11-18-raid-hour-cresselia-darkrai",
@@ -538,7 +546,8 @@
       "tags": [
         "Novembro 2026",
         "Calendário",
-        "Pokémon GO"
+        "Pokémon GO",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
@@ -590,7 +599,14 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-11-25-raid-hour-deoxys",
@@ -601,7 +617,8 @@
       "tags": [
         "Novembro 2026",
         "Calendário",
-        "Pokémon GO"
+        "Pokémon GO",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
@@ -657,7 +674,14 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-11-02-max-machop",
@@ -897,7 +921,8 @@
       "tags": [
         "Novembro 2026",
         "Calendário",
-        "Pokémon GO"
+        "Pokémon GO",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
@@ -946,7 +971,14 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-11-26-spotlight-noibat",
@@ -957,7 +989,8 @@
       "tags": [
         "Novembro 2026",
         "Calendário",
-        "Pokémon GO"
+        "Pokémon GO",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
@@ -1006,7 +1039,14 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-11-07-shadow-tornadus-weekend",
@@ -2830,7 +2870,8 @@
       "tags": [
         "Staraptor",
         "Super Mega",
-        "Raid Day"
+        "Raid Day",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO • calendário setembro 2026",
@@ -2864,7 +2905,14 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-09-choose-your-path",
@@ -7138,7 +7186,8 @@
       "tags": [
         "Max Monday",
         "Dynamax",
-        "Sizzlipede"
+        "Sizzlipede",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO Hub • calendário outubro 2026",
@@ -7172,7 +7221,14 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-10-12-max-monday-rookidee",
@@ -7183,7 +7239,8 @@
       "tags": [
         "Max Monday",
         "Dynamax",
-        "Rookidee"
+        "Rookidee",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO Hub • calendário outubro 2026",
@@ -7217,7 +7274,14 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-10-19-max-monday-sneasel",
@@ -7228,7 +7292,8 @@
       "tags": [
         "Max Monday",
         "Dynamax",
-        "Sneasel"
+        "Sneasel",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO • programação oficial de outubro de 2026",
@@ -7262,7 +7327,14 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-10-26-max-monday-sableye",
@@ -7273,7 +7345,8 @@
       "tags": [
         "Max Monday",
         "Dynamax",
-        "Sableye"
+        "Sableye",
+        "Global"
       ],
       "source": {
         "name": "Pokémon GO • programação oficial de outubro de 2026",
@@ -7316,7 +7389,14 @@
           60
         ]
       },
-      "status": "published"
+      "status": "published",
+      "fly_world_route": {
+        "enabled": true,
+        "scope": "worldwide_local_time",
+        "coordinates": "city_references",
+        "generated_by": "spidey_fly_core",
+        "timezone_conversion": "America/Sao_Paulo"
+      }
     },
     {
       "id": "2026-10-raids-yveltal",
