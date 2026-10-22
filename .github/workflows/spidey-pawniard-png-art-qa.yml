@@ -1,0 +1,47 @@
+name: Spidey Pawniard PNG Art QA
+
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_day24_png_art_browser.mjs'
+      - '.github/workflows/spidey-pawniard-png-art-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  responsive-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install browser harness
+        run: npm install --no-save --no-package-lock playwright-core
+      - name: Validate Pawniard in calendar, week and detail
+        env:
+          SPIDEY_QA_EVENT_ID: 2026-11-21-community-day-preview
+          SPIDEY_QA_APPROVED_ART: assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png
+          SPIDEY_QA_OUTPUT: test-results/pawniard-png-art
+          SPIDEY_QA_WEEK_DATE: '2026-11-16'
+          SPIDEY_QA_FIXED_TIME: '2026-11-21T12:00:00-03:00'
+          SPIDEY_QA_CALENDAR_YEAR: '2026'
+          SPIDEY_QA_CALENDAR_MONTH: '11'
+          SPIDEY_QA_CALENDAR_DAY: '21'
+        run: |
+          mkdir -p test-results/pawniard-png-art
+          command -v google-chrome | tee test-results/pawniard-png-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_day24_png_art_browser.mjs 2>&1 | tee test-results/pawniard-png-art/run.log
+      - name: Upload responsive evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pawniard-png-art-responsive-preview
+          path: test-results/pawniard-png-art
