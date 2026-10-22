@@ -49,6 +49,14 @@ test('Original LendáriosBrasil/FlyGPS/PokemonTrail/Fantasma credits are stored 
   assert.equal(doc.source_list_2023.original_last_updated,'2023-11-06');
   assert.ok(doc.source_list_2023.dates_disclaimer.includes('2023'));
   assert.equal(doc.rules.respect_daylight_saving,true);
+  assert.equal(doc.rules.show_portugal_time_comparison,false,'Portugal hours must NEVER be compared');
+  assert.equal(doc.rules.keep_portugal_as_geographic_reference,true);
+  assert.equal(doc.rules.display_clock_columns.join(','),'horario_local_destino,horario_brasilia');
+  assert.ok(doc.source_list_2023.early_project_evidence.includes('e08cf8eb7c6fd5b6df87dcf1a467c286a0c5295f'));
+  const constitution=fs.readFileSync('SPIDEY_APP_CONSTITUTION.md','utf8');
+  assert.match(constitution,/NÃO exibirá coluna\/conversão de horário de Portugal/);
+  assert.ok(constitution.includes('lista histórica fornecida pelo projeto'));
+
   const ui=read('fly-v1.js');
   assert.ok(ui.includes('id="flySourceCredits"'));
   assert.ok(ui.includes('source.credits'));
