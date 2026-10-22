@@ -2,7 +2,8 @@
   'use strict';
   const categories=new Set(['spotlight_hour','raid_hour','community_day','community_day_classic','max_monday','max_battle_day','raid_day','research_day','hatch_day','incense_day']);
   let pointsPromise;
-  function eligible(e){return e?.status==='published'&&categories.has(e.category)&&(e.tags||[]).some(t=>String(t).toLowerCase()==='global')&&!!e.schedule?.start_local&&!!e.schedule?.end_local}
+  const validLocalClock=/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/;
+  function eligible(e){return e?.status==='published'&&categories.has(e.category)&&(e.tags||[]).some(t=>String(t).toLowerCase()==='global')&&validLocalClock.test(e.schedule?.start_local||'')&&validLocalClock.test(e.schedule?.end_local||'')}
   function parts(date,zone){const p={};new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date).forEach(x=>{if(x.type!=='literal')p[x.type]=Number(x.value)});return p}
   function localToDate(day,clock,zone){
     if(!/^\d{4}-\d{2}-\d{2}$/.test(day||'')||!/^\d{2}:\d{2}$/.test(clock||''))return null;
