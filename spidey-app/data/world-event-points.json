@@ -12,12 +12,14 @@
     {
       "order": 1,
       "flag": "🇰🇮",
-      "name": "Kiritimati, Kiribati",
+      "name": "Kiritimati Lagoon, Kiribati",
       "timezone": "Pacific/Kiritimati",
       "lat": 1.987149,
       "lon": -157.477137,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 2,
@@ -27,7 +29,9 @@
       "lat": -36.852095,
       "lon": 174.76318,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 3,
@@ -37,17 +41,21 @@
       "lat": -33.866173,
       "lon": 151.205945,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 4,
       "flag": "🇯🇵",
-      "name": "Shinjuku, Japão",
+      "name": "Shinjuku Central Park, Japão",
       "timezone": "Asia/Tokyo",
       "lat": 35.68895,
       "lon": 139.69054,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 5,
@@ -62,12 +70,14 @@
     {
       "order": 6,
       "flag": "🇮🇳",
-      "name": "Chennai, Índia",
+      "name": "Tamil Nadu (Chennai), Índia",
       "timezone": "Asia/Kolkata",
       "lat": 13.0403,
       "lon": 80.2666,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 7,
@@ -77,7 +87,9 @@
       "lat": 25.07675,
       "lon": 55.13294,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 8,
@@ -92,12 +104,14 @@
     {
       "order": 9,
       "flag": "🇪🇸",
-      "name": "Zaragoza, Espanha",
+      "name": "Saragoça, Espanha",
       "timezone": "Europe/Madrid",
       "lat": 41.661609,
       "lon": -0.89464,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 10,
@@ -107,7 +121,9 @@
       "lat": 51.501,
       "lon": -0.1246,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 11,
@@ -117,7 +133,9 @@
       "lat": 14.910725,
       "lon": -23.527823,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 12,
@@ -127,7 +145,9 @@
       "lat": -3.8401,
       "lon": -32.41181,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 13,
@@ -147,7 +167,9 @@
       "lat": 40.7803,
       "lon": -73.963,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 15,
@@ -157,7 +179,9 @@
       "lat": 41.898659,
       "lon": -87.623077,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 16,
@@ -177,7 +201,9 @@
       "lat": 37.8095,
       "lon": -122.4101,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 18,
@@ -187,27 +213,33 @@
       "lat": 61.217019,
       "lon": -149.891609,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 19,
       "flag": "🇺🇸",
-      "name": "Honolulu, Havaí",
+      "name": "Kalakaua Ave, Honolulu",
       "timezone": "Pacific/Honolulu",
       "lat": 21.2658,
       "lon": -157.8213,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 20,
       "flag": "🇦🇸",
-      "name": "Pago Pago, Samoa Americana",
+      "name": "Fagatogo, Samoa Americana",
       "timezone": "Pacific/Pago_Pago",
       "lat": -14.277739,
       "lon": -170.688512,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 21,
@@ -217,7 +249,9 @@
       "lat": 34.65011,
       "lon": 135.5105,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 22,
@@ -227,27 +261,33 @@
       "lat": 25.0444,
       "lon": 121.5296,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 23,
       "flag": "🇭🇰",
-      "name": "Hong Kong, Hong Kong",
+      "name": "Hong Kong",
       "timezone": "Asia/Hong_Kong",
       "lat": 22.277957,
       "lon": 114.15616,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 24,
       "flag": "🇮🇩",
-      "name": "Jacarta, Indonésia",
+      "name": "Jakarta, Indonésia",
       "timezone": "Asia/Jakarta",
       "lat": -6.175554,
       "lon": 106.827587,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 25,
@@ -257,27 +297,33 @@
       "lat": 40.626936,
       "lon": 22.952342,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 26,
       "flag": "🇮🇹",
-      "name": "Roma, Itália",
+      "name": "Coliseu, Roma, Itália",
       "timezone": "Europe/Rome",
       "lat": 41.889988,
       "lon": 12.493033,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 27,
       "flag": "🇧🇷",
-      "name": "Ibirapuera, São Paulo, Brasil",
+      "name": "Ibirapuera, São Paulo",
       "timezone": "America/Sao_Paulo",
       "lat": -23.5841713,
       "lon": -46.66072464,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 28,
@@ -287,7 +333,534 @@
       "lat": -34.608403,
       "lon": -58.372164,
       "coordinate_type": "city_reference",
-      "essential": false
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 29,
+      "flag": "🇼🇸",
+      "name": "Fagali'i, Samoa",
+      "timezone": "Pacific/Apia",
+      "lat": -13.831357,
+      "lon": -171.766401,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 30,
+      "flag": "🇳🇿",
+      "name": "Wellington Botanic Garden, Nova Zelândia",
+      "timezone": "Pacific/Auckland",
+      "lat": -41.2846675,
+      "lon": 174.7664883,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 31,
+      "flag": "🇦🇺",
+      "name": "Melbourne, Austrália",
+      "timezone": "Australia/Melbourne",
+      "lat": -37.817509,
+      "lon": 144.963305,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 32,
+      "flag": "🇦🇺",
+      "name": "Royal Botanic Garden, Sydney",
+      "timezone": "Australia/Sydney",
+      "lat": -33.8642,
+      "lon": 151.217819,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 33,
+      "flag": "🇰🇷",
+      "name": "Busan, Coreia do Sul",
+      "timezone": "Asia/Seoul",
+      "lat": 35.154379,
+      "lon": 129.06044,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 34,
+      "flag": "🇰🇷",
+      "name": "Seoul, Coreia do Sul",
+      "timezone": "Asia/Seoul",
+      "lat": 37.511304,
+      "lon": 127.0982,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 35,
+      "flag": "🇯🇵",
+      "name": "Tottori-shi, Japão",
+      "timezone": "Asia/Tokyo",
+      "lat": 35.544,
+      "lon": 134.232,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 36,
+      "flag": "🇯🇵",
+      "name": "Nagoya, Japão",
+      "timezone": "Asia/Tokyo",
+      "lat": 35.1553,
+      "lon": 136.91978,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 37,
+      "flag": "🇯🇵",
+      "name": "Tokyo Disneyland, Japão",
+      "timezone": "Asia/Tokyo",
+      "lat": 35.6312,
+      "lon": 139.88,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 38,
+      "flag": "🇸🇬",
+      "name": "Singapura, Cingapura",
+      "timezone": "Asia/Singapore",
+      "lat": 1.2924,
+      "lon": 103.8476,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 39,
+      "flag": "🇲🇻",
+      "name": "Malé, Maldivas",
+      "timezone": "Indian/Maldives",
+      "lat": 4.175236,
+      "lon": 73.50956,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 40,
+      "flag": "🇹🇲",
+      "name": "Asgabate, Turcomenistão",
+      "timezone": "Asia/Ashgabat",
+      "lat": 37.8863,
+      "lon": 58.38313,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 41,
+      "flag": "🇴🇲",
+      "name": "Muscat, Omã",
+      "timezone": "Asia/Muscat",
+      "lat": 23.62462,
+      "lon": 58.57885,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 42,
+      "flag": "🇦🇿",
+      "name": "Baku, Azerbaijão",
+      "timezone": "Asia/Baku",
+      "lat": 40.36833,
+      "lon": 49.842,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 43,
+      "flag": "🇹🇷",
+      "name": "İzmir, Turquia",
+      "timezone": "Europe/Istanbul",
+      "lat": 38.462347,
+      "lon": 27.216953,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 44,
+      "flag": "🇮🇱",
+      "name": "Jerusalém, Israel",
+      "timezone": "Asia/Jerusalem",
+      "lat": 31.77796,
+      "lon": 35.21913,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 45,
+      "flag": "🇬🇷",
+      "name": "Caminho da Felicidade, Grécia",
+      "timezone": "Europe/Athens",
+      "lat": 35.352,
+      "lon": 25.1561,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 46,
+      "flag": "🇪🇸",
+      "name": "Caminho da Felicidade, Espanha",
+      "timezone": "Europe/Madrid",
+      "lat": 38.9951,
+      "lon": -0.1445,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 47,
+      "flag": "🇫🇷",
+      "name": "Caminho da Felicidade, França",
+      "timezone": "Europe/Paris",
+      "lat": 51.0564,
+      "lon": 2.3408,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 48,
+      "flag": "🇮🇹",
+      "name": "Veneza, Itália",
+      "timezone": "Europe/Rome",
+      "lat": 45.435752,
+      "lon": 12.322317,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 49,
+      "flag": "🇭🇺",
+      "name": "Budapeste, Hungria",
+      "timezone": "Europe/Budapest",
+      "lat": 47.531612,
+      "lon": 19.053035,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 50,
+      "flag": "🇮🇨",
+      "name": "Las Palmas, Canárias, Espanha",
+      "timezone": "Atlantic/Canary",
+      "lat": 28.128966,
+      "lon": -15.433923,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 51,
+      "flag": "🇬🇧",
+      "name": "Caminho da Felicidade, Reino Unido",
+      "timezone": "Europe/London",
+      "lat": 51.5143,
+      "lon": 0.7236,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 52,
+      "flag": "🇮🇪",
+      "name": "St Stephen's Green, Dublin, Irlanda",
+      "timezone": "Europe/Dublin",
+      "lat": 53.3381095,
+      "lon": -6.2592388,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 53,
+      "flag": "🇵🇹",
+      "name": "Ponta Delgada, Açores, Portugal",
+      "timezone": "Atlantic/Azores",
+      "lat": 37.742199,
+      "lon": -25.655522,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 54,
+      "flag": "🇧🇷",
+      "name": "Consolação, São Paulo",
+      "timezone": "America/Sao_Paulo",
+      "lat": -23.550442,
+      "lon": -46.656972,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 55,
+      "flag": "🇧🇷",
+      "name": "Quinta da Boa Vista, Rio de Janeiro",
+      "timezone": "America/Sao_Paulo",
+      "lat": -22.906534,
+      "lon": -43.223197,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 56,
+      "flag": "🇧🇷",
+      "name": "Parque Madureira, Rio de Janeiro",
+      "timezone": "America/Sao_Paulo",
+      "lat": -22.868689,
+      "lon": -43.341303,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 57,
+      "flag": "🇺🇾",
+      "name": "Montevidéu, Uruguai",
+      "timezone": "America/Montevideo",
+      "lat": -34.901112,
+      "lon": -56.164532,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 58,
+      "flag": "🇻🇪",
+      "name": "Caracas, Venezuela",
+      "timezone": "America/Caracas",
+      "lat": 10.506098,
+      "lon": -66.914602,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 59,
+      "flag": "🇺🇸",
+      "name": "Downtown, Nova York",
+      "timezone": "America/New_York",
+      "lat": 40.716759,
+      "lon": -73.998935,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 60,
+      "flag": "🇨🇦",
+      "name": "City Hall, Toronto, Canadá",
+      "timezone": "America/Toronto",
+      "lat": 43.65331,
+      "lon": -79.384008,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 61,
+      "flag": "🇨🇺",
+      "name": "Havana, Cuba",
+      "timezone": "America/Havana",
+      "lat": 23.113592,
+      "lon": -82.366592,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 62,
+      "flag": "🇪🇨",
+      "name": "Guayaquil, Equador",
+      "timezone": "America/Guayaquil",
+      "lat": -2.1038715,
+      "lon": -79.90718,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 63,
+      "flag": "🇺🇸",
+      "name": "Caminho da Felicidade, Texas",
+      "timezone": "America/Chicago",
+      "lat": 29.3646,
+      "lon": -94.8102,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 64,
+      "flag": "🇲🇽",
+      "name": "Cidade do México, México",
+      "timezone": "America/Mexico_City",
+      "lat": 19.435359,
+      "lon": -99.145402,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 65,
+      "flag": "🇨🇦",
+      "name": "Calgary, Alberta, Canadá",
+      "timezone": "America/Edmonton",
+      "lat": 51.046315,
+      "lon": -114.071824,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 66,
+      "flag": "🇺🇸",
+      "name": "Union Square, São Francisco",
+      "timezone": "America/Los_Angeles",
+      "lat": 37.787993,
+      "lon": -122.407437,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 67,
+      "flag": "🇨🇦",
+      "name": "Sutcliffe Park, Vancouver",
+      "timezone": "America/Vancouver",
+      "lat": 49.26906,
+      "lon": -123.13451,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 68,
+      "flag": "🇺🇸",
+      "name": "Fairbanks, Alasca",
+      "timezone": "America/Anchorage",
+      "lat": 64.83895,
+      "lon": -147.71456,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 69,
+      "flag": "🇵🇫",
+      "name": "Mangareva, Polinésia Francesa",
+      "timezone": "Pacific/Gambier",
+      "lat": -23.120088,
+      "lon": -134.96967,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 70,
+      "flag": "🇵🇫",
+      "name": "Rarotonga, Ilhas Cook",
+      "timezone": "Pacific/Rarotonga",
+      "lat": -21.208,
+      "lon": -159.77221,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
+    },
+    {
+      "order": 71,
+      "flag": "🇺🇸",
+      "name": "Midway Island",
+      "timezone": "Pacific/Midway",
+      "lat": 28.211279,
+      "lon": -177.373023,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     }
-  ]
+  ],
+  "source_list_2023": {
+    "original_list_date": "2023-11-10",
+    "original_last_updated": "2023-11-06",
+    "credits": "Siga-nos em:\n👉LendáriosBrasil\n👉FlyGPS\n👉PokemonTrail\n\n❌NÃO EDITE OU TIRE OS CRÉDITOS❌\n✅Lista atualizada em 06/11/2023✅\n⚠️REPORTE PUBLICAÇÕES NOSSAS SEM CRÉDITOS OU EM FORMATO DE PLÁGIO⚠️\n\n👁‍🗨 Horários revisados por:\n👻 Fantasma 👻",
+    "credits_display": "Créditos das coordenadas de referência: LendáriosBrasil · FlyGPS · PokemonTrail. Horários da lista original revisados por 👻 Fantasma 👻 (06/11/2023).",
+    "dates_disclaimer": "Lista histórica de 10/11/2023. Horários de referência originalmente publicados não devem ser copiados para outras datas. A conversão Brasília deve usar timezone IANA e a data real de cada evento.",
+    "source_type": "user_supplied_historical_reference",
+    "original_points_count": 67
+  }
 }
