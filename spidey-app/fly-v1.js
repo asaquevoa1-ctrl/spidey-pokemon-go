@@ -41,8 +41,11 @@
         </div><button class="action-btn gold" type="button" data-fly-morespotlight>Ver rota do Morelull →</button>`;
       }
     }
-    if(points.length && (!selected||!list.some(e=>e.id===selected)))
+    if(points.length && (!selected||!list.some(e=>e.id===selected))){
       selected=spotlight?.e.id||list.find(e=>core.route(e,points,now).some(p=>p.end>now))?.id||list.at(-1)?.id||'';
+      // No primeiro acesso ao Holofote, mostrar TODOS os pontos do mundo.
+      if(selected===MORELULL_ID)mode='all';
+    }
     const signature=JSON.stringify(list.map(e=>[e.id,e.title]));if(select.dataset.signature!==signature){select.innerHTML=list.map(e=>`<option value="${esc(e.id)}">${esc(e.title.replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:'))}</option>`).join('');select.dataset.signature=signature}select.value=selected;
     const e=list.find(e=>e.id===selected),all=e?core.route(e,points,now):[],rows=mode==='essential'?all.filter(p=>p.essential):all;
     const summary=s.querySelector('#flyEventSummary'),summaryKey=JSON.stringify([selected,e?.updated_at,e?.title]);if(summary&&summary.dataset.event!==summaryKey){summary.innerHTML=window.SpideyPlayer?.panel(e,{fly:true})||'';summary.dataset.event=summaryKey;}
