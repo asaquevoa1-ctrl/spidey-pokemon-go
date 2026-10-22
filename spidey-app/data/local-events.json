@@ -2,6 +2,43 @@
   "schema_version": "spidey-local-events-v1",
   "events": [
     {
+      "id": "2026-10-31-dia-de-muertos-paseo-reforma",
+      "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
+      "place": "Avenida Paseo de la Reforma, Cidade do México, México",
+      "dates": "31 out 14h – 05 nov 20h (Cidade do México)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Evento presencial restrito à área de Paseo de la Reforma, em separado do Día de Muertos regional para todo o México. Ginásios, Poképaradas e Pontos de Energia participantes não têm coordenadas exatas confirmadas no anúncio.",
+      "schedule": {
+        "start_date": "2026-10-31",
+        "start_time": "14:00",
+        "end_date": "2026-11-05",
+        "end_time": "20:00",
+        "timezone": "America/Mexico_City"
+      },
+      "source": {
+        "name": "Pokémon GO • comunicado oficial México",
+        "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária exclusiva na área do evento: Cubone, Sunflora, Duskull com coroa/Fundo de Localização, Drifloon, Litwick, Flabébé, Phantump, Fuecoco e Fidough.",
+        "Caça aos Selos GO em Poképaradas e Ginásios selecionados: Duskull com coroa e Fundo de Localização e Doces Duskull.",
+        "Metade do custo de Poeira Estelar nas trocas dentro da área de evento.",
+        "Módulos Atrair ativados durante o evento duram três horas.",
+        "Maior chance de ajuda na captura para quem tiver companheiro Grande Companheiro ou superior.",
+        "Batalhas Max de seis estrelas com Gengar Gigamax, com chance de Brilhante e Fundo de Localização."
+      ],
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "A avenida é a referência geográfica publicada; não há pontos exatos de Ginásios/Poképaradas disponíveis para copiar ou gerar GPX."
+      },
+      "verified_at": "2026-10-22",
+      "detail_title": "Día de Muertos • Paseo de la Reforma"
+    },
+    {
       "id": "2026-10-17-nice-regional",
       "title": "Regional Pokémon de Nice • 17–18 de outubro",
       "place": "Palais des Expositions, Nice, França",
