@@ -68,8 +68,20 @@
       "changed_region": "154x154 at x=18,y=6",
       "pixels_outside_region_changed": 0
     },
-    "visual_qa": "PASSED_LOCAL_PREVIEW",
-    "responsive_qa": "PENDING_CI",
+    "visual_qa": "PASSED_LOCAL_AND_CI_ARTIFACT_REVIEW",
+    "responsive_qa": {
+      "status": "PASSED_PREVIEW",
+      "workflow_run": 39874501927,
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39874501927",
+      "artifact_id": 12467533434,
+      "artifact_digest": "sha256:b765a5b78add9e28e763ab3576ba1cae57f1ecaf0bfa583f2eddc51572a77679",
+      "views": ["calendar", "weekly", "detail"],
+      "widths": [390, 1280],
+      "themes": ["light", "dark"],
+      "checks": 12,
+      "overflow_failures": 0,
+      "artifact_visually_inspected": true
+    },
     "github_pages": "PENDING",
     "physical_android_tested": false
   }
