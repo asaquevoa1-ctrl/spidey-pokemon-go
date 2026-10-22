@@ -19,7 +19,8 @@
           "tags": [
             "Max Monday",
             "Dynamax",
-            "Sneasel"
+            "Sneasel",
+            "Global"
           ],
           "start_brazil": "2026-10-19T18:00:00-03:00",
           "end_brazil": "2026-10-19T19:00:00-03:00",
@@ -705,7 +706,8 @@
         "tags": [
           "Max Monday",
           "Dynamax",
-          "Sneasel"
+          "Sneasel",
+          "Global"
         ],
         "start_brazil": "2026-10-19T18:00:00-03:00",
         "end_brazil": "2026-10-19T19:00:00-03:00",
@@ -1031,7 +1033,7 @@
     "events_without_weekly_art": 3,
     "events_in_weekly": 24,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-21T22:46:46.262242-03:00",
+    "generated_at": "2026-10-22T00:23:55.234449-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
