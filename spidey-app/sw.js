@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261021-eevee-only-hat-v2';
+const CACHE = 'spidey-app-20261021-seoul-text-v3';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -17,6 +17,7 @@ const CORE = [
   './assets/branding/20261019/spidey-icon-cosmic-512.png',
   './assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp',
   './assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp',
+  './assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp',
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
   './assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png',

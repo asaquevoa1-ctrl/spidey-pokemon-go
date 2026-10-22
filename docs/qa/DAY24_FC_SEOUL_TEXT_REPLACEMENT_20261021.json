@@ -1,0 +1,66 @@
+{
+  "schema": "spidey-visual-correction-v3",
+  "event_id": "2026-10-24-spidey-full-day-guide",
+  "created_on": "2026-10-21",
+  "status": "READY_FOR_CI",
+  "issue": "AI miniatures distorted Houndour, Litleo, Litten and could misrepresent Pokémon",
+  "strategy": "Preserve the previously reviewed poster and replace ONLY the FC Seoul thumbnail grid with crisp typeset official list; no generated species drawings in the inset",
+  "source_art": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+  "revised_art": "spidey-app/assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
+  "sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
+  "git_blob_sha": "b0d56e3e5b322a7870f471f7958020cece8ac363",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 536638,
+  "format": "webp",
+  "user_requests": {
+    "use_correct_pokemon": true,
+    "alternative_text_layout_accepted": true,
+    "remove_mobile_timezone_adjustment_tip": true
+  },
+  "official_verified": {
+    "source": "https://pokemongo.com/ko/news/fc-seoul-2026",
+    "event_date": "2026-10-24",
+    "time_kst": "09:00–20:00",
+    "time_brasilia": "2026-10-23 21:00 to 2026-10-24 08:00",
+    "raid_1star": [
+      "Charmander"
+    ],
+    "raid_remote_pass_allowed": false,
+    "timed_research": [
+      "Charizard with Location Background"
+    ],
+    "wild": [
+      "Growlithe",
+      "Flareon",
+      "Torchic",
+      "Houndour",
+      "Litleo",
+      "Litten"
+    ]
+  },
+  "visual_details": {
+    "exact_approved_cosmic_S_logo_preserved": true,
+    "fc_seoul_main_charmander_charizard_untouched": true,
+    "no_species_thumbnails_in_seoul_info_panel": true,
+    "only_eevee_has_explorer_hat_in_boston": true,
+    "pikachu_hatless_night_out": true,
+    "removed_time_zone_setting_instruction": true,
+    "new_first_tip": "Confira as janelas dos eventos.",
+    "other_event_panels_preserved": true,
+    "previous_versions_preserved": true
+  },
+  "pixel_QA": {
+    "verified_dimensions": true,
+    "original_logo_region_mean_absolute_pixel_difference": "3.68/255, WebP re-encoding only",
+    "seoul_text_panel_mean_absolute_pixel_difference": "45.69/255, deliberate replacement",
+    "boston_panel_mean_absolute_pixel_difference": "3.33/255, WebP re-encoding only"
+  },
+  "qa": {
+    "manual_crop_visual_inspection": true,
+    "original_approved_logo_reused_pixelwise": true,
+    "node_tests": "pending",
+    "github_pages_deploy": "pending",
+    "real_Samsung_device": "pending"
+  }
+}

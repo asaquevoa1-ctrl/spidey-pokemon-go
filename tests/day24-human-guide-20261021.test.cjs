@@ -31,8 +31,8 @@ test('24 October guide separates globally accessible steps, regional-only activi
   for (const v of e.verification_sources) assert.ok(v.url.startsWith('https://'), 'Cada referência precisa ser link seguro');
 
   assert.ok(e.notes.every(n => !/Morelull/i.test(n)));
-  const approvedPath='spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp';
-  const sha='fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d';
+  const approvedPath='spidey-app/assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp';
+  const sha='cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e';
   assert.equal(e.art.url,approvedPath.replace('spidey-app/',''));
   assert.equal(e.art.web_sha256,sha);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(approvedPath)).digest('hex'),sha);
@@ -45,20 +45,27 @@ test('24 October guide separates globally accessible steps, regional-only activi
   const sw=fs.readFileSync('spidey-app/sw.js','utf8');
   assert.ok(sw.includes('./'+e.art.url),'Offline cache must contain the approved flow image');
   assert.match(sw,/const CACHE = 'spidey-app-2026[0-9]{4}-[^']+'/,'Service worker must version Android updates');
-  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261021-eevee-hat-v2'));
+  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261021-seoul-text-v3'));
 
-  const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_FLOW_EEVEE_HAT_CORRECTION_20261021.json','utf8'));
+  const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_FC_SEOUL_TEXT_REPLACEMENT_20261021.json','utf8'));
   assert.equal(qa.sha256,sha);
-  assert.ok(qa.identity.original_s_file.includes('spidey-icon-cosmic-512.png'));
-  assert.equal(qa.facts.pokemon_night_out[0],'Pikachu (SEM CHAPÉU)');
-  assert.ok(qa.facts.city_safari_boston.includes('Eevee com chapéu de explorador'));
-  assert.ok(!qa.facts.city_safari_boston.includes('Pikachu'));
-  assert.equal(qa.identity.used_exact_file,true);
+  assert.equal(qa.visual_details.no_species_thumbnails_in_seoul_info_panel,true);
+  assert.equal(qa.visual_details.exact_approved_cosmic_S_logo_preserved,true);
+  assert.equal(qa.visual_details.removed_time_zone_setting_instruction,true);
+  assert.equal(qa.bytes,fs.statSync(approvedPath).size);
+  assert.deepEqual(qa.official_verified.wild,['Growlithe','Flareon','Torchic','Houndour','Litleo','Litten']);
+  assert.deepEqual(qa.official_verified.raid_1star,['Charmander']);
+  assert.deepEqual(qa.official_verified.timed_research,['Charizard with Location Background']);
+  assert.equal(qa.official_verified.raid_remote_pass_allowed,false);
+  assert.ok(fs.existsSync('spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp'));
+  assert.ok(fs.existsSync('spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp'));
+  const earlier=JSON.parse(fs.readFileSync('docs/qa/DAY24_FLOW_EEVEE_HAT_CORRECTION_20261021.json','utf8'));
+  assert.ok(earlier.facts.city_safari_boston.includes('Eevee com chapéu de explorador'));
+  assert.ok(!earlier.facts.city_safari_boston.includes('Pikachu'));
+  assert.equal(earlier.facts.pokemon_night_out[0],'Pikachu (SEM CHAPÉU)');
   assert.ok(e.notes.join(' ').includes('não é a prioridade máxima'));
   assert.equal(e.art.web_width,1024);
   assert.equal(e.art.web_height,1536);
-  assert.equal(qa.bytes,fs.statSync(approvedPath).size);
-  assert.ok(fs.existsSync('spidey-app/assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp'), 'Preserve original v1 art');
 
   assert.equal(events.filter(x=>x.id===e.id).length,1);
 });
