@@ -34,3 +34,11 @@
 .fly-upcoming-item small{color:#c5dcf3;line-height:1.45}
 .fly-upcoming-item:focus-visible{outline:3px solid #e7bd66;outline-offset:2px}
 @media(max-width:640px){.fly-upcoming-items{grid-template-columns:1fr}}
+
+
+/* Preserva, sem alterar, os créditos da lista histórica compartilhada pelo usuário. */
+.fly-reference-credits[hidden]{display:none!important}
+.fly-reference-credits{margin:22px 0 16px;padding:12px 15px;border-radius:13px;border:1px solid rgba(171,190,231,.3);background:rgba(10,22,43,.78);color:#e7eefa}
+.fly-reference-credits summary{cursor:pointer;font-weight:700;min-height:44px;display:list-item;align-content:center}
+.fly-reference-credits p{font-size:.82rem;color:#ced9e9;line-height:1.55}
+.fly-original-credits{white-space:pre-wrap;word-break:break-word;font:inherit;font-size:.81rem;line-height:1.6;color:#f3f4fb}

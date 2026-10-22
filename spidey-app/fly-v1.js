@@ -45,8 +45,18 @@
       :'Últimas janelas do mundo em andamento';
     return {e,route,first,last,active,status};
   }
+  function showSourceCredits(){
+    const box=document.getElementById('flySourceCredits');
+    if(!box)return;
+    const source=window.SPIDEY_FLY_REFERENCE_SOURCE;
+    box.hidden=!source;
+    if(!source)return;
+    const raw=box.querySelector('.fly-original-credits');
+    if(raw && raw.textContent!==source.credits)raw.textContent=source.credits;
+  }
   function render(){
     const s=document.getElementById('flyView');if(!s)return;
+    showSourceCredits();
     const list=events(),select=s.querySelector('#flyEventSelect'),now=new Date();
     const spotlight=spotlightStatus(list,now);
     const preview=upcomingGlobalRoutes(list,now);
@@ -97,18 +107,18 @@
     }).join(''):'<p class="empty">Ainda não temos os horários deste evento.</p>';
     s.querySelectorAll('[data-fly-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.flyMode===mode)));
   }
-  function open(id){selected=id;render();setView('flyView');if(dialog.open)dialog.close()}
+  function open(id){selected=id;mode='all';render();setView('flyView');if(dialog.open)dialog.close()}
   function mount(){
     if(document.getElementById('flyView'))return;
     const main=document.querySelector('main'),nav=document.querySelector('.app-tabs');if(!main||!nav)return;
     const s=document.createElement('section');s.id='flyView';s.className='app-view';s.hidden=true;
-    s.innerHTML=`<section class="hero hero-compact"><span class="eyebrow">FLY • JOGAR PELO MUNDO</span><h1>Rota Mundial</h1><p>Do primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.</p></section><section class="section"><label class="fly-event-label" for="flyEventSelect">Escolha o evento</label><select id="flyEventSelect" class="fly-event-select"></select><div id="flyMorelullSpotlight" class="fly-spotlight-feature" hidden></div><div id="flyUpcomingRoutes" class="fly-upcoming-routes" hidden></div><div id="flyEventSummary"></div><div class="fly-live-grid"><article><span class="eyebrow">ONDE JOGAR AGORA</span><h2 id="flyNow">Carregando…</h2></article><article><span class="eyebrow">PRÓXIMO</span><h2 id="flyNext">Carregando…</h2><p id="flyCountdown" role="status"></p></article></div><p id="flyLast" class="fly-last"></p><div class="fly-toolbar"><button class="action-btn" data-fly-mode="essential" aria-pressed="true">Essenciais</button><button class="action-btn" data-fly-mode="all" aria-pressed="false">Todos os locais</button><span><strong id="flyCount">0</strong> locais</span></div><p class="microcopy">Os pontos abaixo ajudam a escolher onde jogar. Não representam PokéStops exatas.</p><div id="flyRouteList" class="fly-route-list"></div></section>`;main.append(s);
+    s.innerHTML=`<section class="hero hero-compact"><span class="eyebrow">FLY • JOGAR PELO MUNDO</span><h1>Rota Mundial</h1><p>Do primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.</p></section><section class="section"><label class="fly-event-label" for="flyEventSelect">Escolha o evento</label><select id="flyEventSelect" class="fly-event-select"></select><div id="flyMorelullSpotlight" class="fly-spotlight-feature" hidden></div><div id="flyUpcomingRoutes" class="fly-upcoming-routes" hidden></div><div id="flyEventSummary"></div><div class="fly-live-grid"><article><span class="eyebrow">ONDE JOGAR AGORA</span><h2 id="flyNow">Carregando…</h2></article><article><span class="eyebrow">PRÓXIMO</span><h2 id="flyNext">Carregando…</h2><p id="flyCountdown" role="status"></p></article></div><p id="flyLast" class="fly-last"></p><div class="fly-toolbar"><button class="action-btn" data-fly-mode="essential" aria-pressed="true">Essenciais</button><button class="action-btn" data-fly-mode="all" aria-pressed="false">Todos os locais</button><span><strong id="flyCount">0</strong> locais</span></div><p class="microcopy">Os pontos abaixo ajudam a escolher onde jogar. Não representam PokéStops exatas.</p><div id="flyRouteList" class="fly-route-list"></div><details id="flySourceCredits" class="fly-reference-credits" hidden><summary>Créditos e origem da lista mundial</summary><p>Coordenadas fornecidas em lista de 10/11/2023. Os horários são recalculados automaticamente para a data do evento e o fuso de Brasília; não são copiados da lista antiga.</p><pre class="fly-original-credits"></pre></details></section>`;main.append(s);
     const b=document.createElement('button');b.className='app-tab';b.dataset.view='flyView';b.textContent='FLY';nav.insertBefore(b,nav.querySelector('[data-view="stampsView"]'));b.addEventListener('click',()=>{render();setView('flyView')});
     s.querySelector('#flyEventSelect').addEventListener('change',e=>{selected=e.target.value;mode='all';render()});
     s.addEventListener('click',async e=>{const quick=e.target.closest('[data-fly-select]');
       if(quick){selected=quick.dataset.flySelect;mode='all';render();return}
       const spotlightButton=e.target.closest('[data-fly-morespotlight]');if(spotlightButton){selected=MORELULL_ID;mode='all';render();return}const f=e.target.closest('[data-fly-mode]');if(f){mode=f.dataset.flyMode;render();return}const c=e.target.closest('[data-coord]');if(!c)return;try{await navigator.clipboard.writeText(c.dataset.coord);showToast('Coordenadas copiadas.')}catch{prompt('Copie as coordenadas:',c.dataset.coord)}});
-    core.loadPoints().then(p=>{points=p;window.SPIDEY_FLY_POINTS=p;render()}).catch(()=>{s.querySelector('#flyRouteList').innerHTML='<p class="empty">Não foi possível carregar a rota. Recarregue para tentar novamente.</p>'});
+    core.loadPoints().then(p=>{points=p;window.SPIDEY_FLY_POINTS=p;showSourceCredits();render()}).catch(()=>{s.querySelector('#flyRouteList').innerHTML='<p class="empty">Não foi possível carregar a rota. Recarregue para tentar novamente.</p>'});
     window.addEventListener('spideycontentready',render);setInterval(()=>{if(!s.hidden)render()},30000);
   }
   window.SpideyFly=Object.freeze({open,render});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();

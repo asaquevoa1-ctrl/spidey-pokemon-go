@@ -25,14 +25,14 @@ test('official global Cinderace window is available on the world route with its 
  const e=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events.find(e=>e.id==='2026-10-gigantamax-cinderace-max-day');
  assert.equal(core.eligible(e),true);
  const rows=core.route(e,points,new Date('2026-10-02T12:00Z'));
- assert.equal(rows.length,28);
+ assert.equal(rows.length,points.length);
  const taipei=rows.find(p=>p.timezone==='Asia/Taipei');
  assert.equal(taipei.start.toISOString(),'2026-10-03T06:00:00.000Z');
  assert.equal(taipei.end.toISOString(),'2026-10-03T09:00:00.000Z');
  assert.equal(core.eligible({...e,tags:['Cinderace','Gigamax']}),false);
 });
 test('preserve both geography bases and approved assets',()=>{
- assert.equal(points.length,28);assert.ok(points.some(p=>p.name.includes('Taipei')&&p.essential));assert.ok(points.some(p=>p.name.includes('Osaka')));assert.ok(points.some(p=>p.name.includes('Shinjuku')));
+ assert.ok(points.length>=67);assert.ok(points.some(p=>p.name.includes('Taipei')&&p.essential));assert.ok(points.some(p=>p.name.includes('Osaka')));assert.ok(points.some(p=>p.name.includes('Shinjuku')));
  vm.runInContext(fs.readFileSync('spidey-app/premium-approved-master.js','utf8'),sandbox);
  const crypto=require('node:crypto');for(const entry of Object.values(sandbox.window.SPIDEY_APPROVED_ART_MASTER))assert.equal(crypto.createHash('sha256').update(fs.readFileSync('spidey-app/'+entry.file)).digest('hex'),entry.sha256);
  assert.ok(!sandbox.window.SPIDEY_APPROVED_ART_MASTER['harvest-festival-2026']);
@@ -40,7 +40,7 @@ test('preserve both geography bases and approved assets',()=>{
 test('Lake Trio regional route preserves event identity, India exception, DST and unknown island boundaries',()=>{
  const events=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events;
  const trio=events.filter(e=>e.id==='2026-10-dynamax-max-battle-day');assert.equal(trio.length,1);
- const rows=core.route(trio[0],points,new Date('2026-10-01T22:00Z'));assert.equal(rows.length,28);
+ const rows=core.route(trio[0],points,new Date('2026-10-01T22:00Z'));assert.equal(rows.length,points.length);
  for(const [zone,pokemon,start,end] of [
   ['Asia/Taipei','Uxie','2026-10-24T06:00:00.000Z','2026-10-24T09:00:00.000Z'],
   ['Asia/Kolkata','Mesprit','2026-10-24T08:30:00.000Z','2026-10-24T11:30:00.000Z'],

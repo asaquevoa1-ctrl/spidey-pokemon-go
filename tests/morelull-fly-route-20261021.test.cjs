@@ -21,10 +21,10 @@ test('Morelull is on the real FLY global schedule, not only on Calendar',()=>{
   assert.equal(event.schedule.start_local,'2026-10-22T18:00:00-03:00');
   assert.equal(event.schedule.end_local,'2026-10-22T19:00:00-03:00');
   assert.ok(event.bonuses.some(x=>x.includes('2× Poeira Estelar')));
-  assert.equal(points.length,28);
+  assert.ok(points.length>=67);
 });
 
-test('all 28 global reference coordinates use real place names and valid IANA timezones',()=>{
+test('all credited global reference coordinates use real place names and valid IANA timezones',()=>{
   for(const p of points){
     assert.ok(p.name && typeof p.name==='string');
     assert.ok(Number.isFinite(p.lat)&&p.lat>=-90&&p.lat<=90,p.name);
@@ -38,9 +38,11 @@ test('all 28 global reference coordinates use real place names and valid IANA ti
 
 test('Morelull global times align exactly with Brasília across DST and half-hour offsets',()=>{
   const route=core.route(event,points,new Date('2026-10-22T03:51:00Z'));
-  assert.equal(route.length,28);
+  assert.equal(route.length,points.length);
   assert.equal(route[0].timezone,'Pacific/Kiritimati');
-  assert.equal(route.at(-1).timezone,'Pacific/Pago_Pago');
+  assert.equal(route.at(-1).start.toISOString(),'2026-10-23T05:00:00.000Z');
+  assert.ok(route.some(p=>p.timezone==='Pacific/Pago_Pago'));
+  assert.ok(route.some(p=>p.timezone==='Pacific/Midway'));
   const expected=[
     ['Pacific/Kiritimati','2026-10-22T04:00:00.000Z','2026-10-22T05:00:00.000Z'],
     ['Pacific/Auckland','2026-10-22T05:00:00.000Z','2026-10-22T06:00:00.000Z'],
@@ -66,7 +68,7 @@ test('Morelull global times align exactly with Brasília across DST and half-hou
   assert.equal(byZone(core.route(event,points,new Date('2026-10-23T05:30:00Z')),'Pacific/Pago_Pago').status,'ÚLTIMA CHANCE');
 });
 
-test('FLY UI shows a timely Morelull feature, selected 28-point global route and clickable coordinate links',()=>{
+test('FLY UI shows a timely Morelull feature, selected complete global route and clickable coordinate links',()=>{
   const ui=read('fly-v1.js'),html=read('index.html'),css=read('fly-v1.css'),app=read('app.js'),sw=read('sw.js');
   assert.doesNotThrow(()=>new vm.Script(ui,{filename:'fly-v1.js'}));
   assert.doesNotThrow(()=>new vm.Script(app,{filename:'app.js'}));
@@ -77,9 +79,9 @@ test('FLY UI shows a timely Morelull feature, selected 28-point global route and
   assert.ok(ui.includes('data-fly-morespotlight'));
   assert.ok(ui.includes('data-coord="${q}"'));
   assert.ok(ui.includes("core.loadPoints()"));
-  assert.ok(html.includes('fly-v1.js?v=20261021-morelull-fly1'));
+  assert.ok(html.includes('fly-v1.js?v=20261022-credits-dst1'));
   assert.ok(css.includes('.fly-spotlight-feature'));
   assert.ok(app.includes('id="openMorelullFly"'));
   assert.ok(app.includes("SpideyFly?.open('2026-10-22-spotlight-morelull')"));
-  assert.ok(sw.includes('spidey-app-20261021-morelull-fly-v1'));
+  assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1'));
 });
