@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-21-raid-hour-palkia:start:60",
-      "event_id": "2026-10-21-raid-hour-palkia",
-      "event_title": "Raid Hour: Palkia",
-      "category": "raid_hour",
-      "scheduled_for": "2026-10-21T17:00:00-03:00",
-      "event_start": "2026-10-21T18:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Raid Hour: Palkia começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-21-raid-hour-palkia",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • programação oficial de outubro de 2026",
-        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-22-spotlight-morelull:start:60",
       "event_id": "2026-10-22-spotlight-morelull",
       "event_title": "Spotlight Hour: Morelull",
@@ -456,7 +438,7 @@
     }
   ],
   "meta": {
-    "pending_count": 25,
+    "pending_count": 24,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
