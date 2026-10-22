@@ -1,6 +1,6 @@
 {
   "schema": "spidey-governance-v1",
-  "updated_at": "2026-10-18",
+  "updated_at": "2026-10-22",
   "canonical_document": "SPIDEY_DECISIONS_CURRENT.md",
   "coding_agent_document": "AGENTS.md",
   "product": {
@@ -14,12 +14,19 @@
     "no_art_dumps_in_chat": true
   },
   "identity": {
-    "logo": "assets/spidey-logo-oficial.jpg",
+    "logo": "assets/branding/20261019/spidey-icon-cosmic-512.png",
     "banned_word_in_poster": "SpideyNexus",
     "gold_standard": "SPIDEY_GOLD_STANDARD.md",
     "premium_standard": "SPIDEY_PREMIUM_STANDARD.md",
     "visual_comparison_required": true,
-    "render_test_is_visual_approval": false
+    "render_test_is_visual_approval": false,
+    "logo_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+    "logo_decision_date": "2026-10-19",
+    "legacy_logo": "assets/spidey-logo-oficial.jpg",
+    "legacy_logo_preserved": true,
+    "legacy_logo_for_new_art": false,
+    "logo_manifest": "spidey-app/data/cosmic-brand-assets-20261019.json",
+    "priority_rule": "A decisão mais recente do responsável prevalece; usar S cósmico original de 19/10 e nunca retomar aranha antiga."
   },
   "approval": {
     "delegated_qa_source": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
@@ -42,7 +49,7 @@
   },
   "original_ana": {
     "pr": 95,
-    "state": "DRAFT_AWAITING_EXACT_BINARY_FILES",
+    "state": "MERGED_IN_MAIN",
     "visual_reference_approved": true,
     "not_yet_public_claim": false,
     "retain_original_bytes": true
@@ -59,13 +66,10 @@
     ]
   },
   "priorities": [
-    "ANA two reference-approved originals",
-    "FC Seoul Premium artwork",
-    "National Trust Premium artwork",
-    "Adidas artwork revision",
-    "APAC Shopping artwork revision",
-    "Pokémon TCG 30th artwork revision",
-    "Nice regional artwork"
+    "Notificações Web Push efetivamente recebidas no Android, serviço gratuito e seguro",
+    "Caçador Global: apenas feed real, autorizado/licenciado e verificável",
+    "Cobertura Premium: conferir e corrigir lacunas e rejeições sem substituir aprovadas",
+    "GPX: publicar somente pontos exatos confirmados; preservar rotas e créditos"
   ],
   "quality_claims": [
     "created",
@@ -74,5 +78,13 @@
     "deployed",
     "http_verified",
     "android_physical_verified"
+  ],
+  "art_priorities": [
+    "FC Seoul Premium individual",
+    "National Trust Premium",
+    "Adidas artwork revision",
+    "APAC Shopping artwork revision",
+    "Pokémon TCG 30th artwork revision",
+    "Nice regional artwork"
   ]
 }
