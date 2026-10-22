@@ -9,6 +9,28 @@
   // Mostre um atalho temporário a partir das 12 horas anteriores à primeira
   // janela mundial até o fim da última, sem confundir coordenadas urbanas com
   // localização garantida de Pokémon/PokéStops.
+  // Visibilidade global permanente: cada evento elegível terá cartão de rota
+  // na semana correspondente, sem exigir um destaque codificado por Pokémon.
+  // Cacheia conversões IANA, mantendo status sempre recalculado pelo relógio.
+  const cachedWindows=new Map();
+  function upcomingGlobalRoutes(list,now){
+    if(!points.length)return [];
+    const horizon=now.getTime()+7*86400000;
+    return list.filter(e=>{
+      const approx=Date.parse(e.schedule.start_local);
+      return Number.isFinite(approx)&&approx<=horizon&&approx>=now.getTime()-3*86400000;
+    }).map(e=>{
+      const key=[e.id,e.updated_at,e.schedule.start_local,e.schedule.end_local,points.length].join(':');
+      if(!cachedWindows.has(key))cachedWindows.set(key,core.route(e,points,new Date(0)));
+      const windows=cachedWindows.get(key);
+      if(!windows.length)return null;
+      const first=windows[0],last=windows[windows.length-1];
+      if(last.end<=now)return null;
+      const active=windows.filter(p=>p.start<=now&&p.end>now);
+      const next=windows.find(p=>p.start>now);
+      return {event:e,first,last,active,next,sortTime:active.length?now.getTime():next?.start?.getTime()||Number.MAX_SAFE_INTEGER};
+    }).filter(Boolean).sort((a,b)=>a.sortTime-b.sortTime||a.first.start-b.first.start).slice(0,5);
+  }
   const MORELULL_ID='2026-10-22-spotlight-morelull';
   function spotlightStatus(list,now){
     const e=list.find(item=>item.id===MORELULL_ID);
@@ -27,6 +49,18 @@
     const s=document.getElementById('flyView');if(!s)return;
     const list=events(),select=s.querySelector('#flyEventSelect'),now=new Date();
     const spotlight=spotlightStatus(list,now);
+    const preview=upcomingGlobalRoutes(list,now);
+    const previews=s.querySelector('#flyUpcomingRoutes');
+    if(previews){
+      previews.hidden=preview.length===0;
+      previews.innerHTML=preview.length ? `<h2>ROTAS ATIVAS E PRÓXIMAS</h2><div class="fly-upcoming-items">
+        ${preview.map(item=>{
+          const status=item.active.length?`ATIVO AGORA: ${item.active.slice(0,2).map(p=>p.name).join(' • ')}`:item.next?`Próxima janela: ${item.next.name} · ${brazil(item.next.start)}`:'Últimas regiões';
+          return `<button class="fly-upcoming-item" type="button" data-fly-select="${esc(item.event.id)}" aria-label="Abrir rota de ${esc(item.event.title)}">
+            <span>${esc(item.event.title)}</span><small>${esc(status)} (Brasília) · ${points.length} referências</small>
+          </button>`;
+        }).join('')}</div>` : '';
+    }
     const feature=s.querySelector('#flyMorelullSpotlight');
     if(feature){
       feature.hidden=!spotlight;
@@ -42,7 +76,7 @@
       }
     }
     if(points.length && (!selected||!list.some(e=>e.id===selected))){
-      selected=spotlight?.e.id||list.find(e=>core.route(e,points,now).some(p=>p.end>now))?.id||list.at(-1)?.id||'';
+      selected=spotlight?.e.id||preview[0]?.event.id||list.at(-1)?.id||'';
       // No primeiro acesso ao Holofote, mostrar TODOS os pontos do mundo.
       if(selected===MORELULL_ID)mode='all';
     }
@@ -68,10 +102,12 @@
     if(document.getElementById('flyView'))return;
     const main=document.querySelector('main'),nav=document.querySelector('.app-tabs');if(!main||!nav)return;
     const s=document.createElement('section');s.id='flyView';s.className='app-view';s.hidden=true;
-    s.innerHTML=`<section class="hero hero-compact"><span class="eyebrow">FLY • JOGAR PELO MUNDO</span><h1>Rota Mundial</h1><p>Do primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.</p></section><section class="section"><label class="fly-event-label" for="flyEventSelect">Escolha o evento</label><select id="flyEventSelect" class="fly-event-select"></select><div id="flyMorelullSpotlight" class="fly-spotlight-feature" hidden></div><div id="flyEventSummary"></div><div class="fly-live-grid"><article><span class="eyebrow">ONDE JOGAR AGORA</span><h2 id="flyNow">Carregando…</h2></article><article><span class="eyebrow">PRÓXIMO</span><h2 id="flyNext">Carregando…</h2><p id="flyCountdown" role="status"></p></article></div><p id="flyLast" class="fly-last"></p><div class="fly-toolbar"><button class="action-btn" data-fly-mode="essential" aria-pressed="true">Essenciais</button><button class="action-btn" data-fly-mode="all" aria-pressed="false">Todos os locais</button><span><strong id="flyCount">0</strong> locais</span></div><p class="microcopy">Os pontos abaixo ajudam a escolher onde jogar. Não representam PokéStops exatas.</p><div id="flyRouteList" class="fly-route-list"></div></section>`;main.append(s);
+    s.innerHTML=`<section class="hero hero-compact"><span class="eyebrow">FLY • JOGAR PELO MUNDO</span><h1>Rota Mundial</h1><p>Do primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.</p></section><section class="section"><label class="fly-event-label" for="flyEventSelect">Escolha o evento</label><select id="flyEventSelect" class="fly-event-select"></select><div id="flyMorelullSpotlight" class="fly-spotlight-feature" hidden></div><div id="flyUpcomingRoutes" class="fly-upcoming-routes" hidden></div><div id="flyEventSummary"></div><div class="fly-live-grid"><article><span class="eyebrow">ONDE JOGAR AGORA</span><h2 id="flyNow">Carregando…</h2></article><article><span class="eyebrow">PRÓXIMO</span><h2 id="flyNext">Carregando…</h2><p id="flyCountdown" role="status"></p></article></div><p id="flyLast" class="fly-last"></p><div class="fly-toolbar"><button class="action-btn" data-fly-mode="essential" aria-pressed="true">Essenciais</button><button class="action-btn" data-fly-mode="all" aria-pressed="false">Todos os locais</button><span><strong id="flyCount">0</strong> locais</span></div><p class="microcopy">Os pontos abaixo ajudam a escolher onde jogar. Não representam PokéStops exatas.</p><div id="flyRouteList" class="fly-route-list"></div></section>`;main.append(s);
     const b=document.createElement('button');b.className='app-tab';b.dataset.view='flyView';b.textContent='FLY';nav.insertBefore(b,nav.querySelector('[data-view="stampsView"]'));b.addEventListener('click',()=>{render();setView('flyView')});
-    s.querySelector('#flyEventSelect').addEventListener('change',e=>{selected=e.target.value;render()});
-    s.addEventListener('click',async e=>{const spotlightButton=e.target.closest('[data-fly-morespotlight]');if(spotlightButton){selected=MORELULL_ID;mode='all';render();return}const f=e.target.closest('[data-fly-mode]');if(f){mode=f.dataset.flyMode;render();return}const c=e.target.closest('[data-coord]');if(!c)return;try{await navigator.clipboard.writeText(c.dataset.coord);showToast('Coordenadas copiadas.')}catch{prompt('Copie as coordenadas:',c.dataset.coord)}});
+    s.querySelector('#flyEventSelect').addEventListener('change',e=>{selected=e.target.value;mode='all';render()});
+    s.addEventListener('click',async e=>{const quick=e.target.closest('[data-fly-select]');
+      if(quick){selected=quick.dataset.flySelect;mode='all';render();return}
+      const spotlightButton=e.target.closest('[data-fly-morespotlight]');if(spotlightButton){selected=MORELULL_ID;mode='all';render();return}const f=e.target.closest('[data-fly-mode]');if(f){mode=f.dataset.flyMode;render();return}const c=e.target.closest('[data-coord]');if(!c)return;try{await navigator.clipboard.writeText(c.dataset.coord);showToast('Coordenadas copiadas.')}catch{prompt('Copie as coordenadas:',c.dataset.coord)}});
     core.loadPoints().then(p=>{points=p;window.SPIDEY_FLY_POINTS=p;render()}).catch(()=>{s.querySelector('#flyRouteList').innerHTML='<p class="empty">Não foi possível carregar a rota. Recarregue para tentar novamente.</p>'});
     window.addEventListener('spideycontentready',render);setInterval(()=>{if(!s.hidden)render()},30000);
   }
