@@ -11,8 +11,8 @@ const sandbox={window:{},Intl,Date,Math,Object,Set,fetch:()=>{throw Error('Unexp
 vm.runInNewContext(load('fly-core.js'),sandbox);
 const core=sandbox.window.SpideyFlyCore;
 const recurring=new Set(['spotlight_hour','raid_hour','community_day','community_day_classic','raid_day','max_monday','max_battle_day','research_day','hatch_day','incense_day']);
-const hasExactLocalWindow=e=>/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}/.test(e.schedule?.start_local||'')
-  && /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}/.test(e.schedule?.end_local||'');
+const hasExactLocalWindow=e=>/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(e.schedule?.start_local||'')
+  && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(e.schedule?.end_local||'');
 const scoped=all.filter(e=>e.status==='published'&&recurring.has(e.category)&&hasExactLocalWindow(e)
   &&!e.locations?.length&&!e.tags?.some(t=>/presencial|regional|local|ticket|ingresso/i.test(t)));
 
