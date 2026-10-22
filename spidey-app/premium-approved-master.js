@@ -2,13 +2,13 @@
   'use strict';
   const master = {
   "2026-10-24-spidey-full-day-guide": {
-    "file": "assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp",
+    "file": "assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1024,
     "height": 1536,
-    "sha256": "fb7ae2ab9c637d5553f9067c845e5bb681f434b3f53e5b53eb07c738da93ff5d",
-    "approval_record": "docs/qa/DAY24_FLOW_EEVEE_HAT_CORRECTION_20261021.json",
+    "sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
+    "approval_record": "docs/qa/DAY24_FC_SEOUL_TEXT_REPLACEMENT_20261021.json",
     "approval_basis": "USER_CORRECTION_AND_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
