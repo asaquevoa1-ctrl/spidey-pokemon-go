@@ -34,16 +34,29 @@ test('five explicitly approved Spidey Premium reference posters are the current 
   for(const item of record.assets){
     assert.ok(events.some(e=>e.id===item.event_id),'Missing event '+item.event_id);
     const data=fs.readFileSync(item.file);
-    assert.equal(data.toString('ascii',0,4),'RIFF');
-    assert.equal(data.toString('ascii',8,12),'WEBP');
+    if(item.file.endsWith('.png'))assert.equal(data.toString('hex',0,8),'89504e470d0a1a0a');
+    else {
+      assert.equal(data.toString('ascii',0,4),'RIFF');
+      assert.equal(data.toString('ascii',8,12),'WEBP');
+    }
     assert.equal(hash(data),item.sha256,'Poster integrity '+item.event_id);
     assert.equal(registry[item.event_id].file,item.file.replace(/^spidey-app\//,''));
     assert.equal(registry[item.event_id].sha256,item.sha256);
     assert.equal(registry[item.event_id].status,'APPROVED');
     assert.equal(registry[item.event_id].width,1056);
     assert.equal(registry[item.event_id].height,1320);
-    assert.equal(registry[item.event_id].approval_record,'docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json');
+    assert.ok([
+      'docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json',
+      'docs/qa/MINIOR_ORIONIDS_ART_APPROVAL_20261012.json'
+    ].includes(registry[item.event_id].approval_record));
     assert.ok(sw.includes('./'+registry[item.event_id].file),'PWA pre-cache '+item.event_id);
     if(item.old_file)assert.ok(fs.existsSync('spidey-app/'+item.old_file),'Original poster removed: '+item.old_file);
+    if(item.preserved_source){
+      const original=fs.readFileSync(item.preserved_source.file);
+      assert.equal(original.toString('ascii',0,4),'RIFF');
+      assert.equal(original.toString('ascii',8,12),'WEBP');
+      assert.equal(hash(original),item.preserved_source.sha256);
+      assert.ok(sw.includes('./'+item.preserved_source.file.replace(/^spidey-app\//,'')),'Preserved source remains cached');
+    }
   }
 });

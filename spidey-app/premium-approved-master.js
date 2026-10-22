@@ -530,14 +530,14 @@
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-minior-orionids": {
-    "file": "assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp",
+    "file": "assets/events/premium/minior-orionids-20261019-24-cosmic-s-approved-v4.png",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1056,
     "height": 1320,
-    "sha256": "1e6f7df00e04933a569329009b04da1e7122685af1e91073dc34fd0f47254582",
-    "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
-    "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
+    "sha256": "58fa5892e7104de214cd81d231d80bcc7b6c1b1fcdcd05a369ac1687d6e0aa35",
+    "approval_record": "docs/qa/MINIOR_ORIONIDS_ART_APPROVAL_20261012.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY"
   },
   "2026-10-gbl-20-27": {
     "file": "assets/events/premium/gbl-20261020-27-approved-v2.png",

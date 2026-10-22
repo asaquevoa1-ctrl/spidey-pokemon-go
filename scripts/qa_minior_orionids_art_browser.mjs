@@ -3,8 +3,7 @@ import fs from 'node:fs';
 import { chromium } from 'playwright-core';
 
 const eventId='2026-10-minior-orionids';
-const review='assets/events/review/minior-orionids-20261019-24-v2.png';
-const approved='assets/events/premium/minior-orionids-20261019-24-approved-v2.png';
+const approved='assets/events/premium/minior-orionids-20261019-24-cosmic-s-approved-v4.png';
 const output='test-results/minior-orionids-art';
 fs.mkdirSync(output,{recursive:true});
 const futureWeekly=JSON.parse(execFileSync('python3',['-c',"from datetime import date; import json; from scripts.build_spidey_weekly import build; print(json.dumps(build(date(2026,10,19))))"],{encoding:'utf8'}));
@@ -31,8 +30,8 @@ try{
     },{fixed,theme});
     await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'networkidle'});
     await page.waitForFunction(id=>window.state?.events?.some(event=>event.id===id),eventId);
-    const expected=await page.evaluate(({eventId,review,approved})=>window.SPIDEY_APPROVED_ART_MASTER?.[eventId]?.file||window.SPIDEY_PREVIEW_ART?.[eventId]?.file||review,{eventId,review,approved});
-    if(![review,approved].includes(expected))throw new Error(`unexpected artwork ${expected}`);
+    const expected=await page.evaluate(({eventId})=>window.SPIDEY_APPROVED_ART_MASTER?.[eventId]?.file,{eventId});
+    if(expected!==approved)throw new Error(`unexpected artwork ${expected}`);
     await page.evaluate(()=>{state.month=new Date(2026,9,1);renderCalendar();});
     const index=await page.evaluate(()=>{const first=new Date(2026,9,1);const gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,19)-gridStart)/86400000);});
     await page.locator('#calendar .calendar-day').nth(index).click();
@@ -42,14 +41,14 @@ try{
     await dayEvent.click();
     const hero=page.locator('#eventDetail .detail-hero');await hero.waitFor();await hero.evaluate(img=>img.decode());
     const detail=await hero.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
-    if(!detail.src.includes(expected)||detail.natural[0]!==1122||detail.natural[1]!==1402||detail.overflow)throw new Error(`detail failed ${JSON.stringify(detail)}`);
+    if(!detail.src.includes(expected)||detail.natural[0]!==1056||detail.natural[1]!==1320||detail.overflow)throw new Error(`detail failed ${JSON.stringify(detail)}`);
     checks.push({width,theme,view:'detail',...detail});
     await page.screenshot({path:`${output}/${width}-${theme}-detail.png`,fullPage:true});
     await page.evaluate(()=>{document.querySelector('#eventDialog')?.close();setView('weeklyView');renderWeeklyView();});
     const weekly=page.locator(`[data-weekly-event="${eventId}"]`).first();await weekly.waitFor();
     const weeklyImg=weekly.locator('img');await weeklyImg.waitFor();await weeklyImg.evaluate(img=>img.decode());
     const week=await weeklyImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
-    if(!week.src.includes(expected)||week.natural[0]!==1122||week.natural[1]!==1402||week.overflow)throw new Error(`weekly failed ${JSON.stringify(week)}`);
+    if(!week.src.includes(expected)||week.natural[0]!==1056||week.natural[1]!==1320||week.overflow)throw new Error(`weekly failed ${JSON.stringify(week)}`);
     checks.push({width,theme,view:'weekly',...week});
     await page.screenshot({path:`${output}/${width}-${theme}-weekly.png`,fullPage:true});
     await page.close();
