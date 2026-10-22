@@ -255,7 +255,7 @@ function locationRows(event) {
     const airportReference = loc.coordinate_type === 'airport_terminal_reference' && loc.exact_raid_gym_verified === false;
     const stadiumReference = loc.coordinate_type === 'stadium_venue_reference' && loc.exact_raid_gym_verified === false;
     const venueReference = airportReference || stadiumReference;
-    const value = venueReference && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
+    const value = (venueReference || event.id === '2026-10-24-spidey-full-day-guide') && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
       ? loc.coordinate_text : `${Number(loc.latitude).toFixed(4)}, ${Number(loc.longitude).toFixed(4)}`;
     const description = airportReference ? '<small>Referência do aeroporto/terminal • NÃO é Ginásio ANA verificado</small><br>'
       : stadiumReference ? '<small>Referência do Estádio de Seul • NÃO é Ginásio de reide verificado</small><br>' : '';
