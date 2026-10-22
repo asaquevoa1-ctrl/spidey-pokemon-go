@@ -35,7 +35,7 @@ try{
     },{fixed,theme});
     // The app intentionally keeps background requests alive; the catalog is the readiness signal.
     await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'domcontentloaded'});
-    await page.waitForFunction(id=>window.state?.events?.some(item=>item.id===id),eventId);
+    await page.waitForFunction(id=>typeof state!=='undefined'&&state.events.some(item=>item.id===id),eventId);
     const expected=await page.evaluate(id=>window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,eventId);
     if(expected!==approved)throw new Error(`unexpected artwork ${expected}`);
 
