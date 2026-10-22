@@ -6869,6 +6869,10 @@
         "reason": "Evento sem coordenada exata específica confirmada."
       },
       "notes": [
+        "FLY • Rota Mundial | Abra a aba FLY e selecione Morelull. O roteiro mostra 28 coordenadas de referência distribuídas pelo mundo, indicando os horários reais de 18h–19h em cada fuso e as conversões para Brasília.",
+        "Primeira janela | Kiribati (Kiritimati): 22/10, das 01h às 02h de Brasília. Nova Zelândia (Auckland): das 02h às 03h; Austrália (Sydney): das 04h às 05h; Japão (Shinjuku/Osaka): das 06h às 07h.",
+        "Últimas janelas | Havaí (Honolulu): 23/10, das 01h às 02h de Brasília. Samoa Americana (Pago Pago): das 02h às 03h.",
+        "As coordenadas do FLY são referências urbanas, não localizações garantidas de Morelull, PokéStops ou spawns. Nenhuma troca do fuso horário do aparelho é necessária; consulte as janelas convertidas automaticamente.",
         "Quinta-feira, 22/10, das 18h às 19h locais: não acontece no sábado, 24/10.",
         "O bônus de 2× Poeira Estelar vale para capturas de qualquer Pokémon durante o horário, não só Morelull.",
         "Morelull pode ser Brilhante, mas a aparição Brilhante não é garantida. Se quiser farmar Poeira, prepare Poké Bolas, espaço na Bolsa e Pedaços de Estrela."
@@ -6882,7 +6886,20 @@
       "status": "published",
       "bonuses": [
         "2× Poeira Estelar por captura, das 18h às 19h de 22/10."
-      ]
+      ],
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub — outubro 2026, Hora do Holofote Morelull",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "community_verified"
+        },
+        {
+          "name": "Pokémon GO Hub — programação da semana de 19 a 25 outubro",
+          "url": "https://pokemongohub.net/post/event/this-week-in-pokemon-go-19-25-october-2026/",
+          "confidence": "community_verified"
+        }
+      ],
+      "updated_at": "2026-10-21T23:51:00-03:00"
     },
     {
       "id": "2026-10-29-spotlight-gastly",
