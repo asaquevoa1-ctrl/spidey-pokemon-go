@@ -154,10 +154,12 @@
       "flag": "🇧🇷",
       "name": "Ibirapuera, São Paulo",
       "timezone": "America/Sao_Paulo",
-      "lat": -23.584171,
-      "lon": -46.660725,
+      "lat": -23.5841713,
+      "lon": -46.66072464,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
+      "reference_date": "2023-11-10"
     },
     {
       "order": 14,
@@ -315,18 +317,6 @@
     },
     {
       "order": 27,
-      "flag": "🇧🇷",
-      "name": "Ibirapuera, São Paulo",
-      "timezone": "America/Sao_Paulo",
-      "lat": -23.5841713,
-      "lon": -46.66072464,
-      "coordinate_type": "city_reference",
-      "essential": false,
-      "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
-    },
-    {
-      "order": 28,
       "flag": "🇦🇷",
       "name": "Buenos Aires, Argentina",
       "timezone": "America/Argentina/Buenos_Aires",
@@ -338,7 +328,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 29,
+      "order": 28,
       "flag": "🇼🇸",
       "name": "Fagali'i, Samoa",
       "timezone": "Pacific/Apia",
@@ -350,7 +340,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 30,
+      "order": 29,
       "flag": "🇳🇿",
       "name": "Wellington Botanic Garden, Nova Zelândia",
       "timezone": "Pacific/Auckland",
@@ -362,7 +352,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 31,
+      "order": 30,
       "flag": "🇦🇺",
       "name": "Melbourne, Austrália",
       "timezone": "Australia/Melbourne",
@@ -374,7 +364,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 32,
+      "order": 31,
       "flag": "🇦🇺",
       "name": "Royal Botanic Garden, Sydney",
       "timezone": "Australia/Sydney",
@@ -386,7 +376,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 33,
+      "order": 32,
       "flag": "🇰🇷",
       "name": "Busan, Coreia do Sul",
       "timezone": "Asia/Seoul",
@@ -398,7 +388,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 34,
+      "order": 33,
       "flag": "🇰🇷",
       "name": "Seoul, Coreia do Sul",
       "timezone": "Asia/Seoul",
@@ -410,7 +400,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 35,
+      "order": 34,
       "flag": "🇯🇵",
       "name": "Tottori-shi, Japão",
       "timezone": "Asia/Tokyo",
@@ -422,7 +412,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 36,
+      "order": 35,
       "flag": "🇯🇵",
       "name": "Nagoya, Japão",
       "timezone": "Asia/Tokyo",
@@ -434,7 +424,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 37,
+      "order": 36,
       "flag": "🇯🇵",
       "name": "Tokyo Disneyland, Japão",
       "timezone": "Asia/Tokyo",
@@ -446,7 +436,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 38,
+      "order": 37,
       "flag": "🇸🇬",
       "name": "Singapura, Cingapura",
       "timezone": "Asia/Singapore",
@@ -458,7 +448,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 39,
+      "order": 38,
       "flag": "🇲🇻",
       "name": "Malé, Maldivas",
       "timezone": "Indian/Maldives",
@@ -470,7 +460,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 40,
+      "order": 39,
       "flag": "🇹🇲",
       "name": "Asgabate, Turcomenistão",
       "timezone": "Asia/Ashgabat",
@@ -482,7 +472,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 41,
+      "order": 40,
       "flag": "🇴🇲",
       "name": "Muscat, Omã",
       "timezone": "Asia/Muscat",
@@ -494,7 +484,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 42,
+      "order": 41,
       "flag": "🇦🇿",
       "name": "Baku, Azerbaijão",
       "timezone": "Asia/Baku",
@@ -506,7 +496,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 43,
+      "order": 42,
       "flag": "🇹🇷",
       "name": "İzmir, Turquia",
       "timezone": "Europe/Istanbul",
@@ -518,7 +508,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 44,
+      "order": 43,
       "flag": "🇮🇱",
       "name": "Jerusalém, Israel",
       "timezone": "Asia/Jerusalem",
@@ -530,7 +520,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 45,
+      "order": 44,
       "flag": "🇬🇷",
       "name": "Caminho da Felicidade, Grécia",
       "timezone": "Europe/Athens",
@@ -542,7 +532,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 46,
+      "order": 45,
       "flag": "🇪🇸",
       "name": "Caminho da Felicidade, Espanha",
       "timezone": "Europe/Madrid",
@@ -554,7 +544,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 47,
+      "order": 46,
       "flag": "🇫🇷",
       "name": "Caminho da Felicidade, França",
       "timezone": "Europe/Paris",
@@ -566,7 +556,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 48,
+      "order": 47,
       "flag": "🇮🇹",
       "name": "Veneza, Itália",
       "timezone": "Europe/Rome",
@@ -578,7 +568,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 49,
+      "order": 48,
       "flag": "🇭🇺",
       "name": "Budapeste, Hungria",
       "timezone": "Europe/Budapest",
@@ -590,7 +580,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 50,
+      "order": 49,
       "flag": "🇮🇨",
       "name": "Las Palmas, Canárias, Espanha",
       "timezone": "Atlantic/Canary",
@@ -602,7 +592,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 51,
+      "order": 50,
       "flag": "🇬🇧",
       "name": "Caminho da Felicidade, Reino Unido",
       "timezone": "Europe/London",
@@ -614,7 +604,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 52,
+      "order": 51,
       "flag": "🇮🇪",
       "name": "St Stephen's Green, Dublin, Irlanda",
       "timezone": "Europe/Dublin",
@@ -626,7 +616,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 53,
+      "order": 52,
       "flag": "🇵🇹",
       "name": "Ponta Delgada, Açores, Portugal",
       "timezone": "Atlantic/Azores",
@@ -638,7 +628,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 54,
+      "order": 53,
       "flag": "🇧🇷",
       "name": "Consolação, São Paulo",
       "timezone": "America/Sao_Paulo",
@@ -650,7 +640,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 55,
+      "order": 54,
       "flag": "🇧🇷",
       "name": "Quinta da Boa Vista, Rio de Janeiro",
       "timezone": "America/Sao_Paulo",
@@ -662,7 +652,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 56,
+      "order": 55,
       "flag": "🇧🇷",
       "name": "Parque Madureira, Rio de Janeiro",
       "timezone": "America/Sao_Paulo",
@@ -674,7 +664,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 57,
+      "order": 56,
       "flag": "🇺🇾",
       "name": "Montevidéu, Uruguai",
       "timezone": "America/Montevideo",
@@ -686,7 +676,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 58,
+      "order": 57,
       "flag": "🇻🇪",
       "name": "Caracas, Venezuela",
       "timezone": "America/Caracas",
@@ -698,7 +688,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 59,
+      "order": 58,
       "flag": "🇺🇸",
       "name": "Downtown, Nova York",
       "timezone": "America/New_York",
@@ -710,7 +700,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 60,
+      "order": 59,
       "flag": "🇨🇦",
       "name": "City Hall, Toronto, Canadá",
       "timezone": "America/Toronto",
@@ -722,7 +712,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 61,
+      "order": 60,
       "flag": "🇨🇺",
       "name": "Havana, Cuba",
       "timezone": "America/Havana",
@@ -734,7 +724,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 62,
+      "order": 61,
       "flag": "🇪🇨",
       "name": "Guayaquil, Equador",
       "timezone": "America/Guayaquil",
@@ -746,7 +736,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 63,
+      "order": 62,
       "flag": "🇺🇸",
       "name": "Caminho da Felicidade, Texas",
       "timezone": "America/Chicago",
@@ -758,7 +748,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 64,
+      "order": 63,
       "flag": "🇲🇽",
       "name": "Cidade do México, México",
       "timezone": "America/Mexico_City",
@@ -770,7 +760,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 65,
+      "order": 64,
       "flag": "🇨🇦",
       "name": "Calgary, Alberta, Canadá",
       "timezone": "America/Edmonton",
@@ -782,7 +772,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 66,
+      "order": 65,
       "flag": "🇺🇸",
       "name": "Union Square, São Francisco",
       "timezone": "America/Los_Angeles",
@@ -794,7 +784,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 67,
+      "order": 66,
       "flag": "🇨🇦",
       "name": "Sutcliffe Park, Vancouver",
       "timezone": "America/Vancouver",
@@ -806,7 +796,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 68,
+      "order": 67,
       "flag": "🇺🇸",
       "name": "Fairbanks, Alasca",
       "timezone": "America/Anchorage",
@@ -818,7 +808,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 69,
+      "order": 68,
       "flag": "🇵🇫",
       "name": "Mangareva, Polinésia Francesa",
       "timezone": "Pacific/Gambier",
@@ -830,8 +820,8 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 70,
-      "flag": "🇵🇫",
+      "order": 69,
+      "flag": "🇨🇰",
       "name": "Rarotonga, Ilhas Cook",
       "timezone": "Pacific/Rarotonga",
       "lat": -21.208,
@@ -842,7 +832,7 @@
       "reference_date": "2023-11-10"
     },
     {
-      "order": 71,
+      "order": 70,
       "flag": "🇺🇸",
       "name": "Midway Island",
       "timezone": "Pacific/Midway",
