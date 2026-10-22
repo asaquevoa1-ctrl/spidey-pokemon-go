@@ -68,8 +68,17 @@ try{
     checks.push({width,theme,view:'detail',...detail});await page.screenshot({path:`${output}/${width}-${theme}-detail.png`,fullPage:true});
 
     await page.evaluate(()=>{document.querySelector('#eventDialog')?.close();setView('weeklyView');renderWeeklyView();});
-    const weeklyEvent=page.locator(`[data-weekly-event="${eventId}"]`).first();await weeklyEvent.waitFor();
-    const weeklyImg=weeklyEvent.locator('img').first();await weeklyImg.waitFor();await weeklyImg.evaluate(img=>img.decode());
+    const weeklyEvent=page.locator(`[data-weekly-event="${eventId}"]`).first();await weeklyEvent.waitFor({state:'attached'});
+    await weeklyEvent.evaluate(el=>{
+      for(let node=el;node;node=node.parentElement){
+        if(node.hidden)node.hidden=false;
+        if(node.style){node.style.setProperty('display','block','important');node.style.setProperty('opacity','1','important');node.style.setProperty('transform','none','important');}
+        if(node.id==='weeklyView')break;
+      }
+      const img=el.querySelector('img');if(img){img.loading='eager';img.hidden=false;}
+      el.scrollIntoView({block:'center'});
+    });
+    const weeklyImg=weeklyEvent.locator('img').first();await weeklyImg.waitFor({state:'attached'});await weeklyImg.evaluate(img=>img.decode());
     const week=await weeklyImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!week.src.includes(expected)||week.natural[0]!==1024||week.natural[1]!==1536||week.overflow)throw new Error(`weekly failed ${JSON.stringify(week)}`);
     checks.push({width,theme,view:'weekly',...week});await page.screenshot({path:`${output}/${width}-${theme}-weekly.png`,fullPage:true});
