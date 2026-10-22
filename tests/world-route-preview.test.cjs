@@ -14,11 +14,13 @@ const elgyem = events.find(event=>event.id==='2026-10-08-spotlight-elgyem');
 test('Elgyem at 13:16 Brasília exposes all active localities, their coordinates and the next window',()=>{
   const world = setup().SpideyWorldRoute, now = new Date('2026-10-08T16:16:00Z');
   const model = world.model(elgyem,points,now);
-  assert.deepEqual(Array.from(model.active,row=>row.timezone).sort(),['Europe/Madrid','Europe/Rome']);
-  assert.equal(model.next.length,1);assert.equal(model.next[0].timezone,'Europe/London');
+  assert.ok(model.active.length>=6,'Recovered complete 2023 world references should include all active European hotspots');
+  for(const zone of ['Europe/Madrid','Europe/Rome','Europe/Budapest','Europe/Paris']) assert.ok(model.active.some(row=>row.timezone===zone),zone);
+  assert.ok(model.next.some(row=>row.timezone==='Europe/London'),'London still included in next timezone window');
+  assert.ok(model.next.every(row=>row.start.toISOString()==='2026-10-08T17:00:00.000Z'));
   assert.equal(model.next[0].start.toISOString(),'2026-10-08T17:00:00.000Z');
   const html = world.render(elgyem,points,now);
-  for (const text of ['Onde jogar agora','Zaragoza, Espanha','Roma, Itália','Londres, Reino Unido','41.661609,-0.89464','41.889988,12.493033','13:00','14:00','44 min','Copiar coordenadas','Ver rota mundial completa']) assert.ok(html.includes(text),text);
+  for (const text of ['Onde jogar agora','Saragoça, Espanha','Coliseu, Roma, Itália','Londres, Reino Unido','41.661609,-0.89464','41.889988,12.493033','13:00','14:00','44 min','Copiar coordenadas','Ver rota mundial completa']) assert.ok(html.includes(text),text);
   assert.equal(world.model(elgyem,points,new Date('2026-10-08T17:00:00Z')).active[0].timezone,'Europe/London');
 });
 test('Home retains an active world event after its Brazilian window closes',()=>{
