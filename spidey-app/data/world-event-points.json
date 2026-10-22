@@ -6,7 +6,13 @@
     "respect_daylight_saving": true,
     "show_local_event_window": true,
     "coordinate_format": "lat,lon",
-    "coordinate_role": "timezone_reference"
+    "coordinate_role": "timezone_reference",
+    "show_portugal_time_comparison": false,
+    "keep_portugal_as_geographic_reference": true,
+    "display_clock_columns": [
+      "horario_local_destino",
+      "horario_brasilia"
+    ]
   },
   "points": [
     {
@@ -851,6 +857,10 @@
     "credits_display": "Créditos das coordenadas de referência: LendáriosBrasil · FlyGPS · PokemonTrail. Horários da lista original revisados por 👻 Fantasma 👻 (06/11/2023).",
     "dates_disclaimer": "Lista histórica de 10/11/2023. Horários de referência originalmente publicados não devem ser copiados para outras datas. A conversão Brasília deve usar timezone IANA e a data real de cada evento.",
     "source_type": "user_supplied_historical_reference",
-    "original_points_count": 67
+    "original_points_count": 67,
+    "role_in_project": "Base geográfica original do FLY, já prevista na constituição do aplicativo em 01/10/2026; não é nova regra.",
+    "ux_policy": "Exibir horários local do destino e de Brasília, desconsiderar totalmente coluna de hora de Portugal. Não excluir pontos em Portugal que são referências geográficas.",
+    "early_project_evidence": "SPIDEY_APP_CONSTITUTION.md, commit e08cf8eb7c6fd5b6df87dcf1a467c286a0c5295f, 2026-10-01; SPIDEYNEXUS_Continuidade_05-10-2026.md.",
+    "maintenance_20261022": "Recuperação de referências faltantes na implementação atual a partir da lista-base original. Os horários impressos de Portugal e de Brasília em 2023 não são dados operacionais."
   }
 }
