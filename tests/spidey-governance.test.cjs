@@ -61,3 +61,26 @@ test('protect relevant event data and published Seoul event without publishing f
  const trust=JSON.parse(fs.readFileSync('spidey-app/data/national-trust-2026.json','utf8'));
  assert.equal(trust.places.length,27);
 });
+
+
+test('governance, agent and Gold Standard require the exact approved cosmic S instead of historical spider',()=>{
+ const logo='assets/branding/20261019/spidey-icon-cosmic-512.png';
+ const expected='4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8';
+ const manifest=JSON.parse(fs.readFileSync(governance.identity.logo_manifest,'utf8'));
+ const icon=manifest.images.find(item=>item.role==='icon-512');
+ assert.ok(icon,'Cosmic approved launcher icon manifest missing');
+ assert.equal(governance.identity.logo,logo);
+ assert.equal(governance.identity.logo_sha256,expected);
+ assert.equal(icon.path,logo);
+ assert.equal(icon.sha256,expected);
+ assert.equal(governance.identity.legacy_logo_for_new_art,false);
+ assert.ok(fs.existsSync('spidey-app/'+logo),'Cosmic approved binary missing');
+ const agents=fs.readFileSync('AGENTS.md','utf8');
+ const gold=fs.readFileSync('SPIDEY_GOLD_STANDARD.md','utf8');
+ for(const policy of [agents,gold]){
+  assert.match(policy,/S cósmico dourado/);
+  assert.ok(policy.includes(logo));
+  assert.ok(!policy.includes('reutilizar `assets/spidey-logo-oficial.jpg`'));
+ }
+ assert.equal(governance.identity.banned_word_in_poster,'SpideyNexus');
+});
