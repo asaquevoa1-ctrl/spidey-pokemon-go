@@ -2,12 +2,12 @@
   'use strict';
   const master = {
   "2026-10-24-spidey-full-day-guide": {
-    "file": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
+    "file": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1024,
     "height": 1536,
-    "sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
+    "sha256": "7b94b67a2afdeb113ac577545cb758288f9649c8a6c36aa6d18ef62dd602e36d",
     "approval_record": "docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json",
     "approval_basis": "USER_APPROVED_ART_AND_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"

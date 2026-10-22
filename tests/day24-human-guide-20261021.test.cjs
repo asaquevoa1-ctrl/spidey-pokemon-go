@@ -31,8 +31,9 @@ test('24 October guide separates globally accessible steps, regional-only activi
   for (const v of e.verification_sources) assert.ok(v.url.startsWith('https://'), 'Cada referência precisa ser link seguro');
 
   assert.ok(e.notes.every(n => !/Morelull/i.test(n)));
-  const approvedPath='spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp';
-  const sha='003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f';
+  const approvedPath='spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png';
+  const preservedWebp='spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp';
+  const sha='7b94b67a2afdeb113ac577545cb758288f9649c8a6c36aa6d18ef62dd602e36d';
   assert.equal(e.art.url,approvedPath.replace('spidey-app/',''));
   assert.equal(e.art.web_sha256,sha);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(approvedPath)).digest('hex'),sha);
@@ -45,13 +46,16 @@ test('24 October guide separates globally accessible steps, regional-only activi
   const sw=fs.readFileSync('spidey-app/sw.js','utf8');
   assert.ok(sw.includes('./'+e.art.url),'Offline cache must contain the approved flow image');
   assert.match(sw,/const CACHE = 'spidey-app-2026[0-9]{4}-[^']+'/,'Service worker must version Android updates');
-  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261021-pawniard-coords-premium1'));
+  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261022-day24-png1'));
 
   const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json','utf8'));
   const artwork=qa.artworks.find(a=>a.event_id===e.id && a.kind==='main_hero');
   assert.equal(artwork.sha256,sha);
   assert.equal(artwork.bytes,fs.statSync(approvedPath).size);
   assert.equal(artwork.width,1024);
+  assert.equal(artwork.format,'PNG');
+  assert.equal(artwork.preserved_source.path,preservedWebp);
+  assert.equal(artwork.preserved_source.sha256,crypto.createHash('sha256').update(fs.readFileSync(preservedWebp)).digest('hex'));
   assert.equal(qa.original_logo_file,'spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png');
   assert.equal(e.gpx.enabled,false,'Never offer a fake GPX for unverified Gym coordinates');
   assert.equal(e.locations.length,3);

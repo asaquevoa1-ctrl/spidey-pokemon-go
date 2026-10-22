@@ -109,12 +109,12 @@
       },
       "status": "published",
       "verified_at": "2026-10-21",
-      "updated_at": "2026-10-21T22:24:00-03:00",
+      "updated_at": "2026-10-22T17:32:00-03:00",
       "art": {
-        "url": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
+        "url": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png",
         "web_width": 1024,
         "web_height": 1536,
-        "web_sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
+        "web_sha256": "7b94b67a2afdeb113ac577545cb758288f9649c8a6c36aa6d18ef62dd602e36d",
         "alt": "Roteiro Premium de 24 de outubro do Spidey: FC Seoul com Pokémon por nomes e sem miniaturas deformadas, City Safari Boston com Eevee de chapéu, Trio do Lago opcional e Night Out à noite, horários de Brasília."
       },
       "companion_art": {

@@ -9,12 +9,19 @@
     {
       "event_id": "2026-10-24-spidey-full-day-guide",
       "kind": "main_hero",
-      "path": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
+      "path": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png",
+      "format": "PNG",
       "width": 1024,
       "height": 1536,
-      "bytes": 577428,
-      "sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
-      "source": "User-reviewed final event flow graphic; info text for Seoul avoids distorted small Pokémon."
+      "bytes": 2554342,
+      "sha256": "7b94b67a2afdeb113ac577545cb758288f9649c8a6c36aa6d18ef62dd602e36d",
+      "source": "User-reviewed final event flow graphic; info text for Seoul avoids distorted small Pokémon.",
+      "format_conversion": "Lossless storage of the decoded approved WebP pixels as PNG; ImageMagick absolute-error comparison: 0. No regeneration, redesign or text change.",
+      "preserved_source": {
+        "path": "spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
+        "bytes": 577428,
+        "sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f"
+      }
     },
     {
       "event_id": "2026-10-24-spidey-full-day-guide",
@@ -71,7 +78,7 @@
     "https://pokemongo.com/en/news/communityday-november-2026-pawniard"
   ],
   "regression_protections": [
-    "Old v1/v2/v3 day guide premium artwork remains unchanged",
+    "Old v1/v2/v3/v4 WebP day guide premium artwork remains unchanged",
     "Mobile uses only left-side menu; desktop unaffected",
     "Pawniard entry updated in place, not duplicated",
     "Companion landmarks do not enable GPX or claim game-object coordinates",
@@ -82,7 +89,10 @@
     "binary_sha256": "matched locally before GitHub transfer",
     "dimensions": "1024x1536 all",
     "user_visual_feedback": "approved previous three images",
-    "ci_tests": "pending",
+    "pixel_absolute_error": 0,
+    "local_node_tests": "250/250 passed",
+    "responsive_preview": "pending CI: calendar, week and detail at 390/1280 px in light/dark themes",
+    "ci_tests": "pending pull request",
     "github_pages": "pending",
     "real_samsung": "not physically retested"
   }
