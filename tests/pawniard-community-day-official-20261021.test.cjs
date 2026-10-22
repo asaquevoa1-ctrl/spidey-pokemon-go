@@ -44,17 +44,26 @@ test('Pawniard bonuses distinguish 14h–17h from extended 14h–21h',()=>{
   assert.ok(event.pokemon.some(p=>p.name==='Kingambit' && p.note.includes('Kowtow Cleave')));
   assert.ok(event.pokemon.some(p=>p.name==='Pawniard' && p.note.includes('Brilhante')));
 });
-test('No third-party GO Hub poster is passed off as approved Spidey art',()=>{
-  assert.equal(event.presentation.requires_art,false);
-  assert.equal(event.presentation.fallback_visual,'date');
-  assert.equal(event.presentation.no_unverified_poster,true);
-  assert.ok(!event.art || !event.art.url);
+test('Original Pawniard Premium poster is approved and independent of GO Hub third-party artwork',()=>{
+  const crypto=require('node:crypto');
+  assert.equal(event.presentation.requires_art,true);
+  assert.equal(event.presentation.fallback_visual,'none');
+  assert.equal(event.presentation.no_unverified_poster,false);
+  const imagePath='spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp';
+  const sha='3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963';
+  assert.equal(event.art.url,imagePath.replace('spidey-app/',''));
+  assert.equal(event.art.web_sha256,sha);
+  assert.equal(crypto.createHash('sha256').update(fs.readFileSync(imagePath)).digest('hex'),sha);
   const sandbox={window:{}};
   vm.runInNewContext(fs.readFileSync(root+'premium-approved-master.js','utf8'),sandbox);
-  assert.equal(sandbox.window.SPIDEY_APPROVED_ART_MASTER?.[id],undefined);
+  assert.equal(sandbox.window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,event.art.url);
+  assert.equal(sandbox.window.SPIDEY_APPROVED_ART_MASTER?.[id]?.sha256,sha);
+  const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json','utf8'));
+  assert.equal(qa.artworks.find(x=>x.event_id===id).sha256,sha);
   assert.equal(event.gpx.enabled,false);
   assert.ok(event.verification_sources.every(x=>x.confidence==='official'));
   assert.ok(!event.notes.join(' ').includes('aguardam anúncio oficial'));
+  assert.ok(fs.readFileSync(root+'sw.js','utf8').includes('./'+event.art.url));
 });
 test('Confirmed Pawniard release shows as its own Novidades story',()=>{
   const sandbox={window:{},URL,Date,Map,Math};
