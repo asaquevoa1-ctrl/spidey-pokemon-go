@@ -259,17 +259,17 @@
             "confidence": "editorial_verified"
           },
           "art": {
-            "url": "assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
+            "url": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
             "web_width": 1024,
             "web_height": 1536,
-            "web_sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
-            "alt": "Roteiro premium 24/10, com painel FC Seoul sem miniaturas distorcidas: Charmander reides, Charizard pesquisa temporária e Growlithe, Flareon, Torchic, Houndour, Litleo e Litten na natureza; Boston com Eevee de chapéu e Night Out com Pikachu sem chapéu."
+            "web_sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
+            "alt": "Roteiro Premium de 24 de outubro do Spidey: FC Seoul com Pokémon por nomes e sem miniaturas deformadas, City Safari Boston com Eevee de chapéu, Trio do Lago opcional e Night Out à noite, horários de Brasília."
           },
           "weekly_art": {
-            "url": "assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
+            "url": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
             "width": 1024,
             "height": 1536,
-            "sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
+            "sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
             "source_role": "canonical_master",
             "kind": "approved_master",
             "premium": true
@@ -509,17 +509,17 @@
           "confidence": "editorial_verified"
         },
         "art": {
-          "url": "assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
+          "url": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
           "web_width": 1024,
           "web_height": 1536,
-          "web_sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
-          "alt": "Roteiro premium 24/10, com painel FC Seoul sem miniaturas distorcidas: Charmander reides, Charizard pesquisa temporária e Growlithe, Flareon, Torchic, Houndour, Litleo e Litten na natureza; Boston com Eevee de chapéu e Night Out com Pikachu sem chapéu."
+          "web_sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
+          "alt": "Roteiro Premium de 24 de outubro do Spidey: FC Seoul com Pokémon por nomes e sem miniaturas deformadas, City Safari Boston com Eevee de chapéu, Trio do Lago opcional e Night Out à noite, horários de Brasília."
         },
         "weekly_art": {
-          "url": "assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp",
+          "url": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp",
           "width": 1024,
           "height": 1536,
-          "sha256": "cfd7e75a279776764ace690169db060e2e210b52c9cdb0e25e206fd16b07531e",
+          "sha256": "003f5f016fa83c3f43f8c3d50960ab2426135921bdb12cbec71494afc2e4c61f",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
@@ -1031,7 +1031,7 @@
     "events_without_weekly_art": 3,
     "events_in_weekly": 24,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-21T22:40:41.579574-03:00",
+    "generated_at": "2026-10-21T22:46:46.262242-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
