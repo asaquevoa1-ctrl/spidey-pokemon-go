@@ -1,0 +1,34 @@
+name: Spidey Day 24 PNG Art QA
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png'
+      - 'spidey-app/data/events.json'
+      - 'spidey-app/index.html'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/sw.js'
+      - 'docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json'
+      - 'scripts/qa_day24_png_art_browser.mjs'
+      - 'tests/day24-human-guide-20261021.test.cjs'
+      - '.github/workflows/spidey-day24-png-art-qa.yml'
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: node --test tests/day24-human-guide-20261021.test.cjs
+      - run: |
+          set -o pipefail
+          mkdir -p test-results/day24-png-art
+          command -v google-chrome | tee test-results/day24-png-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_day24_png_art_browser.mjs 2>&1 | tee test-results/day24-png-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: day24-png-art-responsive-preview
+          path: test-results/day24-png-art
