@@ -1,6 +1,6 @@
 # SPIDEY — DECISÕES ATUAIS E REGRAS DE CONTINUIDADE
 
-**Atualizado em 18/10/2026.** Fonte de referência operacional para qualquer agente, chat, Work, CI ou colaboração neste repositório.
+**Reconciliado em 22/10/2026.** Fonte de referência operacional para qualquer agente, chat, Work, CI ou colaboração neste repositório.
 
 ## Como resolver divergências
 1. A **instrução mais recente do responsável** para o projeto prevalece sobre decisões históricas.
@@ -190,3 +190,24 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Para **qualquer evento global elegível** publicado, o Spidey calcula **18h–19h no fuso local de cada ponto**, ou o intervalo local próprio do evento, convertendo dinamicamente para **America/Sao_Paulo** por IDs de fusos IANA. No Morelull de 22/10/2026, os horários de Roma, Londres, Jerusalém, Nova York e Chicago diferem dos horários históricos porque ainda há horário de verão.
 - Premissa permanente antirregressão: `tests/fly-historical-list-dst-20261022.test.cjs` verifica todos os **67 pontos e créditos**, duplicatas, chaves timezone, hora local e conversão para Brasília e diferenças de horário de verão entre outubro e novembro. `tests/fly-core.test.cjs`, `tests/morelull-fly-route-20261021.test.cjs` e `tests/fly-contract-global-events-20261021.test.cjs` acompanham dinamicamente o total em vez de aceitar apenas 28.
 - A correção é **restauração da base antiga incompleta**, não uma regra ou recurso inventado nesta data. O FLY deve exibir os **70 pontos** ao abrir o roteiro pelo calendário e manter botões de copiar coordenadas/mapa. Em celulares, atualizar scripts, CSS e Service Worker; manter menu ☰ sem barra inferior, identidade cósmica e artes Premium. **Coordenadas são referências históricas informadas pelo usuário, não garantias de spawns, Ginásios ou PokéStops**.
+
+
+## 22/10/2026 — Proteção da continuidade entre chats, Work, Projeto, GitHub e Notion
+**Fato auditado:** esses ambientes não possuem sincronização automática integral de decisões. O Notion serve como índice complementar; o histórico de conversa, documentos antigos, ações agendadas e relatórios de CI podem refletir momentos diferentes. Não prometer que todos os chats foram integralmente recuperados sem auditoria cruzada.
+
+**Ordem permanente:** (1) decisão explícita mais recente do responsável; (2) este registro e AGENTS.md para regras duráveis; (3) estado técnico real de `main`, GitHub Actions, deployment, registros de artes e fontes; (4) guias históricos/Notion somente como evidência auxiliar. Havendo conflito, registrar qual regra foi substituída, nunca restaurar silenciosamente padrão antigo.
+
+**Obrigação de atualização:** toda decisão duradoura dada em qualquer chat, Work ou Projeto deve ser promovida a ESTE arquivo por alteração rastreável no GitHub, contendo data, redação curta da regra, decisão anterior substituída (quando houver), origem verificável ou indicação “recuperado de conversa”, arquivos/testes impactados e nível real da entrega. Não copiar conversa privada, identificadores pessoais ou credenciais para o repositório público. Se a origem não puder ser confirmada, marcar para investigação em vez de inventar aprovação.
+
+**Regressões comprovadas e protegidas em 22/10:** o antigo logo aranha ainda constava em instruções e no gerador Gold após o novo S cósmico ser aprovado em 19/10; correções mescladas em [PR #132](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/132) e [PR #133](https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/133), com testes específicos. Esses exemplos mostram que texto novo sem atualização dos agentes/código não é proteção suficiente.
+
+**Outras decisões explícitas resgatadas de conversas anteriores (não são afirmações de implantação atual):**
+- 25/09: identificar recursos individualmente como **FUNCIONA / PARCIAL / QUEBRADO / NÃO IMPLEMENTADO**; não chamar de pronto porque existe arquivo, render ou PR; revisão rejeitada bloqueia publicação e não herda aprovação de versão/hash anterior.
+- 30/09: o **aplicativo público** passou a ser o produto prioritário, não canal de distribuição separado; preservar uma única arte vigente por evento sem sobreposição, e manter as versões aprovadas no acervo.
+- 13/10: solicitado relatório automático **a cada três horas** com **somente progresso real**, PRs, testes, bloqueios e lacunas, sem trabalho inventado. Esse registro **não atesta** que o agendamento está ativo; verificar agendamentos separadamente.
+- 19–22/10: S cósmico aprovado, celular com menu lateral ☰ sem barra inferior, FLY global obrigatório, base original de 67 coordenadas/70 localidades únicas, créditos preservados e janelas IANA — todos exigem código + testes, não só anotação no Notion.
+- Prioridades vigentes: push **recebido fisicamente** no Android, Caçador com feed **autorizado**, artes Premium pendentes, FLY e integridade do aplicativo; Amigos/Chat não têm prioridade de execução.
+
+**Agentes automáticos antigos:** antes de qualquer tarefa devem ler a `main` e os dois documentos canônicos atuais; nenhuma automação antiga tem poder de restaurar identidade histórica, afirmar push recebido, gerar GPX inexato, liberar artes rejeitadas ou publicar dados não autorizados. Relatório de saúde técnico ≠ validação do Samsung.
+
+**Limite honesto:** o acervo de decisões aqui é rastreável, mas não comprovadamente exaustivo sobre todos os chats/Work. Continuar comparação retroativa de lacunas sem sobrescrever o histórico anterior.
