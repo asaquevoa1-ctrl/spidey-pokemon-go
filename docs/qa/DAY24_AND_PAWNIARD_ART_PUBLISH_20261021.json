@@ -36,12 +36,19 @@
     {
       "event_id": "2026-11-21-community-day-preview",
       "kind": "event_hero",
-      "path": "spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp",
+      "path": "spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
+      "format": "PNG",
       "width": 1024,
       "height": 1536,
-      "bytes": 498658,
-      "sha256": "3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963",
-      "source": "User-approved original poster based on Pokémon GO official November 21 Pawniard Community Day."
+      "bytes": 2407525,
+      "sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
+      "source": "User-approved original poster based on Pokémon GO official November 21 Pawniard Community Day.",
+      "format_conversion": "Lossless storage of the decoded approved WebP pixels as PNG; ImageMagick absolute-error comparison: 0. No regeneration, redesign or text change.",
+      "preserved_source": {
+        "path": "spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp",
+        "bytes": 498658,
+        "sha256": "3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963"
+      }
     }
   ],
   "coordinates": {

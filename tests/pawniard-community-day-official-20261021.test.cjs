@@ -49,8 +49,8 @@ test('Original Pawniard Premium poster is approved and independent of GO Hub thi
   assert.equal(event.presentation.requires_art,true);
   assert.equal(event.presentation.fallback_visual,'none');
   assert.equal(event.presentation.no_unverified_poster,false);
-  const imagePath='spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp';
-  const sha='3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963';
+  const imagePath='spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png';
+  const sha='f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4';
   assert.equal(event.art.url,imagePath.replace('spidey-app/',''));
   assert.equal(event.art.web_sha256,sha);
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(imagePath)).digest('hex'),sha);
@@ -59,7 +59,11 @@ test('Original Pawniard Premium poster is approved and independent of GO Hub thi
   assert.equal(sandbox.window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,event.art.url);
   assert.equal(sandbox.window.SPIDEY_APPROVED_ART_MASTER?.[id]?.sha256,sha);
   const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json','utf8'));
-  assert.equal(qa.artworks.find(x=>x.event_id===id).sha256,sha);
+  const approved=qa.artworks.find(x=>x.event_id===id);
+  assert.equal(approved.sha256,sha);
+  assert.equal(approved.format,'PNG');
+  assert.equal(approved.preserved_source.sha256,'3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963');
+  assert.equal(crypto.createHash('sha256').update(fs.readFileSync(approved.preserved_source.path)).digest('hex'),approved.preserved_source.sha256);
   assert.equal(event.gpx.enabled,false);
   assert.ok(event.verification_sources.every(x=>x.confidence==='official'));
   assert.ok(!event.notes.join(' ').includes('aguardam anúncio oficial'));

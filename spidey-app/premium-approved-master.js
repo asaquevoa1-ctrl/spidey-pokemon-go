@@ -13,12 +13,12 @@
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-11-21-community-day-preview": {
-    "file": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp",
+    "file": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1024,
     "height": 1536,
-    "sha256": "3725c620344e21f83311c2421f5eaa27e9a5672372c57aa6fb470fa1cb34f963",
+    "sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
     "approval_record": "docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json",
     "approval_basis": "USER_APPROVED_ART_AND_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"

@@ -90,7 +90,7 @@ Ler nesta ordem no GitHub:
 ### Pawniard — Dia Comunitário de novembro
 
 - **21/11/2026, 14h–17h hora local**; espécie e bônus confirmados no anúncio oficial Pokémon GO. Shiny, 1/4 da distância de ovos colocados em incubadoras durante janela, 2× Doces, 2× chance Doces GG para nível 31+, e benefícios estendidos até 21h. Bisharp→Kingambit com **Kowtow Cleave** ao evoluir até 21h, evolução temporariamente facilitada conforme regra oficial. Detalhes exatos no evento e anúncio oficial.
-- **ID existente preservado** `2026-11-21-community-day-preview` apesar do nome histórico “preview”; é evento confirmado publicado, sem duplicação. Arte Premium `assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp`; PR #124 confirmou dados, #127 integrou arte.
+- **ID existente preservado** `2026-11-21-community-day-preview` apesar do nome histórico “preview”; é evento confirmado publicado, sem duplicação. Arte Premium consolidada em PNG `assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png`, com o WebP original preservado; PR #124 confirmou dados, #127 integrou arte.
 
 ### Outros eventos, notícias e calendários
 

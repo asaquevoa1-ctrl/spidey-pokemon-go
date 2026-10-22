@@ -22,7 +22,7 @@ const CORE = [
   './assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp',
   './assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png',
   './assets/events/premium/spidey-2026-10-24-coordinates-reference-v1.webp',
-  './assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp',
+  './assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png',
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
   './assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png',

@@ -2,14 +2,19 @@ import { execFileSync, spawn } from 'node:child_process';
 import fs from 'node:fs';
 import { chromium } from 'playwright-core';
 
-const eventId='2026-10-24-spidey-full-day-guide';
-const approved='assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png';
-const output='test-results/day24-png-art';
+const eventId=process.env.SPIDEY_QA_EVENT_ID||'2026-10-24-spidey-full-day-guide';
+const approved=process.env.SPIDEY_QA_APPROVED_ART||'assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png';
+const output=process.env.SPIDEY_QA_OUTPUT||'test-results/day24-png-art';
+const fixtureDate=process.env.SPIDEY_QA_WEEK_DATE||'2026-10-19';
+const fixed=process.env.SPIDEY_QA_FIXED_TIME||'2026-10-24T12:00:00-03:00';
+const calendarYear=Number(process.env.SPIDEY_QA_CALENDAR_YEAR||2026);
+const calendarMonth=Number(process.env.SPIDEY_QA_CALENDAR_MONTH||10);
+const calendarDay=Number(process.env.SPIDEY_QA_CALENDAR_DAY||24);
 fs.mkdirSync(output,{recursive:true});
 
 const eventsDoc=JSON.parse(fs.readFileSync('spidey-app/data/events.json'));
 if(!eventsDoc.events.some(item=>item.id===eventId))throw new Error('catalog event is missing');
-const weekly=JSON.parse(execFileSync('python3',['-c',"from datetime import date; import json; from scripts.build_spidey_weekly import build; print(json.dumps(build(date(2026,10,19))))"],{encoding:'utf8'}));
+const weekly=JSON.parse(execFileSync('python3',['-c',`from datetime import date; import json; from scripts.build_spidey_weekly import build; print(json.dumps(build(date.fromisoformat('${fixtureDate}'))))`],{encoding:'utf8'}));
 const weeklyItems=[...weekly.days.flatMap(day=>day.items),...Object.values(weekly.sections).flat()];
 if(!weeklyItems.some(item=>item.id===eventId))throw new Error('weekly fixture is missing the event');
 
@@ -21,7 +26,6 @@ for(let attempt=0;attempt<40;attempt+=1){
 }
 if(!ready){server.kill('SIGTERM');throw new Error('static preview server did not become ready');}
 
-const fixed='2026-10-24T12:00:00-03:00';
 const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome'});
 const checks=[];
 try{
@@ -39,12 +43,12 @@ try{
     const expected=await page.evaluate(id=>window.SPIDEY_APPROVED_ART_MASTER?.[id]?.file,eventId);
     if(expected!==approved)throw new Error(`unexpected artwork ${expected}`);
 
-    await page.evaluate(()=>{
+    await page.evaluate(({year,month})=>{
       setView('calendarView');
       document.querySelectorAll('.app-view').forEach(view=>{view.hidden=view.id!=='calendarView';});
-      state.month=new Date(2026,9,1);renderCalendar();
-    });
-    const index=await page.evaluate(()=>{const first=new Date(2026,9,1),gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,24)-gridStart)/86400000);});
+      state.month=new Date(year,month-1,1);renderCalendar();
+    },{year:calendarYear,month:calendarMonth});
+    const index=await page.evaluate(({year,month,day})=>{const first=new Date(year,month-1,1),gridStart=new Date(year,month-1,1-first.getDay());return Math.round((new Date(year,month-1,day)-gridStart)/86400000);},{year:calendarYear,month:calendarMonth,day:calendarDay});
     await page.locator('#calendar .calendar-day').nth(index).evaluate(button=>button.click());
     const dayEvent=page.locator(`#eventDetail [data-event-id="${eventId}"]`);await dayEvent.waitFor();
     await dayEvent.evaluate(el=>{
@@ -84,7 +88,7 @@ try{
     checks.push({width,theme,view:'weekly',...week});await page.screenshot({path:`${output}/${width}-${theme}-weekly.png`,fullPage:true});
     await page.close();
   }
-  fs.writeFileSync(`${output}/result.json`,JSON.stringify({status:'PASSED_PREVIEW',event_id:eventId,week:'2026-10-19..2026-10-25',checks,physical_android_tested:false},null,2)+'\n');
+  fs.writeFileSync(`${output}/result.json`,JSON.stringify({status:'PASSED_PREVIEW',event_id:eventId,week_fixture:fixtureDate,checks,physical_android_tested:false},null,2)+'\n');
   console.log(JSON.stringify({status:'PASSED_PREVIEW',checks:checks.length}));
 }finally{
   await browser.close();server.kill('SIGTERM');
