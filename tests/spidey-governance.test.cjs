@@ -96,3 +96,15 @@ test('Gold image generator overlays the original cosmic-S file, never the old sp
  assert.ok(!script.includes('assets/spidey-logo-oficial.jpg'));
  assert.ok(!script.includes('ImageDraw.Draw(mask).ellipse'));
 });
+
+
+test('cross-chat continuity must be read from current decisions, not outdated Notion or historical index',()=>{
+ const agents=fs.readFileSync('AGENTS.md','utf8');
+ const decisions=fs.readFileSync('SPIDEY_DECISIONS_CURRENT.md','utf8');
+ assert.match(agents,/Continuidade entre chats, Work, automações e Notion/);
+ assert.match(agents,/Atualize o registro canônico/);
+ assert.match(decisions,/Proteção da continuidade entre chats, Work, Projeto, GitHub e Notion/);
+ for(const rule of ['FUNCIONA / PARCIAL / QUEBRADO / NÃO IMPLEMENTADO', 'a cada três horas', '67 coordenadas/70 localidades únicas', 'push **recebido fisicamente**']) {
+  assert.ok(decisions.includes(rule),'Missing recovered durable rule: '+rule);
+ }
+});
