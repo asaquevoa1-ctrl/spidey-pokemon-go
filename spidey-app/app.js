@@ -474,8 +474,17 @@ function openEvent(event) {
       ${newsOnly ? '' : `<div class="info-grid">
         ${dateOnly ? `<div class="info-box"><span>Período no local</span><strong>${window.SpideyDateOnly.label(event)}</strong></div><div class="info-box"><span>Horário diário</span><strong>Não divulgado</strong></div>` : `<div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div><div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>`}
       </div>
-      <h3>Coordenadas</h3>${locationRows(event)}`}
+      <h3>Coordenadas</h3>${locationRows(event)}
+      ${event.companion_art?.url ? `<div class="spidey-companion-art">
+        <h3>${event.companion_art.title || 'Coordenadas ilustradas'}</h3>
+        <a href="${event.companion_art.url}?v=${String(event.companion_art.web_sha256 || '').slice(0,12)}" target="_blank" rel="noopener" aria-label="Abrir arte completa de coordenadas">
+          <img loading="lazy" class="spidey-companion-preview" src="${event.companion_art.url}?v=${String(event.companion_art.web_sha256 || '').slice(0,12)}" alt="${event.companion_art.alt || 'Mapa de referência'}">
+        </a>
+        <a class="action-btn gold" download href="${event.companion_art.url}?v=${String(event.companion_art.web_sha256 || '').slice(0,12)}">Baixar arte de coordenadas</a>
+        <p><small>Referências de locais, não coordenadas de Ginásios ou pontos exclusivos garantidos.</small></p>
+      </div>` : ''}`}
       <div class="action-row">
+        ${['2026-10-24-spidey-full-day-guide','2026-11-21-community-day-preview'].includes(event.id) && event.art?.url ? `<a class="action-btn gold" download href="${eventImage(event)}">Baixar pôster Premium</a>` : ''}
         ${event.gpx?.enabled !== false && (event.locations || []).length ? '<button id="downloadGpx" class="action-btn gold">Baixar GPX</button>' : ''}
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">${event.source.confidence === 'official' ? 'Anúncio oficial' : 'Ver fonte'}</a>` : ''}
       </div>
