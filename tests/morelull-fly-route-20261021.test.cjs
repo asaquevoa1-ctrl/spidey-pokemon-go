@@ -79,9 +79,9 @@ test('FLY UI shows a timely Morelull feature, selected complete global route and
   assert.ok(ui.includes('data-fly-morespotlight'));
   assert.ok(ui.includes('data-coord="${q}"'));
   assert.ok(ui.includes("core.loadPoints()"));
-  assert.ok(html.includes('fly-v1.js?v=20261021-morelull-fly1'));
+  assert.ok(html.includes('fly-v1.js?v=20261022-credits-dst1'));
   assert.ok(css.includes('.fly-spotlight-feature'));
   assert.ok(app.includes('id="openMorelullFly"'));
   assert.ok(app.includes("SpideyFly?.open('2026-10-22-spotlight-morelull')"));
-  assert.ok(sw.includes('spidey-app-20261021-morelull-fly-v1'));
+  assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1'));
 });
