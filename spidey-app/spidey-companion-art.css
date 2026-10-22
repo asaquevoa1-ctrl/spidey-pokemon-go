@@ -1,0 +1,21 @@
+/* Arte extra do roteiro 24/10: complementar à arte Premium principal. */
+.spidey-companion-art {
+  margin: 20px 0 14px;
+  padding: 14px;
+  border: 1px solid rgba(218, 173, 92, .35);
+  border-radius: 18px;
+  background: linear-gradient(130deg, rgba(14, 28, 51, .8), rgba(9, 13, 35, .62));
+}
+.spidey-companion-art h3 { margin: 0 0 12px; color: #f1ce87; }
+.spidey-companion-art a:has(.spidey-companion-preview) { display:block; }
+.spidey-companion-preview {
+  display: block;
+  width: min(100%, 430px);
+  height: auto;
+  margin: 0 auto 12px;
+  border: 1px solid rgba(138, 196, 255, .45);
+  border-radius: 13px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .3);
+}
+.spidey-companion-art p { margin: 10px 0 0; font-size: .8rem; opacity: .86; }
+.spidey-companion-art .action-btn { display: inline-block; margin-top: 4px; }
