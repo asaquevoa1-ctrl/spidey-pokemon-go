@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261021-seoul-text-v3';
+const CACHE = 'spidey-app-20261021-day24-coords-pawniard-v1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -8,6 +8,7 @@ const CORE = [
   './data/hunter-feed.json',
   './mobile-side-menu.js',
   './mobile-side-menu.css',
+  './spidey-companion-art.css',
   './assets/branding/20261019/spidey-opening-cosmic-20261019.webp',
   './assets/branding/20261019/spidey-loading-cosmic-20261019.webp',
   './assets/branding/20261019/spidey-icon-cosmic-20261019.webp',
@@ -18,6 +19,9 @@ const CORE = [
   './assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp',
   './assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp',
   './assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp',
+  './assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp',
+  './assets/events/premium/spidey-2026-10-24-coordinates-reference-v1.webp',
+  './assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1.webp',
   './assets/events/premium/sableye-max-monday-20261026-approved-v1.png',
   './assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png',
   './assets/events/premium/mega-dragonite-raids-20261014-20-approved-v1.png',
