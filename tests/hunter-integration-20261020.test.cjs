@@ -1,4 +1,16 @@
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=p=>fs.readFileSync('spidey-app/'+p,'utf8');
-test('Caçador is loaded in the latest production page with main features intact',()=>{const html=path('index.html');for(const s of ['hunter-v1.css','hunter-v1.js','hunter-live-feed.js','fly-v1.js','pvp.js','push.js','cosmic-brand-20261019.js'])assert.ok(html.includes(s),s);const cmd=path('command-center.js');assert.ok(cmd.includes('data-cc-view="hunterView"'));});
-test('offline install and refresh of only authorized location feed',()=>{const sw=path('sw.js'),data=JSON.parse(path('data/hunter-feed.json'));for(const s of ['hunter-v1.js','hunter-v1.css','hunter-live-feed.js','hunter-feed.json'])assert.ok(sw.includes(s));assert.ok(sw.includes('national-trust-2026|hunter-feed'));assert.ok(sw.includes('fetch(request, { cache: \'no-store\' })'));assert.equal(data.source_status,'awaiting_authorization');assert.deepEqual(data.items,[]);});
+test('Retired Caçador is absent from public app but essential features remain',()=>{
+ const html=path('index.html');
+ for(const s of ['hunter-v1.css','hunter-v1.js','hunter-live-feed.js','data-view="hunterView"'])assert.ok(!html.includes(s),s);
+ for(const s of ['rocket-guide.js','fly-v1.js','pvp.js','push.js','cosmic-brand-20261019.js'])assert.ok(html.includes(s),s);
+ const cmd=path('command-center.js');assert.ok(!cmd.includes('data-cc-view="hunterView"'));assert.ok(cmd.includes('data-cc-view="flyView"'));
+});
+test('Legacy feed stays archived in GitHub, never in public offline installation',()=>{
+ const sw=path('sw.js'),data=JSON.parse(path('data/hunter-feed.json'));
+ for(const s of ['hunter-v1.js','hunter-v1.css','hunter-live-feed.js','hunter-feed.json'])assert.ok(!sw.includes(s),s);
+ assert.ok(sw.includes('national-trust-2026|rocket-lineups'));
+ assert.ok(sw.includes("fetch(request, { cache: 'no-store' })"));
+ assert.equal(data.source_status,'awaiting_authorization');
+ assert.deepEqual(data.items,[]);
+});
 test('External maps do not claim a personal shiny for every trainer',()=>{const feed=path('hunter-live-feed.js');for(const src of ['map-s.spsmapping.eu','pogoalerts.net'])assert.ok(feed.includes(src));assert.ok(feed.includes('shiny_eligible'));assert.ok(feed.includes('Nenhuma aparição disponível no momento.'));assert.ok(!feed.includes('Aguardando acesso autorizado'));assert.ok(feed.includes("alt.append(summary,ext)"));assert.ok(!feed.includes('localStorage.setItem'));});

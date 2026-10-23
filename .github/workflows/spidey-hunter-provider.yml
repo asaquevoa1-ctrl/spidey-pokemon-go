@@ -1,8 +1,6 @@
 name: Spidey - Caçador feed parceiro
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/10 * * * *'
 permissions:
   contents: write
 concurrency:
@@ -11,7 +9,8 @@ concurrency:
 jobs:
   ingest:
     # No vendor license => no job, costs or external requests.
-    if: vars.HUNTER_FEED_LICENSE_APPROVED == 'true'
+    # Retired from the public app by the owner on 23/10/2026. Requires a new explicit decision and PR to reactivate.
+    if: false
     runs-on: ubuntu-latest
     timeout-minutes: 3
     env:

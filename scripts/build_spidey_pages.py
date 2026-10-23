@@ -19,6 +19,7 @@ CATALOG_REQUEST = "fetch(`api/catalog?file=${encodeURIComponent(file)}`,"
 STATIC_REQUEST = "fetch(`data/${file}.json`,"
 GPX_REQUEST = "gpxLink.href = navigator.onLine === false ? url : `api/gpx?rally=${encodeURIComponent(rally.id)}`;"
 ANALYTICS_HOST = 'asaquevoa1-ctrl.github.io'
+ARCHIVED_HUNTER_ASSETS = {'hunter-v1.js', 'hunter-live-feed.js', 'hunter-v1.css', 'data/hunter-feed.json'}
 ANALYTICS_SCRIPT = 'https://static.cloudflareinsights.com/beacon.min.js'
 ANALYTICS_ENDPOINT = 'https://cloudflareinsights.com'
 NO_ANALYTICS_COPY = 'Não instalamos anúncios, rastreadores de comportamento nem ferramentas de análise de visitantes.'
@@ -128,7 +129,7 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     published = output / 'spidey-app'
     for file in app.rglob('*'):
         relative = file.relative_to(app)
-        if not file.is_file() or file.is_symlink() or any(part in {'api', 'node_modules', 'review'} for part in relative.parts):
+        if not file.is_file() or file.is_symlink() or relative.as_posix() in ARCHIVED_HUNTER_ASSETS or any(part in {'api', 'node_modules', 'review'} for part in relative.parts):
             continue
         if file.suffix.lower() not in EXTENSIONS or file.name in {'package.json', 'vercel.json', 'PREMIUM_V2_NOTE.txt'}:
             continue

@@ -34,6 +34,12 @@ class StaticPublicationTests(unittest.TestCase):
             self.assertTrue(core)
             self.assertTrue(all((app / path).exists() for path in core))
             self.assertFalse(any('/review/' in path for path in core))
+            # Caçador was retired from the app; keep history in GitHub, not public Pages.
+            for retired in ('hunter-v1.js', 'hunter-live-feed.js', 'hunter-v1.css', 'data/hunter-feed.json'):
+                self.assertFalse((app / retired).exists(), retired)
+                self.assertNotIn('./' + retired, core, retired)
+            self.assertIn('rocket-guide.js', [p.name for p in app.iterdir()])
+            self.assertIn("data/rocket-lineups.json", [str(p.relative_to(app)) for p in (app / 'data').iterdir()])
             self.assertFalse(json.loads((app / 'api/push/public-key').read_text())['available'])
             self.assertEqual([str(p.relative_to(app)) for p in (app / 'api').rglob('*') if p.is_file()], ['api/push/public-key'])
             for name in ('events', 'stamps', 'weekly', 'local-events', 'pvp'):
