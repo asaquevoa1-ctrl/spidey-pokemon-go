@@ -166,7 +166,7 @@
       "id": "2026-10-24-spidey-full-day-guide",
       "slug": "2026-10-24-spidey-full-day-guide",
       "title": "24 de outubro: seu roteiro para aproveitar todos os eventos",
-      "summary": "Roteiro global de 24/10: Uxie remota na madrugada, Mesprit remota pela manhã, Azelf no Brasil das 14h às 17h, Minior até 21h e Twitch às 23h30.",
+      "summary": "24/10: Uxie remota na madrugada, Mesprit de manhã, Azelf às 14h–17h no Brasil, Minior até 21h e Night Out às 23h30 pela Twitch. Fundos de Pikachu/Gengar são somente nas reides locais de LA.",
       "category": "day_guide",
       "content_type": "event",
       "tags": [
@@ -223,6 +223,16 @@
           "name": "Pokémon GO • como participar de Batalhas Max a distância",
           "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2487-joining-battles-remotely/",
           "confidence": "official"
+        },
+        {
+          "name": "Intuit Dome • show 19h30 PDT",
+          "url": "https://intuitdome.com/events/event-schedule/ticketevent-923456524",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon • transmissão e camiseta",
+          "url": "https://www.pokemon.com/br/noticias/veja-a-transmissao-ao-vivo-do-pokemon-curtir-a-noite-para-festejar-de-casa",
+          "confidence": "official"
         }
       ],
       "schedule": {
@@ -254,14 +264,14 @@
         "17h–21h | Agora é hora do céu estrelado. Este sábado é a última noite da chuva de meteoros Orionidas: Minior aparece com mais frequência das 17h às 21h e rende Poeira Estelar adicional nas capturas. Aproveite até 21h sem comprometer o horário do próximo compromisso.",
         "21h–23h15 | Confira o que ficou pendente: pesquisas temporárias, progresso do Passe GO de outubro, recompensas e espaço na Bolsa. O evento Orionidas termina às 23h59 locais, então capturas de Minior ainda podem surgir depois da janela reforçada.",
         "23h20 | Prepare a Twitch antes da transmissão: entre na conta correta, conecte sua conta Pokémon Trainer Central e confira se o Drop está habilitado. Não deixe para acertar login no meio do programa.",
-        "23h30 | A transmissão de Pokémon Night Out começa neste horário de Brasília (19h30 em Los Angeles). Assista pelo menos 30 minutos no canal oficial Pokémon na Twitch, resgate o Drop no inventário, obtenha o código em rewards.pokemon.com e use a página de resgate de ofertas. A recompensa é uma pesquisa para ganhar a camiseta temática do avatar.",
+        "23h30 | Começam o show do Pokémon Night Out em Los Angeles e a transmissão oficial no YouTube/Twitch. Para receber o código da camiseta do avatar, assista 30 minutos pela TWITCH e resgate o Drop. As reides presenciais com fundo não estão disponíveis remotamente.",
         "Se você estiver em Seul | O FC Seoul é presencial no dia 24, das 9h às 20h da Coreia (21h de sexta a 8h de sábado em Brasília). Charmander nas reides locais não aceita Passe de Reide Remota. Aproveite a pesquisa com Charizard se estiver na área — não é um evento jogável do Brasil.",
         "Se estiver em Los Angeles | Pokémon Night Out tem atrações presenciais e bônus no Intuit Dome, com Pikachu e Gengar de Fundo de Localização. Para quem está no Brasil, a alternativa válida é o Drop da transmissão, não as reides locais.",
         "A regra para o dia dar certo | Dê preferência aos eventos exclusivos para os quais você realmente tem acesso: City Safari Boston, se já tem ingresso, e FC Seoul ou Night Out, se estiver presente nesses locais. O Trio do Lago Dinamax é uma opção das 14h às 17h, não a prioridade máxima; não esqueça Minior das 17h às 21h e o Drop da Twitch às 23h30. Atividades presenciais em Seul ou Los Angeles são condicionais e não cabem num roteiro brasileiro."
       ],
       "news": {
         "title": "24/10 no Pokémon GO: quatro eventos, personagens corretos e prioridades sem correria",
-        "summary": "Roteiro do dia 24 com FC Seoul em destaque e Pokémon identificados corretamente por nome, sem miniaturas deformadas. City Safari Boston exige ingresso, o Trio do Lago não é a prioridade máxima e Twitch Night Out começa às 23h30 em Brasília.",
+        "summary": "Roteiro 24/10 com FC Seoul e Night Out presenciais, Boston apenas para quem tem ingresso, Trio Dinamax opcional, Minior e live da Twitch às 23h30 para brasileiros.",
         "published_on": "2026-10-21"
       },
       "notifications": {
@@ -270,7 +280,7 @@
       },
       "status": "published",
       "verified_at": "2026-10-21",
-      "updated_at": "2026-10-22T17:32:00-03:00",
+      "updated_at": "2026-10-23T09:05:00-03:00",
       "art": {
         "url": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png",
         "web_width": 1024,
@@ -309,13 +319,14 @@
         },
         {
           "label": "Night Out — Intuit Dome (local presencial; NÃO garante reides em Ginásios específicos)",
-          "latitude": 33.94377,
-          "longitude": -118.34229,
+          "latitude": 33.943723,
+          "longitude": -118.342295,
           "coordinate_type": "arena_venue_reference",
-          "coordinate_confidence": "verified_landmark",
+          "coordinate_confidence": "user_supplied_reference",
           "exact_raid_gym_verified": false,
           "source": "https://www.intuitdome.com/plan-your-visit/how-to-get-here",
-          "coordinate_text": "33.943770,-118.342290"
+          "coordinate_text": "33.943723,-118.342295",
+          "source_note": "Referência geográfica de arena fornecida pelo responsável, sem confirmação de Ginásio/Poképarada."
         }
       ],
       "gpx": {
@@ -1874,7 +1885,7 @@
       "id": "2026-pokemon-night-out-la",
       "slug": "2026-pokemon-night-out-la",
       "title": "Pokémon Night Out — Los Angeles | Fundo especial",
-      "summary": "Evento presencial em Intuit Dome, Los Angeles, em 24 de outubro: reides de Pikachu e Gengar com Fundo de Localização exclusivo de Los Angeles, Toxtricity nas Pesquisas Temporárias e Módulos Atrair de 1 hora.",
+      "summary": "24/10 no Intuit Dome: Pikachu e Gengar com Fundo de Localização de Los Angeles em reides locais, Toxtricity e Módulos Atrair por 1h. Show e transmissão às 23h30 de Brasília; o horário específico das reides não foi divulgado.",
       "category": "regional_event",
       "tags": [
         "Fundo Los Angeles",
@@ -1884,7 +1895,7 @@
         "Toxtricity"
       ],
       "source": {
-        "name": "Pokémon GO • anúncio oficial Night Out 2026",
+        "name": "Pokémon GO • notícia oficial",
         "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
         "confidence": "official"
       },
@@ -1899,7 +1910,7 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": false,
+        "requires_art": true,
         "fallback_visual": "date",
         "uses_existing_approved_event_poster": true
       },
@@ -1908,16 +1919,16 @@
         {
           "id": "night-out-la-venue-reference",
           "name": "Intuit Dome",
-          "label": "Intuit Dome • referência do local, não Poképarada",
+          "label": "Intuit Dome — referência da arena, não Ginásio/Poképarada",
           "address": "Inglewood, Califórnia, EUA",
-          "latitude": 33.94446,
-          "longitude": -118.34337,
-          "coordinate_text": "33.94446,-118.34337",
-          "coordinate_type": "venue_reference",
-          "coordinate_confidence": "community_supplied",
+          "latitude": 33.943723,
+          "longitude": -118.342295,
+          "coordinate_text": "33.943723,-118.342295",
+          "coordinate_type": "arena_venue_reference",
+          "coordinate_confidence": "user_supplied_reference",
           "exact_raid_gym_verified": false,
           "exact_pokestop_verified": false,
-          "source_note": "Coordenada informada pela comunidade para o local do evento; não atesta Ginásio ou Poképarada específica."
+          "source_note": "Referência fornecida pelo responsável em 23/10; o anúncio oficial não confirma coordenadas de reides específicas."
         }
       ],
       "location_background": {
@@ -1932,10 +1943,10 @@
         "how": "Capturar Pikachu (Reide de 1 estrela) ou Gengar (Reide de 3 estrelas) nas Reides especiais do evento presencial."
       },
       "bonuses": [
-        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LOS ANGELES: Pikachu e Gengar capturados nas Reides especiais recebem o fundo da cidade.",
-        "Módulos Atrair (exceto Dourados) ativados durante o evento duram 1 hora.",
-        "Reides de 1 estrela: Pikachu, com possibilidade de Brilhante. Reides de 3 estrelas: Gengar, com possibilidade de Brilhante.",
-        "Até 2 Pesquisas Temporárias ao abrir o Pokémon GO no local. Recompensas podem incluir encontros com Toxtricity (Forma Aguda/Grave) e a camisa de beisebol Pokémon Night Out para avatar."
+        "Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Los Angeles.",
+        "Módulos Atrair ativados durante o evento duram 1 hora, exceto os Dourados.",
+        "Até duas oportunidades de Pesquisa Temporária ao abrir o Pokémon GO no local; chances de Toxtricity nas Formas Grave/Aguda e a camiseta exclusiva do avatar.",
+        "Mais aparições de Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee; alguns jogadores também poderão encontrar Unown P, N e O."
       ],
       "pokemon": [
         {
@@ -1952,50 +1963,68 @@
         }
       ],
       "notes": [
-        "Los Angeles: 24 de outubro de 2026 em Intuit Dome. Benefícios disponíveis no local, não mundialmente.",
-        "A transmissão oficial de Los Angeles começa às 19h30 PDT; o anúncio não especifica horário separado para cada bônus dentro do local.",
-        "Quem já resgatou a pesquisa de camiseta por assistir à Twitch em Los Angeles não pode resgatar a mesma pesquisa de camiseta novamente no evento.",
-        "Encontros mais frequentes: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne e Rookidee.",
-        "Também poderão aparecer Unown P, N e O; algumas aparições poderão ser Brilhantes, sem garantia.",
-        "Fundo especial confirmado para Pikachu/Gengar de reides, NÃO para Toxtricity ou encontros na natureza.",
-        "A localização é referência da arena; não significa Ginásio ou Poképarada comprovados.",
-        "Uma arte Premium já aprovada para o Pokémon Night Out é reutilizada sem substituição. Essa arte não representa uma captura real do fundo de localização."
+        "24/10, INTUIT DOME (LOS ANGELES): benefícios do Pokémon GO apenas para jogadores presentes na área do evento, não para o Brasil.",
+        "SHOW E LIVE: 19h30 PDT = 23h30 em Brasília. O show terá transmissão oficial na Twitch e no YouTube. Esse NÃO é um horário confirmado de início das reides ou bônus do Pokémon GO.",
+        "REIDES: Pikachu 1★ e Gengar 3★; os capturados dessas reides terão Fundo de Localização de Los Angeles. Brilhantes são possíveis, não garantidos.",
+        "PESQUISAS: até duas oportunidades de Pesquisa Temporária ao abrir o jogo no local; encontros possíveis com Toxtricity (Forma Grave/Aguda) e camiseta exclusiva. Quem resgatou a pesquisa da camiseta pela Twitch não a recebe novamente no local.",
+        "NATUREZA: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee. Unown P, N e O são possíveis para alguns jogadores.",
+        "COORDENADA DE REFERÊNCIA: 33.943723,-118.342295; não representa Ginásio ou Poképarada comprovados. Sem GPX.",
+        "DO BRASIL: a alternativa oficial é assistir ao show. Para ganhar a pesquisa da camiseta, é obrigatório assistir 30 minutos na TWITCH e resgatar o Drop; assistir pelo YouTube não concede esse Drop.",
+        "Não há Mewtwo Sombroso com Fundo de Localização anunciado para esse evento."
       ],
       "gpx": {
         "enabled": false,
-        "reason": "As coordenadas se referem ao local do evento, sem confirmação de Ginásio ou Poképarada exatos."
+        "reason": "Arena é uma referência geográfica, não Ginásio/Poképarada/Ponto de Poder confirmado. GPX indisponível."
       },
       "art": {
         "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
         "web_width": 1024,
         "web_height": 1536,
         "web_sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
-        "alt": "Pôster Premium previamente aprovado do Pokémon Night Out; consulte o detalhe para o fundo especial de Los Angeles."
+        "alt": "Pôster Premium originalmente aprovado do Pokémon Night Out, sem alteração dos pixels; detalhes de Pikachu e Gengar com Fundo de Localização de Los Angeles no texto."
       },
       "notifications": {
         "enabled": false,
-        "reason": "Sem confirmação de entrega do serviço push para eventos presenciais; evitar notificação falsa."
+        "reason": "Nenhuma janela de jogabilidade foi confirmada; não tratar horário do show como início de reides."
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-23",
       "verification_sources": [
         {
-          "name": "Pokémon GO • Night Out, bônus e fundos de localização",
+          "name": "Pokémon GO • encontros e bônus",
           "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
           "confidence": "official"
         },
         {
-          "name": "Pokémon 30 • locais e datas",
-          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "name": "Intuit Dome • show 19h30 PDT",
+          "url": "https://intuitdome.com/events/event-schedule/ticketevent-923456524",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon • transmissão e camiseta",
+          "url": "https://www.pokemon.com/br/noticias/veja-a-transmissao-ao-vivo-do-pokemon-curtir-a-noite-para-festejar-de-casa",
           "confidence": "official"
         }
-      ]
+      ],
+      "updated_at": "2026-10-23T09:05:00-03:00",
+      "news": {
+        "title": "Pokémon Night Out Los Angeles: Pikachu e Gengar com fundo especial",
+        "summary": "Reides presenciais com fundos de Los Angeles, Toxtricity em Pesquisas Temporárias e bônus da arena. Horários de show e do jogo são coisas diferentes.",
+        "published_on": "2026-10-23"
+      },
+      "venue_program": {
+        "concert_starts_local": "2026-10-24T19:30:00-07:00",
+        "concert_starts_brazil": "2026-10-24T23:30:00-03:00",
+        "twitch_starts_brazil": "2026-10-24T23:30:00-03:00",
+        "pokemon_go_gameplay_hours_confirmed": false,
+        "source_url": "https://intuitdome.com/events/event-schedule/ticketevent-923456524"
+      }
     },
     {
       "id": "2026-pokemon-night-out-london",
       "slug": "2026-pokemon-night-out-london",
       "title": "Pokémon Night Out — Londres | Fundo especial",
-      "summary": "Evento presencial em The O2 Arena, Londres, em 10 de novembro: reides de Pikachu e Gengar com Fundo de Localização exclusivo de Londres, Toxtricity nas Pesquisas Temporárias e Módulos Atrair de 1 hora.",
+      "summary": "10/11 no The O2: Pikachu e Gengar com Fundo de Localização de Londres nas reides presenciais; Toxtricity em Pesquisa Temporária. Portas às 15h e show às 16h30 em Brasília; os horários da jogabilidade não foram publicados.",
       "category": "regional_event",
       "tags": [
         "Fundo Londres",
@@ -2005,7 +2034,7 @@
         "Toxtricity"
       ],
       "source": {
-        "name": "Pokémon GO • anúncio oficial Night Out 2026",
+        "name": "Pokémon GO • notícia oficial",
         "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
         "confidence": "official"
       },
@@ -2020,7 +2049,7 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": false,
+        "requires_art": true,
         "fallback_visual": "date",
         "uses_existing_approved_event_poster": true
       },
@@ -2029,16 +2058,16 @@
         {
           "id": "night-out-london-venue-reference",
           "name": "The O2 Arena",
-          "label": "The O2 Arena • referência do local, não Poképarada",
+          "label": "The O2 Arena — referência da arena, não Ginásio/Poképarada",
           "address": "Londres, Reino Unido",
-          "latitude": 51.50299,
-          "longitude": 0.00307,
-          "coordinate_text": "51.50299,0.00307",
-          "coordinate_type": "venue_reference",
-          "coordinate_confidence": "community_supplied",
+          "latitude": 51.502579,
+          "longitude": 0.003202,
+          "coordinate_text": "51.502579,0.003202",
+          "coordinate_type": "arena_venue_reference",
+          "coordinate_confidence": "user_supplied_reference",
           "exact_raid_gym_verified": false,
           "exact_pokestop_verified": false,
-          "source_note": "Coordenada informada pela comunidade para o local do evento; não atesta Ginásio ou Poképarada específica."
+          "source_note": "Referência fornecida pelo responsável em 23/10; o anúncio oficial não confirma coordenadas de reides específicas."
         }
       ],
       "location_background": {
@@ -2053,10 +2082,10 @@
         "how": "Capturar Pikachu (Reide de 1 estrela) ou Gengar (Reide de 3 estrelas) nas Reides especiais do evento presencial."
       },
       "bonuses": [
-        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LONDRES: Pikachu e Gengar capturados nas Reides especiais recebem o fundo da cidade.",
-        "Módulos Atrair (exceto Dourados) ativados durante o evento duram 1 hora.",
-        "Reides de 1 estrela: Pikachu, com possibilidade de Brilhante. Reides de 3 estrelas: Gengar, com possibilidade de Brilhante.",
-        "Até 2 Pesquisas Temporárias ao abrir o Pokémon GO no local. Recompensas podem incluir encontros com Toxtricity (Forma Aguda/Grave) e a camisa de beisebol Pokémon Night Out para avatar."
+        "Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Londres.",
+        "Módulos Atrair ativados durante o evento duram 1 hora, exceto os Dourados.",
+        "Até duas oportunidades de Pesquisa Temporária ao abrir o Pokémon GO no local; chances de Toxtricity nas Formas Grave/Aguda e a camiseta exclusiva do avatar.",
+        "Mais aparições de Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee; alguns jogadores também poderão encontrar Unown P, N e O."
       ],
       "pokemon": [
         {
@@ -2073,44 +2102,65 @@
         }
       ],
       "notes": [
-        "Londres: 10 de novembro de 2026 em The O2 Arena. Benefícios disponíveis no local, não mundialmente.",
-        "A arena informa abertura das portas às 18h GMT; isso não estabelece o horário preciso de início das atividades do Pokémon GO.",
-        "Quem já resgatou a pesquisa de camiseta por assistir à Twitch em Los Angeles não pode resgatar a mesma pesquisa de camiseta novamente no evento.",
-        "Encontros mais frequentes: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne e Rookidee.",
-        "Também poderão aparecer Unown P, N e O; algumas aparições poderão ser Brilhantes, sem garantia.",
-        "Fundo especial confirmado para Pikachu/Gengar de reides, NÃO para Toxtricity ou encontros na natureza.",
-        "A localização é referência da arena; não significa Ginásio ou Poképarada comprovados.",
-        "Uma arte Premium já aprovada para o Pokémon Night Out é reutilizada sem substituição. Essa arte não representa uma captura real do fundo de localização."
+        "10/11, THE O2 (LONDRES): encontro PRESENCIAL. As reides e bônus divulgados pelo Pokémon GO são locais, não globais.",
+        "PORTAS: 18h GMT = 15h em Brasília. SHOW: 19h30 GMT = 16h30 em Brasília. Horários confirmados da arena, mas não definem início das reides no jogo.",
+        "15h30 de Brasília, divulgado por comunidade, NÃO é um horário confirmado pela arena para portas ou show e NÃO foi anunciado como início da jogabilidade.",
+        "REIDES: Pikachu 1★ e Gengar 3★ com Fundo de Localização de Londres; possibilidade de Brilhante, sem garantia.",
+        "PESQUISA: até duas oportunidades de Pesquisa Temporária no local com Toxtricity Grave/Aguda e camiseta; quem já resgatou a mesma pesquisa via Twitch LA não recebe novamente.",
+        "NATUREZA: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee; Unown P, N e O podem aparecer para alguns jogadores.",
+        "REFERÊNCIA THE O2: 51.502579,0.003202. Coordenadas da arena, NÃO de Ginásio ou Poképarada. GPX desabilitado.",
+        "A Pokémon confirmou que o show de Londres NÃO terá transmissão ao vivo. Não há novo Drop de Twitch confirmado para 10/11.",
+        "Mewtwo Sombroso com fundos NÃO consta do anúncio oficial."
       ],
       "gpx": {
         "enabled": false,
-        "reason": "As coordenadas se referem ao local do evento, sem confirmação de Ginásio ou Poképarada exatos."
+        "reason": "Arena é uma referência geográfica, não Ginásio/Poképarada/Ponto de Poder confirmado. GPX indisponível."
       },
       "art": {
         "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
         "web_width": 1024,
         "web_height": 1536,
         "web_sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
-        "alt": "Pôster Premium previamente aprovado do Pokémon Night Out; consulte o detalhe para o fundo especial de Londres."
+        "alt": "Pôster Premium originalmente aprovado do Pokémon Night Out, sem alteração dos pixels; detalhes de Pikachu e Gengar com Fundo de Localização de Londres no texto."
       },
       "notifications": {
         "enabled": false,
-        "reason": "Sem confirmação de entrega do serviço push para eventos presenciais; evitar notificação falsa."
+        "reason": "Nenhuma janela de jogabilidade foi confirmada; não tratar horário do show como início de reides."
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-23",
       "verification_sources": [
         {
-          "name": "Pokémon GO • Night Out, bônus e fundos de localização",
+          "name": "Pokémon GO • encontros e bônus",
           "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
           "confidence": "official"
         },
         {
-          "name": "Pokémon 30 • locais e datas",
-          "url": "https://30.pokemon.com/pt-br/night-out/",
+          "name": "The O2 / AXS • portas/show",
+          "url": "https://www.axs.com/uk/events/1389569/pokemon-night-out-tues-10th-nov-tickets?skin=theo2&staticDetails=staticDetails",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon • sem live de Londres",
+          "url": "https://www.pokemon.com/br/noticias/veja-a-transmissao-ao-vivo-do-pokemon-curtir-a-noite-para-festejar-de-casa",
           "confidence": "official"
         }
-      ]
+      ],
+      "updated_at": "2026-10-23T09:05:00-03:00",
+      "news": {
+        "title": "Pokémon Night Out Londres: Pikachu e Gengar com fundo especial",
+        "summary": "Reides presenciais com fundos de Londres, Toxtricity em Pesquisas Temporárias e bônus da arena. Horários de show e do jogo são coisas diferentes.",
+        "published_on": "2026-10-23"
+      },
+      "venue_program": {
+        "doors_open_local": "2026-11-10T18:00:00+00:00",
+        "doors_open_brazil": "2026-11-10T15:00:00-03:00",
+        "concert_starts_local": "2026-11-10T19:30:00+00:00",
+        "concert_starts_brazil": "2026-11-10T16:30:00-03:00",
+        "pokemon_go_gameplay_hours_confirmed": false,
+        "london_livestream_announced": false,
+        "source_url": "https://www.axs.com/uk/events/1389569/pokemon-night-out-tues-10th-nov-tickets?skin=theo2&staticDetails=staticDetails"
+      }
     },
     {
       "id": "2026-aeon-mall-halloween-japan",
@@ -6391,7 +6441,7 @@
       "id": "2026-10-pokemon-night-out-twitch",
       "slug": "2026-10-pokemon-night-out-twitch",
       "title": "Pokémon Night Out: recompensa na Twitch",
-      "summary": "Assista 30 minutos da transmissão oficial para receber um código de Pesquisa temporária.",
+      "summary": "24/10 às 23h30 (Brasília): transmissão do Night Out ao vivo no YouTube e Twitch. A pesquisa da camiseta exclusiva exige 30 minutos de Twitch e resgate do código.",
       "category": "timed_research",
       "tags": [
         "Pokémon Night Out",
@@ -6425,10 +6475,10 @@
         "reason": "Recompensa global por transmissão; não exige coordenada de jogo."
       },
       "notes": [
-        "A transmissão de Pokémon GO começa em 24/10 às 19h30 PDT, equivalente a 23h30 em Brasília.",
-        "É necessário assistir 30 minutos à transmissão oficial e vincular a conta Pokémon Trainer Central à Twitch.",
-        "O anúncio não informa horário de encerramento da transmissão; o calendário mostra somente o início confirmado.",
-        "O código pode ser obtido uma vez por jogador."
+        "SHOW e transmissão em 24/10 às 19h30 PDT = 23h30 de Brasília, não é o início confirmado de reides presenciais.",
+        "Twitch e YouTube exibem a transmissão. Apenas assistir 30 minutos na Twitch e resgatar seu Drop oferece o código da Pesquisa Temporária com a camiseta do avatar.",
+        "Vincule Pokémon Trainer Central, resgate o Drop e obtenha o código em rewards.pokemon.com. Ele só pode ser reivindicado uma vez por jogador.",
+        "Não anunciar Mewtwo Sombroso nem fundos especiais por acompanhar a transmissão: o comunicado não oferece isso."
       ],
       "notifications": {
         "enabled": true,
@@ -6438,9 +6488,9 @@
       },
       "status": "published",
       "news": {
-        "title": "Pokémon Night Out terá recompensa global",
-        "summary": "Assista 30 minutos na Twitch em 24/10 para obter uma camisa de beisebol exclusiva para o avatar.",
-        "published_on": "2026-10-02"
+        "title": "Pokémon Night Out 24/10, 23h30: live e Drop da camiseta",
+        "summary": "Assista pela Twitch por 30 minutos e obtenha um código para a camiseta do avatar. Os fundos Pikachu/Gengar são exclusivos das reides presenciais.",
+        "published_on": "2026-10-23"
       }
     },
     {
