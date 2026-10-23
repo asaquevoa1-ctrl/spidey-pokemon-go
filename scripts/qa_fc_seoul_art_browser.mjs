@@ -28,7 +28,7 @@ try{
     await page.evaluate(()=>{setView('calendarView');state.month=new Date(2026,9,1);renderCalendar();});
     const index=await page.evaluate(()=>{const first=new Date(2026,9,1);const gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,24)-gridStart)/86400000);});
     await page.locator('#calendar .calendar-day').nth(index).evaluate(button=>button.click());
-    const dayEvent=page.locator(`#eventDetail [data-event-id="${eventId}"]`);await dayEvent.waitFor();
+    const dayEvent=page.locator(`#eventList [data-event-id="${eventId}"]`);await dayEvent.waitFor();
     const calendarImg=dayEvent.locator('img').first();await calendarImg.waitFor();await calendarImg.evaluate(img=>img.decode());
     const calendar=await calendarImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!calendar.src.includes(expected)||calendar.natural[0]!==768||calendar.natural[1]!==1152||calendar.overflow)throw new Error(`calendar failed ${JSON.stringify(calendar)}`);
