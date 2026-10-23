@@ -2303,9 +2303,9 @@
         "enabled": false,
         "reason": "Evento longo atendido na aba própria Trust; não enviar alertas repetitivos."
       },
-      "status": "draft",
+      "status": "published",
       "verified_at": "2026-10-17",
-      "updated_at": "2026-10-17T16:00:00-03:00",
+      "updated_at": "2026-10-23T17:00:00-03:00",
       "verification_sources": [
         {
           "name": "Pokémon GO oficial",
