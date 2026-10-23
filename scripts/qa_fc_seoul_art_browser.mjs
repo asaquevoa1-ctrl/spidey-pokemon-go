@@ -29,12 +29,13 @@ try{
     const index=await page.evaluate(()=>{const first=new Date(2026,9,1);const gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,24)-gridStart)/86400000);});
     await page.locator('#calendar .calendar-day').nth(index).evaluate(button=>button.click());
     const dayEvent=page.locator(`#eventList [data-event-id="${eventId}"]`);await dayEvent.waitFor({state:'attached'});
-    await dayEvent.evaluate(el=>{for(let node=el;node;node=node.parentElement){node.dataset.fcQaHidden=node.hidden?'1':'0';node.dataset.fcQaStyle=node.hasAttribute('style')?node.getAttribute('style'):'__NONE__';node.hidden=false;node.style.setProperty('display','block','important');node.style.setProperty('opacity','1','important');node.style.setProperty('transform','none','important');if(node.id==='calendarView')break;}const img=el.querySelector('img');if(img){img.loading='eager';img.hidden=false;}el.scrollIntoView({block:'center'});});
-    const calendarImg=dayEvent.locator('img').first();await calendarImg.waitFor();await calendarImg.evaluate(img=>img.decode());
+    await page.evaluate(id=>{document.querySelector('#fcQaCalendar')?.remove();const source=document.querySelector(`#eventList [data-event-id="${id}"]`),host=document.createElement('section');host.id='fcQaCalendar';host.className='section';host.style.cssText='position:fixed;inset:12px auto auto 12px;z-index:2147483647;width:min(968px,calc(100vw - 24px));padding:0;background:transparent';const clone=source.cloneNode(true);clone.style.margin='0';host.appendChild(clone);document.body.appendChild(host);},eventId);
+    const calendarPreview=page.locator('#fcQaCalendar');
+    const calendarImg=calendarPreview.locator('img').first();await calendarImg.waitFor({state:'visible'});await calendarImg.evaluate(img=>img.decode());
     const calendar=await calendarImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!calendar.src.includes(expected)||calendar.natural[0]!==768||calendar.natural[1]!==1152||calendar.overflow)throw new Error(`calendar failed ${JSON.stringify(calendar)}`);
-    checks.push({width,theme,view:'calendar',...calendar});await dayEvent.screenshot({path:`${output}/${width}-${theme}-calendar.png`});
-    await dayEvent.evaluate(el=>{for(let node=el;node;node=node.parentElement){node.hidden=node.dataset.fcQaHidden==='1';const style=node.dataset.fcQaStyle;if(style==='__NONE__')node.removeAttribute('style');else if(style!==undefined)node.setAttribute('style',style);delete node.dataset.fcQaHidden;delete node.dataset.fcQaStyle;if(node.id==='calendarView')break;}});
+    checks.push({width,theme,view:'calendar',...calendar});await calendarPreview.screenshot({path:`${output}/${width}-${theme}-calendar.png`});
+    await calendarPreview.evaluate(host=>host.remove());
     await dayEvent.evaluate(el=>el.click());
     await page.waitForFunction(id=>document.querySelector('#eventDetail')?.dataset.eventId===id,eventId);
     const hero=page.locator(`#eventDetail img[src*="${approved}"]`).first();await hero.waitFor({state:'attached'});
