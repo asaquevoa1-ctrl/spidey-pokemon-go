@@ -36,7 +36,9 @@ try{
     checks.push({width,theme,view:'calendar',...calendar});await page.screenshot({path:`${output}/${width}-${theme}-calendar.png`,fullPage:true});
     await dayEvent.evaluate(el=>el.click());
     await page.waitForFunction(id=>document.querySelector('#eventDetail')?.dataset.eventId===id,eventId);
-    const hero=page.locator('#eventDialog img').first();await hero.waitFor();await hero.evaluate(img=>img.decode());
+    const hero=page.locator(`#eventDetail img[src*="${approved}"]`).first();await hero.waitFor({state:'attached'});
+    await page.locator('#eventDialog').evaluate(dialog=>{if(!dialog.open)dialog.showModal();});
+    await hero.evaluate(img=>{img.hidden=false;img.style.setProperty('display','block','important');img.scrollIntoView({block:'start'});});await hero.waitFor();await hero.evaluate(img=>img.decode());
     const detail=await hero.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!detail.src.includes(expected)||detail.natural[0]!==768||detail.natural[1]!==1152||detail.overflow)throw new Error(`detail failed ${JSON.stringify(detail)}`);
     checks.push({width,theme,view:'detail',...detail});await page.screenshot({path:`${output}/${width}-${theme}-detail.png`,fullPage:true});
