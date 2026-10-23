@@ -22,7 +22,7 @@ test('Night Out is updated in place, without duplicate events or loss of approve
   assert.equal(e.notifications.enabled,false);
   assert.equal(e.gpx.enabled,false);
   assert.ok(!e.tags?.some(tag=>String(tag).toLowerCase()==='global'));
-  assert.equal(e.locations[0].coordinate_type,'arena_venue_reference');
+  assert.equal(e.locations[0].coordinate_type,'venue_reference');
   assert.equal(e.locations[0].coordinate_confidence,'user_supplied_reference');
   assert.equal(e.locations[0].exact_raid_gym_verified,false);
   assert.equal(e.locations[0].exact_pokestop_verified,false);
