@@ -1,22 +1,6 @@
 name: Spidey - Caçador Global Samsung QA
 on:
-  pull_request:
-    paths:
-      - 'spidey-app/hunter*'
-      - 'spidey-app/index.html'
-      - 'spidey-app/data/hunter-feed.json'
-      - 'spidey-app/command-center.js'
-      - 'scripts/qa_hunter_global_browser.mjs'
-      - '.github/workflows/spidey-hunter-samsung-qa.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'spidey-app/hunter*'
-      - 'spidey-app/index.html'
-      - 'spidey-app/data/hunter-feed.json'
-      - 'spidey-app/command-center.js'
-      - 'scripts/qa_hunter_global_browser.mjs'
-      - '.github/workflows/spidey-hunter-samsung-qa.yml'
+  # Archived QA for old Hunter implementation. No PR/push triggers while retired.
   workflow_dispatch:
 permissions:
   contents: read
