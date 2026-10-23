@@ -11,11 +11,11 @@
   if (!toggle || !panel || !shade || !closeButton || !links || !themeSelect || !tabs) return;
 
   const mobile = window.matchMedia('(max-width: 760px)');
-  const preferredOrder = ['calendarView','newsView','weeklyView','flyView','hunterView','stampsView','pvpView','anaView','nationalTrustView'];
+  const preferredOrder = ['calendarView','newsView','weeklyView','flyView','hunterView','rocketGuideView','stampsView','pvpView','anaView','nationalTrustView'];
   const glyphs = {
     calendarView: '⌂', newsView: '✦', weeklyView: '▦',
     flyView: '◈', hunterView: '◎', stampsView: '◉',
-    pvpView: '⚔', anaView: '✈', nationalTrustView: '🎫'
+    pvpView: '⚔', rocketGuideView: 'R', anaView: '✈', nationalTrustView: '🎫'
   };
   let isOpen = false;
   let startTouchX = null;
