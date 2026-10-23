@@ -1924,7 +1924,7 @@
           "latitude": 33.943723,
           "longitude": -118.342295,
           "coordinate_text": "33.943723,-118.342295",
-          "coordinate_type": "arena_venue_reference",
+          "coordinate_type": "venue_reference",
           "coordinate_confidence": "user_supplied_reference",
           "exact_raid_gym_verified": false,
           "exact_pokestop_verified": false,
@@ -1943,7 +1943,7 @@
         "how": "Capturar Pikachu (Reide de 1 estrela) ou Gengar (Reide de 3 estrelas) nas Reides especiais do evento presencial."
       },
       "bonuses": [
-        "Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Los Angeles.",
+        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LOS ANGELES: Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Los Angeles.",
         "Módulos Atrair ativados durante o evento duram 1 hora, exceto os Dourados.",
         "Até duas oportunidades de Pesquisa Temporária ao abrir o Pokémon GO no local; chances de Toxtricity nas Formas Grave/Aguda e a camiseta exclusiva do avatar.",
         "Mais aparições de Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee; alguns jogadores também poderão encontrar Unown P, N e O."
@@ -2063,7 +2063,7 @@
           "latitude": 51.502579,
           "longitude": 0.003202,
           "coordinate_text": "51.502579,0.003202",
-          "coordinate_type": "arena_venue_reference",
+          "coordinate_type": "venue_reference",
           "coordinate_confidence": "user_supplied_reference",
           "exact_raid_gym_verified": false,
           "exact_pokestop_verified": false,
@@ -2082,7 +2082,7 @@
         "how": "Capturar Pikachu (Reide de 1 estrela) ou Gengar (Reide de 3 estrelas) nas Reides especiais do evento presencial."
       },
       "bonuses": [
-        "Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Londres.",
+        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LONDRES: Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Londres.",
         "Módulos Atrair ativados durante o evento duram 1 hora, exceto os Dourados.",
         "Até duas oportunidades de Pesquisa Temporária ao abrir o Pokémon GO no local; chances de Toxtricity nas Formas Grave/Aguda e a camiseta exclusiva do avatar.",
         "Mais aparições de Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee; alguns jogadores também poderão encontrar Unown P, N e O."
