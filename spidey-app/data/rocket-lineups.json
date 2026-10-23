@@ -1,0 +1,1652 @@
+{
+  "schema_version": "spidey-rocket-v1",
+  "source": {
+    "name": "Leek Duck",
+    "url": "https://leekduck.com/rocket-lineups/",
+    "data_provider": "pokelitee/leak-duck",
+    "data_url": "https://raw.githubusercontent.com/pokelitee/leak-duck/data/rocket_lineups.json",
+    "source_updated_on": "2026-10-02",
+    "first_import_on": "2026-10-23",
+    "kind": "community_verified"
+  },
+  "revision": "2026-10-23-leekduck-oct2",
+  "notes": "Escalação comunitária datada de 02/10/2026; é uma referência, não feed oficial ou prova de encontro. Ícones externos não são copiados. A recompensa marcada por posição significa possibilidade, não garantia.",
+  "members": [
+    {
+      "id": "giovanni",
+      "source_key": "Giovanni",
+      "label": "Giovanni",
+      "group": "boss",
+      "type_key": null,
+      "type_label": null,
+      "hint": null,
+      "tip": null,
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Persian",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Kangaskhan",
+              "shiny_possible": false
+            },
+            {
+              "name": "Rhyperior",
+              "shiny_possible": false
+            },
+            {
+              "name": "Machamp",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Zekrom",
+              "shiny_possible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cliff",
+      "source_key": "Cliff",
+      "label": "Cliff",
+      "group": "leader",
+      "type_key": null,
+      "type_label": null,
+      "hint": null,
+      "tip": null,
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Cubone",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Snorlax",
+              "shiny_possible": false
+            },
+            {
+              "name": "Golurk",
+              "shiny_possible": false
+            },
+            {
+              "name": "Galarian Weezing",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Tyranitar",
+              "shiny_possible": false
+            },
+            {
+              "name": "Camerupt",
+              "shiny_possible": false
+            },
+            {
+              "name": "Gallade",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arlo",
+      "source_key": "Arlo",
+      "label": "Arlo",
+      "group": "leader",
+      "type_key": null,
+      "type_label": null,
+      "hint": null,
+      "tip": null,
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Alolan Grimer",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Steelix",
+              "shiny_possible": false
+            },
+            {
+              "name": "Golurk",
+              "shiny_possible": false
+            },
+            {
+              "name": "Slowbro",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Alakazam",
+              "shiny_possible": false
+            },
+            {
+              "name": "Charizard",
+              "shiny_possible": false
+            },
+            {
+              "name": "Scizor",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sierra",
+      "source_key": "Sierra",
+      "label": "Sierra",
+      "group": "leader",
+      "type_key": null,
+      "type_label": null,
+      "hint": null,
+      "tip": null,
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Pancham",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Blastoise",
+              "shiny_possible": false
+            },
+            {
+              "name": "Flygon",
+              "shiny_possible": false
+            },
+            {
+              "name": "Ferrothorn",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Milotic",
+              "shiny_possible": false
+            },
+            {
+              "name": "Houndoom",
+              "shiny_possible": false
+            },
+            {
+              "name": "Steelix",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "normal-type-male-grunt",
+      "source_key": "Normal-type Male Grunt",
+      "label": "Recruta • Normal ♂",
+      "group": "grunt",
+      "type_key": "Normal",
+      "type_label": "Normal",
+      "hint": "Normal does not mean weak.",
+      "tip": "Fraqueza do tipo Normal: Lutador. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Teddiursa",
+              "shiny_possible": true
+            },
+            {
+              "name": "Hoothoot",
+              "shiny_possible": true
+            },
+            {
+              "name": "Porygon",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Loudred",
+              "shiny_possible": true
+            },
+            {
+              "name": "Stufful",
+              "shiny_possible": true
+            },
+            {
+              "name": "Starly",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Ursaring",
+              "shiny_possible": false
+            },
+            {
+              "name": "Swellow",
+              "shiny_possible": false
+            },
+            {
+              "name": "Kangaskhan",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire-type-female-grunt",
+      "source_key": "Fire-type Female Grunt",
+      "label": "Recruta • Fogo ♀",
+      "group": "grunt",
+      "type_key": "Fire",
+      "type_label": "Fogo",
+      "hint": "Do you know how hot Pokémon fire breath can get?",
+      "tip": "Fraqueza do tipo Fogo: Água, Pedra e Terrestre. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Litwick",
+              "shiny_possible": true
+            },
+            {
+              "name": "Ponyta",
+              "shiny_possible": true
+            },
+            {
+              "name": "Torchic",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Magmar",
+              "shiny_possible": false
+            },
+            {
+              "name": "Blaziken",
+              "shiny_possible": false
+            },
+            {
+              "name": "Camerupt",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Darmanitan",
+              "shiny_possible": false
+            },
+            {
+              "name": "Delphox",
+              "shiny_possible": false
+            },
+            {
+              "name": "Magmortar",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water-type-female-grunt",
+      "source_key": "Water-type Female Grunt",
+      "label": "Recruta • Água ♀",
+      "group": "grunt",
+      "type_key": "Water",
+      "type_label": "Água",
+      "hint": "These waters are treacherous!",
+      "tip": "Fraqueza do tipo Água: Elétrico e Planta. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Mudkip",
+              "shiny_possible": true
+            },
+            {
+              "name": "Tentacool",
+              "shiny_possible": true
+            },
+            {
+              "name": "Krabby",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Dewpider",
+              "shiny_possible": false
+            },
+            {
+              "name": "Swampert",
+              "shiny_possible": false
+            },
+            {
+              "name": "Sharpedo",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Walrein",
+              "shiny_possible": false
+            },
+            {
+              "name": "Greninja",
+              "shiny_possible": false
+            },
+            {
+              "name": "Tentacruel",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water-type-male-grunt",
+      "source_key": "Water-type Male Grunt",
+      "label": "Recruta • Água ♂",
+      "group": "grunt",
+      "type_key": "Water",
+      "type_label": "Água",
+      "hint": "These waters are treacherous!",
+      "tip": "Fraqueza do tipo Água: Elétrico e Planta. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Magikarp",
+              "shiny_possible": true
+            },
+            {
+              "name": "Feebas",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Magikarp",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Magikarp",
+              "shiny_possible": false
+            },
+            {
+              "name": "Gyarados",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electric-type-female-grunt",
+      "source_key": "Electric-type Female Grunt",
+      "label": "Recruta • Elétrico ♀",
+      "group": "grunt",
+      "type_key": "Electric",
+      "type_label": "Elétrico",
+      "hint": "Get ready to be shocked!",
+      "tip": "Fraqueza do tipo Elétrico: Terrestre. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Voltorb",
+              "shiny_possible": true
+            },
+            {
+              "name": "Shinx",
+              "shiny_possible": true
+            },
+            {
+              "name": "Helioptile",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Electabuzz",
+              "shiny_possible": true
+            },
+            {
+              "name": "Magnemite",
+              "shiny_possible": true
+            },
+            {
+              "name": "Alolan Geodude",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Luxray",
+              "shiny_possible": false
+            },
+            {
+              "name": "Ampharos",
+              "shiny_possible": false
+            },
+            {
+              "name": "Galvantula",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grass-type-male-grunt",
+      "source_key": "Grass-type Male Grunt",
+      "label": "Recruta • Planta ♂",
+      "group": "grunt",
+      "type_key": "Grass",
+      "type_label": "Planta",
+      "hint": "Don't tangle with us!",
+      "tip": "Fraqueza do tipo Planta: Fogo, Gelo, Voador, Inseto e Venenoso. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Phantump",
+              "shiny_possible": true
+            },
+            {
+              "name": "Fomantis",
+              "shiny_possible": true
+            },
+            {
+              "name": "Tangela",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Lileep",
+              "shiny_possible": false
+            },
+            {
+              "name": "Sceptile",
+              "shiny_possible": false
+            },
+            {
+              "name": "Morelull",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Chesnaught",
+              "shiny_possible": false
+            },
+            {
+              "name": "Trevenant",
+              "shiny_possible": false
+            },
+            {
+              "name": "Cradily",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ice-type-female-grunt",
+      "source_key": "Ice-type Female Grunt",
+      "label": "Recruta • Gelo ♀",
+      "group": "grunt",
+      "type_key": "Ice",
+      "type_label": "Gelo",
+      "hint": "You're gonna be frozen in your tracks.",
+      "tip": "Fraqueza do tipo Gelo: Fogo, Lutador, Pedra e Aço. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Seel",
+              "shiny_possible": true
+            },
+            {
+              "name": "Delibird",
+              "shiny_possible": true
+            },
+            {
+              "name": "Spheal",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Sealeo",
+              "shiny_possible": false
+            },
+            {
+              "name": "Froslass",
+              "shiny_possible": false
+            },
+            {
+              "name": "Alolan Ninetales",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Aurorus",
+              "shiny_possible": false
+            },
+            {
+              "name": "Froslass",
+              "shiny_possible": false
+            },
+            {
+              "name": "Glalie",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fighting-type-female-grunt",
+      "source_key": "Fighting-type Female Grunt",
+      "label": "Recruta • Lutador ♀",
+      "group": "grunt",
+      "type_key": "Fighting",
+      "type_label": "Lutador",
+      "hint": "This buff physique isn't just for show!",
+      "tip": "Fraqueza do tipo Lutador: Psíquico, Voador e Fada. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Timburr",
+              "shiny_possible": true
+            },
+            {
+              "name": "Mankey",
+              "shiny_possible": true
+            },
+            {
+              "name": "Makuhita",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Hitmontop",
+              "shiny_possible": true
+            },
+            {
+              "name": "Hitmonlee",
+              "shiny_possible": true
+            },
+            {
+              "name": "Hitmonchan",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Conkeldurr",
+              "shiny_possible": false
+            },
+            {
+              "name": "Annihilape",
+              "shiny_possible": false
+            },
+            {
+              "name": "Infernape",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poison-type-female-grunt",
+      "source_key": "Poison-type Female Grunt",
+      "label": "Recruta • Venenoso ♀",
+      "group": "grunt",
+      "type_key": "Poison",
+      "type_label": "Venenoso",
+      "hint": "Coiled and ready to strike!",
+      "tip": "Fraqueza do tipo Venenoso: Terrestre e Psíquico. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Oddish",
+              "shiny_possible": true
+            },
+            {
+              "name": "Zubat",
+              "shiny_possible": true
+            },
+            {
+              "name": "Qwilfish",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Galarian Weezing",
+              "shiny_possible": true
+            },
+            {
+              "name": "Nidorino",
+              "shiny_possible": true
+            },
+            {
+              "name": "Nidorina",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Weezing",
+              "shiny_possible": false
+            },
+            {
+              "name": "Toxicroak",
+              "shiny_possible": false
+            },
+            {
+              "name": "Amoonguss",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ground-type-male-grunt",
+      "source_key": "Ground-type Male Grunt",
+      "label": "Recruta • Terrestre ♂",
+      "group": "grunt",
+      "type_key": "Ground",
+      "type_label": "Terrestre",
+      "hint": "You'll be defeated into the ground!",
+      "tip": "Fraqueza do tipo Terrestre: Água, Planta e Gelo. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Rhyhorn",
+              "shiny_possible": true
+            },
+            {
+              "name": "Gligar",
+              "shiny_possible": true
+            },
+            {
+              "name": "Trapinch",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Gligar",
+              "shiny_possible": true
+            },
+            {
+              "name": "Claydol",
+              "shiny_possible": true
+            },
+            {
+              "name": "Vibrava",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Golurk",
+              "shiny_possible": false
+            },
+            {
+              "name": "Hippowdon",
+              "shiny_possible": false
+            },
+            {
+              "name": "Flygon",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flying-type-female-grunt",
+      "source_key": "Flying-type Female Grunt",
+      "label": "Recruta • Voador ♀",
+      "group": "grunt",
+      "type_key": "Flying",
+      "type_label": "Voador",
+      "hint": "Battle against my Flying-type Pokémon!",
+      "tip": "Fraqueza do tipo Voador: Elétrico, Gelo e Pedra. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Taillow",
+              "shiny_possible": true
+            },
+            {
+              "name": "Rookidee",
+              "shiny_possible": true
+            },
+            {
+              "name": "Swablu",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Scyther",
+              "shiny_possible": true
+            },
+            {
+              "name": "Zubat",
+              "shiny_possible": true
+            },
+            {
+              "name": "Gligar",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Dragonite",
+              "shiny_possible": false
+            },
+            {
+              "name": "Toucannon",
+              "shiny_possible": false
+            },
+            {
+              "name": "Swanna",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "psychic-type-male-grunt",
+      "source_key": "Psychic-type Male Grunt",
+      "label": "Recruta • Psíquico ♂",
+      "group": "grunt",
+      "type_key": "Psychic",
+      "type_label": "Psíquico",
+      "hint": "Are you scared of psychics that use unseen power?",
+      "tip": "Fraqueza do tipo Psíquico: Inseto, Fantasma e Sombrio. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Wobbuffet",
+              "shiny_possible": true
+            },
+            {
+              "name": "Ralts",
+              "shiny_possible": true
+            },
+            {
+              "name": "Drowzee",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Drowzee",
+              "shiny_possible": true
+            },
+            {
+              "name": "Duosion",
+              "shiny_possible": true
+            },
+            {
+              "name": "Wobbuffet",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Gallade",
+              "shiny_possible": false
+            },
+            {
+              "name": "Malamar",
+              "shiny_possible": false
+            },
+            {
+              "name": "Reuniclus",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bug-type-male-grunt",
+      "source_key": "Bug-type Male Grunt",
+      "label": "Recruta • Inseto ♂",
+      "group": "grunt",
+      "type_key": "Bug",
+      "type_label": "Inseto",
+      "hint": "Go, my super bug Pokémon!",
+      "tip": "Fraqueza do tipo Inseto: Fogo, Voador e Pedra. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Venonat",
+              "shiny_possible": true
+            },
+            {
+              "name": "Weedle",
+              "shiny_possible": true
+            },
+            {
+              "name": "Wimpod",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Pinsir",
+              "shiny_possible": true
+            },
+            {
+              "name": "Anorith",
+              "shiny_possible": true
+            },
+            {
+              "name": "Dewpider",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Scizor",
+              "shiny_possible": false
+            },
+            {
+              "name": "Scolipede",
+              "shiny_possible": false
+            },
+            {
+              "name": "Vikavolt",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rock-type-male-grunt",
+      "source_key": "Rock-type Male Grunt",
+      "label": "Recruta • Pedra ♂",
+      "group": "grunt",
+      "type_key": "Rock",
+      "type_label": "Pedra",
+      "hint": "Let's rock and roll!",
+      "tip": "Fraqueza do tipo Pedra: Água, Planta, Lutador, Terrestre e Aço. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Onix",
+              "shiny_possible": true
+            },
+            {
+              "name": "Kabuto",
+              "shiny_possible": true
+            },
+            {
+              "name": "Cranidos",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Shieldon",
+              "shiny_possible": true
+            },
+            {
+              "name": "Graveler",
+              "shiny_possible": true
+            },
+            {
+              "name": "Cranidos",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Tyrantrum",
+              "shiny_possible": false
+            },
+            {
+              "name": "Golem",
+              "shiny_possible": false
+            },
+            {
+              "name": "Aurorus",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ghost-type-male-grunt",
+      "source_key": "Ghost-type Male Grunt",
+      "label": "Recruta • Fantasma ♂",
+      "group": "grunt",
+      "type_key": "Ghost",
+      "type_label": "Fantasma",
+      "hint": "Ke...ke...ke...ke...ke...ke!",
+      "tip": "Fraqueza do tipo Fantasma: Fantasma e Sombrio. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Duskull",
+              "shiny_possible": true
+            },
+            {
+              "name": "Sandygast",
+              "shiny_possible": true
+            },
+            {
+              "name": "Yamask",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Dusclops",
+              "shiny_possible": false
+            },
+            {
+              "name": "Sableye",
+              "shiny_possible": false
+            },
+            {
+              "name": "Cofagrigus",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Gengar",
+              "shiny_possible": false
+            },
+            {
+              "name": "Froslass",
+              "shiny_possible": false
+            },
+            {
+              "name": "Cofagrigus",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dragon-type-female-grunt",
+      "source_key": "Dragon-type Female Grunt",
+      "label": "Recruta • Dragão ♀",
+      "group": "grunt",
+      "type_key": "Dragon",
+      "type_label": "Dragão",
+      "hint": "ROAR! ...How'd that sound?",
+      "tip": "Fraqueza do tipo Dragão: Gelo, Dragão e Fada. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Noibat",
+              "shiny_possible": true
+            },
+            {
+              "name": "Deino",
+              "shiny_possible": true
+            },
+            {
+              "name": "Axew",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Alolan Exeggutor",
+              "shiny_possible": false
+            },
+            {
+              "name": "Dragonair",
+              "shiny_possible": false
+            },
+            {
+              "name": "Gabite",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Dragonite",
+              "shiny_possible": false
+            },
+            {
+              "name": "Garchomp",
+              "shiny_possible": false
+            },
+            {
+              "name": "Salamence",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dark-type-female-grunt",
+      "source_key": "Dark-type Female Grunt",
+      "label": "Recruta • Sombrio ♀",
+      "group": "grunt",
+      "type_key": "Dark",
+      "type_label": "Sombrio",
+      "hint": "Wherever there is light, there is also shadow.",
+      "tip": "Fraqueza do tipo Sombrio: Lutador, Inseto e Fada. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Carvanha",
+              "shiny_possible": true
+            },
+            {
+              "name": "Poochyena",
+              "shiny_possible": true
+            },
+            {
+              "name": "Alolan Rattata",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Sneasel",
+              "shiny_possible": true
+            },
+            {
+              "name": "Houndour",
+              "shiny_possible": true
+            },
+            {
+              "name": "Absol",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Liepard",
+              "shiny_possible": false
+            },
+            {
+              "name": "Hydreigon",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "steel-type-male-grunt",
+      "source_key": "Steel-type Male Grunt",
+      "label": "Recruta • Aço ♂",
+      "group": "grunt",
+      "type_key": "Steel",
+      "type_label": "Aço",
+      "hint": "You're no match for my iron will!",
+      "tip": "Fraqueza do tipo Aço: Fogo, Lutador e Terrestre. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Alolan Sandshrew",
+              "shiny_possible": true
+            },
+            {
+              "name": "Aron",
+              "shiny_possible": true
+            },
+            {
+              "name": "Beldum",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Lairon",
+              "shiny_possible": false
+            },
+            {
+              "name": "Skarmory",
+              "shiny_possible": false
+            },
+            {
+              "name": "Metang",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Aggron",
+              "shiny_possible": false
+            },
+            {
+              "name": "Alolan Sandslash",
+              "shiny_possible": false
+            },
+            {
+              "name": "Probopass",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fairy-type-female-grunt",
+      "source_key": "Fairy-type Female Grunt",
+      "label": "Recruta • Fada ♀",
+      "group": "grunt",
+      "type_key": "Fairy",
+      "type_label": "Fada",
+      "hint": "Check out my cute Pokémon!",
+      "tip": "Fraqueza do tipo Fada: Venenoso e Aço. A composição pode ter tipos secundários.",
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Ralts",
+              "shiny_possible": true
+            },
+            {
+              "name": "Snubbull",
+              "shiny_possible": true
+            },
+            {
+              "name": "Alolan Vulpix",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Snubbull",
+              "shiny_possible": true
+            },
+            {
+              "name": "Galarian Weezing",
+              "shiny_possible": true
+            },
+            {
+              "name": "Kirlia",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Alolan Ninetales",
+              "shiny_possible": false
+            },
+            {
+              "name": "Galarian Weezing",
+              "shiny_possible": false
+            },
+            {
+              "name": "Granbull",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "male-grunt",
+      "source_key": "Male Grunt",
+      "label": "Recruta misterioso",
+      "group": "grunt",
+      "type_key": null,
+      "type_label": null,
+      "hint": "Winning is for winners.",
+      "tip": null,
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Bulbasaur",
+              "shiny_possible": true
+            },
+            {
+              "name": "Charmander",
+              "shiny_possible": true
+            },
+            {
+              "name": "Squirtle",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Ivysaur",
+              "shiny_possible": false
+            },
+            {
+              "name": "Charmeleon",
+              "shiny_possible": false
+            },
+            {
+              "name": "Wartortle",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Venusaur",
+              "shiny_possible": false
+            },
+            {
+              "name": "Charizard",
+              "shiny_possible": false
+            },
+            {
+              "name": "Blastoise",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "female-grunt",
+      "source_key": "Female Grunt",
+      "label": "Recruta misterioso",
+      "group": "grunt",
+      "type_key": null,
+      "type_label": null,
+      "hint": "Winning is for winners.",
+      "tip": null,
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Snorlax",
+              "shiny_possible": true
+            },
+            {
+              "name": "Lapras",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Poliwrath",
+              "shiny_possible": false
+            },
+            {
+              "name": "Gardevoir",
+              "shiny_possible": false
+            },
+            {
+              "name": "Snorlax",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Gyarados",
+              "shiny_possible": false
+            },
+            {
+              "name": "Dragonite",
+              "shiny_possible": false
+            },
+            {
+              "name": "Snorlax",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decoy-female-grunt",
+      "source_key": "Decoy Female Grunt",
+      "label": "Recruta isca",
+      "group": "grunt",
+      "type_key": null,
+      "type_label": null,
+      "hint": "Fooled ya, twerp.",
+      "tip": null,
+      "slots": [
+        {
+          "position": 1,
+          "encounter_possible": true,
+          "pokemon": [
+            {
+              "name": "Bellsprout",
+              "shiny_possible": true
+            }
+          ]
+        },
+        {
+          "position": 2,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Raticate",
+              "shiny_possible": false
+            },
+            {
+              "name": "Weepinbell",
+              "shiny_possible": false
+            }
+          ]
+        },
+        {
+          "position": 3,
+          "encounter_possible": false,
+          "pokemon": [
+            {
+              "name": "Raticate",
+              "shiny_possible": false
+            },
+            {
+              "name": "Snorlax",
+              "shiny_possible": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
