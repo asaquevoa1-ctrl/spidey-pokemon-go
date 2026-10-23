@@ -523,6 +523,7 @@ function setView(viewId) {
   if (viewId === 'weeklyView' && typeof renderWeeklyView === 'function') renderWeeklyView();
   if (viewId === 'stampsView') renderStamps();
   if (viewId === 'pvpView') window.SpideyPvp?.load(true);
+  if (viewId === 'rocketGuideView') window.SpideyRocket?.load();
   if (viewId === 'mapView') {
     if (typeof renderMapV2 === 'function') renderMapV2();
     else renderMapSummary();
