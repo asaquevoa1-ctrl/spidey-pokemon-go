@@ -2,6 +2,167 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-10-27-dia-de-muertos-mexico",
+      "slug": "2026-10-27-dia-de-muertos-mexico",
+      "title": "Día de Muertos 2026 — México (evento nacional)",
+      "summary": "Somente no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil, pesquisas e adesivos. O evento presencial do Paseo de la Reforma tem bônus exclusivos separados.",
+      "category": "regional_event",
+      "content_type": "event",
+      "tags": [
+        "México",
+        "Regional",
+        "Día de Muertos",
+        "Cubone",
+        "Cempasúchil",
+        "Evento exclusivo no México"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial México",
+        "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Mexico_City",
+        "start_local": "2026-10-27T10:00:00-06:00",
+        "end_local": "2026-11-05T20:00:00-06:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-27T13:00:00-03:00",
+        "end_brazil": "2026-11-05T23:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "location_label": "Somente no México; não é evento global",
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Benefícios regionais do México; não foram divulgadas coordenadas exatas de Poképaradas para o evento nacional."
+      },
+      "bonuses": [
+        "2× duração dos Poffins (Pokochos) e do Incenso comum para jogadores no México.",
+        "Adesivos especiais do Día de Muertos ao girar fotodiscos em Poképaradas e Ginásios no México.",
+        "Cubone com coroa de cempasúchil via Incenso, Pesquisa Temporária e Desafios de Equipe; pode ser Brilhante, conforme condições oficiais.",
+        "Cubone com coroa de cempasúchil poderá ter Fundo Especial nas modalidades informadas pelo anúncio; não há garantia."
+      ],
+      "pokemon": [
+        {
+          "name": "Cubone com coroa de cempasúchil",
+          "note": "Encontros por Incenso, Pesquisa Temporária e Desafios de Equipe, com possibilidade de Brilhante e/ou Fundo Especial segundo o método."
+        }
+      ],
+      "notes": [
+        "EVENTO REGIONAL: benefícios descritos neste registro são exclusivos dos jogadores no MÉXICO; não é uma celebração mundial, nem concede esses bônus automaticamente ao Brasil.",
+        "Início: 27/10 às 10h da Cidade do México, equivalente a 13h de Brasília. Término: 05/11 às 20h locais, equivalente a 23h de Brasília.",
+        "Pesquisa Temporária nacional oferece Cubone com coroa e Fundo Especial, adesivos de equipes, Poké Bolas, Incenso, 2.026 Poeira Estelar e 2.026 PE, conforme anúncio oficial.",
+        "Nos Desafios de Equipe e encontros de Incenso podem aparecer Cubone com coroa de cempasúchil, com possibilidade, e não garantia, de Brilhante/Fundo Especial.",
+        "Há um EVENTO ADICIONAL presencial no Paseo de la Reforma, Cidade do México, a partir de 31/10 às 14h locais; consulte a entrada específica de Duskull, Caça aos Selos e Gengar Gigamax.",
+        "Não apresentar este evento como FLY mundial: benefícios anunciados são restritos ao México. Sem GPX ou Ginásios inventados."
+      ],
+      "news": {
+        "title": "Día de Muertos 2026: Cubone com coroa e bônus no México",
+        "summary": "De 27/10 a 05/11, os bônus valem apenas no México. Evento presencial separado no Paseo de la Reforma começa em 31/10.",
+        "published_on": "2026-10-22"
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Cadastro editorial novo e regional: não criar alertas ou disparos sem revisão do sistema de notificações."
+      },
+      "status": "published",
+      "verified_at": "2026-10-22",
+      "updated_at": "2026-10-22T20:52:00-03:00"
+    },
+    {
+      "id": "2026-10-31-dia-de-muertos-paseo-reforma",
+      "slug": "2026-10-31-dia-de-muertos-paseo-reforma",
+      "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
+      "summary": "De 31/10 a 05/11, área presencial no Paseo de la Reforma com Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Batalhas Max de Gengar Gigamax 6★.",
+      "category": "local_event",
+      "content_type": "event",
+      "tags": [
+        "México",
+        "Cidade do México",
+        "Presencial",
+        "Local",
+        "Paseo de la Reforma",
+        "Duskull",
+        "Gengar Gigamax",
+        "Caça aos Selos GO"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial México",
+        "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Mexico_City",
+        "start_local": "2026-10-31T14:00:00-06:00",
+        "end_local": "2026-11-05T20:00:00-06:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-31T17:00:00-03:00",
+        "end_brazil": "2026-11-05T23:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "location_label": "Avenida Paseo de la Reforma, Cidade do México — área presencial, não coordenada de Ginásio",
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Poképaradas, Ginásios e Pontos de Energia participantes não tiveram coordenadas exatas divulgadas no comunicado. Não criar GPX fictício."
+      },
+      "bonuses": [
+        "Pesquisa Temporária exclusiva na área do evento: Cubone, Sunflora, Duskull com coroa/Fundo de Localização, Drifloon, Litwick, Flabébé, Phantump, Fuecoco e Fidough.",
+        "Caça aos Selos GO em Poképaradas e Ginásios selecionados: Duskull com coroa e Fundo de Localização e Doces Duskull.",
+        "Metade do custo de Poeira Estelar nas trocas dentro da área de evento.",
+        "Módulos Atrair ativados durante o evento duram três horas.",
+        "Maior chance de ajuda na captura para quem tiver companheiro Grande Companheiro ou superior.",
+        "Batalhas Max de seis estrelas com Gengar Gigamax, com chance de Brilhante e Fundo de Localização."
+      ],
+      "pokemon": [
+        {
+          "name": "Duskull com coroa de cempasúchil",
+          "note": "Pesquisa Temporária e Caça aos Selos GO locais, com Fundo de Localização; Brilhante possível."
+        },
+        {
+          "name": "Gengar Gigamax",
+          "note": "Batalhas Max de seis estrelas na região; Fundo de Localização e Brilhante possíveis, não garantidos."
+        },
+        {
+          "name": "Cubone, Sunflora, Drifloon, Litwick, Flabébé, Phantump, Fuecoco e Fidough",
+          "note": "Encontros por Pesquisa Temporária presencial conforme comunicado oficial."
+        }
+      ],
+      "notes": [
+        "PRESENCIAL: a jogabilidade especial é somente na área do Paseo de la Reforma, Cidade do México; não é acessível mundialmente.",
+        "31/10 às 14h CDMX = 31/10 às 17h Brasília. 05/11 às 20h CDMX = 05/11 às 23h Brasília.",
+        "A Caça aos Selos GO exige girar fotodiscos de locais selecionados na região; o anúncio NÃO fornece lista de coordenadas verificadas para GPX.",
+        "Gengar Gigamax aparece em Batalhas Max 6★ dentro da zona. Não prometer combate remoto nem coordenadas exatas de Pontos de Energia.",
+        "A exposição especial de arte Mexicráneos inspirados no Pokémon GO acontece no Paseo de la Reforma de 17/10 a 16/11/2026; essa exposição tem datas distintas da jogabilidade de 31/10 a 05/11.",
+        "Duskull com coroa e Fundo de Localização aparece em pesquisas e no rally de selos; Brilhante é uma possibilidade, nunca garantia.",
+        "O evento mexicano nacional, de 27/10 a 05/11, é um cadastro separado. Não confundir com Halloween global ou GO Wild Area de 06–08/11."
+      ],
+      "news": {
+        "title": "Día de Muertos: selos, Duskull e Gengar Gigamax na Cidade do México",
+        "summary": "Somente no Paseo de la Reforma a partir de 31/10: pesquisa, Caça aos Selos e Batalhas Max 6★. Confira horário local e de Brasília.",
+        "published_on": "2026-10-22"
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Não disparar aviso automático de evento restrito a uma região sem revisão editorial."
+      },
+      "status": "published",
+      "verified_at": "2026-10-22",
+      "updated_at": "2026-10-22T20:52:00-03:00"
+    },
+    {
       "id": "2026-10-24-spidey-full-day-guide",
       "slug": "2026-10-24-spidey-full-day-guide",
       "title": "24 de outubro: seu roteiro para aproveitar todos os eventos",
