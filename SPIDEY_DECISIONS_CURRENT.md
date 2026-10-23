@@ -211,3 +211,11 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 **Agentes automáticos antigos:** antes de qualquer tarefa devem ler a `main` e os dois documentos canônicos atuais; nenhuma automação antiga tem poder de restaurar identidade histórica, afirmar push recebido, gerar GPX inexato, liberar artes rejeitadas ou publicar dados não autorizados. Relatório de saúde técnico ≠ validação do Samsung.
 
 **Limite honesto:** o acervo de decisões aqui é rastreável, mas não comprovadamente exaustivo sobre todos os chats/Work. Continuar comparação retroativa de lacunas sem sobrescrever o histórico anterior.
+
+## 23/10/2026 — Night Out Los Angeles/Londres: roteiro, horários e fundos especiais
+- Confirmação oficial Pokémon GO: Pikachu em reides 1★ e Gengar em reides 3★ com Fundos de Localização correspondentes a Los Angeles (24/10) e Londres (10/11); Toxtricity Grave/Aguda nas pesquisas; Módulos Atrair 1h exceto dourados. Mewtwo Sombroso com Fundo NÃO foi anunciado.
+- Referências geográficas enviadas pelo responsável: Intuit Dome `33.943723,-118.342295` e The O2 `51.502579,0.003202`. São referências de arenas, não Ginásios/Poképaradas confirmados. GPX continua desativado.
+- Los Angeles: show e transmissão em 24/10 às 19h30 PDT = 23h30 Brasília. YouTube e Twitch exibem o show, porém o Drop da pesquisa da camiseta requer 30 minutos na Twitch. Os bônus locais não são acessíveis mundialmente.
+- Londres: AXS/The O2 confirmou portas em 10/11 às 18h GMT (15h Brasília) e show às 19h30 GMT (16h30 Brasília). A alegação de 15h30 de Brasília não foi confirmada; Pokémon informa que não haverá transmissão londrina. O horário exato da jogabilidade não foi informado em nenhuma das cidades, portanto nenhuma hora de reides foi inventada.
+- Preservar intactos os pôsteres Premium já aprovados do Night Out e roteiro de 24/10. O roteiro da live distingue evento físico e participação do Brasil. Qualquer nova peça usa o S cósmico original e exige QA visual.
+- Fontes: https://pokemongo.com/news/pokemon-night-out-irl-details2026 ; https://intuitdome.com/events/event-schedule/ticketevent-923456524 ; https://www.axs.com/uk/events/1389569/pokemon-night-out-tues-10th-nov-tickets?skin=theo2&staticDetails=staticDetails ; https://www.pokemon.com/br/noticias/veja-a-transmissao-ao-vivo-do-pokemon-curtir-a-noite-para-festejar-de-casa.
