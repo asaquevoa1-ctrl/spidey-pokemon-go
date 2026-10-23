@@ -41,5 +41,48 @@
   ],
   "physical_android_tested": false,
   "push_sends": 0,
-  "personal_data_read": false
+  "personal_data_read": false,
+  "current_revision": {
+    "status": "APPROVED",
+    "date": "2026-10-22",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
+    "file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-cosmic-s-approved-v4.png",
+    "format": "PNG",
+    "width": 1056,
+    "height": 1320,
+    "bytes": 2460806,
+    "sha256": "58fa5892e7104de214cd81d231d80bcc7b6c1b1fcdcd05a369ac1687d6e0aa35",
+    "source_art_preserved": {
+      "file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp",
+      "bytes": 359612,
+      "sha256": "1e6f7df00e04933a569329009b04da1e7122685af1e91073dc34fd0f47254582"
+    },
+    "identity": {
+      "logo_file": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+      "logo_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+      "legacy_spider_visible": false,
+      "spideynexus_text_present": false
+    },
+    "raster_comparison": {
+      "changed_pixels": 20159,
+      "changed_region": "154x154 at x=18,y=6",
+      "pixels_outside_region_changed": 0
+    },
+    "visual_qa": "PASSED_LOCAL_AND_CI_ARTIFACT_REVIEW",
+    "responsive_qa": {
+      "status": "PASSED_PREVIEW",
+      "workflow_run": 39874501927,
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/39874501927",
+      "artifact_id": 12467533434,
+      "artifact_digest": "sha256:b765a5b78add9e28e763ab3576ba1cae57f1ecaf0bfa583f2eddc51572a77679",
+      "views": ["calendar", "weekly", "detail"],
+      "widths": [390, 1280],
+      "themes": ["light", "dark"],
+      "checks": 12,
+      "overflow_failures": 0,
+      "artifact_visually_inspected": true
+    },
+    "github_pages": "PENDING",
+    "physical_android_tested": false
+  }
 }

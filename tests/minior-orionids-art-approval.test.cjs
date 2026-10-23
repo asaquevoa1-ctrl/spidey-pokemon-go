@@ -14,6 +14,16 @@ test('Minior Orionids delegated approval promotes the exact reviewed PNG and pre
   assert.equal(hash(approval.approved_file),approval.sha256);
   assert.ok(fs.existsSync(approval.approved_file));
   assert.notEqual(master[approval.event_id].file,approval.approved_file.replace('spidey-app/',''));
+  const current=approval.current_revision;
+  assert.equal(current.format,'PNG');
+  assert.equal(hash(current.file),current.sha256);
+  assert.equal(hash(current.source_art_preserved.file),current.source_art_preserved.sha256);
+  assert.equal(current.identity.logo_sha256,hash(current.identity.logo_file));
+  assert.equal(current.identity.legacy_spider_visible,false);
+  assert.equal(current.identity.spideynexus_text_present,false);
+  assert.equal(current.raster_comparison.pixels_outside_region_changed,0);
+  assert.equal(master[approval.event_id].file,current.file.replace('spidey-app/',''));
+  assert.equal(master[approval.event_id].sha256,current.sha256);
   assert.equal(window.SPIDEY_PREVIEW_ART[approval.event_id],undefined);
   for(const id of approval.blocked_generations_preserved)assert.equal(master[id],undefined);
 });

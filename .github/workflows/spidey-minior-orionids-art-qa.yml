@@ -6,6 +6,13 @@ on:
       - 'spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v1.png'
       - 'spidey-app/assets/events/review/minior-orionids-20261019-24-v2.png'
       - 'spidey-app/assets/events/premium/minior-orionids-20261019-24-approved-v2.png'
+      - 'spidey-app/assets/events/premium/minior-orionids-20261019-24-cosmic-s-approved-v4.png'
+      - 'docs/qa/MINIOR_ORIONIDS_ART_APPROVAL_20261012.json'
+      - 'docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json'
+      - 'tests/minior-orionids-art-approval.test.cjs'
+      - 'tests/spidey-reference-five-posters.test.cjs'
+      - 'spidey-app/sw.js'
+      - 'config/spidey-protected-approved-baseline.json'
       - 'spidey-app/preview-art.js'
       - 'spidey-app/premium-approved-master.js'
       - 'scripts/qa_minior_orionids_art_browser.mjs'
@@ -23,6 +30,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm install --no-save playwright-core@1.56.1
       - run: |
+          set -o pipefail
           mkdir -p test-results/minior-orionids-art
           command -v google-chrome | tee test-results/minior-orionids-art/chrome-path.txt
           CHROME_PATH="$(command -v google-chrome)" node scripts/qa_minior_orionids_art_browser.mjs 2>&1 | tee test-results/minior-orionids-art/run.log

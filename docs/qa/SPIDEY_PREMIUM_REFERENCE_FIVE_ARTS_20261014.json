@@ -4,7 +4,7 @@
   "publication_authorization": "User explicitly asked 'Agora publique no app' after inspecting five newly generated Spidey Premium reference-style posters.",
   "status": "PUBLISH_REQUESTED",
   "quality_baseline": "User-provided reference posters with fixed Spidey logo, top navigation, slogan, Pokémon protagonist, gold/neon event title, date ribbon, lower feature cards and footer",
-  "format": "image/webp",
+  "format": "mixed; original WebP references preserved, current Minior Orionids revision is PNG",
   "original_versions_preserved": true,
   "no_other_event_image_overwritten": true,
   "existing_master_count": 65,
@@ -34,14 +34,30 @@
     },
     {
       "event_id": "2026-10-minior-orionids",
-      "file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp",
+      "file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-cosmic-s-approved-v4.png",
       "width": 1056,
       "height": 1320,
-      "sha256": "1e6f7df00e04933a569329009b04da1e7122685af1e91073dc34fd0f47254582",
-      "git_blob_sha": "29bd5f405acb976ce11eca134927d9b21536ab65",
+      "bytes": 2460806,
+      "sha256": "58fa5892e7104de214cd81d231d80bcc7b6c1b1fcdcd05a369ac1687d6e0aa35",
       "old_file": "assets/events/premium/minior-orionids-20261019-24-approved-v2.png",
-      "source": "ChatGPT image generation based on user-provided Spidey Premium examples",
-      "visual_release": "Requested by user"
+      "source": "Approved v3 artwork with only the legacy top-left emblem replaced by the exact original cosmic S approved on 2026-10-19",
+      "visual_release": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
+      "preserved_source": {
+        "file": "spidey-app/assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp",
+        "width": 1056,
+        "height": 1320,
+        "bytes": 359612,
+        "sha256": "1e6f7df00e04933a569329009b04da1e7122685af1e91073dc34fd0f47254582",
+        "git_blob_sha": "29bd5f405acb976ce11eca134927d9b21536ab65"
+      },
+      "identity_revision": {
+        "logo_file": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+        "logo_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+        "changed_pixels": 20159,
+        "changed_region": "154x154 at x=18,y=6",
+        "pixels_outside_region_changed": 0,
+        "generation": "none; deterministic overlay from approved repository asset"
+      }
     },
     {
       "event_id": "2026-10-super-mega-raid-day",
