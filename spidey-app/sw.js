@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261023-rocket1-20261022-credits-dst-v1-minior-cosmic-png1-chandelure-cosmic-png1-fc-seoul-cosmic-png1-national-trust-cosmic-png1';
+const CACHE = 'spidey-app-20261022-credits-dst-v1-rocket1-minior-cosmic-png1-chandelure-cosmic-png1-fc-seoul-cosmic-png1-national-trust-cosmic-png1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
