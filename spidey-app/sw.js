@@ -231,7 +231,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
-  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp|national-trust-2026|hunter-feed)\.json$/.test(url.pathname);
+  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp|national-trust-2026|hunter-feed|rocket-lineups)\.json$/.test(url.pathname);
   // Update WebAPK/Android launcher metadata from the network, never from a stale offline manifest.
   const isManifest = url.origin === self.location.origin && url.pathname.endsWith('/manifest.webmanifest');
 
