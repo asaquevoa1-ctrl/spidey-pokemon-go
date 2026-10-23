@@ -26,8 +26,9 @@ test('Menu mobile keeps approved cosmic S icon, responsive visibility and no dis
   assert.ok(css.includes('env(safe-area-inset-top)'));
   assert.ok(css.includes('#spideyMobileMenuPanel[hidden]'));
   assert.ok(script.includes('original.click()'), 'existing routes must retain their own side effects');
-  assert.ok(script.includes('MutationObserver'), 'new FLY, Hunter and News tabs must join automatically');
-  assert.ok(script.includes("hunterView:'Caçador'"),'Menu needs a short, human Caçador label');
+  assert.ok(script.includes('MutationObserver'), 'new FLY, Rocket and News tabs must join automatically');
+  assert.ok(!script.includes("hunterView"),'Retired Caçador must not reappear in the menu');
+  assert.ok(script.includes("'rocketGuideView'"),'Rocket remains available');
   assert.ok(script.includes("anaView:'ANA'"),'Avoid double airplane symbol');
   assert.ok(script.includes("nationalTrustView:'Trust'"),'Avoid double Trust ticket symbol');
 
@@ -84,7 +85,7 @@ test('Menu mobile opens, mirrors dynamic nav, delegates existing routes and clos
     const tab=new Node();tab.className='app-tab';tab.dataset.view=view;tab.textContent=text;
     tab.addEventListener('click',()=>{visible=view;clicks++;});return tab;
   };
-  tabs.children.push(makeTab('calendarView','Início'),makeTab('flyView','FLY'),makeTab('hunterView','Caçador'));
+  tabs.children.push(makeTab('calendarView','Início'),makeTab('flyView','FLY'),makeTab('rocketGuideView','Rocket'));
   const privacy = new Node('privacy');
   privacyButton.addEventListener('click',()=>{visible='privacyView';privacyClicks++;});
   document.getElementById=id=>ids[id]||null;
@@ -100,15 +101,15 @@ test('Menu mobile opens, mirrors dynamic nav, delegates existing routes and clos
   assert.ok(window.SpideyMobileMenu);
   assert.ok(document.documentElement.classList.contains('spidey-mobile-menu-ready'), 'only hide bottom bar once drawer is fully initialized');
   assert.equal(links.children.length,3);
-  assert.ok(links.children.some(x=>x.dataset.menuView==='hunterView'));
+  assert.ok(links.children.some(x=>x.dataset.menuView==='rocketGuideView'));
   toggle.click();
   assert.equal(panel.hidden,false);
   assert.equal(shade.hidden,false);
   assert.equal(toggle.attrs['aria-expanded'],'true');
   assert.ok(document.body.classList.contains('spidey-mobile-menu-open'));
-  const hunter=links.children.find(x=>x.dataset.menuView==='hunterView');
-  hunter.click();
-  assert.equal(visible,'hunterView');
+  const rocket=links.children.find(x=>x.dataset.menuView==='rocketGuideView');
+  rocket.click();
+  assert.equal(visible,'rocketGuideView');
   assert.equal(clicks,1);
   assert.equal(panel.hidden,true);
   assert.equal(toggle.attrs['aria-expanded'],'false');
