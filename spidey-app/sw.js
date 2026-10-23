@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-minior-cosmic-png1-chandelure-cosmic-png1-fc-seoul-cosmic-png1-national-trust-cosmic-png1';
+const CACHE = 'spidey-app-20261023-rocket1-20261022-credits-dst-v1-minior-cosmic-png1-chandelure-cosmic-png1-fc-seoul-cosmic-png1-national-trust-cosmic-png1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -7,6 +7,9 @@ const CORE = [
   './hunter-v1.css',
   './data/hunter-feed.json',
   './mobile-side-menu.js',
+  './rocket-guide.js',
+  './rocket-guide.css',
+  './data/rocket-lineups.json',
   './mobile-side-menu.css',
   './spidey-companion-art.css',
   './assets/branding/20261019/spidey-opening-cosmic-20261019.webp',
