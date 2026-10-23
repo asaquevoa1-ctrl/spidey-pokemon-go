@@ -241,7 +241,7 @@
         {
           "id": "2026-10-24-spidey-full-day-guide",
           "title": "24 de outubro: seu roteiro para aproveitar todos os eventos",
-          "summary": "Roteiro global de 24/10: Uxie remota na madrugada, Mesprit remota pela manhã, Azelf no Brasil das 14h às 17h, Minior até 21h e Twitch às 23h30.",
+          "summary": "24/10: Uxie remota na madrugada, Mesprit de manhã, Azelf às 14h–17h no Brasil, Minior até 21h e Night Out às 23h30 pela Twitch. Fundos de Pikachu/Gengar são somente nas reides locais de LA.",
           "category": "day_guide",
           "tags": [
             "Guia do dia",
@@ -310,7 +310,7 @@
         {
           "id": "2026-10-pokemon-night-out-twitch",
           "title": "Pokémon Night Out: recompensa na Twitch",
-          "summary": "Assista 30 minutos da transmissão oficial para receber um código de Pesquisa temporária.",
+          "summary": "24/10 às 23h30 (Brasília): transmissão do Night Out ao vivo no YouTube e Twitch. A pesquisa da camiseta exclusiva exige 30 minutos de Twitch e resgate do código.",
           "category": "timed_research",
           "tags": [
             "Pokémon Night Out",
@@ -462,7 +462,7 @@
       {
         "id": "2026-10-pokemon-night-out-twitch",
         "title": "Pokémon Night Out: recompensa na Twitch",
-        "summary": "Assista 30 minutos da transmissão oficial para receber um código de Pesquisa temporária.",
+        "summary": "24/10 às 23h30 (Brasília): transmissão do Night Out ao vivo no YouTube e Twitch. A pesquisa da camiseta exclusiva exige 30 minutos de Twitch e resgate do código.",
         "category": "timed_research",
         "tags": [
           "Pokémon Night Out",
@@ -491,7 +491,7 @@
       {
         "id": "2026-10-24-spidey-full-day-guide",
         "title": "24 de outubro: seu roteiro para aproveitar todos os eventos",
-        "summary": "Roteiro global de 24/10: Uxie remota na madrugada, Mesprit remota pela manhã, Azelf no Brasil das 14h às 17h, Minior até 21h e Twitch às 23h30.",
+        "summary": "24/10: Uxie remota na madrugada, Mesprit de manhã, Azelf às 14h–17h no Brasil, Minior até 21h e Night Out às 23h30 pela Twitch. Fundos de Pikachu/Gengar são somente nas reides locais de LA.",
         "category": "day_guide",
         "tags": [
           "Guia do dia",
@@ -913,7 +913,7 @@
       {
         "id": "2026-pokemon-night-out-la",
         "title": "Pokémon Night Out — Los Angeles | Fundo especial",
-        "summary": "Evento presencial em Intuit Dome, Los Angeles, em 24 de outubro: reides de Pikachu e Gengar com Fundo de Localização exclusivo de Los Angeles, Toxtricity nas Pesquisas Temporárias e Módulos Atrair de 1 hora.",
+        "summary": "24/10 no Intuit Dome: Pikachu e Gengar com Fundo de Localização de Los Angeles em reides locais, Toxtricity e Módulos Atrair por 1h. Show e transmissão às 23h30 de Brasília; o horário específico das reides não foi divulgado.",
         "category": "regional_event",
         "tags": [
           "Fundo Los Angeles",
@@ -927,7 +927,7 @@
         "schedule_precision": "date",
         "calendar_date": "2026-10-24",
         "source": {
-          "name": "Pokémon GO • anúncio oficial Night Out 2026",
+          "name": "Pokémon GO • notícia oficial",
           "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
           "confidence": "official"
         },
@@ -936,7 +936,7 @@
           "web_width": 1024,
           "web_height": 1536,
           "web_sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
-          "alt": "Pôster Premium previamente aprovado do Pokémon Night Out; consulte o detalhe para o fundo especial de Los Angeles."
+          "alt": "Pôster Premium originalmente aprovado do Pokémon Night Out, sem alteração dos pixels; detalhes de Pikachu e Gengar com Fundo de Localização de Los Angeles no texto."
         },
         "weekly_art": {
           "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
@@ -1033,7 +1033,7 @@
     "events_without_weekly_art": 3,
     "events_in_weekly": 24,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-23T04:49:04.314928-03:00",
+    "generated_at": "2026-10-23T10:17:48.557184-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
