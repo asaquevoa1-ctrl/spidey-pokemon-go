@@ -1,0 +1,65 @@
+{
+  "schema_version": "spidey-art-approval-v1",
+  "status": "APPROVED",
+  "event_id": "2026-10-24-fc-seoul",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "authorization_sha256": "280dfaefd632220273c78e00a85ba483aac51fa608d0f8926008c0e284fb546f",
+  "individual_human_approval_claimed": false,
+  "candidate_record": "docs/qa/FC_SEOUL_ART_CANDIDATE_20261023.json",
+  "candidate_file": "spidey-app/assets/events/review/fc-seoul-20261024-cosmic-s-v2.png",
+  "approved_file": "spidey-app/assets/events/premium/fc-seoul-20261024-cosmic-s-approved-v2.png",
+  "width": 768,
+  "height": 1152,
+  "bytes": 392747,
+  "sha256": "dc3e461ba85f691cd8a10dc6cd41e973bef6eb25ab8712b70cb3d16946b50ead",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/ko/news/fc-seoul-2026",
+    "confidence": "official",
+    "verified_date": "2026-10-23"
+  },
+  "schedule": {
+    "local_date": "2026-10-24",
+    "start_local": "09:00",
+    "end_local": "20:00",
+    "timezone": "Asia/Seoul",
+    "start_brazil": "2026-10-23T21:00:00-03:00",
+    "end_brazil": "2026-10-24T08:00:00-03:00"
+  },
+  "browser_qa": {
+    "status": "PASSED_PREVIEW",
+    "week_fixture": "2026-10-19..2026-10-25",
+    "views": [
+      "calendar",
+      "weekly",
+      "detail"
+    ],
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "checks": 12,
+    "overflow_failures": 0,
+    "artifact_visually_inspected": true,
+    "workflow_run_id": 40004574262,
+    "artifact_id": 12522824251,
+    "artifact_digest": "sha256:0d829ef96c53914c8827138bb0d1c7516e3406448109aec509864203fae56d78"
+  },
+  "prior_master_entries_preserved": 80,
+  "prior_unique_images_preserved": 69,
+  "remaining_premium_gaps_after_publication": 12,
+  "rejected_svg_restored": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}

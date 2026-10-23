@@ -901,13 +901,13 @@
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/fc-seoul-20261024-cosmic-s-approved-v2.png",
+          "width": 768,
+          "height": 1152,
+          "sha256": "dc3e461ba85f691cd8a10dc6cd41e973bef6eb25ab8712b70cb3d16946b50ead",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       },
       {
@@ -1027,10 +1027,10 @@
   ],
   "meta": {
     "calendar_events_in_week": 24,
-    "events_with_weekly_art": 21,
-    "events_with_premium_weekly_art": 21,
+    "events_with_weekly_art": 22,
+    "events_with_premium_weekly_art": 22,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 3,
+    "events_without_weekly_art": 2,
     "events_in_weekly": 24,
     "events_with_generated_weekly_art": 0,
     "generated_at": "2026-10-23T15:37:49.373735-03:00",

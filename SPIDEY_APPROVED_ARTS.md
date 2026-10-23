@@ -373,3 +373,9 @@ QA do pacote Pages em Chromium: mobile 390px Claro/Escuro e desktop 1280px; 15 c
 Ainda há 14 eventos sem Premium no recorte 11–18/10, discriminados em [CONTENT_ART_GAPS_20261011.json](docs/qa/CONTENT_ART_GAPS_20261011.json); portanto a cobertura inteira não está concluída. Taipei mantém a ilustração oficial creditada e a pendência Premium da frente paralela. Applin/Espaço/Sizzlipede mantêm recusas protegidas. Push e Amigos/chat continuam indisponíveis na hospedagem estática; a proposta de serviço gratuito permanece separada no PR32, sem ativação.
 
 Provas: [aprovação delegada](docs/qa/CONTENT_NFL_APPROVAL_20261011.json), [candidata preservada](docs/qa/CONTENT_NFL_CANDIDATES_20261011.json), [browser do pacote aprovado](docs/qa/CONTENT_NFL_APPROVED_BROWSER_20261011.json), [validação](docs/qa/CONTENT_NFL_VALIDATION_20261011.json).
+
+## 23/10/2026 — FC Seoul individual com identidade cósmica
+
+O pôster individual `2026-10-24-fc-seoul` foi consolidado por `USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY`. O PNG integral 768×1152 usa Charmander e Charizard como protagonistas, lista as demais espécies somente por nome e apresenta apenas fatos do anúncio oficial: 24/10, 09h–20h em Seul; 23/10 21h a 24/10 08h em Brasília; Reide 1★ presencial de Charmander sem Passe Remoto; Charizard na Pesquisa Temporária, ambos com Fundo de Localização.
+
+Arquivo `assets/events/premium/fc-seoul-20261024-cosmic-s-approved-v2.png`, 392.747 bytes, SHA256 `dc3e461ba85f691cd8a10dc6cd41e973bef6eb25ab8712b70cb3d16946b50ead`. O S cósmico original de 19/10 foi aplicado do arquivo canônico; aranha antiga e palavra proibida ausentes. O SVG de FC Seoul rejeitado em 17/10 não foi restaurado. Registros: `docs/qa/FC_SEOUL_ART_CANDIDATE_20261023.json` e `docs/qa/FC_SEOUL_ART_APPROVAL_20261023.json`. Após esta inclusão restam 12 lacunas Premium; Applin, Semana Mundial do Espaço e Max Monday Sizzlipede permanecem protegidos contra nova tentativa.

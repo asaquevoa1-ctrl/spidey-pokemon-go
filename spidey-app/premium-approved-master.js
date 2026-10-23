@@ -809,6 +809,17 @@
     "approval_record": "docs/qa/SABLEYE_MAX_MONDAY_ART_APPROVAL_20261018.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-24-fc-seoul": {
+    "file": "assets/events/premium/fc-seoul-20261024-cosmic-s-approved-v2.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 768,
+    "height": 1152,
+    "sha256": "dc3e461ba85f691cd8a10dc6cd41e973bef6eb25ab8712b70cb3d16946b50ead",
+    "approval_record": "docs/qa/FC_SEOUL_ART_APPROVAL_20261023.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.

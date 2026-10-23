@@ -23,14 +23,20 @@ test('all agents share one explicit current-decision document',()=>{
  assert.equal(governance.identity.visual_comparison_required,true);
 });
 
-test('rejected ANA, Seoul, Trust art never returns to approved master or published Premium SVG directory',()=>{
+test('rejected ANA, Seoul, Trust bytes never return even when a distinct later revision is approved',()=>{
  assert.equal(qa.status,governance.rejected_batch.status);
  assert.equal(qa.user_visual_review,'REJECTED');
  const ids=governance.rejected_batch.ids;
  assert.equal(ids.length,4);
  assert.deepEqual(Array.from(ids),qa.artworks.map(x=>x.id));
  for(const entry of qa.artworks){
-  assert.equal(master[entry.id],undefined,'User explicitly rejected '+entry.id);
+  const current=master[entry.id];
+  if(current){
+   assert.notEqual(current.sha256,entry.sha256,'Rejected bytes cannot return under the same event ID');
+   assert.notEqual(current.file,entry.file.replace('spidey-app/',''),'Rejected path cannot return under the same event ID');
+   assert.match(current.file,/\.png$|\.webp$/,'Later approval must be a genuinely distinct raster revision');
+   assert.ok(current.approval_record,'Later approval requires a traceable decision record');
+  }
   assert.equal(fs.existsSync(entry.file),false,'Rejected file republished: '+entry.file);
   for(const approved of Object.values(master)){
    assert.notEqual(approved.sha256,entry.sha256,'Rejected SHA republished via another event ID');

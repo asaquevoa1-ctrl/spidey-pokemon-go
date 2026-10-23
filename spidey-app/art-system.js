@@ -99,9 +99,18 @@ function spideyArtUsable(asset, role) {
   const url = String(asset.url).trim();
   if (!url || /^data:/i.test(url) || /\.b64(?:$|\?)/i.test(url) || spideyArtIsLogo(url)) return false;
   const limits = SPIDEY_ART_LIMITS[role] || SPIDEY_ART_LIMITS.card;
+  // Integrated image generation currently returns a native 2:3 poster at
+  // 768x1152.  The canonical master has already bound those exact bytes,
+  // dimensions and hash through delegated visual QA, so do not discard that
+  // approved poster only in detail/poster roles because of the older 800px
+  // recommendation.  Unapproved and legacy assets keep the stricter gate.
+  const canonicalPoster = /^(?:premium_catalog|preview_correction):/.test(String(asset.sourceRole || ''))
+    && (role === 'hero' || role === 'poster');
+  const minWidth = canonicalPoster ? 768 : limits.minWidth;
+  const minHeight = canonicalPoster ? 1152 : limits.minHeight;
   const width = Number(asset.width || 0);
   const height = Number(asset.height || 0);
-  if (!Number.isFinite(width) || !Number.isFinite(height) || width < limits.minWidth || height < limits.minHeight) return false;
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width < minWidth || height < minHeight) return false;
   if ((role === 'hero' || role === 'poster') && height <= width) return false;
   return true;
 }

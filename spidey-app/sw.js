@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-minior-cosmic-png1-chandelure-cosmic-png1';
+const CACHE = 'spidey-app-20261022-credits-dst-v1-minior-cosmic-png1-chandelure-cosmic-png1-fc-seoul-cosmic-png1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -19,6 +19,7 @@ const CORE = [
   './assets/events/premium/spidey-2026-10-24-full-day-flow-approved-v1.webp',
   './assets/events/premium/spidey-2026-10-24-full-day-flow-eevee-only-hat-v2.webp',
   './assets/events/premium/spidey-2026-10-24-fc-seoul-text-no-thumbnails-v3.webp',
+  './assets/events/premium/fc-seoul-20261024-cosmic-s-approved-v2.png',
   './assets/events/premium/spidey-2026-10-24-full-day-community-share-v4.webp',
   './assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png',
   './assets/events/premium/spidey-2026-10-24-coordinates-reference-v1.webp',
