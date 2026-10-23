@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-minior-cosmic-png1-chandelure-cosmic-png1-fc-seoul-cosmic-png1-national-trust-cosmic-png1';
+const CACHE = 'spidey-app-20261022-credits-dst-v1-rocket1-minior-cosmic-png1-chandelure-cosmic-png1-fc-seoul-cosmic-png1-national-trust-cosmic-png1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -7,6 +7,9 @@ const CORE = [
   './hunter-v1.css',
   './data/hunter-feed.json',
   './mobile-side-menu.js',
+  './rocket-guide.js',
+  './rocket-guide.css',
+  './data/rocket-lineups.json',
   './mobile-side-menu.css',
   './spidey-companion-art.css',
   './assets/branding/20261019/spidey-opening-cosmic-20261019.webp',
@@ -228,7 +231,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin === self.location.origin && url.pathname.includes('/api/')) return;
   const isAppShell = url.origin === self.location.origin && (request.mode === 'navigate' || /\.(?:js|css)$/.test(url.pathname));
-  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp|national-trust-2026|hunter-feed)\.json$/.test(url.pathname);
+  const isData = url.origin === self.location.origin && /\/data\/(events|stamps|weekly|world-event-points|space-museums|local-events|pvp|national-trust-2026|hunter-feed|rocket-lineups)\.json$/.test(url.pathname);
   // Update WebAPK/Android launcher metadata from the network, never from a stale offline manifest.
   const isManifest = url.origin === self.location.origin && url.pathname.endsWith('/manifest.webmanifest');
 

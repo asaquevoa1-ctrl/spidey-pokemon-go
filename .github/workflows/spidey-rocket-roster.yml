@@ -1,0 +1,48 @@
+name: Spidey - atualizar Guia GO Rocket
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3,9,15,21 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spidey-rocket-lineups
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Checar integridade local antes da rede
+        run: |
+          python -m unittest scripts.test_rocket_lineups
+          node --test tests/rocket-guide.test.cjs
+      - name: Consultar Leek Duck e base factual comunitária
+        run: python scripts/sync_rocket_lineups.py
+      - name: Checar nova escalação, com bloqueio em conteúdo incompleto
+        run: |
+          python -m unittest scripts.test_rocket_lineups
+          node --test tests/rocket-guide.test.cjs
+      - name: Persistir somente mudanças reais da escalação
+        run: |
+          git add spidey-app/data/rocket-lineups.json
+          if git diff --cached --quiet; then
+            echo "Elenco inalterado; nenhum commit nem notificação."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Spidey Rocket: lista verificada contra Leek Duck [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "O Pages republica pela rotina horária existente."
