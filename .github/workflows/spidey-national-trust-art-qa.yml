@@ -1,0 +1,35 @@
+name: Spidey - QA responsivo National Trust Premium
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/assets/events/review/national-trust-27-sites-20261023-cosmic-s-v2.png'
+      - 'spidey-app/assets/events/premium/national-trust-27-sites-20261023-cosmic-s-approved-v2.png'
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/sw.js'
+      - 'spidey-app/data/events.json'
+      - 'docs/qa/NATIONAL_TRUST_ART_*.json'
+      - 'tests/national-trust-art-approval.test.cjs'
+      - 'scripts/qa_national_trust_art_browser.mjs'
+      - '.github/workflows/spidey-national-trust-art-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: |
+          set -o pipefail
+          mkdir -p test-results/national-trust-art
+          command -v google-chrome | tee test-results/national-trust-art/chrome-path.txt
+          CHROME_PATH="$(command -v google-chrome)" node scripts/qa_national_trust_art_browser.mjs 2>&1 | tee test-results/national-trust-art/run.log
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: national-trust-responsive-preview
+          path: test-results/national-trust-art

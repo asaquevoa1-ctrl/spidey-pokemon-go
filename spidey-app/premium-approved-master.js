@@ -820,6 +820,17 @@
     "approval_record": "docs/qa/FC_SEOUL_ART_APPROVAL_20261023.json",
     "approval_basis": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-national-trust-27-sites": {
+    "file": "assets/events/premium/national-trust-27-sites-20261023-cosmic-s-approved-v2.png",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "24fb9fd024dd92c934d98d3af289733ac9bdfdcab29ab40b84912ee876eba9aa",
+    "approval_record": "docs/qa/NATIONAL_TRUST_ART_APPROVAL_20261023.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   }
 };
   // Availability is separate from editorial approval. Preserve the canonical bytes.
