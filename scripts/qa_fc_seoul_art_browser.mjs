@@ -34,6 +34,8 @@ try{
     const calendar=await calendarImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!calendar.src.includes(expected)||calendar.natural[0]!==768||calendar.natural[1]!==1152||calendar.overflow)throw new Error(`calendar failed ${JSON.stringify(calendar)}`);
     checks.push({width,theme,view:'calendar',...calendar});await page.screenshot({path:`${output}/${width}-${theme}-calendar.png`,fullPage:true});
+    await dayEvent.evaluate(el=>el.click());
+    await page.waitForFunction(id=>document.querySelector('#eventDetail')?.dataset.eventId===id,eventId);
     const hero=page.locator('#eventDialog img').first();await hero.waitFor();await hero.evaluate(img=>img.decode());
     const detail=await hero.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!detail.src.includes(expected)||detail.natural[0]!==768||detail.natural[1]!==1152||detail.overflow)throw new Error(`detail failed ${JSON.stringify(detail)}`);
