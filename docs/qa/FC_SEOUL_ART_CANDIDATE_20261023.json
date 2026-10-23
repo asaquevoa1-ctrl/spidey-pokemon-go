@@ -1,0 +1,71 @@
+{
+  "schema_version": "spidey-art-candidate-v1",
+  "art_standard_version": "spidey-premium-v1",
+  "status": "REVIEWED_FOR_DELEGATED_APPROVAL",
+  "art_ready_for_review": true,
+  "event_id": "2026-10-24-fc-seoul",
+  "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
+  "source": {
+    "name": "Pokémon GO",
+    "url": "https://pokemongo.com/ko/news/fc-seoul-2026",
+    "confidence": "official",
+    "verified_date": "2026-10-23"
+  },
+  "schedule": {
+    "local_date": "2026-10-24",
+    "start_local": "09:00",
+    "end_local": "20:00",
+    "timezone": "Asia/Seoul",
+    "start_brazil": "2026-10-23T21:00:00-03:00",
+    "end_brazil": "2026-10-24T08:00:00-03:00"
+  },
+  "fact_checks": [
+    "Charmander participa de Reides de uma estrela presenciais, com Fundo de Localização e sem Passe de Reide Remota.",
+    "Charizard com Fundo de Localização é encontro da Pesquisa Temporária gratuita obtida na região do estádio.",
+    "Growlithe, Flareon, Torchic, Houndour, Litleo e Litten aparecem com mais frequência na natureza.",
+    "O pôster não apresenta bônus, coordenadas ou recompensas adicionais."
+  ],
+  "visual_review": {
+    "status": "PASSED_LOCAL_VISUAL_REVIEW",
+    "cinematic_scene": true,
+    "mobile_text_legible": true,
+    "charmander_anatomy_reviewed": true,
+    "charizard_anatomy_reviewed": true,
+    "minor_species_rendered_as_text_only": true,
+    "corporate_box_layout": false,
+    "raw_url_present": false,
+    "legacy_spider_visible": false,
+    "spideynexus_text_present": false
+  },
+  "identity": {
+    "logo_file": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+    "logo_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+    "application": "Exact approved source file composited into the reserved top-left circle after integrated generation; no AI-redrawn mark."
+  },
+  "candidate_file": "spidey-app/assets/events/review/fc-seoul-20261024-cosmic-s-v2.png",
+  "approved_file": "spidey-app/assets/events/premium/fc-seoul-20261024-cosmic-s-approved-v2.png",
+  "width": 768,
+  "height": 1152,
+  "bytes": 392747,
+  "sha256": "dc3e461ba85f691cd8a10dc6cd41e973bef6eb25ab8712b70cb3d16946b50ead",
+  "generation": "builtin imagegen",
+  "generation_notes": "A composição raster foi criada somente com a geração de imagem integrada. O pós-processamento local gratuito aplicou exclusivamente o S cósmico original já aprovado e otimizou o PNG final para 768×1152; nenhuma API, serviço ou CLI paga foi usada.",
+  "rejected_art_preserved": {
+    "file": "spidey-app/assets/events/premium/fc-seoul-20261024-spidey-premium-v1.svg",
+    "sha256": "8364afe92d6a9b66ede5f10cb25e334c47e9b0431484fc7314638310047c68d4",
+    "status": "REJECTED_BY_USER_AFTER_PUBLICATION",
+    "restored": false
+  },
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "approval_basis_after_qa": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
+  "individual_human_approval_claimed": false,
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "base_main_sha": "7e26393e2eb4accf3a0819b640f240921a7f5a28",
+  "physical_android_tested": false,
+  "push_sends": 0,
+  "personal_data_read": false
+}
