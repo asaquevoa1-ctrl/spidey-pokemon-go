@@ -14,7 +14,7 @@
   "bytes": 2599907,
   "sha256": "24fb9fd024dd92c934d98d3af289733ac9bdfdcab29ab40b84912ee876eba9aa",
   "source": {"name": "Pokémon GO", "url": "https://pokemongo.com/news/nationaltrust-2026", "confidence": "official", "verified_date": "2026-10-23"},
-  "browser_qa": {"status": "PENDING_CI", "fixture": "qa-only-calendar-and-weekly-visibility", "week_fixture": "2026-10-19..2026-10-25", "views": ["calendar", "weekly", "detail"], "widths": [390, 1280], "themes": ["light", "dark"], "checks": 12, "overflow_failures": 0, "artifact_visually_inspected": false},
+  "browser_qa": {"status": "PASSED_PREVIEW", "fixture": "qa-only-calendar-and-weekly-visibility", "week_fixture": "2026-10-19..2026-10-25", "views": ["calendar", "weekly", "detail"], "widths": [390, 1280], "themes": ["light", "dark"], "checks": 12, "overflow_failures": 0, "artifact_visually_inspected": true, "workflow_run_id": 40014834647, "artifact_id": 12528321273, "artifact_digest": "sha256:a2d8c214396fb85c559693cb090c7ff3586d947d57a89eea4ecb39623ff4fdfb"},
   "prior_master_entries_preserved": 81,
   "prior_unique_images_preserved": 70,
   "remaining_premium_gaps_after_publication": 11,
