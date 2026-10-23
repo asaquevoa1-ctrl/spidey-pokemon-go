@@ -134,8 +134,6 @@ const CORE = [
   './national-trust-v1.css',
   './data/national-trust-2026.json',
   './fly-v1.css',
-  './hunter-v1.js',
-  './hunter-v1.css',
   './news-feed.js',
   './command-center.js',
   './world-route-preview.js',
