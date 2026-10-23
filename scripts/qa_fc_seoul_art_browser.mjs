@@ -28,8 +28,8 @@ try{
     await page.evaluate(()=>{setView('calendarView');state.month=new Date(2026,9,1);renderCalendar();});
     const index=await page.evaluate(()=>{const first=new Date(2026,9,1);const gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,24)-gridStart)/86400000);});
     await page.locator('#calendar .calendar-day').nth(index).evaluate(button=>button.click());
-    const dayEvent=page.locator(`#eventList [data-event-id="${eventId}"]`);await dayEvent.waitFor({state:'attached'});
-    await page.evaluate(id=>{document.querySelector('#fcQaCalendar')?.remove();const source=document.querySelector(`#eventList [data-event-id="${id}"]`),host=document.createElement('section');host.id='fcQaCalendar';host.className='section';host.style.cssText='position:fixed;inset:12px auto auto 12px;z-index:2147483647;width:min(968px,calc(100vw - 24px));padding:0;background:transparent';const clone=source.cloneNode(true);clone.style.margin='0';host.appendChild(clone);document.body.appendChild(host);},eventId);
+    const dayEvent=page.locator(`#eventList .event-card[data-event-id="${eventId}"]`);await dayEvent.waitFor({state:'attached'});
+    await page.evaluate(id=>{document.querySelector('#fcQaCalendar')?.remove();const source=document.querySelector(`#eventList .event-card[data-event-id="${id}"]`),host=document.createElement('section');host.id='fcQaCalendar';host.className='section';host.style.cssText='position:fixed;inset:12px auto auto 12px;z-index:2147483647;width:min(968px,calc(100vw - 24px));padding:0;background:transparent';const clone=source.cloneNode(true);clone.style.margin='0';host.appendChild(clone);document.body.appendChild(host);},eventId);
     const calendarPreview=page.locator('#fcQaCalendar');
     const calendarImg=calendarPreview.locator('img').first();await calendarImg.waitFor({state:'visible'});await calendarImg.evaluate(img=>img.decode());
     const calendar=await calendarImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
