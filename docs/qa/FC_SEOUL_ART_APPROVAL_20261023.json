@@ -28,14 +28,27 @@
     "end_brazil": "2026-10-24T08:00:00-03:00"
   },
   "browser_qa": {
-    "status": "PENDING_CI",
+    "status": "PASSED_PREVIEW",
     "week_fixture": "2026-10-19..2026-10-25",
-    "views": ["calendar", "weekly", "detail"],
-    "widths": [390, 1280],
-    "themes": ["light", "dark"],
+    "views": [
+      "calendar",
+      "weekly",
+      "detail"
+    ],
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
     "checks": 12,
     "overflow_failures": 0,
-    "artifact_visually_inspected": false
+    "artifact_visually_inspected": true,
+    "workflow_run_id": 40004574262,
+    "artifact_id": 12522824251,
+    "artifact_digest": "sha256:0d829ef96c53914c8827138bb0d1c7516e3406448109aec509864203fae56d78"
   },
   "prior_master_entries_preserved": 80,
   "prior_unique_images_preserved": 69,
