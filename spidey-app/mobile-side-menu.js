@@ -11,10 +11,10 @@
   if (!toggle || !panel || !shade || !closeButton || !links || !themeSelect || !tabs) return;
 
   const mobile = window.matchMedia('(max-width: 760px)');
-  const preferredOrder = ['calendarView','newsView','weeklyView','flyView','hunterView','rocketGuideView','stampsView','pvpView','anaView','nationalTrustView'];
+  const preferredOrder = ['calendarView','newsView','weeklyView','flyView','rocketGuideView','stampsView','pvpView','anaView','nationalTrustView'];
   const glyphs = {
     calendarView: '⌂', newsView: '✦', weeklyView: '▦',
-    flyView: '◈', hunterView: '◎', stampsView: '◉',
+    flyView: '◈', stampsView: '◉',
     pvpView: '⚔', rocketGuideView: 'R', anaView: '✈', nationalTrustView: '🎫'
   };
   let isOpen = false;
@@ -62,12 +62,12 @@
       const label = document.createElement('span');
       // The original tab sometimes includes an emoji and a verbose accessibility label;
       // keep the drawer concise and avoid duplicated airplane/ticket icons.
-      const conciseLabels = { hunterView:'Caçador', anaView:'ANA', nationalTrustView:'Trust' };
+      const conciseLabels = { anaView:'ANA', nationalTrustView:'Trust' };
       label.textContent = conciseLabels[view] || original.textContent.trim();
       button.append(ico, label);
       button.addEventListener('click', () => {
         close({ restoreFocus:false });
-        // The original button owns side-effects (FLY, Caçador, Novidades).
+        // The original button owns side-effects (FLY, Rocket, Novidades).
         original.click();
         syncActive();
       });
