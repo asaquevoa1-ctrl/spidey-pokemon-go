@@ -35,7 +35,7 @@ try{
     const calendar=await calendarImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!calendar.src.includes(expected)||calendar.natural[0]!==768||calendar.natural[1]!==1152||calendar.overflow)throw new Error(`calendar failed ${JSON.stringify(calendar)}`);
     checks.push({width,theme,view:'calendar',...calendar});await calendarPreview.screenshot({path:`${output}/${width}-${theme}-calendar.png`});
-    await calendarPreview.evaluate(host=>host.remove());
+    await calendarPreview.evaluate(host=>{host.remove();for(const child of [...document.body.children]){if(child.dataset.fcQaBodyHidden!==undefined){child.hidden=child.dataset.fcQaBodyHidden==='1';delete child.dataset.fcQaBodyHidden;}}});
     await dayEvent.evaluate(el=>el.click());
     await page.waitForFunction(id=>document.querySelector('#eventDetail')?.dataset.eventId===id,eventId);
     const hero=page.locator(`#eventDetail img[src*="${approved}"]`).first();await hero.waitFor({state:'attached'});
