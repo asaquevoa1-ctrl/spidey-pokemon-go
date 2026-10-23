@@ -28,7 +28,8 @@ try{
     await page.evaluate(()=>{setView('calendarView');state.month=new Date(2026,9,1);renderCalendar();});
     const index=await page.evaluate(()=>{const first=new Date(2026,9,1);const gridStart=new Date(2026,9,1-first.getDay());return Math.round((new Date(2026,9,24)-gridStart)/86400000);});
     await page.locator('#calendar .calendar-day').nth(index).evaluate(button=>button.click());
-    const dayEvent=page.locator(`#eventList [data-event-id="${eventId}"]`);await dayEvent.waitFor();
+    const dayEvent=page.locator(`#eventList [data-event-id="${eventId}"]`);await dayEvent.waitFor({state:'attached'});
+    await dayEvent.evaluate(el=>{for(let node=el;node;node=node.parentElement){if(node.hidden)node.hidden=false;if(node.style){node.style.setProperty('display','block','important');node.style.setProperty('opacity','1','important');node.style.setProperty('transform','none','important');}if(node.id==='calendarView')break;}const img=el.querySelector('img');if(img){img.loading='eager';img.hidden=false;}el.scrollIntoView({block:'center'});});
     const calendarImg=dayEvent.locator('img').first();await calendarImg.waitFor();await calendarImg.evaluate(img=>img.decode());
     const calendar=await calendarImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!calendar.src.includes(expected)||calendar.natural[0]!==768||calendar.natural[1]!==1152||calendar.overflow)throw new Error(`calendar failed ${JSON.stringify(calendar)}`);
@@ -38,7 +39,8 @@ try{
     if(!detail.src.includes(expected)||detail.natural[0]!==768||detail.natural[1]!==1152||detail.overflow)throw new Error(`detail failed ${JSON.stringify(detail)}`);
     checks.push({width,theme,view:'detail',...detail});await page.screenshot({path:`${output}/${width}-${theme}-detail.png`,fullPage:true});
     await page.evaluate(()=>{document.querySelector('#eventDialog')?.close();setView('weeklyView');renderWeeklyView();});
-    const weeklyEvent=page.locator(`[data-weekly-event="${eventId}"]`).first();await weeklyEvent.waitFor();
+    const weeklyEvent=page.locator(`[data-weekly-event="${eventId}"]`).first();await weeklyEvent.waitFor({state:'attached'});
+    await weeklyEvent.evaluate(el=>{for(let node=el;node;node=node.parentElement){if(node.hidden)node.hidden=false;if(node.style){node.style.setProperty('display','block','important');node.style.setProperty('opacity','1','important');node.style.setProperty('transform','none','important');}if(node.id==='weeklyView')break;}const img=el.querySelector('img');if(img){img.loading='eager';img.hidden=false;}el.scrollIntoView({block:'center'});});
     const weeklyImg=weeklyEvent.locator('img').first();await weeklyImg.waitFor({state:'attached'});await weeklyImg.evaluate(img=>img.decode());
     const week=await weeklyImg.evaluate((img,expected)=>({src:img.getAttribute('src'),natural:[img.naturalWidth,img.naturalHeight],overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,expected}),expected);
     if(!week.src.includes(expected)||week.natural[0]!==768||week.natural[1]!==1152||week.overflow)throw new Error(`weekly failed ${JSON.stringify(week)}`);
