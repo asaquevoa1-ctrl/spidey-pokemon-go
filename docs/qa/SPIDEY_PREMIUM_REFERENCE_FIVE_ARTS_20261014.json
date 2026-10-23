@@ -61,14 +61,30 @@
     },
     {
       "event_id": "2026-10-super-mega-raid-day",
-      "file": "spidey-app/assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-spidey-reference-approved-v2.webp",
+      "file": "spidey-app/assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-cosmic-s-approved-v3.png",
       "width": 1056,
       "height": 1320,
-      "sha256": "a9286379f7358bbc7344d7a67a810d9776d34347c60713a1467b8d867bfefce2",
-      "git_blob_sha": "dd092a6413256ae6c5b7465884e72cb3afc88926",
+      "bytes": 2336626,
+      "sha256": "b393649f7dc20b7cddb0c589672c345bc180a5a8e7061708d983ae79f9e65132",
       "old_file": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png",
-      "source": "ChatGPT image generation based on user-provided Spidey Premium examples",
-      "visual_release": "Requested by user"
+      "source": "Approved v2 artwork with only the legacy top-left emblem replaced by the exact original cosmic S approved on 2026-10-19",
+      "visual_release": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY",
+      "preserved_source": {
+        "file": "spidey-app/assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-spidey-reference-approved-v2.webp",
+        "width": 1056,
+        "height": 1320,
+        "bytes": 330778,
+        "sha256": "a9286379f7358bbc7344d7a67a810d9776d34347c60713a1467b8d867bfefce2",
+        "git_blob_sha": "dd092a6413256ae6c5b7465884e72cb3afc88926"
+      },
+      "identity_revision": {
+        "logo_file": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+        "logo_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+        "changed_pixels": 19043,
+        "changed_region": "154x154 at x=18,y=6",
+        "pixels_outside_region_changed": 0,
+        "generation": "none; deterministic overlay from approved repository asset"
+      }
     },
     {
       "event_id": "2026-10-raids-dialga",

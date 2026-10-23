@@ -661,14 +661,14 @@
     "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
   },
   "2026-10-super-mega-raid-day": {
-    "file": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-spidey-reference-approved-v2.webp",
+    "file": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-cosmic-s-approved-v3.png",
     "status": "APPROVED",
     "display": "full_poster",
     "width": 1056,
     "height": 1320,
-    "sha256": "a9286379f7358bbc7344d7a67a810d9776d34347c60713a1467b8d867bfefce2",
-    "approval_record": "docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json",
-    "approval_basis": "USER_EXPLICIT_PUBLICATION_REQUEST_20261014"
+    "sha256": "b393649f7dc20b7cddb0c589672c345bc180a5a8e7061708d983ae79f9e65132",
+    "approval_record": "docs/qa/MEGA_CHANDELURE_ART_APPROVAL_20261014.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA_AND_CURRENT_COSMIC_IDENTITY"
   },
   "2026-11-minior-leonids": {
     "file": "assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp",
