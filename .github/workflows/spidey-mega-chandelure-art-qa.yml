@@ -4,6 +4,7 @@ on:
     paths:
       - 'spidey-app/assets/events/review/mega-chandelure-super-mega-raid-day-20261031-v1.png'
       - 'spidey-app/assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-approved-v1.png'
+      - 'spidey-app/assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-cosmic-s-approved-v3.png'
       - 'spidey-app/premium-approved-master.js'
       - 'spidey-app/index.html'
       - 'spidey-app/sw.js'
@@ -24,6 +25,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm install --no-save playwright-core@1.56.1
       - run: |
+          set -o pipefail
           mkdir -p test-results/mega-chandelure-art
           command -v google-chrome | tee test-results/mega-chandelure-art/chrome-path.txt
           CHROME_PATH="$(command -v google-chrome)" node scripts/qa_mega_chandelure_art_browser.mjs 2>&1 | tee test-results/mega-chandelure-art/run.log

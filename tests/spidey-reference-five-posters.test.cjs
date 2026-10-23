@@ -47,7 +47,8 @@ test('five explicitly approved Spidey Premium reference posters are the current 
     assert.equal(registry[item.event_id].height,1320);
     assert.ok([
       'docs/qa/SPIDEY_PREMIUM_REFERENCE_FIVE_ARTS_20261014.json',
-      'docs/qa/MINIOR_ORIONIDS_ART_APPROVAL_20261012.json'
+      'docs/qa/MINIOR_ORIONIDS_ART_APPROVAL_20261012.json',
+      'docs/qa/MEGA_CHANDELURE_ART_APPROVAL_20261014.json'
     ].includes(registry[item.event_id].approval_record));
     assert.ok(sw.includes('./'+registry[item.event_id].file),'PWA pre-cache '+item.event_id);
     if(item.old_file)assert.ok(fs.existsSync('spidey-app/'+item.old_file),'Original poster removed: '+item.old_file);

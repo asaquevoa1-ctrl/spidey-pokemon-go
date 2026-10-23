@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-minior-cosmic-png1';
+const CACHE = 'spidey-app-20261022-credits-dst-v1-minior-cosmic-png1-chandelure-cosmic-png1';
 const CORE = [
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
@@ -38,6 +38,7 @@ const CORE = [
   './assets/events/premium/minior-orionids-20261019-24-spidey-reference-approved-v3.webp',
   './assets/events/premium/minior-orionids-20261019-24-cosmic-s-approved-v4.png',
   './assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-spidey-reference-approved-v2.webp',
+  './assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-cosmic-s-approved-v3.png',
   './assets/events/premium/dialga-five-star-raids-20261014-20-spidey-reference-approved-v2.webp',
   './assets/events/premium/dialga-five-star-raids-20261014-20-approved-v1.png',
   './assets/events/premium/minior-leonids-20261114-19-approved-v1.png',
