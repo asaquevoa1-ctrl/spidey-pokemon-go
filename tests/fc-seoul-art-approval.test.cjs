@@ -25,6 +25,14 @@ test('FC Seoul delegated approval uses the exact cosmic-S PNG and preserves all 
   assert.equal(master[approval.event_id].sha256,approval.sha256);
   assert.equal(master[approval.event_id].width,approval.width);
   assert.equal(master[approval.event_id].height,approval.height);
+  const document={addEventListener(){},querySelectorAll(){return []}};
+  const context=vm.createContext({window,document,URL,state:{events:[event]},eventList:{},renderEvents(){},openEvent(){},MutationObserver:class{observe(){}},setTimeout(){},queueMicrotask(){}});
+  for(const file of ['preview-art.js','art-system.js','premium-event-art.js'])vm.runInContext(fs.readFileSync('spidey-app/'+file,'utf8'),context);
+  for(const role of ['thumb','card','weekly','hero','poster']){
+    const resolved=window.SpideyArt.resolve(event,role);
+    assert.equal(resolved.url,master[approval.event_id].file,`${role} must keep the canonical 768x1152 poster`);
+    assert.equal(resolved.sha256,approval.sha256);
+  }
   assert.ok(Object.keys(master).length>=approval.prior_master_entries_preserved+1);
   assert.equal(event.source.confidence,'official');
   assert.equal(event.source.url,approval.source.url);
