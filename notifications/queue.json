@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-city-safari-boston-rescheduled:start:60",
-      "event_id": "2026-10-city-safari-boston-rescheduled",
-      "event_title": "City Safari Boston remarcado",
-      "category": "city_safari",
-      "scheduled_for": "2026-10-24T09:00:00-03:00",
-      "event_start": "2026-10-24T10:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "City Safari Boston remarcado começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-city-safari-boston-rescheduled",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-dynamax-max-battle-day:start:60",
       "event_id": "2026-10-dynamax-max-battle-day",
       "event_title": "Dia de Batalhas Max: Uxie, Mesprit e Azelf Dinamax",
@@ -402,7 +384,7 @@
     }
   ],
   "meta": {
-    "pending_count": 22,
+    "pending_count": 21,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
