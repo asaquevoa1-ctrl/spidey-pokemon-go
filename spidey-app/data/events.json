@@ -9771,7 +9771,9 @@
         "Zacian Espada Coroada e Zamazenta Escudo Coroado aparecem em Reides de cinco estrelas e entregam suas respectivas Energias Coroadas ao serem derrotados.",
         "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Duraludon Gigamax e as duas formas Coroadas podem vir com Fundo de Localização de Sendai; Reides e Batalhas Max remotas não concedem esse fundo.",
         "Sliggoo de Hisui estreia na natureza. Goodra de Hisui pode ser obtido ao evoluir Sliggoo de Hisui com 100 Doces Goomy.",
-        "O Rally de Selos da cidade funciona das 9h às 20h no dia principal do ingresso. Não foram adicionadas coordenadas sem confirmação oficial.",
+        "CORREÇÃO OFICIAL 22/10: a Caça aos Selos GO (GO Stamp Rally) funciona das 10h às 20h no horário LOCAL, SOMENTE no dia principal do ingresso. O adicional Dia Extra (Extra Day) NÃO oferece uma segunda Caça aos Selos.",
+        "Sete Poképaradas oficiais identificadas para a Caça aos Selos: Tsutsujigaoka Park; Daterium; Jyukyo Park Sendai Station West; Sendai City Museum; Nishi Park; Nishikicho Park; AEON Mall Sendai Kamisugi. São nomes oficiais dos locais, não coordenadas nem GPX confirmados.",
+        "Fonte da correção: https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026 (22/10/2026). O horário das Caças aos Selos é diferente da janela geral de gameplay 10h–18h.",
         "Informações oficiais conferidas em 07/10/2026."
       ],
       "notifications": {
@@ -9821,7 +9823,47 @@
         "summary": "Duraludon Gigamax estreia, as formas Coroadas voltam às Reides e Sliggoo e Goodra de Hisui chegam ao jogo.",
         "published_on": "2026-10-07"
       },
-      "updated_at": "2026-10-07T18:19:00Z"
+      "updated_at": "2026-10-25T20:24:00-03:00",
+      "stamp_rally": {
+        "start_time_local": "10:00",
+        "end_time_local": "20:00",
+        "main_ticket_day_only": true,
+        "extra_day_gives_second_rally": false,
+        "timezone": "Asia/Tokyo",
+        "locations": [
+          {
+            "name": "Tsutsujigaoka Park",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Daterium",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Jyukyo Park Sendai Station West",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Sendai City Museum",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Nishi Park",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Nishikicho Park",
+            "coordinates_verified": false
+          },
+          {
+            "name": "AEON Mall Sendai Kamisugi",
+            "coordinates_verified": false
+          }
+        ],
+        "official_update": "2026-10-22",
+        "source_url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026"
+      },
+      "verified_at": "2026-10-25"
     },
     {
       "id": "2026-11-go-wild-area-mexico-city",
@@ -9867,7 +9909,9 @@
         "Zacian Espada Coroada e Zamazenta Escudo Coroado aparecem em Reides de cinco estrelas e entregam suas respectivas Energias Coroadas ao serem derrotados.",
         "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Duraludon Gigamax e as duas formas Coroadas podem vir com Fundo de Localização da Cidade do México; Reides e Batalhas Max remotas não concedem esse fundo.",
         "Sliggoo de Hisui estreia na natureza. Goodra de Hisui pode ser obtido ao evoluir Sliggoo de Hisui com 100 Doces Goomy.",
-        "O Rally de Selos da cidade funciona das 9h às 20h no dia principal do ingresso. Não foram adicionadas coordenadas sem confirmação oficial.",
+        "CORREÇÃO OFICIAL 22/10: a Caça aos Selos GO (GO Stamp Rally) funciona das 10h às 20h no horário LOCAL, SOMENTE no dia principal do ingresso. O adicional Dia Extra (Extra Day) NÃO oferece uma segunda Caça aos Selos.",
+        "Sete Poképaradas oficiais identificadas para a Caça aos Selos: Monumento a la Revolución; Jardín Pushkin; Parque México; Centro de Cultura Digital / Estela de Luz; Parque América; Liverpool Polanco; Mexicráneo + Ángel de la Independencia. São nomes oficiais dos locais, não coordenadas nem GPX confirmados.",
+        "Fonte da correção: https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026 (22/10/2026). O horário das Caças aos Selos é diferente da janela geral de gameplay 10h–18h.",
         "Informações oficiais conferidas em 07/10/2026."
       ],
       "notifications": {
@@ -9917,7 +9961,47 @@
         "summary": "Duraludon Gigamax estreia, as formas Coroadas voltam às Reides e Sliggoo e Goodra de Hisui chegam ao jogo.",
         "published_on": "2026-10-07"
       },
-      "updated_at": "2026-10-07T18:19:00Z"
+      "updated_at": "2026-10-25T20:24:00-03:00",
+      "stamp_rally": {
+        "start_time_local": "10:00",
+        "end_time_local": "20:00",
+        "main_ticket_day_only": true,
+        "extra_day_gives_second_rally": false,
+        "timezone": "America/Mexico_City",
+        "locations": [
+          {
+            "name": "Monumento a la Revolución",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Jardín Pushkin",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Parque México",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Centro de Cultura Digital / Estela de Luz",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Parque América",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Liverpool Polanco",
+            "coordinates_verified": false
+          },
+          {
+            "name": "Mexicráneo + Ángel de la Independencia",
+            "coordinates_verified": false
+          }
+        ],
+        "official_update": "2026-10-22",
+        "source_url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026"
+      },
+      "verified_at": "2026-10-25"
     },
     {
       "id": "2026-11-go-wild-area-global",
