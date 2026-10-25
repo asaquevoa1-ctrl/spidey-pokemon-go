@@ -234,7 +234,7 @@ function renderEvents(events = state.events.filter((event) => event.content_type
     card.dataset.eventId = event.id;
     card.tabIndex = 0;
     card.innerHTML = `
-      ${eventArtVisible(event) ? `<img class="event-thumb" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event)}
+      ${eventArtVisible(event) ? `<img class="event-thumb" loading="lazy" decoding="async" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event)}
       <div>
         <span class="eyebrow">${event.location_label || event.locations?.[0]?.label || 'Evento'}</span>
         <h3>${event.title}</h3>
