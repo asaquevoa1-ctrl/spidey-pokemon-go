@@ -46,7 +46,7 @@ test('Documented third-party API does not silently reinstate retired Hunter or c
  const html=path('spidey-app/index.html');
  assert.match(d,/Documentação não oficial PoGoCoordinates recebida/);
  assert.match(d,/não\s+dá\s+autorização/);
- assert.match(d,/não\s+é\s+uma\s+ordem\s+de\s+reativação/);
+ assert.match(d,/\*\*não\*\* é uma ordem de reativação/);
  assert.ok(!html.includes('coordinates-api.pokemongopro.com'));
  assert.ok(!html.includes('hunter-v1.js'));
  assert.ok(!html.includes('hunter-live-feed.js'));
