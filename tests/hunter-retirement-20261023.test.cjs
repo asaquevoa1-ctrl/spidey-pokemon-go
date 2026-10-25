@@ -40,3 +40,15 @@ test('Archive and prevent automatic partner feed ingestion while keeping audited
  assert.ok(decision.includes('Caçador removido do aplicativo público'));
  assert.ok(decision.includes('Preservar integralmente **Guia GO Rocket**'));
 });
+
+test('Documented third-party API does not silently reinstate retired Hunter or collect tokens',()=>{
+ const d=path('SPIDEY_DECISIONS_CURRENT.md');
+ const html=path('spidey-app/index.html');
+ assert.match(d,/Documentação não oficial PoGoCoordinates recebida/);
+ assert.match(d,/não\s+dá\s+autorização/);
+ assert.match(d,/\*\*não\*\* é uma ordem de reativação/);
+ assert.ok(!html.includes('coordinates-api.pokemongopro.com'));
+ assert.ok(!html.includes('hunter-v1.js'));
+ assert.ok(!html.includes('hunter-live-feed.js'));
+ assert.ok(html.includes('rocket-guide.js'));
+});
