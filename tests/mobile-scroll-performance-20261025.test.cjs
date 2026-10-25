@@ -17,7 +17,8 @@ test('Mobile scroll avoids costly sticky blur without altering desktop or approv
  for(const path of ['mobile-side-menu.css','command-center.js','experience-v1.js','app.js'])
   assert.ok(html.includes(path + '?v=20261025-scroll1'), path+' cache version');
  const sw=read('sw.js');
- assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1-20261025-scroll1'));
+ assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1'));
+ assert.ok(sw.includes('20261023-no-hunter1'),'Legacy Caçador cache version remains invalidated');
  for(const name of ['assets/branding/20261019/spidey-icon-cosmic-192.png','rocket-guide.js','pvp.js','fly-v1.js'])
   assert.ok(html.includes(name),name);
 });
@@ -37,7 +38,7 @@ test('FLY buttons decorate newly added event subtrees without rescanning page fo
  let boot, observer, scheduled=0, fullScans=0;
  const EVENT_SELECTOR='[data-event-id],[data-v22-event]';
  class Node {
-  constructor() {this.dataset={};this.children=[];this.isConnected=true;this.className='';this.textContent='';this.listeners={};this.parent=null;}
+  constructor() {this.nodeType=1;this.dataset={};this.children=[];this.isConnected=true;this.className='';this.textContent='';this.listeners={};this.parent=null;}
   matches(selector){return selector===EVENT_SELECTOR?Boolean(this.dataset.eventId||this.dataset.v22Event):selector==='.cc-fly-action'?this.className.includes('cc-fly-action'):false;}
   querySelectorAll(selector){
    if(selector!==EVENT_SELECTOR)return [];
