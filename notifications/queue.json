@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-pokemon-night-out-twitch:start:60",
-      "event_id": "2026-10-pokemon-night-out-twitch",
-      "event_title": "Pokémon Night Out: recompensa na Twitch",
-      "category": "timed_research",
-      "scheduled_for": "2026-10-24T22:30:00-03:00",
-      "event_start": "2026-10-24T23:30:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Pokémon Night Out: recompensa na Twitch começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-pokemon-night-out-twitch",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/pokemon-night-out-twitch-drops2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-26-max-monday-sableye:start:60",
       "event_id": "2026-10-26-max-monday-sableye",
       "event_title": "Max Monday: Dynamax Sableye",
@@ -366,7 +348,7 @@
     }
   ],
   "meta": {
-    "pending_count": 20,
+    "pending_count": 19,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
