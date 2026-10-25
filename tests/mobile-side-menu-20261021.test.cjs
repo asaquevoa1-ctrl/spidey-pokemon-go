@@ -18,7 +18,7 @@ test('Menu mobile keeps approved cosmic S icon, responsive visibility and no dis
   assert.ok(html.includes('aria-expanded="false"'));
   assert.ok(html.includes('aria-controls="spideyMobileMenuPanel"'));
   assert.ok(html.includes('aria-modal="true"'));
-  assert.ok(html.includes('mobile-side-menu.css?v=20261021-drawer-only2'));
+  assert.ok(html.includes('mobile-side-menu.css?v=20261025-scroll1'));
   assert.ok(html.includes('mobile-side-menu.js?v=20261021-drawer1'));
   assert.ok(html.includes('assets/branding/20261019/spidey-icon-cosmic-192.png'));
   assert.ok(css.includes('@media (max-width: 760px)'));

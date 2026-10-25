@@ -148,3 +148,18 @@
     padding-bottom: calc(28px + env(safe-area-inset-bottom)) !important;
   }
 }
+
+/* Android / mobile scroll performance: the sticky header must not run a live
+   18px backdrop-blur over large poster collections on every swipe frame.
+   Preserve the approved identity and both light/dark theme surfaces. */
+@media (max-width: 760px) {
+  html { scroll-behavior: auto; }
+  .topbar {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: var(--surface, #0a1730) !important;
+  }
+  :root[data-theme="light"] .topbar {
+    background: #fff !important;
+  }
+}

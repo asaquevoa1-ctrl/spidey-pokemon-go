@@ -2,13 +2,21 @@
   'use strict';
   function sourceLabel(e){return window.SpideyPlayer.source(e)}
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const EVENT_SELECTOR='[data-event-id],[data-v22-event]';
   function flyActions(root=document){
-    root.querySelectorAll('[data-event-id],[data-v22-event]').forEach(card=>{
-      const id=card.dataset.eventId||card.dataset.v22Event,e=state.events.find(e=>e.id===id);
-      if(!window.SpideyFlyCore.eligible(e)||card.querySelector('.cc-fly-action'))return;
+    // Limit work to event cards in the changed subtree. Other UI updates must not
+    // rescan the full calendar/weekly list on every animation frame.
+    const cards=[];
+    if(root.matches?.(EVENT_SELECTOR))cards.push(root);
+    root.querySelectorAll?.(EVENT_SELECTOR).forEach(card=>cards.push(card));
+    const byId=new Map((state.events||[]).map(event=>[event.id,event]));
+    for(const card of cards){
+      if(card.querySelector('.cc-fly-action'))continue;
+      const id=card.dataset.eventId||card.dataset.v22Event,e=byId.get(id);
+      if(!window.SpideyFlyCore.eligible(e))continue;
       const nested=card.matches('button,a')||card.closest('button,a');
       const b=document.createElement(nested?'span':'button');b.className=nested?'cc-fly-action cc-fly-label':'action-btn cc-fly-action';b.textContent=nested?'FLY • Rota mundial disponível':'FLY — Ver rota mundial';if(!nested)b.addEventListener('click',ev=>{ev.stopPropagation();window.SpideyFly.open(id)});card.append(b);
-    });
+    }
   }
   function renderNews(){
     const target=document.getElementById('newsList');if(!target)return;
@@ -32,7 +40,26 @@
     shortcuts.addEventListener('click',e=>{const b=e.target.closest('[data-cc-view]');if(!b)return;if(b.dataset.ccView==='flyView')window.SpideyFly.render();if(b.dataset.ccView==='newsView')renderNews();setView(b.dataset.ccView)});
     news.addEventListener('click',e=>{const b=e.target.closest('[data-news-event]');if(b)openEvent(state.events.find(e=>e.id===b.dataset.newsEvent))});
     // Decorate rendered cards without taking ownership of their data or artwork.
-    let queued=false;new MutationObserver(()=>{if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;flyActions()})}).observe(main,{childList:true,subtree:true});
+    const pending=new Set();
+    let queued=false;
+    new MutationObserver(records=>{
+      for(const change of records){
+        for(const node of change.addedNodes){
+          if(node.nodeType!==1||node.matches?.('.cc-fly-action'))continue;
+          // New card, card fragment or changes inside an existing card.
+          const card=node.matches?.(EVENT_SELECTOR)?node:node.closest?.(EVENT_SELECTOR);
+          if(card)pending.add(card);
+          if(node.querySelector?.(EVENT_SELECTOR))pending.add(node);
+        }
+      }
+      if(queued||pending.size===0)return;
+      queued=true;
+      requestAnimationFrame(()=>{
+        queued=false;
+        const changed=[...pending];pending.clear();
+        for(const node of changed)if(node.isConnected)flyActions(node);
+      });
+    }).observe(main,{childList:true,subtree:true});
     window.addEventListener('spideycontentready',()=>{renderNews();flyActions()});
     const original=openEvent;openEvent=function(e){original(e);const source=detail.querySelector('.detail-body > .eyebrow');if(source)source.textContent=window.SpideyPlayer.source(e);const approved=window.SPIDEY_APPROVED_ART_MASTER?.[e.id];detail.classList.toggle('player-art-unavailable',Boolean(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file]));if(approved&&window.SPIDEY_UNAVAILABLE_ART?.[approved.file]&&!window.SpideyPlayer.reviewCorrection(e)){detail.querySelector('.detail-hero')?.remove();const note=document.createElement('p');note.className='player-art-notice';note.textContent='A arte deste evento está temporariamente indisponível.';detail.prepend(note)}const review=window.SPIDEY_PREVIEW_ART?.[e.id];if(approved?.display==='full_poster'||review&&(!approved||window.SpideyPlayer.reviewCorrection(e))){const hero=detail.querySelector('.detail-hero');if(hero){const holder=document.createElement('div');holder.innerHTML=window.SpideyPlayer.image(e);hero.replaceWith(holder.firstElementChild)}}if(window.SpideyFlyCore.eligible(e)){const b=document.createElement('button');b.className='action-btn cc-fly-action';b.textContent='Ver rota mundial';b.addEventListener('click',()=>{dialog.close();window.SpideyFly.open(e.id)});detail.querySelector('.detail-body')?.append(b)}dialog.scrollTop=0};
     renderNews();flyActions();
