@@ -1,0 +1,811 @@
+{
+  "schema_version": "spidey-weekly-v1",
+  "week_start": "2026-10-26",
+  "week_end": "2026-11-01",
+  "timezone": "America/Sao_Paulo",
+  "title": "Spidey Weekly • 26/10 a 01/11",
+  "visual_standard": "spidey-weekly-premium-v1",
+  "status": "ready_for_art",
+  "days": [
+    {
+      "date": "2026-10-26",
+      "weekday": "monday",
+      "items": [
+        {
+          "id": "2026-10-26-max-monday-sableye",
+          "title": "Max Monday: Dynamax Sableye",
+          "summary": "Sableye Dynamax em destaque nos Power Spots durante a Segunda Max.",
+          "category": "max_monday",
+          "tags": [
+            "Max Monday",
+            "Dynamax",
+            "Sableye",
+            "Global"
+          ],
+          "start_brazil": "2026-10-26T06:00:00-03:00",
+          "end_brazil": "2026-10-26T21:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • programação oficial de outubro de 2026",
+            "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/premium/sableye-max-monday-20261026-approved-v1.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "ceb979cc1b98ff3ec9b9bb7dd9d9f31a75eb14c6c914c8fff1ee8dae45ac83e4",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "weekday": "tuesday",
+      "items": [
+        {
+          "id": "2026-10-27-showcase-tuesday",
+          "title": "Descoberta Diária: Terça de Vitrine",
+          "summary": "Até cinco Vitrines de Poképarada e mais PokéStops com Vitrines disponíveis.",
+          "category": "daily_discovery",
+          "tags": [
+            "Vitrines",
+            "PokéStop",
+            "Twilight Trails"
+          ],
+          "start_brazil": "2026-10-27T00:00:00-03:00",
+          "end_brazil": "2026-10-27T23:59:59-03:00",
+          "source": {
+            "name": "Twilight Trails • Daily Discoveries",
+            "url": "https://leekduck.com/events/season-24-twilight-trails/",
+            "confidence": "verified"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/premium/showcase-tuesday-october-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "70c6b42ee42bd39416cadfa2be2c5e6bfb9eb6ec2716b83c2c342297515635b7",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "weekday": "wednesday",
+      "items": [
+        {
+          "id": "2026-10-28-raid-hour-giratina-forma-origem",
+          "title": "Raid Hour: Giratina Forma Origem",
+          "summary": "Giratina Forma Origem em destaque na Hora de Reides.",
+          "category": "raid_hour",
+          "tags": [
+            "Raid Hour",
+            "5 estrelas",
+            "Global"
+          ],
+          "start_brazil": "2026-10-28T18:00:00-03:00",
+          "end_brazil": "2026-10-28T19:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "weekday": "thursday",
+      "items": [
+        {
+          "id": "2026-10-29-go-battle-thursday",
+          "title": "Descoberta Diária: Quinta de Batalhas GO",
+          "summary": "Até 10 séries no dia (50 batalhas) e bônus de Poeira Estelar em recompensas de vitória.",
+          "category": "daily_discovery",
+          "tags": [
+            "GO Battle",
+            "PvP",
+            "Twilight Trails"
+          ],
+          "start_brazil": "2026-10-29T00:00:00-03:00",
+          "end_brazil": "2026-10-29T23:59:59-03:00",
+          "source": {
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/premium/go-battle-thursday-october-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "b880105dbd8686a4f5665167fa0a7156726c6c184857105c807178691f620b8a",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
+          }
+        },
+        {
+          "id": "2026-10-29-spotlight-gastly",
+          "title": "Spotlight Hour: Gastly",
+          "summary": "2× PE por evolução.",
+          "category": "spotlight_hour",
+          "tags": [
+            "Spotlight Hour",
+            "Gastly",
+            "Global"
+          ],
+          "start_brazil": "2026-10-29T18:00:00-03:00",
+          "end_brazil": "2026-10-29T19:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "weekday": "friday",
+      "items": [
+        {
+          "id": "2026-10-30-friendship-friday",
+          "title": "Descoberta Diária: Sexta da Amizade",
+          "summary": "Trocas especiais adicionais, menor custo de Poeira Estelar, maior chance de Lucky Trade e Candy XL em trocas presenciais.",
+          "category": "daily_discovery",
+          "tags": [
+            "Amizade",
+            "Trocas",
+            "Twilight Trails"
+          ],
+          "start_brazil": "2026-10-30T00:00:00-03:00",
+          "end_brazil": "2026-10-30T23:59:59-03:00",
+          "source": {
+            "name": "Twilight Trails • Daily Discoveries",
+            "url": "https://leekduck.com/events/season-24-twilight-trails/",
+            "confidence": "verified"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "assets/events/premium/friendship-friday-october-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "325a96fee7a79969c4322be82b9cdd00d69703716a838657092ff24a83848e6c",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "weekday": "saturday",
+      "items": [
+        {
+          "id": "2026-10-shadow-landorus-31",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Shadow Raid",
+            "Landorus (Forma Encarnada)",
+            "Fim de semana"
+          ],
+          "start_brazil": "2026-10-31T00:00:00-03:00",
+          "end_brazil": "2026-11-01T23:59:59-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "weekday": "sunday",
+      "items": [
+        {
+          "id": "2026-10-shadow-landorus-31",
+          "title": "Shadow Raids: Landorus (Forma Encarnada)",
+          "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Shadow Raid",
+            "Landorus (Forma Encarnada)",
+            "Fim de semana"
+          ],
+          "start_brazil": "2026-10-31T00:00:00-03:00",
+          "end_brazil": "2026-11-01T23:59:59-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário outubro 2026",
+            "url": "https://pokemongohub.net/post/event/october-2026-events/",
+            "confidence": "verified"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "featured": [
+      {
+        "id": "2026-10-halloween-part-1",
+        "title": "Halloween 2026: Parte I",
+        "summary": "Halloween Parte I com novos trajes, surpresas no mapa e bônus liberados pelo Passe GO.",
+        "category": "halloween",
+        "tags": [
+          "Halloween",
+          "Pikachu",
+          "Zubat",
+          "Sinistea",
+          "Global"
+        ],
+        "start_brazil": "2026-10-27T10:00:00-03:00",
+        "end_brazil": "2026-11-01T10:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/halloween-part-1-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/halloween-mystery-teaser-20261004-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "ae832e6af897db82ebcc437fff9893049fc09869aa0114964fa97d2a554293db",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-halloween-go-pass",
+        "title": "Passe GO: Halloween 2026",
+        "summary": "Passe GO temático com encontros, Doces e recompensas; a versão Deluxe inclui itens extras.",
+        "category": "go_pass",
+        "tags": [
+          "GO Pass",
+          "Halloween",
+          "Global"
+        ],
+        "start_brazil": "2026-10-27T10:00:00-03:00",
+        "end_brazil": "2026-11-05T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/halloween-part-1-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/halloween-go-pass-20261027-1105-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "815bc9b7b1b70364b7e17b47a1d11a87307f956815f5f2ed4929dd55d91924ce",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      }
+    ],
+    "raids": [
+      {
+        "id": "2026-10-28-raid-hour-giratina-forma-origem",
+        "title": "Raid Hour: Giratina Forma Origem",
+        "summary": "Giratina Forma Origem em destaque na Hora de Reides.",
+        "category": "raid_hour",
+        "tags": [
+          "Raid Hour",
+          "5 estrelas",
+          "Global"
+        ],
+        "start_brazil": "2026-10-28T18:00:00-03:00",
+        "end_brazil": "2026-10-28T19:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO Hub • calendário outubro 2026",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-10-raids-palkia",
+        "title": "Reides 5★: Palkia",
+        "summary": "Palkia na rotação de Reides de cinco estrelas.",
+        "category": "raid_rotation",
+        "tags": [
+          "Reide 5★",
+          "Rotação",
+          "Palkia"
+        ],
+        "start_brazil": "2026-10-21T06:00:00-03:00",
+        "end_brazil": "2026-10-27T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • programação oficial de outubro de 2026",
+          "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/palkia-five-star-raids-20261021-27-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "f82bfa44e3e3d47de2289889c5ae5cf02a1917a45bf7fb368c80053804648eab",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-raids-giratina-origin",
+        "title": "Reides 5★: Giratina (Forma Origem)",
+        "summary": "Giratina (Forma Origem) na rotação de Reides de cinco estrelas.",
+        "category": "raid_rotation",
+        "tags": [
+          "Reide 5★",
+          "Rotação",
+          "Giratina (Forma Origem)"
+        ],
+        "start_brazil": "2026-10-28T06:00:00-03:00",
+        "end_brazil": "2026-11-03T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO Hub • calendário outubro 2026",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-10-mega-charizard-xy-raids",
+        "title": "Mega Reides: Mega Charizard X e Y",
+        "summary": "Mega Charizard X e Y na rotação de Mega Reides.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Mega Reide",
+          "Rotação",
+          "Mega Charizard X e Y"
+        ],
+        "start_brazil": "2026-10-21T06:00:00-03:00",
+        "end_brazil": "2026-10-27T22:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • programação oficial de outubro de 2026",
+          "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/mega-charizard-xy-raids-20261021-27-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "845873f8e397b7341ca20bd244acb6867ff33fd664d213e99d340bf3f504e965",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-mega-sableye-raids",
+        "title": "Mega Reides: Mega Sableye",
+        "summary": "Mega Sableye na rotação de Mega Reides.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Mega Reide",
+          "Rotação",
+          "Mega Sableye"
+        ],
+        "start_brazil": "2026-10-28T06:00:00-03:00",
+        "end_brazil": "2026-11-08T10:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • programação oficial de outubro de 2026",
+          "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "b47a296119ee93c2d4c7273424df19f083a9e7f13b33e8e1219fa728dc30773d",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-shadow-landorus-31",
+        "title": "Shadow Raids: Landorus (Forma Encarnada)",
+        "summary": "Landorus (Forma Encarnada) Sombroso em Reides Sombrosas no fim de semana.",
+        "category": "shadow_raids",
+        "tags": [
+          "Shadow Raid",
+          "Landorus (Forma Encarnada)",
+          "Fim de semana"
+        ],
+        "start_brazil": "2026-10-31T00:00:00-03:00",
+        "end_brazil": "2026-11-01T23:59:59-03:00",
+        "source": {
+          "name": "Pokémon GO Hub • calendário outubro 2026",
+          "url": "https://pokemongohub.net/post/event/october-2026-events/",
+          "confidence": "verified"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      }
+    ],
+    "max_pvp": [
+      {
+        "id": "2026-10-26-max-monday-sableye",
+        "title": "Max Monday: Dynamax Sableye",
+        "summary": "Sableye Dynamax em destaque nos Power Spots durante a Segunda Max.",
+        "category": "max_monday",
+        "tags": [
+          "Max Monday",
+          "Dynamax",
+          "Sableye",
+          "Global"
+        ],
+        "start_brazil": "2026-10-26T06:00:00-03:00",
+        "end_brazil": "2026-10-26T21:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • programação oficial de outubro de 2026",
+          "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/sableye-max-monday-20261026-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "ceb979cc1b98ff3ec9b9bb7dd9d9f31a75eb14c6c914c8fff1ee8dae45ac83e4",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-gbl-20-27",
+        "title": "GO Battle League: Ultra / Master Mega / Fantasy Cup",
+        "summary": "Rotação da Liga de Batalha GO: Ultra / Master Mega / Fantasy Cup.",
+        "category": "go_battle_league",
+        "tags": [
+          "GO Battle League",
+          "PvP",
+          "Twilight Trails"
+        ],
+        "start_brazil": "2026-10-20T17:00:00-03:00",
+        "end_brazil": "2026-10-27T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/gbl-20261020-27-approved-v2.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "bfaef8a26cbb1184a56249e8ae5762344f5b3c2e6277f7b9dadd20c45fc1446e",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-10-gbl-27-1103",
+        "title": "GO Battle League: Master / Mega Halloween Cup",
+        "summary": "Rotação da Liga de Batalha GO: Master / Mega Halloween Cup.",
+        "category": "go_battle_league",
+        "tags": [
+          "GO Battle League",
+          "PvP",
+          "Twilight Trails"
+        ],
+        "start_brazil": "2026-10-27T17:00:00-03:00",
+        "end_brazil": "2026-11-03T18:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/gbl-20261027-1103-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "fa15e558b19e02802422f1c7b14e2b24fa63f0857e6e89e2f991428e557ae14d",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      }
+    ],
+    "also_happening": [
+      {
+        "id": "2026-10-super-mega-raid-day",
+        "title": "Dia de Super Megarreides de Mega Chandelure",
+        "summary": "Mega Chandelure estreia em Super Megarreides em 31 de outubro, das 14h às 17h, no horário local.",
+        "category": "raid_day",
+        "tags": [
+          "Super Mega",
+          "Raid Day",
+          "Mega Chandelure",
+          "Global"
+        ],
+        "start_brazil": "2026-10-31T14:00:00-03:00",
+        "end_brazil": "2026-10-31T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO · anúncio oficial em inglês",
+          "url": "https://pokemongo.com/en/news/chandelure-super-mega-raid-day-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/mega-chandelure-super-mega-raid-day-20261031-cosmic-s-approved-v3.png",
+          "width": 1056,
+          "height": 1320,
+          "sha256": "b393649f7dc20b7cddb0c589672c345bc180a5a8e7061708d983ae79f9e65132",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-aeon-mall-halloween-japan",
+        "title": "AEON Mall × Pokémon GO — Halloween 2026",
+        "summary": "Evento presencial nos AEON Malls participantes do Japão, de 19 de outubro a 1º de novembro. Duas Pesquisas Temporárias, Pikachu com chapéu de bruxa e Módulos Atrair de 2 horas.",
+        "category": "regional_event",
+        "tags": [
+          "Japão",
+          "AEON Mall",
+          "Halloween",
+          "Pikachu com chapéu de bruxa",
+          "Pesquisa Temporária",
+          "Presencial"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-10-19",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial no Japão",
+          "url": "https://pokemongo.com/ja/news/202610aeonmall-halloween",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-10-27-dia-de-muertos-mexico",
+        "title": "Día de Muertos 2026 — México (evento nacional)",
+        "summary": "Somente no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil, pesquisas e adesivos. O evento presencial do Paseo de la Reforma tem bônus exclusivos separados.",
+        "category": "regional_event",
+        "tags": [
+          "México",
+          "Regional",
+          "Día de Muertos",
+          "Cubone",
+          "Cempasúchil",
+          "Evento exclusivo no México"
+        ],
+        "start_brazil": "2026-10-27T13:00:00-03:00",
+        "end_brazil": "2026-11-05T23:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial México",
+          "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-10-31-dia-de-muertos-paseo-reforma",
+        "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
+        "summary": "De 31/10 a 05/11, área presencial no Paseo de la Reforma com Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Batalhas Max de Gengar Gigamax 6★.",
+        "category": "local_event",
+        "tags": [
+          "México",
+          "Cidade do México",
+          "Presencial",
+          "Local",
+          "Paseo de la Reforma",
+          "Duskull",
+          "Gengar Gigamax",
+          "Caça aos Selos GO"
+        ],
+        "start_brazil": "2026-10-31T17:00:00-03:00",
+        "end_brazil": "2026-11-05T23:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial México",
+          "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-halloween-part-2",
+        "title": "Halloween 2026: Parte II",
+        "summary": "Greavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.",
+        "category": "halloween",
+        "tags": [
+          "Halloween",
+          "Greavard",
+          "Mega Sableye",
+          "Global"
+        ],
+        "start_brazil": "2026-11-01T10:00:00-03:00",
+        "end_brazil": "2026-11-05T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO · anúncio oficial",
+          "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      }
+    ]
+  },
+  "stamps": [
+    {
+      "id": "pokexciting-cross-region-2026",
+      "title": "PokéXciting! Cross-Region GO Stamp Rally",
+      "summary": "Rally regional oficial com cinco selos PokéXciting! distribuídos por cidades da Ásia-Pacífico.",
+      "stamp_count": 5,
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/event-apac-stamp-rally-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "pokemon-centre-japan-stamp-rally-2026",
+      "title": "The Pokémon Centre Stamp Rally — Japão",
+      "summary": "GO Stamp Rally de longa duração nos Pokémon Centers do Japão, com coordenadas do SPS cruzadas com a confirmação oficial do evento e uma segunda lista independente de locais.",
+      "stamp_count": 18,
+      "source": {
+        "name": "Pokémon GO • anúncio oficial japonês",
+        "url": "https://pokemongo.com/ja/news/assistant_pikachu",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "pokelids-japan-national",
+      "title": "PokéLids — Japão",
+      "summary": "Coleção nacional de PokéLids, com locais e artes originais do catálogo oficial.",
+      "stamp_count": 482,
+      "source": {
+        "name": "Pokémon GO · PokéLids em todo o Japão",
+        "confidence": "official",
+        "url": "https://pokemongo.com/ja/news/pokelid_full"
+      }
+    },
+    {
+      "id": "nagasaki-city-stamp-rally",
+      "title": "Nagasaki · Stamp Rally",
+      "summary": "Stamp Rally público anunciado após o GO Wild Area: Nagasaki.",
+      "stamp_count": 8,
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/stamp-rally-nagasaki?hl=en",
+        "confidence": "official"
+      }
+    }
+  ],
+  "meta": {
+    "calendar_events_in_week": 20,
+    "events_with_weekly_art": 13,
+    "events_with_premium_weekly_art": 13,
+    "events_with_official_weekly_art": 0,
+    "events_without_weekly_art": 7,
+    "events_in_weekly": 20,
+    "events_with_generated_weekly_art": 0,
+    "generated_at": "2026-10-26T03:49:56.950242-03:00",
+    "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
+  }
+}
