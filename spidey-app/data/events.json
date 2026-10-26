@@ -6645,7 +6645,7 @@
       "id": "2026-10-halloween-go-pass",
       "slug": "2026-10-halloween-go-pass",
       "title": "Passe GO: Halloween 2026",
-      "summary": "Passe GO temático com encontros, Doces e recompensas; a versão Deluxe inclui itens extras.",
+      "summary": "De 27/10 a 05/11: evolua no Passe GO de Halloween, gratuito ou Deluxe, para liberar encontros e bônus. Resgate TUDO que desbloqueou até 07/11 às 20h locais. Ranques específicos de Pikachu, Rotom e Spiritomb aguardam comprovação.",
       "category": "go_pass",
       "tags": [
         "GO Pass",
@@ -6653,8 +6653,8 @@
         "Global"
       ],
       "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/halloween-part-1-2026",
+        "name": "Pokémon GO • Halloween Parte I (anúncio oficial)",
+        "url": "https://pokemongo.com/pt-BR/news/halloween-part-1-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -6678,9 +6678,17 @@
         "reason": "Passe global sem coordenada específica confirmada."
       },
       "notes": [
-        "O Passe GO gratuito é recebido automaticamente; o Deluxe é uma versão paga.",
-        "As recompensas desbloqueadas podem ser resgatadas até 7/11/2026 às 20h, horário local.",
-        "A disponibilidade do Passe GO Deluxe e os preços variam conforme a região."
+        "COMEÇA EM 27/10/2026 ÀS 10H (HORÁRIO LOCAL). A trilha gratuita aparece automaticamente no jogo. Complete Tarefas de Passe para ganhar Pontos GO e avançar.",
+        "FIM DA PROGRESSÃO: quinta 05/11/2026 às 20h locais. Não confundir com a data-limite para recolher o que já foi desbloqueado.",
+        "ATENÇÃO: PRAZO FINAL PARA RESGATAR AS RECOMPENSAS JÁ LIBERADAS: sábado 07/11/2026 às 20h locais. Após esse horário, elas desaparecem.",
+        "GRATUITO: encontros e Doces de Pokémon temáticos, Doce Raro e Ultra Bolas; a lista oficial não especifica todos os encontros nem todos os ranques.",
+        "DELUXE PAGO: encontra mais Pokémon temáticos, inclui roupas de confeiteiro, Doce Raro GG e Passe de Batalha Premium. Quem compra Deluxe pode resgatar também a trilha gratuita e os ranques desbloqueados antes do upgrade.",
+        "PREÇOS ANUNCIADOS: US$ 7,99 (Deluxe) ou US$ 9,99 (Deluxe + 10 ranques); valores e disponibilidade podem variar por região. A versão +10 concede Pontos GO suficientes para chegar ao ranque 11.",
+        "BÔNUS POR META: ranque 10 = 2× Doces por captura (3× no Deluxe); ranque 20 = 2× Poeira Estelar por captura (3× no Deluxe). Os bônus não são automáticos antes de alcançar essas marcas.",
+        "INFORMAÇÃO COMUNITÁRIA A CONFERIR: Pikachu de chapéu/capa no ranque 49, Rotom no 50 e Spiritomb no 108 foram encaminhados pela comunidade, MAS OS RANQUES E A DISTRIBUIÇÃO ENTRE AS TRILHAS NÃO CONSTAM DO ANÚNCIO OFICIAL CONSULTADO. Verifique a lista no jogo antes de planejar a progressão.",
+        "POKÉMON BRILHANTE: não garantir. A possibilidade de um Pokémon fantasiado ter versão Brilhante não significa encontro garantido nem probabilidade maior.",
+        "Este é um Passe específico do Halloween e NÃO substitui o Passe GO mensal de outubro (Kyogre), cujo prazo de resgate é 05/11 às 10h locais, nem o Passe GO mensal de novembro (Groudon).",
+        "FONTES: https://pokemongo.com/pt-BR/news/halloween-part-1-2026 e https://pokemongo.com/pt-BR/news/halloween-part-2-2026."
       ],
       "notifications": {
         "enabled": true,
@@ -6690,10 +6698,73 @@
       },
       "status": "published",
       "bonuses": [
-        "Recompensas gratuitas incluem encontros temáticos, Doces, Doce Raro e Bolas Ultra.",
-        "O Deluxe inclui encontros extras, conjunto de confeiteiro, Doce Raro GG e Passes de Batalha Premium."
+        "GRATUITO: encontros e Doces de Pokémon temáticos, Doces Raros, Ultra Bolas e outros itens conforme avanço nos ranques.",
+        "DELUXE (PAGO): todas as recompensas gratuitas, encontros adicionais, Camisa e Calças de confeiteiro, Doces Raros GG e Passes de Batalha Premium.",
+        "RANQUE 10: 2× Doces por captura no gratuito; 3× Doces por captura no Deluxe após alcançar o ranque.",
+        "RANQUE 20: 2× Poeira Estelar por captura no gratuito; 3× Poeira Estelar por captura no Deluxe após alcançar o ranque.",
+        "Recompensas liberadas expiram em 07/11/2026 às 20h locais: é necessário RESGATAR manualmente, mesmo que os ranques já tenham sido concluídos."
       ],
-      "updated_at": "2026-10-07T04:08:25Z"
+      "updated_at": "2026-10-26T17:48:00-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Halloween Parte II (mesmo Passe GO)",
+          "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck • resumo Halloween Parte I",
+          "url": "https://leekduck.com/events/halloween-2026-part-1/",
+          "confidence": "verified_community"
+        }
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu com chapéu e capa curta",
+          "note": "Encontro temático e possível Brilhante em atividades oficiais de Halloween. RANQUE 49 do Passe GO é informação comunitária ainda sem confirmação em fonte oficial."
+        },
+        {
+          "name": "Rotom",
+          "note": "Ranque 50 informado pela comunidade; não consta da lista de recompensas por ranque publicada no anúncio oficial."
+        },
+        {
+          "name": "Spiritomb",
+          "note": "Ranque 108 informado pela comunidade; não consta da lista de recompensas por ranque publicada no anúncio oficial."
+        }
+      ],
+      "claim_deadline": {
+        "local_timezone": "America/Sao_Paulo",
+        "local_time_note": "20h no horário local de cada jogador",
+        "end_local": "2026-11-07T20:00:00-03:00",
+        "end_brazil": "2026-11-07T20:00:00-03:00",
+        "kind": "claim_unlocked_rewards",
+        "official": true
+      },
+      "reward_rank_claims": [
+        {
+          "rank": 49,
+          "pokemon": "Pikachu com chapéu e capa curta",
+          "validation": "community_unconfirmed",
+          "track": "unverified"
+        },
+        {
+          "rank": 50,
+          "pokemon": "Rotom",
+          "validation": "community_unconfirmed",
+          "track": "unverified"
+        },
+        {
+          "rank": 108,
+          "pokemon": "Spiritomb",
+          "validation": "community_unconfirmed",
+          "track": "unverified"
+        }
+      ],
+      "news": {
+        "title": "Passe GO Halloween: até 05/11 para avançar e 07/11 para resgatar",
+        "summary": "Trilha gratuita ou Deluxe com bônus nos ranques 10 e 20. Atenção: 07/11 às 20h locais é o prazo final para RECOLHER as recompensas liberadas. Pikachu 49, Rotom 50 e Spiritomb 108 ainda não têm confirmação oficial.",
+        "published_on": "2026-10-26"
+      },
+      "verified_at": "2026-10-26"
     },
     {
       "id": "2026-11-halloween-part-2",
