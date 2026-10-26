@@ -310,7 +310,7 @@
       {
         "id": "2026-10-halloween-go-pass",
         "title": "Passe GO: Halloween 2026",
-        "summary": "Passe GO temático com encontros, Doces e recompensas; a versão Deluxe inclui itens extras.",
+        "summary": "De 27/10 a 05/11: evolua no Passe GO de Halloween, gratuito ou Deluxe, para liberar encontros e bônus. Resgate TUDO que desbloqueou até 07/11 às 20h locais. Ranques específicos de Pikachu, Rotom e Spiritomb aguardam comprovação.",
         "category": "go_pass",
         "tags": [
           "GO Pass",
@@ -320,8 +320,8 @@
         "start_brazil": "2026-10-27T10:00:00-03:00",
         "end_brazil": "2026-11-05T20:00:00-03:00",
         "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/news/halloween-part-1-2026",
+          "name": "Pokémon GO • Halloween Parte I (anúncio oficial)",
+          "url": "https://pokemongo.com/pt-BR/news/halloween-part-1-2026",
           "confidence": "official"
         },
         "art": {},
@@ -805,7 +805,7 @@
     "events_without_weekly_art": 7,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-26T17:04:48.100114-03:00",
+    "generated_at": "2026-10-26T17:59:07.161027-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
