@@ -12,7 +12,10 @@ import json
 import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from html.parser import HTMLParser
 from urllib.parse import urlsplit
+
+import requests
 
 from scripts.official_curated_monitor import buscar_noticias
 
@@ -35,6 +38,48 @@ def canonical(url: str) -> str:
     if not path.startswith("/news/") or len(path) < 8 or path.endswith("/news/"):
         return ""
     return "pokemongo.com" + path.rstrip("/").lower()
+
+
+class PublishedMeta(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.dates = []
+
+    def handle_starttag(self, tag, attrs):
+        values = dict(attrs)
+        key = (values.get('property') or values.get('name') or values.get('itemprop') or '').lower()
+        if tag == 'meta' and key in {'article:published_time', 'datepublished', 'date_created', 'pubdate', 'publish_date'}:
+            self.dates.append(values.get('content') or '')
+        if tag == 'time' and values.get('datetime'):
+            self.dates.append(values['datetime'])
+
+
+def date_from_article_html(source: str) -> date | None:
+    """Only article metadata/JSON-LD, not event dates mentioned in the body."""
+    parser = PublishedMeta()
+    parser.feed(source)
+    values = list(parser.dates)
+    values.extend(re.findall(r'"datePublished"\s*:\s*"([^\"]+)"', source))
+    values.extend(re.findall(r'"date_published"\s*:\s*"([^\"]+)"', source))
+    for value in values:
+        m = re.match(r'^\s*(20\d{2}-\d{2}-\d{2})(?:T|\s|$)', value)
+        if not m:
+            continue
+        try:
+            return date.fromisoformat(m.group(1))
+        except ValueError:
+            continue
+    return None
+
+
+def fetch_publication_date(url: str) -> date | None:
+    if not canonical(url):
+        return None
+    r = requests.get(url, headers={'User-Agent': 'SpideyPokemonGO/1.0 (+verified official news)'}, timeout=15)
+    r.raise_for_status()
+    if len(r.content) > 1_200_000:
+        raise ValueError('Artigo oficial com resposta grande demais')
+    return date_from_article_html(r.text)
 
 
 def date_from_index(label: str) -> date | None:
@@ -101,7 +146,7 @@ def news_record(title: str, url: str, published: date, checked: date) -> dict:
 
 
 def sync(events: list[dict], headlines: list[tuple[str, str]], checked: date,
-         days: int = 21, max_new: int = 7) -> tuple[list[dict], dict]:
+         days: int = 21, max_new: int = 7, date_lookup=None) -> tuple[list[dict], dict]:
     if len(events) < 50:
         raise ValueError("Catálogo possivelmente truncado — não sobrescrever")
     if not 2 <= len(headlines) <= 100:
@@ -112,6 +157,7 @@ def sync(events: list[dict], headlines: list[tuple[str, str]], checked: date,
     observed = set()
     duplicates = 0
     undated = 0
+    meta_checked = 0
     for label, url in headlines:
         key = canonical(url)
         if not key or key in observed:
@@ -121,6 +167,12 @@ def sync(events: list[dict], headlines: list[tuple[str, str]], checked: date,
             duplicates += 1
             continue
         when = date_from_index(label)
+        if when is None and callable(date_lookup) and meta_checked < 14:
+            meta_checked += 1
+            try:
+                when = date_lookup(url)
+            except (requests.RequestException, ValueError) as exc:
+                print('Fonte oficial sem data confirmável em metadados:', canonical(url), type(exc).__name__)
         if when is None:
             undated += 1
             continue
@@ -151,7 +203,7 @@ def main() -> None:
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
     if not isinstance(catalog.get("events"), list):
         raise ValueError("Catálogo sem lista de eventos")
-    new_events, report = sync(catalog["events"], buscar_noticias(), datetime.now(timezone.utc).date())
+    new_events, report = sync(catalog["events"], buscar_noticias(), datetime.now(timezone.utc).date(), date_lookup=fetch_publication_date)
     print(json.dumps(report, ensure_ascii=False))
     if new_events == catalog["events"]:
         print("Sem novos comunicados a publicar.")
