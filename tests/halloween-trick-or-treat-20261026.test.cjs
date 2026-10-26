@@ -1,0 +1,36 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const events=JSON.parse(fs.readFileSync('spidey-app/data/events.json','utf8')).events;
+const first=events.find(e=>e.id==='2026-10-halloween-part-1');
+const second=events.find(e=>e.id==='2026-11-halloween-part-2');
+const pass=events.find(e=>e.id==='2026-10-halloween-go-pass');
+test('Halloween mystery box information extends the existing Part I without duplicate records',()=>{
+ assert.ok(first && second && pass);
+ assert.equal(events.filter(e=>e.id===first.id).length,1);
+ assert.match(first.summary,/caixas-surpresa/);
+ assert.match(first.news.summary,/1º\/11/);
+ assert.match(first.notes.join(' '),/Doces de Pikachu, Zubat ou Sinistea/);
+ assert.match(first.notes.join(' '),/Doce Raro/);
+ assert.match(first.notes.join(' '),/IMAGENS DA COMUNIDADE/);
+ assert.match(first.notes.join(' '),/NÃO comprova|não comprova/i);
+ assert.match(first.notes.join(' '),/01\/11 às 10h/);
+ assert.equal(first.audit.boxes.screenshot_is_official_reward_proof,false);
+ assert.equal(first.audit.boxes.shiny_guaranteed,false);
+ assert.equal(first.schedule.end_local,'2026-11-01T10:00:00-03:00');
+ assert.equal(pass.schedule.end_local,'2026-11-05T20:00:00-03:00');
+ assert.equal(pass.claim_deadline.end_local,'2026-11-07T20:00:00-03:00');
+ assert.equal(second.schedule.start_local,'2026-11-01T10:00:00-03:00');
+});
+test('Automated official discovery is news-only and runs hourly without creating fake events',()=>{
+ const flow=fs.readFileSync('.github/workflows/spidey-official-news-autopublish.yml','utf8');
+ const py=fs.readFileSync('scripts/sync_official_news_to_app.py','utf8');
+ assert.match(flow,/cron: '13 \* \* \* \*'/);
+ assert.match(flow,/scripts\.sync_official_news_to_app/);
+ assert.match(flow,/gh api -X POST.*spidey-pages.yml/);
+ assert.match(py,/not_a_calendar_event/);
+ assert.match(py,/calendar.*hidden/);
+ assert.match(py,/editorial_detail_pending/);
+ assert.ok(!py.includes('setView('));
+});

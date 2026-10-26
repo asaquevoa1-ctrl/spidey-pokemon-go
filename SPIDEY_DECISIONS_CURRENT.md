@@ -267,3 +267,18 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Pesquisa de configuração remota comunitária (https://pogomate.com/en/datamining/eternatus-wild-area-lead-out-2026) aponta GO Wild Area: Lead Out de 14 a 23/11/2026, mas **não confirma data de retorno ou método de obtenção**, outro Eternatus, Doces, versão Brilhante ou cronograma de Batalha Max.
 - Registrar apenas como **Notícia com rumor explicitamente identificado**, campo `calendar.mode=hidden`, sem notificação/FLY/GPX ou geração de arte Premium falsa. Eventos oficiais da Wild Area Global permanecem no calendário 14–15/11.
 - Promover novas informações a evento e guia apenas depois de anúncio oficial completo, com revisão rastreável e preservação de artes já aprovadas.
+
+## 26/10/2026 — Descoberta automática de notícias sem depender de chats (lacuna corrigida)
+- O responsável denunciou corretamente que estava fazendo a descoberta manual e enviando notícias para o Spidey; isso contraria a autonomia combinada. A existência de cron jobs isolados NÃO comprova descoberta, atualização ou publicação.
+- Diagnóstico confirmado em 26/10: os agendamentos ChatGPT "Atualizar calendário Spidey", "Spidey — artes Premium" e "Saúde do Spidey" estavam desativados; o monitor oficial de GitHub detectava/enfileirava notícias, mas o conteúdo ficava bloqueado pela fila de artes Premium. Não apresentar essa situação como funcionamento autônomo completo.
+- Nova rotina independente `.github/workflows/spidey-official-news-autopublish.yml`: verificar índice oficial Pokémon GO a cada hora e publicar automaticamente nas **Novidades** as manchetes recentes ainda ausentes do aplicativo, com data extraída do índice e link oficial, sem exigir criação de arte. Só aceitar domínio oficial, sem duplicar artigo já cadastrado, sem alterar arte ou eventos existentes. Na mudança real, executar testes, fazer commit e acionar GitHub Pages; verificar execução e deploy separadamente.
+- Notícias automáticas **não criam eventos no Calendário** nem alteram FLY, GPX, datas, bônus, Pokémon, push ou chances de Brilhante. Somente o título oficial e a existência do artigo são verificados automaticamente; detalhes editoriais permanecem explicitamente pendentes. Não exagerar chamando esse módulo de curadoria completa de eventos.
+- Se parser de datas, site oficial ou rede falhar, o processo falha sem publicar palpites. Fila Premium permanece para pôsteres; a ausência de arte não impede divulgação textual de novidades.
+- Próxima etapa necessária: promoção automática segura dos artigos para eventos completos com datas e recompensas verificadas, e monitoramento oficial+comunitário abrangente; registrar os bloqueios reais em vez de depender do usuário para encontrar notícias.
+
+## 26/10/2026 — Halloween Parte I: caixas de Gostosuras ou Travessuras
+- Atualizar somente evento existente `2026-10-halloween-part-1`: as caixas-surpresa no mapa são oficiais **durante a Parte I, de 27/10 10h a 01/11 10h locais**. O Passe GO continua até 05/11, mas essa é outra janela.
+- Oficial: encontros Pokémon temáticos, Doces de Pikachu/Zubat/Sinistea e Doce Raro com sorte. Pesquisas temporárias gratuitas também têm recompensa de 6 Doces Raros e Pikachu fantasiado até 01/11 10h.
+- Fotos recebidas mostram Noibat com acessório, Zubat de cartola, Gengar e Vulpix fantasiados. **Não inferir** que a imagem prove cada um como recompensa da caixa, nem a lista total. Marcar exemplos como comunidade/sem comprovação específica.
+- Sem shiny garantido; sem spawn ou GPX das caixas. Preservar artes aprovadas de Halloween I/II e do Passe GO sem gerar imagem genérica.
+- Fonte: https://pokemongo.com/pt-BR/news/halloween-part-1-2026 ; Leek Duck https://leekduck.com/events/halloween-2026-part-1/ .
