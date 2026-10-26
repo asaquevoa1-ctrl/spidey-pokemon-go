@@ -2,7 +2,7 @@
 import copy
 import unittest
 from datetime import date, timedelta
-from scripts.sync_official_news_to_app import canonical, date_from_index, news_record, sync
+from scripts.sync_official_news_to_app import canonical, date_from_index, date_from_article_html, news_record, sync
 
 def base_catalog():
     return [
@@ -66,6 +66,22 @@ class OfficialNewsTests(unittest.TestCase):
         result,report=sync(base_catalog(),rows,today)
         self.assertEqual(report["new"],1)
         self.assertEqual(len(result),61)
+
+
+    def test_article_metadata_recovers_date_when_homepage_does_not_include_it(self):
+        source = ('<html><head><meta property="article:published_time" content="2026-10-26T12:11:00Z"></head>'
+                  '<body>Event begins Nov 14 but article was published Oct 26</body></html>')
+        self.assertEqual(date_from_article_html(source), date(2026,10,26))
+        ld='{"@type":"NewsArticle","datePublished":"2026-10-25T08:00:00Z"}'
+        self.assertEqual(date_from_article_html(ld), date(2026,10,25))
+        self.assertIsNone(date_from_article_html('<body>Event scheduled for Nov 14, 2026</body>'))
+        current=date(2026,10,26)
+        rows=[("New official event without date on index","https://pokemongo.com/news/undated-new"),
+              ("Oct 20, 2026 Older article with a confirmed headline","https://pokemongo.com/news/older")]
+        found,report=sync(base_catalog(),rows,current,date_lookup=lambda url: date_from_article_html(source))
+        self.assertEqual(report["new"],2)
+        self.assertEqual(found[-2]["news"]["published_on"],"2026-10-26")
+        self.assertTrue(all(x["calendar"]["mode"]=="hidden" for x in found[-2:]))
 
     def test_empty_and_corrupted_index_are_never_accepted(self):
         with self.assertRaises(ValueError):
