@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-26-max-monday-sableye:start:60",
-      "event_id": "2026-10-26-max-monday-sableye",
-      "event_title": "Max Monday: Dynamax Sableye",
-      "category": "max_monday",
-      "scheduled_for": "2026-10-26T05:00:00-03:00",
-      "event_start": "2026-10-26T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Max Monday: Dynamax Sableye começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-26-max-monday-sableye",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • programação oficial de outubro de 2026",
-        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-10-halloween-go-pass:start:60",
       "event_id": "2026-10-halloween-go-pass",
       "event_title": "Passe GO: Halloween 2026",
@@ -348,7 +330,7 @@
     }
   ],
   "meta": {
-    "pending_count": 19,
+    "pending_count": 18,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
