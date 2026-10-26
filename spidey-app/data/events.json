@@ -2,6 +2,88 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-10-26-eternatus-teaser-unconfirmed",
+      "slug": "2026-10-26-eternatus-teaser-unconfirmed",
+      "content_type": "news",
+      "title": "Eternatus vai voltar? Teaser oficial e rumores para novembro",
+      "summary": "O Pokémon GO publicou um teaser de Eternamax Eternatus em 26/10. Dataminers encontraram uma possível janela de 14 a 23/11, mas a data, o método de obtenção e as recompensas ainda NÃO foram confirmados.",
+      "category": "community_discovery",
+      "tags": [
+        "Novidade",
+        "Teaser",
+        "Eternatus",
+        "Eternamax",
+        "Datamining",
+        "Rumor",
+        "Novembro 2026",
+        "A confirmar"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • notícia de 26/10 sobre teaser oficial",
+        "url": "https://pokemongohub.net/post/news/eternatus-is-coming-back-pokemon-go-drops-mysterious-eternamax-teaser/",
+        "confidence": "verified_community"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • perfil oficial com teaser em 26/10",
+          "url": "https://x.com/PokemonGoApp",
+          "confidence": "official_social_post"
+        },
+        {
+          "name": "PoGoMate • data mining GO Wild Area: Lead Out",
+          "url": "https://pogomate.com/en/datamining/eternatus-wild-area-lead-out-2026",
+          "confidence": "community_unconfirmed"
+        },
+        {
+          "name": "Pokémon GO • Wild Area Global confirmado 14–15/11",
+          "url": "https://pokemongo.com/en/gowildarea/global",
+          "confidence": "official"
+        }
+      ],
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Eternatus no teaser oficial: retorno ainda sem data",
+        "summary": "Teaser mostra Eternamax Eternatus. A janela 14–23/11 circula em datamining, não em anúncio oficial. Como participar e quais recompensas receberemos ainda são incógnitas.",
+        "published_on": "2026-10-26",
+        "label": "RUMOR / A CONFIRMAR"
+      },
+      "notes": [
+        "OFICIAL: a conta Pokémon GO publicou em 26/10/2026 um teaser de 15 segundos com Eternamax Eternatus; ainda não confirmou a data ou formato de seu retorno.",
+        "Vazamento de configuração remota aponta o nome GO Wild Area: Lead Out e uma janela de 14 a 23 de novembro de 2026. Isso NÃO comprova que Eternatus estará disponível durante todo o período.",
+        "Separadamente, Pokémon GO Wild Area GLOBAL foi anunciado oficialmente para 14 e 15 de novembro, das 10h às 18h locais. Não ampliar esse evento oficial até 23/11.",
+        "Não há confirmação de segunda captura para quem já possui Eternatus, Passe GO, Batalhas Max, número de doces ou doces GG, nem disponibilidade Brilhante.",
+        "Não considerar o teaser confirmação de Eternatus Brilhante, da possibilidade de capturar Eternamax nem de uma recompensa garantida.",
+        "Esta notícia fica apenas nas Novidades do Spidey. Ela NÃO ocupa o Calendário, NÃO cria rota FLY, GPX ou alerta de evento confirmado.",
+        "Quando o anúncio completo sair, revisar as fontes e criar novo cadastro verificado sem transformar rumor antigo em fato."
+      ],
+      "pokemon": [
+        {
+          "name": "Eternatus / Eternamax Eternatus",
+          "note": "Teaser oficial; método de obtenção, datas e versão Brilhante não confirmados."
+        }
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Teaser oficial sem data ou cronograma; nenhum alerta de evento deve ser criado."
+      },
+      "status": "published",
+      "verified_at": "2026-10-26",
+      "updated_at": "2026-10-26T18:10:00-03:00",
+      "audit": {
+        "classification": "official_teaser_plus_datamining",
+        "date_range_claim": "2026-11-14 to 2026-11-23",
+        "date_range_verified_officially": false,
+        "related_official_event": "2026-11-go-wild-area-global",
+        "not_a_calendar_event": true
+      }
+    },
+    {
       "id": "2026-10-27-dia-de-muertos-mexico",
       "slug": "2026-10-27-dia-de-muertos-mexico",
       "title": "Día de Muertos 2026 — México (evento nacional)",
