@@ -254,3 +254,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Em 22/10/2026 o Pokémon GO esclareceu oficialmente que a Caça aos Selos em Sendai e na Cidade do México acontece **10h–20h locais apenas no dia PRINCIPAL do ingresso**, e **não** oferece outro rally durante o adicional Dia Extra. A referência anterior de 9h estava incorreta e foi substituída em ambos os eventos já cadastrados (sem duplicação).
 - Sete Poképaradas oficiais por cidade identificadas nominalmente em https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026. Nomes de referência, **sem atribuir coordenadas ou criar GPX fictícios**. Janelas de gameplay geral do Wild Area continuam 10h–18h e não devem ser confundidas com o Rally.
 - Não alterar os registros de artes Premium, hashes, FLY, Dia Comunitário, Guia Rocket ou eventos não relacionados.
+
+## 26/10/2026 — Passe GO Halloween: duas datas e recompensas com status de evidência
+- Atualizar a entrada EXISTENTE `2026-10-halloween-go-pass`, não duplicar evento. Oficial: gratuito e Deluxe, 27/10 às 10h a 05/11 às 20h LOCAL; resgate das recompensas desbloqueadas até 07/11 às 20h LOCAL. São DOIS prazos diferentes.
+- Oficial: recompensas gratuitas temáticas/Doces Raros/Ultra Bolas; Deluxe com roupas de confeiteiro, Doce Raro GG e passes; bônus ranque 10 = 2× Doces por captura, 3× Deluxe; ranque 20 = 2× Poeira Estelar por captura, 3× Deluxe. Upgrade pode ser retroativo aos ranques já alcançados.
+- O responsável enviou a relação comunidade **Pikachu com chapéu e capa no ranque 49, Rotom no ranque 50, Spiritomb no ranque 108**, mas o anúncio oficial **não detalha esses ranques** nem confirma em qual trilha estão; manter como informação comunitária **não confirmada**, sem propagá-la como oficial até verificação em jogo/fonte documental. Shiny nunca garantido.
+- As imagens aprovadas de Halloween I/II não foram substituídas; nenhuma arte nova ganha status Premium por conter o tema.
+- Fontes oficiais: https://pokemongo.com/pt-BR/news/halloween-part-1-2026 e https://pokemongo.com/pt-BR/news/halloween-part-2-2026 .
