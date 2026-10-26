@@ -280,7 +280,7 @@
       {
         "id": "2026-10-halloween-part-1",
         "title": "Halloween 2026: Parte I",
-        "summary": "Halloween Parte I com novos trajes, surpresas no mapa e bônus liberados pelo Passe GO.",
+        "summary": "27/10 às 10h até 01/11 às 10h locais: caixas-surpresa de Halloween aparecem no mapa. Toque nelas para tentar receber encontros temáticos, Doces de Pikachu, Zubat ou Sinistea e, com sorte, Doce Raro.",
         "category": "halloween",
         "tags": [
           "Halloween",
@@ -805,7 +805,7 @@
     "events_without_weekly_art": 7,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-26T18:02:13.423631-03:00",
+    "generated_at": "2026-10-26T19:06:26.688345-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
