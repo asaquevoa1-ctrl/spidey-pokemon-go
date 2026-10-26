@@ -261,3 +261,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - O responsável enviou a relação comunidade **Pikachu com chapéu e capa no ranque 49, Rotom no ranque 50, Spiritomb no ranque 108**, mas o anúncio oficial **não detalha esses ranques** nem confirma em qual trilha estão; manter como informação comunitária **não confirmada**, sem propagá-la como oficial até verificação em jogo/fonte documental. Shiny nunca garantido.
 - As imagens aprovadas de Halloween I/II não foram substituídas; nenhuma arte nova ganha status Premium por conter o tema.
 - Fontes oficiais: https://pokemongo.com/pt-BR/news/halloween-part-1-2026 e https://pokemongo.com/pt-BR/news/halloween-part-2-2026 .
+
+## 26/10/2026 — Eternatus: teaser oficial e período 14–23/11 apenas no datamining
+- A conta oficial Pokémon GO publicou em 26/10/2026 teaser de Eternamax Eternatus, documentado em https://pokemongohub.net/post/news/eternatus-is-coming-back-pokemon-go-drops-mysterious-eternamax-teaser/ .
+- Pesquisa de configuração remota comunitária (https://pogomate.com/en/datamining/eternatus-wild-area-lead-out-2026) aponta GO Wild Area: Lead Out de 14 a 23/11/2026, mas **não confirma data de retorno ou método de obtenção**, outro Eternatus, Doces, versão Brilhante ou cronograma de Batalha Max.
+- Registrar apenas como **Notícia com rumor explicitamente identificado**, campo `calendar.mode=hidden`, sem notificação/FLY/GPX ou geração de arte Premium falsa. Eventos oficiais da Wild Area Global permanecem no calendário 14–15/11.
+- Promover novas informações a evento e guia apenas depois de anúncio oficial completo, com revisão rastreável e preservação de artes já aprovadas.
