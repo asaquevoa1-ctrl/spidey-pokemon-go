@@ -6642,7 +6642,7 @@
       "id": "2026-10-halloween-part-1",
       "slug": "2026-10-halloween-part-1",
       "title": "Halloween 2026: Parte I",
-      "summary": "Halloween Parte I com novos trajes, surpresas no mapa e bônus liberados pelo Passe GO.",
+      "summary": "27/10 às 10h até 01/11 às 10h locais: caixas-surpresa de Halloween aparecem no mapa. Toque nelas para tentar receber encontros temáticos, Doces de Pikachu, Zubat ou Sinistea e, com sorte, Doce Raro.",
       "category": "halloween",
       "tags": [
         "Halloween",
@@ -6677,10 +6677,13 @@
         "reason": "Evento sem coordenada exata específica confirmada."
       },
       "notes": [
-        "Os bônus de Doces e Poeira Estelar exigem alcançar os ranques indicados no Passe GO do evento.",
-        "Toque nas surpresas deixadas no mapa para tentar receber encontros, Doces de Pikachu, Zubat ou Sinistea e, com sorte, Doce Raro.",
-        "Pikachu com chapéu e capa curta e Sinistea com laço aparecem em reides de uma estrela.",
-        "A música remixada de Lavender Town toca à noite; Poképaradas e Ginásios recebem decoração nas duas partes do Halloween."
+        "CAIXAS-SURPRESA NO MAPA: de 27/10 às 10h até 01/11 às 10h, horário local. Procure as caixas de Gostosuras ou Travessuras no mapa e toque nelas para descobrir a recompensa. Não são Poképaradas e não existe GPX oficial das caixas.",
+        "CONFIRMADO OFICIALMENTE: as caixas podem conceder encontros com Pokémon temáticos, Doces de Pikachu, Zubat ou Sinistea e, com sorte, Doce Raro. Não há quantidade nem taxa de encontro garantidas.",
+        "IMAGENS DA COMUNIDADE (AINDA NÃO CONFIRMADAS COMO LISTA COMPLETA): Noibat com acessório, Zubat de cartola, Gengar de traje e Vulpix fantasiado foram mostrados em capturas de gameplay. A imagem por si só não comprova que todos vêm da caixa; não apresentar como recompensa oficial garantida.",
+        "O anúncio oficial inclui Zubat com cartola, Duskull, Piplup fantasiado e Drifblim fantasiado na natureza, enquanto Pikachu de chapéu e Sinistea de laço aparecem em reides de uma estrela. São fontes de encontro distintas das caixas.",
+        "PESQUISA TEMPORÁRIA GRATUITA: as tarefas são concluídas automaticamente e os prêmios incluem 6 Doces Raros e um encontro com Pikachu de chapéu e pelerine; o resgate precisa ocorrer antes de 01/11 às 10h locais.",
+        "Ranques 10 e 20 do Passe GO desbloqueiam bônus de Doces e Poeira Estelar. O Passe GO segue até 05/11 às 20h locais, mas isso NÃO comprova que as caixas ficam até 05/11.",
+        "Versões Brilhantes apenas quando anunciadas como possíveis pela fonte, nunca garantidas; não inferir porcentagens de chance nem IV."
       ],
       "notifications": {
         "enabled": true,
@@ -6690,15 +6693,17 @@
       },
       "status": "published",
       "news": {
-        "title": "Halloween Parte I confirma três novos trajes",
-        "summary": "Pikachu com chapéu e capa curta, Zubat com cartola e Sinistea com laço estreiam no Halloween Parte I, com bônus liberados pelo Passe GO.",
-        "published_on": "2026-10-06"
+        "title": "Halloween: caixas misteriosas chegam ao mapa em 27/10",
+        "summary": "Toque nas caixas para tentar ganhar Pokémon temáticos ou Doces; Doce Raro depende da sorte. Disponíveis na Parte I, até 1º/11 às 10h locais. Trajes vistos em capturas comunitárias não são lista oficial de prêmios.",
+        "published_on": "2026-10-26"
       },
-      "updated_at": "2026-10-07T04:08:25Z",
+      "updated_at": "2026-10-26T19:12:00-03:00",
       "bonuses": [
         "Passe GO, ranque 10: 2× Doces por captura; no Deluxe, 3× Doces.",
         "Passe GO, ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3× Poeira Estelar.",
-        "Pesquisas de campo temáticas concedem encontros com Pokémon do evento."
+        "Pesquisas de campo temáticas concedem encontros com Pokémon do evento.",
+        "Gostosuras ou Travessuras: caixas misteriosas no mapa podem dar encontros temáticos e Doces de Pikachu, Zubat ou Sinistea; Doce Raro é recompensa de sorte durante a Parte I.",
+        "Pesquisa Temporária gratuita concluída automaticamente: 6 Doces Raros e encontro com Pikachu de chapéu/pelerine; resgatar até 01/11 às 10h locais."
       ],
       "pokemon": [
         {
@@ -6721,7 +6726,35 @@
           "name": "Drifblim com traje Travessuras de Halloween",
           "note": "encontro mais raro na natureza; pode aparecer Brilhante"
         }
-      ]
+      ],
+      "verified_at": "2026-10-26",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial Parte I",
+          "url": "https://pokemongo.com/pt-BR/news/halloween-part-1-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck • Halloween Parte I",
+          "url": "https://leekduck.com/events/halloween-2026-part-1/",
+          "confidence": "verified_community"
+        }
+      ],
+      "audit": {
+        "boxes": {
+          "kind": "in_game_spooky_surprises",
+          "source": "official",
+          "availability_end": "2026-11-01T10:00:00-03:00",
+          "unverified_costumed_examples": [
+            "Noibat acessório",
+            "Zubat cartola",
+            "Gengar fantasia",
+            "Vulpix fantasia"
+          ],
+          "screenshot_is_official_reward_proof": false,
+          "shiny_guaranteed": false
+        }
+      }
     },
     {
       "id": "2026-10-halloween-go-pass",
