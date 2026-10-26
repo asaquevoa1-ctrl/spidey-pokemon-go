@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "💀 Día de Muertos in Mexico!\n🗓️ Oct 27 at 10:00 AM – Nov 5 at 8:00 PM\n🌼 Pokémon wearing cempasúchil crowns\n✨ Special Background encounters\n⏳ 2× Incense and Poffin duration\n\n📍 Paseo de la Reforma bonuses begin Oct 31 at 10:00 AM, featuring Location Backgrounds, Gigantamax Gengar, 3-hour Lure Modules, and more!\n\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2114537497191682259",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2114537497191682259",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-26T05:46:55.341237+00:00"
+}
