@@ -10072,7 +10072,7 @@
       "id": "2026-11-go-wild-area-mexico-city",
       "slug": "2026-11-go-wild-area-mexico-city",
       "title": "Pokémon GO Wild Area 2026: Cidade do México",
-      "summary": "Evento presencial com Duraludon Gigamax, Dialga e Palkia Dinamax, formas Coroadas e estreias de Sliggoo e Goodra de Hisui.",
+      "summary": "De 6 a 8/11, a Cidade do México recebe Duraludon Gigamax, Dialga e Palkia Dinamax, Pokémon de Hisui e uma Caça aos Selos por sete pontos da cidade. A participação presencial exige ingresso.",
       "category": "regional_event",
       "tags": [
         "GO Wild Area",
@@ -10108,14 +10108,15 @@
         "reason": "O anúncio confirma a Cidade do México, mas não publica uma rota nem coordenadas exatas de Poképaradas."
       },
       "notes": [
-        "Jogabilidade exclusiva para quem tiver ingresso, das 10h às 18h GMT−6 no dia escolhido entre 6 e 8 de novembro.",
-        "Zacian Espada Coroada e Zamazenta Escudo Coroado aparecem em Reides de cinco estrelas e entregam suas respectivas Energias Coroadas ao serem derrotados.",
-        "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Duraludon Gigamax e as duas formas Coroadas podem vir com Fundo de Localização da Cidade do México; Reides e Batalhas Max remotas não concedem esse fundo.",
-        "Sliggoo de Hisui estreia na natureza. Goodra de Hisui pode ser obtido ao evoluir Sliggoo de Hisui com 100 Doces Goomy.",
-        "CORREÇÃO OFICIAL 22/10: a Caça aos Selos GO (GO Stamp Rally) funciona das 10h às 20h no horário LOCAL, SOMENTE no dia principal do ingresso. O adicional Dia Extra (Extra Day) NÃO oferece uma segunda Caça aos Selos.",
-        "Sete Poképaradas oficiais identificadas para a Caça aos Selos: Monumento a la Revolución; Jardín Pushkin; Parque México; Centro de Cultura Digital / Estela de Luz; Parque América; Liverpool Polanco; Mexicráneo + Ángel de la Independencia. São nomes oficiais dos locais, não coordenadas nem GPX confirmados.",
-        "Fonte da correção: https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026 (22/10/2026). O horário das Caças aos Selos é diferente da janela geral de gameplay 10h–18h.",
-        "Informações oficiais conferidas em 07/10/2026."
+        "Vai jogar na Cidade do México entre 6 e 8/11? Escolha o dia do seu ingresso: é ele que libera as atrações presenciais das 10h às 18h (13h às 21h de Brasília).",
+        "Para quem quer os sete selos, reserve um tempo a mais: a Caça aos Selos vai das 10h às 20h (13h às 23h de Brasília), apenas no dia principal do ingresso.",
+        "Os locais oficiais dos selos são Monumento a la Revolución, Jardín Pushkin, Parque México, Estela de Luz, Parque América, Liverpool Polanco e Mexicráneo/Ángel de la Independencia. Dá para visitá-los em qualquer ordem.",
+        "Abrimos um guia na aba Selos com o mapa e as coordenadas dos lugares. Elas ajudam na orientação, mas não são posições confirmadas das Poképaradas. Confira o símbolo de selo no jogo e não use GPX como se fosse oficial.",
+        "O Dia Extra não oferece uma segunda Caça aos Selos. Pode, no entanto, liberar mais uma vez as pesquisas temporárias de Aço e Dragão.",
+        "Dialga e Palkia Dinamax e Duraludon Gigamax estreiam em Batalhas Max. Algumas capturas podem ter Fundo de Localização da Cidade do México; em batalhas remotas esse fundo não é concedido.",
+        "Zacian Espada Coroada e Zamazenta Escudo Coroado voltam às reides. Sliggoo de Hisui aparece na natureza, e você pode evoluí-lo para Goodra de Hisui com 100 Doces Goomy.",
+        "Latias e Latios poderosos podem aparecer por Incenso comum no dia do ingresso. Brilhantes são possibilidades, nunca garantias.",
+        "A Pokémon confirmou os sete locais e esclareceu o horário do rally. Confira o guia dentro do Spidey antes de sair."
       ],
       "notifications": {
         "enabled": true,
@@ -10160,11 +10161,11 @@
         }
       ],
       "news": {
-        "title": "GO Wild Area revela as novidades da Cidade do México",
-        "summary": "Duraludon Gigamax estreia, as formas Coroadas voltam às Reides e Sliggoo e Goodra de Hisui chegam ao jogo.",
-        "published_on": "2026-10-07"
+        "title": "Área Selvagem na Cidade do México: sete selos já têm locais confirmados",
+        "summary": "Seu dia de ingresso define quando coletar os sete selos: das 10h às 20h locais. Confira o guia de locais na aba Selos; o Dia Extra não libera outro rally.",
+        "published_on": "2026-10-27"
       },
-      "updated_at": "2026-10-25T20:24:00-03:00",
+      "updated_at": "2026-10-27T17:48:00-03:00",
       "stamp_rally": {
         "start_time_local": "10:00",
         "end_time_local": "20:00",
@@ -10174,37 +10175,91 @@
         "locations": [
           {
             "name": "Monumento a la Revolución",
-            "coordinates_verified": false
+            "coordinates_verified": false,
+            "latitude": 19.436179,
+            "longitude": -99.154629,
+            "coordinate_type": "venue_reference",
+            "coordinate_confidence": "third_party_landmark_reference",
+            "exact_pokestop_verified": false,
+            "reference_only": true,
+            "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/"
           },
           {
             "name": "Jardín Pushkin",
-            "coordinates_verified": false
+            "coordinates_verified": false,
+            "latitude": 19.420331,
+            "longitude": -99.154631,
+            "coordinate_type": "venue_reference",
+            "coordinate_confidence": "third_party_landmark_reference",
+            "exact_pokestop_verified": false,
+            "reference_only": true,
+            "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/"
           },
           {
             "name": "Parque México",
-            "coordinates_verified": false
+            "coordinates_verified": false,
+            "latitude": 19.412222,
+            "longitude": -99.169167,
+            "coordinate_type": "venue_reference",
+            "coordinate_confidence": "third_party_landmark_reference",
+            "exact_pokestop_verified": false,
+            "reference_only": true,
+            "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/"
           },
           {
             "name": "Centro de Cultura Digital / Estela de Luz",
-            "coordinates_verified": false
+            "coordinates_verified": false,
+            "latitude": 19.423048,
+            "longitude": -99.175857,
+            "coordinate_type": "venue_reference",
+            "coordinate_confidence": "third_party_landmark_reference",
+            "exact_pokestop_verified": false,
+            "reference_only": true,
+            "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/"
           },
           {
             "name": "Parque América",
-            "coordinates_verified": false
+            "coordinates_verified": false,
+            "latitude": 19.43397,
+            "longitude": -99.1965,
+            "coordinate_type": "venue_reference",
+            "coordinate_confidence": "third_party_landmark_reference",
+            "exact_pokestop_verified": false,
+            "reference_only": true,
+            "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/"
           },
           {
             "name": "Liverpool Polanco",
-            "coordinates_verified": false
+            "coordinates_verified": false,
+            "latitude": 19.43369,
+            "longitude": -99.1827,
+            "coordinate_type": "venue_reference",
+            "coordinate_confidence": "third_party_landmark_reference",
+            "exact_pokestop_verified": false,
+            "reference_only": true,
+            "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/"
           },
           {
             "name": "Mexicráneo + Ángel de la Independencia",
-            "coordinates_verified": false
+            "coordinates_verified": false,
+            "latitude": 19.427,
+            "longitude": -99.16771,
+            "coordinate_type": "venue_reference",
+            "coordinate_confidence": "third_party_landmark_reference",
+            "exact_pokestop_verified": false,
+            "reference_only": true,
+            "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/"
           }
         ],
         "official_update": "2026-10-22",
-        "source_url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026"
+        "source_url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026",
+        "rally_id": "2026-go-wild-area-mexico-city-stamp-rally",
+        "visit_any_order": true,
+        "rally_window_brasilia": "13:00–23:00",
+        "location_coordinates_are": "landmark_centers_not_exact_pokestops",
+        "verification_date": "2026-10-27"
       },
-      "verified_at": "2026-10-25"
+      "verified_at": "2026-10-27"
     },
     {
       "id": "2026-11-go-wild-area-global",
