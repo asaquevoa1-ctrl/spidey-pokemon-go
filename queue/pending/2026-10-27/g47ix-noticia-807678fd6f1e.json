@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "You can still get that jersey by watching 30 min of this stream https://www.twitch.tv/trishahershberger\n\nedit: it should work until Nov 2 - if that stream will be offine check other co-ostreamers\n\nhttps://twitch.tv/aliythia\nhttps://twitch.tv/berticuss\nhttps://twitch.tv/ninfangirl\n\n#pokemongo #NightOut\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2114870817268105220",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2114870817268105220",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-27T02:04:32.725809+00:00"
+}
