@@ -25,13 +25,13 @@ test('Mexico City local hours and São Paulo conversion are exact; no fabricated
  assert.equal(city.schedule.local_timezone,'America/Mexico_City');
  assert.equal(new Date(national.schedule.start_local).toISOString(),'2026-10-27T16:00:00.000Z');
  assert.equal(new Date(national.schedule.end_local).toISOString(),'2026-11-06T02:00:00.000Z');
- assert.equal(new Date(city.schedule.start_local).toISOString(),'2026-10-31T20:00:00.000Z');
+ assert.equal(new Date(city.schedule.start_local).toISOString(),'2026-10-31T16:00:00.000Z');
  assert.equal(new Date(city.schedule.end_local).toISOString(),'2026-11-06T02:00:00.000Z');
  for(const e of [national,city]){
    assert.equal(new Date(e.schedule.start_local).getTime(),new Date(e.schedule.start_brazil).getTime());
    assert.equal(new Date(e.schedule.end_local).getTime(),new Date(e.schedule.end_brazil).getTime());
    assert.equal(e.gpx.enabled,false);
-   assert.equal(e.locations.length,0);
+   assert.equal(e.locations.length,e===national?0:1);
    assert.equal(e.notifications.enabled,false);
    assert.equal(e.art,undefined);
  }
@@ -40,6 +40,21 @@ test('Mexico City local hours and São Paulo conversion are exact; no fabricated
  const core=sandbox.window.SpideyFlyCore;
  for(const e of [national,city]){assert.equal(core.eligible(e),false,'Regional event must never become global FLY route');}
  assert.equal(locals.find(e=>e.id===city.id).gpx.enabled,false);
+ assert.equal(city.schedule.start_brazil,'2026-10-31T13:00:00-03:00');
+ assert.equal(city.locations[0].coordinate_type,'landmark_reference');
+ assert.equal(city.locations[0].exact_raid_gym_verified,false);
+ assert.equal(city.locations[0].exact_pokestop_verified,false);
+ assert.equal(city.locations[0].exact_power_spot_verified,false);
+ assert.equal(city.locations[0].coordinate_text,'19.4269903,-99.1676463');
+ assert.equal(city.locations[0].coordinate_confidence,'geographic_reference_verified');
+ assert.equal(locals.find(e=>e.id===city.id).schedule.start_time,'10:00');
+ assert.equal(locals.find(e=>e.id===city.id).locations[0].coordinate_type,'landmark_reference');
+ assert.ok(city.notes.some(n=>n.includes('NÃO significa')));
+ assert.ok(!city.notes.some(n=>n.includes('31/10 às 14h')));
+ assert.ok(!national.notes.some(n=>n.includes('31/10 às 14h')));
+ assert.ok(fs.readFileSync('spidey-app/app.js','utf8').includes("loc.coordinate_type === 'landmark_reference'"));
+ assert.ok(fs.readFileSync('spidey-app/app.js','utf8').includes('NÃO é Ginásio, Poképarada, Power Spot'));
+
 });
 test('Both Mexico-only entries preserve original catalog and all protected arts',()=>{
  const ids=new Set(events.map(e=>e.id));
