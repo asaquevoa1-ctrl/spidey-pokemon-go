@@ -161,7 +161,7 @@
       "id": "2026-10-31-dia-de-muertos-paseo-reforma",
       "slug": "2026-10-31-dia-de-muertos-paseo-reforma",
       "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
-      "summary": "Somente de 31/10 às 10h a 05/11 às 20h (Cidade do México), no Paseo de la Reforma: Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Gengar Gigamax 6★. Referência de orientação: Ángel de la Independencia, NÃO Ginásio.",
+      "summary": "De 31/10 a 05/11, o Paseo de la Reforma vira uma aventura de Día de Muertos: procure selos em Poképaradas e Ginásios, monte sua coleção no jogo e tente um Duskull com coroa de flores e Fundo de Localização. Gengar Gigamax 6★ também participa!",
       "category": "local_event",
       "content_type": "event",
       "tags": [
@@ -238,6 +238,7 @@
         }
       ],
       "notes": [
+        "ROTEIRO DE SELOS (SEM GPS INVENTADO): no Paseo de la Reforma, abra o mapa do Pokémon GO, procure Poképaradas/Ginásios com símbolo de selo, chegue perto, gire o fotodisco e carimbe a cartela tocando ou segurando o círculo. Acompanhe no Álbum. O jogo identifica os pontos participantes, ainda sem lista de coordenadas oficiais.",
         "PRESENCIAL: a jogabilidade especial é somente na área do Paseo de la Reforma, Cidade do México; não é acessível mundialmente.",
         "31/10 às 10h CDMX = 31/10 às 13h Brasília. 05/11 às 20h CDMX = 05/11 às 23h Brasília.",
         "A Caça aos Selos GO exige girar fotodiscos de locais selecionados na região; o anúncio NÃO fornece lista de coordenadas verificadas para GPX.",
@@ -246,12 +247,13 @@
         "Duskull com coroa e Fundo de Localização aparece em pesquisas e no rally de selos; Brilhante é uma possibilidade, nunca garantia.",
         "O evento mexicano nacional, de 27/10 a 05/11, é um cadastro separado. Não confundir com Halloween global ou GO Wild Area de 06–08/11.",
         "ONDE JOGAR: Avenida Paseo de la Reforma, Cidade do México. Ponto de ORIENTAÇÃO no trajeto: Ángel de la Independencia, 19.4269903,-99.1676463. Isso NÃO significa que o monumento é um Ginásio, Power Spot, Poképarada selecionada ou o centro/limite da zona do evento.",
-        "O comunicado oficial informa 31/10 às 10h na Cidade do México; publicações antigas mencionando 14h locais/17h Brasília foram substituídas após conferência do anúncio oficial vigente em 27/10."
+        "O comunicado oficial informa 31/10 às 10h na Cidade do México; publicações antigas mencionando 14h locais/17h Brasília foram substituídas após conferência do anúncio oficial vigente em 27/10.",
+        "IMPORTANTE: a Caça aos Selos de Día de Muertos no Paseo de la Reforma NÃO é a Caça aos 7 Selos da Área Selvagem da Cidade do México (6–8/11), que tem ingresso e circuito próprio. Consulte a aba Selos para saber qual é qual."
       ],
       "news": {
-        "title": "Día de Muertos: selos, Duskull e Gengar Gigamax na Cidade do México",
-        "summary": "Somente no Paseo de la Reforma, de 31/10 às 10h locais (13h de Brasília) até 05/11: Duskull com coroa, Caça aos Selos GO e Gengar Gigamax 6★. Coordenada mostrada é referência, não Ginásio.",
-        "published_on": "2026-10-22"
+        "title": "México: como conseguir os selos de Día de Muertos e tentar Duskull com fundo",
+        "summary": "De 31/10 às 10h até 05/11 às 20h, procure as Poképaradas sinalizadas no Paseo de la Reforma. Gire o fotodisco, carimbe o círculo e acompanhe a coleção no Álbum. Não confunda com os 7 selos da Área Selvagem, que começam em 06/11.",
+        "published_on": "2026-10-27"
       },
       "notifications": {
         "enabled": false,

@@ -2,6 +2,66 @@
   "schema_version": "spidey-stamp-rally-v1",
   "rallies": [
     {
+      "id": "2026-dia-de-muertos-reforma-stamp-guide",
+      "slug": "dia-de-muertos-2026-paseo-de-la-reforma-guia-selos",
+      "status": "published",
+      "collection_type": "event_guide",
+      "stamp_count": null,
+      "stops": [],
+      "title": "Día de Muertos • Caça aos Selos no Paseo de la Reforma",
+      "summary": "De 31/10 a 05/11, percorra a Avenida Paseo de la Reforma e procure os selos no próprio mapa do Pokémon GO. Duskull com coroa de cempasúchil e Fundo de Localização é a grande recompensa.",
+      "public_summary": "Vai estar na Cidade do México? Entre 31/10 e 05/11, procure as Poképaradas e Ginásios com símbolo de selo no Paseo de la Reforma. Complete a cartela no jogo para encontrar Duskull com coroa de flores e fundo especial!",
+      "country": "México",
+      "city": "Cidade do México",
+      "ticket_required": null,
+      "available_from": "2026-10-31",
+      "available_until": "2026-11-05",
+      "timezone": "America/Mexico_City",
+      "schedule_note": "Início: 31/10 às 10h CDMX (13h Brasília). Fim: 05/11 às 20h CDMX (23h Brasília). A fonte não especifica janelas diárias separadas para cada selo.",
+      "unknown_stamp_count": true,
+      "stop_list_published": false,
+      "coordinate_policy": "not_disclosed_no_gpx",
+      "location_reference": "Avenida Paseo de la Reforma, Cidade do México; a referência do Ángel de la Independencia não comprova Poképarada participante.",
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Día de Muertos",
+        "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • como coletar selos",
+          "url": "https://niantic.helpshift.com/hc/pt-br/6-pokemon-go/faq/5041-what-is-the-stamp-rally/?hl=pt_BR",
+          "confidence": "official"
+        }
+      ],
+      "calendar": {
+        "enabled": false,
+        "reason": "Já está no Calendário como evento local de 31/10–05/11; este guia aparece somente na aba Selos."
+      },
+      "rewards": [
+        "Duskull com coroa de cempasúchil e Fundo de Localização ao avançar na Caça aos Selos.",
+        "Doces Duskull.",
+        "Duskull Brilhante é possível, nunca garantido. A fonte não divulga quantidade de selos nem posições exatas de Poképaradas."
+      ],
+      "public_notes": [
+        "Primeiro: esteja no Paseo de la Reforma, na Cidade do México, a partir de sábado 31/10 às 10h locais (13h de Brasília). O evento termina em 05/11 às 20h locais (23h de Brasília).",
+        "Abra o mapa do Pokémon GO e procure as Poképaradas ou Ginásios com o símbolo de selo. A organização ainda não publicou a lista exata desses pontos.",
+        "Ao chegar perto de um local participante, você recebe a cartela. Gire o fotodisco, depois toque ou mantenha pressionado o círculo para carimbar. O desenho do selo fica salvo no seu Álbum.",
+        "Junte os selos e acompanhe a cartela no Álbum de Recordações do jogo. A recompensa inclui Duskull com a coroa de flores cempasúchil e Fundo de Localização, além de Doces Duskull.",
+        "✨ Duskull Brilhante é possível, nunca garantido. Fundo de Localização é uma recompensa anunciada, mas a cor Brilhante depende da sorte.",
+        "Aproveite também a Pesquisa Temporária da área, os Módulos Atrair de 3 horas, metade do custo de Poeira Estelar nas trocas e as Batalhas Max 6★ de Gengar Gigamax.",
+        "Atenção: esta NÃO é a Caça aos 7 Selos da Área Selvagem, que acontece de 6 a 8/11, com ingresso e outro circuito pela cidade. Os dois guias ficam separados no Spidey.",
+        "O Ángel de la Independencia é somente um marco turístico para encontrar a avenida, não um ponto de selo confirmado. Não há GPX e nem coordenadas de Poképaradas inventadas."
+      ],
+      "notes": [
+        "Guia editorial sem coordenadas ou contagem de selos; o número e os locais de Poképaradas participantes não foram divulgados.",
+        "O anúncio oficial atualmente exibe 31/10 às 10h; outras publicações mencionam 14h, não tratar ambas como confirmação.",
+        "Não habilitar marcador de progresso 0/0, lista vazia de coordenadas, GPX ou selo fictício."
+      ],
+      "updated_at": "2026-10-27",
+      "verified_at": "2026-10-27"
+    },
+    {
       "id": "2026-go-wild-area-mexico-city-stamp-rally",
       "slug": "wild-area-go-mexico-city-2026-seven-stamps",
       "status": "published",

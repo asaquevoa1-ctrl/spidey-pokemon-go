@@ -318,6 +318,26 @@ function renderStamps() {
     return;
   }
   rallies.forEach((rally) => {
+    if (rally.collection_type === 'event_guide') {
+      // Publisher has not released a stamp count or individual locations; never render fake 0/0 progress.
+      const card = document.createElement('article');
+      card.className = 'stamp-card stamp-guide-card';
+      card.tabIndex = 0;
+      const head = document.createElement('div');
+      head.className = 'stamp-card-top';
+      const mark = document.createElement('span');mark.className = 'stamp-icon';mark.textContent = '◎';
+      const wrap = document.createElement('div');
+      const label = document.createElement('span');label.className = 'eyebrow';label.textContent = 'GUIA LOCAL · SELOS A DESCOBRIR';
+      const title = document.createElement('h3');title.textContent = rally.title;
+      wrap.append(label,title);head.append(mark,wrap);
+      const description = document.createElement('p');description.textContent = rally.public_summary || rally.summary || '';
+      const footer = document.createElement('p');footer.className = 'microcopy';footer.textContent = 'Poképaradas identificadas no próprio jogo · Sem número de selos divulgado · Ver guia';
+      card.append(head,description,footer);
+      card.addEventListener('click',()=>openStampRally(rally));
+      card.addEventListener('keydown',ev=>{if(ev.key==='Enter')openStampRally(rally);});
+      stampList.appendChild(card);
+      return;
+    }
     const progress = getStampProgress(rally);
     const stops = rally.stops || [];
     const exact = stops.filter(exactPokestop).length;
