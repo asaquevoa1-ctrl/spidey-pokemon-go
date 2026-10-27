@@ -66,7 +66,7 @@ test('Published venue coordinates are geographic references ONLY, not PokéStops
  assert.equal(event.gpx.enabled,false);
  const {rallyGpx}=await import('../lib/rally-gpx.js');
  assert.equal(rallyGpx(catalog,rallyId).status,409);
- assert.equal(rallyGpx(catalog,rallyId).body?.error,'exact_coordinates_required');
+ assert.equal(rallyGpx(catalog,rallyId).error,'exact_coordinates_required');
 });
 test('Human-first stamped UI copies only reference locations, keeps exact-gpx restrictions and all other features',()=>{
  const ui=fs.readFileSync('spidey-app/stamps-v2.js','utf8');
