@@ -82,6 +82,15 @@
     return `${Number(stop.latitude).toFixed(6)},${Number(stop.longitude).toFixed(6)}`;
   }
 
+  function landmarkVenueCoord(stop) {
+    // Never treat geographic centers as exact GO PokéStops, and NEVER export these into GPX.
+    if (stop?.reference_only_copyable !== true ||
+        stop.coordinate_type !== 'venue_reference' ||
+        stop.gpx_enabled !== false ||
+        !validCoordinate(stop) || exactPokestop(stop)) return '';
+    return `${Number(stop.latitude).toFixed(6)},${Number(stop.longitude).toFixed(6)}`;
+  }
+
   // The official host sometimes fails to display on a mobile device; avoid the
   // broken-image icon and keep the official-page link available for the player.
   function installImageFallback(root) {
@@ -122,7 +131,7 @@
         <div class="stamp-tile-copy-v2">
           <strong>${escapeHtml(stop.venue || stop.city || `Selo ${number}`)}</strong>
           <small>${escapeHtml(stop.city || '')}${stop.prefecture ? ` · ${escapeHtml(stop.prefecture)}` : ''}</small>
-          <span>${stop.image_kind === 'lid_artwork' ? 'Arte original da PokéLid' : exact ? 'Coordenada confirmada' : 'Coordenada pendente'}</span>
+          <span>${stop.image_kind === 'lid_artwork' ? 'Arte original da PokéLid' : exact ? 'PokéStop confirmada' : landmarkVenueCoord(stop) ? 'Referência do local' : 'Coordenada pendente'}</span>
         </div>
       </button>`;
   }
@@ -155,11 +164,13 @@
     beginAppDialog();
     const stops = orderedStops(rally);
     const isPokelid = rally.collection_type === 'pokelids';
+    const isLandmarkGuide = rally.coordinate_policy === 'venue_references_no_gpx';
     const publicNotes=rally.public_notes ?? rally.notes ?? [];
     let progress = getStampProgress(rally);
     const exactStops = stops.filter(exactPokestop);
     const lidPlaces = isPokelid ? stops.filter(pokelidVenueCoord) : [];
-    const fullGpx = exactStops.length === stops.length && stops.length > 0;
+    const landmarkPlaces = isLandmarkGuide ? stops.filter(landmarkVenueCoord) : [];
+    const fullGpx = !isLandmarkGuide && exactStops.length === stops.length && stops.length > 0;
     const regions = [...new Set(stops.map(regionLabel).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
     let search = '';
     let filter = 'all';
@@ -179,7 +190,7 @@
     }
 
     function copySet(list) {
-      return list.map(stop => isPokelid ? pokelidVenueCoord(stop) : coord(stop)).filter(Boolean).join('\n');
+      return list.map(stop => isPokelid ? pokelidVenueCoord(stop) : isLandmarkGuide ? landmarkVenueCoord(stop) : coord(stop)).filter(Boolean).join('\n');
     }
 
     function activeIndex() {
@@ -195,11 +206,12 @@
         <h2>${escapeHtml(rally.title)}</h2>
         <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
         ${isPokelid ? '<p class="microcopy">Conheça os desenhos das tampas Pokémon pelo Japão. Nem toda PokéLid já virou uma PokéStop no jogo.</p>' : ''}
+        ${isLandmarkGuide ? '<p class="microcopy">Temos os sete lugares no mapa! As coordenadas são dos locais, não das Poképaradas. Procure o símbolo do selo dentro do Pokémon GO.</p>' : ''}
         ${rally.id === 'nagasaki-city-stamp-rally' ? '<p class="microcopy">O selo de Nagasaki tem o desenho de Ampharos. Ele aparece nas oito paradas desta coleção.</p>' : ''}
 
         <div class="stamp-dashboard-v2">
           <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
-          <div><strong>${isPokelid ? lidPlaces.length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais das tampas' : 'pontos confirmados'}</span></div>
+          <div><strong>${isPokelid ? lidPlaces.length : isLandmarkGuide ? landmarkPlaces.length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais das tampas' : isLandmarkGuide ? 'lugares no mapa' : 'pontos confirmados'}</span></div>
           <div><strong>${stops.length - progress.size}</strong><span>restantes</span></div>
         </div>
 
@@ -219,7 +231,7 @@
 
         <section class="stamp-datahub-v2 stamp-copy-list-v3" aria-label="Listas de coordenadas para copiar">
           <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">PRONTO PARA COPIAR</span><h3>Coordenadas ${isPokelid ? 'por prefeitura' : 'da coleção'}</h3></div>
+            <div><span class="eyebrow">PRONTO PARA COPIAR</span><h3>${isLandmarkGuide ? 'Referências dos 7 lugares' : 'Coordenadas ' + (isPokelid ? 'por prefeitura' : 'da coleção')}</h3></div>
           </div>
           ${isPokelid ? `
             <p class="microcopy">Escolha uma prefeitura e copie os locais de uma só vez.</p>
@@ -232,10 +244,10 @@
           <p id="stampCoordListCount" class="microcopy" aria-live="polite"></p>
           <textarea id="rallyAllCoordinates" readonly spellcheck="false" rows="9" aria-label="Coordenadas prontas para copiar">${copySet(stops)}</textarea>
           <div class="action-row stamp-bulk-actions-v2">
-            <button id="copyAllStampCoords" class="action-btn gold" type="button">Copiar toda a lista</button>
+            <button id="copyAllStampCoords" class="action-btn gold" type="button">${isLandmarkGuide ? 'Copiar os 7 lugares' : 'Copiar toda a lista'}</button>
             ${fullGpx ? '<a id="downloadRallyGpxV2" class="action-btn">Baixar GPX</a>' : ''}
           </div>
-          <p class="microcopy">${isPokelid
+          <p class="microcopy">${isLandmarkGuide ? 'Os sete números mostram a localização dos lugares, não a Poképarada com o selo. No jogo, confira qual Poképarada está participando; não existe GPX verificado.' : isPokelid
             ? 'Estes pontos indicam onde ficam as tampas Pokémon. A PokéStop dentro do jogo pode estar em outro lugar.'
             : exactStops.length
               ? 'Um local por linha. Estes pontos foram conferidos pela comunidade; confirme a PokéStop no jogo.'
@@ -304,7 +316,8 @@
       activeId = stop.id;
       const done = progress.has(stop.id);
       const lidValue = isPokelid ? pokelidVenueCoord(stop) : '';
-      const value = lidValue || coord(stop);
+      const landmarkValue = isLandmarkGuide ? landmarkVenueCoord(stop) : '';
+      const value = lidValue || landmarkValue || coord(stop);
       const image = stampImage(stop);
       position.textContent = `${visible.indexOf(stop) + 1} de ${visible.length}`;
       toggleDone.textContent = done ? 'Marcar como faltante' : 'Marcar como feito';
@@ -319,10 +332,10 @@
           <p>${escapeHtml(stop.city || '')}${stop.prefecture ? ` · ${escapeHtml(stop.prefecture)}` : ''}${stop.country ? ` · ${escapeHtml(stop.country)}` : ''}</p>
           ${stop.venue_detail ? `<small>${escapeHtml(stop.venue_detail)}</small>` : ''}
           ${lidValue ? `<div class="pokelid-place-copy"><small>LOCAL DA TAMPA • NÃO É POKÉSTOP VERIFICADA</small><code>${lidValue}</code><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar local da tampa</button></div>` : ''}
-          ${isPokelid ? `<div class="action-row"><a class="action-btn" href="https://www.google.com/maps?q=${Number(stop.latitude)},${Number(stop.longitude)}" target="_blank" rel="noopener noreferrer">Mapa da PokéLid</a><a class="action-btn" href="${escapeHtml(stop.official_url)}" target="_blank" rel="noopener noreferrer">Ver tampa oficial</a></div><small>Este ponto é da tampa física. A PokéStop no jogo pode ter outra posição.</small>` : stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener">Ver local no mapa</a><p class="microcopy">Poképarada confirmada a conferir.</p>` : value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
+          ${isPokelid ? `<div class="action-row"><a class="action-btn" href="https://www.google.com/maps?q=${Number(stop.latitude)},${Number(stop.longitude)}" target="_blank" rel="noopener noreferrer">Mapa da PokéLid</a><a class="action-btn" href="${escapeHtml(stop.official_url)}" target="_blank" rel="noopener noreferrer">Ver tampa oficial</a></div><small>Este ponto é da tampa física. A PokéStop no jogo pode ter outra posição.</small>` : isLandmarkGuide && stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener noreferrer">Ver lugar no mapa</a><p class="microcopy">Essa coordenada leva ao lugar, não necessariamente à Poképarada. Encontre o selo no mapa do jogo.</p>` : stop.map_url ? `<a class="action-btn" href="${escapeHtml(stop.map_url)}" target="_blank" rel="noopener">Ver local no mapa</a><p class="microcopy">Poképarada confirmada a conferir.</p>` : value ? '' : '<p class="microcopy">Coordenada exata ainda não confirmada.</p>'}
         </div>
-        ${value && !isPokelid ? `<div class="coordinates stamp-active-coordinates-v2"><div class="stamp-coordinate-values-v2"><div><small>Latitude</small><code>${value.split(',')[0]}</code></div><div><small>Longitude</small><code>${value.split(',')[1]}</code></div></div><button id="copyActiveStampCoord" class="action-btn" type="button">Copiar coordenadas</button></div>` : ''}`;
-      activeBox.querySelector('#copyActiveStampCoord')?.addEventListener('click', () => setClipboard(value, lidValue ? 'Local da tampa copiado (não é PokéStop verificada).' : 'Coordenada copiada.'));
+        ${value && !isPokelid ? `<div class="coordinates stamp-active-coordinates-v2">${landmarkValue ? '<small>REFERÊNCIA DO LUGAR • NÃO É POKÉPARADA CONFIRMADA</small>' : ''}<div class="stamp-coordinate-values-v2"><div><small>Latitude</small><code>${value.split(',')[0]}</code></div><div><small>Longitude</small><code>${value.split(',')[1]}</code></div></div><button id="copyActiveStampCoord" class="action-btn" type="button">${landmarkValue ? 'Copiar local de referência' : 'Copiar coordenadas'}</button></div>` : ''}`;
+      activeBox.querySelector('#copyActiveStampCoord')?.addEventListener('click', () => setClipboard(value, lidValue ? 'Local da tampa copiado (não é PokéStop verificada).' : landmarkValue ? 'Referência do lugar copiada. Confira o selo na Poképarada dentro do jogo.' : 'Coordenada copiada.'));
       gallery.querySelectorAll('.stamp-tile-v2').forEach((tile) => tile.classList.toggle('is-active', tile.dataset.stampStopId === stop.id));
     }
 
@@ -368,19 +381,19 @@
       const count = value ? value.split('\n').length : 0;
       if (listTextarea) listTextarea.value = value;
       if (listCount) listCount.textContent = count
-        ? count + (isPokelid ? ' locais prontos para copiar.' : ' coordenadas prontas para copiar.')
+        ? count + (isLandmarkGuide ? ' locais de referência prontos para copiar.' : isPokelid ? ' locais prontos para copiar.' : ' coordenadas prontas para copiar.')
         : 'Nenhuma coordenada disponível nesta coleção.';
       if (listCopy) {
         listCopy.disabled = count === 0;
         listCopy.textContent = isPokelid && copyPrefecture?.value !== 'all'
-          ? 'Copiar lista desta prefeitura' : 'Copiar toda a lista';
+          ? 'Copiar lista desta prefeitura' : isLandmarkGuide ? 'Copiar os 7 lugares' : 'Copiar toda a lista';
       }
     }
     copyPrefecture?.addEventListener('change', refreshCoordinateList);
     listCopy?.addEventListener('click', () => {
       const value = selectedCoordinates();
       const count = value ? value.split('\n').length : 0;
-      setClipboard(value, count + ' coordenadas copiadas. É só colar no DataHub.', listTextarea);
+      setClipboard(value, count + (isLandmarkGuide ? ' locais de referência copiados. Procure as Poképaradas participantes no jogo.' : ' coordenadas copiadas. É só colar no DataHub.'), listTextarea);
     });
     refreshCoordinateList();
 

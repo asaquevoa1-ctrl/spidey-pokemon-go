@@ -32,7 +32,7 @@ test('DataHub uses copy-and-paste lists, never TXT downloads',()=>{
   assert.equal(fs.existsSync(root+'data/datahub/'+name),false,'Do not publish old TXT: '+name);
   assert.equal(sw.includes(name),false,'Do not precache old TXT');
  }
- assert.match(html,/stamps-v2\.js\?v=20261018-stamp-copy-lists2/);
+ assert.match(html,/stamps-v2\.js\?v=20261027-mexico-reference1/);
  assert.match(html,/stamps-v2\.css\?v=20261018-stamp-copy-lists2/);
  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-/); // Keep verifying the copy-list UI above, not a frozen global cache version.
 });
