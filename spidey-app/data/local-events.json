@@ -103,14 +103,14 @@
       "id": "2026-10-31-dia-de-muertos-paseo-reforma",
       "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
       "place": "Avenida Paseo de la Reforma, Cidade do México, México",
-      "dates": "31 out 14h – 05 nov 20h (Cidade do México)",
+      "dates": "31 out 10h – 05 nov 20h (Cidade do México)",
       "status": "official",
       "locality": "local",
       "artApproved": false,
-      "note": "Evento presencial restrito à área de Paseo de la Reforma, em separado do Día de Muertos regional para todo o México. Ginásios, Poképaradas e Pontos de Energia participantes não têm coordenadas exatas confirmadas no anúncio.",
+      "note": "Evento presencial restrito à região do Paseo de la Reforma. Ángel de la Independencia é referência geográfica para orientação, NÃO Ginásio/Poképarada/Power Spot verificado. Confira no jogo a zona e os locais participantes.",
       "schedule": {
         "start_date": "2026-10-31",
-        "start_time": "14:00",
+        "start_time": "10:00",
         "end_date": "2026-11-05",
         "end_time": "20:00",
         "timezone": "America/Mexico_City"
@@ -128,12 +128,27 @@
         "Maior chance de ajuda na captura para quem tiver companheiro Grande Companheiro ou superior.",
         "Batalhas Max de seis estrelas com Gengar Gigamax, com chance de Brilhante e Fundo de Localização."
       ],
-      "locations": [],
+      "locations": [
+        {
+          "name": "Ángel de la Independencia, Paseo de la Reforma",
+          "label": "Ponto de referência: Ángel de la Independencia • Paseo de la Reforma (não é Ginásio)",
+          "latitude": 19.4269903,
+          "longitude": -99.1676463,
+          "coordinate_text": "19.4269903,-99.1676463",
+          "coordinate_type": "landmark_reference",
+          "coordinate_confidence": "geographic_reference_verified",
+          "exact_raid_gym_verified": false,
+          "exact_pokestop_verified": false,
+          "exact_power_spot_verified": false,
+          "source_url": "https://www.123coordenadas.com/coordinates/512901-angel-de-la-independencia",
+          "source_note": "Monumento real situado na Avenida Paseo de la Reforma. Apenas ponto de orientação geográfica; não é confirmação do perímetro ativo, de Ginásio, Poképarada, Power Spot, Caça aos Selos ou Gengar Gigamax."
+        }
+      ],
       "gpx": {
         "enabled": false,
-        "reason": "A avenida é a referência geográfica publicada; não há pontos exatos de Ginásios/Poképaradas disponíveis para copiar ou gerar GPX."
+        "reason": "Um marco de orientação do Paseo de la Reforma não é ponto confirmado de Ginásio, Poképarada, selos ou Max. Sem GPX."
       },
-      "verified_at": "2026-10-22",
+      "verified_at": "2026-10-27",
       "detail_title": "Día de Muertos • Paseo de la Reforma"
     },
     {
