@@ -162,6 +162,26 @@
 
   openStampRally = function spideyOpenStampRallyV2(rally) {
     beginAppDialog();
+    if (rally.collection_type === 'event_guide') {
+      // Official event without published stamp count/stop list: an editorial guide, not an empty live tracker.
+      const steps = rally.public_notes ?? rally.notes ?? [];
+      const rewards = rally.rewards ?? [];
+      detail.innerHTML = `
+        <div class="detail-body stamp-detail stamp-detail-v2">
+          <span class="eyebrow">DÍA DE MUERTOS · GUIA DE SELOS</span>
+          <h2>${escapeHtml(rally.title)}</h2>
+          <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
+          <p class="microcopy"><strong>31/10 a 05/11 • Cidade do México</strong> · Passeio de la Reforma · 10h–20h locais (13h–23h de Brasília)</p>
+          <p class="microcopy">A quantidade de selos e as Poképaradas específicas não foram publicadas. Encontre o símbolo dos selos no mapa do próprio Pokémon GO.</p>
+          <h3>Como aproveitar a aventura</h3>
+          <ol class="bonus-list">${steps.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ol>
+          <h3>O que você pode ganhar</h3>
+          <ul class="bonus-list">${rewards.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul>
+          ${rally.source?.url ? `<div class="action-row"><a class="action-btn" href="${escapeHtml(rally.source.url)}" target="_blank" rel="noopener noreferrer">Conferir anúncio oficial</a></div>` : ''}
+        </div>`;
+      showAppDialog();
+      return;
+    }
     const stops = orderedStops(rally);
     const isPokelid = rally.collection_type === 'pokelids';
     const isLandmarkGuide = rally.coordinate_policy === 'venue_references_no_gpx';
