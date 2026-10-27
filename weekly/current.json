@@ -753,6 +753,17 @@
   },
   "stamps": [
     {
+      "id": "2026-go-wild-area-mexico-city-stamp-rally",
+      "title": "Área Selvagem GO 2026 · 7 selos da Cidade do México",
+      "summary": "O circuito oficial passa por sete lugares da Cidade do México. Confira onde ficam os pontos, planeje a visita e marque seus selos sem confundir referências de locais com Poképaradas.",
+      "stamp_count": 7,
+      "source": {
+        "name": "Pokémon GO • Área Selvagem — gameplay oficial",
+        "url": "https://pokemongo.com/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "pokexciting-cross-region-2026",
       "title": "PokéXciting! Cross-Region GO Stamp Rally",
       "summary": "Rally regional oficial com cinco selos PokéXciting! distribuídos por cidades da Ásia-Pacífico.",
@@ -805,7 +816,7 @@
     "events_without_weekly_art": 7,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-27T17:36:01.210868-03:00",
+    "generated_at": "2026-10-27T18:00:48.118150-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
