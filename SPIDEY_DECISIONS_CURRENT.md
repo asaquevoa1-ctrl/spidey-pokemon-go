@@ -282,3 +282,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Fotos recebidas mostram Noibat com acessório, Zubat de cartola, Gengar e Vulpix fantasiados. **Não inferir** que a imagem prove cada um como recompensa da caixa, nem a lista total. Marcar exemplos como comunidade/sem comprovação específica.
 - Sem shiny garantido; sem spawn ou GPX das caixas. Preservar artes aprovadas de Halloween I/II e do Passe GO sem gerar imagem genérica.
 - Fonte: https://pokemongo.com/pt-BR/news/halloween-part-1-2026 ; Leek Duck https://leekduck.com/events/halloween-2026-part-1/ .
+
+## 27/10/2026 — Día de Muertos México: referência de “Onde jogar” e horário oficial corrigido
+- O responsável mostrou na continuidade do chat que o campo “Onde jogar” do evento presencial na Cidade do México estava vazio e pediu continuidade do projeto sem perder decisões. A versão anterior tinha locations vazio, apesar de o anúncio indicar Paseo de la Reforma.
+- Conferência no anúncio oficial vigente em 27/10: o evento presencial do **Paseo de la Reforma inicia 31/10 às 10h CDMX (13h Brasília)** e termina 05/11 às 20h CDMX (23h Brasília), não 14h/17h como versões anteriores. O evento nacional México de 27/10 a 05/11 segue distinto.
+- Para orientar o campo “Onde jogar”, incluir **Ángel de la Independencia** (19.4269903,-99.1676463), marco público da Avenida Paseo de la Reforma, apenas como landmark_reference geográfica, com fonte de coordenadas. **NÃO é** coordenada confirmada de Ginásio, Poképarada, Power Spot, Gengar Gigamax, Caça aos Selos ou perímetro da jogabilidade.
+- O texto público deve distinguir o marco turístico de ponto efetivo de jogo. GPX mantém enabled=false; não há FLY global nem coordenadas fabricadas. Não mudar pôsteres Premium aprovados ou outras funcionalidades.
+- Fontes: anúncio oficial https://pokemongo.com/es-MX/news/dia-de-muertos-2026 ; referência geográfica https://www.123coordenadas.com/coordinates/512901-angel-de-la-independencia ; Prefeitura de CDMX https://www.turismo.cdmx.gob.mx/storage/app/media/inf_2024/Mini%20guia%20Filmaciones.pdf .
