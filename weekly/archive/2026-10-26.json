@@ -626,7 +626,7 @@
       {
         "id": "2026-aeon-mall-halloween-japan",
         "title": "AEON Mall × Pokémon GO — Halloween 2026",
-        "summary": "Evento presencial nos AEON Malls participantes do Japão, de 19 de outubro a 1º de novembro. Duas Pesquisas Temporárias, Pikachu com chapéu de bruxa e Módulos Atrair de 2 horas.",
+        "summary": "19/10 a 01/11 • AEON Malls do Japão: duas Pesquisas Temporárias, Pikachu com chapéu de bruxa e Módulos Atrair de 2h. FLY: use referências dos shoppings participantes e confira a região de ativação no jogo.",
         "category": "regional_event",
         "tags": [
           "Japão",
@@ -659,7 +659,7 @@
       {
         "id": "2026-10-27-dia-de-muertos-mexico",
         "title": "Día de Muertos 2026 — México (evento nacional)",
-        "summary": "Somente no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil, pesquisas e adesivos. O evento presencial do Paseo de la Reforma tem bônus exclusivos separados.",
+        "summary": "Día de Muertos no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil e pesquisas. No FLY, confira a região mexicana e os horários; Paseo de la Reforma tem atividades adicionais.",
         "category": "regional_event",
         "tags": [
           "México",
@@ -690,7 +690,7 @@
       {
         "id": "2026-10-31-dia-de-muertos-paseo-reforma",
         "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
-        "summary": "De 31/10 a 05/11, o Paseo de la Reforma vira uma aventura de Día de Muertos: procure selos em Poképaradas e Ginásios, monte sua coleção no jogo e tente um Duskull com coroa de flores e Fundo de Localização. Gengar Gigamax 6★ também participa!",
+        "summary": "31/10 a 05/11 • Paseo de la Reforma, CDMX: roteiro para jogadores FLY com referência geográfica, horários e caça aos selos na região. Duskull com coroa/Fundo de Localização e Gengar Gigamax 6★; confirme no jogo os pontos participantes.",
         "category": "local_event",
         "tags": [
           "México",
@@ -827,7 +827,7 @@
     "events_without_weekly_art": 7,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-27T20:16:39.980118-03:00",
+    "generated_at": "2026-10-27T20:34:50.395779-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
