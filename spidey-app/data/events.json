@@ -87,7 +87,7 @@
       "id": "2026-10-27-dia-de-muertos-mexico",
       "slug": "2026-10-27-dia-de-muertos-mexico",
       "title": "Día de Muertos 2026 — México (evento nacional)",
-      "summary": "Somente no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil, pesquisas e adesivos. O evento presencial do Paseo de la Reforma tem bônus exclusivos separados.",
+      "summary": "Día de Muertos no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil e pesquisas. No FLY, confira a região mexicana e os horários; Paseo de la Reforma tem atividades adicionais.",
       "category": "regional_event",
       "content_type": "event",
       "tags": [
@@ -118,7 +118,7 @@
         "requires_art": false,
         "fallback_visual": "date"
       },
-      "location_label": "Somente no México; não é evento global",
+      "location_label": "Região de jogo: México • atividades adicionais no Paseo de la Reforma",
       "locations": [],
       "gpx": {
         "enabled": false,
@@ -137,16 +137,16 @@
         }
       ],
       "notes": [
-        "EVENTO REGIONAL: benefícios descritos neste registro são exclusivos dos jogadores no MÉXICO; não é uma celebração mundial, nem concede esses bônus automaticamente ao Brasil.",
+        "GUIA FLY • MÉXICO: os bônus são vinculados à região do México no jogo, não a uma ativação mundial. Confira a localização reconhecida pelo Pokémon GO e os requisitos de cada atividade; não prometemos acesso ou recompensas.",
         "Início: 27/10 às 10h da Cidade do México, equivalente a 13h de Brasília. Término: 05/11 às 20h locais, equivalente a 23h de Brasília.",
         "Pesquisa Temporária nacional oferece Cubone com coroa e Fundo Especial, adesivos de equipes, Poké Bolas, Incenso, 2.026 Poeira Estelar e 2.026 PE, conforme anúncio oficial.",
         "Nos Desafios de Equipe e encontros de Incenso podem aparecer Cubone com coroa de cempasúchil, com possibilidade, e não garantia, de Brilhante/Fundo Especial.",
-        "Há um EVENTO ADICIONAL presencial no Paseo de la Reforma, Cidade do México, a partir de 31/10 às 10h locais; consulte a entrada específica de Duskull, Caça aos Selos e Gengar Gigamax.",
-        "Não apresentar este evento como FLY mundial: benefícios anunciados são restritos ao México. Sem GPX ou Ginásios inventados."
+        "ROTEIRO EXTRA • PASEO DE LA REFORMA: a partir de 31/10 às 10h locais, consulte o guia de Duskull, Caça aos Selos e Gengar Gigamax na região da Cidade do México.",
+        "O evento é regional, NÃO uma rota mundial de fusos no FLY. Sem GPX nem Ginásios inventados. Coordenadas de referência e selos específicos ficam no guia local."
       ],
       "news": {
         "title": "Día de Muertos 2026: Cubone com coroa e bônus no México",
-        "summary": "De 27/10 a 05/11, os bônus valem apenas no México. Evento presencial separado no Paseo de la Reforma começa em 31/10.",
+        "summary": "De 27/10 a 05/11, os bônus são regionais do México. No FLY, confira horários e região; Paseo de la Reforma tem roteiro separado a partir de 31/10.",
         "published_on": "2026-10-22"
       },
       "notifications": {
@@ -161,7 +161,7 @@
       "id": "2026-10-31-dia-de-muertos-paseo-reforma",
       "slug": "2026-10-31-dia-de-muertos-paseo-reforma",
       "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
-      "summary": "De 31/10 a 05/11, o Paseo de la Reforma vira uma aventura de Día de Muertos: procure selos em Poképaradas e Ginásios, monte sua coleção no jogo e tente um Duskull com coroa de flores e Fundo de Localização. Gengar Gigamax 6★ também participa!",
+      "summary": "31/10 a 05/11 • Paseo de la Reforma, CDMX: roteiro para jogadores FLY com referência geográfica, horários e caça aos selos na região. Duskull com coroa/Fundo de Localização e Gengar Gigamax 6★; confirme no jogo os pontos participantes.",
       "category": "local_event",
       "content_type": "event",
       "tags": [
@@ -239,7 +239,7 @@
       ],
       "notes": [
         "ROTEIRO DE SELOS (SEM GPS INVENTADO): no Paseo de la Reforma, abra o mapa do Pokémon GO, procure Poképaradas/Ginásios com símbolo de selo, chegue perto, gire o fotodisco e carimbe a cartela tocando ou segurando o círculo. Acompanhe no Álbum. O jogo identifica os pontos participantes, ainda sem lista de coordenadas oficiais.",
-        "PRESENCIAL: a jogabilidade especial é somente na área do Paseo de la Reforma, Cidade do México; não é acessível mundialmente.",
+        "GUIA FLY • PASEO DE LA REFORMA: as atividades do Pokémon GO são ativadas na região indicada da Cidade do México. Use o ponto de orientação do guia e identifique no mapa do jogo as Poképaradas/Ginásios participantes; a coordenada de referência NÃO garante um ponto de jogo.",
         "31/10 às 10h CDMX = 31/10 às 13h Brasília. 05/11 às 20h CDMX = 05/11 às 23h Brasília.",
         "A Caça aos Selos GO exige girar fotodiscos de locais selecionados na região; o anúncio NÃO fornece lista de coordenadas verificadas para GPX.",
         "Gengar Gigamax aparece em Batalhas Max 6★ dentro da zona. Não prometer combate remoto nem coordenadas exatas de Pontos de Energia.",
@@ -366,13 +366,13 @@
         "21h–23h15 | Confira o que ficou pendente: pesquisas temporárias, progresso do Passe GO de outubro, recompensas e espaço na Bolsa. O evento Orionidas termina às 23h59 locais, então capturas de Minior ainda podem surgir depois da janela reforçada.",
         "23h20 | Prepare a Twitch antes da transmissão: entre na conta correta, conecte sua conta Pokémon Trainer Central e confira se o Drop está habilitado. Não deixe para acertar login no meio do programa.",
         "23h30 | Começam o show do Pokémon Night Out em Los Angeles e a transmissão oficial no YouTube/Twitch. Para receber o código da camiseta do avatar, assista 30 minutos pela TWITCH e resgate o Drop. As reides presenciais com fundo não estão disponíveis remotamente.",
-        "Se você estiver em Seul | O FC Seoul é presencial no dia 24, das 9h às 20h da Coreia (21h de sexta a 8h de sábado em Brasília). Charmander nas reides locais não aceita Passe de Reide Remota. Aproveite a pesquisa com Charizard se estiver na área — não é um evento jogável do Brasil.",
-        "Se estiver em Los Angeles | Pokémon Night Out tem atrações presenciais e bônus no Intuit Dome, com Pikachu e Gengar de Fundo de Localização. Para quem está no Brasil, a alternativa válida é o Drop da transmissão, não as reides locais.",
-        "A regra para o dia dar certo | Dê preferência aos eventos exclusivos para os quais você realmente tem acesso: City Safari Boston, se já tem ingresso, e FC Seoul ou Night Out, se estiver presente nesses locais. O Trio do Lago Dinamax é uma opção das 14h às 17h, não a prioridade máxima; não esqueça Minior das 17h às 21h e o Drop da Twitch às 23h30. Atividades presenciais em Seul ou Los Angeles são condicionais e não cabem num roteiro brasileiro."
+        "FLY • FC SEOUL (24/10): janela das 9h às 20h na Coreia (21h de sexta a 8h de sábado em Brasília); verifique a região do estádio. Charmander em reides especiais não aceita Passe de Reide Remota. Coordenadas fornecidas são referências urbanas, não Ginásios verificados.",
+        "FLY • LOS ANGELES (24/10): os bônus e reides de Pikachu/Gengar com Fundo de Localização dependem da região do Intuit Dome, com coordenada de referência no roteiro. A live às 23h30 Brasília e o Drop da Twitch são uma participação independente.",
+        "Roteiro do dia | Priorize janelas e recursos: FC Seoul e Night Out exigem região do jogo correspondente, Boston exige ingresso antigo, e Trio do Lago/Minior têm horários próprios. Use o guia FLY para conferir referências e fusos, sem prometer recompensas nem Ginásios exatos."
       ],
       "news": {
         "title": "24/10 no Pokémon GO: quatro eventos, personagens corretos e prioridades sem correria",
-        "summary": "Roteiro 24/10 com FC Seoul e Night Out presenciais, Boston apenas para quem tem ingresso, Trio Dinamax opcional, Minior e live da Twitch às 23h30 para brasileiros.",
+        "summary": "Roteiro 24/10 voltado também para FLY: confira as regiões e referências de Seul e Los Angeles, ingresso do Boston, Trio Dinamax, Minior e live da Twitch às 23h30.",
         "published_on": "2026-10-21"
       },
       "notifications": {
@@ -2064,13 +2064,13 @@
         }
       ],
       "notes": [
-        "24/10, INTUIT DOME (LOS ANGELES): benefícios do Pokémon GO apenas para jogadores presentes na área do evento, não para o Brasil.",
+        "ROTEIRO FLY • INTUIT DOME, LOS ANGELES (24/10): os bônus e reides são vinculados à região da arena, não ao fuso de Brasília. A referência 33.943723,-118.342295 não comprova posição de Ginásio; confirme a área no jogo.",
         "SHOW E LIVE: 19h30 PDT = 23h30 em Brasília. O show terá transmissão oficial na Twitch e no YouTube. Esse NÃO é um horário confirmado de início das reides ou bônus do Pokémon GO.",
         "REIDES: Pikachu 1★ e Gengar 3★; os capturados dessas reides terão Fundo de Localização de Los Angeles. Brilhantes são possíveis, não garantidos.",
         "PESQUISAS: até duas oportunidades de Pesquisa Temporária ao abrir o jogo no local; encontros possíveis com Toxtricity (Forma Grave/Aguda) e camiseta exclusiva. Quem resgatou a pesquisa da camiseta pela Twitch não a recebe novamente no local.",
         "NATUREZA: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee. Unown P, N e O são possíveis para alguns jogadores.",
         "COORDENADA DE REFERÊNCIA: 33.943723,-118.342295; não representa Ginásio ou Poképarada comprovados. Sem GPX.",
-        "DO BRASIL: a alternativa oficial é assistir ao show. Para ganhar a pesquisa da camiseta, é obrigatório assistir 30 minutos na TWITCH e resgatar o Drop; assistir pelo YouTube não concede esse Drop.",
+        "Twitch e YouTube exibiram a apresentação; a Pesquisa Temporária da camiseta exigia assistir 30 minutos pela Twitch e resgatar o Drop. É uma modalidade separada das reides na região da arena.",
         "Não há Mewtwo Sombroso com Fundo de Localização anunciado para esse evento."
       ],
       "gpx": {
@@ -2110,7 +2110,7 @@
       "updated_at": "2026-10-23T09:05:00-03:00",
       "news": {
         "title": "Pokémon Night Out Los Angeles: Pikachu e Gengar com fundo especial",
-        "summary": "Reides presenciais com fundos de Los Angeles, Toxtricity em Pesquisas Temporárias e bônus da arena. Horários de show e do jogo são coisas diferentes.",
+        "summary": "Pikachu e Gengar com Fundos de Localização nas reides da região do Intuit Dome, com referência FLY da arena. Show e Twitch são atividades separadas.",
         "published_on": "2026-10-23"
       },
       "venue_program": {
@@ -2125,7 +2125,7 @@
       "id": "2026-pokemon-night-out-london",
       "slug": "2026-pokemon-night-out-london",
       "title": "Pokémon Night Out — Londres | Fundo especial",
-      "summary": "10/11 no The O2: Pikachu e Gengar com Fundo de Localização de Londres nas reides presenciais; Toxtricity em Pesquisa Temporária. Portas às 15h e show às 16h30 em Brasília; os horários da jogabilidade não foram publicados.",
+      "summary": "10/11 • The O2, Londres: Pikachu 1★ e Gengar 3★ com Fundo de Localização nas reides da região, Toxtricity e bônus do Night Out. FLY: use a referência da arena; portas às 15h e show às 16h30 de Brasília não são horários confirmados das reides.",
       "category": "regional_event",
       "tags": [
         "Fundo Londres",
@@ -2203,7 +2203,7 @@
         }
       ],
       "notes": [
-        "10/11, THE O2 (LONDRES): encontro PRESENCIAL. As reides e bônus divulgados pelo Pokémon GO são locais, não globais.",
+        "ROTEIRO FLY • THE O2, LONDRES (10/11): as reides e bônus são vinculados à região da arena no jogo. Use 51.502579,0.003202 como referência geográfica, nunca como Ginásio confirmado. Verifique a área de ativação no jogo.",
         "PORTAS: 18h GMT = 15h em Brasília. SHOW: 19h30 GMT = 16h30 em Brasília. Horários confirmados da arena, mas não definem início das reides no jogo.",
         "15h30 de Brasília, divulgado por comunidade, NÃO é um horário confirmado pela arena para portas ou show e NÃO foi anunciado como início da jogabilidade.",
         "REIDES: Pikachu 1★ e Gengar 3★ com Fundo de Localização de Londres; possibilidade de Brilhante, sem garantia.",
@@ -2250,7 +2250,7 @@
       "updated_at": "2026-10-23T09:05:00-03:00",
       "news": {
         "title": "Pokémon Night Out Londres: Pikachu e Gengar com fundo especial",
-        "summary": "Reides presenciais com fundos de Londres, Toxtricity em Pesquisas Temporárias e bônus da arena. Horários de show e do jogo são coisas diferentes.",
+        "summary": "Pikachu e Gengar com Fundo de Localização em reides na região da The O2, Toxtricity em pesquisas e referência FLY da arena. Portas/show não são janelas de reides.",
         "published_on": "2026-10-23"
       },
       "venue_program": {
@@ -2267,7 +2267,7 @@
       "id": "2026-aeon-mall-halloween-japan",
       "slug": "2026-aeon-mall-halloween-japan",
       "title": "AEON Mall × Pokémon GO — Halloween 2026",
-      "summary": "Evento presencial nos AEON Malls participantes do Japão, de 19 de outubro a 1º de novembro. Duas Pesquisas Temporárias, Pikachu com chapéu de bruxa e Módulos Atrair de 2 horas.",
+      "summary": "19/10 a 01/11 • AEON Malls do Japão: duas Pesquisas Temporárias, Pikachu com chapéu de bruxa e Módulos Atrair de 2h. FLY: use referências dos shoppings participantes e confira a região de ativação no jogo.",
       "category": "regional_event",
       "tags": [
         "Japão",
@@ -2329,7 +2329,7 @@
       "notes": [
         "Pesquisa Temporária Parte 1: pegar de 19 a 25/10/2026; concluir e resgatar até 08/11/2026 às 20h (horário do Japão).",
         "Pesquisa Temporária Parte 2: pegar de 26/10 a 01/11/2026; concluir e resgatar até 15/11/2026 às 20h (horário do Japão).",
-        "Para receber cada pesquisa, visite um AEON Mall participante no Japão durante sua janela de disponibilidade.",
+        "GUIA FLY • AEON MALL: as pesquisas ficam disponíveis nas áreas dos shoppings participantes durante cada janela. Referência de Musashi Murayama cadastrada; estar em um ponto de referência não comprova a zona exata de ativação.",
         "Em 31/10, de 14h a 17h do Japão, 20 unidades selecionadas terão ação de Super Mega Reides de Mega Chandelure; consulte a relação oficial antes de se deslocar.",
         "O anúncio não informa horário diário geral de início e fim do evento, apenas as datas. Não interpretar 00h ou 23h59 como horário jogável.",
         "A comunidade enviou Musashi Murayama (35.746300,139.384900) como referência física. Não atribuir fundo de localização ou Ginásio especial sem comprovação."
@@ -2357,7 +2357,7 @@
       "id": "2026-national-trust-27-sites",
       "slug": "2026-national-trust-27-sites",
       "title": "Pokémon GO × National Trust — 27 locais",
-      "summary": "Parceria presencial de Pokémon GO e National Trust com 27 locais participantes no Reino Unido, Reides com Fundo de Localização e Pesquisas Temporárias locais; guia de referências na aba Trust.",
+      "summary": "Pokémon GO × National Trust: 27 regiões participantes no Reino Unido, reides com Fundo de Localização e Pesquisas Temporárias. Para jogar FLY, consulte referências e requisitos na aba Trust.",
       "category": "regional_event",
       "tags": [
         "National Trust",
@@ -2520,7 +2520,7 @@
       "id": "2026-10-24-fc-seoul",
       "slug": "2026-10-24-fc-seoul",
       "title": "2026 FC Seoul — Charmander e Charizard com Fundo de Localização",
-      "summary": "Evento presencial em 24 de outubro, das 9h às 20h, perto do Estádio da Copa do Mundo de Seul. Charmander em reides de 1★ e Charizard na Pesquisa Temporária, ambos com Fundo de Localização.",
+      "summary": "24/10, 9h–20h (Coreia) • FC Seoul: Charmander nas reides regionais 1★ e Charizard por Pesquisa Temporária, ambos com Fundo de Localização. FLY: confira a região do estádio e a referência, sem confundi-la com Ginásio.",
       "category": "local_event",
       "tags": [
         "Coreia do Sul",
@@ -2569,7 +2569,7 @@
         "reason": "Coordenada compartilhada é referência do estádio; nenhuma localização exata de Ginásio ou Poképarada foi verificada."
       },
       "notes": [
-        "EVENTO PRESENCIAL: somente na região do Estádio da Copa do Mundo de Seul, Coreia do Sul, em 24/10/2026, das 9h às 20h (horário local).",
+        "ROTEIRO FLY • SEUL, COREIA DO SUL: as atividades em 24/10, das 9h às 20h locais, foram vinculadas à região do Estádio da Copa do Mundo de Seul. Referência: 37.568222,126.897361 (não equivale a um Ginásio).",
         "Reides de 1 estrela com Charmander podem oferecer Fundo de Localização temático; chance de Shiny aumentada, não garantida.",
         "IMPORTANTE: Passes de Reide a Distância NÃO podem ser usados nas Reides especiais de Charmander deste evento.",
         "Pesquisa Temporária gratuita deve ser recebida na área do estádio durante o evento. A recompensa inclui Charizard com Fundo de Localização e possibilidade aumentada de Shiny.",
@@ -2603,7 +2603,7 @@
       ],
       "news": {
         "title": "FC Seoul 2026: Charmander e Charizard com fundo especial",
-        "summary": "24/10 na Coreia do Sul: reides presenciais de Charmander, Pesquisa Temporária com Charizard e coordenadas do estádio para copiar.",
+        "summary": "Charmander nas reides locais e Charizard nas pesquisas de Seul, com Fundo de Localização; referência de coordenadas e janela local para jogadores FLY.",
         "published_on": "2026-10-14"
       },
       "notifications": {
@@ -9936,7 +9936,7 @@
       "id": "2026-11-go-wild-area-sendai",
       "slug": "2026-11-go-wild-area-sendai",
       "title": "Pokémon GO Wild Area 2026: Sendai e Tohoku",
-      "summary": "Evento presencial com Duraludon Gigamax, Dialga e Palkia Dinamax, formas Coroadas e estreias de Sliggoo e Goodra de Hisui.",
+      "summary": "6 a 8/11 • Sendai/Tohoku: roteiro regional para FLY com Duraludon Gigamax, Dialga/Palkia Dinamax, formas Coroadas, Sliggoo de Hisui e Caça aos Selos. Ingresso válido e área de jogo correta são necessários.",
       "category": "regional_event",
       "tags": [
         "GO Wild Area",
@@ -9972,7 +9972,7 @@
         "reason": "O anúncio confirma Sendai e Tohoku, mas não publica uma rota nem coordenadas exatas de Poképaradas."
       },
       "notes": [
-        "Jogabilidade exclusiva para quem tiver ingresso, das 10h às 18h JST no dia escolhido entre 6 e 8 de novembro.",
+        "ROTEIRO FLY • SENDAI/TOHOKU: a janela principal é das 10h às 18h JST no dia escolhido entre 6 e 8/11. O ingresso válido é obrigatório para as atividades de ingresso; confira a área exata reconhecida pelo jogo.",
         "Zacian Espada Coroada e Zamazenta Escudo Coroado aparecem em Reides de cinco estrelas e entregam suas respectivas Energias Coroadas ao serem derrotados.",
         "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Duraludon Gigamax e as duas formas Coroadas podem vir com Fundo de Localização de Sendai; Reides e Batalhas Max remotas não concedem esse fundo.",
         "Sliggoo de Hisui estreia na natureza. Goodra de Hisui pode ser obtido ao evoluir Sliggoo de Hisui com 100 Doces Goomy.",
@@ -10074,7 +10074,7 @@
       "id": "2026-11-go-wild-area-mexico-city",
       "slug": "2026-11-go-wild-area-mexico-city",
       "title": "Pokémon GO Wild Area 2026: Cidade do México",
-      "summary": "De 6 a 8/11, a Cidade do México recebe Duraludon Gigamax, Dialga e Palkia Dinamax, Pokémon de Hisui e uma Caça aos Selos por sete pontos da cidade. A participação presencial exige ingresso.",
+      "summary": "6 a 8/11 • Cidade do México: roteiro FLY para localizar a região e os sete lugares da Caça aos Selos, com Duraludon Gigamax, Dialga/Palkia Dinamax e Pokémon de Hisui. Ingresso válido é necessário para as atividades exclusivas.",
       "category": "regional_event",
       "tags": [
         "GO Wild Area",
@@ -10110,7 +10110,7 @@
         "reason": "O anúncio confirma a Cidade do México, mas não publica uma rota nem coordenadas exatas de Poképaradas."
       },
       "notes": [
-        "Vai jogar na Cidade do México entre 6 e 8/11? Escolha o dia do seu ingresso: é ele que libera as atrações presenciais das 10h às 18h (13h às 21h de Brasília).",
+        "ROTEIRO FLY • CIDADE DO MÉXICO, 6–8/11: escolha o dia do seu ingresso válido; as atrações no jogo são liberadas das 10h às 18h locais (13h às 21h de Brasília) na região do evento. Estar na região indicada não substitui o ingresso.",
         "Para quem quer os sete selos, reserve um tempo a mais: a Caça aos Selos vai das 10h às 20h (13h às 23h de Brasília), apenas no dia principal do ingresso.",
         "Os locais oficiais dos selos são Monumento a la Revolución, Jardín Pushkin, Parque México, Estela de Luz, Parque América, Liverpool Polanco e Mexicráneo/Ángel de la Independencia. Dá para visitá-los em qualquer ordem.",
         "Abrimos um guia na aba Selos com o mapa e as coordenadas dos lugares. Elas ajudam na orientação, mas não são posições confirmadas das Poképaradas. Confira o símbolo de selo no jogo e não use GPX como se fosse oficial.",
@@ -10118,7 +10118,7 @@
         "Dialga e Palkia Dinamax e Duraludon Gigamax estreiam em Batalhas Max. Algumas capturas podem ter Fundo de Localização da Cidade do México; em batalhas remotas esse fundo não é concedido.",
         "Zacian Espada Coroada e Zamazenta Escudo Coroado voltam às reides. Sliggoo de Hisui aparece na natureza, e você pode evoluí-lo para Goodra de Hisui com 100 Doces Goomy.",
         "Latias e Latios poderosos podem aparecer por Incenso comum no dia do ingresso. Brilhantes são possibilidades, nunca garantias.",
-        "A Pokémon confirmou os sete locais e esclareceu o horário do rally. Confira o guia dentro do Spidey antes de sair."
+        "Confira os sete locais, a ordem flexível do circuito e os horários no guia de Selos do Spidey antes de começar. Os pontos de referência não são coordenadas exatas das Poképaradas."
       ],
       "notifications": {
         "enabled": true,
@@ -10459,7 +10459,7 @@
       ],
       "notes": [
         "10 e 11/10, das 10h às 22h em Taipei. Brasília: 09/10 às 23h até 10/10 às 11h; e 10/10 às 23h até 11/10 às 11h.",
-        "Local presencial: Xiangti Avenue Plaza e arredores. Área de jogo: partes de Xinyi, excluindo regiões montanhosas.",
+        "GUIA FLY • TAIPEI: região de jogo em partes de Xinyi, incluindo Xiangti Avenue Plaza e arredores; áreas montanhosas estão excluídas. A referência urbana não representa uma Poképarada participante.",
         "O rally continua por um mês a partir do início local; o Pikachu regional permanece na natureza por um mês após o evento.",
         "Ilustração original do anúncio oficial Pokémon Asia, sem alterações."
       ],
@@ -10617,7 +10617,7 @@
         "As coordenadas exibidas são referências de aeroportos divulgadas por fontes da comunidade; não representam Ginásios especiais nem Poképaradas exatas confirmadas.",
         "Nos Ginásios especiais do aeroporto participante: limite de 1 Reide por Ginásio por dia, por treinador.",
         "Pokémon capturados nas Reides ANA especiais recebem fundo temático de localização, conforme anúncio oficial.",
-        "Pesquisa Temporária recebida ao visitar um aeroporto participante, no máximo uma vez nesta fase, e expira três dias após o recebimento.",
+        "PESQUISA TEMPORÁRIA REGIONAL: fica associada à área dos aeroportos participantes, no máximo uma vez nesta fase, com expiração três dias após o recebimento; confirme no jogo a área e o requisito.",
         "Os horários das Reides seguem a programação regular depois do início da fase; não há uma reide ativa permanente.",
         "A participação remota não confirma a obtenção do fundo; confira as regras oficiais antes de usar passe remoto."
       ],
@@ -10898,7 +10898,7 @@
         "As coordenadas exibidas são referências de aeroportos divulgadas por fontes da comunidade; não representam Ginásios especiais nem Poképaradas exatas confirmadas.",
         "Nos Ginásios especiais do aeroporto participante: limite de 1 Reide por Ginásio por dia, por treinador.",
         "Pokémon capturados nas Reides ANA especiais recebem fundo temático de localização, conforme anúncio oficial.",
-        "Pesquisa Temporária recebida ao visitar um aeroporto participante, no máximo uma vez nesta fase, e expira três dias após o recebimento.",
+        "PESQUISA TEMPORÁRIA REGIONAL: fica associada à área dos aeroportos participantes, no máximo uma vez nesta fase, com expiração três dias após o recebimento; confirme no jogo a área e o requisito.",
         "Os horários das Reides seguem a programação regular depois do início da fase; não há uma reide ativa permanente.",
         "A participação remota não confirma a obtenção do fundo; confira as regras oficiais antes de usar passe remoto."
       ],
