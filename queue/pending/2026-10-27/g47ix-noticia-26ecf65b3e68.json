@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "info from twitch: Pokemon Night Out drops are available ONLY while they are streaming in the Pokemon GO category. \n\nUpcoming times for https://www.twitch.tv/trishahershberger include: today 4:30-5:30pm PT, WED 3-4pm PT, THURS 8-9am PT.\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2115176123328029149",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2115176123328029149",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-27T23:05:26.652328+00:00"
+}
