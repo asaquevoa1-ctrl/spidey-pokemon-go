@@ -75,7 +75,7 @@ test('Human-first stamped UI copies only reference locations, keeps exact-gpx re
  const html=fs.readFileSync('spidey-app/index.html','utf8');
  assert.doesNotThrow(()=>new vm.Script(ui,{filename:'stamps-v2.js'}));
  assert.ok(ui.includes("rally.coordinate_policy === 'venue_references_no_gpx'"));
- assert.ok(ui.includes("stop.reference_only_copyable !== true"));
+ assert.ok(ui.includes("stop?.reference_only_copyable !== true"));
  assert.ok(ui.includes('!isLandmarkGuide && exactStops.length'));
  assert.ok(ui.includes('Referência do local'));
  assert.ok(ui.includes('Copiar local de referência'));
