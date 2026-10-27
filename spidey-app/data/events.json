@@ -141,7 +141,7 @@
         "Início: 27/10 às 10h da Cidade do México, equivalente a 13h de Brasília. Término: 05/11 às 20h locais, equivalente a 23h de Brasília.",
         "Pesquisa Temporária nacional oferece Cubone com coroa e Fundo Especial, adesivos de equipes, Poké Bolas, Incenso, 2.026 Poeira Estelar e 2.026 PE, conforme anúncio oficial.",
         "Nos Desafios de Equipe e encontros de Incenso podem aparecer Cubone com coroa de cempasúchil, com possibilidade, e não garantia, de Brilhante/Fundo Especial.",
-        "Há um EVENTO ADICIONAL presencial no Paseo de la Reforma, Cidade do México, a partir de 31/10 às 14h locais; consulte a entrada específica de Duskull, Caça aos Selos e Gengar Gigamax.",
+        "Há um EVENTO ADICIONAL presencial no Paseo de la Reforma, Cidade do México, a partir de 31/10 às 10h locais; consulte a entrada específica de Duskull, Caça aos Selos e Gengar Gigamax.",
         "Não apresentar este evento como FLY mundial: benefícios anunciados são restritos ao México. Sem GPX ou Ginásios inventados."
       ],
       "news": {
@@ -155,13 +155,13 @@
       },
       "status": "published",
       "verified_at": "2026-10-22",
-      "updated_at": "2026-10-22T20:52:00-03:00"
+      "updated_at": "2026-10-27T17:29:00-03:00"
     },
     {
       "id": "2026-10-31-dia-de-muertos-paseo-reforma",
       "slug": "2026-10-31-dia-de-muertos-paseo-reforma",
       "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
-      "summary": "De 31/10 a 05/11, área presencial no Paseo de la Reforma com Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Batalhas Max de Gengar Gigamax 6★.",
+      "summary": "Somente de 31/10 às 10h a 05/11 às 20h (Cidade do México), no Paseo de la Reforma: Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Gengar Gigamax 6★. Referência de orientação: Ángel de la Independencia, NÃO Ginásio.",
       "category": "local_event",
       "content_type": "event",
       "tags": [
@@ -181,10 +181,10 @@
       },
       "schedule": {
         "local_timezone": "America/Mexico_City",
-        "start_local": "2026-10-31T14:00:00-06:00",
+        "start_local": "2026-10-31T10:00:00-06:00",
         "end_local": "2026-11-05T20:00:00-06:00",
         "brazil_timezone": "America/Sao_Paulo",
-        "start_brazil": "2026-10-31T17:00:00-03:00",
+        "start_brazil": "2026-10-31T13:00:00-03:00",
         "end_brazil": "2026-11-05T23:00:00-03:00"
       },
       "calendar": {
@@ -194,11 +194,26 @@
         "requires_art": false,
         "fallback_visual": "date"
       },
-      "location_label": "Avenida Paseo de la Reforma, Cidade do México — área presencial, não coordenada de Ginásio",
-      "locations": [],
+      "location_label": "Paseo de la Reforma, Cidade do México • referência do Ángel de la Independencia, não ponto do jogo",
+      "locations": [
+        {
+          "name": "Ángel de la Independencia, Paseo de la Reforma",
+          "label": "Ponto de referência: Ángel de la Independencia • Paseo de la Reforma (não é Ginásio)",
+          "latitude": 19.4269903,
+          "longitude": -99.1676463,
+          "coordinate_text": "19.4269903,-99.1676463",
+          "coordinate_type": "landmark_reference",
+          "coordinate_confidence": "geographic_reference_verified",
+          "exact_raid_gym_verified": false,
+          "exact_pokestop_verified": false,
+          "exact_power_spot_verified": false,
+          "source_url": "https://www.123coordenadas.com/coordinates/512901-angel-de-la-independencia",
+          "source_note": "Monumento real situado na Avenida Paseo de la Reforma. Apenas ponto de orientação geográfica; não é confirmação do perímetro ativo, de Ginásio, Poképarada, Power Spot, Caça aos Selos ou Gengar Gigamax."
+        }
+      ],
       "gpx": {
         "enabled": false,
-        "reason": "Poképaradas, Ginásios e Pontos de Energia participantes não tiveram coordenadas exatas divulgadas no comunicado. Não criar GPX fictício."
+        "reason": "Marco de orientação geográfica do Paseo de la Reforma não equivale a Power Spot, Ginásio, Poképarada participante ou limite de área. Sem GPX."
       },
       "bonuses": [
         "Pesquisa Temporária exclusiva na área do evento: Cubone, Sunflora, Duskull com coroa/Fundo de Localização, Drifloon, Litwick, Flabébé, Phantump, Fuecoco e Fidough.",
@@ -224,16 +239,18 @@
       ],
       "notes": [
         "PRESENCIAL: a jogabilidade especial é somente na área do Paseo de la Reforma, Cidade do México; não é acessível mundialmente.",
-        "31/10 às 14h CDMX = 31/10 às 17h Brasília. 05/11 às 20h CDMX = 05/11 às 23h Brasília.",
+        "31/10 às 10h CDMX = 31/10 às 13h Brasília. 05/11 às 20h CDMX = 05/11 às 23h Brasília.",
         "A Caça aos Selos GO exige girar fotodiscos de locais selecionados na região; o anúncio NÃO fornece lista de coordenadas verificadas para GPX.",
         "Gengar Gigamax aparece em Batalhas Max 6★ dentro da zona. Não prometer combate remoto nem coordenadas exatas de Pontos de Energia.",
         "A exposição especial de arte Mexicráneos inspirados no Pokémon GO acontece no Paseo de la Reforma de 17/10 a 16/11/2026; essa exposição tem datas distintas da jogabilidade de 31/10 a 05/11.",
         "Duskull com coroa e Fundo de Localização aparece em pesquisas e no rally de selos; Brilhante é uma possibilidade, nunca garantia.",
-        "O evento mexicano nacional, de 27/10 a 05/11, é um cadastro separado. Não confundir com Halloween global ou GO Wild Area de 06–08/11."
+        "O evento mexicano nacional, de 27/10 a 05/11, é um cadastro separado. Não confundir com Halloween global ou GO Wild Area de 06–08/11.",
+        "ONDE JOGAR: Avenida Paseo de la Reforma, Cidade do México. Ponto de ORIENTAÇÃO no trajeto: Ángel de la Independencia, 19.4269903,-99.1676463. Isso NÃO significa que o monumento é um Ginásio, Power Spot, Poképarada selecionada ou o centro/limite da zona do evento.",
+        "O comunicado oficial informa 31/10 às 10h na Cidade do México; publicações antigas mencionando 14h locais/17h Brasília foram substituídas após conferência do anúncio oficial vigente em 27/10."
       ],
       "news": {
         "title": "Día de Muertos: selos, Duskull e Gengar Gigamax na Cidade do México",
-        "summary": "Somente no Paseo de la Reforma a partir de 31/10: pesquisa, Caça aos Selos e Batalhas Max 6★. Confira horário local e de Brasília.",
+        "summary": "Somente no Paseo de la Reforma, de 31/10 às 10h locais (13h de Brasília) até 05/11: Duskull com coroa, Caça aos Selos GO e Gengar Gigamax 6★. Coordenada mostrada é referência, não Ginásio.",
         "published_on": "2026-10-22"
       },
       "notifications": {
@@ -241,8 +258,8 @@
         "reason": "Não disparar aviso automático de evento restrito a uma região sem revisão editorial."
       },
       "status": "published",
-      "verified_at": "2026-10-22",
-      "updated_at": "2026-10-22T20:52:00-03:00"
+      "verified_at": "2026-10-27",
+      "updated_at": "2026-10-27T17:29:00-03:00"
     },
     {
       "id": "2026-10-24-spidey-full-day-guide",
