@@ -690,7 +690,7 @@
       {
         "id": "2026-10-31-dia-de-muertos-paseo-reforma",
         "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
-        "summary": "Somente de 31/10 às 10h a 05/11 às 20h (Cidade do México), no Paseo de la Reforma: Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Gengar Gigamax 6★. Referência de orientação: Ángel de la Independencia, NÃO Ginásio.",
+        "summary": "De 31/10 a 05/11, o Paseo de la Reforma vira uma aventura de Día de Muertos: procure selos em Poképaradas e Ginásios, monte sua coleção no jogo e tente um Duskull com coroa de flores e Fundo de Localização. Gengar Gigamax 6★ também participa!",
         "category": "local_event",
         "tags": [
           "México",
@@ -752,6 +752,17 @@
     ]
   },
   "stamps": [
+    {
+      "id": "2026-dia-de-muertos-reforma-stamp-guide",
+      "title": "Día de Muertos • Caça aos Selos no Paseo de la Reforma",
+      "summary": "De 31/10 a 05/11, percorra a Avenida Paseo de la Reforma e procure os selos no próprio mapa do Pokémon GO. Duskull com coroa de cempasúchil e Fundo de Localização é a grande recompensa.",
+      "stamp_count": 0,
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Día de Muertos",
+        "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+        "confidence": "official"
+      }
+    },
     {
       "id": "2026-go-wild-area-mexico-city-stamp-rally",
       "title": "Área Selvagem GO 2026 · 7 selos da Cidade do México",
@@ -816,7 +827,7 @@
     "events_without_weekly_art": 7,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-27T18:26:12.076921-03:00",
+    "generated_at": "2026-10-27T20:16:39.980118-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
