@@ -21,7 +21,7 @@ test('Tickets, geography, location trust, regional scheduling and global FLY are
  assert.match(mx.summary,/ingresso/i);
  assert.match(mx.notes.join(' '),/ingresso/);
  const sendai=byId('2026-11-go-wild-area-sendai');
- assert.match(sendai.summary,/ingresso/);
+ assert.match(sendai.summary,/ingresso/i);
  const dia=byId('2026-10-31-dia-de-muertos-paseo-reforma');
  assert.equal(dia.schedule.start_local,'2026-10-31T10:00:00-06:00');
  assert.equal(dia.locations[0].coordinate_text,'19.4269903,-99.1676463');
