@@ -690,7 +690,7 @@
       {
         "id": "2026-10-31-dia-de-muertos-paseo-reforma",
         "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
-        "summary": "De 31/10 a 05/11, área presencial no Paseo de la Reforma com Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Batalhas Max de Gengar Gigamax 6★.",
+        "summary": "Somente de 31/10 às 10h a 05/11 às 20h (Cidade do México), no Paseo de la Reforma: Caça aos Selos GO, Duskull com coroa e Fundo de Localização, pesquisas e Gengar Gigamax 6★. Referência de orientação: Ángel de la Independencia, NÃO Ginásio.",
         "category": "local_event",
         "tags": [
           "México",
@@ -702,7 +702,7 @@
           "Gengar Gigamax",
           "Caça aos Selos GO"
         ],
-        "start_brazil": "2026-10-31T17:00:00-03:00",
+        "start_brazil": "2026-10-31T13:00:00-03:00",
         "end_brazil": "2026-11-05T23:00:00-03:00",
         "source": {
           "name": "Pokémon GO • comunicado oficial México",
@@ -805,7 +805,7 @@
     "events_without_weekly_art": 7,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-27T13:47:08.512724-03:00",
+    "generated_at": "2026-10-27T17:36:01.210868-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
