@@ -327,7 +327,7 @@ function renderStamps() {
       head.className = 'stamp-card-top';
       const mark = document.createElement('span');mark.className = 'stamp-icon';mark.textContent = '◎';
       const wrap = document.createElement('div');
-      const label = document.createElement('span');label.className = 'eyebrow';label.textContent = 'GUIA LOCAL · SELos A DESCOBRIR'.replace('SELos','SELOS');
+      const label = document.createElement('span');label.className = 'eyebrow';label.textContent = 'GUIA LOCAL · SELOS A DESCOBRIR';
       const title = document.createElement('h3');title.textContent = rally.title;
       wrap.append(label,title);head.append(mark,wrap);
       const description = document.createElement('p');description.textContent = rally.public_summary || rally.summary || '';
