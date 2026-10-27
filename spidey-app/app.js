@@ -334,7 +334,7 @@ function renderStamps() {
       </div>
       <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="stamp-progress"><span style="width:${stops.length ? Math.min(100, (progress.size / stops.length) * 100) : 0}%"></span></div>
-      <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> ${rally.collection_type === 'pokelids' ? 'registradas' : 'carimbados'} · <strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : 'coordenadas exatas'}</div>
+      <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> ${rally.collection_type === 'pokelids' ? 'registradas' : 'carimbados'} · <strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : 'coordenadas exatas'}</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
     card.addEventListener('click', () => openStampRally(rally));
     card.addEventListener('keydown', (e) => { if (e.key === 'Enter') openStampRally(rally); });
@@ -346,6 +346,7 @@ function renderStamps() {
 function stampCoordinateLabel(stop) {
   if (stop.coordinate_type === 'exact_pokestop' && exactPokestop(stop)) return 'PokéStop exata';
   if (stop.image_kind === 'lid_artwork' && validCoordinate(stop)) return 'Local oficial da PokéLid';
+  if (stop.coordinate_type === 'venue_reference' && stop.reference_only_copyable === true && validCoordinate(stop)) return 'Referência do lugar • não é Poképarada';
   if (stop.coordinate_type === 'venue_reference') return 'Local do evento • coordenada ainda não confirmada';
   return 'Coordenada a confirmar';
 }
