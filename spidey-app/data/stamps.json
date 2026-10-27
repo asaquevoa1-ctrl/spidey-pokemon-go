@@ -2,6 +2,233 @@
   "schema_version": "spidey-stamp-rally-v1",
   "rallies": [
     {
+      "id": "2026-go-wild-area-mexico-city-stamp-rally",
+      "slug": "wild-area-go-mexico-city-2026-seven-stamps",
+      "status": "published",
+      "title": "Área Selvagem GO 2026 · 7 selos da Cidade do México",
+      "summary": "O circuito oficial passa por sete lugares da Cidade do México. Confira onde ficam os pontos, planeje a visita e marque seus selos sem confundir referências de locais com Poképaradas.",
+      "public_summary": "Sete selos espalhados pela Cidade do México! Descubra os locais, confira o mapa e acompanhe sua coleção. Os pontos servem para se orientar: a Poképarada exata aparece no jogo.",
+      "stamp_count": 7,
+      "ticket_required": true,
+      "available_from": "2026-11-06",
+      "available_until": "2026-11-08",
+      "timezone": "America/Mexico_City",
+      "stamp_window_local": "10:00–20:00",
+      "stamp_window_brasilia": "13:00–23:00",
+      "main_ticket_day_only": true,
+      "extra_day_second_rally": false,
+      "visit_order_required": false,
+      "coordinate_policy": "venue_references_no_gpx",
+      "source": {
+        "name": "Pokémon GO • Área Selvagem — gameplay oficial",
+        "url": "https://pokemongo.com/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • sete locais oficiais e esclarecimento",
+          "url": "https://pokemongo.com/es-MX/news/go-wild-area-stamp-rally-details-2026",
+          "confidence": "official",
+          "purpose": "seven_venues_and_ticket_day"
+        },
+        {
+          "name": "iMyFone AnyTo • coordenadas de referência comunitárias",
+          "url": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "confidence": "third_party",
+          "purpose": "landmark_centers_not_pokestops"
+        },
+        {
+          "name": "OpenStreetMap/Mapcarta • Liverpool Polanco",
+          "url": "https://mapcarta.com/es/25263598",
+          "confidence": "geographic_reference",
+          "purpose": "second_check"
+        },
+        {
+          "name": "Wikivoyage • Parque México",
+          "url": "https://es.wikivoyage.org/wiki/Ciudad_de_M%C3%A9xico/Corredor_Roma-Condesa",
+          "confidence": "geographic_reference",
+          "purpose": "second_check"
+        },
+        {
+          "name": "Pokémon GO • GO Wild Area 2026",
+          "url": "https://pokemongo.com/pt-BR/gowildarea/mexico-city",
+          "confidence": "official",
+          "purpose": "ticket_and_gameplay"
+        }
+      ],
+      "calendar": {
+        "enabled": false,
+        "reason": "Evento já cadastrado no Calendário de 6 a 8/11; mostrar a Caça aos Selos na aba Selos para evitar duplicação."
+      },
+      "rewards": [
+        "Colete os selos nas sete Poképaradas participantes e acompanhe os registros no álbum do jogo. O anúncio não informa uma recompensa final específica; não prometemos Pokémon ou Fundo de Localização garantidos."
+      ],
+      "stops": [
+        {
+          "id": "wild-area-mexico-2026-monumento-revolucion",
+          "stamp_number": 1,
+          "route_order": 1,
+          "city": "Cidade do México",
+          "country": "México",
+          "venue": "Monumento a la Revolución",
+          "venue_detail": "Plaza de la República",
+          "available_from": "2026-11-06",
+          "available_until": "2026-11-08",
+          "latitude": 19.436179,
+          "longitude": -99.154629,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "third_party_landmark_reference",
+          "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "coordinate_source_note": "Referência do marco turístico ou estabelecimento em guia comunitário, NÃO localização validada da Poképarada temática. O selo só está disponível no dia principal do ingresso.",
+          "exact_pokestop_verified": false,
+          "reference_only_copyable": true,
+          "gpx_enabled": false,
+          "map_url": "https://www.google.com/maps/search/?api=1&query=19.436179%2C-99.154629"
+        },
+        {
+          "id": "wild-area-mexico-2026-jardin-pushkin",
+          "stamp_number": 2,
+          "route_order": 2,
+          "city": "Cidade do México",
+          "country": "México",
+          "venue": "Jardín Pushkin",
+          "venue_detail": "Jardim da região da Roma Norte",
+          "available_from": "2026-11-06",
+          "available_until": "2026-11-08",
+          "latitude": 19.420331,
+          "longitude": -99.154631,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "third_party_landmark_reference",
+          "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "coordinate_source_note": "Referência do marco turístico ou estabelecimento em guia comunitário, NÃO localização validada da Poképarada temática. O selo só está disponível no dia principal do ingresso.",
+          "exact_pokestop_verified": false,
+          "reference_only_copyable": true,
+          "gpx_enabled": false,
+          "map_url": "https://www.google.com/maps/search/?api=1&query=19.420331%2C-99.154631"
+        },
+        {
+          "id": "wild-area-mexico-2026-parque-mexico",
+          "stamp_number": 3,
+          "route_order": 3,
+          "city": "Cidade do México",
+          "country": "México",
+          "venue": "Parque México",
+          "venue_detail": "Bairro Condesa",
+          "available_from": "2026-11-06",
+          "available_until": "2026-11-08",
+          "latitude": 19.412222,
+          "longitude": -99.169167,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "third_party_landmark_reference",
+          "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "coordinate_source_note": "Referência do marco turístico ou estabelecimento em guia comunitário, NÃO localização validada da Poképarada temática. O selo só está disponível no dia principal do ingresso.",
+          "exact_pokestop_verified": false,
+          "reference_only_copyable": true,
+          "gpx_enabled": false,
+          "map_url": "https://www.google.com/maps/search/?api=1&query=19.412222%2C-99.169167"
+        },
+        {
+          "id": "wild-area-mexico-2026-estela-luz",
+          "stamp_number": 4,
+          "route_order": 4,
+          "city": "Cidade do México",
+          "country": "México",
+          "venue": "Centro de Cultura Digital / Estela de Luz",
+          "venue_detail": "Estela de Luz, perto de Chapultepec",
+          "available_from": "2026-11-06",
+          "available_until": "2026-11-08",
+          "latitude": 19.423048,
+          "longitude": -99.175857,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "third_party_landmark_reference",
+          "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "coordinate_source_note": "Referência do marco turístico ou estabelecimento em guia comunitário, NÃO localização validada da Poképarada temática. O selo só está disponível no dia principal do ingresso.",
+          "exact_pokestop_verified": false,
+          "reference_only_copyable": true,
+          "gpx_enabled": false,
+          "map_url": "https://www.google.com/maps/search/?api=1&query=19.423048%2C-99.175857"
+        },
+        {
+          "id": "wild-area-mexico-2026-parque-america",
+          "stamp_number": 5,
+          "route_order": 5,
+          "city": "Cidade do México",
+          "country": "México",
+          "venue": "Parque América",
+          "venue_detail": "Avenida Horacio, Polanco",
+          "available_from": "2026-11-06",
+          "available_until": "2026-11-08",
+          "latitude": 19.43397,
+          "longitude": -99.1965,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "third_party_landmark_reference",
+          "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "coordinate_source_note": "Referência do marco turístico ou estabelecimento em guia comunitário, NÃO localização validada da Poképarada temática. O selo só está disponível no dia principal do ingresso.",
+          "exact_pokestop_verified": false,
+          "reference_only_copyable": true,
+          "gpx_enabled": false,
+          "map_url": "https://www.google.com/maps/search/?api=1&query=19.43397%2C-99.1965"
+        },
+        {
+          "id": "wild-area-mexico-2026-liverpool-polanco",
+          "stamp_number": 6,
+          "route_order": 6,
+          "city": "Cidade do México",
+          "country": "México",
+          "venue": "Liverpool Polanco",
+          "venue_detail": "Loja Liverpool na região de Polanco",
+          "available_from": "2026-11-06",
+          "available_until": "2026-11-08",
+          "latitude": 19.43369,
+          "longitude": -99.1827,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "third_party_landmark_reference",
+          "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "coordinate_source_note": "Referência do marco turístico ou estabelecimento em guia comunitário, NÃO localização validada da Poképarada temática. O selo só está disponível no dia principal do ingresso.",
+          "exact_pokestop_verified": false,
+          "reference_only_copyable": true,
+          "gpx_enabled": false,
+          "map_url": "https://www.google.com/maps/search/?api=1&query=19.43369%2C-99.1827"
+        },
+        {
+          "id": "wild-area-mexico-2026-mexicraneo-angel",
+          "stamp_number": 7,
+          "route_order": 7,
+          "city": "Cidade do México",
+          "country": "México",
+          "venue": "Mexicráneo + Ángel de la Independencia",
+          "venue_detail": "Referência no monumento Ángel de la Independencia; o Mexicráneo participante pode estar em outro ponto próximo",
+          "available_from": "2026-11-06",
+          "available_until": "2026-11-08",
+          "latitude": 19.427,
+          "longitude": -99.16771,
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "third_party_landmark_reference",
+          "coordinate_source": "https://anyto.imyfone.com/pokemon-go/pokemon-go-wild-area-coordinates/",
+          "coordinate_source_note": "Referência do marco turístico ou estabelecimento em guia comunitário, NÃO localização validada da Poképarada temática. O selo só está disponível no dia principal do ingresso.",
+          "exact_pokestop_verified": false,
+          "reference_only_copyable": true,
+          "gpx_enabled": false,
+          "map_url": "https://www.google.com/maps/search/?api=1&query=19.427%2C-99.16771"
+        }
+      ],
+      "public_notes": [
+        "Quando jogar? Em 6, 7 ou 8 de novembro, somente no dia principal do seu ingresso, das 10h às 20h na Cidade do México (13h às 23h em Brasília).",
+        "Pode escolher por onde começar! Os sete pontos oficiais podem ser visitados em qualquer ordem. No local, procure a Poképarada com o símbolo de selo no mapa do Pokémon GO.",
+        "Toque em um local para ver uma coordenada de referência e abrir o mapa. Esses números ajudam a chegar à região, mas NÃO indicam a posição exata da Poképarada. Por isso, não há GPX de selos.",
+        "O Dia Extra não libera outra Caça aos Selos. Ele pode dar novamente as Pesquisas Temporárias de Aço e Dragão, que são atividades diferentes.",
+        "Se tiver pouco tempo, fique de olho nas Poképaradas decoradas: elas ajudam a avançar nas duas pesquisas de Aço e Dragão e podem guiar o percurso. Conclua e resgate suas recompensas antes das 20h.",
+        "O evento principal tem jogabilidade das 10h às 18h; a Caça aos Selos continua até as 20h no dia do ingresso, conforme correção oficial."
+      ],
+      "notes": [
+        "Locais e horário divulgados oficialmente em Pokémon GO; latitude/longitude obtidas de referências geográficas comunitárias, com conferência adicional para alguns pontos.",
+        "Não afirmar que os sete números são coordenadas exatas das Poképaradas ou dos selos; nem criar GPX ou rota otimizada oficial.",
+        "Os números 1–7 representam a ordem de apresentação, não uma sequência obrigatória de coleta."
+      ],
+      "updated_at": "2026-10-27",
+      "verified_at": "2026-10-27"
+    },
+    {
       "id": "pokexciting-cross-region-2026",
       "slug": "pokexciting-cross-region-go-stamp-rally",
       "status": "published",
@@ -16607,5 +16834,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-04T21:00:35.811601+00:00"
+  "updated_at": "2026-10-27"
 }
