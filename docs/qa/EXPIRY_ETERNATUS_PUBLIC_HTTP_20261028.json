@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-10-28T21:31:23.756282+00:00",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "files": [
+    {
+      "path": "index.html",
+      "http": 200,
+      "bytes": 24380,
+      "sha256": "ca1d6deec6fa4339e111090620dfc0348e9594f4671cf38df3eae19b09303982",
+      "matches_source_bytes": false,
+      "matches_pages_package_bytes": true,
+      "expected_pages_sha256": "ca1d6deec6fa4339e111090620dfc0348e9594f4671cf38df3eae19b09303982"
+    },
+    {
+      "path": "trust-world-v1.js",
+      "http": 200,
+      "bytes": 13410,
+      "sha256": "c47663d5234ad54f945babedf10d9abf456c1ee87584a28229d5ce182eae72fe",
+      "matches_source_bytes": true,
+      "matches_pages_package_bytes": true,
+      "expected_pages_sha256": "c47663d5234ad54f945babedf10d9abf456c1ee87584a28229d5ce182eae72fe"
+    },
+    {
+      "path": "sw.js",
+      "http": 200,
+      "bytes": 15310,
+      "sha256": "3f9f7215c3afdda73777ac5b5c1966ea9d497b763609a73ab264b6c7d3817c0a",
+      "matches_source_bytes": false,
+      "matches_pages_package_bytes": true,
+      "expected_pages_sha256": "3f9f7215c3afdda73777ac5b5c1966ea9d497b763609a73ab264b6c7d3817c0a"
+    },
+    {
+      "path": "data/events.json",
+      "http": 200,
+      "bytes": 420574,
+      "sha256": "3efdfb07b3e1890925110d05f435ab61f5136b11fd3e15dcd8905f33d447b616",
+      "matches_source_bytes": true,
+      "matches_pages_package_bytes": true,
+      "expected_pages_sha256": "3efdfb07b3e1890925110d05f435ab61f5136b11fd3e15dcd8905f33d447b616"
+    },
+    {
+      "path": "data/local-events.json",
+      "http": 200,
+      "bytes": 20668,
+      "sha256": "12ebcd1152e9992faf8a4f4cb6be157bec55d9c8c23cb6232df2804747799212",
+      "matches_source_bytes": true,
+      "matches_pages_package_bytes": true,
+      "expected_pages_sha256": "12ebcd1152e9992faf8a4f4cb6be157bec55d9c8c23cb6232df2804747799212"
+    },
+    {
+      "path": "premium-approved-master.js",
+      "http": 200,
+      "bytes": 39525,
+      "sha256": "8f83a05d98820fb092b9ba77294a80fdfbd834a830a4ad35aa6f41f39c9e1d4b",
+      "matches_source_bytes": true,
+      "matches_pages_package_bytes": true,
+      "expected_pages_sha256": "8f83a05d98820fb092b9ba77294a80fdfbd834a830a4ad35aa6f41f39c9e1d4b"
+    }
+  ],
+  "new_script_version": true,
+  "official_events": [
+    {
+      "id": "2026-11-16-dynamax-trails",
+      "title": "Trilhas Dinamax — Eternatus e Passe GO",
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-16T10:00:00-03:00",
+        "end_local": "2026-11-23T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-16T10:00:00-03:00",
+        "end_brazil": "2026-11-23T20:00:00-03:00"
+      },
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-11-21-eternamax-eternatus-max-battles",
+      "title": "Batalhas Max: Eternamax Eternatus",
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-21T11:00:00-03:00",
+        "end_local": "2026-11-21T14:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-21T11:00:00-03:00",
+        "end_brazil": "2026-11-21T14:00:00-03:00"
+      },
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-11-19-spotlight-galar-starters",
+      "title": "Hora do Holofote: Grookey, Scorbunny e Sobble",
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-19T18:00:00-03:00",
+        "end_local": "2026-11-19T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-19T18:00:00-03:00",
+        "end_brazil": "2026-11-19T19:00:00-03:00"
+      },
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "confidence": "official"
+      }
+    }
+  ],
+  "old_teaser_archived": true,
+  "headline_fully_edited": true,
+  "passed": true,
+  "new_service_worker_cache": true
+}

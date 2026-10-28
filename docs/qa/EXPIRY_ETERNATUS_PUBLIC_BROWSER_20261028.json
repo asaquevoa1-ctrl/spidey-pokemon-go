@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-28T21:34:03.272398+00:00",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "browser": "cloud Chrome",
+  "viewport": {
+    "width": 1348,
+    "height": 926
+  },
+  "home": {
+    "los_angeles_cards": 0,
+    "london_cards": 1
+  },
+  "fly": {
+    "los_angeles_cards": 0,
+    "london_cards": 1,
+    "eternamax_and_spotlight_selectable": true
+  },
+  "news": {
+    "official_story_count": 1,
+    "old_teaser_buttons": 0,
+    "summary_has_three_windows_and_100_candy_condition": true
+  },
+  "details_opened_and_read": [
+    "2026-11-21-eternamax-eternatus-max-battles",
+    "2026-11-16-dynamax-trails",
+    "2026-11-19-spotlight-galar-starters"
+  ],
+  "screenshot": "docs/qa/EXPIRY_ETERNATUS_PUBLIC_APP_20261028.jpg",
+  "physical_android_tested": false,
+  "push_sent": 0,
+  "external_messages_sent": 0
+}

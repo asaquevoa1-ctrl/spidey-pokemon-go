@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "status": "LOCAL_TESTS_PASSED_CI_PENDING",
+  "status": "PUBLISHED_HTTP_AND_BROWSER_VERIFIED",
   "base_main_sha": "952307bd26fb0f34e540dcb6f829fdc1c8689cbd",
   "source": {
     "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
@@ -31,8 +31,380 @@
     "node": 297,
     "python": 31
   },
-  "browser_ci": "Spidey - QA encerrados e Eternatus",
+  "browser_ci": {
+    "run_id": 40771357624,
+    "checks": 37,
+    "status": "success",
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "result": "docs/qa/EXPIRY_ETERNATUS_BROWSER_CI_20261028.json"
+  },
   "physical_android_tested": false,
   "push_sent": 0,
-  "external_messages_sent": 0
+  "external_messages_sent": 0,
+  "verified_at": "2026-10-28T21:34:21.597648+00:00",
+  "merge_sha": "be293c0f2d941862e8e48326b0734cf7701ae905",
+  "candidate_sha": "f9d38058ac6fbaf8e88bcd2dc8d24f741115f00a",
+  "pr": 161,
+  "pr_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/161",
+  "core": [
+    {
+      "id": 40772239754,
+      "name": "Spidey - testar aplicativo",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239754"
+    },
+    {
+      "id": 40772239410,
+      "name": "Spidey Weekly - resumo semanal",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239410"
+    },
+    {
+      "id": 40772239418,
+      "name": "Spidey Notifications - fila de avisos",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239418"
+    },
+    {
+      "id": 40772239615,
+      "name": "Spidey - proteção das decisões",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239615"
+    },
+    {
+      "id": 40772239659,
+      "name": "Spidey - hospedagem gratuita",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239659"
+    },
+    {
+      "id": 40772239556,
+      "name": "Spidey - monitorar aplicativo",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239556"
+    },
+    {
+      "id": 40772239467,
+      "name": "Spidey - identidade cósmica Samsung simulado",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239467"
+    },
+    {
+      "id": 40772239518,
+      "name": "Spidey - validar pipeline curado",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239518"
+    }
+  ],
+  "ci": [
+    {
+      "id": 40771357629,
+      "name": "Spidey - QA responsivo Sandile Hatch Day",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357629"
+    },
+    {
+      "id": 40771357524,
+      "name": "Spidey Pawniard PNG Art QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357524"
+    },
+    {
+      "id": 40771357230,
+      "name": "Spidey - QA responsivo Pokemon Night Out",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357230"
+    },
+    {
+      "id": 40771357735,
+      "name": "Spidey - QA artes Premium no calendário",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357735"
+    },
+    {
+      "id": 40771357204,
+      "name": "Spidey - QA responsivo National Trust Premium",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357204"
+    },
+    {
+      "id": 40771357471,
+      "name": "Spidey - navegação enxuta QA responsivo",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357471"
+    },
+    {
+      "id": 40771357544,
+      "name": "Spidey - alertas gratuitos isolados",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357544"
+    },
+    {
+      "id": 40771357698,
+      "name": "Spidey - QA responsivo Halloween GO Pass",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357698"
+    },
+    {
+      "id": 40771357617,
+      "name": "Spidey - QA responsivo Dialga Reides",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357617"
+    },
+    {
+      "id": 40771357374,
+      "name": "Spidey Sableye Max Monday Art QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357374"
+    },
+    {
+      "id": 40771357535,
+      "name": "Spidey - QA responsivo GBL Halloween",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357535"
+    },
+    {
+      "id": 40771357250,
+      "name": "Spidey - QA responsivo Segunda Max Sneasel",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357250"
+    },
+    {
+      "id": 40771357321,
+      "name": "Spidey - QA responsivo Mega Sableye Mega-Reides",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357321"
+    },
+    {
+      "id": 40771357347,
+      "name": "Spidey - QA responsivo Morelull Holofote",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357347"
+    },
+    {
+      "id": 40771357382,
+      "name": "Spidey - QA responsivo FC Seoul Premium",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357382"
+    },
+    {
+      "id": 40771357608,
+      "name": "Spidey - QA responsivo Landorus Sombroso",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357608"
+    },
+    {
+      "id": 40771357506,
+      "name": "Spidey - identidade cósmica Samsung simulado",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357506"
+    },
+    {
+      "id": 40771357209,
+      "name": "Spidey - QA Premium Giratina Gastly e Groudon",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357209"
+    },
+    {
+      "id": 40771357581,
+      "name": "Spidey - QA responsivo Lake Trio Max Battle",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357581"
+    },
+    {
+      "id": 40771357460,
+      "name": "Spidey - QA responsivo Hora de Reides Palkia",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357460"
+    },
+    {
+      "id": 40771357306,
+      "name": "Spidey - QA responsivo Minior Orionidas",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357306"
+    },
+    {
+      "id": 40771357519,
+      "name": "Spidey - QA responsivo City Safari Boston",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357519"
+    },
+    {
+      "id": 40771357352,
+      "name": "Spidey Day 24 PNG Art QA",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357352"
+    },
+    {
+      "id": 40771357509,
+      "name": "Spidey - QA correcoes do logo oficial",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357509"
+    },
+    {
+      "id": 40771357636,
+      "name": "Spidey - QA responsivo Shopping Asia-Pacifico",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357636"
+    },
+    {
+      "id": 40771357734,
+      "name": "Spidey - QA responsivo Mega Charizard X e Y Mega-Reides",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357734"
+    },
+    {
+      "id": 40771357624,
+      "name": "Spidey - QA encerrados e Eternatus",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357624"
+    },
+    {
+      "id": 40771357644,
+      "name": "Spidey - validar pipeline curado",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357644"
+    },
+    {
+      "id": 40771357319,
+      "name": "Spidey - proteção das decisões",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357319"
+    },
+    {
+      "id": 40771357599,
+      "name": "Spidey - hospedagem gratuita",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357599"
+    },
+    {
+      "id": 40771357639,
+      "name": "Spidey - testar aplicativo",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357639"
+    },
+    {
+      "id": 40771357525,
+      "name": "Spidey - QA responsivo Stufful Holofote",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357525"
+    },
+    {
+      "id": 40771357712,
+      "name": "Spidey - QA responsivo Palkia Reides 5 estrelas",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357712"
+    },
+    {
+      "id": 40771357589,
+      "name": "Spidey - QA responsivo Minior Leonidas",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357589"
+    },
+    {
+      "id": 40771357515,
+      "name": "Spidey - QA responsivo Mega Chandelure",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357515"
+    },
+    {
+      "id": 40771357461,
+      "name": "Spidey - QA responsivo Mega Dragonite Mega-Reides",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357461"
+    },
+    {
+      "id": 40771357504,
+      "name": "Spidey - QA responsivo Pesquisa adidas",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357504"
+    },
+    {
+      "id": 40771357237,
+      "name": "Spidey - PokéLids mobile imagens e coordenadas",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357237"
+    },
+    {
+      "id": 40771357073,
+      "name": "Spidey - National Trust 27 coordenadas QA",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40771357073"
+    }
+  ],
+  "editorial_monitoring": {
+    "title": "Atualizar calendário Spidey",
+    "enabled": true,
+    "cadence": "hourly, minute 35",
+    "timezone": "America/Sao_Paulo",
+    "duplicate_created": false,
+    "full_article_review_required": true
+  },
+  "pages": {
+    "run_id": 40772239659,
+    "status": "success",
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40772239659",
+    "source_sha": "be293c0f2d941862e8e48326b0734cf7701ae905"
+  },
+  "public_http": "docs/qa/EXPIRY_ETERNATUS_PUBLIC_HTTP_20261028.json",
+  "public_browser": "docs/qa/EXPIRY_ETERNATUS_PUBLIC_BROWSER_20261028.json",
+  "known_prior_ci_failures": {
+    "count": 6,
+    "reason": "Older responsive scripts expect historical weekly cards outside the current weekly package; same failures recorded before this change",
+    "fixed_by_this_release": false
+  }
 }
