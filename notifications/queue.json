@@ -4,42 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-mega-sableye-raids:start:60",
-      "event_id": "2026-10-mega-sableye-raids",
-      "event_title": "Mega Reides: Mega Sableye",
-      "category": "mega_raid_rotation",
-      "scheduled_for": "2026-10-28T05:00:00-03:00",
-      "event_start": "2026-10-28T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Mega Reides: Mega Sableye começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-mega-sableye-raids",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO • programação oficial de outubro de 2026",
-        "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "2026-10-raids-giratina-origin:start:60",
-      "event_id": "2026-10-raids-giratina-origin",
-      "event_title": "Reides 5★: Giratina (Forma Origem)",
-      "category": "raid_rotation",
-      "scheduled_for": "2026-10-28T05:00:00-03:00",
-      "event_start": "2026-10-28T06:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Reides 5★: Giratina (Forma Origem) começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-raids-giratina-origin",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-28-raid-hour-giratina-forma-origem:start:60",
       "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
       "event_title": "Raid Hour: Giratina Forma Origem",
@@ -294,7 +258,7 @@
     }
   ],
   "meta": {
-    "pending_count": 16,
+    "pending_count": 14,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
