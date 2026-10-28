@@ -777,7 +777,8 @@
         "Selos recebidos por presentes ajudam a coleção, mas não contam para o encontro com Pikachu.",
         "É necessário nível 5 no Pokémon GO. Confira os selos disponíveis no Scrapbook do jogo.",
         "As imagens são as artes originais das tampas. PokéLids novas podem entrar no catálogo antes de aparecerem no jogo.",
-        "Os mapas mostram o local oficial de cada tampa. A posição exata da PokéStop ainda precisa ser conferida antes de liberar a rota GPX."
+        "Os mapas mostram o local oficial de cada tampa. A posição exata da PokéStop ainda precisa ser conferida antes de liberar a rota GPX.",
+        "Nagano (Chubu): seis selos PokéLid disponíveis desde 01/10/2026. Os locais já estão no mapa do Spidey. Pikachu com Fundo de Localização a cada dois selos presenciais na província; Brilhante possível, nunca garantido."
       ],
       "stops": [
         {
@@ -16742,7 +16743,30 @@
           "go_availability": "check_scrapbook",
           "gpx_enabled": false
         }
-      ]
+      ],
+      "regional_spotlight": {
+        "prefecture": "Nagano",
+        "region": "Chubu",
+        "type": "pokelids_update",
+        "release_date": "2026-10-01",
+        "checked_on": "2026-10-28",
+        "available_stamps": 6,
+        "heading": "Nagano: 6 selos PokéLid liberados",
+        "body": "Os seis selos da província de Nagano estão disponíveis desde 1º de outubro de 2026. Escolha Nagano no filtro para conferir os locais. A cada dois selos obtidos presencialmente na província, há um encontro com Pikachu e Fundo de Localização de Nagano.",
+        "shiny_note": "O Pikachu pode ser Brilhante ✨, mas isso nunca é garantido. Selos recebidos por presentes não contam para o encontro.",
+        "coordinate_note": "As coordenadas são das seis tampas oficiais, não confirmação da localização exata das Poképaradas no jogo. GPX não liberado.",
+        "source": {
+          "name": "PokéRaku • adição de Nagano em 01/10/2026",
+          "url": "https://pokemongo-raku.com/post130804",
+          "confidence": "community_corrob"
+        },
+        "official_rules_source": {
+          "name": "Pokémon GO • Poké Lid Stamp Rally",
+          "url": "https://pokemongo.com/ja/news/pokelid_full",
+          "confidence": "official"
+        },
+        "screenshot_evidence": "capturas compartilhadas pelo responsável em 28/10 indicam Nagano 6/6 e Pikachu com Fundo de Localização; imagens privadas não são publicadas"
+      }
     },
     {
       "id": "nagasaki-city-stamp-rally",
