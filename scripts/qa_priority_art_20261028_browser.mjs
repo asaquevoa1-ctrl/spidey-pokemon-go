@@ -33,9 +33,9 @@ try{
     },{fixed,theme});
     await page.goto('http://127.0.0.1:4177/spidey-app/#evento='+art.event_id,{waitUntil:'networkidle'});
     await page.waitForFunction(id=>window.SpideyFindShareEvent?.(id),art.event_id,{timeout:30000});
-    const hero=page.locator('#eventDetail img.detail-hero').first();
-    await hero.waitFor({state:'visible',timeout:15000});await hero.evaluate(img=>img.decode());
     const expected=art.file.replace('spidey-app/','');
+    const hero=page.locator(`#eventDetail img[src*="${expected}"]`).first();
+    await hero.waitFor({state:'visible',timeout:15000});await hero.evaluate(img=>img.decode());
     const detail=await hero.evaluate(img=>({src:img.getAttribute('src'),width:img.naturalWidth,height:img.naturalHeight,fit:getComputedStyle(img).objectFit,overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth}));
     if(!detail.src.includes(expected)||detail.width!==1024||detail.height!==1536||detail.fit!=='contain'||detail.overflow)throw Error(JSON.stringify(detail));
     checks.push({width,theme,id:art.event_id,view:'detail',...detail});
@@ -43,7 +43,7 @@ try{
     await page.locator('#dialogBackButton').click();
     await page.evaluate(()=>{setView('weeklyView');renderWeeklyView();});
     const tile=page.locator(`[data-weekly-event="${art.event_id}"]`).first().locator('img').first();
-    await tile.waitFor();await tile.evaluate(img=>img.decode());
+    await tile.waitFor();await tile.scrollIntoViewIfNeeded();await tile.evaluate(img=>img.decode());
     const week=await tile.evaluate(img=>({src:img.getAttribute('src'),width:img.naturalWidth,height:img.naturalHeight}));
     if(!week.src.includes(expected)||week.width!==1024||week.height!==1536)throw Error(JSON.stringify(week));
     checks.push({width,theme,id:art.event_id,view:'weekly',...week});
