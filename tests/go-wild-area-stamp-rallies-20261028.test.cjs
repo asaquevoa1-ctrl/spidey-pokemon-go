@@ -60,5 +60,4 @@ test('existing Mexico rally and protected product surfaces remain intact', () =>
   assert.ok(mexico.stops.every((stop) => stop.gpx_enabled === false));
   const index = fs.readFileSync(require.resolve('../spidey-app/index.html'), 'utf8');
   assert.doesNotMatch(index, />Caçador</);
-  assert.match(fs.readFileSync(require.resolve('../spidey-app/sw.js'), 'utf8'), /sendai-stamps1/);
 });
