@@ -55,6 +55,15 @@ try{
      check(text.includes('Anúncio oficial'),'Detail is not credited as official');
      check(!await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth),'Horizontal overflow');
      await page.screenshot({path:`${out}/${width}-${theme}-${id}.png`,fullPage:false});
+     if(id!=='2026-11-19-spotlight-galar-starters'){
+       check(/Passe GO gratuito|trilha gratuita/.test(text),'Free encounter condition missing');
+       check(text.includes('8.900 Doces e 8.900 Doces GG')&&text.includes('nível 15 ao 50'),'Power-up level range or costs missing');
+       check(text.includes('não inclui melhorar os movimentos Max')&&text.includes('Bulbapedia (comunidade)'),'Power-up exclusions or community attribution missing');
+       const guide=page.locator('#eventDetail').getByText('Planeje seus Doces:',{exact:false});
+       await guide.scrollIntoViewIfNeeded();
+       await page.screenshot({path:`${out}/${width}-${theme}-${id}-guide.png`,fullPage:false});
+       checks.push({...activeCase,view:'eternatus_guide',id,free_encounter:true,power_up_from_level:15,power_up_to_level:50,community_cost_labeled:true,max_moves_excluded:true});
+     }
      checks.push({...activeCase,view:'news_to_detail',id});await closeDetail();
    }
    await context.close();page=null;
