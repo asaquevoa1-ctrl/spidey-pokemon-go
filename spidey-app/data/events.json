@@ -10934,6 +10934,104 @@
           "confidence": "community_reference"
         }
       ]
+    },
+    {
+      "id": "official-news-auto-fdcd3a9d813c",
+      "slug": "official-news-auto-fdcd3a9d813c",
+      "content_type": "news",
+      "title": "Todos os caminhos levam ao retorno de Eternatus durante o evento Trilhas Dinamax!",
+      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "category": "official_update",
+      "tags": [
+        "Novidade",
+        "Pokémon GO oficial",
+        "Atualização automática"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+        "confidence": "official"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Todos os caminhos levam ao retorno de Eternatus durante o evento Trilhas Dinamax!",
+        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "published_on": "2026-10-28",
+        "label": "OFICIAL • NOVO"
+      },
+      "notes": [
+        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
+        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
+        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "A notícia não tem horário de evento validado."
+      },
+      "status": "published",
+      "verified_at": "2026-10-28",
+      "updated_at": "2026-10-28T00:00:00+00:00",
+      "audit": {
+        "classification": "official_headline_only",
+        "editorial_detail_pending": true,
+        "automatic_index_discovery": true,
+        "not_a_calendar_event": true
+      }
+    },
+    {
+      "id": "official-news-auto-3226a2a8b105",
+      "slug": "official-news-auto-3226a2a8b105",
+      "content_type": "news",
+      "title": "Esclarecimento sobre as caças aos selos dos eventos da Área Selvagem GO",
+      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "category": "official_update",
+      "tags": [
+        "Novidade",
+        "Pokémon GO oficial",
+        "Atualização automática"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-wild-area-stamp-rally-details-2026",
+        "confidence": "official"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Esclarecimento sobre as caças aos selos dos eventos da Área Selvagem GO",
+        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "published_on": "2026-10-22",
+        "label": "OFICIAL • NOVO"
+      },
+      "notes": [
+        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
+        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
+        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "A notícia não tem horário de evento validado."
+      },
+      "status": "published",
+      "verified_at": "2026-10-28",
+      "updated_at": "2026-10-28T00:00:00+00:00",
+      "audit": {
+        "classification": "official_headline_only",
+        "editorial_detail_pending": true,
+        "automatic_index_discovery": true,
+        "not_a_calendar_event": true
+      }
     }
   ]
 }
