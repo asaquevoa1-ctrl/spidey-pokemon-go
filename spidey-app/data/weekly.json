@@ -764,6 +764,17 @@
       }
     },
     {
+      "id": "2026-go-wild-area-sendai-stamp-rally",
+      "title": "Área Selvagem GO 2026 · 7 selos de Sendai",
+      "summary": "A Caça aos Selos oficial reúne sete Poképaradas em Sendai, visitáveis em qualquer ordem somente no dia principal do ingresso.",
+      "stamp_count": 7,
+      "source": {
+        "name": "Pokémon GO • esclarecimento oficial das Caças aos Selos",
+        "url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-go-wild-area-mexico-city-stamp-rally",
       "title": "Área Selvagem GO 2026 · 7 selos da Cidade do México",
       "summary": "O circuito oficial passa por sete lugares da Cidade do México. Confira onde ficam os pontos, planeje a visita e marque seus selos sem confundir referências de locais com Poképaradas.",
@@ -827,7 +838,7 @@
     "events_without_weekly_art": 4,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-28T18:28:43.829005-03:00",
+    "generated_at": "2026-10-28T19:08:37.424852-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

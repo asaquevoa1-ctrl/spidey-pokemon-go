@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-28",
+  "status": "LOCAL_TESTS_PASSED_CI_PENDING",
+  "base_main_sha": "8093ca2cfbcbe3d135bb7d8fa567b214c8d74f55",
+  "official_sources_read_in_full": [
+    "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026",
+    "https://pokemongo.com/es-MX/news/go-wild-area-stamp-rally-details-2026"
+  ],
+  "collector_story_id": "official-news-auto-3226a2a8b105",
+  "changes": {
+    "editorial_detail_pending": false,
+    "single_story": true,
+    "related_event_ids": [
+      "2026-11-go-wild-area-sendai",
+      "2026-11-go-wild-area-mexico-city"
+    ],
+    "new_stamp_rally_id": "2026-go-wild-area-sendai-stamp-rally",
+    "distinct_windows_preserved": "main gameplay 10:00-18:00; stamp rally 10:00-20:00 local on the main ticket day"
+  },
+  "facts": {
+    "stamp_count_per_city": 7,
+    "visit_order": "any",
+    "extra_day_second_rally": false,
+    "sendai_coordinates_published": false,
+    "sendai_gpx_enabled": false,
+    "final_reward_announced_in_clarification": false
+  },
+  "preserved": [
+    "event ids",
+    "Mexico City landmark references",
+    "approved Premium art",
+    "cosmic S identity",
+    "Pokedex",
+    "PvP",
+    "confirmed GPX",
+    "Push configuration",
+    "Friends/chat configuration"
+  ],
+  "regenerated": {
+    "weekly": "2026-10-26..2026-11-01, 20 calendar items and 7 stamp collections",
+    "notification_queue": "14 pending; no push dispatched"
+  },
+  "local_tests": {
+    "node": 300,
+    "python_core": 32,
+    "python_weekly": 5
+  },
+  "push_sent": 0,
+  "physical_android_tested": false
+}

@@ -10100,7 +10100,12 @@
           }
         ],
         "official_update": "2026-10-22",
-        "source_url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026"
+        "source_url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026",
+        "rally_id": "2026-go-wild-area-sendai-stamp-rally",
+        "visit_any_order": true,
+        "rally_window_brasilia": "22:00 (dia anterior)–08:00",
+        "location_coordinates_are": "not_published",
+        "verification_date": "2026-10-28"
       },
       "verified_at": "2026-10-25"
     },
@@ -11025,8 +11030,8 @@
       "id": "official-news-auto-3226a2a8b105",
       "slug": "official-news-auto-3226a2a8b105",
       "content_type": "news",
-      "title": "Esclarecimento sobre as caças aos selos dos eventos da Área Selvagem GO",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "title": "Área Selvagem: sete selos confirmados em Sendai e na Cidade do México",
+      "summary": "As duas Caças aos Selos funcionam das 10h às 20h locais no dia principal do ingresso, com sete Poképaradas por cidade e ordem livre.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -11046,15 +11051,14 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Esclarecimento sobre as caças aos selos dos eventos da Área Selvagem GO",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Área Selvagem: sete selos confirmados em Sendai e na Cidade do México",
+        "summary": "Em Sendai e na Cidade do México, a Caça aos Selos funciona das 10h às 20h locais, somente no dia principal do ingresso. São sete Poképaradas em cada cidade, visitáveis em qualquer ordem; o Dia Extra não libera outro rally.",
         "published_on": "2026-10-22",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • VERIFICADO"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "A publicação completa foi conferida em 28/10. Ela esclarece apenas as Caças aos Selos de Sendai e da Cidade do México; a jogabilidade principal continua em registros separados no Calendário.",
+        "Os 14 nomes oficiais estão nos dois guias da aba Selos. Sendai permanece sem coordenadas publicadas; na Cidade do México, os mapas são referências de lugares e não posições exatas de Poképaradas."
       ],
       "notifications": {
         "enabled": false,
@@ -11062,13 +11066,22 @@
       },
       "status": "published",
       "verified_at": "2026-10-28",
-      "updated_at": "2026-10-28T00:00:00+00:00",
+      "updated_at": "2026-10-28T19:06:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "canonical_fulltext_url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026"
+      },
+      "related_event_ids": [
+        "2026-11-go-wild-area-sendai",
+        "2026-11-go-wild-area-mexico-city"
+      ],
+      "related_stamp_rally_ids": [
+        "2026-go-wild-area-sendai-stamp-rally",
+        "2026-go-wild-area-mexico-city-stamp-rally"
+      ]
     },
     {
       "id": "2026-11-21-eternamax-eternatus-max-battles",
