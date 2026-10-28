@@ -41,12 +41,15 @@ try{
     checks.push({width,theme,id:art.event_id,view:'detail',...detail});
     await page.screenshot({path:`${output}/${art.event_id}-${width}-${theme}.png`,fullPage:false});
     await page.locator('#dialogBackButton').click();
+    await page.locator('#eventDialog').waitFor({state:'hidden'});
     await page.evaluate(()=>{setView('weeklyView');renderWeeklyView();});
+    await page.locator('#weeklyView').waitFor({state:'visible'});
     const tile=page.locator(`[data-weekly-event="${art.event_id}"]`).first().locator('img').first();
     await tile.waitFor();await tile.scrollIntoViewIfNeeded();await tile.evaluate(img=>img.decode());
     const week=await tile.evaluate(img=>({src:img.getAttribute('src'),width:img.naturalWidth,height:img.naturalHeight}));
     if(!week.src.includes(expected)||week.width!==1024||week.height!==1536)throw Error(JSON.stringify(week));
     checks.push({width,theme,id:art.event_id,view:'weekly',...week});
+    await page.screenshot({path:`${output}/${art.event_id}-${width}-${theme}-weekly.png`,fullPage:false});
     await context.close();
     activePage=null;
   }
