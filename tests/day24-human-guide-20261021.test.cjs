@@ -46,7 +46,7 @@ test('24 October guide separates globally accessible steps, regional-only activi
   const sw=fs.readFileSync('spidey-app/sw.js','utf8');
   assert.ok(sw.includes('./'+e.art.url),'Offline cache must contain the approved flow image');
   assert.match(sw,/const CACHE = 'spidey-app-2026[0-9]{4}-[^']+'/,'Service worker must version Android updates');
-  assert.ok(fs.readFileSync('spidey-app/index.html','utf8').includes('premium-approved-master.js?v=20261022-day24-png1'));
+  assert.match(fs.readFileSync('spidey-app/index.html','utf8'),/premium-approved-master\.js\?v=[a-z0-9-]+/,'The preserved approved art must use the current versioned master');
 
   const qa=JSON.parse(fs.readFileSync('docs/qa/DAY24_AND_PAWNIARD_ART_PUBLISH_20261021.json','utf8'));
   const artwork=qa.artworks.find(a=>a.event_id===e.id && a.kind==='main_hero');

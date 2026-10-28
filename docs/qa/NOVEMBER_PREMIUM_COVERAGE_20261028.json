@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-28",
+  "scope": "published non-hidden events starting in November; approved individual eventId mappings only",
+  "november_events": 33,
+  "approved_after_this_batch": 9,
+  "pending_count": 24,
+  "not_claimed_complete": true,
+  "pending": [
+    {
+      "event_id": "2026-11-04-raids-giratina-altered",
+      "title": "Reides 5★: Giratina (Forma Alterada)",
+      "date": "2026-11-04",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-09-raids-cresselia-darkrai",
+      "title": "Reides 5★: Cresselia e Darkrai",
+      "date": "2026-11-09",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-25-raids-deoxys-four-forms",
+      "title": "Reides 5★: Deoxys (quatro formas)",
+      "date": "2026-11-25",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-16-mega-banette-raids",
+      "title": "Megarreides: Mega Banette",
+      "date": "2026-11-16",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-25-mega-metagross-raids",
+      "title": "Megarreides: Mega Metagross",
+      "date": "2026-11-25",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-04-raid-hour-altered-giratina",
+      "title": "Hora de Reides: Giratina (Forma Alterada)",
+      "date": "2026-11-04T18:00:00-03:00",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-18-raid-hour-cresselia-darkrai",
+      "title": "Hora de Reides: Cresselia e Darkrai",
+      "date": "2026-11-18T18:00:00-03:00",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-25-raid-hour-deoxys",
+      "title": "Hora de Reides: Deoxys (quatro formas)",
+      "date": "2026-11-25T18:00:00-03:00",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-02-max-machop",
+      "title": "Batalhas Max: Machop Dinamax",
+      "date": "2026-11-02",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-16-max-surprise",
+      "title": "Batalhas Max: Pokémon surpresa",
+      "date": "2026-11-16",
+      "status": "AWAITING_FACTUAL_DETAIL",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-23-max-espurr",
+      "title": "Batalhas Max: Espurr Dinamax",
+      "date": "2026-11-23",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-30-max-cryogonal",
+      "title": "Batalhas Max: Cryogonal Dinamax",
+      "date": "2026-11-30",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-05-spotlight-teddiursa",
+      "title": "Hora do Holofote: Teddiursa",
+      "date": "2026-11-05T18:00:00-03:00",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-26-spotlight-noibat",
+      "title": "Hora do Holofote: Noibat",
+      "date": "2026-11-26T18:00:00-03:00",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-07-shadow-tornadus-weekend",
+      "title": "Reides Sombrosas: Tornadus (Fim de semana 07–08)",
+      "date": "2026-11-07",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-21-shadow-tornadus-weekend",
+      "title": "Reides Sombrosas: Tornadus (Fim de semana 21–22)",
+      "date": "2026-11-21",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-28-shadow-tornadus-weekend",
+      "title": "Reides Sombrosas: Tornadus (Fim de semana 28–29)",
+      "date": "2026-11-28",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-09-into-the-wild",
+      "title": "Natureza Selvagem: Into the Wild 2026",
+      "date": "2026-11-09T10:00:00-03:00",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "event_id": "2026-11-09-daily-discovery-pause",
+      "title": "Aviso: Descobertas Diárias suspensas",
+      "date": "2026-11-09",
+      "status": "EDITORIAL_GUIDE_WITHOUT_SPECIES_POSTER",
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "event_id": "2026-11-16-dynamax-trails",
+      "title": "Trilhas Dinamax (prévia)",
+      "date": "2026-11-16",
+      "status": "AWAITING_FACTUAL_DETAIL",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-24-twilight-wishes-preview",
+      "title": "Desejos do Entardecer (prévia)",
+      "date": "2026-11-24",
+      "status": "AWAITING_FACTUAL_DETAIL",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-28-super-mega-raid-day-preview",
+      "title": "Dia de Super Megarreides — prévia",
+      "date": "2026-11-28",
+      "status": "AWAITING_FACTUAL_DETAIL",
+      "source": {
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
+      }
+    },
+    {
+      "event_id": "2026-11-02-monthly-daily-discoveries-guide",
+      "title": "Guia: bônus semanais de novembro",
+      "date": "2026-11-02",
+      "status": "EDITORIAL_GUIDE_WITHOUT_SPECIES_POSTER",
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/en/news/choose-your-path-forever-forward-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "event_id": "2026-11-pokexciting-singapore",
+      "title": "PokéXciting! Singapura 2026",
+      "date": "2026-11-07",
+      "status": "AWAITING_PREMIUM_ART",
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+        "confidence": "official"
+      }
+    }
+  ],
+  "base_main_sha": "88ca256e42d9815afc218b6f8a9a43a55b556b6d"
+}

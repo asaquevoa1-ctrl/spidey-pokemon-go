@@ -1,0 +1,32 @@
+name: Spidey - QA Premium Giratina Gastly e Groudon
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/premium-approved-master.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'spidey-app/assets/events/premium/*20261028*'
+      - 'spidey-app/assets/events/premium/gastly-*'
+      - 'spidey-app/assets/events/premium/groudon-go-pass-*'
+      - 'docs/qa/PRIORITY_ART_APPROVAL_20261028.json'
+      - 'scripts/qa_priority_art_20261028_browser.mjs'
+      - '.github/workflows/spidey-priority-art-20261028-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: node scripts/qa_priority_art_20261028_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: priority-premium-20261028-responsive
+          path: test-results/priority-art-20261028

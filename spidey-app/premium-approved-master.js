@@ -1,6 +1,50 @@
 (() => {
   'use strict';
   const master = {
+  "2026-10-29-spotlight-gastly": {
+    "file": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "8f90571884f5dfd54b70eef1181ebcc334de4d946b619d43ba6fb0da49af2c38",
+    "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261028.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-28-raid-hour-giratina-forma-origem": {
+    "file": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "ec50fd29deab66492dd0a646389552ac327d357b28d557a82c4c57cb5a52dddb",
+    "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261028.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-10-raids-giratina-origin": {
+    "file": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "5e786374e4949b18760f539a186fc86da406d405f7e2644cd971b8fc5ae9d3fd",
+    "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261028.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2026-11-go-pass-groudon": {
+    "file": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "e62598c5fdef662d5afa2dc7b4cabb015585b411768e9cf10f5e09cb9444ee99",
+    "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261028.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
   "2026-10-24-spidey-full-day-guide": {
     "file": "assets/events/premium/spidey-2026-10-24-full-day-community-share-v4-approved-v1.png",
     "status": "APPROVED",
