@@ -99,13 +99,13 @@
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "ec50fd29deab66492dd0a646389552ac327d357b28d557a82c4c57cb5a52dddb",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         }
       ]
@@ -161,13 +161,13 @@
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "8f90571884f5dfd54b70eef1181ebcc334de4d946b619d43ba6fb0da49af2c38",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         }
       ]
@@ -356,13 +356,13 @@
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "ec50fd29deab66492dd0a646389552ac327d357b28d557a82c4c57cb5a52dddb",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       },
       {
@@ -412,13 +412,13 @@
         },
         "art": {},
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "5e786374e4949b18760f539a186fc86da406d405f7e2644cd971b8fc5ae9d3fd",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       },
       {
@@ -821,13 +821,13 @@
   ],
   "meta": {
     "calendar_events_in_week": 20,
-    "events_with_weekly_art": 13,
-    "events_with_premium_weekly_art": 13,
+    "events_with_weekly_art": 16,
+    "events_with_premium_weekly_art": 16,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 7,
+    "events_without_weekly_art": 4,
     "events_in_weekly": 20,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-10-28T16:43:57.338883-03:00",
+    "generated_at": "2026-10-28T17:40:56.310978-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
