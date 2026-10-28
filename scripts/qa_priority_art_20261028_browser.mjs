@@ -44,11 +44,24 @@ try{
     await page.locator('#eventDialog').waitFor({state:'hidden'});
     await page.evaluate(()=>{setView('weeklyView');renderWeeklyView();});
     await page.locator('#weeklyView').waitFor({state:'visible'});
-    const tile=page.locator(`[data-weekly-event="${art.event_id}"]`).first().locator('img').first();
-    await tile.waitFor();await tile.scrollIntoViewIfNeeded();await tile.evaluate(img=>img.decode());
+    const fullCard=page.locator(`#weeklyView .weekly-item:not(.compact)[data-weekly-event="${art.event_id}"]`).first();
+    const entry=await fullCard.count()?fullCard:page.locator(`#weeklyView [data-weekly-event="${art.event_id}"]`).first();
+    await entry.waitFor({state:'visible'});await entry.scrollIntoViewIfNeeded();
+    let tile=entry.locator('img').first(),mode='visible_weekly_thumbnail';
+    if(!await tile.isVisible()){
+      // The approved daily strip intentionally uses compact text entries.
+      // Verify its real click path instead of forcing a hidden image visible.
+      const compact=await entry.evaluate(node=>node.classList.contains('compact'));
+      if(!compact||!(await tile.getAttribute('src'))?.includes(expected))throw Error('Unexpected missing weekly poster');
+      await page.screenshot({path:`${output}/${art.event_id}-${width}-${theme}-weekly-entry.png`,fullPage:false});
+      await entry.click();
+      tile=page.locator(`#eventDetail img[src*="${expected}"]`).first();
+      mode='compact_weekly_entry_opens_full_poster';
+    }
+    await tile.waitFor({state:'visible'});await tile.evaluate(img=>img.decode());
     const week=await tile.evaluate(img=>({src:img.getAttribute('src'),width:img.naturalWidth,height:img.naturalHeight}));
     if(!week.src.includes(expected)||week.width!==1024||week.height!==1536)throw Error(JSON.stringify(week));
-    checks.push({width,theme,id:art.event_id,view:'weekly',...week});
+    checks.push({width,theme,id:art.event_id,view:'weekly',mode,...week});
     await page.screenshot({path:`${output}/${art.event_id}-${width}-${theme}-weekly.png`,fullPage:false});
     await context.close();
     activePage=null;
