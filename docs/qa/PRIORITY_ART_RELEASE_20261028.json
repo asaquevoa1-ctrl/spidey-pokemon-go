@@ -1,0 +1,147 @@
+{
+  "schema": "spidey-priority-art-release-v1",
+  "date": "2026-10-28",
+  "status": "PUBLISHED_AND_PUBLICLY_VERIFIED",
+  "scope": "Four integrated posters only: two corrected Origin Forme Giratina pieces, Gastly Spotlight Hour, November Groudon GO Pass",
+  "decision_record": "SPIDEY_DECISIONS_CURRENT.md",
+  "approval_record": "docs/qa/PRIORITY_ART_APPROVAL_20261028.json",
+  "pull_request": {
+    "number": 160,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/160",
+    "head_sha": "af1f3823d1f81ac6bb937173fa80005456b2789b",
+    "merged": true,
+    "merge_sha": "431ca6e163d7fa50335848b727a54917970eda3d"
+  },
+  "tests": {
+    "node": 292,
+    "python": 31,
+    "required_ci": [
+      {
+        "name": "Spidey - validar pipeline curado",
+        "run_id": 40764090586,
+        "conclusion": "success",
+        "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40764090586"
+      },
+      {
+        "name": "Spidey - hospedagem gratuita",
+        "run_id": 40764090574,
+        "conclusion": "success",
+        "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40764090574"
+      },
+      {
+        "name": "Spidey - testar aplicativo",
+        "run_id": 40764090558,
+        "conclusion": "success",
+        "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40764090558"
+      },
+      {
+        "name": "Spidey - proteção das decisões",
+        "run_id": 40764090595,
+        "conclusion": "success",
+        "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40764090595"
+      },
+      {
+        "name": "Spidey - QA Premium Giratina Gastly e Groudon",
+        "run_id": 40764090672,
+        "conclusion": "success",
+        "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40764090672"
+      }
+    ],
+    "browser_checks": 32,
+    "browser_screenshots": 36,
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "browser_result": "docs/qa/PRIORITY_ART_BROWSER_20261028.json",
+    "browser_artifact_id": 12848908627
+  },
+  "deployment": {
+    "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+    "run_id": 40765088951,
+    "url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40765088951",
+    "head_sha": "431ca6e163d7fa50335848b727a54917970eda3d",
+    "conclusion": "success"
+  },
+  "http_audit": "docs/qa/PRIORITY_ART_PUBLIC_HTTP_20261028.json",
+  "public_browser_audit": "docs/qa/PRIORITY_ART_PUBLIC_BROWSER_20261028.json",
+  "public_browser_screenshot": "docs/qa/PRIORITY_ART_PUBLIC_APP_20261028.jpg",
+  "preserved_previous_master_entries": 82,
+  "total_master_entries": 86,
+  "rejected_giratina_v1_published": false,
+  "legacy_ci_checks_not_claimed_passed": [
+    {
+      "name": "Spidey - QA responsivo Morelull Holofote",
+      "run_id": 40764091141,
+      "result": "missing_expected_weekly_card",
+      "evidence": [
+        "2026-10-28T20:34:44.2366695Z locator.waitFor: Timeout 30000ms exceeded.",
+        "2026-10-28T20:34:44.2368388Z   - waiting for locator('[data-weekly-event=\\\"2026-10-22-spotlight-morelull\\\"]').first() to be visible",
+        "2026-10-28T20:34:44.2369818Z     at /home/runner/work/spidey-pokemon-go/spidey-pokemon-go/scripts/qa_morelull_spotlight_art_browser.mjs:44:98 {",
+        "2026-10-28T20:34:44.2370819Z   name: 'TimeoutError'"
+      ]
+    },
+    {
+      "name": "Spidey Day 24 PNG Art QA",
+      "run_id": 40764090560,
+      "result": "missing_expected_weekly_card",
+      "evidence": [
+        "2026-10-28T20:32:58.6372756Z locator.waitFor: Timeout 30000ms exceeded.",
+        "2026-10-28T20:32:58.6373573Z   - waiting for locator('[data-weekly-event=\\\"2026-10-24-spidey-full-day-guide\\\"]').first()",
+        "2026-10-28T20:32:58.6374371Z     at /home/runner/work/spidey-pokemon-go/spidey-pokemon-go/scripts/qa_day24_png_art_browser.mjs:75:98 {",
+        "2026-10-28T20:32:58.6374882Z   name: 'TimeoutError'"
+      ]
+    },
+    {
+      "name": "Spidey - QA responsivo National Trust Premium",
+      "run_id": 40764090579,
+      "result": "missing_expected_weekly_card",
+      "evidence": [
+        "2026-10-28T20:33:09.0443065Z locator.waitFor: Timeout 30000ms exceeded.",
+        "2026-10-28T20:33:09.0443881Z   - waiting for locator('[data-weekly-event=\\\"2026-national-trust-27-sites\\\"]').first()",
+        "2026-10-28T20:33:09.0444577Z     at /home/runner/work/spidey-pokemon-go/spidey-pokemon-go/scripts/qa_national_trust_art_browser.mjs:47:98 {",
+        "2026-10-28T20:33:09.0445091Z   name: 'TimeoutError'"
+      ]
+    },
+    {
+      "name": "Spidey - QA responsivo Mega Dragonite Mega-Reides",
+      "run_id": 40764090714,
+      "result": "missing_expected_weekly_card",
+      "evidence": [
+        "2026-10-28T20:33:20.9300308Z locator.waitFor: Timeout 30000ms exceeded.",
+        "2026-10-28T20:33:20.9301505Z   - waiting for locator('[data-weekly-event=\\\"2026-10-mega-dragonite-raids\\\"]').first() to be visible",
+        "2026-10-28T20:33:20.9302553Z     at /home/runner/work/spidey-pokemon-go/spidey-pokemon-go/scripts/qa_mega_dragonite_raids_art_browser.mjs:44:98 {",
+        "2026-10-28T20:33:20.9303287Z   name: 'TimeoutError'"
+      ]
+    },
+    {
+      "name": "Spidey - QA responsivo Minior Orionidas",
+      "run_id": 40764090673,
+      "result": "missing_expected_weekly_card",
+      "evidence": [
+        "2026-10-28T20:34:05.1932251Z locator.waitFor: Timeout 30000ms exceeded.",
+        "2026-10-28T20:34:05.1933547Z   - waiting for locator('[data-weekly-event=\\\"2026-10-minior-orionids\\\"]').first()",
+        "2026-10-28T20:34:05.1934864Z     at /home/runner/work/spidey-pokemon-go/spidey-pokemon-go/scripts/qa_minior_orionids_art_browser.mjs:63:88 {",
+        "2026-10-28T20:34:05.1935838Z   name: 'TimeoutError'"
+      ]
+    },
+    {
+      "name": "Spidey - QA responsivo FC Seoul Premium",
+      "run_id": 40764090613,
+      "result": "missing_expected_weekly_card",
+      "evidence": [
+        "2026-10-28T20:34:13.9953397Z locator.waitFor: Timeout 30000ms exceeded.",
+        "2026-10-28T20:34:13.9954619Z   - waiting for locator('[data-weekly-event=\\\"2026-10-24-fc-seoul\\\"]').first()",
+        "2026-10-28T20:34:13.9956151Z     at /home/runner/work/spidey-pokemon-go/spidey-pokemon-go/scripts/qa_fc_seoul_art_browser.mjs:48:98 {",
+        "2026-10-28T20:34:13.9957187Z   name: 'TimeoutError'"
+      ]
+    }
+  ],
+  "physical_android_tested": false,
+  "remaining_november_coverage": "docs/qa/NOVEMBER_PREMIUM_COVERAGE_20261028.json",
+  "november_complete": false
+}

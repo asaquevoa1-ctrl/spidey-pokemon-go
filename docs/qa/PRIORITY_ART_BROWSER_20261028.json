@@ -1,0 +1,310 @@
+{
+  "status": "PASSED_PREVIEW",
+  "checks": [
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "detail",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "weekly",
+      "mode": "compact_weekly_entry_opens_full_poster",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-11-go-pass-groudon",
+      "view": "detail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-11-go-pass-groudon",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "detail",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "weekly",
+      "mode": "compact_weekly_entry_opens_full_poster",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-11-go-pass-groudon",
+      "view": "detail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-11-go-pass-groudon",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "detail",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "weekly",
+      "mode": "compact_weekly_entry_opens_full_poster",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-11-go-pass-groudon",
+      "view": "detail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "id": "2026-11-go-pass-groudon",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "detail",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-29-spotlight-gastly",
+      "view": "weekly",
+      "mode": "compact_weekly_entry_opens_full_poster",
+      "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "detail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-10-raids-giratina-origin",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+      "height": 1536
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-11-go-pass-groudon",
+      "view": "detail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536,
+      "fit": "contain",
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "id": "2026-11-go-pass-groudon",
+      "view": "weekly",
+      "mode": "visible_weekly_thumbnail",
+      "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+      "height": 1536
+    }
+  ],
+  "physical_android_tested": false
+}

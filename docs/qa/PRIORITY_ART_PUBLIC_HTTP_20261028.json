@@ -1,0 +1,61 @@
+{
+  "status": "HTTP_VERIFIED",
+  "checked_at": "2026-10-28T17:40:22.017191-03:00",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "merged_sha": "431ca6e163d7fa50335848b727a54917970eda3d",
+  "master_entries": 86,
+  "master_sha256": "8f83a05d98820fb092b9ba77294a80fdfbd834a830a4ad35aa6f41f39c9e1d4b",
+  "shell_version_verified": true,
+  "service_worker_version_verified": true,
+  "artworks": [
+    {
+      "event_id": "2026-10-29-spotlight-gastly",
+      "url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp",
+      "http": 200,
+      "mime_type": "image/webp",
+      "bytes": 726078,
+      "sha256": "8f90571884f5dfd54b70eef1181ebcc334de4d946b619d43ba6fb0da49af2c38",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp",
+      "http": 200,
+      "mime_type": "image/webp",
+      "bytes": 324696,
+      "sha256": "ec50fd29deab66492dd0a646389552ac327d357b28d557a82c4c57cb5a52dddb",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "event_id": "2026-10-raids-giratina-origin",
+      "url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp",
+      "http": 200,
+      "mime_type": "image/webp",
+      "bytes": 313170,
+      "sha256": "5e786374e4949b18760f539a186fc86da406d405f7e2644cd971b8fc5ae9d3fd",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "event_id": "2026-11-go-pass-groudon",
+      "url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp",
+      "http": 200,
+      "mime_type": "image/webp",
+      "bytes": 775900,
+      "sha256": "e62598c5fdef662d5afa2dc7b4cabb015585b411768e9cf10f5e09cb9444ee99",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    }
+  ],
+  "physical_android_tested": false
+}

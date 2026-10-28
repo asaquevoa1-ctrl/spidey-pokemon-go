@@ -1,0 +1,38 @@
+{
+  "status": "PUBLIC_BROWSER_VERIFIED",
+  "checks": [
+    [
+      {
+        "fit": "contain",
+        "height": 1536,
+        "src": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp?v=8f90571884f5",
+        "width": 1024
+      }
+    ],
+    [
+      {
+        "fit": "contain",
+        "height": 1536,
+        "src": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp?v=e62598c5fdef",
+        "width": 1024
+      }
+    ],
+    [
+      {
+        "fit": "contain",
+        "height": 1536,
+        "src": "assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp?v=ec50fd29deab",
+        "width": 1024
+      }
+    ],
+    [
+      {
+        "fit": "contain",
+        "height": 1536,
+        "src": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp?v=5e786374e494",
+        "width": 1024
+      }
+    ]
+  ],
+  "physical_android_tested": false
+}
