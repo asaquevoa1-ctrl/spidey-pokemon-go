@@ -72,7 +72,7 @@
         "enabled": false,
         "reason": "Teaser oficial sem data ou cronograma; nenhum alerta de evento deve ser criado."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-26",
       "updated_at": "2026-10-26T18:10:00-03:00",
       "audit": {
@@ -81,7 +81,9 @@
         "date_range_verified_officially": false,
         "related_official_event": "2026-11-go-wild-area-global",
         "not_a_calendar_event": true
-      }
+      },
+      "superseded_by": "2026-11-16-dynamax-trails",
+      "superseded_at": "2026-10-28T18:10:35-03:00"
     },
     {
       "id": "2026-10-27-dia-de-muertos-mexico",
@@ -1637,25 +1639,27 @@
     {
       "id": "2026-11-16-dynamax-trails",
       "slug": "2026-11-16-dynamax-trails",
-      "title": "Trilhas Dinamax (prévia)",
-      "summary": "Janela do evento Trilhas Dinamax informada no calendário comunitário; detalhes ainda serão divulgados.",
+      "title": "Trilhas Dinamax — Eternatus e Passe GO",
+      "summary": "De 16/11 às 10h a 23/11 às 20h locais: Batalhas Max, Passe GO e recompensas de Eternatus. Eternamax terá uma janela própria em 21/11, das 11h às 14h locais.",
       "category": "evento_especial",
       "tags": [
-        "Novembro 2026",
-        "Calendário",
-        "Pokémon GO"
+        "Trilhas Dinamax",
+        "Eternatus",
+        "Passe GO",
+        "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-        "confidence": "verified_community"
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "confidence": "official"
       },
       "schedule": {
-        "precision": "date",
         "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-16",
-        "end_date": "2026-11-23",
-        "brazil_timezone": "America/Sao_Paulo"
+        "start_local": "2026-11-16T10:00:00-03:00",
+        "end_local": "2026-11-23T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-16T10:00:00-03:00",
+        "end_brazil": "2026-11-23T20:00:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -1668,27 +1672,57 @@
       "locations": [],
       "gpx": {
         "enabled": false,
-        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+        "reason": "Sem coordenadas de Pontos de Energia ou Poképaradas verificadas."
       },
-      "pokemon": [],
-      "bonuses": [],
+      "pokemon": [
+        {
+          "name": "Eternatus",
+          "note": "Encontro no Passe GO para quem ainda não capturou; quem já capturou recebe 100 Doces de Eternatus."
+        }
+      ],
+      "bonuses": [
+        "Chance de Partículas Max após capturas temáticas ou Batalhas Max; mais Pontos de Energia ativos.",
+        "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo de Localização após a captura.",
+        "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max."
+      ],
       "notes": [
-        "Ainda não há detalhes oficiais suficientes de bônus ou encontros.",
-        "Não atribuir uma espécie à rotação surpresa de Batalhas Max sem confirmação."
+        "Acesso geral ao Passe GO em 16/11 às 10h locais. Quem resgatar o primeiro marco do Passe GO Into the Wild recebe acesso antecipado em 14/11 às 10h e a versão Deluxe gratuitamente.",
+        "Recompensas desbloqueadas: resgate até 25/11 às 20h locais. O encontro não concede um segundo Eternatus a quem já capturou.",
+        "As espécies temáticas podem aparecer na natureza; isso não significa encontrar Pokémon na forma Dinamax fora das Batalhas Max. Lendários e Míticos ficam fora dessa lista comum.",
+        "Capturas com Pokémon GO Plus + ou Explorer Gadget não dão as Partículas Max desse bônus.",
+        "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais.",
+        "Eternamax Eternatus não é capturável após a batalha; as recompensas incluem Doces e Doces GG. Nenhum Eternatus Brilhante foi anunciado."
       ],
       "notifications": {
         "enabled": false,
-        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+        "reason": "Cadastro confirmado; não acionar envio de push nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-28",
       "verification_sources": [
         {
-          "name": "Pokémon GO Hub • calendário comunitário",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
         }
-      ]
+      ],
+      "updated_at": "2026-10-28T18:10:35-03:00",
+      "news": {
+        "title": "Eternatus volta em novembro: veja as datas e como participar",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+        "published_on": "2026-10-28",
+        "label": "OFICIAL • ATUALIZADO"
+      },
+      "claim_deadline": {
+        "end_local": "2026-11-25T20:00:00-03:00",
+        "end_brazil": "2026-11-25T20:00:00-03:00",
+        "local_timezone": "America/Sao_Paulo"
+      },
+      "early_access": {
+        "start_local": "2026-11-14T10:00:00-03:00",
+        "condition": "Resgatar o primeiro marco do Passe GO Into the Wild",
+        "includes_free_deluxe": true
+      }
     },
     {
       "id": "2026-11-21-community-day-preview",
@@ -10939,8 +10973,8 @@
       "id": "official-news-auto-fdcd3a9d813c",
       "slug": "official-news-auto-fdcd3a9d813c",
       "content_type": "news",
-      "title": "Todos os caminhos levam ao retorno de Eternatus durante o evento Trilhas Dinamax!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "title": "Eternatus volta em novembro: veja as datas e como participar",
+      "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -10948,8 +10982,8 @@
         "Atualização automática"
       ],
       "source": {
-        "name": "Pokémon GO • comunicado oficial",
-        "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
         "confidence": "official"
       },
       "calendar": {
@@ -10960,15 +10994,13 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Todos os caminhos levam ao retorno de Eternatus durante o evento Trilhas Dinamax!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Eternatus volta em novembro: veja as datas e como participar",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
         "published_on": "2026-10-28",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • ATUALIZADO"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "Informações e horários conferidos no anúncio oficial de 28/10. Consulte os três eventos relacionados no calendário."
       ],
       "notifications": {
         "enabled": false,
@@ -10976,13 +11008,18 @@
       },
       "status": "published",
       "verified_at": "2026-10-28",
-      "updated_at": "2026-10-28T00:00:00+00:00",
+      "updated_at": "2026-10-28T18:10:35-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
         "not_a_calendar_event": true
-      }
+      },
+      "related_event_ids": [
+        "2026-11-16-dynamax-trails",
+        "2026-11-19-spotlight-galar-starters",
+        "2026-11-21-eternamax-eternatus-max-battles"
+      ]
     },
     {
       "id": "official-news-auto-3226a2a8b105",
@@ -11031,6 +11068,165 @@
         "editorial_detail_pending": true,
         "automatic_index_discovery": true,
         "not_a_calendar_event": true
+      }
+    },
+    {
+      "id": "2026-11-21-eternamax-eternatus-max-battles",
+      "slug": "2026-11-21-eternamax-eternatus-max-battles",
+      "title": "Batalhas Max: Eternamax Eternatus",
+      "summary": "21/11, das 11h às 14h locais: Eternamax ocupa a maioria dos Pontos de Energia. As batalhas dão Doces e Doces GG; a forma Eternamax não pode ser capturada.",
+      "category": "max_battle_day",
+      "tags": [
+        "Eternatus",
+        "Eternamax",
+        "Batalhas Max",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-21T11:00:00-03:00",
+        "end_local": "2026-11-21T14:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-21T11:00:00-03:00",
+        "end_brazil": "2026-11-21T14:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenadas de Pontos de Energia ou Poképaradas verificadas."
+      },
+      "pokemon": [
+        {
+          "name": "Eternamax Eternatus",
+          "note": "Chefe de Batalhas Max; não há captura dessa forma após a vitória."
+        }
+      ],
+      "bonuses": [
+        "Limite de coleta de Partículas Max: 2.400.",
+        "8× Partículas Max nos Pontos de Energia, com renovação mais frequente."
+      ],
+      "notes": [
+        "Para obter Eternatus, avance no Passe GO Trilhas Dinamax. Quem já capturou recebe 100 Doces em vez de outro encontro.",
+        "Limite de 30 Reides a Distância de 20/11 às 18h a 21/11 às 23h em Brasília. Essa janela é separada das Batalhas Max de 11h–14h locais.",
+        "Sem coordenadas exclusivas de Pontos de Energia confirmadas. A rota FLY usa as referências mundiais existentes; confira os pontos ativos no jogo."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Cadastro confirmado; não acionar envio de push nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-10-28",
+      "updated_at": "2026-10-28T18:10:35-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        }
+      ],
+      "news": {
+        "title": "Eternatus volta em novembro: veja as datas e como participar",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+        "published_on": "2026-10-28",
+        "label": "OFICIAL • ATUALIZADO"
+      },
+      "remote_raid_limit": {
+        "limit": 30,
+        "start_brazil": "2026-11-20T18:00:00-03:00",
+        "end_brazil": "2026-11-21T23:00:00-03:00",
+        "source_timezone": "America/Los_Angeles"
+      }
+    },
+    {
+      "id": "2026-11-19-spotlight-galar-starters",
+      "slug": "2026-11-19-spotlight-galar-starters",
+      "title": "Hora do Holofote: Grookey, Scorbunny e Sobble",
+      "summary": "19/11, das 18h às 19h locais: Grookey, Scorbunny e Sobble em destaque, com 2× Doces por captura. Brilhantes são possíveis.",
+      "category": "spotlight_hour",
+      "tags": [
+        "Grookey",
+        "Scorbunny",
+        "Sobble",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-19T18:00:00-03:00",
+        "end_local": "2026-11-19T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-19T18:00:00-03:00",
+        "end_brazil": "2026-11-19T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Sem coordenadas de Pontos de Energia ou Poképaradas verificadas."
+      },
+      "pokemon": [
+        {
+          "name": "Grookey",
+          "note": "Possibilidade de Brilhante; não garantido."
+        },
+        {
+          "name": "Scorbunny",
+          "note": "Possibilidade de Brilhante; não garantido."
+        },
+        {
+          "name": "Sobble",
+          "note": "Possibilidade de Brilhante; não garantido."
+        }
+      ],
+      "bonuses": [
+        "2× Doces por captura durante 18h–19h locais."
+      ],
+      "notes": [
+        "Holofote confirmado no anúncio oficial de Trilhas Dinamax. Não confundir seu horário com as Batalhas Max de Eternamax em 21/11."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Cadastro confirmado; não acionar envio de push nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-10-28",
+      "updated_at": "2026-10-28T18:10:35-03:00",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        }
+      ],
+      "news": {
+        "title": "Eternatus volta em novembro: veja as datas e como participar",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+        "published_on": "2026-10-28",
+        "label": "OFICIAL • ATUALIZADO"
       }
     }
   ]

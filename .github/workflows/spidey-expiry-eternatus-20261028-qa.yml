@@ -1,0 +1,27 @@
+name: Spidey - QA encerrados e Eternatus
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/trust-world-v1.js'
+      - 'spidey-app/data/events.json'
+      - 'scripts/qa_expiry_eternatus_20261028_browser.mjs'
+      - '.github/workflows/spidey-expiry-eternatus-20261028-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: node scripts/qa_expiry_eternatus_20261028_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: expiry-eternatus-20261028-responsive
+          path: test-results/expiry-eternatus-20261028

@@ -42,8 +42,17 @@
   }
   function visibleWorldEvent(event,now=new Date()){
     if(!event.schedule)return false; // No placeholder cards without published dates.
-    const status=eventWindow(event,now).status;
-    return status!=='ENCERRADO'&&status!=='EXPIRADO';
+    if(window.SpideyDateOnly?.valid(event)){
+      return window.SpideyDateOnly.localDay(event,now)<=event.schedule.end_date;
+    }
+    const period=eventWindow(event,now);
+    return Boolean(period.end&&period.end>now);
+  }
+  function pruneExpiredWorldEvents(now=new Date()){
+    document.querySelectorAll('#worldEvents [data-world-event], #flyView .world-event-card[data-world-event]').forEach(card=>{
+      const event=worldEvents.find(item=>item.id===card.dataset.worldEvent);
+      if(event&&!visibleWorldEvent(event,now))card.remove();
+    });
   }
   function renderWorldEvents() {
     const r=document.getElementById('worldEvents');if(!r)return;
@@ -67,7 +76,7 @@
     return event.locations.map(location=>{const coordinates=window.SpideyLocations.coordinateText(location);return `<article class="world-location" data-local-venue="${esc(location.id)}"><h3>${esc(location.name)}</h3><p>${esc(location.address)}</p>${coordinates?`<p class="microcopy">${esc(location.coordinate_label||'Local do evento')}</p><code class="venue-coordinate-value">${esc(coordinates)}</code>`:''}<p class="microcopy">${esc(location.access_note)}</p><div class="world-location-actions">${coordinates?`<button class="action-btn" data-local-coord="${esc(coordinates)}">Copiar coordenadas</button>`:''}<button class="action-btn" data-local-copy="${esc(location.address)}">Copiar endereço</button><a class="action-btn" href="${esc(mapUrl(location))}" target="_blank" rel="noopener">Abrir mapa</a></div></article>`}).join('');
   }
   function openLocalEvent(id) {
-    const event=worldEvents.find(e=>e.id===id);if(!event?.schedule)return;
+    const event=worldEvents.find(e=>e.id===id);if(!event?.schedule||!visibleWorldEvent(event))return;
     beginAppDialog();
     if(dialog.open)dialog.close();
     detail.dataset.eventId = event.id;
@@ -81,6 +90,7 @@
     return `Agora em ${esc(event.place.split(',')[0])}: <strong>${esc(clock(now,event.schedule.timezone))}</strong><br>Brasília: ${esc(clock(now,'America/Sao_Paulo'))}`;
   }
   function updateClocks() {
+    pruneExpiredWorldEvents();
     worldEvents.filter(e=>e.schedule).forEach(event=>{
       document.querySelectorAll(`[data-local-window="${event.id}"]`).forEach(element=>element.innerHTML=scheduleText(event));
       const open=detail.querySelector(`[data-local-detail="${event.id}"] .world-local-clock`);
@@ -102,8 +112,11 @@
       try{await navigator.clipboard.writeText(copy.dataset.localCoord||copy.dataset.localCopy);showToast(copy.dataset.localCoord?'Coordenadas copiadas.':'Endereço copiado.')}catch{showToast('Não foi possível copiar. Use o mapa do local.')}
     });
     window.addEventListener('spideycontentready',mountLocalFly);
+    window.addEventListener('focus',updateClocks);
+    window.addEventListener('online',updateClocks);
+    document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')updateClocks()});
     setInterval(updateClocks,60000);
   }
-  window.SpideyWorld=Object.freeze({eventWindow,mapUrl,locationRows,openLocalEvent});
+  window.SpideyWorld=Object.freeze({eventWindow,visible:visibleWorldEvent,pruneExpired:pruneExpiredWorldEvents,mapUrl,locationRows,openLocalEvent});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();window.addEventListener('load',()=>setTimeout(()=>exposeApprovedPremium(),180),{once:true});
 })();

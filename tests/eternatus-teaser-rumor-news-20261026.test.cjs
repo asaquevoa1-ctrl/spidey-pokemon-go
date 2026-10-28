@@ -1,9 +1,10 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
 const events=JSON.parse(fs.readFileSync('spidey-app/data/events.json','utf8')).events;
-test('Eternatus official teaser is a NEWS ONLY and unconfirmed lead-out window, never calendar event',()=>{
+test('historical Eternatus teaser stays undated and is archived after the full official announcement',()=>{
  const x=events.find(e=>e.id==='2026-10-26-eternatus-teaser-unconfirmed');
  assert.ok(x);assert.equal(x.content_type,'news');assert.equal(x.calendar.mode,'hidden');
+ assert.equal(x.status,'archived');assert.equal(x.superseded_by,'2026-11-16-dynamax-trails');
  assert.equal(x.audit.date_range_verified_officially,false);
  assert.equal(x.audit.not_a_calendar_event,true);
  assert.equal(x.notifications.enabled,false);
