@@ -1646,7 +1646,9 @@
         "Trilhas Dinamax",
         "Eternatus",
         "Passe GO",
-        "Global"
+        "Global",
+        "Fundo Especial",
+        "Batalhas Max"
       ],
       "source": {
         "name": "Pokémon GO • anúncio oficial",
@@ -1682,7 +1684,7 @@
       ],
       "bonuses": [
         "Chance de Partículas Max após capturas temáticas ou Batalhas Max; mais Pontos de Energia ativos.",
-        "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo de Localização após a captura.",
+        "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo Especial ao capturar após Batalha Max (não garantido).",
         "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max."
       ],
       "notes": [
@@ -1695,7 +1697,8 @@
         "Recompensas desbloqueadas: resgate até 25/11 às 20h locais.",
         "As espécies temáticas podem aparecer na natureza; isso não significa encontrar Pokémon na forma Dinamax fora das Batalhas Max. Lendários e Míticos ficam fora dessa lista comum.",
         "Capturas com Pokémon GO Plus + ou Explorer Gadget não dão as Partículas Max desse bônus.",
-        "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais."
+        "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais.",
+        "No guia de Batalhas Max, a seleção visual de Pokémon é comunitária e indicativa; não há confirmação oficial de quais estarão disponíveis a cada dia ou da taxa de Fundo Especial."
       ],
       "notifications": {
         "enabled": false,
@@ -1718,10 +1721,10 @@
           ]
         }
       ],
-      "updated_at": "2026-10-28T19:45:58-03:00",
+      "updated_at": "2026-10-28T20:25:00-03:00",
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro. Os Dynamax não lendários já lançados poderão retornar às Batalhas Max, com chance de Fundo Especial após a captura.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
@@ -1751,6 +1754,84 @@
           ]
         },
         "verified_at": "2026-10-28"
+      },
+      "max_battle_guide": {
+        "heading": "Dynamax que podem retornar",
+        "official_rule": "Todos os Pokémon Dynamax já lançados podem aparecer em Batalhas Max, com exceção de Lendários e Míticos. A disponibilidade de cada espécie depende da rotação no jogo.",
+        "illustrated_selection": [
+          "Bulbasaur",
+          "Charmander",
+          "Squirtle",
+          "Caterpie",
+          "Pikachu",
+          "Growlithe",
+          "Abra",
+          "Gastly",
+          "Krabby",
+          "Hitmonlee",
+          "Hitmonchan",
+          "Rhyhorn",
+          "Chansey",
+          "Electabuzz",
+          "Magmar",
+          "Magikarp",
+          "Eevee",
+          "Omanyte",
+          "Kabuto",
+          "Hoothoot",
+          "Inkay",
+          "Bounsweet",
+          "Passimian",
+          "Drampa",
+          "Grookey",
+          "Scorbunny",
+          "Sobble",
+          "Skwovet",
+          "Rookidee",
+          "Wooloo",
+          "Toxtricity (Forma Aguda)",
+          "Toxtricity (Forma Grave)",
+          "Sizzlipede",
+          "Hatenna",
+          "Falinks",
+          "Duraludon",
+          "Shuckle",
+          "Sneasel",
+          "Hitmontop",
+          "Ralts",
+          "Sableye",
+          "Wailmer",
+          "Trapinch",
+          "Feebas",
+          "Spheal",
+          "Beldum",
+          "Combee",
+          "Pidove",
+          "Roggenrola",
+          "Woobat",
+          "Drilbur",
+          "Cottonee",
+          "Darumaka",
+          "Trubbish",
+          "Cryogonal",
+          "Deino"
+        ],
+        "selection_label": "Seleção visual da comunidade (TrainersGO), usada como referência; não é uma relação oficial fechada nem uma promessa de aparição simultânea.",
+        "special_background": "Pokémon capturados após Batalhas Max durante o evento podem vir com Fundo Especial. Não é garantido em todas as capturas.",
+        "background_reference": "O visual é associado pela comunidade ao Fundo Especial de Céus Sombrios (agosto de 2025); o anúncio oficial de Trilhas Dinamax não identifica expressamente esse desenho.",
+        "capture_method": "O Fundo Especial é uma possibilidade após a captura em Batalhas Max. Encontros selvagens não recebem essa garantia.",
+        "sources": [
+          {
+            "name": "Pokémon GO • anúncio oficial",
+            "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+            "confidence": "official"
+          },
+          {
+            "name": "Serebii • relação e referência visual (comunidade)",
+            "url": "https://www.serebii.net/pokemongo/events/dynamaxtrails.shtml",
+            "confidence": "community"
+          }
+        ]
       }
     },
     {
