@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-28T22:58:28.224Z",
+  "url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "browser": "cloud Chrome",
+  "viewport": {
+    "width": 1348,
+    "height": 936
+  },
+  "agenda_updated_message": true,
+  "news_free_go_pass_and_100_candy": true,
+  "detail_event_id": "2026-11-16-dynamax-trails",
+  "free_encounter_explicit": true,
+  "one_eternatus_100_candy_instead": true,
+  "no_shiny_announced": true,
+  "power_up_from_level": 15,
+  "power_up_to_level": 50,
+  "candy": 8900,
+  "candy_xl": 8900,
+  "max_moves_and_second_charged_attack_excluded": true,
+  "community_source_explicit": true,
+  "battle_only_november_21_11_to_14_local": true,
+  "no_encounter_from_battle": true,
+  "horizontal_overflow": false,
+  "screenshot": "docs/qa/ETERNATUS_PLAYER_GUIDE_PUBLIC_APP_20261028.jpg",
+  "physical_android_tested": false
+}

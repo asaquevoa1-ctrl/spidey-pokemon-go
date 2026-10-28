@@ -1,0 +1,374 @@
+{
+  "status": "PASSED_PREVIEW",
+  "checks": [
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "home",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "fly",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "news",
+      "official_story_count": 1,
+      "old_teaser_visible": false
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "eternatus_guide",
+      "id": "2026-11-16-dynamax-trails",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "news_to_detail",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "news_to_detail",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "eternatus_guide",
+      "id": "2026-11-21-eternamax-eternatus-max-battles",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "light",
+      "view": "news_to_detail",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "future_week",
+      "width": 390,
+      "theme": "light",
+      "view": "weekly",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "future_week",
+      "width": 390,
+      "theme": "light",
+      "view": "weekly",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "future_week",
+      "width": 390,
+      "theme": "light",
+      "view": "weekly",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "home",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "fly",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "news",
+      "official_story_count": 1,
+      "old_teaser_visible": false
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "eternatus_guide",
+      "id": "2026-11-16-dynamax-trails",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "news_to_detail",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "news_to_detail",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "eternatus_guide",
+      "id": "2026-11-21-eternamax-eternatus-max-battles",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 390,
+      "theme": "dark",
+      "view": "news_to_detail",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "future_week",
+      "width": 390,
+      "theme": "dark",
+      "view": "weekly",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "future_week",
+      "width": 390,
+      "theme": "dark",
+      "view": "weekly",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "future_week",
+      "width": 390,
+      "theme": "dark",
+      "view": "weekly",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "home",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "fly",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "news",
+      "official_story_count": 1,
+      "old_teaser_visible": false
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "eternatus_guide",
+      "id": "2026-11-16-dynamax-trails",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "news_to_detail",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "news_to_detail",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "eternatus_guide",
+      "id": "2026-11-21-eternamax-eternatus-max-battles",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "light",
+      "view": "news_to_detail",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "future_week",
+      "width": 1280,
+      "theme": "light",
+      "view": "weekly",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "future_week",
+      "width": 1280,
+      "theme": "light",
+      "view": "weekly",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "future_week",
+      "width": 1280,
+      "theme": "light",
+      "view": "weekly",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "home",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "fly",
+      "expired_la_visible": false,
+      "london_visible": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "news",
+      "official_story_count": 1,
+      "old_teaser_visible": false
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "eternatus_guide",
+      "id": "2026-11-16-dynamax-trails",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "news_to_detail",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "news_to_detail",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "eternatus_guide",
+      "id": "2026-11-21-eternamax-eternatus-max-battles",
+      "free_encounter": true,
+      "power_up_from_level": 15,
+      "power_up_to_level": 50,
+      "community_cost_labeled": true,
+      "max_moves_excluded": true
+    },
+    {
+      "phase": "current",
+      "width": 1280,
+      "theme": "dark",
+      "view": "news_to_detail",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "future_week",
+      "width": 1280,
+      "theme": "dark",
+      "view": "weekly",
+      "id": "2026-11-16-dynamax-trails"
+    },
+    {
+      "phase": "future_week",
+      "width": 1280,
+      "theme": "dark",
+      "view": "weekly",
+      "id": "2026-11-19-spotlight-galar-starters"
+    },
+    {
+      "phase": "future_week",
+      "width": 1280,
+      "theme": "dark",
+      "view": "weekly",
+      "id": "2026-11-21-eternamax-eternatus-max-battles"
+    },
+    {
+      "phase": "local_midnight",
+      "width": 390,
+      "theme": "light",
+      "view": "focus_resume",
+      "expired_la_visible": false,
+      "history_preserved": true
+    }
+  ],
+  "physical_android_tested": false
+}

@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-28",
+  "verified_at": "2026-10-28T22:58:28.223Z",
+  "status": "PUBLISHED_HTTP_AND_BROWSER_VERIFIED",
+  "base_main_sha": "05f2e518bdd0e416b02c5ee21a7f57a003d2becd",
+  "pr": 163,
+  "pr_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/163",
+  "candidate_head": "a068065641a2a8781d97263559fba6fd8c7c4ed1",
+  "merge_sha": "ddb9ceaf381ede220f1198ff7200f7173d54dddf",
+  "sources": [
+    {
+      "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+      "confidence": "official",
+      "claims": [
+        "free GO Pass reward",
+        "100 Candy instead of another encounter",
+        "November 21 11h-14h local Max Battle window",
+        "no Eternamax capture"
+      ]
+    },
+    {
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Candy_XL",
+      "confidence": "verified_community",
+      "claims": [
+        "8900 Candy and 8900 Candy XL from level15 to50",
+        "Max moves and second charged attack excluded"
+      ]
+    }
+  ],
+  "preserved": {
+    "event_ids": 180,
+    "other_event_records_unchanged": 176,
+    "approved_art_entries": 86,
+    "approved_art_and_local_events_bytes_unchanged": true,
+    "source_image_published_as_approved_art": false
+  },
+  "validation": {
+    "node_tests": 300,
+    "python_tests": 31,
+    "scoped_browser_ci": {
+      "run_id": 40783279045,
+      "status": "success",
+      "checks": 45,
+      "screenshots": 28,
+      "widths": [
+        390,
+        1280
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "result": "docs/qa/ETERNATUS_PLAYER_GUIDE_BROWSER_CI_20261028.json"
+    },
+    "initial_scoped_failure": "Weekly cards were replaced by the legacy delayed QA refresh during scrolling. Test now waits for the final DOM render; application behavior was unchanged.",
+    "prior_unrelated_ci_failures": [
+      {
+        "name": "Spidey - QA responsivo FC Seoul Premium",
+        "id": 40783278909
+      },
+      {
+        "name": "Spidey - QA responsivo National Trust Premium",
+        "id": 40783279089
+      },
+      {
+        "name": "Spidey - QA responsivo Mega Dragonite Mega-Reides",
+        "id": 40783279087
+      },
+      {
+        "name": "Spidey Day 24 PNG Art QA",
+        "id": 40783279051
+      }
+    ],
+    "post_merge": [
+      {
+        "name": "Spidey - proteção das decisões",
+        "id": 40783629079,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Spidey Weekly - resumo semanal",
+        "id": 40783629112,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Spidey - validar pipeline curado",
+        "id": 40783629067,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Spidey - testar aplicativo",
+        "id": 40783629064,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Spidey Notifications - fila de avisos",
+        "id": 40783629061,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Spidey - hospedagem gratuita",
+        "id": 40783629094,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Spidey - monitorar aplicativo",
+        "id": 40783629159,
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "pages_run": 40783629094,
+    "pages_status": "success",
+    "public_http": "docs/qa/ETERNATUS_PLAYER_GUIDE_PUBLIC_HTTP_20261028.json",
+    "public_browser": "docs/qa/ETERNATUS_PLAYER_GUIDE_PUBLIC_BROWSER_20261028.json"
+  },
+  "physical_android_tested": false,
+  "push_sent": 0,
+  "external_messages_sent": 0
+}

@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-28T22:56:38.888400+00:00",
+  "url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "files": [
+    {
+      "path": "data/events.json",
+      "http": 200,
+      "bytes": 423729,
+      "sha256": "cb38a696663f831f0ab6934287d30a8b61e8acf8b153051a232367781fc79adc",
+      "matches_tested_source": true
+    },
+    {
+      "path": "premium-approved-master.js",
+      "http": 200,
+      "bytes": 39525,
+      "sha256": "8f83a05d98820fb092b9ba77294a80fdfbd834a830a4ad35aa6f41f39c9e1d4b",
+      "matches_tested_source": true
+    },
+    {
+      "path": "data/local-events.json",
+      "http": 200,
+      "bytes": 20668,
+      "sha256": "12ebcd1152e9992faf8a4f4cb6be157bec55d9c8c23cb6232df2804747799212",
+      "matches_tested_source": true
+    }
+  ],
+  "guide": {
+    "from_level": 15,
+    "to_level": 50,
+    "candy": 8900,
+    "candy_xl": 8900,
+    "includes_max_moves": false,
+    "includes_second_charged_attack": false,
+    "source": {
+      "name": "Bulbapedia • custo de fortalecimento (comunidade)",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/Candy_XL",
+      "confidence": "verified_community",
+      "claims": [
+        "eternatus_power_up_level_15_to_50"
+      ]
+    },
+    "verified_at": "2026-10-28"
+  },
+  "free_encounter_explicit": true,
+  "events": 180,
+  "passed": true
+}
