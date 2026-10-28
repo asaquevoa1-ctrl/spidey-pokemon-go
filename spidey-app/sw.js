@@ -1,5 +1,9 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1-20261027-cdmx-stamps1-mexico-selos-human1';
+const CACHE = 'spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1-20261027-cdmx-stamps1-mexico-selos-human1-20261028-origin-correct2';
 const CORE = [
+  './assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp',
+  './assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp',
+  './assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp',
+  './assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp',
   './cosmic-brand-20261019.js',
   './cosmic-brand-20261019.css',
   './mobile-side-menu.js',

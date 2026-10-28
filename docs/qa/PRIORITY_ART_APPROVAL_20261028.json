@@ -1,0 +1,294 @@
+{
+  "schema_version": "spidey-art-approval-batch-v1",
+  "date": "2026-10-28",
+  "status": "VISUAL_QA_PASSED_BROWSER_QA_PENDING",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "individual_human_approval_claimed": false,
+  "art_standard_version": "spidey-premium-v1",
+  "generation": "builtin imagegen",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "base_main_sha": "88ca256e42d9815afc218b6f8a9a43a55b556b6d",
+  "preserved": {
+    "master_entries": 82,
+    "unique_images": 71,
+    "prior_assets_unchanged": true,
+    "event_schedule_changes": false,
+    "prior_master_ids": [
+      "2026-10-24-spidey-full-day-guide",
+      "2026-11-21-community-day-preview",
+      "2026-10-raids-yveltal",
+      "2026-10-07-raid-hour-yveltal",
+      "2026-10-mega-blastoise-raids",
+      "2026-09-mega-victreebel-raids",
+      "2026-10-01-spotlight-seedot",
+      "2026-10-harvest-taken-over",
+      "2026-10-gigantamax-cinderace-max-day",
+      "2026-10-xerneas-raids",
+      "festival-of-lights-2026-pokeminers-e2",
+      "2026-09-raids-xerneas",
+      "2026-09-30-raid-hour-xerneas",
+      "2026-10-zorua-community-day",
+      "2026-10-shadow-thundurus",
+      "2026-10-08-spotlight-elgyem",
+      "2026-10-go-pass",
+      "2026-09-go-pass",
+      "2026-10-04-scenic-sunday",
+      "2026-10-06-showcase-tuesday",
+      "2026-09-twilight-trails-season",
+      "2026-09-gbl-29-1006",
+      "2026-10-gbl-06-13",
+      "2026-09-iit-delhi-rendezvous",
+      "2026-10-patterns-of-the-wild-indonesia",
+      "2026-10-01-go-battle-thursday",
+      "2026-10-02-friendship-friday",
+      "2026-09-mega-malamar-raids",
+      "2026-09-raids-ultra-beasts",
+      "2026-09-28-max-monday-sobble",
+      "2026-09-29-showcase-tuesday",
+      "2026-09-choose-your-path",
+      "2026-09-gbl-22-29",
+      "2026-10-halloween-part-1",
+      "2026-11-go-wild-area-sendai",
+      "2026-11-go-wild-area-mexico-city",
+      "2026-11-go-wild-area-global",
+      "2026-10-11-scenic-sunday",
+      "2026-10-18-scenic-sunday",
+      "2026-10-25-scenic-sunday",
+      "2026-10-13-showcase-tuesday",
+      "2026-10-20-showcase-tuesday",
+      "2026-10-27-showcase-tuesday",
+      "2026-10-15-go-battle-thursday",
+      "2026-10-22-go-battle-thursday",
+      "2026-10-29-go-battle-thursday",
+      "2026-10-16-friendship-friday",
+      "2026-10-23-friendship-friday",
+      "2026-10-30-friendship-friday",
+      "2026-10-11-nfl-cardinals-pokemon-go-day",
+      "2026-10-fall-marathon-buddy-trek",
+      "2026-11-halloween-part-2",
+      "2026-10-gbl-13-20",
+      "2026-09-tcg-30th-us-retail",
+      "2026-10-minior-orionids",
+      "2026-10-gbl-20-27",
+      "2026-10-halloween-go-pass",
+      "2026-10-sandile-hatch-day",
+      "2026-10-dynamax-max-battle-day",
+      "2026-10-gbl-27-1103",
+      "2026-10-city-safari-boston-rescheduled",
+      "2026-pokemon-night-out-la",
+      "2026-pokemon-night-out-london",
+      "2026-10-pokemon-night-out-twitch",
+      "2026-09-adidas-avatar-research",
+      "2026-10-apac-mall-exploration",
+      "2026-10-super-mega-raid-day",
+      "2026-11-minior-leonids",
+      "2026-10-raids-dialga",
+      "2026-12-minior-geminids",
+      "2026-10-15-spotlight-stufful",
+      "2026-10-22-spotlight-morelull",
+      "2026-10-21-raid-hour-palkia",
+      "2026-10-19-max-monday-sneasel",
+      "2026-10-shadow-landorus-17",
+      "2026-10-raids-palkia",
+      "2026-10-mega-dragonite-raids",
+      "2026-10-mega-charizard-xy-raids",
+      "2026-10-mega-sableye-raids",
+      "2026-10-26-max-monday-sableye",
+      "2026-10-24-fc-seoul",
+      "2026-national-trust-27-sites"
+    ],
+    "master_json_sha256": "b596c6284f56e6e7ddc65c6a02615d91b43354a24e0e4dffd83097846b830ee4"
+  },
+  "identity": {
+    "original_logo": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+    "logo_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+    "application": "Existing original S source resized and composited during asset packaging, not redrawn by AI.",
+    "legacy_spider_used": false
+  },
+  "visual_comparison": {
+    "references": [
+      "spidey-app/assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
+      "spidey-app/assets/events/premium/morelull-spotlight-hour-20261022-approved-v1.png"
+    ],
+    "criteria": [
+      "cinematic integrated scene and dominant faithful species",
+      "large legible Portuguese title/date/time",
+      "not a dashboard, vector placeholder or sprite pasted on generic background",
+      "correct benefit, source attribution and distinct Giratina periods",
+      "no substitution of previously approved assets"
+    ]
+  },
+  "browser_qa": {
+    "status": "REQUIRED_BEFORE_MERGE",
+    "workflow": "Spidey - QA Premium Giratina Gastly e Groudon",
+    "script": "scripts/qa_priority_art_20261028_browser.mjs",
+    "resolutions": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "views": [
+      "detail",
+      "weekly"
+    ],
+    "physical_android_tested": false
+  },
+  "assets": [
+    {
+      "event_id": "2026-10-29-spotlight-gastly",
+      "file": "spidey-app/assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 726078,
+      "sha256": "8f90571884f5dfd54b70eef1181ebcc334de4d946b619d43ba6fb0da49af2c38",
+      "source": {
+        "url": "https://nintendowire.com/guides/pokemon-go/spotlight-hour-for-october-29th-2026/",
+        "confidence": "verified_community"
+      },
+      "fact_checks": [
+        "Gastly, 29/10/2026, 18h–19h locais.",
+        "2× PE ao evoluir qualquer Pokémon; não é bônus por captura."
+      ],
+      "prompt": "Create a NEW finished portrait 1024x1536 promotional illustration/poster for the Portuguese-language Spidey Pokémon GO app. Use case: ads-marketing. Image 1 is an approved campaign-quality reference (Pawniard): match its rich cinematic integrated scenery, correct expressive Pokémon, enormous mobile-readable typography and luminous neon blue/gold polish, NOT its content or panel layout. Image 2 is only a spotlight composition/scene-quality reference; DO NOT use its obsolete spider emblem. Image 3 is the current ORIGINAL GOLD COSMIC S brand asset: place this existing emblem faithfully as a supporting insert in the upper-right corner; do NOT redesign it, do NOT draw a spider, no invented logo. All references are supporting inputs, not images to overwrite. Make a cohesive spectacular original game campaign scene with real depth, dramatic subject pose, premium high-end 3D/painted illustration finish, vivid luminous highlights (not a predominantly black poster). Keep the protagonist huge and biologically faithful to the named Pokémon. All text must be exact Portuguese below, large and crisp; no additional factual promises, numbers, species, gifts, shiny boost, attacks, CP tables, or locations. Header uses \"SPIDEY\" and \"POKÉMON GO\"; never write SpideyNexus. Final tiny footer \"SEMPRE UM PASSO À FRENTE\". No corporate dashboard, no screenshot, no generic sprite-on-background, no crowded small Pokémon, no source logos or raw URLs. Deliver the complete finished single poster, no mockup.\nSubject: ONE dominant Gastly, the authentic spherical black ghost body, large white eyes with pupils, fangs and swirling violet gaseous aura, no arms/legs, not Haunter/Gengar. Scene: immersive enchanted Halloween forest, luminous lavender moonlight, swirling violet spectral fog, floating golden particles and blue spectral spotlights, dynamic depth. Integrated bold editorial title and bottom benefit band. Exact main text: \"HORA DO HOLOFOTE\", \"GASTLY\", \"29 DE OUTUBRO DE 2026\", \"18H ÀS 19H • HORÁRIO LOCAL\", \"2× PE AO EVOLUIR POKÉMON\". Supporting small but readable text \"Prepare suas evoluções para aproveitar o bônus!\". Footer source: \"Fonte: GO Hub / Nintendo Wire • comunidade\". Do not show an evolved Pokémon; the evolution bonus applies to any Pokémon, not a guaranteed Gastly evolution reward."
+    },
+    {
+      "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "file": "spidey-app/assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 324696,
+      "sha256": "ec50fd29deab66492dd0a646389552ac327d357b28d557a82c4c57cb5a52dddb",
+      "source": {
+        "url": "https://leekduck.com/events/giratina-origin-forme-in-5-star-raid-battles-october-2026/",
+        "confidence": "verified_community"
+      },
+      "fact_checks": [
+        "Giratina Forma Origem, não Forma Alterada.",
+        "Hora de Reides em 28/10/2026, 18h–19h locais."
+      ],
+      "prompt": "Use case: ads-marketing. Create a NEW finished portrait 1024x1536 cinematic promotional poster for Spidey Pokémon GO, in Portuguese.\nInput 1 is the OFFICIAL Giratina ORIGIN FORME anatomy reference: match its character faithfully. Input 2 is an approved style/quality reference only (Pawniard); do not copy its Pokémon, panels, bonus information or layout. Input 3 is the original existing cosmic golden S emblem: supporting brand insert, preserve its design.\nShow ONE magnificent authentic Giratina ORIGIN FORME rising diagonally from a cyan-violet dimensional portal, high above a vast inverted ruined city with floating stone arches, luminous purple mist and gold/cyan light. Different composition from a raid rotation poster: the dragon is seen slightly from below with head at center-right, serpentine tail sweeping left and six long black streamers fanning up/back in the sky. Strong depth, dynamic premium game campaign rendering, brilliant lively colors and large crisp mobile-readable typography.\nAnatomy is NONNEGOTIABLE: directly preserve the reference's narrow flat gold-and-grey skull and two long DOWNWARD gold jaw mandibles; grey dome on forehead, red eyes. Do NOT use the high three-prong crown head of Altered Forme. Elongated pale grey legless serpentine body, striped black/red UNDERSIDE, grey sides, separate grey/gold pointed fins matching reference along lower body/tapered tail. SIX black flattened flexible ghostly streamers, three per side, each with a small red triangular tip. NO huge red claws or tubular arms, no feet, no legs, no webbed/bat wings, no hybrid anatomy, no extra Pokémon. Match the official head silhouette exactly.\nUpper left supporting header \"SPIDEY\" and \"POKÉMON GO\". Upper right use the small original gold cosmic S emblem from reference 3.\nMain exact text, huge and integrated into lower third: \"HORA DE REIDES\", \"GIRATINA\", \"FORMA ORIGEM\", \"28 DE OUTUBRO DE 2026\", \"18H ÀS 19H • HORÁRIO LOCAL\", \"Reúna seu grupo e prepare a equipe!\".\nFooter \"Fonte: Leek Duck • comunidade\" and \"SEMPRE UM PASSO À FRENTE\".\nNo star row, no invented bonuses, no numbers other than the specified date/time, no guaranteed shiny or moves, no SpideyNexus, no spider. Render the complete poster as one image, not a mockup, dashboard, flat card, or screenshot.",
+      "visual_review": {
+        "origin_forme_reference_matched": true,
+        "head": "narrow grey/gold skull with downturned mandibles; no Altered Forme crown",
+        "body": "legless pale-grey serpentine body with black/red underside",
+        "appendages": "six black streamers with small red tips",
+        "typography": "checked exact Portuguese date, event and time text",
+        "rotation_star_count": null
+      },
+      "generated_source_sha256": "0e88ba58fb7df02ec5af11df6df8b044d5966bf4a0899d2c22a8ad6f64750015",
+      "brand_packaging": {
+        "source": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+        "source_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+        "method": "existing official asset resize/composite only; no AI logo used",
+        "x": 792,
+        "y": 0,
+        "width": 232,
+        "height": 232
+      }
+    },
+    {
+      "event_id": "2026-10-raids-giratina-origin",
+      "file": "spidey-app/assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 313170,
+      "sha256": "5e786374e4949b18760f539a186fc86da406d405f7e2644cd971b8fc5ae9d3fd",
+      "source": {
+        "url": "https://leekduck.com/events/giratina-origin-forme-in-5-star-raid-battles-october-2026/",
+        "confidence": "verified_community"
+      },
+      "fact_checks": [
+        "Giratina Forma Origem em Reides de cinco estrelas, 28/10–03/11/2026.",
+        "Sem ataque exclusivo, captura, boost ou Brilhante garantidos."
+      ],
+      "prompt": "Use case: ads-marketing. Create a NEW complete vertical 1024x1536 high-end cinematic Portuguese promotional poster for the Spidey Pokémon GO app.\nInput 1 is the OFFICIAL GIRATINA ORIGIN FORME anatomy reference, the decisive character identity. Input 2 is only the accepted Pawniard campaign style/finish reference; do not copy its Pokémon, information panels, or layout. Input 3 is the EXISTING ORIGINAL cosmic gold S brand emblem, a supporting insert; reuse it faithfully, do not invent a replacement.\nPrimary request: a spectacular epic Origin Forme Giratina in the Distortion World, floating above fractured stone pillars and a luminous violet cosmic sea. Give the entire character an elegant dynamic curved serpentine pose and a coherent immersive scene with scale, depth and dramatic violet/cyan/gold lighting, polished game key-art finish and large crisp mobile-readable typography.\nCRITICAL CHARACTER IDENTITY: reproduce the anatomy of input 1 faithfully in three-dimensional cinematic rendering. Long legless grey segmented serpentine body, black bands with red stripes only on the FRONT UNDERSIDE of the neck/body. The SIDES and BACK are predominantly pale grey. Exact gold side armor around a flat narrow skull with grey forehead dome, small red eyes and two long curved downward gold mandibles. Do not convert the head into the three-spike high crown of Altered Forme. SIX long, slender BLACK shadow streamers, three per side of upper back, each ending in a SMALL flat red triangular tip; retain long ribbon silhouette, not huge tubular arms or red claws. Small separate grey-and-gold side body fins toward tail match reference. Body tapers and curls into a tail with grey fins/gold tips as shown. No feet, legs, bat wings, huge horns, fangs, oversized claws, invented armor, or hybrid form. Show the character large and readable, with its whole head and long curled tail visible. Let the six streamers fan behind without covering text.\nUpper left header exact \"SPIDEY\" above \"POKÉMON GO\". Upper right supporting original gold cosmic S insert from image 3, modest scale in an uncluttered area.\nExact main text integrated at bottom in this order: \"REIDES DE 5 ESTRELAS\", \"GIRATINA\", \"FORMA ORIGEM\", \"28 DE OUTUBRO A 3 DE NOVEMBRO\", \"Prepare sua equipe para as reides!\".\nTiny readable footer: \"Fonte: Leek Duck • comunidade\" and \"SEMPRE UM PASSO À FRENTE\".\nTypography: enormous gold GIRATINA and luminous white/violet FORMA ORIGEM, dates crisp in a restrained integrated band. Keep cinematic artistry dominant. No extra dates, hours, characters, bonuses, shiny claims, CP tables or invented facts. No SpideyNexus word, no spider emblem, no dashboard, no generic flat background, no framed screenshot. The character must match the official reference, with costume/anatomy taking precedence over stylistic spectacle.",
+      "revision_prompt": "Edit target: image 1 is the COMPLETE new Giratina Origin Forme poster. Perform ONE precise correction only: the decorative gold star row immediately ABOVE the words \"REIDES DE 5 ESTRELAS\" currently contains seven stars. Replace that one decorative row with EXACTLY FIVE gold stars, one large centered star and two smaller stars on each side, evenly spaced. Count them: 1, 2, 3, 4, 5. No other stars in that row. Preserve ALL other pixels as closely as possible, including the correct Origin Forme head, grey-and-black-red serpentine anatomy, six black streamers, scene, composition, exact Portuguese text, date, all branding and footer. Do not redraw the character or change any text. Preserve portrait 1024x1536 dimensions.",
+      "visual_review": {
+        "origin_forme_reference_matched": true,
+        "head": "narrow grey/gold skull with downturned mandibles; no Altered Forme crown",
+        "body": "legless pale-grey serpentine body with black/red underside",
+        "appendages": "six black streamers with small red tips",
+        "typography": "checked exact Portuguese date, event and time text",
+        "rotation_star_count": 5
+      },
+      "generated_source_sha256": "d91fae7927e646e244d621797962bf88acc7fe582a5193abe3e8fcbc1c7ada4c",
+      "brand_packaging": {
+        "source": "spidey-app/assets/branding/20261019/spidey-icon-cosmic-512.png",
+        "source_sha256": "4ee0ae8587bf3a60e2b4750b16b86a88472232c1627b737efea4d472dcfff0f8",
+        "method": "existing official asset resize/composite only; no AI logo used",
+        "x": 792,
+        "y": 0,
+        "width": 232,
+        "height": 232
+      }
+    },
+    {
+      "event_id": "2026-11-go-pass-groudon",
+      "file": "spidey-app/assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 775900,
+      "sha256": "e62598c5fdef662d5afa2dc7b4cabb015585b411768e9cf10f5e09cb9444ee99",
+      "source": {
+        "url": "https://pokemongo.com/en/news/go-pass-november-2026",
+        "confidence": "official"
+      },
+      "fact_checks": [
+        "Passe GO 03/11–01/12/2026; resgate até 03/12, 10h locais.",
+        "400 PokéMoedas na trilha gratuita, mais 1.000 somente no Deluxe pago; exige progressão.",
+        "Groudon normal, não Groudon Primal."
+      ],
+      "prompt": "Create a NEW finished portrait 1024x1536 promotional illustration/poster for the Portuguese-language Spidey Pokémon GO app. Use case: ads-marketing. Image 1 is an approved campaign-quality reference (Pawniard): match its rich cinematic integrated scenery, correct expressive Pokémon, enormous mobile-readable typography and luminous neon blue/gold polish, NOT its content or panel layout. Image 2 is only a spotlight composition/scene-quality reference; DO NOT use its obsolete spider emblem. Image 3 is the current ORIGINAL GOLD COSMIC S brand asset: place this existing emblem faithfully as a supporting insert in the upper-right corner; do NOT redesign it, do NOT draw a spider, no invented logo. All references are supporting inputs, not images to overwrite. Make a cohesive spectacular original game campaign scene with real depth, dramatic subject pose, premium high-end 3D/painted illustration finish, vivid luminous highlights (not a predominantly black poster). Keep the protagonist huge and biologically faithful to the named Pokémon. All text must be exact Portuguese below, large and crisp; no additional factual promises, numbers, species, gifts, shiny boost, attacks, CP tables, or locations. Header uses \"SPIDEY\" and \"POKÉMON GO\"; never write SpideyNexus. Final tiny footer \"SEMPRE UM PASSO À FRENTE\". No corporate dashboard, no screenshot, no generic sprite-on-background, no crowded small Pokémon, no source logos or raw URLs. Deliver the complete finished single poster, no mockup.\nSubject: ONE huge authentic normal red GROUDON, white claws and plates, black body linework, imposing full-body roar with correct anatomy, NOT Primal Groudon and no invented Mega form. Original vast sunlit volcanic campaign scenery: fiery fissures, hovering glowing golden coin-like light accents (not a promise of unlimited coins), basalt cliffs, golden sunset and blue atmospheric rim lighting; epic vivid depth, not plain lava backdrop. Event panel hierarchy compact and mobile-readable. Exact text: \"PASSE GO • NOVEMBRO\", \"GROUDON\", \"3 DE NOVEMBRO A 1º DE DEZEMBRO\", \"400 POKÉMOEDAS NO GRATUITO\", \"MAIS 1.000 NO DELUXE PAGO\", \"Resgate das recompensas até 3/12, às 10h locais\". Source footer \"Fonte: Pokémon GO oficial\". All 400 require progression; show supporting \"Avance nos ranques para desbloquear recompensas.\" Do not imply 1,400 free, no price, shiny guarantee or Primal encounter. No other Pokémon."
+    }
+  ],
+  "blocked_generations_preserved": [
+    "2026-09-harvest-festival-applin",
+    "2026-10-world-space-week",
+    "2026-10-05-max-monday-sizzlipede"
+  ],
+  "external_messages_sent": 0,
+  "push_sends": 0,
+  "physical_android_tested": false,
+  "rejected_versions": [
+    {
+      "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
+      "file": "spidey-app/assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v1.webp",
+      "sha256": "ca2e34d9eb6be91a81b4607ea218cce07cd9184a67d1cd6806e6bf480cd1d975",
+      "status": "REJECTED_BY_USER",
+      "reason": "Giratina mixes Origin and Altered Forme anatomy; never publish or restore this candidate."
+    },
+    {
+      "event_id": "2026-10-raids-giratina-origin",
+      "file": "spidey-app/assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v1.webp",
+      "sha256": "33af48d76cd2e94e1ebc80ca3624c08374970dabbe5ce2c43a67e8b95ff0ec50",
+      "status": "REJECTED_BY_USER",
+      "reason": "Giratina mixes Origin and Altered Forme anatomy; never publish or restore this candidate."
+    }
+  ],
+  "character_reference": {
+    "name": "Official Giratina Origin Forme Pokédex",
+    "url": "https://ph.portal-pokemon.com/pokedex/0487_1/",
+    "image_url": "https://ph.portal-pokemon.com/images/pokedex/1081bc5f94f5cfb8bbfacc7c9b382613efc355ca.png"
+  },
+  "source_verification": {
+    "date": "2026-10-28",
+    "giratina": "Leek Duck 28/10 06h to 03/11 22h local; Raid Hour 28/10 18h–19h local",
+    "gastly": "GO Hub weekly schedule and Nintendo Wire: 29/10 18h–19h local; 2x evolution XP",
+    "groudon": "Official Pokemon GO November GO Pass: dates, 400 free + 1000 Deluxe paid and progression verified"
+  },
+  "local_tests": {
+    "node": {
+      "passed": 292,
+      "failed": 0
+    },
+    "python": {
+      "passed": 31,
+      "failed": 0
+    },
+    "pages_package": "PASSED",
+    "previous_master_entries_preserved": 82
+  }
+}

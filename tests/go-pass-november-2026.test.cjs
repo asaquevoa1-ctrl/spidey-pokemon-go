@@ -22,7 +22,7 @@ test('free 400 coins are never described as 1400 free and shiny is not guarantee
  assert.ok(e.bonuses.some(x=>x.includes('Ranque 75')));
  assert.equal(e.gpx.enabled,false);
 });
-test('approved premium artworks remain untouched and no invented November artwork is claimed',()=>{
+test('approved premium artworks remain present and November artwork has reviewed provenance',()=>{
  const e=ev[0],q=JSON.parse(fs.readFileSync('queue/pending/2026-10-20/earn-pokecoins-for-progressing-in-go-pass-november-2818d6f061e8.json','utf8'));
  assert.equal(e.presentation.requires_art,false);
  assert.equal(e.presentation.fallback_visual,'date');
@@ -38,5 +38,14 @@ test('approved premium artworks remain untouched and no invented November artwor
  assert.ok(pending || ownArticleDuplicate,'Editorial art brief must not be lost or deduped to an unrelated event');
  const master=fs.readFileSync('spidey-app/premium-approved-master.js','utf8');
  assert.ok(master.includes('go-pass-october-kyogre-approved-v1.png'));
- assert.ok(!master.includes('2026-11-go-pass-groudon'));
+ const window={};require('node:vm').runInNewContext(master,{window});
+ const approved=window.SPIDEY_APPROVED_ART_MASTER[e.id];
+ const qa=JSON.parse(fs.readFileSync(approved.approval_record,'utf8'));
+ const poster=qa.assets.find(a=>a.event_id===e.id);
+ assert.equal(approved.status,'APPROVED');
+ assert.equal(qa.approval_basis,'USER_DELEGATED_VISUAL_QA');
+ assert.equal(qa.individual_human_approval_claimed,false);
+ assert.equal(poster.source.confidence,'official');
+ assert.equal(approved.file,poster.file.replace('spidey-app/',''));
+ assert.equal(approved.sha256,require('node:crypto').createHash('sha256').update(fs.readFileSync(poster.file)).digest('hex'));
 });
