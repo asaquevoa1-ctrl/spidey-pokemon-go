@@ -1677,7 +1677,7 @@
       "pokemon": [
         {
           "name": "Eternatus",
-          "note": "Encontro no Passe GO para quem ainda não capturou; quem já capturou recebe 100 Doces de Eternatus."
+          "note": "Encontro ao avançar no Passe GO gratuito, para quem ainda não capturou; quem já capturou recebe 100 Doces de Eternatus e não tem outro encontro."
         }
       ],
       "bonuses": [
@@ -1686,12 +1686,16 @@
         "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max."
       ],
       "notes": [
-        "Acesso geral ao Passe GO em 16/11 às 10h locais. Quem resgatar o primeiro marco do Passe GO Into the Wild recebe acesso antecipado em 14/11 às 10h e a versão Deluxe gratuitamente.",
-        "Recompensas desbloqueadas: resgate até 25/11 às 20h locais. O encontro não concede um segundo Eternatus a quem já capturou.",
+        "Eternatus está na trilha gratuita do Passe GO. Avance nas tarefas para liberar o encontro; não é necessário comprar o Deluxe.",
+        "Só um Eternatus por conta neste retorno. Se você já capturou em 2025, recebe 100 Doces no lugar de outro encontro.",
+        "Eternatus sem versão Brilhante anunciada para este evento.",
+        "Planeje seus Doces: do nível 15 ao 50, Eternatus exige 8.900 Doces e 8.900 Doces GG. Esse total não inclui melhorar os movimentos Max nem liberar o segundo ataque carregado. Custo documentado pela Bulbapedia (comunidade).",
+        "Batalhas contra Eternamax: somente em 21/11, das 11h às 14h locais. Vencer não dá um encontro com Eternatus: as recompensas são Doces e Doces GG.",
+        "Acesso geral ao Passe GO em 16/11 às 10h locais. Quem resgatar o primeiro marco do Passe GO: Natureza Selvagem (Into the Wild) recebe acesso antecipado em 14/11 às 10h e a versão Deluxe gratuitamente.",
+        "Recompensas desbloqueadas: resgate até 25/11 às 20h locais.",
         "As espécies temáticas podem aparecer na natureza; isso não significa encontrar Pokémon na forma Dinamax fora das Batalhas Max. Lendários e Míticos ficam fora dessa lista comum.",
         "Capturas com Pokémon GO Plus + ou Explorer Gadget não dão as Partículas Max desse bônus.",
-        "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais.",
-        "Eternamax Eternatus não é capturável após a batalha; as recompensas incluem Doces e Doces GG. Nenhum Eternatus Brilhante foi anunciado."
+        "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais."
       ],
       "notifications": {
         "enabled": false,
@@ -1704,12 +1708,20 @@
           "name": "Pokémon GO • anúncio oficial",
           "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
           "confidence": "official"
+        },
+        {
+          "name": "Bulbapedia • custo de fortalecimento (comunidade)",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Candy_XL",
+          "confidence": "verified_community",
+          "claims": [
+            "eternatus_power_up_level_15_to_50"
+          ]
         }
       ],
-      "updated_at": "2026-10-28T18:10:35-03:00",
+      "updated_at": "2026-10-28T19:45:58-03:00",
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
@@ -1722,6 +1734,23 @@
         "start_local": "2026-11-14T10:00:00-03:00",
         "condition": "Resgatar o primeiro marco do Passe GO Into the Wild",
         "includes_free_deluxe": true
+      },
+      "power_up_guide": {
+        "from_level": 15,
+        "to_level": 50,
+        "candy": 8900,
+        "candy_xl": 8900,
+        "includes_max_moves": false,
+        "includes_second_charged_attack": false,
+        "source": {
+          "name": "Bulbapedia • custo de fortalecimento (comunidade)",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Candy_XL",
+          "confidence": "verified_community",
+          "claims": [
+            "eternatus_power_up_level_15_to_50"
+          ]
+        },
+        "verified_at": "2026-10-28"
       }
     },
     {
@@ -10979,7 +11008,7 @@
       "slug": "official-news-auto-fdcd3a9d813c",
       "content_type": "news",
       "title": "Eternatus volta em novembro: veja as datas e como participar",
-      "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+      "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -11000,12 +11029,13 @@
       },
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
       "notes": [
-        "Informações e horários conferidos no anúncio oficial de 28/10. Consulte os três eventos relacionados no calendário."
+        "O encontro está na trilha gratuita do Passe GO; não é necessário comprar o Deluxe. Quem já capturou Eternatus recebe 100 Doces.",
+        "As Batalhas Max acontecem somente em 21/11, 11h–14h locais, e não concedem novo encontro. O guia de Trilhas Dinamax detalha os custos de fortalecimento com fonte comunitária identificada."
       ],
       "notifications": {
         "enabled": false,
@@ -11013,7 +11043,7 @@
       },
       "status": "published",
       "verified_at": "2026-10-28",
-      "updated_at": "2026-10-28T18:10:35-03:00",
+      "updated_at": "2026-10-28T19:45:58-03:00",
       "audit": {
         "classification": "official_announcement_editorially_verified",
         "editorial_detail_pending": false,
@@ -11132,7 +11162,9 @@
         "8× Partículas Max nos Pontos de Energia, com renovação mais frequente."
       ],
       "notes": [
-        "Para obter Eternatus, avance no Passe GO Trilhas Dinamax. Quem já capturou recebe 100 Doces em vez de outro encontro.",
+        "Eternatus vem da trilha gratuita do Passe GO Trilhas Dinamax. Quem já capturou recebe 100 Doces no lugar de outro encontro; vencer a Batalha Max não permite capturá-lo novamente.",
+        "Planeje seus Doces: do nível 15 ao 50, Eternatus exige 8.900 Doces e 8.900 Doces GG. Esse total não inclui melhorar os movimentos Max nem liberar o segundo ataque carregado. Custo documentado pela Bulbapedia (comunidade).",
+        "Eternatus sem versão Brilhante anunciada para este evento.",
         "Limite de 30 Reides a Distância de 20/11 às 18h a 21/11 às 23h em Brasília. Essa janela é separada das Batalhas Max de 11h–14h locais.",
         "Sem coordenadas exclusivas de Pontos de Energia confirmadas. A rota FLY usa as referências mundiais existentes; confira os pontos ativos no jogo."
       ],
@@ -11142,17 +11174,25 @@
       },
       "status": "published",
       "verified_at": "2026-10-28",
-      "updated_at": "2026-10-28T18:10:35-03:00",
+      "updated_at": "2026-10-28T19:45:58-03:00",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio oficial",
           "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
           "confidence": "official"
+        },
+        {
+          "name": "Bulbapedia • custo de fortalecimento (comunidade)",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/Candy_XL",
+          "confidence": "verified_community",
+          "claims": [
+            "eternatus_power_up_level_15_to_50"
+          ]
         }
       ],
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
@@ -11227,7 +11267,7 @@
       },
       "status": "published",
       "verified_at": "2026-10-28",
-      "updated_at": "2026-10-28T18:10:35-03:00",
+      "updated_at": "2026-10-28T19:45:58-03:00",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio oficial",
@@ -11237,7 +11277,7 @@
       ],
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem pelo Passe GO; quem já capturou recebe 100 Doces.",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       }

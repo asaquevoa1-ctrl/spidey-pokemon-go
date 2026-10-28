@@ -42,6 +42,13 @@ test('official announcement replaces the old teaser and one news story opens the
  assert.match(trail.early_access.condition,/primeiro marco/);
  assert.equal(trail.early_access.start_local,'2026-11-14T10:00:00-03:00');
  assert.match(trail.pokemon[0].note,/quem já capturou recebe 100 Doces/);
+ assert.match(trail.pokemon[0].note,/Passe GO gratuito/);
+ const cost=trail.power_up_guide;
+ assert.deepEqual([cost.from_level,cost.to_level,cost.candy,cost.candy_xl],[15,50,8900,8900]);
+ assert.equal(cost.includes_max_moves,false);
+ assert.equal(cost.includes_second_charged_attack,false);
+ assert.equal(cost.source.confidence,'verified_community','Community costs must not become official event promises');
+ assert.ok(trail.notes.some(n=>/8\.900 Doces e 8\.900 Doces GG/.test(n)&&/nível 15 ao 50/.test(n)&&/comunidade/.test(n)));
 });
 test('Eternamax battle window never promises capture or conflates the remote raid limit timezone',()=>{
  const w=setup(),e=events.find(e=>e.id==='2026-11-21-eternamax-eternatus-max-battles');
