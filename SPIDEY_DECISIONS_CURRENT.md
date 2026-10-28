@@ -319,3 +319,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Evitar frases de exclusão por residência (“para quem está no Brasil só resta acompanhar a live”). Lives e recompensas remotas devem aparecer como modos ADICIONAIS de participação, sem negar a orientação geográfica do jogo.
 - A regra vale para o texto do Calendário, Novidades, detalhes, roteiro do dia, cartões de eventos locais, Selos, Trust, ANA e novos conteúdos. A linguagem deve ser direta, inclusiva para FLY e sem promessas de garantias.
 - Preservar datas oficiais, 67 pontos originais/70 localidades FLY, identidade S cósmica, artes aprovadas, GPX desabilitado em locais sem coordenadas específicas e Caçador removido conforme decisão anterior.
+ 
+## 28/10/2026 — Nagano 6/6 PokéLids confirmados, coordenada de Ina já correta
+- Capturas de tela do Pokémon GO fornecidas pelo responsável mostram a província de Nagano com **6/6 selos** no grupo Chubu e um **Pikachu com Fundo de Localização de Nagano**. Preservar imagens privadas fora do repositório.
+- Informação externa cruzada: reportagem PokéRaku de **01/10/2026** identifica seis PokéLids de Nagano disponíveis no jogo: Ina, Okaya, Omachi, Minamimaki, Kiso e Yamanouchi. Fonte: https://pokemongo-raku.com/post130804 . O anúncio oficial explica encontro com Pikachu de fundo regional a cada dois selos presenciais na mesma província e que presentes não contam: https://pokemongo.com/ja/news/pokelid_full .
+- Coordenada enviada `35.88248,137.91905` coincide com a **tampa nº 482 de Ina**, já registrada no Spidey como `35.882479,137.919057` (diferença inferior a 1 m). NÃO substituir a coordenada precisa; manter todas as seis posições originais, as 482 PokéLids e as artes oficiais imutáveis.
+- Não confundir posição física de tampa com localização exata da Poképarada. Manter `gpx_enabled=false`; o print não confirma seis Poképaradas individuais nas coordenadas das tampas.
+- Destaque editorial na coleção nacional exibirá a liberação de Nagano em 01/10/2026 (não dizer "liberado hoje"), seis selos, condição presencial, fundo regional e **Brilhante possível, jamais garantido**.
