@@ -16,7 +16,8 @@ const names=[
 test('Official CDMX Wild Area seven-stamp rally appears once and keeps all preexisting collections',()=>{
  assert.ok(rally && event);
  assert.equal(catalog.rallies.filter(x=>x.id===rallyId).length,1);
- assert.equal(catalog.rallies.length,6); // Novo guia editorial de Día de Muertos, sem afetar o circuito de 7 selos\n assert.equal(catalog.rallies.filter(x=>x.id==='2026-dia-de-muertos-reforma-stamp-guide').length,1);
+ assert.equal(catalog.rallies.length,7); // Sendai entra como guia separado, sem alterar o circuito mexicano.\n assert.equal(catalog.rallies.filter(x=>x.id==='2026-dia-de-muertos-reforma-stamp-guide').length,1);
+ assert.equal(catalog.rallies.filter(x=>x.id==='2026-go-wild-area-sendai-stamp-rally').length,1);
  for(const prior of ['pokemon-centre-japan-stamp-rally-2026','pokexciting-cross-region-2026','nagasaki-city-stamp-rally']){
    assert.equal(catalog.rallies.filter(x=>x.id===prior).length,1,prior);
  }
