@@ -462,3 +462,11 @@
 .stamp-active-art-v2--without-image{min-height:0!important;width:82px;height:82px;align-self:start;border:1px solid rgba(238,202,116,.3)}
 .stamp-art-unavailable-v2{min-height:0;background:rgba(243,199,90,.08)}
 .stamp-active-art-v2--without-image .stamp-art-placeholder-v2{min-height:0}
+
+/* Novidades oficiais/da comunidade na coleção PokéLid, sem trocar as artes das tampas. */
+.stamp-regional-spotlight{margin:16px 0 22px;padding:16px 18px;border:1px solid rgba(238,197,114,.32);border-radius:18px;background:linear-gradient(125deg,rgba(32,41,66,.9),rgba(26,22,49,.92));box-shadow:0 8px 18px rgba(0,0,0,.1)}
+.stamp-regional-spotlight .eyebrow{color:#f8cc76;font-size:.72rem;letter-spacing:.08em}
+.stamp-regional-spotlight h3{font-size:1.05rem;margin:7px 0 9px;color:#fff0ca}
+.stamp-regional-spotlight p{margin:7px 0;line-height:1.5;color:#f3f4fa}
+.stamp-regional-spotlight p.microcopy{color:#d1d7e5;font-size:.82rem}
+.stamp-regional-spotlight a{display:inline-block;margin-top:8px;color:#f8d486;font-size:.85rem;text-decoration:underline;text-underline-offset:3px}

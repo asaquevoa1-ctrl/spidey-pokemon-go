@@ -226,6 +226,14 @@
         <h2>${escapeHtml(rally.title)}</h2>
         <p>${escapeHtml(rally.public_summary ?? rally.summary ?? '')}</p>
         ${isPokelid ? '<p class="microcopy">Conheça os desenhos das tampas Pokémon pelo Japão. Nem toda PokéLid já virou uma PokéStop no jogo.</p>' : ''}
+        ${isPokelid && rally.regional_spotlight ? `<aside class="stamp-regional-spotlight" aria-label="Novidade da região de Nagano">
+          <span class="eyebrow">ATUALIZAÇÃO • ${escapeHtml(rally.regional_spotlight.release_date.split('-').reverse().join('/'))}</span>
+          <h3>${escapeHtml(rally.regional_spotlight.heading)}</h3>
+          <p>${escapeHtml(rally.regional_spotlight.body)}</p>
+          <p class="microcopy">${escapeHtml(rally.regional_spotlight.shiny_note)}</p>
+          <p class="microcopy">${escapeHtml(rally.regional_spotlight.coordinate_note)}</p>
+          <a href="${escapeHtml(rally.regional_spotlight.source.url)}" target="_blank" rel="noopener noreferrer">Conferir atualização de Nagano ↗</a>
+        </aside>` : ''}
         ${isLandmarkGuide ? '<p class="microcopy">Temos os sete lugares no mapa! As coordenadas são dos locais, não das Poképaradas. Procure o símbolo do selo dentro do Pokémon GO.</p>' : ''}
         ${rally.id === 'nagasaki-city-stamp-rally' ? '<p class="microcopy">O selo de Nagasaki tem o desenho de Ampharos. Ele aparece nas oito paradas desta coleção.</p>' : ''}
 
