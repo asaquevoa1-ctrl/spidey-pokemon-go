@@ -30,8 +30,9 @@ test('active, upcoming, date-only and news all honor their appropriate boundarie
   const date=JSON.parse(fs.readFileSync('tests/fixtures/nfl-retired-20261011.json','utf8')).event;
   assert.equal(visible(date,new Date('2026-10-12T06:50:00Z')),true);
   assert.equal(visible(date,new Date('2026-10-12T08:30:00Z')),false);
-  const news=events.find(e=>e.content_type==='news');
+  const news=events.find(e=>e.content_type==='news'&&e.status==='published');
   assert.equal(visible(news,when),true,'news archive must remain');
+  assert.equal(visible(events.find(e=>e.id==='2026-10-26-eternatus-teaser-unconfirmed'),when),false,'superseded teaser stays in source history, not current News');
 });
 test('unfinished schedule does not remain advertised as active',()=>{
   assert.equal(visible({status:'published',schedule:{}},when),false);

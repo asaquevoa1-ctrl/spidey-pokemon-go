@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-28",
+  "status": "LOCAL_TESTS_PASSED_CI_PENDING",
+  "base_main_sha": "952307bd26fb0f34e540dcb6f829fdc1c8689cbd",
+  "source": {
+    "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+    "http": 200,
+    "html_sha256": "6e105f75607f176ebead054a49b85195d2d56c858d0b05247c6023e15c8376a2"
+  },
+  "diagnosis": {
+    "los_angeles": "Date-only status DATA ENCERRADA escaped a filter that compared only ENCERRADO and EXPIRADO",
+    "news": "Official announcement was present only as an automatically discovered headline; editorial calendar task was paused"
+  },
+  "changes": {
+    "expired_world_events": "Filter by local last day and real end instant; prune on clock/focus/online/visibility changes",
+    "dynamax_trails_existing_id": "2026-11-16-dynamax-trails",
+    "new_event_ids": [
+      "2026-11-19-spotlight-galar-starters",
+      "2026-11-21-eternamax-eternatus-max-battles"
+    ],
+    "old_teaser": "Preserved as archived and superseded; no rumor promoted to calendar",
+    "official_news_id": "official-news-auto-fdcd3a9d813c"
+  },
+  "preserved": {
+    "approved_master_sha256": "8f83a05d98820fb092b9ba77294a80fdfbd834a830a4ad35aa6f41f39c9e1d4b",
+    "local_events_sha256": "12ebcd1152e9992faf8a4f4cb6be157bec55d9c8c23cb6232df2804747799212",
+    "los_angeles_history_deleted": false,
+    "artwork_changes": false
+  },
+  "local_tests": {
+    "node": 297,
+    "python": 31
+  },
+  "browser_ci": "Spidey - QA encerrados e Eternatus",
+  "physical_android_tested": false,
+  "push_sent": 0,
+  "external_messages_sent": 0
+}
