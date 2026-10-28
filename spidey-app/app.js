@@ -474,6 +474,27 @@ function nightOutBackgroundHighlight(event) {
 }
 window.SpideyNightOutHighlight = nightOutBackgroundHighlight;
 
+function renderMaxBattleGuide(event) {
+  const guide = event.max_battle_guide;
+  if (!guide || !Array.isArray(guide.illustrated_selection) || !guide.illustrated_selection.length) return '';
+  const escapeText = value => String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[char]));
+  const items = guide.illustrated_selection.map(name => '<li>' + escapeText(name) + '</li>').join('');
+  return '<section class="dynamax-guide" aria-label="Guia dos Pokémon Dinamax">' +
+    '<h3>' + escapeText(guide.heading) + '</h3>' +
+    '<p>' + escapeText(guide.official_rule) + '</p>' +
+    '<p class="dynamax-guide-highlight">' + escapeText(guide.special_background) + '</p>' +
+    '<details class="dynamax-roster">' +
+      '<summary>Ver ' + guide.illustrated_selection.length + ' aparições da seleção ilustrada</summary>' +
+      '<p class="dynamax-guide-source">' + escapeText(guide.selection_label) + '</p>' +
+      '<ul class="dynamax-roster-list">' + items + '</ul>' +
+    '</details>' +
+    '<p class="dynamax-guide-source">' + escapeText(guide.background_reference) + '</p>' +
+    '<p class="dynamax-guide-source">' + escapeText(guide.capture_method) + '</p>' +
+    '</section>';
+}
+
 function openEvent(event) {
   if (!event) return;
   beginAppDialog();
@@ -513,6 +534,7 @@ function openEvent(event) {
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">${event.source.confidence === 'official' ? 'Anúncio oficial' : 'Ver fonte'}</a>` : ''}
       </div>
       ${pokemon.length ? `<h3>Pokémon em destaque</h3><ul class="bonus-list">${pokemon.map((item) => `<li>${item.name}${item.note ? ` — ${item.note}` : ''}</li>`).join('')}</ul>` : ''}
+      ${renderMaxBattleGuide(event)}
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${event.notes?.length ? `<h3>Mais informações</h3><ul class="event-notes">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;
