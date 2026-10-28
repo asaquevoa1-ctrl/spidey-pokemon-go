@@ -30,6 +30,15 @@ async function open(width,theme,fixed,weekly){
  return context;
 }
 async function closeDetail(){await page.locator('#dialogBackButton').click();await page.locator('#eventDialog').waitFor({state:'hidden'});}
+async function waitForWeeklyRender(){
+ // The legacy QA layer refreshes this DOM after 250/1200 ms; wait for its final render before scrolling cards.
+ await page.evaluate(()=>new Promise(resolve=>{
+   const root=document.querySelector('#weeklyView');let quiet;
+   const finish=()=>{observer.disconnect();resolve();};
+   const settle=()=>{clearTimeout(quiet);quiet=setTimeout(finish,1300);};
+   const observer=new MutationObserver(settle);observer.observe(root,{childList:true,subtree:true});settle();
+ }));
+}
 function check(value,message){if(!value)throw Error(message);}
 try{
  for(const width of [390,1280])for(const theme of ['light','dark']){
@@ -69,6 +78,7 @@ try{
    await context.close();page=null;
    activeCase={phase:'future_week',width,theme};const futureContext=await open(width,theme,'2026-11-16T12:00:00-03:00',future);
    await page.evaluate(()=>{setView('weeklyView');renderWeeklyView();});await page.locator('#weeklyView').waitFor({state:'visible'});
+   await waitForWeeklyRender();
    for(const id of ids){const entry=page.locator(`#weeklyView [data-weekly-event="${id}"]`).first();await entry.waitFor({state:'visible'});await entry.scrollIntoViewIfNeeded();checks.push({...activeCase,view:'weekly',id});}
    await page.screenshot({path:`${out}/${width}-${theme}-future-week.png`,fullPage:false});
    await futureContext.close();page=null;
