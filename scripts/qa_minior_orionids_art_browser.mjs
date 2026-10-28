@@ -59,7 +59,15 @@ try{
     if(!detail.src.includes(expected)||detail.natural[0]!==1056||detail.natural[1]!==1320||detail.overflow)throw new Error(`detail failed ${JSON.stringify(detail)}`);
     checks.push({width,theme,view:'detail',...detail});
     await page.screenshot({path:`${output}/${width}-${theme}-detail.png`,fullPage:true});
-    await page.evaluate(()=>{document.querySelector('#eventDialog')?.close();setView('weeklyView');renderWeeklyView();});
+    await page.evaluate((weeklyFixture)=>{
+      document.querySelector('#eventDialog')?.close();
+      // Keep this approved-art check historical and deterministic. The public
+      // weekly snapshot follows the real current week and must not revive this
+      // already-ended event.
+      spideyWeeklyData=weeklyFixture;
+      setView('weeklyView');
+      renderWeeklyView();
+    },futureWeekly);
     const weekly=page.locator(`[data-weekly-event="${eventId}"]`).first();await weekly.waitFor({state:'attached'});
     await weekly.evaluate(el=>{
       for(let node=el;node;node=node.parentElement){
