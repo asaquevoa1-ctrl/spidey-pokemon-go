@@ -103,3 +103,16 @@ h2 { margin: 5px 0 0; font-size: 1.55rem; letter-spacing: -.025em; }
   .info-grid { grid-template-columns:1fr; }
   .topbar { padding-left:12px; padding-right:12px; }
 }
+
+/* Trilhas Dinamax: consulta compacta, legível no Samsung e sem pôster genérico. */
+.dynamax-guide { margin:18px 0; padding:16px; border:1px solid var(--line); border-radius:16px; background:var(--surface-2); }
+.dynamax-guide h3 { margin:0 0 10px; }
+.dynamax-guide p { line-height:1.55; }
+.dynamax-guide-highlight { font-weight:650; color:var(--text); }
+.dynamax-roster { margin:14px 0; border:1px solid var(--line); border-radius:12px; padding:12px; }
+.dynamax-roster summary { cursor:pointer; font-weight:700; color:var(--text); }
+.dynamax-roster summary:focus-visible { outline:2px solid var(--cyan); outline-offset:4px; }
+.dynamax-roster-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 14px; padding:10px 0 0; margin:0; list-style:none; }
+.dynamax-roster-list li { padding:7px 9px; border-radius:8px; background:var(--surface); overflow-wrap:anywhere; }
+.dynamax-guide-source { color:var(--muted); font-size:.88rem; }
+@media(min-width:760px) { .dynamax-roster-list { grid-template-columns:repeat(3,minmax(0,1fr)); } }
