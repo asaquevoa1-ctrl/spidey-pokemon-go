@@ -18,7 +18,7 @@ test('Mobile scroll avoids costly sticky blur without altering desktop or approv
   assert.ok(html.includes(path + '?v=20261025-scroll1'), path+' mobile performance cache version');
  }
  // Other features may legitimately refresh app.js after the scroll improvement.
- assert.match(html, /app\\.js\\?v=20[0-9]{6}-[a-z0-9-]+/i, 'app.js remains cache-versioned');
+ assert.match(html, /app[.]js[?]v=20[0-9]{6}-[a-z0-9-]+/i, 'app.js remains cache-versioned');
  const sw=read('sw.js');
  assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1'));
  assert.ok(sw.includes('20261023-no-hunter1'),'Legacy Caçador cache version remains invalidated');
