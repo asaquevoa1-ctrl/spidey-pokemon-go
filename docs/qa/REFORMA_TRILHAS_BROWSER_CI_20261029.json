@@ -1,0 +1,306 @@
+{
+  "status": "PASSED_PREVIEW",
+  "checks": [
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "six community references rendered"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "community source without false progress or GPX"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "copy point 1"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "copy point 2"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "copy point 3"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "copy point 4"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "copy point 5"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "copy point 6"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "copy all six in map order"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "selectable coordinate list matches clipboard"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "six maps use their own supplied coordinates"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "Reforma has no horizontal overflow"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "illustrative 56-slot roster opens"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "official eligibility and community background distinction"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "check": "Dynamax roster has no horizontal overflow"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "six community references rendered"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "community source without false progress or GPX"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "copy point 1"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "copy point 2"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "copy point 3"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "copy point 4"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "copy point 5"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "copy point 6"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "copy all six in map order"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "selectable coordinate list matches clipboard"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "six maps use their own supplied coordinates"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "Reforma has no horizontal overflow"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "illustrative 56-slot roster opens"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "official eligibility and community background distinction"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "check": "Dynamax roster has no horizontal overflow"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "six community references rendered"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "community source without false progress or GPX"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "copy point 1"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "copy point 2"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "copy point 3"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "copy point 4"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "copy point 5"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "copy point 6"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "copy all six in map order"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "selectable coordinate list matches clipboard"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "six maps use their own supplied coordinates"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "Reforma has no horizontal overflow"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "illustrative 56-slot roster opens"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "official eligibility and community background distinction"
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "check": "Dynamax roster has no horizontal overflow"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "six community references rendered"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "community source without false progress or GPX"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "copy point 1"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "copy point 2"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "copy point 3"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "copy point 4"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "copy point 5"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "copy point 6"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "copy all six in map order"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "selectable coordinate list matches clipboard"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "six maps use their own supplied coordinates"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "Reforma has no horizontal overflow"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "illustrative 56-slot roster opens"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "official eligibility and community background distinction"
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "check": "Dynamax roster has no horizontal overflow"
+    }
+  ],
+  "physical_android_tested": false
+}

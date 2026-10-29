@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-29T16:12:29.389Z",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "mexico": {
+    "coordinates": "19.42790, -99.16620\n19.42941, -99.16447\n19.42910, -99.16164\n19.42800, -99.16446\n19.42530, -99.17020\n19.42770, -99.16760",
+    "gpx": false,
+    "overflow": false,
+    "references": [
+      {
+        "coordinate": "19.42790, -99.16620",
+        "map": "https://www.google.com/maps/search/?api=1&query=19.42790%2C%20-99.16620",
+        "name": "Mexicráneo"
+      },
+      {
+        "coordinate": "19.42941, -99.16447",
+        "map": "https://www.google.com/maps/search/?api=1&query=19.42941%2C%20-99.16447",
+        "name": "Bolsa Mexicana de Valores"
+      },
+      {
+        "coordinate": "19.42910, -99.16164",
+        "map": "https://www.google.com/maps/search/?api=1&query=19.42910%2C%20-99.16164",
+        "name": "Reforma 222"
+      },
+      {
+        "coordinate": "19.42800, -99.16446",
+        "map": "https://www.google.com/maps/search/?api=1&query=19.42800%2C%20-99.16446",
+        "name": "Vasija en Calle Genova"
+      },
+      {
+        "coordinate": "19.42530, -99.17020",
+        "map": "https://www.google.com/maps/search/?api=1&query=19.42530%2C%20-99.17020",
+        "name": "Paseo de las Heroínas"
+      },
+      {
+        "coordinate": "19.42770, -99.16760",
+        "map": "https://www.google.com/maps/search/?api=1&query=19.42770%2C%20-99.16760",
+        "name": "Mexicráneo 2"
+      }
+    ],
+    "title": "Día de Muertos • Caça aos Selos no Paseo de la Reforma"
+  },
+  "screenshot": "REFORMA_SIX_POINTS_PUBLIC_APP_20261029.jpg",
+  "trilhas": {
+    "heading": "Dynamax que podem retornar",
+    "overflow": false,
+    "roster_expanded": true,
+    "roster_items": 56,
+    "text": "Dynamax que podem retornarTodos os Pokémon Dynamax já lançados podem aparecer em Batalhas Max, com exceção de Lendários e Míticos. A disponibilidade de cada espécie depende da rotação no jogo.Pokémon capturados após Batalhas Max durante o evento podem vir com Fundo Especial. Não é garantido em todas as capturas.Ver 56 aparições da seleção ilustradaSeleção visual da comunidade (TrainersGO), usada como referência; não é uma relação oficial fechada nem uma promessa de aparição simultânea.BulbasaurCharmanderSquirtleCaterpiePikachuGrowlitheAbraGastlyKrabbyHitmonleeHitmonchanRhyhornChanseyElectabuzzMagmarMagikarpEeveeOmanyteKabutoHoothootInkayBounsweetPassimianDrampaGrookeyScorbunnySobbleSkwovetRookideeWoolooToxtricity (Forma Aguda)Toxtricity (Forma Grave)SizzlipedeHatennaFalinksDuraludonShuckleSneaselHitmontopRaltsSableyeWailmerTrapinchFeebasSphealBeldumCombeePidoveRoggenrolaWoobatDrilburCottoneeDarumakaTrubbishCryogonalDeinoO visual é associado pela comunidade ao Fundo Especial de Céus Sombrios (agosto de 2025); o anúncio oficial de Trilhas Dinamax não identifica expressamente esse desenho.O Fundo Especial é uma possibilidade após a captura em Batalhas Max. Encontros selvagens não recebem essa garantia."
+  },
+  "passed": true,
+  "physical_android_test": false
+}

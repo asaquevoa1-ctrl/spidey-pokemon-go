@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-29T16:08:21.899519+00:00",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "files": [
+    {
+      "path": "data/events.json",
+      "http": 200,
+      "sha256": "83468d49fc3c99c48bfb8ee74d8e28925e5af09ad5ab847243da0d361a0eb6b9",
+      "source_bytes_match": true
+    },
+    {
+      "path": "data/stamps.json",
+      "http": 200,
+      "sha256": "c802f798a756a385f0f39f226abe97be19e37f523f4e0973f51d7be32253092f",
+      "source_bytes_match": true
+    },
+    {
+      "path": "stamps-v2.js",
+      "http": 200,
+      "sha256": "ece5d2531b99d1d3b41a926a040c2147e0acfc7496ac34b96293b94f3ad63ac5",
+      "source_bytes_match": false,
+      "published_build_bytes_match": true,
+      "expected_build_transform": "Static-host GPX Blob adapter from build_spidey_pages.py"
+    },
+    {
+      "path": "stamps-v2.css",
+      "http": 200,
+      "sha256": "61dfce5bc043f7d6772081e22437fa6a743e4c8d73d8a2d1d1a7050c058c1359",
+      "source_bytes_match": true
+    },
+    {
+      "path": "styles.css",
+      "http": 200,
+      "sha256": "0d8a99df31f2dce1ad00f1db3ce70cae634a04e25e7ce6d2b1c6a783ecebddd7",
+      "source_bytes_match": true
+    },
+    {
+      "path": "premium-approved-master.js",
+      "http": 200,
+      "sha256": "8f83a05d98820fb092b9ba77294a80fdfbd834a830a4ad35aa6f41f39c9e1d4b",
+      "source_bytes_match": true
+    },
+    {
+      "path": "spidey-premium-unified-20261029.css",
+      "http": 200,
+      "sha256": "1c52606481bd340d7e3291acd721abdd69edcfdd34c4c374dd54eb14478ffa56",
+      "source_bytes_match": true
+    },
+    {
+      "path": "spidey-universe-3d.js",
+      "http": 200,
+      "sha256": "44d5f7cdb8906b1c8e35f5c71eabb09bef21ba1be5a2c7abf68b9ef4ede5d575",
+      "source_bytes_match": true
+    },
+    {
+      "path": "spidey-universe-3d.css",
+      "http": 200,
+      "sha256": "7de00d073734c10c37cc2cd103e15a69f18753554cfefd4aaa17a54486ecd195",
+      "source_bytes_match": true
+    },
+    {
+      "path": "index.html",
+      "http": 200,
+      "sha256": "0776b858d4feb2c4e436201fead3904578ed7f8d5575bb9825d13327052f44a3",
+      "source_bytes_match": false,
+      "published_build_bytes_match": true,
+      "expected_build_transform": "Approved security, analytics and push metadata from Pages build"
+    },
+    {
+      "path": "sw.js",
+      "http": 200,
+      "sha256": "c09c6d4bca24b68488ae3f8126db171a16a4de58a3c1a7c6ea29c44e270dd5cc",
+      "source_bytes_match": false,
+      "published_build_bytes_match": true,
+      "expected_build_transform": "Public cache serialized by Pages build; review assets excluded"
+    }
+  ],
+  "updated_events_match": true,
+  "public_event_count": 181,
+  "six_point_guide_matches": true,
+  "coordinates": [
+    {
+      "name": "Mexicráneo",
+      "latitude": 19.4279,
+      "longitude": -99.1662
+    },
+    {
+      "name": "Bolsa Mexicana de Valores",
+      "latitude": 19.42941,
+      "longitude": -99.16447
+    },
+    {
+      "name": "Reforma 222",
+      "latitude": 19.4291,
+      "longitude": -99.16164
+    },
+    {
+      "name": "Vasija en Calle Genova",
+      "latitude": 19.428,
+      "longitude": -99.16446
+    },
+    {
+      "name": "Paseo de las Heroínas",
+      "latitude": 19.4253,
+      "longitude": -99.1702
+    },
+    {
+      "name": "Mexicráneo 2",
+      "latitude": 19.4277,
+      "longitude": -99.1676
+    }
+  ],
+  "new_script_versions": true,
+  "cache_updated": true,
+  "passed": true
+}

@@ -1,0 +1,164 @@
+{
+  "schema": "spidey-release-evidence-v1",
+  "date": "2026-10-29",
+  "public_url": "https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/",
+  "pull_request": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/pull/171",
+  "base_sha": "07e8787769c18b1c850c80ad9e5a5eeead393b8d",
+  "reviewed_head": "33ce6247e02bf8855072b7b97dcf882dd463c0d3",
+  "merged_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+  "superseded_pr": {
+    "number": 164,
+    "state": "closed",
+    "reason": "Scoped roster changes included in PR 171; no duplicate merge."
+  },
+  "changes": [
+    "Six numbered community map references in the Día de Muertos Reforma guide, with individual and all-coordinate copy controls plus map links.",
+    "Official event window and Duskull rewards retained. References are not certified exact PokéStops. No GPX or invented stamp count/progress.",
+    "Trilhas Dinamax official eligibility rule, possible Special Background and expandable 56-appearance community illustration list (55 species, both Toxtricity forms).",
+    "Official announcement does not expressly identify the Dark Skies 2025 artwork; that association is labeled community information."
+  ],
+  "preservation": {
+    "events_total": 181,
+    "modified_events": [
+      "2026-10-31-dia-de-muertos-paseo-reforma",
+      "2026-11-16-dynamax-trails"
+    ],
+    "other_event_objects_unchanged": 179,
+    "rallies_total": 7,
+    "modified_rallies": [
+      "2026-dia-de-muertos-reforma-stamp-guide"
+    ],
+    "other_rally_objects_unchanged": 6,
+    "approved_art_master_entries": 86,
+    "approved_art_master_unchanged": true,
+    "premium_light_dark_preserved": true,
+    "universe_3d_preserved": true,
+    "local_events_file_unchanged": true
+  },
+  "validation": {
+    "node_tests_passed": 319,
+    "python_tests_passed": 31,
+    "syntax_and_diff_check": true,
+    "responsive_browser_checks": 60,
+    "responsive_screenshots": 12,
+    "widths": [
+      390,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "clipboard_reads_verified_in_ci": true,
+    "ci": {
+      "id": 40907641964,
+      "name": "Spidey - QA Reforma e Trilhas Dinamax",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "33ce6247e02bf8855072b7b97dcf882dd463c0d3",
+      "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40907641964"
+    },
+    "artifact": {
+      "id": 12911079452,
+      "name": "reforma-trilhas-20261029-responsive",
+      "sha256": "6a192133184cb2fed90424a6385870252af074c997d9818fc1d10cc22864ab95"
+    },
+    "core_gates": [
+      {
+        "id": 40907642340,
+        "name": "Spidey - validar pipeline curado",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "33ce6247e02bf8855072b7b97dcf882dd463c0d3",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40907642340"
+      },
+      {
+        "id": 40907642583,
+        "name": "Spidey - proteção das decisões",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "33ce6247e02bf8855072b7b97dcf882dd463c0d3",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40907642583"
+      }
+    ],
+    "postmerge_runs": [
+      {
+        "id": 40908152364,
+        "name": "Spidey - monitorar aplicativo",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152364"
+      },
+      {
+        "id": 40908152386,
+        "name": "Spidey Notifications - fila de avisos",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152386"
+      },
+      {
+        "id": 40908152278,
+        "name": "Spidey - testar aplicativo",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152278"
+      },
+      {
+        "id": 40908152369,
+        "name": "Spidey - proteção das decisões",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152369"
+      },
+      {
+        "id": 40908152320,
+        "name": "Spidey - identidade cósmica Samsung simulado",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152320"
+      },
+      {
+        "id": 40908152333,
+        "name": "Spidey Weekly - resumo semanal",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152333"
+      },
+      {
+        "id": 40908152277,
+        "name": "Spidey - validar pipeline curado",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152277"
+      },
+      {
+        "id": 40908152304,
+        "name": "Spidey - hospedagem gratuita",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "f128163bcf8ee62d19d5664b6a22c3dceca9a843",
+        "html_url": "https://github.com/asaquevoa1-ctrl/spidey-pokemon-go/actions/runs/40908152304"
+      }
+    ],
+    "public_http_report": "REFORMA_TRILHAS_PUBLIC_HTTP_20261029.json",
+    "public_browser_report": "REFORMA_TRILHAS_PUBLIC_BROWSER_20261029.json",
+    "live_screenshot": "REFORMA_SIX_POINTS_PUBLIC_APP_20261029.jpg",
+    "public_http_passed": true,
+    "public_browser_passed": true
+  },
+  "limitations": [
+    "No physical Android/Samsung device test; responsive browser and Samsung CI simulation only.",
+    "The broad historical visual CI suite has unrelated legacy failures. This report does not claim all workflows are green.",
+    "Initial scoped screenshot run stalled on document.fonts.ready. The harness now uses the existing Samsung QA font-readiness workaround; no application behavior was changed in that fix."
+  ],
+  "notifications_sent": 0,
+  "third_party_messages_sent": 0,
+  "private_attachments_published": false
+}
