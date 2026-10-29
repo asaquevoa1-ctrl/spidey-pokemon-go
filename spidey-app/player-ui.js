@@ -62,7 +62,7 @@
     // Construir o dashboard sobre #playerHome, sem substituir os posters aprovados.
     const head=root.querySelector('.player-home-head');
     if(head){
-      head.classList.add('spidey-premium-home-head');
+      head.classList.add('spidey-premium-home-head','spidey-cockpit-home-head');
       const kicker=head.querySelector('span'),heading=head.querySelector('h1'),description=head.querySelector('p');
       if(kicker)kicker.textContent='SPIDEY · '+new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now);
       if(heading)heading.textContent='Seu universo. Seu próximo desafio.';
