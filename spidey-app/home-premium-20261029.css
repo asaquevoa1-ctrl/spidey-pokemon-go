@@ -1,0 +1,217 @@
+/* SPIDEY — Home Premium Grafite 29/10/2026
+   Camada visual reversivel. Nunca redesenha/corta/altera posters Premium
+   nem o emblema S cosmico aprovado. Conserva temas e menu lateral. */
+:root[data-theme="dark"] {
+  --bg: #0a1018;
+  --surface: #151e29;
+  --surface-2: #1d2835;
+  --line: rgba(184, 194, 206, .16);
+  --cyan: #d8b56d;
+  --blue: #b83c49;
+  --gold: #e0bc73;
+  --text: #f5f2ed;
+  --muted: #adb7c4;
+  --spidey-cyan: #e0bc73;
+  --spidey-gold: #e0bc73;
+  --spidey-panel: #141d29;
+  --spidey-line: rgba(204, 214, 222, .16);
+}
+:root[data-theme="light"] {
+  --bg: #f3f0eb;
+  --surface: #fffdfa;
+  --surface-2: #ede7df;
+  --line: rgba(64, 61, 61, .16);
+  --cyan: #865e21;
+  --blue: #a02b39;
+  --gold: #8b6729;
+  --text: #20262d;
+  --muted: #57616b;
+  --spidey-cyan: #865e21;
+  --spidey-gold: #8b6729;
+  --spidey-panel: #fffdfa;
+  --spidey-line: rgba(67, 59, 52, .16);
+}
+html[data-theme="dark"] body {
+  background: radial-gradient(ellipse at 76% -15%, rgba(144, 41, 51, .11), transparent 35%),
+              linear-gradient(180deg, #0e1621 0, #0a1018 44%, #0b1119 100%);
+}
+html[data-theme="dark"] body.cosmic-inapp-art {
+  background-image: linear-gradient(rgba(10, 15, 22, .92), rgba(10, 15, 22, .97)),
+                    var(--cosmic-brand-clean-image, none) !important;
+  background-size: cover;
+  background-position: center top;
+}
+html[data-theme="light"] body {
+  background: linear-gradient(160deg, #f6f1ea, #eeeae4 48%, #f4f2ef);
+}
+html[data-theme="light"] body.cosmic-inapp-art {
+  background-image: linear-gradient(rgba(246, 243, 238, .95), rgba(246, 243, 238, .98)),
+                    var(--cosmic-brand-clean-image, none) !important;
+}
+html[data-theme="dark"] .topbar {
+  background: rgba(13, 19, 28, .96);
+  border-bottom: 1px solid rgba(220, 181, 109, .16);
+}
+html[data-theme="light"] .topbar {
+  background: rgba(250, 247, 242, .96);
+  border-bottom: 1px solid rgba(110, 79, 43, .14);
+}
+/* Emblema original: apenas dimensao e contorno da moldura, sem filtros. */
+.brand-logo {
+  border-color: rgba(222, 186, 118, .32);
+  box-shadow: 0 0 0 3px rgba(222, 186, 118, .045);
+}
+.topbar .brand strong { letter-spacing: .045em; font-weight: 850; }
+#calendarView .experience-intro,
+body.spidey-command-center #calendarView .experience-intro {
+  border: 1px solid rgba(222, 186, 118, .20);
+  border-top: 2px solid rgba(222, 186, 118, .57);
+  border-radius: 22px;
+  background: linear-gradient(125deg, rgba(30, 38, 48, .94), rgba(16, 24, 34, .93));
+  box-shadow: 0 16px 38px rgba(0,0,0,.13);
+}
+html[data-theme="light"] #calendarView .experience-intro {
+  background: linear-gradient(125deg, #fffdf9, #eee9e1);
+}
+#calendarView .experience-intro::after {
+  background: radial-gradient(circle, rgba(212, 167, 93, .09), transparent 68%);
+}
+#calendarView .experience-intro h1 {
+  font-size: clamp(1.7rem, 5.8vw, 3rem);
+  line-height: 1.07;
+  max-width: 680px;
+  letter-spacing: -.037em;
+}
+#calendarView .experience-intro p {
+  max-width: 610px;
+  line-height: 1.48;
+  color: var(--muted);
+}
+#calendarView .eyebrow { color: var(--spidey-gold); letter-spacing: .12em; }
+#calendarView .primary-btn, .spidey-home-premium .primary-btn {
+  background: #af3441;
+  color: #fffaf6;
+  border: 1px solid rgba(255, 231, 224, .16);
+  box-shadow: 0 7px 20px rgba(97, 29, 39, .2);
+}
+#calendarView .primary-btn:focus-visible,
+.spidey-home-quick-button:focus-visible { outline: 3px solid #e9c87e; outline-offset: 3px; }
+#calendarView .status-strip { margin: 13px 0 16px; gap: 10px; }
+#calendarView .status-strip > div {
+  border: 1px solid var(--spidey-line);
+  border-radius: 15px;
+  background: var(--spidey-panel);
+  text-align: left;
+  padding: 14px 16px;
+  box-shadow: 0 3px 18px rgba(0,0,0,.045);
+}
+#calendarView .status-strip strong { color: var(--text); font-size: 1.55rem; }
+#calendarView .status-strip span { color: var(--muted); font-size: .75rem; }
+#calendarView .experience-section { padding-top: 7px; }
+#calendarView .section-head h2 { font-size: clamp(1.36rem, 2.8vw, 1.86rem); }
+#calendarView .experience-feature,
+#calendarView .experience-mini,
+#calendarView .calendar-wrap,
+#calendarView .event-card {
+  border-color: var(--spidey-line);
+  background: var(--spidey-panel);
+  box-shadow: 0 8px 28px rgba(0,0,0,.09);
+}
+#calendarView .experience-feature { border-radius: 22px; }
+#calendarView .experience-feature-copy {
+  background: linear-gradient(150deg, rgba(22, 30, 41, .98), rgba(15, 23, 33, .98));
+}
+html[data-theme="light"] #calendarView .experience-feature-copy {
+  background: #fffdfa;
+}
+#calendarView .experience-feature-copy h3 { color: var(--text); }
+#calendarView .experience-range, #calendarView .experience-summary,
+#calendarView .experience-mini-meta { color: var(--muted); }
+#calendarView .experience-countdown {
+  color: var(--spidey-gold);
+  background: rgba(214, 168, 91, .1);
+  border-color: rgba(214, 168, 91, .22);
+}
+#calendarView .experience-cta { color: var(--spidey-gold); }
+#calendarView .experience-mini:hover,
+#calendarView .experience-mini:focus-visible { border-color: rgba(222, 186, 118, .45); }
+#calendarView .experience-empty { background: var(--spidey-panel); border-color: var(--spidey-line); color: var(--muted); }
+#calendarView .experience-link-btn { color: var(--spidey-gold); }
+#calendarView .calendar-day.today { border-color: #b23a46; box-shadow: inset 0 0 0 1px rgba(178,58,70,.16); }
+#calendarView .calendar-day.has-event { background: rgba(214,168,91,.08); }
+#calendarView .event-dot { background: #bb5a61; box-shadow: none; }
+/* Os posters e suas cores sao intocados: sem filtro, blend ou recorte novo. */
+.spidey-home-premium .spidey-home-quick {
+  margin: 27px 0 10px;
+}
+.spidey-home-quick-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+.spidey-home-quick-head h2 { margin: 2px 0 0; font-size: clamp(1.32rem, 2.8vw, 1.78rem); }
+.spidey-home-quick-head p { color: var(--muted); font-size: .84rem; margin: 0; }
+.spidey-home-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.spidey-home-quick-button {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+  padding: 14px;
+  color: var(--text);
+  border: 1px solid var(--spidey-line);
+  border-radius: 15px;
+  background: var(--spidey-panel);
+  cursor: pointer;
+  transition: background .16s ease, border-color .16s ease, transform .16s ease;
+}
+.spidey-home-quick-button:hover { border-color: rgba(211,172,105,.45); transform: translateY(-2px); }
+.spidey-home-quick-icon {
+  flex: 0 0 37px;
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: rgba(180, 57, 68, .13);
+  color: #ddac75;
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+.spidey-home-quick-copy { display: grid; gap: 3px; min-width: 0; }
+.spidey-home-quick-copy strong { font-size: .9rem; line-height: 1.15; }
+.spidey-home-quick-copy small { color: var(--muted); font-size: .71rem; line-height: 1.3; }
+.spidey-home-quick-status { margin: 8px 0 0; color: var(--muted); font-size: .77rem; }
+.spidey-home-quick-status:empty { display: none; }
+@media (max-width: 760px) {
+  /* Nao introduzir barra inferior; menu lateral existente continua exclusivo. */
+  #calendarView .experience-intro { padding: 21px 18px 19px; }
+  #calendarView .experience-feature-copy { padding: 19px 17px 22px; }
+  #calendarView .experience-section { margin-top: 22px; }
+  #calendarView .status-strip > div { padding: 12px 9px; }
+  #calendarView .status-strip strong { font-size: 1.3rem; }
+  #calendarView .status-strip span { font-size: .68rem; }
+  .spidey-home-quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spidey-home-quick-button { padding: 11px; gap: 9px; min-height: 66px; }
+  .spidey-home-quick-icon { flex-basis: 32px; width: 32px; height: 32px; font-size: 1.05rem; }
+  .spidey-home-quick-head { align-items: start; }
+  .spidey-home-quick-head p { max-width: 132px; text-align: right; }
+  body.spidey-command-center main { padding-bottom: 45px; }
+}
+@media (max-width: 370px) {
+  .spidey-home-quick-button { padding: 9px; }
+  .spidey-home-quick-icon { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spidey-home-quick-button { transition: none; }
+  .spidey-home-quick-button:hover { transform: none; }
+}
