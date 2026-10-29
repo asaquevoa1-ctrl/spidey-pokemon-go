@@ -82,6 +82,20 @@ try {
       // Universe3D: verificar a Home real, e nao os blocos legacy ocultos.
       const galaxy=page.locator('#playerHome #spideyUniverse3D');
       await galaxy.waitFor({state:'visible',timeout:12000});
+      const heroY=(await galaxy.boundingBox())?.y;
+      const kpiY=(await page.locator('#playerHome .spidey-premium-kpis').boundingBox())?.y;
+      assert.ok(Number.isFinite(heroY)&&Number.isFinite(kpiY)&&heroY<kpiY,
+        'Universe 3D deve aparecer antes dos indicadores na Home');
+      const duplicate=page.locator('#spideyUniverseHighlightDetails');
+      await duplicate.waitFor({state:'visible'});
+      assert.equal(await duplicate.evaluate(node=>node.open),false,
+        'Poster grande repetido deve iniciar recolhido no Samsung');
+      await duplicate.locator('summary').click();
+      assert.ok(await duplicate.evaluate(node=>node.open),
+        'Roteiro completo deve expandir ao toque');
+      await duplicate.locator('summary').click();
+      assert.equal(await duplicate.evaluate(node=>node.open),false);
+
       const cards=galaxy.locator('.spidey-universe-card');
       assert.ok(await cards.count()>=2,'Galeria 3D precisa de eventos Premium reais');
       await galaxy.scrollIntoViewIfNeeded();
