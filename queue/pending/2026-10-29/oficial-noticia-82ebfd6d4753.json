@@ -5,15 +5,22 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "oficial-https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
+  "status": "curated",
+  "etapa_editorial": "curadoria_editorial_concluida",
+  "prior_automated_status": "aguardando_arte_chatgpt",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
   "media_policy": "premium_editorial",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
-  "proibir_fallback": true,
+  "proibir_fallback": false,
+  "curated_path": "queue/curated/oficial-noticia-82ebfd6d4753.json",
+  "app_event_ids": [
+    "2026-11-go-wild-area-global",
+    "2026-11-go-wild-area-global-brazil-community"
+  ],
+  "curated_at_utc": "2026-10-29T19:30:00+00:00",
   "created_at_utc": "2026-10-29T18:40:29.270706+00:00"
 }

@@ -1,0 +1,25 @@
+{
+  "titulo": "Área Selvagem GO Global 2026 — encontros no Brasil",
+  "mensagem": "Em 14 e 15 de novembro, das 10h às 18h no horário local, o encontro principal será no Pavilhão Japonês do Parque Ibirapuera. O anúncio também lista 96 referências de locais para encontros oficiais de comunidades pelo Brasil.",
+  "source_url": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
+  "source_verified": true,
+  "status": "published_without_new_art",
+  "art_required_for_publication": false,
+  "fallback_visual": "date",
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "2026-11-go-wild-area-global",
+    "2026-11-go-wild-area-global-brazil-community"
+  ],
+  "fact_checks": [
+    "official_article_read_in_full",
+    "main_meetup_pavilhao_japones",
+    "96_community_venue_references",
+    "schedule_confirmed_on_global_event_page",
+    "no_coordinates_published"
+  ],
+  "source_date_conflict": "O título e a introdução indicam 2026, mas dois subtítulos mostram 2025. A página oficial do evento confirma 14–15/11/2026, 10h–18h no horário local.",
+  "published_at_source": "2026-10-29T18:11:31.770Z",
+  "curated_at_utc": "2026-10-29T19:30:00+00:00"
+}
