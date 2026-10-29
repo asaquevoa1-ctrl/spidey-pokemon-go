@@ -15,7 +15,7 @@ test('Tema Premium global carregado por ultimo, após estilos dinamicos legados'
   assert.match(html,/SPIDEY_BUILD='2026-10-29-universe3dfocus2'/);
   const sw=read('sw.js');
   assert.match(sw,/\.\/spidey-premium-unified-20261029\.css/);
-  assert.match(sw,/20261029-focus2/);
+  assert.match(sw,/20261029-universe3dfocus2/);
 });
 test('Home alterada é a realmente visível, não experience-* oculto',()=>{
   const ui=read('player-ui.js');
