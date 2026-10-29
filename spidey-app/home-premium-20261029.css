@@ -215,3 +215,188 @@ html[data-theme="light"] #calendarView .experience-feature-copy {
   .spidey-home-quick-button { transition: none; }
   .spidey-home-quick-button:hover { transform: none; }
 }
+
+
+/* Samsung real 29/10: arte premium primeiro, azul residual neutralizado. */
+:root[data-theme="dark"] body.cosmic-inapp-art {
+  background-image:
+    linear-gradient(rgba(10, 15, 22, .972), rgba(10, 15, 22, .985)),
+    var(--cosmic-brand-clean-image, none) !important;
+  background-color: #0b1018;
+}
+:root[data-theme="dark"] .topbar .brand-logo {
+  border-color: rgba(224, 188, 115, .42);
+  box-shadow: 0 0 0 2px rgba(224, 188, 115, .055);
+}
+:root[data-theme="dark"] #calendarView .experience-feature,
+:root[data-theme="dark"] #calendarView .experience-mini[data-visual-category],
+:root[data-theme="dark"] #calendarView .experience-feature[data-visual-category] {
+  background: #151e28 !important;
+  border-color: rgba(207, 193, 169, .23);
+}
+:root[data-theme="dark"] #calendarView .experience-feature-copy {
+  background: linear-gradient(150deg, #17202b, #101720) !important;
+}
+:root[data-theme="light"] #calendarView .experience-feature,
+:root[data-theme="light"] #calendarView .experience-mini[data-visual-category],
+:root[data-theme="light"] #calendarView .experience-feature[data-visual-category] {
+  background: #fffdfa !important;
+}
+:root[data-theme="light"] #calendarView .experience-feature-copy {
+  background: #fffdfa !important;
+}
+:root[data-theme="dark"] #calendarView .calendar-wrap,
+:root[data-theme="dark"] #calendarView .v22-board,
+:root[data-theme="dark"] #calendarView .v22-group,
+:root[data-theme="dark"] #calendarView .spidey-home-quick-button {
+  background: #141c27;
+  border-color: rgba(211, 193, 158, .17);
+}
+:root[data-theme="dark"] #calendarView .v22-group-label strong { color: #d5b372; }
+:root[data-theme="dark"] #calendarView .v22-month-head,
+:root[data-theme="dark"] #calendarView .v22-group-label { color: #f4f0e9; }
+:root[data-theme="dark"] .spidey-mobile-menu-panel {
+  background:
+    linear-gradient(175deg, rgba(12,18,26,.96), rgba(18,23,31,.955) 50%, rgba(11,16,25,.975)),
+    url('assets/branding/20261019/spidey-wallpaper-cosmic-20261019.webp') center / cover;
+  border-right-color: rgba(219,181,113,.28);
+}
+/* Cartaz original segue com suas cores reais. Sem filtro ou crop adicional. */
+#calendarView .spidey-opening-screen,
+body.spidey-command-center #calendarView .spidey-opening-screen {
+  min-height: 0;
+  padding: 12px 17px !important;
+  background: linear-gradient(110deg, #20252c, #151d28) !important;
+  border: 1px solid rgba(218, 178, 110, .17);
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  box-shadow: none;
+}
+:root[data-theme="light"] #calendarView .spidey-opening-screen {
+  background: #fffdfa !important;
+}
+#calendarView .spidey-opening-screen::before,
+#calendarView .spidey-opening-screen::after { display: none; }
+#calendarView .spidey-opening-screen .spidey-opening-identity { display: none; }
+#calendarView .spidey-opening-screen > .eyebrow {
+  flex: 1 1 100%;
+  font-size: .67rem;
+  letter-spacing: .14em;
+}
+#calendarView .spidey-opening-screen h1,
+.experience-intro.spidey-opening-screen h1 {
+  margin: 0;
+  font-size: clamp(1.18rem, 4.5vw, 1.62rem);
+  line-height: 1.2;
+  max-width: 500px;
+  color: var(--text);
+}
+#calendarView .spidey-opening-screen > p { display: none; }
+#calendarView .spidey-opening-screen .hero-actions {
+  margin: 0;
+  margin-left: auto;
+}
+#calendarView .spidey-opening-screen .hero-actions button {
+  padding: 8px 11px;
+  border-radius: 10px;
+  font-size: .79rem;
+}
+#calendarView > .experience-section:has(#nowExperience) {
+  margin-top: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#calendarView > .experience-section:has(#nowExperience) .section-head {
+  margin-bottom: 11px;
+}
+#calendarView > .experience-section:has(#nowExperience) .section-head .eyebrow { color: #dcbd83; }
+#calendarView .experience-feature-button { min-width: 0; }
+#calendarView .experience-feature-copy { padding: 21px 22px; }
+#calendarView #spideyHomeQuick { margin: 20px 0 12px; }
+#calendarView #spideyHomeQuick .spidey-home-quick-head { margin-bottom: 10px; }
+/* Configuracoes de alertas continuam funcionando, mas nao tomam a primeira dobra. */
+.spidey-app-utilities {
+  margin: 4px auto 0;
+  width: min(100% - 32px, 980px);
+  color: var(--muted);
+}
+.spidey-app-utilities > summary {
+  display: inline-flex;
+  cursor: pointer;
+  list-style-position: inside;
+  align-items: center;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 11px;
+  font-size: .77rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--muted);
+}
+.spidey-app-utilities > summary:focus-visible {
+  outline: 3px solid var(--spidey-gold);
+  outline-offset: 3px;
+}
+.spidey-app-utilities[open] > summary { margin-bottom: 7px; }
+.spidey-app-utilities .notification-controls {
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 10px;
+  background: var(--surface);
+  gap: 8px;
+}
+.spidey-home-premium:has(#calendarView:not([hidden])) .app-back-row,
+.spidey-home-premium:has(#calendarView:not([hidden])) #calendarUpdateStatus {
+  display: none;
+}
+@media (max-width: 760px) {
+  #calendarView .spidey-opening-screen {
+    padding: 11px 13px !important;
+    gap: 5px 8px;
+  }
+  #calendarView .spidey-opening-screen h1 { flex: 1 1 170px; font-size: 1.19rem; }
+  #calendarView .spidey-opening-screen .hero-actions { margin-left: auto; }
+  #calendarView .experience-feature-art-wrap::after { pointer-events: none; }
+  #calendarView .experience-feature-copy { padding: 15px 16px 18px; gap: 9px; }
+  #calendarView .experience-feature-copy h3 { font-size: clamp(1.34rem, 5.4vw, 1.8rem); }
+  #calendarView .experience-feature-copy .experience-summary { font-size: .86rem; line-height: 1.43; }
+  #calendarView #spideyHomeQuick { margin-top: 19px; }
+  #calendarView .spidey-home-quick-head p { display: none; }
+  .spidey-app-utilities { width: calc(100% - 26px); }
+  .spidey-app-utilities > summary { font-size: .73rem; }
+}
+
+/* O compartilhamento precisa estar visivel sem expandir ajustes de alertas. */
+.spidey-utility-row {
+  width: min(calc(100% - 32px), 980px);
+  margin: 5px auto 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.spidey-utility-row .spidey-app-utilities {
+  flex: 1 1 auto;
+  width: auto;
+  margin: 0;
+  min-width: 0;
+}
+.spidey-utility-row .spidey-share-main {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  margin: 0;
+  font-size: .78rem;
+  border-radius: 11px;
+}
+@media (max-width: 400px) {
+  .spidey-utility-row { width: calc(100% - 26px); }
+  .spidey-utility-row .spidey-share-main { font-size: .73rem; padding: 7px 8px; }
+  .spidey-app-utilities > summary { font-size: .68rem; padding: 7px 8px; }
+}
