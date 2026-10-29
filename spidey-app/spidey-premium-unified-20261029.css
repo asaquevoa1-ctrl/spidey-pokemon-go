@@ -453,3 +453,32 @@ html[data-theme="light"] body.spidey-player-ui {
   --player-accent:#805920;
   --player-ink:#26252b;
 }
+
+/* Feed da Home: substituir linhas planas por cartoes editoriais leves. */
+html[data-theme] body.spidey-player-ui #playerHome .player-feed {
+  gap:18px;
+  margin-top:24px;
+}
+html[data-theme] body.spidey-player-ui #playerHome .player-feed > section > h2 {
+  font-size:1.22rem;
+  margin:0 0 12px;
+}
+html[data-theme] body.spidey-player-ui #playerHome .player-row {
+  display:grid;
+  width:100%;
+  padding:12px !important;
+  margin:0 0 10px;
+  border:1px solid var(--premium-stroke) !important;
+  border-radius:15px !important;
+  background:linear-gradient(135deg,var(--premium-panel-high),var(--premium-panel)) !important;
+  box-shadow:0 10px 24px rgba(0,0,0,.1),inset 0 1px rgba(255,255,255,.035) !important;
+}
+html[data-theme] body.spidey-player-ui #playerHome .player-row > img {
+  border-radius:9px;
+}
+@media (pointer:coarse) {
+  #playerHome .spidey-premium-nav-grid button:active,
+  #playerHome .player-row:active {
+    transform:translateY(1px);
+  }
+}
