@@ -210,3 +210,82 @@ html[data-theme] body.spidey-player-ui #playerHome .spidey-universe-card-copy {
   #playerHome .spidey-universe-card {transition:none !important;}
   #playerHome .spidey-universe-orbits {display:none;}
 }
+
+
+/* Revisão após vídeo físico Samsung 266s: palco em destaque, sem pôster
+   duplicado; centro ampliado com perspectiva preservada. */
+#playerHome .spidey-universe-highlight-details {
+  margin:0 0 20px;
+  border:1px solid var(--premium-stroke,rgba(210,170,108,.24));
+  border-radius:15px;
+  background:var(--premium-panel,#181f29);
+  overflow:hidden;
+  box-shadow:0 8px 21px rgba(0,0,0,.09);
+}
+#playerHome .spidey-universe-highlight-details > summary {
+  cursor:pointer;
+  list-style:revert;
+  padding:14px 16px;
+  color:var(--premium-gold,#e1bc78);
+  font-size:.84rem;
+  font-weight:800;
+  line-height:1.4;
+}
+#playerHome .spidey-universe-highlight-details > summary:focus-visible {
+  outline:3px solid var(--premium-gold,#e1bc78);
+  outline-offset:-3px;
+}
+#playerHome .spidey-universe-highlight-details .spidey-premium-feature-stage {
+  padding:0 12px 13px;
+  margin:0;
+}
+#playerHome .spidey-universe-highlight-details .spidey-premium-stage-heading {display:none;}
+#playerHome .spidey-universe-3d { margin-top:12px; margin-bottom:15px; }
+@media(max-width:560px) {
+  #playerHome .spidey-premium-home-head {
+    padding:14px 16px 15px !important;
+    margin-bottom:6px !important;
+  }
+  #playerHome .spidey-premium-home-head h1 {
+    font-size:clamp(1.47rem,6vw,1.85rem) !important;
+    line-height:1.12 !important;
+    margin:4px 0 5px !important;
+  }
+  #playerHome .spidey-premium-home-head p {
+    font-size:.81rem;
+    line-height:1.42;
+  }
+  #playerHome .spidey-universe-viewport {
+    height:clamp(356px,103vw,440px);
+    margin:7px -9px 0;
+    perspective:900px;
+  }
+  #playerHome .spidey-universe-card {
+    width:clamp(231px,72%,300px);
+    height:calc(100% - 10px);
+  }
+  #playerHome .spidey-universe-card[data-position="center"] {
+    transform:translate3d(-50%,0,63px) rotateY(0deg);
+  }
+  #playerHome .spidey-universe-card[data-position="left"] {
+    transform:translate3d(calc(-50% - 86%),9px,-156px) rotateY(47deg);
+  }
+  #playerHome .spidey-universe-card[data-position="right"] {
+    transform:translate3d(calc(-50% + 86%),9px,-156px) rotateY(-47deg);
+  }
+  #playerHome .spidey-universe-card-copy strong {font-size:.91rem;}
+  #playerHome .spidey-universe-card-copy small {font-size:.7rem;}
+  #playerHome .spidey-universe-footer {gap:7px;}
+  #playerHome .spidey-universe-3d {padding:15px 10px 13px;margin:9px 0 13px;}
+  #playerHome .spidey-premium-kpis {margin:10px 0 16px;}
+  .spidey-utility-row {margin:2px auto 0;}
+  .spidey-utility-row .spidey-share-main,
+  .spidey-app-utilities > summary {
+    min-height:32px;
+    padding:6px 8px;
+    font-size:.7rem;
+  }
+  .app-back-row .app-privacy-button {display:none !important;}
+  .app-back-row {padding-top:3px;padding-bottom:3px;}
+  .app-back-row #appBackButton {min-height:34px;font-size:.78rem;padding:7px 12px;}
+}
