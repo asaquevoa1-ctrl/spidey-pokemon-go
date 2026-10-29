@@ -64,9 +64,28 @@
     if(head){
       head.classList.add('spidey-premium-home-head');
       const kicker=head.querySelector('span'),heading=head.querySelector('h1'),description=head.querySelector('p');
-      if(kicker)kicker.textContent='SEU PAINEL · '+new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now);
-      if(heading)heading.textContent='O mundo Pokémon GO, em destaque.';
-      if(description)description.textContent='Eventos reais, artes premium e o próximo passo para jogar.';
+      if(kicker)kicker.textContent='SPIDEY · '+new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now);
+      if(heading)heading.textContent='Seu universo. Seu próximo desafio.';
+      if(description)description.textContent='O melhor do Pokémon GO em uma experiência feita para explorar.';
+      // O S cósmico oficial, não um novo logo nem a antiga aranha.
+      const emblem=document.createElement('img');
+      emblem.className='spidey-cockpit-emblem';
+      emblem.src='assets/branding/20261019/spidey-icon-cosmic-192.png';
+      emblem.width=104;emblem.height=104;emblem.alt='';
+      emblem.decoding='async';
+      emblem.setAttribute('aria-hidden','true');
+      head.append(emblem);
+      const actions=document.createElement('div');
+      actions.className='spidey-cockpit-hero-actions';
+      const explore=document.createElement('a');
+      explore.href='#spideyUniverse3D';explore.className='spidey-cockpit-explore';
+      explore.textContent='Explorar em 3D';
+      const week=document.createElement('button');
+      week.type='button';week.className='spidey-cockpit-week';
+      week.dataset.premiumView='weeklyView';
+      week.textContent='Ver programação';
+      actions.append(explore,week);
+      head.append(actions);
       const kpis=document.createElement('div');
       kpis.className='spidey-premium-kpis';
       kpis.setAttribute('aria-label','Seleção da agenda');
@@ -100,6 +119,25 @@
     }
     // A Home REAL (#playerHome) recebe a galeria 3D com eventos aprovados.
     window.SpideyUniverse3D?.mount(root, state.events, focus, now, art, title, time, getBrazilRange);
+
+    // Uma composição: palco principal e console de atalhos à direita no desktop;
+    // palco e atalhos empilhados no celular. Mover DOM existente mantém ouvintes.
+    const universe=root.querySelector('#spideyUniverse3D');
+    const shortcuts=root.querySelector('.spidey-premium-nav');
+    const metrics=root.querySelector('.spidey-premium-kpis');
+    if(universe&&shortcuts&&metrics){
+      const cockpit=document.createElement('section');
+      cockpit.className='spidey-command-cockpit';
+      cockpit.setAttribute('aria-label','Painel de comando Premium');
+      const aside=document.createElement('div');
+      aside.className='spidey-command-aside';
+      head.insertAdjacentElement('afterend',cockpit);
+      cockpit.append(universe,aside);
+      aside.append(shortcuts,metrics);
+    }else{
+      // Sem arte aprovada? O usuário mantém navegação, métricas e conteúdo.
+      head.querySelector('.spidey-cockpit-explore')?.remove();
+    }
 
   }
   function mount(){
