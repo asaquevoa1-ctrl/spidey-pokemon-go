@@ -121,6 +121,38 @@ try {
       checks.push({profile:'Universe3D Samsung',theme,cards:await cards.count(),geometry:'css-3d+webgl-optional',rotation:'ok',detail:'ok'});
 
 
+      // Vídeo físico de 29/10: cartaz Twitch/LA de 24/10 aparecia em
+      // Londres (10/11) tanto na grade local como dentro do modal.
+      await page.waitForFunction(()=>
+        window.SPIDEY_WORLD_EVENTS?.some(e=>e.id==='2026-pokemon-night-out-london'),
+        null,{timeout:11000});
+      const londonId='2026-pokemon-night-out-london';
+      const badPoster='pokemon-night-out-20261024-approved-v1.png';
+      assert.equal(await page.evaluate(id=>window.SPIDEY_APPROVED_ART_MASTER?.[id],londonId),
+        undefined,'Cadastro de artes ainda reutiliza cartaz Twitch 24/10 para Londres');
+      const londonCards=page.locator('[data-world-event="'+londonId+'"]');
+      await londonCards.first().waitFor({state:'attached',timeout:9000});
+      assert.equal(await londonCards.locator('figure.world-premium-poster img').count(),0,
+        'Cartaz vencido reapareceu nos cartões locais');
+      assert.equal(await londonCards.locator('img[src*="'+badPoster+'"]').count(),0,
+        'Cartaz de 24/10 associado a Londres nos cartões locais');
+      await page.evaluate(id=>window.SpideyWorld.openLocalEvent(id),londonId);
+      const londonModal=page.locator('[data-local-detail="'+londonId+'"]');
+      await londonModal.waitFor({state:'visible',timeout:6000});
+      assert.equal(await londonModal.locator('img[src*="'+badPoster+'"]').count(),0,
+        'Cartaz de Twitch 24/10 apareceu no modal de Londres 10/11');
+      assert.equal(await londonModal.locator('figure.world-premium-poster').count(),0,
+        'O modal de Londres ainda expõe a arte antiga');
+      assert.ok((await londonModal.innerText()).includes('10 nov'),
+        'O evento de Londres deve continuar visível com a data correta');
+      assert.ok(!(await londonModal.innerText()).includes('A arte Premium existente permanece preservada'),
+        'Nota interna não pode aparecer ao jogador');
+      await page.screenshot({path:output+'/galaxy-390-'+theme+'-london-no-expired-art.png',
+        animations:'disabled',timeout:16000});
+      await page.locator('#closeDialog').click();
+      checks.push({profile:'London Night Out no Samsung',theme,
+        localCards:await londonCards.count(),expiredPoster:false,detailsPreserved:true});
+      
       // O vídeo real atravessa as telas internas no modo Claro. Validar
       // essas telas, nao somente o topo da Home, nos dois temas.
       for(const [view,card] of [

@@ -33,7 +33,21 @@ test('Giratina, Gastly and November GO Pass use the four reviewed raster posters
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(record.identity.original_logo)).digest('hex'),record.identity.logo_sha256);
 });
 test('priority art adds coverage without changing an earlier approval',()=>{
-  const old=Object.fromEntries(record.preserved.prior_master_ids.map(id=>[id,master[id]]));
+  // Registro histórico para recompor a assinatura original de 82 aprovações.
+  // Apenas o vínculo incorreto do cartaz Twitch/LA com Londres foi revogado:
+  // o arquivo original, o hash e TODAS as outras aprovações devem coincidir.
+  const revokedLondonMapping={
+    file:'assets/events/premium/pokemon-night-out-20261024-approved-v1.png',
+    status:'APPROVED',display:'full_poster',width:1024,height:1536,
+    sha256:'a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3',
+    approval_record:'docs/qa/POKEMON_NIGHT_OUT_ART_APPROVAL_20261013.json',
+    approval_basis:'EXISTING_APPROVED_NIGHT_OUT_POSTER_REUSED_UNMODIFIED',
+    art_note:'Identidade Night Out existente; detalhes oficiais dos fundos especiais da cidade constam no texto do evento.'
+  };
+  assert.equal(master['2026-pokemon-night-out-london'],undefined);
+  const old=Object.fromEntries(record.preserved.prior_master_ids.map(id=>[
+    id,id==='2026-pokemon-night-out-london'?revokedLondonMapping:master[id]
+  ]));
   assert.equal(Object.keys(old).length,82);
   assert.equal(crypto.createHash('sha256').update(JSON.stringify(old)).digest('hex'),record.preserved.master_json_sha256);
   for(const item of Object.values(old)){

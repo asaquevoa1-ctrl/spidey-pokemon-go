@@ -12,10 +12,10 @@ test('Tema Premium global carregado por ultimo, após estilos dinamicos legados'
   const html=read('index.html');
   assert.match(html,/player-ui\.js\?v=20261029-orbit1/);
   assert.match(html,/theme\.js\?v=20261029-focus2/);
-  assert.match(html,/SPIDEY_BUILD='2026-10-29-universe3dfocus2'/);
+  assert.match(html,/SPIDEY_BUILD='2026-10-29-london-local-art2'/);
   const sw=read('sw.js');
   assert.match(sw,/\.\/spidey-premium-unified-20261029\.css/);
-  assert.match(sw,/20261029-universe3dfocus2/);
+  assert.match(sw,/20261029-london-local-art2/);
 });
 test('Home alterada é a realmente visível, não experience-* oculto',()=>{
   const ui=read('player-ui.js');

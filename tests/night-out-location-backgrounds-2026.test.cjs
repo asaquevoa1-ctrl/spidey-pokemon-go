@@ -47,19 +47,19 @@ test('Both city dates remain correct in their own timezone and do not masquerade
   assert.match(window.SpideyDateOnly.status(events.find(e=>e.id===nights[0][0]),new Date('2026-10-24T19:00:00Z')),/^Hoje/);
   assert.match(window.SpideyDateOnly.status(events.find(e=>e.id===nights[1][0]),new Date('2026-11-10T12:00:00Z')),/^Hoje/);
 });
-test('Reuses only the previously approved Premium Night Out poster, never alters original master', () => {
+test('Preserves original Twitch/LA poster but revokes its incorrect association to London', () => {
   const masterCode=fs.readFileSync(root+'premium-approved-master.js','utf8');
   const window={};vm.runInNewContext(masterCode,{window});
   const old=window.SPIDEY_APPROVED_ART_MASTER[original.id];
   assert.ok(old);
-  for(const [id] of nights){
-    const a=window.SPIDEY_APPROVED_ART_MASTER[id];
-    assert.ok(a);
-    assert.equal(a.file,old.file);
-    assert.equal(a.sha256,old.sha256);
-    assert.equal(a.approval_record,old.approval_record);
-    assert.equal(a.approval_basis,'EXISTING_APPROVED_NIGHT_OUT_POSTER_REUSED_UNMODIFIED');
-  }
+  const la=window.SPIDEY_APPROVED_ART_MASTER['2026-pokemon-night-out-la'];
+  assert.ok(la);
+  assert.equal(la.file,old.file);
+  assert.equal(la.sha256,old.sha256);
+  assert.equal(la.approval_record,old.approval_record);
+  assert.equal(la.approval_basis,'EXISTING_APPROVED_NIGHT_OUT_POSTER_REUSED_UNMODIFIED');
+  assert.equal(window.SPIDEY_APPROVED_ART_MASTER['2026-pokemon-night-out-london'],undefined,
+    'O cartaz Twitch/LA de 24/10 nao pode ser aplicado ao evento de Londres 10/11');
 });
 test('Location background reward is visible in calendar detail and Home with no third-party GPS or new posters', () => {
   const html=fs.readFileSync(root+'index.html','utf8');

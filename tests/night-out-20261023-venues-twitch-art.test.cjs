@@ -38,11 +38,13 @@ test('Night Out is updated in place, without duplicate events or loss of approve
  }
  const win={};vm.runInNewContext(fs.readFileSync('spidey-app/premium-approved-master.js','utf8'),{window:win});
  const master=win.SPIDEY_APPROVED_ART_MASTER;
- for(const id of ids){
+ for(const id of ['2026-pokemon-night-out-la','2026-10-pokemon-night-out-twitch']){
   assert.equal(master[id].file,originalPath,id);
   assert.equal(master[id].sha256,originalHash,id);
   assert.equal(master[id].status,'APPROVED',id);
  }
+ assert.equal(master['2026-pokemon-night-out-london'],undefined,
+  'Londres nao pode herdar aprovacao Twitch/LA de 24/10');
 });
 test('Arena coordinates from owner are references, not gym spawns or fake GPX',()=>{
  assert.equal(la.locations[0].coordinate_text,'33.943723,-118.342295');
@@ -90,5 +92,14 @@ test('Londres não mostra campanha Twitch vencida nem texto interno de curadoria
  // O arquivo histórico continua aprovado e não é excluído nem regravado.
  const master=(()=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSync('spidey-app/premium-approved-master.js','utf8'),sandbox);return sandbox.window.SPIDEY_APPROVED_ART_MASTER;})();
  assert.equal(master['2026-10-pokemon-night-out-twitch'].file,originalPath);
- assert.equal(master['2026-pokemon-night-out-london'].file,originalPath);
+ assert.equal(master['2026-pokemon-night-out-london'],undefined);
+});
+
+test('Renderer local respeita artApproved e nao publica instrucoes de bastidores',()=>{
+ const renderer=fs.readFileSync('spidey-app/trust-world-v1.js','utf8');
+ const source=renderer.slice(renderer.indexOf('function posterFigure(event) {'),renderer.indexOf('function eventCard(event) {'));
+ assert.match(source,/event\.artApproved !== true/);
+ assert.match(source,/hide_poster_until_corrected/);
+ assert.match(renderer,/event\.note\?\x60<p>/);
+ assert.equal(local.find(e=>e.id==='2026-pokemon-night-out-london').artApproved,false);
 });
