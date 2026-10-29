@@ -23,5 +23,5 @@ test('desenhos oficiais e listas copiáveis continuam disponíveis',()=>{
  assert.ok(ui.includes('id="stampCoordPrefecture"'));
  assert.ok(ui.includes('Copiar toda a lista'));
  assert.match(html,/stamps-v2\.js\?v=[\w-]+/);
- assert.ok(html.includes('stamps-v2.css?v=20261018-stamp-copy-lists2'));
+ assert.ok(html.includes('stamps-v2.css?v=20261029-reforma6-v1'));
 });
