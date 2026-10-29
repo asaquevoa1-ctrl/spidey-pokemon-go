@@ -1,0 +1,441 @@
+/* Spidey Premium UI · 29/10/2026
+   UMA camada visual apos todos os estilos do app.
+   Os posters e a marca cosmica original NUNCA recebem filtros, mascaras
+   ou substituicoes. Profundidade de interface com baixo custo no Android. */
+:root[data-theme="dark"] {
+  --premium-bg:#0a0f16;
+  --premium-panel:#151c25;
+  --premium-panel-high:#1d2630;
+  --premium-stroke:rgba(222,197,154,.19);
+  --premium-text:#f7f3ed;
+  --premium-dim:#b7bcc5;
+  --premium-gold:#e2c182;
+  --premium-red:#b33847;
+  --premium-shadow:0 16px 36px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.048);
+  --player-line:rgba(226,193,130,.20);
+  --player-accent:#e2c182;
+  --player-ink:#f7f3ed;
+}
+:root[data-theme="light"] {
+  --premium-bg:#eee9e2;
+  --premium-panel:#fffcf7;
+  --premium-panel-high:#f5efe7;
+  --premium-stroke:rgba(111,91,61,.18);
+  --premium-text:#26252b;
+  --premium-dim:#555a62;
+  --premium-gold:#805920;
+  --premium-red:#a72d3e;
+  --premium-shadow:0 14px 30px rgba(55,42,34,.11),inset 0 1px rgba(255,255,255,.8);
+  --player-line:rgba(111,91,61,.2);
+  --player-accent:#805920;
+  --player-ink:#26252b;
+}
+html[data-theme="dark"] body.spidey-player-ui,
+html[data-theme="dark"] body.spidey-player-ui.cosmic-inapp-art {
+  background:radial-gradient(ellipse at 88% -18%,rgba(166,49,62,.16),transparent 36%),
+             linear-gradient(180deg,#101720 0%,#0b1119 50%,#080d14 100%) !important;
+  background-attachment:scroll !important;
+  color:var(--premium-text);
+}
+html[data-theme="light"] body.spidey-player-ui,
+html[data-theme="light"] body.spidey-player-ui.cosmic-inapp-art {
+  background:radial-gradient(ellipse at 88% -20%,rgba(163,117,57,.13),transparent 40%),
+             linear-gradient(180deg,#f5f0e9 0%,#ede8e2 60%,#eae4dc 100%) !important;
+  background-attachment:scroll !important;
+  color:var(--premium-text);
+}
+/* Sem blur na barra fixa: rolagem responsiva no Samsung. */
+html[data-theme] body.spidey-player-ui .topbar {
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  background:var(--premium-panel) !important;
+  border-bottom:1px solid var(--premium-stroke);
+  box-shadow:0 4px 16px rgba(0,0,0,.09);
+}
+html[data-theme] body.spidey-player-ui .brand-logo {
+  border-color:rgba(212,170,99,.48) !important;
+  box-shadow:0 0 0 3px rgba(217,181,114,.07) !important;
+}
+html[data-theme] body.spidey-player-ui :is(h1,h2,h3) { color:var(--premium-text); }
+html[data-theme] body.spidey-player-ui :is(.microcopy,.hero p,.player-home-head p,.player-row-bonus) { color:var(--premium-dim) !important; }
+html[data-theme] body.spidey-player-ui :is(.eyebrow,.player-kicker,.player-source) { color:var(--premium-gold); }
+html[data-theme] body.spidey-player-ui .month-nav { color:var(--premium-text); }
+
+/* Home REAL do app: #playerHome, nao os blocos experience-* escondidos. */
+#playerHome { position:relative; perspective:1050px; }
+#playerHome .spidey-premium-home-head {
+  position:relative;
+  overflow:hidden;
+  margin:0 0 13px;
+  padding:22px 22px 23px;
+  border:1px solid var(--premium-stroke);
+  border-radius:22px;
+  background:
+    radial-gradient(ellipse at 92% 10%,rgba(186,67,76,.13),transparent 43%),
+    linear-gradient(136deg,var(--premium-panel-high),var(--premium-panel));
+  box-shadow:var(--premium-shadow);
+}
+#playerHome .spidey-premium-home-head::after {
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:4px;
+  background:linear-gradient(180deg,var(--premium-gold),var(--premium-red));
+  pointer-events:none;
+}
+#playerHome .spidey-premium-home-head > span {
+  display:block;
+  letter-spacing:.10em;
+  color:var(--premium-gold);
+  font-size:.68rem;
+  line-height:1.5;
+  font-weight:850;
+}
+#playerHome .spidey-premium-home-head h1 {
+  margin:7px 0 8px;
+  max-width:610px;
+  font-size:clamp(1.85rem,5.5vw,3.25rem);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  text-wrap:balance;
+}
+#playerHome .spidey-premium-home-head p { line-height:1.5; }
+#playerHome .spidey-premium-kpis {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:0 0 24px;
+}
+#playerHome .spidey-premium-kpi {
+  display:grid;
+  gap:4px;
+  min-width:0;
+  padding:15px 17px;
+  border:1px solid var(--premium-stroke);
+  border-radius:17px;
+  background:var(--premium-panel);
+  box-shadow:0 9px 19px rgba(0,0,0,.08),inset 0 1px rgba(255,255,255,.035);
+}
+#playerHome .spidey-premium-kpi span {
+  font-size:.74rem;color:var(--premium-dim);font-weight:720;
+}
+#playerHome .spidey-premium-kpi strong {
+  font-size:clamp(1.3rem,4vw,1.85rem);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-.02em;color:var(--premium-text);
+}
+#playerHome .spidey-premium-kpi:first-child strong { color:var(--premium-gold); }
+#playerHome .spidey-premium-kpi small {font-size:.66rem;color:var(--premium-dim);line-height:1.25;}
+#playerHome .spidey-premium-feature-stage {margin:0;}
+#playerHome .spidey-premium-stage-heading {
+  display:flex;align-items:center;gap:11px;margin:0 0 12px;
+}
+#playerHome .spidey-premium-stage-heading div {display:grid;gap:3px;}
+#playerHome .spidey-premium-stage-heading div span {
+  color:var(--premium-gold);font-size:.68rem;letter-spacing:.13em;font-weight:850;
+}
+#playerHome .spidey-premium-stage-heading h2 {margin:0;font-size:clamp(1.18rem,3vw,1.6rem);}
+#playerHome .spidey-premium-stage-icon {
+  display:grid;place-items:center;width:39px;height:39px;flex:0 0 39px;
+  border-radius:12px;border:1px solid var(--premium-stroke);
+  background:linear-gradient(145deg,var(--premium-panel-high),var(--premium-panel));
+  color:var(--premium-gold);font-size:1.13rem;
+}
+/* O mesmo poster cinematografico aprovado, sem crop novo ou filtro. */
+html[data-theme] body.spidey-player-ui #playerHome .player-event,
+html[data-theme] body.spidey-player-ui #playerHome .player-event:has(.player-art-window) {
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--premium-stroke);
+  border-radius:22px;
+  background:var(--premium-panel) !important;
+  color:var(--premium-text);
+  box-shadow:var(--premium-shadow);
+  transform-style:preserve-3d;
+}
+html[data-theme] body.spidey-player-ui #playerHome .player-event-copy {
+  background:linear-gradient(148deg,var(--premium-panel-high),var(--premium-panel));
+}
+#playerHome .player-event .player-facts {
+  border-top-color:var(--premium-stroke);
+}
+#playerHome .player-event .player-facts p {color:var(--premium-dim);}
+#playerHome .player-event h2 {color:var(--premium-text);font-size:clamp(1.36rem,4.3vw,2.25rem);}
+#playerHome .player-event .player-time {color:var(--premium-gold);}
+#playerHome .player-event .player-source {color:var(--premium-gold);}
+#playerHome .player-event .player-actions .action-btn:first-child {
+  background:var(--premium-red);
+  border-color:var(--premium-red);
+  color:#fff !important;
+}
+#playerHome .player-event .player-actions .action-btn.gold {
+  background:rgba(226,193,130,.15);
+  border:1px solid var(--premium-stroke);
+  color:var(--premium-text);
+}
+/* O poster conserva os bytes, escala, proporcao e cor originais. */
+#playerHome .player-poster { max-height:none; }
+#playerHome .player-art-window { background:var(--premium-panel); }
+
+/* Menu de acoes visivel e vinculado as abas reais. */
+#playerHome .spidey-premium-nav {
+  margin:25px 0 26px;
+}
+#playerHome .spidey-premium-nav-head {
+  display:flex;align-items:end;justify-content:space-between;gap:14px;
+  margin-bottom:11px;
+}
+#playerHome .spidey-premium-nav-head > div {display:grid;gap:3px;}
+#playerHome .spidey-premium-nav-head span {
+  color:var(--premium-gold);
+  font-size:.68rem;font-weight:850;letter-spacing:.12em;
+}
+#playerHome .spidey-premium-nav-head h2 {font-size:1.5rem;margin:0;}
+#playerHome .spidey-premium-nav-head small {color:var(--premium-dim);font-size:.73rem;}
+#playerHome .spidey-premium-nav-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+#playerHome .spidey-premium-nav-grid button {
+  appearance:none;
+  position:relative;
+  overflow:hidden;
+  min-width:0;
+  display:grid;grid-template-columns:36px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  column-gap:12px;
+  align-content:center;text-align:left;
+  padding:16px 14px;
+  border:1px solid var(--premium-stroke);
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--premium-panel-high),var(--premium-panel));
+  box-shadow:0 10px 24px rgba(0,0,0,.09),inset 0 1px rgba(255,255,255,.065);
+  color:var(--premium-text);
+  cursor:pointer;
+}
+#playerHome .spidey-premium-nav-grid button span {
+  display:grid;place-items:center;
+  width:36px;height:36px;grid-row:1/3;
+  border:1px solid rgba(189,82,84,.22);
+  border-radius:11px;
+  background:rgba(178,56,71,.13);
+  color:var(--premium-gold);
+  font-size:1.2rem;
+  align-self:center;
+}
+#playerHome .spidey-premium-nav-grid button strong {font-size:.89rem;line-height:1.2;align-self:end;}
+#playerHome .spidey-premium-nav-grid button small {font-size:.72rem;color:var(--premium-dim);margin-top:4px;}
+#playerHome .spidey-premium-nav-grid button:focus-visible {
+  outline:3px solid var(--premium-gold);
+  outline-offset:3px;
+}
+
+/* Sistema global: noticias, semana, FLY, Rocket, PvP, Selos, calendario e detalhamento. */
+html[data-theme] body.spidey-player-ui .hero.hero-compact {
+  border:1px solid var(--premium-stroke) !important;
+  border-radius:19px !important;
+  padding:21px 22px !important;
+  background:
+    radial-gradient(ellipse at 100% 0,rgba(169,56,66,.11),transparent 48%),
+    linear-gradient(140deg,var(--premium-panel-high),var(--premium-panel)) !important;
+  box-shadow:var(--premium-shadow) !important;
+}
+html[data-theme] body.spidey-player-ui .hero.hero-compact p {color:var(--premium-dim) !important;}
+html[data-theme] body.spidey-player-ui :is(
+  .cc-news-card,.weekly-hero-card,.weekly-day,.weekly-item,.weekly-stamp-card,
+  .event-card,.event-dialog,.info-box,.stamp-card,.stamp-stop,
+  .map-location-card,.map-pending-card,.v22-event,.v24-day-event,
+  .pvp-card,.pvp-team-slot,.pvp-detail-moves li,.rocket-card,
+  .rocket-credits,.fly-live-grid article,.fly-point,.fly-event-select,
+  .fly-upcoming-item,.fly-spotlight-feature,.fly-reference-credits,
+  .player-world-route,.player-route-place,.spidey-player-ui .cc-news-card
+) {
+  color:var(--premium-text);
+  background:linear-gradient(150deg,var(--premium-panel-high),var(--premium-panel)) !important;
+  border:1px solid var(--premium-stroke) !important;
+  box-shadow:var(--premium-shadow);
+}
+html[data-theme] body.spidey-player-ui :is(
+  .cc-news-card,.weekly-day,.weekly-item,.event-card,.stamp-card,
+  .pvp-card,.rocket-card,.fly-point,.v22-event,.v24-day-event,
+  .player-route-place
+) {border-radius:17px;}
+html[data-theme] body.spidey-player-ui .spidey-player-ui .cc-news-card,
+html[data-theme] body.spidey-player-ui .cc-news-card {
+  padding:19px !important;
+  border-radius:18px !important;
+}
+html[data-theme] body.spidey-player-ui .cc-news-list {gap:13px;}
+html[data-theme] body.spidey-player-ui .cc-news-card h2 {color:var(--premium-text);}
+html[data-theme] body.spidey-player-ui .cc-news-card p {color:var(--premium-dim);}
+html[data-theme] body.spidey-player-ui .weekly-item-copy strong {color:var(--premium-text) !important;}
+html[data-theme] body.spidey-player-ui :is(.weekly-item-copy p,.weekly-time,.weekly-day-head strong,.weekly-tags span) {color:var(--premium-dim);}
+html[data-theme] body.spidey-player-ui :is(.weekly-day-head span,.weekly-count,.v22-group-label strong) {color:var(--premium-gold);}
+html[data-theme] body.spidey-player-ui .weekly-grid {gap:13px;}
+html[data-theme] body.spidey-player-ui .v22-group {border-color:var(--premium-stroke);}
+html[data-theme] body.spidey-player-ui .v22-board {border-color:var(--premium-stroke);}
+html[data-theme] body.spidey-player-ui .v22-group-label span {color:var(--premium-dim);}
+html[data-theme] body.spidey-player-ui .v22-event-copy strong {color:var(--premium-text);}
+html[data-theme] body.spidey-player-ui .v22-event-copy small {color:var(--premium-dim);}
+html[data-theme] body.spidey-player-ui .v22-group {--v22-accent:var(--premium-gold);}
+html[data-theme] body.spidey-player-ui .pvp-leagues button.active,
+html[data-theme] body.spidey-player-ui .rocket-group button[aria-pressed="true"] {
+  background:var(--premium-red) !important;
+  border-color:var(--premium-red) !important;
+  color:#fff !important;
+}
+html[data-theme] body.spidey-player-ui :is(.fly-upcoming-item small,.rocket-meta span,.rocket-first,.rocket-credits p,.pvp-moves,.pvp-score span,.fly-state) {
+  color:var(--premium-dim);
+}
+html[data-theme] body.spidey-player-ui .rocket-card .rocket-hint {color:var(--premium-text);}
+html[data-theme] body.spidey-player-ui .rocket-card :is(.rocket-mon,.rocket-slot) {
+  background:var(--premium-panel);
+  color:var(--premium-text);
+  border-color:var(--premium-stroke);
+}
+html[data-theme] body.spidey-player-ui .fly-active {
+  border-left:3px solid var(--premium-red) !important;
+}
+html[data-theme] body.spidey-player-ui .fly-upcoming-item {color:var(--premium-text);}
+html[data-theme] body.spidey-player-ui :is(.action-btn,.ghost-btn,.secondary-btn,.fly-point-actions a,.month-nav button) {
+  background:var(--premium-panel-high) !important;
+  color:var(--premium-text) !important;
+  border:1px solid var(--premium-stroke) !important;
+  border-radius:11px;
+  box-shadow:inset 0 1px rgba(255,255,255,.035);
+}
+html[data-theme] body.spidey-player-ui :is(.action-btn.gold,.primary-btn) {
+  background:var(--premium-red) !important;
+  border-color:var(--premium-red) !important;
+  color:#fff !important;
+}
+html[data-theme] body.spidey-player-ui .spidey-share-main {
+  background:var(--premium-panel-high) !important;
+  color:var(--premium-text) !important;
+  border:1px solid var(--premium-stroke) !important;
+  box-shadow:none !important;
+}
+html[data-theme] body.spidey-player-ui .notification-controls {
+  background:var(--premium-panel);
+  border-color:var(--premium-stroke);
+}
+html[data-theme] body.spidey-player-ui .spidey-app-utilities > summary {
+  color:var(--premium-text);
+  background:var(--premium-panel-high);
+  border-color:var(--premium-stroke);
+}
+html[data-theme] body.spidey-player-ui :is(input,select,textarea) {
+  color:var(--premium-text);
+  background:var(--premium-panel);
+  border-color:var(--premium-stroke);
+}
+html[data-theme] body.spidey-player-ui :is(.calendar-wrap,.v24-day-sheet) {
+  background:var(--premium-panel) !important;
+  border-color:var(--premium-stroke) !important;
+}
+html[data-theme] body.spidey-player-ui :is(.calendar-day.has-event,.v24-day-event.has-art) {
+  background:rgba(176,73,76,.07) !important;
+}
+html[data-theme] body.spidey-player-ui .event-dialog {
+  border-radius:22px;
+  background:var(--premium-panel) !important;
+  color:var(--premium-text);
+  border-color:var(--premium-stroke) !important;
+  box-shadow:0 32px 85px rgba(0,0,0,.36);
+}
+html[data-theme] body.spidey-player-ui .event-dialog::backdrop {
+  background:rgba(0,0,0,.77);
+  backdrop-filter:none;
+}
+html[data-theme] body.spidey-player-ui .spidey-detail-v3 .detail-body,
+html[data-theme] body.spidey-player-ui .spidey-detail-v2 .detail-body,
+html[data-theme] body.spidey-player-ui .detail-body {
+  background:var(--premium-panel) !important;
+  color:var(--premium-text);
+}
+html[data-theme] body.spidey-player-ui .detail-body p {color:var(--premium-dim) !important;}
+html[data-theme] body.spidey-player-ui :is(.coordinates,.bonus-list li) {
+  background:var(--premium-panel-high);
+  border-color:var(--premium-stroke);
+  color:var(--premium-text);
+}
+html[data-theme] body.spidey-player-ui .coordinates code {color:var(--premium-text);}
+html[data-theme] body.spidey-player-ui .player-row {
+  color:var(--premium-text);
+  border-bottom:1px solid var(--premium-stroke);
+}
+html[data-theme] body.spidey-player-ui .player-row strong {color:var(--premium-text);}
+html[data-theme] body.spidey-player-ui .player-row small {color:var(--premium-gold);}
+html[data-theme] body.spidey-player-ui .player-date {
+  background:var(--premium-panel-high);
+  color:var(--premium-text);
+}
+html[data-theme] body.spidey-player-ui .spidey-menu-item.active {
+  background:rgba(179,56,71,.18);
+  border-color:rgba(222,193,130,.26);
+  color:#fff;
+}
+html[data-theme] body.spidey-player-ui .spidey-mobile-menu-panel {
+  background:linear-gradient(160deg,rgba(17,21,30,.97),rgba(10,14,21,.98)),
+  url('assets/branding/20261019/spidey-wallpaper-cosmic-20261019.webp') center/cover !important;
+  border-right-color:var(--premium-stroke);
+}
+html[data-theme] body.spidey-player-ui #spideyMenuToggle {
+  background:var(--premium-panel-high);
+  border-color:var(--premium-stroke);
+  color:var(--premium-gold);
+}
+html[data-theme] body.spidey-player-ui .app-tab.active {
+  background:rgba(178,55,69,.16) !important;
+  color:var(--premium-gold) !important;
+  border-color:var(--premium-stroke);
+}
+
+/* A profundidade responde ao cursor somente em aparelhos com mouse.
+   Sem giro constante, blur no scroll ou deformacao de poster no Android. */
+@media (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  #playerHome .player-event {
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  #playerHome .player-event:hover {
+    transform:perspective(1200px) translateY(-3px) rotateX(.35deg);
+    box-shadow:0 22px 47px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.055);
+  }
+  #playerHome .spidey-premium-nav-grid button {
+    transition:transform .16s ease,border-color .16s ease;
+  }
+  #playerHome .spidey-premium-nav-grid button:hover {
+    transform:perspective(900px) translateY(-2px) rotateX(1deg);
+    border-color:rgba(226,193,130,.48);
+  }
+}
+@media (max-width:760px) {
+  #playerHome .spidey-premium-home-head {padding:17px 16px;margin-bottom:9px;border-radius:17px;}
+  #playerHome .spidey-premium-home-head h1 {font-size:1.78rem;}
+  #playerHome .spidey-premium-kpis {gap:6px;margin-bottom:19px;}
+  #playerHome .spidey-premium-kpi {padding:10px 9px;border-radius:12px;}
+  #playerHome .spidey-premium-kpi span {font-size:.66rem;}
+  #playerHome .spidey-premium-kpi strong {font-size:1.35rem;}
+  #playerHome .spidey-premium-kpi small {font-size:.59rem;}
+  #playerHome .player-event-copy {padding:17px !important;}
+  #playerHome .player-event .player-facts p {font-size:.9rem;}
+  #playerHome .spidey-premium-nav-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+  #playerHome .spidey-premium-nav-grid button {padding:12px 10px;grid-template-columns:30px minmax(0,1fr);gap:8px;}
+  #playerHome .spidey-premium-nav-grid button span {height:30px;width:30px;font-size:1.03rem;}
+  #playerHome .spidey-premium-nav-grid button strong {font-size:.83rem;}
+  #playerHome .spidey-premium-nav-grid button small {font-size:.66rem;}
+  #playerHome .spidey-premium-nav-head small {display:none;}
+  html[data-theme] body.spidey-player-ui .hero.hero-compact {padding:17px 16px !important;}
+  html[data-theme] body.spidey-player-ui .cc-news-card {padding:15px !important;}
+}
+@media (max-width:365px) {
+  #playerHome .spidey-premium-kpi small {display:none;}
+  #playerHome .spidey-premium-nav-grid button span {display:none;}
+  #playerHome .spidey-premium-nav-grid button {grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion:reduce) {
+  #playerHome .player-event,#playerHome .spidey-premium-nav-grid button {
+    transition:none !important;transform:none !important;
+  }
+}
