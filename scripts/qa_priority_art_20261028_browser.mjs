@@ -1,6 +1,8 @@
 import {execFileSync,spawn} from 'node:child_process';
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
+// Prevent Chromium screenshot from hanging on fonts.ready in archived-event QA.
+process.env.PW_TEST_SCREENSHOT_NO_FONTS_READY='1';
 const record=JSON.parse(fs.readFileSync('docs/qa/PRIORITY_ART_APPROVAL_20261028.json'));
 const output='test-results/priority-art-20261028';
 fs.mkdirSync(output,{recursive:true});
@@ -71,7 +73,7 @@ try{
 }catch(error){
   if(activePage){
     fs.writeFileSync(output+'/failure.json',JSON.stringify({case:activeCase,error:String(error),url:activePage.url(),body:await activePage.locator('body').innerText(),errors},null,2)+'\n');
-    await activePage.screenshot({path:output+'/failure.png',fullPage:true});
+    try { await activePage.screenshot({path:output+'/failure.png',fullPage:true,timeout:9000,animations:'disabled'}); } catch (_) { /* Preserve original failure.json and error. */ }
   }
   throw error;
 }finally{await browser.close();server.kill('SIGTERM');fs.rmSync(publicDirectory,{recursive:true,force:true});}
