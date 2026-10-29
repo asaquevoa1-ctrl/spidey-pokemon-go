@@ -121,10 +121,10 @@ try {
       await duplicate.waitFor({state:'visible'});
       assert.equal(await duplicate.evaluate(node=>node.open),false,
         'Poster grande repetido deve iniciar recolhido no Samsung');
-      await duplicate.locator('summary').click();
+      await duplicate.locator(':scope > summary').click();
       assert.ok(await duplicate.evaluate(node=>node.open),
         'Roteiro completo deve expandir ao toque');
-      await duplicate.locator('summary').click();
+      await duplicate.locator(':scope > summary').click();
       assert.equal(await duplicate.evaluate(node=>node.open),false);
 
       const cards=galaxy.locator('.spidey-universe-card');
