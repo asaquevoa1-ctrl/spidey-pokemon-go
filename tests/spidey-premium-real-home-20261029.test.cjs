@@ -10,12 +10,12 @@ test('Tema Premium global carregado por ultimo, após estilos dinamicos legados'
   const after=theme.indexOf("loadStyle('spidey-premium-unified-20261029.css'");
   assert.ok(before>0&&after>before);
   const html=read('index.html');
-  assert.match(html,/player-ui\.js\?v=20261029-orbit1/);
-  assert.match(html,/theme\.js\?v=20261029-focus2/);
-  assert.match(html,/SPIDEY_BUILD='2026-10-29-london-local-art2'/);
+  assert.match(html,/player-ui\.js\?v=20261029-cockpit1/);
+  assert.match(html,/theme\.js\?v=20261029-cockpit1/);
+  assert.match(html,/SPIDEY_BUILD='2026-10-29-cockpit1'/);
   const sw=read('sw.js');
   assert.match(sw,/\.\/spidey-premium-unified-20261029\.css/);
-  assert.match(sw,/20261029-london-local-art2/);
+  assert.match(sw,/20261029-cockpit1/);
 });
 test('Home alterada é a realmente visível, não experience-* oculto',()=>{
   const ui=read('player-ui.js');
