@@ -33,7 +33,7 @@ try{
       class FixedDate extends NativeDate{constructor(...args){super(...(args.length?args:[now]));}static now(){return now;}}
       Object.setPrototypeOf(FixedDate,NativeDate);window.Date=FixedDate;localStorage.setItem('spidey-theme',theme);
     },{fixed,theme});
-    await page.goto('http://127.0.0.1:4177/spidey-app/#evento='+art.event_id,{waitUntil:'networkidle'});
+    await page.goto('http://127.0.0.1:4177/spidey-app/#evento='+art.event_id,{waitUntil:'domcontentloaded',timeout:30000});
     await page.waitForFunction(id=>window.SpideyFindShareEvent?.(id),art.event_id,{timeout:30000});
     const expected=art.file.replace('spidey-app/','');
     const hero=page.locator(`#eventDetail img[src*="${expected}"]`).first();
