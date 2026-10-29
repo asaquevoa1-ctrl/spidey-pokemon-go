@@ -38,6 +38,8 @@ test('Samsung: pôster premium vem antes dos atalhos e alertas são recolhíveis
   assert.match(js, /featureSection\.insertAdjacentElement\('afterend', quick\)/);
   assert.match(js, /document\.createElement\('details'\)/);
   assert.match(js, /utilities\.open = true/);
+  assert.match(js, /utilityRow\.append\(share\)/);
+  assert.match(css, /\.spidey-utility-row \.spidey-share-main/);
   assert.match(css, /spidey-app-utilities/);
   assert.match(css, /cosmic-inapp-art/);
   assert.doesNotMatch(js, /hunterView|ca[cç]ador|mapView/i);
