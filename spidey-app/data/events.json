@@ -2295,9 +2295,10 @@
         "mode": "span"
       },
       "presentation": {
-        "requires_art": true,
+        "requires_art": false,
         "fallback_visual": "date",
-        "uses_existing_approved_event_poster": true
+        "uses_existing_approved_event_poster": false,
+        "hide_poster_until_corrected": true
       },
       "location_label": "The O2 Arena • Londres",
       "locations": [
@@ -2362,13 +2363,7 @@
         "enabled": false,
         "reason": "Arena é uma referência geográfica, não Ginásio/Poképarada/Ponto de Poder confirmado. GPX indisponível."
       },
-      "art": {
-        "url": "assets/events/premium/pokemon-night-out-20261024-approved-v1.png",
-        "web_width": 1024,
-        "web_height": 1536,
-        "web_sha256": "a340c9e232cbe34a9a392d300ca3a287cf5df9a54af7bdb3d1e98b8cece933d3",
-        "alt": "Pôster Premium originalmente aprovado do Pokémon Night Out, sem alteração dos pixels; detalhes de Pikachu e Gengar com Fundo de Localização de Londres no texto."
-      },
+      "art": null,
       "notifications": {
         "enabled": false,
         "reason": "Nenhuma janela de jogabilidade foi confirmada; não tratar horário do show como início de reides."
