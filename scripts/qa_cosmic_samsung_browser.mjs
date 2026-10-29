@@ -78,6 +78,32 @@ try {
       assert.ok(shared?.text?.includes(base),'Android share payload missing working link');
       assert.ok(!shared.text.includes('spidey-nexus'),'Prohibited branding in share text');
       await page.screenshot({path:`${output}/galaxy-390-${theme}.png`,animations:'disabled',timeout:16000});
+
+      // O vídeo real atravessa as telas internas no modo Claro. Validar
+      // essas telas, nao somente o topo da Home, nos dois temas.
+      for(const [view,card] of [
+        ['pvpView','.pvp-card'],
+        ['rocketGuideView','.rocket-card'],
+        ['weeklyView','.weekly-item']
+      ]){
+        const tab=page.locator('.app-tab[data-view="'+view+'"]').first();
+        assert.ok(await tab.count(),'Tab ausente: '+view);
+        await tab.evaluate(button=>button.click());
+        await page.waitForFunction(id=>{
+          const el=document.getElementById(id);
+          return el && !el.hidden;
+        },view,{timeout:9000});
+        await page.locator('#'+view+' '+card).first().waitFor({state:'visible',timeout:9000});
+        const style=await page.locator('#'+view+' '+card).first().evaluate(el=>{
+          const css=getComputedStyle(el);
+          return {background:css.backgroundImage,border:css.borderTopWidth,shadow:css.boxShadow};
+        });
+        assert.match(style.background,/linear-gradient/i,view+' cartao sem acabamento');
+        assert.ok(style.shadow!=='none',view+' cartao sem profundidade');
+        await page.screenshot({path:`${output}/galaxy-390-${theme}-${view}.png`,animations:'disabled',timeout:16000});
+        checks.push({profile:'Samsung interno',theme,view,depth:style.shadow!=='none'});
+      }
+
       checks.push({profile:'Samsung Galaxy Android 14 simulated',width:390,theme,images:loaded.length,splashMs:elapsed,share:'ok',background:'ok'});
     }finally{await context.close();}
   }
