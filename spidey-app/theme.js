@@ -12,6 +12,8 @@
     loadStyle('app-v2-3.css','spideyAppV23');
     loadStyle('app-v2-4.css','spideyAppV24');
     loadStyle('art-coverage-v1.css','spideyArtCoverage');
+    // Ultima folha visual, depois dos estilos legados carregados dinamicamente.
+    loadStyle('spidey-premium-unified-20261029.css','spideyPremiumUnified');
     loadScript('app-v2.js','spideyAppV2');
     loadScript('app-v2-1.js','spideyAppV21');
     loadScript('app-v2-2.js','spideyAppV22');
@@ -21,7 +23,7 @@
   }
   function normalizeMode(value){return['light','dark','system'].includes(value)?value:'system'}
   function effectiveTheme(mode){if(mode==='system')return media.matches?'dark':'light';return mode}
-  function applyTheme(mode,persist=true){const normalized=normalizeMode(mode);const effective=effectiveTheme(normalized);document.documentElement.dataset.themeMode=normalized;document.documentElement.dataset.theme=effective;document.documentElement.style.colorScheme=effective;const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.setAttribute('content',effective==='dark'?'#07162d':'#f6f8fb');const select=document.querySelector('#themeSelect');if(select&&select.value!==normalized)select.value=normalized;if(persist)localStorage.setItem(STORAGE_KEY,normalized);window.dispatchEvent(new CustomEvent('spideythemechange',{detail:{mode:normalized,effective}}))}
+  function applyTheme(mode,persist=true){const normalized=normalizeMode(mode);const effective=effectiveTheme(normalized);document.documentElement.dataset.themeMode=normalized;document.documentElement.dataset.theme=effective;document.documentElement.style.colorScheme=effective;const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.setAttribute('content',effective==='dark'?'#0a0f16':'#eee9e2');const select=document.querySelector('#themeSelect');if(select&&select.value!==normalized)select.value=normalized;if(persist)localStorage.setItem(STORAGE_KEY,normalized);window.dispatchEvent(new CustomEvent('spideythemechange',{detail:{mode:normalized,effective}}))}
   function currentMode(){return normalizeMode(localStorage.getItem(STORAGE_KEY)||document.documentElement.dataset.themeMode||'system')}
   function initThemeControl(){const select=document.querySelector('#themeSelect');if(select){select.value=currentMode();select.addEventListener('change',()=>applyTheme(select.value))}const mediaListener=()=>{if(currentMode()==='system')applyTheme('system',false)};if(typeof media.addEventListener==='function')media.addEventListener('change',mediaListener);else if(typeof media.addListener==='function')media.addListener(mediaListener);applyTheme(currentMode(),false)}
   loadAppUi();if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initThemeControl,{once:true});else initThemeControl();window.SpideyTheme={apply:applyTheme,currentMode,effectiveTheme};
