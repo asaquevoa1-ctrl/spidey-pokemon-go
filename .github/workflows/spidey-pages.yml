@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
   pull_request:
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', '.github/workflows/spidey-pages.yml']
   workflow_run:
     workflows: ['Spidey Weekly - resumo semanal', 'Spidey - Caçador feed parceiro']
     types: [completed]
@@ -41,6 +41,8 @@ jobs:
           node-version: '24'
       - name: Conferir limites da medição de acessos
         run: node --test tests/web-analytics.test.cjs
+      - name: Bloquear arte datada errada e texto interno antes de publicar
+        run: node scripts/check_editorial_integrity.cjs
       - name: Preparar somente os arquivos públicos
         run: python scripts/build_spidey_pages.py --output pages-public
       - uses: actions/upload-pages-artifact@v3

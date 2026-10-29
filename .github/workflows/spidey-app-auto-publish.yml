@@ -10,6 +10,8 @@ on:
       - "queue/app-ready/**"
       - "scripts/app_auto_publish.py"
       - "scripts/app_auto_publish_v2.py"
+      - "scripts/check_editorial_integrity.cjs"
+      - "config/spidey-art-date-scopes.json"
       - "scripts/test_app_auto_publish.py"
       - ".github/workflows/spidey-app-auto-publish.yml"
   workflow_dispatch:
@@ -59,6 +61,9 @@ jobs:
               json.loads(path.read_text(encoding='utf-8'))
           print('JSON OK')
           PY
+
+      - name: Validar conteúdo final para bloquear arte e data incorretas
+        run: node scripts/check_editorial_integrity.cjs
 
       - name: Gravar resultado
         shell: bash
