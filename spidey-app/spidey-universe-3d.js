@@ -5,6 +5,7 @@
 (() => {
   'use strict';
   let selectedId = null;
+  let expandedHighlight = false;
   const MOD = 5;
   const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
 
@@ -183,7 +184,20 @@
     open.type = 'button';
     footer.append(prev, counter, next, open);
     section.append(heading, viewport, footer);
-    stage.insertAdjacentElement('beforebegin', section);
+    // Destaque visual em primeiro plano, antes dos números resumidos.
+    const intro = root.querySelector('.spidey-premium-home-head');
+    if (intro) intro.insertAdjacentElement('afterend', section);
+    else stage.insertAdjacentElement('beforebegin', section);
+    // Não mostrar o mesmo pôster duas vezes em sequência. O painel legado
+    // continua completo e acessível, mas recolhido por padrão no Samsung.
+    const disclosure = make('details', 'spidey-universe-highlight-details');
+    disclosure.id = 'spideyUniverseHighlightDetails';
+    const discloseTitle = make('summary', '', 'Programação e roteiro completo do destaque');
+    discloseTitle.setAttribute('aria-label', 'Expandir programação e detalhes completos do destaque');
+    stage.parentElement.insertBefore(disclosure, stage);
+    disclosure.append(discloseTitle, stage);
+    disclosure.open = expandedHighlight;
+    disclosure.addEventListener('toggle', () => { expandedHighlight = disclosure.open; });
 
     let active = Math.max(0, selection.findIndex(item => item.id === selectedId));
     if (active < 0) active = 0;
