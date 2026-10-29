@@ -56,6 +56,7 @@
   function renderHome(){
     const root=document.getElementById('playerHome');if(!root||!state.events.length)return;
     const now=new Date(),{focus,dated,active,upcoming}=homeSelection(state.events,worldPoints,now);
+    root.querySelector('#spideyUniverse3D')?.spideyDispose?.();
     root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${panel(focus)}${window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
     // Esta e a Home VISIVEL: os blocos legados experience-* estao ocultos pelo Player UI.
     // Construir o dashboard sobre #playerHome, sem substituir os posters aprovados.
@@ -97,6 +98,8 @@
         +'<button type="button" data-premium-view="rocketGuideView"><span aria-hidden="true">R</span><strong>Rocket</strong><small>Guias de batalha</small></button></div>';
       feed.before(nav);
     }
+    // A Home REAL (#playerHome) recebe a galeria 3D com eventos aprovados.
+    window.SpideyUniverse3D?.mount(root, state.events, focus, now, art, title, time, getBrazilRange);
 
   }
   function mount(){

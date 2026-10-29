@@ -79,6 +79,34 @@ try {
       assert.ok(!shared.text.includes('spidey-nexus'),'Prohibited branding in share text');
       await page.screenshot({path:`${output}/galaxy-390-${theme}.png`,animations:'disabled',timeout:16000});
 
+      // Universe3D: verificar a Home real, e nao os blocos legacy ocultos.
+      const galaxy=page.locator('#playerHome #spideyUniverse3D');
+      await galaxy.waitFor({state:'visible',timeout:12000});
+      const cards=galaxy.locator('.spidey-universe-card');
+      assert.ok(await cards.count()>=2,'Galeria 3D precisa de eventos Premium reais');
+      await galaxy.scrollIntoViewIfNeeded();
+      const first=galaxy.locator('.spidey-universe-card[data-position="center"]');
+      await first.waitFor({state:'visible'});
+      const sceneStyle=await first.evaluate(card=>{
+        const css=getComputedStyle(card);
+        return {transform:css.transform,image:card.querySelector('img')?.getAttribute('src')};
+      });
+      assert.match(sceneStyle.transform,/matrix3d\(/,'Cartaz nao recebeu transform 3D');
+      assert.ok(sceneStyle.image?.includes('assets/events/'),'Arte Premium nao vinculada a arquivo real');
+      await first.locator('img').evaluate(img=>img.decode()).catch(()=>{});
+      assert.ok(await first.locator('img').evaluate(img=>img.naturalWidth>0),'Arte Premium nao carregou');
+      const before=await galaxy.locator('.spidey-universe-counter').innerText();
+      await galaxy.locator('button[aria-label="Próximo evento"]').click();
+      const after=await galaxy.locator('.spidey-universe-counter').innerText();
+      assert.notEqual(after,before,'Controle de rotacao nao mudou o evento');
+      assert.ok(await galaxy.locator('.spidey-universe-card[data-position="left"]').count()>0,'Plano 3D lateral ausente');
+      await page.screenshot({path:output+'/galaxy-390-'+theme+'-universe-3d.png',animations:'disabled',timeout:16000});
+      await galaxy.locator('.spidey-universe-open').click();
+      await page.locator('#eventDialog[open]').waitFor({state:'visible',timeout:5000});
+      await page.locator('#closeDialog').click();
+      checks.push({profile:'Universe3D Samsung',theme,cards:await cards.count(),geometry:'css-3d+webgl-optional',rotation:'ok',detail:'ok'});
+
+
       // O vídeo real atravessa as telas internas no modo Claro. Validar
       // essas telas, nao somente o topo da Home, nos dois temas.
       for(const [view,card] of [
