@@ -39,9 +39,11 @@ function validate({events,local,master,policy}){
     for(const id of allowed){
       const event=allEvents.get(id)||allLocal.get(id);
       if(!event){issue('POLICY_EVENT_MISSING',id,'Escopo cita evento inexistente');continue;}
-      const day=localDay(event);
-      if(!day||day<rule.start_date||day>rule.end_date)
-        issue('POLICY_DATE_MISMATCH',id,'Pôster datado '+rule.start_date+'–'+rule.end_date+' usado em '+(day||'data ausente'));
+      const schedule=event.schedule||{};
+      const days=[schedule.start_date,schedule.end_date,schedule.start_local,schedule.end_local]
+        .filter(Boolean).map(value=>String(value).slice(0,10));
+      if(!days.length||days.some(day=>day<rule.start_date||day>rule.end_date))
+        issue('POLICY_DATE_MISMATCH',id,'Pôster datado '+rule.start_date+'–'+rule.end_date+' versus datas locais '+(days.join(', ')||'ausentes'));
     }
     for(const [id,entry] of Object.entries(master||{})){
       if(file(entry?.file)===asset&&!allowed.has(id))
