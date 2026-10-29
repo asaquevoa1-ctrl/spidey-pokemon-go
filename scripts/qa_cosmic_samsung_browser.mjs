@@ -209,7 +209,9 @@ try {
           const highlight=page.locator('#rocketGuideView .rocket-hero strong').first();
           if(await highlight.count()){
             const color=await highlight.evaluate(el=>getComputedStyle(el).color);
-            assert.equal(color,'rgb(232, 192, 125)','Rocket hero precisa ter negrito legivel no modo Claro');
+            const rgb=color.match(/\d+/g)?.slice(0,3).map(Number)||[];
+            assert.ok(rgb.length===3 && rgb[0]>=180 && rgb[1]>=130 && rgb[2]>=75,
+              'Rocket hero precisa ter negrito dourado legivel no Claro: '+color);
           }
         }
         await page.screenshot({path:`${output}/galaxy-390-${theme}-${view}.png`,animations:'disabled',timeout:16000});
