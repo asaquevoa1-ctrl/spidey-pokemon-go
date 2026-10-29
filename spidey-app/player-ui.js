@@ -69,7 +69,7 @@
       const kpis=document.createElement('div');
       kpis.className='spidey-premium-kpis';
       kpis.setAttribute('aria-label','Seleção da agenda');
-      kpis.innerHTML='<div class="spidey-premium-kpi"><span>Em destaque</span><strong>01</strong><small>Seleção da Home</small></div>'
+      kpis.innerHTML='<div class="spidey-premium-kpi"><span>Em destaque</span><strong>'+(focus?1:0)+'</strong><small>Seleção da Home</small></div>'
         +'<div class="spidey-premium-kpi"><span>Outros ativos</span><strong>'+active.length+'</strong><small>Além do destaque</small></div>'
         +'<div class="spidey-premium-kpi"><span>Próximos</span><strong>'+upcoming.length+'</strong><small>Na seleção de eventos</small></div>';
       head.after(kpis);
@@ -79,7 +79,7 @@
       stage.classList.add('spidey-premium-feature-stage');
       const stageTitle=document.createElement('div');
       stageTitle.className='spidey-premium-stage-heading';
-      stageTitle.innerHTML='<span class="spidey-premium-stage-icon" aria-hidden="true">✦</span><div><span>ARTE PREMIUM & EVENTO</span><h2>Para aproveitar agora</h2></div>';
+      stageTitle.innerHTML='<span class="spidey-premium-stage-icon" aria-hidden="true">✦</span><div><span>'+(focus&&art(focus)?'ARTE PREMIUM & EVENTO':'EVENTO EM DESTAQUE')+'</span><h2>Para aproveitar agora</h2></div>';
       stage.prepend(stageTitle);
     }
     const feed=root.querySelector('.player-feed');
