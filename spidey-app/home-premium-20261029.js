@@ -50,7 +50,37 @@
     status.setAttribute('role', 'status');
     status.setAttribute('aria-live', 'polite');
     quick.append(heading, grid, status);
-    feature.closest('.experience-section')?.insertAdjacentElement('afterend', quick);
+
+    // O destaque com arte Premium deve aparecer antes do bloco de atalhos e
+    // do resumo numerico; os nos existentes continuam com todos os listeners.
+    const intro = home.querySelector('.experience-intro');
+    const featureSection = feature.closest('.experience-section');
+    const stats = home.querySelector('.status-strip');
+    if (intro && featureSection) {
+      const kicker = intro.querySelector('.eyebrow');
+      const title = intro.querySelector('h1');
+      if (kicker) kicker.textContent = 'HOJE NO SPIDEY';
+      if (title) title.textContent = 'O melhor da aventura, agora.';
+      intro.insertAdjacentElement('afterend', featureSection);
+      featureSection.insertAdjacentElement('afterend', quick);
+      if (stats) quick.insertAdjacentElement('afterend', stats);
+    } else {
+      feature.closest('.experience-section')?.insertAdjacentElement('afterend', quick);
+    }
+
+    // A mensagem tecnica e os controles de alertas continuam acessiveis,
+    // mas deixam de ocupar a abertura inteira do celular.
+    const notificationControls = document.querySelector('.notification-controls');
+    if (notificationControls && !document.getElementById('spideyAppUtilities')) {
+      const utilities = document.createElement('details');
+      utilities.id = 'spideyAppUtilities';
+      utilities.className = 'spidey-app-utilities';
+      const summary = document.createElement('summary');
+      summary.textContent = 'Alertas e compartilhamento';
+      utilities.append(summary);
+      notificationControls.insertAdjacentElement('beforebegin', utilities);
+      utilities.append(notificationControls);
+    }
 
     grid.addEventListener('click', event => {
       const button = event.target.closest('.spidey-home-quick-button');
@@ -77,6 +107,8 @@
       if (button.dataset.spideyQuickAction === 'alerts') {
         const controls = document.querySelector('.notification-controls');
         if (controls) {
+          const utilities = document.getElementById('spideyAppUtilities');
+          if (utilities) utilities.open = true;
           controls.scrollIntoView({ behavior: 'smooth', block: 'center' });
           const active = [...controls.querySelectorAll('button')].find(item => !item.hidden);
           active?.focus({ preventScroll: true });
