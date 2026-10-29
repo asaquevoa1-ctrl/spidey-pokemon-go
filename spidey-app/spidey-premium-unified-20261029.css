@@ -591,3 +591,9 @@ html[data-theme="light"] body.spidey-player-ui #playerHome .player-event .player
 }
 html[data-theme] body.spidey-player-ui :is(.section-head h2,.player-feed h2) {letter-spacing:-.025em;line-height:1.2;}
 /* Midia Premium, fundos oficiais e S cosmico preservados sem filtros/crops. */
+
+/* Contraste confirmado nas capturas Samsung: negrito não herda tinta escura em hero grafite. */
+html[data-theme="light"] body.spidey-player-ui #rocketGuideView .rocket-hero :is(strong,b),
+html[data-theme="light"] body.spidey-player-ui .hero.hero-compact :is(strong,b) {
+  color:#e8c07d !important;
+}
