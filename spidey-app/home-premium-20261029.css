@@ -369,3 +369,34 @@ body.spidey-command-center #calendarView .spidey-opening-screen {
   .spidey-app-utilities { width: calc(100% - 26px); }
   .spidey-app-utilities > summary { font-size: .73rem; }
 }
+
+/* O compartilhamento precisa estar visivel sem expandir ajustes de alertas. */
+.spidey-utility-row {
+  width: min(calc(100% - 32px), 980px);
+  margin: 5px auto 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.spidey-utility-row .spidey-app-utilities {
+  flex: 1 1 auto;
+  width: auto;
+  margin: 0;
+  min-width: 0;
+}
+.spidey-utility-row .spidey-share-main {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  margin: 0;
+  font-size: .78rem;
+  border-radius: 11px;
+}
+@media (max-width: 400px) {
+  .spidey-utility-row { width: calc(100% - 26px); }
+  .spidey-utility-row .spidey-share-main { font-size: .73rem; padding: 7px 8px; }
+  .spidey-app-utilities > summary { font-size: .68rem; padding: 7px 8px; }
+}
