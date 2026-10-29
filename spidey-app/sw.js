@@ -1,5 +1,7 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1-20261027-cdmx-stamps1-mexico-selos-human1-20261028-origin-correct2-20261028-expiry-news1-20261029-premium-depth2';
+const CACHE = 'spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1-20261027-cdmx-stamps1-mexico-selos-human1-20261028-origin-correct2-20261028-expiry-news1-20261029-universe3d1';
 const CORE = [
+  './spidey-universe-3d.css',
+  './spidey-universe-3d.js',
   './spidey-premium-unified-20261029.css',
   './home-premium-20261029.css',
   './home-premium-20261029.js',
