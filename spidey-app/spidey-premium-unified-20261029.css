@@ -32,15 +32,17 @@
 }
 html[data-theme="dark"] body.spidey-player-ui,
 html[data-theme="dark"] body.spidey-player-ui.cosmic-inapp-art {
-  background:radial-gradient(ellipse at 88% -18%,rgba(166,49,62,.16),transparent 36%),
-             linear-gradient(180deg,#101720 0%,#0b1119 50%,#080d14 100%) !important;
+  background:radial-gradient(ellipse at 88% -18%,rgba(166,49,62,.13),transparent 36%),
+             linear-gradient(180deg,rgba(16,23,32,.965),rgba(8,13,20,.985)),
+             var(--cosmic-brand-clean-image,none) !important;
   background-attachment:scroll !important;
   color:var(--premium-text);
 }
 html[data-theme="light"] body.spidey-player-ui,
 html[data-theme="light"] body.spidey-player-ui.cosmic-inapp-art {
-  background:radial-gradient(ellipse at 88% -20%,rgba(163,117,57,.13),transparent 40%),
-             linear-gradient(180deg,#f5f0e9 0%,#ede8e2 60%,#eae4dc 100%) !important;
+  background:radial-gradient(ellipse at 88% -20%,rgba(163,117,57,.09),transparent 40%),
+             linear-gradient(180deg,rgba(245,240,233,.965),rgba(234,228,220,.985)),
+             var(--cosmic-brand-clean-image,none) !important;
   background-attachment:scroll !important;
   color:var(--premium-text);
 }
