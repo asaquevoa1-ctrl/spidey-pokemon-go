@@ -429,6 +429,112 @@
       "verified_at": "2026-10-08"
     },
     {
+      "id": "2026-11-go-wild-area-global-europe-karlsruhe",
+      "title": "Área Selvagem GO Global 2026 — Karlsruhe",
+      "place": "Ettlinger Tor · Karlsruhe, Alemanha",
+      "dates": "14 nov 2026 • 10h–20h (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com Embaixadores da Comunidade, Pesquisa Temporária por check-in e atividades presenciais.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-14",
+        "end_time": "20:00",
+        "timezone": "Europe/Berlin"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/gowa-global-europe-2026",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in no encontro oficial.",
+        "Atividades e oportunidades para fotos com as comunidades locais.",
+        "Pins e impressos do Pokémon GO enquanto durarem os estoques.",
+        "Mais Poképaradas, Ginásios e Pontos de Poder previstos perto da área do encontro."
+      ],
+      "locations": [
+        {
+          "id": "ettlinger-tor-karlsruhe",
+          "name": "Ettlinger Tor",
+          "address": "Karl-Friedrich-Straße 26, 76133 Karlsruhe, Alemanha",
+          "access_note": "Local oficial anunciado. O artigo não publica coordenadas nem identifica pontos específicos do jogo.",
+          "source_url": "https://pokemongo.com/news/gowa-global-europe-2026",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o endereço do local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "checked_at": "2026-10-29"
+      },
+      "verified_at": "2026-10-29",
+      "detail_title": "Área Selvagem GO Global 2026 — Karlsruhe"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-europe-stockholm",
+      "title": "Área Selvagem GO Global 2026 — Estocolmo",
+      "place": "Kulturhuset Stadsteatern · Estocolmo, Suécia",
+      "dates": "15 nov 2026 • 10h–18h (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com Embaixadores da Comunidade, Pesquisa Temporária por check-in e atividades presenciais.",
+      "schedule": {
+        "start_date": "2026-11-15",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Europe/Stockholm"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/gowa-global-europe-2026",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in no encontro oficial.",
+        "Atividades e oportunidades para fotos com as comunidades locais.",
+        "Pins e impressos do Pokémon GO enquanto durarem os estoques.",
+        "Mais Poképaradas, Ginásios e Pontos de Poder previstos perto da área do encontro."
+      ],
+      "locations": [
+        {
+          "id": "kulturhuset-stadsteatern-stockholm",
+          "name": "Kulturhuset Stadsteatern",
+          "address": "Sergels Torg, 111 57 Stockholm, Suécia",
+          "access_note": "Local oficial anunciado. O artigo não publica coordenadas nem identifica pontos específicos do jogo.",
+          "source_url": "https://pokemongo.com/news/gowa-global-europe-2026",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o endereço do local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "checked_at": "2026-10-29"
+      },
+      "verified_at": "2026-10-29",
+      "detail_title": "Área Selvagem GO Global 2026 — Estocolmo"
+    },
+    {
       "id": "2026-11-go-wild-area-global-brazil-community",
       "title": "Área Selvagem GO Global 2026 — encontros no Brasil",
       "place": "Brasil • Pavilhão Japonês e comunidades oficiais",

@@ -10432,6 +10432,12 @@
           "url": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
           "confidence": "official",
           "published_at": "2026-10-29T18:11:31.770Z"
+        },
+        {
+          "name": "Pokémon GO · encontros da comunidade na Europa",
+          "url": "https://pokemongo.com/news/gowa-global-europe-2026",
+          "confidence": "official",
+          "published_on": "2026-10-26"
         }
       ],
       "schedule": {
@@ -10462,6 +10468,8 @@
         "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Reshiram, Zekrom, Kyurem, Duraludon Gigamax e outros encontros indicados podem vir com o novo Fundo Especial do evento.",
         "Os bônus do ingresso estão identificados separadamente; a compra não garante Pokémon Brilhante.",
         "No Brasil, haverá encontro principal no Pavilhão Japonês do Parque Ibirapuera e encontros oficiais de comunidades em 96 referências de locais anunciadas.",
+        "Na Europa, haverá encontros oficiais em Karlsruhe em 14/11, das 10h às 20h, e em Estocolmo em 15/11, das 10h às 18h, nos horários locais.",
+        "Os encontros europeus oferecem Pesquisa Temporária por check-in, atividades com Embaixadores da Comunidade e brindes enquanto durarem os estoques.",
         "A publicação brasileira repete 2025 em dois subtítulos, mas o título, a introdução e a página oficial do evento confirmam 14 e 15 de novembro de 2026; a divergência foi preservada na auditoria.",
         "Informações oficiais conferidas em 29/10/2026."
       ],
@@ -10506,8 +10514,8 @@
         }
       ],
       "news": {
-        "title": "Área Selvagem GO Global ganha encontros oficiais no Brasil",
-        "summary": "Além de Duraludon Gigamax e Kyurem, o evento terá encontro principal no Parque Ibirapuera e reuniões oficiais de comunidades em 96 referências de locais no Brasil.",
+        "title": "Área Selvagem GO Global reúne comunidades no Brasil e na Europa",
+        "summary": "Além dos encontros brasileiros, Karlsruhe recebe uma reunião oficial em 14/11 e Estocolmo em 15/11. Os dois locais europeus têm Pesquisa Temporária por check-in e atividades com Embaixadores da Comunidade.",
         "published_on": "2026-10-07",
         "updated_on": "2026-10-29"
       },
@@ -10520,7 +10528,32 @@
         "source_date_conflict": "O título e a introdução indicam 2026, enquanto dois subtítulos do artigo mostram 2025. A página oficial do evento confirma 14–15/11/2026, 10h–18h no horário local.",
         "coordinates_published": false
       },
-      "updated_at": "2026-10-29T18:11:31Z"
+      "europe_community_program": {
+        "official_article": "https://pokemongo.com/news/gowa-global-europe-2026",
+        "published_on": "2026-10-26",
+        "meetups": [
+          {
+            "city": "Karlsruhe",
+            "country": "Alemanha",
+            "venue": "Ettlinger Tor",
+            "date": "2026-11-14",
+            "time_local": "10:00–20:00",
+            "timezone": "Europe/Berlin"
+          },
+          {
+            "city": "Estocolmo",
+            "country": "Suécia",
+            "venue": "Kulturhuset Stadsteatern",
+            "date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Europe/Stockholm"
+          }
+        ],
+        "check_in_timed_research": true,
+        "coordinates_published": false,
+        "checked_at": "2026-10-29"
+      },
+      "updated_at": "2026-10-29T22:55:00Z"
     },
     {
       "id": "2026-10-pokexciting-taipei",
