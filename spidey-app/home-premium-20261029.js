@@ -77,9 +77,25 @@
       utilities.className = 'spidey-app-utilities';
       const summary = document.createElement('summary');
       summary.textContent = 'Alertas e compartilhamento';
-      utilities.append(summary);
-      notificationControls.insertAdjacentElement('beforebegin', utilities);
-      utilities.append(notificationControls);
+      const utilityRow = document.createElement('div');
+      utilityRow.className = 'spidey-utility-row';
+      notificationControls.insertAdjacentElement('beforebegin', utilityRow);
+      utilityRow.append(utilities);
+      utilities.append(summary, notificationControls);
+      // Compartilhar permanece visivel no topo, inclusive no Chrome/Samsung.
+      // Os ouvintes ja registrados no botao original continuam funcionando.
+      const exposeShare = () => {
+        const share = notificationControls.querySelector('#shareSpideyButton');
+        if (!share) return false;
+        utilityRow.append(share);
+        return true;
+      };
+      if (!exposeShare()) {
+        const observer = new MutationObserver(() => {
+          if (exposeShare()) observer.disconnect();
+        });
+        observer.observe(notificationControls, { childList: true });
+      }
     }
 
     grid.addEventListener('click', event => {
