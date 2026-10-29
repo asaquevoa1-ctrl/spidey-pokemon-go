@@ -80,6 +80,37 @@ try {
       await page.screenshot({path:`${output}/galaxy-390-${theme}.png`,animations:'disabled',timeout:16000});
 
       // Universe3D: verificar a Home real, e nao os blocos legacy ocultos.
+      // The Premium cockpit is actual playerHome content, not hidden legacy blocks.
+      const cockpit=page.locator('#playerHome .spidey-command-cockpit');
+      await cockpit.waitFor({state:'visible',timeout:12000});
+      assert.equal(await cockpit.locator(':scope > #spideyUniverse3D').count(),1,
+        '3D hero not inside the cockpit');
+      assert.equal(await cockpit.locator('.spidey-command-aside .spidey-premium-nav').count(),1,
+        'Quick navigation was not assembled beside the 3D stage');
+      assert.equal(await cockpit.locator('.spidey-command-aside .spidey-premium-kpis').count(),1,
+        'Real event metrics missing from command panel');
+      const header=page.locator('#playerHome .spidey-cockpit-home-head');
+      await header.waitFor({state:'visible'});
+      const emblem=header.locator('.spidey-cockpit-emblem');
+      assert.ok(await emblem.evaluate(el=>el.complete&&el.naturalWidth>0),'Official S cosmic emblem failed');
+      assert.ok((await header.innerText()).includes('Seu universo.'),'Premium opening not updated');
+      const heroLink=header.locator('.spidey-cockpit-explore');
+      assert.equal(await heroLink.getAttribute('href'),'#spideyUniverse3D');
+      const layout=await cockpit.evaluate(el=>{
+        const stage=el.querySelector('#spideyUniverse3D')?.getBoundingClientRect();
+        const aside=el.querySelector('.spidey-command-aside')?.getBoundingClientRect();
+        return {stage:stage&&{x:stage.x,y:stage.y,right:stage.right,bottom:stage.bottom},
+          aside:aside&&{x:aside.x,y:aside.y,right:aside.right,bottom:aside.bottom},
+          overflow:document.documentElement.scrollWidth>window.innerWidth+3};
+      });
+      assert.ok(layout.stage&&layout.aside,'Cockpit missing a major region');
+      assert.ok(layout.aside.y>=layout.stage.bottom-3,'Samsung should stack navigation BELOW 3D stage');
+      assert.equal(layout.overflow,false,'Cockpit introduced horizontal overflow on Samsung');
+      await page.screenshot({path:`${output}/galaxy-390-${theme}-premium-cockpit.png`,
+        animations:'disabled',timeout:16000});
+      checks.push({profile:'Premium cockpit Samsung',theme,emblem:'official',
+        quickNavigation:'visible',stageFirst:true,horizontalOverflow:false});
+
       const galaxy=page.locator('#playerHome #spideyUniverse3D');
       await galaxy.waitFor({state:'visible',timeout:12000});
       const heroY=(await galaxy.boundingBox())?.y;
@@ -188,6 +219,40 @@ try {
       checks.push({profile:'Samsung Galaxy Android 14 simulated',width:390,theme,images:loaded.length,splashMs:elapsed,share:'ok',background:'ok'});
     }finally{await context.close();}
   }
+
+  // Desktop version of the same cinematic experience: 3D LEFT, console RIGHT.
+  const desktopContext=await browser.newContext({
+    viewport:{width:1440,height:900},deviceScaleFactor:1,
+    serviceWorkers:'block',colorScheme:'dark'
+  });
+  try {
+    const desk=await desktopContext.newPage();
+    await desk.addInitScript(()=>localStorage.setItem('spidey-theme','dark'));
+    await desk.goto(base,{waitUntil:'domcontentloaded',timeout:25000});
+    const board=desk.locator('#playerHome .spidey-command-cockpit');
+    await board.waitFor({state:'visible',timeout:14000});
+    const layout=await board.evaluate(node=>{
+      const box=selector=>{
+        const r=node.querySelector(selector)?.getBoundingClientRect();
+        return r&&{x:r.x,right:r.right,y:r.y,bottom:r.bottom,width:r.width};
+      };
+      return {stage:box('#spideyUniverse3D'),aside:box('.spidey-command-aside'),
+        columns:getComputedStyle(node).gridTemplateColumns,
+        horizontalOverflow:document.documentElement.scrollWidth>innerWidth+3};
+    });
+    assert.ok(layout.stage&&layout.aside,'Desktop cockpit incomplete');
+    assert.ok(layout.aside.x>=layout.stage.right-3,'Desktop console must be to the RIGHT of the stage');
+    assert.equal(layout.horizontalOverflow,false,'Desktop horizontal overflow');
+    const cosmic=desk.locator('#playerHome .spidey-cockpit-emblem');
+    assert.ok(await cosmic.evaluate(e=>e.naturalWidth>0),'Desktop logo failed to render');
+    await desk.screenshot({path:output+'/desktop-1440-premium-cockpit.png',
+      animations:'disabled',timeout:16000});
+    await desk.locator('#playerHome .spidey-cockpit-week').click();
+    await desk.waitForFunction(()=>document.getElementById('weeklyView')&&!document.getElementById('weeklyView').hidden,
+      null,{timeout:8000});
+    checks.push({profile:'Premium cockpit desktop',width:1440,stageLeft:true,consoleRight:true,
+      navigation:'week ok',horizontalOverflow:false});
+  } finally { await desktopContext.close(); }
 
   // A deliberately slow catalog must not keep a full-screen loading image on screen.
   const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,serviceWorkers:'block'});

@@ -1,0 +1,433 @@
+/* SPIDEY / COMMAND COCKPIT • identity v1
+ * Structural experience, not a recolor of legacy hidden panels.
+ * No filtered/cropped approved artwork, no new icon and no bottom tab bar.
+ * Loaded after premium-unified.css and universe-3d.css by theme.js.
+ */
+html[data-theme] body.spidey-player-ui #playerHome {
+  --cockpit-gold:#e7c68a;
+  --cockpit-red:#b83c4d;
+  --cockpit-white:#f9f5ec;
+  --cockpit-graphite:#121922;
+  --cockpit-edge:rgba(230,197,142,.28);
+  position:relative;
+  isolation:isolate;
+  max-width:1360px;
+  margin:0 auto;
+}
+
+/* Signature opening: S cosmic is the approved PNG asset, never recreated. */
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:clamp(18px,3vw,35px) clamp(18px,3.7vw,44px) !important;
+  margin:0 0 clamp(13px,2.2vw,24px) !important;
+  min-height:182px;
+  border-radius:24px !important;
+  border:1px solid rgba(222,184,126,.43) !important;
+  background:
+    radial-gradient(ellipse at 94% 18%,rgba(205,78,85,.29),transparent 36%),
+    radial-gradient(ellipse at 15% 100%,rgba(167,129,77,.14),transparent 55%),
+    linear-gradient(127deg,#1d2430 0%,#121b28 56%,#29212b 100%) !important;
+  box-shadow:
+    0 7px 0 rgba(0,0,0,.15),
+    0 22px 50px rgba(0,0,0,.27),
+    inset 0 1px rgba(255,243,219,.16) !important;
+  color:var(--cockpit-white);
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head::before {
+  content:"";
+  position:absolute;
+  width:340px;
+  height:340px;
+  right:-136px;
+  top:-115px;
+  border-radius:50%;
+  background:
+    repeating-radial-gradient(circle,transparent 0 24px,rgba(226,192,130,.12) 25px 26px,transparent 27px 43px);
+  mask-image:radial-gradient(circle,black,transparent 72%);
+  pointer-events:none;
+  z-index:-1;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head::after {
+  content:"";
+  position:absolute;
+  inset:auto 20px 0 20px;
+  width:auto;
+  height:3px;
+  background:linear-gradient(90deg,var(--cockpit-red),var(--cockpit-gold) 40%,transparent 88%);
+  pointer-events:none;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head > span {
+  display:block;
+  position:relative;
+  max-width:calc(100% - 118px);
+  font-size:.68rem !important;
+  line-height:1.5;
+  letter-spacing:.16em !important;
+  font-weight:850;
+  text-transform:uppercase;
+  color:var(--cockpit-gold) !important;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head h1 {
+  position:relative;
+  max-width:680px;
+  margin:10px 105px 10px 0 !important;
+  color:var(--cockpit-white) !important;
+  font-size:clamp(1.8rem,4vw,3.25rem) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.052em;
+  text-wrap:balance;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head > p {
+  position:relative;
+  max-width:600px;
+  margin:0 !important;
+  padding-right:80px;
+  color:#d9d7d5 !important;
+  font-size:clamp(.83rem,1.5vw,.95rem);
+  line-height:1.5;
+}
+#playerHome .spidey-cockpit-emblem {
+  position:absolute;
+  top:23px;
+  right:30px;
+  width:clamp(72px,10vw,104px);
+  height:clamp(72px,10vw,104px);
+  object-fit:contain;
+  filter:none !important;
+  pointer-events:none;
+  z-index:1;
+  box-shadow:0 10px 30px rgba(5,5,10,.22);
+  border-radius:50%;
+}
+#playerHome .spidey-cockpit-hero-actions {
+  position:relative;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:19px;
+  z-index:2;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-hero-actions :is(a,button) {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:39px;
+  padding:9px 17px;
+  border-radius:11px;
+  font-family:inherit;
+  font-weight:800;
+  font-size:.79rem;
+  text-decoration:none;
+  white-space:normal;
+  line-height:1.25;
+  cursor:pointer;
+  transition:transform .17s ease,box-shadow .17s ease;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-explore {
+  background:linear-gradient(135deg,#bf4655,#9a2a3d) !important;
+  color:#fff !important;
+  border:1px solid rgba(241,156,150,.46) !important;
+  box-shadow:0 4px 0 rgba(49,12,23,.39),0 9px 22px rgba(0,0,0,.2) !important;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-week {
+  color:#efe1c6 !important;
+  border:1px solid rgba(232,197,143,.4) !important;
+  background:rgba(255,255,255,.055) !important;
+  box-shadow:inset 0 1px rgba(255,255,255,.08) !important;
+}
+#playerHome .spidey-cockpit-hero-actions :is(a,button):focus-visible {
+  outline:3px solid var(--cockpit-gold) !important;
+  outline-offset:3px;
+}
+
+/* Real architectural change: one coherent stage and dashboard side console. */
+#playerHome .spidey-command-cockpit {
+  display:grid;
+  grid-template-columns:minmax(0,1.68fr) minmax(296px,.88fr);
+  align-items:stretch;
+  gap:clamp(12px,1.8vw,22px);
+  margin:0 0 16px;
+  min-width:0;
+}
+#playerHome .spidey-command-cockpit > #spideyUniverse3D {
+  min-width:0;
+  margin:0 !important;
+  padding:clamp(16px,2vw,26px) clamp(12px,2vw,23px) 15px !important;
+  border:1px solid rgba(226,191,131,.4) !important;
+  border-top:2px solid rgba(235,203,147,.78) !important;
+  border-radius:22px;
+  background:
+    radial-gradient(ellipse at 50% 44%,rgba(124,71,105,.21),transparent 60%),
+    radial-gradient(ellipse at 50% 98%,rgba(176,50,69,.19),transparent 40%),
+    linear-gradient(145deg,#1b2330,#090f18 70%,#1e1b27) !important;
+  box-shadow:0 8px 0 rgba(0,0,0,.12),0 21px 43px rgba(0,0,0,.29),inset 0 1px rgba(255,255,255,.07) !important;
+}
+#playerHome .spidey-command-cockpit .spidey-universe-heading {
+  padding-bottom:6px;
+  border-bottom:1px solid rgba(229,199,150,.12);
+}
+#playerHome .spidey-command-cockpit .spidey-universe-heading h2 {
+  font-size:clamp(1.48rem,2.8vw,2rem) !important;
+}
+#playerHome .spidey-command-cockpit .spidey-universe-viewport {
+  height:clamp(362px,38vw,475px);
+  perspective:1100px;
+}
+#playerHome .spidey-command-cockpit .spidey-universe-card {
+  width:clamp(210px,48%,315px);
+}
+#playerHome .spidey-command-cockpit .spidey-universe-footer {
+  padding-top:5px;
+}
+#playerHome .spidey-command-aside {
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav {
+  flex:1 1 auto;
+  min-width:0;
+  margin:0 !important;
+  padding:19px 17px 15px;
+  border-radius:21px;
+  border:1px solid var(--premium-stroke);
+  background:linear-gradient(148deg,var(--premium-panel-high),var(--premium-panel)) !important;
+  box-shadow:var(--premium-shadow);
+}
+#playerHome .spidey-command-aside .spidey-premium-nav-head {
+  margin:0 0 16px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--premium-stroke);
+}
+#playerHome .spidey-command-aside .spidey-premium-nav-head h2 {
+  font-size:clamp(1.27rem,2vw,1.6rem) !important;
+}
+#playerHome .spidey-command-aside .spidey-premium-nav-head small {
+  display:none;
+}
+#playerHome .spidey-command-aside .spidey-premium-nav-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+html[data-theme] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav-grid button {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  gap:3px;
+  min-height:104px;
+  padding:13px 11px;
+  color:var(--premium-text);
+  border-radius:15px;
+  box-shadow:inset 0 1px rgba(255,255,255,.08),0 8px 15px rgba(0,0,0,.1) !important;
+}
+#playerHome .spidey-command-aside .spidey-premium-nav-grid button span {
+  display:grid !important;
+  place-items:center;
+  width:31px;
+  height:31px;
+  margin-bottom:5px;
+  flex:0 0 auto;
+  font-size:1.03rem;
+}
+#playerHome .spidey-command-aside .spidey-premium-nav-grid button strong {
+  font-size:.89rem;
+  letter-spacing:-.015em;
+}
+#playerHome .spidey-command-aside .spidey-premium-nav-grid button small {
+  font-size:.65rem;
+  line-height:1.3;
+  margin:1px 0 0;
+}
+#playerHome .spidey-command-aside .spidey-premium-kpis {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin:0;
+  gap:7px;
+}
+#playerHome .spidey-command-aside .spidey-premium-kpi {
+  min-width:0;
+  gap:3px;
+  padding:10px 7px 12px;
+  background:var(--premium-panel);
+  border-radius:12px;
+}
+#playerHome .spidey-command-aside .spidey-premium-kpi span { font-size:.64rem;line-height:1.25;}
+#playerHome .spidey-command-aside .spidey-premium-kpi strong { font-size:1.55rem;line-height:1.1;}
+#playerHome .spidey-command-aside .spidey-premium-kpi small { font-size:.59rem;}
+
+/* The additional full detail remains collapsed and accessible below command deck. */
+#playerHome > .spidey-universe-highlight-details {
+  max-width:100%;
+  margin:0 0 27px;
+  border-color:var(--premium-stroke);
+  box-shadow:0 8px 22px rgba(0,0,0,.10);
+}
+#playerHome > .spidey-universe-highlight-details > summary {
+  padding:13px 17px;
+  font-size:.81rem;
+}
+
+/* Editorial feed gets an intentional hierarchy, not a wall of bare white cards. */
+#playerHome .player-feed {
+  margin-top:22px;
+  gap:clamp(17px,2vw,26px);
+}
+#playerHome .player-feed > section {
+  position:relative;
+  min-width:0;
+}
+#playerHome .player-feed > section > h2 {
+  position:relative;
+  margin:0 0 15px;
+  padding:0 0 9px 13px;
+  border-bottom:1px solid var(--premium-stroke);
+  font-size:clamp(1.12rem,1.8vw,1.44rem) !important;
+  line-height:1.3;
+}
+#playerHome .player-feed > section > h2::before {
+  content:"";
+  position:absolute;
+  top:2px;
+  left:0;
+  bottom:10px;
+  width:3px;
+  border-radius:2px;
+  background:linear-gradient(var(--cockpit-red),var(--cockpit-gold));
+}
+html[data-theme] body.spidey-player-ui #playerHome .player-row {
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+
+/* Consistent light-mode cockpit: dark 3D theatre, warm refined dashboard console. */
+html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav {
+  background:linear-gradient(145deg,#fbf5eb,#e8dacc) !important;
+  border-color:rgba(118,88,63,.30);
+}
+html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav-head h2 {
+  color:#232831 !important;
+}
+html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav-grid button {
+  background:linear-gradient(145deg,#333640,#19222e) !important;
+  color:#f7f0e8 !important;
+  border-color:rgba(205,169,117,.4) !important;
+}
+html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav-grid button strong {color:#f7f0e8 !important;}
+html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav-grid button small {color:#c7c3b9 !important;}
+html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-kpi {
+  background:linear-gradient(#f9f1e7,#e9dfd2) !important;
+}
+html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-kpi strong {color:#29282d !important;}
+
+@media (pointer:fine) and (prefers-reduced-motion:no-preference){
+  #playerHome .spidey-cockpit-hero-actions :is(a,button):hover{ transform:translateY(-2px);}
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid button:hover{
+    transform:translateY(-3px);
+    border-color:rgba(230,197,142,.54) !important;
+    box-shadow:0 12px 23px rgba(0,0,0,.23) !important;
+  }
+  #playerHome .player-row:hover { transform:translateY(-2px);}
+}
+
+/* Laptop and tablets: functional one-column flow, no horizontal scrolling. */
+@media (max-width:980px){
+  #playerHome .spidey-command-cockpit {
+    grid-template-columns:minmax(0,1fr);
+    gap:12px;
+  }
+  #playerHome .spidey-command-aside .spidey-premium-nav {padding:15px !important;}
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid button {
+    min-height:84px !important;
+  }
+  #playerHome .spidey-command-aside .spidey-premium-kpis {
+    gap:9px;
+  }
+}
+@media (max-width:600px){
+  html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head {
+    min-height:0;
+    padding:17px 15px 19px !important;
+    margin:0 0 11px !important;
+    border-radius:18px !important;
+  }
+  html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head > span{
+    max-width:calc(100% - 75px);
+    font-size:.62rem !important;
+    letter-spacing:.1em !important;
+  }
+  html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head h1{
+    margin:7px 73px 7px 0 !important;
+    font-size:clamp(1.65rem,7.1vw,2.17rem) !important;
+    letter-spacing:-.045em;
+  }
+  html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head > p {
+    padding-right:0;
+    max-width:290px;
+    font-size:.80rem;
+    line-height:1.42;
+  }
+  #playerHome .spidey-cockpit-emblem{
+    top:19px;right:17px;width:68px;height:68px;
+  }
+  #playerHome .spidey-cockpit-hero-actions {margin-top:15px;gap:8px;}
+  html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-hero-actions :is(a,button){
+    min-height:37px;padding:8px 12px;font-size:.73rem;
+  }
+  #playerHome .spidey-command-cockpit {gap:11px;margin-bottom:12px;}
+  #playerHome .spidey-command-cockpit > #spideyUniverse3D {
+    padding:14px 10px 13px !important;
+    border-radius:18px;
+  }
+  #playerHome .spidey-command-cockpit .spidey-universe-heading h2 {font-size:1.45rem !important;}
+  #playerHome .spidey-command-cockpit .spidey-universe-viewport{
+    height:clamp(330px,96vw,420px);
+    perspective:880px;
+    margin:7px -9px 0;
+  }
+  #playerHome .spidey-command-cockpit .spidey-universe-card{
+    width:clamp(215px,69%,280px);
+  }
+  #playerHome .spidey-command-aside .spidey-premium-nav{
+    padding:15px 12px !important;
+    border-radius:17px;
+  }
+  #playerHome .spidey-command-aside .spidey-premium-nav-head{margin:0 0 11px;padding:0 0 10px;}
+  #playerHome .spidey-command-aside .spidey-premium-nav-head h2 {font-size:1.24rem !important;}
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+  }
+  html[data-theme] body.spidey-player-ui #playerHome .spidey-command-aside .spidey-premium-nav-grid button {
+    padding:9px 7px;
+    border-radius:12px;
+    min-height:93px !important;
+    gap:3px;
+  }
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid button span{
+    width:27px;height:27px;font-size:.94rem;margin:0 0 3px;
+  }
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid button strong{font-size:.76rem;}
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid button small{font-size:.59rem;line-height:1.25;}
+  #playerHome .spidey-command-aside .spidey-premium-kpis {gap:7px;}
+  #playerHome .spidey-command-aside .spidey-premium-kpi {padding:10px 8px;}
+  #playerHome .spidey-command-aside .spidey-premium-kpi strong{font-size:1.3rem;}
+  #playerHome .player-feed {margin-top:20px;}
+}
+@media (max-width:365px){
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid button {min-height:78px !important;}
+  #playerHome .spidey-cockpit-emblem {width:61px;height:61px;}
+  html[data-theme] body.spidey-player-ui #playerHome .spidey-cockpit-home-head h1 {margin-right:62px !important;}
+}
+@media (prefers-reduced-motion:reduce){
+  #playerHome .spidey-cockpit-hero-actions :is(a,button),
+  #playerHome .spidey-command-aside .spidey-premium-nav-grid button,
+  #playerHome .player-row {transition:none !important;}
+}
