@@ -79,7 +79,7 @@
       stage.classList.add('spidey-premium-feature-stage');
       const stageTitle=document.createElement('div');
       stageTitle.className='spidey-premium-stage-heading';
-      stageTitle.innerHTML='<span class="spidey-premium-stage-icon" aria-hidden="true">✦</span><div><span>'+(focus&&art(focus)?'ARTE PREMIUM & EVENTO':'EVENTO EM DESTAQUE')+'</span><h2>Para aproveitar agora</h2></div>';
+      stageTitle.innerHTML='<span class="spidey-premium-stage-icon" aria-hidden="true">✦</span><div><span>'+(focus&&art(focus)?'ARTE PREMIUM & EVENTO':'EVENTO EM DESTAQUE')+'</span><h2>Destaque da agenda</h2></div>';
       stage.prepend(stageTitle);
     }
     const feed=root.querySelector('.player-feed');
