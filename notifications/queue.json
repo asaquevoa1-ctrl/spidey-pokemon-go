@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-10-28-raid-hour-giratina-forma-origem:start:60",
-      "event_id": "2026-10-28-raid-hour-giratina-forma-origem",
-      "event_title": "Raid Hour: Giratina Forma Origem",
-      "category": "raid_hour",
-      "scheduled_for": "2026-10-28T17:00:00-03:00",
-      "event_start": "2026-10-28T18:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Raid Hour: Giratina Forma Origem começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-10-28-raid-hour-giratina-forma-origem",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO Hub • calendário outubro 2026",
-        "url": "https://pokemongohub.net/post/event/october-2026-events/",
-        "confidence": "verified"
-      }
-    },
-    {
       "id": "2026-10-29-spotlight-gastly:start:60",
       "event_id": "2026-10-29-spotlight-gastly",
       "event_title": "Spotlight Hour: Gastly",
@@ -235,6 +217,24 @@
       "source": {
         "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
         "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-12-pokemon-center-bangkok-opening:start:60",
+      "event_id": "2026-12-pokemon-center-bangkok-opening",
+      "event_title": "Inauguração do Pokémon Center Bangkok",
+      "category": "regional_event",
+      "scheduled_for": "2026-11-30T19:00:00-03:00",
+      "event_start": "2026-11-30T20:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Inauguração do Pokémon Center Bangkok começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-12-pokemon-center-bangkok-opening",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
         "confidence": "official"
       }
     },

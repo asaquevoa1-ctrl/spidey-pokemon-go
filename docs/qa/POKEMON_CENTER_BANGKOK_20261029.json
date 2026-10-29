@@ -1,0 +1,39 @@
+{
+  "schema_version": "spidey-editorial-audit-v1",
+  "checked_on": "2026-10-29",
+  "event_id": "2026-12-pokemon-center-bangkok-opening",
+  "canonical_url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+  "source_classification": "official",
+  "locale_checked": [
+    "en",
+    "pt-BR"
+  ],
+  "pt_br_status": "not_found_during_check",
+  "official_claims": {
+    "scope": "all_trainers_nationwide_in_thailand",
+    "start_local": "2026-12-01T06:00:00+07:00",
+    "end_local": "2026-12-10T23:59:00+07:00",
+    "timed_research_rewards": [
+      "opening-themed stickers",
+      "Stardust",
+      "other rewards not detailed"
+    ],
+    "timed_research_expiry_date": "2026-12-30",
+    "timed_research_expiry_time_confirmed": false,
+    "event_stickers_from_pokestops": true
+  },
+  "excluded_unconfirmed_claims": [
+    "Pokemon encounters",
+    "Shiny availability",
+    "reward quantities",
+    "exclusive Pokestops or routes",
+    "coordinates or GPX",
+    "Timed Research expiry hour"
+  ],
+  "duplicate_checks": {
+    "event_id_unique": true,
+    "canonical_url_unique": true,
+    "open_pr_overlap": false,
+    "note": "PR 164 covers Dynamax Trails only. Existing PokéXciting Bangkok stamp placeholder is a separate February 2027 campaign and was preserved."
+  }
+}
