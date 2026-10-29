@@ -216,6 +216,38 @@ try {
         checks.push({profile:'Samsung interno',theme,view,depth:style.shadow!=='none'});
       }
 
+      // Full editorial walkthrough: not just the Home. These are the six
+      // visible routes from the real app, tested in both Samsung themes.
+      for(const id of ['newsView','weeklyView','flyView','pvpView','rocketGuideView','stampsView']){
+        const button=page.locator('.app-tab[data-view="'+id+'"]').first();
+        assert.ok(await button.count(),'Navegação inexistente: '+id);
+        await button.evaluate(el=>el.click());
+        const hero=page.locator('#'+id+' > .hero.hero-compact');
+        await hero.waitFor({state:'visible',timeout:11000});
+        await hero.scrollIntoViewIfNeeded();
+        const style=await hero.evaluate(el=>{
+          const css=getComputedStyle(el);
+          const bounds=el.getBoundingClientRect();
+          return {
+            image:css.backgroundImage,border:css.borderTopWidth,
+            heading:getComputedStyle(el.querySelector('h1')).color,
+            width:bounds.width,x:bounds.x,
+            overflow:document.documentElement.scrollWidth>window.innerWidth+4
+          };
+        });
+        assert.ok(style.image.includes('spidey-icon-cosmic-192.png'),id+' sem emblema S original');
+        assert.ok(style.image.includes('linear-gradient'),id+' sem palco Premium');
+        assert.ok(parseFloat(style.border)>=2,id+' sem acabamento superior');
+        assert.equal(style.overflow,false,id+' possui rolagem horizontal');
+        assert.ok(style.width>=290,id+' cabeçalho estreito demais');
+        await page.screenshot({path:output+'/galaxy-390-'+theme+'-premium-interior-'+id+'.png',
+          animations:'disabled',timeout:16000});
+        checks.push({profile:'Interior Premium Samsung',theme,id,hero:'cinematic',logo:'S original',
+          horizontalOverflow:false});
+      }
+      // Return to Home through its existing tab; do not create another nav.
+      await page.locator('.app-tab[data-view="calendarView"]').first()
+        .evaluate(el=>el.click());
       checks.push({profile:'Samsung Galaxy Android 14 simulated',width:390,theme,images:loaded.length,splashMs:elapsed,share:'ok',background:'ok'});
     }finally{await context.close();}
   }
