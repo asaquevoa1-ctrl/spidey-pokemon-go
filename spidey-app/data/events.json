@@ -10426,6 +10426,14 @@
         "url": "https://pokemongo.com/en/gowildarea/global",
         "confidence": "official"
       },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Brasil · encontros da comunidade",
+          "url": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
+          "confidence": "official",
+          "published_at": "2026-10-29T18:11:31.770Z"
+        }
+      ],
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2026-11-14T10:00:00-03:00",
@@ -10453,7 +10461,9 @@
         "As Reides de Kyurem Branco e Kyurem Preto concedem Energia de Fusão correspondente.",
         "Machamp com jaqueta moderna, Dialga Dinamax, Palkia Dinamax, Reshiram, Zekrom, Kyurem, Duraludon Gigamax e outros encontros indicados podem vir com o novo Fundo Especial do evento.",
         "Os bônus do ingresso estão identificados separadamente; a compra não garante Pokémon Brilhante.",
-        "Informações oficiais conferidas em 07/10/2026."
+        "No Brasil, haverá encontro principal no Pavilhão Japonês do Parque Ibirapuera e encontros oficiais de comunidades em 96 referências de locais anunciadas.",
+        "A publicação brasileira repete 2025 em dois subtítulos, mas o título, a introdução e a página oficial do evento confirmam 14 e 15 de novembro de 2026; a divergência foi preservada na auditoria.",
+        "Informações oficiais conferidas em 29/10/2026."
       ],
       "notifications": {
         "enabled": true,
@@ -10496,11 +10506,21 @@
         }
       ],
       "news": {
-        "title": "GO Wild Area Global traz Duraludon Gigamax e Kyurem",
-        "summary": "Duraludon Gigamax estreia e Kyurem Branco e Kyurem Preto voltam às Reides em dias diferentes.",
-        "published_on": "2026-10-07"
+        "title": "Área Selvagem GO Global ganha encontros oficiais no Brasil",
+        "summary": "Além de Duraludon Gigamax e Kyurem, o evento terá encontro principal no Parque Ibirapuera e reuniões oficiais de comunidades em 96 referências de locais no Brasil.",
+        "published_on": "2026-10-07",
+        "updated_on": "2026-10-29"
       },
-      "updated_at": "2026-10-07T18:19:00Z"
+      "brazil_community_program": {
+        "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
+        "published_at": "2026-10-29T18:11:31.770Z",
+        "main_meetup": "Pavilhão Japonês, Parque Ibirapuera, São Paulo",
+        "community_venue_reference_count": 96,
+        "schedule_confirmed_by": "https://pokemongo.com/pt-BR/gowildarea/global?hl=pt_BR",
+        "source_date_conflict": "O título e a introdução indicam 2026, enquanto dois subtítulos do artigo mostram 2025. A página oficial do evento confirma 14–15/11/2026, 10h–18h no horário local.",
+        "coordinates_published": false
+      },
+      "updated_at": "2026-10-29T18:11:31Z"
     },
     {
       "id": "2026-10-pokexciting-taipei",
