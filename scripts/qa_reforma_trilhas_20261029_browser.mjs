@@ -1,6 +1,8 @@
 import {execFileSync,spawn} from 'node:child_process';
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
+// Match the current Samsung QA: capture rendered fallback text without hanging on fonts.ready.
+process.env.PW_TEST_SCREENSHOT_NO_FONTS_READY='1';
 const out='test-results/reforma-trilhas-20261029',pub=out+'/pages-preview';
 fs.mkdirSync(out,{recursive:true});
 execFileSync('python3',['scripts/build_spidey_pages.py','--output',pub],{stdio:'pipe'});
@@ -16,11 +18,11 @@ try{
  for(const width of [390,1280])for(const theme of ['light','dark']){
   active={width,theme};
   const context=await browser.newContext({viewport:{width,height:900},timezoneId:'America/Sao_Paulo',serviceWorkers:'block',permissions:['clipboard-read','clipboard-write']});
-  page=await context.newPage();page.on('pageerror',e=>errors.push(String(e)));
+  page=await context.newPage();page.setDefaultTimeout(15000);page.setDefaultNavigationTimeout(30000);page.on('pageerror',e=>errors.push(String(e)));
   await page.route('https://**/*',route=>route.abort());
   await page.addInitScript(theme=>localStorage.setItem('spidey-theme',theme),theme);
   await page.goto('http://127.0.0.1:4194/spidey-app/',{waitUntil:'networkidle'});
-  await page.waitForFunction(id=>state.stamps.some(e=>e.id===id)&&window.SpideyFindShareEvent?.('2026-11-16-dynamax-trails'),guideId);
+  await page.waitForFunction(id=>state.stamps.some(e=>e.id===id)&&window.SpideyFindShareEvent?.('2026-11-16-dynamax-trails'),guideId,{timeout:20000});
   await page.evaluate(()=>setView('stampsView'));
   await page.locator(`[data-stamp-guide="${guideId}"]`).click();await page.locator('#eventDialog').waitFor({state:'visible'});
   check(await page.locator('[data-reforma-reference]').count()===6,'six community references rendered');
@@ -50,5 +52,5 @@ try{
  if(errors.length)throw Error(errors.join('\n'));
  fs.writeFileSync(out+'/result.json',JSON.stringify({status:'PASSED_PREVIEW',checks,physical_android_tested:false},null,2)+'\n');
  console.log(JSON.stringify({status:'PASSED_PREVIEW',checks:checks.length,physical_android_tested:false}));
-}catch(error){if(page){fs.writeFileSync(out+'/failure.json',JSON.stringify({active,error:String(error),errors,body:await page.locator('body').innerText()},null,2));await page.screenshot({path:out+'/failure.png',fullPage:true});}throw error;
+}catch(error){if(page){fs.writeFileSync(out+'/failure.json',JSON.stringify({active,error:String(error),errors,body:await page.locator('body').innerText()},null,2));try{await page.screenshot({path:out+'/failure.png',fullPage:true,timeout:10000});}catch{}}throw error;
 }finally{await browser.close();server.kill('SIGTERM');fs.rmSync(pub,{recursive:true,force:true});}
