@@ -35,10 +35,23 @@ test('Markup e CSS tridimensional preservam artes, acessibilidade e mobile',()=>
 });
 test('Nova versão carrega galeria antes da Home, cache offline incluído',()=>{
   const index=read('index.html'),theme=read('theme.js'),sw=read('sw.js');
-  assert.ok(index.indexOf('spidey-universe-3d.js?v=20261029-orbit1')<index.indexOf('player-ui.js?v=20261029-orbit1'));
+  assert.ok(index.indexOf('spidey-universe-3d.js?v=20261029-focus2')<index.indexOf('player-ui.js?v=20261029-orbit1'));
   assert.ok(theme.indexOf("loadStyle('spidey-universe-3d.css'")>theme.indexOf("loadStyle('spidey-premium-unified-20261029.css'"));
   assert.match(sw,/\.\/spidey-universe-3d\.css/);
   assert.match(sw,/\.\/spidey-universe-3d\.js/);
-  assert.match(sw,/20261029-universe3d1/);
+  assert.match(sw,/20261029-universe3dfocus2/);
   assert.match(index,/spidey-icon-cosmic-192\.png/);
+});
+
+
+test('Vídeo Samsung: Universe antes dos indicadores e sem pôster duplicado obrigatório',()=>{
+  const js=read('spidey-universe-3d.js');
+  const css=read('spidey-universe-3d.css');
+  assert.match(js,/intro\.insertAdjacentElement\('afterend', section\)/);
+  assert.match(js,/spidey-universe-highlight-details/);
+  assert.match(js,/disclosure\.append\(discloseTitle, stage\)/);
+  assert.match(js,/disclosure\.open = expandedHighlight/);
+  assert.match(css,/spidey-universe-highlight-details/);
+  assert.match(css,/height:clamp\(356px,103vw,440px\)/);
+  assert.match(css,/object-fit:contain/);
 });
