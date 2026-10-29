@@ -220,6 +220,40 @@ try {
     }finally{await context.close();}
   }
 
+  // Desktop version of the same cinematic experience: 3D LEFT, console RIGHT.
+  const desktopContext=await browser.newContext({
+    viewport:{width:1440,height:900},deviceScaleFactor:1,
+    serviceWorkers:'block',colorScheme:'dark'
+  });
+  try {
+    const desk=await desktopContext.newPage();
+    await desk.addInitScript(()=>localStorage.setItem('spidey-theme','dark'));
+    await desk.goto(base,{waitUntil:'domcontentloaded',timeout:25000});
+    const board=desk.locator('#playerHome .spidey-command-cockpit');
+    await board.waitFor({state:'visible',timeout:14000});
+    const layout=await board.evaluate(node=>{
+      const box=selector=>{
+        const r=node.querySelector(selector)?.getBoundingClientRect();
+        return r&&{x:r.x,right:r.right,y:r.y,bottom:r.bottom,width:r.width};
+      };
+      return {stage:box('#spideyUniverse3D'),aside:box('.spidey-command-aside'),
+        columns:getComputedStyle(node).gridTemplateColumns,
+        horizontalOverflow:document.documentElement.scrollWidth>innerWidth+3};
+    });
+    assert.ok(layout.stage&&layout.aside,'Desktop cockpit incomplete');
+    assert.ok(layout.aside.x>=layout.stage.right-3,'Desktop console must be to the RIGHT of the stage');
+    assert.equal(layout.horizontalOverflow,false,'Desktop horizontal overflow');
+    const cosmic=desk.locator('#playerHome .spidey-cockpit-emblem');
+    assert.ok(await cosmic.evaluate(e=>e.naturalWidth>0),'Desktop logo failed to render');
+    await desk.screenshot({path:output+'/desktop-1440-premium-cockpit.png',
+      animations:'disabled',timeout:16000});
+    await desk.locator('#playerHome .spidey-cockpit-week').click();
+    await desk.waitForFunction(()=>document.getElementById('weeklyView')&&!document.getElementById('weeklyView').hidden,
+      null,{timeout:8000});
+    checks.push({profile:'Premium cockpit desktop',width:1440,stageLeft:true,consoleRight:true,
+      navigation:'week ok',horizontalOverflow:false});
+  } finally { await desktopContext.close(); }
+
   // A deliberately slow catalog must not keep a full-screen loading image on screen.
   const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,serviceWorkers:'block'});
   const page=await context.newPage();
