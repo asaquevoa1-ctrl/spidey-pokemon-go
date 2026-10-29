@@ -100,6 +100,13 @@ try {
         });
         assert.match(style.background,/linear-gradient/i,view+' cartao sem acabamento');
         assert.ok(style.shadow!=='none',view+' cartao sem profundidade');
+        if(theme==='light' && view==='rocketGuideView'){
+          const highlight=page.locator('#rocketGuideView .rocket-hero strong').first();
+          if(await highlight.count()){
+            const color=await highlight.evaluate(el=>getComputedStyle(el).color);
+            assert.equal(color,'rgb(232, 192, 125)','Rocket hero precisa ter negrito legivel no modo Claro');
+          }
+        }
         await page.screenshot({path:`${output}/galaxy-390-${theme}-${view}.png`,animations:'disabled',timeout:16000});
         checks.push({profile:'Samsung interno',theme,view,depth:style.shadow!=='none'});
       }
