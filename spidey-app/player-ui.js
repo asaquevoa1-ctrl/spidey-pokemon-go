@@ -50,18 +50,59 @@
     const activeAt=e=>!dateOnly(e)&&periods(e).some(p=>p.start<=now&&now<p.end);
     const live=events.filter(e=>dateOnly(e)?window.SpideyDateOnly.status(e,now)!=='Data encerrada':periods(e).some(p=>p.end>now)).sort((a,b)=>getBrazilRange(a).start-getBrazilRange(b).start);
     const scheduled=live.filter(e=>!dateOnly(e));
-    const focus=scheduled.find(e=>window.SpideyFlyCore?.eligible(e)&&activeAt(e))||scheduled.find(e=>e.schedule?.start_local?.slice(0,10)===today&&window.SpideyFlyCore?.eligible(e))||scheduled.find(e=>e.id==='2026-10-world-space-week'&&activeAt(e))||scheduled.find(e=>art(e))||scheduled[0];
+    const focus=scheduled.find(e=>art(e)&&window.SpideyFlyCore?.eligible(e)&&activeAt(e))||scheduled.find(e=>art(e)&&activeAt(e))||scheduled.find(e=>window.SpideyFlyCore?.eligible(e)&&activeAt(e))||scheduled.find(e=>e.schedule?.start_local?.slice(0,10)===today&&window.SpideyFlyCore?.eligible(e))||scheduled.find(e=>e.id==='2026-10-world-space-week'&&activeAt(e))||scheduled.find(e=>art(e))||scheduled[0];
     return {focus,dated:live.filter(dateToday),active:live.filter(e=>e.id!==focus?.id&&activeAt(e)),upcoming:live.filter(e=>e.id!==focus?.id&&!dateToday(e)&&!activeAt(e)).slice(0,6)};
   }
   function renderHome(){
     const root=document.getElementById('playerHome');if(!root||!state.events.length)return;
     const now=new Date(),{focus,dated,active,upcoming}=homeSelection(state.events,worldPoints,now);
     root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${panel(focus)}${window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
+    // Esta e a Home VISIVEL: os blocos legados experience-* estao ocultos pelo Player UI.
+    // Construir o dashboard sobre #playerHome, sem substituir os posters aprovados.
+    const head=root.querySelector('.player-home-head');
+    if(head){
+      head.classList.add('spidey-premium-home-head');
+      const kicker=head.querySelector('span'),heading=head.querySelector('h1'),description=head.querySelector('p');
+      if(kicker)kicker.textContent='SEU PAINEL · '+new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now);
+      if(heading)heading.textContent='O mundo Pokémon GO, em destaque.';
+      if(description)description.textContent='Eventos reais, artes premium e o próximo passo para jogar.';
+      const kpis=document.createElement('div');
+      kpis.className='spidey-premium-kpis';
+      kpis.setAttribute('aria-label','Seleção da agenda');
+      kpis.innerHTML='<div class="spidey-premium-kpi"><span>Em destaque</span><strong>'+(focus?1:0)+'</strong><small>Seleção da Home</small></div>'
+        +'<div class="spidey-premium-kpi"><span>Outros ativos</span><strong>'+active.length+'</strong><small>Além do destaque</small></div>'
+        +'<div class="spidey-premium-kpi"><span>Próximos</span><strong>'+upcoming.length+'</strong><small>Na seleção de eventos</small></div>';
+      head.after(kpis);
+    }
+    const stage=root.querySelector('section[aria-label="Destaque do dia"]');
+    if(stage){
+      stage.classList.add('spidey-premium-feature-stage');
+      const stageTitle=document.createElement('div');
+      stageTitle.className='spidey-premium-stage-heading';
+      stageTitle.innerHTML='<span class="spidey-premium-stage-icon" aria-hidden="true">✦</span><div><span>'+(focus&&art(focus)?'ARTE PREMIUM & EVENTO':'EVENTO EM DESTAQUE')+'</span><h2>Destaque da agenda</h2></div>';
+      stage.prepend(stageTitle);
+    }
+    const feed=root.querySelector('.player-feed');
+    if(feed){
+      const nav=document.createElement('nav');
+      nav.className='spidey-premium-nav';
+      nav.setAttribute('aria-label','Atalhos do aplicativo');
+      nav.innerHTML='<div class="spidey-premium-nav-head"><div><span>EXPLORE O SPIDEY</span><h2>Tudo a um toque</h2></div><small>Menu completo no ☰</small></div>'
+        +'<div class="spidey-premium-nav-grid">'
+        +'<button type="button" data-premium-view="newsView"><span aria-hidden="true">✦</span><strong>Novidades</strong><small>Notícias e eventos</small></button>'
+        +'<button type="button" data-premium-view="weeklyView"><span aria-hidden="true">▦</span><strong>Semana</strong><small>Programação</small></button>'
+        +'<button type="button" data-premium-view="flyView"><span aria-hidden="true">◈</span><strong>FLY</strong><small>Rotas e fusos</small></button>'
+        +'<button type="button" data-premium-view="stampsView"><span aria-hidden="true">◉</span><strong>Selos</strong><small>Coleções</small></button>'
+        +'<button type="button" data-premium-view="pvpView"><span aria-hidden="true">⚔</span><strong>PvP</strong><small>Rankings e times</small></button>'
+        +'<button type="button" data-premium-view="rocketGuideView"><span aria-hidden="true">R</span><strong>Rocket</strong><small>Guias de batalha</small></button></div>';
+      feed.before(nav);
+    }
+
   }
   function mount(){
     const home=document.getElementById('calendarView');if(!home)return;
     const root=document.createElement('section');root.id='playerHome';home.prepend(root);document.body.classList.add('spidey-player-ui');
-    document.addEventListener('click',async ev=>{const c=ev.target.closest('[data-route-coord]'),f=ev.target.closest('[data-play-fly]'),d=ev.target.closest('[data-play-detail]');if(c){try{await navigator.clipboard.writeText(c.dataset.routeCoord);showToast('Coordenadas copiadas.')}catch{showToast('Não foi possível copiar. As coordenadas estão no card.')}return}if(f){window.SpideyFly?.open(f.dataset.playFly);return}if(d){const e=state.events.find(e=>e.id===d.dataset.playDetail);if(e)openEvent(e)}});
+    document.addEventListener('click',async ev=>{const target=ev.target.closest('[data-premium-view]');if(target){const button=[...document.querySelectorAll('.app-tab[data-view]')].find(item=>item.dataset.view===target.dataset.premiumView);button?.click();if(button)window.scrollTo({top:0,behavior:'instant'});return}const c=ev.target.closest('[data-route-coord]'),f=ev.target.closest('[data-play-fly]'),d=ev.target.closest('[data-play-detail]');if(c){try{await navigator.clipboard.writeText(c.dataset.routeCoord);showToast('Coordenadas copiadas.')}catch{showToast('Não foi possível copiar. As coordenadas estão no card.')}return}if(f){window.SpideyFly?.open(f.dataset.playFly);return}if(d){const e=state.events.find(e=>e.id===d.dataset.playDetail);if(e)openEvent(e)}});
     window.SpideyFlyCore?.loadPoints().then(points=>{worldPoints=points;renderHome()}).catch(()=>{worldError=true;renderHome()});
     window.addEventListener('spideycontentready',renderHome);renderHome();
     setInterval(()=>{if(!home.hidden)renderHome()},60000);
