@@ -439,3 +439,15 @@ html[data-theme] body.spidey-player-ui .app-tab.active {
     transition:none !important;transform:none !important;
   }
 }
+
+/* Player UI possui tokens no body que sobrepunham valores no :root. */
+html[data-theme="dark"] body.spidey-player-ui {
+  --player-line:rgba(226,193,130,.20);
+  --player-accent:#e2c182;
+  --player-ink:#f7f3ed;
+}
+html[data-theme="light"] body.spidey-player-ui {
+  --player-line:rgba(111,91,61,.20);
+  --player-accent:#805920;
+  --player-ink:#26252b;
+}
