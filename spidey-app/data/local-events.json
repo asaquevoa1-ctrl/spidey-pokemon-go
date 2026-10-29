@@ -8,8 +8,7 @@
       "dates": "10 nov • portas 18h GMT / 15h BRT; show 19h30 GMT / 16h30 BRT (reides: janela não divulgada)",
       "status": "official",
       "locality": "local",
-      "artApproved": true,
-      "note": "A arte Premium existente permanece preservada; horários do show NÃO confirmam janelas do Pokémon GO.",
+      "artApproved": false,
       "schedule": {
         "start_date": "2026-11-10",
         "end_date": "2026-11-10",
@@ -58,7 +57,6 @@
       "status": "official",
       "locality": "local",
       "artApproved": true,
-      "note": "A arte Premium existente permanece preservada; horários do show NÃO confirmam janelas do Pokémon GO.",
       "schedule": {
         "start_date": "2026-10-24",
         "end_date": "2026-10-24",
