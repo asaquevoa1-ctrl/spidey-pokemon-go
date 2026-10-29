@@ -80,6 +80,37 @@ try {
       await page.screenshot({path:`${output}/galaxy-390-${theme}.png`,animations:'disabled',timeout:16000});
 
       // Universe3D: verificar a Home real, e nao os blocos legacy ocultos.
+      // The Premium cockpit is actual playerHome content, not hidden legacy blocks.
+      const cockpit=page.locator('#playerHome .spidey-command-cockpit');
+      await cockpit.waitFor({state:'visible',timeout:12000});
+      assert.equal(await cockpit.locator(':scope > #spideyUniverse3D').count(),1,
+        '3D hero not inside the cockpit');
+      assert.equal(await cockpit.locator('.spidey-command-aside .spidey-premium-nav').count(),1,
+        'Quick navigation was not assembled beside the 3D stage');
+      assert.equal(await cockpit.locator('.spidey-command-aside .spidey-premium-kpis').count(),1,
+        'Real event metrics missing from command panel');
+      const header=page.locator('#playerHome .spidey-cockpit-home-head');
+      await header.waitFor({state:'visible'});
+      const emblem=header.locator('.spidey-cockpit-emblem');
+      assert.ok(await emblem.evaluate(el=>el.complete&&el.naturalWidth>0),'Official S cosmic emblem failed');
+      assert.ok((await header.innerText()).includes('Seu universo.'),'Premium opening not updated');
+      const heroLink=header.locator('.spidey-cockpit-explore');
+      assert.equal(await heroLink.getAttribute('href'),'#spideyUniverse3D');
+      const layout=await cockpit.evaluate(el=>{
+        const stage=el.querySelector('#spideyUniverse3D')?.getBoundingClientRect();
+        const aside=el.querySelector('.spidey-command-aside')?.getBoundingClientRect();
+        return {stage:stage&&{x:stage.x,y:stage.y,right:stage.right,bottom:stage.bottom},
+          aside:aside&&{x:aside.x,y:aside.y,right:aside.right,bottom:aside.bottom},
+          overflow:document.documentElement.scrollWidth>window.innerWidth+3};
+      });
+      assert.ok(layout.stage&&layout.aside,'Cockpit missing a major region');
+      assert.ok(layout.aside.y>=layout.stage.bottom-3,'Samsung should stack navigation BELOW 3D stage');
+      assert.equal(layout.overflow,false,'Cockpit introduced horizontal overflow on Samsung');
+      await page.screenshot({path:`${output}/galaxy-390-${theme}-premium-cockpit.png`,
+        animations:'disabled',timeout:16000});
+      checks.push({profile:'Premium cockpit Samsung',theme,emblem:'official',
+        quickNavigation:'visible',stageFirst:true,horizontalOverflow:false});
+
       const galaxy=page.locator('#playerHome #spideyUniverse3D');
       await galaxy.waitFor({state:'visible',timeout:12000});
       const heroY=(await galaxy.boundingBox())?.y;
