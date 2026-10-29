@@ -42,8 +42,8 @@ test('Cockpit está no último CSS e é incluido no cache PWA',()=>{
  assert.ok(theme.indexOf("loadStyle('spidey-command-cockpit-20261029.css'")>
   theme.indexOf("loadStyle('spidey-universe-3d.css'"));
  assert.match(html,/player-ui\.js\?v=20261029-cockpit1/);
- assert.match(html,/theme\.js\?v=20261029-cockpit1/);
- assert.match(html,/SPIDEY_BUILD='2026-10-29-cockpit1'/);
+ assert.match(html,/theme\.js\?v=20261029-interiors1/);
+ assert.match(html,/SPIDEY_BUILD='2026-10-29-interiors1'/);
  assert.match(sw,/\.\/spidey-command-cockpit-20261029\.css/);
- assert.match(sw,/20261029-cockpit1/);
+ assert.match(sw,/20261029-interiors1/);
 });
