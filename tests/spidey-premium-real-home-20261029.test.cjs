@@ -11,11 +11,11 @@ test('Tema Premium global carregado por ultimo, após estilos dinamicos legados'
   assert.ok(before>0&&after>before);
   const html=read('index.html');
   assert.match(html,/player-ui\.js\?v=20261029-premium-real1/);
-  assert.match(html,/theme\.js\?v=20261029-premium-real1/);
-  assert.match(html,/SPIDEY_BUILD='2026-10-29-premium-real1'/);
+  assert.match(html,/theme\.js\?v=20261029-premium-depth2/);
+  assert.match(html,/SPIDEY_BUILD='2026-10-29-premium-depth2'/);
   const sw=read('sw.js');
   assert.match(sw,/\.\/spidey-premium-unified-20261029\.css/);
-  assert.match(sw,/20261029-premium-global-real1/);
+  assert.match(sw,/20261029-premium-depth2/);
 });
 test('Home alterada é a realmente visível, não experience-* oculto',()=>{
   const ui=read('player-ui.js');
