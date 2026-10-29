@@ -470,3 +470,13 @@
 .stamp-regional-spotlight p{margin:7px 0;line-height:1.5;color:#f3f4fa}
 .stamp-regional-spotlight p.microcopy{color:#d1d7e5;font-size:.82rem}
 .stamp-regional-spotlight a{display:inline-block;margin-top:8px;color:#f8d486;font-size:.85rem;text-decoration:underline;text-underline-offset:3px}
+.stamp-guide-route { margin:20px 0; }
+.stamp-guide-reference-list { display:grid; gap:12px; margin-top:14px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.stamp-guide-reference { min-width:0; padding:16px; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
+.stamp-guide-reference h4 { margin:7px 0 12px; font-size:1rem; }
+.stamp-guide-reference code { display:block; margin-bottom:12px; white-space:nowrap; font-size:.95rem; }
+.stamp-guide-reference .action-row { display:flex; gap:8px; flex-wrap:wrap; }
+.stamp-guide-reference .action-btn { min-height:44px; }
+.stamp-guide-coordinate-list { margin-top:12px; }
+.stamp-guide-coordinate-list textarea { display:block; width:100%; box-sizing:border-box; margin-top:10px; padding:12px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--text); font-size:1rem; }
+@media(max-width:560px) { .stamp-guide-reference-list { grid-template-columns:1fr; } }

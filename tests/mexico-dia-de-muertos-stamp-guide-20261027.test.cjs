@@ -19,7 +19,8 @@ test('Día de Muertos is distinct from seven-ticketed GO Wild Area stops', () =>
  assert.equal(guide.stamp_count, null, 'Do not invent stamp count');
  assert.equal(guide.unknown_stamp_count, true);
  assert.equal(guide.stop_list_published, false);
- assert.equal(guide.coordinate_policy, 'not_disclosed_no_gpx');
+ assert.equal(guide.coordinate_policy, 'community_references_no_exact_stop_gpx');
+ assert.equal(guide.route_references.length,6);
  assert.deepEqual(guide.stops, []);
  assert.equal(guide.ticket_required, null, 'No statement of ticket requirement without source');
  assert.equal(area.stamp_count, 7);
@@ -31,14 +32,14 @@ test('Día de Muertos is distinct from seven-ticketed GO Wild Area stops', () =>
  assert.equal(rallies.filter(x=>x.id===guide.id).length,1);
  assert.equal(events.filter(x=>x.id===mexico.id).length,1);
 });
-test('Human editorial guide never shows fake 0/0 markers, copy coordinates, GPX or stamps',()=>{
+test('Human editorial guide offers reported references without fake 0/0 progress or exact-stop GPX',()=>{
  const app=read('spidey-app/app.js'),s=read('spidey-app/stamps-v2.js');
  const sw=read('spidey-app/sw.js');
  assert.ok(app.includes("rally.collection_type === 'event_guide'"));
  assert.ok(app.includes("return;\n    }\n    const progress = getStampProgress(rally);"));
  assert.ok(s.includes("rally.collection_type === 'event_guide'"));
  assert.ok(s.includes("showAppDialog();\n      return;"));
- assert.ok(s.includes('A quantidade de selos e as Poképaradas específicas não foram publicadas'));
+ assert.ok(s.includes('Referências do mapa da comunidade'));
  assert.ok(s.includes('Como aproveitar a aventura'));
  assert.ok(s.includes('escapeHtml(item)'),'User visible guide must escape event texts');
  assert.ok(sw.includes('mexico-selos-human1'),'PWA cache must refresh');
@@ -54,8 +55,8 @@ test('Brazil and Mexico event times, non-guaranteed shiny, and published news al
  assert.ok(guide.public_notes.some(x=>x.includes('Álbum')));
  assert.ok(guide.public_notes.some(x=>x.includes('nunca garantido')));
  assert.ok(guide.public_notes.some(x=>x.includes('7 Selos da Área Selvagem')));
- assert.ok(mexico.news?.summary.includes('fotodisco'));
- assert.ok(mexico.news?.summary.includes('06/11'));
+ assert.ok(mexico.news?.summary.includes('seis referências'));
+ assert.ok(mexico.news?.summary.includes('6–8/11'));
  assert.equal(guide.source.confidence,'official');
  assert.ok(guide.source.url.includes('dia-de-muertos-2026'));
  assert.ok(guide.verification_sources[0].url.includes('what-is-the-stamp-rally'));

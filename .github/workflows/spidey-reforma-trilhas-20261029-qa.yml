@@ -1,0 +1,28 @@
+name: Spidey - QA Reforma e Trilhas Dinamax
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/data/stamps.json'
+      - 'spidey-app/stamps-v2.js'
+      - 'spidey-app/app.js'
+      - 'scripts/qa_reforma_trilhas_20261029_browser.mjs'
+      - '.github/workflows/spidey-reforma-trilhas-20261029-qa.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - run: node scripts/qa_reforma_trilhas_20261029_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reforma-trilhas-20261029-responsive
+          path: test-results/reforma-trilhas-20261029

@@ -322,16 +322,17 @@ function renderStamps() {
       // Publisher has not released a stamp count or individual locations; never render fake 0/0 progress.
       const card = document.createElement('article');
       card.className = 'stamp-card stamp-guide-card';
+      card.dataset.stampGuide = rally.id;
       card.tabIndex = 0;
       const head = document.createElement('div');
       head.className = 'stamp-card-top';
       const mark = document.createElement('span');mark.className = 'stamp-icon';mark.textContent = '◎';
       const wrap = document.createElement('div');
-      const label = document.createElement('span');label.className = 'eyebrow';label.textContent = 'GUIA LOCAL · SELOS A DESCOBRIR';
+      const label = document.createElement('span');label.className = 'eyebrow';label.textContent = rally.route_references?.length ? `GUIA LOCAL · ${rally.route_references.length} PONTOS DO MAPA` : 'GUIA LOCAL · SELOS A DESCOBRIR';
       const title = document.createElement('h3');title.textContent = rally.title;
       wrap.append(label,title);head.append(mark,wrap);
       const description = document.createElement('p');description.textContent = rally.public_summary || rally.summary || '';
-      const footer = document.createElement('p');footer.className = 'microcopy';footer.textContent = 'Poképaradas identificadas no próprio jogo · Sem número de selos divulgado · Ver guia';
+      const footer = document.createElement('p');footer.className = 'microcopy';footer.textContent = rally.route_references?.length ? 'Referências da comunidade · Coordenadas copiáveis · Ver roteiro' : 'Poképaradas identificadas no próprio jogo · Sem número de selos divulgado · Ver guia';
       card.append(head,description,footer);
       card.addEventListener('click',()=>openStampRally(rally));
       card.addEventListener('keydown',ev=>{if(ev.key==='Enter')openStampRally(rally);});
@@ -474,6 +475,27 @@ function nightOutBackgroundHighlight(event) {
 }
 window.SpideyNightOutHighlight = nightOutBackgroundHighlight;
 
+function renderMaxBattleGuide(event) {
+  const guide = event.max_battle_guide;
+  if (!guide || !Array.isArray(guide.illustrated_selection) || !guide.illustrated_selection.length) return '';
+  const escapeText = value => String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[char]));
+  const items = guide.illustrated_selection.map(name => '<li>' + escapeText(name) + '</li>').join('');
+  return '<section class="dynamax-guide" aria-label="Guia dos Pokémon Dinamax">' +
+    '<h3>' + escapeText(guide.heading) + '</h3>' +
+    '<p>' + escapeText(guide.official_rule) + '</p>' +
+    '<p class="dynamax-guide-highlight">' + escapeText(guide.special_background) + '</p>' +
+    '<details class="dynamax-roster">' +
+      '<summary>Ver ' + guide.illustrated_selection.length + ' aparições da seleção ilustrada</summary>' +
+      '<p class="dynamax-guide-source">' + escapeText(guide.selection_label) + '</p>' +
+      '<ul class="dynamax-roster-list">' + items + '</ul>' +
+    '</details>' +
+    '<p class="dynamax-guide-source">' + escapeText(guide.background_reference) + '</p>' +
+    '<p class="dynamax-guide-source">' + escapeText(guide.capture_method) + '</p>' +
+    '</section>';
+}
+
 function openEvent(event) {
   if (!event) return;
   beginAppDialog();
@@ -513,6 +535,7 @@ function openEvent(event) {
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">${event.source.confidence === 'official' ? 'Anúncio oficial' : 'Ver fonte'}</a>` : ''}
       </div>
       ${pokemon.length ? `<h3>Pokémon em destaque</h3><ul class="bonus-list">${pokemon.map((item) => `<li>${item.name}${item.note ? ` — ${item.note}` : ''}</li>`).join('')}</ul>` : ''}
+      ${renderMaxBattleGuide(event)}
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${event.notes?.length ? `<h3>Mais informações</h3><ul class="event-notes">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;

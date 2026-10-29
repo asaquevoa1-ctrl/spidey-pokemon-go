@@ -163,7 +163,7 @@
       "id": "2026-10-31-dia-de-muertos-paseo-reforma",
       "slug": "2026-10-31-dia-de-muertos-paseo-reforma",
       "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
-      "summary": "31/10 a 05/11 • Paseo de la Reforma, CDMX: roteiro para jogadores FLY com referência geográfica, horários e caça aos selos na região. Duskull com coroa/Fundo de Localização e Gengar Gigamax 6★; confirme no jogo os pontos participantes.",
+      "summary": "31/10 a 05/11 • Paseo de la Reforma, CDMX: seis pontos do mapa da comunidade para orientar a caça aos selos, com coordenadas copiáveis na aba Selos. Duskull com coroa e Fundo de Localização; Brilhante é possível.",
       "category": "local_event",
       "content_type": "event",
       "tags": [
@@ -240,8 +240,8 @@
         }
       ],
       "notes": [
-        "ROTEIRO DE SELOS (SEM GPS INVENTADO): no Paseo de la Reforma, abra o mapa do Pokémon GO, procure Poképaradas/Ginásios com símbolo de selo, chegue perto, gire o fotodisco e carimbe a cartela tocando ou segurando o círculo. Acompanhe no Álbum. O jogo identifica os pontos participantes, ainda sem lista de coordenadas oficiais.",
-        "GUIA FLY • PASEO DE LA REFORMA: as atividades do Pokémon GO são ativadas na região indicada da Cidade do México. Use o ponto de orientação do guia e identifique no mapa do jogo as Poképaradas/Ginásios participantes; a coordenada de referência NÃO garante um ponto de jogo.",
+        "Abra Selos → Día de Muertos para consultar os seis pontos do mapa da comunidade, copiar coordenadas e abrir cada referência no mapa. Procure o símbolo de selo no Pokémon GO, gire o fotodisco e carimbe a cartela no Álbum.",
+        "GUIA FLY • PASEO DE LA REFORMA: as atividades são regionais da Cidade do México. As seis coordenadas orientam a busca pelos pontos; confira no jogo a posição exata da Poképarada e os requisitos da cartela.",
         "31/10 às 10h CDMX = 31/10 às 13h Brasília. 05/11 às 20h CDMX = 05/11 às 23h Brasília.",
         "A Caça aos Selos GO exige girar fotodiscos de locais selecionados na região; o anúncio NÃO fornece lista de coordenadas verificadas para GPX.",
         "Gengar Gigamax aparece em Batalhas Max 6★ dentro da zona. Não prometer combate remoto nem coordenadas exatas de Pontos de Energia.",
@@ -253,9 +253,10 @@
         "IMPORTANTE: a Caça aos Selos de Día de Muertos no Paseo de la Reforma NÃO é a Caça aos 7 Selos da Área Selvagem da Cidade do México (6–8/11), que tem ingresso e circuito próprio. Consulte a aba Selos para saber qual é qual."
       ],
       "news": {
-        "title": "México: como conseguir os selos de Día de Muertos e tentar Duskull com fundo",
-        "summary": "De 31/10 às 10h até 05/11 às 20h, procure as Poképaradas sinalizadas no Paseo de la Reforma. Gire o fotodisco, carimbe o círculo e acompanhe a coleção no Álbum. Não confunda com os 7 selos da Área Selvagem, que começam em 06/11.",
-        "published_on": "2026-10-27"
+        "title": "Día de Muertos: seis pontos para procurar Duskull com fundo",
+        "summary": "De 31/10 às 10h até 05/11 às 20h CDMX: o roteiro em Selos reúne seis referências do mapa da comunidade, com coordenadas para copiar. Carimbe a cartela no jogo e tente Duskull com coroa e Fundo de Localização; Brilhante é possível. A caça da Área Selvagem é outro evento, em 6–8/11.",
+        "published_on": "2026-10-29",
+        "label": "ATUALIZADO • ROTEIRO DA COMUNIDADE"
       },
       "notifications": {
         "enabled": false,
@@ -263,7 +264,7 @@
       },
       "status": "published",
       "verified_at": "2026-10-27",
-      "updated_at": "2026-10-27T17:29:00-03:00"
+      "updated_at": "2026-10-29T12:46:49-03:00"
     },
     {
       "id": "2026-10-24-spidey-full-day-guide",
@@ -1646,7 +1647,9 @@
         "Trilhas Dinamax",
         "Eternatus",
         "Passe GO",
-        "Global"
+        "Global",
+        "Fundo Especial",
+        "Batalhas Max"
       ],
       "source": {
         "name": "Pokémon GO • anúncio oficial",
@@ -1682,7 +1685,7 @@
       ],
       "bonuses": [
         "Chance de Partículas Max após capturas temáticas ou Batalhas Max; mais Pontos de Energia ativos.",
-        "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo de Localização após a captura.",
+        "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo Especial ao capturar após Batalha Max (não garantido).",
         "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max."
       ],
       "notes": [
@@ -1695,7 +1698,8 @@
         "Recompensas desbloqueadas: resgate até 25/11 às 20h locais.",
         "As espécies temáticas podem aparecer na natureza; isso não significa encontrar Pokémon na forma Dinamax fora das Batalhas Max. Lendários e Míticos ficam fora dessa lista comum.",
         "Capturas com Pokémon GO Plus + ou Explorer Gadget não dão as Partículas Max desse bônus.",
-        "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais."
+        "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais.",
+        "No guia de Batalhas Max, a seleção visual de Pokémon é comunitária e indicativa; não há confirmação oficial de quais estarão disponíveis a cada dia ou da taxa de Fundo Especial."
       ],
       "notifications": {
         "enabled": false,
@@ -1718,10 +1722,10 @@
           ]
         }
       ],
-      "updated_at": "2026-10-28T19:45:58-03:00",
+      "updated_at": "2026-10-28T20:25:00-03:00",
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
+        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro. Os Dynamax não lendários já lançados poderão retornar às Batalhas Max, com chance de Fundo Especial após a captura.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
@@ -1751,6 +1755,84 @@
           ]
         },
         "verified_at": "2026-10-28"
+      },
+      "max_battle_guide": {
+        "heading": "Dynamax que podem retornar",
+        "official_rule": "Todos os Pokémon Dynamax já lançados podem aparecer em Batalhas Max, com exceção de Lendários e Míticos. A disponibilidade de cada espécie depende da rotação no jogo.",
+        "illustrated_selection": [
+          "Bulbasaur",
+          "Charmander",
+          "Squirtle",
+          "Caterpie",
+          "Pikachu",
+          "Growlithe",
+          "Abra",
+          "Gastly",
+          "Krabby",
+          "Hitmonlee",
+          "Hitmonchan",
+          "Rhyhorn",
+          "Chansey",
+          "Electabuzz",
+          "Magmar",
+          "Magikarp",
+          "Eevee",
+          "Omanyte",
+          "Kabuto",
+          "Hoothoot",
+          "Inkay",
+          "Bounsweet",
+          "Passimian",
+          "Drampa",
+          "Grookey",
+          "Scorbunny",
+          "Sobble",
+          "Skwovet",
+          "Rookidee",
+          "Wooloo",
+          "Toxtricity (Forma Aguda)",
+          "Toxtricity (Forma Grave)",
+          "Sizzlipede",
+          "Hatenna",
+          "Falinks",
+          "Duraludon",
+          "Shuckle",
+          "Sneasel",
+          "Hitmontop",
+          "Ralts",
+          "Sableye",
+          "Wailmer",
+          "Trapinch",
+          "Feebas",
+          "Spheal",
+          "Beldum",
+          "Combee",
+          "Pidove",
+          "Roggenrola",
+          "Woobat",
+          "Drilbur",
+          "Cottonee",
+          "Darumaka",
+          "Trubbish",
+          "Cryogonal",
+          "Deino"
+        ],
+        "selection_label": "Seleção visual da comunidade (TrainersGO), usada como referência; não é uma relação oficial fechada nem uma promessa de aparição simultânea.",
+        "special_background": "Pokémon capturados após Batalhas Max durante o evento podem vir com Fundo Especial. Não é garantido em todas as capturas.",
+        "background_reference": "O visual é associado pela comunidade ao Fundo Especial de Céus Sombrios (agosto de 2025); o anúncio oficial de Trilhas Dinamax não identifica expressamente esse desenho.",
+        "capture_method": "O Fundo Especial é uma possibilidade após a captura em Batalhas Max. Encontros selvagens não recebem essa garantia.",
+        "sources": [
+          {
+            "name": "Pokémon GO • anúncio oficial",
+            "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+            "confidence": "official"
+          },
+          {
+            "name": "Serebii • relação e referência visual (comunidade)",
+            "url": "https://www.serebii.net/pokemongo/events/dynamaxtrails.shtml",
+            "confidence": "community"
+          }
+        ]
       }
     },
     {
