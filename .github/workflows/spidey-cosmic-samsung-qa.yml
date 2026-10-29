@@ -8,6 +8,9 @@ on:
       - 'spidey-app/index.html'
       - 'spidey-app/manifest.webmanifest'
       - 'spidey-app/sw.js'
+      - 'spidey-app/player-ui.js'
+      - 'spidey-app/theme.js'
+      - 'spidey-app/spidey-command-cockpit-20261029.css'
       - 'scripts/qa_cosmic_samsung_browser.mjs'
       - '.github/workflows/spidey-cosmic-samsung-qa.yml'
   pull_request:
@@ -16,6 +19,9 @@ on:
       - 'spidey-app/loading-screen.*'
       - 'spidey-app/cosmic-brand-20261019.*'
       - 'spidey-app/sw.js'
+      - 'spidey-app/player-ui.js'
+      - 'spidey-app/theme.js'
+      - 'spidey-app/spidey-command-cockpit-20261029.css'
       - 'scripts/qa_cosmic_samsung_browser.mjs'
       - '.github/workflows/spidey-cosmic-samsung-qa.yml'
   workflow_dispatch:
