@@ -40,7 +40,7 @@ test('details use an expandable responsive gallery, without touching approved po
   assert.match(app, /<details class="dynamax-roster">/);
   assert.match(app, /\$\{renderMaxBattleGuide\(event\)\}/);
   assert.match(css, /\.dynamax-roster-list/);
-  assert.match(html, /app\.js\?v=20261029-visiblehome1/);
+  assert.match(html, /app\.js\?v=20261029-guides-stable1/);
   assert.match(html, /styles\.css\?v=20261028-dynamax-roster1/);
   assert.match(sw, /20261028-dynamax-roster1/);
 });

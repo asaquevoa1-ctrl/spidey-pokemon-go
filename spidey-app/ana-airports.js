@@ -9,6 +9,7 @@
     return Math.abs(lat)<=90&&Math.abs(lon)<=180?v:null;
   };
   let events=[],originalPosters=[],phase=IDS[0],search='';
+  let lastAirportMarkup=null;
   const clean=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   function matchesAirport(point,term){
     const query=clean(term).trim();
@@ -29,18 +30,23 @@
     const link=root.querySelector('#anaPosterEnlarge');
     const stage=root.querySelector('#anaPosterStage');
     if(poster&&link&&stage){
-      stage.hidden=true;
       if(original && original.file.startsWith('assets/events/premium/') && original.file.endsWith('.jpg') && !original.file.includes('..') && /^[a-f0-9]{64}$/.test(original.sha256)){
         const target=original.file+'?v='+original.sha256.slice(0,12);
-        poster.dataset.activeFile=original.file;
-        poster.alt=original.slot+' — ANA Pokémon Jet';
-        poster.onload=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=false;};
-        poster.onerror=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=true;};
+        const isNewPoster=poster.getAttribute('src')!==target;
         link.href=target;
-        if(poster.getAttribute('src')!==target)poster.src=target;
-        else if(poster.complete&&poster.naturalWidth>0)stage.hidden=false;
+        if(isNewPoster){
+          // Searching airports must not hide or reload the SAME original approved poster.
+          stage.hidden=true;
+          poster.dataset.activeFile=original.file;
+          poster.alt=original.slot+' — ANA Pokémon Jet';
+          poster.onload=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=false;};
+          poster.onerror=()=>{if(poster.dataset.activeFile===original.file)stage.hidden=true;};
+          poster.src=target;
+        }else if(poster.complete&&poster.naturalWidth>0)stage.hidden=false;
       }else{
+        stage.hidden=true;
         poster.removeAttribute('src');
+        poster.removeAttribute('data-active-file');
         link.removeAttribute('href');
       }
     }
@@ -56,7 +62,7 @@
     const filtered=refs.filter(p=>matchesAirport(p,search));
     root.querySelector('#anaAirportStatus').textContent=(search?filtered.length+' de ':'')+refs.length+
       ' pontos de aeroportos • nenhum Ginásio especial confirmado';
-    root.querySelector('#anaAirportList').innerHTML=filtered.length?filtered.map(p=>{
+    const markup=filtered.length?filtered.map(p=>{
       const value=parse(p.coordinate_text);
       return '<article class="ana-airport-row"><div><strong>'+esc(p.label)+'</strong>'+
         '<small>Referência de aeroporto/terminal • Ginásio NÃO verificado</small>'+
@@ -64,6 +70,10 @@
         '<button class="action-btn" type="button" data-ana-coord="'+esc(value)+'">Copiar coordenadas</button>'+
         '<a class="action-btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(value)+'">Mapa</a></article>';
     }).join(''):'<p class="empty">Nenhum aeroporto encontrado. Tente o nome, cidade ou código IATA.</p>';
+    if(lastAirportMarkup!==markup){
+      root.querySelector('#anaAirportList').innerHTML=markup;
+      lastAirportMarkup=markup;
+    }
     root.querySelectorAll('[data-ana-phase]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.anaPhase===phase)));
   }
   function mount(){

@@ -309,9 +309,22 @@ function renderStampStats() {
   $('#stampReadyCount').textContent = rallies.filter(r => r.stops?.length && r.stops.every(exactPokestop)).length;
 }
 
+let lastStampCatalog=null, lastStampProgressSignature='';
 function renderStamps() {
   const rallies = state.stamps.filter((rally) => rally.status === 'published');
+  const progressSignature = rallies.map(rally => rally.collection_type === 'event_guide'
+    ? rally.id + ':guide'
+    : rally.id + ':' + getStampProgress(rally).size).join('|');
+  // Keep the same card DOM and handlers when the player returns to Selos unchanged.
+  if(lastStampCatalog===state.stamps && lastStampProgressSignature===progressSignature &&
+     stampList.dataset.stampCardsReady==='true') {
+    renderStampStats();
+    return;
+  }
+  lastStampCatalog=state.stamps;
+  lastStampProgressSignature=progressSignature;
   stampList.innerHTML = '';
+  stampList.dataset.stampCardsReady='true';
   if (!rallies.length) {
     stampList.innerHTML = '<p class="empty">Nenhum Stamp Rally disponível.</p>';
     renderStampStats();
@@ -615,7 +628,10 @@ async function loadContent({ refresh = false } = {}) {
       if (status) status.textContent = state.events.length ? 'Mostrando a última agenda salva. Tentaremos atualizar quando houver conexão.' : 'Não foi possível atualizar a agenda. Tente novamente quando estiver online.';
       if (!state.events.length) {
         eventList.innerHTML = '<p class="empty">Não foi possível carregar os eventos.</p>';
-        if (stampList) stampList.innerHTML = '<p class="empty">Não foi possível carregar os selos.</p>';
+        if (stampList) {
+          stampList.innerHTML = '<p class="empty">Não foi possível carregar os selos.</p>';
+          stampList.removeAttribute('data-stamp-cards-ready');
+        }
       }
     }
   })().finally(() => { window.dispatchEvent(new Event('spideycontentsettled')); contentLoading = null; });
