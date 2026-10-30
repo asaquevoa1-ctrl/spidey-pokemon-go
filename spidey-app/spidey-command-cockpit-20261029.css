@@ -431,3 +431,18 @@ html[data-theme="light"] body.spidey-player-ui #playerHome .spidey-command-aside
   #playerHome .spidey-command-aside .spidey-premium-nav-grid button,
   #playerHome .player-row {transition:none !important;}
 }
+
+/* Samsung real: fallback Premium em caso de catálogo offline ou lento.
+   Não mostrar atalhos antigos duplicados quando #playerHome está presente. */
+body.spidey-player-ui #spideyHomeQuick {display:none !important;}
+#playerHome .spidey-home-awaiting {
+  margin:6px 0 17px;
+  padding:clamp(17px,3vw,28px);
+  border:1px solid rgba(230,194,134,.36);
+  border-left:3px solid #d9ae70;
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(174,72,83,.12),rgba(233,188,118,.055));
+  box-shadow:0 13px 24px rgba(0,0,0,.11);
+}
+#playerHome .spidey-home-awaiting strong {color:var(--premium-text);font-size:1.1rem;}
+#playerHome .spidey-home-awaiting p {color:var(--premium-dim);line-height:1.5;margin:8px 0 0;}

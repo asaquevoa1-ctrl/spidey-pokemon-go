@@ -702,6 +702,8 @@ window.addEventListener('appinstalled', () => {
 });
 
 if ('serviceWorker' in navigator) window.addEventListener('load', async () => { try { const reg = await navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }); await reg.update(); } catch (error) { console.error(error); } });
+// A grade de 42 dias não depende da internet: mostrar imediatamente, inclusive offline.
+renderCalendar();
 loadContent();
 
 $('#privacyButton')?.addEventListener('click', () => setView('privacyView'));

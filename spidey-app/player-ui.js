@@ -54,10 +54,10 @@
     return {focus,dated:live.filter(dateToday),active:live.filter(e=>e.id!==focus?.id&&activeAt(e)),upcoming:live.filter(e=>e.id!==focus?.id&&!dateToday(e)&&!activeAt(e)).slice(0,6)};
   }
   function renderHome(){
-    const root=document.getElementById('playerHome');if(!root||!state.events.length)return;
+    const root=document.getElementById('playerHome');if(!root)return;
     const now=new Date(),{focus,dated,active,upcoming}=homeSelection(state.events,worldPoints,now);
     root.querySelector('#spideyUniverse3D')?.spideyDispose?.();
-    root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${panel(focus)}${window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
+    root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${focus?panel(focus):'<div class="spidey-home-awaiting" role="status"><strong>Seu universo está pronto.</strong><p>Os eventos aparecerão assim que a agenda estiver disponível. Você já pode explorar as outras áreas.</p></div>'}${focus?(window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''):''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
     // Esta e a Home VISIVEL: os blocos legados experience-* estao ocultos pelo Player UI.
     // Construir o dashboard sobre #playerHome, sem substituir os posters aprovados.
     const head=root.querySelector('.player-home-head');
@@ -145,7 +145,9 @@
     const root=document.createElement('section');root.id='playerHome';home.prepend(root);document.body.classList.add('spidey-player-ui');
     document.addEventListener('click',async ev=>{const target=ev.target.closest('[data-premium-view]');if(target){const button=[...document.querySelectorAll('.app-tab[data-view]')].find(item=>item.dataset.view===target.dataset.premiumView);button?.click();if(button)window.scrollTo({top:0,behavior:'instant'});return}const c=ev.target.closest('[data-route-coord]'),f=ev.target.closest('[data-play-fly]'),d=ev.target.closest('[data-play-detail]');if(c){try{await navigator.clipboard.writeText(c.dataset.routeCoord);showToast('Coordenadas copiadas.')}catch{showToast('Não foi possível copiar. As coordenadas estão no card.')}return}if(f){window.SpideyFly?.open(f.dataset.playFly);return}if(d){const e=state.events.find(e=>e.id===d.dataset.playDetail);if(e)openEvent(e)}});
     window.SpideyFlyCore?.loadPoints().then(points=>{worldPoints=points;renderHome()}).catch(()=>{worldError=true;renderHome()});
-    window.addEventListener('spideycontentready',renderHome);renderHome();
+    window.addEventListener('spideycontentready',renderHome);
+    window.addEventListener('spideycontentsettled',()=>{if(!state.events.length)renderHome()});
+    renderHome();
     setInterval(()=>{if(!home.hidden)renderHome()},60000);
   }
   window.SpideyPlayer=Object.freeze({panel,row,art,image,facts,time,title,source,renderHome,homeSelection,reviewCorrection});
