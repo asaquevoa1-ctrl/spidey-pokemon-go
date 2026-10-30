@@ -22,7 +22,7 @@ test('Home Premium mostra emblema e navegação mesmo com catálogo vazio',()=>{
 });
 test('service worker distribui a correção offline, sem alterar imagens Premium',()=>{
  const html=read('index.html'),sw=read('sw.js');
- assert.match(html,/app\.js\?v=20261029-home-stable1/);
+ assert.match(html,/app\.js\?v=20261029-visiblehome1/);
  assert.match(html,/player-ui\.js\?v=20261029-home-stable1/);
  assert.match(sw,/20261029-home-stable1/);
  assert.match(sw,/\.\/app\.js/);
