@@ -16,6 +16,8 @@
       typeof p.group==='string'&&p.group.length<80&&typeof p.region==='string'&&p.region.length<80);
   }
   let doc=null,places=[],search='',group='all';
+  let lastDisplayedPlaces=null;
+  let placesRevision=0;
   const root=()=>document.getElementById('nationalTrustGuide');
   function draw(){
     const el=root();if(!el)return;
@@ -25,7 +27,12 @@
     const filtered=places.filter(p=>(group==='all'||p.group===group)&&
       clean(p.name+' '+p.region+' '+p.group).includes(query));
     count.textContent=filtered.length+' de '+places.length+' locais • pontos comunitários';
+    const identity=placesRevision+'|'+filtered.map(p=>p.id||p.name+'@'+p.coordinates).join('|');
+    // Preserve DOM and keyboard focus when changing search text keeps the same matches.
+    if(identity===lastDisplayedPlaces)return;
+    lastDisplayedPlaces=identity;
     list.replaceChildren();
+    const fragment=document.createDocumentFragment();
     for(const p of filtered){
       const item=document.createElement('article');item.className='nt-place';
       const details=document.createElement('div');details.className='nt-place-text';
@@ -36,8 +43,9 @@
       details.append(heading,desc,caution,code);
       const copy=document.createElement('button');copy.type='button';copy.className='action-btn nt-copy';copy.dataset.coord=p.coordinates;copy.textContent='Copiar coordenadas';
       const map=document.createElement('a');map.className='action-btn';map.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.coordinates);map.target='_blank';map.rel='noopener noreferrer';map.textContent='Mapa';
-      item.append(details,copy,map);list.append(item);
+      item.append(details,copy,map);fragment.append(item);
     }
+    list.append(fragment);
     if(!filtered.length){
       const p=document.createElement('p');p.className='microcopy';p.textContent='Nenhum local encontrado com esse filtro.';list.append(p);
     }
@@ -83,7 +91,7 @@
       try{await navigator.clipboard.writeText(v);if(typeof window.showToast==='function')window.showToast('Referência do local copiada.');else btn.textContent='Copiado!';}
       catch{window.prompt('Copie a coordenada de referência:',v);}
     });
-    fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Falha na fonte');return r.json();}).then(json=>{doc=json;places=validPlaces(json);draw();}).catch(()=>{
+    fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Falha na fonte');return r.json();}).then(json=>{doc=json;places=validPlaces(json);placesRevision++;draw();}).catch(()=>{
       const status=details.querySelector('#nationalTrustCount');if(status)status.textContent='Não foi possível carregar as localidades. Atualize a página.';
     });
   }
