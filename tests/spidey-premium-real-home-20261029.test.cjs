@@ -10,7 +10,7 @@ test('Tema Premium global carregado por ultimo, após estilos dinamicos legados'
   const after=theme.indexOf("loadStyle('spidey-premium-unified-20261029.css'");
   assert.ok(before>0&&after>before);
   const html=read('index.html');
-  assert.match(html,/player-ui\.js\?v=20261029-visiblehome1/);
+  assert.match(html,/player-ui\.js\?v=20261029-home-stable1/);
   assert.match(html,/theme\.js\?v=20261029-motion1/);
   assert.match(html,/SPIDEY_BUILD='2026-10-29-motion1'/);
   const sw=read('sw.js');
