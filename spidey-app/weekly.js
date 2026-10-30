@@ -1,5 +1,12 @@
 let spideyWeeklyData = null;
 let spideyWeeklyLoading = false;
+const weeklyMarkupCache = new WeakMap();
+function weeklySetMarkupIfChanged(root,markup){
+  if(!root || weeklyMarkupCache.get(root)===markup)return false;
+  root.innerHTML=markup;
+  weeklyMarkupCache.set(root,markup);
+  return true;
+}
 
 const WEEKDAY_PT = {
   monday: 'SEG',
@@ -143,7 +150,7 @@ function weeklyVisibleItem(item,now=new Date()){
 function renderWeeklyDays(data) {
   const strip = document.querySelector('#weeklyDays');
   if (!strip) return;
-  strip.innerHTML = (data.days || []).map((day) => {
+  const markup = (data.days || []).map((day) => {
     const items = (day.items || []).filter(item=>weeklyVisibleItem(item));
     return `
       <article class="weekly-day ${items.length ? 'has-items' : ''}">
@@ -156,7 +163,7 @@ function renderWeeklyDays(data) {
         </div>
       </article>`;
   }).join('');
-  bindWeeklyItems(strip);
+  if(weeklySetMarkupIfChanged(strip,markup))bindWeeklyItems(strip);
 }
 
 function renderWeeklySections(data) {
@@ -178,8 +185,7 @@ function renderWeeklySections(data) {
         <div class="weekly-grid">${items.map((item) => weeklyItemCard(item)).join('')}</div>
       </section>`;
   }).join('');
-  root.innerHTML = html || '<p class="empty">Nenhum destaque semanal disponível.</p>';
-  bindWeeklyItems(root);
+  if(weeklySetMarkupIfChanged(root,html || '<p class="empty">Nenhum destaque semanal disponível.</p>'))bindWeeklyItems(root);
 }
 
 function renderWeeklyStamps(data) {
@@ -191,14 +197,15 @@ function renderWeeklyStamps(data) {
     return;
   }
   root.hidden = false;
-  root.innerHTML = `
+  const markup = `
     <div class="weekly-block-head">
       <div><span class="eyebrow">STAMPS</span><h2>Rallies ativos</h2></div>
     </div>
     <div class="weekly-stamp-grid">
       ${stamps.map((stamp) => `<button class="weekly-stamp-card" data-open-stamps="1"><span>◎</span><div><strong>${stamp.title}</strong><small>${stamp.stamp_count || 0} selos</small></div></button>`).join('')}
     </div>`;
-  root.querySelectorAll('[data-open-stamps]').forEach((button) => button.addEventListener('click', () => setView('stampsView')));
+  if(weeklySetMarkupIfChanged(root,markup))
+    root.querySelectorAll('[data-open-stamps]').forEach((button) => button.addEventListener('click', () => setView('stampsView')));
 }
 
 function renderWeeklyView() {
