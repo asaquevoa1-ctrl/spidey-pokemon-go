@@ -83,7 +83,7 @@ test('Human-first stamped UI copies only reference locations, keeps exact-gpx re
  assert.ok(ui.includes('Procure o símbolo do selo'));
  assert.ok(ui.includes('isLandmarkGuide ? landmarkVenueCoord(stop) : coord(stop)'));
  assert.ok(app.includes('lugares de referência (não Poképaradas)'));
- assert.ok(html.includes('stamps-v2.js?v=20261029-pokelids-mobile-batch1'));
+ assert.ok(html.includes('stamps-v2.js?v=20261029-pokelids-mobile-pages2'));
  assert.ok(sw.includes('20261027-cdmx-stamps1'));
  for(const feature of ['rocket-guide.js','fly-v1.js','pvp.js','push.js'])assert.ok(html.includes(feature));
  assert.ok(!html.includes('hunter-v1.js'),'Do not restore retired Caçador');

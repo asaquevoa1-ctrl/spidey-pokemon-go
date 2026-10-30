@@ -233,7 +233,7 @@
     let filter = 'all';
     let region = 'all';
     let activeId = (stops.find((stop) => !progress.has(stop.id)) || stops[0])?.id || '';
-    let galleryLimit = isPokelid ? POKELID_PAGE_SIZE : Number.POSITIVE_INFINITY;
+    let galleryOffset = 0;
 
     function filteredStops() {
       const needle = search.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
@@ -339,7 +339,7 @@
             </div>
           </div>
           <div id="stampGalleryV2" class="stamp-gallery-v2"></div>
-          <div id="stampGalleryMoreV2" class="stamp-gallery-more-v2" hidden><button id="stampLoadMoreV2" class="action-btn" type="button">Mostrar mais PokéLids</button></div>
+          <div id="stampGalleryMoreV2" class="stamp-gallery-more-v2" hidden><button id="stampPrevPageV2" class="action-btn" type="button" hidden>← Anteriores</button><button id="stampLoadMoreV2" class="action-btn" type="button" hidden>Próximas PokéLids →</button></div>
         </section>
 
         ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
@@ -350,21 +350,31 @@
     const gallery = detail.querySelector('#stampGalleryV2');
     const moreBox = detail.querySelector('#stampGalleryMoreV2');
     const moreButton = detail.querySelector('#stampLoadMoreV2');
+    const prevPageButton = detail.querySelector('#stampPrevPageV2');
     const activeBox = detail.querySelector('#stampActiveStop');
     installImageFallback(detail);
     const position = detail.querySelector('#stampRoutePosition');
     const toggleDone = detail.querySelector('#stampToggleDone');
 
-    function renderGallery({ append = false } = {}) {
+    function renderGallery() {
       const visible = filteredStops();
-      const shown = visible.slice(0, galleryLimit);
-      const start = append ? gallery.querySelectorAll('[data-stamp-stop-id]').length : 0;
-      const markup = shown.slice(start).map((stop) => stopTile(stop, progress, stops.indexOf(stop))).join('');
-      if (append && start > 0) gallery.insertAdjacentHTML('beforeend', markup);
-      else gallery.innerHTML = markup || '<p class="empty">Nenhum selo corresponde a este filtro.</p>';
-      detail.querySelector('#stampVisibleCount').textContent = `${shown.length}/${visible.length}`;
-      moreBox.hidden = !isPokelid || shown.length >= visible.length;
-      moreButton.textContent = `Mostrar mais ${Math.min(POKELID_PAGE_SIZE, visible.length - shown.length)} PokéLids`;
+      // Never mount more than 36 image tiles simultaneously on mobile.
+      if (isPokelid && visible.length && galleryOffset >= visible.length) {
+        galleryOffset = Math.floor((visible.length - 1) / POKELID_PAGE_SIZE) * POKELID_PAGE_SIZE;
+      }
+      const shown = isPokelid ? visible.slice(galleryOffset, galleryOffset + POKELID_PAGE_SIZE) : visible;
+      gallery.innerHTML = shown.length
+        ? shown.map((stop) => stopTile(stop, progress, stops.indexOf(stop))).join('')
+        : '<p class="empty">Nenhum selo corresponde a este filtro.</p>';
+      detail.querySelector('#stampVisibleCount').textContent = isPokelid && shown.length
+        ? `${galleryOffset + 1}–${galleryOffset + shown.length}/${visible.length}`
+        : `${shown.length}/${visible.length}`;
+      const hasPrev = isPokelid && galleryOffset > 0;
+      const hasNext = isPokelid && galleryOffset + shown.length < visible.length;
+      prevPageButton.hidden = !hasPrev;
+      moreButton.hidden = !hasNext;
+      moreBox.hidden = !hasPrev && !hasNext;
+      moreButton.textContent = `Próximas ${Math.min(POKELID_PAGE_SIZE, visible.length - galleryOffset - shown.length)} PokéLids →`;
     }
 
     // One delegated listener, instead of hundreds of listeners recreated for each filter/progress change.
@@ -377,12 +387,19 @@
     });
 
     moreButton.addEventListener('click', () => {
-      galleryLimit += POKELID_PAGE_SIZE;
-      renderGallery({ append: true });
+      galleryOffset += POKELID_PAGE_SIZE;
+      renderGallery();
+      gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    prevPageButton.addEventListener('click', () => {
+      galleryOffset = Math.max(0, galleryOffset - POKELID_PAGE_SIZE);
+      renderGallery();
+      gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
     function resetGallery() {
-      galleryLimit = isPokelid ? POKELID_PAGE_SIZE : Number.POSITIVE_INFINITY;
+      galleryOffset = 0;
       renderGallery();
       renderActive();
     }
