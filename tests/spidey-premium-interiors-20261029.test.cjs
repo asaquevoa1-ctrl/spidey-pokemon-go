@@ -34,10 +34,10 @@ test('tema e cache PWA carregam última folha; Samsung responsivo',()=>{
  const posTheme=theme.indexOf("loadStyle('spidey-premium-interiors-20261029.css'");
  const posPrevious=theme.indexOf("loadStyle('spidey-command-cockpit-20261029.css'");
  assert.ok(posTheme>posPrevious&&posPrevious>0);
- assert.match(html,/theme\.js\?v=20261029-interiors1/);
- assert.match(html,/SPIDEY_BUILD='2026-10-29-interiors1'/);
+ assert.match(html,/theme\.js\?v=20261029-motion1/);
+ assert.match(html,/SPIDEY_BUILD='2026-10-29-motion1'/);
  assert.match(sw,/\.\/spidey-premium-interiors-20261029\.css/);
- assert.match(sw,/20261029-interiors1/);
+ assert.match(sw,/20261029-motion1/);
  assert.match(css,/@media\(max-width:760px\)/);
  assert.match(css,/@media\(max-width:370px\)/);
  assert.match(css,/@media\(prefers-reduced-motion:reduce\)/);
