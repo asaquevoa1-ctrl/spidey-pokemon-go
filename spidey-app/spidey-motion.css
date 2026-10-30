@@ -1,0 +1,146 @@
+/* Spidey Premium Motion: startup, in-app navigation, theme reveal.
+   Existing approved art is unchanged; no new bottom bar or false progress. */
+#spideySplash.spidey-splash {
+  background:
+    radial-gradient(ellipse at 50% 36%,rgba(159,59,74,.25),transparent 48%),
+    radial-gradient(ellipse at 50% 69%,rgba(219,174,104,.12),transparent 45%),
+    linear-gradient(158deg,#171d29 0%,#0b111b 68%,#211920 100%);
+  color:#f9f1e5;
+}
+#spideySplash .spidey-splash-aura::before {
+  border:1px solid rgba(235,193,129,.46);
+  box-shadow:0 0 54px rgba(205,141,83,.19),inset 0 0 48px rgba(166,57,74,.12);
+}
+#spideySplash .spidey-splash-aura::after {
+  border:1px solid rgba(236,192,114,.21);
+  border-top-color:rgba(244,211,145,.75);
+  border-bottom-color:rgba(187,63,81,.60);
+  animation:spidey-launch-orbit 5.5s linear infinite;
+}
+#spideySplash .spidey-splash-logo {
+  background:#101823;
+  box-shadow:0 19px 43px rgba(0,0,0,.44),0 0 30px rgba(226,173,95,.20);
+  /* Keep the full original cosmic S without color or crop filters. */
+  filter:none;
+}
+#spideySplash .spidey-splash-title {
+  color:#f9f0dd;
+  text-shadow:0 4px 27px rgba(220,173,91,.31);
+}
+#spideySplash .spidey-splash-subtitle {color:#e8c88e;}
+#spideySplash .spidey-splash-track {background:rgba(230,186,110,.19);}
+#spideySplash .spidey-splash-track::after {
+  background:linear-gradient(90deg,transparent,#f8df9f,#be4254);
+  box-shadow:0 0 15px rgba(232,192,125,.62);
+}
+#spideySplash .spidey-splash-label {color:#dfd0ba;}
+/* The original approved opening/loading full-bleed artworks stay untouched.
+   Only a delicate noninteractive arc marks active preparation. */
+#spideySplash.cosmic-brand-ready::after {
+  content:"";
+  position:absolute;
+  z-index:3;
+  bottom:max(16px,env(safe-area-inset-bottom));
+  left:50%;
+  transform:translateX(-50%);
+  width:clamp(72px,18vw,112px);
+  height:2px;
+  border-radius:99px;
+  background:linear-gradient(90deg,transparent,#e9c887,transparent);
+  box-shadow:0 0 13px rgba(235,189,99,.33);
+  pointer-events:none;
+  animation:spidey-launch-beacon 900ms ease-in-out infinite alternate;
+}
+@keyframes spidey-launch-orbit {to{transform:rotate(360deg)}}
+@keyframes spidey-launch-beacon {from{opacity:.25}to{opacity:.9}}
+
+/* Navigation runs on the visible page only, never during every scrolling frame. */
+.app-view.spidey-scene-enter:not([hidden]) {
+  animation:spidey-scene-arrive 330ms cubic-bezier(.18,.76,.22,1) both;
+}
+@keyframes spidey-scene-arrive {
+  from {opacity:.57;transform:translate3d(0,10px,0) scale(.994);}
+  to {opacity:1;transform:translate3d(0,0,0) scale(1);}
+}
+body.spidey-arrived #playerHome .spidey-cockpit-home-head {
+  animation:spidey-home-arrive 370ms cubic-bezier(.16,.78,.23,1) both;
+}
+@keyframes spidey-home-arrive {
+  from {opacity:.4;transform:translate3d(0,12px,0) scale(.989);}
+  to {opacity:1;transform:none;}
+}
+#eventDialog[open] {
+  animation:spidey-dialog-arrive 220ms cubic-bezier(.19,.74,.23,1) both;
+}
+@keyframes spidey-dialog-arrive {
+  from {opacity:.66;transform:translate3d(0,12px,0) scale(.987);}
+  to {opacity:1;transform:none;}
+}
+
+/* Magnetic emphasis in the EXISTING drawer; the current menu remains the
+   only mobile navigation. Touch feedback doesn't shift surrounding items. */
+@media(max-width:760px){
+  html.spidey-mobile-menu-ready .spidey-menu-item {
+    transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease;
+  }
+  html.spidey-mobile-menu-ready .spidey-menu-item-icon {
+    position:relative;
+    display:grid;
+    place-items:center;
+    width:34px;
+    height:34px;
+    flex:0 0 34px;
+    border:1px solid transparent;
+    border-radius:50%;
+    transition:background-color .23s ease,border-color .23s ease,transform .23s ease,box-shadow .23s ease;
+  }
+  html.spidey-mobile-menu-ready .spidey-menu-item.active,
+  html.spidey-mobile-menu-ready .spidey-menu-item[aria-current="page"] {
+    background:linear-gradient(100deg,rgba(188,71,78,.21),rgba(231,188,117,.10));
+    border-color:rgba(234,197,128,.4);
+    box-shadow:inset 3px 0 0 #e8c687,0 6px 14px rgba(0,0,0,.10);
+  }
+  html.spidey-mobile-menu-ready .spidey-menu-item.active .spidey-menu-item-icon,
+  html.spidey-mobile-menu-ready .spidey-menu-item[aria-current="page"] .spidey-menu-item-icon {
+    background:radial-gradient(circle at 30% 26%,#6d4650,#452638 65%,#241c2c);
+    border-color:rgba(244,200,133,.65);
+    color:#ffe9b2;
+    transform:translate3d(0,-2px,0) scale(1.07);
+    box-shadow:0 4px 16px rgba(196,65,83,.25),0 0 0 3px rgba(234,188,113,.09);
+  }
+  html.spidey-mobile-menu-ready .spidey-menu-item:active .spidey-menu-item-icon {
+    transform:scale(.94);
+  }
+}
+
+/* Theme reveal uses Chromium's native View Transitions; old snapshot remains
+   stationary while the new theme expands from the relevant control. */
+html.spidey-theme-revealing::view-transition-old(root) {
+  animation:none;
+  mix-blend-mode:normal;
+}
+html.spidey-theme-revealing::view-transition-new(root) {
+  mix-blend-mode:normal;
+  animation:spidey-theme-expand 430ms cubic-bezier(.22,.78,.2,1) both;
+}
+@keyframes spidey-theme-expand {
+  from {clip-path:circle(0px at var(--spidey-reveal-x,50vw) var(--spidey-reveal-y,12vh));}
+  to {clip-path:circle(var(--spidey-reveal-radius,150vmax) at var(--spidey-reveal-x,50vw) var(--spidey-reveal-y,12vh));}
+}
+@media(prefers-reduced-motion:reduce) {
+  #spideySplash .spidey-splash-aura::after,
+  #spideySplash.cosmic-brand-ready::after,
+  .app-view.spidey-scene-enter:not([hidden]),
+  body.spidey-arrived #playerHome .spidey-cockpit-home-head,
+  #eventDialog[open],
+  html.spidey-theme-revealing::view-transition-old(root),
+  html.spidey-theme-revealing::view-transition-new(root) {
+    animation:none !important;
+    transition:none !important;
+  }
+  html.spidey-mobile-menu-ready .spidey-menu-item-icon,
+  html.spidey-mobile-menu-ready .spidey-menu-item {
+    transition:none !important;
+    transform:none !important;
+  }
+}
