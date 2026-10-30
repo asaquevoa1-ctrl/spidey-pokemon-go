@@ -1,5 +1,7 @@
 (() => {
   const IMAGE_FIELDS = ['stamp_image_url', 'stamp_image', 'image_url', 'image'];
+  // Render just one small batch on Android; filters and navigation retain access to every PokéLid.
+  const POKELID_PAGE_SIZE = 36;
 
   // Índice visual dos selos Pokémon Center documentados pelo Serebii (2026).
   // Não confundir imagens dos selos com banners do evento. Yokohama não possui
@@ -94,6 +96,8 @@
   // The official host sometimes fails to display on a mobile device; avoid the
   // broken-image icon and keep the official-page link available for the player.
   function installImageFallback(root) {
+    if (root.dataset.stampImageFallbackInstalled === 'true') return;
+    root.dataset.stampImageFallbackInstalled = 'true';
     root.addEventListener('error', event => {
       const img = event.target;
       if (!img || img.tagName !== 'IMG' || !img.closest('.stamp-tile-art-v2, .stamp-active-art-v2')) return;
@@ -229,6 +233,7 @@
     let filter = 'all';
     let region = 'all';
     let activeId = (stops.find((stop) => !progress.has(stop.id)) || stops[0])?.id || '';
+    let galleryLimit = isPokelid ? POKELID_PAGE_SIZE : Number.POSITIVE_INFINITY;
 
     function filteredStops() {
       const needle = search.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
@@ -334,6 +339,7 @@
             </div>
           </div>
           <div id="stampGalleryV2" class="stamp-gallery-v2"></div>
+          <div id="stampGalleryMoreV2" class="stamp-gallery-more-v2" hidden><button id="stampLoadMoreV2" class="action-btn" type="button">Mostrar mais PokéLids</button></div>
         </section>
 
         ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
@@ -342,24 +348,43 @@
       </div>`;
 
     const gallery = detail.querySelector('#stampGalleryV2');
+    const moreBox = detail.querySelector('#stampGalleryMoreV2');
+    const moreButton = detail.querySelector('#stampLoadMoreV2');
     const activeBox = detail.querySelector('#stampActiveStop');
     installImageFallback(detail);
     const position = detail.querySelector('#stampRoutePosition');
     const toggleDone = detail.querySelector('#stampToggleDone');
 
-    function renderGallery() {
+    function renderGallery({ append = false } = {}) {
       const visible = filteredStops();
-      detail.querySelector('#stampVisibleCount').textContent = `${visible.length}/${stops.length}`;
-      gallery.innerHTML = visible.length
-        ? visible.map((stop) => stopTile(stop, progress, stops.indexOf(stop))).join('')
-        : '<p class="empty">Nenhum selo corresponde a este filtro.</p>';
-      gallery.querySelectorAll('[data-stamp-stop-id]').forEach((button) => {
-        button.addEventListener('click', () => {
-          activeId = button.dataset.stampStopId;
-          renderActive();
-          detail.querySelector('.stamp-route-panel-v2')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
+      const shown = visible.slice(0, galleryLimit);
+      const start = append ? gallery.querySelectorAll('[data-stamp-stop-id]').length : 0;
+      const markup = shown.slice(start).map((stop) => stopTile(stop, progress, stops.indexOf(stop))).join('');
+      if (append && start > 0) gallery.insertAdjacentHTML('beforeend', markup);
+      else gallery.innerHTML = markup || '<p class="empty">Nenhum selo corresponde a este filtro.</p>';
+      detail.querySelector('#stampVisibleCount').textContent = `${shown.length}/${visible.length}`;
+      moreBox.hidden = !isPokelid || shown.length >= visible.length;
+      moreButton.textContent = `Mostrar mais ${Math.min(POKELID_PAGE_SIZE, visible.length - shown.length)} PokéLids`;
+    }
+
+    // One delegated listener, instead of hundreds of listeners recreated for each filter/progress change.
+    gallery.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-stamp-stop-id]');
+      if (!button || !gallery.contains(button)) return;
+      activeId = button.dataset.stampStopId;
+      renderActive();
+      detail.querySelector('.stamp-route-panel-v2')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    moreButton.addEventListener('click', () => {
+      galleryLimit += POKELID_PAGE_SIZE;
+      renderGallery({ append: true });
+    });
+
+    function resetGallery() {
+      galleryLimit = isPokelid ? POKELID_PAGE_SIZE : Number.POSITIVE_INFINITY;
+      renderGallery();
+      renderActive();
     }
 
     function renderActive() {
@@ -478,28 +503,25 @@
 
     detail.querySelector('#stampSearchV2')?.addEventListener('input', (event) => {
       search = event.target.value || '';
-      renderGallery();
-      renderActive();
+      resetGallery();
     });
     detail.querySelector('#stampPrefectureRoute')?.addEventListener('change', event => {
       region = event.target.value || 'all';
       detail.querySelector('#stampRegionV2').value = region;
       activeId = '';
-      renderGallery(); renderActive();
+      resetGallery();
     });
     detail.querySelector('#stampRegionV2')?.addEventListener('change', (event) => {
       region = event.target.value || 'all';
       if (isPokelid) detail.querySelector('#stampPrefectureRoute').value = region;
       activeId = '';
-      renderGallery();
-      renderActive();
+      resetGallery();
     });
     detail.querySelectorAll('[data-stamp-filter]').forEach((button) => {
       button.addEventListener('click', () => {
         filter = button.dataset.stampFilter || 'all';
         detail.querySelectorAll('[data-stamp-filter]').forEach((item) => item.classList.toggle('active', item === button));
-        renderGallery();
-        renderActive();
+        resetGallery();
       });
     });
 
