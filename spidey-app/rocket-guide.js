@@ -14,6 +14,10 @@
   let lastCheck = 0;
   let selected = 'all';
   let pending = null;
+  let catalogRevision = 0;
+  let renderedKey = '';
+  let searchTimer = null;
+  const expandedMembers = new Set();
 
   function plain(node, tag, value, className) {
     const e = document.createElement(tag);
@@ -45,6 +49,8 @@
   function card(m) {
     const article = document.createElement('details');
     article.className = 'rocket-card';
+    article.dataset.rocketMember = m.id;
+    article.open = expandedMembers.has(m.id);
     const head = plain(article, 'summary', '', 'rocket-card-head');
     const over = plain(head, 'span', '', 'rocket-card-over');
     plain(over, 'span', m.group === 'boss' ? 'CHEFE' : m.group === 'leader' ? 'LÍDER' : 'RECRUTA', 'rocket-card-tag');
@@ -83,7 +89,11 @@
       const hay = [m.label, m.source_key, m.type_label, m.hint, ...m.slots.flatMap(s => s.pokemon.map(p => p.name))].join(' ');
       return slug(hay).includes(q);
     });
-    board.replaceChildren(...matches.map(card));
+    const key = [catalogRevision, selected, q].join('|');
+    if(key !== renderedKey){
+      board.replaceChildren(...matches.map(card));
+      renderedKey = key;
+    }
     count.textContent = matches.length + (matches.length === 1 ? ' adversário encontrado' : ' adversários encontrados');
     if (!matches.length) plain(board, 'p', 'Nenhum resultado. Tente o nome de um Pokémon, líder ou tipo.', 'rocket-empty');
   }
@@ -100,6 +110,7 @@
         const json = await response.json();
         if (!safe(json)) throw new Error('Elenco incompleto; não será exibido como atualizado');
         current = json;
+        catalogRevision += 1;
         lastCheck = Date.now();
         freshness(json);
         show();
@@ -122,7 +133,16 @@
     filter.querySelectorAll('[data-rocket-group]').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
     show();
   });
-  search?.addEventListener('input', show);
+  board?.addEventListener('toggle', event => {
+    const node = event.target;
+    if(!node?.matches?.('.rocket-card'))return;
+    if(node.open)expandedMembers.add(node.dataset.rocketMember);
+    else expandedMembers.delete(node.dataset.rocketMember);
+  }, true);
+  search?.addEventListener('input', () => {
+    if(searchTimer!==null)clearTimeout(searchTimer);
+    searchTimer=setTimeout(()=>{searchTimer=null;show()},120);
+  });
   refresh?.addEventListener('click', () => load(true));
   window.SpideyRocket = Object.freeze({load});
 })();
