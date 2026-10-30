@@ -16,6 +16,7 @@
     loadStyle('spidey-premium-unified-20261029.css','spideyPremiumUnified');
     loadStyle('spidey-universe-3d.css','spideyUniverse3D');
     loadStyle('spidey-command-cockpit-20261029.css','spideyCommandCockpit');
+    loadStyle('spidey-premium-interiors-20261029.css','spideyPremiumInteriors');
     loadScript('app-v2.js','spideyAppV2');
     loadScript('app-v2-1.js','spideyAppV21');
     loadScript('app-v2-2.js','spideyAppV22');
