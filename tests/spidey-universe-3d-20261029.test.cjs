@@ -39,7 +39,7 @@ test('Nova versão carrega galeria antes da Home, cache offline incluído',()=>{
   assert.ok(theme.indexOf("loadStyle('spidey-universe-3d.css'")>theme.indexOf("loadStyle('spidey-premium-unified-20261029.css'"));
   assert.match(sw,/\.\/spidey-universe-3d\.css/);
   assert.match(sw,/\.\/spidey-universe-3d\.js/);
-  assert.match(sw,/20261029-interiors1/);
+  assert.match(sw,/20261029-motion1/);
   assert.match(index,/spidey-icon-cosmic-192\.png/);
 });
 
