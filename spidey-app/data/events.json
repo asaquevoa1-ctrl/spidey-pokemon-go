@@ -10409,6 +10409,120 @@
       "verified_at": "2026-10-27"
     },
     {
+      "id": "2026-11-into-the-wild",
+      "slug": "2026-11-into-the-wild",
+      "title": "Into the Wild 2026",
+      "summary": "De 9 a 13 de novembro: estreia de Regidrago Dinamax, Reides Coroadas, horas de Batalhas Max e Passe GO com Meltan Dinamax. Alguns bônus continuam até 15/11.",
+      "category": "evento_especial",
+      "tags": [
+        "Into the Wild",
+        "Regidrago Dinamax",
+        "Meltan Dinamax",
+        "Zacian",
+        "Zamazenta",
+        "Global",
+        "GO Pass"
+      ],
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-09T10:00:00-03:00",
+        "end_local": "2026-11-13T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-13T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem rota fixa nem coordenadas exatas de Poképaradas."
+      },
+      "notes": [
+        "Evento principal: 9/11 às 10h até 13/11 às 20h, horário local. O GO Pass e os bônus da Caixa Misteriosa e Bolsa de Moedas continuam até 15/11 às 18h.",
+        "9/11, 18h às 19h: Hora de Reides de Zacian Espada Coroada.",
+        "10/11, 18h às 19h: Hora de Reides de Zamazenta Escudo Coroado.",
+        "11/11, 18h às 19h: Batalhas Max de Registeel Dinamax.",
+        "12/11, 18h às 19h: Batalhas Max de Regidrago Dinamax (estreia).",
+        "13/11, 18h às 19h: Batalhas Max de Latias e Latios Dinamax.",
+        "Reides de cinco estrelas com Zacian Espada Coroada e Zamazenta Escudo Coroado; Reides de três estrelas com Druddigon e Orthworm.",
+        "O GO Pass gratuito inclui encontro com Meltan Dinamax. O Passe Deluxe pago pode conceder uma Garrafa Prateada e recompensas adicionais; preços e disponibilidade estão no anúncio oficial.",
+        "A Garrafa Prateada da recompensa Deluxe expira em 22/11, às 23h59 locais. Recompensas desbloqueadas do GO Pass devem ser resgatadas até 17/11, às 23h59 locais.",
+        "Se o Desafio Global for concluído, serão liberadas melhorias nos efeitos de aventura de Zacian e Zamazenta Coroados e no enchimento do medidor Max.",
+        "Registeel pode conhecer Garra de Metal; Regidrago, Sopro do Dragão; Latias, Bola de Névoa; Latios, Purga Luminosa.",
+        "Reides e Batalhas Max de cinco estrelas podem conceder Fundo Especial após a captura; não é garantido."
+      ],
+      "bonuses": [
+        "Limite de Reides remotas aumenta para 30 entre 9 e 13/11; sem limite nos dias 14 e 15/11.",
+        "Bolsa de Moedas pode dar Gimmighoul Brilhante; Caixa Misteriosa pode dar Meltan Brilhante, com intervalo reduzido para reabertura. Válido até 15/11 às 18h locais.",
+        "Batalhas Max de cinco estrelas em destaque entre 11 e 13/11, com Hora Max das 18h às 19h locais.",
+        "GO Pass Into the Wild gratuito de 9/11 às 10h até 15/11 às 18h; o Deluxe pago oferece outras recompensas e Garrafa Prateada.",
+        "Pokémon temáticos em pesquisas de campo, novos adesivos, encontro com Magnemite, Noibat e Togedemaru na natureza.",
+        "Possibilidade de Fundo Especial em Pokémon capturados depois de Reides e Batalhas Max de cinco estrelas."
+      ],
+      "pokemon": [
+        {
+          "name": "Regidrago Dinamax",
+          "note": "estreia em Batalhas Max de cinco estrelas; em destaque em 12/11; pode aparecer Brilhante"
+        },
+        {
+          "name": "Meltan Dinamax",
+          "note": "estreia como recompensa do GO Pass; pode aparecer Brilhante"
+        },
+        {
+          "name": "Registeel Dinamax",
+          "note": "Batalhas Max de cinco estrelas em 11/11; pode aparecer Brilhante"
+        },
+        {
+          "name": "Latias e Latios Dinamax",
+          "note": "Batalhas Max de cinco estrelas em 13/11; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Zacian Espada Coroada e Zamazenta Escudo Coroado",
+          "note": "Reides de cinco estrelas, com Energia Coroada; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Druddigon e Orthworm",
+          "note": "Reides de três estrelas; podem aparecer Brilhantes"
+        },
+        {
+          "name": "Magnemite, Noibat e Togedemaru",
+          "note": "encontros temáticos na natureza; podem aparecer Brilhantes"
+        }
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "news": {
+        "title": "Into the Wild 2026 traz Regidrago e Meltan Dinamax",
+        "summary": "De 9 a 13 de novembro, com reides Coroadas, estreias Dinamax, limite ampliado de Reides remotas e GO Pass até o dia 15.",
+        "published_on": "2026-10-14"
+      },
+      "verified_at": "2026-10-14",
+      "updated_at": "2026-10-14T17:40:00Z",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO · anúncio Into the Wild",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "confidence": "official"
+        }
+      ]
+    },
+    {
       "id": "2026-11-go-wild-area-global",
       "slug": "2026-11-go-wild-area-global",
       "title": "Pokémon GO Wild Area 2026: Global",
