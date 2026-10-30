@@ -35,7 +35,7 @@ test('Markup e CSS tridimensional preservam artes, acessibilidade e mobile',()=>
 });
 test('Nova versão carrega galeria antes da Home, cache offline incluído',()=>{
   const index=read('index.html'),theme=read('theme.js'),sw=read('sw.js');
-  assert.ok(index.indexOf('spidey-universe-3d.js?v=20261029-focus2')<index.indexOf('player-ui.js?v=20261029-home-stable1'));
+  assert.ok(index.indexOf('spidey-universe-3d.js?v=20261029-focus2')<index.indexOf('player-ui.js?v=20261030-human-editorial1'));
   assert.ok(theme.indexOf("loadStyle('spidey-universe-3d.css'")>theme.indexOf("loadStyle('spidey-premium-unified-20261029.css'"));
   assert.match(sw,/\.\/spidey-universe-3d\.css/);
   assert.match(sw,/\.\/spidey-universe-3d\.js/);
