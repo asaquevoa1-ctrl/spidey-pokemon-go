@@ -12,13 +12,13 @@
     quick.setAttribute('aria-label', 'Acesso rapido do Spidey');
     const heading = document.createElement('div');
     heading.className = 'spidey-home-quick-head';
-    heading.innerHTML = '<div><span class="eyebrow">SEU SPIDEY</span><h2>Acesso rápido</h2></div><p>Direto para o que importa</p>';
+    heading.innerHTML = '<div><span class="eyebrow">SEU SPIDEY</span><h2>Acesso rápido</h2></div><p>Abra a área que você precisa</p>';
     const grid = document.createElement('div');
     grid.className = 'spidey-home-quick-grid';
     const actions = [
-      { label: 'Semana', detail: 'Agenda dos próximos dias', icon: '▦', view: 'weeklyView' },
-      { label: 'FLY', detail: 'Roteiros pelo mundo', icon: '◈', view: 'flyView' },
-      { label: 'Novidades', detail: 'Notícias e anúncios', icon: '✦', view: 'newsView' },
+      { label: 'Semana', detail: 'Eventos por dia', icon: '▦', view: 'weeklyView' },
+      { label: 'FLY', detail: 'Locais e horários', icon: '◈', view: 'flyView' },
+      { label: 'Novidades', detail: 'Anúncios do jogo', icon: '✦', view: 'newsView' },
       { label: 'Selos', detail: 'Coleções e locais', icon: '◉', view: 'stampsView' },
       { label: 'PvP', detail: 'Times e rankings', icon: '⚔', view: 'pvpView' },
       { label: 'Rocket', detail: 'Líderes e recrutas', icon: 'R', view: 'rocketGuideView' },
@@ -60,7 +60,7 @@
       const kicker = intro.querySelector('.eyebrow');
       const title = intro.querySelector('h1');
       if (kicker) kicker.textContent = 'HOJE NO SPIDEY';
-      if (title) title.textContent = 'O melhor da aventura, agora.';
+      if (title) title.textContent = 'Veja o que vale jogar hoje.';
       intro.insertAdjacentElement('afterend', featureSection);
       featureSection.insertAdjacentElement('afterend', quick);
       if (stats) quick.insertAdjacentElement('afterend', stats);
@@ -111,7 +111,7 @@
           original.click();
           window.scrollTo({ top: 0, behavior: 'auto' });
         } else {
-          status.textContent = 'Área indisponível neste momento. Tente novamente pelo menu.';
+          status.textContent = 'Não consegui abrir esta área. Tente pelo menu.';
         }
         return;
       }
@@ -128,7 +128,7 @@
           controls.scrollIntoView({ behavior: 'smooth', block: 'center' });
           const active = [...controls.querySelectorAll('button')].find(item => !item.hidden);
           active?.focus({ preventScroll: true });
-        } else status.textContent = 'Os alertas não estão disponíveis neste momento.';
+        } else status.textContent = 'Não foi possível abrir os alertas agora.';
       }
     });
   }
