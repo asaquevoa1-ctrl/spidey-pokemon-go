@@ -6,6 +6,7 @@ import json
 import re
 from datetime import datetime, timezone
 from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -120,11 +121,39 @@ def normalize(raw: dict) -> list[dict]:
     return members
 
 
+class _PageText(HTMLParser):
+    """Visible page text; tag boundaries often split a published update date."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.parts: list[str] = []
+        self.hidden_depth = 0
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in ("script", "style", "noscript"):
+            self.hidden_depth += 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in ("script", "style", "noscript") and self.hidden_depth:
+            self.hidden_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if not self.hidden_depth:
+            self.parts.append(data)
+
+
 def source_date(page: str) -> str:
-    match = re.search(r"Updated on\s+([A-Za-z]+\s+\d{1,2},?\s+\d{4})", unescape(page), re.I)
+    parser = _PageText()
+    parser.feed(page)
+    # The source changed from plain "Updated on October 2, 2026" to HTML
+    # whose tags break the phrase. Read only visible text and fail closed
+    # if the update date is genuinely absent or malformed.
+    visible = re.sub(r"\s+", " ", unescape(" ".join(parser.parts)))
+    match = re.search(r"\bUpdated\s+on\s+([A-Za-z]+\s+\d{1,2}\s*,?\s*\d{4})\b", visible, re.I)
     if not match:
         raise ValueError("Leek Duck não informou a data da escalação; não publicar nova revisão")
-    return datetime.strptime(match.group(1).replace(",", ""), "%B %d %Y").date().isoformat()
+    label = re.sub(r"\s*,\s*", " ", match.group(1)).strip()
+    return datetime.strptime(label, "%B %d %Y").date().isoformat()
 
 
 def verify_page(raw: dict, page: str) -> None:

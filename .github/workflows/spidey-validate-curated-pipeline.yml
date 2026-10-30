@@ -43,6 +43,9 @@ jobs:
       - name: Rodar testes do pipeline
         run: python -m unittest -v test_pipeline_stability.py test_spidey_approval.py test_spidey_geo.py test_world_event_times.py test_editorial_state.py test_sps_resilience.py
 
+      - name: Validar leitura de data e escalações Rocket (offline)
+        run: python -m unittest -v scripts.test_rocket_lineups
+
       - name: Validar entrada dos quatro monitores
         shell: bash
         run: |
