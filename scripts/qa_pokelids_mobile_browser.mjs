@@ -32,8 +32,14 @@ try{
     // Regression: 482 image tiles must never be mounted at once on Android.
     const tileCount = () => page.locator('#stampGalleryV2 .stamp-tile-v2').count();
     if (await tileCount() !== 36) throw Error('Initial PokéLid gallery should render only 36 tiles');
+    const firstTile = await page.locator('#stampGalleryV2 .stamp-tile-v2').first().getAttribute('data-stamp-stop-id');
     await page.locator('#stampLoadMoreV2').click({noWaitAfter:true});
-    if (await tileCount() !== 72) throw Error('Load-more failed to append the next PokéLid batch');
+    if (await tileCount() !== 36) throw Error('Mobile pagination mounted more than 36 PokéLids');
+    if (await page.locator('#stampGalleryV2 .stamp-tile-v2').first().getAttribute('data-stamp-stop-id') === firstTile)
+      throw Error('Next page did not change PokéLid tiles');
+    await page.locator('#stampPrevPageV2').click({noWaitAfter:true});
+    if (await page.locator('#stampGalleryV2 .stamp-tile-v2').first().getAttribute('data-stamp-stop-id') !== firstTile)
+      throw Error('Previous page did not restore PokéLid tiles');
     await page.locator('#stampRegionV2').selectOption({index:1});
     if (await tileCount() > 36) throw Error('Prefecture filter failed to reset the mobile gallery limit');
     await page.locator('#stampRegionV2').selectOption('all');
