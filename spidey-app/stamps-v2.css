@@ -215,6 +215,14 @@
   gap: 10px;
 }
 
+.stamp-gallery-more-v2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.stamp-gallery-more-v2[hidden] { display: none; }
+.stamp-gallery-more-v2 .action-btn { min-height: 44px; }
+
 .stamp-tile-v2 {
   min-width: 0;
   overflow: hidden;
