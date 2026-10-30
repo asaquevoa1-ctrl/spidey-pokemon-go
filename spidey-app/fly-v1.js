@@ -4,6 +4,13 @@
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const brazil=d=>new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(d);
   let points=[],selected='',mode='essential';
+  // Rewriting long routes on every clock tick causes unnecessary mobile layout and scrolling work.
+  const renderedMarkup = new WeakMap();
+  function setMarkupIfChanged(node,markup){
+    if(!node || renderedMarkup.get(node)===markup)return;
+    node.innerHTML=markup;
+    renderedMarkup.set(node,markup);
+  }
   function events(){return state.events.filter(core.eligible).sort((a,b)=>a.schedule.start_local.localeCompare(b.schedule.start_local))}
   // O Holofote acontece às 18h–19h NO FUSO DE CADA CIDADE.
   // Mostre um atalho temporário a partir das 12 horas anteriores à primeira
@@ -63,26 +70,26 @@
     const previews=s.querySelector('#flyUpcomingRoutes');
     if(previews){
       previews.hidden=preview.length===0;
-      previews.innerHTML=preview.length ? `<h2>ROTAS ATIVAS E PRÓXIMAS</h2><div class="fly-upcoming-items">
+      setMarkupIfChanged(previews,preview.length ? `<h2>ROTAS ATIVAS E PRÓXIMAS</h2><div class="fly-upcoming-items">
         ${preview.map(item=>{
           const status=item.active.length?`ATIVO AGORA: ${item.active.slice(0,2).map(p=>p.name).join(' • ')}`:item.next?`Próxima janela: ${item.next.name} · ${brazil(item.next.start)}`:'Últimas regiões';
           return `<button class="fly-upcoming-item" type="button" data-fly-select="${esc(item.event.id)}" aria-label="Abrir rota de ${esc(item.event.title)}">
             <span>${esc(item.event.title)}</span><small>${esc(status)} (Brasília) · ${points.length} referências</small>
           </button>`;
-        }).join('')}</div>` : '';
+        }).join('')}</div>` : '');
     }
     const feature=s.querySelector('#flyMorelullSpotlight');
     if(feature){
       feature.hidden=!spotlight;
       if(spotlight){
         const first=spotlight.first;
-        feature.innerHTML=`<div class="fly-spotlight-copy">
+        setMarkupIfChanged(feature,`<div class="fly-spotlight-copy">
           <span class="eyebrow">🍄 HOLOFOTE MUNDIAL • 22/10</span>
           <h2>Morelull no FLY</h2>
           <p><strong>18h às 19h no horário de cada cidade · 2× Poeira Estelar por captura</strong></p>
           <p aria-live="polite">${esc(spotlight.status)}</p>
           <small>Primeira referência: ${esc(first.name)} · ${brazil(first.start)} (Brasília) • ${spotlight.route.length} locais em todos os fusos. São referências geográficas, não pontos de captura confirmados.</small>
-        </div><button class="action-btn gold" type="button" data-fly-morespotlight>Ver rota do Morelull →</button>`;
+        </div><button class="action-btn gold" type="button" data-fly-morespotlight>Ver rota do Morelull →</button>`);
       }
     }
     if(points.length && (!selected||!list.some(e=>e.id===selected))){
@@ -101,10 +108,10 @@
     s.querySelector('#flyCount').textContent=String(rows.length);
     const last=all.reduce((r,p)=>!r||p.end>r.end?p:r,null);
     s.querySelector('#flyLast').textContent=last?`Última janela: ${last.name} · até ${brazil(last.end)} (Brasília)`:'Horário não informado';
-    s.querySelector('#flyRouteList').innerHTML=rows.length?rows.map((p,i)=>{
+    setMarkupIfChanged(s.querySelector('#flyRouteList'),rows.length?rows.map((p,i)=>{
       const q=`${p.lat},${p.lon}`,date=e.schedule.start_local.slice(8,10)+'/'+e.schedule.start_local.slice(5,7);
       return `<article class="fly-point ${['ATIVO AGORA','ÚLTIMA CHANCE'].includes(p.status)?'fly-active':''}"><span class="fly-order">${String(i+1).padStart(2,'0')}</span><div class="fly-place"><span class="fly-state">${esc(p.status)}</span><h3>${esc(p.flag)} ${esc(p.name)}</h3>${p.featuredPokemon?`<p class="fly-regional-pokemon"><strong>${esc(p.featuredPokemon)} Dinamax nesta região</strong></p>`:e.regional_pokemon?'<p>Pokémon regional a confirmar neste local.</p>':''}<p>Local: ${esc(date)} · ${esc(e.schedule.start_local.slice(11,16))} → ${esc(e.schedule.end_local.slice(11,16))}</p><p><strong>Brasília: ${brazil(p.start)} → ${brazil(p.end)}</strong></p>${brazil(p.start).slice(0,5)!==date?'<small>O início cai em outro dia em Brasília.</small>':''}<small>Local aproximado · confira no mapa</small><code>${q}</code></div><div class="fly-point-actions"><button class="action-btn" data-coord="${q}">Copiar coordenadas</button><a class="action-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Abrir mapa</a></div></article>`;
-    }).join(''):'<p class="empty">Ainda não temos os horários deste evento.</p>';
+    }).join(''):'<p class="empty">Ainda não temos os horários deste evento.</p>');
     s.querySelectorAll('[data-fly-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.flyMode===mode)));
   }
   function open(id){selected=id;mode='all';render();setView('flyView');if(dialog.open)dialog.close()}
@@ -119,7 +126,10 @@
       if(quick){selected=quick.dataset.flySelect;mode='all';render();return}
       const spotlightButton=e.target.closest('[data-fly-morespotlight]');if(spotlightButton){selected=MORELULL_ID;mode='all';render();return}const f=e.target.closest('[data-fly-mode]');if(f){mode=f.dataset.flyMode;render();return}const c=e.target.closest('[data-coord]');if(!c)return;try{await navigator.clipboard.writeText(c.dataset.coord);showToast('Coordenadas copiadas.')}catch{prompt('Copie as coordenadas:',c.dataset.coord)}});
     core.loadPoints().then(p=>{points=p;window.SPIDEY_FLY_POINTS=p;showSourceCredits();render()}).catch(()=>{s.querySelector('#flyRouteList').innerHTML='<p class="empty">Não foi possível carregar a rota. Recarregue para tentar novamente.</p>'});
-    window.addEventListener('spideycontentready',render);setInterval(()=>{if(!s.hidden)render()},30000);
+    window.addEventListener('spideycontentready',render);
+    // Text clocks are minute-granular; no benefit in rebuilding a multi-stop route every 30s.
+    setInterval(()=>{if(!document.hidden&&!s.hidden)render()},60000);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!s.hidden)render()});
   }
   window.SpideyFly=Object.freeze({open,render});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();
