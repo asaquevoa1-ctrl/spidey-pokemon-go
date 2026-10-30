@@ -93,7 +93,7 @@ try {
       await header.waitFor({state:'visible'});
       const emblem=header.locator('.spidey-cockpit-emblem');
       assert.ok(await emblem.evaluate(el=>el.complete&&el.naturalWidth>0),'Official S cosmic emblem failed');
-      assert.ok((await header.innerText()).includes('Seu universo.'),'Premium opening not updated');
+      assert.ok((await header.innerText()).includes('O que vale jogar hoje?'),'Premium opening not updated');
       const heroLink=header.locator('.spidey-cockpit-explore');
       assert.equal(await heroLink.getAttribute('href'),'#spideyUniverse3D');
       const layout=await cockpit.evaluate(el=>{

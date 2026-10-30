@@ -9,7 +9,7 @@ test('Home Premium inclui estilos e comportamento com cache versionado', () => {
   const html = read('index.html');
   const sw = read('sw.js');
   assert.match(html, /home-premium-20261029\.css\?v=20261029-hero2/);
-  assert.match(html, /home-premium-20261029\.js\?v=20261029-hero2/);
+  assert.match(html, /home-premium-20261029\.js\?v=20261030-human-editorial1/);
   assert.match(sw, /\.\/home-premium-20261029\.css/);
   assert.match(sw, /\.\/home-premium-20261029\.js/);
 });

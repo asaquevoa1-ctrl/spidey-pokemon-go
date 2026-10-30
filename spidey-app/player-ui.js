@@ -40,7 +40,7 @@
     const image=art(e),pokemon=(e.pokemon||[]).map(p=>typeof p==='string'?p:`${p.name}${p.note?' — '+p.note:''}`),notes=(e.notes||[]).filter(n=>typeof n==='string');
     const official=!image&&e.official_media?.classification==='official_illustration'?e.official_media:null;
     const visual=image?window.SpideyPlayer.image(e,fly):official?`<figure class="space-official-figure"><img src="${esc(official.file)}?v=${esc(official.sha256.slice(0,12))}" width="${official.width}" height="${official.height}" alt="${esc(official.alt)}"><figcaption>Imagem do anúncio oficial · ${esc(official.credit||'Pokémon GO')}</figcaption></figure>`:'';
-    return `<article class="player-event ${fly?'player-event--fly':''} ${image?'has-poster':official?'has-official-media':'without-poster'}">${visual}<div class="player-event-copy"><span class="player-kicker">${esc(spideyCategoryLabel(e))}</span><h2>${esc(title(e))}</h2><p class="player-time">${esc(time(e))}</p>${window.SpideyNightOutHighlight?.(e)||''}<div class="player-facts">${facts(e).map(f=>`<p>${esc(f)}</p>`).join('')||'<p>Os detalhes deste evento ainda serão anunciados.</p>'}</div>${pokemon.length?`<h3>Pokémon em destaque</h3><ul>${pokemon.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}${notes.length?`<details><summary>O que mais você precisa saber</summary><ul>${notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></details>`:''}<div class="player-actions"><button class="action-btn" data-play-detail="${esc(e.id)}">Todos os detalhes</button>${official&&e.id==='2026-10-world-space-week'?'<button class="action-btn gold" data-open-space-museums>Ver museus e fundos</button>':''}${!fly&&window.SpideyFlyCore?.eligible(e)?`<button class="action-btn gold" data-play-fly="${esc(e.id)}">Jogar pelo mundo →</button>`:''}</div>${e.source?.url?`<a class="player-source" href="${esc(e.source.url)}" target="_blank" rel="noopener">${esc(source(e))} ↗</a>`:''}</div></article>`;
+    return `<article class="player-event ${fly?'player-event--fly':''} ${image?'has-poster':official?'has-official-media':'without-poster'}">${visual}<div class="player-event-copy"><span class="player-kicker">${esc(spideyCategoryLabel(e))}</span><h2>${esc(title(e))}</h2><p class="player-time">${esc(time(e))}</p>${window.SpideyNightOutHighlight?.(e)||''}<div class="player-facts">${facts(e).map(f=>`<p>${esc(f)}</p>`).join('')||'<p>Ainda não há detalhes confirmados para este evento.</p>'}</div>${pokemon.length?`<h3>Pokémon em destaque</h3><ul>${pokemon.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}${notes.length?`<details><summary>Outras informações</summary><ul>${notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></details>`:''}<div class="player-actions"><button class="action-btn" data-play-detail="${esc(e.id)}">Ver detalhes</button>${official&&e.id==='2026-10-world-space-week'?'<button class="action-btn gold" data-open-space-museums>Ver museus e fundos</button>':''}${!fly&&window.SpideyFlyCore?.eligible(e)?`<button class="action-btn gold" data-play-fly="${esc(e.id)}">Ver locais e horários →</button>`:''}</div>${e.source?.url?`<a class="player-source" href="${esc(e.source.url)}" target="_blank" rel="noopener">${esc(source(e))} ↗</a>`:''}</div></article>`;
   }
   function row(e){const image=art(e);return `<button class="player-row" data-play-detail="${esc(e.id)}">${image?window.SpideyPlayer.image(e,true):`<span class="player-date" aria-hidden="true">${esc((e.schedule?.start_local||e.schedule?.start_date)?.slice(8,10)||'—')}<small>${esc((e.schedule?.start_local||e.schedule?.start_date)?.slice(5,7)||'')}</small></span>`}<span><small>${esc(spideyCategoryLabel(e))}</small><strong>${esc(title(e))}</strong><span>${esc(time(e))}</span>${facts(e)[0]?`<span class="player-row-bonus">${esc(facts(e)[0])}</span>`:''}</span><span aria-hidden="true">›</span></button>`}
   function homeSelection(events,points,now=new Date()){
@@ -72,7 +72,7 @@
     const {focus,dated,active,upcoming}=selection;
     lastTimelineSignature=homeTimelineSignature(selection,now);
     root.querySelector('#spideyUniverse3D')?.spideyDispose?.();
-    root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${focus?panel(focus):'<div class="spidey-home-awaiting" role="status"><strong>Seu universo está pronto.</strong><p>Os eventos aparecerão assim que a agenda estiver disponível. Você já pode explorar as outras áreas.</p></div>'}${focus?(window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''):''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
+    root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>O que está rolando agora?</h1><p>Confira os eventos ativos, veja os bônus e planeje sua próxima jogada.</p></header><section aria-label="Destaque do dia">${focus?panel(focus):'<div class="spidey-home-awaiting" role="status"><strong>A agenda ainda não apareceu.</strong><p>Enquanto isso, você pode abrir Semana, FLY, Selos ou PvP.</p></div>'}${focus?(window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''):''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Próximos eventos</h2>${upcoming.map(row).join('')||'<p>Nada mais nesta seleção por enquanto. Confira a Semana para ver a programação.</p>'}</section></div>`;
     // Esta e a Home VISIVEL: os blocos legados experience-* estao ocultos pelo Player UI.
     // Construir o dashboard sobre #playerHome, sem substituir os posters aprovados.
     const head=root.querySelector('.player-home-head');
@@ -80,8 +80,8 @@
       head.classList.add('spidey-premium-home-head','spidey-cockpit-home-head');
       const kicker=head.querySelector('span'),heading=head.querySelector('h1'),description=head.querySelector('p');
       if(kicker)kicker.textContent='SPIDEY · '+new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now);
-      if(heading)heading.textContent='Seu universo. Seu próximo desafio.';
-      if(description)description.textContent='O melhor do Pokémon GO em uma experiência feita para explorar.';
+      if(heading)heading.textContent='O que vale jogar hoje?';
+      if(description)description.textContent='Veja o que está ativo, confira horários e escolha seu próximo evento.';
       // O S cósmico oficial, não um novo logo nem a antiga aranha.
       const emblem=document.createElement('img');
       emblem.className='spidey-cockpit-emblem';
@@ -104,9 +104,9 @@
       const kpis=document.createElement('div');
       kpis.className='spidey-premium-kpis';
       kpis.setAttribute('aria-label','Seleção da agenda');
-      kpis.innerHTML='<div class="spidey-premium-kpi"><span>Em destaque</span><strong>'+(focus?1:0)+'</strong><small>Seleção da Home</small></div>'
-        +'<div class="spidey-premium-kpi"><span>Outros ativos</span><strong>'+active.length+'</strong><small>Além do destaque</small></div>'
-        +'<div class="spidey-premium-kpi"><span>Próximos</span><strong>'+upcoming.length+'</strong><small>Na seleção de eventos</small></div>';
+      kpis.innerHTML='<div class="spidey-premium-kpi"><span>Em destaque</span><strong>'+(focus?1:0)+'</strong><small>Evento selecionado</small></div>'
+        +'<div class="spidey-premium-kpi"><span>Outros ativos</span><strong>'+active.length+'</strong><small>Também em andamento</small></div>'
+        +'<div class="spidey-premium-kpi"><span>Próximos</span><strong>'+upcoming.length+'</strong><small>Nesta página</small></div>';
       head.after(kpis);
     }
     const stage=root.querySelector('section[aria-label="Destaque do dia"]');
@@ -114,7 +114,7 @@
       stage.classList.add('spidey-premium-feature-stage');
       const stageTitle=document.createElement('div');
       stageTitle.className='spidey-premium-stage-heading';
-      stageTitle.innerHTML='<span class="spidey-premium-stage-icon" aria-hidden="true">✦</span><div><span>'+(focus&&art(focus)?'ARTE PREMIUM & EVENTO':'EVENTO EM DESTAQUE')+'</span><h2>Destaque da agenda</h2></div>';
+      stageTitle.innerHTML='<span class="spidey-premium-stage-icon" aria-hidden="true">✦</span><div><span>'+(focus&&art(focus)?'EVENTO COM ARTE':'EVENTO EM DESTAQUE')+'</span><h2>Evento em destaque</h2></div>';
       stage.prepend(stageTitle);
     }
     const feed=root.querySelector('.player-feed');
@@ -122,12 +122,12 @@
       const nav=document.createElement('nav');
       nav.className='spidey-premium-nav';
       nav.setAttribute('aria-label','Atalhos do aplicativo');
-      nav.innerHTML='<div class="spidey-premium-nav-head"><div><span>EXPLORE O SPIDEY</span><h2>Tudo a um toque</h2></div><small>Menu completo no ☰</small></div>'
+      nav.innerHTML='<div class="spidey-premium-nav-head"><div><span>NAVEGUE PELO SPIDEY</span><h2>Escolha por onde começar</h2></div><small>Menu completo no ☰</small></div>'
         +'<div class="spidey-premium-nav-grid">'
-        +'<button type="button" data-premium-view="newsView"><span aria-hidden="true">✦</span><strong>Novidades</strong><small>Notícias e eventos</small></button>'
-        +'<button type="button" data-premium-view="weeklyView"><span aria-hidden="true">▦</span><strong>Semana</strong><small>Programação</small></button>'
-        +'<button type="button" data-premium-view="flyView"><span aria-hidden="true">◈</span><strong>FLY</strong><small>Rotas e fusos</small></button>'
-        +'<button type="button" data-premium-view="stampsView"><span aria-hidden="true">◉</span><strong>Selos</strong><small>Coleções</small></button>'
+        +'<button type="button" data-premium-view="newsView"><span aria-hidden="true">✦</span><strong>Novidades</strong><small>Anúncios e atualizações</small></button>'
+        +'<button type="button" data-premium-view="weeklyView"><span aria-hidden="true">▦</span><strong>Semana</strong><small>Eventos por dia</small></button>'
+        +'<button type="button" data-premium-view="flyView"><span aria-hidden="true">◈</span><strong>FLY</strong><small>Locais e horários</small></button>'
+        +'<button type="button" data-premium-view="stampsView"><span aria-hidden="true">◉</span><strong>Selos</strong><small>Locais e selos</small></button>'
         +'<button type="button" data-premium-view="pvpView"><span aria-hidden="true">⚔</span><strong>PvP</strong><small>Rankings e times</small></button>'
         +'<button type="button" data-premium-view="rocketGuideView"><span aria-hidden="true">R</span><strong>Rocket</strong><small>Guias de batalha</small></button></div>';
       feed.before(nav);
