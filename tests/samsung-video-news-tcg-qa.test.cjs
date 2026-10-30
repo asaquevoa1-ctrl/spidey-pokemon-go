@@ -52,7 +52,7 @@ test('Startup is bounded and deploy refreshes PWA assets on Samsung',()=>{
   assert.ok(load('loading-screen.css').includes('spidey-splash-failsafe'));
   assert.ok(html.includes('2100);</script>'));
   assert.ok(html.includes('samsung-video-fixes-20261019.css?v=20261019-samsung3'));
-  assert.ok(html.includes('loading-screen.js?v=20261020-fast1'));
+  assert.ok(html.includes('loading-screen.js?v=20261029-motion1'));
   assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.ok(sw.includes("'./samsung-video-fixes-20261019.css'"));
 });
