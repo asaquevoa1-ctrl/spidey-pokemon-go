@@ -47,7 +47,7 @@ test('cache offline inclui CSS/JS Motion e nova versão',()=>{
  const html=read('index.html'),sw=read('sw.js');
  assert.match(html,/SPIDEY_BUILD='2026-10-29-motion1'/);
  assert.match(html,/theme\.js\?v=20261029-motion1/);
- assert.match(html,/app\.js\?v=20261029-motion1/);
+ assert.match(html,/app\.js\?v=20261029-visiblehome1/);
  assert.match(html,/loading-screen\.js\?v=20261029-motion1/);
  assert.match(sw,/\.\/spidey-motion\.js/);
  assert.match(sw,/\.\/spidey-motion\.css/);
