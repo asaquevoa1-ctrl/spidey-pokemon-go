@@ -35,6 +35,25 @@ class RocketSnapshotTests(unittest.TestCase):
         old = copy.deepcopy(self.snapshot)
         self.assertEqual(run(self.raw, self.mock_page, old), old)
 
+    def test_visible_html_date_can_be_split_across_tags_without_guessing(self):
+        html = (
+            '<!doctype html><html><head><title>Team GO Rocket Lineups</title>'
+            '<script>const decoy = "Updated on October 30, 2026";</script></head>'
+            '<body><h1>Team GO Rocket Lineups</h1>'
+            '<div class="source-date">Updated <span>on</span> '
+            '<time datetime="2026-10-02"><strong>October</strong> 2, 2026</time></div>'
+            '<p>Giovanni Cliff Arlo Sierra Persian Cubone Alolan Grimer Pancham</p>'
+            '</body></html>'
+        )
+        self.assertEqual(source_date(html), "2026-10-02")
+        self.assertEqual(source_date("<p>Updated on October <b>2</b> , 2026</p>"), "2026-10-02")
+        self.assertEqual(source_date("Updated on October 2, 2026"), "2026-10-02")
+        self.assertEqual(run(self.raw, html, self.snapshot), self.snapshot)
+        with self.assertRaises(ValueError):
+            source_date('<script>Updated on October 2, 2026</script><p>Updated on yesterday</p>')
+        with self.assertRaises(ValueError):
+            source_date('<p>Updated <b>on</b> unknown date</p>')
+
     def test_fail_closed_on_missing_or_malicious_source(self):
         bad = copy.deepcopy(self.raw)
         del bad["Giovanni"]
