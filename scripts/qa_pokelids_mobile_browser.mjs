@@ -29,6 +29,15 @@ try{
     const card=page.locator('.stamp-card').filter({hasText:'PokéLids — Japão'});
     await card.waitFor({state:'visible',timeout:15000});
     await card.click();
+    // Regression: 482 image tiles must never be mounted at once on Android.
+    const tileCount = () => page.locator('#stampGalleryV2 .stamp-tile-v2').count();
+    if (await tileCount() !== 36) throw Error('Initial PokéLid gallery should render only 36 tiles');
+    await page.locator('#stampLoadMoreV2').click({noWaitAfter:true});
+    if (await tileCount() !== 72) throw Error('Load-more failed to append the next PokéLid batch');
+    await page.locator('#stampRegionV2').selectOption({index:1});
+    if (await tileCount() > 36) throw Error('Prefecture filter failed to reset the mobile gallery limit');
+    await page.locator('#stampRegionV2').selectOption('all');
+    if (await tileCount() !== 36) throw Error('Clearing the filter failed to restore the first batch');
     await page.locator('#stampActiveStop .pokelid-place-copy code').waitFor({state:'visible',timeout:12000});
     const v=await page.locator('#stampActiveStop .pokelid-place-copy code').textContent();
     if(v.trim()!=='43.585848,141.423898')throw Error('Official Ishikari coordinate unavailable: '+v);
