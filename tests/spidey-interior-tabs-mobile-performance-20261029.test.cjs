@@ -50,6 +50,7 @@ test('News retains unchanged images; Rocket retains expanded panels; PvP search 
   assert.match(rocket,/const expandedMembers = new Set\(\)/);
   assert.match(rocket,/article\.open = expandedMembers\.has\(m\.id\)/);
   assert.match(rocket,/key !== renderedKey/);
+  assert.match(rocket,/if\(!matches\.length\)plain\(board/);
   assert.match(rocket,/addEventListener\('toggle'/);
   assert.match(pvp,/searchRenderTimer=setTimeout/);
   assert.match(pvp,/cancelSearchRender\(\)/);
