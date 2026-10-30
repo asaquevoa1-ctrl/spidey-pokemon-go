@@ -92,10 +92,10 @@
     const key = [catalogRevision, selected, q].join('|');
     if(key !== renderedKey){
       board.replaceChildren(...matches.map(card));
+      if(!matches.length)plain(board, 'p', 'Nenhum resultado. Tente o nome de um Pokémon, líder ou tipo.', 'rocket-empty');
       renderedKey = key;
     }
     count.textContent = matches.length + (matches.length === 1 ? ' adversário encontrado' : ' adversários encontrados');
-    if (!matches.length) plain(board, 'p', 'Nenhum resultado. Tente o nome de um Pokémon, líder ou tipo.', 'rocket-empty');
   }
 
   async function load(force = false) {
