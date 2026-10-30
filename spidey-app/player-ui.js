@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   let worldPoints = null, worldError = false;
+  let lastTimelineSignature = null;
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const title=e=>window.SpideyVisualV3?.localizeTitle(e.title)||String(e.title||'').replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:');
   function art(e){
@@ -53,9 +54,23 @@
     const focus=scheduled.find(e=>art(e)&&window.SpideyFlyCore?.eligible(e)&&activeAt(e))||scheduled.find(e=>art(e)&&activeAt(e))||scheduled.find(e=>window.SpideyFlyCore?.eligible(e)&&activeAt(e))||scheduled.find(e=>e.schedule?.start_local?.slice(0,10)===today&&window.SpideyFlyCore?.eligible(e))||scheduled.find(e=>e.id==='2026-10-world-space-week'&&activeAt(e))||scheduled.find(e=>art(e))||scheduled[0];
     return {focus,dated:live.filter(dateToday),active:live.filter(e=>e.id!==focus?.id&&activeAt(e)),upcoming:live.filter(e=>e.id!==focus?.id&&!dateToday(e)&&!activeAt(e)).slice(0,6)};
   }
+  // A Home Premium não deve destruir imagens e WebGL a cada minuto sem mudança de agenda.
+  // Renderizações por conteúdo novo continuam imediatas; esta assinatura vale só para o relógio.
+  function homeTimelineSignature(selection,now){
+    const ids=list=>list.map(event=>event.id).join('|');
+    return [brazilDateKey(now),selection.focus?.id||'',ids(selection.dated),ids(selection.active),ids(selection.upcoming)].join('::');
+  }
+  function refreshHomeIfChanged(){
+    const root=document.getElementById('playerHome');
+    if(!root || document.hidden || document.getElementById('calendarView')?.hidden)return;
+    const now=new Date(),selection=homeSelection(state.events,worldPoints,now);
+    if(homeTimelineSignature(selection,now)!==lastTimelineSignature)renderHome();
+  }
   function renderHome(){
     const root=document.getElementById('playerHome');if(!root)return;
-    const now=new Date(),{focus,dated,active,upcoming}=homeSelection(state.events,worldPoints,now);
+    const now=new Date(),selection=homeSelection(state.events,worldPoints,now);
+    const {focus,dated,active,upcoming}=selection;
+    lastTimelineSignature=homeTimelineSignature(selection,now);
     root.querySelector('#spideyUniverse3D')?.spideyDispose?.();
     root.innerHTML=`<header class="player-home-head"><span>${esc(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'numeric',month:'long'}).format(now))}</span><h1>Seu próximo encontro.</h1><p>Escolha o evento. Aproveite o bônus. Jogue pelo mundo.</p></header><section aria-label="Destaque do dia">${focus?panel(focus):'<div class="spidey-home-awaiting" role="status"><strong>Seu universo está pronto.</strong><p>Os eventos aparecerão assim que a agenda estiver disponível. Você já pode explorar as outras áreas.</p></div>'}${focus?(window.SpideyWorldRoute?.render(focus,worldPoints,now,worldError)||''):''}</section><div class="player-feed">${dated.length?`<section><h2>Eventos de hoje · horário a confirmar</h2>${dated.map(row).join('')}</section>`:''}${active.length?`<section><h2>Acontecendo agora <span>${active.length}</span></h2>${active.map(row).join('')}</section>`:''}<section><h2>Vem por aí</h2>${upcoming.map(row).join('')||'<p>Novos eventos serão anunciados em breve.</p>'}</section></div>`;
     // Esta e a Home VISIVEL: os blocos legados experience-* estao ocultos pelo Player UI.
@@ -148,7 +163,10 @@
     window.addEventListener('spideycontentready',renderHome);
     window.addEventListener('spideycontentsettled',()=>{if(!state.events.length)renderHome()});
     renderHome();
-    setInterval(()=>{if(!home.hidden)renderHome()},60000);
+    // Sem recarregar toda a Home durante leitura, swipe ou navegação do carrossel.
+    setInterval(refreshHomeIfChanged,60000);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshHomeIfChanged()});
+    window.addEventListener('spideyviewchange',event=>{if(event.detail?.to==='calendarView')refreshHomeIfChanged()});
   }
   window.SpideyPlayer=Object.freeze({panel,row,art,image,facts,time,title,source,renderHome,homeSelection,reviewCorrection});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
