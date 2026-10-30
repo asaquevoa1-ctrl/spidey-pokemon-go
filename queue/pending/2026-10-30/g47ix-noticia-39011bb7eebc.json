@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "👻 Gigantamax Gengar will be available in 6-star Max Battles at Paseo de la Reforma in Mexico City!\n\n📅 Oct 31, 10:00 a.m. to Nov 5, 8:00 p.m. local time\n\n✨ If you’re lucky, you may encounter a Shiny Gigantamax Gengar and if you are in Mexico you can get one with a Location Background!\n\n🌐 Remotes should be available (but no bg for you)\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2116168087808376993",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2116168087808376993",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-10-30T16:41:58.004919+00:00"
+}
