@@ -250,6 +250,34 @@ try {
       // Return to Home through its existing tab; do not create another nav.
       await page.locator('.app-tab[data-view="calendarView"]').first()
         .evaluate(el=>el.click());
+      // Visual-motion contract: actual route change, not artificial loading.
+      assert.equal(await page.evaluate(()=>typeof window.SpideyMotion?.revealTheme),'function');
+      await page.locator('.app-tab[data-view="pvpView"]').first().evaluate(el=>el.click());
+      const motion=await page.locator('#pvpView').evaluate(el=>({
+        name:getComputedStyle(el).animationName,hidden:el.hidden
+      }));
+      assert.equal(motion.hidden,false,'Premium route became hidden');
+      assert.ok(motion.name.includes('spidey-scene-arrive'),
+        'Premium route should animate only on real navigation: '+motion.name);
+      await page.locator('.app-tab[data-view="calendarView"]').first().evaluate(el=>el.click());
+      const alternate=theme==='dark'?'light':'dark';
+      await page.locator('#themeSelect').evaluate((el,value)=>{
+        el.value=value;
+        el.dispatchEvent(new Event('change',{bubbles:true}));
+      },alternate);
+      await page.waitForFunction(t=>document.documentElement.dataset.theme===t,alternate,{timeout:3500});
+      await page.waitForTimeout(530);
+      assert.equal(await page.evaluate(()=>localStorage.getItem('spidey-theme')),alternate,
+        'Manual theme selection failed to persist');
+      await page.locator('#themeSelect').evaluate((el,value)=>{
+        el.value=value;
+        el.dispatchEvent(new Event('change',{bubbles:true}));
+      },theme);
+      await page.waitForFunction(t=>document.documentElement.dataset.theme===t,theme,{timeout:3500});
+      await page.waitForTimeout(530);
+      checks.push({profile:'Premium motion Samsung',theme,sceneTransition:'real view',
+        themeReveal:'manual and reversible',splashBound:elapsed<6500});
+
       checks.push({profile:'Samsung Galaxy Android 14 simulated',width:390,theme,images:loaded.length,splashMs:elapsed,share:'ok',background:'ok'});
     }finally{await context.close();}
   }
