@@ -558,6 +558,7 @@ window.SpideyOpenSharedEvent = (id) => {
 };
 
 function setView(viewId) {
+  const previousView=document.querySelector('.app-view:not([hidden])')?.id;
   if (!document.getElementById(viewId) || document.getElementById(viewId)?.classList.contains('app-view') === false) viewId='calendarView';
   window.SpideyNavigation?.trackView(viewId);
   document.querySelectorAll('.app-view').forEach((view) => { view.hidden = view.id !== viewId; });
@@ -574,6 +575,7 @@ function setView(viewId) {
     if (typeof renderMapV2 === 'function') renderMapV2();
     else renderMapSummary();
   }
+  if(previousView!==viewId) window.dispatchEvent(new CustomEvent('spideyviewchange',{detail:{from:previousView,to:viewId}}));
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
