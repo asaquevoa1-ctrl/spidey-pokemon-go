@@ -24,6 +24,8 @@
         splash.hidden = true;
         splash.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('spidey-loading');
+        window.dispatchEvent(new Event('spideylaunchcomplete'));
+        window.SpideyMotion?.revealHome?.();
       }, reducedMotion ? 0 : 290);
     }, reducedMotion ? 0 : Math.max(0, MIN_MS - elapsed));
   }
