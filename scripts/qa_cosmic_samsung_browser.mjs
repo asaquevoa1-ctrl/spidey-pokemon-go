@@ -337,6 +337,17 @@ try {
   assert.ok(Date.now()-domReadySlow<3500,'Slow catalog must not trap the Samsung behind splash '+(Date.now()-domReadySlow)+'ms after DOM ready');
   assert.ok(slowSplashMs<6500,'Unexpected end-to-end delay with slow catalog '+slowSplashMs+'ms');
   assert.ok(await page.locator('.topbar').isVisible(),'App must be visible before the slow catalog completes');
+  // Samsung físico mostrou apenas os dias da semana enquanto o catálogo atrasava.
+  // A grade e o S Premium devem ser independentes do fetch.
+  assert.equal(await page.locator('#calendar .calendar-day').count(),42,
+    'O calendário deve mostrar os 42 dias enquanto os eventos carregam');
+  await page.locator('#playerHome .spidey-cockpit-home-head').waitFor({state:'visible',timeout:2500});
+  assert.ok(await page.locator('#playerHome .spidey-home-awaiting').count(),
+    'Sem catálogo ainda é preciso haver uma Home Premium funcional');
+  assert.equal(await page.locator('#spideyHomeQuick').isVisible(),false,
+    'Não duplicar atalhos antigos na Home Premium');
+  await page.screenshot({path:output+'/galaxy-390-offline-premium-home-visible.png',animations:'disabled'});
+
   checks.push({profile:'Samsung delayed catalog',splashMs:slowSplashMs,mainAppVisible:true});
   await context.close();
   console.log(JSON.stringify({passed:checks.length,checks}));
