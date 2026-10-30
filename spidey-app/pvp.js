@@ -5,6 +5,8 @@
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const teamKey = 'spidey-pvp-team';
   let snapshot, loading, lastCheck = 0, leagueId = 'great', limit = 25;
+  let searchRenderTimer = null;
+  function cancelSearchRender(){if(searchRenderTimer!==null){clearTimeout(searchRenderTimer);searchRenderTimer=null;}}
   let teams;
   try { teams = JSON.parse(localStorage.getItem(teamKey) || '{}'); } catch { teams = {}; }
   if (!teams || typeof teams !== 'object' || Array.isArray(teams)) teams = {};
@@ -74,10 +76,10 @@
   function mount() {
     const root = document.getElementById('pvpView'); if (!root) return;
     document.getElementById('pvpType').innerHTML = '<option value="">Todos os tipos</option>' + Object.entries(TYPES).map(([id,name]) => `<option value="${id}">${name}</option>`).join('');
-    document.querySelectorAll('[data-pvp-league]').forEach(button => button.addEventListener('click',() => { leagueId = button.dataset.pvpLeague; limit = 25; render(); }));
-    document.getElementById('pvpSearch').addEventListener('input',() => { limit=25; render(); });
-    document.getElementById('pvpType').addEventListener('change',() => { limit=25; render(); });
-    document.getElementById('pvpMore').addEventListener('click',() => { limit += 25; render(); });
+    document.querySelectorAll('[data-pvp-league]').forEach(button => button.addEventListener('click',() => { cancelSearchRender();leagueId = button.dataset.pvpLeague; limit = 25; render(); }));
+    document.getElementById('pvpSearch').addEventListener('input',() => { cancelSearchRender();searchRenderTimer=setTimeout(()=>{searchRenderTimer=null;limit=25;render()},120); });
+    document.getElementById('pvpType').addEventListener('change',() => { cancelSearchRender();limit=25;render(); });
+    document.getElementById('pvpMore').addEventListener('click',() => { cancelSearchRender();limit += 25; render(); });
     document.getElementById('pvpRetry').addEventListener('click',() => load(true));
     document.addEventListener('click',event => { const target=event.target.closest('[data-pvp-open],[data-pvp-team]'); if (!target) return; if (target.dataset.pvpOpen) openDetail(target.dataset.pvpOpen); else selectTeam(target.dataset.pvpTeam); });
     window.addEventListener('online',() => { if (!root.hidden) load(true); });
