@@ -49,3 +49,6 @@
 #flyView .fly-regional-events[hidden]{display:none!important}
 #flyView .fly-regional-list{display:grid;gap:15px;margin-top:16px}
 #flyView .fly-event-details:not([open]) #flyEventSummary{display:none}
+
+/* Fail-open on Samsung/Android: the 70-stop route must not be transparent while waiting for a scroll observer. */
+#flyView > .section {opacity:1!important;visibility:visible!important;transform:none!important;}

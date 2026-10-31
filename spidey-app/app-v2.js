@@ -94,7 +94,7 @@
         entry.target.classList.add('v2-visible');
         observer.unobserve(entry.target);
       }
-    }, { rootMargin: '0px 0px -7% 0px', threshold: .05 });
+    }, { rootMargin: '0px 0px -7% 0px', threshold: 0 });
     targets.forEach((el) => {
       if (!el.classList.contains('v2-visible')) observer.observe(el);
     });
