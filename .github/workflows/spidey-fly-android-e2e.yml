@@ -1,0 +1,32 @@
+name: Spidey FLY - navegação funcional Android
+on:
+  pull_request:
+    paths:
+      - 'spidey-app/app.js'
+      - 'spidey-app/fly-v1.js'
+      - 'spidey-app/space-week.js'
+      - 'spidey-app/index.html'
+      - 'spidey-app/sw.js'
+      - 'scripts/qa_fly_android_browser.mjs'
+      - '.github/workflows/spidey-fly-android-e2e.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fly-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm install --no-save playwright-core@1.56.1
+      - name: Abrir Mega Chandelure, FLY e coordenadas como no vídeo Samsung
+        run: CHROME_PATH="$(command -v google-chrome)" node scripts/qa_fly_android_browser.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fly-android-e2e
+          path: test-results/fly-android
