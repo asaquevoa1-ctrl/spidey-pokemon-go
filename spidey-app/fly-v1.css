@@ -42,3 +42,10 @@
 .fly-reference-credits summary{cursor:pointer;font-weight:700;min-height:44px;display:list-item;align-content:center}
 .fly-reference-credits p{font-size:.82rem;color:#ced9e9;line-height:1.55}
 .fly-original-credits{white-space:pre-wrap;word-break:break-word;font:inherit;font-size:.81rem;line-height:1.6;color:#f3f4fb}
+
+/* Functional FLY first: the world route stays ahead of optional regional content and artwork. */
+#flyView .fly-event-details,#flyView .fly-regional-events{margin:24px 0 0;padding:16px;border:1px solid var(--border,var(--line));border-radius:16px;background:var(--surface,#142033)}
+#flyView .fly-event-details>summary,#flyView .fly-regional-events>summary{cursor:pointer;font-weight:750;padding:4px;line-height:1.5}
+#flyView .fly-regional-events[hidden]{display:none!important}
+#flyView .fly-regional-list{display:grid;gap:15px;margin-top:16px}
+#flyView .fly-event-details:not([open]) #flyEventSummary{display:none}
