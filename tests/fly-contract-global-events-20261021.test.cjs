@@ -62,7 +62,7 @@ test('Permanent global route discovery automatically surfaces every nearby eligi
   assert.ok(css.includes('.fly-upcoming-item'));
   assert.ok(html.includes('fly-v1.js?v=20261022-credits-dst1'));
   assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1'));
-  assert.ok(load('app.js').includes('openMorelullFly'));
+  assert.ok(load('app.js').includes('openEventFly'));
 });
 
 test('FLY route works as a permanent global event feature without false GPX claims',()=>{
@@ -71,4 +71,26 @@ test('FLY route works as a permanent global event feature without false GPX clai
   const future=all.filter(e=>e.status==='published'&&recurring.has(e.category)&&!hasExactLocalWindow(e));
   assert.ok(future.length>0);
   for(const e of future)assert.equal(core.eligible(e),false);
+});
+
+
+test('Chandelure global Super Mega Raid Day has a direct FLY route even after the Brazil window',()=>{
+  const event=all.find(e=>e.id==='2026-10-super-mega-raid-day');
+  assert.ok(event);
+  assert.equal(core.eligible(event),true);
+  assert.equal(event.schedule.start_local,'2026-10-31T14:00:00-03:00');
+  assert.equal(event.schedule.end_local,'2026-10-31T17:00:00-03:00');
+  const brazilAlreadyEnded=new Date('2026-10-31T20:30:00Z');
+  const route=core.route(event,points,brazilAlreadyEnded);
+  assert.equal(route.length,points.length);
+  assert.ok(route.some(p=>p.status==='ATIVO AGORA'),'Raid remains active in other countries');
+  assert.ok(route.some(p=>p.status==='ENCERRADO'),'Earlier regions finished');
+  assert.ok(route.some(p=>p.end>brazilAlreadyEnded),'World route persists after Brazil end');
+  const app=load('app.js'),ui=load('fly-v1.js');
+  assert.ok(app.includes('flyEvents = eventsData.events.filter(event => window.SpideyFlyCore?.eligible(event))'));
+  assert.ok(app.includes('window.SpideyFlyCore?.eligible(event) ?'));
+  assert.ok(app.includes('window.SpideyFly?.open(event.id)'));
+  assert.ok(ui.includes('state.flyEvents?.length'));
+  assert.ok(ui.includes('windowTimes(e).some(p=>p.end>now)'));
+  assert.ok(app.includes('id="openEventFly"'));
 });
