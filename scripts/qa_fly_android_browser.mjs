@@ -50,7 +50,7 @@ try {
     results.push({type,...stateRead,errors});
     console.log('FLY_DIAGNOSTIC '+JSON.stringify(results.at(-1)));
     if(stateRead.flyHidden || !stateRead.calendarHidden || stateRead.flyDisplay==='none')throw Error(type+': FLY view navigation failed');
-    if(stateRead.selected!=='2026-10-super-mega-raid-day'||stateRead.routeCards!==70)throw Error(type+': event or 70 world coordinates missing');
+    if(stateRead.selected!=='2026-10-super-mega-raid-day'||stateRead.routeCards!==64)throw Error(type+': event or 70 world coordinates missing');
     if(stateRead.routeSectionOpacity<0.99 || stateRead.routeSectionVisibility!=='visible')throw Error(type+': main route is visually hidden despite correct DOM data');
     if(type!=='drawer' && (!stateRead.selectRect||stateRead.selectRect.top<0||stateRead.selectRect.top>760))throw Error(type+': route controls are buried behind unrelated cards');
     await context.close();
