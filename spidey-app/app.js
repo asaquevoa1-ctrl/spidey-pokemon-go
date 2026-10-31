@@ -22,6 +22,7 @@ function calendarToday(reference = new Date()) {
 const initialCalendarDay = calendarToday();
 const state = {
   events: [],
+  flyEvents: [],
   stamps: [],
   month: new Date(initialCalendarDay.getFullYear(), initialCalendarDay.getMonth(), 1),
   deferredInstall: null,
@@ -532,7 +533,7 @@ function openEvent(event) {
       ${newsOnly ? '' : `<div class="info-grid">
         ${dateOnly ? `<div class="info-box"><span>Período no local</span><strong>${window.SpideyDateOnly.label(event)}</strong></div><div class="info-box"><span>Horário diário</span><strong>Não divulgado</strong></div>` : `<div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div><div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>`}
       </div>
-      <h3>Coordenadas</h3>${locationRows(event)}
+      <h3>Coordenadas</h3>${window.SpideyFlyCore?.eligible(event) ? '<p class="microcopy">Evento mundial: horários e coordenadas de referência aparecem no FLY, por cidade e em Brasília. As referências urbanas não são Ginásios confirmados.</p>' : locationRows(event)}
       ${event.companion_art?.url ? `<div class="spidey-companion-art">
         <h3>${event.companion_art.title || 'Coordenadas ilustradas'}</h3>
         <a href="${event.companion_art.url}?v=${String(event.companion_art.web_sha256 || '').slice(0,12)}" target="_blank" rel="noopener" aria-label="Abrir arte completa de coordenadas">
@@ -542,7 +543,7 @@ function openEvent(event) {
         <p><small>Referências de locais, não coordenadas de Ginásios ou pontos exclusivos garantidos.</small></p>
       </div>` : ''}`}
       <div class="action-row">
-        ${event.id==='2026-10-22-spotlight-morelull' ? '<button class="action-btn gold" id="openMorelullFly" type="button">🍄 Ver rota mundial no FLY</button>' : ''}
+        ${window.SpideyFlyCore?.eligible(event) ? '<button class="action-btn gold" id="openEventFly" type="button">🌍 Ver rota mundial no FLY • horários e coordenadas</button>' : ''}
         ${['2026-10-24-spidey-full-day-guide','2026-11-21-community-day-preview'].includes(event.id) && event.art?.url ? `<a class="action-btn gold" download href="${eventImage(event)}">Baixar pôster Premium</a>` : ''}
         ${event.gpx?.enabled !== false && (event.locations || []).length ? '<button id="downloadGpx" class="action-btn gold">Baixar GPX</button>' : ''}
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">${event.source.confidence === 'official' ? 'Anúncio oficial' : 'Ver fonte'}</a>` : ''}
@@ -556,7 +557,7 @@ function openEvent(event) {
     await navigator.clipboard.writeText(button.dataset.value);
     showToast('Coordenadas copiadas.');
   }));
-  detail.querySelector('#openMorelullFly')?.addEventListener('click', () => window.SpideyFly?.open('2026-10-22-spotlight-morelull'));
+  detail.querySelector('#openEventFly')?.addEventListener('click', () => window.SpideyFly?.open(event.id));
   detail.querySelector('#downloadGpx')?.addEventListener('click', () => downloadGpx(event));
   showAppDialog();
 }
@@ -608,15 +609,17 @@ async function loadContent({ refresh = false } = {}) {
         window.SpideyCatalog.load('events'), window.SpideyCatalog.load('stamps'),
       ]);
       const events = eventsData.events.filter(event => eventVisibleInPublicAgenda(event));
+      // FLY uses the entire verified global catalog: a worldwide raid continues after it ends in Brazil.
+      const flyEvents = eventsData.events.filter(event => window.SpideyFlyCore?.eligible(event));
       const stamps = stampsData.rallies.filter(rally => rally.status === 'published');
-      const fingerprint = JSON.stringify([events.map(e => [e.id,e.updated_at,e.status]), stamps.map(s => [s.id,s.status])]);
+      const fingerprint = JSON.stringify([events.map(e => [e.id,e.updated_at,e.status]), flyEvents.map(e => [e.id,e.updated_at,e.status]), stamps.map(s => [s.id,s.status])]);
       lastContentCheck = Date.now();
       const status = document.getElementById('calendarUpdateStatus');
       if (status) status.textContent = 'Novidades no mesmo link. A agenda é atualizada automaticamente.';
       window.dispatchEvent(new Event('spideycatalogchecked'));
       if (fingerprint === catalogFingerprint) return;
       catalogFingerprint = fingerprint;
-      state.events = events; state.stamps = stamps;
+      state.events = events; state.flyEvents = flyEvents; state.stamps = stamps;
       renderCalendar(); renderEvents(); renderStamps();
       if (typeof renderWeeklyView === 'function') renderWeeklyView();
       if (typeof renderMapV2 === 'function') renderMapV2(); else renderMapSummary();
