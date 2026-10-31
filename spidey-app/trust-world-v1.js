@@ -64,13 +64,23 @@
   }
   function mountLocalFly() {
     const fly=document.getElementById('flyView');if(!fly)return;
+    const worldRoute=fly.querySelector(':scope > .section');
+    if(!worldRoute)return; // Never place local-only cards before the worldwide FLY controls.
+    let regionals=fly.querySelector('#flyRegionalEvents');
+    if(!regionals){
+      regionals=document.createElement('details');
+      regionals.id='flyRegionalEvents';
+      regionals.className='fly-regional-events';
+      regionals.innerHTML='<summary>Eventos presenciais por região</summary><div class="fly-regional-list"></div>';
+      worldRoute.insertAdjacentElement('afterend',regionals);
+    }
+    const list=regionals.querySelector('.fly-regional-list');
     const available=worldEvents.filter(event=>visibleWorldEvent(event));
-    fly.querySelectorAll('.world-event-card[data-world-event]').forEach(card=>{
-      if(!available.some(event=>event.id===card.dataset.worldEvent))card.remove();
-    });
-    available.forEach(event=>{
-      if(!fly.querySelector(`[data-world-event="${event.id}"]`))fly.querySelector('.hero')?.insertAdjacentHTML('afterend',eventCard(event));
-    });
+    const markup=available.map(eventCard).join('');
+    if(list.innerHTML!==markup)list.innerHTML=markup;
+    regionals.hidden=available.length===0;
+    // Remove legacy cards injected immediately after the FLY title on older builds.
+    fly.querySelectorAll(':scope > .world-event-card[data-world-event]').forEach(card=>card.remove());
   }
   function mapUrl(location) {
     return window.SpideyLocations.mapUrl(location);
