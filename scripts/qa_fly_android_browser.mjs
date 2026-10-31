@@ -44,13 +44,14 @@ try {
       const native=fly?.querySelector(':scope > .section');
       const promo=fly?.querySelector('.space-entry');
       const rect=e=>{if(!e)return null;const r=e.getBoundingClientRect();return {top:Math.round(r.top),bottom:Math.round(r.bottom),height:Math.round(r.height)};};
-      return {flyHidden:fly?.hidden,calendarHidden:calendar?.hidden,flyDisplay:fly?getComputedStyle(fly).display:null,calendarDisplay:calendar?getComputedStyle(calendar).display:null,selected:selector?.value,selectRect:rect(selector),nativeRect:rect(native),promoRect:rect(promo),routeRect:rect(controls),routeCards:controls?.querySelectorAll('.fly-point').length,flyChildren:[...(fly?.children||[])].map(e=>({tag:e.tagName,class:e.className,head:e.textContent?.trim().slice(0,70)})),docScrollY:window.scrollY};
+      return {flyHidden:fly?.hidden,calendarHidden:calendar?.hidden,flyDisplay:fly?getComputedStyle(fly).display:null,calendarDisplay:calendar?getComputedStyle(calendar).display:null,routeSectionOpacity:native?Number(getComputedStyle(native).opacity):null,routeSectionVisibility:native?getComputedStyle(native).visibility:null,selected:selector?.value,selectRect:rect(selector),nativeRect:rect(native),promoRect:rect(promo),routeRect:rect(controls),routeCards:controls?.querySelectorAll('.fly-point').length,flyChildren:[...(fly?.children||[])].map(e=>({tag:e.tagName,class:e.className,head:e.textContent?.trim().slice(0,70)})),docScrollY:window.scrollY};
     });
     await page.screenshot({path:`${output}/${type}.png`,fullPage:false,animations:'disabled',timeout:15000});
     results.push({type,...stateRead,errors});
     console.log('FLY_DIAGNOSTIC '+JSON.stringify(results.at(-1)));
     if(stateRead.flyHidden || !stateRead.calendarHidden || stateRead.flyDisplay==='none')throw Error(type+': FLY view navigation failed');
     if(stateRead.selected!=='2026-10-super-mega-raid-day'||stateRead.routeCards!==70)throw Error(type+': event or 70 world coordinates missing');
+    if(stateRead.routeSectionOpacity<0.99 || stateRead.routeSectionVisibility!=='visible')throw Error(type+': main route is visually hidden despite correct DOM data');
     if(type!=='drawer' && (!stateRead.selectRect||stateRead.selectRect.top<0||stateRead.selectRect.top>760))throw Error(type+': route controls are buried behind unrelated cards');
     await context.close();
   }
