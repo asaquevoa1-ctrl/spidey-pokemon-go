@@ -99,13 +99,13 @@
     },
     {
       "id": "2026-10-31-dia-de-muertos-paseo-reforma",
-      "title": "Día de Muertos 2026 — Paseo de la Reforma, Cidade do México",
+      "title": "Día de Muertos 2026 — Gengar Gigamax 6★ e Selos no Paseo de la Reforma",
       "place": "Avenida Paseo de la Reforma, Cidade do México, México",
       "dates": "31 out 10h – 05 nov 20h (Cidade do México)",
       "status": "official",
       "locality": "local",
       "artApproved": false,
-      "note": "GUIA FLY: atividades regionais no Paseo de la Reforma, Cidade do México. Ángel de la Independencia é somente referência para orientação, NÃO Ginásio/Poképarada/Power Spot verificado. Identifique os selos e pontos ativos dentro do jogo.",
+      "note": "GENGAR GIGAMAX 6★ e caça aos Selos no Paseo de la Reforma, Cidade do México. 31/10 10h–05/11 20h locais (31/10 13h–05/11 23h Brasília). Participação remota possível pela regra geral das Batalhas Max, sujeita à disponibilidade; Fundo de Localização só presencial. Ángel de la Independencia é referência urbana, NÃO Ponto de Energia/Ginásio/Poképarada verificado.",
       "schedule": {
         "start_date": "2026-10-31",
         "start_time": "10:00",
@@ -124,7 +124,7 @@
         "Metade do custo de Poeira Estelar nas trocas dentro da área de evento.",
         "Módulos Atrair ativados durante o evento duram três horas.",
         "Maior chance de ajuda na captura para quem tiver companheiro Grande Companheiro ou superior.",
-        "Batalhas Max de seis estrelas com Gengar Gigamax, com chance de Brilhante e Fundo de Localização."
+        "Gengar Gigamax em Batalhas Max de 6 estrelas na zona do Paseo de la Reforma; chance de Brilhante. Fundo de Localização presencial, não garantido remotamente."
       ],
       "locations": [
         {
@@ -146,8 +146,16 @@
         "enabled": false,
         "reason": "Um marco de orientação do Paseo de la Reforma não é ponto confirmado de Ginásio, Poképarada, selos ou Max. Sem GPX."
       },
-      "verified_at": "2026-10-27",
-      "detail_title": "Día de Muertos • Paseo de la Reforma"
+      "verified_at": "2026-10-31",
+      "detail_title": "Gengar Gigamax 6★ e Selos • Paseo de la Reforma",
+      "notes": [
+        "GENGAR GIGAMAX 6★ • BATALHA MAX REGIONAL: disponível em Pontos de Energia ativos na zona do Paseo de la Reforma, de 31/10 às 10h a 05/11 às 20h (CDMX) = 31/10 às 13h a 05/11 às 23h (Brasília). Brilhante possível. O Fundo de Localização exige participação presencial; não é garantido.",
+        "COMO PARTICIPAR DO BRASIL: desde 19/05/2025, a regra geral do Pokémon GO permite Batalhas Max remotamente com Passe de Reide a Distância e as Partículas Max exigidas. Para este evento regional, confirme no jogo se há batalha ativa acessível e convite/entrada remota disponível. O Fundo de Localização é presencial; não garanta essa recompensa nem um ponto de batalha específico.",
+        "PONTO DE REFERÊNCIA, NÃO POWER SPOT: Ángel de la Independencia (19.4269903,-99.1676463) identifica a região, mas NÃO comprova um Ponto de Energia com Gengar Gigamax, Ginásio ou Poképarada. Não gerar GPX de reides com essa referência.",
+        "Fonte da regra geral de participação remota: https://pokemongo.com/pt-BR/news/shadow-raid-max-battle-update",
+        "Selos e Duskull com coroa e Fundo de Localização exigem ações presenciais em Poképaradas/Ginásios participantes no México."
+      ],
+      "updated_at": "2026-10-31T12:29:00-03:00"
     },
     {
       "id": "2026-10-17-nice-regional",
