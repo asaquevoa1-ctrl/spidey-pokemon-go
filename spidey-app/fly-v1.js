@@ -11,7 +11,22 @@
     node.innerHTML=markup;
     renderedMarkup.set(node,markup);
   }
-  function events(){return state.events.filter(core.eligible).sort((a,b)=>a.schedule.start_local.localeCompare(b.schedule.start_local))}
+  const cachedWindows=new Map();
+  function windowTimes(e){
+    if(!points.length)return [];
+    const key=[e.id,e.updated_at,e.schedule.start_local,e.schedule.end_local,points.length].join(':');
+    if(!cachedWindows.has(key))cachedWindows.set(key,core.route(e,points,new Date(0)));
+    return cachedWindows.get(key);
+  }
+  function events(){
+    const now=new Date(), source=state.flyEvents?.length ? state.flyEvents : state.events;
+    return source.filter(core.eligible).filter(e=>{
+      // Quick cutoff only: the true last window is derived from each city's IANA timezone.
+      const end=Date.parse(e.schedule.end_local);
+      if(!Number.isFinite(end)||end+36*3600000<=+now)return false;
+      return !points.length||windowTimes(e).some(p=>p.end>now);
+    }).sort((a,b)=>a.schedule.start_local.localeCompare(b.schedule.start_local));
+  }
   // O Holofote acontece às 18h–19h NO FUSO DE CADA CIDADE.
   // Mostre um atalho temporário a partir das 12 horas anteriores à primeira
   // janela mundial até o fim da última, sem confundir coordenadas urbanas com
@@ -19,7 +34,6 @@
   // Visibilidade global permanente: cada evento elegível terá cartão de rota
   // na semana correspondente, sem exigir um destaque codificado por Pokémon.
   // Cacheia conversões IANA, mantendo status sempre recalculado pelo relógio.
-  const cachedWindows=new Map();
   function upcomingGlobalRoutes(list,now){
     if(!points.length)return [];
     const horizon=now.getTime()+7*86400000;
@@ -27,9 +41,7 @@
       const approx=Date.parse(e.schedule.start_local);
       return Number.isFinite(approx)&&approx<=horizon&&approx>=now.getTime()-3*86400000;
     }).map(e=>{
-      const key=[e.id,e.updated_at,e.schedule.start_local,e.schedule.end_local,points.length].join(':');
-      if(!cachedWindows.has(key))cachedWindows.set(key,core.route(e,points,new Date(0)));
-      const windows=cachedWindows.get(key);
+      const windows=windowTimes(e);
       if(!windows.length)return null;
       const first=windows[0],last=windows[windows.length-1];
       if(last.end<=now)return null;
