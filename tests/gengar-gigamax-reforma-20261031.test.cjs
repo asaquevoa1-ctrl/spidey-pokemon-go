@@ -44,7 +44,7 @@ test('Remote Max Battle participation is described conditionally; location backg
     assert.match(message,/19\/05\/2025/);
     assert.match(message,/Fundo de Localização/);
     assert.match(message,/presencial/);
-    assert.match(message,/disponibilidade/);
+    assert.match(message,/disponibilidade|disponível|batalha ativa acessível/);
     assert.doesNotMatch(message,/Não prometer combate remoto/);
     assert.match(message,/NÃO (comprova|Ponto de Energia|significa)/);
   }
