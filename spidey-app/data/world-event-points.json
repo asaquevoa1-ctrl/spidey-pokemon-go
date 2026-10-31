@@ -12,7 +12,10 @@
     "display_clock_columns": [
       "horario_local_destino",
       "horario_brasilia"
-    ]
+    ],
+    "current_fly_list": "user_supplied_2026_10_31",
+    "current_fly_list_count": 64,
+    "preserve_legacy_points_separately": true
   },
   "points": [
     {
@@ -25,7 +28,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 2,
@@ -37,7 +41,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 3,
@@ -49,7 +54,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 4,
@@ -61,7 +67,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 5,
@@ -71,7 +78,8 @@
       "lat": 25.033964,
       "lon": 121.564468,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "current_user_list_20261031": false
     },
     {
       "order": 6,
@@ -83,7 +91,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 7,
@@ -95,7 +104,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 8,
@@ -105,7 +115,8 @@
       "lat": 41.0082,
       "lon": 28.9784,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "current_user_list_20261031": false
     },
     {
       "order": 9,
@@ -117,7 +128,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 10,
@@ -129,7 +141,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 11,
@@ -141,7 +154,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 12,
@@ -153,7 +167,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 13,
@@ -165,7 +180,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 14,
@@ -177,7 +193,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 15,
@@ -189,7 +206,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 16,
@@ -199,7 +217,8 @@
       "lat": 39.7392,
       "lon": -104.9903,
       "coordinate_type": "city_reference",
-      "essential": true
+      "essential": true,
+      "current_user_list_20261031": false
     },
     {
       "order": 17,
@@ -211,7 +230,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 18,
@@ -223,7 +243,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 19,
@@ -235,7 +256,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 20,
@@ -247,7 +269,8 @@
       "coordinate_type": "city_reference",
       "essential": true,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 21,
@@ -259,7 +282,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 22,
@@ -271,7 +295,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 23,
@@ -283,7 +308,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 24,
@@ -295,7 +321,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 25,
@@ -307,7 +334,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 26,
@@ -319,7 +347,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": false
     },
     {
       "order": 27,
@@ -331,7 +360,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 28,
@@ -343,7 +373,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 29,
@@ -355,7 +386,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 30,
@@ -367,7 +399,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 31,
@@ -379,7 +412,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 32,
@@ -391,7 +425,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 33,
@@ -403,7 +438,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 34,
@@ -415,7 +451,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 35,
@@ -427,7 +464,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 36,
@@ -439,7 +477,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 37,
@@ -451,7 +490,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": false
     },
     {
       "order": 38,
@@ -463,7 +503,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 39,
@@ -475,7 +516,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 40,
@@ -487,7 +529,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 41,
@@ -499,7 +542,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 42,
@@ -511,7 +555,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 43,
@@ -523,7 +568,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 44,
@@ -535,7 +581,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 45,
@@ -547,7 +594,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 46,
@@ -559,7 +607,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 47,
@@ -571,7 +620,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 48,
@@ -583,7 +633,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 49,
@@ -595,7 +646,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 50,
@@ -607,7 +659,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 51,
@@ -619,7 +672,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 52,
@@ -631,7 +685,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 53,
@@ -643,7 +698,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": false
     },
     {
       "order": 54,
@@ -655,7 +711,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 55,
@@ -667,7 +724,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 56,
@@ -679,7 +737,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 57,
@@ -691,7 +750,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 58,
@@ -703,7 +763,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 59,
@@ -715,7 +776,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 60,
@@ -727,7 +789,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 61,
@@ -739,7 +802,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 62,
@@ -751,7 +815,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 63,
@@ -763,7 +828,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 64,
@@ -775,7 +841,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 65,
@@ -787,7 +854,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 66,
@@ -799,7 +867,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": false
     },
     {
       "order": 67,
@@ -811,7 +880,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 68,
@@ -823,7 +893,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": false
     },
     {
       "order": 69,
@@ -835,7 +906,8 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
     },
     {
       "order": 70,
@@ -847,7 +919,32 @@
       "coordinate_type": "city_reference",
       "essential": false,
       "source_list": "LendáriosBrasil / FlyGPS / PokemonTrail, revisão Fantasma 06/11/2023",
-      "reference_date": "2023-11-10"
+      "reference_date": "2023-11-10",
+      "current_user_list_20261031": true
+    },
+    {
+      "order": 71,
+      "flag": "🇧🇷",
+      "name": "Praça XV, Rio de Janeiro",
+      "timezone": "America/Sao_Paulo",
+      "lat": -22.902745,
+      "lon": -43.171821,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "current_user_list_20261031": true,
+      "source_note": "Ponto incluído conforme lista fornecida pelo responsável em 31/10/2026"
+    },
+    {
+      "order": 72,
+      "flag": "🇩🇴",
+      "name": "Ciudad Universitaria, Santo Domingo, República Dominicana",
+      "timezone": "America/Santo_Domingo",
+      "lat": 18.462522,
+      "lon": -69.915771,
+      "coordinate_type": "city_reference",
+      "essential": false,
+      "current_user_list_20261031": true,
+      "source_note": "Ponto incluído conforme lista fornecida pelo responsável em 31/10/2026"
     }
   ],
   "source_list_2023": {
@@ -862,5 +959,15 @@
     "ux_policy": "Exibir horários local do destino e de Brasília, desconsiderar totalmente coluna de hora de Portugal. Não excluir pontos em Portugal que são referências geográficas.",
     "early_project_evidence": "SPIDEY_APP_CONSTITUTION.md, commit e08cf8eb7c6fd5b6df87dcf1a467c286a0c5295f, 2026-10-01; SPIDEYNEXUS_Continuidade_05-10-2026.md.",
     "maintenance_20261022": "Recuperação de referências faltantes na implementação atual a partir da lista-base original. Os horários impressos de Portugal e de Brasília em 2023 não são dados operacionais."
+  },
+  "source_list_current": {
+    "provided_by": "user",
+    "received_date": "2026-10-31",
+    "count": 64,
+    "coordinate_source": "Lista integral enviada no chat para FLY, baseada na referência histórica de 2023",
+    "selection_field": "current_user_list_20261031",
+    "other_reference_policy": "Manter 8 pontos complementares históricos no arquivo, mas fora da rota mundial principal; não editar os créditos originais",
+    "credit_key": "source_list_2023.credits",
+    "clock_policy": "Calcular horários por data local real do evento com fuso IANA, não reutilizar 2023"
   }
 }
