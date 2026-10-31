@@ -87,8 +87,7 @@
   function mountEntries(data) {
     const world = document.getElementById('worldEvents');
     if (world && !world.querySelector('.space-entry')) world.insertAdjacentHTML('afterbegin',entryCard(data));
-    const fly = document.getElementById('flyView');
-    if (fly && !fly.querySelector('.space-entry')) fly.querySelector('.hero')?.insertAdjacentHTML('afterend',entryCard(data));
+    // Keep the museum partnership in the local Home area; never bury FLY routes below a promo.
   }
 
   const originalOpenEvent = typeof openEvent === 'function' ? openEvent : null;
