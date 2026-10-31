@@ -22,6 +22,6 @@
     const next=rows.find(p=>p.start>now),last=Math.max(...rows.map(p=>+p.end));
     return rows.map(p=>({...p,featuredPokemon:e.regional_pokemon?.by_timezone?.[p.timezone]||null,status:now>=p.end?'ENCERRADO':now>=p.start?(+p.end===last?'ÚLTIMA CHANCE':'ATIVO AGORA'):+p.start===+next?.start?'PRÓXIMO':'FUTURO'}));
   }
-  function loadPoints(){return pointsPromise||=fetch('data/world-event-points.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Referências indisponíveis');return r.json()}).then(d=>{window.SPIDEY_FLY_REFERENCE_SOURCE=d.source_list_2023||null;return d.points})}
+  function loadPoints(){return pointsPromise||=fetch('data/world-event-points.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Referências indisponíveis');return r.json()}).then(d=>{window.SPIDEY_FLY_REFERENCE_SOURCE=d.source_list_2023||null;return (d.points||[]).filter(p=>p.current_user_list_20261031===true)})}
   window.SpideyFlyCore=Object.freeze({eligible,localToDate,route,loadPoints});
 })();
