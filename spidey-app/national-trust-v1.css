@@ -134,3 +134,7 @@
  #nationalTrustView .nt-place code,#eventDetail .nt-event-simple-row code{font-size:.75rem}
  #nationalTrustView .nt-place .action-btn,#eventDetail .nt-event-simple-row .action-btn{padding:8px;font-size:.7rem}
 }
+
+#nationalTrustView .nt-place-number,
+#eventDetail .nt-place-number{flex:0 0 auto;align-self:flex-start;min-width:20px;
+ font:700 .67rem/1.4 ui-monospace,Consolas,monospace;color:#d3a969;padding-top:2px;}
