@@ -95,7 +95,88 @@
       const status=details.querySelector('#nationalTrustCount');if(status)status.textContent='Não foi possível carregar as localidades. Atualize a página.';
     });
   }
-  window.SpideyNationalTrustCore=Object.freeze({validPlaces,parseCoord});
+  // O mesmo conjunto de 27 referências deve acompanhar o próprio evento.
+  // Antes, a janela de detalhes só encaminhava à aba Trust e parecia vazia.
+  let eventPlacesPromise=null;
+  const loadEventPlaces=()=>{
+    if(places.length===27)return Promise.resolve(places);
+    return eventPlacesPromise ||= fetch(DATA_URL,{cache:'no-store'})
+      .then(res=>{if(!res.ok)throw Error('Base Trust indisponível');return res.json();})
+      .then(json=>{
+        const verifiedStructure=validPlaces(json);
+        if(verifiedStructure.length!==27)throw Error('Lista Trust incompleta');
+        return verifiedStructure;
+      })
+      .catch(err=>{eventPlacesPromise=null;throw err;});
+  };
+  function renderEventCoordinates(target,isCurrent=()=>true){
+    if(!target)return;
+    const status=target.querySelector('[data-nt-event-status]');
+    const content=target.querySelector('[data-nt-event-list]');
+    if(!status||!content)return;
+    const current=()=>target.isConnected&&isCurrent();
+    status.textContent='Carregando as 27 coordenadas de referência…';
+    content.replaceChildren();
+    loadEventPlaces().then(items=>{
+      if(!current())return;
+      status.textContent=items.length+' locais com coordenadas disponíveis para copiar. Referências comunitárias, não pontos exatos verificados de ativação.';
+      const groups=new Map();
+      for(const p of items){
+        if(!groups.has(p.group))groups.set(p.group,[]);
+        groups.get(p.group).push(p);
+      }
+      const fragment=document.createDocumentFragment();
+      for(const [name,values] of groups){
+        const section=document.createElement('details');
+        section.className='nt-event-group';section.open=true;
+        const heading=document.createElement('summary');
+        heading.textContent=name+' ('+values.length+')';
+        section.append(heading);
+        const grid=document.createElement('div');
+        grid.className='nt-event-grid';
+        for(const p of values){
+          const item=document.createElement('article');
+          item.className='nt-event-place';
+          const title=document.createElement('strong');title.textContent=p.name;
+          const region=document.createElement('small');
+          region.textContent=p.region+' · referência comunitária';
+          const coord=document.createElement('code');
+          coord.textContent=p.coordinates;
+          const copy=document.createElement('button');copy.type='button';
+          copy.className='action-btn nt-event-copy';
+          copy.textContent='Copiar coordenadas';
+          copy.dataset.coord=p.coordinates;
+          item.append(title,region,coord,copy);grid.append(item);
+        }
+        section.append(grid);fragment.append(section);
+      }
+      content.replaceChildren(fragment);
+    }).catch(()=>{
+      if(!current())return;
+      status.textContent='Não foi possível carregar as coordenadas. A lista continua disponível na aba Trust.';
+      const retry=document.createElement('button');
+      retry.type='button';retry.className='action-btn';
+      retry.textContent='Tentar carregar novamente';
+      retry.addEventListener('click',()=>renderEventCoordinates(target,isCurrent),{once:true});
+      content.replaceChildren(retry);
+    });
+    if(target.dataset.ntCopyBound==='true')return;
+    target.dataset.ntCopyBound='true';
+    target.addEventListener('click',async e=>{
+      const btn=e.target.closest('button.nt-event-copy[data-coord]');
+      if(!btn||!target.contains(btn))return;
+      const coordinate=parseCoord(btn.dataset.coord);
+      if(!coordinate)return;
+      try{
+        await navigator.clipboard.writeText(coordinate);
+        if(typeof window.showToast==='function')window.showToast('Referência copiada.');
+        else btn.textContent='Copiado!';
+      }catch{
+        window.prompt('Copie a coordenada:',coordinate);
+      }
+    });
+  }
+  window.SpideyNationalTrustCore=Object.freeze({validPlaces,parseCoord,renderEventCoordinates});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});
   else mount();
 })();
