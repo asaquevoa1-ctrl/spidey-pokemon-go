@@ -1,0 +1,19 @@
+{
+  "titulo": "📅 G47IX • EVENTO",
+  "mensagem": "The blog mention only 10-8pm for this event, but apparently GMax Gengar is only available on 2 PowerStops between 7-8 pm mexico time.\n\nI'm not sure if those are actually remotable - i couldn't join any invite last night 😞\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2116983617406812173",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2116983617406812173",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-01T23:57:50.078736+00:00"
+}
