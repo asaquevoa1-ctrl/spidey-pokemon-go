@@ -111,6 +111,7 @@
     }
     const signature=JSON.stringify(list.map(e=>[e.id,e.title]));if(select.dataset.signature!==signature){select.innerHTML=list.map(e=>`<option value="${esc(e.id)}">${esc(e.title.replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:'))}</option>`).join('');select.dataset.signature=signature}select.value=selected;
     const e=list.find(e=>e.id===selected),all=e?core.route(e,points,now):[],rows=mode==='essential'?all.filter(p=>p.essential):all;
+    window.SpideyFlyGlobe?.update(e,rows,mode);
     const summary=s.querySelector('#flyEventSummary'),summaryKey=JSON.stringify([selected,e?.updated_at,e?.title]);if(summary&&summary.dataset.event!==summaryKey){summary.innerHTML=window.SpideyPlayer?.panel(e,{fly:true})||'';summary.dataset.event=summaryKey;}
     const active=all.filter(p=>['ATIVO AGORA','ÚLTIMA CHANCE'].includes(p.status)),next=all.find(p=>p.status==='PRÓXIMO');
     s.querySelector('#flyNow').textContent=active.length?active.slice(0,2).map(p=>p.name).join(' • '):'Nenhuma janela ativa';
