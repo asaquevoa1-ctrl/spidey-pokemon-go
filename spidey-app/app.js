@@ -590,11 +590,16 @@ function openEvent(event) {
     const manual=detail.querySelector('.nt-manual-copy');
     const box=detail.querySelector('#ntEventAllText');
     const feedback=detail.querySelector('#ntEventCopyStatus');
+    const fullList=embeddedTrustLocations.length===27
+      ? embeddedTrustLocations.map(p=>String(p.coordinate_text)).join('\n')
+      : (window.SpideyNationalTrustCore?.allCoordinatesText?.()||'');
+    if(box)box.value=fullList;
     copyAll?.addEventListener('click',async()=>{
-      const payload=embeddedTrustLocations.length===27
-        ? embeddedTrustLocations.map(p=>String(p.coordinate_text)).join('\n')
-        : (window.SpideyNationalTrustCore?.allCoordinatesText?.()||'');
-      if(!payload)return;
+      const payload=fullList;
+      if(!payload){
+        feedback.textContent='Não consegui abrir a lista. Acesse Trust · 27.';
+        return;
+      }
       box.value=payload;
       feedback.textContent='';
       try{
