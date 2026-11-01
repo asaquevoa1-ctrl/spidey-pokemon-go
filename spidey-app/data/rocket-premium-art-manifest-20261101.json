@@ -1,0 +1,54 @@
+{
+  "schema": "spidey-rocket-premium-v1",
+  "date": "2026-11-01",
+  "source_lineup": "2026-10-02",
+  "usage": "Rocket 3D coverflow, exact rotation only",
+  "fallback": "dynamic card when roster changes or image fails",
+  "images": [
+    {
+      "id": "giovanni",
+      "bytes": 139864,
+      "sha256": "c5bc895f628efa6d8bf8109556a75e6594c35ea164bfd1c5b068838714a77e85",
+      "git_blob": "60e598bac6181763f3eee8953f013b3a727fba09",
+      "path": "assets/rocket-premium-20261101/giovanni-premium-shadow.webp",
+      "source": "ChatGPT image generation, user approved",
+      "format": "webp",
+      "dimensions": "768x1152"
+    },
+    {
+      "id": "cliff",
+      "bytes": 143374,
+      "sha256": "a4e4ea311b5a020ca680f347408d35e06e2236578074bcd8a59721c4e5285eb9",
+      "git_blob": "71d1872508997dd9d292f6d3710d87754e22fc44",
+      "path": "assets/rocket-premium-20261101/cliff-premium-shadow.webp",
+      "source": "ChatGPT image generation, user approved",
+      "format": "webp",
+      "dimensions": "768x1152"
+    },
+    {
+      "id": "arlo",
+      "bytes": 153172,
+      "sha256": "2e58b02f6c423c0cc0334c26d610cb4719e909d5a1882b17de8fb3d3bea2e089",
+      "git_blob": "bd4725014f0a910b664f6cb09ab95ba8904a72c8",
+      "path": "assets/rocket-premium-20261101/arlo-premium-shadow.webp",
+      "source": "ChatGPT image generation, user approved",
+      "format": "webp",
+      "dimensions": "768x1152"
+    },
+    {
+      "id": "sierra",
+      "bytes": 157508,
+      "sha256": "8939628a5afcec4c40dbd5e11aa9384a490f329f8c026f98d799fe2c1ad7f4f3",
+      "git_blob": "f315d73a143f1bf51f1854947cbd224160b07a93",
+      "path": "assets/rocket-premium-20261101/sierra-premium-shadow.webp",
+      "source": "ChatGPT image generation, user approved",
+      "format": "webp",
+      "dimensions": "768x1152"
+    }
+  ],
+  "notes": [
+    "Poster artwork has embedded editorial Pokémon art; the cosmic emblem in the app heading remains the official source file.",
+    "The Giovanni poster is the previously approved variant; leader Shadow artwork (Cliff, Arlo, Sierra) was approved in this conversation.",
+    "Images must be displayed without cropping or upscaling filters."
+  ]
+}
