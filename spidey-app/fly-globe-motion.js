@@ -172,7 +172,7 @@
     const p=rows[selected];
     el.location.textContent=(p.flag||'')+' '+shorten(p.name);
     el.tag.textContent='ETAPA '+String(selected+1).padStart(2,'0')+' / '+String(rows.length).padStart(2,'0');
-    el.localClock.textContent=fmt(p.start,p.timezone)+' → '+clock(p.end,p.timezone);
+    el.localClock.textContent=fmt(p.start,p.timezone)+' → '+fmt(p.end,p.timezone);
     el.brClock.textContent=fmt(p.start,BRT)+' → '+fmt(p.end,BRT);
     el.coords.textContent='Referência: '+p.lat+', '+p.lon+' · '+p.timezone;
     el.fill.style.width=(((selected+1)/rows.length)*100).toFixed(2)+'%';
