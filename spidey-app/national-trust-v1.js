@@ -56,7 +56,10 @@
       copy.className='action-btn nt-copy';copy.dataset.coord=p.coordinates;
       copy.textContent='Copiar';
       copy.setAttribute('aria-label','Copiar coordenadas de '+p.name);
-      item.append(details,copy);fragment.append(item);
+      const number=document.createElement('span');
+      number.className='nt-place-number';number.textContent=String(i+1).padStart(2,'0');
+      number.setAttribute('aria-hidden','true');
+      item.append(number,details,copy);fragment.append(item);
     }
     list.append(fragment);
     if(!filtered.length){
