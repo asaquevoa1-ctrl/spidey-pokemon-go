@@ -1,0 +1,54 @@
+/* SPIDEY FLY — visual em movimento, baseado em janelas IANA reais.
+   Identidade cósmica dourada preservada; aranha antiga nunca é renderizada. */
+#flyGlobeMotion{position:relative;isolation:isolate;overflow:hidden;margin:16px 0 22px;
+ padding:16px;border:1px solid rgba(209,170,110,.32);border-radius:22px;
+ color:#f7f0e6;background:linear-gradient(155deg,#192432,#0a111d 75%,#171f2b);
+ box-shadow:0 14px 35px rgba(0,0,0,.19),inset 0 1px rgba(250,229,185,.11);}
+#flyGlobeMotion[hidden]{display:none!important;}
+#flyGlobeMotion:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;
+ background:repeating-linear-gradient(0deg,transparent 0 32px,rgba(231,199,144,.08) 33px),
+ repeating-linear-gradient(90deg,transparent 0 32px,rgba(231,199,144,.08) 33px);}
+.fly-globe-head{display:flex;align-items:center;justify-content:space-between;gap:8px;position:relative;z-index:2;margin-bottom:11px;}
+.fly-globe-title{min-width:0;}
+.fly-globe-kicker{display:block;font-size:.67rem;letter-spacing:.16em;font-weight:850;color:#e4bd79;}
+.fly-globe-title h2{font-size:clamp(1.36rem,5vw,1.88rem);letter-spacing:-.035em;margin:2px 0;color:#faf4e9;}
+.fly-globe-title p{margin:0;color:#c7c8cf;font-size:.75rem;line-height:1.35;}
+.fly-globe-brand{height:42px;width:42px;border-radius:9px;object-fit:contain;flex-shrink:0;}
+.fly-globe-screen{position:relative;isolation:isolate;border:1px solid rgba(212,186,147,.2);
+ background:#0b1524;border-radius:17px;overflow:hidden;height:clamp(250px,74vw,360px);}
+.fly-globe-canvas{width:100%;height:100%;display:block;}
+.fly-globe-screen[hidden]{display:none;}
+.fly-globe-overlay{position:absolute;top:13px;left:13px;right:13px;display:flex;align-items:start;
+ justify-content:space-between;gap:9px;pointer-events:none;}
+.fly-globe-location{color:#fff3d9;max-width:72%;padding:5px 10px;border:1px solid rgba(230,189,131,.35);
+ border-radius:11px;background:rgba(10,21,36,.84);font-weight:850;font-size:.86rem;line-height:1.3;overflow-wrap:anywhere;
+ text-shadow:0 1px 3px rgba(0,0,0,.35);}
+.fly-globe-counter{white-space:nowrap;display:inline-flex;padding:7px 8px;color:#f1d3a3;
+ border-radius:9px;border:1px solid rgba(236,202,158,.28);background:rgba(10,21,36,.75);
+ font-size:.63rem;font-weight:800;letter-spacing:.09em;}
+.fly-globe-times{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;}
+.fly-globe-time{min-width:0;display:grid;gap:6px;padding:12px 11px;background:rgba(6,13,25,.58);
+ border:1px solid rgba(211,181,133,.21);border-radius:12px;}
+.fly-globe-time span{letter-spacing:.09em;color:#dcb980;font-size:.58rem;font-weight:850;}
+.fly-globe-time strong{font-size:clamp(.79rem,2.5vw,1rem);font-variant-numeric:tabular-nums;color:#fff4e9;overflow-wrap:anywhere;}
+.fly-globe-coords{font-size:.75rem;color:#c4d0de;margin:10px 2px;overflow-wrap:anywhere;}
+.fly-globe-controls{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;margin:13px 0 10px;}
+.fly-globe-controls button{cursor:pointer;min-height:43px;border:1px solid rgba(237,188,131,.46);
+ border-radius:11px;background:#233247;color:#fff4df;font:inherit;font-weight:800;}
+.fly-globe-step{min-width:48px;padding:4px;font-size:1.6rem!important;line-height:1;}
+.fly-globe-play{min-width:119px;padding:9px 16px;background:linear-gradient(115deg,#a63e50,#733147)!important;}
+.fly-globe-controls button:focus-visible{outline:3px solid #eacb85;outline-offset:3px;}
+.fly-globe-count{color:#ecd0aa;font-weight:730;font-size:.76rem;}
+.fly-globe-track{position:relative;height:4px;background:rgba(238,203,155,.16);border-radius:99px;overflow:hidden;}
+.fly-globe-track-fill{width:0;height:100%;background:linear-gradient(90deg,#d8b778,#e981b8);border-radius:inherit;
+ transition:width .23s ease;}
+.fly-globe-note{font-size:.71rem;line-height:1.45;color:#c9c6c2;margin:10px 2px 0;}
+.fly-globe-no-canvas .fly-globe-times{border-top:1px solid rgba(240,210,158,.2);padding-top:9px;}
+html[data-theme="light"] #flyGlobeMotion{color:#fff;background:linear-gradient(155deg,#243246,#131b2a);}
+@media(max-width:390px){#flyGlobeMotion{padding:11px;}
+ .fly-globe-screen{height:clamp(245px,78vw,290px)}
+ .fly-globe-time{padding:10px 8px;}
+ .fly-globe-time strong{font-size:.77rem}
+ .fly-globe-location{font-size:.77rem;}
+ .fly-globe-count{flex-basis:100%;text-align:center;}}
+@media(prefers-reduced-motion:reduce){.fly-globe-track-fill{transition:none;}}
