@@ -50,3 +50,21 @@
 #eventDetail .nt-event-copy{min-height:43px;cursor:pointer;font-size:.8rem;text-align:center;
  border-radius:10px}
 #eventDetail .nt-event-copy:focus-visible{outline:3px solid #f0d39b;outline-offset:2px}
+
+/* O usuário abre o National Trust pela Home 3D: locais vêm antes do pôster. */
+#eventDetail .nt-event-coordinates-first{position:relative;margin:0;padding:16px 14px 12px;
+ color:#f3f1ed;background:linear-gradient(155deg,#1a2837,#101a29 82%);
+ border-bottom:1px solid rgba(230,185,112,.35)}
+#eventDetail .nt-event-coordinates-first h2{margin:10px 0 10px;font-size:clamp(1.35rem,5vw,1.75rem);
+ letter-spacing:-.028em;line-height:1.17;color:#fff5df}
+#eventDetail .nt-event-topline{display:flex;align-items:center;justify-content:space-between;
+ gap:8px;flex-wrap:wrap;font-size:.62rem;font-weight:850;letter-spacing:.09em;color:#ead0a3}
+#eventDetail .nt-event-topline strong{padding:5px 8px;border:1px solid rgba(226,186,114,.45);
+ border-radius:999px;background:rgba(230,186,108,.08);font-size:.67rem;white-space:nowrap}
+#eventDetail .nt-event-coordinates-first .nt-event-caution{color:#ece1d0;line-height:1.43;
+ padding:9px 11px;font-size:.75rem;margin-bottom:7px}
+#eventDetail .nt-event-coordinates-first [data-nt-event-status]{color:#e2cfb4;margin:8px 0 12px}
+#eventDetail .nt-event-coordinates-first .nt-event-group{background:#152638}
+#eventDetail .nt-event-coordinates-first .nt-event-group summary{color:#fff1d3}
+@media(max-width:420px){#eventDetail .nt-event-coordinates-first{padding:12px 10px}
+ #eventDetail .nt-event-coordinates-first h2{font-size:1.35rem}}
