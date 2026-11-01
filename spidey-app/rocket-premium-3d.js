@@ -13,7 +13,7 @@
     Pancham:674,Blastoise:9,Flygon:330,Ferrothorn:598,Milotic:350,Houndoom:229
   });
   // IDs de formas regionais específicos: nunca usar imagem da forma comum no lugar.
-  const LABELS = {giovanni:'CHEFE SUPREMO',cliff:'LÍDER',arlo:'LÍDER',sierra:'LÍDER'};
+  const LABELS = {giovanni:'CHEFE',cliff:'LÍDER',arlo:'LÍDER',sierra:'LÍDER'};
   const COLORS = {giovanni:'ruby',cliff:'blue',arlo:'ember',sierra:'violet'};
   let current = 0;
   let lastSignature = '';
