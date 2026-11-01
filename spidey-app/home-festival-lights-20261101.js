@@ -9,6 +9,39 @@
   const EVENT_START=Date.parse('2026-11-06T10:00:00+05:30');
   const EVENT_END=Date.parse('2026-11-08T20:00:00+05:30');
   const OFFICIAL='https://pokemongo.com/en/news/festival-of-lights-2026';
+  // Fallback factual da versão publicada do evento: a Home não depende
+  // do catálogo dinâmico, que pode estar atrasado no Pages/PWA.
+  // Não cria evento adicional no calendário, só mantém o destaque e detalhes.
+  const APPROVED_EVENT=Object.freeze({
+    id:ID,slug:'festival-das-luzes-2026-india',status:'published',
+    title:'Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta',
+    summary:'Evento exclusivo da Índia com Pikachu usando sari ou kurta e chance de Fundo Especial.',
+    category:'evento_especial',
+    source:{name:'Pokémon GO',url:OFFICIAL,confidence:'official'},
+    art:{url:'assets/festival-das-luzes-approved.png',alt:'Arte Spidey do Festival das Luzes 2026',
+      standard:'spidey-premium-v1'},
+    schedule:{
+      local_timezone:'Asia/Kolkata',
+      start_local:'2026-11-06T10:00:00+05:30',
+      end_local:'2026-11-08T20:00:00+05:30',
+      brazil_timezone:'America/Sao_Paulo',
+      start_brazil:'2026-11-06T01:30:00-03:00',
+      end_brazil:'2026-11-08T11:30:00-03:00'
+    },
+    locations:[{label:'Índia • referência geográfica',latitude:20.5937,longitude:78.9629,
+      coordinate_type:'country_reference',copyable:true}],
+    pokemon:[
+      {name:'Pikachu com saree',note:'Pode ser Brilhante; possível fundo especial'},
+      {name:'Pikachu com kurta',note:'Pode ser Brilhante; possível fundo especial'}
+    ],
+    bonuses:['Duração triplicada dos Módulos Atrair',
+      'Adesivos de evento em Poképaradas na Índia'],
+    notes:['Evento exclusivo da Índia, 6 a 8 de novembro.',
+      'Pesquisa temporária ramificada desde 01/11 às 06h, horário da Índia.',
+      'A coordenada da Índia é apenas referência geográfica, não rota GPX.'],
+    gpx:{enabled:false,reason:'Nenhum local específico de Poképarada confirmado.'}
+  });
+
 
   function phase(now=new Date()) {
     const time=+now;
@@ -25,15 +58,20 @@
   function lookup() {
     try {
       if(typeof state!=='undefined' && Array.isArray(state.events)) {
-        return state.events.find(item=>item.id===ID&&item.status==='published')||null;
+        const event=state.events.find(item=>item.id===ID);
+        // Não anunciar evento revogado se uma atualização oficial o cancelou.
+        if(event && event.status!=='published')return null;
+        if(event)return event;
       }
-    }catch(_){} // A Home continua funcionando se o catálogo ainda não estiver pronto.
-    return null;
+    }catch(_){} // Sem catálago inicial, usa o evento aprovado embarcado.
+    return APPROVED_EVENT;
   }
   function place() {
     const home=document.getElementById('calendarView');
     const feature=home?.querySelector('#nowExperience')?.closest('.experience-section');
-    if(!home||!feature)return false;
+    if(!home)return false;
+    const placement=feature||home.querySelector('.experience-intro');
+    if(!placement)return false;
     if(card?.isConnected)return true;
     const section=element('section','festival-lights-home');
     section.id='festivalLightsHome';
@@ -75,22 +113,25 @@
     open.addEventListener('click',()=>{
       const event=lookup();
       if(event&&typeof openEvent==='function')openEvent(event);
-      else window.location.href=OFFICIAL;
+      else {
+        // Não redirecionar o botão principal para fora do Spidey.
+        card.querySelector('#festivalLightsStatus').textContent='Confira os detalhes no Calendário.';
+      }
     });
     const official=element('a','festival-lights-source','Fonte oficial');
     official.href=OFFICIAL;official.target='_blank';official.rel='noopener noreferrer';
     actionRow.append(open,official);
     section.append(banner,body,dates,research,actionRow);
-    feature.insertAdjacentElement('afterend',section);
+    placement.insertAdjacentElement('afterend',section);
     card=section;
     return true;
   }
   function render(now=new Date()) {
     if(!place())return;
     const event=lookup(),current=phase(now);
-    const valid=event?.schedule?.start_local==='2026-11-06T10:00:00+05:30'
-      &&event?.schedule?.end_local==='2026-11-08T20:00:00+05:30';
-    const show=valid&&current!=='hidden';
+    // Se o catálogo estiver ausente ou defasado, não esconda o destaque.
+    // A janela de visibilidade é definida pelas datas aprovadas acima.
+    const show=Boolean(event)&&current!=='hidden';
     card.hidden=!show;
     if(!show)return;
     if(selectedPhase!==current){

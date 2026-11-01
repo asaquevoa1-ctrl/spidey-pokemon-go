@@ -482,3 +482,12 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Card dá destaque à pesquisa antes de 06/11 e ao festival enquanto acontece; **desaparece automaticamente ao final de 08/11** ou se o evento deixar de ser publicado. Botão “Explorar evento” abre o detalhe *dentro do Spidey*. Link discreto aponta para anúncio oficial.
 - Componentes independentes `home-festival-lights-20261101.js/.css`, carregados após `home-premium-20261029.js` e cacheados no PWA. Não afetar outras guias.
 - Testes `tests/home-festival-lights-20261101.test.cjs` verificam datas UTC, fases pesquisa/festival, origem, arte, integração e cache. Confirmação real no GitHub Pages e Android físico depende de evidência própria; não confundir CI com conferência visual.
+
+## 01/11/2026 — Correção urgente de card Festival das Luzes invisível na Home
+- Usuário confirmou no Samsung que **não apareceu mesmo após limpeza de cache**. Nunca responder só com instruções para limpar o cache novamente.
+- A primeira implementação ocultava o card sempre que o evento não estivesse carregado no `state.events` do catálogo dinâmico, ou se a janela textual fosse diferente. Essa condição era inadequada para um card de Home com anúncio oficial já aprovado.
+- A exibição do card passa a ser vinculada à **janela oficial confirmada** (pesquisa liberada 01/11 às 06h IST; festival 06/11–08/11 IST) e não depende da chegada do catálogo. Um objeto factual local do mesmo evento permite abrir detalhes *dentro do app* mesmo com catálogo atrasado ou indisponível. Não se cria entrada duplicada no calendário.
+- Se o catálogo explicitamente revogar o evento, respeitar `status != published`; não publicar anúncio cancelado.
+- Busca de âncora da Home inclui fallback para `.experience-intro`; cache JS e service worker rotacionados.
+- Testes de regressão agora obrigam **visibilidade de fato** em 01/11 sem catálogo e funcionamento do clique, além de ocultar após 08/11. Preservar arte Premium aprovada, emblema S cósmico e as demais guias.
+- A visibilidade no Samsung e a URL pública só poderão ser declaradas verificadas após teste de dispositivo/HTTP; CI sozinho não basta.
