@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1-20261027-cdmx-stamps1-mexico-selos-human1-20261028-origin-correct2-20261028-expiry-news1-20261029-universe3dfocus2-20261028-dynamax-roster1-20261029-interiors1-20261029-motion1-20261029-visiblehome1-20261029-pokelids-mobile-batch1-20261029-pokelids-pages2-20261029-home-stable1-20261029-interiors-performance1-20261029-guides-stable1-20261030-human-editorial1-20261031-fly-world1-20261031-fly-visible1-20261031-fly-visible2-20261101-rocket-shadow1-20261101-worldglobe1-20261101-geo2-20261101-fly-nocaption1-20261101-india-lights-home1-20261101-home-lights-visible2-20261101-indiafirst3-20261101-fly-cleanheading1-20261101-eventcoords1-20261101-trusttop2-20261101-nt27embedded-20261101-ntvisible4';
+const CACHE = 'spidey-app-20261101-ntvisible4';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -231,8 +231,21 @@ const CORE = [
   './assets/events/premium/zorua-premium-approved-v1.avif'
 ];
 
+// Evita que um pôster ausente impeça a instalação inteira do PWA.
+// O código e dados do app continuam pré-carregados; artes são cacheadas
+// ao abrir as telas. Um único arquivo opcional não bloqueia atualizações.
+const INSTALL_CORE = [
+  './index.html',
+  ...CORE.filter(path => /\\.(?:js|css|json|webmanifest)$/.test(path))
+];
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)).then(() => self.skipWaiting()));
+  event.waitUntil(caches.open(CACHE).then(async cache => {
+    // A Home é essencial. Se ela falhar, preservar o SW anterior.
+    await cache.add('./index.html');
+    // Falha de um asset opcional nunca rejeita todo o novo SW.
+    const assets=[...new Set(INSTALL_CORE)].filter(path=>path!=='./index.html');
+    await Promise.allSettled(assets.map(path=>cache.add(path)));
+  }).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {
