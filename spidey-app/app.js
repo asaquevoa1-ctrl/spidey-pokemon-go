@@ -534,7 +534,7 @@ function openEvent(event) {
   const embeddedTrustLocations=(event.locations||[]).filter(loc=>loc.coordinate_type==='community_site_reference'&&validCoordinate(loc));
   const trustRows=embeddedTrustLocations.map((p,i)=>{
     const coord=String(p.coordinate_text||'');
-    return '<li class="nt-event-simple-row"><div><strong>'+xmlSafe(p.label.split(' • ')[0])+'</strong><code>'+coord+'</code></div><button type="button" class="action-btn copy-coord" data-value="'+coord+'">Copiar</button></li>';
+    return '<li class="nt-event-simple-row"><span class="nt-place-number" aria-hidden="true">'+String(i+1).padStart(2,'0')+'</span><div><strong>'+xmlSafe(p.label.split(' • ')[0])+'</strong><code>'+coord+'</code></div><button type="button" class="action-btn copy-coord" data-value="'+coord+'">Copiar</button></li>';
   }).join('');
   const trustCoordinatesMarkup='<section id="nationalTrustEventCoords" class="nt-event-coordinates nt-event-coordinates-first" aria-label="27 coordenadas National Trust">'+
     '<div class="nt-event-topline"><span>🇬🇧 NATIONAL TRUST</span><strong>27 LOCAIS</strong></div>'+
