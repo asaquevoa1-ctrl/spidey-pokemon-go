@@ -67,7 +67,7 @@ test('the 3D event detail contains an in-place coordinate list, not only a Trust
  assert.match(app,/detail\.dataset\.eventId===event\.id/);
  assert.match(nt.summary,/27 coordenadas de referência/);
  assert.match(nt.notes.join(' '),/copiados aqui ou na aba Trust/);
- assert.match(html,/national-trust-v1\.js\?v=20261101-trusttop2/);
+ assert.match(html,/national-trust-v1\.js\?v=20261101-ntvisible4/);
  assert.match(html,/app\.js\?v=20261101-embedded27/);
  assert.match(html,/national-trust-v1\.css\?v=20261101-ntvisible4/);
  assert.match(sw,/20261101-ntvisible4/);
