@@ -78,3 +78,59 @@
 #nationalTrustView .nt-toolbar{margin:12px 0 8px;}
 #nationalTrustView .nt-place-list{margin-top:6px;}
 #nationalTrustView .nt-poster-stage{margin:24px auto 14px;}
+
+
+/* National Trust — lista humana e compacta, pronta para copiar no Data Hub. */
+#nationalTrustView .nt-caution{display:none!important}
+#nationalTrustView .nt-bulk-actions,
+#eventDetail .nt-bulk-actions{display:grid;gap:7px;margin:10px 0 14px;min-width:0;}
+#nationalTrustView .nt-copy-all,
+#eventDetail .nt-copy-all{display:block;width:100%;min-height:49px;border-radius:13px;
+ padding:11px 15px;border:1px solid rgba(255,221,169,.5);
+ background:linear-gradient(110deg,#954453,#752e3b);color:#fff9ef;
+ font:inherit;font-size:1rem;font-weight:850;letter-spacing:.005em;
+ cursor:pointer;box-shadow:0 6px 14px rgba(17,11,22,.18);}
+#nationalTrustView .nt-copy-all:focus-visible,
+#eventDetail .nt-copy-all:focus-visible{outline:3px solid #ffdc9e;outline-offset:2px}
+#nationalTrustView .nt-copy-hint,
+#eventDetail .nt-copy-hint{font-size:.79rem;line-height:1.4;color:var(--text,#e4e8ea);
+ opacity:.84;margin:1px 2px 4px;}
+#nationalTrustView .nt-copy-status,
+#eventDetail .nt-copy-status{font-size:.8rem;line-height:1.4;margin:0 2px;color:#eccb87;}
+#nationalTrustView .nt-copy-status:empty,
+#eventDetail .nt-copy-status:empty{display:none}
+#nationalTrustView .nt-manual-copy,
+#eventDetail .nt-manual-copy{border:1px solid rgba(218,183,119,.22);border-radius:10px;padding:6px 10px;}
+#nationalTrustView .nt-manual-copy summary,
+#eventDetail .nt-manual-copy summary{cursor:pointer;font-size:.76rem;font-weight:700;padding:5px 0;}
+#nationalTrustView .nt-manual-copy textarea,
+#eventDetail .nt-manual-copy textarea{box-sizing:border-box;display:block;width:100%;max-width:100%;
+ margin:9px 0 5px;padding:10px;resize:vertical;border-radius:9px;
+ border:1px solid rgba(201,169,113,.35);background:#0c1825;color:#f4ead8;
+ font:500 .9rem/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;
+ font-variant-numeric:tabular-nums;user-select:text;-webkit-user-select:text;}
+#nationalTrustView .nt-place-list,
+#eventDetail .nt-event-simple-list{list-style:none;padding:0;margin:9px 0 14px;display:grid;gap:7px;}
+#nationalTrustView .nt-place,
+#eventDetail .nt-event-simple-row{display:flex;align-items:center;justify-content:space-between;
+ gap:12px;min-width:0;padding:11px 12px;
+ border-radius:12px;border:1px solid rgba(208,179,133,.25);
+ background:rgba(15,29,45,.89);color:#fbf5e8;}
+#nationalTrustView .nt-place-text,
+#eventDetail .nt-event-simple-row>div{flex:1 1 auto;min-width:0;}
+#nationalTrustView .nt-place strong,
+#eventDetail .nt-event-simple-row strong{display:block;font-size:.85rem;
+ line-height:1.32;font-weight:760;color:#fff1d7;margin:0 0 3px;overflow-wrap:anywhere;}
+#nationalTrustView .nt-place small{display:block;font-size:.7rem;opacity:.72;line-height:1.25;margin:0 0 4px;}
+#nationalTrustView .nt-place code,
+#eventDetail .nt-event-simple-row code{display:block;font:.82rem/1.3 ui-monospace,Consolas,monospace;
+ color:#dfedf5;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;user-select:text;}
+#nationalTrustView .nt-place .action-btn,
+#eventDetail .nt-event-simple-row .action-btn{flex:0 0 auto;min-height:41px;
+ padding:8px 10px;font-size:.77rem;border-radius:10px;cursor:pointer;}
+#eventDetail .nt-event-coordinates-first .nt-event-caution{display:none;}
+@media(max-width:370px){
+ #nationalTrustView .nt-place,#eventDetail .nt-event-simple-row{gap:7px;padding:9px 8px}
+ #nationalTrustView .nt-place code,#eventDetail .nt-event-simple-row code{font-size:.75rem}
+ #nationalTrustView .nt-place .action-btn,#eventDetail .nt-event-simple-row .action-btn{padding:8px;font-size:.7rem}
+}
