@@ -69,3 +69,30 @@ html[data-theme="light"] #rocketGuideView .rocket-3d{background:linear-gradient(
  transform:translate3d(calc(-50% + 85%),8px,-125px) rotateY(-42deg)}}
 @media(max-width:380px){.rocket-3d-card{width:68%}.rocket-3d-slot-names{font-size:.65rem}.rocket-3d-position{min-width:100px}}
 @media(prefers-reduced-motion:reduce){.rocket-3d-card{transition:none}}
+
+/* Cartazes originais Shadow Premium: imagem integral, sem corte ou regeneração.
+   A lista textual permanece disponível a leitores de tela e no detalhe.
+   Se a formação mudou, o cartão dinâmico continua sendo o fallback. */
+#rocketGuideView .rocket-3d-viewport {height:clamp(360px,102vw,465px);}
+#rocketGuideView .rocket-3d-card {width:min(69%,300px);}
+#rocketGuideView .rocket-3d-card-poster {padding:0;gap:0;border-color:rgba(227,188,113,.65)!important;background:#101621!important;}
+#rocketGuideView .rocket-3d-card-poster .rocket-3d-art-panel{
+  flex:1 1 100%;min-height:0;width:100%;border:0;border-radius:17px;background:#101621;
+}
+#rocketGuideView .rocket-3d-card-poster .rocket-3d-art-panel::before {display:none;}
+#rocketGuideView .rocket-3d-poster-image {
+  position:absolute;inset:0;display:block;width:100%;height:100%;
+  object-fit:contain;object-position:center;background:#0b101a;
+}
+#rocketGuideView .rocket-3d-card-poster .rocket-3d-lineup {
+  position:absolute!important;width:1px!important;height:1px!important;
+  padding:0!important;margin:-1px!important;overflow:hidden!important;
+  clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;
+}
+@media(min-width:750px){
+  #rocketGuideView .rocket-3d-viewport{height:465px;}
+}
+@media(max-width:380px){
+  #rocketGuideView .rocket-3d-viewport{height:clamp(330px,107vw,390px);}
+  #rocketGuideView .rocket-3d-card{width:70%;}
+}

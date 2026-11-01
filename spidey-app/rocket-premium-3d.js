@@ -12,6 +12,32 @@
     'Alolan Grimer':10112,Steelix:208,Slowbro:80,Alakazam:65,Charizard:6,Scizor:212,
     Pancham:674,Blastoise:9,Flygon:330,Ferrothorn:598,Milotic:350,Houndoom:229
   });
+  // Artes editoriais aprovadas para a rotação de 02/10/2026.
+  // Se qualquer slot mudar, o card dinâmico toma o lugar do pôster antigo.
+  const POSTERS = Object.freeze({
+    giovanni: {
+      file:'assets/rocket-premium-20261101/giovanni-premium-shadow.webp',
+      slots:[['Persian'],['Kangaskhan','Rhyperior','Machamp'],['Zekrom']]
+    },
+    cliff: {
+      file:'assets/rocket-premium-20261101/cliff-premium-shadow.webp',
+      slots:[['Cubone'],['Snorlax','Golurk','Galarian Weezing'],['Tyranitar','Camerupt','Gallade']]
+    },
+    arlo: {
+      file:'assets/rocket-premium-20261101/arlo-premium-shadow.webp',
+      slots:[['Alolan Grimer'],['Steelix','Golurk','Slowbro'],['Alakazam','Charizard','Scizor']]
+    },
+    sierra: {
+      file:'assets/rocket-premium-20261101/sierra-premium-shadow.webp',
+      slots:[['Pancham'],['Blastoise','Flygon','Ferrothorn'],['Milotic','Houndoom','Steelix']]
+    }
+  });
+  function matchingPoster(member) {
+    const poster = POSTERS[member.id];
+    if (!poster || member.slots.length !== poster.slots.length) return null;
+    const same = member.slots.every((slot,i) => slot.pokemon.map(p=>p.name).join('|') === poster.slots[i].join('|'));
+    return same ? poster : null;
+  }
   // IDs de formas regionais específicos: nunca usar imagem da forma comum no lugar.
   const LABELS = {giovanni:'CHEFE',cliff:'LÍDER',arlo:'LÍDER',sierra:'LÍDER'};
   const COLORS = {giovanni:'ruby',cliff:'blue',arlo:'ember',sierra:'violet'};
@@ -52,6 +78,25 @@
     nameplate.append(elt('strong','rocket-3d-name',member.label));
     artwork.append(nameplate);
     card.append(artwork);
+    // A arte Premium mostra a formação inteira e os olhos sombrios.
+    // Mantenha a escalação em texto na árvore de acessibilidade e no detalhe.
+    const poster = matchingPoster(member);
+    if (poster) {
+      const illustration = document.createElement('img');
+      illustration.className = 'rocket-3d-poster-image';
+      illustration.alt = 'Arte Premium de ' + member.label + ' e seus Pokémon Sombrios';
+      illustration.loading = 'lazy';
+      illustration.decoding = 'async';
+      illustration.dataset.rocketPosterUrl = poster.file;
+      illustration.addEventListener('load',()=>card.classList.add('rocket-3d-card-poster'),{once:true});
+      illustration.addEventListener('error',()=>{
+        illustration.remove();
+        card.classList.remove('rocket-3d-card-poster');
+        card.removeAttribute('data-rocket-poster');
+      },{once:true});
+      artwork.append(illustration);
+      card.dataset.rocketPoster = member.id;
+    }
     const lineup = elt('span','rocket-3d-lineup');
     member.slots.forEach((slot,i) => {
       const row = elt('span','rocket-3d-slot');
@@ -152,6 +197,10 @@
         card.dataset.position = delta === 0 ? 'center' : delta === -1 ? 'left' : delta === 1 ? 'right' : 'hidden';
         card.tabIndex = delta === 0 ? 0 : -1;
         card.setAttribute('aria-hidden',String(delta !== 0));
+        // Nunca faça requisição de todas as artes antes de o usuário navegar.
+        if (Math.abs(delta) <= 1) card.querySelectorAll('img[data-rocket-poster-url]').forEach(img=>{
+          if(!img.getAttribute('src')) img.src=img.dataset.rocketPosterUrl;
+        });
         // Só carrega miniaturas do card em foco ou dos cards vizinhos.
         if(Math.abs(delta)<=1) card.querySelectorAll('img[data-rocket-mini-url]').forEach(img=>{
           if(!img.src) img.src = img.dataset.rocketMiniUrl;

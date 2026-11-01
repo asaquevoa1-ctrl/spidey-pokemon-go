@@ -448,3 +448,11 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Priorizar visual 3D cinematográfico com identidade oficial S cósmico, sem restaurar logo anterior e sem substituir qualquer pôster Premium já aprovado.
 - **Estado da entrega:** código da galeria de consulta interativa em PR; arte cinematográfica individual de Cliff, Arlo e Sierra e comparação visual definitiva permanecem como etapa de qualidade distinta. Não declarar artes aprovadas nem publicação automática sem evidência.
 - Arquivos do recurso: `spidey-app/rocket-premium-3d.js`, `spidey-app/rocket-premium-3d.css`; integração via `rocket-guide.js` e `index.html`. Manter tipagens/recrutas para próxima etapa solicitada.
+
+## 01/11/2026 — artes Premium Sombrias para Rocket 3D
+- O responsável aprovou o resultado visual das três artes sombrias com olhos vermelhos e fumaça roxa de Cliff, Arlo e Sierra e autorizou explicitamente a atualização do aplicativo.
+- Mantida a arte anterior de Giovanni, igualmente aprovada; no painel seu título é apenas **CHEFE**, jamais "Chefe Supremo".
+- No **Explorar 3D** da guia Rocket, usar os pôsteres completos em formato WebP otimizado 768×1152, sem cortes, preservando as demais guias e o emblema S cósmico da interface.
+- Pôsteres exibidos somente quando as três posições de cada adversário coincidirem exatamente com a rotação factual carregada do JSON local; se mudar a escalação ou falhar o download da arte, voltar ao card dinâmico existente.
+- Manifesto de artes/hash: `spidey-app/data/rocket-premium-art-manifest-20261101.json`. Arquivos em `spidey-app/assets/rocket-premium-20261101/`. Conferir o link público e o Samsung antes de declarar implantação física.
+- Próxima etapa separada: tipagens/recrutas. Não alterar os cards de recrutas neste lote.
