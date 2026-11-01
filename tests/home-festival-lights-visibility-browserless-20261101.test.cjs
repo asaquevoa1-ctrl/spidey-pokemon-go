@@ -5,7 +5,7 @@ const code=fs.readFileSync(path.join(__dirname,'../spidey-app/home-festival-ligh
 function appState(provideState=false){
  let openCall=null, inserted=null;
  const node=(tag='div')=>({
-   tagName:tag.toUpperCase(),children:[],attributes:{},hidden:false,isConnected:false,style:{},
+   tagName:tag.toUpperCase(),children:[],attributes:{},dataset:{},hidden:false,isConnected:false,style:{},
    setAttribute(key,value){this.attributes[key]=value;},
    addEventListener(name,cb){this.events ||= {};this.events[name]=cb;},
    append(...children){this.children.push(...children);},
