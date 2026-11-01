@@ -1,0 +1,23 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+test('GitHub Pages favors newest main version and verifies ACTUAL public deployment',()=>{
+ const yml=read('.github/workflows/spidey-pages.yml');
+ const checker=read('scripts/qa_trust_27_public_pages.mjs');
+ assert.match(yml,/group: spidey-pages-/);
+ assert.match(yml,/cancel-in-progress: true/);
+ assert.match(yml,/uses: actions\/deploy-pages@v4/);
+ assert(yml.indexOf('uses: actions/deploy-pages@v4')<yml.indexOf('node scripts/qa_trust_27_public_pages.mjs'));
+ for(const file of ['app.js','national-trust-v1.js','national-trust-v1.css','data/events.json']) {
+   assert(checker.includes("'"+file+"'"),file);
+ }
+ assert.match(checker,/createHash\('sha256'\)/);
+ assert.match(checker,/hash\(bytes\)!==hash\(source\)/);
+ assert.match(checker,/ntEventCopyAll/);
+ assert.match(checker,/Copiar todas as 27/);
+ assert.doesNotMatch(checker,/v=20261101-copyall5/);
+});
