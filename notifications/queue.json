@@ -4,24 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "2026-11-halloween-part-2:start:60",
-      "event_id": "2026-11-halloween-part-2",
-      "event_title": "Halloween 2026: Parte II",
-      "category": "halloween",
-      "scheduled_for": "2026-11-01T09:00:00-03:00",
-      "event_start": "2026-11-01T10:00:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Halloween 2026: Parte II começa em cerca de 1 hora(s).",
-      "url": "./?event=2026-11-halloween-part-2",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO · anúncio oficial",
-        "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-11-go-pass-groudon:start:60",
       "event_id": "2026-11-go-pass-groudon",
       "event_title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
@@ -204,7 +186,7 @@
     }
   ],
   "meta": {
-    "pending_count": 11,
+    "pending_count": 10,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
