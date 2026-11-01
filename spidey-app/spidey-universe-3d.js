@@ -27,7 +27,10 @@
         return dateStatus ? true : !!(r?.end && r.end.getTime() > now.getTime());
       } catch (_) { return false; }
     };
-    const ordered = [focus, ...(events || []).slice().filter(valid).sort((a, b) => {
+    // O evento regional em evidência abre a galeria enquanto sua janela
+    // de pesquisa/festival estiver válida. Demais cards continuam navegáveis.
+    const regional = window.SpideyFestivalLights?.featuredEvent?.(now);
+    const ordered = [regional, focus, ...(events || []).slice().filter(valid).sort((a, b) => {
       try { return range(a).start - range(b).start; } catch (_) { return 0; }
     })];
     const seen = new Set();
@@ -255,5 +258,5 @@
     section.spideyDispose = dispose;
     return section;
   }
-  window.SpideyUniverse3D = Object.freeze({ mount });
+  window.SpideyUniverse3D = Object.freeze({ mount, approvedEvents });
 })();
