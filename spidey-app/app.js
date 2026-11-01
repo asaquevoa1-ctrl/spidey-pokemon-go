@@ -533,7 +533,11 @@ function openEvent(event) {
       ${newsOnly ? '' : `<div class="info-grid">
         ${dateOnly ? `<div class="info-box"><span>Período no local</span><strong>${window.SpideyDateOnly.label(event)}</strong></div><div class="info-box"><span>Horário diário</span><strong>Não divulgado</strong></div>` : `<div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div><div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>`}
       </div>
-      <h3>Coordenadas</h3>${window.SpideyFlyCore?.eligible(event) ? '<p class="microcopy">Evento mundial: horários e coordenadas de referência aparecem no FLY, por cidade e em Brasília. As referências urbanas não são Ginásios confirmados.</p>' : locationRows(event)}
+      <h3>Coordenadas</h3>${event.id==='2026-national-trust-27-sites'
+        ? '<section id="nationalTrustEventCoords" class="nt-event-coordinates" aria-label="27 locais e coordenadas National Trust"><p class="nt-event-caution">27 referências comunitárias das propriedades National Trust. Não representam Poképaradas, Ginásios ou locais exatos verificados de ativação das pesquisas.</p><p data-nt-event-status role="status">Carregando as 27 coordenadas de referência…</p><div data-nt-event-list class="nt-event-list"></div></section>'
+        : window.SpideyFlyCore?.eligible(event)
+          ? '<p class="microcopy">Evento mundial: horários e coordenadas de referência aparecem no FLY, por cidade e em Brasília. As referências urbanas não são Ginásios confirmados.</p>'
+          : locationRows(event)}
       ${event.companion_art?.url ? `<div class="spidey-companion-art">
         <h3>${event.companion_art.title || 'Coordenadas ilustradas'}</h3>
         <a href="${event.companion_art.url}?v=${String(event.companion_art.web_sha256 || '').slice(0,12)}" target="_blank" rel="noopener" aria-label="Abrir arte completa de coordenadas">
@@ -553,6 +557,12 @@ function openEvent(event) {
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${event.notes?.length ? `<h3>Mais informações</h3><ul class="event-notes">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;
+  if(event.id==='2026-national-trust-27-sites'){
+    window.SpideyNationalTrustCore?.renderEventCoordinates?.(
+      detail.querySelector('#nationalTrustEventCoords'),
+      ()=>detail.dataset.eventId===event.id
+    );
+  }
   detail.querySelectorAll('.copy-coord').forEach((button) => button.addEventListener('click', async () => {
     await navigator.clipboard.writeText(button.dataset.value);
     showToast('Coordenadas copiadas.');
