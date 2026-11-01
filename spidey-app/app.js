@@ -258,7 +258,8 @@ function locationRows(event) {
     const landmarkReference = loc.coordinate_type === 'landmark_reference' && loc.exact_raid_gym_verified === false;
     const venueReference = airportReference || stadiumReference || landmarkReference;
     const communityReference = loc.coordinate_type === 'community_site_reference' && loc.exact_pokestop_verified === false;
-    const value = (venueReference || communityReference || event.id === '2026-10-24-spidey-full-day-guide') && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
+    const communityValue=communityReference && /^-?\d{1,2}\.\d+,-?\d{1,3}\.\d+$/.test(String(loc.coordinate_text||'')) ? loc.coordinate_text : null;
+    const value = communityValue || (venueReference || event.id === '2026-10-24-spidey-full-day-guide') && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
       ? loc.coordinate_text : `${Number(loc.latitude).toFixed(4)}, ${Number(loc.longitude).toFixed(4)}`;
     const description = airportReference ? '<small>Referência do aeroporto/terminal • NÃO é Ginásio ANA verificado</small><br>'
       : stadiumReference ? '<small>Referência do Estádio de Seul • NÃO é Ginásio de reide verificado</small><br>'
