@@ -49,7 +49,7 @@ test('Original FLY points, controls and cache are retained with updated geograph
  assert.equal(points.filter(p=>p.essential).length,17);
  const sw=read('sw.js'),html=read('index.html');
  assert(sw.includes("'./data/fly-earth-land-110m.json'"));
- assert(html.includes('fly-globe-motion.js?v=20261101-geo2'));
+ assert(html.includes('fly-globe-motion.js?v=20261101-nocaption1'));
  assert(script.includes('viewLat=rows[0].lat'));
  assert(script.includes('viewLat+=(p.lat-viewLat)'));
  assert(script.includes('Pausar animação'));
