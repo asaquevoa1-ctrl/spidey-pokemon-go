@@ -62,17 +62,13 @@
     root=node('section','fly-globe-motion');
     root.id='flyGlobeMotion';
     root.setAttribute('aria-label','Rota mundial animada do evento');
-    const heading=node('header','fly-globe-head');
-    const info=node('div','fly-globe-title');
-    info.append(node('span','fly-globe-kicker','SPIDEY PREMIUM · FLY'));
-    info.append(node('h2','', 'Globo das janelas'));
-    info.append(node('p','', 'Uma viagem visual pelos fusos — não representa deslocamento real.'));
+    // Preservar apenas o emblema S cósmico, sem cabeçalho ou texto promocional.
     const brand=document.createElement('img');
     brand.src='assets/branding/20261019/spidey-icon-cosmic-192.png';
-    brand.alt='Emblema S cósmico do Spidey';
+    brand.alt='';
+    brand.setAttribute('aria-hidden','true');
     brand.className='fly-globe-brand';
     brand.loading='lazy';
-    heading.append(info,brand);
     const screen=node('div','fly-globe-screen');
     canvas=document.createElement('canvas');
     canvas.className='fly-globe-canvas';
@@ -83,9 +79,7 @@
     const location=node('strong','fly-globe-location','');
     location.id='flyGlobeLocation';
     location.setAttribute('aria-live','polite');
-    const tag=node('span','fly-globe-counter','');
-    tag.id='flyGlobeCounter';
-    overlay.append(location,tag);
+    overlay.append(location,brand);
     screen.append(overlay);
     const times=node('div','fly-globe-times');
     const local=node('div','fly-globe-time');
@@ -114,10 +108,10 @@
     const track=node('div','fly-globe-track');
     const fill=node('div','fly-globe-track-fill');
     track.append(fill);
-    root.append(heading,screen,times,coords,controls,track);
+    root.append(screen,times,coords,controls,track);
     anchor.insertAdjacentElement('afterend',root);
     loadLand();
-    el={location,tag,localClock,brClock,coords,prev,next,play,count,fill};
+    el={location,localClock,brClock,coords,prev,next,play,count,fill};
     ctx=canvas.getContext('2d',{alpha:false});
     if(!ctx){
       screen.hidden=true;
@@ -166,7 +160,6 @@
     if(!el || !rows.length)return;
     const p=rows[selected];
     el.location.textContent=(p.flag||'')+' '+shorten(p.name);
-    el.tag.textContent='ETAPA '+String(selected+1).padStart(2,'0')+' / '+String(rows.length).padStart(2,'0');
     el.localClock.textContent=fmt(p.start,p.timezone)+' → '+fmt(p.end,p.timezone);
     el.brClock.textContent=fmt(p.start,BRT)+' → '+fmt(p.end,BRT);
     el.coords.textContent='Referência: '+p.lat+', '+p.lon+' · '+p.timezone;
