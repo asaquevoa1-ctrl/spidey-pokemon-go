@@ -1,0 +1,50 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const root=path.join(__dirname,'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const festivalCode=read('spidey-app/home-festival-lights-20261101.js');
+const universeCode=read('spidey-app/spidey-universe-3d.js');
+const ui={};
+const doc={readyState:'loading',addEventListener(){}};
+vm.runInNewContext(festivalCode,{window:ui,document:doc,Date,console});
+const today=new Date('2026-11-01T20:00:00Z');
+const approved=ui.SpideyFestivalLights.featuredEvent(today);
+const other=[1,2,3,4].map(i=>({id:'fixture-event-'+i,title:'Evento '+i,status:'published',
+ schedule:{start_local:'2026-11-02T10:00:00-03:00',end_local:'2026-11-09T20:00:00-03:00'}}));
+ui.SPIDEY_APPROVED_ART_MASTER=Object.fromEntries([approved,...other].map(e=>[e.id,{file:e.id===approved.id?'assets/festival-das-luzes-approved.png':'assets/test.png'}]));
+vm.runInNewContext(universeCode,{window:ui,document:doc,navigator:{},console,Date,Math});
+const deck=ui.SpideyUniverse3D.approvedEvents;
+const range=e=>({start:new Date(e.schedule.start_local),end:new Date(e.schedule.end_local)});
+const art=e=>ui.SPIDEY_APPROVED_ART_MASTER[e.id]?.file;
+const title=e=>e.title,time=e=>e.schedule.start_local;
+test('Home 3D leads with approved Festival das Luzes on 01/11, keeping four other cards',()=>{
+ const result=deck(other,other[0],today,art,title,time,range);
+ assert.equal(result.length,5);
+ assert.equal(result[0].id,'festival-of-lights-2026-pokeminers-e2');
+ assert.equal(result[0].art,'assets/festival-das-luzes-approved.png');
+ assert.equal(result.filter(item=>item.id===result[0].id).length,1);
+ assert.equal(result[1].id,'fixture-event-1');
+ assert.match(universeCode,/let active = Math.max\(0, selection\.findIndex\(item => item\.id === selectedId\)\)/);
+});
+test('Festival carousel slide retires after 08/11, other cards stay untouched',()=>{
+ const expired=new Date('2026-11-08T14:30:00Z');
+ const result=deck(other,other[0],expired,art,title,time,range);
+ assert.equal(result.length,4);
+ assert(!result.some(x=>x.id==='festival-of-lights-2026-pokeminers-e2'));
+});
+test('Festival first-screen teaser is mounted in real Player Home and never legacy calendar',()=>{
+ const player=read('spidey-app/player-ui.js');
+ const css=read('spidey-app/home-festival-lights-20261101.css');
+ const html=read('spidey-app/index.html');
+ assert.match(festivalCode,/document\.getElementById\('playerHome'\)/);
+ assert.match(festivalCode,/querySelector\('\.spidey-cockpit-home-head'\)/);
+ assert.doesNotMatch(festivalCode,/document\.getElementById\('calendarView'\)/);
+ assert.match(player,/window\.dispatchEvent\(new Event\('spideyhomeupdated'\)\)/);
+ assert.match(player,/SpideyFestivalLights\?\.eventById/);
+ assert.match(css,/#playerHome \.festival-lights-hero-teaser/);
+ assert.match(css,/festival-lights-poster\{\s*display:none!important/);
+ assert.match(html,/spidey-universe-3d\.js\?v=20261101-indiafirst3/);
+ assert.match(html,/player-ui\.js\?v=20261101-indiafirst3/);
+ assert.match(html,/home-festival-lights-20261101\.js\?v=20261101-firstscreen3/);
+});
