@@ -220,6 +220,9 @@
       selectedId = selection[active].id;
       counter.textContent = (active + 1) + ' / ' + selection.length + ' · ' + selection[active].title;
       open.dataset.playDetail = selection[active].id;
+      // Explicitar a ação que o responsável procura no cartão National Trust.
+      open.textContent = selection[active].id === '2026-national-trust-27-sites'
+        ? 'Ver 27 coordenadas' : 'Ver evento';
       prev.disabled = next.disabled = selection.length < 2;
     }
     function move(delta) { active = (active + delta + selection.length) % selection.length; draw(); }
