@@ -69,8 +69,8 @@ test('the 3D event detail contains an in-place coordinate list, not only a Trust
  assert.match(nt.notes.join(' '),/copiados aqui ou na aba Trust/);
  assert.match(html,/national-trust-v1\.js\?v=20261101-trusttop2/);
  assert.match(html,/app\.js\?v=20261101-embedded27/);
- assert.match(html,/national-trust-v1\.css\?v=20261101-trusttop2/);
- assert.match(sw,/20261101-nt27embedded/);
+ assert.match(html,/national-trust-v1\.css\?v=20261101-ntvisible4/);
+ assert.match(sw,/20261101-ntvisible4/);
  assert.match(sw,/\.\/data\/national-trust-2026\.json/);
  assert.equal(nt.gpx.enabled,false);
  assert.equal(nt.locations.length,27);
@@ -80,4 +80,35 @@ test('the 3D event detail contains an in-place coordinate list, not only a Trust
  assert.match(app,/embeddedTrustLocations.length===27/);
  assert.match(app,/communityValue=communityReference/);
  assert.match(app,/locationRows\(event\)/);
+});
+
+// The Trust tab must show the original 27 locations even with NO network.
+test('offline app ships all 27 coordinates in Trust and puts them before the poster',async()=>{
+ const src=read('spidey-app/national-trust-v1.js');
+ const expected=JSON.parse(read('spidey-app/data/national-trust-2026.json')).places;
+ let attempts=0;
+ const w={};
+ const copied=[];
+ const target=new El('section'),status=new El('p'),list=new El('div');
+ target.querySelector=sel=>sel==='[data-nt-event-status]'?status:sel==='[data-nt-event-list]'?list:null;
+ vm.runInNewContext(src,{
+   window:w,document:fakeDoc,
+   fetch:()=>{attempts++;throw Error('Offline test: network blocked');},
+   navigator:{clipboard:{writeText:async value=>{copied.push(value);}}},
+   console,Error,Promise,Map,Number,Math,Array,String
+ });
+ w.SpideyNationalTrustCore.renderEventCoordinates(target);
+ for(let i=0;i<5;i++)await nextTick();
+ const sites=list.children.flatMap(section=>section.children.filter(x=>x.tag==='div').flatMap(grid=>grid.children));
+ assert.equal(attempts,0,'no network needed to render 27 items');
+ assert.equal(sites.length,27);
+ const coords=sites.map(site=>site.children.find(child=>child.tag==='code')?.textContent);
+ assert.deepEqual(coords,expected.map(p=>p.coordinates));
+ assert.match(src,/intro\.prepend\(heading,toolbar,count,list\)/);
+ assert.match(src,/intro\.append\(stage\)/);
+ const universe=read('spidey-app/spidey-universe-3d.js');
+ assert.match(universe,/Ver 27 coordenadas/);
+ const html=read('spidey-app/index.html');
+ assert.match(html,/Trust · 27/);
+ assert.match(html,/national-trust-v1\.js\?v=20261101-ntvisible4/);
 });
