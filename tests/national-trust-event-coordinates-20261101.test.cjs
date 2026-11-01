@@ -59,8 +59,8 @@ test('the 3D event detail contains an in-place coordinate list, not only a Trust
  assert.match(app,/id="nationalTrustEventCoords"/);
  assert.match(app,/nt-event-coordinates-first/);
  // The full-size poster must no longer hide all 27 coordinates below the fold.
- assert(app.indexOf("\\${isNationalTrust ? trustCoordinatesMarkup : ''}") <
-        app.indexOf("\\${newsOnly ? '' : (eventArtVisible(event)"));
+ assert(app.indexOf("${isNationalTrust ? trustCoordinatesMarkup : ''}") <
+        app.indexOf("${newsOnly ? '' : (eventArtVisible(event)"));
  assert.match(app,/dialog.scrollTop=0/);
  assert.match(app,/detail.scrollTop=0/);
  assert.match(app,/SpideyNationalTrustCore\?\.renderEventCoordinates\?\./);
