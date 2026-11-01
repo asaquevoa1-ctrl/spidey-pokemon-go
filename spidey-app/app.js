@@ -532,10 +532,20 @@ function openEvent(event) {
   // antes do pôster vertical: no Samsung a arte inteira ocupava mais
   // de uma tela, dando a falsa impressão de que as coordenadas sumiram.
   const embeddedTrustLocations=(event.locations||[]).filter(loc=>loc.coordinate_type==='community_site_reference'&&validCoordinate(loc));
-  const trustCoordinatesMarkup='<section id="nationalTrustEventCoords" class="nt-event-coordinates nt-event-coordinates-first" aria-label="27 locais e coordenadas National Trust"><div class="nt-event-topline"><span>🇬🇧 NATIONAL TRUST · REINO UNIDO</span><strong>27 LOCAIS</strong></div><h2>Coordenadas dos 27 locais</h2><p class="nt-event-caution">Referências comunitárias das propriedades. Não são Poképaradas, Ginásios ou pontos exatos verificados de ativação das pesquisas.</p>'+
+  const trustRows=embeddedTrustLocations.map((p,i)=>{
+    const coord=String(p.coordinate_text||'');
+    return '<li class="nt-event-simple-row"><span class="nt-place-number" aria-hidden="true">'+String(i+1).padStart(2,'0')+'</span><div><strong>'+xmlSafe(p.label.split(' • ')[0])+'</strong><code>'+coord+'</code></div><button type="button" class="action-btn copy-coord" data-value="'+coord+'">Copiar</button></li>';
+  }).join('');
+  const trustCoordinatesMarkup='<section id="nationalTrustEventCoords" class="nt-event-coordinates nt-event-coordinates-first" aria-label="27 coordenadas National Trust">'+
+    '<div class="nt-event-topline"><span>🇬🇧 NATIONAL TRUST</span><strong>27 LOCAIS</strong></div>'+
+    '<h2>Coordenadas para copiar</h2>'+
+    '<div class="nt-bulk-actions"><button type="button" id="ntEventCopyAll" class="action-btn nt-copy-all">Copiar todas as 27</button>'+
+    '<p class="nt-copy-hint">Uma coordenada por linha, pronta para colar no Data Hub.</p>'+
+    '<p id="ntEventCopyStatus" class="nt-copy-status" role="status"></p>'+
+    '<details class="nt-manual-copy"><summary>Ver a lista em texto</summary><textarea id="ntEventAllText" rows="6" readonly aria-label="As 27 coordenadas prontas para copiar"></textarea></details></div>'+
     (embeddedTrustLocations.length===27
-      ? '<p class="nt-embedded-count" role="status">27 coordenadas disponíveis · toque em Copiar</p>'+locationRows(event)
-      : '<p data-nt-event-status role="status">Carregando as 27 coordenadas de referência…</p><div data-nt-event-list class="nt-event-list"></div>')+'</section>';
+      ? '<ol class="nt-event-simple-list">'+trustRows+'</ol>'
+      : '<p data-nt-event-status role="status">Abrindo a lista de coordenadas…</p><div data-nt-event-list class="nt-event-list"></div>')+'</section>';
   detail.innerHTML = `
     ${isNationalTrust ? trustCoordinatesMarkup : ''}
     ${newsOnly ? '' : (eventArtVisible(event) ? `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event))}
@@ -574,6 +584,34 @@ function openEvent(event) {
       detail.querySelector('#nationalTrustEventCoords'),
       ()=>detail.dataset.eventId===event.id
     );
+  }
+  if(isNationalTrust){
+    const copyAll=detail.querySelector('#ntEventCopyAll');
+    const manual=detail.querySelector('.nt-manual-copy');
+    const box=detail.querySelector('#ntEventAllText');
+    const feedback=detail.querySelector('#ntEventCopyStatus');
+    const fullList=embeddedTrustLocations.length===27
+      ? embeddedTrustLocations.map(p=>String(p.coordinate_text)).join('\n')
+      : (window.SpideyNationalTrustCore?.allCoordinatesText?.()||'');
+    if(box)box.value=fullList;
+    copyAll?.addEventListener('click',async()=>{
+      const payload=fullList;
+      if(!payload){
+        feedback.textContent='Não consegui abrir a lista. Acesse Trust · 27.';
+        return;
+      }
+      box.value=payload;
+      feedback.textContent='';
+      try{
+        if(!navigator.clipboard?.writeText)throw Error('Clipboard indisponível');
+        await navigator.clipboard.writeText(payload);
+        feedback.textContent='Pronto! 27 coordenadas copiadas. Agora é só colar no Data Hub.';
+        showToast('27 coordenadas copiadas!');
+      }catch{
+        manual.open=true;box.focus();box.select();
+        feedback.textContent='Não consegui copiar sozinho. Selecione a lista abaixo para copiar.';
+      }
+    });
   }
   detail.querySelectorAll('.copy-coord').forEach((button) => button.addEventListener('click', async () => {
     await navigator.clipboard.writeText(button.dataset.value);

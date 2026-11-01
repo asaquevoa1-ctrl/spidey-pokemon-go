@@ -35,7 +35,7 @@ try{
   const count=await page.locator('#nationalTrustPlaces .nt-place').count();
   assert.equal(count,27,'A aba Trust deve exibir 27 coordenadas sem rolar pelo pôster');
   const label=await page.locator('#nationalTrustView h1').innerText();
-  assert.match(label,/27 coordenadas para copiar/);
+  assert.match(label,/27 locais, uma lista só/);
   const order=await page.evaluate(()=>{
     const list=document.querySelector('#nationalTrustPlaces');
     const poster=document.querySelector('#nationalTrustView .nt-poster-stage');
@@ -45,6 +45,16 @@ try{
   assert(order,'Lista deve vir ANTES do pôster Premium');
   const first=await page.locator('#nationalTrustPlaces .nt-place code').first().innerText();
   assert.equal(first,'52.93539,-3.08941');
+  // Interação real no Chromium: um toque copia 27 linhas sem cabeçalhos.
+  await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:'http://127.0.0.1:'+port});
+  await page.locator('#ntCopyAll').click();
+  const exported=await page.evaluate(()=>navigator.clipboard.readText());
+  const original=await page.locator('#nationalTrustPlaces .nt-place code').allInnerTexts();
+  assert.equal(exported,original.join('\n'));
+  assert.equal(exported.split('\n').length,27);
+  assert.match(await page.locator('#ntCopyStatus').innerText(),/27 coordenadas copiadas/);
+  assert.equal(await page.locator('#nationalTrustView .nt-caution').count(),0);
+
   await page.waitForFunction(()=>typeof window.SpideyOpenSharedEvent==='function'&&
     !!window.SpideyFindShareEvent?.('2026-national-trust-27-sites'),{timeout:20000});
   await page.evaluate(()=>window.SpideyOpenSharedEvent('2026-national-trust-27-sites'));
@@ -52,6 +62,11 @@ try{
   assert.equal(await page.locator('#eventDialog #nationalTrustEventCoords .copy-coord').count(),27,
     'O evento deve abrir 27 botões de copiar no próprio modal');
   assert.equal(await page.locator('#eventDialog #nationalTrustEventCoords code').first().innerText(),first);
+  await page.locator('#ntEventCopyAll').click();
+  const exportedInEvent=await page.evaluate(()=>navigator.clipboard.readText());
+  assert.equal(exportedInEvent,exported);
+  assert.match(await page.locator('#ntEventCopyStatus').innerText(),/27 coordenadas copiadas/);
+
   await page.screenshot({path:'trust-27-verificado-no-navegador.png',fullPage:false});
   console.log('APROVADO: Trust tab=27, lista antes do pôster, evento modal=27, primeiro ponto='+first);
   if(errors.length)console.log('Avisos JS não relacionados: '+errors.slice(0,4).join(' | '));

@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261101-ntvisible4';
+const CACHE = 'spidey-app-20261101-trustcopyall5';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',

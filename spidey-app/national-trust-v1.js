@@ -21,6 +21,9 @@
       typeof p.group==='string'&&p.group.length<80&&typeof p.region==='string'&&p.region.length<80);
   }
   let doc=null,places=validPlaces({schema:'spidey-national-trust-sites-v1',places:EMBEDDED_PLACES}),search='',group='all';
+  // Formato simples para colar no Data Hub: uma coordenada por linha,
+  // sem nomes, números, títulos ou arredondamentos.
+  const allCoordinatesText=(items=places)=>items.map(p=>parseCoord(p.coordinates)).filter(Boolean).join('\n');
   let lastDisplayedPlaces=null;
   let placesRevision=0;
   const root=()=>document.getElementById('nationalTrustGuide');
@@ -31,24 +34,32 @@
     const query=clean(search.trim());
     const filtered=places.filter(p=>(group==='all'||p.group===group)&&
       clean(p.name+' '+p.region+' '+p.group).includes(query));
-    count.textContent=filtered.length+' de '+places.length+' locais • pontos comunitários';
+    const exportText=el.querySelector('#ntAllCoordinateText');
+    if(exportText)exportText.value=allCoordinatesText();
+    count.textContent=filtered.length===places.length
+      ? places.length+' locais na lista'
+      : filtered.length+' de '+places.length+' locais encontrados';
     const identity=placesRevision+'|'+filtered.map(p=>p.id||p.name+'@'+p.coordinates).join('|');
     // Preserve DOM and keyboard focus when changing search text keeps the same matches.
     if(identity===lastDisplayedPlaces)return;
     lastDisplayedPlaces=identity;
     list.replaceChildren();
     const fragment=document.createDocumentFragment();
-    for(const p of filtered){
-      const item=document.createElement('article');item.className='nt-place';
+    for(const [i,p] of filtered.entries()){
+      const item=document.createElement('li');item.className='nt-place';
       const details=document.createElement('div');details.className='nt-place-text';
       const heading=document.createElement('strong');heading.textContent=p.name;
-      const desc=document.createElement('small');desc.textContent=p.region+' • '+p.group;
-      const caution=document.createElement('small');caution.textContent='Referência geográfica • ativação da pesquisa não verificada';
+      const desc=document.createElement('small');desc.textContent=p.region;
       const code=document.createElement('code');code.textContent=p.coordinates;
-      details.append(heading,desc,caution,code);
-      const copy=document.createElement('button');copy.type='button';copy.className='action-btn nt-copy';copy.dataset.coord=p.coordinates;copy.textContent='Copiar coordenadas';
-      const map=document.createElement('a');map.className='action-btn';map.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.coordinates);map.target='_blank';map.rel='noopener noreferrer';map.textContent='Mapa';
-      item.append(details,copy,map);fragment.append(item);
+      details.append(heading,desc,code);
+      const copy=document.createElement('button');copy.type='button';
+      copy.className='action-btn nt-copy';copy.dataset.coord=p.coordinates;
+      copy.textContent='Copiar';
+      copy.setAttribute('aria-label','Copiar coordenadas de '+p.name);
+      const number=document.createElement('span');
+      number.className='nt-place-number';number.textContent=String(i+1).padStart(2,'0');
+      number.setAttribute('aria-hidden','true');
+      item.append(number,details,copy);fragment.append(item);
     }
     list.append(fragment);
     if(!filtered.length){
@@ -60,12 +71,12 @@
     if(!main||root())return;
     const view=document.createElement('section');
     view.id='nationalTrustView';view.className='app-view national-trust-standalone';view.hidden=true;
-    view.innerHTML='<section class="hero hero-compact"><span class="eyebrow">REINO UNIDO · NATIONAL TRUST</span><h1>27 coordenadas para copiar</h1><p>Lista completa logo abaixo. Referências comunitárias, não locais exatos de pesquisa confirmados.</p></section>';
+    view.innerHTML='<section class="hero hero-compact"><span class="eyebrow">NATIONAL TRUST · REINO UNIDO</span><h1>27 locais, uma lista só</h1><p>Copie tudo de uma vez ou escolha um lugar da lista.</p></section>';
     const details=document.createElement('details');details.id='nationalTrustGuide';details.className='section nt-guide';
-    details.innerHTML='<summary><span class="eyebrow">REINO UNIDO · NATIONAL TRUST</span><strong>27 coordenadas disponíveis</strong><span class="nt-more">Toque para mostrar ou ocultar a lista</span></summary>'+
-      '<div class="nt-intro"><p><strong>Até 27 Passes Premium potenciais.</strong> São 27 Pesquisas Temporárias locais, de 3 etapas. Na terceira etapa, a tarefa de <strong>30 lançamentos bons de bola curva</strong> recompensa 1 Passe de Batalha Premium por pesquisa.</p>'+
-      '<p><strong>Parceria prorrogada até 31/12/2026.</strong> As pesquisas também exigem caminhar, chocar Ovo, girar PokéParadas e participar de reides. Recebimento e acúmulo de todas as pesquisas não são garantidos.</p>'+
-      '<p class="nt-caution">As coordenadas foram compartilhadas pela comunidade e <strong>não são pontos exatos verificados de ativação, Ginásios ou PokéParadas</strong>. O Spidey não altera GPS, não confirma ausência de cooldown e não garante recompensas. Utilize as regras oficiais do jogo.</p>'+
+    details.innerHTML='<summary><span class="eyebrow">REINO UNIDO · NATIONAL TRUST</span><strong>Lista de coordenadas</strong><span class="nt-more">Mostrar ou ocultar a lista</span></summary>'+
+      '<div class="nt-intro"><p><strong>Quer aproveitar as pesquisas?</strong> São até 27 pesquisas em locais do National Trust. Uma das etapas pede 30 bons lançamentos em curva e pode render 1 Passe de Batalha Premium.</p>'+
+      '<p><strong>Até 31/12/2026.</strong> Também pode ser preciso caminhar, chocar Ovo, girar Poképaradas e fazer reides. Confira as etapas no jogo.</p>'+
+
       '<div class="nt-actions"><a href="https://pokemongo.com/news/nationaltrust-2026" target="_blank" rel="noopener noreferrer" class="action-btn">Anúncio oficial ↗</a>'+
       '<a href="https://pokemongohub.net/post/event/national-trust-x-pokemon-go-events/" target="_blank" rel="noopener noreferrer" class="action-btn">Etapas da pesquisa ↗</a></div>'+
       '<div class="nt-toolbar"><label for="ntSearch">Encontrar local</label><input id="ntSearch" placeholder="Ex.: Chirk, Londres, Wimpole..." type="search" autocomplete="off" maxlength="90"/>'+
@@ -74,17 +85,39 @@
       '<option value="Norte e Irlanda do Norte">Norte e Irlanda do Norte (5)</option>'+
       '<option value="Midlands e Leste">Midlands e Leste (8)</option>'+
       '<option value="Londres e Sudeste">Londres e Sudeste (6)</option></select></div>'+
-      '<p id="nationalTrustCount" role="status" class="microcopy">Carregando 27 locais…</p>'+
-      '<div id="nationalTrustPlaces" class="nt-place-list"></div></div>';
+      '<p id="nationalTrustCount" role="status" class="microcopy">27 locais</p>'+
+      '<ol id="nationalTrustPlaces" class="nt-place-list"></ol></div>';
     // Coordenadas primeiro, sem rolagem pelo pôster ou pela explicação longa.
     const intro=details.querySelector('.nt-intro');
     const toolbar=details.querySelector('.nt-toolbar');
+    const copyActions=document.createElement('div');
+    copyActions.className='nt-bulk-actions';
+    const copyAll=document.createElement('button');copyAll.type='button';
+    copyAll.id='ntCopyAll';copyAll.className='action-btn nt-copy-all';
+    copyAll.textContent='Copiar todas as 27';
+    copyAll.setAttribute('aria-label','Copiar todas as 27 coordenadas para colar no Data Hub');
+    const hint=document.createElement('p');
+    hint.className='nt-copy-hint';
+    hint.textContent='Uma coordenada por linha, pronta para colar no Data Hub.';
+    const feedback=document.createElement('p');feedback.id='ntCopyStatus';
+    feedback.className='nt-copy-status';feedback.setAttribute('role','status');
+    const manual=document.createElement('details');
+    manual.id='ntManualCopy';manual.className='nt-manual-copy';
+    const summary=document.createElement('summary');
+    summary.textContent='Ver a lista em texto';
+    const textarea=document.createElement('textarea');textarea.id='ntAllCoordinateText';
+    textarea.readOnly=true;textarea.rows=6;
+    textarea.setAttribute('aria-label','As 27 coordenadas, uma por linha');
+    textarea.value=allCoordinatesText();
+    manual.append(summary,textarea);
+    copyActions.append(copyAll,hint,feedback,manual);
+
     const count=details.querySelector('#nationalTrustCount');
     const list=details.querySelector('#nationalTrustPlaces');
     const heading=document.createElement('h2');
     heading.className='nt-coordinates-heading';
     heading.textContent='27 coordenadas de referência';
-    intro.prepend(heading,toolbar,count,list);
+    intro.prepend(heading,copyActions,toolbar,count,list);
     // O guia de 27 localidades mantém seu próprio pôster, APÓS a lista.
 
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.['2026-national-trust-27-sites'];
@@ -99,12 +132,27 @@
     details.open=true;view.append(details);main.appendChild(view);
     // A primeira pintura já contém os 27 locais (sem rede).
     placesRevision++;draw();
+    copyAll.addEventListener('click',async()=>{
+      const payload=allCoordinatesText();
+      textarea.value=payload;
+      feedback.textContent='';
+      try {
+        if(!navigator.clipboard?.writeText)throw Error('Clipboard API indisponível');
+        await navigator.clipboard.writeText(payload);
+        feedback.textContent='Pronto! 27 coordenadas copiadas. Agora é só colar no Data Hub.';
+        if(typeof window.showToast==='function')window.showToast('27 coordenadas copiadas!');
+      } catch {
+        // Alternativa manual funciona até em navegadores sem permissão.
+        manual.open=true;textarea.focus();textarea.select();
+        feedback.textContent='Não consegui copiar sozinho. Selecione o texto abaixo para copiar.';
+      }
+    });
     details.querySelector('#ntSearch').addEventListener('input',e=>{search=e.target.value;draw()});
     details.querySelector('#ntGroup').addEventListener('change',e=>{group=e.target.value;draw()});
     details.addEventListener('click',async e=>{
       const btn=e.target.closest('button[data-coord]');if(!btn)return;
       const v=parseCoord(btn.dataset.coord);if(!v)return;
-      try{await navigator.clipboard.writeText(v);if(typeof window.showToast==='function')window.showToast('Referência do local copiada.');else btn.textContent='Copiado!';}
+      try{await navigator.clipboard.writeText(v);if(typeof window.showToast==='function')window.showToast('Coordenada copiada!');else btn.textContent='Copiado!';}
       catch{window.prompt('Copie a coordenada de referência:',v);}
     });
     // Atualização opcional da fonte; um erro de rede NUNCA esconde a lista.
@@ -195,7 +243,7 @@
       }
     });
   }
-  window.SpideyNationalTrustCore=Object.freeze({validPlaces,parseCoord,renderEventCoordinates});
+  window.SpideyNationalTrustCore=Object.freeze({validPlaces,parseCoord,allCoordinatesText,renderEventCoordinates});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});
   else mount();
 })();
