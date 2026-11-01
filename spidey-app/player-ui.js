@@ -153,12 +153,14 @@
       // Sem arte aprovada? O usuário mantém navegação, métricas e conteúdo.
       head.querySelector('.spidey-cockpit-explore')?.remove();
     }
+    // Avisar o destaque regional após cada reconstrução da Home real.
+    window.dispatchEvent(new Event('spideyhomeupdated'));
 
   }
   function mount(){
     const home=document.getElementById('calendarView');if(!home)return;
     const root=document.createElement('section');root.id='playerHome';home.prepend(root);document.body.classList.add('spidey-player-ui');
-    document.addEventListener('click',async ev=>{const target=ev.target.closest('[data-premium-view]');if(target){const button=[...document.querySelectorAll('.app-tab[data-view]')].find(item=>item.dataset.view===target.dataset.premiumView);button?.click();if(button)window.scrollTo({top:0,behavior:'instant'});return}const c=ev.target.closest('[data-route-coord]'),f=ev.target.closest('[data-play-fly]'),d=ev.target.closest('[data-play-detail]');if(c){try{await navigator.clipboard.writeText(c.dataset.routeCoord);showToast('Coordenadas copiadas.')}catch{showToast('Não foi possível copiar. As coordenadas estão no card.')}return}if(f){window.SpideyFly?.open(f.dataset.playFly);return}if(d){const e=state.events.find(e=>e.id===d.dataset.playDetail);if(e)openEvent(e)}});
+    document.addEventListener('click',async ev=>{const target=ev.target.closest('[data-premium-view]');if(target){const button=[...document.querySelectorAll('.app-tab[data-view]')].find(item=>item.dataset.view===target.dataset.premiumView);button?.click();if(button)window.scrollTo({top:0,behavior:'instant'});return}const c=ev.target.closest('[data-route-coord]'),f=ev.target.closest('[data-play-fly]'),d=ev.target.closest('[data-play-detail]');if(c){try{await navigator.clipboard.writeText(c.dataset.routeCoord);showToast('Coordenadas copiadas.')}catch{showToast('Não foi possível copiar. As coordenadas estão no card.')}return}if(f){window.SpideyFly?.open(f.dataset.playFly);return}if(d){const e=state.events.find(e=>e.id===d.dataset.playDetail)||window.SpideyFestivalLights?.eventById?.(d.dataset.playDetail);if(e)openEvent(e)}});
     window.SpideyFlyCore?.loadPoints().then(points=>{worldPoints=points;renderHome()}).catch(()=>{worldError=true;renderHome()});
     window.addEventListener('spideycontentready',renderHome);
     window.addEventListener('spideycontentsettled',()=>{if(!state.events.length)renderHome()});

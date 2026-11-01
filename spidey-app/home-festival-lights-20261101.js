@@ -67,14 +67,16 @@
     return APPROVED_EVENT;
   }
   function place() {
-    const home=document.getElementById('calendarView');
-    const feature=home?.querySelector('#nowExperience')?.closest('.experience-section');
-    if(!home)return false;
-    const placement=feature||home.querySelector('.experience-intro');
-    if(!placement)return false;
+    // A Home verdadeira é #playerHome; as seções experience-* são legadas
+    // e ficam escondidas pelo player-ui.css no Samsung.
+    const home=document.getElementById('playerHome');
+    const placement=home?.querySelector('.spidey-cockpit-home-head');
+    if(!home||!placement)return false;
     if(card?.isConnected)return true;
+    selectedPhase=''; // A Home é reconstruída: atualizar também o novo DOM.
     const section=element('section','festival-lights-home');
     section.id='festivalLightsHome';
+    section.classList.add('festival-lights-hero-teaser');
     section.setAttribute('aria-label','Festival das Luzes 2026 na Índia');
     section.hidden=true;
     const banner=element('div','festival-lights-head');
@@ -147,11 +149,22 @@
   const mount=()=>{
     render();
     window.addEventListener('spideycontentready',()=>render());
+    window.addEventListener('spideyhomeupdated',()=>render());
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)render();});
     // Revalida a fase sem atualizar layouts a cada segundo.
     window.setInterval(()=>{if(!document.hidden)render();},60000);
   };
-  window.SpideyFestivalLights=Object.freeze({phase,render,RESEARCH_START,EVENT_START,EVENT_END});
+  // A mesma arte é priorizada no Explorar 3D, sem criar outro pôster.
+  // O objeto homologado mantém o destaque visível se o catálogo atrasar.
+  function featuredEvent(now=new Date()) {
+    return phase(now)==='hidden'?null:lookup();
+  }
+  function eventById(id) {
+    return id===ID?featuredEvent():null;
+  }
+  window.SpideyFestivalLights=Object.freeze({
+    phase,render,featuredEvent,eventById,RESEARCH_START,EVENT_START,EVENT_END
+  });
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',mount,{once:true});
   else mount();
 })();

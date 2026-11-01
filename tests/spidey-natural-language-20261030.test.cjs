@@ -26,7 +26,7 @@ test('Atalhos e Semana explicam a utilidade sem prometer recursos inexistentes',
 test('Nova redação chega ao PWA sem reaproveitar os scripts antigos em cache', () => {
   const index = read('spidey-app/index.html');
   const sw = read('spidey-app/sw.js');
-  assert.match(index, /player-ui\.js\?v=20261030-human-editorial1/);
+  assert.match(index, /player-ui\.js\?v=20261101-indiafirst3/);
   assert.match(index, /home-premium-20261029\.js\?v=20261030-human-editorial1/);
   assert.match(sw, /20261030-human-editorial1/);
 });

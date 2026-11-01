@@ -491,3 +491,12 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Busca de âncora da Home inclui fallback para `.experience-intro`; cache JS e service worker rotacionados.
 - Testes de regressão agora obrigam **visibilidade de fato** em 01/11 sem catálogo e funcionamento do clique, além de ocultar após 08/11. Preservar arte Premium aprovada, emblema S cósmico e as demais guias.
 - A visibilidade no Samsung e a URL pública só poderão ser declaradas verificadas após teste de dispositivo/HTTP; CI sozinho não basta.
+
+## 01/11/2026 — Festival das Luzes na PRIMEIRA DOBRA da Home, junto do Explorar 3D
+- Responsável mostrou vídeo do Samsung e pediu **evento em destaque imediatamente ao abrir o app**, junto da galeria **Explorar em 3D**, sem precisar rolar até uma seção inferior.
+- Diagnóstico: o card anterior era inserido em `#calendarView` / `.experience-section`, estrutura legada que `player-ui.css` oculta; a Home real é gerada em `#playerHome`. Não voltar a inserir destaques em seções legadas invisíveis.
+- Priorizar **Festival das Luzes — Índia** como **primeiro slide do Explorar 3D**, entre 01/11 às 06h IST (início da pesquisa) e 08/11 às 20h IST (fim do festival), com a arte Premium original já aprovada. Manter os demais 4 eventos e controles do carrossel, sem repetição do pôster em bloco separado.
+- Inserir acima do carrossel uma **tarja curta** na verdadeira Home, abaixo de “O que vale jogar hoje?”, com nome do evento, exclusividade da Índia, estado da pesquisa/festival e botão “Explorar evento” para abrir o detalhe interno. A galeria continua logo abaixo dessa tarja, visível no começo da tela.
+- Ao reconstruir a Home, emitir `spideyhomeupdated` para remontar a tarja corretamente e atualizar o estado. Resolver o evento pelo catálogo ativo e, se ainda ausente, pelos dados aprovados embarcados. Nunca exibir se revogado explicitamente ou depois de encerrar.
+- Arquivos: `spidey-app/spidey-universe-3d.js`, `spidey-app/player-ui.js`, `spidey-app/home-festival-lights-20261101.js/.css`; manter S cósmico dourado e nenhuma aranha. Não reiniciar outras páginas nem substituir outras artes.
+- Prova exigida: teste `tests/home-festival-first-screen-3d-20261101.test.cjs` mais renderização DOM no `#playerHome` e CI. Testes de código não comprovam acesso público Pages ou Samsung físico, que devem ser avaliados separadamente.

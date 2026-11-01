@@ -6,6 +6,7 @@ function appState(provideState=false){
  let openCall=null, inserted=null;
  const node=(tag='div')=>({
    tagName:tag.toUpperCase(),children:[],attributes:{},dataset:{},hidden:false,isConnected:false,style:{},
+   classList:{add(){}},
    setAttribute(key,value){this.attributes[key]=value;},
    addEventListener(name,cb){this.events ||= {};this.events[name]=cb;},
    append(...children){this.children.push(...children);},
@@ -17,11 +18,11 @@ function appState(provideState=false){
    }
  });
  const feature=node('section'),home=node('main');
- home.querySelector=sel=>sel==='#nowExperience'?{closest:()=>feature}:null;
+ home.querySelector=sel=>sel==='.spidey-cockpit-home-head'?feature:null;
  const document={
    readyState:'loading',
    addEventListener(){},
-   getElementById(id){return id==='calendarView'?home:null;},
+   getElementById(id){return id==='playerHome'?home:null;},
    createElement(tag){return node(tag);}
  };
  const global={document,window:{},console,Date,openEvent(event){openCall=event;}};

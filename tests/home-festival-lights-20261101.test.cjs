@@ -35,10 +35,12 @@ test('Card uses already approved premium art, official source and the existing e
 });
 test('Home card is wired, accessible and cached without removing existing features',()=>{
  const html=read('spidey-app/index.html'),sw=read('spidey-app/sw.js');
- assert(html.includes('home-festival-lights-20261101.js?v=20261101-lights2'));
- assert(html.includes('home-festival-lights-20261101.css?v=20261101-lights1'));
+ assert(html.includes('home-festival-lights-20261101.js?v=20261101-firstscreen3'));
+ assert(html.includes('home-festival-lights-20261101.css?v=20261101-firstscreen3'));
  assert(html.indexOf('home-premium-20261029.js?v=')<html.indexOf('home-festival-lights-20261101.js?v='));
  assert.match(code,/placement\.insertAdjacentElement\('afterend',section\)/);
+ assert.match(code,/document\.getElementById\('playerHome'\)/);
+ assert.match(code,/spideyhomeupdated/);
  assert.match(code,/aria-label/);
  assert.match(code,/return APPROVED_EVENT/);
  assert.doesNotMatch(code,/window\.location\.href=OFFICIAL/);
