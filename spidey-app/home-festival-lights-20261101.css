@@ -1,0 +1,58 @@
+/* Festival das Luzes — Home Premium. Arte aprovada preservada sem recortes.
+ * Visual carvão/azul-petróleo, ouro discreto e luzes de Diwali.
+ */
+#calendarView .festival-lights-home{position:relative;isolation:isolate;overflow:hidden;
+ margin:18px 0 20px;padding:17px;border:1px solid rgba(220,180,103,.38);
+ border-radius:22px;color:#fbf3e8;
+ background:radial-gradient(ellipse at 86% 4%,rgba(206,141,55,.17),transparent 46%),
+ radial-gradient(ellipse at 6% 98%,rgba(176,59,74,.13),transparent 48%),
+ linear-gradient(145deg,#1d2935,#0c1623 70%,#141c29);
+ box-shadow:0 18px 36px rgba(0,0,0,.18),inset 0 1px rgba(254,231,187,.12);}
+#calendarView .festival-lights-home[hidden]{display:none!important}
+#calendarView .festival-lights-home::before{content:"";pointer-events:none;position:absolute;
+ inset:0;opacity:.32;background:radial-gradient(circle at 90% 13%,#e3bb72 0 2px,transparent 3px),
+ radial-gradient(circle at 82% 27%,#e7bd80 0 1px,transparent 2px),
+ radial-gradient(circle at 4% 67%,#e7bd80 0 1px,transparent 2px);
+ background-size:145px 120px,103px 143px,163px 147px;}
+.festival-lights-head{position:relative;display:flex;align-items:center;justify-content:space-between;
+ gap:8px;margin-bottom:13px;flex-wrap:wrap;}
+.festival-lights-eyebrow{color:#e4be7e;font-size:.66rem;letter-spacing:.13em;font-weight:850;}
+.festival-lights-region{font-size:.67rem;letter-spacing:.04em;font-weight:820;
+ color:#f8e2ad;padding:7px 9px;border-radius:999px;background:rgba(210,170,109,.11);
+ border:1px solid rgba(229,188,122,.32);}
+.festival-lights-body{position:relative;display:grid;grid-template-columns:minmax(95px,34%) minmax(0,1fr);align-items:center;gap:15px;}
+.festival-lights-poster{align-self:stretch;position:relative;display:flex;align-items:center;justify-content:center;
+ min-height:172px;border-radius:13px;overflow:hidden;background:linear-gradient(160deg,#243447,#0c1423);
+ border:1px solid rgba(243,192,121,.22);}
+.festival-lights-poster img{width:100%;max-height:245px;object-fit:contain;object-position:center;display:block;}
+.festival-lights-no-poster{min-height:155px;background:radial-gradient(circle,#6c4246,#101b28);}
+.festival-lights-copy{min-width:0;position:relative;display:grid;gap:8px;align-content:center;}
+.festival-lights-copy h2{font-weight:900;letter-spacing:-.035em;font-size:clamp(1.28rem,4.1vw,1.85rem);
+ line-height:1.07;margin:0;color:#fff6e9;}
+.festival-lights-subtitle{margin:0;font-size:.82rem;line-height:1.4;color:#e3d9c6;}
+.festival-lights-status{font-weight:820;font-size:.68rem;line-height:1.4;letter-spacing:.035em;
+ color:#ffda95;border-left:3px solid #d6aa5d;background:rgba(214,174,111,.1);
+ padding:7px 9px;border-radius:0 8px 8px 0;}
+.festival-lights-state-copy{margin:0;color:#d3cfcb;font-size:.73rem;line-height:1.42;}
+.festival-lights-dates{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px;}
+.festival-lights-time{display:grid;gap:5px;min-width:0;padding:10px 11px;border:1px solid rgba(220,185,129,.2);
+ border-radius:11px;background:rgba(8,14,23,.44);}
+.festival-lights-time span{color:#e3bc7f;font-size:.61rem;letter-spacing:.07em;font-weight:800;}
+.festival-lights-time strong{font-variant-numeric:tabular-nums;line-height:1.35;font-size:.81rem;color:#fff5e7;}
+.festival-lights-research{position:relative;margin:11px 0;font-size:.71rem;line-height:1.45;color:#dad1c4;}
+.festival-lights-actions{position:relative;display:flex;align-items:center;gap:15px;flex-wrap:wrap;}
+.festival-lights-open{cursor:pointer;min-height:44px;border-radius:12px!important;border:1px solid rgba(252,225,176,.46)!important;
+ background:linear-gradient(110deg,#a43f4a,#7d2c3d)!important;color:#fffaf4!important;
+ font:inherit;font-size:.81rem;font-weight:850;padding:10px 17px;box-shadow:0 6px 18px rgba(95,25,40,.17);}
+.festival-lights-source{font-size:.78rem;color:#f0d7a8!important;text-underline-offset:3px;}
+.festival-lights-open:focus-visible,.festival-lights-source:focus-visible{outline:3px solid #f5cf8b;outline-offset:2px;}
+#calendarView .festival-lights-home[data-phase="festival"] .festival-lights-status{border-left-color:#e8bb69;}
+html[data-theme="light"] #calendarView .festival-lights-home{color:#fffaf2;background:linear-gradient(130deg,#233344,#141e2c);}
+@media(max-width:390px){#calendarView .festival-lights-home{padding:12px;}
+ .festival-lights-body{grid-template-columns:minmax(93px,35%) minmax(0,1fr);gap:10px;}
+ .festival-lights-copy{gap:6px;}
+ .festival-lights-copy h2{font-size:1.24rem;}
+ .festival-lights-time{padding:9px 8px;}
+ .festival-lights-time strong{font-size:.73rem;}
+ .festival-lights-research{font-size:.68rem;}}
+@media(prefers-reduced-motion:reduce){.festival-lights-home *{scroll-behavior:auto;}}
