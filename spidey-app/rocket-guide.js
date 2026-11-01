@@ -114,6 +114,7 @@
         lastCheck = Date.now();
         freshness(json);
         show();
+        window.SpideyRocketPremium3D?.mount(json);
         status.textContent = 'Referência comunitária com fonte e data. O roteiro é checado automaticamente, mas pode mudar no jogo sem aviso.';
       } catch (error) {
         status.textContent = current

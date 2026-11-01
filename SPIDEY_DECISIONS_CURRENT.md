@@ -440,3 +440,11 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Preservar rigor factual, fontes, chances de Brilhante, horários, restrições regionais, coordenadas, identidade e artes Premium. Não modificar resumos canônicos de eventos ou material impresso em artes sem curadoria factual específica.
 - Primeira aplicação: Home visível em `spidey-app/player-ui.js`, atalhos em `spidey-app/home-premium-20261029.js` e textos de apoio em `spidey-app/index.html`. Atualização de cache no PWA e teste de regressão editorial. São mudanças de **texto de interface**, não reescrita do calendário ou de descrições oficiais de eventos.
 - Critério de verificação: conferir textos realmente exibidos no aplicativo publicado; manter distinção entre alterações na branch, PR, CI, merge, publicação HTTP e aparelho Samsung físico.
+
+
+## 01/11/2026 — Explorar 3D na guia Rocket (decisão do responsável)
+- Estender o comportamento aprovado do **Explorar 3D da Home** para a guia Rocket, mantendo os componentes originais, cards expansíveis, filtros, busca, temas e navegação.
+- A ordem é Giovanni → Cliff → Arlo → Sierra, cada card ligado à escalação comunitária já validada do `data/rocket-lineups.json`, incluindo alternativas das posições 2 e 3, identificação do possível Brilhante e aviso de que o resgate não é garantido.
+- Priorizar visual 3D cinematográfico com identidade oficial S cósmico, sem restaurar logo anterior e sem substituir qualquer pôster Premium já aprovado.
+- **Estado da entrega:** código da galeria de consulta interativa em PR; arte cinematográfica individual de Cliff, Arlo e Sierra e comparação visual definitiva permanecem como etapa de qualidade distinta. Não declarar artes aprovadas nem publicação automática sem evidência.
+- Arquivos do recurso: `spidey-app/rocket-premium-3d.js`, `spidey-app/rocket-premium-3d.css`; integração via `rocket-guide.js` e `index.html`. Manter tipagens/recrutas para próxima etapa solicitada.
