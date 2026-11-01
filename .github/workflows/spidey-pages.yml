@@ -18,9 +18,11 @@ on:
 permissions:
   contents: read
 
+# O site público deve receber a versão MAIS RECENTE de main.
+# Cancelar builds anteriores evita uma fila de versões ultrapassadas.
 concurrency:
   group: spidey-pages-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'public' }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -67,3 +69,10 @@ jobs:
       - name: Publicar Spidey
         id: deployment
         uses: actions/deploy-pages@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # Este passo só termina com sucesso quando o site PÚBLICO
+      # entrega o botão Copiar todas e as 27 coordenadas.
+      - name: Confirmar no endereço público as 27 coordenadas do Trust
+        run: node scripts/qa_trust_27_public_pages.mjs
