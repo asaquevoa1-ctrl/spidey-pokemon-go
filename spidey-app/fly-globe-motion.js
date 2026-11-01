@@ -7,31 +7,27 @@
   const BRT='America/Sao_Paulo';
   const STEP_MS=2350;
   const RADIANS=Math.PI/180;
-  const landPolygons=[
-    [[-168,71],[-140,72],[-125,62],[-127,53],[-123,49],[-118,34],[-110,30],[-105,24],[-96,19],[-88,15],[-83,9],[-78,10],[-82,19],[-91,30],[-98,36],[-95,50],[-112,59],[-133,67],[-151,60],[-168,64]],
-    [[-81,12],[-74,10],[-69,11],[-61,9],[-53,4],[-50,-1],[-43,-4],[-35,-8],[-38,-19],[-42,-23],[-48,-28],[-53,-35],[-69,-56],[-74,-48],[-71,-33],[-75,-15],[-80,-5]],
-    [[-74,60],[-59,60],[-40,65],[-41,82],[-55,84],[-67,78]],
-    [[-10,36],[-17,28],[-16,14],[-17,5],[-10,-5],[12,-17],[18,-32],[20,-35],[31,-29],[35,-18],[41,-11],[47,8],[43,13],[32,31],[12,36],[-2,36]],
-    [[-12,36],[-9,43],[-3,44],[4,51],[12,56],[20,59],[29,65],[37,70],[54,72],[70,71],[91,74],[112,73],[143,60],[158,60],[171,54],[164,45],[150,45],[145,34],[131,34],[126,39],[117,35],[121,24],[113,18],[109,9],[102,3],[99,1],[101,-4],[109,-7],[116,-7],[120,-2],[126,-8],[135,-6],[142,-3],[150,-8],[145,-17],[132,-11],[116,-8],[108,1],[100,12],[93,17],[85,21],[74,10],[68,22],[59,26],[51,17],[43,13],[41,29],[33,32],[24,39],[16,39],[10,47],[0,44],[-9,36]],
-    [[113,-11],[123,-11],[130,-13],[136,-12],[153,-27],[151,-37],[138,-39],[130,-33],[114,-32]],
-    [[43,-12],[51,-13],[50,-25],[45,-26]],
-    [[-10,58],[-5,59],[-2,55],[-5,51],[-10,52]],
-    [[130,31],[141,35],[145,45],[141,43],[136,35]],
-    [[-177,-17],[-170,-14],[-165,-22],[-172,-26]]
-  ];
-  const layer = [];
-  function inside(lon,lat,poly) {
-    let hit=false;
-    for(let i=0,j=poly.length-1;i<poly.length;j=i++){
-      const a=poly[i],b=poly[j];
-      if((a[1]>lat)!==(b[1]>lat) && lon<(b[0]-a[0])*(lat-a[1])/(b[1]-a[1])+a[0]) hit=!hit;
-    }
-    return hit;
-  }
-  for(let lat=-76;lat<=80;lat+=4.1){
-    for(let lon=-178;lon<=180;lon+=4.1){
-      if(landPolygons.some(poly=>inside(lon,lat,poly)))layer.push([lat,lon]);
-    }
+  // Natural Earth 110m (public domain), sampled before publishing.
+  // Land and city pins use *the exact same* orthographic projection.
+  // Never fall back to fictitious polygons if the offline data fails to load.
+  let layer=[];
+  let landLoaded=false;
+  let landLoadPromise=null;
+  function loadLand(){
+    return landLoadPromise ||= fetch('data/fly-earth-land-110m.json',{cache:'force-cache'})
+      .then(response=>{if(!response.ok)throw Error('Mapa Natural Earth indisponível');return response.json();})
+      .then(data=>{
+        if(data?.schema!=='spidey-fly-naturalearth-110m-v1' ||
+           data.coordinate_order!=='lat_lon' || !Array.isArray(data.points) ||
+           data.points.length<3000 || !data.points.every(p=>Array.isArray(p)&&p.length===2 &&
+             Number.isFinite(p[0])&&Math.abs(p[0])<=90&&Number.isFinite(p[1])&&Math.abs(p[1])<=180)){
+          throw Error('Base cartográfica inválida');
+        }
+        layer=data.points;landLoaded=true;paint();request();
+      }).catch(error=>{
+        landLoaded=false;
+        console.warn('Spidey FLY: mapa Natural Earth não carregado',error);
+      });
   }
   const globeGrid=[];
   for(let lat=-75;lat<=75;lat+=15) for(let lon=-180;lon<180;lon+=15) globeGrid.push([lat,lon]);
@@ -122,6 +118,7 @@
       'Sequência ilustrativa das janelas confirmadas. Datas e horários são calculados por fuso IANA. Coordenadas são referências geográficas, não PokéStops ou uma rota GPX.');
     root.append(heading,screen,times,coords,controls,track,note);
     anchor.insertAdjacentElement('afterend',root);
+    loadLand();
     el={location,tag,localClock,brClock,coords,prev,next,play,count,fill};
     ctx=canvas.getContext('2d',{alpha:false});
     if(!ctx){
@@ -200,15 +197,20 @@
     selected=0;
     stopped=false;running=canAuto;progress=0;
     stageStart=performance.now();
-    viewLon=rows[0].lon;viewLat=Math.max(-45,Math.min(45,rows[0].lat*.5));
+    viewLon=rows[0].lon;viewLat=rows[0].lat;
     describe();paint();request();
   }
-  function project(lat,lon,cx,cy,r){
-    const a=lat*RADIANS,b=(lon-viewLon)*RADIANS,t=viewLat*RADIANS;
+  function projectCoordinates(lat,lon,centerLat,centerLon,cx=0,cy=0,r=1){
+    // Spherical orthographic projection (WGS84 geographic lat/lon).
+    // Longitude +E; screen x grows east/right, screen y grows south/down.
+    const a=lat*RADIANS,b=(lon-centerLon)*RADIANS,t=centerLat*RADIANS;
     const x=Math.cos(a)*Math.sin(b);
     const y=Math.cos(t)*Math.sin(a)-Math.sin(t)*Math.cos(a)*Math.cos(b);
     const z=Math.sin(t)*Math.sin(a)+Math.cos(t)*Math.cos(a)*Math.cos(b);
     return {x:cx+r*x,y:cy-r*y,z};
+  }
+  function project(lat,lon,cx,cy,r){
+    return projectCoordinates(lat,lon,viewLat,viewLon,cx,cy,r);
   }
   function greatCircle(a,b,t){
     const v=p=>{const lat=p.lat*RADIANS,lon=p.lon*RADIANS;return [Math.cos(lat)*Math.cos(lon),Math.cos(lat)*Math.sin(lon),Math.sin(lat)]};
@@ -224,18 +226,18 @@
     ctx.beginPath();
     for(let k=0;k<=steps*fraction;k++){
       const t=k/steps,p=greatCircle(a,b,t),o=project(p.lat,p.lon,cx,cy,r*(1+.16*Math.sin(Math.PI*t)));
-      if(o.z<=-.16){drawing=false;continue;}
+      if(o.z<=0){drawing=false;continue;}
       if(!drawing){ctx.moveTo(o.x,o.y);drawing=true;}else ctx.lineTo(o.x,o.y);
     }
     ctx.strokeStyle='rgba(240,111,193,.27)';ctx.lineWidth=9;ctx.shadowColor='#ed6ec9';ctx.shadowBlur=18;ctx.stroke();
     ctx.strokeStyle='#e79ace';ctx.lineWidth=2.5;ctx.shadowBlur=9;ctx.stroke();ctx.shadowBlur=0;
     const point=greatCircle(a,b,Math.min(fraction,1));
     const pp=project(point.lat,point.lon,cx,cy,r*(1+.16*Math.sin(Math.PI*Math.min(fraction,1))));
-    if(pp.z>-.16){ctx.fillStyle='#fff9dd';ctx.shadowColor='#ef8ed4';ctx.shadowBlur=18;ctx.beginPath();ctx.arc(pp.x,pp.y,4.3,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;}
+    if(pp.z>0){ctx.fillStyle='#fff9dd';ctx.shadowColor='#ef8ed4';ctx.shadowBlur=18;ctx.beginPath();ctx.arc(pp.x,pp.y,4.3,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;}
   }
   function marker(p,cx,cy,r,isCurrent){
     const q=project(p.lat,p.lon,cx,cy,r);
-    if(q.z<-.09)return;
+    if(q.z<0)return;
     ctx.beginPath();ctx.arc(q.x,q.y,isCurrent?15:7,0,Math.PI*2);
     ctx.fillStyle=isCurrent?'rgba(236,171,103,.14)':'rgba(239,162,187,.08)';ctx.fill();
     ctx.beginPath();ctx.arc(q.x,q.y,isCurrent?5.8:3.1,0,Math.PI*2);
@@ -281,7 +283,7 @@
     ctx.fillStyle='rgba(222,187,130,.65)';
     ctx.font='600 10px system-ui,sans-serif';
     ctx.textAlign='center';
-    ctx.fillText('JANELAS MUNDIAIS · DADOS DO EVENTO',w/2,h-13);
+    ctx.fillText(landLoaded?'JANELAS MUNDIAIS · MAPA NATURAL EARTH':'MAPA INDISPONÍVEL · COORDENADAS PRESERVADAS',w/2,h-13);
   }
   function request(){
     if(raf||!root?.isConnected||root.hidden||!rows.length||!ctx||document.hidden||!visible)return;
@@ -295,7 +297,7 @@
       const p=rows[selected];
       const diff=((p.lon-viewLon+540)%360)-180;
       viewLon+=diff*.07;
-      viewLat+=(Math.max(-55,Math.min(55,p.lat*.72))-viewLat)*.065;
+      viewLat+=(p.lat-viewLat)*.065;
       if(running){
         const elapsed=ts-stageStart;
         progress=Math.max(0,Math.min(1,elapsed/(STEP_MS*.83)));
@@ -309,7 +311,7 @@
       }else progress=1;
       paint();
     }
-    if(running || Math.abs((((rows[selected].lon-viewLon+540)%360)-180))>.5 || Math.abs(rows[selected].lat*.72-viewLat)>.5)request();
+    if(running || Math.abs((((rows[selected].lon-viewLon+540)%360)-180))>.5 || Math.abs(rows[selected].lat-viewLat)>.5)request();
   }
-  window.SpideyFlyGlobe=Object.freeze({update});
+  window.SpideyFlyGlobe=Object.freeze({update,projectCoordinates});
 })();

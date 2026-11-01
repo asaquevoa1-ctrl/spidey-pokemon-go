@@ -1,0 +1,26 @@
+name: "Spidey FLY — precisão cartográfica do globo"
+on:
+  pull_request:
+    paths:
+      - "spidey-app/fly-globe-motion.js"
+      - "spidey-app/data/fly-earth-land-110m.json"
+      - "spidey-app/data/world-event-points.json"
+      - "tests/fly-globe-geography-20261101.test.cjs"
+      - ".github/workflows/fly-globe-geography-qa.yml"
+  push:
+    branches: [main]
+    paths:
+      - "spidey-app/fly-globe-motion.js"
+      - "spidey-app/data/fly-earth-land-110m.json"
+      - "spidey-app/data/world-event-points.json"
+      - "tests/fly-globe-geography-20261101.test.cjs"
+      - ".github/workflows/fly-globe-geography-qa.yml"
+jobs:
+  globe-geography:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testar marcadores georreferenciados e linha de data
+        run: node --test tests/fly-globe-geography-20261101.test.cjs
