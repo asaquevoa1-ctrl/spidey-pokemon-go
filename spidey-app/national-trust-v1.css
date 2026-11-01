@@ -68,3 +68,13 @@
 #eventDetail .nt-event-coordinates-first .nt-event-group summary{color:#fff1d3}
 @media(max-width:420px){#eventDetail .nt-event-coordinates-first{padding:12px 10px}
  #eventDetail .nt-event-coordinates-first h2{font-size:1.35rem}}
+
+/* Trust: coordenadas visíveis primeiro e botões fáceis de localizar. */
+#nationalTrustView .nt-guide{margin-top:10px;}
+#nationalTrustView .nt-intro{padding:10px 4px;}
+#nationalTrustView .nt-coordinates-heading{margin:8px 0 4px;color:var(--text,#f0e9d9);
+ font-size:clamp(1.2rem,5vw,1.6rem);font-weight:850;}
+#nationalTrustView #nationalTrustCount{font-weight:750;margin:8px 0;}
+#nationalTrustView .nt-toolbar{margin:12px 0 8px;}
+#nationalTrustView .nt-place-list{margin-top:6px;}
+#nationalTrustView .nt-poster-stage{margin:24px auto 14px;}
