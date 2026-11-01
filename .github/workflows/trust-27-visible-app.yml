@@ -1,0 +1,63 @@
+name: "Spidey Trust - 27 coordenadas visíveis no app"
+on:
+  pull_request:
+    paths:
+      - "spidey-app/national-trust-v1.js"
+      - "spidey-app/national-trust-v1.css"
+      - "spidey-app/spidey-universe-3d.js"
+      - "spidey-app/index.html"
+      - "spidey-app/sw.js"
+      - "tests/national-trust-event-coordinates-20261101.test.cjs"
+      - "scripts/qa_trust_27_ui_chromium.mjs"
+      - "scripts/qa_trust_27_public_pages.mjs"
+      - ".github/workflows/trust-27-visible-app.yml"
+  push:
+    branches: [main]
+    paths:
+      - "spidey-app/national-trust-v1.js"
+      - "spidey-app/national-trust-v1.css"
+      - "spidey-app/spidey-universe-3d.js"
+      - "spidey-app/index.html"
+      - "spidey-app/sw.js"
+      - "scripts/qa_trust_27_ui_chromium.mjs"
+      - "scripts/qa_trust_27_public_pages.mjs"
+      - ".github/workflows/trust-27-visible-app.yml"
+jobs:
+  mobile-ui:
+    name: "Trust 27 exibidos de verdade no Chromium"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Exigir as 27 referências offline e sincronizadas
+        run: node --test tests/national-trust-event-coordinates-20261101.test.cjs
+      - name: Preparar navegador de teste
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright-core@1.58.2
+          which google-chrome || which chromium
+      - name: Abrir Spidey real e verificar 27 coordenadas em Trust e no evento
+        run: node scripts/qa_trust_27_ui_chromium.mjs
+      - name: Guardar captura da interface testada
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spidey-national-trust-27-visiveis
+          path: trust-27-verificado-no-navegador.png
+          if-no-files-found: ignore
+  public-pages:
+    name: "Trust 27 disponíveis no GitHub Pages"
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Conferir HTML, JavaScript e 27 coordenadas no endereço público
+        run: node scripts/qa_trust_27_public_pages.mjs

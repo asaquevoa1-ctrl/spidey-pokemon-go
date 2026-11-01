@@ -1,6 +1,11 @@
 (() => {
   'use strict';
   const DATA_URL='data/national-trust-2026.json';
+  // Cópia offline validada dos 27 locais aprovados: disponível mesmo se a
+  // solicitação de JSON falhar, sem novo download ou catálogo dinâmico.
+  // Sincronize e valide com data/national-trust-2026.json em QA.
+  const EMBEDDED_PLACES=Object.freeze([{"id":"nt-2026-01","name":"Chirk Castle and Garden","group":"Sudoeste e País de Gales","region":"Wrexham","coordinates":"52.93539,-3.08941","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-02","name":"Killerton","group":"Sudoeste e País de Gales","region":"Devon","coordinates":"50.79128,-3.45763","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-03","name":"Kingston Lacy","group":"Sudoeste e País de Gales","region":"Dorset","coordinates":"50.81096,-2.03171","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-04","name":"Lacock","group":"Sudoeste e País de Gales","region":"Wiltshire","coordinates":"51.41496,-2.11760","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-05","name":"Stourhead","group":"Sudoeste e País de Gales","region":"Wiltshire","coordinates":"51.10507,-2.31787","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-06","name":"Tredegar House","group":"Sudoeste e País de Gales","region":"Newport","coordinates":"51.56176,-3.02789","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-07","name":"Trelissick","group":"Sudoeste e País de Gales","region":"Cornwall","coordinates":"50.21718,-5.03393","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-08","name":"Tyntesfield","group":"Sudoeste e País de Gales","region":"North Somerset","coordinates":"51.44079,-2.71242","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-09","name":"Dunham Massey","group":"Norte e Irlanda do Norte","region":"Grande Manchester","coordinates":"53.38284,-2.40014","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-10","name":"Fountains Abbey","group":"Norte e Irlanda do Norte","region":"North Yorkshire","coordinates":"54.10948,-1.58184","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-11","name":"Gibside","group":"Norte e Irlanda do Norte","region":"Tyne & Wear","coordinates":"54.92050,-1.73195","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-12","name":"Lyme","group":"Norte e Irlanda do Norte","region":"Cheshire","coordinates":"53.33804,-2.05470","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-13","name":"Mount Stewart","group":"Norte e Irlanda do Norte","region":"County Down · Irlanda do Norte","coordinates":"54.55165,-5.60212","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-14","name":"Anglesey Abbey","group":"Midlands e Leste","region":"Cambridgeshire","coordinates":"52.23649,0.24398","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-15","name":"Attingham Park","group":"Midlands e Leste","region":"Shropshire","coordinates":"52.68634,-2.66441","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-16","name":"Belton Estate","group":"Midlands e Leste","region":"Lincolnshire","coordinates":"52.94307,-0.617821","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-17","name":"Calke Abbey","group":"Midlands e Leste","region":"Derbyshire","coordinates":"52.79976,-1.45609","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-18","name":"Clumber Park","group":"Midlands e Leste","region":"Nottinghamshire","coordinates":"53.27095,-1.051910","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-19","name":"Hanbury Hall","group":"Midlands e Leste","region":"Worcestershire","coordinates":"52.27179,-2.08332","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-20","name":"Hardwick","group":"Midlands e Leste","region":"Derbyshire","coordinates":"53.16877,-1.30873","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-21","name":"Wimpole Estate","group":"Midlands e Leste","region":"Cambridgeshire","coordinates":"52.14105,-0.04978","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-22","name":"Cliveden","group":"Londres e Sudeste","region":"Buckinghamshire","coordinates":"51.55685,-0.68172","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-23","name":"Mottisfont","group":"Londres e Sudeste","region":"Hampshire","coordinates":"51.04112,-1.535211","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-24","name":"Nymans","group":"Londres e Sudeste","region":"West Sussex","coordinates":"51.04923,-0.19526","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-25","name":"Polesden Lacey","group":"Londres e Sudeste","region":"Surrey","coordinates":"51.25884,-0.37418","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-26","name":"Scotney Castle","group":"Londres e Sudeste","region":"Kent","coordinates":"51.09283,0.40826","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false},{"id":"nt-2026-27","name":"Stowe Gardens","group":"Londres e Sudeste","region":"Buckinghamshire","coordinates":"52.02206,-1.00813","coordinate_type":"community_site_reference","exact_research_trigger_verified":false,"exact_pokestop_verified":false}]);
+
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const clean=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const parseCoord=s=>{
@@ -15,7 +20,7 @@
       parseCoord(p.coordinates)&&typeof p.name==='string'&&p.name.length<100&&
       typeof p.group==='string'&&p.group.length<80&&typeof p.region==='string'&&p.region.length<80);
   }
-  let doc=null,places=[],search='',group='all';
+  let doc=null,places=validPlaces({schema:'spidey-national-trust-sites-v1',places:EMBEDDED_PLACES}),search='',group='all';
   let lastDisplayedPlaces=null;
   let placesRevision=0;
   const root=()=>document.getElementById('nationalTrustGuide');
@@ -55,9 +60,9 @@
     if(!main||root())return;
     const view=document.createElement('section');
     view.id='nationalTrustView';view.className='app-view national-trust-standalone';view.hidden=true;
-    view.innerHTML='<section class="hero hero-compact"><span class="eyebrow">REINO UNIDO • NATIONAL TRUST</span><h1>27 localidades</h1><p>Pesquisas Temporárias e referências geográficas para copiar.</p></section>';
+    view.innerHTML='<section class="hero hero-compact"><span class="eyebrow">REINO UNIDO · NATIONAL TRUST</span><h1>27 coordenadas para copiar</h1><p>Lista completa logo abaixo. Referências comunitárias, não locais exatos de pesquisa confirmados.</p></section>';
     const details=document.createElement('details');details.id='nationalTrustGuide';details.className='section nt-guide';
-    details.innerHTML='<summary><span class="eyebrow">REINO UNIDO • NATIONAL TRUST</span><strong>27 locais • pesquisas com Passe Premium</strong><span class="nt-more">Abrir lista de coordenadas</span></summary>'+
+    details.innerHTML='<summary><span class="eyebrow">REINO UNIDO · NATIONAL TRUST</span><strong>27 coordenadas disponíveis</strong><span class="nt-more">Toque para mostrar ou ocultar a lista</span></summary>'+
       '<div class="nt-intro"><p><strong>Até 27 Passes Premium potenciais.</strong> São 27 Pesquisas Temporárias locais, de 3 etapas. Na terceira etapa, a tarefa de <strong>30 lançamentos bons de bola curva</strong> recompensa 1 Passe de Batalha Premium por pesquisa.</p>'+
       '<p><strong>Parceria prorrogada até 31/12/2026.</strong> As pesquisas também exigem caminhar, chocar Ovo, girar PokéParadas e participar de reides. Recebimento e acúmulo de todas as pesquisas não são garantidos.</p>'+
       '<p class="nt-caution">As coordenadas foram compartilhadas pela comunidade e <strong>não são pontos exatos verificados de ativação, Ginásios ou PokéParadas</strong>. O Spidey não altera GPS, não confirma ausência de cooldown e não garante recompensas. Utilize as regras oficiais do jogo.</p>'+
@@ -71,18 +76,29 @@
       '<option value="Londres e Sudeste">Londres e Sudeste (6)</option></select></div>'+
       '<p id="nationalTrustCount" role="status" class="microcopy">Carregando 27 locais…</p>'+
       '<div id="nationalTrustPlaces" class="nt-place-list"></div></div>';
-    // O guia de 27 localidades mantém seu próprio pôster, sem inventar Ginásios.
+    // Coordenadas primeiro, sem rolagem pelo pôster ou pela explicação longa.
+    const intro=details.querySelector('.nt-intro');
+    const toolbar=details.querySelector('.nt-toolbar');
+    const count=details.querySelector('#nationalTrustCount');
+    const list=details.querySelector('#nationalTrustPlaces');
+    const heading=document.createElement('h2');
+    heading.className='nt-coordinates-heading';
+    heading.textContent='27 coordenadas de referência';
+    intro.prepend(heading,toolbar,count,list);
+    // O guia de 27 localidades mantém seu próprio pôster, APÓS a lista.
+
     const approved=window.SPIDEY_APPROVED_ART_MASTER?.['2026-national-trust-27-sites'];
     if(approved){
-      const intro=details.querySelector('.nt-intro');
       const stage=document.createElement('div');stage.className='nt-poster-stage';
       const poster=document.createElement('img');
       poster.alt='Pokémon GO × National Trust — 27 locais com pesquisas presenciais';
       poster.loading='lazy';poster.src=approved.file+'?v='+approved.sha256.slice(0,12);
       poster.addEventListener('error',()=>{stage.hidden=true;});
-      stage.append(poster);intro.prepend(stage);
+      stage.append(poster);intro.append(stage);
     }
     details.open=true;view.append(details);main.appendChild(view);
+    // A primeira pintura já contém os 27 locais (sem rede).
+    placesRevision++;draw();
     details.querySelector('#ntSearch').addEventListener('input',e=>{search=e.target.value;draw()});
     details.querySelector('#ntGroup').addEventListener('change',e=>{group=e.target.value;draw()});
     details.addEventListener('click',async e=>{
@@ -91,9 +107,12 @@
       try{await navigator.clipboard.writeText(v);if(typeof window.showToast==='function')window.showToast('Referência do local copiada.');else btn.textContent='Copiado!';}
       catch{window.prompt('Copie a coordenada de referência:',v);}
     });
-    fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Falha na fonte');return r.json();}).then(json=>{doc=json;places=validPlaces(json);placesRevision++;draw();}).catch(()=>{
-      const status=details.querySelector('#nationalTrustCount');if(status)status.textContent='Não foi possível carregar as localidades. Atualize a página.';
-    });
+    // Atualização opcional da fonte; um erro de rede NUNCA esconde a lista.
+    fetch(DATA_URL,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Falha na fonte');return r.json();}).then(json=>{
+      const latest=validPlaces(json);
+      if(latest.length!==27)throw Error('Fonte Trust incompleta');
+      doc=json;places=latest;placesRevision++;draw();
+    }).catch(()=>{ /* As 27 referências embarcadas permanecem disponíveis. */ });
   }
   // O mesmo conjunto de 27 referências deve acompanhar o próprio evento.
   // Antes, a janela de detalhes só encaminhava à aba Trust e parecia vazia.
