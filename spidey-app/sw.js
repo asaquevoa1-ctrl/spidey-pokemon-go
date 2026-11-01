@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1-20261027-cdmx-stamps1-mexico-selos-human1-20261028-origin-correct2-20261028-expiry-news1-20261029-universe3dfocus2-20261028-dynamax-roster1-20261029-interiors1-20261029-motion1-20261029-visiblehome1-20261029-pokelids-mobile-batch1-20261029-pokelids-pages2-20261029-home-stable1-20261029-interiors-performance1-20261029-guides-stable1-20261030-human-editorial1-20261031-fly-world1-20261031-fly-visible1-20261031-fly-visible2-20261101-rocket-shadow1-20261101-worldglobe1-20261101-geo2-20261101-fly-nocaption1';
+const CACHE = 'spidey-app-20261022-credits-dst-v1-20261023-no-hunter1-20261025-scroll1-20261027-cdmx-stamps1-mexico-selos-human1-20261028-origin-correct2-20261028-expiry-news1-20261029-universe3dfocus2-20261028-dynamax-roster1-20261029-interiors1-20261029-motion1-20261029-visiblehome1-20261029-pokelids-mobile-batch1-20261029-pokelids-pages2-20261029-home-stable1-20261029-interiors-performance1-20261029-guides-stable1-20261030-human-editorial1-20261031-fly-world1-20261031-fly-visible1-20261031-fly-visible2-20261101-rocket-shadow1-20261101-worldglobe1-20261101-geo2-20261101-fly-nocaption1-20261101-india-lights-home1';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -8,6 +8,8 @@ const CORE = [
   './spidey-universe-3d.js',
   './spidey-premium-unified-20261029.css',
   './home-premium-20261029.css',
+  './home-festival-lights-20261101.css',
+  './home-festival-lights-20261101.js',
   './home-premium-20261029.js',
   './assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp',
   './assets/events/premium/giratina-origin-raid-hour-20261028-cosmic-s-approved-v2.webp',
