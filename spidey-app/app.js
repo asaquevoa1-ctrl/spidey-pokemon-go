@@ -257,11 +257,13 @@ function locationRows(event) {
     const stadiumReference = loc.coordinate_type === 'stadium_venue_reference' && loc.exact_raid_gym_verified === false;
     const landmarkReference = loc.coordinate_type === 'landmark_reference' && loc.exact_raid_gym_verified === false;
     const venueReference = airportReference || stadiumReference || landmarkReference;
-    const value = (venueReference || event.id === '2026-10-24-spidey-full-day-guide') && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
+    const communityReference = loc.coordinate_type === 'community_site_reference' && loc.exact_pokestop_verified === false;
+    const value = (venueReference || communityReference || event.id === '2026-10-24-spidey-full-day-guide') && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
       ? loc.coordinate_text : `${Number(loc.latitude).toFixed(4)}, ${Number(loc.longitude).toFixed(4)}`;
     const description = airportReference ? '<small>Referência do aeroporto/terminal • NÃO é Ginásio ANA verificado</small><br>'
       : stadiumReference ? '<small>Referência do Estádio de Seul • NÃO é Ginásio de reide verificado</small><br>'
-      : landmarkReference ? '<small>Marco de orientação no Paseo de la Reforma. NÃO é Ginásio, Poképarada, Power Spot, ponto de selos nem limite confirmado do evento.</small><br>' : '';
+      : landmarkReference ? '<small>Marco de orientação no Paseo de la Reforma. NÃO é Ginásio, Poképarada, Power Spot, ponto de selos nem limite confirmado do evento.</small><br>'
+      : communityReference ? '<small>Referência comunitária não verificada para ativação de pesquisa, Poképarada ou Ginásio.</small><br>' : '';
     return `<div class="coordinates"><div><strong>${loc.label || `Ponto ${index + 1}`}</strong><br>${description}<code>${value}</code></div><button class="action-btn copy-coord" data-value="${value}">Copiar</button></div>`;
   }).join('');
 }
@@ -528,7 +530,11 @@ function openEvent(event) {
   // O conteúdo procurado deve ser o PRIMEIRO elemento do detalhe,
   // antes do pôster vertical: no Samsung a arte inteira ocupava mais
   // de uma tela, dando a falsa impressão de que as coordenadas sumiram.
-  const trustCoordinatesMarkup='<section id="nationalTrustEventCoords" class="nt-event-coordinates nt-event-coordinates-first" aria-label="27 locais e coordenadas National Trust"><div class="nt-event-topline"><span>🇬🇧 NATIONAL TRUST · REINO UNIDO</span><strong>27 LOCAIS</strong></div><h2>Coordenadas dos 27 locais</h2><p class="nt-event-caution">Referências comunitárias das propriedades. Não são Poképaradas, Ginásios ou pontos exatos verificados de ativação das pesquisas.</p><p data-nt-event-status role="status">Carregando as 27 coordenadas de referência…</p><div data-nt-event-list class="nt-event-list"></div></section>';
+  const embeddedTrustLocations=(event.locations||[]).filter(loc=>loc.coordinate_type==='community_site_reference'&&validCoordinate(loc));
+  const trustCoordinatesMarkup='<section id="nationalTrustEventCoords" class="nt-event-coordinates nt-event-coordinates-first" aria-label="27 locais e coordenadas National Trust"><div class="nt-event-topline"><span>🇬🇧 NATIONAL TRUST · REINO UNIDO</span><strong>27 LOCAIS</strong></div><h2>Coordenadas dos 27 locais</h2><p class="nt-event-caution">Referências comunitárias das propriedades. Não são Poképaradas, Ginásios ou pontos exatos verificados de ativação das pesquisas.</p>'+
+    (embeddedTrustLocations.length===27
+      ? '<p class="nt-embedded-count" role="status">27 coordenadas disponíveis · toque em Copiar</p>'+locationRows(event)
+      : '<p data-nt-event-status role="status">Carregando as 27 coordenadas de referência…</p><div data-nt-event-list class="nt-event-list"></div>')+'</section>';
   detail.innerHTML = `
     ${isNationalTrust ? trustCoordinatesMarkup : ''}
     ${newsOnly ? '' : (eventArtVisible(event) ? `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event))}
@@ -562,7 +568,7 @@ function openEvent(event) {
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${event.notes?.length ? `<h3>Mais informações</h3><ul class="event-notes">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;
-  if(event.id==='2026-national-trust-27-sites'){
+  if(event.id==='2026-national-trust-27-sites' && embeddedTrustLocations.length!==27){
     window.SpideyNationalTrustCore?.renderEventCoordinates?.(
       detail.querySelector('#nationalTrustEventCoords'),
       ()=>detail.dataset.eventId===event.id
