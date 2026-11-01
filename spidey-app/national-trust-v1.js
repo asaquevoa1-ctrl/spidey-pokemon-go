@@ -34,6 +34,8 @@
     const query=clean(search.trim());
     const filtered=places.filter(p=>(group==='all'||p.group===group)&&
       clean(p.name+' '+p.region+' '+p.group).includes(query));
+    const exportText=el.querySelector('#ntAllCoordinateText');
+    if(exportText)exportText.value=allCoordinatesText();
     count.textContent=filtered.length===places.length
       ? places.length+' locais na lista'
       : filtered.length+' de '+places.length+' locais encontrados';
@@ -69,8 +71,8 @@
     view.innerHTML='<section class="hero hero-compact"><span class="eyebrow">NATIONAL TRUST · REINO UNIDO</span><h1>27 locais, uma lista só</h1><p>Copie tudo de uma vez ou escolha um lugar da lista.</p></section>';
     const details=document.createElement('details');details.id='nationalTrustGuide';details.className='section nt-guide';
     details.innerHTML='<summary><span class="eyebrow">REINO UNIDO · NATIONAL TRUST</span><strong>Lista de coordenadas</strong><span class="nt-more">Mostrar ou ocultar a lista</span></summary>'+
-      '<div class="nt-intro"><p><strong>Até 27 Passes Premium potenciais.</strong> São 27 Pesquisas Temporárias locais, de 3 etapas. Na terceira etapa, a tarefa de <strong>30 lançamentos bons de bola curva</strong> recompensa 1 Passe de Batalha Premium por pesquisa.</p>'+
-      '<p><strong>Parceria prorrogada até 31/12/2026.</strong> As pesquisas também exigem caminhar, chocar Ovo, girar PokéParadas e participar de reides. Recebimento e acúmulo de todas as pesquisas não são garantidos.</p>'+
+      '<div class="nt-intro"><p><strong>Quer aproveitar as pesquisas?</strong> São até 27 pesquisas em locais do National Trust. Uma das etapas pede 30 bons lançamentos em curva e pode render 1 Passe de Batalha Premium.</p>'+
+      '<p><strong>Até 31/12/2026.</strong> Também pode ser preciso caminhar, chocar Ovo, girar Poképaradas e fazer reides. Confira as etapas no jogo.</p>'+
 
       '<div class="nt-actions"><a href="https://pokemongo.com/news/nationaltrust-2026" target="_blank" rel="noopener noreferrer" class="action-btn">Anúncio oficial ↗</a>'+
       '<a href="https://pokemongohub.net/post/event/national-trust-x-pokemon-go-events/" target="_blank" rel="noopener noreferrer" class="action-btn">Etapas da pesquisa ↗</a></div>'+
