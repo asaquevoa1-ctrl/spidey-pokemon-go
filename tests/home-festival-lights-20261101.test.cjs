@@ -1,0 +1,47 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const root=path.resolve(__dirname,'..');
+const read=file=>fs.readFileSync(path.join(root,file),'utf8');
+const code=read('spidey-app/home-festival-lights-20261101.js');
+const win={};
+const doc={readyState:'loading',addEventListener(){}};
+vm.runInNewContext(code,{window:win,document:doc,Date,console});
+const ui=win.SpideyFestivalLights;
+test('Festival das Luzes uses confirmed research and main-event India times',()=>{
+ assert.equal(new Date(ui.RESEARCH_START).toISOString(),'2026-11-01T00:30:00.000Z');
+ assert.equal(new Date(ui.EVENT_START).toISOString(),'2026-11-06T04:30:00.000Z');
+ assert.equal(new Date(ui.EVENT_END).toISOString(),'2026-11-08T14:30:00.000Z');
+ assert.equal(ui.phase(new Date('2026-10-31T23:30:00Z')),'hidden');
+ assert.equal(ui.phase(new Date('2026-11-01T00:30:00Z')),'research');
+ assert.equal(ui.phase(new Date('2026-11-06T04:29:59Z')),'research');
+ assert.equal(ui.phase(new Date('2026-11-06T04:30:00Z')),'festival');
+ assert.equal(ui.phase(new Date('2026-11-08T14:29:59Z')),'festival');
+ assert.equal(ui.phase(new Date('2026-11-08T14:30:00Z')),'hidden');
+});
+test('Card uses already approved premium art, official source and the existing event',()=>{
+ const data=JSON.parse(read('spidey-app/data/events.json'));
+ const event=data.events.find(e=>e.id==='festival-of-lights-2026-pokeminers-e2');
+ assert.equal(event?.status,'published');
+ assert.equal(event?.schedule?.local_timezone,'Asia/Kolkata');
+ assert.equal(event?.art?.url,'assets/festival-das-luzes-approved.png');
+ assert.equal(event?.art?.standard,'spidey-premium-v1');
+ assert(fs.existsSync(path.join(root,'spidey-app',event.art.url)));
+ assert.match(code,/event&&typeof openEvent==='function'/);
+ assert.match(code,/🇮🇳 EXCLUSIVO DA ÍNDIA/);
+ assert.match(code,/Prazo final: consulte no jogo/);
+ assert.match(code,/pokemongo.com\/en\/news\/festival-of-lights-2026/);
+ assert.doesNotMatch(code,/SpideyNexus|aranha|spider/i);
+});
+test('Home card is wired, accessible and cached without removing existing features',()=>{
+ const html=read('spidey-app/index.html'),sw=read('spidey-app/sw.js');
+ assert(html.includes('home-festival-lights-20261101.js?v=20261101-lights1'));
+ assert(html.includes('home-festival-lights-20261101.css?v=20261101-lights1'));
+ assert(html.indexOf('home-premium-20261029.js?v=')<html.indexOf('home-festival-lights-20261101.js?v='));
+ assert.match(code,/feature\.insertAdjacentElement\('afterend',section\)/);
+ assert.match(code,/aria-label/);
+ assert.match(code,/hidden=!show/);
+ assert.match(sw,/\.\/home-festival-lights-20261101\.js/);
+ assert.match(sw,/\.\/home-festival-lights-20261101\.css/);
+ assert.match(html,/nowExperience/);
+});

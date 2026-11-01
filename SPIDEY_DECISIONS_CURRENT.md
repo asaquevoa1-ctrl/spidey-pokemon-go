@@ -474,3 +474,11 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Preservar os **64 pontos aprovados, 17 essenciais, horários IANA e Brasília**, créditos originais, performance móvel, controles, arte S cósmico e nenhuma aranha.
 - Não reutilizar os polígonos ilustrativos falsos nem esconder o problema com ajustes visuais de posição. Em falha da base cartográfica, não fabricar continentes; deixar horários e coordenadas disponíveis.
 - Teste `tests/fly-globe-geography-20261101.test.cjs`, cache `sw.js` atualizado e versionamento do script. A revisão só deve ser dada como publicada após integração e conferência de estado do repositório; teste em Samsung real é distinto.
+
+## 01/11/2026 — Card Premium do Festival das Luzes na Home (Índia)
+- O responsável pediu explicitamente **card do Festival das Luzes 2026 na Home**. Não substituir o pôster principal, atalhos ou outras artes existentes.
+- Reusar a **arte Premium já aprovada** e cadastrada no evento `festival-of-lights-2026-pokeminers-e2`: `spidey-app/assets/festival-das-luzes-approved.png`. Sem logo de aranha, sem regenerar arte, sem trocar a identidade do S cósmico.
+- Fonte oficial: `https://pokemongo.com/en/news/festival-of-lights-2026`. Evento **somente na Índia**, de **06/11 às 10h a 08/11 às 20h** no fuso `Asia/Kolkata` (Brasília: 06/11 às 01h30 até 08/11 às 11h30). **Pesquisa temporária ramificada disponível a partir de 01/11 às 06h na Índia** (31/10 às 21h30 Brasília), separada do evento principal. O fim da pesquisa **não foi informado oficialmente**: manter mensagem de conferir prazo no jogo, sem inventar vencimento.
+- Card dá destaque à pesquisa antes de 06/11 e ao festival enquanto acontece; **desaparece automaticamente ao final de 08/11** ou se o evento deixar de ser publicado. Botão “Explorar evento” abre o detalhe *dentro do Spidey*. Link discreto aponta para anúncio oficial.
+- Componentes independentes `home-festival-lights-20261101.js/.css`, carregados após `home-premium-20261029.js` e cacheados no PWA. Não afetar outras guias.
+- Testes `tests/home-festival-lights-20261101.test.cjs` verificam datas UTC, fases pesquisa/festival, origem, arte, integração e cache. Confirmação real no GitHub Pages e Android físico depende de evidência própria; não confundir CI com conferência visual.
