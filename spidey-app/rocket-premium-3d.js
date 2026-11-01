@@ -8,11 +8,11 @@
   const ORDER = ['giovanni','cliff','arlo','sierra'];
   const ART = Object.freeze({
     Persian:53,Kangaskhan:115,Rhyperior:464,Machamp:68,Zekrom:644,
-    Cubone:104,Snorlax:143,Golurk:623,Tyranitar:248,Camerupt:323,Gallade:475,
-    Steelix:208,Slowbro:80,Alakazam:65,Charizard:6,Scizor:212,
+    Cubone:104,Snorlax:143,Golurk:623,'Galarian Weezing':10167,Tyranitar:248,Camerupt:323,Gallade:475,
+    'Alolan Grimer':10112,Steelix:208,Slowbro:80,Alakazam:65,Charizard:6,Scizor:212,
     Pancham:674,Blastoise:9,Flygon:330,Ferrothorn:598,Milotic:350,Houndoom:229
   });
-  // Sem arte de forma regional correta? Exibir nome, não imagem de outra forma.
+  // IDs de formas regionais específicos: nunca usar imagem da forma comum no lugar.
   const LABELS = {giovanni:'CHEFE SUPREMO',cliff:'LÍDER',arlo:'LÍDER',sierra:'LÍDER'};
   const COLORS = {giovanni:'ruby',cliff:'blue',arlo:'ember',sierra:'violet'};
   let current = 0;
