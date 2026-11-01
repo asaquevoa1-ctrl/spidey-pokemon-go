@@ -8,12 +8,8 @@
 #flyGlobeMotion:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;
  background:repeating-linear-gradient(0deg,transparent 0 32px,rgba(231,199,144,.08) 33px),
  repeating-linear-gradient(90deg,transparent 0 32px,rgba(231,199,144,.08) 33px);}
-.fly-globe-head{display:flex;align-items:center;justify-content:space-between;gap:8px;position:relative;z-index:2;margin-bottom:11px;}
-.fly-globe-title{min-width:0;}
-.fly-globe-kicker{display:block;font-size:.67rem;letter-spacing:.16em;font-weight:850;color:#e4bd79;}
-.fly-globe-title h2{font-size:clamp(1.36rem,5vw,1.88rem);letter-spacing:-.035em;margin:2px 0;color:#faf4e9;}
-.fly-globe-title p{margin:0;color:#c7c8cf;font-size:.75rem;line-height:1.35;}
-.fly-globe-brand{height:42px;width:42px;border-radius:9px;object-fit:contain;flex-shrink:0;}
+.fly-globe-brand{height:36px;width:36px;border-radius:9px;object-fit:contain;flex-shrink:0;
+ filter:drop-shadow(0 2px 8px rgba(222,178,92,.18));}
 .fly-globe-screen{position:relative;isolation:isolate;border:1px solid rgba(212,186,147,.2);
  background:#0b1524;border-radius:17px;overflow:hidden;height:clamp(250px,74vw,360px);}
 .fly-globe-canvas{width:100%;height:100%;display:block;}
@@ -23,9 +19,6 @@
 .fly-globe-location{color:#fff3d9;max-width:72%;padding:5px 10px;border:1px solid rgba(230,189,131,.35);
  border-radius:11px;background:rgba(10,21,36,.84);font-weight:850;font-size:.86rem;line-height:1.3;overflow-wrap:anywhere;
  text-shadow:0 1px 3px rgba(0,0,0,.35);}
-.fly-globe-counter{white-space:nowrap;display:inline-flex;padding:7px 8px;color:#f1d3a3;
- border-radius:9px;border:1px solid rgba(236,202,158,.28);background:rgba(10,21,36,.75);
- font-size:.63rem;font-weight:800;letter-spacing:.09em;}
 .fly-globe-times{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;}
 .fly-globe-time{min-width:0;display:grid;gap:6px;padding:12px 11px;background:rgba(6,13,25,.58);
  border:1px solid rgba(211,181,133,.21);border-radius:12px;}
