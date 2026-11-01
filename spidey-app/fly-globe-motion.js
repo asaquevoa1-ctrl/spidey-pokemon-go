@@ -114,9 +114,7 @@
     const track=node('div','fly-globe-track');
     const fill=node('div','fly-globe-track-fill');
     track.append(fill);
-    const note=node('p','fly-globe-note',
-      'Sequência ilustrativa das janelas confirmadas. Datas e horários são calculados por fuso IANA. Coordenadas são referências geográficas, não PokéStops ou uma rota GPX.');
-    root.append(heading,screen,times,coords,controls,track,note);
+    root.append(heading,screen,times,coords,controls,track);
     anchor.insertAdjacentElement('afterend',root);
     loadLand();
     el={location,tag,localClock,brClock,coords,prev,next,play,count,fill};
