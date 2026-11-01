@@ -236,7 +236,7 @@ const CORE = [
 // ao abrir as telas. Um único arquivo opcional não bloqueia atualizações.
 const INSTALL_CORE = [
   './index.html',
-  ...CORE.filter(path => /\\.(?:js|css|json|webmanifest)$/.test(path))
+  ...CORE.filter(path => /\.(?:js|css|json|webmanifest)$/.test(path))
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then(async cache => {
