@@ -65,6 +65,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
       - uses: actions/configure-pages@v5
       - name: Publicar Spidey
         id: deployment
