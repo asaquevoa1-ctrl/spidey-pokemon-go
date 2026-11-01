@@ -12,7 +12,7 @@ test('GitHub Pages favors newest main version and verifies ACTUAL public deploym
  assert.match(yml,/cancel-in-progress: true/);
  assert.match(yml,/uses: actions\/deploy-pages@v4/);
  const deploy=yml.slice(yml.indexOf('  deploy:'));
- assert.match(deploy,/uses: actions\\/checkout@v5/);
+ assert.match(deploy,/uses: actions\/checkout@v5/);
  assert(deploy.indexOf('uses: actions/checkout@v5')<deploy.indexOf('uses: actions/deploy-pages@v4'));
  assert(deploy.indexOf('uses: actions/checkout@v5')<deploy.indexOf('node scripts/qa_trust_27_public_pages.mjs'));
 
