@@ -57,14 +57,20 @@ test('the 3D event detail contains an in-place coordinate list, not only a Trust
  const nt=events.find(e=>e.id==='2026-national-trust-27-sites');
  assert(nt && nt.status==='published');
  assert.match(app,/id="nationalTrustEventCoords"/);
+ assert.match(app,/nt-event-coordinates-first/);
+ // The full-size poster must no longer hide all 27 coordinates below the fold.
+ assert(app.indexOf("${isNationalTrust ? trustCoordinatesMarkup : ''}") <
+        app.indexOf("${newsOnly ? '' : (eventArtVisible(event)"));
+ assert.match(app,/dialog.scrollTop=0/);
+ assert.match(app,/detail.scrollTop=0/);
  assert.match(app,/SpideyNationalTrustCore\?\.renderEventCoordinates\?\./);
  assert.match(app,/detail\.dataset\.eventId===event\.id/);
  assert.match(nt.summary,/27 coordenadas de referência/);
  assert.match(nt.notes.join(' '),/copiados aqui ou na aba Trust/);
- assert.match(html,/national-trust-v1\.js\?v=20261101-eventcoords1/);
- assert.match(html,/app\.js\?v=20261101-eventcoords1/);
- assert.match(html,/national-trust-v1\.css\?v=20261101-eventcoords1/);
- assert.match(sw,/20261101-eventcoords1/);
+ assert.match(html,/national-trust-v1\.js\?v=20261101-trusttop2/);
+ assert.match(html,/app\.js\?v=20261101-trusttop2/);
+ assert.match(html,/national-trust-v1\.css\?v=20261101-trusttop2/);
+ assert.match(sw,/20261101-trusttop2/);
  assert.match(sw,/\.\/data\/national-trust-2026\.json/);
  assert.equal(nt.gpx.enabled,false);
  assert.equal(nt.locations.length,0);

@@ -524,20 +524,25 @@ function openEvent(event) {
   const brazilZone = event.schedule?.brazil_timezone || 'America/Sao_Paulo';
   const bonuses = event.bonuses || [];
   const pokemon = event.pokemon || [];
+  const isNationalTrust=event.id==='2026-national-trust-27-sites';
+  // O conteúdo procurado deve ser o PRIMEIRO elemento do detalhe,
+  // antes do pôster vertical: no Samsung a arte inteira ocupava mais
+  // de uma tela, dando a falsa impressão de que as coordenadas sumiram.
+  const trustCoordinatesMarkup='<section id="nationalTrustEventCoords" class="nt-event-coordinates nt-event-coordinates-first" aria-label="27 locais e coordenadas National Trust"><div class="nt-event-topline"><span>🇬🇧 NATIONAL TRUST · REINO UNIDO</span><strong>27 LOCAIS</strong></div><h2>Coordenadas dos 27 locais</h2><p class="nt-event-caution">Referências comunitárias das propriedades. Não são Poképaradas, Ginásios ou pontos exatos verificados de ativação das pesquisas.</p><p data-nt-event-status role="status">Carregando as 27 coordenadas de referência…</p><div data-nt-event-list class="nt-event-list"></div></section>';
   detail.innerHTML = `
+    ${isNationalTrust ? trustCoordinatesMarkup : ''}
     ${newsOnly ? '' : (eventArtVisible(event) ? `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event))}
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
-      <h2>${event.public_title || event.title}</h2><p>${event.public_summary || event.summary || ''}</p>
+      <h2>${event.public_title || event.title}</h2><p>${isNationalTrust ? '27 localidades do National Trust, com referências para copiar disponíveis no início desta tela. A parceria segue até 31/12/2026.' : (event.public_summary || event.summary || '')}</p>
       ${nightOutBackgroundHighlight(event)}
       ${newsOnly ? '' : `<div class="info-grid">
         ${dateOnly ? `<div class="info-box"><span>Período no local</span><strong>${window.SpideyDateOnly.label(event)}</strong></div><div class="info-box"><span>Horário diário</span><strong>Não divulgado</strong></div>` : `<div class="info-box"><span>Horário local</span><strong>${localStart && localEnd ? `${formatDateTime(localStart, localZone)} → ${formatDateTime(localEnd, localZone)}` : 'A confirmar'}</strong></div><div class="info-box"><span>Brasil</span><strong>${brazilStart && brazilEnd ? `${formatDateTime(brazilStart, brazilZone)} → ${formatDateTime(brazilEnd, brazilZone)}` : 'A confirmar'}</strong></div>`}
       </div>
-      <h3>Coordenadas</h3>${event.id==='2026-national-trust-27-sites'
-        ? '<section id="nationalTrustEventCoords" class="nt-event-coordinates" aria-label="27 locais e coordenadas National Trust"><p class="nt-event-caution">27 referências comunitárias das propriedades National Trust. Não representam Poképaradas, Ginásios ou locais exatos verificados de ativação das pesquisas.</p><p data-nt-event-status role="status">Carregando as 27 coordenadas de referência…</p><div data-nt-event-list class="nt-event-list"></div></section>'
-        : window.SpideyFlyCore?.eligible(event)
+      ${isNationalTrust ? '<p class="microcopy">Os 27 locais estão listados no início deste evento, com botões para copiar cada coordenada de referência.</p>' :
+        `<h3>Coordenadas</h3>${window.SpideyFlyCore?.eligible(event)
           ? '<p class="microcopy">Evento mundial: horários e coordenadas de referência aparecem no FLY, por cidade e em Brasília. As referências urbanas não são Ginásios confirmados.</p>'
-          : locationRows(event)}
+          : locationRows(event)}`}
       ${event.companion_art?.url ? `<div class="spidey-companion-art">
         <h3>${event.companion_art.title || 'Coordenadas ilustradas'}</h3>
         <a href="${event.companion_art.url}?v=${String(event.companion_art.web_sha256 || '').slice(0,12)}" target="_blank" rel="noopener" aria-label="Abrir arte completa de coordenadas">
@@ -570,6 +575,10 @@ function openEvent(event) {
   detail.querySelector('#openEventFly')?.addEventListener('click', () => window.SpideyFly?.open(event.id));
   detail.querySelector('#downloadGpx')?.addEventListener('click', () => downloadGpx(event));
   showAppDialog();
+  if(isNationalTrust){
+    dialog.scrollTop=0;
+    detail.scrollTop=0;
+  }
 }
 
 // Safe public lookup for event deep-links. Never expose an unpublished or expired event.
