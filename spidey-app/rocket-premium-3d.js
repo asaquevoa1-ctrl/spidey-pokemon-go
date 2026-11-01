@@ -88,6 +88,7 @@
       illustration.loading = 'lazy';
       illustration.decoding = 'async';
       illustration.dataset.rocketPosterUrl = poster.file;
+      illustration.addEventListener('load',()=>card.classList.add('rocket-3d-card-poster'),{once:true});
       illustration.addEventListener('error',()=>{
         illustration.remove();
         card.classList.remove('rocket-3d-card-poster');
@@ -95,7 +96,6 @@
       },{once:true});
       artwork.append(illustration);
       card.dataset.rocketPoster = member.id;
-      card.classList.add('rocket-3d-card-poster');
     }
     const lineup = elt('span','rocket-3d-lineup');
     member.slots.forEach((slot,i) => {
