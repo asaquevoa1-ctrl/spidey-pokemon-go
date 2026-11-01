@@ -58,10 +58,20 @@
       row.append(elt('b','rocket-3d-slot-number',String(i+1) + 'º'));
       const pkm = elt('span','rocket-3d-slot-names');
       slot.pokemon.forEach((p,j) => {
-        const badge = elt('span','rocket-3d-pokemon',p.name);
+        const badge = elt('span','rocket-3d-pokemon');
+        if(ART[p.name]) {
+          const thumb = document.createElement('img');
+          thumb.className = 'rocket-3d-mini';
+          thumb.alt = '';
+          thumb.loading = 'lazy';
+          thumb.decoding = 'async';
+          thumb.dataset.rocketMiniUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + ART[p.name] + '.png';
+          thumb.addEventListener('error',()=>thumb.remove(),{once:true});
+          badge.append(thumb);
+        }
+        badge.append(elt('span','rocket-3d-pokemon-label',p.name));
         if(p.shiny_possible) badge.append(elt('sup','rocket-3d-shiny',' ✦'));
         pkm.append(badge);
-        if(j < slot.pokemon.length-1) pkm.append(elt('span','rocket-3d-or',' / '));
       });
       row.append(pkm);
       lineup.append(row);
@@ -142,6 +152,10 @@
         card.dataset.position = delta === 0 ? 'center' : delta === -1 ? 'left' : delta === 1 ? 'right' : 'hidden';
         card.tabIndex = delta === 0 ? 0 : -1;
         card.setAttribute('aria-hidden',String(delta !== 0));
+        // Só carrega miniaturas do card em foco ou dos cards vizinhos.
+        if(Math.abs(delta)<=1) card.querySelectorAll('img[data-rocket-mini-url]').forEach(img=>{
+          if(!img.src) img.src = img.dataset.rocketMiniUrl;
+        });
       });
       position.textContent = (current+1) + ' / ' + members.length + ' · ' + members[current].label;
       details.setAttribute('aria-label','Ver escalação completa de ' + members[current].label);
