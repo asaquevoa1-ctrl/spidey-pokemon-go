@@ -56,3 +56,50 @@ html[data-theme="light"] #calendarView .festival-lights-home{color:#fffaf2;backg
  .festival-lights-time strong{font-size:.73rem;}
  .festival-lights-research{font-size:.68rem;}}
 @media(prefers-reduced-motion:reduce){.festival-lights-home *{scroll-behavior:auto;}}
+
+/* 01/11 — A Home em uso é #playerHome, não o calendário legado.
+   Card-tarja compacto no primeiro visor; arte Premium integral no 3D.
+   Nenhum segundo cartaz abaixo do painel de destaques. */
+#calendarView #playerHome .festival-lights-hero-teaser{
+  margin:8px 0 10px;padding:10px 13px;
+  border-radius:15px;border-color:rgba(230,185,107,.48);
+  background:radial-gradient(ellipse at 96% 10%,rgba(219,141,61,.16),transparent 55%),linear-gradient(112deg,#272b38,#101a29);
+  box-shadow:0 7px 20px rgba(0,0,0,.13);
+}
+#playerHome .festival-lights-hero-teaser .festival-lights-head{
+  margin:0 0 6px;gap:4px;
+}
+#playerHome .festival-lights-hero-teaser .festival-lights-eyebrow{font-size:.58rem;}
+#playerHome .festival-lights-hero-teaser .festival-lights-region{
+  padding:3px 7px;font-size:.57rem;
+}
+#playerHome .festival-lights-hero-teaser .festival-lights-body{
+  display:block;margin-right:118px;
+}
+#playerHome .festival-lights-hero-teaser .festival-lights-poster{
+  display:none!important;
+}
+#playerHome .festival-lights-hero-teaser .festival-lights-copy{gap:3px;}
+#playerHome .festival-lights-hero-teaser .festival-lights-copy h2{font-size:1.18rem;line-height:1.13;}
+#playerHome .festival-lights-hero-teaser .festival-lights-subtitle{font-size:.66rem;line-height:1.24;}
+#playerHome .festival-lights-hero-teaser .festival-lights-status{
+  display:block;width:fit-content;font-size:.60rem;line-height:1.25;
+  padding:4px 6px;margin-top:2px;
+}
+#playerHome .festival-lights-hero-teaser .festival-lights-state-copy,
+#playerHome .festival-lights-hero-teaser .festival-lights-dates,
+#playerHome .festival-lights-hero-teaser .festival-lights-research,
+#playerHome .festival-lights-hero-teaser .festival-lights-source{display:none;}
+#playerHome .festival-lights-hero-teaser .festival-lights-actions{
+  position:absolute;right:12px;bottom:13px;margin:0;
+}
+#playerHome .festival-lights-hero-teaser .festival-lights-open{
+  min-height:39px;padding:8px 10px;font-size:.68rem;white-space:nowrap;
+}
+@media(max-width:390px){
+  #calendarView #playerHome .festival-lights-hero-teaser{padding:9px 10px;}
+  #playerHome .festival-lights-hero-teaser .festival-lights-body{margin-right:105px;}
+  #playerHome .festival-lights-hero-teaser .festival-lights-open{padding:7px 8px;font-size:.63rem;}
+  #playerHome .festival-lights-hero-teaser .festival-lights-actions{right:8px;bottom:10px;}
+  #playerHome .festival-lights-hero-teaser .festival-lights-copy h2{font-size:1.06rem;}
+}
