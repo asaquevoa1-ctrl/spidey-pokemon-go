@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/explorer-gadget-news-*.test.cjs', 'tests/fly-*.test.cjs', 'tests/weekly-*.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', 'scripts/qa_wild_cdmx_public_pages.mjs', 'spidey-app/news-premium-20261102.js', 'spidey-app/news-premium-20261102.css', 'tests/news-premium-20261102.test.cjs', 'tests/weekly-day-fix-20261102.test.cjs', 'tests/fly-premium-20261102.test.cjs', 'tests/fly-remove-old-panels-20261102.test.cjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/explorer-gadget-news-*.test.cjs', 'tests/fly-*.test.cjs', 'tests/weekly-*.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', 'scripts/qa_wild_cdmx_public_pages.mjs', 'spidey-app/news-premium-20261102.js', 'spidey-app/news-premium-20261102.css', 'tests/news-premium-20261102.test.cjs', 'tests/weekly-day-fix-20261102.test.cjs', 'tests/fly-premium-20261102.test.cjs', 'tests/fly-remove-old-panels-20261102.test.cjs', 'tests/stamps-premium-20261102.test.cjs', '.github/workflows/spidey-pages.yml']
   pull_request:
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/explorer-gadget-news-*.test.cjs', 'tests/fly-*.test.cjs', 'tests/weekly-*.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', 'scripts/qa_wild_cdmx_public_pages.mjs', 'spidey-app/news-premium-20261102.js', 'spidey-app/news-premium-20261102.css', 'tests/news-premium-20261102.test.cjs', 'tests/weekly-day-fix-20261102.test.cjs', 'tests/fly-premium-20261102.test.cjs', 'tests/fly-remove-old-panels-20261102.test.cjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/explorer-gadget-news-*.test.cjs', 'tests/fly-*.test.cjs', 'tests/weekly-*.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', 'scripts/qa_wild_cdmx_public_pages.mjs', 'spidey-app/news-premium-20261102.js', 'spidey-app/news-premium-20261102.css', 'tests/news-premium-20261102.test.cjs', 'tests/weekly-day-fix-20261102.test.cjs', 'tests/fly-premium-20261102.test.cjs', 'tests/fly-remove-old-panels-20261102.test.cjs', 'tests/stamps-premium-20261102.test.cjs', '.github/workflows/spidey-pages.yml']
   workflow_run:
     workflows: ['Spidey Weekly - resumo semanal', 'Spidey - Caçador feed parceiro']
     types: [completed]
@@ -58,6 +58,8 @@ jobs:
         run: node --test tests/fly-premium-20261102.test.cjs
       - name: Conferir limpeza dos paineis do FLY e preservar origem
         run: node --test tests/fly-remove-old-panels-20261102.test.cjs tests/fly-historical-list-dst-20261022.test.cjs
+      - name: Conferir identidade Premium da galeria Selos e PokéLids
+        run: node --test tests/stamps-premium-20261102.test.cjs
       - name: Conferir Semana nos sete dias e horarios em Brasilia
         run: node --test tests/weekly-day-fix-20261102.test.cjs tests/weekly-cards.test.cjs
       - name: Testar lista e cópia das 27 coordenadas antes de publicar
