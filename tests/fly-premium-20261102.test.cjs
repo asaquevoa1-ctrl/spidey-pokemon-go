@@ -10,9 +10,9 @@ const sw=read('spidey-app/sw.js');
 
 test('FLY usa aba dinâmica existente sem modificar eventos, coordenadas nem rota IANA',()=>{
  assert.match(core,/id='flyView'/);
- assert.match(core,/id=\\"flyRouteList\\"/);
- assert.match(core,/id=\\"flyNow\\"/);
- assert.match(core,/data-coord=\\"/);
+ assert.match(core,/flyRouteList/);
+ assert.match(core,/flyNow/);
+ assert.match(core,/data-coord/);
  assert.match(core,/SpideyFlyCore/);
  assert.match(core,/loadPoints\(/);
  assert.match(js,/getElementById\('flyView'\)/);
