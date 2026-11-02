@@ -1,5 +1,7 @@
-const CACHE = 'spidey-app-20261102-weekday2';
+const CACHE = 'spidey-app-20261102-candy-alert1';
 const CORE = [
+  './rare-candy-alert-20261102.js',
+  './rare-candy-alert-20261102.css',
   './spidey-motion.css',
   './spidey-motion.js',
   './spidey-premium-interiors-20261029.css',
