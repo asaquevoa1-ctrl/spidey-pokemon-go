@@ -1,0 +1,267 @@
+/* FLY Premium · navegação móvel e acabamento editorial.
+   Apenas apresentação: coordenadas, rota IANA, copy e globo não mudam. */
+#flyView{
+  --flygold:#ebc790;
+  --flyink:#fff3e4;
+  --flymuted:#c4d1dd;
+  --flyline:rgba(231,191,134,.25);
+  color:var(--flyink);
+}
+#flyView>.hero.hero-compact{
+  position:relative;overflow:hidden;isolation:isolate;
+  border-radius:23px!important;
+  padding:clamp(23px,4vw,39px)!important;
+  border:1px solid rgba(230,189,121,.33)!important;
+  background:
+    radial-gradient(circle at 92% -16%,rgba(185,67,75,.20),transparent 49%),
+    radial-gradient(ellipse at 0% 110%,rgba(63,101,135,.27),transparent 52%),
+    linear-gradient(145deg,#26384a,#0c1929 70%)!important;
+  box-shadow:0 17px 35px rgba(0,0,0,.19),inset 0 1px rgba(250,226,176,.09)!important;
+}
+#flyView>.hero.hero-compact:before{
+  content:"";position:absolute;inset:0 0 auto;height:2px;
+  background:linear-gradient(90deg,#b5444d,#ecc589 65%,transparent);
+}
+#flyView>.hero.hero-compact .eyebrow{
+  color:var(--flygold)!important;font-weight:850;letter-spacing:.15em;
+}
+#flyView>.hero.hero-compact h1{
+  color:#fff4e9!important;letter-spacing:-.038em;
+  line-height:1.08;margin:12px 0 10px;
+  font-size:clamp(1.8rem,6vw,3.3rem)!important;
+}
+#flyView>.hero.hero-compact p{
+  color:var(--flymuted)!important;
+  max-width:650px;line-height:1.58;font-size:clamp(.85rem,1.7vw,1rem);
+}
+#flyView .fly-premium-quick-nav{
+  display:flex;gap:10px;flex-wrap:wrap;
+  padding:10px 2px 15px;
+}
+#flyView .fly-premium-quick-nav button{
+  appearance:none;min-height:46px;cursor:pointer;
+  display:inline-flex;justify-content:center;align-items:center;gap:7px;
+  border-radius:13px;border:1px solid rgba(235,192,128,.3);
+  background:#24384c;color:#f9dfb9;
+  padding:10px 16px;
+  font-family:inherit;font-size:.83rem;font-weight:800;line-height:1.25;letter-spacing:.005em;
+}
+#flyView .fly-premium-quick-nav button:first-child{
+  background:linear-gradient(114deg,#b64753,#7a2f40);
+  color:#fff4e8;border-color:rgba(240,192,138,.38);
+}
+#flyView .fly-premium-quick-nav button:focus-visible,
+#flyView .fly-point-actions :is(a,button):focus-visible,
+#flyView .fly-toolbar button:focus-visible,
+#flyView .fly-event-select:focus-visible{
+  outline:3px solid #f8d799!important;outline-offset:3px!important;
+}
+#flyView>.section{
+  border-radius:21px!important;
+  border:1px solid rgba(225,190,141,.15)!important;
+  background:linear-gradient(145deg,rgba(26,41,59,.92),rgba(10,22,36,.97))!important;
+  padding:clamp(15px,2.7vw,26px)!important;
+  opacity:1!important;visibility:visible!important;transform:none!important;
+}
+#flyView .fly-event-label{
+  display:block;color:#ebc78f;
+  font-size:.79rem;letter-spacing:.035em;font-weight:860;
+}
+#flyView .fly-event-select{
+  width:100%;max-width:100%;
+  background:#263b50!important;color:#fff3e5!important;
+  border:1px solid rgba(232,193,135,.38)!important;
+  border-radius:13px!important;min-height:52px;
+  font-size:.91rem!important;line-height:1.35;
+}
+#flyView .fly-live-grid{
+  margin:19px 0 14px;gap:12px!important;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+#flyView .fly-live-grid article{
+  min-width:0;position:relative;
+  border-radius:18px!important;
+  padding:clamp(15px,2.7vw,24px)!important;
+  border:1px solid rgba(229,188,127,.26)!important;
+  background:linear-gradient(145deg,#26394e,#122235)!important;
+  box-shadow:inset 0 1px rgba(245,220,181,.07),0 9px 20px rgba(0,0,0,.11)!important;
+}
+#flyView .fly-live-grid article:first-child{
+  border-left:3px solid #e4b777!important;
+}
+#flyView .fly-live-grid .eyebrow{
+  font-size:.68rem!important;letter-spacing:.12em;
+  font-weight:850;color:#e7bd7d!important;
+}
+#flyView .fly-live-grid h2{
+  margin:9px 0 4px;color:var(--flyink)!important;
+  font-size:clamp(1.04rem,2.4vw,1.38rem);line-height:1.4;
+  overflow-wrap:anywhere;
+}
+#flyView .fly-live-grid #flyCountdown,
+#flyView .fly-last{color:#cbd8e2!important;line-height:1.6}
+#flyView .fly-upcoming-routes{
+  border-radius:18px;padding:14px;
+  border:1px solid var(--flyline);
+  background:rgba(4,17,28,.38);
+}
+#flyView .fly-upcoming-routes h2{
+  color:#f4d29f;font-size:.88rem!important;
+  letter-spacing:.075em!important;margin:0 0 12px!important;
+}
+#flyView .fly-upcoming-items{gap:10px!important}
+#flyView .fly-upcoming-item{
+  min-width:0;min-height:72px!important;
+  border:1px solid rgba(217,178,126,.28)!important;
+  background:linear-gradient(125deg,#273a4d,#16293b)!important;
+  border-radius:14px!important;
+  box-shadow:inset 0 1px rgba(251,231,196,.05);
+}
+#flyView .fly-upcoming-item span{color:#fff2df}
+#flyView .fly-upcoming-item small{color:#c3d2df!important}
+#flyView .fly-toolbar{
+  display:flex;gap:8px!important;align-items:center;
+  border-top:1px solid rgba(224,187,137,.17);
+  padding-top:17px;margin:17px 0!important;
+}
+#flyView .fly-toolbar button{
+  min-height:45px;flex:0 0 auto;
+  background:#233a50!important;color:#f8ddb2!important;
+  border:1px solid rgba(234,192,129,.31)!important;
+  border-radius:12px!important;padding:11px 14px!important;
+  font-size:.79rem!important;font-weight:830!important;
+}
+#flyView .fly-toolbar button[aria-pressed="true"]{
+  color:#112438!important;background:#e9bf85!important;
+  border-color:#f4d29c!important;outline:none!important;
+}
+#flyView .fly-toolbar>span{
+  margin-left:auto;color:#c2d0da;
+  font-size:.8rem;white-space:nowrap;
+}
+#flyView .fly-toolbar>span strong{
+  color:var(--flygold);font-variant-numeric:tabular-nums;
+}
+#flyView #flyRouteList{
+  position:relative;display:grid;gap:11px!important;
+  scroll-margin-top:18px;
+}
+#flyView .fly-point{
+  position:relative;min-width:0;
+  border:1px solid rgba(221,185,131,.24)!important;
+  border-radius:17px!important;
+  background:
+    radial-gradient(ellipse at 105% 0%,rgba(145,78,76,.07),transparent 55%),
+    linear-gradient(130deg,#24374b,#122236)!important;
+  box-shadow:inset 0 1px rgba(255,231,196,.06),0 8px 20px rgba(0,0,0,.12)!important;
+  padding:clamp(14px,2.4vw,22px)!important;
+  grid-template-columns:35px minmax(0,1fr) minmax(120px,auto);
+  align-items:start;gap:13px!important;
+}
+#flyView .fly-point.fly-active{
+  border:1px solid rgba(236,190,125,.62)!important;
+  border-left:4px solid #e6b677!important;
+  background:linear-gradient(130deg,#2b4050,#162c3d)!important;
+}
+#flyView .fly-order{
+  display:grid;place-items:center;
+  height:36px;min-width:34px;border-radius:11px;
+  background:rgba(228,177,106,.12);
+  border:1px solid rgba(232,186,122,.25);
+  color:#f5d39f!important;font-size:.96rem!important;
+  font-variant-numeric:tabular-nums;font-weight:900;
+}
+#flyView .fly-place{min-width:0}
+#flyView .fly-place h3{
+  color:#fff2e1!important;margin:8px 0!important;
+  font-size:clamp(1rem,2.6vw,1.2rem);
+  line-height:1.3;overflow-wrap:break-word;
+}
+#flyView .fly-place p{
+  color:#c9d5df!important;line-height:1.48;
+  font-size:.83rem;margin:6px 0!important;
+}
+#flyView .fly-place p strong{color:#f7dbad!important}
+#flyView .fly-place small{
+  color:#acbfce!important;font-size:.7rem;line-height:1.4;
+}
+#flyView .fly-place code{
+  margin-top:10px;color:#e5c99e!important;
+  background:rgba(5,16,26,.48);border:1px solid rgba(220,177,116,.2);
+  border-radius:9px;padding:8px 10px;
+  font-size:.8rem;line-height:1.45;font-variant-numeric:tabular-nums;
+  white-space:normal;overflow-wrap:anywhere;
+}
+#flyView .fly-state{
+  color:#ecc78b!important;font-size:.64rem!important;
+  font-weight:880!important;letter-spacing:.09em;
+}
+#flyView .fly-point-actions{
+  display:grid;gap:9px!important;min-width:124px;
+}
+#flyView .fly-point-actions :is(button,a){
+  display:flex;align-items:center;justify-content:center;
+  width:100%;box-sizing:border-box;min-height:46px;
+  border-radius:11px!important;padding:10px 12px!important;
+  text-align:center;font-size:.76rem!important;font-weight:820;
+  white-space:normal;line-height:1.3;
+}
+#flyView .fly-point-actions button{
+  background:linear-gradient(120deg,#ad4551,#793143)!important;
+  color:#fff4e8!important;border:1px solid rgba(241,199,141,.4)!important;
+}
+#flyView .fly-point-actions a{
+  background:#263d51!important;color:#f5dfb9!important;
+  border:1px solid rgba(228,187,131,.3)!important;
+}
+#flyView :is(.fly-event-details,.fly-regional-events,.fly-reference-credits){
+  border:1px solid rgba(228,183,129,.22)!important;
+  border-radius:15px!important;background:#1a2d40!important;
+  color:#e6d0b2;overflow:hidden;
+}
+#flyView :is(.fly-event-details,.fly-regional-events,.fly-reference-credits)>summary{
+  min-height:46px;padding:13px 15px!important;
+  font-size:.83rem;line-height:1.45;font-weight:800;
+  cursor:pointer;color:#f2d1a1!important;
+}
+#flyView :is(.fly-event-details,.fly-regional-events,.fly-reference-credits)[open]>summary{
+  border-bottom:1px solid rgba(227,182,130,.17);
+}
+#flyView :is(.fly-event-details,.fly-regional-events,.fly-reference-credits)>div{
+  padding:12px 14px;
+}
+#flyGlobeMotion{
+  border-radius:22px!important;
+  border-color:rgba(230,188,122,.38)!important;
+}
+#flyGlobeMotion .fly-globe-play{
+  color:#fff5e5!important;
+  border-color:rgba(240,193,133,.45)!important;
+}
+@media(max-width:740px){
+  #flyView>.hero.hero-compact{padding:22px 17px!important;}
+  #flyView>.section{padding:15px 12px!important;}
+  #flyView .fly-live-grid{grid-template-columns:1fr!important;gap:10px!important;}
+  #flyView .fly-point{
+    grid-template-columns:32px minmax(0,1fr)!important;
+    gap:10px!important;padding:14px 12px!important;
+  }
+  #flyView .fly-point-actions{
+    grid-column:2;grid-template-columns:repeat(2,minmax(0,1fr));
+    min-width:0;width:100%;
+  }
+  #flyView .fly-toolbar>span{
+    flex-basis:100%;margin-left:0;text-align:right;
+  }
+  #flyView .fly-premium-quick-nav button{
+    flex:1 1 120px;padding:11px!important;
+  }
+}
+@media(max-width:400px){
+  #flyView .fly-point-actions{grid-template-columns:1fr;}
+  #flyView .fly-point-actions :is(button,a){min-height:44px}
+  #flyView .fly-live-grid h2{font-size:1.06rem}
+}
+@media(prefers-reduced-motion:reduce){
+  #flyView .fly-point,#flyGlobeMotion{transition:none!important;animation:none!important}
+}
