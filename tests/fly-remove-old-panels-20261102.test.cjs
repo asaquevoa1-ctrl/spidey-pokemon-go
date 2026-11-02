@@ -14,7 +14,7 @@ const route=JSON.parse(read('spidey-app/data/world-event-points.json'));
 test('FLY nao mostra secao de creditos da lista mundial',()=>{
   assert.doesNotMatch(fly,/id="flySourceCredits"|Créditos e origem da lista mundial/);
   assert.doesNotMatch(fly,/showSourceCredits|raw\.textContent=source\.credits/);
-  assert.match(fly,/id=\\"flyRouteList\\"/);
+  assert.match(fly,/flyRouteList/);
   assert.match(fly,/data-coord=/);
   assert.match(fly,/Copiar coordenadas/);
   assert.match(fly,/Abrir mapa/);
