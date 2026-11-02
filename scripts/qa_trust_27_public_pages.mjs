@@ -7,10 +7,10 @@ const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const packageApp='pages-public/spidey-app/';
 const sourceIndex=readFileSync(packageApp+'index.html','utf8');
-const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-premium-20261102.css','pvp-premium-20261102.css'];
+const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-v2.js','stamps-premium-20261102.css','pvp-premium-20261102.css'];
 const assets=new Map(sources.map(name=>[name,readFileSync(packageApp+name)]));
 const versions=new Map();
-for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js','stamps-premium-20261102.css','pvp-premium-20261102.css']){
+for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js','stamps-v2.js','stamps-premium-20261102.css','pvp-premium-20261102.css']){
  const escaped=name.replaceAll('.','\\.');
  const found=sourceIndex.match(new RegExp(escaped+'\\?v=[^"\\s]+'));
  assert(found,'Referência da versão ausente em index.html: '+name);
@@ -34,7 +34,13 @@ for(let attempt=1;attempt<=12;attempt++){
     if(hash(bytes)!==hash(source))throw Error(name+' público não corresponde ao código atual');
   }
   const stampsCss=assets.get('stamps-premium-20261102.css').toString('utf8');
+  const stamps=assets.get('stamps-v2.js').toString('utf8');
+  const publicApp=assets.get('app.js').toString('utf8');
   assert(stampsCss.includes('#stampsView .stamp-list')&&stampsCss.includes('object-fit:contain'));
+  assert(stamps.includes('stamp-location-summary-v2')&&stamps.includes('copyAllStampCoords'));
+  assert(!/stampToggleDone|saveStampProgress|Marcar como feito|Marcar como faltante|data-stamp-filter="done"|data-stamp-filter="remaining"/.test(stamps));
+  assert(!/stamp-toggle|rallyProgressText|getStampProgress|saveStampProgress/.test(publicApp));
+  assert(index.includes('Explore as coleções, veja os locais e copie coordenadas com facilidade.'));
   const fly=assets.get('fly-v1.js').toString('utf8');
   const world=assets.get('trust-world-v1.js').toString('utf8');
   const sw=assets.get('sw.js').toString('utf8');
