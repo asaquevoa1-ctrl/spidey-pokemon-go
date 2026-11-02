@@ -78,15 +78,18 @@
       Number(Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[b.id]))-Number(Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[a.id]))||
       String(a.title).localeCompare(String(b.title),'pt-BR'));
   }
-  function eventTime(e){
+  function eventTime(e,key){
     const r=range(e);
-    if(r.dates)return 'Datas confirmadas · confira os horários no evento';
+    if(r.dates)return 'Datas anunciadas · confira os horários no evento';
     if(r.sessions?.length){
-      const first=r.sessions[0];
-      return 'Sessão: '+startLabel.format(first.start)+' (Brasília)';
+      const session=r.sessions.find(x=>brazilKey(x.start)<=key&&key<=brazilKey(new Date(x.end-1)))||r.sessions[0];
+      return 'Sessão: '+startLabel.format(session.start)+' (Brasília)';
     }
     if(!Number.isFinite(+r.start))return 'Horário a confirmar';
-    return 'A partir de '+startLabel.format(r.start)+' (Brasília)';
+    if(brazilKey(r.start)<key&&Number.isFinite(+r.end)){
+      return 'Em andamento · até '+startLabel.format(r.end)+' (Brasília)';
+    }
+    return 'Início: '+startLabel.format(r.start)+' (Brasília)';
   }
   function approvedArt(e){
     if(!window.SPIDEY_APPROVED_ART_MASTER?.[e?.id]||
@@ -114,7 +117,7 @@
     const category=isRegional(e)?'REGIONAL':isRaid(e)?'REIDES':'EVENTO';
     details.append(node('small','spidey-agenda-kind',category));
     details.append(node('strong','spidey-agenda-event-title',e.public_title||window.SpideyPlayer?.title?.(e)||e.title));
-    details.append(node('span','spidey-agenda-hour',eventTime(e)));
+    details.append(node('span','spidey-agenda-hour',eventTime(e,key)));
     const arrow=node('span','spidey-agenda-arrow','›');arrow.setAttribute('aria-hidden','true');
     btn.append(poster,details,arrow);
     return btn;
