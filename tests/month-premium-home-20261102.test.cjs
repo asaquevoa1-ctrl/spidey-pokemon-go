@@ -63,9 +63,13 @@ const fixtures=[
  {id:'singapore',title:'Sessão Singapura',category:'regional_event',status:'published',content_type:'event',
   schedule:{sessions:[{start:'2026-11-07T10:00:00+08:00',end:'2026-11-07T22:00:00+08:00'}]}}
 ];
-const toDay=date=>new Intl.DateTimeFormat('en-CA',{
- timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'
-}).format(date);
+const toDay=date=>{
+ const parts=new Intl.DateTimeFormat('en-CA',{
+  timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'
+ }).formatToParts(date).filter(x=>x.type!=='literal');
+ const obj=Object.fromEntries(parts.map(x=>[x.type,x.value]));
+ return obj.year+'-'+obj.month+'-'+obj.day;
+};
 const covered=(e,key)=>{
  const s=e.schedule||{},r=s.sessions?.length
   ?s.sessions:[{start:s.start_brazil,end:s.end_brazil}];
