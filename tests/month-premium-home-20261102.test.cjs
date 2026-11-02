@@ -132,7 +132,7 @@ test('PWA, script order and visual guardrails are integrated',()=>{
  const sw=read('spidey-app/sw.js');
  const css=read('spidey-app/month-premium-20261102.css');
  assert.match(html,/month-premium-20261102\.css\?v=20261102-month1/);
- assert.match(html,/month-premium-20261102\.js\?v=20261102-month1/);
+ assert.match(html,/month-premium-20261102\.js\?v=20261102-month2/);
  assert(html.indexOf('calendar-premium-20261101.js?v=')<
    html.indexOf('month-premium-20261102.js?v='));
  assert.match(sw,/spidey-app-20261102-month1/);
