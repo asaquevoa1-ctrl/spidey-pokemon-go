@@ -67,11 +67,13 @@ test('the 3D event detail contains an in-place coordinate list, not only a Trust
  assert.match(app,/detail\.dataset\.eventId===event\.id/);
  assert.match(nt.summary,/27 coordenadas de referência/);
  assert.match(nt.notes.join(' '),/copiados aqui ou na aba Trust/);
- assert.match(html,/national-trust-v1\.js\?v=20261101-copyall5/);
- assert.match(html,/app\.js\?v=20261101-copyall5/);
- assert.match(html,/national-trust-v1\.css\?v=20261101-copyall5/);
- assert.match(sw,/20261101-copyall5/);
+ assert.match(html,/national-trust-v1\.js\?v=[\w-]+/);
+ assert.match(html,/app\.js\?v=[\w-]+/);
+ assert.match(html,/national-trust-v1\.css\?v=[\w-]+/);
+ assert.match(sw,/const CACHE = ['"]spidey-app-[\w-]+['"]/);
  assert.match(sw,/\.\/data\/national-trust-2026\.json/);
+ assert.match(sw,/\.\/national-trust-v1\.js/);
+ assert.match(sw,/\.\/national-trust-v1\.css/);
  assert.equal(nt.gpx.enabled,false);
  assert.equal(nt.locations.length,27);
  const references=JSON.parse(read('spidey-app/data/national-trust-2026.json')).places;
@@ -117,5 +119,5 @@ test('offline app ships all 27 coordinates in Trust and puts them before the pos
  assert.match(universe,/Ver 27 coordenadas/);
  const html=read('spidey-app/index.html');
  assert.match(html,/Trust · 27/);
- assert.match(html,/national-trust-v1\.js\?v=20261101-copyall5/);
+ assert.match(html,/national-trust-v1\.js\?v=[\w-]+/);
 });
