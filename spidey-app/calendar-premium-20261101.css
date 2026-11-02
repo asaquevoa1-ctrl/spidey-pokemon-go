@@ -15,7 +15,7 @@
 #spideyCalendarPremium h2{color:#fff7eb;font-size:clamp(1.28rem,4.2vw,1.7rem);font-weight:890;letter-spacing:-.025em;margin:0;line-height:1.2}
 #spideyCalendarPremium .spidey-agenda-heading p{color:var(--agenda-muted);font-size:.77rem;line-height:1.36;margin:7px 0 0}
 #spideyCalendarPremium .spidey-agenda-week-link{flex:0 0 auto;min-height:40px;
- font:700 .73rem/1.25 inherit;cursor:pointer;padding:8px 10px;border-radius:11px!important;
+ font-family:inherit;font-size:.73rem;font-weight:700;line-height:1.25;cursor:pointer;padding:8px 10px;border-radius:11px!important;
  background:rgba(218,177,110,.09)!important;color:#f5dbab!important;
  border:1px solid rgba(223,184,121,.34)!important;box-shadow:none!important}
 #spideyCalendarPremium .spidey-agenda-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
