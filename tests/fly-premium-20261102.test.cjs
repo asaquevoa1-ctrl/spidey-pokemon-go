@@ -79,7 +79,7 @@ test('HTML e PWA carregam estilo e JS novos sem mudar shell de FLY',()=>{
  assert.match(html,/fly-premium-20261102\.js\?v=20261102-flypremium1/);
  assert.match(html,/fly-v1\.js\?v=/);
  assert.ok(html.indexOf('fly-v1.js?v=')<html.indexOf('fly-premium-20261102.js?v='));
- assert.match(sw,/const CACHE = 'spidey-app-20261102-flypremium1'/);
+ assert.match(sw,/const CACHE = 'spidey-app-20261102-fly-clean1'/);
  assert.match(sw,/\.\/fly-premium-20261102\.js/);
  assert.match(sw,/\.\/fly-premium-20261102\.css/);
 });
