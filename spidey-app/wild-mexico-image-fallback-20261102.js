@@ -87,7 +87,7 @@
     img.addEventListener('error',failed);
     // Captura apenas imagens que efetivamente terminaram com erro antes do listener.
     // Sem watchdog por tempo: rede lenta / lazy-loading não são erros de imagem.
-    if(img.complete && img.currentSrc && img.naturalWidth===0)failed();
+    if(img.loading!=='lazy' && img.complete && img.currentSrc && img.naturalWidth===0)failed();
   }
   function scan(){
     const root=document.getElementById('wildAreaMexicoView');
