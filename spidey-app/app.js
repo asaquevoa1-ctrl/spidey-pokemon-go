@@ -234,6 +234,8 @@ function renderEvents(events = state.events.filter((event) => event.content_type
     card.className = 'event-card';
     card.dataset.eventId = event.id;
     card.tabIndex = 0;
+    card.setAttribute('role','button');
+    card.setAttribute('aria-label','Explorar coleção: '+rally.title);
     card.innerHTML = `
       ${eventArtVisible(event) ? `<img class="event-thumb" loading="lazy" decoding="async" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event)}
       <div>
@@ -341,6 +343,8 @@ function renderStamps() {
       card.className = 'stamp-card stamp-guide-card';
       card.dataset.stampGuide = rally.id;
       card.tabIndex = 0;
+      card.setAttribute('role','button');
+      card.setAttribute('aria-label','Abrir guia: '+rally.title);
       const head = document.createElement('div');
       head.className = 'stamp-card-top';
       const mark = document.createElement('span');mark.className = 'stamp-icon';mark.textContent = '◎';
@@ -352,7 +356,7 @@ function renderStamps() {
       const footer = document.createElement('p');footer.className = 'microcopy';footer.textContent = rally.route_references?.length ? 'Referências da comunidade · Coordenadas copiáveis · Ver roteiro' : 'Poképaradas identificadas no próprio jogo · Sem número de selos divulgado · Ver guia';
       card.append(head,description,footer);
       card.addEventListener('click',()=>openStampRally(rally));
-      card.addEventListener('keydown',ev=>{if(ev.key==='Enter')openStampRally(rally);});
+      card.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();openStampRally(rally);}});
       stampList.appendChild(card);
       return;
     }
@@ -375,7 +379,7 @@ function renderStamps() {
       <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> ${rally.collection_type === 'pokelids' ? 'registradas' : 'carimbados'} · <strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : 'coordenadas exatas'}</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
     card.addEventListener('click', () => openStampRally(rally));
-    card.addEventListener('keydown', (e) => { if (e.key === 'Enter') openStampRally(rally); });
+    card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStampRally(rally); } });
     stampList.appendChild(card);
   });
   renderStampStats();
