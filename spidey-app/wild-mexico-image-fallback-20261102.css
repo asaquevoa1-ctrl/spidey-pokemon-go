@@ -1,0 +1,92 @@
+/* Falhas de mídia não podem destruir o visual no Samsung.
+   A foto promocional oficial é sempre a primeira opção; texto editorial entra apenas se falhar. */
+#wildAreaMexicoView .wild-mx-photo-unavailable,
+#wildMxHomeFeature .wild-mx-photo-unavailable{
+  background:radial-gradient(ellipse at 80% 25%,rgba(198,142,78,.15),transparent 45%),
+    radial-gradient(ellipse at 10% 100%,rgba(93,131,159,.20),transparent 60%),
+    linear-gradient(145deg,#1d3042,#071622);
+  border:1px solid rgba(225,182,122,.25);
+}
+#wildAreaMexicoView .wild-mx-machamp-spotlight.wild-mx-photo-unavailable{
+  aspect-ratio:auto!important;min-height:208px;max-height:none;
+}
+#wildAreaMexicoView .wild-mx-photo-unavailable .wild-mx-hero-art-label{display:none!important}
+#wildAreaMexicoView .wild-mx-fallback,
+#wildMxHomeFeature .wild-mx-fallback{
+  position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  gap:8px;height:100%;min-height:155px;padding:clamp(17px,4vw,27px);z-index:1;
+  color:#f9e5bf;box-sizing:border-box;
+}
+#wildAreaMexicoView .wild-mx-fallback-machamp{
+  background:radial-gradient(circle at 82% 80%,rgba(164,69,87,.25),transparent 45%);
+}
+#wildAreaMexicoView .wild-mx-fallback-machamp:before,
+#wildMxHomeFeature .wild-mx-fallback-machamp:before{
+  content:"✦";position:absolute;right:16px;top:9px;font-size:2.3rem;
+  color:rgba(242,191,113,.22);
+}
+#wildAreaMexicoView .wild-mx-fallback-machamp strong,
+#wildMxHomeFeature .wild-mx-fallback-machamp strong{
+  font-size:clamp(1.4rem,4vw,2.1rem);letter-spacing:.12em;font-weight:900
+}
+#wildAreaMexicoView .wild-mx-fallback-machamp span,
+#wildMxHomeFeature .wild-mx-fallback-machamp span{
+  max-width:24ch;font-size:.82rem;line-height:1.5;color:#d9e0e7
+}
+#wildAreaMexicoView .wild-mx-fallback-machamp a,
+#wildMxHomeFeature .wild-mx-fallback-machamp a{
+  display:inline-block;margin-top:8px;color:#f4d4a2;
+  font-size:.75rem;line-height:1.4;font-weight:800;
+  text-decoration:underline;text-underline-offset:3px
+}
+#wildAreaMexicoView .wild-mx-roster-visual.wild-mx-photo-unavailable{
+  display:flex;align-items:stretch;min-height:170px;height:auto!important
+}
+#wildAreaMexicoView .wild-mx-roster-visual.wild-mx-photo-unavailable:after{display:none}
+#wildAreaMexicoView .wild-mx-roster-visual .wild-mx-fallback{
+  width:100%;min-height:170px;padding:20px
+}
+#wildAreaMexicoView .wild-mx-fallback-kicker{
+  font-size:.67rem;letter-spacing:.14em;color:#c7d7de;font-weight:840
+}
+#wildAreaMexicoView .wild-mx-roster-visual .wild-mx-fallback strong{
+  font-size:clamp(1.15rem,3vw,1.7rem);line-height:1.2;letter-spacing:-.025em
+}
+#wildAreaMexicoView .wild-mx-roster-visual .wild-mx-fallback>span:last-child{
+  color:#cbd6df;font-size:.79rem;line-height:1.5
+}
+#wildAreaMexicoView .wild-mx-fallback-steel{
+  border-left:4px solid #7eb7c7;
+  background:linear-gradient(120deg,rgba(60,103,128,.24),transparent)
+}
+#wildAreaMexicoView .wild-mx-fallback-dragon{
+  border-left:4px solid #9c87d7;
+  background:linear-gradient(120deg,rgba(98,70,156,.28),transparent)
+}
+#wildAreaMexicoView .wild-mx-fallback-mighty{
+  border-left:4px solid #d8a66b;
+  background:linear-gradient(120deg,rgba(156,93,52,.19),transparent)
+}
+#wildAreaMexicoView .wild-mx-real-safari .wild-mx-ball-fallback-text{
+  color:#28433f;font-size:1.2rem;font-weight:900;text-align:center;line-height:1.4
+}
+#wildAreaMexicoView .wild-mx-real-safari img{
+  background:none;mix-blend-mode:normal;filter:none;
+}
+#wildMxHomeFeature .wild-mx-home-image.wild-mx-photo-unavailable{
+  display:flex;min-width:0;align-items:center;max-height:none;
+  border-radius:12px;overflow:hidden
+}
+#wildMxHomeFeature .wild-mx-fallback-machamp{
+  padding:14px;min-height:130px;gap:5px
+}
+#wildMxHomeFeature .wild-mx-fallback-machamp strong{font-size:1.2rem}
+#wildMxHomeFeature .wild-mx-fallback-machamp span{font-size:.68rem}
+#wildMxHomeFeature .wild-mx-fallback-machamp a{font-size:.63rem}
+@media(max-width:650px){
+ #wildAreaMexicoView .wild-mx-machamp-spotlight.wild-mx-photo-unavailable{min-height:195px}
+ #wildAreaMexicoView .wild-mx-fallback-machamp{min-height:195px}
+ #wildAreaMexicoView .wild-mx-roster-visual .wild-mx-fallback{min-height:165px}
+ #wildMxHomeFeature .wild-mx-fallback-machamp{padding:10px;min-height:130px}
+ #wildMxHomeFeature .wild-mx-fallback-machamp strong{font-size:1rem}
+}
