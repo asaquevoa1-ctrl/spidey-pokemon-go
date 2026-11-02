@@ -5,9 +5,10 @@ import {createHash} from 'node:crypto';
 const base='https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/';
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const hash=x=>createHash('sha256').update(x).digest('hex');
-const sourceIndex=readFileSync('spidey-app/index.html','utf8');
+const packageApp='pages-public/spidey-app/';
+const sourceIndex=readFileSync(packageApp+'index.html','utf8');
 const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js'];
-const assets=new Map(sources.map(name=>[name,readFileSync('spidey-app/'+name)]));
+const assets=new Map(sources.map(name=>[name,readFileSync(packageApp+name)]));
 const versions=new Map();
 for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js']){
  const escaped=name.replaceAll('.','\\.');
