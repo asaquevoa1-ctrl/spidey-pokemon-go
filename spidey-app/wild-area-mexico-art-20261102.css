@@ -1,0 +1,149 @@
+/* Spidey Wild Area — direção de arte editorial 02/11/2026.
+   Imagens originais oficiais Pokémon GO/Pokémon.com, sem reinterpretação de espécie.
+   Escopo isolado na aba temática e no destaque do evento; poster anterior preservado no Git. */
+#wildAreaMexicoView .wild-mx-hero{
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.18fr);
+  align-items:stretch;gap:clamp(14px,2.6vw,32px);
+  background:
+    radial-gradient(ellipse at 81% 0%,rgba(215,167,95,.14),transparent 60%),
+    radial-gradient(ellipse at 3% 12%,rgba(136,35,48,.21),transparent 52%),
+    linear-gradient(128deg,#132232 0%,#07121d 100%);
+  box-shadow:inset 0 1px 0 rgba(255,227,176,.11),0 16px 44px rgba(0,0,0,.23);
+}
+#wildAreaMexicoView .wild-mx-hero-copy{align-self:center;padding:clamp(4px,1vw,15px) 0}
+#wildAreaMexicoView .wild-mx-machamp-spotlight{
+  isolation:isolate;align-self:center;justify-self:stretch;overflow:hidden;
+  position:relative;display:block;max-width:none;max-height:none;width:100%;
+  border:1px solid rgba(239,199,139,.30);border-radius:18px;
+  background:#0a1523;aspect-ratio:1.55/1;
+  box-shadow:0 18px 32px rgba(0,0,0,.25);
+}
+#wildAreaMexicoView .wild-mx-machamp-spotlight img{
+  display:block;width:100%;height:100%;max-height:none;max-width:none;
+  object-fit:contain!important;object-position:center!important;
+  border-radius:0;background:#101c2b
+}
+#wildAreaMexicoView .wild-mx-hero-art-label{
+  position:absolute;inset:auto 0 0 0;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;padding:20px 16px 13px;
+  background:linear-gradient(0deg,rgba(4,10,19,.93),rgba(4,10,19,.53) 77%,transparent);
+  color:#fbe1b2;text-shadow:0 1px 5px #020b15;
+}
+#wildAreaMexicoView .wild-mx-hero-art-label strong{font-size:.84rem;letter-spacing:.15em}
+#wildAreaMexicoView .wild-mx-hero-art-label span{font-size:.69rem;line-height:1.35;text-align:right}
+#wildAreaMexicoView .wild-mx-real-safari{
+  width:min(100%,225px);max-width:225px;aspect-ratio:1/1;
+  margin:0;position:relative;padding:15px;
+  border:1px solid rgba(244,209,149,.42);border-radius:19px;
+  background:radial-gradient(circle at 32% 22%,#fbf5e8,#c8d9c9 60%,#a1bbac);
+  box-shadow:0 12px 25px rgba(2,7,12,.28),inset 0 1px 0 #fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+#wildAreaMexicoView .wild-mx-real-safari img{
+  display:block;width:100%;height:auto;max-height:156px;
+  object-fit:contain!important;mix-blend-mode:multiply;
+  border-radius:12px
+}
+#wildAreaMexicoView .wild-mx-real-safari figcaption{
+  color:#213a38;font-size:.63rem;line-height:1.2;text-align:center;font-weight:850;
+  margin-top:5px
+}
+#wildAreaMexicoView .wild-mx-safari{grid-template-columns:minmax(140px,225px) minmax(0,1fr)}
+#wildAreaMexicoView .wild-mx-featured-roster{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0 22px
+}
+#wildAreaMexicoView .wild-mx-roster-tile{
+  position:relative;overflow:hidden;border-radius:17px;
+  border:1px solid rgba(219,182,124,.28);
+  background:#0c1927;color:#e9f1f3;
+  box-shadow:0 14px 30px rgba(0,0,0,.19);
+  display:flex;flex-direction:column;min-width:0;
+}
+#wildAreaMexicoView .wild-mx-roster-visual{
+  height:clamp(170px,22vw,270px);overflow:hidden;position:relative;
+  background:#152838;isolation:isolate;
+}
+#wildAreaMexicoView .wild-mx-roster-visual:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(9,22,34,.9),transparent 52%);
+  pointer-events:none
+}
+#wildAreaMexicoView .wild-mx-roster-visual img{
+  display:block;width:100%;height:100%;max-width:none;
+  object-fit:cover;object-position:center;
+  filter:saturate(.94) contrast(1.045)
+}
+#wildAreaMexicoView .wild-mx-roster-steel .wild-mx-roster-visual img{object-position:center 48%}
+#wildAreaMexicoView .wild-mx-roster-dragon .wild-mx-roster-visual img{object-position:center 42%}
+#wildAreaMexicoView .wild-mx-roster-mighty{
+  grid-column:1/-1;display:grid;grid-template-columns: minmax(0,1.08fr) minmax(0,.92fr);
+  min-height:235px
+}
+#wildAreaMexicoView .wild-mx-roster-mighty .wild-mx-roster-visual{height:100%;min-height:235px}
+#wildAreaMexicoView .wild-mx-roster-mighty .wild-mx-roster-visual:after{
+  background:linear-gradient(90deg,transparent 63%,rgba(9,22,34,.78))
+}
+#wildAreaMexicoView .wild-mx-roster-content{
+  padding:17px 18px 20px;flex:1;position:relative;
+  background:linear-gradient(150deg,rgba(26,45,60,.96),rgba(10,23,37,.98))
+}
+#wildAreaMexicoView .wild-mx-roster-kicker{
+  font-weight:850;color:#e8c28e;font-size:.62rem;letter-spacing:.13em
+}
+#wildAreaMexicoView .wild-mx-roster-content h3{
+  color:#fff4dc;font-size:clamp(1.3rem,2.45vw,1.85rem);
+  letter-spacing:-.035em;line-height:1.16;margin:9px 0 4px
+}
+#wildAreaMexicoView .wild-mx-roster-content>p:not(.wild-mx-roster-examples){
+  color:#bfcbd4;font-size:.82rem;margin:0 0 11px
+}
+#wildAreaMexicoView .wild-mx-roster-examples{
+  margin:14px 0 0;color:#c8d2d9;font-size:.82rem;line-height:1.53
+}
+#wildAreaMexicoView .wild-mx-roster-tags{display:flex;gap:7px;flex-wrap:wrap}
+#wildAreaMexicoView .wild-mx-roster-tags span{
+  border:1px solid rgba(231,198,146,.22);
+  border-radius:16px;padding:6px 10px;color:#ffe0ab;
+  background:rgba(219,172,98,.11);font-weight:800;font-size:.65rem;line-height:1.3
+}
+#wildAreaMexicoView .wild-mx-roster-dragon{border-color:rgba(159,158,224,.35)}
+#wildAreaMexicoView .wild-mx-roster-dragon .wild-mx-roster-content{
+  background:linear-gradient(145deg,#222d46,#111e34)
+}
+#wildAreaMexicoView .wild-mx-roster-dragon .wild-mx-roster-kicker{color:#c6bff2}
+#wildAreaMexicoView .wild-mx-roster-dragon .wild-mx-roster-tags span{
+  border-color:rgba(169,158,224,.25);color:#d9d3ff;background:rgba(148,136,222,.11)
+}
+#wildAreaMexicoView .wild-mx-roster-mighty{border-color:rgba(223,176,108,.37)}
+#wildAreaMexicoView .wild-mx-roster-mighty .wild-mx-roster-content{display:flex;flex-direction:column;justify-content:center}
+#wildMxHomeFeature .wild-mx-home-image{max-height:245px}
+#wildMxHomeFeature .wild-mx-home-image img{
+  display:block;width:100%;height:auto;max-height:230px;object-fit:contain!important;
+  border:1px solid rgba(238,202,159,.29);border-radius:13px
+}
+#wildMxHomeFeature .wild-mx-home-copy>span{color:#edc58d}
+@media(max-width:850px){
+  #wildAreaMexicoView .wild-mx-hero{grid-template-columns:minmax(0,1fr);gap:14px}
+  #wildAreaMexicoView .wild-mx-machamp-spotlight{max-width:680px;margin:0 auto}
+  #wildAreaMexicoView .wild-mx-roster-mighty{grid-template-columns:minmax(0,1fr)}
+  #wildAreaMexicoView .wild-mx-roster-mighty .wild-mx-roster-visual{height:230px;min-height:0}
+}
+@media(max-width:650px){
+  #wildAreaMexicoView .wild-mx-hero{grid-template-columns:1fr}
+  #wildAreaMexicoView .wild-mx-machamp-spotlight{max-width:100%;aspect-ratio:1.65}
+  #wildAreaMexicoView .wild-mx-hero-art-label{padding:14px 11px 10px}
+  #wildAreaMexicoView .wild-mx-hero-art-label span{font-size:.57rem}
+  #wildAreaMexicoView .wild-mx-safari{grid-template-columns:1fr;gap:14px}
+  #wildAreaMexicoView .wild-mx-featured-roster{grid-template-columns:1fr;gap:13px}
+  #wildAreaMexicoView .wild-mx-roster-mighty{grid-column:1;display:flex;flex-direction:column}
+  #wildAreaMexicoView .wild-mx-roster-visual,
+  #wildAreaMexicoView .wild-mx-roster-mighty .wild-mx-roster-visual{height:195px;min-height:0}
+  #wildAreaMexicoView .wild-mx-roster-content{padding:16px}
+  #wildAreaMexicoView .wild-mx-roster-content h3{font-size:1.42rem}
+  #wildAreaMexicoView .wild-mx-real-safari{width:170px;max-width:170px;padding:9px}
+  #wildAreaMexicoView .wild-mx-real-safari img{max-height:120px}
+}
+@media(prefers-reduced-motion:reduce){
+  #wildAreaMexicoView .wild-mx-roster-visual img{transition:none!important}
+}
