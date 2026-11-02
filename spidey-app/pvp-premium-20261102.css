@@ -1,0 +1,199 @@
+/* Spidey PvP Premium · painel tático, sem alterar dados do PvPoke nem lógica do time. */
+#pvpView,
+#eventDetail:has(.pvp-detail) {
+  --pvp-premium-gold:#e7c68c;
+  --pvp-premium-ruby:#b34858;
+  --pvp-premium-edge:rgba(226,193,139,.29);
+  --pvp-premium-text:#f5f1e9;
+  --pvp-premium-muted:#bdc7d3;
+}
+
+/* Ligas: chaveamento claro, legível e operável por toque. */
+html[data-theme] body.spidey-player-ui #pvpView .pvp-leagues {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:9px;
+  margin:19px 0 14px;
+}
+html[data-theme] body.spidey-player-ui #pvpView .pvp-leagues button {
+  position:relative;
+  min-width:0;
+  min-height:67px;
+  padding:12px 8px;
+  border:1px solid rgba(226,193,139,.37) !important;
+  border-radius:15px;
+  color:#f0ede8 !important;
+  background:linear-gradient(145deg,rgba(53,59,74,.85),rgba(27,37,50,.9)) !important;
+  box-shadow:inset 0 1px rgba(255,255,255,.07),0 4px 15px rgba(0,0,0,.13) !important;
+  font-weight:850;
+  line-height:1.3;
+}
+html[data-theme] body.spidey-player-ui #pvpView .pvp-leagues button.active {
+  border-color:rgba(239,202,148,.80) !important;
+  color:#fff7eb !important;
+  background:linear-gradient(135deg,#9e3547,#6f2636) !important;
+  box-shadow:0 0 0 2px rgba(231,198,140,.12),0 12px 24px rgba(0,0,0,.24) !important;
+}
+#pvpView .pvp-leagues button.active::after {
+  content:"";
+  position:absolute;
+  bottom:0;left:19%;right:19%;
+  height:3px;border-radius:6px 6px 0 0;
+  background:var(--pvp-premium-gold);
+}
+#pvpView .pvp-leagues small {display:block;margin-top:5px;font-size:.68rem;font-weight:650;}
+#pvpView :is(.pvp-leagues button,.pvp-team-button,.pvp-name,.pvp-more,.pvp-tools input,.pvp-tools select):focus-visible,
+#eventDetail:has(.pvp-detail) :is(button,a):focus-visible {
+  outline:3px solid var(--pvp-premium-gold) !important;
+  outline-offset:3px;
+}
+
+/* Ranking e seleção com hierarquia: número, nome, tipos e pontuação. */
+#pvpView .pvp-rankings {display:grid;gap:12px;min-width:0;}
+html[data-theme] body.spidey-player-ui #pvpView .pvp-card {
+  min-width:0;
+  grid-template-columns:43px minmax(0,1fr) 72px;
+  align-items:start;
+  gap:clamp(9px,1.7vw,16px);
+  padding:clamp(15px,2.2vw,23px);
+  border:1px solid var(--pvp-premium-edge) !important;
+  border-left:3px solid var(--pvp-premium-ruby) !important;
+  border-radius:18px !important;
+  background:
+    radial-gradient(circle at 100% 0,rgba(172,73,85,.11),transparent 40%),
+    linear-gradient(145deg,#293243,#1c2735) !important;
+  box-shadow:0 11px 24px rgba(0,0,0,.14),inset 0 1px rgba(255,255,255,.07) !important;
+  overflow:hidden;
+}
+#pvpView .pvp-rank {
+  font-size:clamp(1.05rem,2.2vw,1.38rem);
+  color:var(--pvp-premium-gold);
+  font-weight:900;
+  font-variant-numeric:tabular-nums;
+  line-height:1.25;
+}
+#pvpView .pvp-card-copy {min-width:0;}
+html[data-theme] body.spidey-player-ui #pvpView .pvp-name {
+  padding:0;
+  min-height:35px;
+  max-width:100%;
+  font-size:clamp(1.04rem,2.25vw,1.24rem);
+  line-height:1.3;
+  color:var(--pvp-premium-text) !important;
+  overflow-wrap:anywhere;
+}
+#pvpView .pvp-types {display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;}
+#pvpView .pvp-type {
+  display:inline-flex;
+  align-items:center;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.065);
+  font-size:.69rem;
+  line-height:1.25;
+  color:#f1ede9;
+}
+#pvpView .pvp-moves {margin:11px 0;font-size:.79rem;line-height:1.6;color:#c9d2dc;overflow-wrap:anywhere;}
+#pvpView .pvp-score {
+  border-left:1px solid rgba(227,199,153,.18);
+  padding:4px 0 4px 8px;
+  min-width:0;
+}
+#pvpView .pvp-score strong {
+  font-size:clamp(1.18rem,2.4vw,1.52rem);
+  font-variant-numeric:tabular-nums;
+  color:var(--pvp-premium-gold);
+}
+#pvpView .pvp-score span {font-size:.61rem;color:var(--pvp-premium-muted);}
+html[data-theme] body.spidey-player-ui #pvpView .pvp-team-button {
+  min-height:43px;
+  padding:9px 12px;
+  color:var(--pvp-premium-gold);
+  border:1px solid rgba(226,193,139,.46);
+  border-radius:11px;
+  background:rgba(226,193,139,.07);
+}
+html[data-theme] body.spidey-player-ui #pvpView .pvp-team-button[aria-pressed="true"] {
+  color:#ecfff5;
+  border-color:rgba(117,203,163,.62);
+  background:rgba(32,119,85,.45);
+}
+#pvpView .pvp-more {
+  min-height:48px;
+  border:1px solid rgba(226,193,139,.35);
+  border-radius:14px;
+}
+#pvpView .pvp-tools {gap:12px;min-width:0;}
+#pvpView .pvp-tools label {color:var(--pvp-premium-muted);font-weight:760;}
+#pvpView .pvp-tools :is(input,select) {
+  border:1px solid rgba(226,193,139,.32);
+  background:#222c39;
+  color:#f4eee6;
+  border-radius:13px;
+}
+#pvpView .pvp-credit {border-top:1px solid rgba(226,193,139,.22);padding-top:16px;line-height:1.65;}
+#pvpView .pvp-credit a {color:var(--pvp-premium-gold);}
+
+/* Montagem do trio, preservando os três espaços e a interação original. */
+#pvpView .pvp-team-panel {min-width:0;}
+#pvpView .pvp-team-slots {gap:9px;}
+html[data-theme] body.spidey-player-ui #pvpView .pvp-team-slot {
+  min-width:0;
+  padding:14px;
+  border:1px solid rgba(226,193,139,.3) !important;
+  border-top:2px solid rgba(226,193,139,.43) !important;
+  border-radius:15px;
+  background:linear-gradient(150deg,#293241,#202b38);
+  box-shadow:0 7px 17px rgba(0,0,0,.12);
+}
+#pvpView .pvp-team-slot strong {color:#f4efe7;font-size:.86rem;overflow-wrap:anywhere;}
+#pvpView .pvp-team-empty {color:#c0ccd8;}
+#pvpView .pvp-team-empty span {color:var(--pvp-premium-gold);opacity:.82;}
+#pvpView .pvp-count {color:var(--pvp-premium-gold);font-variant-numeric:tabular-nums;}
+#pvpView .pvp-team-hints {border-left-color:var(--pvp-premium-gold);}
+
+/* Detalhamento: golpes simulados, não promessas de vitória. */
+#eventDetail .pvp-detail > .eyebrow {color:var(--pvp-premium-gold);}
+#eventDetail .pvp-detail h2 {font-size:clamp(1.55rem,4vw,2.3rem);line-height:1.2;letter-spacing:-.035em;}
+#eventDetail .pvp-detail-score {color:var(--pvp-premium-gold);font-variant-numeric:tabular-nums;}
+#eventDetail .pvp-detail-moves {gap:10px;}
+#eventDetail .pvp-detail-moves li {
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(226,193,139,.26);
+  border-left:3px solid var(--pvp-premium-ruby);
+  background:linear-gradient(140deg,rgba(43,52,67,.8),rgba(25,34,46,.84));
+}
+#eventDetail .pvp-opponent {min-height:44px;border-color:rgba(226,193,139,.27);}
+
+@media(max-width:600px) {
+  #pvpView .pvp-leagues {gap:7px;}
+  html[data-theme] body.spidey-player-ui #pvpView .pvp-leagues button {
+    min-height:61px;padding:9px 4px;font-size:.81rem;
+  }
+  #pvpView .pvp-leagues small {font-size:.59rem;}
+  #pvpView .pvp-card {grid-template-columns:35px minmax(0,1fr) 58px;gap:9px;}
+  #pvpView .pvp-score {padding-left:6px;}
+  #pvpView .pvp-tools {grid-template-columns:minmax(0,1fr) minmax(112px,35%);}
+  #pvpView .pvp-team-slots {grid-template-columns:repeat(3,minmax(0,1fr));}
+  #pvpView .pvp-team-slot {padding:10px;}
+}
+@media(max-width:360px) {
+  #pvpView .pvp-team-slots {grid-template-columns:minmax(0,1fr);}
+  #pvpView .pvp-tools {grid-template-columns:minmax(0,1fr);}
+  #pvpView .pvp-card {grid-template-columns:30px minmax(0,1fr) 53px;}
+  #pvpView .pvp-score strong {font-size:1.05rem;}
+}
+@media(prefers-reduced-motion:reduce) {
+  #pvpView :is(.pvp-card,.pvp-leagues button,.pvp-team-slot) {transition:none !important;animation:none !important;}
+}
+html[data-theme="light"] body.spidey-player-ui #pvpView .pvp-card,
+html[data-theme="light"] body.spidey-player-ui #pvpView .pvp-team-slot {
+  background:linear-gradient(145deg,#e9edf2,#f9f5ed) !important;
+  border-color:rgba(135,104,57,.3) !important;
+}
+html[data-theme="light"] #pvpView :is(.pvp-name,.pvp-team-slot strong) {color:#27323c !important;}
+html[data-theme="light"] #pvpView :is(.pvp-moves,.pvp-score span,.pvp-team-empty) {color:#485969;}
+html[data-theme="light"] #pvpView .pvp-type {color:#27323c;background:#fff9ed;}
+html[data-theme="light"] #pvpView .pvp-tools :is(input,select) {color:#1b2836;background:#fffdf8;border-color:#c8b493;}
+html[data-theme="light"] #eventDetail .pvp-detail-moves li {background:#f9f5ed;border-color:#cab997;}
