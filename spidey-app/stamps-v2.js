@@ -118,19 +118,18 @@
       .replace(/'/g, '&#039;');
   }
 
-  function stopTile(stop, progress, position) {
-    const done = progress.has(stop.id);
+  function stopTile(stop, position) {
     const image = stampImage(stop);
     const exact = exactPokestop(stop);
     const number = stop.stamp_number || position + 1;
     return `
-      <button class="stamp-tile-v2 ${done ? 'is-done' : ''}" type="button" data-stamp-stop-id="${escapeHtml(stop.id)}" aria-label="Abrir selo ${number}: ${escapeHtml(stop.venue || stop.city || '')}">
+      <button class="stamp-tile-v2" type="button" data-stamp-stop-id="${escapeHtml(stop.id)}" aria-label="Abrir selo ${number}: ${escapeHtml(stop.venue || stop.city || '')}">
         <div class="stamp-tile-art-v2">
           ${image ? `<img src="${escapeHtml(image)}" alt="${stop.image_kind === 'lid_artwork' ? 'PokéLid' : 'Selo'} ${number} · ${escapeHtml(stop.venue || stop.city || '')}" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : `
             <div class="stamp-art-placeholder-v2 stamp-art-unavailable-v2" aria-label="Selo ${number} sem desenho individual confirmado">
               <span>SELO</span><strong>${number}</strong>
             </div>`}
-          <span class="stamp-tile-status-v2">${done ? '✓' : number}</span>
+          <span class="stamp-tile-status-v2">${number}</span>
         </div>
         <div class="stamp-tile-copy-v2">
           <strong>${escapeHtml(stop.venue || stop.city || `Selo ${number}`)}</strong>
@@ -223,7 +222,6 @@
     const isPokelid = rally.collection_type === 'pokelids';
     const isLandmarkGuide = rally.coordinate_policy === 'venue_references_no_gpx';
     const publicNotes=rally.public_notes ?? rally.notes ?? [];
-    let progress = getStampProgress(rally);
     const exactStops = stops.filter(exactPokestop);
     const lidPlaces = isPokelid ? stops.filter(pokelidVenueCoord) : [];
     const landmarkPlaces = isLandmarkGuide ? stops.filter(landmarkVenueCoord) : [];
@@ -232,15 +230,13 @@
     let search = '';
     let filter = 'all';
     let region = 'all';
-    let activeId = (stops.find((stop) => !progress.has(stop.id)) || stops[0])?.id || '';
+    let activeId = stops[0]?.id || '';
     let galleryOffset = 0;
 
     function filteredStops() {
       const needle = search.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
       return stops.filter((stop) => {
         if (region !== 'all' && regionLabel(stop) !== region) return false;
-        if (filter === 'remaining' && progress.has(stop.id)) return false;
-        if (filter === 'done' && !progress.has(stop.id)) return false;
         if (filter === 'exact' && !exactPokestop(stop)) return false;
         if (needle && !searchable(stop).includes(needle)) return false;
         return true;
@@ -249,11 +245,6 @@
 
     function copySet(list) {
       return list.map(stop => isPokelid ? pokelidVenueCoord(stop) : isLandmarkGuide ? landmarkVenueCoord(stop) : coord(stop)).filter(Boolean).join('\n');
-    }
-
-    function activeIndex() {
-      const index = stops.findIndex((stop) => stop.id === activeId);
-      return index >= 0 ? index : 0;
     }
 
     const cover = rallyCover(rally);
@@ -275,10 +266,9 @@
         ${isLandmarkGuide ? '<p class="microcopy">Temos os sete lugares no mapa! As coordenadas são dos locais, não das Poképaradas. Procure o símbolo do selo dentro do Pokémon GO.</p>' : ''}
         ${rally.id === 'nagasaki-city-stamp-rally' ? '<p class="microcopy">O selo de Nagasaki tem o desenho de Ampharos. Ele aparece nas oito paradas desta coleção.</p>' : ''}
 
-        <div class="stamp-dashboard-v2">
-          <div><strong id="stampV2Progress">${progress.size}/${stops.length}</strong><span>concluídos</span></div>
-          <div><strong>${isPokelid ? lidPlaces.length : isLandmarkGuide ? landmarkPlaces.length : exactStops.length}/${stops.length}</strong><span>${isPokelid ? 'locais das tampas' : isLandmarkGuide ? 'lugares no mapa' : 'pontos confirmados'}</span></div>
-          <div><strong>${stops.length - progress.size}</strong><span>restantes</span></div>
+        <div class="stamp-location-summary-v2">
+          <strong>${isPokelid ? lidPlaces.length : isLandmarkGuide ? landmarkPlaces.length : exactStops.length}/${stops.length}</strong>
+          <span>${isPokelid ? 'locais das tampas com coordenadas' : isLandmarkGuide ? 'lugares no mapa' : 'pontos confirmados'}</span>
         </div>
 
         <section class="stamp-route-panel-v2" aria-label="Navegação da rota">
@@ -290,7 +280,6 @@
           <div id="stampActiveStop" class="stamp-active-stop-v2"></div>
           <div class="stamp-route-actions-v2">
             <button id="stampPrev" class="action-btn" type="button">← Anterior</button>
-            <button id="stampToggleDone" class="action-btn gold" type="button">Marcar como feito</button>
             <button id="stampNext" class="action-btn" type="button">Próximo →</button>
           </div>
         </section>
@@ -322,7 +311,7 @@
 
         <section class="stamp-gallery-section-v2">
           <div class="stamp-section-head-v2">
-            <div><span class="eyebrow">${isPokelid ? 'TAMPA POR TAMPA' : 'SELO POR SELO'}</span><h3>${isPokelid ? 'Sua coleção' : 'Seus selos'}</h3></div>
+            <div><span class="eyebrow">${isPokelid ? 'TAMPA POR TAMPA' : 'SELO POR SELO'}</span><h3>${isPokelid ? 'Galeria de PokéLids' : 'Galeria de selos'}</h3></div>
             <span id="stampVisibleCount" class="stamp-visible-count-v2"></span>
           </div>
           <div class="stamp-filterbar-v2">
@@ -331,12 +320,7 @@
               <option value="all">Todas as regiões</option>
               ${regions.map((item) => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join('')}
             </select>
-            <div class="stamp-filterchips-v2" role="group" aria-label="Filtrar selos">
-              <button class="active" type="button" data-stamp-filter="all">Todos</button>
-              <button type="button" data-stamp-filter="remaining">Faltam</button>
-              <button type="button" data-stamp-filter="done">Feitos</button>
-              ${isPokelid ? '' : '<button type="button" data-stamp-filter="exact">Com coordenada</button>'}
-            </div>
+            ${isPokelid ? '' : '<div class="stamp-filterchips-v2" role="group" aria-label="Filtrar por coordenadas"><button class="active" type="button" data-stamp-filter="all">Todos</button><button type="button" data-stamp-filter="exact">Com coordenada</button></div>'}
           </div>
           <div id="stampGalleryV2" class="stamp-gallery-v2"></div>
           <div id="stampGalleryMoreV2" class="stamp-gallery-more-v2" hidden><button id="stampPrevPageV2" class="action-btn" type="button" hidden>← Anteriores</button><button id="stampLoadMoreV2" class="action-btn" type="button" hidden>Próximas PokéLids →</button></div>
@@ -354,7 +338,6 @@
     const activeBox = detail.querySelector('#stampActiveStop');
     installImageFallback(detail);
     const position = detail.querySelector('#stampRoutePosition');
-    const toggleDone = detail.querySelector('#stampToggleDone');
 
     function renderGallery() {
       const visible = filteredStops();
@@ -364,7 +347,7 @@
       }
       const shown = isPokelid ? visible.slice(galleryOffset, galleryOffset + POKELID_PAGE_SIZE) : visible;
       gallery.innerHTML = shown.length
-        ? shown.map((stop) => stopTile(stop, progress, stops.indexOf(stop))).join('')
+        ? shown.map((stop) => stopTile(stop, stops.indexOf(stop))).join('')
         : '<p class="empty">Nenhum selo corresponde a este filtro.</p>';
       detail.querySelector('#stampVisibleCount').textContent = isPokelid && shown.length
         ? `${galleryOffset + 1}–${galleryOffset + shown.length}/${visible.length}`
@@ -377,7 +360,7 @@
       moreButton.textContent = `Próximas ${Math.min(POKELID_PAGE_SIZE, visible.length - galleryOffset - shown.length)} PokéLids →`;
     }
 
-    // One delegated listener, instead of hundreds of listeners recreated for each filter/progress change.
+    // One delegated listener, instead of hundreds of listeners recreated for each navigation change.
     gallery.addEventListener('click', (event) => {
       const button = event.target.closest('[data-stamp-stop-id]');
       if (!button || !gallery.contains(button)) return;
@@ -410,21 +393,16 @@
       if (!visible.length) {
         activeBox.innerHTML = '<p class="empty">Nenhum selo neste filtro. Escolha outra prefeitura ou busca.</p>';
         position.textContent = '0 de 0';
-        toggleDone.disabled = true;
         return;
       }
-      toggleDone.disabled = false;
-      const stop = visible.find(item => item.id === activeId) || visible.find(item => !progress.has(item.id)) || visible[0];
+      const stop = visible.find(item => item.id === activeId) || visible[0];
       const index = stops.indexOf(stop);
       activeId = stop.id;
-      const done = progress.has(stop.id);
       const lidValue = isPokelid ? pokelidVenueCoord(stop) : '';
       const landmarkValue = isLandmarkGuide ? landmarkVenueCoord(stop) : '';
       const value = lidValue || landmarkValue || coord(stop);
       const image = stampImage(stop);
       position.textContent = `${visible.indexOf(stop) + 1} de ${visible.length}`;
-      toggleDone.textContent = done ? 'Marcar como faltante' : 'Marcar como feito';
-      toggleDone.classList.toggle('is-done', done);
       activeBox.innerHTML = `
         <div class="stamp-active-art-v2 ${image ? '' : 'stamp-active-art-v2--without-image'}">
           ${image ? `<img src="${escapeHtml(image)}" alt="${isPokelid ? 'Desenho da PokéLid' : 'Desenho do selo'} ${escapeHtml(stop.stamp_number || index + 1)}" loading="eager" referrerpolicy="no-referrer">` : `<div class="stamp-art-placeholder-v2 stamp-art-unavailable-v2"><span>SELO</span><strong>${escapeHtml(stop.stamp_number || index + 1)}</strong></div>`}
@@ -455,19 +433,6 @@
 
     detail.querySelector('#stampPrev')?.addEventListener('click', () => setActiveByOffset(-1));
     detail.querySelector('#stampNext')?.addEventListener('click', () => setActiveByOffset(1));
-    toggleDone?.addEventListener('click', () => {
-      const stop = stops[activeIndex()];
-      if (!stop) return;
-      if (progress.has(stop.id)) progress.delete(stop.id); else progress.add(stop.id);
-      saveStampProgress(rally, progress);
-      detail.querySelector('#stampV2Progress').textContent = `${progress.size}/${stops.length}`;
-      const dashboard = detail.querySelector('.stamp-dashboard-v2 > div:nth-child(3) strong');
-      if (dashboard) dashboard.textContent = String(stops.length - progress.size);
-      renderGallery();
-      renderActive();
-      renderStamps();
-    });
-
     // Uma lista por coleção ou prefeitura. Somente copiar; nenhum TXT é criado.
     const listTextarea = detail.querySelector('#rallyAllCoordinates');
     const listCount = detail.querySelector('#stampCoordListCount');
