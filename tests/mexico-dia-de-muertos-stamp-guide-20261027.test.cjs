@@ -43,7 +43,8 @@ test('Human editorial guide offers reported references without fake 0/0 progress
  assert.ok(s.includes('Referências do mapa da comunidade'));
  assert.ok(s.includes('Como aproveitar a aventura'));
  assert.ok(s.includes('escapeHtml(item)'),'User visible guide must escape event texts');
- assert.ok(sw.includes('mexico-selos-human1'),'PWA cache must refresh');
+ assert.ok(sw.includes("'./stamps-v2.js'") && sw.includes("'./app.js'"),'Arquivos de Selos devem fazer parte do PWA');
+ assert.match(sw,/const CACHE = 'spidey-app-[^']+'/,'O cache deve ser versionado');
  assert.ok(!guide.stops.some(s => s.gpx_enabled || s.latitude || s.longitude));
  assert.doesNotThrow(() => new vm.Script(s,{filename:'stamps-v2.js'}));
  assert.doesNotThrow(() => new vm.Script(app,{filename:'app.js'}));
