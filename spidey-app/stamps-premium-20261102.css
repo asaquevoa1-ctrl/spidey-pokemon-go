@@ -116,16 +116,6 @@ html[data-theme] body.spidey-player-ui #stampsView .stamp-card {
   line-height:1.55;
   margin:3px 0 14px;
 }
-#stampsView .stamp-progress {
-  height:7px;
-  margin:7px 0 10px;
-  border:1px solid rgba(255,255,255,.09);
-  background:#121923;
-}
-#stampsView .stamp-progress span {
-  background:linear-gradient(90deg,#b04c57 0%,#e8c68a 100%);
-  box-shadow:0 0 12px rgba(232,198,138,.14);
-}
 #stampsView .stamp-meta {
   color:var(--stp-muted);
   font-size:.76rem;
@@ -182,19 +172,27 @@ html[data-theme] body.spidey-player-ui #stampsView .stamp-card {
   border-radius:18px;
   background:linear-gradient(145deg,#252a36,#151e2b);
 }
-#eventDetail .stamp-dashboard-v2 {gap:9px;}
-#eventDetail .stamp-dashboard-v2 > div {
-  min-width:0;
-  padding:13px 8px;
+#eventDetail .stamp-location-summary-v2 {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 12px;
+  margin:16px 0;
+  padding:12px 16px;
   border:1px solid rgba(232,198,138,.25);
   border-radius:15px;
   background:linear-gradient(145deg,rgba(53,57,67,.42),rgba(25,35,46,.64));
 }
-#eventDetail .stamp-dashboard-v2 strong {
+#eventDetail .stamp-location-summary-v2 strong {
   color:var(--stp-gold);
+  font-size:1.13rem;
   font-variant-numeric:tabular-nums;
 }
-#eventDetail .stamp-dashboard-v2 span {line-height:1.35;color:var(--stp-muted);}
+#eventDetail .stamp-location-summary-v2 span {
+  color:var(--stp-muted);
+  line-height:1.35;
+}
+
 #eventDetail .stamp-route-panel-v2,
 #eventDetail .stamp-copy-list-v3,
 #eventDetail .stamp-gallery-section-v2 {
@@ -235,17 +233,10 @@ html[data-theme] body.spidey-player-ui #stampsView .stamp-card {
   border-color:var(--stp-gold);
   box-shadow:0 0 0 2px rgba(232,198,138,.20);
 }
-#eventDetail .stamp-tile-v2.is-done {opacity:1;}
-#eventDetail .stamp-tile-v2.is-done .stamp-tile-art-v2::after {
-  background:rgba(12,24,31,.14);
-}
 #eventDetail .stamp-tile-status-v2 {
   color:#f8e4b6;
   border:1px solid rgba(232,198,138,.45);
   background:rgba(22,28,35,.87);
-}
-#eventDetail .stamp-tile-v2.is-done .stamp-tile-status-v2 {
-  color:#fff;background:#236b56;border-color:#81c0a7;
 }
 #eventDetail .stamp-tile-copy-v2 {gap:4px;padding:10px;}
 #eventDetail .stamp-tile-copy-v2 strong {color:#f6f2eb;font-size:.76rem;}
@@ -287,10 +278,6 @@ html[data-theme] body.spidey-player-ui #stampsView .stamp-card {
   #stampsView .stamp-list {grid-template-columns:minmax(0,1fr);}
   #stampsView .stamp-card {padding:18px;}
   #stampsView .stamp-card::before {width:150px;height:150px;}
-  #eventDetail .stamp-dashboard-v2 {gap:6px;}
-  #eventDetail .stamp-dashboard-v2 > div {padding:11px 5px;}
-  #eventDetail .stamp-dashboard-v2 strong {font-size:1rem;}
-  #eventDetail .stamp-dashboard-v2 span {font-size:.64rem;}
   #eventDetail .stamp-gallery-v2 {grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
   #eventDetail .stamp-route-panel-v2,
   #eventDetail .stamp-copy-list-v3,
@@ -318,10 +305,12 @@ html[data-theme="light"] #eventDetail .stamp-gallery-section-v2 {
   background:linear-gradient(145deg,#f5f0e8,#e7ecf1);
   border-color:rgba(134,103,54,.29);
 }
-html[data-theme="light"] #eventDetail .stamp-dashboard-v2 > div {
+html[data-theme="light"] #eventDetail .stamp-location-summary-v2 {
   background:#f7f2e9;
   border-color:#c9b896;
 }
+html[data-theme="light"] #eventDetail .stamp-location-summary-v2 strong {color:#79531d;}
+html[data-theme="light"] #eventDetail .stamp-location-summary-v2 span {color:#4e5965;}
 html[data-theme="light"] #eventDetail .stamp-tile-v2 {
   background:#fbf8f2;
   border-color:#c5b496;
@@ -338,10 +327,8 @@ html[data-theme="light"] #eventDetail .stamp-filterchips-v2 button {background:#
 html[data-theme="light"] #eventDetail .stamp-filterchips-v2 button.active {background:#e8c68a;color:#1c2631;}
 html[data-theme="light"] #eventDetail .pokelid-place-copy code {color:#5b451f;}
 
-html[data-theme="light"] #eventDetail .stamp-dashboard-v2 strong,
 html[data-theme="light"] #eventDetail .stamp-route-title-v2 > strong,
 html[data-theme="light"] #eventDetail .stamp-visible-count-v2 {color:#79531d;}
-html[data-theme="light"] #eventDetail .stamp-dashboard-v2 span {color:#4e5965;}
 html[data-theme="light"] #eventDetail .stamp-route-title-v2 > strong,
 html[data-theme="light"] #eventDetail .stamp-visible-count-v2 {background:#fff4df;border-color:#cdb78e;}
 
