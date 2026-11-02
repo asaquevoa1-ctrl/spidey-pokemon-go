@@ -9,7 +9,7 @@ const world=read('spidey-app/trust-world-v1.js');
 const core=read('spidey-app/fly-core.js');
 const html=read('spidey-app/index.html');
 const sw=read('spidey-app/sw.js');
-const route=JSON.parse(read('spidey-app/data/fly-points.json'));
+const route=JSON.parse(read('spidey-app/data/world-event-points.json'));
 
 test('FLY nao mostra secao de creditos da lista mundial',()=>{
   assert.doesNotMatch(fly,/id="flySourceCredits"|Créditos e origem da lista mundial/);
