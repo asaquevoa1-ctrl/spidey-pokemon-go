@@ -2,6 +2,77 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-11-02-alerta-doces-raros-banimentos",
+      "slug": "2026-11-02-alerta-doces-raros-banimentos",
+      "content_type": "news",
+      "title": "Doces Raros no Halloween: falha corrigida e relatos de banimentos",
+      "summary": "A Scopely confirmou uma falha nas surpresas do Halloween envolvendo Doces Raros e informou que foi corrigida. Jogadores relatam banimentos permanentes, mas ainda não há número oficial de contas atingidas nem explicação individual de cada punição.",
+      "category": "community_discovery",
+      "tags": [
+        "Alerta",
+        "Halloween 2026",
+        "Doces Raros",
+        "Banimentos",
+        "Segurança da conta",
+        "Informação verificada"
+      ],
+      "source": {
+        "name": "Meristation • reportagem de 1º de novembro sobre relatos de banimentos",
+        "url": "https://as.com/meristation/noticias/pokemon-go-desata-una-oleada-de-baneos-permanentes-en-halloween-2026-por-abusar-de-un-exploit-de-caramelos-raros-infinitos-f202611-n/",
+        "confidence": "verified_community"
+      },
+      "verification_sources": [
+        {
+          "name": "Scopely • reconhecimento e resolução da falha dos Doces Raros",
+          "url": "https://scopelyexplore.helpshift.com/hc/pt-br/5-pokemon-go/faq/2648-rare-candy-removed-from-tappable-halloween-surprises/",
+          "confidence": "official"
+        },
+        {
+          "name": "Scopely • pedido de revisão de banimento",
+          "url": "https://scopelyexplore.helpshift.com/hc/en/5-pokemon-go/faq/1291-submitting-a-ban-appeal/",
+          "confidence": "official"
+        },
+        {
+          "name": "NWTV • relatos de punições possivelmente indevidas (2/11)",
+          "url": "https://www.nwtv.nl/323957/scopely-heeft-afgelopen-weekend-een-flinke-lading-onterechte-pokemon-go-bans-uitgedeeld",
+          "confidence": "community"
+        }
+      ],
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Doces Raros: falha corrigida, banimentos sob apuração",
+        "summary": "CONFIRMADO: a Scopely reconheceu e resolveu uma falha nas surpresas do Halloween. RELATADO: jogadores receberam banimentos permanentes. Não há balanço oficial de quantas contas foram punidas, nem prova de que todos os casos têm a mesma causa.",
+        "published_on": "2026-11-02",
+        "label": "ALERTA • FATOS E RELATOS"
+      },
+      "notes": [
+        "CONFIRMADO PELA SCOPELY: houve um problema envolvendo Doces Raros nas surpresas interativas do Halloween Parte 1. A recompensa foi removida temporariamente e depois voltou quando a falha foi resolvida.",
+        "RELATOS DA COMUNIDADE: usuários publicaram imagens e vídeos de inventários com quantidades anormais de Doces Raros e mensagens de banimento permanente. Prints ou vídeos isolados não comprovam a causa de cada punição.",
+        "AINDA NÃO CONFIRMADO: número total de contas atingidas, lista de ferramentas envolvidas, critérios usados em cada caso ou se todas as punições estão relacionadas ao mesmo problema.",
+        "RECOMENDAÇÃO: não utilize falhas, aplicativos modificados nem ferramentas de automação para obter vantagens. Receber recompensas normalmente pelo jogo não equivale a explorar uma falha.",
+        "SE A CONTA FOI BANIDA E VOCÊ ACREDITA QUE FOI UM ENGANO: envie recurso pelo canal oficial da Scopely (link em Fontes); guarde prints, data e detalhes do ocorrido.",
+        "O Spidey é independente e não possui acesso ao histórico de punições de contas nem à investigação interna da Scopely. Atualizado em 02/11/2026."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Notícia de cautela, sem evento ou janela de jogo a notificar."
+      },
+      "status": "published",
+      "verified_at": "2026-11-02",
+      "updated_at": "2026-11-02T18:00:00-03:00",
+      "audit": {
+        "classification": "official_issue_resolved_plus_community_ban_reports",
+        "date_range_claim": "2026-10-30 to 2026-11-02",
+        "scope": "news_only"
+      }
+    },
+    {
       "id": "2026-10-26-eternatus-teaser-unconfirmed",
       "slug": "2026-10-26-eternatus-teaser-unconfirmed",
       "content_type": "news",
