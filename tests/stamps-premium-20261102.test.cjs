@@ -21,7 +21,7 @@ test('Selos premium entrou no app público e PWA mantém atualização automáti
 });
 test('Cartões de coleção e modo claro/escuro têm acabamento Premium responsivo',()=>{
   for(const selector of ['#stampsView .stamp-list','#stampsView .stamp-card','#stampsView .stamp-card::after',
-    '#stampsView .stamp-progress','#stampsView .status-strip','#eventDetail .stamp-dashboard-v2',
+    '#stampsView .stamp-meta','#stampsView .status-strip','#eventDetail .stamp-location-summary-v2',
     '#eventDetail .stamp-route-panel-v2','#eventDetail .stamp-gallery-v2']){
     assert(css.includes(selector),'Faltando '+selector);
   }
@@ -43,12 +43,18 @@ test('Artes oficiais das tampas são exibidas completas, sem substituir dados',(
   const pokelids=catalog.rallies.find(item=>item.id==='pokelids-japan-national');
   assert(pokelids&&pokelids.stops.length>400);
 });
-test('Cartões permanecem clicáveis e o progresso da coleção é preservado',()=>{
+test('Cartões continuam clicáveis, sem marcação de feitos',()=>{
   assert.match(app,/card\.addEventListener\('click',\s*\(\)\s*=>\s*openStampRally\(rally\)\)/);
   assert.match(app,/card\.setAttribute\('role','button'\)/);
   assert.match(app,/e\.key === ' ' /);
   assert.match(app,/ev\.key===' '/);
-  assert.match(stamp,/saveStampProgress\(rally, progress\)/);
+  assert.doesNotMatch(stamp,/stampToggleDone|stampV2Progress|saveStampProgress|data-stamp-filter="done"|data-stamp-filter="remaining"|Marcar como feito|Marcar como faltante/);
+  assert.doesNotMatch(app,/stamp-toggle|getStampProgress|saveStampProgress|rallyProgressText|stamp-progress/);
+  assert.doesNotMatch(css,/stamp-dashboard-v2|stamp-progress|\.is-done/);
+  assert.match(stamp,/stamp-location-summary-v2/);
+  assert.match(stamp,/Galeria de PokéLids/);
+  assert.match(stamp,/id="stampPrev"/);
+  assert.match(stamp,/id="stampNext"/);
   assert.match(stamp,/gallery\.addEventListener\('click'/);
   assert.match(stamp,/function filteredStops\(\)/);
 });
