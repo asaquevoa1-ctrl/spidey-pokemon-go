@@ -7,10 +7,10 @@ const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const packageApp='pages-public/spidey-app/';
 const sourceIndex=readFileSync(packageApp+'index.html','utf8');
-const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-premium-20261102.css'];
+const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-premium-20261102.css','pvp-premium-20261102.css'];
 const assets=new Map(sources.map(name=>[name,readFileSync(packageApp+name)]));
 const versions=new Map();
-for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js','stamps-premium-20261102.css']){
+for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js','stamps-premium-20261102.css','pvp-premium-20261102.css']){
  const escaped=name.replaceAll('.','\\.');
  const found=sourceIndex.match(new RegExp(escaped+'\\?v=[^"\\s]+'));
  assert(found,'Referência da versão ausente em index.html: '+name);
