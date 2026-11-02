@@ -29,6 +29,7 @@ test('Lista usa SOMENTE o catalogo existente e protege noticias/sources como dad
   assert.match(js,/window\.SpideyCatalog\.load\('events'\)/);
   assert.match(js,/window\.SpideyNews\?\.build\(events,range,now\)/);
   assert.match(js,/window\.SpideyPlayer\.image\(event,true\)/);
+  assert.match(js,/window\.SPIDEY_APPROVED_ART_MASTER\?\.\[event\.id\]/);
   assert.match(js,/const esc=s=>/);
   assert.match(js,/const safeUrl=s=>/);
   assert.match(js,/data-news-detail/);
