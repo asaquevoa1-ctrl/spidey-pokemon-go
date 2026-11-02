@@ -74,6 +74,19 @@ test('Regional and raid filters select only published event categories',()=>{
  assert.deepEqual(api.choose(fixture,'2026-11-04','raids').map(x=>x.id).sort(),['date','raids']);
  assert.equal(api.choose(fixture,'2026-11-04','local').length,0);
 });
+test('International sessions override local dates and appear on the correct Brazil day',()=>{
+ const singapore={id:'singapore',title:'Sessões em Singapura',status:'published',content_type:'event',
+  category:'regional_event',schedule:{
+   local_timezone:'Asia/Singapore',start_date:'2026-11-07',end_date:'2026-11-08',
+   start_brazil:'2026-11-06T23:00:00-03:00',end_brazil:'2026-11-08T11:00:00-03:00',
+   sessions:[{start:'2026-11-07T10:00:00+08:00',end:'2026-11-07T22:00:00+08:00'},
+             {start:'2026-11-08T10:00:00+08:00',end:'2026-11-08T22:00:00+08:00'}]}};
+ assert(api.covers(singapore,'2026-11-06'),'First local session starts on Nov 6 in Brazil');
+ assert(api.covers(singapore,'2026-11-07'));
+ assert(api.covers(singapore,'2026-11-08'));
+ assert(!api.covers(singapore,'2026-11-09'));
+ assert.equal(api.choose([singapore],'2026-11-06')[0].id,'singapore');
+});
 test('Fresh daily events and raids precede older long-running campaigns',()=>{
  const older={id:'older',title:'Temporada longa',status:'published',content_type:'event',category:'temporada',
   schedule:{start_brazil:'2026-09-01T10:00:00-03:00',end_brazil:'2026-12-01T20:00:00-03:00'}};
