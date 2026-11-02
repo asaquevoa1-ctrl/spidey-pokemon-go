@@ -92,6 +92,13 @@ jobs:
       - name: Publicar Spidey
         id: deployment
         uses: actions/deploy-pages@v4
+      # Reconstroi deterministicamente os mesmos arquivos para validar o
+      # sw.js e o index.html publicados, que diferem dos arquivos-fonte.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preparar pacote identico para auditoria publica
+        run: python scripts/build_spidey_pages.py --output pages-public
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
