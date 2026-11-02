@@ -48,7 +48,8 @@
     }).slice(0,22);
   }
   function poster(event){
-    if(!event||!window.SpideyPlayer?.image)return '';
+    // Versões em avaliação (preview) não são pôsteres aprovados para Novidades.
+    if(!event||!window.SPIDEY_APPROVED_ART_MASTER?.[event.id]||!window.SpideyPlayer?.image)return '';
     const img=window.SpideyPlayer.image(event,true);
     return img?'<div class="spidey-news-media">'+img+'</div>':'';
   }
