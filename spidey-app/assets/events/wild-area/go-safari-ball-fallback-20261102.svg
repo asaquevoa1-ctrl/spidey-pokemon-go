@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+<title id="title">Bola Safári GO</title><desc id="desc">Representação de contingência da Bola Safári GO com camuflagem verde e marrom, faixa preta, botão central e metade inferior branca.</desc>
+<defs>
+  <radialGradient id="top" cx=".3" cy=".16" r=".88"><stop stop-color="#a89050"/><stop offset=".36" stop-color="#6b854b"/><stop offset=".74" stop-color="#3b5b45"/><stop offset="1" stop-color="#1a2926"/></radialGradient>
+  <linearGradient id="bottom" x1="0" y1="0" x2=".62" y2="1"><stop stop-color="#fdfdf4"/><stop offset=".63" stop-color="#e7eef0"/><stop offset="1" stop-color="#8eb4be"/></linearGradient>
+  <radialGradient id="button"><stop stop-color="#fff"/><stop offset=".55" stop-color="#e5f7fa"/><stop offset=".83" stop-color="#b2d9e5"/><stop offset="1" stop-color="#5e9db0"/></radialGradient>
+  <radialGradient id="shine" cx=".25" cy=".12" r=".95"><stop stop-color="#fff" stop-opacity=".6"/><stop offset=".36" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></radialGradient>
+  <clipPath id="sphere"><circle cx="160" cy="159" r="139"/></clipPath>
+  <filter id="shadow"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<ellipse cx="162" cy="291" rx="112" ry="13" fill="#000" opacity=".22" filter="url(#shadow)"/>
+<g clip-path="url(#sphere)">
+  <rect x="16" y="15" width="288" height="149" fill="url(#top)"/>
+  <path d="M20 84C53 33 98 67 132 30c35-31 58 15 94-4 27-14 44 13 80 21l-3 42c-43 8-45-17-81-1-27 12-48-1-58-15-12-15-24 23-53 20C75 87 74 120 33 112Z" fill="#ae7835"/>
+  <path d="M37 141c28-34 73-26 80-53 8-31 39-21 56-5 28 24 32-7 59-4 19 4 47 26 70 16v30c-27 8-36 33-64 11-19-16-30-5-49 0-38 11-54-33-89-13-27 14-36 43-63 39Z" fill="#182f28"/>
+  <path d="M19 43c45 12 61-2 94-26l57 7c-10 29-45 28-59 39-33 28-58-4-85 9Z" fill="#6d7b4a"/>
+  <path d="M246 30c17 25 37 10 64 11v45c-14-6-44-17-56-30Z" fill="#384639"/>
+  <path d="M13 154H307V304H13Z" fill="url(#bottom)"/>
+  <path d="M10 150h300v22H10Z" fill="#08151b"/>
+  <path d="M20 169h280v7H20Z" fill="#48a8b8" opacity=".64"/>
+  <circle cx="161" cy="170" r="40" fill="#081c22"/>
+  <circle cx="161" cy="170" r="31" fill="url(#button)" stroke="#97d9e5" stroke-width="5"/>
+  <circle cx="161" cy="170" r="20" fill="#fff" opacity=".85"/>
+  <text x="247" y="140" font-size="34" font-family="Arial,sans-serif" font-weight="900" fill="#f4f6eb" stroke="#253634" stroke-width="2" paint-order="stroke" transform="rotate(-12 247 140)">GO</text>
+  <circle cx="160" cy="159" r="139" fill="url(#shine)" stroke="#273f3b" stroke-width="4"/>
+</g></svg>
