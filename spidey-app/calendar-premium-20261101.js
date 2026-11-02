@@ -186,10 +186,10 @@
       btn.type='button';btn.dataset.agendaDay=d.key;
       if(d.key===view.selected)btn.classList.add('selected');
       btn.setAttribute('aria-pressed',String(d.key===view.selected));
-      btn.setAttribute('aria-label',d.today?'Hoje, '+d.day+'/'+d.key.slice(5,7):d.day+'/'+d.key.slice(5,7));
+      btn.setAttribute('aria-label',(d.today?'Hoje, ':'')+d.day+'/'+d.key.slice(5,7)+', '+count+' evento'+(count===1?'':'s'));
       btn.append(node('span','',d.today?'HOJE':d.weekday.toUpperCase()));
       btn.append(node('strong','',d.day));
-      btn.append(node('small','',count?count+' evento'+(count>1?'s':''):'—'));
+      btn.append(node('small','spidey-agenda-count',count?'● '+count:'—'));
       return btn;
     });
     strip.replaceChildren(...dayNodes);
