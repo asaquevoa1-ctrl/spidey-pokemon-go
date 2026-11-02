@@ -2,6 +2,77 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-11-02-explorer-gadget-visual-updates",
+      "slug": "2026-11-02-explorer-gadget-visual-updates",
+      "content_type": "news",
+      "title": "Dispositivo de Exploração: capturas automáticas e mudanças na interface",
+      "summary": "O Dispositivo de Exploração tenta pegar Pokémon e girar Poképaradas enquanto você explora. A equipe do Pokémon GO ainda descreve a liberação como gradual; ajustes visuais mostrados pela comunidade podem variar entre contas.",
+      "category": "game_update",
+      "tags": [
+        "Novidade",
+        "Dispositivo de Exploração",
+        "Captura automática",
+        "Poképaradas",
+        "Atualização do jogo",
+        "Disponibilidade gradual"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial do Dispositivo de Exploração",
+        "url": "https://pokemongo.com/pt-BR/news/pgo-explorer-gadget-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Central de Ajuda oficial • funcionamento e restrições",
+          "url": "https://niantic.helpshift.com/hc/pt/6-pokemon-go/faq/5493-what-is-the-explorer-gadget/",
+          "confidence": "official"
+        },
+        {
+          "name": "Comunidade The Silph Road • funcionamento com jogo aberto relatado em setembro",
+          "url": "https://www.reddit.com/r/TheSilphRoad/comments/1wodjiu/explorer_gadget_update/",
+          "confidence": "verified_community"
+        }
+      ],
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Dispositivo de Exploração: o que mudou na prática",
+        "summary": "O recurso tenta capturar Pokémon e girar Poképaradas automaticamente. Requer nível 20 e segue em liberação gradual no comunicado oficial. Veja também mudanças de interface relatadas pelos jogadores.",
+        "published_on": "2026-11-02",
+        "label": "GUIA • OFICIAL + RELATOS"
+      },
+      "notes": [
+        "COMO FUNCIONA: com o dispositivo ativado, o jogo tenta capturar Pokémon próximos com Poké Bolas comuns e girar Poképaradas enquanto você caminha, inclusive com o aplicativo fechado ou em segundo plano.",
+        "COMO ATIVAR: a partir do nível 20, procure o ícone no canto superior direito do mapa ou o Dispositivo de Exploração em Itens-Chave da Bolsa. Se não aparecer, sua conta ainda pode estar fora da liberação gradual.",
+        "LIMITES IMPORTANTES: há um limite diário de capturas e giros conforme seu nível. Sem espaço no armazenamento ou na Bolsa, o dispositivo interrompe a atividade correspondente; ele não usa Grandes Bolas nem Ultra Bolas.",
+        "COMPATIBILIDADE: não é possível manter o Dispositivo de Exploração e um Pokémon GO Plus + ou outro acessório de captura ativos ao mesmo tempo. Ao trocar para um acessório físico durante a sessão, o dispositivo interno pode ficar indisponível até o dia seguinte.",
+        "RESUMO: ao voltar ao jogo, você pode conferir quantas capturas e giros o dispositivo realizou. Ele não tenta pegar certas espécies ainda não registradas na Pokédex nem Pokémon incríveis.",
+        "RELATO DA COMUNIDADE: jogadores observaram um pequeno ícone de Poké Bola e um indicador de progresso quando o dispositivo tenta capturar ou girar com o jogo aberto. O visual e a disponibilidade podem variar conforme conta e versão.",
+        "OUTROS AJUSTES MOSTRADOS EM INFOGRÁFICO DA COMUNIDADE: novo atalho de avaliação, alterações nos círculos de Pokémon atraídos, contraste de Poképaradas e efeitos visuais próximos a itens. Essas alterações específicas não foram detalhadas no anúncio oficial consultado.",
+        "NÃO CONFUNDIR: a notícia oficial de 8 de outubro sobre Células de Zygarde, transferências 100% e interface do mapa já está cadastrada separadamente nas Novidades do Spidey.",
+        "STATUS EM 02/11/2026: o site oficial ainda fala em implantação gradual do Dispositivo de Exploração, não em disponibilidade garantida para todas as contas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização de recurso sem início universal ou janela de evento confirmados."
+      },
+      "status": "published",
+      "verified_at": "2026-11-02",
+      "updated_at": "2026-11-02T18:45:00-03:00",
+      "audit": {
+        "classification": "official_explorer_gadget_and_labeled_community_ui_reports",
+        "scope": "news_only",
+        "official_general_availability_confirmed": false,
+        "related_existing_story": "2026-10-08-gameplay-quality-of-life",
+        "user_supplied_community_infographic": "Jogada Excelente, compartilhado em 02/11/2026"
+      }
+    },
+    {
       "id": "2026-11-02-alerta-doces-raros-banimentos",
       "slug": "2026-11-02-alerta-doces-raros-banimentos",
       "content_type": "news",

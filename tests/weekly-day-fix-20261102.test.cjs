@@ -68,7 +68,7 @@ test('Carrossel Samsung largura legível e PWA atualizado sem mudar pôsteres',(
  const html=read('spidey-app/index.html'),sw=read('spidey-app/sw.js'),css=read('spidey-app/weekly-day-fix-20261102.css');
  assert.match(html,/weekly-day-fix-20261102\.css\?v=20261102-weekday2/);
  assert.match(html,/weekly\.js\?v=20261102-weekday2/);
- assert.match(sw,/spidey-app-20261102-weekday2/);
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
  assert.match(sw,/\.\/weekly-day-fix-20261102\.css/);
  assert.match(css,/@media\(max-width:720px\)/);
  assert.match(css,/scroll-snap-type:x mandatory/);
