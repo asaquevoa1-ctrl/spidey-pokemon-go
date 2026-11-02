@@ -1,0 +1,277 @@
+/* SPIDEY / GO WILD AREA CDMX — guia Premium mobile-first 02/11/2026
+   Utiliza o pôster do master aprovado SEM crop, filtros, sobreposição ou alterações. */
+#wildAreaMexicoView{
+  --wild-gold:#edc58d;--wild-text:#f7f2e9;--wild-muted:#bec9d6;
+  color:var(--wild-text);
+}
+#wildAreaMexicoView .wild-mx-guide{max-width:1250px;margin:0 auto 50px}
+#wildAreaMexicoView .wild-mx-hero{
+  position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(245px,.65fr);
+  align-items:center;gap:clamp(16px,3vw,45px);padding:clamp(19px,3.4vw,40px);
+  overflow:hidden;border:1px solid rgba(234,194,133,.3);border-radius:24px;
+  background:radial-gradient(ellipse at 7% 0,rgba(198,62,71,.17),transparent 45%),
+    radial-gradient(ellipse at 90% 1%,rgba(220,160,77,.12),transparent 50%),
+    linear-gradient(135deg,#1b2d42,#091624 75%);
+  box-shadow:0 23px 47px rgba(0,0,0,.2);
+}
+#wildAreaMexicoView .wild-mx-hero:before{
+  content:"";height:2px;position:absolute;top:0;left:0;right:0;
+  background:linear-gradient(90deg,#cf4652,#f3cb83,transparent)
+}
+#wildAreaMexicoView .wild-mx-eyebrow,
+#wildAreaMexicoView .wild-mx-section-head>span{
+  display:block;color:var(--wild-gold);font-size:.68rem;letter-spacing:.16em;
+  line-height:1.5;font-weight:880
+}
+#wildAreaMexicoView .wild-mx-hero-copy{min-width:0;position:relative;z-index:1}
+#wildAreaMexicoView .wild-mx-hero h1{
+  margin:12px 0 15px;letter-spacing:-.046em;line-height:1.02;
+  font-size:clamp(2rem,5.4vw,4.2rem);font-weight:910;color:#fff5e5
+}
+#wildAreaMexicoView .wild-mx-hero h1 em,
+#wildMxHomeFeature h2 em{display:block;font-style:normal;color:var(--wild-gold,#edc58d)}
+#wildAreaMexicoView .wild-mx-hero-copy>p{
+  max-width:520px;font-size:clamp(.89rem,1.6vw,1.02rem);line-height:1.6;color:var(--wild-muted)
+}
+#wildAreaMexicoView .wild-mx-hero-tags,
+#wildAreaMexicoView .wild-mx-hero-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+#wildAreaMexicoView .wild-mx-hero-tags{margin:19px 0}
+#wildAreaMexicoView .wild-mx-hero-tags span{
+  display:inline-flex;border-radius:100px;padding:8px 11px;
+  color:#f5d2a2;border:1px solid rgba(237,199,135,.28);
+  background:rgba(222,183,123,.09);font-weight:790;font-size:.72rem
+}
+#wildAreaMexicoView button{font-family:inherit;cursor:pointer}
+#wildAreaMexicoView button:focus-visible,
+#wildMxHomeFeature button:focus-visible{outline:3px solid #f5d28f!important;outline-offset:3px}
+#wildAreaMexicoView .wild-mx-hero-actions button,
+#wildMxHomeFeature [data-wild-open]{
+  border:1px solid rgba(243,220,186,.35);min-height:44px;
+  border-radius:12px;padding:11px 15px;background:linear-gradient(110deg,#ac3545,#771f31);
+  color:#fff8ed;font-size:.84rem;font-weight:820
+}
+#wildAreaMexicoView .wild-mx-hero-actions button+button{
+  background:rgba(242,214,173,.10);color:#f4dbb3
+}
+#wildAreaMexicoView .wild-mx-hero-poster{
+  max-width:400px;max-height:520px;justify-self:center;width:100%;
+  display:flex;align-items:center;justify-content:center
+}
+#wildAreaMexicoView .wild-mx-hero-poster img{
+  display:block;width:auto;max-width:100%;max-height:500px;height:auto;
+  object-fit:contain!important;object-position:center!important;
+  border-radius:12px
+}
+#wildAreaMexicoView .wild-mx-fact-strip{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:15px 0
+}
+#wildAreaMexicoView .wild-mx-fact-strip>div{
+  display:flex;flex-direction:column;gap:4px;min-width:0;
+  padding:16px;border-radius:15px;border:1px solid rgba(224,190,135,.20);
+  background:linear-gradient(120deg,#1a2b3f,#0f1b2b)
+}
+#wildAreaMexicoView .wild-mx-fact-strip span,
+#wildAreaMexicoView .wild-mx-ticket>span{
+  color:var(--wild-gold);font-size:.63rem;font-weight:850;letter-spacing:.12em
+}
+#wildAreaMexicoView .wild-mx-fact-strip strong{font-size:1.02rem;font-weight:850;color:#fff0dd}
+#wildAreaMexicoView .wild-mx-fact-strip small{color:var(--wild-muted);font-size:.75rem;line-height:1.4}
+#wildAreaMexicoView .wild-mx-local-nav{
+  position:sticky;top:var(--spidey-header-height,68px);z-index:5;
+  display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;
+  max-width:100%;padding:12px 1px 15px;margin:5px 0 11px;
+  background:linear-gradient(180deg,rgba(9,18,30,.98),rgba(9,18,30,.96) 80%,transparent);
+  scrollbar-width:thin
+}
+#wildAreaMexicoView .wild-mx-local-nav button{
+  flex:0 0 auto;min-height:40px;padding:9px 15px;border-radius:50px;
+  background:#1d3044;border:1px solid rgba(241,199,131,.27);
+  color:#f4d7aa;font-size:.76rem;font-weight:770
+}
+#wildAreaMexicoView .wild-mx-section{
+  margin:15px 0;padding:clamp(16px,2.6vw,26px);
+  border:1px solid rgba(224,187,132,.17);
+  border-radius:21px;background:linear-gradient(147deg,#172536,#101a2a);
+  scroll-margin-top:150px
+}
+#wildAreaMexicoView .wild-mx-section-head{margin-bottom:16px}
+#wildAreaMexicoView .wild-mx-section-head h2{
+  margin:7px 0;color:#fff3e3;font-size:clamp(1.45rem,3vw,2.05rem);
+  letter-spacing:-.03em;font-weight:870
+}
+#wildAreaMexicoView .wild-mx-section-head p{
+  margin:0;color:var(--wild-muted);font-size:.86rem;line-height:1.5
+}
+#wildAreaMexicoView .wild-mx-grid{display:grid;gap:12px}
+#wildAreaMexicoView .wild-mx-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+#wildAreaMexicoView .wild-mx-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+#wildAreaMexicoView .wild-mx-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+#wildAreaMexicoView .wild-mx-card,
+#wildAreaMexicoView .wild-mx-ticket{
+  border:1px solid rgba(216,188,149,.22);border-radius:15px;
+  padding:clamp(15px,2.3vw,21px);min-width:0;
+  background:linear-gradient(136deg,rgba(41,59,80,.77),rgba(17,30,44,.97));
+  box-shadow:inset 0 1px rgba(255,241,209,.07)
+}
+#wildAreaMexicoView .wild-mx-card-type{
+  color:#ecc48c;font-size:.66rem;letter-spacing:.12em;font-weight:850
+}
+#wildAreaMexicoView .wild-mx-card h3{
+  margin:9px 0 10px;color:#fff3e6;font-size:1.04rem;line-height:1.3
+}
+#wildAreaMexicoView .wild-mx-card p,
+#wildAreaMexicoView .wild-mx-ticket p{
+  color:#d1d8df;font-size:.84rem;line-height:1.55;margin:7px 0;
+}
+#wildAreaMexicoView .wild-mx-card strong{color:#f8dfbb}
+#wildAreaMexicoView .wild-mx-card small{
+  display:block;margin-top:11px;padding-top:10px;border-top:1px solid rgba(233,193,135,.18);
+  color:#c8bdad;font-size:.73rem;line-height:1.5
+}
+#wildAreaMexicoView .wild-mx-safari{
+  display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;
+  align-items:center;padding:19px;border:1px solid rgba(219,178,110,.32);
+  border-radius:16px;background:radial-gradient(ellipse at 0% 0%,rgba(224,158,93,.16),transparent 56%),#0d1d2b
+}
+#wildAreaMexicoView .wild-mx-safari-stamp{
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  width:140px;height:140px;border:6px solid #dab77a;
+  border-radius:50%;box-shadow:inset 0 0 0 4px #14253a,0 5px 26px rgba(221,155,85,.17);
+  background:radial-gradient(circle at 32% 18%,#ffecba,#ad8050 38%,#202f43 39%,#132236);
+  color:#fff3d0;text-shadow:0 2px 5px #000;font-weight:900;
+  letter-spacing:.08em;transform:rotate(-9deg)
+}
+#wildAreaMexicoView .wild-mx-safari-stamp strong{font-size:1.14rem;color:#fff5cc}
+#wildAreaMexicoView .wild-mx-safari-stamp span{font-size:.73rem}
+#wildAreaMexicoView .wild-mx-safari-info h3{
+  color:#fff0df;margin:0 0 7px;font-size:1.15rem
+}
+#wildAreaMexicoView .wild-mx-safari-info>p{
+  color:#d0dbe4;line-height:1.52;font-size:.85rem;margin:0 0 15px
+}
+#wildAreaMexicoView .wild-mx-mini-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px
+}
+#wildAreaMexicoView .wild-mx-mini-grid div{
+  background:rgba(38,58,75,.72);border-radius:12px;padding:13px;
+  border:1px solid rgba(223,190,137,.18)
+}
+#wildAreaMexicoView .wild-mx-mini-grid strong,
+#wildAreaMexicoView .wild-mx-mini-grid span{display:block;line-height:1.42}
+#wildAreaMexicoView .wild-mx-mini-grid strong{font-size:.77rem;color:#f8d5a2;margin-bottom:5px}
+#wildAreaMexicoView .wild-mx-mini-grid span{font-size:.76rem;color:#c7d1dc}
+#wildAreaMexicoView .wild-mx-bonus,
+#wildAreaMexicoView .wild-mx-ticket-caution{
+  margin:14px 0 0;padding:17px;border-radius:13px;
+  border-left:3px solid #dfbb82;background:rgba(222,177,112,.09);
+  color:#e1d8c9;font-size:.84rem;line-height:1.55
+}
+#wildAreaMexicoView .wild-mx-bonus strong{color:#ffe6b8}
+#wildAreaMexicoView .wild-mx-bonus p{margin:7px 0 0}
+#wildAreaMexicoView .wild-mx-stamps-layout{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.7fr);gap:13px
+}
+#wildAreaMexicoView .wild-mx-stamp-list{
+  display:grid;gap:8px;counter-reset:stamp;margin:0;padding:0;list-style:none
+}
+#wildAreaMexicoView .wild-mx-stamp-list li{
+  display:flex;align-items:center;gap:12px;counter-increment:stamp;
+  border:1px solid rgba(223,190,150,.17);border-radius:10px;
+  padding:10px 12px;color:#eee2d4;background:rgba(38,55,72,.62);
+  font-size:.83rem;line-height:1.4
+}
+#wildAreaMexicoView .wild-mx-stamp-list li:before{
+  content:counter(stamp,decimal-leading-zero);font-size:.76rem;font-weight:840;color:#f7ca89
+}
+#wildAreaMexicoView .wild-mx-stamp-aside{
+  border:1px solid rgba(230,189,128,.36);border-radius:13px;
+  background:linear-gradient(137deg,rgba(127,46,59,.29),rgba(25,37,50,.94));padding:19px
+}
+#wildAreaMexicoView .wild-mx-stamp-aside>strong{font-size:1.15rem;color:#ffdfac}
+#wildAreaMexicoView .wild-mx-stamp-aside p{font-size:.82rem;line-height:1.53;color:#e2d9d0}
+#wildAreaMexicoView .wild-mx-stamp-aside button{
+  border-radius:10px;border:1px solid rgba(243,205,147,.47);
+  padding:11px 14px;min-height:43px;background:#8f2e40;color:#fff3e1;
+  font-weight:820;font-size:.81rem;width:100%
+}
+#wildAreaMexicoView .wild-mx-ticket>strong{
+  display:block;margin:9px 0 11px;color:#ffe0ae;font-size:1.55rem;font-weight:880
+}
+#wildAreaMexicoView .wild-mx-sources{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  margin:16px 0;padding:13px;color:#9daebf;font-size:.69rem;line-height:1.5
+}
+#wildAreaMexicoView .wild-mx-sources a{
+  color:#f0c786;text-decoration:underline;text-underline-offset:3px
+}
+.wild-mx-tab{color:#f0c78b!important}
+#wildMxHomeFeature{
+  --wild-gold:#edc58d;
+  display:grid;grid-template-columns:minmax(110px,.34fr) minmax(0,1fr);
+  gap:clamp(14px,3vw,30px);align-items:center;
+  padding:clamp(13px,2vw,24px);margin:16px 0 20px;
+  border:1px solid rgba(236,187,119,.45);border-radius:20px;
+  background:radial-gradient(ellipse at 98% -8%,rgba(192,56,65,.18),transparent 48%),
+    linear-gradient(125deg,#22364a,#0c1a28);
+  box-shadow:0 18px 40px rgba(0,0,0,.19);
+  color:#fff2e1
+}
+#wildMxHomeFeature .wild-mx-home-image{
+  display:flex;justify-content:center;align-items:center;min-width:0;max-height:230px
+}
+#wildMxHomeFeature .wild-mx-home-image img{
+  display:block;max-width:100%;width:auto;height:auto;max-height:220px;
+  border-radius:10px;object-fit:contain!important
+}
+#wildMxHomeFeature .wild-mx-home-copy{min-width:0}
+#wildMxHomeFeature .wild-mx-home-copy>span{
+  color:#edc58d;font-weight:860;font-size:.7rem;letter-spacing:.12em
+}
+#wildMxHomeFeature h2{
+  margin:8px 0;font-size:clamp(1.27rem,3vw,2.24rem);
+  line-height:1.13;letter-spacing:-.028em;color:#fff2e6
+}
+#wildMxHomeFeature .wild-mx-home-copy p{
+  color:#c8d4df;font-size:.86rem;line-height:1.48;margin:5px 0
+}
+#wildMxHomeFeature .wild-mx-home-times{margin:8px 0 13px;color:#dbc7a9;font-size:.79rem}
+#wildMxHomeFeature .wild-mx-home-times strong{color:#ffe5b9}
+#wildMxHomeFeature [data-wild-open]{
+  cursor:pointer;padding:10px 18px;min-height:43px
+}
+@media(max-width:890px){
+  #wildAreaMexicoView .wild-mx-three{grid-template-columns:1fr 1fr}
+  #wildAreaMexicoView .wild-mx-four{grid-template-columns:1fr 1fr}
+  #wildAreaMexicoView .wild-mx-mini-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  #wildAreaMexicoView .wild-mx-hero{grid-template-columns:1fr;padding:19px 15px}
+  #wildAreaMexicoView .wild-mx-hero h1{font-size:clamp(1.95rem,8vw,3rem)}
+  #wildAreaMexicoView .wild-mx-hero-poster{
+    width:100%;max-width:270px;max-height:340px
+  }
+  #wildAreaMexicoView .wild-mx-hero-poster img{max-height:330px}
+  #wildAreaMexicoView .wild-mx-fact-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  #wildAreaMexicoView .wild-mx-fact-strip>div{padding:12px}
+  #wildAreaMexicoView .wild-mx-fact-strip strong{font-size:.93rem}
+  #wildAreaMexicoView .wild-mx-section{padding:16px 12px;margin:13px 0}
+  #wildAreaMexicoView .wild-mx-three,
+  #wildAreaMexicoView .wild-mx-two{grid-template-columns:1fr}
+  #wildAreaMexicoView .wild-mx-stamps-layout{grid-template-columns:1fr}
+  #wildAreaMexicoView .wild-mx-safari{grid-template-columns:1fr;justify-items:center;padding:14px}
+  #wildAreaMexicoView .wild-mx-mini-grid{grid-template-columns:1fr}
+  #wildMxHomeFeature{grid-template-columns:105px minmax(0,1fr);gap:11px;padding:12px}
+  #wildMxHomeFeature .wild-mx-home-image img{max-height:160px}
+  #wildMxHomeFeature h2{font-size:1.35rem}
+  #wildMxHomeFeature .wild-mx-home-copy>span{font-size:.61rem}
+  #wildMxHomeFeature .wild-mx-home-copy p{font-size:.76rem}
+  #wildMxHomeFeature .wild-mx-home-times{font-size:.72rem}
+}
+@media(max-width:390px){
+  #wildAreaMexicoView .wild-mx-four{grid-template-columns:1fr}
+  #wildMxHomeFeature{grid-template-columns:88px minmax(0,1fr)}
+  #wildMxHomeFeature [data-wild-open]{font-size:.73rem;padding:8px 9px}
+}
+@media(prefers-reduced-motion:reduce){
+  #wildAreaMexicoView *{scroll-behavior:auto!important;transition:none!important}
+}
