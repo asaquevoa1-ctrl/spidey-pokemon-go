@@ -11,8 +11,8 @@ const sw=read('sw.js');
 const {statSync}=require('node:fs');
 
 test('Tratamento das imagens quebradas é carregado na aba',()=>{
-  assert.match(html,/wild-mexico-image-fallback-20261102\.js\?v=20261102-wildfix1/);
-  assert.match(html,/wild-mexico-image-fallback-20261102\.css\?v=20261102-wildfix1/);
+  assert.match(html,/wild-mexico-image-fallback-20261102\.js\?v=20261102-safarireal2/);
+  assert.match(html,/wild-mexico-image-fallback-20261102\.css\?v=20261102-safarireal2/);
   assert.match(sw,/spidey-app-20261102-safarireal2/);
   assert.match(sw,/\.\/wild-mexico-image-fallback-20261102\.js/);
   assert.match(sw,/\.\/wild-mexico-image-fallback-20261102\.css/);
@@ -47,8 +47,8 @@ test('Remover imagem quebrada também desativa estilos display importantes',()=>
 test('Home renovada e conexão ruim também acionam proteção',()=>{
   assert.match(js,/spideyhomeupdated/);
   assert.match(js,/spideycontentready/);
-  assert.match(js,/setTimeout\(\(\)=>/);
-  assert.match(js,/,9000\)/);
+  assert.doesNotMatch(js,/setTimeout/);
+  assert.doesNotMatch(js,/9000/);
   assert.match(js,/Ver a imagem no anúncio oficial/);
   assert.match(js,/pokemongo\.com\/gowildarea\/mexico-city\/gameplay/);
 });
