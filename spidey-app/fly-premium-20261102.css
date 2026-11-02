@@ -44,7 +44,7 @@
   border-radius:13px;border:1px solid rgba(235,192,128,.3);
   background:#24384c;color:#f9dfb9;
   padding:10px 16px;
-  font:800 .83rem/1.25 inherit;letter-spacing:.005em;
+  font-family:inherit;font-size:.83rem;font-weight:800;line-height:1.25;letter-spacing:.005em;
 }
 #flyView .fly-premium-quick-nav button:first-child{
   background:linear-gradient(114deg,#b64753,#7a2f40);
