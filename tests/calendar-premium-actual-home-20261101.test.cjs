@@ -74,6 +74,21 @@ test('Regional and raid filters select only published event categories',()=>{
  assert.deepEqual(api.choose(fixture,'2026-11-04','raids').map(x=>x.id).sort(),['date','raids']);
  assert.equal(api.choose(fixture,'2026-11-04','local').length,0);
 });
+test('Fresh daily events and raids precede older long-running campaigns',()=>{
+ const older={id:'older',title:'Temporada longa',status:'published',content_type:'event',category:'temporada',
+  schedule:{start_brazil:'2026-09-01T10:00:00-03:00',end_brazil:'2026-12-01T20:00:00-03:00'}};
+ const newRaid={id:'newRaid',title:'Nova rotação',status:'published',content_type:'event',category:'raid_rotation',
+  schedule:{start_brazil:'2026-11-04T10:00:00-03:00',end_brazil:'2026-11-10T10:00:00-03:00'}};
+ const raidHour={id:'raidHour',title:'Hora de Reides',status:'published',content_type:'event',category:'raid_hour',
+  schedule:{start_brazil:'2026-11-04T18:00:00-03:00',end_brazil:'2026-11-04T19:00:00-03:00'}};
+ const recurring={id:'recurring',title:'Sessão nova',status:'published',content_type:'event',category:'evento_especial',
+  schedule:{sessions:[{start:'2026-11-01T10:00:00-03:00',end:'2026-11-01T12:00:00-03:00'},
+                      {start:'2026-11-04T14:00:00-03:00',end:'2026-11-04T16:00:00-03:00'}]}};
+ assert.deepEqual(api.choose([older,raidHour,recurring,newRaid],'2026-11-04').map(e=>e.id),
+  ['newRaid','recurring','raidHour','older']);
+ assert.deepEqual(api.choose([older,raidHour,recurring,newRaid],'2026-11-04','raids').map(e=>e.id),
+  ['newRaid','raidHour']);
+});
 test('Actual Player Home receives interactive date rail after the existing 3D cockpit',()=>{
  assert.equal(api.render(fixed),true);
  const agenda=home.querySelector('#spideyCalendarPremium');
@@ -104,7 +119,7 @@ test('Actual Player Home receives interactive date rail after the existing 3D co
 test('Premium agenda is integrated without hiding legacy calendar or duplicating events',()=>{
  const html=read('spidey-app/index.html'),css=read('spidey-app/calendar-premium-20261101.css');
  const sw=read('spidey-app/sw.js'),player=read('spidey-app/player-ui.js');
- assert.match(html,/calendar-premium-20261101\.js\?v=20261101-agenda1/);
+ assert.match(html,/calendar-premium-20261101\.js\?v=20261101-agenda2/);
  assert.match(html,/calendar-premium-20261101\.css\?v=20261101-agenda1/);
  assert(html.indexOf('player-ui.js?v=')<html.indexOf('calendar-premium-20261101.js?v='));
  assert.match(html,/id="calendar"/);
