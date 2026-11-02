@@ -54,16 +54,32 @@ test('Ingressos por dia, complementos e evento Global separados',()=>{
   assert.match(html,/O evento <strong>Global<\/strong> de 14 e 15\/11 é separado/);
   assert.match(html,/https:\/\/pokemongo\.com\/gowildarea\/mexico-city\/tickets/); 
 });
-test('Imagem Premium existente preservada sem crop; PWA versionado',()=>{
-  assert.match(html,/assets\/events\/premium\/wild-area-mexico-city-2026-approved-v1\.png/);
+test('Imagem oficial Machamp e Safari Ball reais; artes anteriores preservadas no Git e precache PWA',()=>{
+  const art=read('spidey-app/wild-area-mexico-art-20261102.css');
+  const master=read('spidey-app/premium-approved-master.js');
+  assert.match(master,/wild-area-mexico-city-2026-approved-v1\.png/);
   assert.match(sw,/assets\/events\/premium\/wild-area-mexico-city-2026-approved-v1\.png/);
-  assert.match(css,/object-fit:contain!important/);
-  assert.doesNotMatch(css,/object-fit\s*:\s*cover/i);
-  assert.match(sw,/spidey-app-20261102-wildmexico1/);
-  assert.match(sw,/\.\/wild-area-mexico-20261102\.js/);
-  assert.match(sw,/\.\/wild-area-mexico-20261102\.css/);
-  assert.match(html,/wild-area-mexico-20261102\.js\?v=20261102-wild1/);
-  assert.match(html,/wild-area-mexico-20261102\.css\?v=20261102-wild1/);
+  assert.match(html,/wild-mx-machamp-spotlight/);
+  assert.match(html,/Machamp com jaqueta e capa modernas, quatro braços/);
+  assert.match(html,/lh3\.googleusercontent\.com\/EwKELOgm/);
+  assert.match(html,/www\.pokemon\.com\/static-assets\/content-assets\/cms2\/img\/video-games/);
+  assert.doesNotMatch(html,/wild-mx-safari-stamp/);
+  assert.match(html,/Bola Safári GO oficial, camuflagem verde e marrom/);
+  assert.match(art,/wild-mx-real-safari img/);
+  assert.match(art,/object-fit:contain!important/);
+  assert.match(sw,/spidey-app-20261102-wildart1/);
+  assert.match(sw,/\.\/wild-area-mexico-art-20261102\.css/);
+  assert.match(html,/wild-area-mexico-20261102\.js\?v=20261102-wildart1/);
+  assert.match(html,/wild-area-mexico-art-20261102\.css\?v=20261102-wildart1/);
+});
+test('Tres paineis editoriais com habitats e spawns oficiais, sem confundir Incenso',()=>{
+  const art=read('spidey-app/wild-area-mexico-art-20261102.css');
+  assert.match(html,/class="wild-mx-featured-roster"/);
+  for(const part of ['wild-mx-roster-steel','wild-mx-roster-dragon','wild-mx-roster-mighty'])assert(html.includes(part));
+  for(const name of ['Solid as Steel','Daring as Dragons','Beldum, Lucario, Ferroseed, Klink','Dratini, Bagon, Gible, Axew, Deino e Frigibax','Machamp de jaqueta','Hawlucha na Cidade do México'])assert(html.includes(name));
+  assert.match(html,/Incenso comum; não fazem parte de um habitat exclusivo/);
+  assert.match(art,/@media\(max-width:650px\)/);
+  assert.match(art,/grid-template-columns:1fr/);
 });
 test('Destaque na Home deixa de aparecer apos a data de encerramento',()=>{
   assert.match(js,/featureActive\(now=Date\.now\(\)\)/);

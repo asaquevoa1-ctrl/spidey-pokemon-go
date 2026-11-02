@@ -2,7 +2,8 @@
 (() => {
   'use strict';
   const EVENT_ID='2026-11-go-wild-area-mexico-city';
-  const POSTER='assets/events/premium/wild-area-mexico-city-2026-approved-v1.png';
+  // Arte principal oficial 2026; pôster antigo preservado no catálogo e no histórico.
+  const POSTER='https://lh3.googleusercontent.com/EwKELOgmCLzqD8Ev1ZIa7KlcPlKkMexajZTROxHvRSSP4ubiYIfR6jzTJTOZglGPexOdOasxoUPVKOM5yyXbRxS5420m_iaXINV4VvyPsV0=s0-e365';
   const END=Date.parse('2026-11-08T21:00:00-03:00');
   const prefersReduced=()=>window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
   function openView(id) {
@@ -24,8 +25,8 @@
     block=document.createElement('section');
     block.id='wildMxHomeFeature';block.className='wild-mx-home-feature';
     block.setAttribute('aria-label','GO Wild Area: Cidade do México — especial da semana');
-    // Imagem já aprovada no acervo. Sem SVG, sprite ou poster novo.
-    block.innerHTML='<div class="wild-mx-home-image"><img src="'+POSTER+'" loading="lazy" decoding="async" alt="Pôster Premium GO Wild Area Cidade do México"></div>'+
+    // Material promocional do Machamp com jaqueta/capa, publicado pelo Pokémon GO; não altera os binários aprovados.
+    block.innerHTML='<div class="wild-mx-home-image"><img src="'+POSTER+'" loading="lazy" decoding="async" alt="Machamp com jaqueta e capa modernas, imagem promocional oficial Wild Area 2026" referrerpolicy="no-referrer"></div>'+
       '<div class="wild-mx-home-copy"><span>✦ ESPECIAL DA SEMANA · 6 A 8 NOV</span>'+
       '<h2>GO Wild Area <em>Cidade do México</em></h2>'+
       '<p>Guia de pesquisas, Safari Balls, Pokémon, ingressos e os 7 Selos. Tudo num só lugar.</p>'+
