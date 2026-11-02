@@ -1,9 +1,10 @@
-/* GO Wild Area MX — fallback defensivo para imagens externas (Samsung/PWA).
-   Não altera as artes do master; não apresenta imagem de terceiros como arte Premium. */
+/* Wild Area MX — proteger imagens locais em caso de erro HTTP real.
+   Nunca substituir a Bola Safári GO oficial por ilustração inventada. */
 (() => {
   'use strict';
   const OFFICIAL='https://pokemongo.com/gowildarea/mexico-city/gameplay';
-  const BALL='assets/events/wild-area/go-safari-ball-fallback-20261102.svg';
+  const BALL='assets/events/wild-area/official-local-20261102/safari-ball.webp';
+  const SAFARI_RETRY='?safari=real-20261102-v2';
   const LABELS={
     steel:{eyebrow:'HORA DO AÇO',title:'Solid as Steel',name:'Beldum · Lucario · Klink'},
     dragon:{eyebrow:'HORA DOS DRAGÕES',title:'Daring as Dragons',name:'Dratini · Bagon · Gible'},
@@ -25,17 +26,6 @@
     if(!img||img.dataset.wildFallback==='done')return;
     const parent=img.parentElement;
     if(!parent)return;
-    if(parent.classList.contains('wild-mx-real-safari')){
-      // A ilustração local preserva o desenho real da bola e funciona offline.
-      if(img.dataset.wildLocalAttempt!=='1'){
-        img.dataset.wildLocalAttempt='1';
-        img.src=BALL;
-        img.removeAttribute('referrerpolicy');
-        const fig=parent.querySelector('figcaption');
-        if(fig)fig.textContent='Bola Safári GO · ilustração de referência';
-        return;
-      }
-    }
     img.dataset.wildFallback='done';
     img.hidden=true;
     img.style.setProperty('display','none','important');
@@ -61,9 +51,20 @@
       return;
     }
     if(parent.classList.contains('wild-mx-real-safari')){
-      const fallback=document.createElement('span');fallback.className='wild-mx-ball-fallback-text';
-      fallback.textContent='Bola Safári GO';
-      parent.insertBefore(fallback,parent.firstChild);
+      // Nenhuma imagem alternativa: mostrar aviso compacto apenas quando a foto real falhar duas vezes.
+      const fallback=document.createElement('button');
+      fallback.type='button';
+      fallback.className='wild-mx-ball-retry';
+      fallback.textContent='Recarregar foto da Bola Safári GO';
+      fallback.addEventListener('click',()=>{
+        fallback.remove();
+        img.dataset.wildFallback='';
+        img.dataset.wildLocalAttempt='';
+        img.style.removeProperty('display');
+        img.hidden=false;
+        img.src=BALL+'?safari=real-20261102-manual';
+      });
+      parent.append(fallback);
       return;
     }
     parent.classList.add('wild-mx-photo-unavailable');
@@ -71,16 +72,22 @@
   function check(img){
     if(img.dataset.wildMonitored==='1')return;
     img.dataset.wildMonitored='1';
-    img.addEventListener('error',()=>fallbackFor(img));
-    if(img.complete&&!img.naturalWidth){
+    // A foto oficial é a única mídia aceita no espaço da Safari Ball.
+    // Não disparar fallback porque loading="lazy" ainda não terminou.
+    const failed=()=>{
+      if(img.naturalWidth>0)return;
+      const safari=img.parentElement?.classList.contains('wild-mx-real-safari');
+      if(safari&&img.dataset.wildLocalAttempt!=='1'){
+        img.dataset.wildLocalAttempt='1';
+        img.src=BALL+SAFARI_RETRY;
+        return;
+      }
       fallbackFor(img);
-    }else if(!img.complete){
-      // Se a CDN deixar a imagem pendurada, não manter cartão vazio para sempre.
-      const watchdog=setTimeout(()=>{
-        if(!img.complete||!img.naturalWidth)fallbackFor(img);
-      },9000);
-      img.addEventListener('load',()=>clearTimeout(watchdog),{once:true});
-    }
+    };
+    img.addEventListener('error',failed);
+    // Captura apenas imagens que efetivamente terminaram com erro antes do listener.
+    // Sem watchdog por tempo: rede lenta / lazy-loading não são erros de imagem.
+    if(img.complete && img.currentSrc && img.naturalWidth===0)failed();
   }
   function scan(){
     const root=document.getElementById('wildAreaMexicoView');
