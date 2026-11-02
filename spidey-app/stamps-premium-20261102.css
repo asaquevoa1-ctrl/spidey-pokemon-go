@@ -1,0 +1,339 @@
+/* Spidey Premium · Selos / PokéLids
+   Arquivo visual apenas: não altera dados, filtros, cliques, coordenadas ou imagens oficiais.
+   Grafite + petróleo, acabamento rubi contido e detalhes dourados da identidade S. */
+
+#stampsView,
+#eventDetail:has(.stamp-detail-v2) {
+  --stp-bg: #171e29;
+  --stp-raised: #242c39;
+  --stp-edge: rgba(222,189,134,.28);
+  --stp-gold: #e8c68a;
+  --stp-ink: #f4f1eb;
+  --stp-muted: #bcc6d2;
+  --stp-ruby: #ac4955;
+  --stp-shadow: 0 15px 32px rgba(0,0,0,.22);
+}
+
+/* Coleções: layout editorial com indicação de abertura sempre visível. */
+#stampsView .stamp-list {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+  gap:clamp(12px,2vw,22px);
+  align-items:stretch;
+}
+html[data-theme] body.spidey-player-ui #stampsView .stamp-card {
+  position:relative;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  padding:clamp(18px,2.4vw,25px);
+  overflow:hidden;
+  isolation:isolate;
+  text-align:left;
+  border:1px solid var(--stp-edge) !important;
+  border-top:2px solid rgba(232,198,138,.55) !important;
+  border-radius:20px !important;
+  color:var(--stp-ink);
+  background:
+    radial-gradient(circle at 98% -3%,rgba(174,69,85,.20),transparent 44%),
+    linear-gradient(148deg,#293141 0%,#1b2531 62%,#202631 100%) !important;
+  box-shadow:var(--stp-shadow),inset 0 1px rgba(255,255,255,.07) !important;
+}
+#stampsView .stamp-card::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  right:-56px;
+  top:-64px;
+  width:180px;
+  height:180px;
+  border:1px solid rgba(231,191,127,.16);
+  border-radius:50%;
+  box-shadow:0 0 0 24px rgba(231,191,127,.035),0 0 0 57px rgba(231,191,127,.025);
+  pointer-events:none;
+}
+#stampsView .stamp-card::after {
+  content:"Explorar coleção  ›";
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:39px;
+  box-sizing:border-box;
+  margin-top:auto;
+  padding-top:14px;
+  border-top:1px solid rgba(232,198,138,.20);
+  color:var(--stp-gold);
+  font-size:.79rem;
+  font-weight:850;
+  letter-spacing:.01em;
+}
+#stampsView .stamp-card:is(:hover,:focus-visible) {
+  border-color:rgba(232,198,138,.75) !important;
+}
+#stampsView .stamp-card:focus-visible,
+#eventDetail:has(.stamp-detail-v2) :is(button,select,input,textarea,a,summary):focus-visible {
+  outline:3px solid var(--stp-gold) !important;
+  outline-offset:3px;
+}
+#stampsView .stamp-card-top {
+  align-items:flex-start;
+  gap:13px;
+  margin:0 0 12px;
+}
+#stampsView .stamp-card-top > div {min-width:0;flex:1 1 auto;}
+#stampsView .stamp-icon {
+  width:55px;
+  height:55px;
+  border-radius:16px;
+  font-size:1.7rem;
+  line-height:1;
+  color:#f1d39d;
+  border:1px solid rgba(229,195,133,.50);
+  background:
+    radial-gradient(circle at 36% 26%,rgba(255,242,202,.26),transparent 48%),
+    linear-gradient(145deg,#53432f,#2a2c32);
+  box-shadow:inset 0 1px rgba(255,255,255,.18),0 5px 13px rgba(0,0,0,.2);
+}
+#stampsView .stamp-card .eyebrow {
+  display:inline-block;
+  margin:0 0 7px;
+  font-size:.65rem;
+  letter-spacing:.11em;
+  color:var(--stp-gold) !important;
+}
+#stampsView .stamp-card h3 {
+  margin:0;
+  color:var(--stp-ink) !important;
+  font-size:clamp(1.04rem,2vw,1.25rem);
+  line-height:1.28;
+  letter-spacing:-.02em;
+  overflow-wrap:anywhere;
+}
+#stampsView .stamp-card > p {
+  color:#d1d8e1 !important;
+  font-size:.85rem;
+  line-height:1.55;
+  margin:3px 0 14px;
+}
+#stampsView .stamp-progress {
+  height:7px;
+  margin:7px 0 10px;
+  border:1px solid rgba(255,255,255,.09);
+  background:#121923;
+}
+#stampsView .stamp-progress span {
+  background:linear-gradient(90deg,#b04c57 0%,#e8c68a 100%);
+  box-shadow:0 0 12px rgba(232,198,138,.14);
+}
+#stampsView .stamp-meta {
+  color:var(--stp-muted);
+  font-size:.76rem;
+  line-height:1.5;
+  margin-bottom:13px;
+}
+#stampsView .stamp-meta strong {color:var(--stp-gold);}
+#stampsView .stamp-card .badges {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:0 0 16px;
+}
+#stampsView .stamp-card .badge {
+  padding:5px 9px;
+  border-radius:999px;
+  border:1px solid rgba(217,192,151,.20);
+  color:#e5e4df;
+  background:rgba(255,255,255,.055);
+  font-size:.68rem;
+}
+#stampsView .stamp-guide-card > p.microcopy {margin-top:auto;padding-bottom:16px;}
+#stampsView .status-strip {
+  gap:9px;
+  margin-top:18px;
+}
+#stampsView .status-strip > div {
+  min-width:0;
+  border-radius:16px;
+  border:1px solid rgba(232,198,138,.20);
+  background:linear-gradient(145deg,rgba(37,45,57,.90),rgba(22,32,43,.91));
+}
+#stampsView .status-strip strong {color:var(--stp-gold);font-variant-numeric:tabular-nums;}
+#stampsView .status-strip span {color:#d3d7dd;}
+
+/* Detalhes: vitrine de coleção com arte sem recorte e controles legíveis. */
+#eventDetail:has(.stamp-detail-v2) {min-width:0;}
+#eventDetail .stamp-detail-v2 {min-width:0;overflow-wrap:anywhere;}
+#eventDetail .stamp-detail-v2 > .eyebrow {color:var(--stp-gold);letter-spacing:.11em;}
+#eventDetail .stamp-detail-v2 > h2 {
+  font-size:clamp(1.55rem,4vw,2.25rem);
+  line-height:1.14;
+  letter-spacing:-.035em;
+  margin:8px 0 10px;
+}
+#eventDetail .stamp-detail-v2 > p {line-height:1.6;}
+#eventDetail .stamp-rally-cover-v2 {
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:420px;
+  object-fit:contain !important;
+  border:1px solid rgba(228,191,128,.20);
+  border-radius:18px;
+  background:linear-gradient(145deg,#252a36,#151e2b);
+}
+#eventDetail .stamp-dashboard-v2 {gap:9px;}
+#eventDetail .stamp-dashboard-v2 > div {
+  min-width:0;
+  padding:13px 8px;
+  border:1px solid rgba(232,198,138,.25);
+  border-radius:15px;
+  background:linear-gradient(145deg,rgba(53,57,67,.42),rgba(25,35,46,.64));
+}
+#eventDetail .stamp-dashboard-v2 strong {
+  color:var(--stp-gold);
+  font-variant-numeric:tabular-nums;
+}
+#eventDetail .stamp-dashboard-v2 span {line-height:1.35;color:var(--stp-muted);}
+#eventDetail .stamp-route-panel-v2,
+#eventDetail .stamp-copy-list-v3,
+#eventDetail .stamp-gallery-section-v2 {
+  min-width:0;
+  border:1px solid rgba(232,198,138,.23);
+  border-top:2px solid rgba(232,198,138,.5);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 96% -4%,rgba(172,73,85,.11),transparent 35%),
+    linear-gradient(145deg,rgba(38,46,60,.86),rgba(18,30,43,.88));
+  box-shadow:0 10px 24px rgba(0,0,0,.11);
+}
+#eventDetail :is(.stamp-route-title-v2,.stamp-section-head-v2) .eyebrow {
+  color:var(--stp-gold);letter-spacing:.1em;
+}
+#eventDetail .stamp-route-title-v2 > strong,
+#eventDetail .stamp-visible-count-v2 {
+  background:rgba(232,198,138,.09);
+  color:var(--stp-gold);
+  border:1px solid rgba(232,198,138,.29);
+}
+#eventDetail .stamp-active-art-v2 {
+  background:radial-gradient(circle at center,#3c4351,#222c3a);
+  border:1px solid rgba(232,198,138,.19);
+}
+#eventDetail .stamp-active-art-v2 img,
+#eventDetail .stamp-tile-art-v2 img {
+  object-fit:contain !important; /* Originais oficiais sempre completos. */
+  object-position:center;
+}
+#eventDetail .stamp-tile-v2 {
+  border-radius:16px;
+  border:1px solid rgba(219,196,156,.25);
+  background:linear-gradient(155deg,#273240,#1c2733);
+  box-shadow:inset 0 1px rgba(255,255,255,.06);
+}
+#eventDetail .stamp-tile-v2.is-active {
+  border-color:var(--stp-gold);
+  box-shadow:0 0 0 2px rgba(232,198,138,.20);
+}
+#eventDetail .stamp-tile-v2.is-done {opacity:1;}
+#eventDetail .stamp-tile-v2.is-done .stamp-tile-art-v2::after {
+  background:rgba(12,24,31,.14);
+}
+#eventDetail .stamp-tile-status-v2 {
+  color:#f8e4b6;
+  border:1px solid rgba(232,198,138,.45);
+  background:rgba(22,28,35,.87);
+}
+#eventDetail .stamp-tile-v2.is-done .stamp-tile-status-v2 {
+  color:#fff;background:#236b56;border-color:#81c0a7;
+}
+#eventDetail .stamp-tile-copy-v2 {gap:4px;padding:10px;}
+#eventDetail .stamp-tile-copy-v2 strong {color:#f6f2eb;font-size:.76rem;}
+#eventDetail .stamp-tile-copy-v2 small {color:#c7cdd5;}
+#eventDetail .stamp-tile-copy-v2 span {color:#e5c58d;}
+#eventDetail .stamp-filterbar-v2 :is(input,select),
+#eventDetail .stamp-copy-list-v3 :is(select,textarea),
+#eventDetail .stamp-prefecture-picker select {
+  min-width:0;
+  border:1px solid rgba(232,198,138,.29);
+  background:#1a2632;
+  color:#f4f1eb;
+}
+#eventDetail .stamp-filterchips-v2 button {
+  min-height:42px;
+  color:#e0e4e8;
+  border:1px solid rgba(216,191,146,.27);
+  background:rgba(255,255,255,.045);
+}
+#eventDetail .stamp-filterchips-v2 button.active {
+  color:#171e29;
+  border-color:#edd4a6;
+  background:#e8c68a;
+}
+#eventDetail .stamp-copy-list-v3 textarea {font-variant-numeric:tabular-nums;}
+#eventDetail .pokelid-place-copy {
+  border-color:rgba(232,198,138,.39);
+  background:rgba(232,198,138,.07);
+}
+#eventDetail .pokelid-place-copy code {color:#f2dbb1;}
+#eventDetail .stamp-active-copy-v2 :is(h3,p,small) {overflow-wrap:anywhere;}
+#eventDetail .stamp-regional-spotlight {
+  border-color:rgba(232,198,138,.4);
+  background:linear-gradient(125deg,#30303d,#202a38);
+}
+#eventDetail .stamp-regional-spotlight h3 {color:#f6e3bd;}
+
+@media(max-width:600px) {
+  #stampsView .stamp-list {grid-template-columns:minmax(0,1fr);}
+  #stampsView .stamp-card {padding:18px;}
+  #stampsView .stamp-card::before {width:150px;height:150px;}
+  #eventDetail .stamp-dashboard-v2 {gap:6px;}
+  #eventDetail .stamp-dashboard-v2 > div {padding:11px 5px;}
+  #eventDetail .stamp-dashboard-v2 strong {font-size:1rem;}
+  #eventDetail .stamp-dashboard-v2 span {font-size:.64rem;}
+  #eventDetail .stamp-gallery-v2 {grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+  #eventDetail .stamp-route-panel-v2,
+  #eventDetail .stamp-copy-list-v3,
+  #eventDetail .stamp-gallery-section-v2 {padding:14px;}
+  #eventDetail .stamp-active-stop-v2 {grid-template-columns:96px minmax(0,1fr);gap:11px;}
+  #eventDetail .stamp-active-copy-v2 .action-row {flex-wrap:wrap;}
+  #eventDetail .stamp-active-copy-v2 .action-row a {flex:1 1 120px;}
+  #eventDetail .stamp-route-actions-v2 .action-btn {min-height:44px;}
+}
+@media(max-width:360px) {
+  #stampsView .status-strip {gap:5px;}
+  #eventDetail .stamp-active-stop-v2 {grid-template-columns:minmax(0,1fr);}
+  #eventDetail .stamp-active-art-v2 {max-width:170px;}
+  #eventDetail .stamp-tile-copy-v2 {padding:8px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  #stampsView .stamp-card,
+  #eventDetail .stamp-tile-v2 {transition:none!important;animation:none!important;}
+}
+
+/* Modo claro preserva contraste de entrada e das artes; os controles continuam legíveis. */
+html[data-theme="light"] #eventDetail .stamp-route-panel-v2,
+html[data-theme="light"] #eventDetail .stamp-copy-list-v3,
+html[data-theme="light"] #eventDetail .stamp-gallery-section-v2 {
+  background:linear-gradient(145deg,#f5f0e8,#e7ecf1);
+  border-color:rgba(134,103,54,.29);
+}
+html[data-theme="light"] #eventDetail .stamp-dashboard-v2 > div {
+  background:#f7f2e9;
+  border-color:#c9b896;
+}
+html[data-theme="light"] #eventDetail .stamp-tile-v2 {
+  background:#fbf8f2;
+  border-color:#c5b496;
+}
+html[data-theme="light"] #eventDetail .stamp-tile-copy-v2 strong {color:#232d39;}
+html[data-theme="light"] #eventDetail .stamp-tile-copy-v2 small {color:#52606e;}
+html[data-theme="light"] #eventDetail .stamp-tile-copy-v2 span {color:#76541d;}
+html[data-theme="light"] #eventDetail .stamp-filterbar-v2 :is(input,select),
+html[data-theme="light"] #eventDetail .stamp-copy-list-v3 :is(select,textarea),
+html[data-theme="light"] #eventDetail .stamp-prefecture-picker select {
+  background:#fffdf9;color:#1e2833;border-color:#b5a889;
+}
+html[data-theme="light"] #eventDetail .stamp-filterchips-v2 button {background:#fffdf9;color:#273442;}
+html[data-theme="light"] #eventDetail .stamp-filterchips-v2 button.active {background:#e8c68a;color:#1c2631;}
+html[data-theme="light"] #eventDetail .pokelid-place-copy code {color:#5b451f;}
