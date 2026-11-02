@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261101-trustcopyall5';
+const CACHE = 'spidey-app-20261101-agenda1';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -164,6 +164,8 @@ const CORE = [
   './world-route-preview.js',
   './assets/events/official/pokexciting-taipei-2026.jpg',
   './player-ui.js',
+  './calendar-premium-20261101.js',
+  './calendar-premium-20261101.css',
   './player-ui.css',
   './preview-art.js',
   './assets/events/premium/showcase-tuesday-20261006-approved-v1.png',
