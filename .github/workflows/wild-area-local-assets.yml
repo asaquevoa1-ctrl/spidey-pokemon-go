@@ -1,0 +1,57 @@
+name: Spidey - importar imagens Wild Area ao app
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wild-area-local-assets.yml'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: spidey-wild-area-media-import
+  cancel-in-progress: false
+
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar decodificador de imagens
+        run: python -m pip install --disable-pip-version-check 'pillow>=11,<13'
+      - name: Baixar, decodificar e validar TODAS as imagens oficiais
+        run: python scripts/import_wild_area_official_images.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validar o guia e o PWA antes de mudar a main
+        run: |
+          node --test tests/wild-area-mexico-premium-20261102.test.cjs tests/wild-mexico-broken-images-20261102.test.cjs
+          node scripts/check_editorial_integrity.cjs
+          git diff --check
+      - name: Gravar os arquivos locais na main
+        run: |
+          git config user.name "spidey-wild-area-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spidey-app/index.html spidey-app/wild-area-mexico-20261102.js spidey-app/sw.js \
+            spidey-app/assets/events/wild-area/official-local-20261102/ \
+            tests/wild-area-mexico-premium-20261102.test.cjs \
+            tests/wild-mexico-broken-images-20261102.test.cjs SPIDEY_DECISIONS_CURRENT.md
+          git diff --cached --quiet && exit 0
+          git commit -m "fix(wild area): publicar cinco imagens oficiais locais para Samsung"
+          git -c pull.rebase=true pull origin main
+          git push origin HEAD:main
+      - name: Solicitar publicação GitHub Pages da main atual
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run spidey-pages.yml --ref main
