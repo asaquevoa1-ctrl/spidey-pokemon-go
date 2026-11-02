@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', 'scripts/qa_wild_cdmx_public_pages.mjs', '.github/workflows/spidey-pages.yml']
   pull_request:
-    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', '.github/workflows/spidey-pages.yml']
+    paths: ['spidey-app/**', 'config/spidey-web-analytics.json', 'config/spidey-art-date-scopes.json', 'scripts/check_editorial_integrity.cjs', 'scripts/build_spidey_pages.py', 'scripts/test_spidey_pages.py', 'tests/web-analytics.test.cjs', 'tests/national-trust-*.test.cjs', 'tests/spidey-pages-latest-release-20261101.test.cjs', 'scripts/qa_trust_27_public_pages.mjs', 'scripts/qa_wild_cdmx_public_pages.mjs', '.github/workflows/spidey-pages.yml']
   workflow_run:
     workflows: ['Spidey Weekly - resumo semanal', 'Spidey - Caçador feed parceiro']
     types: [completed]
@@ -87,3 +87,5 @@ jobs:
       # entrega o botão Copiar todas e as 27 coordenadas.
       - name: Confirmar no endereço público as 27 coordenadas do Trust
         run: node scripts/qa_trust_27_public_pages.mjs
+      - name: Confirmar no endereço público as 5 imagens oficiais da Wild Area
+        run: node scripts/qa_wild_cdmx_public_pages.mjs
