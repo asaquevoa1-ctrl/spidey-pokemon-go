@@ -41,7 +41,17 @@
   }
   function events(){try{return Array.isArray(state.events)?state.events:[]}catch(_){return []}}
   function choose(key,mode=ui.filter){
-    return window.SpideyCalendarPremium?.choose?.(events(),key,mode)||[];
+    const selected=window.SpideyCalendarPremium?.choose?.(events(),key,mode)||[];
+    // Respeita as mesmas regras do calendário original (oculto/só no início).
+    return selected.filter(event=>{
+      const mode=event.calendar?.mode||(event.calendar?.enabled===false?'hidden':'span');
+      if(mode==='hidden')return false;
+      if(mode!=='start')return true;
+      const s=event.schedule||{};
+      if(s.precision==='date')return s.start_date===key;
+      const start=new Date(s.start_brazil||s.start_local||s.sessions?.[0]?.start||'');
+      return Number.isFinite(+start)&&dateKey(start)===key;
+    });
   }
   function eventTime(event,key){
     const s=event.schedule||{};
