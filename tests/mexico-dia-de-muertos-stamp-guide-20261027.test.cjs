@@ -36,7 +36,8 @@ test('Human editorial guide offers reported references without fake 0/0 progress
  const app=read('spidey-app/app.js'),s=read('spidey-app/stamps-v2.js');
  const sw=read('spidey-app/sw.js');
  assert.ok(app.includes("rally.collection_type === 'event_guide'"));
- assert.ok(app.includes("return;\n    }\n    const progress = getStampProgress(rally);"));
+ assert.ok(app.includes("return;\n    }\n    const stops = rally.stops || [];"));
+ assert.doesNotMatch(app,/getStampProgress|rallyProgressText|stamp-toggle/);
  assert.ok(s.includes("rally.collection_type === 'event_guide'"));
  assert.ok(s.includes("showAppDialog();\n      return;"));
  assert.ok(s.includes('Referências do mapa da comunidade'));
