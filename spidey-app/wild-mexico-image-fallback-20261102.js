@@ -38,6 +38,7 @@
     }
     img.dataset.wildFallback='done';
     img.hidden=true;
+    img.style.setProperty('display','none','important');
     img.removeAttribute('src');
     if(parent.classList.contains('wild-mx-roster-visual')){
       const tile=parent.closest('.wild-mx-roster-tile');
