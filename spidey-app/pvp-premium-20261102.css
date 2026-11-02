@@ -197,3 +197,10 @@ html[data-theme="light"] #pvpView :is(.pvp-moves,.pvp-score span,.pvp-team-empty
 html[data-theme="light"] #pvpView .pvp-type {color:#27323c;background:#fff9ed;}
 html[data-theme="light"] #pvpView .pvp-tools :is(input,select) {color:#1b2836;background:#fffdf8;border-color:#c8b493;}
 html[data-theme="light"] #eventDetail .pvp-detail-moves li {background:#f9f5ed;border-color:#cab997;}
+
+html[data-theme="light"] #pvpView .pvp-rank,
+html[data-theme="light"] #pvpView .pvp-score strong,
+html[data-theme="light"] #pvpView .pvp-count {color:#79531d;}
+html[data-theme="light"] #pvpView .pvp-team-button:not([aria-pressed="true"]) {color:#79531d;background:#fff7e8;}
+html[data-theme="light"] #eventDetail .pvp-detail-score {color:#79531d;}
+
