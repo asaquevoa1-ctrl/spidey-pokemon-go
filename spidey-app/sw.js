@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh';
+const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh-stampmuseum1';
 const CORE = [
   './rare-candy-alert-20261102.js',
   './rare-candy-alert-20261102.css',
@@ -22,6 +22,7 @@ const CORE = [
   './mobile-side-menu.js',
   './fly-globe-motion.css',
   './fly-premium-20261102.css',
+  './stamps-premium-20261102.css',
   './fly-premium-20261102.js',
   './fly-globe-motion.js',
   './data/fly-earth-land-110m.json',
