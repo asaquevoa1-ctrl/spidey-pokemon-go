@@ -46,6 +46,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Conferir sintaxe do verificador Wild Area
+        run: node --check scripts/qa_wild_cdmx_public_pages.mjs
       - name: Conferir limites da medição de acessos
         run: node --test tests/web-analytics.test.cjs
       - name: Testar lista e cópia das 27 coordenadas antes de publicar
