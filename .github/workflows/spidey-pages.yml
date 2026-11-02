@@ -48,6 +48,8 @@ jobs:
           node-version: '24'
       - name: Conferir limites da medição de acessos
         run: node --test tests/web-analytics.test.cjs
+      - name: Testar lista e cópia das 27 coordenadas antes de publicar
+        run: node --test tests/national-trust-27-places.test.cjs tests/national-trust-event-coordinates-20261101.test.cjs tests/spidey-pages-latest-release-20261101.test.cjs
       - name: Bloquear arte datada errada e texto interno antes de publicar
         run: node scripts/check_editorial_integrity.cjs
       - name: Preparar somente os arquivos públicos
