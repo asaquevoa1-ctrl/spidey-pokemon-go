@@ -13,7 +13,7 @@ const svg=read('assets/events/wild-area/go-safari-ball-fallback-20261102.svg');
 test('Tratamento das imagens quebradas é carregado na aba',()=>{
   assert.match(html,/wild-mexico-image-fallback-20261102\.js\?v=20261102-wildfix1/);
   assert.match(html,/wild-mexico-image-fallback-20261102\.css\?v=20261102-wildfix1/);
-  assert.match(sw,/spidey-app-20261102-wildfix1/);
+  assert.match(sw,/spidey-app-20261102-local1/);
   assert.match(sw,/\.\/wild-mexico-image-fallback-20261102\.js/);
   assert.match(sw,/\.\/wild-mexico-image-fallback-20261102\.css/);
 });

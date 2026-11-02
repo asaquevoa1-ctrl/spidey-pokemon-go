@@ -3,7 +3,7 @@
   'use strict';
   const EVENT_ID='2026-11-go-wild-area-mexico-city';
   // Arte principal oficial 2026; pôster antigo preservado no catálogo e no histórico.
-  const POSTER='https://lh3.googleusercontent.com/EwKELOgmCLzqD8Ev1ZIa7KlcPlKkMexajZTROxHvRSSP4ubiYIfR6jzTJTOZglGPexOdOasxoUPVKOM5yyXbRxS5420m_iaXINV4VvyPsV0=s0-e365';
+  const POSTER='assets/events/wild-area/official-local-20261102/machamp-jacket.webp';
   const END=Date.parse('2026-11-08T21:00:00-03:00');
   const prefersReduced=()=>window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
   function openView(id) {

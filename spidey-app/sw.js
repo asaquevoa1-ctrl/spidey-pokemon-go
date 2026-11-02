@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-wildfix1';
+const CACHE = 'spidey-app-20261102-local1';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -174,6 +174,11 @@ const CORE = [
   './wild-mexico-image-fallback-20261102.css',
   './wild-mexico-image-fallback-20261102.js',
   './assets/events/wild-area/go-safari-ball-fallback-20261102.svg',
+  './assets/events/wild-area/official-local-20261102/machamp-jacket.webp',
+  './assets/events/wild-area/official-local-20261102/safari-ball.webp',
+  './assets/events/wild-area/official-local-20261102/solid-as-steel.webp',
+  './assets/events/wild-area/official-local-20261102/daring-as-dragons.webp',
+  './assets/events/wild-area/official-local-20261102/mighty-latias-latios.webp',
   './wild-area-mexico-20261102.js',
   './player-ui.css',
   './preview-art.js',
@@ -249,7 +254,12 @@ const INSTALL_CORE = [
   './index.html',
   ...CORE.filter(path => /\.(?:js|css|json|webmanifest)$/.test(path)),
   // Este único SVG é pequeno e precisa funcionar mesmo sem imagens externas.
-  './assets/events/wild-area/go-safari-ball-fallback-20261102.svg'
+  './assets/events/wild-area/go-safari-ball-fallback-20261102.svg',
+  './assets/events/wild-area/official-local-20261102/machamp-jacket.webp',
+  './assets/events/wild-area/official-local-20261102/safari-ball.webp',
+  './assets/events/wild-area/official-local-20261102/solid-as-steel.webp',
+  './assets/events/wild-area/official-local-20261102/daring-as-dragons.webp',
+  './assets/events/wild-area/official-local-20261102/mighty-latias-latios.webp'
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then(async cache => {

@@ -61,15 +61,15 @@ test('Imagem oficial Machamp e Safari Ball reais; artes anteriores preservadas n
   assert.match(sw,/assets\/events\/premium\/wild-area-mexico-city-2026-approved-v1\.png/);
   assert.match(html,/wild-mx-machamp-spotlight/);
   assert.match(html,/Machamp com jaqueta e capa modernas, quatro braços/);
-  assert.match(html,/lh3\.googleusercontent\.com\/EwKELOgm/);
-  assert.match(html,/www\.pokemon\.com\/static-assets\/content-assets\/cms2\/img\/video-games/);
+  assert.match(html,/official-local-20261102\/machamp-jacket\.webp/);
+  assert.match(html,/official-local-20261102\/safari-ball\.webp/);
   assert.doesNotMatch(html,/wild-mx-safari-stamp/);
   assert.match(html,/Bola Safári GO oficial, camuflagem verde e marrom/);
   assert.match(art,/wild-mx-real-safari img/);
   assert.match(art,/object-fit:contain!important/);
-  assert.match(sw,/spidey-app-20261102-wildfix1/);
+  assert.match(sw,/spidey-app-20261102-local1/);
   assert.match(sw,/\.\/wild-area-mexico-art-20261102\.css/);
-  assert.match(html,/wild-area-mexico-20261102\.js\?v=20261102-wildart1/);
+  assert.match(html,/wild-area-mexico-20261102\.js\?v=20261102-local1/);
   assert.match(html,/wild-area-mexico-art-20261102\.css\?v=20261102-wildart1/);
 });
 test('Tres paineis editoriais com habitats e spawns oficiais, sem confundir Incenso',()=>{

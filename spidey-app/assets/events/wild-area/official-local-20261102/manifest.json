@@ -1,0 +1,47 @@
+{
+  "machamp": {
+    "path": "assets/events/wild-area/official-local-20261102/machamp-jacket.webp",
+    "source": "https://lh3.googleusercontent.com/EwKELOgmCLzqD8Ev1ZIa7KlcPlKkMexajZTROxHvRSSP4ubiYIfR6jzTJTOZglGPexOdOasxoUPVKOM5yyXbRxS5420m_iaXINV4VvyPsV0=s0-e365",
+    "sha256": "ab1c307798b78e92256a7911bd0953da50d77a325f7de77584ec6c46c9b03f53",
+    "pixels": [
+      920,
+      518
+    ]
+  },
+  "safari": {
+    "path": "assets/events/wild-area/official-local-20261102/safari-ball.webp",
+    "source": "https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/pokemon-go/2025/11/03/inline/03.png",
+    "sha256": "97a21ea82eb4dc95886ad79439ff23e42f37840157be2a87b98cee6e916f3b13",
+    "pixels": [
+      578,
+      578
+    ]
+  },
+  "steel": {
+    "path": "assets/events/wild-area/official-local-20261102/solid-as-steel.webp",
+    "source": "https://lh3.googleusercontent.com/Do3Z7F38dCYS_PaiDBDa1AAAUVSYWzaOxmPNTuy4oRqDSF5zo8jSYoKA-W4bUQN0F7gFAsYk3qXiB8fYDBFcwo2R8ymFsFtDVplXdHC-6SPG=s0-e365",
+    "sha256": "a8669fe5bd61c6d3534cef522ee88429157b331d152bedaa2cae71db66f7af0c",
+    "pixels": [
+      1400,
+      724
+    ]
+  },
+  "dragon": {
+    "path": "assets/events/wild-area/official-local-20261102/daring-as-dragons.webp",
+    "source": "https://lh3.googleusercontent.com/5rQaHUrToRsfP6PBUy0eajQUG5TO2nDUFPo5BT4BFo3ee_owtoLfCB4aZi8EUdK0J3-HqM7-98SVbujF4z_tsguLMK_GrHl_InRklcA83fQ=s0-e365",
+    "sha256": "6a0493839604ee1c1445b5453ca3927d1c6c6369dc96302a5308bec1c16d95ac",
+    "pixels": [
+      1080,
+      1080
+    ]
+  },
+  "mighty": {
+    "path": "assets/events/wild-area/official-local-20261102/mighty-latias-latios.webp",
+    "source": "https://lh3.googleusercontent.com/aBzko1zRt10EXht23yahoCr3KrC3NaCO1tBYMDX5IwHkonKWOfAaiiXX6VDlSAUE3ohleRSKa1JRKOpL7OXwpj2DoIs5jq2BOD-X5VkRugl6=s0-e365",
+    "sha256": "b9f500823e831ba38580f0fd36ad550c2e2cfdf6a403ff278e189f97f4df881a",
+    "pixels": [
+      1024,
+      512
+    ]
+  }
+}
