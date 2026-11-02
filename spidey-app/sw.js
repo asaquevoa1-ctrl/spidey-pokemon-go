@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-fly-clean1';
+const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh';
 const CORE = [
   './rare-candy-alert-20261102.js',
   './rare-candy-alert-20261102.css',
@@ -277,11 +277,22 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => key.startsWith('spidey-app-') && key !== CACHE).map((key) => caches.delete(key))))
-      .then(() => self.clients.claim())
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    const outdated = keys.filter((key) => key.startsWith('spidey-app-') && key !== CACHE);
+    await Promise.all(outdated.map((key) => caches.delete(key)));
+    await self.clients.claim();
+
+    // Uma aba/PWA já aberta mantém o DOM antigo mesmo após o novo SW assumir.
+    // Atualizar uma vez as janelas existentes, apenas em upgrades (não na primeira instalação).
+    // Preservar a URL para não alterar o destino e não tocar nos dados de coordenadas.
+    if (!outdated.length) return;
+    const scope = new URL('./', self.location.href).href;
+    const windows = await self.clients.matchAll({type: 'window', includeUncontrolled: true});
+    await Promise.allSettled(windows
+      .filter((client) => client.url.startsWith(scope))
+      .map((client) => client.navigate(client.url)));
+  })());
 });
 
 self.addEventListener('fetch', (event) => {
