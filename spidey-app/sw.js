@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-weekly1';
+const CACHE = 'spidey-app-20261102-wildmexico1';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -169,6 +169,8 @@ const CORE = [
   './month-premium-20261102.js',
   './month-premium-20261102.css',
   './weekly-premium-finish-20261102.css',
+  './wild-area-mexico-20261102.css',
+  './wild-area-mexico-20261102.js',
   './player-ui.css',
   './preview-art.js',
   './assets/events/premium/showcase-tuesday-20261006-approved-v1.png',
