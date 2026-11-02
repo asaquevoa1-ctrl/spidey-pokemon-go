@@ -54,11 +54,11 @@ test('today follows Arizona through Brazilian midnight and ends only when the lo
   assert.equal(after.dated.length + after.active.length + after.upcoming.length, 0);
 });
 
-test('the weekly card keeps a date and unknown hours, without midnight or kickoff masquerading as the activity time', () => {
+test('the weekly card keeps the real day without repeating unknown hours or inventing kickoff time', () => {
   const {context} = setup();
   const html = context.weeklyItemCard({id: event.id, title: event.title});
-  assert.match(html, /11\/10\/2026.*horário do evento a confirmar/);
-  assert.match(html, /Horário a confirmar/);
+  assert.match(html, /11 de out/);
+  assert.doesNotMatch(html, /Horário a confirmar|horário do evento a confirmar/);
   assert.ok(!html.includes('00:00') && !html.includes('17:25'));
 });
 
