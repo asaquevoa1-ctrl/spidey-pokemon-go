@@ -62,24 +62,12 @@
     r.querySelectorAll('.world-event-card').forEach(card=>card.remove());
     r.insertAdjacentHTML('beforeend',worldEvents.filter(event=>visibleWorldEvent(event)).map(eventCard).join(''));
   }
+  // A rota FLY permanece global; eventos presenciais ficam na guia apropriada.
+  // Remove eventuais cartões legados da árvore sem duplicar conteúdo no FLY.
   function mountLocalFly() {
-    const fly=document.getElementById('flyView');if(!fly)return;
-    const worldRoute=fly.querySelector(':scope > .section');
-    if(!worldRoute)return; // Never place local-only cards before the worldwide FLY controls.
-    let regionals=fly.querySelector('#flyRegionalEvents');
-    if(!regionals){
-      regionals=document.createElement('details');
-      regionals.id='flyRegionalEvents';
-      regionals.className='fly-regional-events';
-      regionals.innerHTML='<summary>Eventos presenciais por região</summary><div class="fly-regional-list"></div>';
-      worldRoute.insertAdjacentElement('afterend',regionals);
-    }
-    const list=regionals.querySelector('.fly-regional-list');
-    const available=worldEvents.filter(event=>visibleWorldEvent(event));
-    const markup=available.map(eventCard).join('');
-    if(list.innerHTML!==markup)list.innerHTML=markup;
-    regionals.hidden=available.length===0;
-    // Remove legacy cards injected immediately after the FLY title on older builds.
+    const fly=document.getElementById('flyView');
+    if(!fly)return;
+    fly.querySelector('#flyRegionalEvents')?.remove();
     fly.querySelectorAll(':scope > .world-event-card[data-world-event]').forEach(card=>card.remove());
   }
   function mapUrl(location) {

@@ -57,11 +57,11 @@ test('Original LendáriosBrasil/FlyGPS/PokemonTrail/Fantasma credits are stored 
   assert.match(constitution,/NÃO exibirá coluna\/conversão de horário de Portugal/);
   assert.ok(constitution.includes('lista histórica fornecida pelo projeto'));
 
+  // Origem e créditos permanecem preservados integralmente no registro histórico,
+  // sem ocupar a tela de coordenadas do aplicativo.
   const ui=read('fly-v1.js');
-  assert.ok(ui.includes('id="flySourceCredits"'));
-  assert.ok(ui.includes('source.credits'));
-  assert.ok(ui.includes('raw.textContent=source.credits'));
-  assert.ok(read('fly-v1.css').includes('.fly-original-credits'));
+  assert.ok(!ui.includes('id="flySourceCredits"'));
+  assert.ok(!ui.includes('raw.textContent=source.credits'));
   assert.ok(read('fly-core.js').includes('SPIDEY_FLY_REFERENCE_SOURCE=d.source_list_2023'));
 });
 test('22 October 2026 Morelull route uses CURRENT local DST, not November 2023 Brasília hours',()=>{
