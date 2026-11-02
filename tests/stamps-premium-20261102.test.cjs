@@ -45,6 +45,9 @@ test('Artes oficiais das tampas são exibidas completas, sem substituir dados',(
 });
 test('Cartões permanecem clicáveis e o progresso da coleção é preservado',()=>{
   assert.match(app,/card\.addEventListener\('click',\s*\(\)\s*=>\s*openStampRally\(rally\)\)/);
+  assert.match(app,/card\.setAttribute\('role','button'\)/);
+  assert.match(app,/e\.key === ' ' /);
+  assert.match(app,/ev\.key===' '/);
   assert.match(stamp,/saveStampProgress\(rally, progress\)/);
   assert.match(stamp,/gallery\.addEventListener\('click'/);
   assert.match(stamp,/function filteredStops\(\)/);
