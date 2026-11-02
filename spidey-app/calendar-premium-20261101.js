@@ -72,11 +72,27 @@
   function choose(events,key,mode='all'){
     const items=(Array.isArray(events)?events:[]).filter(e=>covers(e,key)&&
       (mode==='local'?isRegional(e):mode==='raids'?isRaid(e):true));
-    const order=e=>{const r=range(e);return r.dates?key+'T23:59:00Z':r.sessions?.[0]?.start||r.start;};
-    // Arte aprovada primeiro entre eventos com o mesmo início; não inventar arte.
-    return items.sort((a,b)=>+new Date(order(a))- +new Date(order(b))||
-      Number(Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[b.id]))-Number(Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[a.id]))||
-      String(a.title).localeCompare(String(b.title),'pt-BR'));
+    // Primeiro os eventos que começam no dia; depois os que já estavam em andamento.
+    // Para sessões recorrentes vale o início da sessão do dia escolhido.
+    const byEvent=new Map(items.map(event=>{
+      const r=range(event);
+      const session=r.sessions?.find(s=>
+        brazilKey(s.start)<=key&&key<=brazilKey(new Date(s.end.getTime()-1)));
+      const start=r.dates?dayAt(r.first):(session?.start||r.sessions?.[0]?.start||r.start);
+      return [event,{
+        startsToday:(r.dates?r.first:brazilKey(start))===key,
+        moment:Number.isFinite(+start)?+start:0
+      }];
+    }));
+    return items.sort((a,b)=>{
+      const x=byEvent.get(a),y=byEvent.get(b);
+      if(x.startsToday!==y.startsToday)return x.startsToday?-1:1;
+      const timing=x.startsToday?x.moment-y.moment:y.moment-x.moment;
+      return timing||
+        Number(Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[b.id]))-
+        Number(Boolean(window.SPIDEY_APPROVED_ART_MASTER?.[a.id]))||
+        String(a.title).localeCompare(String(b.title),'pt-BR');
+    });
   }
   function eventTime(e,key){
     const r=range(e);
