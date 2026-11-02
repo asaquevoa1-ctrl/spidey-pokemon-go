@@ -6,10 +6,10 @@ const base='https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/';
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const sourceIndex=readFileSync('spidey-app/index.html','utf8');
-const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json'];
+const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js'];
 const assets=new Map(sources.map(name=>[name,readFileSync('spidey-app/'+name)]));
 const versions=new Map();
-for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css']){
+for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js']){
  const escaped=name.replaceAll('.','\\.');
  const found=sourceIndex.match(new RegExp(escaped+'\\?v=[^"\\s]+'));
  assert(found,'Referência da versão ausente em index.html: '+name);
@@ -32,6 +32,13 @@ for(let attempt=1;attempt<=12;attempt++){
     const bytes=Buffer.from(await remote.arrayBuffer());
     if(hash(bytes)!==hash(source))throw Error(name+' público não corresponde ao código atual');
   }
+  const fly=assets.get('fly-v1.js').toString('utf8');
+  const world=assets.get('trust-world-v1.js').toString('utf8');
+  const sw=assets.get('sw.js').toString('utf8');
+  assert(!fly.includes('flySourceCredits')&&!fly.includes('Créditos e origem da lista mundial'));
+  assert(!world.includes("innerHTML='<summary>Eventos presenciais por região"));
+  assert(world.includes("fly.querySelector('#flyRegionalEvents')?.remove()"));
+  assert(sw.includes('fly-clean2-autorefresh')&&sw.includes('client.navigate(client.url)'));
   const trust=assets.get('national-trust-v1.js').toString('utf8');
   const app=assets.get('app.js').toString('utf8');
   assert(trust.includes('Copiar todas as 27')&&trust.includes('allCoordinatesText'));
