@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261101-agenda2';
+const CACHE = 'spidey-app-20261102-month1';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -166,6 +166,8 @@ const CORE = [
   './player-ui.js',
   './calendar-premium-20261101.js',
   './calendar-premium-20261101.css',
+  './month-premium-20261102.js',
+  './month-premium-20261102.css',
   './player-ui.css',
   './preview-art.js',
   './assets/events/premium/showcase-tuesday-20261006-approved-v1.png',
