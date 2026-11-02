@@ -113,7 +113,7 @@ function weeklyItemCard(item, compact = false) {
   const schedule = weeklySchedule(item);
   const time = weeklyTimeLabel(event || item);
   const exactTime = time !== 'Horário a confirmar';
-  const tags = (item.tags || []).slice(0, compact ? 1 : 2);
+  const tags = compact ? [] : (item.tags || []).slice(0, 2);
   const visual = art ? `<img src="${weeklyEsc(art)}" alt="${weeklyEsc(item.title || 'Evento')}" loading="lazy" onerror="this.hidden=true">`
     : official ? `<figure class="weekly-official-media"><img src="${weeklyEsc(official.file)}?v=${weeklyEsc(official.sha256.slice(0,12))}" width="${official.width}" height="${official.height}" alt="${weeklyEsc(official.alt)}" loading="lazy"><figcaption>Imagem do anúncio oficial · Pokémon GO</figcaption></figure>`
     : `<span class="weekly-date" aria-hidden="true">${schedule?.day || '—'}<small>${schedule?.month || ''}</small></span>`;
