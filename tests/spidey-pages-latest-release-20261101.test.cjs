@@ -25,6 +25,9 @@ test('GitHub Pages favors newest main version and verifies ACTUAL public deploym
  for(const file of ['app.js','national-trust-v1.js','national-trust-v1.css','data/events.json']) {
    assert(checker.includes("'"+file+"'"),file);
  }
+ assert(checker.includes("const packageApp='pages-public/spidey-app/';"),'Hash must compare BUILT files, not source SW');
+ assert(yml.includes('Preparar pacote identico para auditoria publica'));
+ assert(yml.indexOf('Preparar pacote identico para auditoria publica')<yml.indexOf('node scripts/qa_trust_27_public_pages.mjs'));
  assert.match(checker,/createHash\('sha256'\)/);
  assert.match(checker,/hash\(bytes\)!==hash\(source\)/);
  assert.match(checker,/ntEventCopyAll/);
