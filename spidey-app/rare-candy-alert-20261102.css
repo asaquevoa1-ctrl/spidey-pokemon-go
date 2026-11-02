@@ -1,0 +1,38 @@
+/* Alerta editorial Spidey: grafite/azul-petróleo, vermelho contido e dourado. */
+.spidey-candy-alert{position:relative;overflow:hidden;isolation:isolate;min-width:0;
+  padding:clamp(17px,3vw,27px);border-radius:20px;
+  border:1px solid rgba(224,186,133,.36);
+  background:radial-gradient(ellipse at 100% 0,rgba(153,58,60,.20),transparent 58%),
+    linear-gradient(135deg,#213545,#111f2c 68%,#101b27);
+  box-shadow:0 16px 30px rgba(0,0,0,.16);color:#f7f0e7}
+.spidey-candy-alert::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;
+  background:linear-gradient(#d1a765,#b43f4b)}
+.spidey-candy-signal{display:flex;align-items:center;gap:9px;
+  font-size:.67rem;font-weight:850;line-height:1.4;letter-spacing:.12em;color:#e9c58d}
+.spidey-candy-signal>span:first-child{display:grid;place-items:center;flex:0 0 21px;
+  width:21px;height:21px;border:1px solid rgba(245,198,133,.48);border-radius:50%;
+  font-size:.78rem;font-weight:900;color:#f4d294}
+.spidey-candy-alert h2{max-width:720px;margin:11px 0 8px;
+  font-size:clamp(1.35rem,3.3vw,2rem);line-height:1.17;letter-spacing:-.035em;
+  color:#fff3e6;font-weight:850}
+.spidey-candy-alert h2 em{font-style:normal;color:#edc18a}
+.spidey-candy-alert p{max-width:750px;margin:0 0 14px;color:#c7d5df;
+  font-size:.88rem;line-height:1.55}
+.spidey-candy-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.spidey-candy-alert button,.spidey-candy-alert a{font:inherit;font-size:.8rem;font-weight:800;
+  padding:10px 14px;min-height:43px;border-radius:11px;display:inline-flex;
+  align-items:center;justify-content:center;text-decoration:none;cursor:pointer}
+.spidey-candy-alert button{color:#fff8ed;background:#8f3240;border:1px solid #ad5058}
+.spidey-candy-alert a{color:#f1d4ae;background:rgba(233,187,120,.07);
+  border:1px solid rgba(233,187,120,.34)}
+.spidey-candy-alert button:focus-visible,.spidey-candy-alert a:focus-visible{
+  outline:3px solid #f4d397;outline-offset:3px}
+.spidey-candy-alert-news{margin:0 0 16px}
+.spidey-candy-alert-home{margin:14px 0}
+.spidey-candy-alert-home h2{font-size:clamp(1.15rem,2.65vw,1.48rem)}
+.spidey-candy-alert-home p{font-size:.81rem}
+.spidey-candy-status{display:block;color:#dfbd97;font-size:.77rem}
+@media(max-width:460px){.spidey-candy-alert{padding:17px 16px}
+  .spidey-candy-actions button,.spidey-candy-actions a{flex:1 1 100%}
+  .spidey-candy-alert h2{font-size:1.4rem}}
+@media(prefers-reduced-motion:reduce){.spidey-candy-alert{scroll-behavior:auto}}
