@@ -1,0 +1,80 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const read=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8');
+const html=read('spidey-app/index.html');
+const sw=read('spidey-app/sw.js');
+const js=read('spidey-app/news-premium-20261102.js');
+const css=read('spidey-app/news-premium-20261102.css');
+const mobile=read('spidey-app/mobile-side-menu.js');
+const events=JSON.parse(read('spidey-app/data/events.json')).events;
+const oldMaster=read('spidey-app/premium-approved-master.js');
+
+test('Novidades agora tem aba real e Home consegue abrir a pagina nativa',()=>{
+  assert.match(html,/<section id="newsView" class="app-view spidey-news-view" hidden/);
+  assert.match(html,/<button class="app-tab" data-view="newsView">Novidades<\/button>/);
+  assert.match(html,/data-news-filter="all"/);
+  assert.match(html,/data-news-filter="official"/);
+  assert.match(html,/data-news-filter="community"/);
+  assert.match(mobile,/'calendarView','newsView','wildAreaMexicoView'/);
+  assert.match(read('spidey-app/player-ui.js'),/data-premium-view="newsView"/);
+  assert.match(js,/\.app-tab\[data-view=/);
+  assert.match(js,/SpideyOpenSharedEvent\?\.\(event\.id\)/);
+  assert.match(js,/spideyviewchange/);
+});
+test('Lista usa SOMENTE o catalogo existente e protege noticias/sources como dados',()=>{
+  assert.match(js,/window\.SpideyCatalog\.load\('events'\)/);
+  assert.match(js,/window\.SpideyNews\?\.build\(events,range,now\)/);
+  assert.match(js,/window\.SpideyPlayer\.image\(event,true\)/);
+  assert.match(js,/const esc=s=>/);
+  assert.match(js,/const safeUrl=s=>/);
+  assert.match(js,/data-news-detail/);
+  assert.match(js,/Fonte oficial/);
+  assert.match(js,/Fonte comunitária/);
+  assert.match(js,/45\*86400000/);
+  assert.match(js,/oficial confirmado|anúncio oficial confirmado/i);
+  assert.doesNotMatch(js,/Math\.random\(|lorem ipsum/i);
+  assert.ok(events.length>150);
+});
+test('Estilo Premium usa cartazes completos, nunca crop e funciona em celular',()=>{
+  assert.match(css,/spidey-news-feature/);
+  assert.match(css,/spidey-news-article/);
+  assert.match(css,/object-fit:contain!important/);
+  assert.doesNotMatch(css,/object-fit\s*:\s*cover/i);
+  assert.match(css,/@media\(max-width:740px\)/);
+  assert.match(css,/@media\(max-width:470px\)/);
+  assert.match(css,/focus-visible/);
+  assert.ok(oldMaster.includes('wild-area-mexico-city-2026-approved-v1.png'));
+});
+test('Calendario e pagina Novidades mantem Wild Area atual sem destacar expirados',()=>{
+  assert.match(js,/2026-11-08T21:00:00-03:00/);
+  assert.match(js,/assets\/events\/wild-area\/official-local-20261102\/machamp-jacket\.webp/);
+  assert.match(js,/now\.getTime\(\)>WILD_END/);
+  assert.match(html,/wildAreaMexicoView/);
+  assert.match(html,/id="spideyNewsFeatured"/);
+  assert.match(html,/id="spideyNewsCards"/);
+});
+test('PWA versionado e novas interfaces passam a fazer parte do instalavel',()=>{
+  assert.match(sw,/const CACHE = 'spidey-app-20261102-news1'/);
+  assert.match(sw,/\.\/news-premium-20261102\.js/);
+  assert.match(sw,/\.\/news-premium-20261102\.css/);
+  assert.match(html,/news-premium-20261102\.js\?v=20261102-news1/);
+  assert.match(html,/news-premium-20261102\.css\?v=20261102-news1/);
+});
+test('Modelo editorial real exclui evento expirado e teaser superado por fonte oficial',()=>{
+  const context={window:{},document:{readyState:'loading',addEventListener(){}},URL,Date,Intl,Map,console};
+  vm.createContext(context);
+  vm.runInContext(read('spidey-app/news-feed.js'),context);
+  vm.runInContext(js,context);
+  const now=new Date('2026-11-02T18:00:00-03:00');
+  const all=events.filter(e=>e.status==='published');
+  const groups=context.window.SpideyNewsPremium.chooseGroups(all,now);
+  assert.ok(groups.length>0,'deve haver publicacoes verificadas para novembro');
+  assert.ok(groups.some(g=>g.event.source?.confidence==='official'),'ao menos uma fonte oficial deve aparecer');
+  assert.ok(groups.every(g=>g.event.status==='published'));
+  assert.ok(groups.length<=22);
+  assert.ok(!groups.some(g=>g.event.id==='2026-10-26-eternatus-teaser-unconfirmed'));
+});
