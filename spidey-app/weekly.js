@@ -73,7 +73,13 @@ function weeklySchedule(item, reference = new Date()) {
   const event = weeklyFindEvent(item?.id);
   if (window.SpideyDateOnly?.valid(event)) {
     const s = event.schedule;
-    return {label: `${window.SpideyDateOnly.label(event)} · ${window.SpideyDateOnly.status(event, reference)}`, day: s.start_date.slice(8), month: s.start_date.slice(5, 7)};
+    const beginning = weeklyDateLabel(s.start_date);
+    const finish = weeklyDateLabel(s.end_date);
+    const status = window.SpideyDateOnly.status(event, reference);
+    return {
+      label: `${beginning}${beginning === finish ? '' : ` → ${finish}`} · ${status}`,
+      day: s.start_date.slice(8), month: s.start_date.slice(5, 7)
+    };
   }
   const start = new Date(event?.schedule?.start_brazil || item?.start_brazil || '');
   const end = new Date(event?.schedule?.end_brazil || item?.end_brazil || '');
@@ -105,6 +111,8 @@ function weeklyItemCard(item, compact = false) {
     && event?.id === '2026-10-world-space-week' && event.official_media?.classification === 'official_illustration'
     ? event.official_media : null;
   const schedule = weeklySchedule(item);
+  const time = weeklyTimeLabel(event || item);
+  const exactTime = time !== 'Horário a confirmar';
   const tags = (item.tags || []).slice(0, compact ? 1 : 2);
   const visual = art ? `<img src="${weeklyEsc(art)}" alt="${weeklyEsc(item.title || 'Evento')}" loading="lazy" onerror="this.hidden=true">`
     : official ? `<figure class="weekly-official-media"><img src="${weeklyEsc(official.file)}?v=${weeklyEsc(official.sha256.slice(0,12))}" width="${official.width}" height="${official.height}" alt="${weeklyEsc(official.alt)}" loading="lazy"><figcaption>Imagem do anúncio oficial · Pokémon GO</figcaption></figure>`
@@ -113,8 +121,8 @@ function weeklyItemCard(item, compact = false) {
     <article class="weekly-item ${compact ? 'compact' : ''} ${official ? 'has-official-media' : ''}" tabindex="0" data-weekly-event="${weeklyEsc(item.id || '')}" data-weekly-art-owner="canonical">
       ${visual}
       <div class="weekly-item-copy">
-        ${schedule ? `<span class="weekly-date-range">${weeklyEsc(schedule.label)}</span>` : ''}
-        <span class="weekly-time">${weeklyEsc(weeklyTimeLabel(weeklyFindEvent(item?.id) || item))}</span>
+        ${!compact && schedule ? `<span class="weekly-date-range">${weeklyEsc(schedule.label)}</span>` : ''}
+        ${exactTime ? `<span class="weekly-time">${weeklyEsc(time)}</span>` : ''}
         <strong>${weeklyEsc(item.title || 'Evento')}</strong>
         ${!compact && item.summary ? `<p>${weeklyEsc(item.summary)}</p>` : ''}
         ${tags.length ? `<div class="weekly-tags">${tags.map((tag) => `<span>${weeklyEsc(tag)}</span>`).join('')}</div>` : ''}
@@ -147,11 +155,54 @@ function weeklyVisibleItem(item,now=new Date()){
   return Boolean(date&&Number.isFinite(date.getTime())&&date>now);
 }
 
+
+// The generated weekly snapshot curates events in sections, but its 7-day strip
+// only contains a subset. Show real events from those same verified sections
+// without fabricating calendar entries or repeating all-day summaries.
+function weeklyBrazilDayKey(value){
+  const date = value instanceof Date ? value : new Date(value);
+  if (!Number.isFinite(date.getTime())) return '';
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'
+  }).formatToParts(date);
+  const part = kind => parts.find(p=>p.type===kind)?.value || '';
+  return `${part('year')}-${part('month')}-${part('day')}`;
+}
+function weeklyDayRange(item){
+  const event=weeklyFindEvent(item?.id) || item;
+  const schedule=event?.schedule || {};
+  if(schedule.precision==='date' || event?.schedule_precision==='date'){
+    return {start:schedule.start_date||item.start_date||'',end:schedule.end_date||item.end_date||'',knownTime:false};
+  }
+  const start=weeklyBrazilDayKey(schedule.start_brazil||item.start_brazil||schedule.start_local);
+  const end=weeklyBrazilDayKey(schedule.end_brazil||item.end_brazil||schedule.end_local);
+  return {start,end,knownTime:!!(schedule.start_brazil||item.start_brazil)};
+}
+function weeklyCuratedDayItems(day,data,now=new Date()){
+  const sections=Object.values(data?.sections||{}).flat();
+  const existing=day?.items||[];
+  const unique=new Map();
+  for(const item of [...existing,...sections]){
+    if(!item?.id||unique.has(item.id)||!weeklyVisibleItem(item,now))continue;
+    const {start,end}=weeklyDayRange(item);
+    if(!start||!end||start>day.date||end<day.date)continue;
+    unique.set(item.id,item);
+  }
+  return [...unique.values()].sort((a,b)=>{
+    const aRange=weeklyDayRange(a),bRange=weeklyDayRange(b);
+    const aBegins=aRange.start===day.date?1:0,bBegins=bRange.start===day.date?1:0;
+    if(aBegins!==bBegins)return bBegins-aBegins;
+    const aKnown=aRange.knownTime?1:0,bKnown=bRange.knownTime?1:0;
+    if(aKnown!==bKnown)return bKnown-aKnown;
+    return a.title.localeCompare(b.title,'pt-BR');
+  });
+}
+
 function renderWeeklyDays(data) {
   const strip = document.querySelector('#weeklyDays');
   if (!strip) return;
   const markup = (data.days || []).map((day) => {
-    const items = (day.items || []).filter(item=>weeklyVisibleItem(item));
+    const items = weeklyCuratedDayItems(day,data);
     return `
       <article class="weekly-day ${items.length ? 'has-items' : ''}">
         <div class="weekly-day-head">
@@ -159,7 +210,8 @@ function renderWeeklyDays(data) {
           <strong>${weeklyDateLabel(day.date)}</strong>
         </div>
         <div class="weekly-day-items">
-          ${items.length ? items.slice(0, 3).map((item) => weeklyItemCard(item, true)).join('') : '<span class="weekly-empty-day">Sem destaque</span>'}
+          ${items.length ? items.slice(0, 3).map((item) => weeklyItemCard(item, true)).join('') : '<span class="weekly-empty-day">Sem evento confirmado para este dia</span>'}
+          ${items.length>3 ? `<small class="weekly-more-day">+${items.length-3} na programação da semana</small>` : ''}
         </div>
       </article>`;
   }).join('');
