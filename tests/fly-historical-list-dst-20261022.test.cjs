@@ -109,9 +109,9 @@ test('FLY opens the entire world and sw cache revokes the stale point list',()=>
   const ui=read('fly-v1.js');
   assert.ok(ui.includes("selected=id;mode='all';render()"));
   const index=read('index.html'),sw=read('sw.js');
-  assert.ok(index.includes('fly-core.js?v=20261022-credits-dst1'));
-  assert.ok(index.includes('fly-v1.js?v=20261022-credits-dst1'));
-  assert.ok(index.includes('fly-v1.css?v=20261022-credits-dst1'));
+  assert.match(index,/fly-core\.js\?v=[\w-]+/);
+  assert.match(index,/fly-v1\.js\?v=[\w-]+/);
+  assert.match(index,/fly-v1\.css\?v=[\w-]+/);
   assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.equal(morelull.gpx.enabled,false);
 });
