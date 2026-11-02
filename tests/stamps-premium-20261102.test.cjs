@@ -46,7 +46,7 @@ test('Artes oficiais das tampas são exibidas completas, sem substituir dados',(
 test('Cartões continuam clicáveis, sem marcação de feitos',()=>{
   assert.match(app,/card\.addEventListener\('click',\s*\(\)\s*=>\s*openStampRally\(rally\)\)/);
   assert.match(app,/card\.setAttribute\('role','button'\)/);
-  assert.match(app,/e\.key === ' ' /);
+  assert.match(app,/e\.key === ' '/);
   assert.match(app,/ev\.key===' '/);
   assert.doesNotMatch(stamp,/stampToggleDone|stampV2Progress|saveStampProgress|data-stamp-filter="done"|data-stamp-filter="remaining"|Marcar como feito|Marcar como faltante/);
   assert.doesNotMatch(app,/stamp-toggle|getStampProgress|saveStampProgress|rallyProgressText|stamp-progress/);
