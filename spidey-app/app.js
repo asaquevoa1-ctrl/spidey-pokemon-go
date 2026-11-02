@@ -513,6 +513,22 @@ function renderMaxBattleGuide(event) {
     '</section>';
 }
 
+function newsVerificationSources(event) {
+  if (event?.content_type !== 'news' || !Array.isArray(event.verification_sources)) return '';
+  const safe = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
+  const links = event.verification_sources.slice(0, 6).map(source => {
+    try {
+      const url = new URL(source.url);
+      if (url.protocol !== 'https:') return '';
+      return '<li><a href="' + safe(url.href) + '" target="_blank" rel="noopener noreferrer">'
+        + safe(source.name || 'Fonte complementar') + '</a></li>';
+    } catch (_) { return ''; }
+  }).filter(Boolean).join('');
+  return links ? '<h3>Fontes para conferir</h3><ul class="event-notes">' + links + '</ul>' : '';
+}
+
 function openEvent(event) {
   if (!event) return;
   beginAppDialog();
@@ -578,6 +594,7 @@ function openEvent(event) {
       ${renderMaxBattleGuide(event)}
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${event.notes?.length ? `<h3>Mais informações</h3><ul class="event-notes">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
+      ${newsVerificationSources(event)}
     </div>`;
   if(event.id==='2026-national-trust-27-sites' && embeddedTrustLocations.length!==27){
     window.SpideyNationalTrustCore?.renderEventCoordinates?.(
