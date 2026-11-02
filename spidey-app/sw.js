@@ -247,7 +247,9 @@ const CORE = [
 // ao abrir as telas. Um único arquivo opcional não bloqueia atualizações.
 const INSTALL_CORE = [
   './index.html',
-  ...CORE.filter(path => /\.(?:js|css|json|webmanifest)$/.test(path))
+  ...CORE.filter(path => /\.(?:js|css|json|webmanifest)$/.test(path)),
+  // Este único SVG é pequeno e precisa funcionar mesmo sem imagens externas.
+  './assets/events/wild-area/go-safari-ball-fallback-20261102.svg'
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then(async cache => {
