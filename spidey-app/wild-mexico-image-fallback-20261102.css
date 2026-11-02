@@ -70,7 +70,7 @@
 #wildAreaMexicoView .wild-mx-real-safari .wild-mx-ball-retry{
   cursor:pointer;padding:12px;border-radius:12px;
   border:1px solid rgba(235,193,121,.42);background:#23384a;color:#f5d4a8;
-  font:800 .8rem/1.45 inherit;min-height:44px
+  font-family:inherit;font-size:.8rem;font-weight:800;line-height:1.45;min-height:44px
 }
 #wildAreaMexicoView .wild-mx-real-safari img{
   background:none;mix-blend-mode:normal;filter:none;
