@@ -13,7 +13,7 @@ test('Weekly premium finishes existing UI without changing weekly data or approv
  const source=read('spidey-app/weekly.js');
  assert.match(html,/weekly-premium-finish-20261102\.css\?v=20261102-weekly1/);
  assert.match(sw,/\.\/weekly-premium-finish-20261102\.css/);
- assert.match(sw,/spidey-app-20261102-weekly1/);
+ assert.match(sw,/spidey-app-20261102-weekday2/);
  assert.match(css,/#weeklyView \.weekly-item/);
  assert.match(css,/#weeklyView \.weekly-day/);
  assert.match(css,/#weeklyView \.weekly-hero-card/);
