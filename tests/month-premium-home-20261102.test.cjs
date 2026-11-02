@@ -135,7 +135,7 @@ test('PWA, script order and visual guardrails are integrated',()=>{
  assert.match(html,/month-premium-20261102\.js\?v=20261102-month2/);
  assert(html.indexOf('calendar-premium-20261101.js?v=')<
    html.indexOf('month-premium-20261102.js?v='));
- assert.match(sw,/spidey-app-20261102-month1/);
+ assert.match(sw,/spidey-app-20261102-weekday2/);
  assert.match(sw,/\.\/month-premium-20261102\.css/);
  assert.match(sw,/\.\/month-premium-20261102\.js/);
  assert.match(css,/spidey-month-premium-ready/);
