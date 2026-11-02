@@ -59,7 +59,7 @@ test('Calendario e pagina Novidades mantem Wild Area atual sem destacar expirado
   assert.match(html,/id="spideyNewsCards"/);
 });
 test('PWA versionado e novas interfaces passam a fazer parte do instalavel',()=>{
-  assert.match(sw,/const CACHE = 'spidey-app-20261102-news1'/);
+  assert.match(sw,/const CACHE = 'spidey-app-20261102-weekday2'/);
   assert.match(sw,/\.\/news-premium-20261102\.js/);
   assert.match(sw,/\.\/news-premium-20261102\.css/);
   assert.match(html,/news-premium-20261102\.js\?v=20261102-news1/);
