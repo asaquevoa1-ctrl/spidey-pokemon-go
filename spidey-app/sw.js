@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-news1';
+const CACHE = 'spidey-app-20261102-weekday2';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -169,6 +169,7 @@ const CORE = [
   './month-premium-20261102.js',
   './month-premium-20261102.css',
   './weekly-premium-finish-20261102.css',
+  './weekly-day-fix-20261102.css',
   './news-premium-20261102.css',
   './news-premium-20261102.js',
   './wild-area-mexico-20261102.css',
