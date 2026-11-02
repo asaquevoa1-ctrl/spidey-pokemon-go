@@ -1,0 +1,21 @@
+{
+  "titulo": "⚙️ ATUALIZAÇÃO FORÇADA • Pokémon GO",
+  "mensagem": "O PokeMiners detectou uma atualização forçada da API do Pokémon GO.\n\n📦 Versão anterior: 0.433.1\n🆕 Nova versão: 0.435.1\n⚠️ Tipo: atualização forçada\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1566896451672477789",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1566896451672477789",
+  "image_url": null,
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1566896451672477789",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-02T19:43:40.360082+00:00"
+}
