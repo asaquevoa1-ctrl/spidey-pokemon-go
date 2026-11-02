@@ -598,3 +598,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 
 ## 02/11/2026 — Correção de mídia local Wild Area
 - Imagens oficiais Machamp, Bola Safári GO, Aço, Dragão e Poderosos importadas pelo GitHub Actions como WebP local, com checksums e origem no manifesto de assets. Sem URLs externas nas imagens do guia. O pôster antigo permanece no master histórico. Testes estáticos e publicação em GitHub Pages devem ser checados separadamente do Android físico.
+
+
+## 02/11/2026 — Safari Ball GO: somente foto real, sem ilustração
+- O responsável mostrou captura física da aba Wild Area com a **ilustração de referência de contingência** em vez da Bola Safári GO real, e exigiu removê-la. Sua referência visual foi a Safari Ball camuflada vista nos resultados Google.
+- A mídia oficial `assets/events/wild-area/official-local-20261102/safari-ball.webp` existe no GitHub Pages e foi validada como WebP verdadeiro (578 × 578). Deve ser a **única imagem** exibida no cartão Safari Ball; a arte ilustrativa `go-safari-ball-fallback-20261102.svg` foi excluída do repositório e do cache PWA.
+- Falhas ou carregamento lento não autorizam trocar a imagem verdadeira por ilustração inventada. Não usar temporizador de 9 segundos para confundir `loading=lazy` com erro. Para Safari Ball, carregar imediatamente, repetir a imagem local uma vez em erro real, e somente após falha comprovada oferecer recarregamento. Não usar o rótulo `ilustração de referência`.
+- A composição visual da foto real usa cartão escuro coerente com o Premium; todo o restante do evento permanece intacto. Atualizar service worker e testes, validar publicação com HTTP dos cinco arquivos e reportar teste físico separadamente.
