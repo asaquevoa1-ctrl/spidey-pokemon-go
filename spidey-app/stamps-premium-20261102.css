@@ -337,3 +337,11 @@ html[data-theme="light"] #eventDetail .stamp-prefecture-picker select {
 html[data-theme="light"] #eventDetail .stamp-filterchips-v2 button {background:#fffdf9;color:#273442;}
 html[data-theme="light"] #eventDetail .stamp-filterchips-v2 button.active {background:#e8c68a;color:#1c2631;}
 html[data-theme="light"] #eventDetail .pokelid-place-copy code {color:#5b451f;}
+
+html[data-theme="light"] #eventDetail .stamp-dashboard-v2 strong,
+html[data-theme="light"] #eventDetail .stamp-route-title-v2 > strong,
+html[data-theme="light"] #eventDetail .stamp-visible-count-v2 {color:#79531d;}
+html[data-theme="light"] #eventDetail .stamp-dashboard-v2 span {color:#4e5965;}
+html[data-theme="light"] #eventDetail .stamp-route-title-v2 > strong,
+html[data-theme="light"] #eventDetail .stamp-visible-count-v2 {background:#fff4df;border-color:#cdb78e;}
+
