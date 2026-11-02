@@ -298,15 +298,6 @@ function downloadGpx(event) {
   showToast('GPX gerado.');
 }
 
-function stampProgressKey(rally) { return `spidey-stamps:${rally.id}`; }
-function getStampProgress(rally) {
-  try { return new Set(JSON.parse(localStorage.getItem(stampProgressKey(rally)) || '[]')); }
-  catch (_) { return new Set(); }
-}
-function saveStampProgress(rally, set) {
-  try { localStorage.setItem(stampProgressKey(rally), JSON.stringify([...set])); } catch { showToast('Não foi possível salvar o progresso neste aparelho.'); }
-}
-
 function renderStampStats() {
   const rallies = state.stamps.filter((rally) => rally.status === 'published');
   const stops = rallies.flatMap((rally) => rally.stops || []);
@@ -315,20 +306,15 @@ function renderStampStats() {
   $('#stampReadyCount').textContent = rallies.filter(r => r.stops?.length && r.stops.every(exactPokestop)).length;
 }
 
-let lastStampCatalog=null, lastStampProgressSignature='';
+let lastStampCatalog=null;
 function renderStamps() {
   const rallies = state.stamps.filter((rally) => rally.status === 'published');
-  const progressSignature = rallies.map(rally => rally.collection_type === 'event_guide'
-    ? rally.id + ':guide'
-    : rally.id + ':' + getStampProgress(rally).size).join('|');
   // Keep the same card DOM and handlers when the player returns to Selos unchanged.
-  if(lastStampCatalog===state.stamps && lastStampProgressSignature===progressSignature &&
-     stampList.dataset.stampCardsReady==='true') {
+  if(lastStampCatalog===state.stamps && stampList.dataset.stampCardsReady==='true') {
     renderStampStats();
     return;
   }
   lastStampCatalog=state.stamps;
-  lastStampProgressSignature=progressSignature;
   stampList.innerHTML = '';
   stampList.dataset.stampCardsReady='true';
   if (!rallies.length) {
@@ -338,7 +324,7 @@ function renderStamps() {
   }
   rallies.forEach((rally) => {
     if (rally.collection_type === 'event_guide') {
-      // Publisher has not released a stamp count or individual locations; never render fake 0/0 progress.
+      // Publisher has not released a stamp count or individual locations; don't invent one.
       const card = document.createElement('article');
       card.className = 'stamp-card stamp-guide-card';
       card.dataset.stampGuide = rally.id;
@@ -360,7 +346,6 @@ function renderStamps() {
       stampList.appendChild(card);
       return;
     }
-    const progress = getStampProgress(rally);
     const stops = rally.stops || [];
     const exact = stops.filter(exactPokestop).length;
     const card = document.createElement('article');
@@ -375,8 +360,7 @@ function renderStamps() {
         </div>
       </div>
       <p>${rally.public_summary ?? rally.summary ?? ''}</p>
-      <div class="stamp-progress"><span style="width:${stops.length ? Math.min(100, (progress.size / stops.length) * 100) : 0}%"></span></div>
-      <div class="stamp-meta"><strong>${progress.size}/${stops.length}</strong> ${rally.collection_type === 'pokelids' ? 'registradas' : 'carimbados'} · <strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : 'coordenadas exatas'}</div>
+      <div class="stamp-meta"><strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : 'coordenadas exatas'}</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
     card.addEventListener('click', () => openStampRally(rally));
     card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStampRally(rally); } });
@@ -393,9 +377,8 @@ function stampCoordinateLabel(stop) {
   return 'Coordenada a confirmar';
 }
 
-function stampStopHtml(rally, stop, progress) {
+function stampStopHtml(rally, stop) {
   const exact = exactPokestop(stop);
-  const checked = progress.has(stop.id);
   const value = validCoordinate(stop) ? `${Number(stop.latitude).toFixed(6)}, ${Number(stop.longitude).toFixed(6)}` : '';
   return `
     <article class="stamp-stop ${exact ? 'is-exact' : 'needs-coordinate'}">
@@ -404,7 +387,6 @@ function stampStopHtml(rally, stop, progress) {
           <span class="eyebrow">SELO ${stop.stamp_number || ''}</span>
           <h3>${stop.city} · ${stop.country}</h3>
         </div>
-        <label class="stamp-check"><input type="checkbox" class="stamp-toggle" data-stop-id="${stop.id}" ${checked ? 'checked' : ''}> Carimbado</label>
       </div>
       <p><strong>${stop.venue || 'Local a confirmar'}</strong></p>
       <p class="microcopy">${formatDateOnly(stop.available_from)} → ${formatDateOnly(stop.available_until)}</p>
@@ -417,7 +399,6 @@ function stampStopHtml(rally, stop, progress) {
 function openStampRally(rally) {
   beginAppDialog();
   const stops = rally.stops || [];
-  const progress = getStampProgress(rally);
   const exactStops = stops.filter(exactPokestop);
   const fullGpx = exactStops.length === stops.length && stops.length > 0;
   detail.innerHTML = `
@@ -426,7 +407,6 @@ function openStampRally(rally) {
       <h2>${rally.title}</h2>
       <p>${rally.public_summary ?? rally.summary ?? ''}</p>
       <div class="info-grid">
-        <div class="info-box"><span>Progresso</span><strong id="rallyProgressText">${progress.size}/${stops.length} selos</strong></div>
         <div class="info-box"><span>GPX confirmado</span><strong>${exactStops.length}/${stops.length} Stops</strong></div>
       </div>
       <div class="action-row">
@@ -434,20 +414,11 @@ function openStampRally(rally) {
         ${rally.source?.url ? `<a class="action-btn" href="${rally.source.url}" target="_blank" rel="noopener">Fonte oficial</a>` : ''}
       </div>
       ${!fullGpx ? '<p class="microcopy">GPX completo fica bloqueado até todas as PokéStops terem coordenadas exatas confirmadas.</p>' : ''}
-      <div class="stamp-stops">${stops.map((stop) => stampStopHtml(rally, stop, progress)).join('')}</div>
+      <div class="stamp-stops">${stops.map((stop) => stampStopHtml(rally, stop)).join('')}</div>
       ${(rally.rewards || []).length ? `<h3>Recompensas</h3><ul class="bonus-list">${rally.rewards.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${(rally.public_notes ?? rally.notes ?? []).length ? `<h3>Observações</h3><ul class="bonus-list">${(rally.public_notes ?? rally.notes ?? []).map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;
 
-  detail.querySelectorAll('.stamp-toggle').forEach((input) => {
-    input.addEventListener('change', () => {
-      const current = getStampProgress(rally);
-      if (input.checked) current.add(input.dataset.stopId); else current.delete(input.dataset.stopId);
-      saveStampProgress(rally, current);
-      $('#rallyProgressText').textContent = `${current.size}/${stops.length} selos`;
-      renderStamps();
-    });
-  });
   detail.querySelectorAll('.copy-stamp-coord').forEach((button) => {
     button.addEventListener('click', async () => {
       await navigator.clipboard.writeText(button.dataset.value);
@@ -780,7 +751,7 @@ function installedAsApp() {
 }
 function showInstallGuide() {
   beginAppDialog();
-  detail.innerHTML = `<div class="detail-body"><span class="eyebrow">SPIDEY NO SEU CELULAR</span><h2>Instalar o Spidey</h2><p>Use o ícone na tela inicial para abrir o app.</p><h3>Android · Chrome</h3><ol class="bonus-list"><li>Abra este site no Chrome, fora do navegador interno do WhatsApp ou ChatGPT.</li><li>Toque no menu de três pontos (⋮).</li><li>Escolha <strong>Instalar e criar atalho</strong> e depois <strong>Instalar</strong>.</li><li>Confirme e abra o Spidey pelo novo ícone.</li></ol><p>Dependendo da versão do navegador, a opção pode se chamar “Instalar app” ou “Adicionar à tela inicial”.</p><h3>iPhone · Safari</h3><p>Abra o site no Safari. Toque em Compartilhar e em Adicionar à Tela de Início.</p><p class="microcopy">Para receber avisos, toque em Ativar alertas e permita as notificações. No iPhone, abra o Spidey pelo ícone instalado. Seu progresso de selos fica salvo neste aparelho e navegador.</p></div>`;
+  detail.innerHTML = `<div class="detail-body"><span class="eyebrow">SPIDEY NO SEU CELULAR</span><h2>Instalar o Spidey</h2><p>Use o ícone na tela inicial para abrir o app.</p><h3>Android · Chrome</h3><ol class="bonus-list"><li>Abra este site no Chrome, fora do navegador interno do WhatsApp ou ChatGPT.</li><li>Toque no menu de três pontos (⋮).</li><li>Escolha <strong>Instalar e criar atalho</strong> e depois <strong>Instalar</strong>.</li><li>Confirme e abra o Spidey pelo novo ícone.</li></ol><p>Dependendo da versão do navegador, a opção pode se chamar “Instalar app” ou “Adicionar à tela inicial”.</p><h3>iPhone · Safari</h3><p>Abra o site no Safari. Toque em Compartilhar e em Adicionar à Tela de Início.</p><p class="microcopy">Para receber avisos, toque em Ativar alertas e permita as notificações. No iPhone, abra o Spidey pelo ícone instalado. </p></div>`;
   showAppDialog();
 }
 const installButton = $('#installButton');
