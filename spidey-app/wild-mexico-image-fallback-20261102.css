@@ -67,8 +67,10 @@
   border-left:4px solid #d8a66b;
   background:linear-gradient(120deg,rgba(156,93,52,.19),transparent)
 }
-#wildAreaMexicoView .wild-mx-real-safari .wild-mx-ball-fallback-text{
-  color:#28433f;font-size:1.2rem;font-weight:900;text-align:center;line-height:1.4
+#wildAreaMexicoView .wild-mx-real-safari .wild-mx-ball-retry{
+  cursor:pointer;padding:12px;border-radius:12px;
+  border:1px solid rgba(235,193,121,.42);background:#23384a;color:#f5d4a8;
+  font:800 .8rem/1.45 inherit;min-height:44px
 }
 #wildAreaMexicoView .wild-mx-real-safari img{
   background:none;mix-blend-mode:normal;filter:none;
@@ -89,4 +91,24 @@
  #wildAreaMexicoView .wild-mx-roster-visual .wild-mx-fallback{min-height:165px}
  #wildMxHomeFeature .wild-mx-fallback-machamp{padding:10px;min-height:130px}
  #wildMxHomeFeature .wild-mx-fallback-machamp strong{font-size:1rem}
+}
+
+/* A mídia oficial do próprio Spidey deve aparecer de fato, não sobre uma ilustração. */
+#wildAreaMexicoView .wild-mx-real-safari{
+  background:radial-gradient(circle at 50% 30%,#293a38,#112231 64%,#0d1827);
+  border:1px solid rgba(236,196,138,.32);box-shadow:inset 0 1px rgba(255,255,255,.09),0 10px 25px rgba(0,0,0,.20);
+  overflow:hidden;aspect-ratio:auto;padding:12px 11px 10px;max-width:225px
+}
+#wildAreaMexicoView .wild-mx-real-safari img{
+  width:100%;height:auto;max-height:190px;aspect-ratio:1/1;
+  object-fit:contain!important;mix-blend-mode:normal!important;
+  filter:none!important;background:transparent;display:block;border-radius:12px
+}
+#wildAreaMexicoView .wild-mx-real-safari figcaption{
+  color:#efce9b;font-weight:820;font-size:.7rem;line-height:1.35;margin:9px 0 0;
+  text-shadow:none
+}
+@media(max-width:650px){
+ #wildAreaMexicoView .wild-mx-real-safari{max-width:195px;width:min(100%,195px)}
+ #wildAreaMexicoView .wild-mx-real-safari img{max-height:165px}
 }
