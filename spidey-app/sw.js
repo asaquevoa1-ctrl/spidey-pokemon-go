@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261101-agenda1';
+const CACHE = 'spidey-app-20261101-agenda2';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
