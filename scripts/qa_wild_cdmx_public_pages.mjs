@@ -2,7 +2,7 @@
 /* Confirma com HTTP REAL que as cinco imagens locais foram publicadas no GitHub Pages.
    Execute DEPOIS de actions/deploy-pages@v4, jamais confundir com testes de main. */
 'use strict';
-const { setTimeout: pause }=require('node:timers/promises');
+import { setTimeout as pause } from 'node:timers/promises';
 const BASE='https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/';
 const PREFIX='assets/events/wild-area/official-local-20261102/';
 const FILES=[
