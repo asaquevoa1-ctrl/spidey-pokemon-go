@@ -11,6 +11,11 @@ test('GitHub Pages favors newest main version and verifies ACTUAL public deploym
  assert.match(yml,/group: spidey-pages-/);
  assert.match(yml,/cancel-in-progress: true/);
  assert.match(yml,/uses: actions\/deploy-pages@v4/);
+ // O pacote que sobe ao Pages precisa corresponder ao commit do build,
+ // mesmo se outros fluxos atualizarem a branch principal enquanto ele roda.
+ assert.match(yml,/source_sha: \\$\\{\\{ steps\\.capture_sha\\.outputs\\.sha \\}\\}/);
+ assert.match(yml,/echo "sha=\\$\\(git rev-parse HEAD\\)"/);
+ assert.match(yml,/ref: \\$\\{\\{ needs\\.build\\.outputs\\.source_sha \\}\\}/);
  const deploy=yml.slice(yml.indexOf('  deploy:'));
  assert.match(deploy,/uses: actions\/checkout@v5/);
  assert(deploy.indexOf('uses: actions/checkout@v5')<deploy.indexOf('uses: actions/deploy-pages@v4'));
