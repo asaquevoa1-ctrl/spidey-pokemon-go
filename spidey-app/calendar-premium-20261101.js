@@ -40,7 +40,9 @@
   }
   function range(event){
     const s=event?.schedule||{};
-    if(s.precision==='date'||(s.start_date&&s.end_date)){
+    // Datas sem horário só prevalecem quando a precisão é realmente "date".
+    // Eventos com sessões (ex.: Singapura) devem respeitar cada horário em Brasília.
+    if(s.precision==='date'){
       return {dates:true,first:s.start_date,last:s.end_date};
     }
     if(Array.isArray(s.sessions)&&s.sessions.length){
@@ -50,6 +52,8 @@
     }
     const start=new Date(s.start_brazil||s.start_local||'');
     const end=new Date(s.end_brazil||s.end_local||'');
+    if(Number.isFinite(+start)&&Number.isFinite(+end))return {start,end};
+    if(s.start_date&&s.end_date)return {dates:true,first:s.start_date,last:s.end_date};
     return {start,end};
   }
   function covers(event,key){
