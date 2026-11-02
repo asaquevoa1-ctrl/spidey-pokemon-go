@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-safarireal2';
+const CACHE = 'spidey-app-20261102-news1';
 const CORE = [
   './spidey-motion.css',
   './spidey-motion.js',
@@ -169,6 +169,8 @@ const CORE = [
   './month-premium-20261102.js',
   './month-premium-20261102.css',
   './weekly-premium-finish-20261102.css',
+  './news-premium-20261102.css',
+  './news-premium-20261102.js',
   './wild-area-mexico-20261102.css',
   './wild-area-mexico-art-20261102.css',
   './wild-mexico-image-fallback-20261102.css',
