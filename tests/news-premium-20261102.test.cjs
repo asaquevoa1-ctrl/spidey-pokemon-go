@@ -82,8 +82,8 @@ test('PWA versionado e novas interfaces passam a fazer parte do instalavel',()=>
   assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(sw,/\.\/news-premium-20261102\.js/);
   assert.match(sw,/\.\/news-premium-20261102\.css/);
-  assert.match(html,/news-premium-20261102\.js\?v=20261102-news1/);
-  assert.match(html,/news-premium-20261102\.css\?v=20261102-news1/);
+  assert.match(html,/news-premium-20261102\.js\?v=20261102-news-profileart2/);
+  assert.match(html,/news-premium-20261102\.css\?v=20261102-news-profileart2/);
 });
 test('Modelo editorial real exclui evento expirado e teaser superado por fonte oficial',()=>{
   const context={window:{},document:{readyState:'loading',addEventListener(){}},URL,Date,Intl,Map,console};
