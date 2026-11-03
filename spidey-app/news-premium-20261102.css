@@ -196,3 +196,71 @@
 @media(prefers-reduced-motion:reduce){
   #newsView *,#newsView *:before,#newsView *:after{animation:none!important;transition:none!important}
 }
+
+/* Novidades · arte editorial do perfil com três pôsteres oficiais já aprovados.
+   Nenhum deles é apresentado como screenshot da funcionalidade. */
+#newsView .spidey-news-media.spidey-profile-media{
+  display:block;width:100%;flex:0 0 100%;max-height:none;min-height:0;overflow:hidden;
+  border-bottom:1px solid rgba(224,190,137,.25);
+  background:linear-gradient(135deg,#142941,#1a2340 55%,#342348)
+}
+#newsView .spidey-profile-poster{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(11px,2.2vw,20px);
+  background:radial-gradient(circle at 78% -12%,rgba(115,84,196,.28),transparent 59%),
+   radial-gradient(circle at 8% 4%,rgba(54,142,181,.26),transparent 54%),
+   linear-gradient(140deg,#152e42,#152235 58%,#231c3b);
+}
+#newsView .spidey-profile-poster::before{
+  content:"";pointer-events:none;position:absolute;inset:0 0 auto;height:2px;
+  background:linear-gradient(90deg,#bc5d65,#edca8c,#6c7dce)
+}
+#newsView .spidey-profile-poster-heading{display:grid;gap:5px;text-align:center;margin:0 auto 12px}
+#newsView .spidey-profile-poster-heading > span{
+  color:#e6c790;font-size:.65rem;font-weight:850;letter-spacing:.16em
+}
+#newsView .spidey-profile-poster-heading > strong{
+  color:#fff3df;font-size:clamp(1.12rem,3.5vw,1.76rem);
+  letter-spacing:-.035em;line-height:1.16
+}
+#newsView .spidey-profile-scenes{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(7px,1.5vw,12px)
+}
+#newsView .spidey-profile-scene{
+  min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding:5px;overflow:hidden;border-radius:13px;
+  border:1px solid rgba(232,198,138,.33);
+  background:linear-gradient(145deg,rgba(47,59,79,.98),rgba(21,28,42,.97));
+  box-shadow:0 11px 22px rgba(0,0,0,.22)
+}
+#newsView .spidey-profile-scene img{
+  display:block;width:100%;height:auto;max-width:100%;max-height:190px;
+  aspect-ratio:16/10;object-fit:contain!important;object-position:center!important;
+  border-radius:8px;background:rgba(12,19,36,.25)
+}
+#newsView .spidey-profile-scene-tag{
+  box-sizing:border-box;display:block;width:100%;margin-top:5px;padding:6px 4px;
+  border-radius:7px;background:rgba(230,190,126,.08);
+  color:#f1e7d7;line-height:1.33;font-size:clamp(.58rem,1.45vw,.73rem);text-align:center
+}
+#newsView .spidey-profile-scene-tag strong{color:#f4cf90;display:block;font-variant-numeric:tabular-nums}
+#newsView .spidey-profile-art-note{
+  margin:10px auto 0;text-align:center;max-width:640px;
+  color:#d2d9e5;font-size:clamp(.64rem,1.5vw,.75rem);line-height:1.42
+}
+@media(max-width:740px){
+ #newsView .spidey-news-media.spidey-profile-media{width:100%;flex:0 0 100%;max-height:none}
+ #newsView .spidey-profile-scene img{max-height:170px}
+}
+@media(max-width:470px){
+ #newsView .spidey-news-media.spidey-profile-media{max-height:none}
+ #newsView .spidey-profile-poster{padding:12px 9px}
+ #newsView .spidey-profile-poster-heading > strong{font-size:1.12rem}
+ #newsView .spidey-profile-scenes{gap:6px}
+ #newsView .spidey-profile-scene{padding:4px;border-radius:10px}
+ #newsView .spidey-profile-scene img{max-height:125px}
+ #newsView .spidey-profile-scene-tag{font-size:.61rem}
+}
+html[data-theme="light"] #newsView .spidey-profile-poster{
+  background:linear-gradient(140deg,#1f3752,#262c48 63%,#372753);
+}
