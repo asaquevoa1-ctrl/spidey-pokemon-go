@@ -62,8 +62,8 @@ test('Hawlucha e Lapras exibem cartazes Premium existentes sem alterar os selos 
 });
 
 test('App inclui listas Premium para copiar individuais, grupos e mapas',()=>{
- assert.match(html,/stamps-community-routes-20261102\.js\?v=20261102-hawlucha-lapras1/);
- assert.match(html,/stamps-community-routes-20261102\.css\?v=20261102-hawlucha-lapras1/);
+ assert.match(html,/stamps-community-routes-20261102\.js\?v=20261102-hawlucha-lapras-art2/);
+ assert.match(html,/stamps-community-routes-20261102\.css\?v=20261102-hawlucha-lapras-art2/);
  assert.match(sw,/\.\/stamps-community-routes-20261102\.js/);
  assert.match(sw,/\.\/stamps-community-routes-20261102\.css/);
  assert.match(sw,/\.\/data\/community-routes-20261102\.json/);
