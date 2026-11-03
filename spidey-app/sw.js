@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh-stampmuseum1-pvpcockpit1-no-mark1-communityroutes1-profile1-premiumarts3';
+const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh-stampmuseum1-pvpcockpit1-no-mark1-communityroutes1-profile1-premiumarts4-mobileheight';
 const CORE = [
   './rare-candy-alert-20261102.js',
   './rare-candy-alert-20261102.css',
