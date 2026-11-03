@@ -83,6 +83,7 @@
   function article(group){
     const e=group.event;
     const official=isOfficial(e);
+    const rumor=!official && /rumor|não confirmado|a confirmar/i.test([e.news?.label,e.title,e.news?.title].filter(Boolean).join(' '));
     const source=safeUrl(e.source?.url);
     const displayTitle=group.title||e.title||'Notícia sem título';
     const summary=group.summary||e.summary||'Veja os detalhes na fonte.';
@@ -94,7 +95,7 @@
       +media
       +'<div class="spidey-news-article-copy">'
       +'<div class="spidey-news-meta"><span class="'+(official?'is-official':'is-community')+'">'
-      +(official?'Fonte oficial':'Fonte comunitária')+'</span><time>'+esc(dateStr(date))+'</time></div>'
+      +(official?'Fonte oficial':rumor?'Rumor não confirmado':'Fonte comunitária')+'</span><time>'+esc(dateStr(date))+'</time></div>'
       +'<h3>'+esc(displayTitle)+'</h3><p>'+esc(summary)+'</p>'
       +(count>1?'<small>'+count+' eventos relacionados ao mesmo anúncio</small>':'')
       +'<div class="spidey-news-actions"><button type="button" data-news-detail="'+esc(e.id)+'">Ver detalhes</button>'
