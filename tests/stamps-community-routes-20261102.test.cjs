@@ -45,6 +45,22 @@ test('As rotas da comunidade não viram os selos oficiais de 7 PokéStops por ci
  assert.match(js,/não são as 7 PokéStops oficiais/);
 });
 
+test('Hawlucha e Lapras exibem cartazes Premium existentes sem alterar os selos oficiais',()=>{
+ const assets=[
+  'wild-area-mexico-city-2026-approved-v1.png',
+  'wild-area-sendai-2026-approved-v1.png'
+ ];
+ for(const name of assets){
+  assert(js.includes(name),'Cartaz não conectado: '+name);
+  assert(fs.existsSync(path.resolve(__dirname,'../spidey-app/assets/events/premium',name)));
+ }
+ assert.match(js,/class="stamp-community-visual"/);
+ assert.match(js,/class="stamp-community-card"/);
+ assert.match(css,/\.stamp-community-visual img/);
+ assert.match(css,/object-fit:contain!important/);
+ assert.doesNotMatch(js,/Marcar como feito|Carimbado|\.is-done/);
+});
+
 test('App inclui listas Premium para copiar individuais, grupos e mapas',()=>{
  assert.match(html,/stamps-community-routes-20261102\.js\?v=20261102-hawlucha-lapras1/);
  assert.match(html,/stamps-community-routes-20261102\.css\?v=20261102-hawlucha-lapras1/);
