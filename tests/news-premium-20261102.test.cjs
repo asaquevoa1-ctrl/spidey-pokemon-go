@@ -50,6 +50,26 @@ test('Estilo Premium usa cartazes completos, nunca crop e funciona em celular',(
   assert.match(css,/focus-visible/);
   assert.ok(oldMaster.includes('wild-area-mexico-city-2026-approved-v1.png'));
 });
+test('Novidade dos fundos exibe arte editorial com pôsteres regionais aprovados',()=>{
+  const fs=require('node:fs');
+  const p=require('node:path');
+  assert.match(js,/PROFILE_ID='2026-11-02-trainer-profile-buddy-backgrounds-2026'/);
+  assert.match(js,/if\(event\?\.id===PROFILE_ID\)return profileArtwork\(\)/);
+  assert.match(js,/spidey-profile-scenes/);
+  for(const file of [
+    'wild-area-sendai-2026-approved-v1.png',
+    'wild-area-mexico-city-2026-approved-v1.png',
+    'wild-area-global-2026-approved-v1.png'
+  ]){
+    assert(js.includes(file),'Arte ausente: '+file);
+    assert(fs.existsSync(p.join(__dirname,'../spidey-app/assets/events/premium',file)),file+' não existe no repositório');
+  }
+  assert(css.includes('.spidey-profile-poster'));
+  assert(css.includes('.spidey-profile-scene img'));
+  assert(css.includes('object-fit:contain!important'));
+  assert(js.includes('liberação do recurso ainda não confirmada oficialmente'));
+});
+
 test('Calendario e pagina Novidades mantem Wild Area atual sem destacar expirados',()=>{
   assert.match(js,/2026-11-08T21:00:00-03:00/);
   assert.match(js,/assets\/events\/wild-area\/official-local-20261102\/machamp-jacket\.webp/);
