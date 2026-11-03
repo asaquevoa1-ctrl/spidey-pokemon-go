@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "Passe GO: novembro 🎟️\n🌋 Groudon estará disponível no GO Pass\n🪙 PokéCoins também estarão entre as recompensas\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2117355582797529169",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2117355582797529169",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-03T01:43:37.070473+00:00"
+}
