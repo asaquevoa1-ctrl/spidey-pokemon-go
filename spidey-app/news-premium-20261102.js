@@ -98,7 +98,7 @@
     // Só usar mídia real presente no master Premium. Não usar sprites ou poster gerado.
     const media=poster(e);
     const count=group.events.length;
-    return '<article class="spidey-news-article">'
+    return '<article class="spidey-news-article'+(e.id===PROFILE_ID?' is-profile-story':'')+'">'
       +media
       +'<div class="spidey-news-article-copy">'
       +'<div class="spidey-news-meta"><span class="'+(official?'is-official':'is-community')+'">'
