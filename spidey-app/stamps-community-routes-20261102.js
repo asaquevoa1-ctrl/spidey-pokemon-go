@@ -4,6 +4,17 @@
   const DATA_URL = 'data/community-routes-20261102.json';
   const SECTION_ID = 'stampCommunityRoutes20261102';
   const officialSource = 'https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026';
+  // Cartazes Premium já aprovados do evento; não substituem as imagens oficiais das PokéLids.
+  const ROUTE_ART=Object.freeze({
+    'hawlucha-mexico-city':{
+      file:'assets/events/premium/wild-area-mexico-city-2026-approved-v1.png',
+      alt:'Cartaz Premium do GO Wild Area 2026 na Cidade do México'
+    },
+    'lapras-sendai-tohoku':{
+      file:'assets/events/premium/wild-area-sendai-2026-approved-v1.png',
+      alt:'Cartaz Premium do GO Wild Area 2026 em Sendai'
+    }
+  });
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({
     '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
   })[char]);
@@ -56,6 +67,10 @@
       <div class="stamp-community-grid">
         ${data.routes.map((route, index) => `
           <article class="stamp-community-card" data-community-route="${esc(route.id)}">
+            <figure class="stamp-community-visual">
+              <img src="${esc(ROUTE_ART[route.id]?.file || '')}" alt="${esc(ROUTE_ART[route.id]?.alt || 'Cartaz do evento regional')}" loading="lazy" decoding="async" width="920" height="520">
+              <figcaption><span>✦ ROTA EXTRA DA COMUNIDADE</span><strong>${esc(route.pokemon)}</strong><small>${esc(route.city)}</small></figcaption>
+            </figure>
             <div class="stamp-community-title">
               <span class="stamp-community-symbol" aria-hidden="true">${index === 0 ? 'H' : 'L'}</span>
               <div><span class="eyebrow">${esc(route.city)}</span><h3>${esc(route.pokemon)}</h3></div>
