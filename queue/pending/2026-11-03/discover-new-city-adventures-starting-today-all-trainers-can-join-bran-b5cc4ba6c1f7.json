@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 Discover new city adventures starting today! All Trainers can join brand-new Pokémon GO Stamp Rallies in Sendai • Tohoku, Japan, and Mexico City, Mexico.",
+  "mensagem": "Discover new city adventures starting today! All Trainers can join brand-new Pokémon GO Stamp Rallies in Sendai • Tohoku, Japan, and Mexico City, Mexico.\n\n🔗 https://pokemongo.com/news/forever-stamp-rally-go-wild-area-2026\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/forever-stamp-rally-go-wild-area-2026",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1566966043849662545",
+  "image_url": "https://lh3.googleusercontent.com/M9HsqPfmLn15sC1MyDWRVZDzmVDI1nGsjHYREQU0mGjgTkgamrO5mtCve6AQBUdnnHSUH1doO1yPywHyFkuulCuPq15YBjORFm-nBkE42UE",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1566966043849662545",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-03T01:51:11.524642+00:00"
+}
