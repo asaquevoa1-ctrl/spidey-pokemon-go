@@ -8,7 +8,7 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1566966835050582029",
-  "status": "aguardando_arte_chatgpt",
+  "status": "duplicado",
   "etapa_editorial": "aguardando_arte_premium_original",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
@@ -17,5 +17,6 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-11-03T01:51:12.681595+00:00"
+  "created_at_utc": "2026-11-03T01:51:12.681595+00:00",
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/get-ready-for-gowildarea-2026"
 }
