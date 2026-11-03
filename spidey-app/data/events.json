@@ -2,6 +2,62 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
+      "slug": "fundos-no-perfil-do-treinador-novembro-2026",
+      "content_type": "news",
+      "title": "Fundos dos Pokémon companheiros no perfil do Treinador",
+      "summary": "Uma novidade compartilhada pela comunidade indica duas etapas: 6/11, 10h locais, para fundos de Sendai e Cidade do México; 9/11, 10h locais, para fundos especiais da Área Selvagem 2026 e fundos de local anteriores. Horários de liberação ainda não confirmados em comunicado oficial.",
+      "category": "community_discovery",
+      "tags": [
+        "Novidade",
+        "Perfil do Treinador",
+        "Pokémon companheiro",
+        "Fundos de localização",
+        "Fundos especiais",
+        "GO Wild Area 2026",
+        "A confirmar"
+      ],
+      "source": {
+        "name": "Comunidade Pokémon GO • descoberta sobre fundos no perfil (datas informadas em material compartilhado)",
+        "url": "https://consolepcgaming.com/pokemon-go-datamine-hints-at-go-wild-area-profile-backgrounds/",
+        "confidence": "community"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Seu companheiro poderá mostrar fundos no perfil?",
+        "summary": "Segundo material da comunidade: 6/11, 10h locais, fundos de Sendai e Cidade do México; 9/11, 10h locais, fundo especial da Área Selvagem 2026 e fundos de local antigos. O recurso e os horários do perfil ainda aguardam confirmação oficial.",
+        "published_on": "2026-11-02",
+        "label": "COMUNIDADE • HORÁRIOS A CONFIRMAR"
+      },
+      "notes": [
+        "COMO SERIA: ao usar como companheiro um Pokémon com Fundo de Localização ou Fundo Especial elegível, o fundo poderá aparecer atrás dele no perfil do Treinador. A atualização não concede nem garante novos fundos.",
+        "6 DE NOVEMBRO DE 2026 • 10H LOCAIS: o material compartilhado indica a liberação dos fundos de localização de Sendai/Tohoku e da Cidade do México, relacionados à Área Selvagem GO 2026.",
+        "9 DE NOVEMBRO DE 2026 • 10H LOCAIS: o mesmo material indica o fundo especial da Área Selvagem 2026 e os fundos de localização de eventos anteriores. Outros fundos especiais poderão chegar depois, sem data divulgada.",
+        "VISIBILIDADE PARA AMIGOS: conforme o relato, a mudança respeita o horário local de cada Treinador; amigos em fusos horários diferentes só a verão após as 10h locais deles.",
+        "O QUE JÁ FOI CONFERIDO: o site oficial confirma o GO Wild Area presencial de 6 a 8/11 em Sendai e Cidade do México e os fundos de localização associados às capturas elegíveis. O anúncio oficial consultado não detalha a liberação desses fundos na tela do perfil em 6 e 9/11.",
+        "FONTE DAS DATAS: imagem e texto de comunidade enviados ao Spidey em 2/11/2026; a fonte vinculada nesta publicação documenta sinais da funcionalidade em dados do jogo, mas não confirma esses horários. Não tratar os horários como anúncio oficial.",
+        "Esta atualização é informativa e aparece somente em Novidades, sem notificação de evento ou alteração das recompensas da Área Selvagem."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Horários de recurso relatados pela comunidade, sem confirmação oficial; não enviar alertas de calendário."
+      },
+      "status": "published",
+      "verified_at": "2026-11-02",
+      "audit": {
+        "classification": "community_report_trainer_profile_backgrounds",
+        "dates_reported_not_officially_verified": true,
+        "calendar_event": false,
+        "art_independent": true
+      }
+    },
+    {
       "id": "2026-11-02-explorer-gadget-visual-updates",
       "slug": "2026-11-02-explorer-gadget-visual-updates",
       "content_type": "news",
