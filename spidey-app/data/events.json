@@ -2,6 +2,63 @@
   "schema_version": "spidey-event-v1",
   "events": [
     {
+      "id": "2026-11-03-clone-special-raid-day-rumor",
+      "slug": "clone-special-raid-day-mewtwo-armadura-rumor-19-dezembro-2026",
+      "content_type": "news",
+      "title": "Rumor: Mewtwo de Armadura pode voltar em 19 de dezembro",
+      "summary": "Segundo informação atribuída ao ThePokemodGroup, um possível Clone Special Raid Day estaria previsto para sábado, 19/12. A data, o nome do evento e o retorno dos Pokémon Clone ainda não foram confirmados oficialmente.",
+      "category": "community_discovery",
+      "tags": [
+        "Rumor",
+        "Mewtwo de Armadura",
+        "Clone Special Raid Day",
+        "19 de dezembro",
+        "ThePokemodGroup",
+        "Não confirmado"
+      ],
+      "source": {
+        "name": "ThePokemodGroup • relato da comunidade (não confirmado)",
+        "url": "https://x.com/search?q=ThePokemodGroup%20Clone%20Special%20Raid%20Day",
+        "confidence": "community"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • retorno oficial anterior de Mewtwo de Armadura em setembro de 2026 (não confirma dezembro)",
+          "url": "https://pokemongo.com/en/news/megafinale-2026-armored-mewtwo",
+          "confidence": "official"
+        }
+      ],
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Mewtwo de Armadura em dezembro? Comunidade aponta possível Dia de Reides",
+        "summary": "O ThePokemodGroup é citado em relato sobre um possível Clone Special Raid Day em 19/12. A volta de Pikachu Clone e dos iniciais de Kanto é especulação; não há anúncio oficial confirmando esses detalhes.",
+        "published_on": "2026-11-03",
+        "label": "RUMOR • SEM CONFIRMAÇÃO OFICIAL"
+      },
+      "notes": [
+        "Relato atribuído ao ThePokemodGroup; não há confirmação oficial para 19/12.",
+        "O retorno de Pikachu Clone, Venusaur Clone, Charizard Clone e Blastoise Clone é apenas especulação.",
+        "A Niantic/Scopely confirmou Mewtwo de Armadura em setembro de 2026, mas isso não confirma o evento de dezembro."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Rumor sem confirmação oficial; não notificar como evento."
+      },
+      "status": "published",
+      "verified_at": "2026-11-03",
+      "audit": {
+        "classification": "community_unconfirmed_rumor",
+        "calendar_event": false,
+        "reported_date_not_confirmed": true
+      }
+    },
+    {
       "id": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
       "slug": "fundos-no-perfil-do-treinador-novembro-2026",
       "content_type": "news",
