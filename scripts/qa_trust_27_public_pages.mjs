@@ -7,10 +7,10 @@ const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const packageApp='pages-public/spidey-app/';
 const sourceIndex=readFileSync(packageApp+'index.html','utf8');
-const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-v2.js','stamps-premium-20261102.css','pvp-premium-20261102.css'];
+const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-v2.js','stamps-premium-20261102.css','stamps-community-routes-20261102.js','stamps-community-routes-20261102.css','data/community-routes-20261102.json','pvp-premium-20261102.css'];
 const assets=new Map(sources.map(name=>[name,readFileSync(packageApp+name)]));
 const versions=new Map();
-for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js','stamps-v2.js','stamps-premium-20261102.css','pvp-premium-20261102.css']){
+for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js','stamps-v2.js','stamps-premium-20261102.css','stamps-community-routes-20261102.js','stamps-community-routes-20261102.css','pvp-premium-20261102.css']){
  const escaped=name.replaceAll('.','\\.');
  const found=sourceIndex.match(new RegExp(escaped+'\\?v=[^"\\s]+'));
  assert(found,'Referência da versão ausente em index.html: '+name);
@@ -41,6 +41,12 @@ for(let attempt=1;attempt<=12;attempt++){
   assert(!/stampToggleDone|saveStampProgress|Marcar como feito|Marcar como faltante|data-stamp-filter="done"|data-stamp-filter="remaining"/.test(stamps));
   assert(!/stamp-toggle|rallyProgressText|getStampProgress|saveStampProgress/.test(publicApp));
   assert(index.includes('Explore as coleções, veja os locais e copie coordenadas com facilidade.'));
+  const shared=JSON.parse(assets.get('data/community-routes-20261102.json').toString('utf8'));
+  const sharedUi=assets.get('stamps-community-routes-20261102.js').toString('utf8');
+  assert.equal(shared.routes.length,2);
+  assert.deepEqual(shared.routes.map(r=>r.points.length),[8,8]);
+  assert(sharedUi.includes('data-community-copy-all')&&sharedUi.includes('data-community-copy-one'));
+  assert(index.includes('stamps-community-routes-20261102.js')&&index.includes('stamps-community-routes-20261102.css'));
   const fly=assets.get('fly-v1.js').toString('utf8');
   const world=assets.get('trust-world-v1.js').toString('utf8');
   const sw=assets.get('sw.js').toString('utf8');
