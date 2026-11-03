@@ -73,6 +73,15 @@ test('Novidade dos fundos exibe arte editorial com pôsteres regionais aprovados
   assert(js.includes('liberação do recurso ainda não confirmada oficialmente'));
 });
 
+test('Card da novidade do perfil não reserva altura extra no celular',()=>{
+  assert.match(js,/is-profile-story/);
+  assert.match(css,/#newsView \.spidey-news-article\.is-profile-story/);
+  assert.match(css,/#newsView \.spidey-news-article\.is-profile-story > \.spidey-profile-media/);
+  assert.doesNotMatch(css,/spidey-profile-media\s*\{[^}]*flex:\s*0 0 100%/s);
+  assert.match(css,/spidey-profile-media\s*\{[^}]*height:auto;[^}]*flex:none/s);
+  assert.match(css,/#newsView \.spidey-news-article\.is-profile-story\s*\{[^}]*display:block/s);
+  assert.match(css,/@media\(max-width:740px\)/);
+});
 test('Calendario e pagina Novidades mantem Wild Area atual sem destacar expirados',()=>{
   assert.match(js,/2026-11-08T21:00:00-03:00/);
   assert.match(js,/assets\/events\/wild-area\/official-local-20261102\/machamp-jacket\.webp/);
