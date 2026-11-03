@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh-stampmuseum1-pvpcockpit1-no-mark1-communityroutes1-profile1-premiumarts4-mobileheight';
+const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh-stampmuseum1-pvpcockpit1-no-mark1-communityroutes1-profile1-premiumarts5-originalart';
 const CORE = [
   './rare-candy-alert-20261102.js',
   './rare-candy-alert-20261102.css',
@@ -180,6 +180,7 @@ const CORE = [
   './weekly-premium-finish-20261102.css',
   './weekly-day-fix-20261102.css',
   './news-premium-20261102.css',
+  './assets/events/premium/trainer-profile-backgrounds-20261102-premium-v1.png',
   './news-premium-20261102.js',
   './wild-area-mexico-20261102.css',
   './wild-area-mexico-art-20261102.css',
