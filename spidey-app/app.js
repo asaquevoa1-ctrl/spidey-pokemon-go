@@ -568,7 +568,7 @@ function openEvent(event) {
       ${pokemon.length ? `<h3>Pokémon em destaque</h3><ul class="bonus-list">${pokemon.map((item) => `<li>${item.name}${item.note ? ` — ${item.note}` : ''}</li>`).join('')}</ul>` : ''}
       ${renderMaxBattleGuide(event)}
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
-      ${event.notes?.length ? `<h3>Mais informações</h3><ul class="event-notes">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
+      ${!newsOnly && event.notes?.length ? `<h3>Mais informações</h3><ul class="event-notes">${event.notes.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       ${newsVerificationSources(event)}
     </div>`;
   if(event.id==='2026-national-trust-27-sites' && embeddedTrustLocations.length!==27){
