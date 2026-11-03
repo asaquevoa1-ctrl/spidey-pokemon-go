@@ -7,6 +7,14 @@
   const WILD_ID='2026-11-go-wild-area-mexico-city';
   const WILD_END=Date.parse('2026-11-08T21:00:00-03:00');
   const WILD_IMAGE='assets/events/wild-area/official-local-20261102/machamp-jacket.webp';
+  const PROFILE_ID='2026-11-02-trainer-profile-buddy-backgrounds-2026';
+  // Reutiliza artes oficiais aprovadas para os três eventos; composição editorial, não screenshot do novo recurso.
+  const PROFILE_SCENES=Object.freeze([
+    ['assets/events/premium/wild-area-sendai-2026-approved-v1.png','Sendai','6 NOV'],
+    ['assets/events/premium/wild-area-mexico-city-2026-approved-v1.png','Cidade do México','6 NOV'],
+    ['assets/events/premium/wild-area-global-2026-approved-v1.png','Wild Area 2026','9 NOV']
+  ]);
+
   const MAX_NEWS_AGE=45*86400000;
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const safeUrl=s=>{
@@ -47,8 +55,21 @@
       return true;
     }).slice(0,22);
   }
+  function profileArtwork(){
+    const scenes=PROFILE_SCENES.map(([src,label,day])=>
+      '<div class="spidey-profile-scene"><img src="'+esc(src)+'" alt="Pôster aprovado do evento '+esc(label)+'" loading="lazy" decoding="async" width="700" height="430">'
+      +'<span class="spidey-profile-scene-tag"><strong>'+esc(day)+'</strong> '+esc(label)+'</span></div>'
+    ).join('');
+    return '<div class="spidey-news-media spidey-profile-media">'
+      +'<div class="spidey-profile-poster" role="group" aria-label="Montagem editorial com os eventos Sendai, Cidade do México e Wild Area Global">'
+      +'<div class="spidey-profile-poster-heading"><span>✦ NOVIDADE NO PERFIL · 2026</span><strong>Seu companheiro, um novo cenário</strong></div>'
+      +'<div class="spidey-profile-scenes">'+scenes+'</div>'
+      +'<div class="spidey-profile-art-note">Arte editorial com pôsteres de eventos já aprovados · liberação do recurso ainda não confirmada oficialmente</div>'
+      +'</div></div>';
+  }
   function poster(event){
     // Versões em avaliação (preview) não são pôsteres aprovados para Novidades.
+    if(event?.id===PROFILE_ID)return profileArtwork();
     if(!event||!window.SPIDEY_APPROVED_ART_MASTER?.[event.id]||!window.SpideyPlayer?.image)return '';
     const img=window.SpideyPlayer.image(event,true);
     return img?'<div class="spidey-news-media">'+img+'</div>':'';
