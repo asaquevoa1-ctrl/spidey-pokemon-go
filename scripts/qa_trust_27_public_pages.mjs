@@ -7,7 +7,7 @@ const delay=ms=>new Promise(r=>setTimeout(r,ms));
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const packageApp='pages-public/spidey-app/';
 const sourceIndex=readFileSync(packageApp+'index.html','utf8');
-const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-v2.js','stamps-premium-20261102.css','stamps-community-routes-20261102.js','stamps-community-routes-20261102.css','data/community-routes-20261102.json','pvp-premium-20261102.css','news-premium-20261102.js','news-premium-20261102.css'];
+const sources=['national-trust-v1.js','app.js','national-trust-v1.css','data/events.json','fly-v1.js','trust-world-v1.js','sw.js','stamps-v2.js','stamps-premium-20261102.css','stamps-community-routes-20261102.js','stamps-community-routes-20261102.css','data/community-routes-20261102.json','pvp-premium-20261102.css','news-premium-20261102.js','news-premium-20261102.css','assets/events/premium/trainer-profile-backgrounds-20261102-premium-v1.png'];
 const assets=new Map(sources.map(name=>[name,readFileSync(packageApp+name)]));
 const versions=new Map();
 for(const name of ['national-trust-v1.js','app.js','national-trust-v1.css','fly-v1.js','trust-world-v1.js','stamps-v2.js','stamps-premium-20261102.css','stamps-community-routes-20261102.js','stamps-community-routes-20261102.css','pvp-premium-20261102.css','news-premium-20261102.js','news-premium-20261102.css']){
@@ -49,10 +49,15 @@ for(let attempt=1;attempt<=12;attempt++){
   assert(sharedUi.includes('stamp-community-visual')&&sharedUi.includes('wild-area-mexico-city-2026-approved-v1.png')&&sharedUi.includes('wild-area-sendai-2026-approved-v1.png'));
   const newsArtUi=assets.get('news-premium-20261102.js').toString('utf8');
   const newsArtCss=assets.get('news-premium-20261102.css').toString('utf8');
-  assert(newsArtUi.includes('if(event?.id===PROFILE_ID)return profileArtwork()'));
+  assert(newsArtUi.includes('if(isProfileStory(event))return profileArtwork()'));
   assert(newsArtUi.includes("detail.insertAdjacentHTML('afterbegin',profileArtwork())"));
-  assert(newsArtUi.includes('wild-area-global-2026-approved-v1.png')&&newsArtUi.includes('wild-area-sendai-2026-approved-v1.png'));
-  assert(newsArtCss.includes('spidey-profile-scenes')&&newsArtCss.includes('#eventDetail .spidey-profile-scenes'));
+  assert(newsArtUi.includes('trainer-profile-backgrounds-20261102-premium-v1.png'));
+  assert(!newsArtUi.includes('PROFILE_SCENES'),'Montagem antiga não pode voltar');
+  assert(newsArtCss.includes('spidey-profile-cover')&&newsArtCss.includes('#eventDetail .spidey-profile-cover'));
+  const profileArt=assets.get('assets/events/premium/trainer-profile-backgrounds-20261102-premium-v1.png');
+  assert(profileArt.subarray(0,8).equals(Buffer.from('89504e470d0a1a0a','hex')));
+  assert.equal(profileArt.readUInt32BE(16),1672);
+  assert.equal(profileArt.readUInt32BE(20),941);
 
   assert(index.includes('stamps-community-routes-20261102.js')&&index.includes('stamps-community-routes-20261102.css'));
   const fly=assets.get('fly-v1.js').toString('utf8');
