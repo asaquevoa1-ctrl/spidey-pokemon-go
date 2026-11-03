@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 Discover more of the city during Pokémon GO Wild Area: Mexico City",
+  "mensagem": "Discover more of the city during Pokémon GO Wild Area: Mexico City\n\n🔗 https://pokemongo.com/news/gowa_cdmx_additional_info\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/gowa_cdmx_additional_info",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1567207501143867423",
+  "image_url": "https://lh3.googleusercontent.com/TwRjZcGWGqReS4Tjaic5EgYT1oFjxlAfmAGM74dTR4orh5pNBWw-MvnaJPPWaQnkUbFwQPJIAmaYtDJZeAtYdo_KL3I_oCco2r61jS7ZHU4",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1567207501143867423",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-03T17:18:06.236791+00:00"
+}
