@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "O Explorer Gadget ficou ainda melhor! 🧭\n\nAgora ele pode capturar Pokémon e girar PokéStops enquanto você joga ativamente (como GOPlus normal, etc.).\n\nTambém ao vivo:\n🔍 Botão de avaliação dedicado\n🎁 Resumo de captura aprimorado\n🗺️ Visuais mais claros\n❌ Encontros Power Spot removidos\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2117363189428216147",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2117363189428216147",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-03T01:43:39.548965+00:00"
+}
