@@ -66,6 +66,9 @@ test('Novidade dos fundos exibe arte editorial com pôsteres regionais aprovados
   }
   assert(css.includes('.spidey-profile-poster'));
   assert(css.includes('.spidey-profile-scene img'));
+  assert(css.includes('#eventDetail .spidey-profile-scenes'),'Arte precisa aparecer também no detalhe');
+  assert.match(js,/detail\.insertAdjacentHTML\('afterbegin',profileArtwork\(\)\)/);
+
   assert(css.includes('object-fit:contain!important'));
   assert(js.includes('liberação do recurso ainda não confirmada oficialmente'));
 });
