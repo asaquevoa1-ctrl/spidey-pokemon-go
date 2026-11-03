@@ -50,27 +50,27 @@ test('Estilo Premium usa cartazes completos, nunca crop e funciona em celular',(
   assert.match(css,/focus-visible/);
   assert.ok(oldMaster.includes('wild-area-mexico-city-2026-approved-v1.png'));
 });
-test('Novidade dos fundos exibe arte editorial com pôsteres regionais aprovados',()=>{
-  const fs=require('node:fs');
-  const p=require('node:path');
+test('Novidade do perfil usa a arte exata aprovada no app e no detalhe',()=>{
+  const file='trainer-profile-backgrounds-20261102-premium-v1.png';
+  const artPath=path.join(__dirname,'../spidey-app/assets/events/premium',file);
+  assert(fs.existsSync(artPath),'A imagem original deve ser parte do repositório');
+  const bytes=fs.readFileSync(artPath);
+  assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a','Arquivo tem de ser PNG real');
+  assert.equal(bytes.readUInt32BE(16),1672);
+  assert.equal(bytes.readUInt32BE(20),941);
+  assert(bytes.length>100000,'Não aceitar imagem placeholder');
   assert.match(js,/PROFILE_ID='2026-11-02-trainer-profile-buddy-backgrounds-2026'/);
-  assert.match(js,/if\(event\?\.id===PROFILE_ID\)return profileArtwork\(\)/);
-  assert.match(js,/spidey-profile-scenes/);
-  for(const file of [
-    'wild-area-sendai-2026-approved-v1.png',
-    'wild-area-mexico-city-2026-approved-v1.png',
-    'wild-area-global-2026-approved-v1.png'
-  ]){
-    assert(js.includes(file),'Arte ausente: '+file);
-    assert(fs.existsSync(p.join(__dirname,'../spidey-app/assets/events/premium',file)),file+' não existe no repositório');
-  }
-  assert(css.includes('.spidey-profile-poster'));
-  assert(css.includes('.spidey-profile-scene img'));
-  assert(css.includes('#eventDetail .spidey-profile-scenes'),'Arte precisa aparecer também no detalhe');
+  assert(js.includes(file),'A imagem aprovada deve ser usada em profileArtwork');
+  assert.match(js,/if\(isProfileStory\(event\)\)return profileArtwork\(\)/);
+  assert.match(js,/is-profile-story/);
+  assert.match(js,/spidey-profile-cover/);
   assert.match(js,/detail\.insertAdjacentHTML\('afterbegin',profileArtwork\(\)\)/);
-
-  assert(css.includes('object-fit:contain!important'));
-  assert(js.includes('liberação do recurso ainda não confirmada oficialmente'));
+  assert.match(js,/get-ready-for-gowildarea-2026/,'Notícia oficial sobre o mesmo tema também deve receber arte');
+  assert.doesNotMatch(js,/PROFILE_SCENES|spidey-profile-poster-heading/);
+  assert.match(css,/#eventDetail \.spidey-profile-cover/);
+  assert.match(css,/#newsView \.spidey-news-article\.is-profile-story \.spidey-profile-cover/);
+  assert.doesNotMatch(css,/spidey-profile-scenes|spidey-profile-scene-tag/);
+  assert.match(css,/object-fit:contain!important/);
 });
 
 test('Card da novidade do perfil não reserva altura extra no celular',()=>{
@@ -94,8 +94,9 @@ test('PWA versionado e novas interfaces passam a fazer parte do instalavel',()=>
   assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(sw,/\.\/news-premium-20261102\.js/);
   assert.match(sw,/\.\/news-premium-20261102\.css/);
-  assert.match(html,/news-premium-20261102\.js\?v=20261102-news-profilemobile4/);
-  assert.match(html,/news-premium-20261102\.css\?v=20261102-news-profilemobile4/);
+  assert.match(sw,/\.\/assets\/events\/premium\/trainer-profile-backgrounds-20261102-premium-v1\.png/);
+  assert.match(html,/news-premium-20261102\.js\?v=20261102-news-profileoriginal5/);
+  assert.match(html,/news-premium-20261102\.css\?v=20261102-news-profileoriginal5/);
 });
 test('Modelo editorial real exclui evento expirado e teaser superado por fonte oficial',()=>{
   const context={window:{},document:{readyState:'loading',addEventListener(){}},URL,Date,Intl,Map,console};
