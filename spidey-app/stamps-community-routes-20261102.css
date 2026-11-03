@@ -59,3 +59,56 @@ html[data-theme='light'] #stampsView .stamp-community-points li{background:#ffff
 html[data-theme='light'] #stampsView .stamp-community-points code{color:#233243;}
 html[data-theme='light'] #stampsView .stamp-community-points :is(button,a){color:#654d24;background:#fcf6eb;border-color:#c6af7f;}
 html[data-theme='light'] #stampsView .stamp-community-disclaimer :is(strong,a){color:#6c4e1d;}
+
+
+/* Vitrines regionais: pôsteres Premium aprovados com leitura intacta. */
+#stampsView .stamp-community-visual{
+  position:relative;display:block;overflow:hidden;margin:0 0 14px;
+  min-width:0;border-radius:14px;
+  border:1px solid rgba(233,197,139,.38);
+  background:radial-gradient(circle at top right,rgba(95,88,158,.25),transparent 50%),
+    linear-gradient(140deg,#17273b,#252b3c)
+}
+#stampsView .stamp-community-visual::before{
+  content:"";position:absolute;z-index:1;inset:0 0 auto;
+  height:2px;background:linear-gradient(90deg,#bf5262,#f2d497,#5d7d99);
+  pointer-events:none
+}
+#stampsView .stamp-community-visual img{
+  display:block;max-width:100%;width:100%;height:auto;
+  max-height:270px;aspect-ratio:16/10;
+  object-fit:contain!important;object-position:center!important;
+  background:#0d1a2b
+}
+#stampsView .stamp-community-visual figcaption{
+  box-sizing:border-box;display:grid;grid-template-columns:auto 1fr;
+  gap:3px 11px;align-items:center;
+  padding:10px 12px;
+  background:linear-gradient(110deg,#202e40,#172334);
+  border-top:1px solid rgba(232,198,138,.23);
+  color:#e1ebf2
+}
+#stampsView .stamp-community-visual figcaption > span{
+  color:#e8c68a;font-size:.61rem;font-weight:850;letter-spacing:.10em;
+  grid-column:1/-1
+}
+#stampsView .stamp-community-visual figcaption > strong{
+  color:#fff1d9;font-size:clamp(1.05rem,2.1vw,1.3rem);
+  line-height:1.22
+}
+#stampsView .stamp-community-visual figcaption > small{
+  color:#c6d2de;font-size:.72rem;text-align:right
+}
+#stampsView .stamp-community-card:focus-within .stamp-community-visual{
+  border-color:rgba(242,212,151,.70)
+}
+@media(max-width:480px){
+  #stampsView .stamp-community-visual{margin-bottom:12px;border-radius:12px}
+  #stampsView .stamp-community-visual img{max-height:230px}
+  #stampsView .stamp-community-visual figcaption{padding:9px;gap:5px}
+  #stampsView .stamp-community-visual figcaption > span{font-size:.56rem}
+  #stampsView .stamp-community-visual figcaption > small{font-size:.63rem}
+}
+html[data-theme='light'] #stampsView .stamp-community-visual figcaption{
+  background:linear-gradient(140deg,#2b4051,#253345)
+}
