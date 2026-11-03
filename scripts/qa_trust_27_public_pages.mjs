@@ -59,6 +59,13 @@ for(let attempt=1;attempt<=12;attempt++){
   assert(trust.includes('Copiar todas as 27')&&trust.includes('allCoordinatesText'));
   assert(app.includes('ntEventCopyAll'));
   const events=JSON.parse(assets.get('data/events.json').toString('utf8'));
+  const profileNews=events.events.find(e=>e.id==='2026-11-02-trainer-profile-buddy-backgrounds-2026');
+  assert(profileNews,'Notícia de perfil de Treinador ausente no catálogo público');
+  assert.equal(profileNews.source.confidence,'community');
+  assert.equal(profileNews.calendar.mode,'hidden');
+  assert.equal(profileNews.notifications.enabled,false);
+  assert(profileNews.news.summary.includes('6/11') && profileNews.news.summary.includes('9/11'));
+
   assert.equal(events.events.find(e=>e.id==='2026-national-trust-27-sites')?.locations.length,27);
   verified=true;
   console.log('GITHUB PAGES CONFIRMADO: lista e copiar todas as 27, com os arquivos exatos da revisão publicada');
