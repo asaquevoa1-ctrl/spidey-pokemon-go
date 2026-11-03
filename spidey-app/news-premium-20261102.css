@@ -200,7 +200,7 @@
 /* Novidades · arte editorial do perfil com três pôsteres oficiais já aprovados.
    Nenhum deles é apresentado como screenshot da funcionalidade. */
 #newsView .spidey-news-media.spidey-profile-media{
-  display:block;width:100%;flex:0 0 100%;max-height:none;min-height:0;overflow:hidden;
+  display:block;width:100%;height:auto;flex:none;max-height:none;min-height:0;overflow:hidden;
   border-bottom:1px solid rgba(224,190,137,.25);
   background:linear-gradient(135deg,#142941,#1a2340 55%,#342348)
 }
@@ -249,7 +249,7 @@
   color:#d2d9e5;font-size:clamp(.64rem,1.5vw,.75rem);line-height:1.42
 }
 @media(max-width:740px){
- #newsView .spidey-news-media.spidey-profile-media{width:100%;flex:0 0 100%;max-height:none}
+ #newsView .spidey-news-media.spidey-profile-media{width:100%;height:auto;flex:none;max-height:none}
  #newsView .spidey-profile-scene img{max-height:170px}
 }
 @media(max-width:470px){
@@ -290,4 +290,53 @@ html[data-theme="light"] #newsView .spidey-profile-poster{
  #eventDetail .spidey-profile-scene{padding:3px;border-radius:8px}
  #eventDetail .spidey-profile-scene img{max-height:120px}
  #eventDetail .spidey-profile-scene-tag{font-size:.58rem;padding:5px 1px}
+}
+
+
+/* Corrige cartão alto com grande bloco vazio no Android.
+   A mídia deixa de disputar 100% da altura disponível no eixo vertical.
+   O layout da matéria do perfil usa altura estritamente determinada por conteúdo. */
+#newsView .spidey-news-article.is-profile-story{
+  display:block;
+  height:auto;
+  min-height:0;
+  align-self:start;
+}
+#newsView .spidey-news-article.is-profile-story > .spidey-profile-media{
+  box-sizing:border-box;
+  display:block;
+  position:relative;
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  flex:none;
+  align-self:auto;
+  aspect-ratio:auto;
+  overflow:hidden;
+}
+#newsView .spidey-news-article.is-profile-story .spidey-profile-poster,
+#newsView .spidey-news-article.is-profile-story .spidey-profile-scenes,
+#newsView .spidey-news-article.is-profile-story .spidey-profile-scene{
+  height:auto;
+  min-height:0;
+  max-height:none;
+}
+#newsView .spidey-news-article.is-profile-story > .spidey-news-article-copy{
+  height:auto;
+  min-height:0;
+  flex:none;
+}
+@media(max-width:740px){
+  #newsView .spidey-news-article.is-profile-story{
+    display:block;
+    align-self:stretch;
+  }
+  #newsView .spidey-news-article.is-profile-story > .spidey-profile-media{
+    width:100%;
+    flex:none;
+    height:auto;
+    min-height:0;
+    max-height:none;
+  }
 }
