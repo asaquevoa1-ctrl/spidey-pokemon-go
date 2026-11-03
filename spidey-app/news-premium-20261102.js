@@ -172,7 +172,15 @@
       if(detail){
         const event=allEvents.find(x=>x.id===detail.dataset.newsDetail);
         if(!event)return;
-        if(!window.SpideyOpenSharedEvent?.(event.id)){
+        const opened=window.SpideyOpenSharedEvent?.(event.id)===true;
+        if(opened && event.id===PROFILE_ID){
+          // O detalhe de notícias não tem pôster padrão: inserir a mesma arte sem trocar o master.
+          const detail=document.getElementById('eventDetail');
+          if(detail && !detail.querySelector('.spidey-profile-media')){
+            detail.insertAdjacentHTML('afterbegin',profileArtwork());
+          }
+        }
+        if(!opened){
           const url=safeUrl(event.source?.url);if(url)window.open(url,'_blank','noopener,noreferrer');
         }
       }
