@@ -57,7 +57,7 @@ jobs:
           }
           with open('spidey-app/deploy-version.json', 'w', encoding='utf-8') as f:
               json.dump(version, f, ensure_ascii=False, indent=2)
-              f.write('\\n')
+              f.write(chr(10))
           print('Versão a verificar por HTTP em /spidey-app/deploy-version.json:', version)
           PY
       - name: Enviar artefato ao GitHub Pages
