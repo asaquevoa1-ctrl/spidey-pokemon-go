@@ -707,10 +707,32 @@
       }
     },
     {
-      "id": "2026-lego-pikachu-stamp-rally",
-      "title": "LEGO × Pokémon GO • Pikachu — coordenadas históricas",
+      "id": "2026-lego-pikachu-europa",
+      "title": "LEGO × Pikachu · Europa",
       "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
-      "stamp_count": 212,
+      "stamp_count": 74,
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      }
+    },
+    {
+      "id": "2026-lego-pikachu-austrália",
+      "title": "LEGO × Pikachu · Oceania · Austrália",
+      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "stamp_count": 21,
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      }
+    },
+    {
+      "id": "2026-lego-pikachu-estados-unidos",
+      "title": "LEGO × Pikachu · América do Norte · Estados Unidos",
+      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "stamp_count": 117,
       "source": {
         "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
         "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
@@ -760,28 +782,6 @@
         "url": "https://pokemongo.com/ja/news/assistant_pikachu",
         "confidence": "official"
       }
-    },
-    {
-      "id": "pokelids-japan-national",
-      "title": "PokéLids — Japão",
-      "summary": "Coleção nacional de PokéLids, com locais e artes originais do catálogo oficial.",
-      "stamp_count": 482,
-      "source": {
-        "name": "Pokémon GO · PokéLids em todo o Japão",
-        "confidence": "official",
-        "url": "https://pokemongo.com/ja/news/pokelid_full"
-      }
-    },
-    {
-      "id": "nagasaki-city-stamp-rally",
-      "title": "Nagasaki · Stamp Rally",
-      "summary": "Stamp Rally público anunciado após o GO Wild Area: Nagasaki.",
-      "stamp_count": 8,
-      "source": {
-        "name": "Pokémon GO",
-        "url": "https://pokemongo.com/news/stamp-rally-nagasaki?hl=en",
-        "confidence": "official"
-      }
     }
   ],
   "meta": {
@@ -792,7 +792,7 @@
     "events_without_weekly_art": 9,
     "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-04T10:36:33.245144-03:00",
+    "generated_at": "2026-11-04T10:41:57.485310-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
