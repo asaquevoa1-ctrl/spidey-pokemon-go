@@ -709,7 +709,7 @@
     {
       "id": "2026-lego-pikachu-europa",
       "title": "LEGO × Pikachu · Europa",
-      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "summary": "Coordenadas comunitárias de pontos LEGO × Pokémon GO, organizadas por continente. O jogo mostra encerramento em 3 de fevereiro de 2027. Pontos não verificados individualmente.",
       "stamp_count": 74,
       "source": {
         "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
@@ -720,7 +720,7 @@
     {
       "id": "2026-lego-pikachu-austrália",
       "title": "LEGO × Pikachu · Oceania · Austrália",
-      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "summary": "Coordenadas comunitárias de pontos LEGO × Pokémon GO, organizadas por continente. O jogo mostra encerramento em 3 de fevereiro de 2027. Pontos não verificados individualmente.",
       "stamp_count": 21,
       "source": {
         "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
@@ -731,7 +731,7 @@
     {
       "id": "2026-lego-pikachu-estados-unidos",
       "title": "LEGO × Pikachu · América do Norte · Estados Unidos",
-      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "summary": "Coordenadas comunitárias de pontos LEGO × Pokémon GO, organizadas por continente. O jogo mostra encerramento em 3 de fevereiro de 2027. Pontos não verificados individualmente.",
       "stamp_count": 117,
       "source": {
         "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
@@ -792,7 +792,7 @@
     "events_without_weekly_art": 9,
     "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-04T10:41:57.485310-03:00",
+    "generated_at": "2026-11-04T11:06:15.337666-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
