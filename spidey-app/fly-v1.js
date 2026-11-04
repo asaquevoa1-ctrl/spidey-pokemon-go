@@ -50,9 +50,9 @@
       return {event:e,first,last,active,next,sortTime:active.length?now.getTime():next?.start?.getTime()||Number.MAX_SAFE_INTEGER};
     }).filter(Boolean).sort((a,b)=>a.sortTime-b.sortTime||a.first.start-b.first.start).slice(0,5);
   }
-  const MORELULL_ID='2026-10-22-spotlight-morelull';
+  const FEATURED_SPOTLIGHT_ID='2026-11-05-spotlight-teddiursa';
   function spotlightStatus(list,now){
-    const e=list.find(item=>item.id===MORELULL_ID);
+    const e=list.find(item=>item.id===FEATURED_SPOTLIGHT_ID);
     if(!e||!points.length)return null;
     const route=core.route(e,points,now),first=route[0],last=route.at(-1);
     if(!first||!last||now<first.start-12*3600000||now>=last.end)return null;
@@ -86,18 +86,18 @@
       if(spotlight){
         const first=spotlight.first;
         setMarkupIfChanged(feature,`<div class="fly-spotlight-copy">
-          <span class="eyebrow">🍄 HOLOFOTE MUNDIAL • 22/10</span>
-          <h2>Morelull no FLY</h2>
-          <p><strong>18h às 19h no horário de cada cidade · 2× Poeira Estelar por captura</strong></p>
+          <span class="eyebrow">✨ HOLOFOTE MUNDIAL • 05/11</span>
+          <h2>Teddiursa com chapéu de bruxa no FLY</h2>
+          <p><strong>18h às 19h no horário de cada cidade · 2× XP por evolução</strong></p>
           <p aria-live="polite">${esc(spotlight.status)}</p>
           <small>Primeira referência: ${esc(first.name)} · ${brazil(first.start)} (Brasília) • ${spotlight.route.length} locais em todos os fusos. São referências geográficas, não pontos de captura confirmados.</small>
-        </div><button class="action-btn gold" type="button" data-fly-morespotlight>Ver rota do Morelull →</button>`);
+        </div><button class="action-btn gold" type="button" data-fly-morespotlight>Ver rota do Teddiursa →</button>`);
       }
     }
     if(points.length && (!selected||!list.some(e=>e.id===selected))){
       selected=spotlight?.e.id||preview[0]?.event.id||list.at(-1)?.id||'';
       // No primeiro acesso ao Holofote, mostrar TODOS os pontos do mundo.
-      if(selected===MORELULL_ID)mode='all';
+      if(selected===FEATURED_SPOTLIGHT_ID)mode='all';
     }
     const signature=JSON.stringify(list.map(e=>[e.id,e.title]));if(select.dataset.signature!==signature){select.innerHTML=list.map(e=>`<option value="${esc(e.id)}">${esc(e.title.replace(/^Spotlight Hour:/,'Hora do Holofote:').replace(/^Raid Hour:/,'Hora de Reides:').replace(/^Max Monday:/,'Segunda Max:'))}</option>`).join('');select.dataset.signature=signature}select.value=selected;
     const e=list.find(e=>e.id===selected),all=e?core.route(e,points,now):[],rows=mode==='essential'?all.filter(p=>p.essential):all;
