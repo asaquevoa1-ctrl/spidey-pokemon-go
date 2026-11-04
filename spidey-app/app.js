@@ -360,7 +360,7 @@ function renderStamps() {
         </div>
       </div>
       <p>${rally.public_summary ?? rally.summary ?? ''}</p>
-      <div class="stamp-meta"><strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : 'coordenadas exatas'}</div>
+      <div class="stamp-meta"><strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.collection_type === 'historical_community_reference' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.collection_type === 'historical_community_reference' ? 'coordenadas comunitárias' : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : 'coordenadas exatas'}</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
     card.addEventListener('click', () => openStampRally(rally));
     card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStampRally(rally); } });
