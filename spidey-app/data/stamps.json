@@ -20284,7 +20284,21 @@
           "confidence": "official"
         },
         "screenshot_evidence": "capturas compartilhadas pelo responsável em 28/10 indicam Nagano 6/6 e Pikachu com Fundo de Localização; imagens privadas não são publicadas"
-      }
+      },
+      "upcoming_regions": [
+        {
+          "prefecture": "Gunma",
+          "pokemon": "Pikachu",
+          "location_background": true,
+          "available_stamps": 0,
+          "release_date": null,
+          "status": "awaiting_release",
+          "heading": "Gunma: novo Fundo de Localização do Pikachu",
+          "body": "Gunma já aparece no Stamp Rally das PokéLids no Pokémon GO, com 0/0 selos. O Pikachu terá um Fundo de Localização de Gunma, mas ainda não há selos liberados nem data confirmada.",
+          "coordinate_note": "Sem selos disponíveis, não há coordenadas de rota para copiar. Acompanhe a liberação oficial.",
+          "evidence": "Captura do jogo compartilhada em 04/11/2026; disponibilidade futura ainda não confirmada."
+        }
+      ]
     },
     {
       "id": "nagasaki-city-stamp-rally",
