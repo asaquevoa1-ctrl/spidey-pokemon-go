@@ -284,6 +284,7 @@
           </div>
         </section>
 
+        ${copySet(stops) ? `
         <section class="stamp-datahub-v2 stamp-copy-list-v3" aria-label="Listas de coordenadas para copiar">
           <div class="stamp-section-head-v2">
             <div><span class="eyebrow">PRONTO PARA COPIAR</span><h3>${isLandmarkGuide ? 'Referências dos 7 lugares' : 'Coordenadas ' + (isPokelid ? 'por prefeitura' : 'da coleção')}</h3></div>
@@ -308,6 +309,8 @@
               ? 'Um local por linha. Estes pontos foram conferidos pela comunidade; confirme a PokéStop no jogo.'
               : 'Ainda não temos coordenadas confirmadas para esta coleção.'}</p>
         </section>
+
+        ` : `<section class="stamp-datahub-v2 stamp-copy-list-v3" aria-label="Coordenadas pendentes"><div class="stamp-section-head-v2"><div><span class="eyebrow">COORDENADAS PENDENTES</span><h3>Lista ainda indisponível</h3></div></div><p class="microcopy">Ainda não há coordenadas verificadas para esta coleção. Por isso, não exibimos uma lista vazia nem um botão de copiar sem conteúdo.</p></section>`}
 
         <section class="stamp-gallery-section-v2">
           <div class="stamp-section-head-v2">
