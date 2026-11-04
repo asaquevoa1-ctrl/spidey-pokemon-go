@@ -420,6 +420,15 @@ function openStampRally(rally) {
       ${(rally.public_notes ?? rally.notes ?? []).length ? `<h3>Observações</h3><ul class="bonus-list">${(rally.public_notes ?? rally.notes ?? []).map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
     </div>`;
 
+  detail.querySelector('#copyCommunityRallyAll')?.addEventListener('click', async () => {
+    const coordinates = stops.filter(validCoordinate).map(stop => Number(stop.latitude).toFixed(6) + ',' + Number(stop.longitude).toFixed(6)).join('\n');
+    try {
+      await navigator.clipboard.writeText(coordinates);
+      showToast('Coordenadas da região copiadas.');
+    } catch {
+      showToast('Não foi possível copiar as coordenadas.');
+    }
+  });
   detail.querySelectorAll('.copy-stamp-coord').forEach((button) => {
     button.addEventListener('click', async () => {
       await navigator.clipboard.writeText(button.dataset.value);
