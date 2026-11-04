@@ -56,37 +56,7 @@
     {
       "date": "2026-11-05",
       "weekday": "thursday",
-      "items": [
-        {
-          "id": "2026-11-05-spotlight-teddiursa",
-          "title": "Hora do Holofote: Teddiursa",
-          "summary": "Teddiursa, das 18h às 19h, com 2× XP por evolução.",
-          "category": "spotlight_hour",
-          "tags": [
-            "Novembro 2026",
-            "Calendário",
-            "Pokémon GO",
-            "Global"
-          ],
-          "start_brazil": "2026-11-05T18:00:00-03:00",
-          "end_brazil": "2026-11-05T19:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-            "confidence": "verified_community"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
-          }
-        }
-      ]
+      "items": []
     },
     {
       "date": "2026-11-06",
@@ -507,6 +477,35 @@
         }
       },
       {
+        "id": "2026-11-05-spotlight-teddiursa",
+        "title": "Hora do Holofote: Teddiursa com chapéu de bruxa",
+        "summary": "5/11, das 18h às 19h no horário local: Teddiursa fantasiado, com possibilidade de Shiny sem aumento de chance e 2× XP por evolução.",
+        "category": "spotlight_hour",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO",
+          "Global"
+        ],
+        "start_brazil": "2026-11-05T18:00:00-03:00",
+        "end_brazil": "2026-11-05T19:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
         "id": "2026-10-27-dia-de-muertos-mexico",
         "title": "Día de Muertos 2026 — México (evento nacional)",
         "summary": "Día de Muertos no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil e pesquisas. No FLY, confira a região mexicana e os horários; Paseo de la Reforma tem atividades adicionais.",
@@ -792,7 +791,7 @@
     "events_without_weekly_art": 9,
     "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-04T13:28:18.475023-03:00",
+    "generated_at": "2026-11-04T13:47:20.776328-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
