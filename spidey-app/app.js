@@ -671,9 +671,20 @@ async function loadContent({ refresh = false } = {}) {
   if (contentLoading) return contentLoading;
   contentLoading = (async () => {
     try {
-      const [eventsData, stampsData] = await Promise.all([
+      const [eventsResult, stampsResult] = await Promise.allSettled([
         window.SpideyCatalog.load('events'), window.SpideyCatalog.load('stamps'),
       ]);
+      if (stampsResult.status === 'fulfilled') {
+        state.stamps = stampsResult.value.rallies.filter(rally => rally.status === 'published');
+        lastStampCatalog = null;
+        renderStamps();
+      }
+      if (eventsResult.status !== 'fulfilled') {
+        if (stampsResult.status === 'fulfilled') return;
+        throw eventsResult.reason;
+      }
+      const eventsData = eventsResult.value;
+      const stampsData = stampsResult.status === 'fulfilled' ? stampsResult.value : {rallies:state.stamps};
       const events = eventsData.events.filter(event => eventVisibleInPublicAgenda(event));
       // FLY uses the entire verified global catalog: a worldwide raid continues after it ends in Brazil.
       const flyEvents = eventsData.events.filter(event => window.SpideyFlyCore?.eligible(event));
