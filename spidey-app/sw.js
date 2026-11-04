@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261103-public-notes-clean2';
+const CACHE = 'spidey-app-20261104-lego-stamps1';
 const CORE = [
   './rare-candy-alert-20261102.js',
   './rare-candy-alert-20261102.css',
