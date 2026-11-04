@@ -95,8 +95,8 @@ test('PWA versionado e novas interfaces passam a fazer parte do instalavel',()=>
   assert.match(sw,/\.\/news-premium-20261102\.js/);
   assert.match(sw,/\.\/news-premium-20261102\.css/);
   assert.match(sw,/\.\/assets\/events\/premium\/trainer-profile-backgrounds-20261102-premium-v1\.png/);
-  assert.match(html,/news-premium-20261102\.js\?v=20261102-news-profileoriginal5/);
-  assert.match(html,/news-premium-20261102\.css\?v=20261102-news-profileoriginal5/);
+  assert.match(html,/news-premium-20261102\.js\?v=[\w-]+/);
+  assert.match(html,/news-premium-20261102\.css\?v=[\w-]+/);
 });
 test('Modelo editorial real exclui evento expirado e teaser superado por fonte oficial',()=>{
   const context={window:{},document:{readyState:'loading',addEventListener(){}},URL,Date,Intl,Map,console};

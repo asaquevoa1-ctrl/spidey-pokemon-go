@@ -1,10 +1,13 @@
 {
   "schema_version": "spidey-community-routes-v1",
-  "last_reviewed": "2026-11-02",
-  "title": "Pontos compartilhados para explorar",
-  "description": "Hawlucha na Cidade do México e Lapras na região de Sendai / Tohoku. Coordenadas enviadas pela comunidade e apresentadas na ordem original.",
-  "source_type": "user_shared_unverified",
-  "verification": "Não há confirmação independente de aparições, fundos especiais ou PokéStops nestas coordenadas. Não são a lista oficial de sete PokéStops por cidade do GO Wild Area 2026.",
+  "last_reviewed": "2026-11-04",
+  "title": "Caças aos Selos permanentes de Hawlucha e Lapras",
+  "description": "O anúncio oficial confirmou oito locais na Cidade do México e oito em Sendai / Tohoku, sem data de término planejada. As coordenadas continuam sendo referências comunitárias dos lugares, não posições oficiais das Poképaradas.",
+  "source_type": "official_venues_with_community_landmark_coordinates",
+  "verification": "Locais, recompensas e disponibilidade contínua confirmados oficialmente em 03/11/2026. Coordenadas exatas das Poképaradas não foram publicadas; não gerar GPX.",
+  "official_source": "https://pokemongo.com/news/forever-stamp-rally-go-wild-area-2026",
+  "available_from": "2026-11-02T16:00:00-08:00",
+  "available_until": null,
   "official_event_stamp_rally_source": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026",
   "routes": [
     {
@@ -13,47 +16,59 @@
       "city": "Cidade do México",
       "region": "Cidade do México",
       "country": "México",
+      "official_rally": true,
+      "ticket_required": false,
+      "planned_end_date": null,
+      "reward": "Encontro com Hawlucha com Fundo de Localização da Cidade do México; Brilhante possível.",
       "coordinate_type": "community_reference",
       "pokestop_verified": false,
-      "background_guaranteed": false,
+      "background_guaranteed_on_completion": true,
       "points": [
         {
           "order": 1,
+          "venue": "Palacio de Bellas Artes",
           "latitude": 19.435019,
           "longitude": -99.141343
         },
         {
           "order": 2,
+          "venue": "Palacio Nacional",
           "latitude": 19.432514,
           "longitude": -99.13204
         },
         {
           "order": 3,
+          "venue": "Columna El Paraguas",
           "latitude": 19.42592,
           "longitude": -99.18578
         },
         {
           "order": 4,
+          "venue": "Diana Cazadora",
           "latitude": 19.425135,
           "longitude": -99.17162
         },
         {
           "order": 5,
+          "venue": "Fuente de los Coyotes Coyoacán",
           "latitude": 19.349138,
           "longitude": -99.16353
         },
         {
           "order": 6,
+          "venue": "Aztlán 360",
           "latitude": 19.415812,
           "longitude": -99.19599
         },
         {
           "order": 7,
+          "venue": "Reloj y Fuente de Parque Hundido",
           "latitude": 19.377789,
           "longitude": -99.179115
         },
         {
           "order": 8,
+          "venue": "Museo Soumaya",
           "latitude": 19.440695,
           "longitude": -99.2047
         }
@@ -65,47 +80,59 @@
       "city": "Sendai / Tohoku",
       "region": "Miyagi",
       "country": "Japão",
+      "official_rally": true,
+      "ticket_required": false,
+      "planned_end_date": null,
+      "reward": "Encontro com Lapras com Fundo de Localização de Sendai / Tohoku; Brilhante possível.",
       "coordinate_type": "community_reference",
       "pokestop_verified": false,
-      "background_guaranteed": false,
+      "background_guaranteed_on_completion": true,
       "points": [
         {
           "order": 1,
+          "venue": "Site of Sendai Castle",
           "latitude": 38.252922,
           "longitude": 140.85649
         },
         {
           "order": 2,
+          "venue": "Sendai Mediatheque",
           "latitude": 38.26527,
           "longitude": 140.86559
         },
         {
           "order": 3,
+          "venue": "Sendai Asaichi (Morning Market)",
           "latitude": 38.302784,
           "longitude": 140.98834
         },
         {
           "order": 4,
+          "venue": "Akiu Onsen",
           "latitude": 38.258724,
           "longitude": 140.879
         },
         {
           "order": 5,
+          "venue": "Tagajo Castle Ruins",
           "latitude": 38.4214,
           "longitude": 141.30533
         },
         {
           "order": 6,
+          "venue": "Kadonowaki Elementary School Ruins",
           "latitude": 38.002476,
           "longitude": 140.61714
         },
         {
           "order": 7,
+          "venue": "Shiroishi Castle",
           "latitude": 38.369698,
           "longitude": 141.06287
         },
         {
           "order": 8,
+          "venue": "Matsushima Park",
           "latitude": 38.22543,
           "longitude": 140.72697
         }

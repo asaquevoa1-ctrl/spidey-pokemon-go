@@ -14,23 +14,24 @@ test('Explorer Gadget is one news article, not an invented dated event or duplic
  assert.equal(entry.presentation.requires_art,false);
  assert.equal(entry.presentation.fallback_visual,'none');
  assert.equal(entry.source.confidence,'official');
- assert.equal(entry.source.url,'https://pokemongo.com/pt-BR/news/pgo-explorer-gadget-2026');
+ assert.equal(entry.source.url,'https://pokemongo.com/pt-BR/news/pgo-explorer-gadget-2026-update');
  assert(events.some(item=>item.id==='2026-10-08-gameplay-quality-of-life'),'existing October news preserved');
 });
-test('official phased rollout is not promoted to universal availability',()=>{
+test('official update confirms active-play behavior without inventing an event window',()=>{
  const all=[entry.summary,entry.news.summary,...entry.notes].join(' ');
- assert.match(all,/gradual/i);
  assert.match(all,/nível 20/);
  assert.match(all,/Poké Bolas/);
  assert.match(all,/Pokémon GO Plus \+/);
- assert.equal(entry.audit.official_general_availability_confirmed,false);
- assert.doesNotMatch(entry.news.summary,/liberad[oa] (?:para )?tod[oa]s/i);
+ assert.match(all,/ícone rosa/);
+ assert.match(all,/janela limitada/);
+ assert.equal(entry.audit.official_general_availability_confirmed,true);
  assert(!entry.notifications.enabled);
 });
-test('reported interface changes are clearly separated from official claims',()=>{
+test('interface changes previously reported by the community are now confirmed by the official article',()=>{
  assert(entry.verification_sources.some(x=>x.confidence==='official'));
  assert(entry.verification_sources.some(x=>x.confidence==='verified_community'));
- assert(entry.notes.some(n=>n.startsWith('RELATO DA COMUNIDADE:')));
- assert(entry.notes.some(n=>n.startsWith('OUTROS AJUSTES MOSTRADOS EM INFOGRÁFICO DA COMUNIDADE:')));
+ assert(entry.notes.some(n=>n.startsWith('COM O JOGO ABERTO:')));
+ assert(entry.notes.some(n=>n.startsWith('MELHORIAS OFICIAIS:')));
+ assert.match(entry.audit.canonical_fulltext_url,/pgo-explorer-gadget-2026-update/);
  assert.equal(entry.audit.scope,'news_only');
 });

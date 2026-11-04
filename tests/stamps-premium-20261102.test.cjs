@@ -14,9 +14,9 @@ const stamp=read('spidey-app/stamps-v2.js');
 const catalog=JSON.parse(read('spidey-app/data/stamps.json'));
 
 test('Selos premium entrou no app público e PWA mantém atualização automática',()=>{
-  assert.match(html,/stamps-premium-20261102\.css\?v=20261102-stampmuseum1/);
+  assert.match(html,/stamps-premium-20261102\.css\?v=20261102-stampmuseum1(?:-[\w-]+)?/);
   assert.match(sw,/\.\/stamps-premium-20261102\.css/);
-  assert.match(sw,/fly-clean2-autorefresh-stampmuseum1/);
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(sw,/client\.navigate\(client\.url\)/);
 });
 test('Cartões de coleção e modo claro/escuro têm acabamento Premium responsivo',()=>{

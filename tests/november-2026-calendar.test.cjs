@@ -18,7 +18,7 @@ test('november 2026 curated batch is present once with no duplicated Halloween o
  assert.ok(nov.length>=30,'Previously published November events and 24 new records are preserved');
 });
 test('remaining unconfirmed November previews do not invent hours, posters, Pokemon or GPX',()=>{
- for(const id of ['2026-11-24-twilight-wishes-preview','2026-11-28-super-mega-raid-day-preview','2026-11-16-max-surprise']){
+ for(const id of ['2026-11-28-super-mega-raid-day-preview','2026-11-16-max-surprise']){
    const e=find(id);
    assert.equal(e.schedule.precision,'date');
    assert.equal(e.schedule.start_local,undefined);
@@ -29,6 +29,16 @@ test('remaining unconfirmed November previews do not invent hours, posters, Poke
    assert.notEqual(e.source.confidence,'official');
    assert.ok(e.title.includes('prévia')||e.title.includes('surpresa'));
  }
+});
+test('Twilight Wishes preview was completed from the official announcement without changing its ID',()=>{
+ const e=find('2026-11-24-twilight-wishes-preview');
+ assert.equal(e.source.confidence,'official');
+ assert.equal(e.title,'Chamados do Crepúsculo');
+ assert.equal(e.schedule.start_local,'2026-11-24T10:00:00-03:00');
+ assert.equal(e.schedule.end_local,'2026-11-30T20:00:00-03:00');
+ assert.equal(e.field_research_windows.length,2);
+ assert.ok(e.pokemon.length>0);
+ assert.equal(e.gpx.enabled,false);
 });
 test('spotlight and raid hours use correct local and Brasília 18 to 19, not generic UTC',()=>{
  for(const id of ['2026-11-04-raid-hour-altered-giratina','2026-11-18-raid-hour-cresselia-darkrai','2026-11-25-raid-hour-deoxys','2026-11-05-spotlight-teddiursa','2026-11-26-spotlight-noibat']){

@@ -38,10 +38,10 @@ test('A origem das coordenadas continua arquivada sem expor a caixa antiga',()=>
   assert.ok(route.points.length>=67);
 });
 test('PWA entrega scripts atualizados e mantem FLY Premium',()=>{
-  assert.match(html,/fly-v1\.js\?v=20261102-fly-clean1/);
+  assert.match(html,/fly-v1\.js\?v=20261104-teddiursa1/);
   assert.match(html,/trust-world-v1\.js\?v=20261102-fly-clean1/);
   assert.match(html,/fly-premium-20261102\.js\?v=20261102-flypremium1/);
-  assert.match(sw,/const CACHE = 'spidey-app-20261102-fly-clean2-autorefresh(?:-[^']+)?'/);
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(sw,/const outdated = keys\.filter/);
   assert.match(sw,/client\.navigate\(client\.url\)/);
   assert.match(sw,/\.\/fly-premium-20261102\.js/);

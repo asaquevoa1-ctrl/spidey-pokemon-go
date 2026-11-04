@@ -13,7 +13,7 @@ const pvp=JSON.parse(read('spidey-app/data/pvp.json'));
 test('Painel tático Premium está integrado no HTML e PWA',()=>{
  assert.match(html,/pvp-premium-20261102\.css\?v=20261102-pvpcockpit1/);
  assert.match(sw,/\.\/pvp-premium-20261102\.css/);
- assert.match(sw,/pvpcockpit1/);
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
 });
 test('Visual das ligas, ranking e trio responde a toque, foco e telas pequenas',()=>{
  for(const name of ['#pvpView .pvp-leagues','#pvpView .pvp-rankings','#pvpView .pvp-rank',

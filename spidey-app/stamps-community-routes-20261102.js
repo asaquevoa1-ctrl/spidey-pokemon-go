@@ -1,9 +1,9 @@
-/* Rotas extras enviadas pela comunidade; não alteram os Stamp Rallies oficiais. */
+/* Caças aos Selos permanentes: locais oficiais com coordenadas de referência comunitárias. */
 (function () {
   'use strict';
   const DATA_URL = 'data/community-routes-20261102.json';
   const SECTION_ID = 'stampCommunityRoutes20261102';
-  const officialSource = 'https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026';
+  const officialSource = 'https://pokemongo.com/news/forever-stamp-rally-go-wild-area-2026';
   // Cartazes Premium já aprovados do evento; não substituem as imagens oficiais das PokéLids.
   const ROUTE_ART=Object.freeze({
     'hawlucha-mexico-city':{
@@ -58,9 +58,9 @@
     root.innerHTML = `
       <div class="stamp-community-head">
         <div>
-          <span class="eyebrow">COMPARTILHADO PELA COMUNIDADE</span>
-          <h2>Pontos extras para explorar</h2>
-          <p>Hawlucha na Cidade do México e Lapras na região de Sendai. São 8 coordenadas para cada um, prontas para copiar.</p>
+          <span class="eyebrow">CAÇAS OFICIAIS · SEM DATA DE TÉRMINO</span>
+          <h2>Hawlucha e Lapras: 8 selos por cidade</h2>
+          <p>O Pokémon GO confirmou oito locais na Cidade do México e oito em Sendai/Tohoku. As coordenadas ajudam a chegar aos lugares, mas a Poképarada exata deve ser conferida no jogo.</p>
         </div>
         <span class="stamp-community-total">16 pontos</span>
       </div>
@@ -69,19 +69,19 @@
           <article class="stamp-community-card" data-community-route="${esc(route.id)}">
             <figure class="stamp-community-visual">
               <img src="${esc(ROUTE_ART[route.id]?.file || '')}" alt="${esc(ROUTE_ART[route.id]?.alt || 'Cartaz do evento regional')}" loading="lazy" decoding="async" width="920" height="520">
-              <figcaption><span>✦ ROTA EXTRA DA COMUNIDADE</span><strong>${esc(route.pokemon)}</strong><small>${esc(route.city)}</small></figcaption>
+              <figcaption><span>✦ CAÇA AOS SELOS PERMANENTE</span><strong>${esc(route.pokemon)}</strong><small>${esc(route.city)}</small></figcaption>
             </figure>
             <div class="stamp-community-title">
               <span class="stamp-community-symbol" aria-hidden="true">${index === 0 ? 'H' : 'L'}</span>
               <div><span class="eyebrow">${esc(route.city)}</span><h3>${esc(route.pokemon)}</h3></div>
               <span class="stamp-community-counter">8 pontos</span>
             </div>
-            <p class="stamp-community-note">Referências compartilhadas por jogadores. Aparições e fundos especiais não são garantidos.</p>
+            <p class="stamp-community-note">Ao completar os oito selos, o encontro com ${esc(route.pokemon)} e o Fundo de Localização são recompensas oficiais. Brilhante é possível, nunca garantido. As coordenadas são referências comunitárias dos lugares.</p>
             <ol class="stamp-community-points">
               ${route.points.map((point, idx) => {
                 const coord = asText(point);
                 return `<li><span class="stamp-community-number">${idx + 1}</span>
-                  <code>${esc(coord)}</code>
+                  <span><strong>${esc(point.venue || ('Ponto ' + (idx + 1)))}</strong><code>${esc(coord)}</code></span>
                   <button type="button" data-community-copy-one="${idx}" aria-label="Copiar ponto ${idx + 1} de ${esc(route.pokemon)}">Copiar</button>
                   <a href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(coord)}" target="_blank" rel="noopener noreferrer" aria-label="Ver no mapa o ponto ${idx + 1} de ${esc(route.pokemon)}">Mapa</a></li>`;
               }).join('')}
@@ -89,7 +89,7 @@
             <button type="button" class="action-btn gold stamp-community-copy-all" data-community-copy-all="${esc(route.id)}">Copiar as 8 coordenadas</button>
           </article>`).join('')}
       </div>
-      <p class="stamp-community-disclaimer"><strong>Importante:</strong> estas listas compartilhadas não são as 7 PokéStops oficiais de cada GO Stamp Rally da Área Selvagem 2026. Consulte os locais oficiais nas coleções acima ou no <a href="${officialSource}" target="_blank" rel="noopener noreferrer">comunicado do Pokémon GO</a>.</p>`;
+      <p class="stamp-community-disclaimer"><strong>Importante:</strong> estas duas rotas contínuas são separadas das Caças aos Selos de 7 pontos exclusivas do fim de semana da Área Selvagem. Os nomes e as recompensas vêm do <a href="${officialSource}" target="_blank" rel="noopener noreferrer">comunicado oficial</a>; as coordenadas não são posições oficiais das Poképaradas e não geram GPX.</p>`;
     root.addEventListener('click', async event => {
       const button = event.target.closest('[data-community-copy-one],[data-community-copy-all]');
       if (!button || !root.contains(button)) return;
@@ -118,7 +118,7 @@
       if (!r.ok) throw Error('HTTP ' + r.status);
       return r.json();
     }).then(data => render(root, data)).catch(() => {
-      root.innerHTML = '<div class="stamp-community-head"><h2>Pontos extras para explorar</h2></div><p class="microcopy">Não foi possível abrir as coordenadas agora. Confira sua conexão e reabra o Spidey.</p>';
+      root.innerHTML = '<div class="stamp-community-head"><h2>Caças aos Selos de Hawlucha e Lapras</h2></div><p class="microcopy">Não foi possível abrir os locais agora. Confira sua conexão e reabra o Spidey.</p>';
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, {once:true});
