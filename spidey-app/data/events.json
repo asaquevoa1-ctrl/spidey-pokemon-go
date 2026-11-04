@@ -1449,8 +1449,8 @@
     {
       "id": "2026-11-05-spotlight-teddiursa",
       "slug": "2026-11-05-spotlight-teddiursa",
-      "title": "Hora do Holofote: Teddiursa",
-      "summary": "Teddiursa, das 18h às 19h, com 2× XP por evolução.",
+      "title": "Hora do Holofote: Teddiursa com chapéu de bruxa",
+      "summary": "5/11, das 18h às 19h no horário local: Teddiursa fantasiado, com possibilidade de Shiny sem aumento de chance e 2× XP por evolução.",
       "category": "spotlight_hour",
       "tags": [
         "Novembro 2026",
@@ -1486,13 +1486,20 @@
       },
       "pokemon": [
         {
-          "name": "Teddiursa"
+          "name": "Teddiursa",
+          "costume": "Chapéu de bruxa",
+          "shiny_available": true,
+          "shiny_boosted": false
         }
       ],
       "bonuses": [
         "2× XP por evolução."
       ],
-      "notes": [],
+      "notes": [
+        "Teddiursa com chapéu de bruxa aparece com mais frequência; Shiny disponível, sem chance aumentada.",
+        "Ovo da Sorte dobra o XP recebido: com o bônus de 2× XP por evolução, o total pode chegar a 4× XP por evolução.",
+        "No Fly, os pontos são referências geográficas das cidades e não garantem aparições."
+      ],
       "notifications": {
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
@@ -1512,7 +1519,8 @@
         "coordinates": "city_references",
         "generated_by": "spidey_fly_core",
         "timezone_conversion": "America/Sao_Paulo"
-      }
+      },
+      "updated_at": "2026-11-04"
     },
     {
       "id": "2026-11-26-spotlight-noibat",
