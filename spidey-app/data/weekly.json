@@ -707,6 +707,17 @@
       }
     },
     {
+      "id": "2026-lego-pikachu-stamp-rally",
+      "title": "LEGO × Pokémon GO • Pikachu — coordenadas históricas",
+      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "stamp_count": 212,
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      }
+    },
+    {
       "id": "2026-go-wild-area-sendai-stamp-rally",
       "title": "Área Selvagem GO 2026 · 7 selos de Sendai",
       "summary": "A Caça aos Selos oficial reúne sete Poképaradas em Sendai, visitáveis em qualquer ordem somente no dia principal do ingresso.",
@@ -781,7 +792,7 @@
     "events_without_weekly_art": 9,
     "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-04T04:46:06.565395-03:00",
+    "generated_at": "2026-11-04T10:36:33.245144-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
