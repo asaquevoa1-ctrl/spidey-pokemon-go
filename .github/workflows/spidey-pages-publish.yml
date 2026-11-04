@@ -1,0 +1,46 @@
+name: Publicar Spidey no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: spidey-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Obter arquivos da versão atual
+        uses: actions/checkout@v4
+      - name: Preparar site estático
+        run: |
+          touch .nojekyll
+          test -f spidey-app/index.html
+          test -f spidey-app/data/stamps.json
+          python3 - <<'PY'
+          import json
+          with open('spidey-app/data/stamps.json', encoding='utf-8') as f:
+              rallies=json.load(f)['rallies']
+          published=[r for r in rallies if r.get('status')=='published']
+          stops=sum(len(r.get('stops',[])) for r in published)
+          print(f'Selos publicados: {len(published)}; coordenadas: {stops}')
+          assert len(published)>=10 and stops>=739, 'Catálogo incompleto: publicação interrompida'
+          PY
+      - name: Enviar artefato ao GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
