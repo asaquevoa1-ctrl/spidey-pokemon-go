@@ -113,6 +113,24 @@
       }
     },
     {
+      "id": "2026-11-20-laic-2027-sao-paulo:start:60",
+      "event_id": "2026-11-20-laic-2027-sao-paulo",
+      "event_title": "Pokémon GO no LAIC 2027 — São Paulo",
+      "category": "local_event",
+      "scheduled_for": "2026-11-20T07:00:00-03:00",
+      "event_start": "2026-11-20T08:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Pokémon GO no LAIC 2027 — São Paulo começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-20-laic-2027-sao-paulo",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-11-21-community-day-preview:start:60",
       "event_id": "2026-11-21-community-day-preview",
       "event_title": "Dia Comunitário de novembro: Pawniard",
@@ -168,7 +186,7 @@
     }
   ],
   "meta": {
-    "pending_count": 9,
+    "pending_count": 10,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }

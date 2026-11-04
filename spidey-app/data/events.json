@@ -63,7 +63,7 @@
       "slug": "fundos-no-perfil-do-treinador-novembro-2026",
       "content_type": "news",
       "title": "Fundos dos Pokémon companheiros no perfil do Treinador",
-      "summary": "Uma novidade compartilhada pela comunidade indica duas etapas: 6/11, 10h locais, para fundos de Sendai e Cidade do México; 9/11, 10h locais, para fundos especiais da Área Selvagem 2026 e fundos de local anteriores. Horários de liberação ainda não confirmados em comunicado oficial.",
+      "summary": "Relato comunitário que antecipou os fundos no Perfil do Treinador. O histórico foi preservado e substituído pelo anúncio oficial de 3/11.",
       "category": "community_discovery",
       "tags": [
         "Novidade",
@@ -72,7 +72,7 @@
         "Fundos de localização",
         "Fundos especiais",
         "GO Wild Area 2026",
-        "A confirmar"
+        "Confirmado depois"
       ],
       "source": {
         "name": "Comunidade Pokémon GO • descoberta sobre fundos no perfil (datas informadas em material compartilhado)",
@@ -88,9 +88,9 @@
       },
       "news": {
         "title": "Seu companheiro poderá mostrar fundos no perfil?",
-        "summary": "Segundo material da comunidade: 6/11, 10h locais, fundos de Sendai e Cidade do México; 9/11, 10h locais, fundo especial da Área Selvagem 2026 e fundos de local antigos. O recurso e os horários do perfil ainda aguardam confirmação oficial.",
+        "summary": "A comunidade antecipou corretamente as duas etapas. O anúncio oficial de 3/11 confirmou 6/11 às 10h locais para Sendai e Cidade do México e 9/11 às 10h locais para o Fundo Especial 2026 e fundos de localização anteriores.",
         "published_on": "2026-11-02",
-        "label": "COMUNIDADE • HORÁRIOS A CONFIRMAR"
+        "label": "HISTÓRICO • CONFIRMADO DEPOIS"
       },
       "notes": [
         "COMO SERIA: ao usar como companheiro um Pokémon com Fundo de Localização ou Fundo Especial elegível, o fundo poderá aparecer atrás dele no perfil do Treinador. A atualização não concede nem garante novos fundos.",
@@ -105,21 +105,25 @@
         "enabled": false,
         "reason": "Horários de recurso relatados pela comunidade, sem confirmação oficial; não enviar alertas de calendário."
       },
-      "status": "published",
-      "verified_at": "2026-11-02",
+      "status": "archived",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T07:27:00-03:00",
       "audit": {
         "classification": "community_report_trainer_profile_backgrounds",
-        "dates_reported_not_officially_verified": true,
+        "dates_reported_not_officially_verified": false,
+        "confirmed_by_official_announcement": true,
         "calendar_event": false,
         "art_independent": true
-      }
+      },
+      "superseded_by": "official-news-auto-5e1b1cd68f6c",
+      "superseded_at": "2026-11-04T07:27:00-03:00"
     },
     {
       "id": "2026-11-02-explorer-gadget-visual-updates",
       "slug": "2026-11-02-explorer-gadget-visual-updates",
       "content_type": "news",
       "title": "Dispositivo de Exploração: capturas automáticas e mudanças na interface",
-      "summary": "O Dispositivo de Exploração tenta pegar Pokémon e girar Poképaradas enquanto você explora. A equipe do Pokémon GO ainda descreve a liberação como gradual; ajustes visuais mostrados pela comunidade podem variar entre contas.",
+      "summary": "O Dispositivo de Exploração agora também ajuda com o jogo aberto: o ícone rosa mostra a tentativa automática e permite assumir a captura ou o giro por um curto período.",
       "category": "game_update",
       "tags": [
         "Novidade",
@@ -127,11 +131,11 @@
         "Captura automática",
         "Poképaradas",
         "Atualização do jogo",
-        "Disponibilidade gradual"
+        "Atualização oficial"
       ],
       "source": {
         "name": "Pokémon GO • anúncio oficial do Dispositivo de Exploração",
-        "url": "https://pokemongo.com/pt-BR/news/pgo-explorer-gadget-2026",
+        "url": "https://pokemongo.com/pt-BR/news/pgo-explorer-gadget-2026-update",
         "confidence": "official"
       },
       "verification_sources": [
@@ -155,34 +159,35 @@
       },
       "news": {
         "title": "Dispositivo de Exploração: o que mudou na prática",
-        "summary": "O recurso tenta capturar Pokémon e girar Poképaradas automaticamente. Requer nível 20 e segue em liberação gradual no comunicado oficial. Veja também mudanças de interface relatadas pelos jogadores.",
+        "summary": "A atualização oficial confirma uso com o jogo aberto, intervenção manual por tempo limitado, resumo das capturas e giros e seis melhorias de interface e jogabilidade.",
         "published_on": "2026-11-02",
-        "label": "GUIA • OFICIAL + RELATOS"
+        "label": "OFICIAL • GUIA VERIFICADO"
       },
       "notes": [
         "COMO FUNCIONA: com o dispositivo ativado, o jogo tenta capturar Pokémon próximos com Poké Bolas comuns e girar Poképaradas enquanto você caminha, inclusive com o aplicativo fechado ou em segundo plano.",
-        "COMO ATIVAR: a partir do nível 20, procure o ícone no canto superior direito do mapa ou o Dispositivo de Exploração em Itens-Chave da Bolsa. Se não aparecer, sua conta ainda pode estar fora da liberação gradual.",
+        "COMO ATIVAR: a partir do nível 20, procure o ícone no canto superior direito do mapa ou o Dispositivo de Exploração em Itens-Chave da Bolsa.",
         "LIMITES IMPORTANTES: há um limite diário de capturas e giros conforme seu nível. Sem espaço no armazenamento ou na Bolsa, o dispositivo interrompe a atividade correspondente; ele não usa Grandes Bolas nem Ultra Bolas.",
         "COMPATIBILIDADE: não é possível manter o Dispositivo de Exploração e um Pokémon GO Plus + ou outro acessório de captura ativos ao mesmo tempo. Ao trocar para um acessório físico durante a sessão, o dispositivo interno pode ficar indisponível até o dia seguinte.",
         "RESUMO: ao voltar ao jogo, você pode conferir quantas capturas e giros o dispositivo realizou. Ele não tenta pegar certas espécies ainda não registradas na Pokédex nem Pokémon incríveis.",
-        "RELATO DA COMUNIDADE: jogadores observaram um pequeno ícone de Poké Bola e um indicador de progresso quando o dispositivo tenta capturar ou girar com o jogo aberto. O visual e a disponibilidade podem variar conforme conta e versão.",
-        "OUTROS AJUSTES MOSTRADOS EM INFOGRÁFICO DA COMUNIDADE: novo atalho de avaliação, alterações nos círculos de Pokémon atraídos, contraste de Poképaradas e efeitos visuais próximos a itens. Essas alterações específicas não foram detalhadas no anúncio oficial consultado.",
+        "COM O JOGO ABERTO: um ícone rosa de Poké Bola aparece sobre o Pokémon ou a Poképarada que o dispositivo está tentando atender. Toque no alvo dentro da janela limitada para assumir a ação manualmente.",
+        "MELHORIAS OFICIAIS: resumo de captura mais claro, botão dedicado de avaliação, fim dos encontros especiais ao visitar ou deixar Pokémon em Pontos de Energia, novos indicadores de anel, contraste maior entre Poképaradas giradas e não giradas e novos efeitos da Caixa Misteriosa e da Bolsa de Moedas.",
         "NÃO CONFUNDIR: a notícia oficial de 8 de outubro sobre Células de Zygarde, transferências 100% e interface do mapa já está cadastrada separadamente nas Novidades do Spidey.",
-        "STATUS EM 02/11/2026: o site oficial ainda fala em implantação gradual do Dispositivo de Exploração, não em disponibilidade garantida para todas as contas."
+        "O anúncio de 2/11 confirma as mudanças, mas não define uma janela de evento nem garante disponibilidade idêntica em todas as contas e versões."
       ],
       "notifications": {
         "enabled": false,
         "reason": "Atualização de recurso sem início universal ou janela de evento confirmados."
       },
       "status": "published",
-      "verified_at": "2026-11-02",
-      "updated_at": "2026-11-02T18:45:00-03:00",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T07:27:00-03:00",
       "audit": {
-        "classification": "official_explorer_gadget_and_labeled_community_ui_reports",
+        "classification": "official_explorer_gadget_update_editorially_verified",
         "scope": "news_only",
-        "official_general_availability_confirmed": false,
+        "official_general_availability_confirmed": true,
         "related_existing_story": "2026-10-08-gameplay-quality-of-life",
-        "user_supplied_community_infographic": "Jogada Excelente, compartilhado em 02/11/2026"
+        "canonical_fulltext_url": "https://pokemongo.com/news/pgo-explorer-gadget-2026-update",
+        "user_supplied_community_infographic": "Jogada Excelente, compartilhado em 02/11/2026; previsões de interface confirmadas pelo anúncio oficial de 02/11"
       }
     },
     {
@@ -2220,25 +2225,28 @@
     {
       "id": "2026-11-24-twilight-wishes-preview",
       "slug": "2026-11-24-twilight-wishes-preview",
-      "title": "Desejos do Entardecer (prévia)",
-      "summary": "Evento Desejos do Entardecer previsto de 24 a 30/11; detalhes ainda não confirmados.",
+      "title": "Chamados do Crepúsculo",
+      "summary": "24/11 às 10h até 30/11 às 20h locais: Staryu e Elgyem com chance Brilhante aumentada, reides temáticas, Pesquisas de Campo em duas fases e Passe GO próprio.",
       "category": "evento_especial",
       "tags": [
         "Novembro 2026",
         "Calendário",
-        "Pokémon GO"
+        "Pokémon GO",
+        "Anúncio oficial",
+        "Passe GO"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-        "confidence": "verified_community"
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+        "confidence": "official"
       },
       "schedule": {
-        "precision": "date",
         "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-24",
-        "end_date": "2026-11-30",
-        "brazil_timezone": "America/Sao_Paulo"
+        "start_local": "2026-11-24T10:00:00-03:00",
+        "end_local": "2026-11-30T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-24T10:00:00-03:00",
+        "end_brazil": "2026-11-30T20:00:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -2253,25 +2261,75 @@
         "enabled": false,
         "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
       },
-      "pokemon": [],
-      "bonuses": [],
+      "pokemon": [
+        {
+          "name": "Staryu e Elgyem",
+          "note": "Maior chance de encontrar as formas Brilhantes durante o evento."
+        },
+        {
+          "name": "Clefairy, Rockruff e outros Pokémon temáticos",
+          "note": "Encontros na natureza; Brilhante possível quando disponível."
+        },
+        {
+          "name": "Pikachu com coroa do sol ou da lua, Espeon com lenço do sol e Umbreon com lenço da lua",
+          "note": "Reides de uma e três estrelas; Brilhante possível."
+        },
+        {
+          "name": "Mega Beedrill, Mega Houndoom, Mega Sableye e Mega Manectric",
+          "note": "Megarreides durante o evento; Brilhante possível."
+        }
+      ],
+      "bonuses": [
+        "Maior chance de encontrar Staryu Brilhante e Elgyem Brilhante.",
+        "Passe GO, no nível 1: maior chance de Pokémon Sortudos em trocas e de se tornar Amizade Sortuda.",
+        "Passe GO, no nível 10: 2× Poeira Estelar por captura; no Passe GO Deluxe, 3× Poeira Estelar por captura."
+      ],
       "notes": [
-        "Nome e janela informados no calendário comunitário de 19/10.",
-        "Aguardar anúncio oficial antes de divulgar Pokémon e bônus."
+        "A janela oficial é de 24/11 às 10h a 30/11 às 20h no horário local.",
+        "PESQUISA DE CAMPO • 24/11 10h a 26/11 10h: Applin pode aparecer como recompensa; Brilhante possível.",
+        "PESQUISA DE CAMPO • 26/11 10h a 30/11 20h: Gengar com fantasia do Festival Assustador, Drifblim com fantasia Travessura de Halloween e Bramblin podem aparecer.",
+        "O Passe GO: Chamados do Crepúsculo funciona durante o evento. Recompensas desbloqueadas podem ser resgatadas até 2/12 às 20h locais.",
+        "A disponibilidade do Passe GO Deluxe varia por região; a compra não garante Pokémon Brilhante."
       ],
       "notifications": {
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T07:27:00-03:00",
       "verification_sources": [
         {
-          "name": "Pokémon GO Hub • calendário comunitário",
+          "name": "Pokémon GO • anúncio completo",
+          "url": "https://pokemongo.com/news/twilight-wishes-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub • prévia comunitária preservada",
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "field_research_windows": [
+        {
+          "start_local": "2026-11-24T10:00:00",
+          "end_local": "2026-11-26T10:00:00",
+          "timezone_scope": "local",
+          "encounters": ["Applin"]
+        },
+        {
+          "start_local": "2026-11-26T10:00:00",
+          "end_local": "2026-11-30T20:00:00",
+          "timezone_scope": "local",
+          "encounters": ["Gengar com fantasia do Festival Assustador", "Drifblim com fantasia Travessura de Halloween", "Bramblin"]
+        }
+      ],
+      "news": {
+        "title": "Chamados do Crepúsculo: duas fases de pesquisa e Passe GO",
+        "summary": "De 24 a 30/11, Staryu e Elgyem têm chance Brilhante aumentada. A Pesquisa de Campo muda em 26/11 às 10h locais, e o Passe GO libera bônus por nível.",
+        "published_on": "2026-11-02",
+        "label": "OFICIAL • DETALHES CONFIRMADOS"
+      }
     },
     {
       "id": "2026-11-28-super-mega-raid-day-preview",
@@ -10799,6 +10857,20 @@
         "url": "https://pokemongo.com/en/gowildarea/mexico-city/gameplay",
         "confidence": "official"
       },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • atividades pela Cidade do México",
+          "url": "https://pokemongo.com/news/gowa_cdmx_additional_info",
+          "confidence": "official",
+          "published_on": "2026-11-03"
+        },
+        {
+          "name": "Pokémon GO • preparativos da Área Selvagem 2026",
+          "url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
+          "confidence": "official",
+          "published_on": "2026-11-03"
+        }
+      ],
       "schedule": {
         "local_timezone": "America/Mexico_City",
         "start_local": "2026-11-06T10:00:00-06:00",
@@ -10828,7 +10900,10 @@
         "Dialga e Palkia Dinamax e Duraludon Gigamax estreiam em Batalhas Max. Algumas capturas podem ter Fundo de Localização da Cidade do México; em batalhas remotas esse fundo não é concedido.",
         "Zacian Espada Coroada e Zamazenta Escudo Coroado voltam às reides. Sliggoo de Hisui aparece na natureza, e você pode evoluí-lo para Goodra de Hisui com 100 Doces Goomy.",
         "Latias e Latios poderosos podem aparecer por Incenso comum no dia do ingresso. Brilhantes são possibilidades, nunca garantias.",
-        "Confira os sete locais, a ordem flexível do circuito e os horários no guia de Selos do Spidey antes de começar. Os pontos de referência não são coordenadas exatas das Poképaradas."
+        "Confira os sete locais, a ordem flexível do circuito e os horários no guia de Selos do Spidey antes de começar. Os pontos de referência não são coordenadas exatas das Poképaradas.",
+        "PESQUISAS: a Especial concede as duas medalhas de tipo. As duas Pesquisas Temporárias avançam ao girar Poképaradas decoradas e expiram às 20h locais no dia válido; o Dia Extra oferece outra oportunidade para Aço e Dragão. Tarefas e recompensas individuais ainda não foram publicadas.",
+        "ATIVIDADES PRESENCIAIS • 6–8/11: encontro com Pikachu e Eevee no Monumento a la Revolución (10h–12h50 e 15h–17h50 CST), Treinadores notáveis, artistas, suporte, acessibilidade, embaixadores e ativações em vários pontos da cidade.",
+        "LOJA TEMPORÁRIA: Foro Lucerna, Calle Lucerna 70, de 6 a 8/11, das 10h às 19h locais. Cinépolis Diana e Liverpool Polanco têm ativações de 5 a 9/11; brindes e viseiras são limitados aos estoques."
       ],
       "notifications": {
         "enabled": true,
@@ -10971,7 +11046,7 @@
         "location_coordinates_are": "landmark_centers_not_exact_pokestops",
         "verification_date": "2026-10-27"
       },
-      "verified_at": "2026-10-27"
+      "verified_at": "2026-11-04"
     },
     {
       "id": "2026-11-go-wild-area-global",
@@ -11003,6 +11078,12 @@
           "url": "https://pokemongo.com/news/gowa-global-europe-2026",
           "confidence": "official",
           "published_on": "2026-10-26"
+        },
+        {
+          "name": "Pokémon GO • preparativos da Área Selvagem 2026",
+          "url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
+          "confidence": "official",
+          "published_on": "2026-11-03"
         }
       ],
       "schedule": {
@@ -11035,6 +11116,8 @@
         "No Brasil, haverá encontro principal no Pavilhão Japonês do Parque Ibirapuera e encontros oficiais de comunidades em 96 referências de locais anunciadas.",
         "Na Europa, haverá encontros oficiais em Karlsruhe em 14/11, das 10h às 20h, e em Estocolmo em 15/11, das 10h às 18h, nos horários locais.",
         "Os encontros europeus oferecem Pesquisa Temporária por check-in, atividades com Embaixadores da Comunidade e brindes enquanto durarem os estoques.",
+        "A Pesquisa Especial do ingresso começa em 14/11 às 10h locais e pede escolha entre Aço e Dragão. Ao obter a medalha do tipo, o bônus correspondente dura até 15/11 às 18h locais.",
+        "Caminho Aço: +1 Doce GG por captura de Pokémon poderoso do tipo Aço para nível 31+ e +1.000 Poeira Estelar por captura. Caminho Dragão: os mesmos bônus para Pokémon poderosos do tipo Dragão.",
         "A publicação brasileira repete 2025 em dois subtítulos, mas o título, a introdução e a página oficial do evento confirmam 14 e 15 de novembro de 2026; a divergência foi preservada na auditoria.",
         "Informações oficiais conferidas em 29/10/2026."
       ],
@@ -11050,7 +11133,8 @@
         "Para todos: três encontros-surpresa no Retrato GO por dia, oito horas de Jogar em Grupo e chance de Pokémon poderosos em Rotas.",
         "Com ingresso: maior chance de Brilhantes, limite diário de 3.200 Partículas Max e até seis Passes de Reide por dia.",
         "Com ingresso: 2× Doces por captura, Incenso com duração dobrada, Módulos Atrair por duas horas e mais chance de Ovos de 10 km.",
-        "Com ingresso: até seis Trocas Especiais por dia e metade do custo de Poeira Estelar nas trocas."
+        "Com ingresso: até seis Trocas Especiais por dia e metade do custo de Poeira Estelar nas trocas.",
+        "Após obter a medalha escolhida na Pesquisa Especial: +1 Doce GG (nível 31+) e +1.000 Poeira Estelar ao capturar Pokémon poderosos do tipo Aço ou Dragão correspondente."
       ],
       "pokemon": [
         {
@@ -11118,7 +11202,7 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-10-29T22:55:00Z"
+      "updated_at": "2026-11-04T07:27:00-03:00"
     },
     {
       "id": "2026-10-pokexciting-taipei",
@@ -12060,7 +12144,7 @@
       "slug": "official-news-auto-f0093c412c9b",
       "content_type": "news",
       "title": "Reúnam-se sob um céu estrelado durante os Chamados do Crepúsculo!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "O anúncio completo foi incorporado ao evento Chamados do Crepúsculo, mantendo neste registro o histórico da descoberta automática.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -12081,9 +12165,9 @@
       },
       "news": {
         "title": "Reúnam-se sob um céu estrelado durante os Chamados do Crepúsculo!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "Detalhes confirmados no evento de 24 a 30/11: bônus, reides, duas fases de Pesquisa de Campo e Passe GO próprio.",
         "published_on": "2026-11-02",
-        "label": "OFICIAL • NOVO"
+        "label": "HISTÓRICO • INCORPORADO AO EVENTO"
       },
       "notes": [
         "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
@@ -12094,22 +12178,26 @@
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
-      "status": "published",
-      "verified_at": "2026-11-02",
-      "updated_at": "2026-11-02T00:00:00+00:00",
+      "status": "archived",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T07:27:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_grouped_with_calendar_event",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026"
+      },
+      "related_event_ids": ["2026-11-24-twilight-wishes-preview"],
+      "superseded_by": "2026-11-24-twilight-wishes-preview",
+      "superseded_at": "2026-11-04T07:27:00-03:00"
     },
     {
       "id": "official-news-auto-1eda22614526",
       "slug": "official-news-auto-1eda22614526",
       "content_type": "news",
       "title": "Descubram novas aventuras pelas cidades a partir de hoje! Treinadoras e Treinadores já podem participar das novas Caças aos Selos do Pokémon GO em Sendai • Tohoku, no Japão, e na Cidade do México, no México.",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "Duas Caças aos Selos permanentes e separadas do evento começaram em 2/11 às 16h PST: oito pontos em Sendai/Tohoku e oito na Cidade do México, sem data de término anunciada.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -12129,36 +12217,42 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Descubram novas aventuras pelas cidades a partir de hoje! Treinadoras e Treinadores já podem participar das novas Caças aos Selos do Pokémon GO em Sendai • Tohoku, no Japão, e na Cidade do México, no México.",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Novas Caças aos Selos permanentes em Sendai e na Cidade do México",
+        "summary": "Cada rota tem oito Poképaradas e pode ser concluída em qualquer ordem. A Cidade do México entrega encontro com Hawlucha e Fundo de Localização; Sendai entrega Lapras e Fundo de Localização. Brilhante é possível, não garantido.",
         "published_on": "2026-11-03",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • GUIA VERIFICADO"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "Estas rotas são permanentes e separadas das Caças aos Selos de sete pontos exclusivas do GO Wild Area. Não exigem ingresso segundo o anúncio.",
+        "CIDADE DO MÉXICO: Palacio de Bellas Artes, Palacio Nacional, Columna El Paraguas, Diana Cazadora, Fuente de los Coyotes Coyoacán, Aztlán 360, Reloj y Fuente de Parque Hundido e Museo Soumaya.",
+        "SENDAI/TOHOKU: Site of Sendai Castle, Sendai Mediatheque, Sendai Asaichi, Akiu Onsen, Tagajo Castle Ruins, Kadonowaki Elementary School Ruins, Shiroishi Castle e Matsushima Park.",
+        "As coordenadas compartilhadas anteriormente continuam identificadas como referências comunitárias dos lugares; o anúncio não publicou coordenadas exatas das Poképaradas e não autoriza GPX."
       ],
       "notifications": {
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
       "status": "published",
-      "verified_at": "2026-11-03",
-      "updated_at": "2026-11-03T00:00:00+00:00",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T07:27:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/forever-stamp-rally-go-wild-area-2026",
+        "no_planned_end_date": true,
+        "distinct_from_event_stamp_rallies": true
+      },
+      "related_event_ids": ["2026-11-go-wild-area-sendai", "2026-11-go-wild-area-mexico-city"],
+      "related_stamp_rally_ids": ["lapras-sendai-tohoku", "hawlucha-mexico-city"]
     },
     {
       "id": "official-news-auto-5e1b1cd68f6c",
       "slug": "official-news-auto-5e1b1cd68f6c",
       "content_type": "news",
       "title": "Preparem-se para a Área Selvagem do Pokémon GO 2026 com fundos de Pokémon no Perfil de Treinador, novos itens de avatar e mais novidades empolgantes.",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "O anúncio confirma fundos no Perfil do Treinador em duas etapas, grupos privados Dinamax, pesquisas de Aço e Dragão, envio de Bolas Safári ao Pokémon HOME e outros preparativos da Área Selvagem.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -12178,36 +12272,42 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Preparem-se para a Área Selvagem do Pokémon GO 2026 com fundos de Pokémon no Perfil de Treinador, novos itens de avatar e mais novidades empolgantes.",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Área Selvagem confirma fundos no perfil e grupos privados Dinamax",
+        "summary": "Fundos de Sendai e Cidade do México chegam ao perfil em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores chegam em 9/11 às 10h locais. O anúncio também detalha pesquisas, avatares, Pokémon HOME e Efeitos de Aventura.",
         "published_on": "2026-11-03",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • DETALHES CONFIRMADOS"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "6/11 ÀS 10H LOCAIS: fundos de localização da Área Selvagem 2026 de Sendai e Cidade do México passam a poder aparecer com o Pokémon companheiro no Perfil do Treinador.",
+        "9/11 ÀS 10H LOCAIS: Fundo Especial da Área Selvagem 2026 e fundos de localização lançados anteriormente passam a ser exibidos no perfil. Amigos só veem o fundo após 10h no fuso local deles.",
+        "Batalhas Dinamax passam a oferecer entrada por pareamento automático ou Grupo Privado com código.",
+        "Na Área Selvagem Global, a Pesquisa Especial ramificada libera medalha de Aço ou Dragão e bônus do tipo escolhido. Participantes presenciais de Sendai e Cidade do México podem obter as duas medalhas.",
+        "Pokémon capturados em Bolas Safári GO agora podem ser enviados ao Pokémon HOME, onde a bola aparece como Bola Estranha.",
+        "Efeitos de Aventura selecionados poderão ser ativados no lobby de reides ou Batalhas Max a partir de Natureza Selvagem; participantes presenciais têm acesso antecipado."
       ],
       "notifications": {
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
       "status": "published",
-      "verified_at": "2026-11-03",
-      "updated_at": "2026-11-03T00:00:00+00:00",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T07:27:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
+        "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026"
+      },
+      "related_event_ids": ["2026-11-go-wild-area-sendai", "2026-11-go-wild-area-mexico-city", "2026-11-09-into-the-wild", "2026-11-go-wild-area-global"]
     },
     {
       "id": "official-news-auto-f4cc5d7a7e81",
       "slug": "official-news-auto-f4cc5d7a7e81",
       "content_type": "news",
       "title": "O Dispositivo de Exploração está evoluindo!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "O anúncio completo foi incorporado ao guia do Dispositivo de Exploração, preservando neste registro o histórico da descoberta automática.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -12228,9 +12328,9 @@
       },
       "news": {
         "title": "O Dispositivo de Exploração está evoluindo!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "O guia verificado explica o uso com o jogo aberto, a intervenção manual por tempo limitado e as melhorias oficiais de interface.",
         "published_on": "2026-11-02",
-        "label": "OFICIAL • NOVO"
+        "label": "HISTÓRICO • INCORPORADO AO GUIA"
       },
       "notes": [
         "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
@@ -12241,14 +12341,110 @@
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
-      "status": "published",
-      "verified_at": "2026-11-03",
-      "updated_at": "2026-11-03T00:00:00+00:00",
+      "status": "archived",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T07:27:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_grouped_with_existing_guide",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
+        "not_a_calendar_event": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/pgo-explorer-gadget-2026-update"
+      },
+      "superseded_by": "2026-11-02-explorer-gadget-visual-updates",
+      "superseded_at": "2026-11-04T07:27:00-03:00"
+    },
+    {
+      "id": "2026-11-20-laic-2027-sao-paulo",
+      "slug": "2026-11-20-laic-2027-sao-paulo",
+      "content_type": "event",
+      "title": "Pokémon GO no LAIC 2027 — São Paulo",
+      "summary": "De 20 a 22/11, das 8h às 18h em cada dia, o espaço de Pokémon GO no LAIC terá atividades da comunidade, fotos com os líderes de equipe e transmissão oficial em português.",
+      "category": "local_event",
+      "tags": [
+        "LAIC 2027",
+        "São Paulo",
+        "Evento presencial",
+        "Transmissão em português",
+        "Competitivo"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "local_place": "São Paulo",
+        "start_local": "2026-11-20T08:00:00-03:00",
+        "end_local": "2026-11-22T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-20T08:00:00-03:00",
+        "end_brazil": "2026-11-22T18:00:00-03:00",
+        "recurrence": "daily",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-22",
+        "start_time": "08:00",
+        "end_time": "18:00",
+        "timezone": "America/Sao_Paulo",
+        "sessions": [
+          {
+            "start": "2026-11-20T08:00:00-03:00",
+            "end": "2026-11-20T18:00:00-03:00"
+          },
+          {
+            "start": "2026-11-21T08:00:00-03:00",
+            "end": "2026-11-21T18:00:00-03:00"
+          },
+          {
+            "start": "2026-11-22T08:00:00-03:00",
+            "end": "2026-11-22T18:00:00-03:00"
+          }
+        ]
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "location_label": "Distrito Anhembi • Av. Olavo Fontoura, 1209 • Santana • São Paulo",
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "O comunicado informa o endereço do evento, mas não publica coordenadas de Poképaradas, Ginásios ou uma rota oficial."
+      },
+      "notes": [
+        "O espaço de Pokémon GO funcionará das 8h às 18h em cada um dos três dias; as janelas diárias foram mantidas separadas no calendário.",
+        "O comunicado anuncia atividades da comunidade, área para recarregar baterias e fotos com estátuas em tamanho real dos líderes de equipe.",
+        "As partidas de Pokémon GO terão transmissão oficial em português na Twitch, YouTube, TikTok e Facebook. A transmissão da Twitch em português terá Drops.",
+        "A publicação não detalha bônus no jogo, encontros, tarefas de pesquisa, recompensas presenciais ou Poképaradas; nenhum desses itens foi inferido."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "verified_at": "2026-11-04",
+      "updated_at": "2026-11-04T17:54:00-03:00",
+      "news": {
+        "title": "LAIC 2027 terá espaço de Pokémon GO e transmissão em português",
+        "summary": "O encontro será no Distrito Anhembi, de 20 a 22/11, das 8h às 18h por dia. A publicação confirma atividades da comunidade, fotos e transmissão oficial; não anuncia bônus ou encontros no jogo.",
+        "published_on": "2026-11-04",
+        "label": "OFICIAL • SÃO PAULO"
+      },
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
+        "automatic_index_discovery": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/pokemon-go-at-laic2027",
+        "collector_source_id": "oficial-https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
+        "collector_queue_file": "queue/pending/2026-11-04/oficial-noticia-c0b30b540fab.json",
+        "daily_sessions_preserved": true,
+        "no_gameplay_bonuses_announced": true
       }
     }
   ]

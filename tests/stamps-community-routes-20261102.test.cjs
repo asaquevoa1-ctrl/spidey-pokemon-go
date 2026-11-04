@@ -30,19 +30,24 @@ test('As dezesseis coordenadas do usuário estão preservadas e na ordem origina
    assert.deepEqual(route.points.map(p=>p.order),[1,2,3,4,5,6,7,8]);
    assert.equal(new Set(route.points.map(p=>p.latitude+','+p.longitude)).size,8);
    assert.equal(route.pokestop_verified,false);
-   assert.equal(route.background_guaranteed,false);
+   assert.equal(route.background_guaranteed_on_completion,true);
+   assert.equal(route.official_rally,true);
+   assert.equal(route.ticket_required,false);
+   assert.equal(route.points.every(p=>typeof p.venue==='string'&&p.venue.length>3),true);
    assert.equal(route.coordinate_type,'community_reference');
  }
 });
 
-test('As rotas da comunidade não viram os selos oficiais de 7 PokéStops por cidade',()=>{
- assert.equal(data.source_type,'user_shared_unverified');
- assert.match(data.verification,/Não há confirmação independente/);
+test('Anúncio oficial confirma as rotas contínuas sem confundi-las com os selos do evento',()=>{
+ assert.equal(data.source_type,'official_venues_with_community_landmark_coordinates');
+ assert.match(data.verification,/Locais, recompensas e disponibilidade contínua confirmados/);
+ assert.equal(data.available_until,null);
+ assert.match(data.official_source,/forever-stamp-rally/);
  assert.match(data.official_event_stamp_rally_source,/pokemongo.com/);
  assert.equal(stamps.rallies.find(r=>r.id==='2026-go-wild-area-sendai-stamp-rally').stops.length,7);
  assert.equal(stamps.rallies.find(r=>r.id==='2026-go-wild-area-mexico-city-stamp-rally').stops.length,7);
  assert.doesNotMatch(js,/saveStampProgress|getStampProgress|Marcar como feito/);
- assert.match(js,/não são as 7 PokéStops oficiais/);
+ assert.match(js,/separadas das Caças aos Selos de 7 pontos/);
 });
 
 test('Hawlucha e Lapras exibem cartazes Premium existentes sem alterar os selos oficiais',()=>{
@@ -62,12 +67,12 @@ test('Hawlucha e Lapras exibem cartazes Premium existentes sem alterar os selos 
 });
 
 test('App inclui listas Premium para copiar individuais, grupos e mapas',()=>{
- assert.match(html,/stamps-community-routes-20261102\.js\?v=20261102-hawlucha-lapras-art2/);
- assert.match(html,/stamps-community-routes-20261102\.css\?v=20261102-hawlucha-lapras-art2/);
+ assert.match(html,/stamps-community-routes-20261102\.js\?v=20261104-official-rallies1/);
+ assert.match(html,/stamps-community-routes-20261102\.css\?v=20261104-official-rallies1/);
  assert.match(sw,/\.\/stamps-community-routes-20261102\.js/);
  assert.match(sw,/\.\/stamps-community-routes-20261102\.css/);
  assert.match(sw,/\.\/data\/community-routes-20261102\.json/);
- assert.match(sw,/communityroutes1/);
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
  assert.match(js,/data-community-copy-one/);
  assert.match(js,/data-community-copy-all/);
  assert.match(js,/route\.points\.map\(asText\)\.join\('\\n'\)/);
