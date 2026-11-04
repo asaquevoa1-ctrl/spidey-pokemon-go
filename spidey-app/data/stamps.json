@@ -148,14 +148,14 @@
       }
     },
     {
-      "id": "2026-lego-pikachu-stamp-rally",
-      "slug": "lego-pikachu-2026-selos-coordenadas",
+      "id": "2026-lego-pikachu-europa",
+      "slug": "lego-pikachu-2026-europa",
       "status": "published",
       "collection_type": "historical_community_reference",
-      "title": "LEGO × Pokémon GO • Pikachu — coordenadas históricas",
+      "title": "LEGO × Pikachu · Europa",
       "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
-      "public_summary": "Lista histórica de 212 coordenadas comunitárias de lojas LEGO participantes. Evento encerrado; confira cada ponto antes de usar.",
-      "stamp_count": 212,
+      "public_summary": "Arquivo histórico · 74 coordenadas comunitárias de Europa. Evento encerrado em setembro de 2026.",
+      "stamp_count": 74,
       "available_from": "2026-08-03",
       "available_until": "2026-09-30",
       "source": {
@@ -1206,7 +1206,38 @@
           "coordinate_confidence": "unverified",
           "exact_pokestop_verified": false,
           "gpx_enabled": false
-        },
+        }
+      ],
+      "notes": [
+        "Referências comunitárias, não coordenadas oficiais verificadas de Poképaradas.",
+        "Sydney omitida por longitude inválida na lista de origem.",
+        "Não gerar GPX de Poképaradas confirmadas com base em pontos não verificados."
+      ]
+    },
+    {
+      "id": "2026-lego-pikachu-austrália",
+      "slug": "lego-pikachu-2026-austrália",
+      "status": "published",
+      "collection_type": "historical_community_reference",
+      "title": "LEGO × Pikachu · Oceania · Austrália",
+      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "public_summary": "Arquivo histórico · 21 coordenadas comunitárias de Oceania · Austrália. Evento encerrado em setembro de 2026.",
+      "stamp_count": 21,
+      "available_from": "2026-08-03",
+      "available_until": "2026-09-30",
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      },
+      "calendar": {
+        "enabled": false,
+        "reason": "Evento encerrado em setembro; arquivo histórico na aba Selos."
+      },
+      "rewards": [
+        "Durante o evento: encontro com Pikachu com Fundo Especial, conforme condições do evento."
+      ],
+      "stops": [
         {
           "id": "lego-pikachu-2026-75",
           "stamp_number": 75,
@@ -1500,7 +1531,38 @@
           "coordinate_confidence": "unverified",
           "exact_pokestop_verified": false,
           "gpx_enabled": false
-        },
+        }
+      ],
+      "notes": [
+        "Referências comunitárias, não coordenadas oficiais verificadas de Poképaradas.",
+        "Sydney omitida por longitude inválida na lista de origem.",
+        "Não gerar GPX de Poképaradas confirmadas com base em pontos não verificados."
+      ]
+    },
+    {
+      "id": "2026-lego-pikachu-estados-unidos",
+      "slug": "lego-pikachu-2026-estados-unidos",
+      "status": "published",
+      "collection_type": "historical_community_reference",
+      "title": "LEGO × Pikachu · América do Norte · Estados Unidos",
+      "summary": "Pontos comunitários da Caça aos Selos LEGO × Pokémon GO. Evento encerrado em 30/09/2026. Coordenadas não verificadas individualmente; não representam garantia de Poképarada ativa.",
+      "public_summary": "Arquivo histórico · 117 coordenadas comunitárias de América do Norte · Estados Unidos. Evento encerrado em setembro de 2026.",
+      "stamp_count": 117,
+      "available_from": "2026-08-03",
+      "available_until": "2026-09-30",
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      },
+      "calendar": {
+        "enabled": false,
+        "reason": "Evento encerrado em setembro; arquivo histórico na aba Selos."
+      },
+      "rewards": [
+        "Durante o evento: encontro com Pikachu com Fundo Especial, conforme condições do evento."
+      ],
+      "stops": [
         {
           "id": "lego-pikachu-2026-96",
           "stamp_number": 96,
