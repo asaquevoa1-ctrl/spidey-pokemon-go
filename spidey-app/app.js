@@ -410,6 +410,7 @@ function openStampRally(rally) {
         <div class="info-box"><span>GPX confirmado</span><strong>${exactStops.length}/${stops.length} Stops</strong></div>
       </div>
       <div class="action-row">
+        ${rally.collection_type === 'historical_community_reference' ? '<button id="copyCommunityRallyAll" class="action-btn gold">Copiar todas as coordenadas</button>' : ''}
         ${fullGpx ? '<button id="downloadRallyGpx" class="action-btn gold">Baixar GPX completo</button>' : ''}
         ${rally.source?.url ? `<a class="action-btn" href="${rally.source.url}" target="_blank" rel="noopener">Fonte oficial</a>` : ''}
       </div>
