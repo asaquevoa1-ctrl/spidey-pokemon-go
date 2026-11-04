@@ -37,6 +37,29 @@ jobs:
           print(f'Selos publicados: {len(published)}; coordenadas: {stops}')
           assert len(published)>=10 and stops>=739, 'Catálogo incompleto: publicação interrompida'
           PY
+      - name: Gravar identificação verificável da versão publicada
+        env:
+          SPIDEY_DEPLOY_SHA: ${{ github.sha }}
+          SPIDEY_DEPLOY_RUN: ${{ github.run_id }}
+        run: |
+          python3 - <<'PY'
+          import datetime, json, os
+          with open('spidey-app/data/stamps.json', encoding='utf-8') as f:
+              rallies = json.load(f)['rallies']
+          published = [r for r in rallies if r.get('status') == 'published']
+          version = {
+              'schema': 'spidey-deployment-v1',
+              'git_sha': os.environ['SPIDEY_DEPLOY_SHA'],
+              'workflow_run_id': os.environ['SPIDEY_DEPLOY_RUN'],
+              'generated_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'published_collections': len(published),
+              'published_stops': sum(len(r.get('stops', [])) for r in published)
+          }
+          with open('spidey-app/deploy-version.json', 'w', encoding='utf-8') as f:
+              json.dump(version, f, ensure_ascii=False, indent=2)
+              f.write('\\n')
+          print('Versão a verificar por HTTP em /spidey-app/deploy-version.json:', version)
+          PY
       - name: Enviar artefato ao GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
