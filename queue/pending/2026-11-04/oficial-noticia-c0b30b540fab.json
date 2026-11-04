@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 OFICIAL • NOTÍCIA",
+  "mensagem": "Assistam às partidas de Pokémon GO no LAIC 2027, em português!\n\n📌 Fonte: Pokémon GO oficial",
+  "url": "https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "oficial-https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-04T17:56:08.608910+00:00"
+}
