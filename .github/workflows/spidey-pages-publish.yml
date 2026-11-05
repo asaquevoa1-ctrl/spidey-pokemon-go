@@ -88,7 +88,28 @@ jobs:
                   assert version['git_sha'] == expected, f"SHA publicado {version['git_sha']} != {expected}"
                   assert version['published_collections'] >= 10
                   assert version['published_stops'] >= 739
-                  print('GitHub Pages verificado por HTTP:', base, version)
+                  # O manifesto sozinho não garante que os arquivos efetivos estejam atuais.
+                  # Validar o catálogo e os recursos usados pelo navegador no mesmo deploy.
+                  def get_public(path):
+                      req = urllib.request.Request(
+                          base + path + '?check=' + expected[:12],
+                          headers={'Cache-Control': 'no-cache', 'User-Agent': 'Spidey-Pages-Verification'})
+                      with urllib.request.urlopen(req, timeout=20) as response:
+                          assert response.status == 200, f'{path}: HTTP {response.status}'
+                          return response.read()
+                  catalog = json.loads(get_public('data/stamps.json'))
+                  active = [r for r in catalog['rallies'] if r.get('status') == 'published']
+                  stops = sum(len(r.get('stops', [])) for r in active)
+                  assert len(active) >= 10, f'Catálogo HTTP: {len(active)} coleções'
+                  assert stops >= 739, f'Catálogo HTTP: {stops} pontos'
+                  assert len(active) == version['published_collections'], 'Manifesto diverge das coleções HTTP'
+                  assert stops == version['published_stops'], 'Manifesto diverge dos pontos HTTP'
+                  html = get_public('index.html').decode('utf-8')
+                  for asset in ('app.js', 'news-premium-20261102.js', 'sw.js'):
+                      body = get_public(asset)
+                      assert len(body) > 100, f'{asset}: conteúdo vazio/incompleto'
+                  assert 'stamps-v2.js' in html, 'index.html sem módulo de Selos'
+                  print('GitHub Pages verificado por HTTP (manifesto, catálogo, HTML, JS e SW):', base, version)
                   break
               except (OSError, ValueError, KeyError, AssertionError) as error:
                   last_error = str(error)
