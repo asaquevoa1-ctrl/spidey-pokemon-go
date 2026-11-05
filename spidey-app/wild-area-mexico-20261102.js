@@ -26,7 +26,7 @@
     block.id='wildMxHomeFeature';block.className='wild-mx-home-feature';
     block.setAttribute('aria-label','GO Wild Area: Cidade do México — especial da semana');
     // Material promocional do Machamp com jaqueta/capa, publicado pelo Pokémon GO; não altera os binários aprovados.
-    block.innerHTML='<div class="wild-mx-home-image"><img src="'+POSTER+'" loading="lazy" decoding="async" alt="Machamp com jaqueta e capa modernas, imagem promocional oficial Wild Area 2026" referrerpolicy="no-referrer"></div>'+
+    block.innerHTML='<div class="wild-mx-home-image"><img src="'+POSTER+'" loading="eager" fetchpriority="high" decoding="async" alt="Machamp com jaqueta e capa modernas, imagem promocional oficial Wild Area 2026" referrerpolicy="no-referrer"></div>'+
       '<div class="wild-mx-home-copy"><span>✦ ESPECIAL DA SEMANA · 6 A 8 NOV</span>'+
       '<h2>GO Wild Area <em>Cidade do México</em></h2>'+
       '<p>Guia de pesquisas, Safari Balls, Pokémon, ingressos e os 7 Selos. Tudo num só lugar.</p>'+
