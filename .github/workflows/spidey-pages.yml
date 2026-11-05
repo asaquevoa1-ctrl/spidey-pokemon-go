@@ -74,6 +74,20 @@ jobs:
         run: node scripts/check_editorial_integrity.cjs
       - name: Preparar somente os arquivos públicos
         run: python scripts/build_spidey_pages.py --output pages-public
+      - name: Bloquear catálogo incompleto antes da publicação
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          candidates = [Path('pages-public/spidey-app/data/stamps.json'), Path('pages-public/data/stamps.json')]
+          path = next((p for p in candidates if p.is_file()), None)
+          assert path is not None, 'Catálogo de selos ausente no artefato público'
+          rallies = json.loads(path.read_text(encoding='utf-8'))['rallies']
+          active = [r for r in rallies if r.get('status') == 'published']
+          stops = sum(len(r.get('stops', [])) for r in active)
+          print(f'Catálogo do artefato: {len(active)} coleções, {stops} pontos')
+          assert len(active) >= 10 and stops >= 739, 'Artefato público incompleto'
+          PY
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
