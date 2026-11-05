@@ -11084,6 +11084,12 @@
           "url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
           "confidence": "official",
           "published_on": "2026-11-03"
+        },
+        {
+          "name": "Pokémon GO · encontros da comunidade na Ásia-Pacífico",
+          "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "confidence": "official",
+          "published_on": "2026-11-04"
         }
       ],
       "schedule": {
@@ -11119,7 +11125,9 @@
         "A Pesquisa Especial do ingresso começa em 14/11 às 10h locais e pede escolha entre Aço e Dragão. Ao obter a medalha do tipo, o bônus correspondente dura até 15/11 às 18h locais.",
         "Caminho Aço: +1 Doce GG por captura de Pokémon poderoso do tipo Aço para nível 31+ e +1.000 Poeira Estelar por captura. Caminho Dragão: os mesmos bônus para Pokémon poderosos do tipo Dragão.",
         "A publicação brasileira repete 2025 em dois subtítulos, mas o título, a introdução e a página oficial do evento confirmam 14 e 15 de novembro de 2026; a divergência foi preservada na auditoria.",
-        "Informações oficiais conferidas em 29/10/2026."
+        "Informações oficiais conferidas em 29/10/2026.",
+        "Na Ásia-Pacífico, 12 locais em 11 comunidades recebem encontros oficiais nos dias 14 e 15/11, com horários próprios preservados no guia de eventos locais.",
+        "Os encontros da Ásia-Pacífico incluem pop-up do Pokémon GO, fotos, atividades com Embaixadores e comunidades, brindes enquanto durarem os estoques e Pesquisa Temporária por check-in. O anúncio cita encontro com Pokémon e itens sem detalhar espécie, tarefas ou itens."
       ],
       "notifications": {
         "enabled": true,
@@ -11163,10 +11171,10 @@
         }
       ],
       "news": {
-        "title": "Área Selvagem GO Global reúne comunidades no Brasil e na Europa",
-        "summary": "Além dos encontros brasileiros, Karlsruhe recebe uma reunião oficial em 14/11 e Estocolmo em 15/11. Os dois locais europeus têm Pesquisa Temporária por check-in e atividades com Embaixadores da Comunidade.",
+        "title": "Área Selvagem GO Global reúne comunidades no Brasil, Europa e Ásia-Pacífico",
+        "summary": "A história global reúne o encontro principal e 96 referências no Brasil, Karlsruhe e Estocolmo na Europa, além de 12 locais em 11 comunidades da Ásia-Pacífico. Cada encontro preserva seu horário local; as sedes anunciadas oferecem atividades comunitárias e Pesquisa Temporária por check-in.",
         "published_on": "2026-10-07",
-        "updated_on": "2026-10-29"
+        "updated_on": "2026-11-05"
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -11202,7 +11210,146 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-11-04T07:27:00-03:00"
+      "updated_at": "2026-11-05T01:51:00-03:00",
+      "asia_pacific_community_program": {
+        "official_article": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "published_on": "2026-11-04",
+        "dates": [
+          "2026-11-14",
+          "2026-11-15"
+        ],
+        "venue_count": 12,
+        "community_count": 11,
+        "meetups": [
+          {
+            "city": "Suwon",
+            "country": "Coreia do Sul",
+            "venue": "Time Villas Suwon",
+            "address": "134 Sehwa-ro, Gwonseon-gu, Suwon-si, Gyeonggi-do, Coreia do Sul",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Seoul"
+          },
+          {
+            "city": "Taipei",
+            "country": "Taiwan",
+            "venue": "Pokémon GO Booth · entrada sul, 1º andar, Shin Kong Mitsukoshi Taipei Xinyi Place A11",
+            "address": "No. 11, Songshou Rd., Xinyi Dist., Taipei City, Taiwan",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "11:00–22:00",
+            "timezone": "Asia/Taipei"
+          },
+          {
+            "city": "Kowloon",
+            "country": "Hong Kong",
+            "venue": "Festival Walk Shopping Mall",
+            "address": "80 Tat Chee Avenue, Kowloon Tong, Kowloon, Hong Kong",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "11:00–21:00",
+            "timezone": "Asia/Hong_Kong"
+          },
+          {
+            "city": "Bengaluru",
+            "country": "Índia",
+            "venue": "Freedom Park",
+            "address": "Freedom Park, Bengaluru, Índia",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Kolkata"
+          },
+          {
+            "city": "Kolkata",
+            "country": "Índia",
+            "venue": "City Center 1, Salt Lake",
+            "address": "City Center 1, Salt Lake, Kolkata, Índia",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Kolkata"
+          },
+          {
+            "city": "Mumbai",
+            "country": "Índia",
+            "venue": "Carter Road, Bandra West",
+            "address": "Carter Road, Bandra West, Mumbai, Índia",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Kolkata"
+          },
+          {
+            "city": "Melbourne",
+            "country": "Austrália",
+            "venue": "Westfield Fountain Gate",
+            "address": "Westfield Fountain Gate, Melbourne, Austrália",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–17:00",
+            "timezone": "Australia/Melbourne"
+          },
+          {
+            "city": "Jacarta",
+            "country": "Indonésia",
+            "venue": "Agora Mall · átrio L2",
+            "address": "Agora Mall, Jacarta, Indonésia",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Jakarta"
+          },
+          {
+            "city": "Jacarta",
+            "country": "Indonésia",
+            "venue": "Taman Ismail Marzuki Promenade",
+            "address": "Taman Ismail Marzuki Promenade, Jacarta, Indonésia",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Jakarta"
+          },
+          {
+            "city": "Bangcoc",
+            "country": "Tailândia",
+            "venue": "Chamchuri Square",
+            "address": "Chamchuri Square, Bangcoc, Tailândia",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Bangkok"
+          },
+          {
+            "city": "Kuala Lumpur",
+            "country": "Malásia",
+            "venue": "Ombak KLCC",
+            "address": "Ombak KLCC, Kuala Lumpur, Malásia",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Kuala_Lumpur"
+          },
+          {
+            "city": "Pasay City, Metro Manila",
+            "country": "Filipinas",
+            "venue": "Amphitheatre, MOA Sky, Mall of Asia",
+            "address": "Amphitheatre, MOA Sky, Mall of Asia, Pasay City, Metro Manila, Filipinas",
+            "start_date": "2026-11-14",
+            "end_date": "2026-11-15",
+            "time_local": "10:00–18:00",
+            "timezone": "Asia/Manila"
+          }
+        ],
+        "check_in_timed_research": true,
+        "check_in_rewards_disclosed_only_as": [
+          "encontro com Pokémon",
+          "itens"
+        ],
+        "coordinates_published": false,
+        "checked_at": "2026-11-05"
+      }
     },
     {
       "id": "2026-10-pokexciting-taipei",
