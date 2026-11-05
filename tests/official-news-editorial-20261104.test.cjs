@@ -39,7 +39,8 @@ test('Mexico City guide shows only officially published research detail and city
  const event=byId('2026-11-go-wild-area-mexico-city');
  const html=fs.readFileSync('spidey-app/index.html','utf8');
  assert(event.verification_sources.some(source=>source.url.includes('gowa_cdmx_additional_info')));
- assert(event.notes.some(note=>note.includes('Tarefas e recompensas individuais ainda não foram publicadas')));
+ assert(event.notes.some(note=>note.includes('Duraludon Gigamax com Fundo de Localização')));
+ assert(event.notes.some(note=>note.includes('Tarefas e recompensas individuais das Pesquisas Temporárias e de Campo ainda não foram publicadas')));
  assert.match(html,/id="wildMxCity"/);
  assert.match(html,/Monumento a la Revolución/);
  assert.match(html,/10h às 12h50/);
