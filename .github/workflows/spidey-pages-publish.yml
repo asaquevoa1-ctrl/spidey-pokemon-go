@@ -60,6 +60,35 @@ jobs:
               f.write(chr(10))
           print('Versão a verificar por HTTP em /spidey-app/deploy-version.json:', version)
           PY
+      - name: Versionar cache PWA conforme arquivos efetivos
+        run: |
+          python3 - <<'PY'
+          import hashlib, pathlib, re
+          base = pathlib.Path('spidey-app')
+          # A versão do SW deve mudar quando o catálogo ou a interface mudarem,
+          # mesmo se o arquivo sw.js não tiver sido editado na main.
+          watched = [
+              'index.html', 'app.js', 'news-premium-20261102.js',
+              'stamps-v2.js', 'data/stamps.json', 'data/events.json',
+              'data/weekly.json', 'sw.js',
+          ]
+          digest = hashlib.sha256()
+          for name in watched:
+              file = base / name
+              assert file.is_file(), f'Arquivo essencial ausente: {name}'
+              digest.update(name.encode('utf-8') + b'\\0')
+              digest.update(file.read_bytes())
+          version = digest.hexdigest()[:16]
+          sw = base / 'sw.js'
+          original = sw.read_text(encoding='utf-8')
+          patched, count = re.subn(
+              r"(?m)^const CACHE = 'spidey-app-[^']+';",
+              f"const CACHE = 'spidey-app-build-{version}';",
+              original, count=1)
+          assert count == 1, 'Declaração CACHE do service worker não encontrada'
+          sw.write_text(patched, encoding='utf-8')
+          print('Cache PWA do artefato publicado:', version)
+          PY
       - name: Enviar artefato ao GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
