@@ -66,7 +66,8 @@ for(let attempt=1;attempt<=12;attempt++){
   assert(!fly.includes('flySourceCredits')&&!fly.includes('Créditos e origem da lista mundial'));
   assert(!world.includes("innerHTML='<summary>Eventos presenciais por região"));
   assert(world.includes("fly.querySelector('#flyRegionalEvents')?.remove()"));
-  assert(sw.includes('fly-clean2-autorefresh')&&sw.includes('client.navigate(client.url)'));
+  assert.match(sw,/const CACHE = ['"]spidey-app-[^'"]+['"]/);
+  assert(sw.includes('client.navigate(client.url)'));
   const trust=assets.get('national-trust-v1.js').toString('utf8');
   const app=assets.get('app.js').toString('utf8');
   assert(trust.includes('Copiar todas as 27')&&trust.includes('allCoordinatesText'));
