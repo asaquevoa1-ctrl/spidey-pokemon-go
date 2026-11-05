@@ -543,6 +543,666 @@
       "detail_title": "Área Selvagem GO Global 2026 — Estocolmo"
     },
     {
+      "id": "2026-11-go-wild-area-global-apac-suwon-time-villas",
+      "title": "Área Selvagem GO Global 2026 — Suwon",
+      "place": "Time Villas Suwon · Suwon, Coreia do Sul",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Seoul",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "suwon-time-villas",
+          "name": "Time Villas Suwon",
+          "address": "134 Sehwa-ro, Gwonseon-gu, Suwon-si, Gyeonggi-do, Coreia do Sul",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Suwon"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-taipei-shin-kong-mitsukoshi-a11",
+      "title": "Área Selvagem GO Global 2026 — Taipei",
+      "place": "Pokémon GO Booth · entrada sul, 1º andar, Shin Kong Mitsukoshi Taipei Xinyi Place A11 · Taipei, Taiwan",
+      "dates": "14–15 nov 2026 • 11:00–22:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "11:00",
+        "end_date": "2026-11-15",
+        "end_time": "22:00",
+        "timezone": "Asia/Taipei",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "taipei-shin-kong-mitsukoshi-a11",
+          "name": "Pokémon GO Booth · entrada sul, 1º andar, Shin Kong Mitsukoshi Taipei Xinyi Place A11",
+          "address": "No. 11, Songshou Rd., Xinyi Dist., Taipei City, Taiwan",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Taipei"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-kowloon-festival-walk",
+      "title": "Área Selvagem GO Global 2026 — Kowloon",
+      "place": "Festival Walk Shopping Mall · Kowloon, Hong Kong",
+      "dates": "14–15 nov 2026 • 11:00–21:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "11:00",
+        "end_date": "2026-11-15",
+        "end_time": "21:00",
+        "timezone": "Asia/Hong_Kong",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "kowloon-festival-walk",
+          "name": "Festival Walk Shopping Mall",
+          "address": "80 Tat Chee Avenue, Kowloon Tong, Kowloon, Hong Kong",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Kowloon"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-bengaluru-freedom-park",
+      "title": "Área Selvagem GO Global 2026 — Bengaluru",
+      "place": "Freedom Park · Bengaluru, Índia",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Kolkata",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "bengaluru-freedom-park",
+          "name": "Freedom Park",
+          "address": "Freedom Park, Bengaluru, Índia",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Bengaluru"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-kolkata-city-center-1",
+      "title": "Área Selvagem GO Global 2026 — Kolkata",
+      "place": "City Center 1, Salt Lake · Kolkata, Índia",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Kolkata",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "kolkata-city-center-1",
+          "name": "City Center 1, Salt Lake",
+          "address": "City Center 1, Salt Lake, Kolkata, Índia",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Kolkata"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-mumbai-carter-road",
+      "title": "Área Selvagem GO Global 2026 — Mumbai",
+      "place": "Carter Road, Bandra West · Mumbai, Índia",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Kolkata",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "mumbai-carter-road",
+          "name": "Carter Road, Bandra West",
+          "address": "Carter Road, Bandra West, Mumbai, Índia",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Mumbai"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-melbourne-westfield-fountain-gate",
+      "title": "Área Selvagem GO Global 2026 — Melbourne",
+      "place": "Westfield Fountain Gate · Melbourne, Austrália",
+      "dates": "14–15 nov 2026 • 10:00–17:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "17:00",
+        "timezone": "Australia/Melbourne",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "melbourne-westfield-fountain-gate",
+          "name": "Westfield Fountain Gate",
+          "address": "Westfield Fountain Gate, Melbourne, Austrália",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Melbourne"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-jakarta-agora-mall",
+      "title": "Área Selvagem GO Global 2026 — Jacarta",
+      "place": "Agora Mall · átrio L2 · Jacarta, Indonésia",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Jakarta",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "jakarta-agora-mall",
+          "name": "Agora Mall · átrio L2",
+          "address": "Agora Mall, Jacarta, Indonésia",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Jacarta"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-jakarta-taman-ismail-marzuki",
+      "title": "Área Selvagem GO Global 2026 — Jacarta",
+      "place": "Taman Ismail Marzuki Promenade · Jacarta, Indonésia",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Jakarta",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "jakarta-taman-ismail-marzuki",
+          "name": "Taman Ismail Marzuki Promenade",
+          "address": "Taman Ismail Marzuki Promenade, Jacarta, Indonésia",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Jacarta"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-bangkok-chamchuri-square",
+      "title": "Área Selvagem GO Global 2026 — Bangcoc",
+      "place": "Chamchuri Square · Bangcoc, Tailândia",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Bangkok",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "bangkok-chamchuri-square",
+          "name": "Chamchuri Square",
+          "address": "Chamchuri Square, Bangcoc, Tailândia",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Bangcoc"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-kuala-lumpur-ombak-klcc",
+      "title": "Área Selvagem GO Global 2026 — Kuala Lumpur",
+      "place": "Ombak KLCC · Kuala Lumpur, Malásia",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Kuala_Lumpur",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "kuala-lumpur-ombak-klcc",
+          "name": "Ombak KLCC",
+          "address": "Ombak KLCC, Kuala Lumpur, Malásia",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Kuala Lumpur"
+    },
+    {
+      "id": "2026-11-go-wild-area-global-apac-pasay-city-moa-sky",
+      "title": "Área Selvagem GO Global 2026 — Pasay City, Metro Manila",
+      "place": "Amphitheatre, MOA Sky, Mall of Asia · Pasay City, Metro Manila, Filipinas",
+      "dates": "14–15 nov 2026 • 10:00–18:00 (horário local)",
+      "status": "official",
+      "locality": "local",
+      "artApproved": false,
+      "note": "Encontro oficial com check-in para Pesquisa Temporária, atividades comunitárias, fotos e brindes enquanto durarem os estoques.",
+      "schedule": {
+        "start_date": "2026-11-14",
+        "start_time": "10:00",
+        "end_date": "2026-11-15",
+        "end_time": "18:00",
+        "timezone": "Asia/Manila",
+        "recurrence": "daily"
+      },
+      "source": {
+        "name": "Pokémon GO · anúncio oficial",
+        "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+        "confidence": "official"
+      },
+      "bonuses": [
+        "Pesquisa Temporária ao fazer check-in; o anúncio informa recompensas como encontro com Pokémon e itens, sem detalhar quais.",
+        "Pop-up do Pokémon GO com atividades interativas e brindes enquanto durarem os estoques.",
+        "Oportunidades para fotos e atividades com Embaixadores da Comunidade e comunidades locais.",
+        "Encontro e batalhas com outros Treinadores."
+      ],
+      "locations": [
+        {
+          "id": "pasay-city-moa-sky",
+          "name": "Amphitheatre, MOA Sky, Mall of Asia",
+          "address": "Amphitheatre, MOA Sky, Mall of Asia, Pasay City, Metro Manila, Filipinas",
+          "access_note": "Local oficial anunciado. A publicação não fornece coordenadas nem identifica Poképaradas, Ginásios ou Pontos de Energia específicos.",
+          "source_url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
+          "coordinate_type": "official_venue_address_no_coordinates",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica o local, mas não coordenadas verificadas de pontos do jogo."
+      },
+      "audit": {
+        "related_event_id": "2026-11-go-wild-area-global",
+        "distinct_local_window_preserved": true,
+        "no_coordinates_invented": true,
+        "timed_research_details_limited_to_official_wording": true,
+        "checked_at": "2026-11-05"
+      },
+      "verified_at": "2026-11-05",
+      "detail_title": "Área Selvagem GO Global 2026 — Pasay City, Metro Manila"
+    },
+    {
       "id": "2026-11-go-wild-area-global-brazil-community",
       "title": "Área Selvagem GO Global 2026 — encontros no Brasil",
       "place": "Brasil • Pavilhão Japonês e comunidades oficiais",

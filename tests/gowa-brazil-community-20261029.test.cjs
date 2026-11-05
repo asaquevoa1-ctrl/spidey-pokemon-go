@@ -13,7 +13,7 @@ test('the existing global story is enriched instead of duplicated',()=>{
  assert.ok(globalEvent);
  assert.equal(globalEvent.schedule.start_local,'2026-11-14T10:00:00-03:00');
  assert.equal(globalEvent.schedule.end_local,'2026-11-15T18:00:00-03:00');
- assert.equal(globalEvent.news.updated_on,'2026-10-29');
+ assert.equal(globalEvent.news.updated_on,'2026-11-05');
  assert.equal(globalEvent.brazil_community_program.community_venue_reference_count,96);
  assert.match(globalEvent.brazil_community_program.source_date_conflict,/2025/);
  const canonical='https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil';
