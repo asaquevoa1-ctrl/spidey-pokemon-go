@@ -178,7 +178,7 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     if cache_count != 1:
         raise ValueError('Identificador do cache PWA não encontrado')
     # A substituição do CORE é feita após a versão do cache, pois seus offsets mudam.
-    core_match = re.search(r'const CORE = (\\[.*?\\]);', text, re.S)
+    core_match = re.search(r'const CORE = (\[.*?\]);', text, re.S)
     worker.write_text(text[:core_match.start(1)] + json.dumps(core, ensure_ascii=False, indent=2)
                       + text[core_match.end(1):], encoding='utf-8')
     index = published / 'index.html'
