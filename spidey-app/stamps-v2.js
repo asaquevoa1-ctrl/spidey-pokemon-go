@@ -244,7 +244,7 @@
       const needle = search.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
       return stops.filter((stop) => {
         if (region !== 'all' && regionLabel(stop) !== region) return false;
-        if (filter === 'exact' && !exactPokestop(stop)) return false;
+        if (filter === 'exact' && !exactPokestop(stop) && !communityCoord(stop)) return false;
         if (needle && !searchable(stop).includes(needle)) return false;
         return true;
       });
@@ -320,7 +320,7 @@
             ? 'Estes pontos indicam onde ficam as tampas Pokémon. A PokéStop dentro do jogo pode estar em outro lugar.'
             : exactStops.length
               ? 'Um local por linha. Estes pontos foram conferidos pela comunidade; confirme a PokéStop no jogo.'
-              : 'Ainda não temos coordenadas confirmadas para esta coleção.'}</p>
+              : 'Coordenadas comunitárias de referência: confirme a PokéStop no jogo. Não são pontos exatos verificados.'}</p>
         </section>
 
         ` : `<section class="stamp-datahub-v2 stamp-copy-list-v3" aria-label="Coordenadas pendentes"><div class="stamp-section-head-v2"><div><span class="eyebrow">COORDENADAS PENDENTES</span><h3>Lista ainda indisponível</h3></div></div><p class="microcopy">Ainda não há coordenadas verificadas para esta coleção. Por isso, não exibimos uma lista vazia nem um botão de copiar sem conteúdo.</p></section>`}
@@ -416,7 +416,7 @@
       activeId = stop.id;
       const lidValue = isPokelid ? pokelidVenueCoord(stop) : '';
       const landmarkValue = isLandmarkGuide ? landmarkVenueCoord(stop) : '';
-      const value = lidValue || landmarkValue || coord(stop);
+      const value = lidValue || landmarkValue || coord(stop) || communityCoord(stop);
       const image = stampImage(stop);
       position.textContent = `${visible.indexOf(stop) + 1} de ${visible.length}`;
       activeBox.innerHTML = `
