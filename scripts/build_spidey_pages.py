@@ -171,7 +171,7 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
         asset = published / name
         if not asset.is_file():
             raise ValueError(f'Arquivo essencial para versão do cache ausente: {name}')
-        digest.update(name.encode('utf-8') + b'\\0' + asset.read_bytes())
+        digest.update(name.encode('utf-8') + b'\0' + asset.read_bytes())
     cache_version = digest.hexdigest()[:16]
     text, cache_count = re.subn(r"(?m)^const CACHE = '[^']+';",
                                 f"const CACHE = 'spidey-app-build-{cache_version}';", text, count=1)
