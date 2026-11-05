@@ -77,6 +77,13 @@
     return `${Number(stop.latitude).toFixed(6)},${Number(stop.longitude).toFixed(6)}`;
   }
 
+  // LEGO × Pikachu coordinates are community references, not verified PokéStops.
+  // Allow text copying without changing GPX eligibility or verification status.
+  function communityCoord(stop) {
+    if (stop?.coordinate_type !== 'community_reference' || !validCoordinate(stop)) return '';
+    return `${Number(stop.latitude)},${Number(stop.longitude)}`;
+  }
+
   // A PokéLid has a verified physical lid position, but this does NOT establish
   // the exact Pokémon GO PokéStop. Never feed these coordinates to GPX export.
   function pokelidVenueCoord(stop) {
@@ -244,7 +251,7 @@
     }
 
     function copySet(list) {
-      return list.map(stop => isPokelid ? pokelidVenueCoord(stop) : isLandmarkGuide ? landmarkVenueCoord(stop) : coord(stop)).filter(Boolean).join('\n');
+      return list.map(stop => isPokelid ? pokelidVenueCoord(stop) : isLandmarkGuide ? landmarkVenueCoord(stop) : (coord(stop) || communityCoord(stop))).filter(Boolean).join('\n');
     }
 
     const cover = rallyCover(rally);
