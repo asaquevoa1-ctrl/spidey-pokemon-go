@@ -1,0 +1,25 @@
+{
+  "titulo": "Dia de Super Megarreides de Mega Clefable",
+  "mensagem": "Em 28 de novembro, das 14h às 17h no horário local, Mega Clefable estreia em Super Megarreides com Explosão Lunar+, Pesquisa Temporária, bônus gratuitos e ingresso opcional.",
+  "source_url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+  "source_verified": true,
+  "status": "published_without_new_art",
+  "art_required_for_publication": false,
+  "fallback_visual": "date",
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "2026-11-28-super-mega-raid-day-preview",
+    "2026-11-27-clefable-global-challenge",
+    "2026-11-30-clefable-global-rewards"
+  ],
+  "fact_checks": [
+    "official_pt_br_and_en_articles_read_in_full",
+    "existing_preview_id_preserved",
+    "main_and_global_windows_kept_distinct",
+    "no_coordinates_or_gyms_invented",
+    "no_new_art_required_for_publication"
+  ],
+  "published_at_source": "2026-11-05T18:52:00.927Z",
+  "curated_at_utc": "2026-11-05T19:56:00+00:00"
+}
