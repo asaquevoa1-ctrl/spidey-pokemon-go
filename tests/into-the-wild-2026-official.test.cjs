@@ -1,0 +1,27 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const db=JSON.parse(fs.readFileSync('spidey-app/data/events.json','utf8'));
+test('Into the Wild 2026 is sourced from official Pokémon GO announcement without mixing GO Pass timing',()=>{
+  const all=db.events.filter(e=>e.id==='2026-11-into-the-wild');
+  assert.equal(all.length,1);
+  const e=all[0];
+  assert.equal(e.source.url,'https://pokemongo.com/news/into-the-wild-2026');
+  assert.equal(e.source.confidence,'official');
+  assert.equal(e.schedule.start_local,'2026-11-09T10:00:00-03:00');
+  assert.equal(e.schedule.end_local,'2026-11-13T20:00:00-03:00');
+  assert.ok(e.notes.some(t=>t.includes('15/11 às 18h')),'GO Pass extension must be made explicit');
+  assert.ok(e.bonuses.some(t=>t.includes('30')&&t.includes('14 e 15/11')));
+  assert.ok(e.pokemon.some(p=>p.name==='Regidrago Dinamax'));
+  assert.ok(e.pokemon.some(p=>p.name==='Meltan Dinamax'));
+  assert.ok(e.notes.some(t=>t.includes('9/11, 18h às 19h')&&t.includes('Zacian')));
+  assert.ok(e.notes.some(t=>t.includes('10/11, 18h às 19h')&&t.includes('Zamazenta')));
+  assert.ok(e.notes.some(t=>t.includes('12/11, 18h às 19h')&&t.includes('Regidrago')));
+  assert.ok(e.notes.some(t=>t.includes('13/11, 18h às 19h')&&t.includes('Latias')));
+  assert.ok(e.bonuses.some(t=>t.includes('pode dar')&&t.includes('Brilhante')));
+  assert.equal(e.presentation.requires_art,true,'Premium Spidey art must precede release');
+  assert.equal(e.gpx.enabled,false,'Never invent coordinates for a global event');
+  assert.equal(e.news.published_on,'2026-10-14');
+  assert.ok(db.events.some(x=>x.id==='2026-11-go-wild-area-global'),'Separate weekend global event remains');
+  assert.ok(db.events.every(x=>!String(x.summary||'').includes('G47IX')),'G47IX identity must not be copied');
+});
