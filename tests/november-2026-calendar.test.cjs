@@ -18,7 +18,7 @@ test('november 2026 curated batch is present once with no duplicated Halloween o
  assert.ok(nov.length>=30,'Previously published November events and 24 new records are preserved');
 });
 test('remaining unconfirmed November previews do not invent hours, posters, Pokemon or GPX',()=>{
- for(const id of ['2026-11-28-super-mega-raid-day-preview','2026-11-16-max-surprise']){
+ for(const id of ['2026-11-16-max-surprise']){
    const e=find(id);
    assert.equal(e.schedule.precision,'date');
    assert.equal(e.schedule.start_local,undefined);
@@ -29,6 +29,15 @@ test('remaining unconfirmed November previews do not invent hours, posters, Poke
    assert.notEqual(e.source.confidence,'official');
    assert.ok(e.title.includes('prévia')||e.title.includes('surpresa'));
  }
+});
+test('Clefable announcement completes the November raid day preview without replacing its ID',()=>{
+ const e=find('2026-11-28-super-mega-raid-day-preview');
+ assert.equal(e.source.confidence,'official');
+ assert.equal(e.schedule.start_local,'2026-11-28T14:00:00-03:00');
+ assert.equal(e.schedule.end_local,'2026-11-28T17:00:00-03:00');
+ assert.ok(e.pokemon.some(p=>p.name==='Mega Clefable'));
+ assert.equal(e.gpx.enabled,false);
+ assert.equal(e.audit.prediction_history.preserved_id,true);
 });
 test('Twilight Wishes preview was completed from the official announcement without changing its ID',()=>{
  const e=find('2026-11-24-twilight-wishes-preview');

@@ -33,7 +33,7 @@ test('Mandatory FLY contract: every published recurring worldwide event with exa
 test('Different event types automatically appear: Morelull, new November spotlight, raid hours, community day, raid day and Max Monday',()=>{
   for(const id of ['2026-10-22-spotlight-morelull','2026-11-05-spotlight-teddiursa',
     '2026-11-04-raid-hour-altered-giratina','2026-11-21-community-day-preview',
-    '2026-10-super-mega-raid-day','2026-10-26-max-monday-sableye']){
+    '2026-10-super-mega-raid-day','2026-11-28-super-mega-raid-day-preview','2026-10-26-max-monday-sableye']){
     const e=all.find(x=>x.id===id);assert.ok(e,id);
     assert.ok(scoped.some(x=>x.id===id),'Event missing from automatic Global coverage: '+id);
     assert.equal(core.route(e,points,new Date('2026-01-01T00:00Z')).length,points.length,id);
@@ -41,7 +41,7 @@ test('Different event types automatically appear: Morelull, new November spotlig
 });
 
 test('Unknown date-only previews do not invent hours or world coordinates',()=>{
-  for(const id of ['2026-11-28-super-mega-raid-day-preview','2026-11-16-max-surprise']){
+  for(const id of ['2026-11-16-max-surprise']){
     const e=all.find(x=>x.id===id);assert.ok(e);
     assert.equal(core.eligible(e),false,'No local clock to convert: '+id);
     assert.equal(core.route(e,points).length,0);

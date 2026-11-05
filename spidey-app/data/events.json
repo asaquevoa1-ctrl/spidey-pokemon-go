@@ -2334,25 +2334,27 @@
     {
       "id": "2026-11-28-super-mega-raid-day-preview",
       "slug": "2026-11-28-super-mega-raid-day-preview",
-      "title": "Dia de Super Megarreides — prévia",
-      "summary": "Dia de Super Megarreides previsto para 28/11; Pokémon e horários serão anunciados posteriormente.",
+      "title": "Dia de Super Megarreides de Mega Clefable",
+      "summary": "Mega Clefable estreia em Super Megarreides em 28/11, das 14h às 17h, no horário local, com Explosão Lunar+ e chance aumentada de Clefable Brilhante.",
       "category": "raid_day",
       "tags": [
-        "Novembro 2026",
-        "Calendário",
-        "Pokémon GO"
+        "Super Mega",
+        "Raid Day",
+        "Mega Clefable",
+        "Global"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-        "confidence": "verified_community"
+        "name": "Pokémon GO • anúncio oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+        "confidence": "official"
       },
       "schedule": {
-        "precision": "date",
         "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-28",
-        "end_date": "2026-11-28",
-        "brazil_timezone": "America/Sao_Paulo"
+        "start_local": "2026-11-28T14:00:00-03:00",
+        "end_local": "2026-11-28T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-28T14:00:00-03:00",
+        "end_brazil": "2026-11-28T17:00:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -2365,27 +2367,214 @@
       "locations": [],
       "gpx": {
         "enabled": false,
-        "reason": "Evento global ou calendário de referência: nenhuma coordenada exclusiva confirmada."
+        "reason": "Evento global; o anúncio não confirma uma rota, Ginásio ou Poképarada específica."
       },
-      "pokemon": [],
-      "bonuses": [],
+      "pokemon": [
+        {
+          "name": "Mega Clefable",
+          "note": "estreia em Super Megarreides; Super Nível Máximo e Explosão Lunar+"
+        },
+        {
+          "name": "Clefable",
+          "note": "chance aumentada de Brilhante em Super Megarreides; Meganível 1 desbloqueado após a captura"
+        },
+        {
+          "name": "Metagross",
+          "note": "encontro da Pesquisa temporária"
+        }
+      ],
+      "bonuses": [
+        "Limite de Reides a Distância aumentado para 20, de 27/11 às 22h até 29/11 à 1h, no horário de Brasília.",
+        "Até seis Passes de Reide gratuitos ao girar fotodiscos de Ginásios.",
+        "Clefable capturado em Super Megarreides já terá o Meganível 1 desbloqueado.",
+        "Maior chance de encontrar Clefable Brilhante em Super Megarreides.",
+        "Ingresso pago: até 14 Passes de Reide em Ginásios, maior chance de Doce Raro GG e mais 5.000 PE e 5.000 Poeira Estelar por Super Megarreide."
+      ],
       "notes": [
-        "Não confundir com as Megarreides de rotação.",
-        "Chefe, mecânica e horário do evento não confirmados na fonte consultada."
+        "Mega Clefable pode chegar ao Super Nível Máximo e usar Explosão Lunar+: 80 de força em Batalhas de Treinador, com chance de reduzir o Ataque do oponente em um estágio; 160 de força em Reides.",
+        "A Pesquisa temporária dá um Passe de Batalha Premium e um encontro com Metagross; conclua e resgate antes do fim do evento.",
+        "O Ultracombo da loja online inclui o ingresso e um Passe de Batalha Premium adicional pelo mesmo nível de preço anunciado.",
+        "Super Megarreides podem aparecer apenas em determinados Ginásios; o anúncio orienta consultar o mapa oficial e encontros de comunidades.",
+        "Não confundir com as Megarreides de rotação."
       ],
       "notifications": {
-        "enabled": false,
-        "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "news": {
+        "title": "Mega Clefable estreia no Dia de Super Megarreides",
+        "summary": "Em 28/11, das 14h às 17h: Mega Clefable, Super Nível Máximo, Explosão Lunar+, Pesquisa Temporária e maior chance de Clefable Brilhante.",
+        "published_on": "2026-11-05",
+        "label": "OFICIAL • DETALHES CONFIRMADOS"
+      },
+      "related_event_ids": [
+        "2026-11-27-clefable-global-challenge",
+        "2026-11-30-clefable-global-rewards"
+      ],
+      "updated_at": "2026-11-05T16:56:00-03:00",
+      "verified_at": "2026-11-05",
       "verification_sources": [
         {
-          "name": "Pokémon GO Hub • calendário comunitário",
+          "name": "Pokémon GO • anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/clefable-super-mega-raid-day-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub • calendário comunitário anterior",
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "classification": "official_announcement_confirming_calendar_preview",
+        "editorial_detail_pending": false,
+        "automatic_index_discovery": true,
+        "collector_source_ids": [
+          "oficial-https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+          "pokeminers-1567975667772030977"
+        ],
+        "canonical_fulltext_url": "https://pokemongo.com/news/clefable-super-mega-raid-day-2026",
+        "html_canonical_url": "https://pokemongolive.com/news/clefable-super-mega-raid-day-2026",
+        "prediction_history": {
+          "confirmed_on": "2026-11-05",
+          "previous_title": "Dia de Super Megarreides — prévia",
+          "previous_source": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "preserved_id": true
+        }
+      }
+    },
+    {
+      "id": "2026-11-27-clefable-global-challenge",
+      "slug": "2026-11-27-clefable-global-challenge",
+      "title": "Desafio Global de Mega Clefable",
+      "summary": "Complete Batalhas de Reide com a comunidade global para ampliar os bônus posteriores de Mega Clefable.",
+      "category": "evento_especial",
+      "tags": [
+        "Mega Clefable",
+        "Desafio Global",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-11-27T17:00:00-08:00",
+        "end_local": "2026-11-28T20:00:00-08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-27T22:00:00-03:00",
+        "end_brazil": "2026-11-29T01:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Desafio global sem rota ou ponto físico específico."
+      },
+      "pokemon": [
+        {
+          "name": "Mega Clefable",
+          "note": "os níveis concluídos definem a intensidade dos bônus posteriores"
+        }
+      ],
+      "bonuses": [],
+      "notes": [
+        "A progressão ocorre ao completar Batalhas de Reide durante a janela global.",
+        "Quanto mais níveis forem concluídos, maiores serão os bônus de Mega Clefable na janela posterior."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Janela global informativa; nenhum alerta será disparado nesta publicação editorial."
+      },
+      "status": "published",
+      "related_event_ids": [
+        "2026-11-28-super-mega-raid-day-preview",
+        "2026-11-30-clefable-global-rewards"
+      ],
+      "updated_at": "2026-11-05T16:56:00-03:00",
+      "verified_at": "2026-11-05",
+      "audit": {
+        "classification": "official_distinct_global_challenge_window",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/news/clefable-super-mega-raid-day-2026"
+      }
+    },
+    {
+      "id": "2026-11-30-clefable-global-rewards",
+      "slug": "2026-11-30-clefable-global-rewards",
+      "title": "Bônus globais de Mega Clefable",
+      "summary": "A força dos bônus de Explosão Lunar+ e de Mega Clefable no Super Nível Máximo dependerá do Desafio Global.",
+      "category": "evento_especial",
+      "tags": [
+        "Mega Clefable",
+        "Bônus Global",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-11-30T12:00:00-08:00",
+        "end_local": "2026-12-13T12:00:00-08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-30T17:00:00-03:00",
+        "end_brazil": "2026-12-13T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Bônus global sem rota ou ponto físico específico."
+      },
+      "pokemon": [
+        {
+          "name": "Mega Clefable",
+          "note": "bônus graduados conforme os níveis concluídos no Desafio Global"
+        }
+      ],
+      "bonuses": [
+        "Explosão Lunar+ terá a força-base aumentada para Mega Clefable no primeiro Meganível ou acima; não se aplica à Liga de Batalha GO.",
+        "Mega Clefable no Super Nível Máximo terá os Pontos de Combate aumentados.",
+        "A intensidade dos dois aumentos dependerá do número de níveis concluídos no Desafio Global."
+      ],
+      "notes": [],
+      "notifications": {
+        "enabled": false,
+        "reason": "Bônus condicionado ao resultado do Desafio Global; nenhum valor foi antecipado."
+      },
+      "status": "published",
+      "related_event_ids": [
+        "2026-11-28-super-mega-raid-day-preview",
+        "2026-11-27-clefable-global-challenge"
+      ],
+      "updated_at": "2026-11-05T16:56:00-03:00",
+      "verified_at": "2026-11-05",
+      "audit": {
+        "classification": "official_distinct_global_reward_window",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/news/clefable-super-mega-raid-day-2026",
+        "conditional_values_not_invented": true
+      }
     },
     {
       "id": "2026-11-02-monthly-daily-discoveries-guide",

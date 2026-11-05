@@ -149,6 +149,24 @@
       }
     },
     {
+      "id": "2026-11-28-super-mega-raid-day-preview:start:60",
+      "event_id": "2026-11-28-super-mega-raid-day-preview",
+      "event_title": "Dia de Super Megarreides de Mega Clefable",
+      "category": "raid_day",
+      "scheduled_for": "2026-11-28T13:00:00-03:00",
+      "event_start": "2026-11-28T14:00:00-03:00",
+      "lead_minutes": 60,
+      "title": "Spidey Pokémon GO",
+      "body": "Dia de Super Megarreides de Mega Clefable começa em cerca de 1 hora(s).",
+      "url": "./?event=2026-11-28-super-mega-raid-day-preview",
+      "status": "pending",
+      "source": {
+        "name": "Pokémon GO • anúncio oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+        "confidence": "official"
+      }
+    },
+    {
       "id": "2026-12-pokemon-center-bangkok-opening:start:60",
       "event_id": "2026-12-pokemon-center-bangkok-opening",
       "event_title": "Inauguração do Pokémon Center Bangkok",
@@ -186,7 +204,7 @@
     }
   ],
   "meta": {
-    "pending_count": 10,
+    "pending_count": 11,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
