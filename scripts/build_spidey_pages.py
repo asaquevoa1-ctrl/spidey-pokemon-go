@@ -172,6 +172,14 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
         if not asset.is_file():
             raise ValueError(f'Arquivo essencial para versão do cache ausente: {name}')
         digest.update(name.encode('utf-8') + b'\0' + asset.read_bytes())
+    # Arquivos de interface presentes no pré-cache também precisam invalidar o PWA.
+    # Sem isso, uma mudança só de CSS/JS pode manter o cache anterior instalado.
+    watched = {'index.html', 'app.js', 'stamps-v2.js', 'news-premium-20261102.js',
+               'data/stamps.json', 'data/events.json', 'data/weekly.json', 'sw.js'}
+    for name in sorted({path.removeprefix('./') for path in core
+                        if path.endswith(('.css', '.js', '.json'))} - watched):
+        asset = published / name
+        digest.update(name.encode('utf-8') + b'\\0' + asset.read_bytes())
     cache_version = digest.hexdigest()[:16]
     text, cache_count = re.subn(r"(?m)^const CACHE = '[^']+';",
                                 f"const CACHE = 'spidey-app-build-{cache_version}';", text, count=1)
