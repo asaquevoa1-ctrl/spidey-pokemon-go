@@ -197,6 +197,35 @@
         }
       },
       {
+        "id": "2026-11-halloween-part-2",
+        "title": "Halloween 2026: Parte II",
+        "summary": "Até 5/11 às 20h locais: Greavard Brilhante, Super Nível Máximo de Mega Sableye e Pesquisa Temporária gratuita com 6 Doces Raros e Sinistea com laço.",
+        "category": "halloween",
+        "tags": [
+          "Halloween",
+          "Greavard",
+          "Mega Sableye",
+          "Global"
+        ],
+        "start_brazil": "2026-11-01T10:00:00-03:00",
+        "end_brazil": "2026-11-05T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO · anúncio oficial",
+          "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/halloween2-20261011-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
         "id": "2026-11-go-pass-groudon",
         "title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
         "summary": "Passe gratuito: encontro com Groudon (pode ser Brilhante) e até 400 PokéMoedas. Passe Deluxe pago: mais 1.000 PokéMoedas, total de 1.400.",
@@ -571,35 +600,6 @@
         }
       },
       {
-        "id": "2026-11-halloween-part-2",
-        "title": "Halloween 2026: Parte II",
-        "summary": "Greavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.",
-        "category": "halloween",
-        "tags": [
-          "Halloween",
-          "Greavard",
-          "Mega Sableye",
-          "Global"
-        ],
-        "start_brazil": "2026-11-01T10:00:00-03:00",
-        "end_brazil": "2026-11-05T20:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO · anúncio oficial",
-          "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/halloween2-20261011-approved-v1.png",
-          "width": 1122,
-          "height": 1402,
-          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      },
-      {
         "id": "2026-11-go-wild-area-sendai",
         "title": "Pokémon GO Wild Area 2026: Sendai e Tohoku",
         "summary": "6 a 8/11 • Sendai/Tohoku: roteiro regional para FLY com Duraludon Gigamax, Dialga/Palkia Dinamax, formas Coroadas, Sliggoo de Hisui e Caça aos Selos. Ingresso válido e área de jogo correta são necessários.",
@@ -791,7 +791,7 @@
     "events_without_weekly_art": 9,
     "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-05T05:30:11.094332-03:00",
+    "generated_at": "2026-11-05T08:09:26.257831-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
