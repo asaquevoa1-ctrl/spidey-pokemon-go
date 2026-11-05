@@ -163,6 +163,22 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     if any(not isinstance(path, str) or not path.startswith('./') or '..' in Path(path).parts
            or not (published / path).exists() for path in core):
         raise ValueError('Cache referencia arquivo ausente ou fora do app')
+    # O cache precisa mudar quando o catálogo ou a interface publicada mudar.
+    # Calcular sobre bytes do pacote (não sobre data/hora) mantém builds reproduzíveis.
+    digest = hashlib.sha256()
+    for name in ('index.html', 'app.js', 'stamps-v2.js', 'news-premium-20261102.js',
+                 'data/stamps.json', 'data/events.json', 'data/weekly.json', 'sw.js'):
+        asset = published / name
+        if not asset.is_file():
+            raise ValueError(f'Arquivo essencial para versão do cache ausente: {name}')
+        digest.update(name.encode('utf-8') + b'\\0' + asset.read_bytes())
+    cache_version = digest.hexdigest()[:16]
+    text, cache_count = re.subn(r"(?m)^const CACHE = '[^']+';",
+                                f"const CACHE = 'spidey-app-build-{cache_version}';", text, count=1)
+    if cache_count != 1:
+        raise ValueError('Identificador do cache PWA não encontrado')
+    # A substituição do CORE é feita após a versão do cache, pois seus offsets mudam.
+    core_match = re.search(r'const CORE = (\\[.*?\\]);', text, re.S)
     worker.write_text(text[:core_match.start(1)] + json.dumps(core, ensure_ascii=False, indent=2)
                       + text[core_match.end(1):], encoding='utf-8')
     index = published / 'index.html'
