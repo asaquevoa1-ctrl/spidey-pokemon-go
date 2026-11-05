@@ -133,10 +133,18 @@ jobs:
                   assert stops >= 739, f'Catálogo HTTP: {stops} pontos'
                   assert len(active) == version['published_collections'], 'Manifesto diverge das coleções HTTP'
                   assert stops == version['published_stops'], 'Manifesto diverge dos pontos HTTP'
-                  html = get_public('index.html').decode('utf-8')
-                  for asset in ('app.js', 'news-premium-20261102.js', 'sw.js'):
-                      body = get_public(asset)
-                      assert len(body) > 100, f'{asset}: conteúdo vazio/incompleto'
+                  # Conferir os bytes efetivamente servidos, não apenas o manifesto.
+                  # O sw.js local já foi versionado durante a preparação do artefato.
+                  import hashlib, pathlib
+                  for asset in ('index.html', 'app.js', 'news-premium-20261102.js', 'sw.js', 'data/stamps.json'):
+                      served = get_public(asset)
+                      expected_bytes = (pathlib.Path('spidey-app') / asset).read_bytes()
+                      actual_hash = hashlib.sha256(served).hexdigest()
+                      expected_hash = hashlib.sha256(expected_bytes).hexdigest()
+                      assert actual_hash == expected_hash, (
+                          f'{asset}: SHA256 HTTP {actual_hash} != artefato {expected_hash}')
+                      print(f'HTTP SHA256 confirmado: {asset} {actual_hash}')
+                  html = (pathlib.Path('spidey-app') / 'index.html').read_text(encoding='utf-8')
                   assert 'stamps-v2.js' in html, 'index.html sem módulo de Selos'
                   print('GitHub Pages verificado por HTTP (manifesto, catálogo, HTML, JS e SW):', base, version)
                   break
