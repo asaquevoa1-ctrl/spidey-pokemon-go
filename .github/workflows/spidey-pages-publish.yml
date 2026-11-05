@@ -16,6 +16,9 @@ concurrency:
 
 jobs:
   deploy:
+    # Publicação centralizada em spidey-pages.yml para evitar sobrescrita concorrente.
+    # Mantido como referência histórica; não executar um segundo deploy.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
