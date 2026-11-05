@@ -7667,7 +7667,7 @@
       "id": "2026-11-halloween-part-2",
       "slug": "2026-11-halloween-part-2",
       "title": "Halloween 2026: Parte II",
-      "summary": "Greavard Brilhante estreia, e Mega Sableye ganha Super Nível Máximo e Sombra Noturna+. De 1 a 5 de novembro, no horário local.",
+      "summary": "Até 5/11 às 20h locais: Greavard Brilhante, Super Nível Máximo de Mega Sableye e Pesquisa Temporária gratuita com 6 Doces Raros e Sinistea com laço.",
       "category": "halloween",
       "tags": [
         "Halloween",
@@ -7703,6 +7703,8 @@
       "notes": [
         "Greavard pode aparecer Brilhante pela primeira vez na natureza e nas tarefas do Passe GO e de Pesquisa de campo.",
         "Mega Sableye ganha Super Nível Máximo e o ataque Sombra Noturna+ enquanto está Megaevoluído.",
+        "PESQUISA TEMPORÁRIA OFICIAL: as tarefas vêm concluídas automaticamente. Resgate 6 Doces Raros e um encontro com Sinistea com laço até 05/11 às 20h, no horário local.",
+        "PESQUISA DE CAMPO (fonte comunitária Leek Duck): Capturar 13 Pokémon rende 13 Megaenergias de Sableye; Capturar 13 Pokémon do tipo Fantasma pode render Rowlet fantasiado, Greavard ou Froakie fantasiado; fazer 6 boas jogadas pode render Litwick, Sandygast ou Greavard; vencer uma reide pode render Zubat de cartola ou Sinistea com laço; vencer três reides rende Pikachu de chapéu e pelerine.",
         "Resgate as recompensas do Passe GO até 7/11 às 20h, no horário local."
       ],
       "notifications": {
@@ -7714,22 +7716,33 @@
       "status": "published",
       "news": {
         "title": "Halloween Parte II confirma Greavard Brilhante e novidades de Mega Sableye",
-        "summary": "De 1 a 5 de novembro: estreia de Greavard Brilhante, Super Nível Máximo de Mega Sableye e bônus liberados pelos Ranques 10 e 20 do Passe GO.",
+        "summary": "Até 5/11 às 20h locais: Greavard Brilhante, Super Nível Máximo de Mega Sableye e Pesquisa Temporária gratuita com 6 Doces Raros e Sinistea com laço.",
         "published_on": "2026-10-11"
       },
-      "updated_at": "2026-10-11T22:04:39.046009+00:00",
-      "verified_at": "2026-10-11",
+      "updated_at": "2026-11-05T08:05:00-03:00",
+      "verified_at": "2026-11-05",
       "verification_sources": [
         {
           "name": "Pokémon GO · anúncio completo em inglês",
           "url": "https://pokemongo.com/news/halloween-part-2-2026",
           "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO · anúncio completo em português",
+          "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck · tarefas de pesquisa da Parte II",
+          "url": "https://leekduck.com/events/halloween-2026-part-2/",
+          "confidence": "verified_community"
         }
       ],
       "bonuses": [
         "Passe GO, Ranque 10: 2× Doces por captura; no Deluxe, 3×.",
         "Passe GO, Ranque 20: 2× Poeira Estelar por captura; no Deluxe, 3×.",
-        "Pesquisas de campo temáticas dão encontros com Pokémon do evento."
+        "Pesquisas de campo temáticas dão encontros com Pokémon do evento.",
+        "Pesquisa Temporária gratuita: tarefas concluídas automaticamente, 6 Doces Raros e encontro com Sinistea com laço; resgate até 05/11 às 20h locais."
       ],
       "pokemon": [
         {
@@ -7758,9 +7771,64 @@
         },
         {
           "name": "Sinistea com laço",
-          "note": "reides de uma estrela; pode aparecer Brilhante"
+          "note": "reides de uma estrela e recompensa da Pesquisa Temporária gratuita; pode aparecer Brilhante"
         }
-      ]
+      ],
+      "audit": {
+        "research": {
+          "official_timed_research": {
+            "tasks_automatically_completed": true,
+            "rewards": [
+              "6 Doces Raros",
+              "Encontro com Sinistea com laço"
+            ],
+            "claim_deadline_local": "2026-11-05T20:00:00-03:00",
+            "source_url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
+            "confidence": "official"
+          },
+          "field_research": {
+            "source_url": "https://leekduck.com/events/halloween-2026-part-2/",
+            "confidence": "verified_community",
+            "tasks": [
+              {
+                "task": "Capturar 13 Pokémon",
+                "rewards": [
+                  "13 Megaenergias de Sableye"
+                ]
+              },
+              {
+                "task": "Capturar 13 Pokémon do tipo Fantasma",
+                "possible_rewards": [
+                  "Rowlet com fantasia de Dia das Bruxas",
+                  "Greavard",
+                  "Froakie com fantasia de Dia das Bruxas"
+                ]
+              },
+              {
+                "task": "Fazer 6 boas jogadas",
+                "possible_rewards": [
+                  "Litwick",
+                  "Sandygast",
+                  "Greavard"
+                ]
+              },
+              {
+                "task": "Vencer uma reide",
+                "possible_rewards": [
+                  "Zubat com cartola",
+                  "Sinistea com laço"
+                ]
+              },
+              {
+                "task": "Vencer três reides",
+                "rewards": [
+                  "Pikachu com chapéu e pelerine"
+                ]
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "id": "2026-10-super-mega-raid-day",
