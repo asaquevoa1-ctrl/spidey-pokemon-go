@@ -51,6 +51,8 @@ jobs:
           node-version: '24'
       - name: Conferir sintaxe do verificador Wild Area
         run: node --check scripts/qa_wild_cdmx_public_pages.mjs
+      - name: Conferir sintaxe das rotas comunitárias Aço e Dragão
+        run: node --check spidey-app/wild-mexico-type-stops-20261106.js
       - name: Conferir limites da medição de acessos
         run: node --test tests/web-analytics.test.cjs
       - name: Conferir Novidades Premium e fontes reais
@@ -136,7 +138,7 @@ jobs:
           python3 - <<'PY'
           import hashlib, json, os, pathlib, time, urllib.request
           base = 'https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/'
-          files = ('index.html', 'app.js', 'news-premium-20261102.js', 'sw.js', 'data/stamps.json')
+          files = ('index.html', 'app.js', 'news-premium-20261102.js', 'wild-mexico-type-stops-20261106.js', 'sw.js', 'data/stamps.json')
           expected = {name: hashlib.sha256((pathlib.Path('pages-public/spidey-app') / name).read_bytes()).hexdigest() for name in files}
           error = None
           for attempt in range(12):
