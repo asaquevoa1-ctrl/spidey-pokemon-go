@@ -2315,13 +2315,19 @@
           "start_local": "2026-11-24T10:00:00",
           "end_local": "2026-11-26T10:00:00",
           "timezone_scope": "local",
-          "encounters": ["Applin"]
+          "encounters": [
+            "Applin"
+          ]
         },
         {
           "start_local": "2026-11-26T10:00:00",
           "end_local": "2026-11-30T20:00:00",
           "timezone_scope": "local",
-          "encounters": ["Gengar com fantasia do Festival Assustador", "Drifblim com fantasia Travessura de Halloween", "Bramblin"]
+          "encounters": [
+            "Gengar com fantasia do Festival Assustador",
+            "Drifblim com fantasia Travessura de Halloween",
+            "Bramblin"
+          ]
         }
       ],
       "news": {
@@ -12592,7 +12598,9 @@
         "not_a_calendar_event": true,
         "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026"
       },
-      "related_event_ids": ["2026-11-24-twilight-wishes-preview"],
+      "related_event_ids": [
+        "2026-11-24-twilight-wishes-preview"
+      ],
       "superseded_by": "2026-11-24-twilight-wishes-preview",
       "superseded_at": "2026-11-04T07:27:00-03:00"
     },
@@ -12648,8 +12656,14 @@
         "no_planned_end_date": true,
         "distinct_from_event_stamp_rallies": true
       },
-      "related_event_ids": ["2026-11-go-wild-area-sendai", "2026-11-go-wild-area-mexico-city"],
-      "related_stamp_rally_ids": ["lapras-sendai-tohoku", "hawlucha-mexico-city"]
+      "related_event_ids": [
+        "2026-11-go-wild-area-sendai",
+        "2026-11-go-wild-area-mexico-city"
+      ],
+      "related_stamp_rally_ids": [
+        "lapras-sendai-tohoku",
+        "hawlucha-mexico-city"
+      ]
     },
     {
       "id": "official-news-auto-5e1b1cd68f6c",
@@ -12704,7 +12718,12 @@
         "canonical_fulltext_url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
         "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026"
       },
-      "related_event_ids": ["2026-11-go-wild-area-sendai", "2026-11-go-wild-area-mexico-city", "2026-11-09-into-the-wild", "2026-11-go-wild-area-global"]
+      "related_event_ids": [
+        "2026-11-go-wild-area-sendai",
+        "2026-11-go-wild-area-mexico-city",
+        "2026-11-09-into-the-wild",
+        "2026-11-go-wild-area-global"
+      ]
     },
     {
       "id": "official-news-auto-f4cc5d7a7e81",
@@ -12849,6 +12868,55 @@
         "collector_queue_file": "queue/pending/2026-11-04/oficial-noticia-c0b30b540fab.json",
         "daily_sessions_preserved": true,
         "no_gameplay_bonuses_announced": true
+      }
+    },
+    {
+      "id": "official-news-auto-6e45ee38e2b8",
+      "slug": "official-news-auto-6e45ee38e2b8",
+      "content_type": "news",
+      "title": "Apenas este fim de semana! Faça login entre 6 e 8 de novembro para obter uma Pesquisa temporária gratuita com Machamp Gigamax!",
+      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "category": "official_update",
+      "tags": [
+        "Novidade",
+        "Pokémon GO oficial",
+        "Atualização automática"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
+        "confidence": "official"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Apenas este fim de semana! Faça login entre 6 e 8 de novembro para obter uma Pesquisa temporária gratuita com Machamp Gigamax!",
+        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "published_on": "2026-11-06",
+        "label": "OFICIAL • NOVO"
+      },
+      "notes": [
+        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
+        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
+        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "A notícia não tem horário de evento validado."
+      },
+      "status": "published",
+      "verified_at": "2026-11-06",
+      "updated_at": "2026-11-06T00:00:00+00:00",
+      "audit": {
+        "classification": "official_headline_only",
+        "editorial_detail_pending": true,
+        "automatic_index_discovery": true,
+        "not_a_calendar_event": true
       }
     }
   ]
