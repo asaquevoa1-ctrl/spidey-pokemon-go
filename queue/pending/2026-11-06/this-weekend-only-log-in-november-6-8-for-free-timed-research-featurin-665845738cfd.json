@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 This weekend only! Log in November 6–8 for free Timed Research featuring Gigantamax Machamp!",
+  "mensagem": "This weekend only! Log in November 6–8 for free Timed Research featuring Gigantamax Machamp!\n\n🔗 https://pokemongo.com/news/gowildarea-2026-timed-research\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/gowildarea-2026-timed-research",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1568325031258357833",
+  "image_url": "https://lh3.googleusercontent.com/ou9s1BeQ2dxKpKmtjCjzqmE7LInbAzbD6UxkhtK6DMHRPpfxjkCxIfoVyfWpulXpmXnCCuTOluKKw_e_5n6yMhRFnYOq4OBwe5KoWt4HCeU",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1568325031258357833",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-06T20:56:05.409102+00:00"
+}
