@@ -5,11 +5,12 @@ const fs=require('node:fs');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-test('GitHub Pages favors newest main version and verifies ACTUAL public deployment',()=>{
+test('GitHub Pages serializes releases and verifies ACTUAL public deployment',()=>{
  const yml=read('.github/workflows/spidey-pages.yml');
  const checker=read('scripts/qa_trust_27_public_pages.mjs');
  assert.match(yml,/group: spidey-pages-/);
- assert.match(yml,/cancel-in-progress: true/);
+ assert.match(yml,/cancel-in-progress: false/);
+ assert.match(yml,/cron: '47 \* \* \* \*'/); // Scheduled release catches HEAD after catalog-only commits.
  assert.match(yml,/uses: actions\/deploy-pages@v4/);
  // O pacote que sobe ao Pages precisa corresponder ao commit do build,
  // mesmo se outros fluxos atualizarem a branch principal enquanto ele roda.
