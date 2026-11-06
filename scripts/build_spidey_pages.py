@@ -163,6 +163,10 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     if any(not isinstance(path, str) or not path.startswith('./') or '..' in Path(path).parts
            or not (published / path).exists() for path in core):
         raise ValueError('Cache referencia arquivo ausente ou fora do app')
+    # Aplicar as transformações públicas antes de calcular o hash do PWA.
+    # Assim mudanças na política CSP, analytics e push também invalidam o cache.
+    index = published / 'index.html'
+    index.write_text(prepare_shell(index.read_text(encoding='utf-8'), analytics, push), encoding='utf-8')
     # O cache precisa mudar quando o catálogo ou a interface publicada mudar.
     # Calcular sobre bytes do pacote (não sobre data/hora) mantém builds reproduzíveis.
     digest = hashlib.sha256()
@@ -188,9 +192,6 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     core_match = re.search(r'const CORE = (\[.*?\]);', text, re.S)
     worker.write_text(text[:core_match.start(1)] + json.dumps(core, ensure_ascii=False, indent=2)
                       + text[core_match.end(1):], encoding='utf-8')
-    index = published / 'index.html'
-    text = index.read_text(encoding='utf-8')
-    index.write_text(prepare_shell(text, analytics, push), encoding='utf-8')
     result['web_analytics'] = {'enabled': analytics['enabled'], 'provider': 'cloudflare' if analytics['enabled'] else None}
     result['push'] = {'configured': push['enabled'], 'hosting': push['hosting']}
     # Public availability only. No subscription store, registration or dispatch exists here.
