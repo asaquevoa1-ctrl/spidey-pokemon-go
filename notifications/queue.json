@@ -4,25 +4,6 @@
   "horizon_days": 45,
   "jobs": [
     {
-      "id": "festival-of-lights-2026-pokeminers-e2:start:60",
-      "event_id": "festival-of-lights-2026-pokeminers-e2",
-      "event_title": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta",
-      "category": "evento_especial",
-      "scheduled_for": "2026-11-06T00:30:00-03:00",
-      "event_start": "2026-11-06T01:30:00-03:00",
-      "lead_minutes": 60,
-      "title": "Spidey Pokémon GO",
-      "body": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta começa em cerca de 1 hora(s).",
-      "url": "./?event=festival-das-luzes-2026-india",
-      "status": "pending",
-      "source": {
-        "name": "Pokémon GO",
-        "captured_via": "PokeMiners",
-        "url": "https://pokemongo.com/news/festival-of-lights-2026",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "2026-11-go-wild-area-mexico-city:start:60",
       "event_id": "2026-11-go-wild-area-mexico-city",
       "event_title": "Pokémon GO Wild Area 2026: Cidade do México",
@@ -186,7 +167,7 @@
     }
   ],
   "meta": {
-    "pending_count": 10,
+    "pending_count": 9,
     "delivery_backend": "web_push",
     "note": "Envio pelo dispatcher autenticado do app; adesão e permissões por aparelho."
   }
