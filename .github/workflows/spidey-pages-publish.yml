@@ -1,8 +1,7 @@
 name: Publicar Spidey no GitHub Pages
 
 on:
-  push:
-    branches: [main]
+  # Fluxo legado mantido apenas para consulta manual; sem execuções a cada push.
   workflow_dispatch:
 
 permissions:
