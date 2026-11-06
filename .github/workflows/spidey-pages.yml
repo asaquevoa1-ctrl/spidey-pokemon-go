@@ -22,7 +22,10 @@ permissions:
 # Cancelar builds anteriores evita uma fila de versões ultrapassadas.
 concurrency:
   group: spidey-pages-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'public' }}
-  cancel-in-progress: true
+  # Não interromper um deploy em andamento: cancelamentos sucessivos podem
+  # impedir a publicação durante atualizações frequentes do catálogo.
+  # A fila termina e a execução agendada posterior publica o HEAD mais recente.
+  cancel-in-progress: false
 
 jobs:
   build:
