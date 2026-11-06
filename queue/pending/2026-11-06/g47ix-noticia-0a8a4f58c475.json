@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "O novo Perfil do Treinador está no ar e recebeu uma pequena atualização! ✨\n\n🌍 Agora você pode ver os planos de fundo de localização nos perfis de seus amigos (por enquanto, apenas os planos de fundo do México ou Sendai funcionam)\n\n🔄 Além disso, parece que agora podemos saber se o Buddy Pokémon de alguém foi negociado, graças a um novo ícone ao lado do seu nome!\n\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2118683166617551346",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2118683166617551346",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-06T20:54:18.651394+00:00"
+}
