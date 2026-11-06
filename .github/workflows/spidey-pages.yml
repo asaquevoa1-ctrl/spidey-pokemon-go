@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 # O site público deve receber a versão MAIS RECENTE de main.
-# Cancelar builds anteriores evita uma fila de versões ultrapassadas.
+# Serializar publicações evita cancelar deploys em andamento.
 concurrency:
   group: spidey-pages-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'public' }}
   # Não interromper um deploy em andamento: cancelamentos sucessivos podem
