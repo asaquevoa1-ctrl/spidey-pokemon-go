@@ -180,8 +180,12 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     # Assim artes aprovadas atualizadas não ficam presas na versão anterior do PWA.
     watched = {'index.html', 'app.js', 'stamps-v2.js', 'news-premium-20261102.js',
                'data/stamps.json', 'data/events.json', 'data/weekly.json', 'sw.js'}
-    for name in sorted({path.removeprefix('./') for path in core} - watched):
+    # './' is the app root URL, served by index.html; it is not a file.
+    # index.html is already hashed above, so do not read the directory as bytes.
+    for name in sorted({path.removeprefix('./') for path in core} - watched - {''}):
         asset = published / name
+        if not asset.is_file():
+            raise ValueError(f'Recurso CORE ausente ou não é arquivo: {name}')
         digest.update(name.encode('utf-8') + b'\\0' + asset.read_bytes())
     cache_version = digest.hexdigest()[:16]
     text, cache_count = re.subn(r"(?m)^const CACHE = '[^']+';",
