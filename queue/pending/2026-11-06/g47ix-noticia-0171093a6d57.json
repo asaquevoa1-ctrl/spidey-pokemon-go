@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "Os ataques do Pikachu podem ser controlados remotamente e também podemos obter informações especiais (acabei de receber um)\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2118658995762160057",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2118658995762160057",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-06T20:54:15.820580+00:00"
+}
