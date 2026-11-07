@@ -25,6 +25,7 @@ const CORE = [
   './stamps-premium-20261102.css',
   './stamps-community-routes-20261102.css',
   './stamps-community-routes-20261102.js',
+  './wild-mexico-type-stops-20261106.js',
   './data/community-routes-20261102.json',
   './pvp-premium-20261102.css',
   './fly-premium-20261102.js',
