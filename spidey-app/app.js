@@ -330,7 +330,47 @@ function renderStamps() {
     singaporeArea = document.createElement('section');
     singaporeArea.className = 'stamp-singapore-area';
     singaporeArea.setAttribute('aria-label', 'Selos de Singapura');
-    singaporeArea.innerHTML = '<div class="stamp-singapore-heading"><span class="eyebrow">DESTAQUE · SINGAPURA</span><h3>5 selos em Changi e Jewel</h3><p>Rota com cinco coordenadas comunitárias. Abra para consultar e copiar todos os pontos.</p></div>';
+    // Original Singapore skyline artwork; self-contained and available offline.
+    // No third-party poster, unverified Pokémon illustration or external CDN.
+    singaporeArea.innerHTML = `<div class="stamp-singapore-art" role="img" aria-label="Ilustração noturna de Singapura, com Marina Bay Sands, Supertrees e cinco selos dourados">
+      <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="sgSky" x2="0" y2="1"><stop stop-color="#08151f"/><stop offset=".68" stop-color="#133744"/><stop offset="1" stop-color="#20343b"/></linearGradient>
+          <linearGradient id="sgGold" x2="1" y2="1"><stop stop-color="#fff0b5"/><stop offset=".55" stop-color="#d8aa55"/><stop offset="1" stop-color="#8c6033"/></linearGradient>
+          <linearGradient id="sgWater" x2="0" y2="1"><stop stop-color="#234b54"/><stop offset="1" stop-color="#081e29"/></linearGradient>
+          <radialGradient id="sgGlow"><stop stop-color="#d2a358" stop-opacity=".42"/><stop offset="1" stop-color="#d2a358" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="720" height="380" fill="url(#sgSky)"/>
+        <circle cx="535" cy="96" r="146" fill="url(#sgGlow)"/>
+        <circle cx="535" cy="96" r="35" fill="#e6c98c" opacity=".9"/>
+        <g fill="#e8cf9c" opacity=".65"><circle cx="82" cy="54" r="2"/><circle cx="184" cy="92" r="1.5"/><circle cx="278" cy="47" r="2"/><circle cx="410" cy="76" r="1.5"/><circle cx="649" cy="51" r="2"/></g>
+        <path d="M0 275Q150 260 290 274T720 267V380H0Z" fill="url(#sgWater)"/>
+        <g fill="#0b222c" stroke="#b58a50" stroke-width="2.5">
+          <path d="M105 272V164Q105 148 118 148H153Q166 148 166 164V272Z"/>
+          <path d="M174 272V151Q174 135 187 135H223Q237 135 237 151V272Z"/>
+          <path d="M244 272V164Q244 148 257 148H292Q306 148 306 164V272Z"/>
+          <path d="M89 146Q196 117 322 137L317 153Q203 139 94 160Z" fill="#c19a5d"/>
+        </g>
+        <g stroke="#d4aa66" stroke-width="2" fill="none">
+          <path d="M431 275V173M500 275V151M569 275V182"/>
+          <path d="M405 173Q431 129 457 173Q431 188 405 173Z"/>
+          <path d="M472 151Q500 98 528 151Q500 171 472 151Z"/>
+          <path d="M543 182Q569 140 595 182Q569 198 543 182Z"/>
+          <path d="M420 179L442 160M489 158L511 136M558 188L580 167"/>
+        </g>
+        <g stroke="#d5b478" stroke-width="1" opacity=".4"><path d="M0 299Q180 309 360 298T720 304"/><path d="M0 332Q180 342 360 331T720 337"/></g>
+        <g transform="translate(52 32)">
+          <rect width="215" height="37" rx="18" fill="#0c222a" stroke="#bb975b"/>
+          <text x="107" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="3" fill="#f4d69c">SINGAPURA</text>
+        </g>
+        <g transform="translate(482 295)" fill="none" stroke="url(#sgGold)" stroke-width="3">
+          <circle cx="0" cy="0" r="17"/><circle cx="43" cy="0" r="17"/><circle cx="86" cy="0" r="17"/><circle cx="129" cy="0" r="17"/><circle cx="172" cy="0" r="17"/>
+          <circle cx="0" cy="0" r="5" fill="#d9b36d"/><circle cx="43" cy="0" r="5" fill="#d9b36d"/><circle cx="86" cy="0" r="5" fill="#d9b36d"/><circle cx="129" cy="0" r="5" fill="#d9b36d"/><circle cx="172" cy="0" r="5" fill="#d9b36d"/>
+        </g>
+        <text x="50" y="336" fill="#f5e5c2" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="2">CHANGI · JEWEL</text>
+        <text x="50" y="356" fill="#d5c2a2" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">CINCO SELOS · UMA AVENTURA</text>
+      </svg>
+    </div><div class="stamp-singapore-heading"><span class="eyebrow">DESTAQUE · SINGAPURA</span><h3>5 selos em Changi e Jewel</h3><p>Rota com cinco coordenadas comunitárias. Abra para consultar e copiar todos os pontos.</p></div>`;
     stampList.appendChild(singaporeArea);
   }
   rallies.forEach((rally) => {
