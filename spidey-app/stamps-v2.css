@@ -491,3 +491,13 @@
 .stamp-guide-coordinate-list { margin-top:12px; }
 .stamp-guide-coordinate-list textarea { display:block; width:100%; box-sizing:border-box; margin-top:10px; padding:12px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--text); font-size:1rem; }
 @media(max-width:560px) { .stamp-guide-reference-list { grid-template-columns:1fr; } }
+
+
+/* Singapore Stamp Rally: distinct editorial destination inside Selos. */
+.stamp-list .stamp-singapore-area{grid-column:1/-1;display:grid;gap:12px;padding:clamp(16px,4vw,24px);border:1px solid rgba(191,158,89,.42);border-radius:20px;background:linear-gradient(135deg,rgba(14,49,61,.94),rgba(22,29,37,.97));color:#f5f2e9}
+.stamp-singapore-heading .eyebrow{color:#e0bf79;letter-spacing:.11em}
+.stamp-singapore-heading h3{margin:6px 0;font-size:clamp(1.2rem,4.5vw,1.65rem);line-height:1.18;color:#fff}
+.stamp-singapore-heading p{margin:0;max-width:52ch;color:#e0e7e8;line-height:1.5}
+.stamp-singapore-feature{max-width:100%;border-color:rgba(191,158,89,.55)}
+.stamp-singapore-feature:focus-visible{outline:3px solid #e0bf79;outline-offset:4px}
+@media(min-width:700px){.stamp-singapore-area{grid-template-columns:minmax(0,1fr) minmax(280px,1fr);align-items:center}}
