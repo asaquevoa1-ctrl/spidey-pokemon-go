@@ -2,6 +2,123 @@
   "schema_version": "spidey-stamp-rally-v1",
   "rallies": [
     {
+      "id": "pokexciting-singapore-changi-jewel-five-stamps-2026",
+      "slug": "pokexciting-singapura-cinco-selos-changi-jewel-2026",
+      "status": "published",
+      "collection_type": "event",
+      "title": "PokéXciting! Singapura · 5 selos",
+      "summary": "Cinco selos locais no Aeroporto de Changi e no Jewel. Coordenadas compartilhadas pela comunidade, ainda não verificadas como PokéStops exatas.",
+      "public_summary": "Cinco selos locais em Changi e Jewel. Copie os cinco pontos de referência e confira os selos no jogo.",
+      "stamp_count": 5,
+      "country": "Singapura",
+      "city": "Singapura",
+      "available_from": "2026-11-07",
+      "available_until": "2026-12-08",
+      "timezone": "Asia/Singapore",
+      "source": {
+        "name": "Pokémon GO • PokéXciting! Singapore",
+        "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+        "confidence": "official"
+      },
+      "calendar": {
+        "enabled": false,
+        "reason": "A programação do evento é gerenciada pelo calendário; esta coleção reúne somente os pontos na aba Selos."
+      },
+      "rewards": [
+        "Ao completar os cinco selos locais, encontro com PokéXciting! Pikachu (azul) e Fundo de Localização de Singapura."
+      ],
+      "stops": [
+        {
+          "id": "pokexciting-singapore-community-point-1",
+          "stamp_number": 1,
+          "route_order": 1,
+          "city": "Singapura",
+          "country": "Singapura",
+          "venue": "Ponto comunitário 1 · Changi/Jewel",
+          "latitude": 1.338006,
+          "longitude": 103.983177,
+          "coordinate_type": "community_reference",
+          "coordinate_confidence": "unverified",
+          "exact_pokestop_verified": false,
+          "gpx_enabled": false,
+          "available_from": "2026-11-07",
+          "available_until": "2026-12-08"
+        },
+        {
+          "id": "pokexciting-singapore-community-point-2",
+          "stamp_number": 2,
+          "route_order": 2,
+          "city": "Singapura",
+          "country": "Singapura",
+          "venue": "Ponto comunitário 2 · Changi/Jewel",
+          "latitude": 1.3559379,
+          "longitude": 103.9872238,
+          "coordinate_type": "community_reference",
+          "coordinate_confidence": "unverified",
+          "exact_pokestop_verified": false,
+          "gpx_enabled": false,
+          "available_from": "2026-11-07",
+          "available_until": "2026-12-08"
+        },
+        {
+          "id": "pokexciting-singapore-community-point-3",
+          "stamp_number": 3,
+          "route_order": 3,
+          "city": "Singapura",
+          "country": "Singapura",
+          "venue": "Ponto comunitário 3 · Changi/Jewel",
+          "latitude": 1.3606,
+          "longitude": 103.9889,
+          "coordinate_type": "community_reference",
+          "coordinate_confidence": "unverified",
+          "exact_pokestop_verified": false,
+          "gpx_enabled": false,
+          "available_from": "2026-11-07",
+          "available_until": "2026-12-08"
+        },
+        {
+          "id": "pokexciting-singapore-community-point-4",
+          "stamp_number": 4,
+          "route_order": 4,
+          "city": "Singapura",
+          "country": "Singapura",
+          "venue": "Ponto comunitário 4 · Changi/Jewel",
+          "latitude": 1.3614765,
+          "longitude": 103.9904243,
+          "coordinate_type": "community_reference",
+          "coordinate_confidence": "unverified",
+          "exact_pokestop_verified": false,
+          "gpx_enabled": false,
+          "available_from": "2026-11-07",
+          "available_until": "2026-12-08"
+        },
+        {
+          "id": "pokexciting-singapore-community-point-5",
+          "stamp_number": 5,
+          "route_order": 5,
+          "city": "Singapura",
+          "country": "Singapura",
+          "venue": "Ponto comunitário 5 · Changi/Jewel",
+          "latitude": 1.3551798,
+          "longitude": 103.9891596,
+          "coordinate_type": "community_reference",
+          "coordinate_confidence": "unverified",
+          "exact_pokestop_verified": false,
+          "gpx_enabled": false,
+          "available_from": "2026-11-07",
+          "available_until": "2026-12-08"
+        }
+      ],
+      "public_notes": [
+        "Os cinco pontos foram compartilhados pela comunidade. A localização exata de cada PokéStop não foi verificada.",
+        "Não confundir esta coleção local de cinco selos com o selo inter-regional de Singapura, disponível separadamente."
+      ],
+      "notes": [
+        "Coordenadas fornecidas pelo responsável em 07/11/2026; não atribuir personagens individuais aos pontos sem confirmação.",
+        "A organização Changi Airport informa disponibilidade da caça local de 07/11 a 08/12/2026."
+      ]
+    },
+    {
       "id": "2026-dia-de-muertos-reforma-stamp-guide",
       "slug": "dia-de-muertos-2026-paseo-de-la-reforma-guia-selos",
       "status": "published",
