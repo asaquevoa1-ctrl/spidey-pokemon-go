@@ -1,0 +1,15 @@
+/* Community-submitted ticket-only 7-stop rallies; separate from permanent 8-stop routes. */
+(()=>{'use strict';
+const source='data/ticket-rally-community-20261107.json';
+const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const valid=s=>typeof s==='string'&&/^-?\d+(?:\.\d+)?,-?\d+(?:\.\d+)?$/.test(s)&&Math.abs(Number(s.split(',')[0]))<=90&&Math.abs(Number(s.split(',')[1]))<=180;
+async function copy(s){try{await navigator.clipboard.writeText(s);return true}catch(e){const el=document.createElement('textarea');el.value=s;document.body.append(el);el.select();let ok=false;try{ok=document.execCommand('copy')}catch(e){}el.remove();return ok}}
+async function mount(){const view=document.getElementById('stampsView');if(!view||document.getElementById('ticketRalliesCommunity'))return;
+const root=document.createElement('section');root.id='ticketRalliesCommunity';root.className='section stamp-community-section';view.append(root);
+try{const res=await fetch(source,{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const data=await res.json();
+if(data.schema_version!=='spidey-ticket-rally-community-v1'||data.routes.length!==2||!data.routes.every(r=>r.coords.length===7&&r.coords.every(valid)))throw Error('Incomplete community list');
+root.innerHTML='<div class="stamp-community-head"><div><span class="eyebrow">COMUNIDADE · INGRESSO NECESSÁRIO</span><h2>7 selos: Sendai e México</h2><p>Coordenadas compartilhadas por treinadores, ainda não verificadas como Poképaradas exatas. Diferentes das rotas permanentes de 8 selos. Sem GPX.</p></div><span class="stamp-community-total">14 pontos</span></div><div class="stamp-community-grid">'+data.routes.map(r=>'<article class="stamp-community-card" data-ticket-route="'+escape(r.id)+'"><div class="stamp-community-title"><h3>'+escape(r.title)+'</h3><span class="stamp-community-counter">7 pontos</span></div><ol class="stamp-community-points">'+r.coords.map((p,i)=>'<li><span class="stamp-community-number">'+(i+1)+'</span><code>'+escape(p)+'</code><button type="button" data-copy-point="'+i+'">Copiar</button></li>').join('')+'</ol><button type="button" class="action-btn gold stamp-community-copy-all" data-copy-all>Copiar todas as 7 coordenadas</button></article>').join('')+'</div>';
+root.addEventListener('click',async ev=>{const button=ev.target.closest('[data-copy-all],[data-copy-point]');if(!button)return;const card=button.closest('[data-ticket-route]');const route=data.routes.find(r=>r.id===card?.dataset.ticketRoute);if(!route)return;const payload=button.hasAttribute('data-copy-all')?route.coords.join('\n'):route.coords[Number(button.dataset.copyPoint)];const ok=await copy(payload);button.textContent=ok?'Copiado!':'Selecione e copie';setTimeout(()=>button.textContent=button.hasAttribute('data-copy-all')?'Copiar todas as 7 coordenadas':'Copiar',2000)});
+}catch(e){root.innerHTML='<p class="microcopy">As rotas comunitárias de ingresso estão indisponíveis no momento.</p>';}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
+})();
