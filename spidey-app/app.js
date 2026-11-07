@@ -330,39 +330,12 @@ function renderStamps() {
     singaporeArea = document.createElement('section');
     singaporeArea.className = 'stamp-singapore-area';
     singaporeArea.setAttribute('aria-label', 'Selos de Singapura');
-    // Event-specific Premium composition. Never use a generic skyline in this feature.
-    singaporeArea.innerHTML = `<div class="stamp-singapore-art" role="img" aria-label="Arte Premium de PokéXciting! Singapura: Pikachu com fantasia azul, cinco selos e Changi Jewel">
-      <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="sgPremium" x2="1" y2="1"><stop stop-color="#130650"/><stop offset=".52" stop-color="#07226a"/><stop offset="1" stop-color="#36127e"/></linearGradient>
-          <radialGradient id="sgBlueGlow"><stop stop-color="#31b8ff" stop-opacity=".58"/><stop offset="1" stop-color="#31b8ff" stop-opacity="0"/></radialGradient>
-          <linearGradient id="sgElectric" x2="1" y2="1"><stop stop-color="#5fe5ff"/><stop offset="1" stop-color="#8c7dff"/></linearGradient>
-        </defs>
-        <rect width="720" height="420" rx="22" fill="url(#sgPremium)"/>
-        <circle cx="520" cy="202" r="220" fill="url(#sgBlueGlow)"/>
-        <g opacity=".55" fill="#b4edff"><circle cx="50" cy="68" r="2"/><circle cx="308" cy="35" r="3"/><circle cx="650" cy="61" r="2"/><circle cx="688" cy="290" r="3"/><circle cx="347" cy="340" r="2"/></g>
-        <g transform="translate(432 49)">
-          <path d="M60 151L15 7L81 73L123 3L140 122" fill="#ffdd4a" stroke="#172148" stroke-width="8" stroke-linejoin="round"/>
-          <path d="M20 21L42 53L27 57Z M122 21L113 60L132 45Z" fill="#1b204b"/>
-          <ellipse cx="94" cy="192" rx="106" ry="123" fill="#ffdf51" stroke="#172148" stroke-width="8"/>
-          <ellipse cx="46" cy="192" rx="12" ry="18" fill="#141b39"/><ellipse cx="139" cy="192" rx="12" ry="18" fill="#141b39"/>
-          <circle cx="14" cy="231" r="21" fill="#f55d5e"/><circle cx="171" cy="231" r="21" fill="#f55d5e"/>
-          <path d="M75 234Q94 258 113 234" fill="none" stroke="#2b2138" stroke-width="7" stroke-linecap="round"/>
-          <path d="M-5 112Q-34 68 10 43Q29 -4 75 23Q115 -12 145 31Q198 21 204 73Q239 102 202 135Q167 105 129 115Q94 100 61 119Q28 100 -5 112Z" fill="#478df9" stroke="#173caa" stroke-width="7"/>
-          <path d="M15 90Q52 61 88 82M106 78Q148 52 185 90" fill="none" stroke="#94c7ff" stroke-width="11" stroke-linecap="round" opacity=".8"/>
-        </g>
-        <rect x="30" y="29" width="205" height="40" rx="20" fill="#061847" stroke="#62dfff"/>
-        <text x="132" y="55" fill="#d7f8ff" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="800" letter-spacing="2">SINGAPURA 2026</text>
-        <text x="34" y="132" fill="#fff" font-family="Arial,sans-serif" font-size="48" font-weight="900">PokéXciting!</text>
-        <text x="35" y="175" fill="#82e8ff" font-family="Arial,sans-serif" font-size="28" font-weight="800">PIKACHU AZUL</text>
-        <text x="36" y="216" fill="#f6f4ff" font-family="Arial,sans-serif" font-size="22" font-weight="700">7–8 NOV · CHANGI &amp; JEWEL</text>
-        <g transform="translate(42 267)" stroke="#8feaff" stroke-width="3" fill="#0d3278">
-          <circle cx="22" cy="22" r="21"/><circle cx="75" cy="22" r="21"/><circle cx="128" cy="22" r="21"/><circle cx="181" cy="22" r="21"/><circle cx="234" cy="22" r="21"/>
-          <g fill="#ffda71" stroke="none"><circle cx="22" cy="22" r="8"/><circle cx="75" cy="22" r="8"/><circle cx="128" cy="22" r="8"/><circle cx="181" cy="22" r="8"/><circle cx="234" cy="22" r="8"/></g>
-        </g>
-        <text x="43" y="340" fill="#ffffff" font-family="Arial,sans-serif" font-size="22" font-weight="800">5 SELOS · FUNDO DE LOCALIZAÇÃO</text>
-        <text x="43" y="372" fill="#c7e6ff" font-family="Arial,sans-serif" font-size="17">Coordenadas comunitárias copiáveis</text>
-      </svg>
+    // No improvised character art. Keep event information and route usable until a verified approved asset is integrated.
+    singaporeArea.innerHTML = `<div class="stamp-singapore-art stamp-singapore-editorial" role="group" aria-label="PokéXciting! Singapura, 7 e 8 de novembro, cinco selos em Changi e Jewel" style="min-height:190px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(20px,5vw,38px);background:linear-gradient(125deg,#111d49,#26366b 58%,#123c60);color:#fff;border-radius:20px;border:1px solid rgba(172,220,255,.38)">
+      <span style="font-size:.78rem;letter-spacing:.16em;font-weight:800;color:#b6e9ff">SINGAPURA · 7–8 NOV 2026</span>
+      <strong style="font-size:clamp(1.8rem,6vw,3rem);line-height:1.15;margin:.7rem 0">PokéXciting!</strong>
+      <span style="font-size:1.05rem;font-weight:700;color:#e5f5ff">5 selos em Changi e Jewel</span>
+      <span style="margin-top:.8rem;color:#cbdaf4">Pikachu com fantasia azul · Fundo de localização</span>
     </div><div class="stamp-singapore-heading"><span class="eyebrow">DESTAQUE · SINGAPURA</span><h3>5 selos em Changi e Jewel</h3><p>Rota com cinco coordenadas comunitárias. Abra para consultar e copiar todos os pontos.</p></div>`;
     stampList.appendChild(singaporeArea);
   }
