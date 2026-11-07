@@ -73,6 +73,23 @@ jobs:
         run: node --test tests/stamps-premium-20261102.test.cjs
       - name: Conferir as 16 coordenadas da comunidade, separadas dos selos oficiais
         run: node --test tests/stamps-community-routes-20261102.test.cjs
+      - name: Validar as rotas com ingresso de Sendai e México no pacote
+        run: |
+          node --check spidey-app/ticket-rally-community-20261107.js
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('spidey-app/data/ticket-rally-community-20261107.json').read_text(encoding='utf-8'))
+          routes = data['routes']
+          assert {route['id'] for route in routes} == {'sendai', 'mexico'}
+          assert data['ticket_required'] is True and data['exact_pokestops_verified'] is False
+          assert all(len(route['coords']) == 7 for route in routes)
+          for route in routes:
+              for point in route['coords']:
+                  lat, lon = map(float, point.split(','))
+                  assert -90 <= lat <= 90 and -180 <= lon <= 180
+          print('Rotas comunitárias preservadas: Sendai 7 + México 7')
+          PY
       - name: Conferir visual e controles do painel PvP Premium
         run: node --test tests/pvp-premium-20261102.test.cjs
       - name: Conferir Semana nos sete dias e horarios em Brasilia
