@@ -791,7 +791,7 @@
     "events_without_weekly_art": 9,
     "events_in_weekly": 18,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-06T22:01:58.907473-03:00",
+    "generated_at": "2026-11-07T04:31:14.547572-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
