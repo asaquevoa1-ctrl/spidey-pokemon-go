@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261104-lego-stamps1';
+const CACHE = 'spidey-app-20261107-ticket-rallies1';
 const CORE = [
   './rare-candy-alert-20261102.js',
   './rare-candy-alert-20261102.css',
@@ -26,6 +26,8 @@ const CORE = [
   './stamps-community-routes-20261102.css',
   './stamps-community-routes-20261102.js',
   './wild-mexico-type-stops-20261106.js',
+  './ticket-rally-community-20261107.js',
+  './data/ticket-rally-community-20261107.json',
   './data/community-routes-20261102.json',
   './pvp-premium-20261102.css',
   './fly-premium-20261102.js',
