@@ -1,0 +1,21 @@
+{
+  "titulo": "🔎 DATAMINE • PokeMiners",
+  "mensagem": "Nova informação detectada automaticamente no PokeMiners.\n\nA Helpshift Known Issues article was updated\nTitle: GO Battle League Known Issues\nLink: https://scopelyexplore.helpshift.com/hc/en/5-pokemon-go/faq/866-go-battle-league-known-issues-1793149376/\nDiff: too many changes for Discord — link instead:\n- https://pokeminers.com/blogdiff/go-battle-league-known-issues\n\n@subscriber\n\nGO Battle League Known Issues — Pokémon GO Help Center\n\nHere is a list of issues related to GO Battle League that are currently being investigated by our engineering team. This list will be updated\n\n…\n\nPokeMiners is a group of dataminers for Pokemon GO!\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1568432689529229442",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1568432689529229442",
+  "image_url": null,
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1568432689529229442",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-07T07:00:03.591766+00:00"
+}
