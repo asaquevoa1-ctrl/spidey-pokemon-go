@@ -330,45 +330,38 @@ function renderStamps() {
     singaporeArea = document.createElement('section');
     singaporeArea.className = 'stamp-singapore-area';
     singaporeArea.setAttribute('aria-label', 'Selos de Singapura');
-    // Original Singapore skyline artwork; self-contained and available offline.
-    // No third-party poster, unverified Pokémon illustration or external CDN.
-    singaporeArea.innerHTML = `<div class="stamp-singapore-art" role="img" aria-label="Ilustração noturna de Singapura, com Marina Bay Sands, Supertrees e cinco selos dourados">
-      <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    // Event-specific Premium composition. Never use a generic skyline in this feature.
+    singaporeArea.innerHTML = `<div class="stamp-singapore-art" role="img" aria-label="Arte Premium de PokéXciting! Singapura: Pikachu com fantasia azul, cinco selos e Changi Jewel">
+      <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
         <defs>
-          <linearGradient id="sgSky" x2="0" y2="1"><stop stop-color="#08151f"/><stop offset=".68" stop-color="#133744"/><stop offset="1" stop-color="#20343b"/></linearGradient>
-          <linearGradient id="sgGold" x2="1" y2="1"><stop stop-color="#fff0b5"/><stop offset=".55" stop-color="#d8aa55"/><stop offset="1" stop-color="#8c6033"/></linearGradient>
-          <linearGradient id="sgWater" x2="0" y2="1"><stop stop-color="#234b54"/><stop offset="1" stop-color="#081e29"/></linearGradient>
-          <radialGradient id="sgGlow"><stop stop-color="#d2a358" stop-opacity=".42"/><stop offset="1" stop-color="#d2a358" stop-opacity="0"/></radialGradient>
+          <linearGradient id="sgPremium" x2="1" y2="1"><stop stop-color="#130650"/><stop offset=".52" stop-color="#07226a"/><stop offset="1" stop-color="#36127e"/></linearGradient>
+          <radialGradient id="sgBlueGlow"><stop stop-color="#31b8ff" stop-opacity=".58"/><stop offset="1" stop-color="#31b8ff" stop-opacity="0"/></radialGradient>
+          <linearGradient id="sgElectric" x2="1" y2="1"><stop stop-color="#5fe5ff"/><stop offset="1" stop-color="#8c7dff"/></linearGradient>
         </defs>
-        <rect width="720" height="380" fill="url(#sgSky)"/>
-        <circle cx="535" cy="96" r="146" fill="url(#sgGlow)"/>
-        <circle cx="535" cy="96" r="35" fill="#e6c98c" opacity=".9"/>
-        <g fill="#e8cf9c" opacity=".65"><circle cx="82" cy="54" r="2"/><circle cx="184" cy="92" r="1.5"/><circle cx="278" cy="47" r="2"/><circle cx="410" cy="76" r="1.5"/><circle cx="649" cy="51" r="2"/></g>
-        <path d="M0 275Q150 260 290 274T720 267V380H0Z" fill="url(#sgWater)"/>
-        <g fill="#0b222c" stroke="#b58a50" stroke-width="2.5">
-          <path d="M105 272V164Q105 148 118 148H153Q166 148 166 164V272Z"/>
-          <path d="M174 272V151Q174 135 187 135H223Q237 135 237 151V272Z"/>
-          <path d="M244 272V164Q244 148 257 148H292Q306 148 306 164V272Z"/>
-          <path d="M89 146Q196 117 322 137L317 153Q203 139 94 160Z" fill="#c19a5d"/>
+        <rect width="720" height="420" rx="22" fill="url(#sgPremium)"/>
+        <circle cx="520" cy="202" r="220" fill="url(#sgBlueGlow)"/>
+        <g opacity=".55" fill="#b4edff"><circle cx="50" cy="68" r="2"/><circle cx="308" cy="35" r="3"/><circle cx="650" cy="61" r="2"/><circle cx="688" cy="290" r="3"/><circle cx="347" cy="340" r="2"/></g>
+        <g transform="translate(432 49)">
+          <path d="M60 151L15 7L81 73L123 3L140 122" fill="#ffdd4a" stroke="#172148" stroke-width="8" stroke-linejoin="round"/>
+          <path d="M20 21L42 53L27 57Z M122 21L113 60L132 45Z" fill="#1b204b"/>
+          <ellipse cx="94" cy="192" rx="106" ry="123" fill="#ffdf51" stroke="#172148" stroke-width="8"/>
+          <ellipse cx="46" cy="192" rx="12" ry="18" fill="#141b39"/><ellipse cx="139" cy="192" rx="12" ry="18" fill="#141b39"/>
+          <circle cx="14" cy="231" r="21" fill="#f55d5e"/><circle cx="171" cy="231" r="21" fill="#f55d5e"/>
+          <path d="M75 234Q94 258 113 234" fill="none" stroke="#2b2138" stroke-width="7" stroke-linecap="round"/>
+          <path d="M-5 112Q-34 68 10 43Q29 -4 75 23Q115 -12 145 31Q198 21 204 73Q239 102 202 135Q167 105 129 115Q94 100 61 119Q28 100 -5 112Z" fill="#478df9" stroke="#173caa" stroke-width="7"/>
+          <path d="M15 90Q52 61 88 82M106 78Q148 52 185 90" fill="none" stroke="#94c7ff" stroke-width="11" stroke-linecap="round" opacity=".8"/>
         </g>
-        <g stroke="#d4aa66" stroke-width="2" fill="none">
-          <path d="M431 275V173M500 275V151M569 275V182"/>
-          <path d="M405 173Q431 129 457 173Q431 188 405 173Z"/>
-          <path d="M472 151Q500 98 528 151Q500 171 472 151Z"/>
-          <path d="M543 182Q569 140 595 182Q569 198 543 182Z"/>
-          <path d="M420 179L442 160M489 158L511 136M558 188L580 167"/>
+        <rect x="30" y="29" width="205" height="40" rx="20" fill="#061847" stroke="#62dfff"/>
+        <text x="132" y="55" fill="#d7f8ff" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="800" letter-spacing="2">SINGAPURA 2026</text>
+        <text x="34" y="132" fill="#fff" font-family="Arial,sans-serif" font-size="48" font-weight="900">PokéXciting!</text>
+        <text x="35" y="175" fill="#82e8ff" font-family="Arial,sans-serif" font-size="28" font-weight="800">PIKACHU AZUL</text>
+        <text x="36" y="216" fill="#f6f4ff" font-family="Arial,sans-serif" font-size="22" font-weight="700">7–8 NOV · CHANGI &amp; JEWEL</text>
+        <g transform="translate(42 267)" stroke="#8feaff" stroke-width="3" fill="#0d3278">
+          <circle cx="22" cy="22" r="21"/><circle cx="75" cy="22" r="21"/><circle cx="128" cy="22" r="21"/><circle cx="181" cy="22" r="21"/><circle cx="234" cy="22" r="21"/>
+          <g fill="#ffda71" stroke="none"><circle cx="22" cy="22" r="8"/><circle cx="75" cy="22" r="8"/><circle cx="128" cy="22" r="8"/><circle cx="181" cy="22" r="8"/><circle cx="234" cy="22" r="8"/></g>
         </g>
-        <g stroke="#d5b478" stroke-width="1" opacity=".4"><path d="M0 299Q180 309 360 298T720 304"/><path d="M0 332Q180 342 360 331T720 337"/></g>
-        <g transform="translate(52 32)">
-          <rect width="215" height="37" rx="18" fill="#0c222a" stroke="#bb975b"/>
-          <text x="107" y="24" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="3" fill="#f4d69c">SINGAPURA</text>
-        </g>
-        <g transform="translate(482 295)" fill="none" stroke="url(#sgGold)" stroke-width="3">
-          <circle cx="0" cy="0" r="17"/><circle cx="43" cy="0" r="17"/><circle cx="86" cy="0" r="17"/><circle cx="129" cy="0" r="17"/><circle cx="172" cy="0" r="17"/>
-          <circle cx="0" cy="0" r="5" fill="#d9b36d"/><circle cx="43" cy="0" r="5" fill="#d9b36d"/><circle cx="86" cy="0" r="5" fill="#d9b36d"/><circle cx="129" cy="0" r="5" fill="#d9b36d"/><circle cx="172" cy="0" r="5" fill="#d9b36d"/>
-        </g>
-        <text x="50" y="336" fill="#f5e5c2" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="2">CHANGI · JEWEL</text>
-        <text x="50" y="356" fill="#d5c2a2" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">CINCO SELOS · UMA AVENTURA</text>
+        <text x="43" y="340" fill="#ffffff" font-family="Arial,sans-serif" font-size="22" font-weight="800">5 SELOS · FUNDO DE LOCALIZAÇÃO</text>
+        <text x="43" y="372" fill="#c7e6ff" font-family="Arial,sans-serif" font-size="17">Coordenadas comunitárias copiáveis</text>
       </svg>
     </div><div class="stamp-singapore-heading"><span class="eyebrow">DESTAQUE · SINGAPURA</span><h3>5 selos em Changi e Jewel</h3><p>Rota com cinco coordenadas comunitárias. Abra para consultar e copiar todos os pontos.</p></div>`;
     stampList.appendChild(singaporeArea);
