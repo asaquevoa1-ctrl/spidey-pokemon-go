@@ -37,9 +37,11 @@ jobs:
     # Evitar que o build seja cancelado antes de gerar o artefato Pages.
     timeout-minutes: 15
     steps:
+      # Pushes em fila podem apontar para commits antigos; publicar sempre o HEAD
+      # de main nos eventos de deploy. PR continua testando sua propria revisao.
       - uses: actions/checkout@v5
         with:
-          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
+          ref: ${{ github.event_name == 'pull_request' && github.ref || 'main' }}
       - name: Fixar a revisão do pacote público
         id: capture_sha
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
