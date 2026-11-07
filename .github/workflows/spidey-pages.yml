@@ -112,7 +112,7 @@ jobs:
           active = [r for r in rallies if r.get('status') == 'published']
           stops = sum(len(r.get('stops', [])) for r in active)
           print(f'Catálogo do artefato: {len(active)} coleções, {stops} pontos')
-          assert len(active) >= 10 and stops >= 739, 'Artefato público incompleto'
+          assert len(active) >= 11 and stops >= 744, 'Artefato público incompleto: mínimo aprovado 11 coleções/744 pontos'
           PY
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
@@ -227,7 +227,7 @@ jobs:
                           rallies = json.loads(data)['rallies']
                           published = [r for r in rallies if r.get('status') == 'published']
                           points = sum(len(r.get('stops', [])) for r in published)
-                          assert len(published) >= 10 and points >= 739, f'HTTP: {len(published)} coleções/{points} pontos'
+                          assert len(published) >= 11 and points >= 744, f'HTTP: {len(published)} coleções/{points} pontos'
                           print(f'Catálogo HTTP: {len(published)} coleções/{points} pontos')
                       print(f'HTTP confirmado: {name} SHA256={actual}')
                   print('Pacote publicado coincide com build do commit', os.environ['SPIDEY_EXPECTED_SHA'])
