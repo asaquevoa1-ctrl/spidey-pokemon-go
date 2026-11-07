@@ -136,6 +136,32 @@ jobs:
         with:
           # Conferir exatamente os arquivos usados no build, não um main posterior.
           ref: ${{ needs.build.outputs.source_sha }}
+      # Não permitir que um build antigo sobrescreva um deploy mais novo.
+      # O agendamento seguinte publica o HEAD atualizado se houver novo commit.
+      - name: Impedir publicação de pacote ultrapassado
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+          BUILT_SHA: ${{ needs.build.outputs.source_sha }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          repo = os.environ['GH_REPOSITORY']
+          req = urllib.request.Request(
+              f'https://api.github.com/repos/{repo}/git/ref/heads/main',
+              headers={
+                  'Accept': 'application/vnd.github+json',
+                  'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                  'X-GitHub-Api-Version': '2022-11-28',
+              })
+          with urllib.request.urlopen(req, timeout=20) as response:
+              latest = json.load(response)['object']['sha']
+          built = os.environ['BUILT_SHA']
+          print(f'Pacote construído: {built}; HEAD atual: {latest}')
+          if latest != built:
+              print('::error::Deploy bloqueado: pacote desatualizado. A próxima execução publicará a main mais recente.')
+              raise SystemExit(1)
+          PY
       - name: Verificar se Pages aceita publicação por Actions
         env:
           GH_TOKEN: ${{ github.token }}
