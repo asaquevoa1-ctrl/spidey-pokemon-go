@@ -33,7 +33,9 @@ jobs:
       source_sha: ${{ steps.capture_sha.outputs.sha }}
     if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && (github.event.workflow_run.name != 'Spidey - Caçador feed parceiro' || vars.HUNTER_FEED_LICENSE_APPROVED == 'true'))
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    # Testes Node/Python, empacotamento e upload podem exceder 5 minutos.
+    # Evitar que o build seja cancelado antes de gerar o artefato Pages.
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
         with:
