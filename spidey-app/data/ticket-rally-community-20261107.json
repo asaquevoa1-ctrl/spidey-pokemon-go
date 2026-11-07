@@ -1,0 +1,36 @@
+{
+  "schema_version": "spidey-ticket-rally-community-v1",
+  "description": "Coordenadas compartilhadas pela comunidade para rallies de 7 selos com ingresso. Não são coordenadas oficiais verificadas de Poképaradas. Não confundir com as rotas permanentes de 8 selos.",
+  "ticket_required": true,
+  "coordinate_source": "community_user_submission_2026-11-06",
+  "exact_pokestops_verified": false,
+  "gpx_enabled": false,
+  "routes": [
+    {
+      "id": "sendai",
+      "title": "Sendai · 7 selos (ingresso)",
+      "coords": [
+        "38.2589724,140.8953251",
+        "38.2607255,140.8836615",
+        "38.2609376,140.8803248",
+        "38.2564439,140.8575357",
+        "38.2616810,140.8619891",
+        "38.2662926,140.8751901",
+        "38.2755172,140.8731369"
+      ]
+    },
+    {
+      "id": "mexico",
+      "title": "Cidade do México · 7 selos (ingresso)",
+      "coords": [
+        "19.41173857062945,-99.16954198479704",
+        "19.42046890906195,-99.15467342208727",
+        "19.43630985495746,-99.1547062797571",
+        "19.42707371948768,-99.16767176963562",
+        "19.423099524124,-99.17575149325235",
+        "19.43412069790903,-99.1826039202429",
+        "19.43429176251364,-99.19663336441745"
+      ]
+    }
+  ]
+}
