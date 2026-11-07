@@ -210,7 +210,7 @@ jobs:
           python3 - <<'PY'
           import hashlib, json, os, pathlib, time, urllib.request
           base = 'https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/'
-          files = ('index.html', 'app.js', 'news-premium-20261102.js', 'wild-mexico-type-stops-20261106.js', 'sw.js', 'data/stamps.json')
+          files = ('index.html', 'app.js', 'news-premium-20261102.js', 'wild-mexico-type-stops-20261106.js', 'ticket-rally-community-20261107.js', 'data/ticket-rally-community-20261107.json', 'sw.js', 'data/stamps.json')
           expected = {name: hashlib.sha256((pathlib.Path('pages-public/spidey-app') / name).read_bytes()).hexdigest() for name in files}
           error = None
           for attempt in range(12):
@@ -223,6 +223,15 @@ jobs:
                           data = response.read()
                       actual = hashlib.sha256(data).hexdigest()
                       assert actual == expected[name], f'{name}: hash HTTP {actual} != pacote {expected[name]}'
+                      if name == 'data/ticket-rally-community-20261107.json':
+                          community = json.loads(data)
+                          assert community['ticket_required'] is True
+                          assert community['exact_pokestops_verified'] is False
+                          routes = {route['id']: route['coords'] for route in community['routes']}
+                          assert set(routes) == {'sendai', 'mexico'}
+                          assert all(len(points) == 7 for points in routes.values()), 'HTTP: rotas de ingresso incompletas'
+                          assert 'ticket-rally-community-20261107.js' in (pathlib.Path('pages-public/spidey-app/index.html')).read_text(encoding='utf-8'), 'Módulo de rotas ausente do HTML'
+                          print('Rotas HTTP confirmadas: Sendai 7 + México 7')
                       if name == 'data/stamps.json':
                           rallies = json.loads(data)['rallies']
                           published = [r for r in rallies if r.get('status') == 'published']
