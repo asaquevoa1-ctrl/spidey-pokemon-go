@@ -136,6 +136,31 @@ jobs:
         with:
           # Conferir exatamente os arquivos usados no build, não um main posterior.
           ref: ${{ needs.build.outputs.source_sha }}
+      - name: Verificar se Pages aceita publicação por Actions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.error, urllib.request
+          url = 'https://api.github.com/repos/' + os.environ['GH_REPOSITORY'] + '/pages'
+          request = urllib.request.Request(url, headers={
+              'Accept': 'application/vnd.github+json',
+              'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+              'X-GitHub-Api-Version': '2022-11-28',
+          })
+          try:
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  pages = json.load(response)
+          except urllib.error.HTTPError as exc:
+              print(f'::warning::Não foi possível ler a configuração do Pages (HTTP {exc.code}); verificar Settings > Pages.')
+          else:
+              mode = pages.get('build_type', 'desconhecido')
+              print('GitHub Pages: build_type=' + mode + ', status=' + str(pages.get('status')))
+              if mode != 'workflow':
+                  print('::error::Pages está configurado para publicar por branch, não por GitHub Actions. Em Settings > Pages > Build and deployment > Source, selecionar GitHub Actions.')
+                  raise SystemExit(1)
+          PY
       - uses: actions/configure-pages@v5
       - name: Publicar Spidey
         id: deployment
