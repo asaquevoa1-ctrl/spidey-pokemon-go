@@ -322,6 +322,17 @@ function renderStamps() {
     renderStampStats();
     return;
   }
+  // Área exclusiva de Singapura, sem duplicar o card no catálogo geral.
+  const singaporeId = 'pokexciting-singapore-changi-jewel-five-stamps-2026';
+  const singapore = rallies.find((rally) => rally.id === singaporeId);
+  let singaporeArea = null;
+  if (singapore) {
+    singaporeArea = document.createElement('section');
+    singaporeArea.className = 'stamp-singapore-area';
+    singaporeArea.setAttribute('aria-label', 'Selos de Singapura');
+    singaporeArea.innerHTML = '<div class="stamp-singapore-heading"><span class="eyebrow">DESTAQUE · SINGAPURA</span><h3>5 selos em Changi e Jewel</h3><p>Rota com cinco coordenadas comunitárias. Abra para consultar e copiar todos os pontos.</p></div>';
+    stampList.appendChild(singaporeArea);
+  }
   rallies.forEach((rally) => {
     if (rally.collection_type === 'event_guide') {
       // Publisher has not released a stamp count or individual locations; don't invent one.
@@ -349,7 +360,7 @@ function renderStamps() {
     const stops = rally.stops || [];
     const exact = stops.filter(exactPokestop).length;
     const card = document.createElement('article');
-    card.className = 'stamp-card';
+    card.className = rally.id === singaporeId ? 'stamp-card stamp-singapore-feature' : 'stamp-card';
     card.tabIndex = 0;
     card.innerHTML = `
       <div class="stamp-card-top">
@@ -360,11 +371,11 @@ function renderStamps() {
         </div>
       </div>
       <p>${rally.public_summary ?? rally.summary ?? ''}</p>
-      <div class="stamp-meta"><strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.collection_type === 'historical_community_reference' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.collection_type === 'historical_community_reference' ? 'coordenadas comunitárias' : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : 'coordenadas exatas'}</div>
+      <div class="stamp-meta"><strong>${rally.collection_type === 'pokelids' ? stops.filter(validCoordinate).length : rally.collection_type === 'historical_community_reference' ? stops.filter(validCoordinate).length : rally.coordinate_policy === 'venue_references_no_gpx' ? stops.filter(s => s.reference_only_copyable && validCoordinate(s)).length : rally.id === singaporeId ? stops.filter(validCoordinate).length : exact}</strong> ${rally.collection_type === 'pokelids' ? `locais oficiais · ${rally.prefecture_count} prefeituras` : rally.collection_type === 'historical_community_reference' ? 'coordenadas comunitárias' : rally.coordinate_policy === 'venue_references_no_gpx' ? 'lugares de referência (não Poképaradas)' : rally.id === singaporeId ? 'coordenadas comunitárias' : 'coordenadas exatas'}</div>
       <div class="badges">${stops.slice(0, 4).map((stop) => `<span class="badge">${stop.city}</span>`).join('')}</div>`;
     card.addEventListener('click', () => openStampRally(rally));
     card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStampRally(rally); } });
-    stampList.appendChild(card);
+    (rally.id === singaporeId ? singaporeArea : stampList).appendChild(card);
   });
   renderStampStats();
 }
