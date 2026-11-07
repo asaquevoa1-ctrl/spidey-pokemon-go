@@ -110,8 +110,11 @@
     if(!target||!hero)return;
     const now=new Date();
     hero.innerHTML=feature(now,allEvents);
-    const filtered=mode==='official'?groups.filter(g=>isOfficial(g.event)):
-      mode==='community'?groups.filter(g=>!isOfficial(g.event)):groups;
+    // O destaque Wild Area já representa o evento: não repetir o mesmo anúncio
+    // como cartão de Novidades enquanto o destaque estiver visível.
+    const visibleGroups=hero.innerHTML ? groups.filter(g=>g.event?.id!==WILD_ID) : groups;
+    const filtered=mode==='official'?visibleGroups.filter(g=>isOfficial(g.event)):
+      mode==='community'?visibleGroups.filter(g=>!isOfficial(g.event)):visibleGroups;
     target.innerHTML=filtered.length?filtered.map(article).join(''):
       '<div class="spidey-news-empty"><strong>Nenhuma novidade nesta seleção.</strong><p>Confira as outras fontes ou volte mais tarde.</p></div>';
     if(count)count.textContent=filtered.length+' '+(filtered.length===1?'publicação':'publicações')+' para consultar';
