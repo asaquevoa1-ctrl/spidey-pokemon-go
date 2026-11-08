@@ -12950,6 +12950,271 @@
         "automatic_index_discovery": true,
         "not_a_calendar_event": true
       }
+    },
+    {
+      "id": "2026-11-09-raid-hour-zacian-crowned",
+      "slug": "2026-11-09-raid-hour-zacian-crowned",
+      "title": "Hora de Reides: Zacian Espada Coroada",
+      "summary": "Zacian Espada Coroada em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+      "category": "raid_hour",
+      "tags": [
+        "Global",
+        "Hora de Reides",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-09T18:00:00-03:00",
+        "end_local": "2026-11-09T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-09T18:00:00-03:00",
+        "end_brazil": "2026-11-09T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "64 referências urbanas FLY existentes não são ginásios nem Pontos de Energia verificados."
+      },
+      "pokemon": [
+        {
+          "name": "Zacian Espada Coroada"
+        }
+      ],
+      "notes": [
+        "Janela local em cada fuso; a Rota Mundial converte os horários por cidade, não usa 18h de Brasília para o mundo inteiro.",
+        "Sem coordenadas verificadas de ginásios ou Pontos de Energia específicos deste evento; referências urbanas não garantem encontro ou reide."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evitar alertas duplicados do evento principal."
+      },
+      "status": "published",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "id": "2026-11-10-raid-hour-zamazenta-crowned",
+      "slug": "2026-11-10-raid-hour-zamazenta-crowned",
+      "title": "Hora de Reides: Zamazenta Escudo Coroado",
+      "summary": "Zamazenta Escudo Coroado em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+      "category": "raid_hour",
+      "tags": [
+        "Global",
+        "Hora de Reides",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-10T18:00:00-03:00",
+        "end_local": "2026-11-10T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-10T18:00:00-03:00",
+        "end_brazil": "2026-11-10T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "64 referências urbanas FLY existentes não são ginásios nem Pontos de Energia verificados."
+      },
+      "pokemon": [
+        {
+          "name": "Zamazenta Escudo Coroado"
+        }
+      ],
+      "notes": [
+        "Janela local em cada fuso; a Rota Mundial converte os horários por cidade, não usa 18h de Brasília para o mundo inteiro.",
+        "Sem coordenadas verificadas de ginásios ou Pontos de Energia específicos deste evento; referências urbanas não garantem encontro ou reide."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evitar alertas duplicados do evento principal."
+      },
+      "status": "published",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "id": "2026-11-11-max-hour-registeel",
+      "slug": "2026-11-11-max-hour-registeel",
+      "title": "Hora Max: Registeel Dinamax",
+      "summary": "Registeel Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+      "category": "max_battle_day",
+      "tags": [
+        "Global",
+        "Batalhas Max",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-11T18:00:00-03:00",
+        "end_local": "2026-11-11T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-11T18:00:00-03:00",
+        "end_brazil": "2026-11-11T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "64 referências urbanas FLY existentes não são ginásios nem Pontos de Energia verificados."
+      },
+      "pokemon": [
+        {
+          "name": "Registeel Dinamax"
+        }
+      ],
+      "notes": [
+        "Janela local em cada fuso; a Rota Mundial converte os horários por cidade, não usa 18h de Brasília para o mundo inteiro.",
+        "Sem coordenadas verificadas de ginásios ou Pontos de Energia específicos deste evento; referências urbanas não garantem encontro ou reide."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evitar alertas duplicados do evento principal."
+      },
+      "status": "published",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "id": "2026-11-12-max-hour-regidrago",
+      "slug": "2026-11-12-max-hour-regidrago",
+      "title": "Hora Max: Regidrago Dinamax",
+      "summary": "Regidrago Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+      "category": "max_battle_day",
+      "tags": [
+        "Global",
+        "Batalhas Max",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-12T18:00:00-03:00",
+        "end_local": "2026-11-12T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-12T18:00:00-03:00",
+        "end_brazil": "2026-11-12T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "64 referências urbanas FLY existentes não são ginásios nem Pontos de Energia verificados."
+      },
+      "pokemon": [
+        {
+          "name": "Regidrago Dinamax"
+        }
+      ],
+      "notes": [
+        "Janela local em cada fuso; a Rota Mundial converte os horários por cidade, não usa 18h de Brasília para o mundo inteiro.",
+        "Sem coordenadas verificadas de ginásios ou Pontos de Energia específicos deste evento; referências urbanas não garantem encontro ou reide."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evitar alertas duplicados do evento principal."
+      },
+      "status": "published",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "id": "2026-11-13-max-hour-latias-latios",
+      "slug": "2026-11-13-max-hour-latias-latios",
+      "title": "Hora Max: Latias e Latios Dinamax",
+      "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+      "category": "max_battle_day",
+      "tags": [
+        "Global",
+        "Batalhas Max",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-13T18:00:00-03:00",
+        "end_local": "2026-11-13T19:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-13T18:00:00-03:00",
+        "end_brazil": "2026-11-13T19:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "64 referências urbanas FLY existentes não são ginásios nem Pontos de Energia verificados."
+      },
+      "pokemon": [
+        {
+          "name": "Latias e Latios Dinamax"
+        }
+      ],
+      "notes": [
+        "Janela local em cada fuso; a Rota Mundial converte os horários por cidade, não usa 18h de Brasília para o mundo inteiro.",
+        "Sem coordenadas verificadas de ginásios ou Pontos de Energia específicos deste evento; referências urbanas não garantem encontro ou reide."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evitar alertas duplicados do evento principal."
+      },
+      "status": "published",
+      "verified_at": "2026-11-08"
     }
   ]
 }
