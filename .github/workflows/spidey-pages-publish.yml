@@ -1,160 +1,17 @@
-name: Publicar Spidey no GitHub Pages
+name: Publicar Spidey no GitHub Pages (legado desativado)
 
+# Arquivo histórico: NÃO publica o aplicativo.
+# A única publicação oficial ocorre em .github/workflows/spidey-pages.yml.
+# Não reativar deploy paralelo nem usar Vercel.
 on:
-  # Fluxo legado mantido apenas para consulta manual; sem execuções a cada push.
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: spidey-pages
-  cancel-in-progress: false
 
 jobs:
-  deploy:
-    # Publicação centralizada em spidey-pages.yml para evitar sobrescrita concorrente.
-    # Mantido como referência histórica; não executar um segundo deploy.
+  legado_desativado:
     if: ${{ false }}
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Obter arquivos da versão atual
-        uses: actions/checkout@v4
-      - name: Preparar site estático
-        run: |
-          touch .nojekyll
-          test -f spidey-app/index.html
-          test -f spidey-app/data/stamps.json
-          python3 - <<'PY'
-          import json
-          with open('spidey-app/data/stamps.json', encoding='utf-8') as f:
-              rallies=json.load(f)['rallies']
-          published=[r for r in rallies if r.get('status')=='published']
-          stops=sum(len(r.get('stops',[])) for r in published)
-          print(f'Selos publicados: {len(published)}; coordenadas: {stops}')
-          assert len(published)>=10 and stops>=739, 'Catálogo incompleto: publicação interrompida'
-          PY
-      - name: Gravar identificação verificável da versão publicada
-        env:
-          SPIDEY_DEPLOY_SHA: ${{ github.sha }}
-          SPIDEY_DEPLOY_RUN: ${{ github.run_id }}
-        run: |
-          python3 - <<'PY'
-          import datetime, json, os
-          with open('spidey-app/data/stamps.json', encoding='utf-8') as f:
-              rallies = json.load(f)['rallies']
-          published = [r for r in rallies if r.get('status') == 'published']
-          version = {
-              'schema': 'spidey-deployment-v1',
-              'git_sha': os.environ['SPIDEY_DEPLOY_SHA'],
-              'workflow_run_id': os.environ['SPIDEY_DEPLOY_RUN'],
-              'generated_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-              'published_collections': len(published),
-              'published_stops': sum(len(r.get('stops', [])) for r in published)
-          }
-          with open('spidey-app/deploy-version.json', 'w', encoding='utf-8') as f:
-              json.dump(version, f, ensure_ascii=False, indent=2)
-              f.write(chr(10))
-          print('Versão a verificar por HTTP em /spidey-app/deploy-version.json:', version)
-          PY
-      - name: Versionar cache PWA conforme arquivos efetivos
-        run: |
-          python3 - <<'PY'
-          import hashlib, pathlib, re
-          base = pathlib.Path('spidey-app')
-          # A versão do SW deve mudar quando o catálogo ou a interface mudarem,
-          # mesmo se o arquivo sw.js não tiver sido editado na main.
-          watched = [
-              'index.html', 'app.js', 'news-premium-20261102.js',
-              'stamps-v2.js', 'data/stamps.json', 'data/events.json',
-              'data/weekly.json', 'sw.js',
-          ]
-          digest = hashlib.sha256()
-          for name in watched:
-              file = base / name
-              assert file.is_file(), f'Arquivo essencial ausente: {name}'
-              digest.update(name.encode('utf-8') + b'\\0')
-              digest.update(file.read_bytes())
-          version = digest.hexdigest()[:16]
-          sw = base / 'sw.js'
-          original = sw.read_text(encoding='utf-8')
-          patched, count = re.subn(
-              r"(?m)^const CACHE = 'spidey-app-[^']+';",
-              f"const CACHE = 'spidey-app-build-{version}';",
-              original, count=1)
-          assert count == 1, 'Declaração CACHE do service worker não encontrada'
-          sw.write_text(patched, encoding='utf-8')
-          print('Cache PWA do artefato publicado:', version)
-          PY
-      - name: Enviar artefato ao GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - name: Publicar no GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-      - name: Verificar publicação HTTP e versão servida
-        env:
-          EXPECTED_SHA: ${{ github.sha }}
-          PAGES_URL: ${{ steps.deployment.outputs.page_url }}
-        run: |
-          python3 - <<'PY'
-          import json, os, time, urllib.error, urllib.request
-          base = os.environ['PAGES_URL'].rstrip('/') + '/spidey-app/'
-          expected = os.environ['EXPECTED_SHA']
-          last_error = None
-          for attempt in range(1, 13):
-              try:
-                  request = urllib.request.Request(
-                      base + 'deploy-version.json?check=' + expected[:12],
-                      headers={'Cache-Control': 'no-cache', 'User-Agent': 'Spidey-Pages-Verification'})
-                  with urllib.request.urlopen(request, timeout=15) as response:
-                      assert response.status == 200, f'HTTP {response.status}'
-                      version = json.load(response)
-                  assert version['git_sha'] == expected, f"SHA publicado {version['git_sha']} != {expected}"
-                  assert version['published_collections'] >= 10
-                  assert version['published_stops'] >= 739
-                  # O manifesto sozinho não garante que os arquivos efetivos estejam atuais.
-                  # Validar o catálogo e os recursos usados pelo navegador no mesmo deploy.
-                  def get_public(path):
-                      req = urllib.request.Request(
-                          base + path + '?check=' + expected[:12],
-                          headers={'Cache-Control': 'no-cache', 'User-Agent': 'Spidey-Pages-Verification'})
-                      with urllib.request.urlopen(req, timeout=20) as response:
-                          assert response.status == 200, f'{path}: HTTP {response.status}'
-                          return response.read()
-                  catalog = json.loads(get_public('data/stamps.json'))
-                  active = [r for r in catalog['rallies'] if r.get('status') == 'published']
-                  stops = sum(len(r.get('stops', [])) for r in active)
-                  assert len(active) >= 10, f'Catálogo HTTP: {len(active)} coleções'
-                  assert stops >= 739, f'Catálogo HTTP: {stops} pontos'
-                  assert len(active) == version['published_collections'], 'Manifesto diverge das coleções HTTP'
-                  assert stops == version['published_stops'], 'Manifesto diverge dos pontos HTTP'
-                  # Conferir os bytes efetivamente servidos, não apenas o manifesto.
-                  # O sw.js local já foi versionado durante a preparação do artefato.
-                  import hashlib, pathlib
-                  for asset in ('index.html', 'app.js', 'news-premium-20261102.js', 'sw.js', 'data/stamps.json'):
-                      served = get_public(asset)
-                      expected_bytes = (pathlib.Path('spidey-app') / asset).read_bytes()
-                      actual_hash = hashlib.sha256(served).hexdigest()
-                      expected_hash = hashlib.sha256(expected_bytes).hexdigest()
-                      assert actual_hash == expected_hash, (
-                          f'{asset}: SHA256 HTTP {actual_hash} != artefato {expected_hash}')
-                      print(f'HTTP SHA256 confirmado: {asset} {actual_hash}')
-                  html = (pathlib.Path('spidey-app') / 'index.html').read_text(encoding='utf-8')
-                  assert 'stamps-v2.js' in html, 'index.html sem módulo de Selos'
-                  print('GitHub Pages verificado por HTTP (manifesto, catálogo, HTML, JS e SW):', base, version)
-                  break
-              except (OSError, ValueError, KeyError, AssertionError) as error:
-                  last_error = str(error)
-                  print(f'Tentativa {attempt}/12: {last_error}')
-                  if attempt < 12:
-                      time.sleep(15)
-          else:
-              raise SystemExit('Deploy executado, mas versão pública NÃO verificada: ' + str(last_error))
-          PY
+      - run: echo "Fluxo legado desativado; use spidey-pages.yml"
