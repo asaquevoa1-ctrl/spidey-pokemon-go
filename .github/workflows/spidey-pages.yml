@@ -109,10 +109,14 @@ jobs:
           path = next((p for p in candidates if p.is_file()), None)
           assert path is not None, 'Catálogo de selos ausente no artefato público'
           rallies = json.loads(path.read_text(encoding='utf-8'))['rallies']
+          source = json.loads(Path('spidey-app/data/stamps.json').read_text(encoding='utf-8'))['rallies']
           active = [r for r in rallies if r.get('status') == 'published']
+          source_active = [r for r in source if r.get('status') == 'published']
           stops = sum(len(r.get('stops', [])) for r in active)
-          print(f'Catálogo do artefato: {len(active)} coleções, {stops} pontos')
+          source_stops = sum(len(r.get('stops', [])) for r in source_active)
+          print(f'Catálogo do artefato: {len(active)} coleções, {stops} pontos; fonte: {len(source_active)}/{source_stops}')
           assert len(active) >= 11 and stops >= 744, 'Artefato público incompleto: mínimo aprovado 11 coleções/744 pontos'
+          assert {r['id']: r for r in active} == {r['id']: r for r in source_active}, 'Artefato diverge do catálogo da main (coleções, coordenadas ou metadados)'
           PY
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
@@ -240,6 +244,9 @@ jobs:
                           published = [r for r in rallies if r.get('status') == 'published']
                           points = sum(len(r.get('stops', [])) for r in published)
                           assert len(published) >= 11 and points >= 744, f'HTTP: {len(published)} coleções/{points} pontos'
+                          source_catalog = json.loads((pathlib.Path('pages-public/spidey-app/data/stamps.json')).read_text(encoding='utf-8'))
+                          source_published = [r for r in source_catalog['rallies'] if r.get('status') == 'published']
+                          assert {r['id']: r for r in published} == {r['id']: r for r in source_published}, 'HTTP: catálogo diferente do pacote gerado'
                           print(f'Catálogo HTTP: {len(published)} coleções/{points} pontos')
                       print(f'HTTP confirmado: {name} SHA256={actual}')
                   print('Pacote publicado coincide com build do commit', os.environ['SPIDEY_EXPECTED_SHA'])
