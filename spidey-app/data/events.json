@@ -1782,7 +1782,7 @@
       "id": "2026-11-09-into-the-wild",
       "slug": "2026-11-09-into-the-wild",
       "title": "Natureza Selvagem: Into the Wild 2026",
-      "summary": "9/11 às 10h até 13/11 às 20h: aventura com Regidrago Dinamax e Passe GO: Natureza Selvagem.",
+      "summary": "9 a 13/11, 10h–20h (horário local): Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Registeel, Regidrago, Latias e Latios Dinamax em Batalhas Max 5★. Fundo especial possível, não garantido.",
       "category": "evento_especial",
       "tags": [
         "Novembro 2026",
@@ -1817,30 +1817,56 @@
       },
       "pokemon": [
         {
-          "name": "Regidrago Dinamax"
+          "name": "Zacian Espada Coroada",
+          "method": "Reides 5★, 9–13/11; hora de reides 9/11, 18h–19h local"
+        },
+        {
+          "name": "Zamazenta Escudo Coroado",
+          "method": "Reides 5★, 9–13/11; hora de reides 10/11, 18h–19h local"
+        },
+        {
+          "name": "Registeel Dinamax",
+          "method": "Batalhas Max 5★, 11/11; hora Max 18h–19h local"
+        },
+        {
+          "name": "Regidrago Dinamax",
+          "method": "Batalhas Max 5★, 12/11; hora Max 18h–19h local"
+        },
+        {
+          "name": "Latias Dinamax",
+          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local"
+        },
+        {
+          "name": "Latios Dinamax",
+          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local"
         },
         {
           "name": "Meltan Dinamax (Passe GO)"
         }
       ],
       "bonuses": [
-        "Limite de Reides Remotas aumentado para 30 entre 9 e 13/11.",
-        "Regidrago Dinamax estreia nas Batalhas Max cinco estrelas.",
-        "Possibilidade de encontrar Gimmighoul Brilhante com Bolsa de Moedas em período informado no anúncio."
+        "Energia Espada Coroada ao derrotar Zacian Espada Coroada em reides; Energia Escudo Coroado ao derrotar Zamazenta Escudo Coroado.",
+        "Chance de Fundo Especial ao capturar Pokémon após reides 5★ e Batalhas Max 5★ do evento (não garantido).",
+        "Horas de Reide: Zacian em 9/11 e Zamazenta em 10/11, das 18h às 19h locais.",
+        "Horas de Batalhas Max: Registeel em 11/11, Regidrago em 12/11, Latias e Latios em 13/11, das 18h às 19h locais.",
+        "Limite de Reides Remotas aumentado para 30 entre 9 e 13/11; sem limite em 14 e 15/11.",
+        "Regidrago Dinamax estreia em Batalhas Max 5★; Meltan Dinamax no Passe GO.",
+        "Possibilidade de Gimmighoul Brilhante com Bolsa de Moedas e Meltan Brilhante com Caixa Misteriosa nos períodos oficiais."
       ],
       "notes": [
-        "Evento de 9/11 às 10h a 13/11 às 20h no horário local.",
-        "O Passe GO: Into the Wild continua até 15/11 às 18h, não confundir com o encerramento do evento principal.",
-        "Durante a Área Selvagem, Reides e Batalhas Max temáticas podem substituir rotações regulares.",
+        "Evento principal: 9/11 às 10h a 13/11 às 20h no horário local; para Brasília, 10h e 20h BRT.",
+        "O Passe GO: Natureza Selvagem e alguns bônus continuam até 15/11 às 18h local.",
         "Descobertas Diárias suspensas de 9 a 15/11.",
-        "Para o Brasil, o horário local corresponde a Brasília. Em outros países, o evento ocorre nos mesmos horários locais indicados."
+        "O Fundo Especial é uma possibilidade após captura, não recompensa garantida.",
+        "Os horários diários de reides e Batalhas Max são locais: no Brasil (horário de Brasília), 18h–19h.",
+        "Fonte oficial prevalece sobre horários de 5h e 21h de material comunitário, que não são o período geral oficial."
       ],
       "notifications": {
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-08",
       "verification_sources": [
         {
           "name": "Pokémon GO • oficial",
