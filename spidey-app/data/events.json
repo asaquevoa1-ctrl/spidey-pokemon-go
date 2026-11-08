@@ -1873,7 +1873,13 @@
           "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         }
-      ]
+      ],
+      "news": {
+        "title": "Zacian e Zamazenta Coroados chegam às reides da Natureza Selvagem",
+        "summary": "De 9 a 13/11: Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★. Ganhe as respectivas energias ao vencer e tenha chance de Fundo Especial ao capturar. Horas de Reide: Zacian 9/11 e Zamazenta 10/11, das 18h às 19h locais. Batalhas Max 5★: Registeel 11/11, Regidrago 12/11, Latias e Latios 13/11. Os ginásios exibidos no registro comunitário de Kiribati ainda não têm coordenadas verificadas.",
+        "published_on": "2026-11-08",
+        "label": "NOVIDADE • REIDES 5★ E BATALHAS MAX"
+      }
     },
     {
       "id": "2026-11-09-daily-discovery-pause",
