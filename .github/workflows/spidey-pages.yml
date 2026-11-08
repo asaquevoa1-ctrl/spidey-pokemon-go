@@ -214,6 +214,7 @@ jobs:
           expected = {name: hashlib.sha256((pathlib.Path('pages-public/spidey-app') / name).read_bytes()).hexdigest() for name in files}
           error = None
           for attempt in range(12):
+              public_index = ''
               try:
                   for name in files:
                       url = base + name + '?deploy_check=' + os.environ['SPIDEY_EXPECTED_SHA'][:12]
@@ -221,6 +222,8 @@ jobs:
                       with urllib.request.urlopen(request, timeout=20) as response:
                           assert response.status == 200, f'{name}: HTTP {response.status}'
                           data = response.read()
+                      if name == 'index.html':
+                          public_index = data.decode('utf-8')
                       actual = hashlib.sha256(data).hexdigest()
                       assert actual == expected[name], f'{name}: hash HTTP {actual} != pacote {expected[name]}'
                       if name == 'data/ticket-rally-community-20261107.json':
@@ -230,7 +233,7 @@ jobs:
                           routes = {route['id']: route['coords'] for route in community['routes']}
                           assert set(routes) == {'sendai', 'mexico'}
                           assert all(len(points) == 7 for points in routes.values()), 'HTTP: rotas de ingresso incompletas'
-                          assert 'ticket-rally-community-20261107.js' in (pathlib.Path('pages-public/spidey-app/index.html')).read_text(encoding='utf-8'), 'Módulo de rotas ausente do HTML'
+                          assert 'ticket-rally-community-20261107.js' in public_index, 'HTTP: módulo de rotas ausente do HTML público'
                           print('Rotas HTTP confirmadas: Sendai 7 + México 7')
                       if name == 'data/stamps.json':
                           rallies = json.loads(data)['rallies']
