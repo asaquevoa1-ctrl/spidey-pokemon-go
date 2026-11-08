@@ -83,6 +83,24 @@ try {
       // The Premium cockpit is actual playerHome content, not hidden legacy blocks.
       const cockpit=page.locator('#playerHome .spidey-command-cockpit');
       await cockpit.waitFor({state:'visible',timeout:12000});
+      const galleryDiagnostics=await page.evaluate(()=>{
+        const events=typeof state!=='undefined'&&Array.isArray(state.events)?state.events:[];
+        const approved=events.filter(e=>window.SPIDEY_APPROVED_ART_MASTER?.[e.id]);
+        const now=Date.now();
+        return {
+          catalogEvents:events.length, approvedEvents:approved.length,
+          approvedUpcoming:approved.filter(e=>{
+            const end=e.schedule?.end_brazil||e.schedule?.end_local;
+            return end&&Date.parse(end)>now;
+          }).slice(0,15).map(e=>e.id),
+          galleryCount:document.querySelectorAll('#playerHome #spideyUniverse3D').length,
+          fallbackCount:document.querySelectorAll('#playerHome .spidey-universe-fallback').length,
+          catalogStatus:document.getElementById('calendarUpdateStatus')?.textContent,
+          approvedMasterCount:Object.keys(window.SPIDEY_APPROVED_ART_MASTER||{}).length,
+          has3DModule:!!window.SpideyUniverse3D
+        };
+      });
+      console.log('SPIDEY_3D_HOME_DIAGNOSTIC', JSON.stringify({theme,...galleryDiagnostics}));
       assert.equal(await cockpit.locator(':scope > #spideyUniverse3D').count(),1,
         '3D hero not inside the cockpit');
       assert.equal(await cockpit.locator('.spidey-command-aside .spidey-premium-nav').count(),1,
