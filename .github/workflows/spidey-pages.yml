@@ -183,7 +183,16 @@ jobs:
               with urllib.request.urlopen(request, timeout=20) as response:
                   pages = json.load(response)
           except urllib.error.HTTPError as exc:
-              print(f'::warning::Não foi possível ler a configuração do Pages (HTTP {exc.code}); verificar Settings > Pages.')
+              if exc.code == 404:
+                  print('::error::GitHub Pages não está configurado para este repositório (API HTTP 404). Ação: Settings > Pages > Build and deployment > Source = GitHub Actions.')
+              elif exc.code == 403:
+                  print('::error::Token sem acesso à configuração do Pages (API HTTP 403). Conferir permissões do workflow e políticas de Actions/Pages do repositório.')
+              else:
+                  print(f'::error::Falha ao consultar configuração do GitHub Pages (API HTTP {exc.code}).')
+              raise SystemExit(1)
+          except urllib.error.URLError as exc:
+              print(f'::error::Não foi possível consultar a API do GitHub Pages: {exc.reason}.')
+              raise SystemExit(1)
           else:
               mode = pages.get('build_type', 'desconhecido')
               print('GitHub Pages: build_type=' + mode + ', status=' + str(pages.get('status')))
