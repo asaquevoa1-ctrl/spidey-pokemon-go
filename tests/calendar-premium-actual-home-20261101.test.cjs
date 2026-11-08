@@ -132,7 +132,7 @@ test('Actual Player Home receives interactive date rail after the existing 3D co
 test('Premium agenda is integrated without hiding legacy calendar or duplicating events',()=>{
  const html=read('spidey-app/index.html'),css=read('spidey-app/calendar-premium-20261101.css');
  const sw=read('spidey-app/sw.js'),player=read('spidey-app/player-ui.js');
- assert.match(html,/calendar-premium-20261101\.js\?v=20261101-agenda2/);
+ assert.match(html,/calendar-premium-20261101\.js\?v=20261108-homeguard1/);
  assert.match(html,/calendar-premium-20261101\.css\?v=20261101-agenda1/);
  assert(html.indexOf('player-ui.js?v=')<html.indexOf('calendar-premium-20261101.js?v='));
  assert.match(html,/id="calendar"/);
