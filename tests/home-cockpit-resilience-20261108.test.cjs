@@ -119,3 +119,25 @@ test('PWA versions and sources for the correction are kept in sync', () => {
     assert.equal(spawnSync(process.execPath, ['--check', path.join(root, file)], { encoding:'utf8' }).status, 0, file + ' has a syntax error');
   }
 });
+
+
+test('catalog includes future approved events for the 3D gallery on 8 Nov 2026', () => {
+  const window = {};
+  vm.runInNewContext(read('spidey-app/premium-approved-master.js'), { window });
+  vm.runInNewContext(read('spidey-app/spidey-universe-3d.js'), { window });
+  const events = JSON.parse(read('spidey-app/data/events.json')).events;
+  const now = new Date('2026-11-08T23:00:00Z');
+  const art = event => {
+    const approved = window.SPIDEY_APPROVED_ART_MASTER?.[event.id];
+    return approved ? approved.file + '?v=' + approved.sha256.slice(0, 12) : null;
+  };
+  const range = e => ({
+    start: new Date(e.schedule?.start_brazil || e.schedule?.start_local || ''),
+    end: new Date(e.schedule?.end_brazil || e.schedule?.end_local || '')
+  });
+  const selection = window.SpideyUniverse3D.approvedEvents(events, null, now,
+    art, e => e.title, () => '', range);
+  assert.ok(selection.length >= 2,
+    'Approved future posters should be available independently of the Home loading state');
+  assert.ok(selection.every(e => e.art.startsWith('assets/')));
+});
