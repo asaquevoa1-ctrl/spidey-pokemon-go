@@ -8,7 +8,9 @@ test('Cockpit combina galeria 3D, atalhos e métricas sem recriar eventos',()=>{
  const ui=read('player-ui.js');
  assert.match(ui,/SpideyUniverse3D\?\.mount\(root, state\.events, focus, now, art, title, time, getBrazilRange\)/);
  assert.match(ui,/spidey-command-cockpit/);
- assert.match(ui,/cockpit\.append\(universe,aside\)/);
+ assert.match(ui,/if\\(head&&shortcuts&&metrics\\)/);
+ assert.match(ui,/cockpit\\.append\\(universe\\)/);
+ assert.match(ui,/cockpit\\.append\\(fallback\\)/);
  assert.match(ui,/aside\.append\(shortcuts,metrics\)/);
  assert.match(ui,/data-premium-view='weeklyView'|week\.dataset\.premiumView='weeklyView'/);
  assert.match(ui,/head\.querySelector\('\.spidey-cockpit-explore'\)\?\.remove\(\)/);
@@ -41,9 +43,9 @@ test('Cockpit está no último CSS e é incluido no cache PWA',()=>{
  const sw=read('sw.js');
  assert.ok(theme.indexOf("loadStyle('spidey-command-cockpit-20261029.css'")>
   theme.indexOf("loadStyle('spidey-universe-3d.css'"));
- assert.match(html,/player-ui\.js\?v=20261101-indiafirst3/);
+ assert.match(html,/player-ui\.js\?v=20261108-homeguard1/);
  assert.match(html,/theme\.js\?v=20261029-motion1/);
- assert.match(html,/SPIDEY_BUILD='2026-10-29-motion1'/);
+ assert.match(html,/SPIDEY_BUILD='2026-11-08-homeguard1'/);
  assert.match(sw,/\.\/spidey-command-cockpit-20261029\.css/);
- assert.match(sw,/20261029-motion1/);
+ assert.match(sw,/spidey-app-20261108-homeguard1/);
 });
