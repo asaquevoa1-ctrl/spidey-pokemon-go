@@ -59,5 +59,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Reconstruir pacote público para comparação byte a byte
+        run: python3 scripts/build_spidey_pages.py --output pages-public
       - name: Conferir HTML, JavaScript e 27 coordenadas no endereço público
         run: node scripts/qa_trust_27_public_pages.mjs
