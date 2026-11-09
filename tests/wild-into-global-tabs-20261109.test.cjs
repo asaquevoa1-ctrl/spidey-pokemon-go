@@ -35,11 +35,11 @@ test('two independent views are wired into the existing navigation and Samsung m
   }
   assert.match(html,/wildAreaMexicoView/,'historical Mexico page is preserved');
   assert.match(html,/México · arquivo/);
-  assert.match(html,/wild-area-20261109\.css\?v=20261109-wildtabs1/);
-  assert.match(html,/wild-area-20261109\.js\?v=20261109-wildtabs1/);
+  assert.match(html,/wild-area-20261109\.css\?v=20261109-weekart2/);
+  assert.match(html,/wild-area-20261109\.js\?v=20261109-weekart2/);
   assert.match(css,/max-width:680px/);
   assert.match(css,/prefers-reduced-motion/);
-  assert.match(read(app+'sw.js'),/spidey-app-20261109-into-global1/);
+  assert.match(read(app+'sw.js'),/spidey-app-20261109-weekart2/);
   assert.match(read(app+'sw.js'),/\.\/wild-area-20261109\.js/);
   assert.match(read(app+'sw.js'),/\.\/wild-area-20261109\.css/);
 });
@@ -55,7 +55,15 @@ test('official programming and Premium art use accurate dedicated sources',()=>{
   assert.match(script,/pokemongo\.com\/news\/into-the-wild-2026/);
   assert.match(script,/pokemongo\.com\/gowildarea\/global/);
   assert.match(script,/wild-area-global-2026-approved-v1\.png/);
-  assert.match(script,/WEEK_IMAGE/);
+  assert.doesNotMatch(script,/WEEK_IMAGE|googleusercontent\.com/);
+  assert.match(script,/wild-week-mosaic-grid/);
+  assert.match(script,/wild-week-mosaic-panel--steel/);
+  assert.match(script,/wild-week-mosaic-panel--dragon/);
+  assert.match(script,/Imagens oficiais da temática Aço e Dragão/);
+  const steel='spidey-app/assets/events/wild-area/official-local-20261102/solid-as-steel.webp';
+  const dragon='spidey-app/assets/events/wild-area/official-local-20261102/daring-as-dragons.webp';
+  assert.ok(fs.statSync(path.join(root,steel)).size>20000);
+  assert.ok(fs.statSync(path.join(root,dragon)).size>20000);
   assert.match(script,/Créditos: LendáriosBrasil, FlyGPS, PokemonTrail/);
   assert.doesNotMatch(script,/fake-spawn|invented-gym|representa ginásios confirmados/i);
   assert.ok(fs.statSync(path.join(root,app,'assets/events/premium/wild-area-global-2026-approved-v1.png')).size>100000);
