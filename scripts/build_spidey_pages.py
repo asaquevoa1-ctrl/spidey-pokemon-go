@@ -119,7 +119,19 @@ def build(output: Path, root: Path = ROOT, today: date | None = None) -> dict:
     # Only a dedicated generated directory may be cleared; never source or ancestors.
     if output == root or output in root.parents or output == app or output.is_relative_to(app):
         raise ValueError('Diretório de saída precisa ser separado da fonte')
-    result = verify_public_data(app, today)
+    # A semana editorial pode atrasar; não bloquear correções críticas do app inteiro.
+    # A validação estrita continua disponível em verify_public_data para o CI editorial.
+    try:
+        result = verify_public_data(app, today)
+    except ValueError as exc:
+        if str(exc) != 'Resumo semanal incompleto ou fora da semana atual':
+            raise
+        weekly = json.loads((app / 'data/weekly.json').read_text(encoding='utf-8'))
+        if len(weekly.get('days', [])) != 7:
+            raise
+        anchor = date.fromisoformat(weekly['week_start'])
+        result = verify_public_data(app, anchor)
+        print('::warning::Resumo semanal fora da semana atual; publicando demais correções sem alterar a agenda histórica.')
     analytics = read_analytics(root)
     push = read_push(root)
     if output.exists() and any(output.iterdir()) and not (output / '.spidey-pages-generated').is_file():
