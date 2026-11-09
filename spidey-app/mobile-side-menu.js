@@ -11,9 +11,9 @@
   if (!toggle || !panel || !shade || !closeButton || !links || !themeSelect || !tabs) return;
 
   const mobile = window.matchMedia('(max-width: 760px)');
-  const preferredOrder = ['calendarView','newsView','wildAreaMexicoView','weeklyView','flyView','rocketGuideView','stampsView','pvpView','anaView','nationalTrustView'];
+  const preferredOrder = ['calendarView','newsView','wildIntoView','wildGlobalView','weeklyView','flyView','rocketGuideView','stampsView','pvpView','anaView','nationalTrustView','wildAreaMexicoView'];
   const glyphs = {
-    calendarView: '⌂', newsView: '✦', wildAreaMexicoView: '✧', weeklyView: '▦',
+    calendarView: '⌂', newsView: '✦', wildIntoView: '✦', wildGlobalView: '◈', wildAreaMexicoView: '✧', weeklyView: '▦',
     flyView: '◈', stampsView: '◉',
     pvpView: '⚔', rocketGuideView: 'R', anaView: '✈', nationalTrustView: '🎫'
   };
