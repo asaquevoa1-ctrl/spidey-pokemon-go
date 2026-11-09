@@ -27,3 +27,16 @@ test('Novidades não repetem títulos entre registros independentes', () => {
     seen.set(title, e.id);
   }
 });
+
+test('cards globais de Dialga e Palkia não reutilizam artes de outros Pokémon', () => {
+  const source = fs.readFileSync(path.join(__dirname, '../spidey-app/wild-area-20261109.js'), 'utf8');
+  assert.match(source, /const GLOBAL_POSTER='assets\/events\/premium\/wild-area-global-2026-approved-v1\.png'/);
+  for (const [day, pokemon] of [['SÁBADO · 14/11', 'Dialga Dinamax'], ['DOMINGO · 15/11', 'Palkia Dinamax']]) {
+    const start = source.indexOf('<strong>' + day + '</strong><h3>' + pokemon + '</h3>');
+    assert.ok(start >= 0, 'Card ausente: ' + pokemon);
+    const end = source.indexOf('</article>', start);
+    const card = source.slice(start, end);
+    assert.match(card, /GLOBAL_POSTER/, 'Card sem pôster aprovado: ' + pokemon);
+    assert.doesNotMatch(card, /\+STEEL\+|\+DRAGON\+/, 'Card com arte genérica: ' + pokemon);
+  }
+});
