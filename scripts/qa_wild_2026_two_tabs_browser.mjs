@@ -77,6 +77,13 @@ try {
       await page.locator('.app-tab[data-view="wildAreaMexicoView"]').evaluate(button=>button.click());
       assert.match(await page.locator('#wildAreaMexicoView').getAttribute('aria-label'),/México/);
       assert.equal(await page.locator('.app-tab[data-view="wildAreaMexicoView"]').innerText(),'México · arquivo');
+      assert.match(await page.locator('#wildAreaMexicoView .wild-mx-hero-tags').innerText(),/encerrado/i);
+      const archiveAction=page.locator('#wildAreaMexicoView .wild-mx-hero-actions [data-wild-stamps]');
+      assert.equal(await archiveAction.count(),1,'Expired event must not keep a dead detail button');
+      await archiveAction.click();
+      await page.waitForFunction(()=>!document.getElementById('stampsView').hidden,{timeout:9000});
+      assert.doesNotMatch(await page.locator('#wildGlobalView .wild-event-art figcaption').innerText(),/aprovada/i,
+        'Public visual should not expose internal art approval records');
 
       const ownErrors=errorMessages.filter(message=>/wild-area-20261109|SpideyWild2026/i.test(message));
       assert.deepEqual(ownErrors,[],'Wild module must not throw runtime errors');
