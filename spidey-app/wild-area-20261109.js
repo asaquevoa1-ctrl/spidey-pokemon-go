@@ -149,9 +149,9 @@
       '<figure class="wild-event-art"><img src="'+GLOBAL_POSTER+'" alt="Pôster Premium Spidey aprovado para a Área Selvagem Global 2026" loading="eager" decoding="async"><figcaption>Destaque Spidey · GO Wild Area Global</figcaption></figure></div>'+
       '<section id="wildGlobalSchedule" class="wild-event-section"><div class="wild-heading"><span class="wild-eyebrow">DOIS DIAS • DUAS JORNADAS</span><h2>A programação de cada dia</h2></div>'+
       '<div class="wild-global-days"><article><strong>SÁBADO · 14/11</strong><h3>Dialga Dinamax</h3><p>Batalhas Max com Dialga Dinamax e Duraludon Gigamax. Reides com Zekrom e Kyurem Branco.</p>'+
-      '<img src="'+STEEL+'" alt="Arte promocional oficial temática do tipo Aço" loading="lazy"></article>'+
+      '<img src="'+GLOBAL_POSTER+'" alt="Pôster aprovado da Área Selvagem Global 2026; programação de sábado com Dialga Dinamax" loading="lazy"></article>'+
       '<article><strong>DOMINGO · 15/11</strong><h3>Palkia Dinamax</h3><p>Batalhas Max com Palkia Dinamax e Duraludon Gigamax. Reides com Reshiram e Kyurem Preto.</p>'+
-      '<img src="'+DRAGON+'" alt="Arte promocional oficial temática do tipo Dragão" loading="lazy"></article></div></section>'+
+      '<img src="'+GLOBAL_POSTER+'" alt="Pôster aprovado da Área Selvagem Global 2026; programação de domingo com Palkia Dinamax" loading="lazy"></article></div></section>'+
       '<div class="wild-feature-grid"><article><strong>3★ · OS DOIS DIAS</strong><img src="'+MACHAMP+'" alt="Machamp com jaqueta moderna, arte oficial" loading="lazy"><h2>Machamp de jaqueta</h2><p>Disponível nas reides de 3 estrelas de sábado e domingo.</p></article>'+
       '<article><strong>ESTREIA GIGAMAX</strong><h2>Duraludon Gigamax</h2><p>Batalhas Max 6★ durante o evento. Possibilidade de Shiny; pesquisa especial exclusiva para quem tiver ingresso.</p></article>'+
       '<article><strong>CAPTURAS ESPECIAIS</strong><img class="wild-safari-art" src="'+SAFARI+'" alt="Bola Safári GO oficial" loading="lazy"><h2>Bolas Safári GO</h2><p>Ajuda nas capturas dos Pokémon poderosos da natureza. Não confundir com bolas convencionais.</p></article></div>'+
