@@ -59,6 +59,8 @@ jobs:
         run: node --check spidey-app/wild-mexico-type-stops-20261106.js
       - name: Conferir limites da medição de acessos
         run: node --test tests/web-analytics.test.cjs
+      - name: Proteger rota mundial Teddiursa e impedir notícias duplicadas
+        run: node --test tests/world-route-news-regression-20261109.test.cjs
       - name: Conferir Novidades Premium e fontes reais
         run: node --test tests/news-premium-20261102.test.cjs
       - name: Validar noticia de fundos no perfil sem inventar confirmacao oficial
