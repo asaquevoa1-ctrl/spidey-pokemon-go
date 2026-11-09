@@ -434,7 +434,7 @@
       {
         "id": "2026-pokemon-night-out-london",
         "title": "Pokémon Night Out — Londres | Fundo especial",
-        "summary": "10/11 • The O2, Londres: Pikachu 1★ e Gengar 3★ com Fundo de Localização nas reides da região, Toxtricity e bônus do Night Out. FLY: use a referência da arena; portas às 15h e show às 16h30 de Brasília não são horários confirmados das reides.",
+        "summary": "10/11 • The O2, Londres: Pikachu 1★ e Gengar 3★ com Fundo de Localização, reides exclusivamente presenciais, Toxtricity em pesquisa e Módulos Atrair por 1h. Referência FLY 51.5029,0.0034; 13h e 18h GMT para jogabilidade são horários comunitários não confirmados.",
         "category": "regional_event",
         "tags": [
           "Fundo Londres",
@@ -563,7 +563,7 @@
     "events_without_weekly_art": 9,
     "events_in_weekly": 12,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-09T08:56:20.040323-03:00",
+    "generated_at": "2026-11-09T18:43:39.736382-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
