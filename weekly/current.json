@@ -1,136 +1,105 @@
 {
   "schema_version": "spidey-weekly-v1",
-  "week_start": "2026-11-02",
-  "week_end": "2026-11-08",
+  "week_start": "2026-11-09",
+  "week_end": "2026-11-15",
   "timezone": "America/Sao_Paulo",
-  "title": "Spidey Weekly • 02/11 a 08/11",
+  "title": "Spidey Weekly • 09/11 a 15/11",
   "visual_standard": "spidey-weekly-premium-v1",
   "status": "ready_for_art",
   "days": [
     {
-      "date": "2026-11-02",
+      "date": "2026-11-09",
       "weekday": "monday",
-      "items": [
-        {
-          "id": "2026-11-02-monthly-daily-discoveries-guide",
-          "title": "Guia: bônus semanais de novembro",
-          "summary": "Confira bônus de segunda a domingo e a pausa de 9 a 15 de novembro.",
-          "category": "evento_especial",
-          "tags": [
-            "Novembro 2026",
-            "Calendário",
-            "Pokémon GO"
-          ],
-          "start_brazil": null,
-          "end_brazil": null,
-          "schedule_precision": "date",
-          "calendar_date": "2026-11-02",
-          "source": {
-            "name": "Pokémon GO • comunicado oficial",
-            "url": "https://pokemongo.com/en/news/choose-your-path-forever-forward-2026",
-            "confidence": "official"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
-          }
-        }
-      ]
+      "items": []
     },
     {
-      "date": "2026-11-03",
+      "date": "2026-11-10",
       "weekday": "tuesday",
       "items": []
     },
     {
-      "date": "2026-11-04",
+      "date": "2026-11-11",
       "weekday": "wednesday",
       "items": []
     },
     {
-      "date": "2026-11-05",
+      "date": "2026-11-12",
       "weekday": "thursday",
       "items": []
     },
     {
-      "date": "2026-11-06",
+      "date": "2026-11-13",
       "weekday": "friday",
       "items": []
     },
     {
-      "date": "2026-11-07",
+      "date": "2026-11-14",
       "weekday": "saturday",
       "items": [
         {
-          "id": "2026-11-07-shadow-tornadus-weekend",
-          "title": "Reides Sombrosas: Tornadus (Fim de semana 07–08)",
-          "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
-          "category": "shadow_raids",
+          "id": "2026-11-go-wild-area-global",
+          "title": "Pokémon GO Wild Area 2026: Global",
+          "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
+          "category": "evento_especial",
           "tags": [
-            "Novembro 2026",
-            "Calendário",
-            "Pokémon GO"
+            "GO Wild Area",
+            "Duraludon Gigamax",
+            "Kyurem Branco",
+            "Kyurem Preto",
+            "Global"
           ],
-          "start_brazil": null,
-          "end_brazil": null,
-          "schedule_precision": "date",
-          "calendar_date": "2026-11-07",
+          "start_brazil": "2026-11-14T10:00:00-03:00",
+          "end_brazil": "2026-11-15T18:00:00-03:00",
           "source": {
-            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-            "confidence": "verified_community"
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/en/gowildarea/global",
+            "confidence": "official"
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/wild-area-global-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "772cd973f35942f42d6d55565d6d4c68f81bc7799b993f3a333e31fc7d440770",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         }
       ]
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-15",
       "weekday": "sunday",
       "items": [
         {
-          "id": "2026-11-07-shadow-tornadus-weekend",
-          "title": "Reides Sombrosas: Tornadus (Fim de semana 07–08)",
-          "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
-          "category": "shadow_raids",
+          "id": "2026-11-go-wild-area-global",
+          "title": "Pokémon GO Wild Area 2026: Global",
+          "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
+          "category": "evento_especial",
           "tags": [
-            "Novembro 2026",
-            "Calendário",
-            "Pokémon GO"
+            "GO Wild Area",
+            "Duraludon Gigamax",
+            "Kyurem Branco",
+            "Kyurem Preto",
+            "Global"
           ],
-          "start_brazil": null,
-          "end_brazil": null,
-          "schedule_precision": "date",
-          "calendar_date": "2026-11-07",
+          "start_brazil": "2026-11-14T10:00:00-03:00",
+          "end_brazil": "2026-11-15T18:00:00-03:00",
           "source": {
-            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-            "confidence": "verified_community"
+            "name": "Pokémon GO",
+            "url": "https://pokemongo.com/en/gowildarea/global",
+            "confidence": "official"
           },
           "art": {},
           "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
+            "url": "assets/events/premium/wild-area-global-2026-approved-v1.png",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "772cd973f35942f42d6d55565d6d4c68f81bc7799b993f3a333e31fc7d440770",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
           }
         }
       ]
@@ -139,22 +108,24 @@
   "sections": {
     "featured": [
       {
-        "id": "2026-11-02-monthly-daily-discoveries-guide",
-        "title": "Guia: bônus semanais de novembro",
-        "summary": "Confira bônus de segunda a domingo e a pausa de 9 a 15 de novembro.",
+        "id": "2026-11-09-daily-discovery-pause",
+        "title": "Aviso: Descobertas Diárias suspensas",
+        "summary": "Sem Descobertas Diárias de 9 a 15 de novembro durante a programação da Área Selvagem.",
         "category": "evento_especial",
         "tags": [
           "Novembro 2026",
           "Calendário",
-          "Pokémon GO"
+          "Pokémon GO",
+          "Atenção",
+          "Sem Holofote"
         ],
         "start_brazil": null,
         "end_brazil": null,
         "schedule_precision": "date",
-        "calendar_date": "2026-11-02",
+        "calendar_date": "2026-11-09",
         "source": {
           "name": "Pokémon GO • comunicado oficial",
-          "url": "https://pokemongo.com/en/news/choose-your-path-forever-forward-2026",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         },
         "art": {},
@@ -169,57 +140,58 @@
         }
       },
       {
-        "id": "2026-10-halloween-go-pass",
-        "title": "Passe GO: Halloween 2026",
-        "summary": "De 27/10 a 05/11: evolua no Passe GO de Halloween, gratuito ou Deluxe, para liberar encontros e bônus. Resgate TUDO que desbloqueou até 07/11 às 20h locais. Ranques específicos de Pikachu, Rotom e Spiritomb aguardam comprovação.",
-        "category": "go_pass",
+        "id": "2026-11-go-wild-area-global",
+        "title": "Pokémon GO Wild Area 2026: Global",
+        "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
+        "category": "evento_especial",
         "tags": [
-          "GO Pass",
-          "Halloween",
+          "GO Wild Area",
+          "Duraludon Gigamax",
+          "Kyurem Branco",
+          "Kyurem Preto",
           "Global"
         ],
-        "start_brazil": "2026-10-27T10:00:00-03:00",
-        "end_brazil": "2026-11-05T20:00:00-03:00",
+        "start_brazil": "2026-11-14T10:00:00-03:00",
+        "end_brazil": "2026-11-15T18:00:00-03:00",
         "source": {
-          "name": "Pokémon GO • Halloween Parte I (anúncio oficial)",
-          "url": "https://pokemongo.com/pt-BR/news/halloween-part-1-2026",
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/en/gowildarea/global",
           "confidence": "official"
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/premium/halloween-go-pass-20261027-1105-approved-v1.png",
-          "width": 1024,
-          "height": 1536,
-          "sha256": "815bc9b7b1b70364b7e17b47a1d11a87307f956815f5f2ed4929dd55d91924ce",
+          "url": "assets/events/premium/wild-area-global-2026-approved-v1.png",
+          "width": 1122,
+          "height": 1402,
+          "sha256": "772cd973f35942f42d6d55565d6d4c68f81bc7799b993f3a333e31fc7d440770",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
         }
       },
       {
-        "id": "2026-11-halloween-part-2",
-        "title": "Halloween 2026: Parte II",
-        "summary": "Até 5/11 às 20h locais: Greavard Brilhante, Super Nível Máximo de Mega Sableye e Pesquisa Temporária gratuita com 6 Doces Raros e Sinistea com laço.",
-        "category": "halloween",
+        "id": "2026-11-minior-leonids",
+        "title": "Minior: chuva de meteoros Leônidas",
+        "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+        "category": "evento_especial",
         "tags": [
-          "Halloween",
-          "Greavard",
-          "Mega Sableye",
+          "Minior",
+          "Leônidas",
           "Global"
         ],
-        "start_brazil": "2026-11-01T10:00:00-03:00",
-        "end_brazil": "2026-11-05T20:00:00-03:00",
+        "start_brazil": "2026-11-14T17:00:00-03:00",
+        "end_brazil": "2026-11-19T23:59:59-03:00",
         "source": {
-          "name": "Pokémon GO · anúncio oficial",
-          "url": "https://pokemongo.com/pt-BR/news/halloween-part-2-2026",
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
           "confidence": "official"
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/premium/halloween2-20261011-approved-v1.png",
-          "width": 1122,
-          "height": 1402,
-          "sha256": "c26d617a61c71c48c2bf2fb9454502be5674843e789da5fb27ef98a7ba0969e8",
+          "url": "assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp",
+          "width": 1056,
+          "height": 1320,
+          "sha256": "a8dbf8e9b2988493e61b75ef4f351b6b4ebdc9c734714304e7c16d7fe39aed35",
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
@@ -259,37 +231,9 @@
     ],
     "raids": [
       {
-        "id": "2026-10-raids-giratina-origin",
-        "title": "Reides 5★: Giratina (Forma Origem)",
-        "summary": "Giratina (Forma Origem) na rotação de Reides de cinco estrelas.",
-        "category": "raid_rotation",
-        "tags": [
-          "Reide 5★",
-          "Rotação",
-          "Giratina (Forma Origem)"
-        ],
-        "start_brazil": "2026-10-28T06:00:00-03:00",
-        "end_brazil": "2026-11-03T22:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO Hub • calendário outubro 2026",
-          "url": "https://pokemongohub.net/post/event/october-2026-events/",
-          "confidence": "verified"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/giratina-origin-raids-20261028-1103-cosmic-s-approved-v2.webp",
-          "width": 1024,
-          "height": 1536,
-          "sha256": "5e786374e4949b18760f539a186fc86da406d405f7e2644cd971b8fc5ae9d3fd",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      },
-      {
-        "id": "2026-11-04-raids-giratina-altered",
-        "title": "Reides 5★: Giratina (Forma Alterada)",
-        "summary": "Giratina na Forma Alterada retorna às Reides de cinco estrelas.",
+        "id": "2026-11-09-raids-cresselia-darkrai",
+        "title": "Reides 5★: Cresselia e Darkrai",
+        "summary": "Cresselia e Darkrai na rotação mensal; atenção às reides temáticas de 9 a 15/11.",
         "category": "raid_rotation",
         "tags": [
           "Novembro 2026",
@@ -299,65 +243,7 @@
         "start_brazil": null,
         "end_brazil": null,
         "schedule_precision": "date",
-        "calendar_date": "2026-11-04",
-        "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-10-mega-sableye-raids",
-        "title": "Mega Reides: Mega Sableye",
-        "summary": "Mega Sableye na rotação de Mega Reides.",
-        "category": "mega_raid_rotation",
-        "tags": [
-          "Mega Reide",
-          "Rotação",
-          "Mega Sableye"
-        ],
-        "start_brazil": "2026-10-28T06:00:00-03:00",
-        "end_brazil": "2026-11-08T10:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • programação oficial de outubro de 2026",
-          "url": "https://www.facebook.com/PokemonGO/posts/1633614811455883/",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/mega-sableye-raids-20261028-1103-approved-v1.png",
-          "width": 1024,
-          "height": 1536,
-          "sha256": "b47a296119ee93c2d4c7273424df19f083a9e7f13b33e8e1219fa728dc30773d",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      },
-      {
-        "id": "2026-11-07-shadow-tornadus-weekend",
-        "title": "Reides Sombrosas: Tornadus (Fim de semana 07–08)",
-        "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
-        "category": "shadow_raids",
-        "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO"
-        ],
-        "start_brazil": null,
-        "end_brazil": null,
-        "schedule_precision": "date",
-        "calendar_date": "2026-11-07",
+        "calendar_date": "2026-11-09",
         "source": {
           "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
@@ -375,183 +261,51 @@
         }
       }
     ],
-    "max_pvp": [
-      {
-        "id": "2026-11-02-max-machop",
-        "title": "Batalhas Max: Machop Dinamax",
-        "summary": "Machop Dinamax aparece na rotação de Batalhas Max.",
-        "category": "max_monday",
-        "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO"
-        ],
-        "start_brazil": null,
-        "end_brazil": null,
-        "schedule_precision": "date",
-        "calendar_date": "2026-11-02",
-        "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-10-gbl-27-1103",
-        "title": "GO Battle League: Master / Mega Halloween Cup",
-        "summary": "Rotação da Liga de Batalha GO: Master / Mega Halloween Cup.",
-        "category": "go_battle_league",
-        "tags": [
-          "GO Battle League",
-          "PvP",
-          "Twilight Trails"
-        ],
-        "start_brazil": "2026-10-27T17:00:00-03:00",
-        "end_brazil": "2026-11-03T18:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/news/go-battle-league-twilight-trails",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/gbl-20261027-1103-approved-v1.png",
-          "width": 1024,
-          "height": 1536,
-          "sha256": "fa15e558b19e02802422f1c7b14e2b24fa63f0857e6e89e2f991428e557ae14d",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      }
-    ],
+    "max_pvp": [],
     "also_happening": [
       {
-        "id": "festival-of-lights-2026-pokeminers-e2",
-        "title": "Festival das Luzes 2026 • Pikachu com saree e Pikachu com kurta",
-        "summary": "Evento exclusivo da Índia com Pikachu usando sari ou kurta e chance de Fundo Especial.",
+        "id": "2026-11-09-into-the-wild",
+        "title": "Natureza Selvagem: Into the Wild 2026",
+        "summary": "9 a 13/11, 10h–20h (horário local): Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Registeel, Regidrago, Latias e Latios Dinamax em Batalhas Max 5★. Fundo especial possível, não garantido.",
         "category": "evento_especial",
         "tags": [
-          "Festival of Lights",
-          "Pikachu",
-          "Índia",
-          "regional"
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
         ],
-        "start_brazil": "2026-11-06T01:30:00-03:00",
-        "end_brazil": "2026-11-08T11:30:00-03:00",
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-13T20:00:00-03:00",
         "source": {
-          "name": "Pokémon GO",
-          "captured_via": "PokeMiners",
-          "url": "https://pokemongo.com/news/festival-of-lights-2026",
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         },
-        "art": {
-          "url": "assets/festival-das-luzes-approved.png",
-          "alt": "Arte Spidey do Festival das Luzes 2026",
-          "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
-          "web_sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
-          "width": 1024,
-          "height": 1536,
-          "web_width": 1024,
-          "web_height": 1536,
-          "standard": "spidey-premium-v1"
-        },
+        "art": {},
         "weekly_art": {
-          "url": "assets/festival-das-luzes-approved.png",
-          "width": 1024,
-          "height": 1536,
-          "sha256": "6a4bc24f09a72ad7e0836197277b581207ccba6be2562c814585e50387a6acda",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
         }
       },
       {
-        "id": "2026-11-04-raid-hour-altered-giratina",
-        "title": "Hora de Reides: Giratina (Forma Alterada)",
-        "summary": "Das 18h às 19h no horário local: Giratina Forma Alterada.",
+        "id": "2026-11-09-raid-hour-zacian-crowned",
+        "title": "Hora de Reides: Zacian Espada Coroada",
+        "summary": "Zacian Espada Coroada em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
         "category": "raid_hour",
         "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO",
-          "Global"
+          "Global",
+          "Hora de Reides",
+          "Natureza Selvagem 2026"
         ],
-        "start_brazil": "2026-11-04T18:00:00-03:00",
-        "end_brazil": "2026-11-04T19:00:00-03:00",
+        "start_brazil": "2026-11-09T18:00:00-03:00",
+        "end_brazil": "2026-11-09T19:00:00-03:00",
         "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-11-05-spotlight-teddiursa",
-        "title": "Hora do Holofote: Teddiursa com chapéu de bruxa",
-        "summary": "5/11, das 18h às 19h no horário local: Teddiursa fantasiado, com possibilidade de Shiny sem aumento de chance e 2× XP por evolução.",
-        "category": "spotlight_hour",
-        "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO",
-          "Global"
-        ],
-        "start_brazil": "2026-11-05T18:00:00-03:00",
-        "end_brazil": "2026-11-05T19:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-10-27-dia-de-muertos-mexico",
-        "title": "Día de Muertos 2026 — México (evento nacional)",
-        "summary": "Día de Muertos no México, de 27/10 a 05/11: Incenso e Poffin com duração 2×, Cubone com coroa de cempasúchil e pesquisas. No FLY, confira a região mexicana e os horários; Paseo de la Reforma tem atividades adicionais.",
-        "category": "regional_event",
-        "tags": [
-          "México",
-          "Regional",
-          "Día de Muertos",
-          "Cubone",
-          "Cempasúchil",
-          "Evento exclusivo no México"
-        ],
-        "start_brazil": "2026-10-27T13:00:00-03:00",
-        "end_brazil": "2026-11-05T23:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • comunicado oficial México",
-          "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         },
         "art": {},
@@ -566,26 +320,20 @@
         }
       },
       {
-        "id": "2026-10-31-dia-de-muertos-paseo-reforma",
-        "title": "Día de Muertos 2026 — Gengar Gigamax 6★ e Selos no Paseo de la Reforma",
-        "summary": "GENGAR GIGAMAX 6★ • Día de Muertos no Paseo de la Reforma, Cidade do México: 31/10 às 10h até 05/11 às 20h locais (13h a 23h em Brasília nas datas indicadas). Batalhas Max com chance de Brilhante; Fundo de Localização apenas presencial. Selos: Duskull com coroa e fundo, com 6 referências de orientação na aba Selos.",
-        "category": "local_event",
+        "id": "2026-11-10-raid-hour-zamazenta-crowned",
+        "title": "Hora de Reides: Zamazenta Escudo Coroado",
+        "summary": "Zamazenta Escudo Coroado em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+        "category": "raid_hour",
         "tags": [
-          "México",
-          "Cidade do México",
-          "Presencial",
-          "Local",
-          "Paseo de la Reforma",
-          "Duskull",
-          "Gengar Gigamax",
-          "Caça aos Selos GO",
-          "Batalha Max 6★"
+          "Global",
+          "Hora de Reides",
+          "Natureza Selvagem 2026"
         ],
-        "start_brazil": "2026-10-31T13:00:00-03:00",
-        "end_brazil": "2026-11-05T23:00:00-03:00",
+        "start_brazil": "2026-11-10T18:00:00-03:00",
+        "end_brazil": "2026-11-10T19:00:00-03:00",
         "source": {
-          "name": "Pokémon GO • comunicado oficial México",
-          "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         },
         "art": {},
@@ -600,84 +348,108 @@
         }
       },
       {
-        "id": "2026-11-go-wild-area-sendai",
-        "title": "Pokémon GO Wild Area 2026: Sendai e Tohoku",
-        "summary": "6 a 8/11 • Sendai/Tohoku: roteiro regional para FLY com Duraludon Gigamax, Dialga/Palkia Dinamax, formas Coroadas, Sliggoo de Hisui e Caça aos Selos. Ingresso válido e área de jogo correta são necessários.",
-        "category": "regional_event",
+        "id": "2026-11-11-max-hour-registeel",
+        "title": "Hora Max: Registeel Dinamax",
+        "summary": "Registeel Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+        "category": "max_battle_day",
         "tags": [
-          "GO Wild Area",
-          "Sendai",
-          "Duraludon Gigamax",
-          "Zacian Espada Coroada",
-          "Zamazenta Escudo Coroado",
-          "Regional"
+          "Global",
+          "Batalhas Max",
+          "Natureza Selvagem 2026"
         ],
-        "start_brazil": "2026-11-05T22:00:00-03:00",
-        "end_brazil": "2026-11-08T06:00:00-03:00",
+        "start_brazil": "2026-11-11T18:00:00-03:00",
+        "end_brazil": "2026-11-11T19:00:00-03:00",
         "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/en/gowildarea/sendai/gameplay",
+          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/premium/wild-area-sendai-2026-approved-v1.png",
-          "width": 1122,
-          "height": 1402,
-          "sha256": "18b4d7237129c9ab4cea402c2cc5d4fa33dc7f44e28b06d6d48c0bf83f4e4eee",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
         }
       },
       {
-        "id": "2026-11-go-wild-area-mexico-city",
-        "title": "Pokémon GO Wild Area 2026: Cidade do México",
-        "summary": "6 a 8/11 • Cidade do México: roteiro FLY para localizar a região e os sete lugares da Caça aos Selos, com Duraludon Gigamax, Dialga/Palkia Dinamax e Pokémon de Hisui. Ingresso válido é necessário para as atividades exclusivas.",
-        "category": "regional_event",
+        "id": "2026-11-12-max-hour-regidrago",
+        "title": "Hora Max: Regidrago Dinamax",
+        "summary": "Regidrago Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+        "category": "max_battle_day",
         "tags": [
-          "GO Wild Area",
-          "Cidade do México",
-          "Duraludon Gigamax",
-          "Zacian Espada Coroada",
-          "Zamazenta Escudo Coroado",
-          "Regional"
+          "Global",
+          "Batalhas Max",
+          "Natureza Selvagem 2026"
         ],
-        "start_brazil": "2026-11-06T13:00:00-03:00",
-        "end_brazil": "2026-11-08T21:00:00-03:00",
+        "start_brazil": "2026-11-12T18:00:00-03:00",
+        "end_brazil": "2026-11-12T19:00:00-03:00",
         "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/en/gowildarea/mexico-city/gameplay",
+          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         },
         "art": {},
         "weekly_art": {
-          "url": "assets/events/premium/wild-area-mexico-city-2026-approved-v1.png",
-          "width": 1122,
-          "height": 1402,
-          "sha256": "b508a6e00b627eb515d747e35092330cd901d35214af7aa61c04e00fe9650789",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
         }
       },
       {
-        "id": "2026-11-pokexciting-singapore",
-        "title": "PokéXciting! Singapura 2026",
-        "summary": "Evento em toda Singapura com Pikachu PokéXciting! azul, Rally de Selos, pesquisas e Batalhas Gigamax.",
+        "id": "2026-11-13-max-hour-latias-latios",
+        "title": "Hora Max: Latias e Latios Dinamax",
+        "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+        "category": "max_battle_day",
+        "tags": [
+          "Global",
+          "Batalhas Max",
+          "Natureza Selvagem 2026"
+        ],
+        "start_brazil": "2026-11-13T18:00:00-03:00",
+        "end_brazil": "2026-11-13T19:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-pokemon-night-out-london",
+        "title": "Pokémon Night Out — Londres | Fundo especial",
+        "summary": "10/11 • The O2, Londres: Pikachu 1★ e Gengar 3★ com Fundo de Localização nas reides da região, Toxtricity e bônus do Night Out. FLY: use a referência da arena; portas às 15h e show às 16h30 de Brasília não são horários confirmados das reides.",
         "category": "regional_event",
         "tags": [
-          "PokéXciting!",
-          "Singapura",
-          "Rally de Selos",
-          "Pikachu",
-          "Gigamax"
+          "Fundo Londres",
+          "Pikachu e Gengar",
+          "Evento presencial",
+          "Pesquisa Temporária",
+          "Toxtricity"
         ],
-        "start_brazil": "2026-11-06T23:00:00-03:00",
-        "end_brazil": "2026-11-08T11:00:00-03:00",
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-10",
         "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+          "name": "Pokémon GO • notícia oficial",
+          "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
           "confidence": "official"
         },
         "art": {},
@@ -784,14 +556,14 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 18,
-    "events_with_weekly_art": 9,
-    "events_with_premium_weekly_art": 9,
+    "calendar_events_in_week": 12,
+    "events_with_weekly_art": 3,
+    "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
     "events_without_weekly_art": 9,
-    "events_in_weekly": 18,
+    "events_in_weekly": 12,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-08T23:52:21.183760-03:00",
+    "generated_at": "2026-11-09T08:56:20.040323-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
