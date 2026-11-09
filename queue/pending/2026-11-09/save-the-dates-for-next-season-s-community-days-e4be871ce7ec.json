@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 Save the dates for next Season’s Community Days!",
+  "mensagem": "Save the dates for next Season’s Community Days!\n\n🔗 https://pokemongo.com/news/save-the-date-s25\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/save-the-date-s25",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1569412522786955407",
+  "image_url": "https://lh3.googleusercontent.com/GMESDlJRw5GMsmroW_oK6TLXA4OerLjNY43b0JkjCoSXrez97CwCflnTBTh-uzMhJZYQvQbtA8nK8YPEknYHu0tearwDyBVUoi8",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1569412522786955407",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-09T21:37:07.969712+00:00"
+}
