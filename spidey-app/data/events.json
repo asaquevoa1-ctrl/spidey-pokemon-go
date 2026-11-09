@@ -12248,12 +12248,6 @@
         "requires_art": false,
         "fallback_visual": "none"
       },
-      "news": {
-        "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
-        "published_on": "2026-10-28",
-        "label": "OFICIAL • ATUALIZADO"
-      },
       "notes": [
         "O encontro está na trilha gratuita do Passe GO; não é necessário comprar o Deluxe. Quem já capturou Eternatus recebe 100 Doces.",
         "As Batalhas Max acontecem somente em 21/11, 11h–14h locais, e não concedem novo encontro. O guia de Trilhas Dinamax detalha os custos de fortalecimento com fonte comunitária identificada."
@@ -12411,12 +12405,6 @@
           ]
         }
       ],
-      "news": {
-        "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
-        "published_on": "2026-10-28",
-        "label": "OFICIAL • ATUALIZADO"
-      },
       "remote_raid_limit": {
         "limit": 30,
         "start_brazil": "2026-11-20T18:00:00-03:00",
@@ -12495,13 +12483,7 @@
           "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
           "confidence": "official"
         }
-      ],
-      "news": {
-        "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro.",
-        "published_on": "2026-10-28",
-        "label": "OFICIAL • ATUALIZADO"
-      }
+      ]
     },
     {
       "id": "2026-12-pokemon-center-bangkok-opening",
