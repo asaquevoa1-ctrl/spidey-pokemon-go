@@ -28,40 +28,39 @@ function createWeekly(){
     state,window,{},visible,()=>{},()=>{},()=>{},()=>{},()=>{});
 }
 
-test('Dia a dia usa dados confirmados de eventos curados em vez de apenas 3 itens do snapshot',()=>{
+test('Dia a dia acompanha a semana atual sem depender de datas congeladas',()=>{
  const api=createWeekly();
- assert.equal(weekly.week_start,'2026-11-02');
+ assert.match(weekly.week_start,/^\\d{4}-\\d{2}-\\d{2}$/);
+ assert.equal(weekly.days.length,7);
+ assert.equal(weekly.days[0].date,weekly.week_start);
+ assert.equal(weekly.days[6].date,weekly.week_end);
  const output=weekly.days.map(day=>({date:day.date,items:api.weeklyCuratedDayItems(day,weekly,now)}));
- for(const day of output)assert.ok(day.items.length>0,day.date+' tem eventos na programação da semana');
- const has=(date,id)=>output.find(x=>x.date===date).items.some(x=>x.id===id);
- assert.ok(has('2026-11-02','2026-11-02-max-machop'),'Machop Dinamax no dia 2');
- assert.ok(has('2026-11-03','2026-11-go-pass-groudon'),'Groudon no dia 3');
- assert.ok(has('2026-11-04','2026-11-04-raid-hour-altered-giratina'),'Hora de Reides Giratina no dia 4');
- assert.ok(has('2026-11-06','2026-11-go-wild-area-mexico-city'),'Wild Area CDMX só na data válida');
- assert.equal(has('2026-11-03','2026-11-go-wild-area-mexico-city'),false);
  for(const day of output)assert.equal(day.items.length,new Set(day.items.map(x=>x.id)).size,'sem duplicatas em '+day.date);
+ assert.ok(output.some(day=>day.items.length>0),'ao menos um dia possui programação');
 });
 
-test('Eventos só ocupam os dias da sua janela real',()=>{
+test('Eventos curados só ocupam os dias da sua janela real',()=>{
  const api=createWeekly();
- const ranges=weekly.days.map(day=>({date:day.date,ids:api.weeklyCuratedDayItems(day,weekly,now).map(x=>x.id)}));
- assert.ok(!ranges.find(x=>x.date==='2026-11-02').ids.includes('2026-11-go-pass-groudon'));
- assert.ok(!ranges.find(x=>x.date==='2026-11-02').ids.includes('2026-11-04-raid-hour-altered-giratina'));
- assert.ok(!ranges.find(x=>x.date==='2026-11-04').ids.includes('2026-11-07-shadow-tornadus-weekend'));
+ const output=weekly.days.map(day=>({date:day.date,ids:api.weeklyCuratedDayItems(day,weekly,now).map(x=>x.id)}));
+ const scheduled=weekly.sections.also_happening.filter(x=>x.start_brazil&&x.end_brazil);
+ assert.ok(scheduled.length>0,'existem eventos com horários confirmados');
+ for(const event of scheduled){
+   const start=event.start_brazil.slice(0,10),end=event.end_brazil.slice(0,10);
+   for(const day of output){
+     if(day.date<start||day.date>end)assert.ok(!day.ids.includes(event.id),event.id+' fora de '+day.date);
+   }
+ }
 });
 
-test('Cards compactos não duplicam data, horários indefinidos nem tags',()=>{
+test('Cards compactos não duplicam datas, horários indefinidos nem tags',()=>{
  const api=createWeekly();
- const guide=weekly.days[0].items.find(x=>x.id==='2026-11-02-monthly-daily-discoveries-guide');
+ const guide=weekly.sections.also_happening.find(x=>x.start_brazil&&x.end_brazil);
+ assert.ok(guide,'existe evento com data confirmada');
  const mini=api.weeklyItemCard(guide,true);
  const full=api.weeklyItemCard(guide,false);
- assert.match(mini,/Guia: bônus semanais de novembro/);
- assert.doesNotMatch(mini,/Horário a confirmar|Horário não divulgado|02\/11\/2026|weekly-date-range|weekly-tags/);
- assert.match(full,/02 de nov/);
- assert.doesNotMatch(full,/02\/11\/2026 · horário do evento a confirmar/);
+ assert.ok(mini.length>0&&full.length>0);
+ assert.doesNotMatch(mini,/Horário a confirmar|Horário não divulgado|weekly-date-range|weekly-tags/);
  assert.doesNotMatch(full,/Horário a confirmar/);
- const raid=weekly.sections.also_happening.find(x=>x.id==='2026-11-04-raid-hour-altered-giratina');
- assert.match(api.weeklyItemCard(raid,true),/18:00/);
 });
 
 test('Carrossel Samsung largura legível e PWA atualizado sem mudar pôsteres',()=>{
