@@ -46,9 +46,16 @@ try {
       const weekText=await page.evaluate(()=>navigator.clipboard.readText());
       assert.equal(weekText.trim().split('\n').length,64,'Week route must copy all points');
       assert.ok(weekText.includes('1.987149,-157.477137'),'Kiritimati must be included');
-      const weekImg=page.locator('#wildIntoView .wild-event-art img');
-      await page.waitForFunction(()=>document.querySelector('#wildIntoView .wild-event-art img')?.complete,{timeout:13000});
-      assert.ok(await weekImg.evaluate(img=>img.naturalWidth>0),'Week hero image did not load (including local fallback)');
+      const weekImages=page.locator('#wildIntoView .wild-week-mosaic-grid img');
+      assert.equal(await weekImages.count(),2,'Week must show both local Steel and Dragon art');
+      await weekImages.evaluateAll(async images=>await Promise.all(images.map(image=>image.decode())));
+      assert.ok(await weekImages.evaluateAll(images=>images.every(img=>img.naturalWidth>0)),'Steel or Dragon artwork failed to load');
+      const mediaSize=await page.locator('#wildIntoView .wild-week-mosaic').boundingBox();
+      assert.ok(mediaSize.height<310,'Week art must not reserve the oversized 390px mobile slot');
+      const headingBox=await page.locator('#wildIntoView .wild-event-copy h1').boundingBox();
+      assert.ok(headingBox.y<830,'Week heading must appear on first mobile screen');
+      assert.equal(await page.locator('#wildIntoView .wild-week-mosaic figcaption').innerText(),
+        'Artes oficiais Pokémon GO · temas Aço e Dragão');
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3),false,'Week has horizontal overflow');
       await page.screenshot({path:output+'/week-'+theme+'.png',animations:'disabled',fullPage:true,timeout:30000});
 
