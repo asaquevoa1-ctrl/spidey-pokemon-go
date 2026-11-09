@@ -13,7 +13,7 @@ const {statSync}=require('node:fs');
 test('Tratamento das imagens quebradas é carregado na aba',()=>{
   assert.match(html,/wild-mexico-image-fallback-20261102\.js\?v=20261102-safarireal2/);
   assert.match(html,/wild-mexico-image-fallback-20261102\.css\?v=20261102-safarireal2/);
-  assert.match(sw,/spidey-app-20261102-weekday2/);
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(sw,/\.\/wild-mexico-image-fallback-20261102\.js/);
   assert.match(sw,/\.\/wild-mexico-image-fallback-20261102\.css/);
 });
