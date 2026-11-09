@@ -130,3 +130,78 @@ body:has(#wildGlobalView:not([hidden])) #calendarUpdateStatus{display:none!impor
  .wild-global-hero .wild-event-art img{width:100%;height:auto;max-height:none;min-height:0;object-fit:contain;object-position:center;padding:12px 16px}
  .wild-event-art figcaption{position:relative;bottom:auto;left:auto;right:auto;margin:0 13px 8px;padding:8px 10px}
 }
+
+
+/* 09/11: mobile visual QA — Week hero used to allocate 390px to a broken
+ * remote image, leaving blank space and a misleading Steel-only fallback.
+ * Compact, self-hosted, two-theme art display with the event heading nearby.
+ */
+#wildIntoView .wild-week-hero .wild-week-mosaic {
+  position:relative;display:flex;flex-direction:column;align-items:stretch;
+  justify-content:flex-start;gap:6px;min-height:0;padding:12px 12px 7px;
+  overflow:hidden;background:linear-gradient(146deg,#1b2435,#0c1422 70%,#2c2035);
+}
+#wildIntoView .wild-week-mosaic-grid {
+  position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  flex:1;min-height:390px;gap:8px;overflow:hidden;border-radius:14px;
+  border:1px solid rgba(245,209,153,.34);
+}
+#wildIntoView .wild-week-mosaic-panel{
+  position:relative;min-width:0;min-height:0;overflow:hidden;
+  background:radial-gradient(circle at 50% 35%,#2f4155,#141f30 82%);
+}
+#wildIntoView .wild-week-mosaic-panel::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 54%,rgba(10,13,22,.73));
+}
+#wildIntoView .wild-week-mosaic-grid img {
+  display:block;width:100%;height:100%;min-height:0;max-height:none;
+  padding:0;object-fit:cover;object-position:center;
+}
+#wildIntoView .wild-week-mosaic-panel--steel img {object-position:50% 48%}
+#wildIntoView .wild-week-mosaic-panel--dragon img {object-position:50% 45%}
+#wildIntoView .wild-week-mosaic-mark{
+  position:absolute;z-index:2;bottom:49px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;gap:3px;align-items:center;
+  width:max-content;max-width:calc(100% - 36px);text-align:center;
+  border:1px solid rgba(244,201,131,.56);border-radius:12px;
+  padding:9px 14px;background:rgba(11,17,29,.87);
+  box-shadow:0 9px 24px rgba(0,0,0,.32);
+}
+#wildIntoView .wild-week-mosaic-mark span{
+  font-size:.63rem;letter-spacing:.13em;font-weight:900;color:#f2d099;
+}
+#wildIntoView .wild-week-mosaic-mark strong{
+  font-size:clamp(.95rem,1.9vw,1.27rem);letter-spacing:.05em;font-weight:900;
+  color:#fff7e5;
+}
+#wildIntoView .wild-week-mosaic-mark i{font-style:normal;color:#ebbb7f}
+#wildIntoView .wild-week-mosaic figcaption{
+  position:static;flex:none;margin:0;padding:5px 0 1px;
+  background:transparent!important;border:0;text-align:center;
+  color:#e0d2bb;font-size:.68rem;line-height:1.3;
+}
+@media(max-width:680px){
+  #wildIntoView .wild-week-hero .wild-week-mosaic{
+    max-height:none;min-height:0;padding:10px 10px 6px;gap:5px;
+  }
+  #wildIntoView .wild-week-mosaic-grid{
+    flex:none;height:clamp(174px,51vw,230px);min-height:0;
+    gap:6px;border-radius:12px;
+  }
+  #wildIntoView .wild-week-mosaic-grid img{
+    height:100%;min-height:0;max-height:none;padding:0;object-fit:cover;
+  }
+  #wildIntoView .wild-week-mosaic-mark{
+    bottom:34px;border-radius:9px;padding:6px 11px;
+  }
+  #wildIntoView .wild-week-mosaic-mark span{font-size:.57rem}
+  #wildIntoView .wild-week-mosaic-mark strong{font-size:.94rem}
+  #wildIntoView .wild-week-mosaic figcaption{font-size:.61rem;padding:3px 0}
+  #wildIntoView .wild-event-copy{padding-top:17px}
+  #wildIntoView .wild-event-copy h1{
+    font-size:clamp(1.95rem,8vw,2.65rem);
+    margin:9px 0 11px;letter-spacing:-.042em;
+  }
+  #wildIntoView .wild-event-copy p{margin-bottom:14px}
+}
