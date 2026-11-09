@@ -1,0 +1,45 @@
+name: Spidey - Wild 2026 duas abas e rotas
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'spidey-app/wild-area-20261109.*'
+      - 'spidey-app/index.html'
+      - 'spidey-app/mobile-side-menu.js'
+      - 'spidey-app/sw.js'
+      - 'tests/wild-into-global-tabs-20261109.test.cjs'
+      - 'scripts/qa_wild_2026_two_tabs_browser.mjs'
+      - '.github/workflows/spidey-wild-2026-two-guides.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'spidey-app/wild-area-20261109.*'
+      - 'spidey-app/index.html'
+      - 'spidey-app/mobile-side-menu.js'
+      - 'spidey-app/sw.js'
+      - 'tests/wild-into-global-tabs-20261109.test.cjs'
+permissions:
+  contents: read
+jobs:
+  wild-two-guides:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --ignore-scripts
+      - run: node --test tests/wild-into-global-tabs-20261109.test.cjs
+      - run: npm install --no-save playwright-core@1.56.1
+      - name: Validar duas abas em Samsung simulado (temas claro e escuro)
+        run: CHROME_PATH="$(command -v google-chrome)" node scripts/qa_wild_2026_two_tabs_browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: spidey-wild-2026-premium-android
+          path: test-results/wild-2026/
+          if-no-files-found: ignore
