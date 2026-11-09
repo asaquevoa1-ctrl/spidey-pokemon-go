@@ -19,7 +19,10 @@ test('Novidades agora tem aba real e Home consegue abrir a pagina nativa',()=>{
   assert.match(html,/data-news-filter="all"/);
   assert.match(html,/data-news-filter="official"/);
   assert.match(html,/data-news-filter="community"/);
-  assert.match(mobile,/'calendarView','newsView','wildAreaMexicoView'/);
+  assert.match(mobile,/'calendarView','newsView','wildIntoView','wildGlobalView'/);
+  assert.match(mobile,/'wildAreaMexicoView'\];/);
+  assert.match(html,/data-view="wildIntoView"/);
+  assert.match(html,/data-view="wildGlobalView"/);
   assert.match(read('spidey-app/player-ui.js'),/data-premium-view="newsView"/);
   assert.match(js,/\.app-tab\[data-view=/);
   assert.match(js,/SpideyOpenSharedEvent\?\.\(event\.id\)/);
