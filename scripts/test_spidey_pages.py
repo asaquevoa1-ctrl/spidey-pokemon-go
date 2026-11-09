@@ -64,6 +64,15 @@ class StaticPublicationTests(unittest.TestCase):
                 build(output, today=self.anchor)
             self.assertEqual(sentinel.read_text(), 'preservar')
 
+    def test_expired_week_does_not_block_other_publication_fixes(self):
+        # O catálogo semanal pode atrasar sem impedir correções críticas no Pages.
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / 'pages'
+            stale_day = date.fromisoformat(self.weekly['week_end']) + timedelta(days=1)
+            result = build(output, today=stale_day)
+            self.assertEqual(result['week'], [self.weekly['week_start'], self.weekly['week_end']])
+            self.assertTrue((output / 'spidey-app/data/stamps.json').is_file())
+
     def test_stats_remain_off_without_a_real_site_identifier(self):
         source = (ROOT / 'spidey-app/index.html').read_text()
         with tempfile.TemporaryDirectory() as directory:
