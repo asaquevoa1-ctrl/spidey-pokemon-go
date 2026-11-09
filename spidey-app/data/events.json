@@ -2821,7 +2821,7 @@
       "id": "2026-pokemon-night-out-london",
       "slug": "2026-pokemon-night-out-london",
       "title": "Pokémon Night Out — Londres | Fundo especial",
-      "summary": "10/11 • The O2, Londres: Pikachu 1★ e Gengar 3★ com Fundo de Localização nas reides da região, Toxtricity e bônus do Night Out. FLY: use a referência da arena; portas às 15h e show às 16h30 de Brasília não são horários confirmados das reides.",
+      "summary": "10/11 • The O2, Londres: Pikachu 1★ e Gengar 3★ com Fundo de Localização, reides exclusivamente presenciais, Toxtricity em pesquisa e Módulos Atrair por 1h. Referência FLY 51.5029,0.0034; 13h e 18h GMT para jogabilidade são horários comunitários não confirmados.",
       "category": "regional_event",
       "tags": [
         "Fundo Londres",
@@ -2858,14 +2858,14 @@
           "name": "The O2 Arena",
           "label": "The O2 Arena — referência da arena, não Ginásio/Poképarada",
           "address": "Londres, Reino Unido",
-          "latitude": 51.502579,
-          "longitude": 0.003202,
-          "coordinate_text": "51.502579,0.003202",
+          "latitude": 51.5029,
+          "longitude": 0.0034,
+          "coordinate_text": "51.5029,0.0034",
           "coordinate_type": "venue_reference",
           "coordinate_confidence": "user_supplied_reference",
           "exact_raid_gym_verified": false,
           "exact_pokestop_verified": false,
-          "source_note": "Referência fornecida pelo responsável em 23/10; o anúncio oficial não confirma coordenadas de reides específicas."
+          "source_note": "Referência da arena fornecida pelo responsável em 09/11; não identifica um Ginásio nem Poképarada e não comprova a área exata das reides."
         }
       ],
       "location_background": {
@@ -2880,7 +2880,7 @@
         "how": "Capturar Pikachu (Reide de 1 estrela) ou Gengar (Reide de 3 estrelas) nas Reides especiais do evento presencial."
       },
       "bonuses": [
-        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LONDRES: Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Londres.",
+        "FUNDO DE LOCALIZAÇÃO EXCLUSIVO DE LONDRES: Pikachu em reides 1★ e Gengar em reides 3★, ambos com chance de Brilhante. Capturados nessas reides especiais, recebem Fundo de Localização de Londres. Reides locais: Passes de Reide a Distância não podem ser usados.",
         "Módulos Atrair ativados durante o evento duram 1 hora, exceto os Dourados.",
         "Até duas oportunidades de Pesquisa Temporária ao abrir o Pokémon GO no local; chances de Toxtricity nas Formas Grave/Aguda e a camiseta exclusiva do avatar.",
         "Mais aparições de Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee; alguns jogadores também poderão encontrar Unown P, N e O."
@@ -2900,13 +2900,13 @@
         }
       ],
       "notes": [
-        "ROTEIRO FLY • THE O2, LONDRES (10/11): as reides e bônus são vinculados à região da arena no jogo. Use 51.502579,0.003202 como referência geográfica, nunca como Ginásio confirmado. Verifique a área de ativação no jogo.",
+        "FLY • REFERÊNCIA DA ARENA: 51.5029,0.0034 (The O2, Londres). Copiar como referência geográfica; NÃO é coordenada verificada de Ginásio, Poképarada ou reide.",
+        "HORÁRIOS COMUNITÁRIOS A CONFIRMAR: possível início das atividades às 13h GMT (10h Brasília) e Pesquisas Temporárias às 18h GMT (15h Brasília). Não apresentar essas horas como programação oficial das reides.",
         "PORTAS: 18h GMT = 15h em Brasília. SHOW: 19h30 GMT = 16h30 em Brasília. Horários confirmados da arena, mas não definem início das reides no jogo.",
         "15h30 de Brasília, divulgado por comunidade, NÃO é um horário confirmado pela arena para portas ou show e NÃO foi anunciado como início da jogabilidade.",
         "REIDES: Pikachu 1★ e Gengar 3★ com Fundo de Localização de Londres; possibilidade de Brilhante, sem garantia.",
         "PESQUISA: até duas oportunidades de Pesquisa Temporária no local com Toxtricity Grave/Aguda e camiseta; quem já resgatou a mesma pesquisa via Twitch LA não recebe novamente.",
         "NATUREZA: Gastly, Voltorb, Marowak de Alola, Hoothoot, Murkrow, Houndour, Electrike, Carvanha, Shinx, Zorua, Joltik, Froakie, Dedenne, Rookidee; Unown P, N e O podem aparecer para alguns jogadores.",
-        "REFERÊNCIA THE O2: 51.502579,0.003202. Coordenadas da arena, NÃO de Ginásio ou Poképarada. GPX desabilitado.",
         "A Pokémon confirmou que o show de Londres NÃO terá transmissão ao vivo. Não há novo Drop de Twitch confirmado para 10/11.",
         "Mewtwo Sombroso com fundos NÃO consta do anúncio oficial."
       ],
@@ -2938,11 +2938,12 @@
           "confidence": "official"
         }
       ],
-      "updated_at": "2026-10-23T09:05:00-03:00",
+      "updated_at": "2026-11-09T18:42:00-03:00",
       "news": {
-        "title": "Pokémon Night Out Londres: Pikachu e Gengar com fundo especial",
-        "summary": "Pikachu e Gengar com Fundo de Localização em reides na região da The O2, Toxtricity em pesquisas e referência FLY da arena. Portas/show não são janelas de reides.",
-        "published_on": "2026-10-23"
+        "title": "Pokémon Night Out em Londres: reides locais, fundos e Unown",
+        "summary": "10/11 na The O2: Pikachu e Gengar com Fundo de Localização em reides presenciais (sem passes remotos); Módulos Atrair por 1h, pesquisas de Toxtricity e camiseta, Gastly, Voltorb, Marowak de Alola e Unown P/N/O. Referência FLY: 51.5029,0.0034. Horários de jogabilidade 13h/18h GMT ainda não confirmados.",
+        "published_on": "2026-11-09",
+        "label": "LONDRES • EVENTO PRESENCIAL"
       },
       "venue_program": {
         "doors_open_local": "2026-11-10T18:00:00+00:00",
