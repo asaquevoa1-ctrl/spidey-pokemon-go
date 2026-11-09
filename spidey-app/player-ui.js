@@ -140,18 +140,43 @@
     const universe=root.querySelector('#spideyUniverse3D');
     const shortcuts=root.querySelector('.spidey-premium-nav');
     const metrics=root.querySelector('.spidey-premium-kpis');
-    if(universe&&shortcuts&&metrics){
+    // A navegação e a agenda de sete dias NÃO podem depender de existir arte
+    // aprovada para o carrossel. O painel é parte da Home, não da galeria.
+    if(head&&shortcuts&&metrics){
       const cockpit=document.createElement('section');
       cockpit.className='spidey-command-cockpit';
       cockpit.setAttribute('aria-label','Painel de comando Premium');
       const aside=document.createElement('div');
       aside.className='spidey-command-aside';
       head.insertAdjacentElement('afterend',cockpit);
-      cockpit.append(universe,aside);
+      if(universe){
+        cockpit.append(universe);
+      }else{
+        // Estado funcional, sem fingir que uma arte ou experiência 3D existe.
+        const fallback=document.createElement('section');
+        fallback.className='spidey-universe-fallback';
+        fallback.setAttribute('aria-label','Acesso à programação');
+        const eyebrow=document.createElement('span');
+        eyebrow.className='eyebrow';
+        eyebrow.textContent='SPIDEY · PROGRAMAÇÃO';
+        const heading=document.createElement('h2');
+        heading.textContent='Seu próximo evento está na agenda';
+        const description=document.createElement('p');
+        description.textContent='Veja os eventos dos próximos dias e escolha o que quer jogar.';
+        const action=document.createElement('button');
+        action.type='button';
+        action.className='action-btn gold';
+        action.dataset.premiumView='weeklyView';
+        action.textContent='Ver semana completa';
+        fallback.append(eyebrow,heading,description,action);
+        cockpit.append(fallback);
+        head.querySelector('.spidey-cockpit-explore')?.remove();
+      }
+      cockpit.append(aside);
       aside.append(shortcuts,metrics);
     }else{
-      // Sem arte aprovada? O usuário mantém navegação, métricas e conteúdo.
-      head.querySelector('.spidey-cockpit-explore')?.remove();
+      // Nunca mostrar botão 3D sem galeria funcional.
+      head?.querySelector('.spidey-cockpit-explore')?.remove();
     }
     // Avisar o destaque regional após cada reconstrução da Home real.
     window.dispatchEvent(new Event('spideyhomeupdated'));

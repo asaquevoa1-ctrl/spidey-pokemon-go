@@ -446,3 +446,41 @@ body.spidey-player-ui #spideyHomeQuick {display:none !important;}
 }
 #playerHome .spidey-home-awaiting strong {color:var(--premium-text);font-size:1.1rem;}
 #playerHome .spidey-home-awaiting p {color:var(--premium-dim);line-height:1.5;margin:8px 0 0;}
+
+
+/* A Home permanece completa mesmo quando nenhum evento pode entrar no 3D. */
+#playerHome .spidey-command-cockpit > .spidey-universe-fallback {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  min-width:0;
+  min-height:250px;
+  padding:clamp(22px,4vw,38px);
+  border-radius:22px;
+  border:1px solid rgba(226,191,131,.4);
+  border-top:2px solid rgba(235,203,147,.78);
+  background:radial-gradient(ellipse at 85% 20%,rgba(190,67,87,.18),transparent 52%),linear-gradient(145deg,#1b2330,#090f18 75%,#1e1b27);
+  box-shadow:0 8px 0 rgba(0,0,0,.12),0 21px 43px rgba(0,0,0,.29),inset 0 1px rgba(255,255,255,.07);
+  color:#f9f5ec;
+}
+#playerHome .spidey-universe-fallback .eyebrow {
+  color:#e7c68a;
+  font-size:.72rem;
+  letter-spacing:.1em;
+  font-weight:800;
+}
+#playerHome .spidey-universe-fallback h2 {
+  color:#f9f5ec !important;
+  margin:12px 0 6px;
+  font-size:clamp(1.35rem,3vw,1.9rem);
+  line-height:1.17;
+}
+#playerHome .spidey-universe-fallback p {
+  color:#d9d7d5 !important;
+  margin:0 0 18px;
+  max-width:42ch;
+}
+#playerHome .spidey-universe-fallback button {
+  min-height:44px;
+}

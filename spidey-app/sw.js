@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261108-wild-news-route1';
+const CACHE = 'spidey-app-20261108-homeguard1';
 const CORE = [
   './rare-candy-alert-20261102.js',
   './rare-candy-alert-20261102.css',

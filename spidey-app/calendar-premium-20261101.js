@@ -148,8 +148,11 @@
   }
   function mount(){
     const home=document.getElementById('playerHome');
-    const cockpit=home?.querySelector('.spidey-command-cockpit');
-    if(!home||!cockpit)return null;
+    // A agenda nunca pode desaparecer se o palco 3D/painel Premium falhar.
+    const anchor=home?.querySelector('.spidey-command-cockpit')
+      ||home?.querySelector('.spidey-cockpit-home-head')
+      ||home?.querySelector('.player-home-head');
+    if(!home||!anchor)return null;
     let root=home.querySelector('#spideyCalendarPremium');
     if(root)return root;
     root=node('section','spidey-agenda-premium');
@@ -171,7 +174,7 @@
     const cards=node('div','spidey-agenda-cards');cards.id='spideyAgendaResults';
     const footer=node('div','spidey-agenda-footer');
     root.append(heading,days,filters,status,cards,footer);
-    cockpit.insertAdjacentElement('afterend',root);
+    anchor.insertAdjacentElement('afterend',root);
     root.addEventListener('click',evt=>{
       const day=evt.target.closest('button[data-agenda-day]');
       if(day){
