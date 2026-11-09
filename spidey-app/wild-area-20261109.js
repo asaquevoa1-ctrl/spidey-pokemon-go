@@ -7,7 +7,6 @@
   const BR='America/Sao_Paulo';
   const WEEK_SOURCE='https://pokemongo.com/news/into-the-wild-2026';
   const GLOBAL_SOURCE='https://pokemongo.com/gowildarea/global';
-  const WEEK_IMAGE='https://lh3.googleusercontent.com/xQzYXbxguNWaaSXG5thVM5x44Luvbb5Pi8rPlYSPIV6kePCzoS_5NWzlM0yzNGIVs1NzhXIPLcg2HKS0iuizGsHZUvSS_ZcemC5-i4My5yA=s0-e365';
   const GLOBAL_POSTER='assets/events/premium/wild-area-global-2026-approved-v1.png';
   const STEEL='assets/events/wild-area/official-local-20261102/solid-as-steel.webp';
   const DRAGON='assets/events/wild-area/official-local-20261102/daring-as-dragons.webp';
@@ -120,7 +119,12 @@
       '<h1>A aventura <em>começa agora.</em></h1><p>De 9 a 13 de novembro. Reides coroadas, Batalhas Max, pesquisas, Fundo Especial e a preparação para o fim de semana Global.</p>'+
       '<div class="wild-tags"><span>09–13 NOV</span><span>10h de 09/11 → 20h de 13/11 · horário local</span><span>Aço & Dragão</span></div>'+
       '<div class="wild-hero-links"><a href="#wildIntoSchedule">Ver programação</a><a href="#wildIntoRoute">Coordenadas das 18h</a></div></div>'+
-      '<figure class="wild-event-art"><img src="'+WEEK_IMAGE+'" alt="Imagem promocional oficial Into the Wild 2026 com Regidrago e Registeel Dinamax" referrerpolicy="no-referrer" loading="eager" decoding="async"><figcaption>Arte oficial Pokémon GO · Semana Selvagem</figcaption></figure></div>'+
+      '<figure class="wild-event-art wild-week-mosaic" aria-label="Imagens oficiais da temática Aço e Dragão do GO Wild Area">'+
+      '<div class="wild-week-mosaic-grid">'+
+      '<div class="wild-week-mosaic-panel wild-week-mosaic-panel--steel"><img src="'+STEEL+'" alt="Pokémon do tipo Aço reunidos em cenário do GO Wild Area, imagem promocional oficial" loading="eager" decoding="async"></div>'+
+      '<div class="wild-week-mosaic-panel wild-week-mosaic-panel--dragon"><img src="'+DRAGON+'" alt="Pokémon do tipo Dragão em arte promocional oficial do GO Wild Area" loading="eager" decoding="async"></div>'+
+      '</div><div class="wild-week-mosaic-mark" aria-hidden="true"><span>9 A 13 DE NOVEMBRO</span><strong>AÇO <i>×</i> DRAGÃO</strong></div>'+
+      '<figcaption>Artes oficiais Pokémon GO · temas Aço e Dragão</figcaption></figure></div>'+
       '<div class="wild-feature-grid"><article><strong>Reides 5★</strong><h2>Zacian e Zamazenta coroados</h2><p>Energia Espada Coroada e Escudo Coroado ao derrotá-los. Horas de Reides nas duas primeiras noites.</p></article>'+
       '<article><strong>Batalhas Max 5★</strong><h2>Registeel, Regidrago, Latias e Latios</h2><p>De quarta a sexta, das 18h às 19h locais, cada dia tem seu destaque.</p></article>'+
       '<article><strong>GO Pass • 09–15 NOV</strong><h2>Meltan Dinamax e recompensas</h2><p>GO Pass gratuito e Deluxe; na versão paga, Tampa Prateada. Resgate das recompensas até 17/11 às 23h59 locais.</p></article></div>'+
@@ -167,16 +171,8 @@
     const root=el?.querySelector(view==='wildIntoView'?'#wildIntoContent':'#wildGlobalContent');
     if(!root)return;
     root.innerHTML=view==='wildIntoView'?staticWeek():staticGlobal();
-    if(view==='wildIntoView'){
-      const image=root.querySelector('.wild-week-hero .wild-event-art img');
-      image?.addEventListener('error',()=>{
-        // Arquivo oficial local já auditado; nunca deixar a aba sem imagem.
-        image.src=STEEL;
-        image.alt='Arte promocional oficial de Pokémon de tipo Aço para o GO Wild Area';
-        const caption=root.querySelector('.wild-week-hero figcaption');
-        if(caption)caption.textContent='Arte oficial Pokémon GO · tema Aço';
-      },{once:true});
-    }
+    // As duas imagens da Semana são arquivos oficiais locais já incluídos na PWA.
+    // Evita banner externo quebrado, fallback enganoso e releitura desnecessária.
     displayRows(view,state[view].day);
     root.addEventListener('click',async ev=>{
       const day=ev.target.closest('[data-wild-day]');
