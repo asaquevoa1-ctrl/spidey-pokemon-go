@@ -30,7 +30,7 @@ function createWeekly(){
 
 test('Dia a dia acompanha a semana atual sem depender de datas congeladas',()=>{
  const api=createWeekly();
- assert.match(weekly.week_start,/^\\d{4}-\\d{2}-\\d{2}$/);
+ assert.match(weekly.week_start,/^\d{4}-\d{2}-\d{2}$/);
  assert.equal(weekly.days.length,7);
  assert.equal(weekly.days[0].date,weekly.week_start);
  assert.equal(weekly.days[6].date,weekly.week_end);
