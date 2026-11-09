@@ -19,10 +19,14 @@ test('Existe somente um evento oficial Wild Area Mexico no catalogo',()=>{
   assert.equal(event[0].schedule.start_brazil,'2026-11-06T13:00:00-03:00');
   assert.equal(event[0].schedule.end_brazil,'2026-11-08T21:00:00-03:00');
 });
-test('Aba propria, navegacao nativa e menu lateral sem nova rota',()=>{
+test('Arquivo Mexico preservado ao lado de novas abas da Semana e do Global',()=>{
   assert.match(html,/<section id="wildAreaMexicoView" class="app-view wild-mx-view" hidden/);
   assert.match(html,/<button class="app-tab wild-mx-tab" data-view="wildAreaMexicoView">/);
-  assert.match(menu,/'newsView','wildAreaMexicoView','weeklyView'/);
+  assert.match(menu,/'newsView','wildIntoView','wildGlobalView','weeklyView'/);
+  assert.match(menu,/'nationalTrustView','wildAreaMexicoView'/);
+  assert.match(html,/data-view="wildIntoView"/);
+  assert.match(html,/data-view="wildGlobalView"/);
+  assert.match(html,/data-view="wildAreaMexicoView">México · arquivo/);
   assert.match(menu,/wildAreaMexicoView: '✧'/);
   assert.match(js,/\.app-tab\[data-view=/);
   assert.match(js,/SpideyOpenSharedEvent\?\.\(EVENT_ID\)/);
@@ -67,7 +71,9 @@ test('Imagem oficial Machamp e Safari Ball reais; artes anteriores preservadas n
   assert.match(html,/Bola Safári GO original, com camuflagem verde e marrom/);
   assert.match(art,/wild-mx-real-safari img/);
   assert.match(art,/object-fit:contain!important/);
-  assert.match(sw,/spidey-app-20261102-weekday2/);
+  assert.match(sw,/spidey-app-20261109-into-global1/);
+  assert.match(sw,/\.\/wild-area-20261109\.js/);
+  assert.match(sw,/\.\/wild-area-20261109\.css/);
   assert.match(sw,/\.\/wild-area-mexico-art-20261102\.css/);
   assert.match(html,/wild-area-mexico-20261102\.js\?v=20261102-local1/);
   assert.match(html,/wild-area-mexico-art-20261102\.css\?v=20261102-wildart1/);
