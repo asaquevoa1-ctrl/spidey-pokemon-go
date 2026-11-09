@@ -142,7 +142,7 @@
       '<h1>O mundo inteiro <em>na Área Selvagem.</em></h1><p>14 e 15 de novembro, das 10h às 18h no horário de cada região. Dialga e Palkia Dinamax, Duraludon Gigamax e Pokémon poderosos.</p>'+
       '<div class="wild-tags"><span>14 & 15 NOV</span><span>10h–18h · cada dia · horário local</span><span>Aço & Dragão</span></div>'+
       '<div class="wild-hero-links"><a href="#wildGlobalSchedule">Programação</a><a href="#wildGlobalRoute">Rota das 10h</a></div></div>'+
-      '<figure class="wild-event-art"><img src="'+GLOBAL_POSTER+'" alt="Pôster Premium Spidey aprovado para a Área Selvagem Global 2026" loading="eager" decoding="async"><figcaption>Arte Premium Spidey aprovada · preservada no original</figcaption></figure></div>'+
+      '<figure class="wild-event-art"><img src="'+GLOBAL_POSTER+'" alt="Pôster Premium Spidey aprovado para a Área Selvagem Global 2026" loading="eager" decoding="async"><figcaption>Destaque Spidey · GO Wild Area Global</figcaption></figure></div>'+
       '<section id="wildGlobalSchedule" class="wild-event-section"><div class="wild-heading"><span class="wild-eyebrow">DOIS DIAS • DUAS JORNADAS</span><h2>A programação de cada dia</h2></div>'+
       '<div class="wild-global-days"><article><strong>SÁBADO · 14/11</strong><h3>Dialga Dinamax</h3><p>Batalhas Max com Dialga Dinamax e Duraludon Gigamax. Reides com Zekrom e Kyurem Branco.</p>'+
       '<img src="'+STEEL+'" alt="Arte promocional oficial temática do tipo Aço" loading="lazy"></article>'+
@@ -247,7 +247,19 @@
     mount('wildIntoView');mount('wildGlobalView');mountHome();
     window.addEventListener('spideyhomeupdated',mountHome);
     loadPoints();
-    document.getElementById('wildAreaMexicoView')?.querySelector('.wild-mx-hero-tags')?.insertAdjacentHTML('beforeend','<span>Evento presencial encerrado · 08/11</span>');
+    const mexico=document.getElementById('wildAreaMexicoView');
+    if(mexico){
+      mexico.querySelector('.wild-mx-hero-tags')?.insertAdjacentHTML('beforeend','<span>Evento presencial encerrado · 08/11</span>');
+      const intro=mexico.querySelector('.wild-mx-hero-copy > p');
+      if(intro)intro.textContent='Evento presencial encerrado em 8 de novembro. Relembre as atividades, confira os selos e consulte o histórico de coordenadas.';
+      const previousDetail=mexico.querySelector('[data-wild-detail]');
+      if(previousDetail){
+        // O evento expirado saiu da agenda ao vivo: não manter um botão morto.
+        previousDetail.removeAttribute('data-wild-detail');
+        previousDetail.setAttribute('data-wild-stamps','1');
+        previousDetail.textContent='Consultar selos';
+      }
+    }
   }
   window.SpideyWild2026=Object.freeze({allRows,loadPoints,homeStatus});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
