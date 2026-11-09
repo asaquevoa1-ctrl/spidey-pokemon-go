@@ -96,7 +96,7 @@
         '<div class="wild-route-actions"><button type="button" class="wild-copy-all" data-wild-copy-all>Copiar todas as '+num+' coordenadas</button>'+
         '<button type="button" class="wild-filter'+(mode==='essential'?' selected':'')+'" data-wild-mode="essential" aria-pressed="'+(mode==='essential')+'">Rota rápida</button>'+
         '<button type="button" class="wild-filter'+(mode==='all'?' selected':'')+'" data-wild-mode="all" aria-pressed="'+(mode==='all')+'">Lista completa ('+num+')</button></div>'+
-        '<p class="wild-route-copyhint">A cópia inclui as '+num+' referências, uma por linha, prontas para colar no Data Hub. Horários de Brasília recalculados para a data escolhida.</p>'+
+        '<p class="wild-route-copyhint">A cópia inclui as '+num+' referências, uma por linha, prontas para colar no Data Hub. Horários de Brasília recalculados para a data escolhida. Créditos: LendáriosBrasil, FlyGPS, PokemonTrail e revisão de horários por Fantasma (lista-base de 2023; fusos recalculados para 2026).</p>'+
         '<ol class="wild-route-list">'+shown.map(r=>{
           const p=r.point;
           return '<li class="wild-route-item"><span class="wild-route-flag" aria-hidden="true">'+ESC(p.flag||'📍')+'</span>'+
@@ -167,6 +167,16 @@
     const root=el?.querySelector(view==='wildIntoView'?'#wildIntoContent':'#wildGlobalContent');
     if(!root)return;
     root.innerHTML=view==='wildIntoView'?staticWeek():staticGlobal();
+    if(view==='wildIntoView'){
+      const image=root.querySelector('.wild-week-hero .wild-event-art img');
+      image?.addEventListener('error',()=>{
+        // Arquivo oficial local já auditado; nunca deixar a aba sem imagem.
+        image.src=STEEL;
+        image.alt='Arte promocional oficial de Pokémon de tipo Aço para o GO Wild Area';
+        const caption=root.querySelector('.wild-week-hero figcaption');
+        if(caption)caption.textContent='Arte oficial Pokémon GO · tema Aço';
+      },{once:true});
+    }
     displayRows(view,state[view].day);
     root.addEventListener('click',async ev=>{
       const day=ev.target.closest('[data-wild-day]');
@@ -205,8 +215,8 @@
     tile.id='wild2026HomeHub';tile.className='wild-home-hub';
     tile.setAttribute('aria-label','Semana Selvagem e Área Selvagem Global');
     tile.innerHTML='<div class="wild-home-hub-heading"><span>✦ SPIDEY · ESPECIAL NOVEMBRO</span><h2>Da Semana Selvagem ao Global</h2><p>Confira os horários, Pokémon, artes e coordenadas nas duas áreas.</p></div>'+
-    '<div class="wild-home-hub-cards"><button type="button" data-wild-nav="wildIntoView"><span>09–13 NOV · AGORA</span><strong>Semana Selvagem</strong><small>Reides e Batalhas Max · Rota das 18h</small></button>'+
-    '<button type="button" data-wild-nav="wildGlobalView"><span>14–15 NOV · EM BREVE</span><strong>Área Selvagem Global</strong><small>Dialga, Palkia, Duraludon · Rota das 10h</small></button></div>';
+    '<div class="wild-home-hub-cards"><button type="button" data-wild-nav="wildIntoView"><span>09–13 NOV · SEMANA</span><strong>Semana Selvagem</strong><small>Reides e Batalhas Max · Rota das 18h</small></button>'+
+    '<button type="button" data-wild-nav="wildGlobalView"><span>14–15 NOV · GLOBAL</span><strong>Área Selvagem Global</strong><small>Dialga, Palkia, Duraludon · Rota das 10h</small></button></div>';
     const anchor=home.querySelector('.spidey-command-cockpit')||home.querySelector('#spideyCalendarPremium')||home.querySelector('.player-home-head');
     if(anchor)anchor.insertAdjacentElement('beforebegin',tile);
     else home.prepend(tile);
