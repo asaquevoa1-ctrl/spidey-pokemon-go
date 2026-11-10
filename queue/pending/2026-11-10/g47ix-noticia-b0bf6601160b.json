@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "Trainers, reach rank 1 in GO Pass: Into the Wild and claim the GO Wild Area 2026 purple tee to unlock GO Pass Deluxe: Dynamax Trails for free! Doing so also grants you early access starting Saturday, November 14, at 10:00 a.m. local time, before the general launch on Monday, November 16. #PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/ScopelyExplore/status/2119965177722335582",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2119965177722335582",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-10T03:49:31.057140+00:00"
+}
