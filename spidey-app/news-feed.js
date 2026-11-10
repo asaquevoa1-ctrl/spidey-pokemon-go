@@ -4,6 +4,9 @@
     // A curated day guide brings together multiple announcements and must remain
     // separate even when its primary link points to one official Pokémon GO post.
     if (event.category === 'day_guide' && event.source?.confidence === 'editorial_verified') return `event:${event.id}`;
+    // One announcement covers two distinct local Night Out events. Keep London
+    // and Los Angeles as separate news cards rather than collapsing by URL.
+    if (event.id === '2026-pokemon-night-out-la' || event.id === '2026-pokemon-night-out-london') return `event:${event.id}`;
     try{
       const url=new URL(event.source?.url);
       if(!['https:','http:'].includes(url.protocol))return null;
