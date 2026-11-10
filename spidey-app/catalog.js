@@ -10,6 +10,15 @@
       if (!Array.isArray(data.rallies)) throw new Error('Catálogo incompleto');
       return data;
     }
+    // GitHub Pages is static: avoid an API request that can only return 404.
+    // Use the same fresh catalog files as the published Pages artifact.
+    if (location.hostname.endsWith('.github.io')) {
+      const fresh = await fetch(`data/${file}.json?fresh=${Date.now()}`, { cache: 'no-store' });
+      if (!fresh.ok) throw new Error('Agenda indisponível');
+      const data = await fresh.json();
+      if (!Array.isArray(data[fields[file]])) throw new Error('Agenda incompleta');
+      return data;
+    }
     try {
       response = await fetch(`api/catalog?file=${encodeURIComponent(file)}`, { cache: 'no-store', signal: AbortSignal.timeout(8000) });
       if (!response.ok) throw new Error('Agenda indisponível');
