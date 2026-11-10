@@ -124,7 +124,9 @@ jobs:
         if: github.event_name != 'pull_request'
         with:
           path: pages-public
-          retention-days: 1
+          # Preservar artefatos por uma semana para investigar divergências de Pages
+          # e comparar o pacote gerado com o catálogo entregue por HTTP.
+          retention-days: 7
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
