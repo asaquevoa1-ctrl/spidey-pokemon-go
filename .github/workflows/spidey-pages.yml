@@ -49,7 +49,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Conferir empacotamento e integridade
-        run: python -m unittest scripts.test_spidey_pages
+        run: python -m unittest scripts.test_spidey_pages scripts.test_build_spidey_weekly
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -62,7 +62,7 @@ jobs:
       - name: Proteger rota mundial Teddiursa e impedir notícias duplicadas
         run: node --test tests/world-route-news-regression-20261109.test.cjs
       - name: Conferir Novidades Premium e fontes reais
-        run: node --test tests/news-premium-20261102.test.cjs
+        run: node --test tests/news-premium-20261102.test.cjs tests/official-news-editorial-20261104.test.cjs tests/official-news-editorial-20261111.test.cjs
       - name: Validar noticia de fundos no perfil sem inventar confirmacao oficial
         run: node --test tests/trainer-profile-backgrounds-20261102.test.cjs
       - name: Conferir Explorer Gadget, status gradual e relatos separados

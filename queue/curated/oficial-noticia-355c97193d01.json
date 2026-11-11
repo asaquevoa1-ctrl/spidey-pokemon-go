@@ -1,0 +1,14 @@
+{
+  "titulo": "Pesquisa temporária do Machamp Gigamax",
+  "mensagem": "A aquisição encerrou em 8/11. Quem recebeu a pesquisa no prazo pode concluir tarefas e resgatar recompensas até 15/11 às 23h59 no horário local.",
+  "source_url": "https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
+  "source_verified": true,
+  "status": "published_without_new_art",
+  "art_required_for_publication": false,
+  "fallback_visual": "date",
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": ["official-news-auto-6e45ee38e2b8", "2026-11-06-gmax-machamp-research-acquisition", "2026-11-06-gmax-machamp-research-completion"],
+  "fact_checks": ["official_article_read_in_full", "acquisition_window_preserved", "completion_window_preserved", "individual_tasks_not_published", "no_coordinates_published"],
+  "curated_at_utc": "2026-11-11T10:36:00+00:00"
+}

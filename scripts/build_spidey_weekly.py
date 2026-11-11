@@ -6,7 +6,7 @@ import os
 import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
-from zoneinfo import ZoneInfo
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 ROOT = Path(__file__).resolve().parents[1]
 EVENTS_FILE = ROOT / "spidey-app" / "data" / "events.json"
@@ -82,8 +82,11 @@ def event_range(event: dict) -> tuple[datetime | None, datetime | None]:
             end = date.fromisoformat(schedule["end_date"])
             if end < start:
                 return None, None
-            return datetime(start.year, start.month, start.day, tzinfo=BR), datetime(end.year, end.month, end.day, 23, 59, 59, tzinfo=BR)
-        except (ValueError, KeyError, TypeError):
+            local_zone = ZoneInfo(schedule.get("local_timezone") or schedule.get("timezone"))
+            local_start = datetime(start.year, start.month, start.day, tzinfo=local_zone)
+            local_end = datetime(end.year, end.month, end.day, 23, 59, 59, 999999, tzinfo=local_zone)
+            return local_start.astimezone(BR), local_end.astimezone(BR)
+        except (ValueError, KeyError, TypeError, ZoneInfoNotFoundError):
             return None, None
     return parse_dt(schedule.get("start_brazil") or schedule.get("start_local")), parse_dt(schedule.get("end_brazil") or schedule.get("end_local"))
 
@@ -204,11 +207,13 @@ def score(event: dict) -> tuple[int, datetime]:
     return priorities.get(category, 50), start or datetime.max.replace(tzinfo=BR)
 
 
-def build(anchor: date) -> dict:
+def build(anchor: date, reference: datetime | None = None) -> dict:
     week_start = monday_for(anchor)
     week_end = week_start + timedelta(days=6)
     start_dt, _ = day_window(week_start)
     _, end_dt = day_window(week_end)
+    reference = (reference or datetime.now(BR)).astimezone(BR)
+    filter_expired = week_start <= reference.date() <= week_end
 
     events_doc = load(EVENTS_FILE)
     master = load_art_master()
@@ -220,6 +225,8 @@ def build(anchor: date) -> dict:
             continue
         start, end = event_range(event)
         if not start or not end or not overlaps(start, end, start_dt, end_dt):
+            continue
+        if filter_expired and end < reference:
             continue
         events.append(event)
 
@@ -287,6 +294,7 @@ def build(anchor: date) -> dict:
             "events_in_weekly": len(unique_art),
             "events_with_generated_weekly_art": 0,
             "generated_at": datetime.now(BR).isoformat(),
+            "current_items_filtered_at": reference.isoformat() if filter_expired else None,
             "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js",
         },
     }

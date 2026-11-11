@@ -227,6 +227,34 @@
           "kind": "approved_master",
           "premium": true
         }
+      },
+      {
+        "id": "2026-11-08-black-friday-double-pokecoins",
+        "title": "Black Friday — dobro de Pokémoedas de bônus",
+        "summary": "Pacotes de US$ 19,99 ou mais na Loja Online oferecem o dobro das Pokémoedas de bônus, até 2.000 moedas extras, com uma compra por pacote e cliente.",
+        "category": "official_update",
+        "tags": [
+          "Global",
+          "Loja Online",
+          "Black Friday"
+        ],
+        "start_brazil": "2026-11-08T22:00:00-03:00",
+        "end_brazil": "2026-11-30T01:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
       }
     ],
     "raids": [
@@ -277,62 +305,6 @@
         "end_brazil": "2026-11-13T20:00:00-03:00",
         "source": {
           "name": "Pokémon GO • comunicado oficial",
-          "url": "https://pokemongo.com/news/into-the-wild-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-11-09-raid-hour-zacian-crowned",
-        "title": "Hora de Reides: Zacian Espada Coroada",
-        "summary": "Zacian Espada Coroada em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
-        "category": "raid_hour",
-        "tags": [
-          "Global",
-          "Hora de Reides",
-          "Natureza Selvagem 2026"
-        ],
-        "start_brazil": "2026-11-09T18:00:00-03:00",
-        "end_brazil": "2026-11-09T19:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
-          "url": "https://pokemongo.com/news/into-the-wild-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-11-10-raid-hour-zamazenta-crowned",
-        "title": "Hora de Reides: Zamazenta Escudo Coroado",
-        "summary": "Zamazenta Escudo Coroado em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
-        "category": "raid_hour",
-        "tags": [
-          "Global",
-          "Hora de Reides",
-          "Natureza Selvagem 2026"
-        ],
-        "start_brazil": "2026-11-10T18:00:00-03:00",
-        "end_brazil": "2026-11-10T19:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
           "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         },
@@ -432,24 +404,132 @@
         }
       },
       {
-        "id": "2026-pokemon-night-out-london",
-        "title": "Pokémon Night Out — Londres | Fundo especial",
-        "summary": "10/11 • The O2, Londres: Pikachu 1★ e Gengar 3★ com Fundo de Localização, reides exclusivamente presenciais, Toxtricity em pesquisa e Módulos Atrair por 1h. Referência FLY 51.5029,0.0034; 13h e 18h GMT para jogabilidade são horários comunitários não confirmados.",
-        "category": "regional_event",
+        "id": "2026-11-06-gmax-machamp-research-completion",
+        "title": "Prazo para concluir — Pesquisa do Machamp Gigamax",
+        "summary": "Somente para quem recebeu a pesquisa até 8/11: concluir tarefas e resgatar recompensas até 15/11 às 23h59 no horário local.",
+        "category": "research",
         "tags": [
-          "Fundo Londres",
-          "Pikachu e Gengar",
-          "Evento presencial",
-          "Pesquisa Temporária",
-          "Toxtricity"
+          "Global",
+          "Pesquisa temporária",
+          "Machamp Gigamax"
         ],
-        "start_brazil": null,
-        "end_brazil": null,
-        "schedule_precision": "date",
-        "calendar_date": "2026-11-10",
+        "start_brazil": "2026-11-06T10:00:00-03:00",
+        "end_brazil": "2026-11-15T23:59:00-03:00",
         "source": {
-          "name": "Pokémon GO • notícia oficial",
-          "url": "https://pokemongo.com/news/pokemon-night-out-irl-details2026",
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-08-seasonal-delights-box",
+        "title": "Caixa Delícias Sazonais — janela da Black Friday",
+        "summary": "Caixa de 6.095 Pokémoedas com Incubadoras, passes e Partículas Max; disponível até 27/11 às 20h PST, com limite de três compras e disponibilidade regional.",
+        "category": "official_update",
+        "tags": [
+          "Global",
+          "Loja Online",
+          "Black Friday"
+        ],
+        "start_brazil": "2026-11-08T22:00:00-03:00",
+        "end_brazil": "2026-11-28T01:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-09-into-the-wild-go-pass",
+        "title": "Passe GO: Natureza Selvagem — progressão",
+        "summary": "Colete Pontos GO e avance no Passe de 9/11 às 10h até 15/11 às 18h no horário local. A Tampinha Prateada pertence à trilha Deluxe.",
+        "category": "research",
+        "tags": [
+          "Global",
+          "Passe GO",
+          "Natureza Selvagem 2026"
+        ],
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-15T18:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • Natureza Selvagem 2026",
+          "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-09-into-the-wild-pass-claim",
+        "title": "Prazo para resgatar recompensas — Passe GO Natureza Selvagem",
+        "summary": "As recompensas já desbloqueadas no Passe GO: Natureza Selvagem devem ser resgatadas até 17/11 às 23h59 no horário local.",
+        "category": "research",
+        "tags": [
+          "Global",
+          "Passe GO",
+          "Natureza Selvagem 2026"
+        ],
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-17T23:59:00-03:00",
+        "source": {
+          "name": "Pokémon GO • Natureza Selvagem 2026",
+          "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-09-silver-bottle-cap-use-deadline",
+        "title": "Prazo para usar a Tampinha Prateada",
+        "summary": "Quem obtiver a Tampinha Prateada ao concluir o Passe GO Deluxe deve aplicá-la a um Pokémon elegível até 22/11 às 23h59 no horário local.",
+        "category": "research",
+        "tags": [
+          "Global",
+          "Passe GO",
+          "Natureza Selvagem 2026"
+        ],
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-22T23:59:00-03:00",
+        "source": {
+          "name": "Pokémon GO • Natureza Selvagem 2026",
+          "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
           "confidence": "official"
         },
         "art": {},
@@ -556,14 +636,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 12,
+    "calendar_events_in_week": 15,
     "events_with_weekly_art": 3,
     "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 9,
-    "events_in_weekly": 12,
+    "events_without_weekly_art": 12,
+    "events_in_weekly": 15,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-11T04:59:30.105926-03:00",
+    "generated_at": "2026-11-11T07:54:39.234044-03:00",
+    "current_items_filtered_at": "2026-11-11T07:54:39.194557-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

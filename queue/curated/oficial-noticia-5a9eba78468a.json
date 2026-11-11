@@ -1,0 +1,14 @@
+{
+  "titulo": "Datas da próxima Temporada",
+  "mensagem": "Onze datas oficiais foram cadastradas sem inventar horários, Pokémon, bônus ou locais. O rumor de Mewtwo de Armadura foi arquivado e ligado ao Dia de Reides de 19/12.",
+  "source_url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+  "source_verified": true,
+  "status": "published_without_new_art",
+  "art_required_for_publication": false,
+  "fallback_visual": "date",
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": ["official-news-auto-8a38cf8f2093", "2026-12-05-max-battle-day-save-date", "2026-12-12-community-day-save-date", "2026-12-19-raid-day-save-date", "2026-12-26-hatch-day-save-date", "2027-01-02-community-day-classic-save-date", "2027-01-09-super-mega-raid-day-save-date", "2027-01-16-community-day-save-date", "2027-01-23-max-battle-day-save-date", "2027-01-30-super-mega-raid-day-save-date", "2027-02-06-community-day-save-date", "2027-02-13-raid-day-save-date"],
+  "fact_checks": ["official_article_read_in_full", "date_only_precision", "no_times_announced", "no_species_announced", "rumor_history_preserved"],
+  "curated_at_utc": "2026-11-11T10:36:00+00:00"
+}

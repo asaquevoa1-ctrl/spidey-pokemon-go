@@ -1,0 +1,14 @@
+{
+  "titulo": "Black Friday 2026",
+  "mensagem": "A promoção de Pokémoedas e a Caixa Delícias Sazonais foram verificadas como janelas distintas, com limites, conteúdo e disponibilidade regional preservados.",
+  "source_url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+  "source_verified": true,
+  "status": "published_without_new_art",
+  "art_required_for_publication": false,
+  "fallback_visual": "date",
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": ["official-news-auto-1027790d90b8", "2026-11-08-black-friday-double-pokecoins", "2026-11-08-seasonal-delights-box"],
+  "fact_checks": ["official_article_read_in_full", "distinct_store_windows_preserved", "purchase_limits_preserved", "regional_availability_disclosed"],
+  "curated_at_utc": "2026-11-11T10:36:00+00:00"
+}
