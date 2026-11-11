@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-11-11T13:46:00-03:00",
+  "base_main_sha": "ba22e925b8da407c498bc515d0001da2873567ac",
+  "official_fulltext": {
+    "url": "https://pokemongo.com/news/gowildarea-global-2026-osaka-gameplay-update",
+    "classification": "official_local_gameplay_advisory",
+    "published_as": "official-news-auto-2ff7990f7c9c",
+    "calendar_event_created": false,
+    "unspecified_fields": [
+      "affected_features",
+      "hours",
+      "radius",
+      "coordinates",
+      "game_objects"
+    ]
+  },
+  "community_fulltext": {
+    "url": "https://pokemongohub.net/post/news/pokemon-storage-and-item-bag-increased-ahead-of-pokemon-go-wild-area-global-2026/",
+    "classification": "verified_community",
+    "published_as": "2026-11-11-storage-cap-increase",
+    "official_article_found": false,
+    "calendar_event_created": false
+  },
+  "collector": {
+    "source_id": "pokeminers-1570031332187176995",
+    "queue_file": "queue/pending/2026-11-11/notice-regarding-gameplay-in-osaka-during-pokemon-go-wild-area-global-96fb9d1a575f.json",
+    "editorial_status": "curated",
+    "art_required_for_publication": false
+  },
+  "preserved": [
+    "approved_art",
+    "cosmic_s",
+    "catalogs",
+    "pokedex",
+    "pvp",
+    "confirmed_gpx",
+    "push_configuration",
+    "friends_chat"
+  ],
+  "push_sent": false,
+  "physical_android_test": false
+}

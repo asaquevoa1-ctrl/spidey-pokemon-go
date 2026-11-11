@@ -14476,6 +14476,121 @@
         "calendar_event": true,
         "date_confirmed_details_unannounced": true
       }
+    },
+    {
+      "id": "official-news-auto-2ff7990f7c9c",
+      "slug": "official-news-auto-2ff7990f7c9c",
+      "content_type": "news",
+      "title": "Área Selvagem Global em Osaka: recursos podem ser ajustados temporariamente",
+      "summary": "Nos dias 14 e 15/11, outro jogo para celular terá um evento presencial em Namba. O Pokémon GO informou que alguns recursos podem sofrer ajustes temporários na região ao redor, sem especificar quais recursos, horários ou raio.",
+      "category": "official_update",
+      "tags": [
+        "Oficial",
+        "Área Selvagem Global 2026",
+        "Osaka",
+        "Namba",
+        "Aviso local"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/news/gowildarea-global-2026-osaka-gameplay-update",
+        "confidence": "official"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none",
+        "no_unverified_poster": true
+      },
+      "news": {
+        "title": "Osaka: possível ajuste temporário de recursos na região de Namba",
+        "summary": "O aviso oficial vale para 14 e 15/11, durante a Área Selvagem Global. A publicação não informa quais recursos serão alterados, o perímetro afetado nem horários específicos.",
+        "published_on": "2026-11-11",
+        "label": "OFICIAL • AVISO LOCAL"
+      },
+      "notes": [
+        "Outro jogo para celular realizará um evento presencial na região de Namba, em Osaka, nos dias 14 e 15 de novembro, ao mesmo tempo que a Área Selvagem Global.",
+        "O Pokémon GO informa apenas que alguns recursos de jogabilidade na área ao redor podem ser ajustados temporariamente para ajudar na segurança e na experiência dos participantes.",
+        "A publicação recomenda explorar outras áreas de Osaka, respeitar estabelecimentos e moradores e prestar atenção ao entorno.",
+        "NÃO DIVULGADO: recursos afetados, raio, coordenadas, Poképaradas, Ginásios, Pontos de Energia ou horários dos ajustes. Nada disso foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Aviso editorial local sem janela operacional precisa; nenhum push foi autorizado."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "updated_at": "2026-11-11T13:46:00-03:00",
+      "related_event_ids": [
+        "2026-11-go-wild-area-global"
+      ],
+      "audit": {
+        "classification": "official_local_gameplay_advisory_editorially_verified",
+        "editorial_detail_pending": false,
+        "automatic_index_discovery": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/gowildarea-global-2026-osaka-gameplay-update",
+        "collector_source_id": "pokeminers-1570031332187176995",
+        "collector_queue_file": "queue/pending/2026-11-11/notice-regarding-gameplay-in-osaka-during-pokemon-go-wild-area-global-96fb9d1a575f.json",
+        "not_a_calendar_event": true,
+        "unspecified_features_preserved": true,
+        "no_coordinates_or_game_objects_inferred": true
+      }
+    },
+    {
+      "id": "2026-11-11-storage-cap-increase",
+      "slug": "2026-11-11-storage-cap-increase",
+      "content_type": "news",
+      "title": "Armazenamento de Pokémon e Bolsa de Itens recebem mais 500 espaços",
+      "summary": "O Pokémon GO Hub registrou um aumento de 500 nos limites compráveis: até 13.150 Pokémon e 12.500 itens. Com as recompensas máximas de nível, os totais informados chegam a 13.500 e 13.250, respectivamente.",
+      "category": "community_discovery",
+      "tags": [
+        "Fonte comunitária",
+        "Armazenamento de Pokémon",
+        "Bolsa de Itens",
+        "Área Selvagem Global 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO Hub • verificação comunitária",
+        "url": "https://pokemongohub.net/post/news/pokemon-storage-and-item-bag-increased-ahead-of-pokemon-go-wild-area-global-2026/",
+        "confidence": "verified_community"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none",
+        "no_unverified_poster": true
+      },
+      "news": {
+        "title": "Mais espaço antes da Área Selvagem Global",
+        "summary": "Fonte comunitária confiável registrou +500 para o armazenamento comprável de Pokémon e +500 para a Bolsa de Itens. Os benefícios de nível são contabilizados separadamente.",
+        "published_on": "2026-11-11",
+        "label": "COMUNIDADE • VERIFICADO"
+      },
+      "notes": [
+        "Limite comprável informado: 13.150 Pokémon; com todas as recompensas de nível, total de 13.500.",
+        "Limite comprável informado: 12.500 itens; com todas as recompensas de nível, total de 13.250.",
+        "O artigo relata opções de expansão na loja do jogo e na Loja Online, mas ressalta que pacotes e ofertas podem variar por conta e região.",
+        "Até esta revisão, não foi localizado um novo artigo oficial do Pokémon GO com esses números. Por isso, a informação permanece identificada como fonte comunitária verificada, não como anúncio oficial."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização permanente de capacidade, sem janela de evento ou push autorizado."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "updated_at": "2026-11-11T13:46:00-03:00",
+      "audit": {
+        "classification": "verified_community_storage_cap_observation",
+        "scope": "news_only",
+        "not_a_calendar_event": true,
+        "official_article_found": false,
+        "purchasable_and_level_reward_caps_kept_distinct": true,
+        "regional_offer_variation_disclosed": true
+      }
     }
   ]
 }

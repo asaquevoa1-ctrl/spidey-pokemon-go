@@ -1,0 +1,24 @@
+{
+  "titulo": "Área Selvagem Global 2026 — aviso de jogabilidade em Osaka",
+  "mensagem": "Nos dias 14 e 15 de novembro, alguns recursos de jogabilidade podem sofrer ajustes temporários na região de Namba, em Osaka. O comunicado oficial não especifica recursos, horários nem perímetro.",
+  "source_url": "https://pokemongo.com/news/gowildarea-global-2026-osaka-gameplay-update",
+  "source_verified": true,
+  "status": "published_without_new_art",
+  "art_required_for_publication": false,
+  "fallback_visual": "news_text",
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "official-news-auto-2ff7990f7c9c",
+    "2026-11-go-wild-area-global"
+  ],
+  "fact_checks": [
+    "official_article_read_in_full",
+    "november_14_15_preserved_as_advisory_dates",
+    "namba_osaka_scope_preserved",
+    "affected_features_hours_and_radius_not_invented",
+    "no_coordinates_or_game_objects_published"
+  ],
+  "published_on": "2026-11-11",
+  "curated_at_utc": "2026-11-11T16:46:00+00:00"
+}
