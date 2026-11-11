@@ -5,15 +5,18 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2119475042362987005",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
+  "status": "curated_grouped",
+  "etapa_editorial": "completed",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
   "media_policy": "premium_editorial",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
-  "proibir_fallback": true,
-  "created_at_utc": "2026-11-09T11:15:42.298554+00:00"
+  "proibir_fallback": false,
+  "created_at_utc": "2026-11-09T11:15:42.298554+00:00",
+  "curated_at_utc": "2026-11-11T10:36:00+00:00",
+  "curated_path": "queue/curated/g47ix-noticia-a97f1bd0ae81.json",
+  "app_event_ids": ["2026-11-09-into-the-wild", "2026-11-09-silver-bottle-cap-use-deadline"]
 }

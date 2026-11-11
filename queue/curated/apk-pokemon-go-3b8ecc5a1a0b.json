@@ -1,0 +1,13 @@
+{
+  "titulo": "Pokémon GO 0.435.2 — rollout operacional",
+  "source_url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo",
+  "source_verified": false,
+  "source_classification": "community_operational",
+  "status": "no_public_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [],
+  "curation_note": "O coletor informa somente a conclusão do rollout, sem changelog factual de jogabilidade. Não foi transformado em evento ou notícia.",
+  "curated_at_utc": "2026-11-11T10:36:00+00:00"
+}

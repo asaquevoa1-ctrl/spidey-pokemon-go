@@ -6,7 +6,7 @@
       "slug": "clone-special-raid-day-mewtwo-armadura-rumor-19-dezembro-2026",
       "content_type": "news",
       "title": "Rumor: Mewtwo de Armadura pode voltar em 19 de dezembro",
-      "summary": "Segundo informação atribuída ao ThePokemodGroup, um possível Clone Special Raid Day estaria previsto para sábado, 19/12. A data, o nome do evento e o retorno dos Pokémon Clone ainda não foram confirmados oficialmente.",
+      "summary": "O anúncio oficial da próxima Temporada confirmou um Dia de Reides em 19/12, mas não confirmou Mewtwo de Armadura, Pokémon Clone nem o nome “Clone Special Raid Day”. O rumor foi arquivado e ligado à data oficial.",
       "category": "community_discovery",
       "tags": [
         "Rumor",
@@ -23,6 +23,11 @@
       },
       "verification_sources": [
         {
+          "name": "Pokémon GO • datas oficiais da próxima Temporada",
+          "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+          "confidence": "official"
+        },
+        {
           "name": "Pokémon GO • retorno oficial anterior de Mewtwo de Armadura em setembro de 2026 (não confirma dezembro)",
           "url": "https://pokemongo.com/en/news/megafinale-2026-armored-mewtwo",
           "confidence": "official"
@@ -36,27 +41,33 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Mewtwo de Armadura em dezembro? Comunidade aponta possível Dia de Reides",
-        "summary": "O ThePokemodGroup é citado em relato sobre um possível Clone Special Raid Day em 19/12. A volta de Pikachu Clone e dos iniciais de Kanto é especulação; não há anúncio oficial confirmando esses detalhes.",
+        "title": "Rumor de Mewtwo de Armadura em 19/12: data de Dia de Reides confirmada, espécie não",
+        "summary": "A fonte oficial confirmou apenas que 19/12 terá um Dia de Reides. Mewtwo de Armadura, Pikachu Clone e os iniciais Clone continuam sem confirmação para essa data.",
         "published_on": "2026-11-03",
-        "label": "RUMOR • SEM CONFIRMAÇÃO OFICIAL"
+        "label": "HISTÓRICO • SUBSTITUÍDO POR DATA OFICIAL"
       },
       "notes": [
-        "Relato atribuído ao ThePokemodGroup; não há confirmação oficial para 19/12.",
-        "O retorno de Pikachu Clone, Venusaur Clone, Charizard Clone e Blastoise Clone é apenas especulação.",
-        "A Niantic/Scopely confirmou Mewtwo de Armadura em setembro de 2026, mas isso não confirma o evento de dezembro."
+        "O relato comunitário foi preservado como histórico; não é um anúncio oficial de Mewtwo de Armadura ou Pokémon Clone.",
+        "A publicação oficial de 9/11 confirma somente o tipo Dia de Reides e a data 19/12/2026; horário, espécie, brilho, bônus e encontros não foram divulgados.",
+        "O registro oficial vinculado é 2026-12-19-raid-day-save-date."
       ],
       "notifications": {
         "enabled": false,
         "reason": "Rumor sem confirmação oficial; não notificar como evento."
       },
-      "status": "published",
-      "verified_at": "2026-11-03",
+      "status": "archived",
+      "verified_at": "2026-11-11",
       "audit": {
-        "classification": "community_unconfirmed_rumor",
+        "classification": "community_unconfirmed_rumor_archived",
         "calendar_event": false,
-        "reported_date_not_confirmed": true
-      }
+        "reported_date_not_confirmed": false,
+        "official_date_confirmed": true,
+        "species_still_unconfirmed": true,
+        "historical_record_preserved": true
+      },
+      "updated_at": "2026-11-11T07:36:00-03:00",
+      "superseded_by": "2026-12-19-raid-day-save-date",
+      "superseded_at": "2026-11-11T07:36:00-03:00"
     },
     {
       "id": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
@@ -1851,7 +1862,8 @@
         "Horas de Batalhas Max: Registeel em 11/11, Regidrago em 12/11, Latias e Latios em 13/11, das 18h às 19h locais.",
         "Limite de Reides Remotas aumentado para 30 entre 9 e 13/11; sem limite em 14 e 15/11.",
         "Regidrago Dinamax estreia em Batalhas Max 5★; Meltan Dinamax no Passe GO.",
-        "Possibilidade de Gimmighoul Brilhante com Bolsa de Moedas e Meltan Brilhante com Caixa Misteriosa nos períodos oficiais."
+        "Possibilidade de Gimmighoul Brilhante com Bolsa de Moedas e Meltan Brilhante com Caixa Misteriosa nos períodos oficiais.",
+        "Passe GO Deluxe: Natureza Selvagem concede uma Tampinha Prateada ao completar a trilha; ela aumenta um único atributo por Hiper Treinamento."
       ],
       "notes": [
         "Evento principal: 9/11 às 10h a 13/11 às 20h no horário local; para Brasília, 10h e 20h BRT.",
@@ -1859,7 +1871,10 @@
         "Descobertas Diárias suspensas de 9 a 15/11.",
         "O Fundo Especial é uma possibilidade após captura, não recompensa garantida.",
         "Os horários diários de reides e Batalhas Max são locais: no Brasil (horário de Brasília), 18h–19h.",
-        "Fonte oficial prevalece sobre horários de 5h e 21h de material comunitário, que não são o período geral oficial."
+        "Fonte oficial prevalece sobre horários de 5h e 21h de material comunitário, que não são o período geral oficial.",
+        "Passe GO e Passe GO Deluxe: 9/11 às 10h até 15/11 às 18h locais; recompensas desbloqueadas devem ser resgatadas até 17/11 às 23h59 locais.",
+        "A Tampinha Prateada da trilha Deluxe deve ser usada até 22/11 às 23h59 locais. Exige Grande Companheiro ou nível superior; Pokémon Sombrosos e Pokémon com todos os atributos já no máximo não são elegíveis.",
+        "Depois de usar a Tampinha, há 365 dias para concluir as tarefas de Hiper Treinamento do atributo escolhido. Pokémon Hiper Treinados não podem ser enviados ao Pokémon HOME."
       ],
       "notifications": {
         "enabled": false,
@@ -1879,7 +1894,199 @@
         "summary": "De 9 a 13/11: Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★. Ganhe as respectivas energias ao vencer e tenha chance de Fundo Especial ao capturar. Horas de Reide: Zacian 9/11 e Zamazenta 10/11, das 18h às 19h locais. Batalhas Max 5★: Registeel 11/11, Regidrago 12/11, Latias e Latios 13/11. Os ginásios exibidos no registro comunitário de Kiribati ainda não têm coordenadas verificadas.",
         "published_on": "2026-11-08",
         "label": "NOVIDADE • REIDES 5★ E BATALHAS MAX"
+      },
+      "related_event_ids": [
+        "2026-11-09-into-the-wild-go-pass",
+        "2026-11-09-into-the-wild-pass-claim",
+        "2026-11-09-silver-bottle-cap-use-deadline"
+      ],
+      "updated_at": "2026-11-11T07:36:00-03:00",
+      "audit": {
+        "official_article_read_in_full": true,
+        "distinct_pass_windows_preserved": true,
+        "silver_bottle_cap_verified": true
       }
+    },
+    {
+      "id": "2026-11-09-into-the-wild-go-pass",
+      "slug": "2026-11-09-into-the-wild-go-pass",
+      "title": "Passe GO: Natureza Selvagem — progressão",
+      "summary": "Colete Pontos GO e avance no Passe de 9/11 às 10h até 15/11 às 18h no horário local. A Tampinha Prateada pertence à trilha Deluxe.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Passe GO",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • Natureza Selvagem 2026",
+        "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/into-the-wild-2026",
+          "confidence": "official"
+        }
+      ],
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Benefício global sem coordenadas ou GPX."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "2026-11-09-into-the-wild",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "calendar_event": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-09T10:00:00-03:00",
+        "end_local": "2026-11-15T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-15T18:00:00-03:00"
+      },
+      "notes": [
+        "O Passe gratuito é recebido automaticamente. A trilha Deluxe é paga e contém recompensas adicionais.",
+        "Há limite diário de Pontos GO de 9 a 13/11; não há limite em 14 e 15/11.",
+        "Tampinha Prateada, encontros adicionais com Meltan Dinamax e Calças Duraludon estão entre as recompensas anunciadas da trilha Deluxe."
+      ]
+    },
+    {
+      "id": "2026-11-09-into-the-wild-pass-claim",
+      "slug": "2026-11-09-into-the-wild-pass-claim",
+      "title": "Prazo para resgatar recompensas — Passe GO Natureza Selvagem",
+      "summary": "As recompensas já desbloqueadas no Passe GO: Natureza Selvagem devem ser resgatadas até 17/11 às 23h59 no horário local.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Passe GO",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • Natureza Selvagem 2026",
+        "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/into-the-wild-2026",
+          "confidence": "official"
+        }
+      ],
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Benefício global sem coordenadas ou GPX."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "2026-11-09-into-the-wild",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "calendar_event": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-09T10:00:00-03:00",
+        "end_local": "2026-11-17T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-17T23:59:00-03:00"
+      },
+      "notes": [
+        "Este prazo é para resgatar recompensas desbloqueadas; a progressão do Passe encerra antes, em 15/11 às 18h locais."
+      ]
+    },
+    {
+      "id": "2026-11-09-silver-bottle-cap-use-deadline",
+      "slug": "2026-11-09-silver-bottle-cap-use-deadline",
+      "title": "Prazo para usar a Tampinha Prateada",
+      "summary": "Quem obtiver a Tampinha Prateada ao concluir o Passe GO Deluxe deve aplicá-la a um Pokémon elegível até 22/11 às 23h59 no horário local.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Passe GO",
+        "Natureza Selvagem 2026"
+      ],
+      "source": {
+        "name": "Pokémon GO • Natureza Selvagem 2026",
+        "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/into-the-wild-2026",
+          "confidence": "official"
+        }
+      ],
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Benefício global sem coordenadas ou GPX."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "2026-11-09-into-the-wild",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "calendar_event": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-09T10:00:00-03:00",
+        "end_local": "2026-11-22T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-09T10:00:00-03:00",
+        "end_brazil": "2026-11-22T23:59:00-03:00"
+      },
+      "notes": [
+        "A Tampinha aumenta um único atributo: Ataque, Defesa ou PS.",
+        "O Pokémon deve ser Grande Companheiro ou superior. Pokémon Sombrosos e Pokémon com todos os atributos já no máximo não são elegíveis.",
+        "Após usar a Tampinha, o Hiper Treinamento tem prazo separado de 365 dias. Pokémon Hiper Treinados não podem ser enviados ao Pokémon HOME."
+      ]
     },
     {
       "id": "2026-11-09-daily-discovery-pause",
@@ -12889,13 +13096,15 @@
       "id": "official-news-auto-6e45ee38e2b8",
       "slug": "official-news-auto-6e45ee38e2b8",
       "content_type": "news",
-      "title": "Apenas este fim de semana! Faça login entre 6 e 8 de novembro para obter uma Pesquisa temporária gratuita com Machamp Gigamax!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "title": "Pesquisa temporária gratuita com Machamp Gigamax: conclusão até 15 de novembro",
+      "summary": "A janela para receber a pesquisa encerrou em 8/11. Quem a recebeu ao entrar no jogo entre 6/11 às 10h e 8/11 às 23h59 pode concluir as tarefas e resgatar as recompensas até 15/11 às 23h59, sempre no horário local.",
       "category": "official_update",
       "tags": [
-        "Novidade",
-        "Pokémon GO oficial",
-        "Atualização automática"
+        "Oficial",
+        "Pesquisa temporária",
+        "Machamp Gigamax",
+        "Prazo de conclusão",
+        "Natureza Selvagem GO 2026"
       ],
       "source": {
         "name": "Pokémon GO • comunicado oficial",
@@ -12910,29 +13119,174 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Apenas este fim de semana! Faça login entre 6 e 8 de novembro para obter uma Pesquisa temporária gratuita com Machamp Gigamax!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Recebeu a pesquisa do Machamp Gigamax? O prazo termina em 15/11",
+        "summary": "A aquisição encerrou em 8/11. Para quem entrou no prazo e recebeu a pesquisa, tarefas e recompensas devem ser concluídas e resgatadas até 15/11 às 23h59 no horário local.",
         "published_on": "2026-11-06",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • PRAZO ATIVO"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "A pesquisa só foi concedida a quem entrou no Pokémon GO entre 6/11 às 10h e 8/11 às 23h59, no horário local.",
+        "As recompensas anunciadas incluem encontro com Machamp Gigamax, que pode ser Brilhante, Doces Machop, Doces Machop GG e Partículas Max.",
+        "A publicação oficial consultada não lista as tarefas individuais; nenhuma etapa foi inferida."
       ],
       "notifications": {
         "enabled": false,
-        "reason": "A notícia não tem horário de evento validado."
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-11-06",
-      "updated_at": "2026-11-06T00:00:00+00:00",
+      "verified_at": "2026-11-11",
+      "updated_at": "2026-11-11T07:36:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
+        "collector_source_id": "oficial-https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
+        "collector_queue_file": "queue/pending/2026-11-06/oficial-noticia-355c97193d01.json",
+        "acquisition_window_closed": true,
+        "completion_window_active_until": "2026-11-15T23:59:00",
+        "individual_tasks_not_published": true
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/gowildarea-2026-timed-research",
+          "confidence": "official"
+        }
+      ],
+      "related_event_ids": [
+        "2026-11-06-gmax-machamp-research-acquisition",
+        "2026-11-06-gmax-machamp-research-completion"
+      ]
+    },
+    {
+      "id": "2026-11-06-gmax-machamp-research-acquisition",
+      "slug": "2026-11-06-gmax-machamp-research-acquisition",
+      "title": "Janela de recebimento — Pesquisa do Machamp Gigamax",
+      "summary": "Janela oficial para entrar no jogo e receber a Pesquisa temporária gratuita. Esta etapa encerrou em 8/11 às 23h59 no horário local.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Pesquisa temporária",
+        "Machamp Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/gowildarea-2026-timed-research",
+          "confidence": "official"
+        }
+      ],
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "calendar_event": true,
+        "individual_tasks_not_published": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-06T10:00:00-03:00",
+        "end_local": "2026-11-08T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T10:00:00-03:00",
+        "end_brazil": "2026-11-08T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "notes": [
+        "Era necessário entrar no jogo durante esta janela para receber a pesquisa.",
+        "O encerramento desta janela não remove o prazo separado de conclusão para quem já recebeu a pesquisa."
+      ],
+      "related_news_id": "official-news-auto-6e45ee38e2b8"
+    },
+    {
+      "id": "2026-11-06-gmax-machamp-research-completion",
+      "slug": "2026-11-06-gmax-machamp-research-completion",
+      "title": "Prazo para concluir — Pesquisa do Machamp Gigamax",
+      "summary": "Somente para quem recebeu a pesquisa até 8/11: concluir tarefas e resgatar recompensas até 15/11 às 23h59 no horário local.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Pesquisa temporária",
+        "Machamp Gigamax"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/gowildarea-2026-timed-research",
+          "confidence": "official"
+        }
+      ],
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "calendar_event": true,
+        "individual_tasks_not_published": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-06T10:00:00-03:00",
+        "end_local": "2026-11-15T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-06T10:00:00-03:00",
+        "end_brazil": "2026-11-15T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "pokemon": [
+        {
+          "name": "Machamp Gigamax",
+          "shiny": true
+        }
+      ],
+      "notes": [
+        "A pesquisa precisava ter sido recebida até 8/11 às 23h59.",
+        "Recompensas anunciadas: encontro com Machamp Gigamax (pode ser Brilhante), Doces Machop, Doces Machop GG e Partículas Max.",
+        "As tarefas individuais não foram publicadas na fonte oficial consultada."
+      ],
+      "related_news_id": "official-news-auto-6e45ee38e2b8"
     },
     {
       "id": "2026-11-09-raid-hour-zacian-crowned",
@@ -13203,13 +13557,15 @@
       "id": "official-news-auto-1027790d90b8",
       "slug": "official-news-auto-1027790d90b8",
       "content_type": "news",
-      "title": "Obtenham o dobro de Pokémoedas de bônus com nossa promoção de Black Friday!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "title": "Black Friday: dobro de Pokémoedas de bônus e Caixa Delícias Sazonais",
+      "summary": "Na Loja Online, pacotes de US$ 19,99 ou mais oferecem o dobro das Pokémoedas de bônus até 29/11 às 20h PST. A Caixa Delícias Sazonais tem janela própria até 27/11 às 20h PST.",
       "category": "official_update",
       "tags": [
-        "Novidade",
-        "Pokémon GO oficial",
-        "Atualização automática"
+        "Oficial",
+        "Black Friday",
+        "Loja Online",
+        "Pokémoedas",
+        "Caixa Delícias Sazonais"
       ],
       "source": {
         "name": "Pokémon GO • comunicado oficial",
@@ -13224,41 +13580,181 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Obtenham o dobro de Pokémoedas de bônus com nossa promoção de Black Friday!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Black Friday: dobro de bônus na Loja Online e caixa com prazo menor",
+        "summary": "Pacotes elegíveis dão até 2.000 Pokémoedas de bônus, com uma compra por pacote e cliente. A promoção geral termina em 29/11 às 20h PST; a Caixa Delícias Sazonais sai antes, em 27/11 às 20h PST.",
         "published_on": "2026-11-09",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • LOJA ONLINE"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "Promoção de dobro das Pokémoedas de bônus válida em pacotes de US$ 19,99 ou mais, com até 2.000 moedas de bônus e limite de uma compra por pacote e cliente.",
+        "A Caixa Delícias Sazonais custa 6.095 Pokémoedas e contém 40 Incubadoras, 40 Superincubadoras, 3 Passes de Reide a Distância, 5 Passes de Batalha Premium e 1 Pacote de Partículas Max.",
+        "A caixa pode ser comprada até três vezes e pode não estar disponível em todas as regiões."
       ],
       "notifications": {
         "enabled": false,
-        "reason": "A notícia não tem horário de evento validado."
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-11-09",
-      "updated_at": "2026-11-09T00:00:00+00:00",
+      "verified_at": "2026-11-11",
+      "updated_at": "2026-11-11T07:36:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+        "collector_source_id": "oficial-https://pokemongo.com/pt-BR/news/black-friday-2026",
+        "collector_queue_file": "queue/pending/2026-11-09/oficial-noticia-902c2dcbdc28.json",
+        "distinct_store_windows_preserved": true,
+        "regional_availability_disclosed": true
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/black-friday-2026",
+          "confidence": "official"
+        }
+      ],
+      "related_event_ids": [
+        "2026-11-08-black-friday-double-pokecoins",
+        "2026-11-08-seasonal-delights-box"
+      ]
+    },
+    {
+      "id": "2026-11-08-black-friday-double-pokecoins",
+      "slug": "2026-11-08-black-friday-double-pokecoins",
+      "title": "Black Friday — dobro de Pokémoedas de bônus",
+      "summary": "Pacotes de US$ 19,99 ou mais na Loja Online oferecem o dobro das Pokémoedas de bônus, até 2.000 moedas extras, com uma compra por pacote e cliente.",
+      "category": "official_update",
+      "tags": [
+        "Global",
+        "Loja Online",
+        "Black Friday"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/black-friday-2026",
+          "confidence": "official"
+        }
+      ],
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-1027790d90b8",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "calendar_event": true,
+        "store_offer": true
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-11-08T17:00:00-08:00",
+        "end_local": "2026-11-29T20:00:00-08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-08T22:00:00-03:00",
+        "end_brazil": "2026-11-30T01:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "notes": [
+        "A publicação usa PST para esta janela.",
+        "Até 2.000 Pokémoedas de bônus; uma compra de cada pacote com desconto por cliente."
+      ]
+    },
+    {
+      "id": "2026-11-08-seasonal-delights-box",
+      "slug": "2026-11-08-seasonal-delights-box",
+      "title": "Caixa Delícias Sazonais — janela da Black Friday",
+      "summary": "Caixa de 6.095 Pokémoedas com Incubadoras, passes e Partículas Max; disponível até 27/11 às 20h PST, com limite de três compras e disponibilidade regional.",
+      "category": "official_update",
+      "tags": [
+        "Global",
+        "Loja Online",
+        "Black Friday"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/black-friday-2026",
+          "confidence": "official"
+        }
+      ],
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-1027790d90b8",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "calendar_event": true,
+        "store_offer": true
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-11-08T17:00:00-08:00",
+        "end_local": "2026-11-27T20:00:00-08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-08T22:00:00-03:00",
+        "end_brazil": "2026-11-28T01:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "notes": [
+        "Conteúdo: 40 Incubadoras, 40 Superincubadoras, 3 Passes de Reide a Distância, 5 Passes de Batalha Premium e 1 Pacote de Partículas Max.",
+        "Limite de três compras; a oferta pode não estar disponível em todas as regiões."
+      ]
     },
     {
       "id": "official-news-auto-8a38cf8f2093",
       "slug": "official-news-auto-8a38cf8f2093",
       "content_type": "news",
-      "title": "Marquem no calendário as datas dos Dias Comunitários da próxima Temporada!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "title": "Datas oficiais da próxima Temporada: Dias Comunitários e outros eventos",
+      "summary": "O Pokémon GO confirmou onze datas entre 5/12/2026 e 13/2/2027. Horários, espécies, bônus e demais detalhes ainda não foram anunciados; os registros permanecem marcados como data confirmada.",
       "category": "official_update",
       "tags": [
-        "Novidade",
-        "Pokémon GO oficial",
-        "Atualização automática"
+        "Oficial",
+        "Próxima Temporada",
+        "Datas confirmadas",
+        "Dia Comunitário",
+        "Dia de Reides",
+        "Batalhas Max"
       ],
       "source": {
         "name": "Pokémon GO • comunicado oficial",
@@ -13273,28 +13769,712 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Marquem no calendário as datas dos Dias Comunitários da próxima Temporada!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Próxima Temporada: 11 datas confirmadas, detalhes ainda a anunciar",
+        "summary": "A lista inclui Dias Comunitários, Batalhas Max, Reides, Super Mega Reides e Dia de Chocar. Como a fonte divulga somente datas, o Spidey não atribui horários, espécies ou bônus.",
         "published_on": "2026-11-09",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • DATAS CONFIRMADAS"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "12 e 13/12/2026 formam uma única janela de Dias Comunitários.",
+        "As demais datas são registros separados para preservar cada janela oficial.",
+        "Horários, Pokémon, possibilidade de Brilhante, bônus, tarefas, locais e coordenadas não foram publicados."
       ],
       "notifications": {
         "enabled": false,
-        "reason": "A notícia não tem horário de evento validado."
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-11-09",
-      "updated_at": "2026-11-09T00:00:00+00:00",
+      "verified_at": "2026-11-11",
+      "updated_at": "2026-11-11T07:36:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "collector_source_id": "oficial-https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "collector_queue_file": "queue/pending/2026-11-09/oficial-noticia-5a9eba78468a.json",
+        "date_only": true,
+        "details_unannounced": true
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "related_event_ids": [
+        "2026-12-05-max-battle-day-save-date",
+        "2026-12-12-community-day-save-date",
+        "2026-12-19-raid-day-save-date",
+        "2026-12-26-hatch-day-save-date",
+        "2027-01-02-community-day-classic-save-date",
+        "2027-01-09-super-mega-raid-day-save-date",
+        "2027-01-16-community-day-save-date",
+        "2027-01-23-max-battle-day-save-date",
+        "2027-01-30-super-mega-raid-day-save-date",
+        "2027-02-06-community-day-save-date",
+        "2027-02-13-raid-day-save-date"
+      ]
+    },
+    {
+      "id": "2026-12-05-max-battle-day-save-date",
+      "slug": "2026-12-05-max-battle-day-save-date",
+      "title": "Dia de Batalhas Max",
+      "summary": "Data oficial confirmada para Dia de Batalhas Max. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "max_battle_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-05",
+        "end_date": "2026-12-05",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2026-12-12-community-day-save-date",
+      "slug": "2026-12-12-community-day-save-date",
+      "title": "Dias Comunitários de dezembro",
+      "summary": "Data oficial confirmada para Dias Comunitários de dezembro. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "community_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-12",
+        "end_date": "2026-12-13",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2026-12-19-raid-day-save-date",
+      "slug": "2026-12-19-raid-day-save-date",
+      "title": "Dia de Reides",
+      "summary": "Data oficial confirmada para Dia de Reides. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "raid_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-19",
+        "end_date": "2026-12-19",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2026-12-26-hatch-day-save-date",
+      "slug": "2026-12-26-hatch-day-save-date",
+      "title": "Dia de Chocar",
+      "summary": "Data oficial confirmada para Dia de Chocar. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "hatch_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-26",
+        "end_date": "2026-12-26",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2027-01-02-community-day-classic-save-date",
+      "slug": "2027-01-02-community-day-classic-save-date",
+      "title": "Dia Comunitário Clássico",
+      "summary": "Data oficial confirmada para Dia Comunitário Clássico. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "community_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-01-02",
+        "end_date": "2027-01-02",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2027-01-09-super-mega-raid-day-save-date",
+      "slug": "2027-01-09-super-mega-raid-day-save-date",
+      "title": "Dia de Reides Super Mega",
+      "summary": "Data oficial confirmada para Dia de Reides Super Mega. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "raid_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-01-09",
+        "end_date": "2027-01-09",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2027-01-16-community-day-save-date",
+      "slug": "2027-01-16-community-day-save-date",
+      "title": "Dia Comunitário",
+      "summary": "Data oficial confirmada para Dia Comunitário. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "community_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-01-16",
+        "end_date": "2027-01-16",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2027-01-23-max-battle-day-save-date",
+      "slug": "2027-01-23-max-battle-day-save-date",
+      "title": "Dia de Batalhas Max",
+      "summary": "Data oficial confirmada para Dia de Batalhas Max. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "max_battle_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-01-23",
+        "end_date": "2027-01-23",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2027-01-30-super-mega-raid-day-save-date",
+      "slug": "2027-01-30-super-mega-raid-day-save-date",
+      "title": "Dia de Reides Super Mega",
+      "summary": "Data oficial confirmada para Dia de Reides Super Mega. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "raid_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-01-30",
+        "end_date": "2027-01-30",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2027-02-06-community-day-save-date",
+      "slug": "2027-02-06-community-day-save-date",
+      "title": "Dia Comunitário",
+      "summary": "Data oficial confirmada para Dia Comunitário. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "community_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-02-06",
+        "end_date": "2027-02-06",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
+      }
+    },
+    {
+      "id": "2027-02-13-raid-day-save-date",
+      "slug": "2027-02-13-raid-day-save-date",
+      "title": "Dia de Reides",
+      "summary": "Data oficial confirmada para Dia de Reides. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "category": "raid_day",
+      "tags": [
+        "Global",
+        "Data confirmada",
+        "Próxima Temporada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-02-13",
+        "end_date": "2027-02-13",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notes": [
+        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
+        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-11",
+      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "audit": {
+        "classification": "official_save_the_date",
+        "calendar_event": true,
+        "date_confirmed_details_unannounced": true
       }
     }
   ]

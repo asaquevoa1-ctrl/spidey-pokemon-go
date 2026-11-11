@@ -8,14 +8,17 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1569482242378563646",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
+  "status": "curated_operational_no_public_story",
+  "etapa_editorial": "completed",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
-  "proibir_fallback": true,
-  "created_at_utc": "2026-11-10T03:50:35.414629+00:00"
+  "proibir_fallback": false,
+  "created_at_utc": "2026-11-10T03:50:35.414629+00:00",
+  "curated_at_utc": "2026-11-11T10:36:00+00:00",
+  "curated_path": "queue/curated/apk-pokemon-go-3b8ecc5a1a0b.json",
+  "curation_note": "Conclusão operacional de rollout da versão 0.435.2, sem anúncio de recurso, evento, bônus ou data de jogabilidade; não vira notícia pública nem calendário."
 }
