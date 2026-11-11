@@ -1,7 +1,7 @@
 import copy
 import json
 import unittest
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from unittest.mock import patch
 
@@ -11,6 +11,15 @@ from scripts.build_spidey_weekly import build, load, EVENTS_FILE, load_art_maste
 
 
 class WeeklyPublicationTests(unittest.TestCase):
+    def test_timed_event_is_visible_through_its_exact_end_and_hidden_afterward(self):
+        event_id = "2026-11-11-max-hour-registeel"
+        at_end = build(date(2026, 11, 11), reference=datetime(2026, 11, 11, 19, 0, tzinfo=weekly_module.BR))
+        after_end = build(date(2026, 11, 11), reference=datetime(2026, 11, 11, 19, 0, 0, 1, tzinfo=weekly_module.BR))
+        at_end_ids = {item["id"] for group in at_end["sections"].values() for item in group}
+        after_end_ids = {item["id"] for group in after_end["sections"].values() for item in group}
+        self.assertIn(event_id, at_end_ids)
+        self.assertNotIn(event_id, after_end_ids)
+
     def test_confirmed_date_with_unknown_hours_is_visible_without_an_invented_activity_window(self):
         # Exercise the archived NFL date-only example without restoring it to production data.
         fixture = json.loads(Path("tests/fixtures/nfl-retired-20261011.json").read_text(encoding="utf-8"))["event"]
