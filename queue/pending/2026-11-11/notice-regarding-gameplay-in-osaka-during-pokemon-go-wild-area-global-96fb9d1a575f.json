@@ -8,14 +8,20 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1570031332187176995",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
+  "status": "curated",
+  "etapa_editorial": "curadoria_editorial_concluida",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
-  "proibir_fallback": true,
-  "created_at_utc": "2026-11-11T15:24:58.549708+00:00"
+  "proibir_fallback": false,
+  "created_at_utc": "2026-11-11T15:24:58.549708+00:00",
+  "prior_automated_status": "aguardando_arte_chatgpt",
+  "curated_path": "queue/curated/notice-regarding-gameplay-in-osaka-during-pokemon-go-wild-area-global-96fb9d1a575f.json",
+  "app_event_ids": [
+    "official-news-auto-2ff7990f7c9c"
+  ],
+  "curated_at_utc": "2026-11-11T16:46:00+00:00"
 }
