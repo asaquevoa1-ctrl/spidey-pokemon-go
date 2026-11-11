@@ -1,0 +1,17 @@
+{
+  "audit_type": "github_pages_stale_build_retry",
+  "recorded_at_utc": "2026-11-11T23:03:00+00:00",
+  "repository": "asaquevoa1-ctrl/spidey-pokemon-go",
+  "hosting": "GitHub Pages",
+  "source_pr": 282,
+  "merged_change_sha": "da12c1bdddbe3d9d30806025858636ae298ca06d",
+  "failed_pages_run": 43116502178,
+  "build_job": "success",
+  "deploy_job": "failure",
+  "failed_step": "Impedir publicação de pacote ultrapassado",
+  "reason": "A automação semanal criou um sucessor de main durante o build; o deploy recusou corretamente publicar o pacote do SHA anterior.",
+  "main_successor_sha": "251ca736e4377a00da00e09340328084e4e7a6f6",
+  "retry_policy": "Executar um novo ciclo normal de PR e Pages sobre o sucessor atual, sem desativar nem contornar a trava de SHA.",
+  "push_triggered": false,
+  "physical_android_tested": false
+}
