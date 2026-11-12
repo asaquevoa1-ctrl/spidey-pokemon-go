@@ -662,3 +662,14 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Causa identificada: `WEEK_IMAGE` apontava para CDN remoto indisponível e o `error` substituía o banner por `solid-as-steel.webp`; o CSS da mídia reservava altura grande e `object-fit: contain` ampliava os espaços mortos.
 - Correção: remover URL remota e fallback com rótulo genérico; criar composição responsiva, compacta e acessível usando **dois arquivos oficiais já locais** (`solid-as-steel.webp` e `daring-as-dragons.webp`), com crédito editorial proporcional e título próximo da mídia. Não afirmar que as duas imagens sejam um pôster autoral Premium aprovado para a Semana.
 - Não alterar pôster aprovado do Global, calendário, horários por fuso, histórico do México e a lista de 64 coordenadas. Atualizar versões no HTML, cache PWA e testes de navegador da Semana para exigir duas imagens carregadas, altura reduzida e título visível na primeira tela Android.
+
+
+## 12/11/2026 — Detalhes oficiais da Área Selvagem Global, Minior e fronteiras de encerramento
+
+- Revisadas as páginas completas oficiais PT-BR/EN da Área Selvagem Global, do anúncio complementar de recursos e de Minior. A programação e os IDs existentes foram preservados; nenhuma janela ou evento duplicado foi criado.
+- A página Global passa a expor habitats Aço/Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso, ataques em destaque, limites e bônus por ingresso, uso/expiração das Bolas Safári GO, transferência ao HOME como Strange Ball, grupos privados de Batalha Dinamax, Efeitos de Aventura no lobby e pose de avatar.
+- Minior mantém Leônidas e Geminidas como janelas separadas da mesma história. Núcleo Verde nas Oriônidas e 1.000 de Poeira Estelar por captura ficam identificados como confirmação comunitária (Leek Duck/GO Hub); o anúncio oficial não quantifica a Poeira Estelar nem identifica as cores futuras. Datas de 2027 sem ano explícito na página oficial não foram inferidas.
+- Aviso oficial de sobreposição de eventos foi acrescentado a Minior. Diferença de tradução do limite de PS foi preservada em auditoria: PT-BR diz 50% ou menos; EN diz abaixo de 50%.
+- Encerramento de eventos com hora é exclusivo: remover da Semana e de Novidades quando agora >= fim. Eventos sem hora usam o primeiro instante do dia seguinte no fuso IANA do próprio evento como limite exclusivo.
+- Os testes cobrem 18:59:59/19:00 para a Hora Max de Regidrago, 19:59:59/20:00 para Into the Wild, a fronteira de Londres em Europe/London e o agrupamento único de Minior.
+- Nenhuma arte foi criada ou substituída. Pôster Global aprovado, S cósmico, coordenadas, rotas, GPX, catálogos, Pokédex, PvP, Push e Amigos/chat permanecem intocados.
