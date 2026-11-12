@@ -105,3 +105,13 @@ test('LAIC remains one official São Paulo local event with separate daily sessi
   assert.deepEqual(event.locations, []);
   assert.equal(event.gpx.enabled, false);
 });
+
+test('Minior uses one news story linked to two separate calendar windows', () => {
+  const leonids = byId('2026-11-minior-leonids');
+  const geminids = byId('2026-12-minior-geminids');
+  assert.ok(leonids?.news);
+  assert.equal(geminids?.news, undefined);
+  assert.ok(leonids.related_event_ids.includes(geminids.id));
+  assert.equal(leonids.schedule.start_local, '2026-11-14T17:00:00-03:00');
+  assert.equal(geminids.schedule.start_local, '2026-12-11T17:00:00-03:00');
+});
