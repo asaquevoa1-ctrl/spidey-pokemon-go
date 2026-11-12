@@ -434,7 +434,7 @@
       {
         "id": "2026-11-09-into-the-wild-go-pass",
         "title": "Passe GO: Natureza Selvagem — progressão",
-        "summary": "Colete Pontos GO e avance no Passe de 9/11 às 10h até 15/11 às 18h no horário local. A Tampinha Prateada pertence à trilha Deluxe.",
+        "summary": "Colete Pontos GO de 9/11 às 10h até 15/11 às 18h no horário local. No Ranque 25, ovos colocados em Incubadoras durante o evento exigem metade da distância; a Tampinha Prateada pertence à trilha Deluxe.",
         "category": "research",
         "tags": [
           "Global",
@@ -615,8 +615,8 @@
     "events_without_weekly_art": 11,
     "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-12T01:47:35.083613-03:00",
-    "current_items_filtered_at": "2026-11-12T01:47:35.068024-03:00",
+    "generated_at": "2026-11-12T03:27:55.846234-03:00",
+    "current_items_filtered_at": "2026-11-12T03:27:55.816041-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

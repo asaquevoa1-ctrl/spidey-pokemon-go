@@ -1,0 +1,30 @@
+{
+  "audit_id": "into-the-wild-pass-detail-20261112",
+  "base_main_sha": "5e45f185c5d646b1458090bfa2aa774873c1ebc8",
+  "checked_at": "2026-11-12T03:25:00-03:00",
+  "canonical_story_id": "2026-11-09-into-the-wild",
+  "event_id": "2026-11-09-into-the-wild-go-pass",
+  "sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+    "https://pokemongo.com/news/into-the-wild-2026"
+  ],
+  "corrections": [
+    "Replaced broad reward examples that were not stated in the Into the Wild reward list.",
+    "Added the Purple GO Wild Area 2026 Tee to the free track.",
+    "Added the exact Rank 25 half Hatch Distance bonus.",
+    "Added exact Deluxe Rank 1, Rank 2 and Rank 3 milestone bonuses."
+  ],
+  "calendar": {
+    "new_event_created": false,
+    "existing_window_preserved": true,
+    "existing_claim_deadline_preserved": true,
+    "existing_silver_bottle_cap_deadline_preserved": true
+  },
+  "preservation": {
+    "approved_art_changed": false,
+    "gpx_changed": false,
+    "push_dispatched": false,
+    "friends_or_chat_changed": false,
+    "physical_android_test_claimed": false
+  }
+}

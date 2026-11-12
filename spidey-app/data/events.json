@@ -1927,7 +1927,7 @@
       "id": "2026-11-09-into-the-wild-go-pass",
       "slug": "2026-11-09-into-the-wild-go-pass",
       "title": "Passe GO: Natureza Selvagem — progressão",
-      "summary": "Colete Pontos GO e avance no Passe de 9/11 às 10h até 15/11 às 18h no horário local. A Tampinha Prateada pertence à trilha Deluxe.",
+      "summary": "Colete Pontos GO de 9/11 às 10h até 15/11 às 18h no horário local. No Ranque 25, ovos colocados em Incubadoras durante o evento exigem metade da distância; a Tampinha Prateada pertence à trilha Deluxe.",
       "category": "research",
       "tags": [
         "Global",
@@ -1964,11 +1964,15 @@
         "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-11-11",
+      "verified_at": "2026-11-12",
       "related_news_id": "2026-11-09-into-the-wild",
       "audit": {
         "classification": "official_announcement_editorially_verified",
-        "calendar_event": true
+        "calendar_event": true,
+        "official_article_read_in_full": true,
+        "reward_lists_reconciled": true,
+        "milestone_bonuses_reconciled": true,
+        "reconciled_at": "2026-11-12T03:25:00-03:00"
       },
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
@@ -1981,9 +1985,12 @@
       "notes": [
         "O Passe gratuito é recebido automaticamente. A trilha Deluxe é paga e contém recompensas adicionais.",
         "Há limite diário de Pontos GO de 9 a 13/11; não há limite em 14 e 15/11.",
-        "Trilha gratuita: Incenso, MTs, Doces, Incubadoras, Poeira Estelar, PE, Poké Bolas, encontros temáticos e Doces GG.",
-        "Trilha Deluxe: Tampinha Prateada, encontros adicionais com Meltan Dinamax, Passe de Reide Premium, Incubadora, Partícula Max, Doces GG adicionais e Calças Duraludon.",
-        "Ao alcançar o ranque principal, há bônus de Doces por captura; os ranques Ultra e Mestre ampliam Doces e chance de Doce GG por captura."
+        "Trilha gratuita: encontro com Meltan Dinamax, encontros temáticos, Camiseta da Área Selvagem GO 2026 (roxa), Poeira Estelar, PE, Poké Bolas e Doces.",
+        "Trilha Deluxe: Tampinha Prateada, encontros adicionais com Meltan Dinamax, Calças Duraludon e itens premium, como Incenso e Ovo da Sorte.",
+        "Ranque 25 do Passe: metade da distância para chocar ovos colocados em Incubadoras durante o evento.",
+        "Deluxe, Ranque 1: 5.000 PE adicionais por reide concluída e 5.000 PE adicionais por Batalha Max concluída.",
+        "Deluxe, Ranque 2: custo de Partículas Max reduzido a 3/4 para desbloquear e fortalecer Movimentos Max.",
+        "Deluxe, Ranque 3: um Doce adicional por reide e por Batalha Max; para Treinadores de nível 31 ou superior, também um Doce GG adicional em cada uma dessas atividades."
       ]
     },
     {

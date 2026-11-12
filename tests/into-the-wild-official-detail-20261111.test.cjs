@@ -59,5 +59,10 @@ test('fontes oficiais usam URLs canônicas e o Passe registra as recompensas pub
   const passText = byId('2026-11-09-into-the-wild-go-pass').notes.join(' ');
   assert.match(passText, /Trilha gratuita/);
   assert.match(passText, /Trilha Deluxe/);
-  assert.match(passText, /ranques Ultra e Mestre/);
+  assert.match(passText, /Camiseta da Área Selvagem GO 2026 \(roxa\)/);
+  assert.match(passText, /metade da distância/);
+  assert.match(passText, /5\.000 PE adicionais por reide/);
+  assert.match(passText, /custo de Partículas Max reduzido a 3\/4/);
+  assert.match(passText, /Doce GG adicional/);
+  assert.doesNotMatch(passText, /MTs|Passe de Reide Premium|ranques Ultra e Mestre/);
 });
