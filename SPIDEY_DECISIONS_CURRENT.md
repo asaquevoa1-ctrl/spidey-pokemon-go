@@ -671,7 +671,7 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Minior mantém Leônidas e Geminidas como janelas separadas da mesma história. Núcleo Verde nas Oriônidas e 1.000 de Poeira Estelar por captura ficam identificados como confirmação comunitária (Leek Duck/GO Hub); o anúncio oficial não quantifica a Poeira Estelar nem identifica as cores futuras. Datas de 2027 sem ano explícito na página oficial não foram inferidas.
 - Aviso oficial de sobreposição de eventos foi acrescentado a Minior. Diferença de tradução do limite de PS foi preservada em auditoria: PT-BR diz 50% ou menos; EN diz abaixo de 50%.
 - Encerramento de eventos com hora é exclusivo: remover da Semana e de Novidades quando agora >= fim. Eventos sem hora usam o primeiro instante do dia seguinte no fuso IANA do próprio evento como limite exclusivo.
-- Os testes cobrem 18:59:59/19:00 para a Hora Max de Regidrago, 19:59:59/20:00 para Into the Wild, a fronteira de Londres em Europe/London e o agrupamento único de Minior.
+- Os testes cobrem 12/11 18:59:59/19:00 para a Hora Max de Regidrago, 13/11 19:59:59/20:00 para Into the Wild, a fronteira de Londres em Europe/London, a data local em Asia/Seoul e o agrupamento único de Minior.
 - Nenhuma arte foi criada ou substituída. Pôster Global aprovado, S cósmico, coordenadas, rotas, GPX, catálogos, Pokédex, PvP, Push e Amigos/chat permanecem intocados.
 
 
