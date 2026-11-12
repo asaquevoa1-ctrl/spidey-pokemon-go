@@ -23,13 +23,13 @@
       },
       "verification_sources": [
         {
-          "name": "Pokémon GO • datas oficiais da próxima Temporada",
+          "name": "Pokémon GO • comunicado oficial em português (data de Reides)",
           "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
           "confidence": "official"
         },
         {
-          "name": "Pokémon GO • retorno oficial anterior de Mewtwo de Armadura em setembro de 2026 (não confirma dezembro)",
-          "url": "https://pokemongo.com/en/news/megafinale-2026-armored-mewtwo",
+          "name": "Pokémon GO • comunicado oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
           "confidence": "official"
         }
       ],
@@ -42,7 +42,7 @@
       },
       "news": {
         "title": "Rumor de Mewtwo de Armadura em 19/12: data de Dia de Reides confirmada, espécie não",
-        "summary": "A fonte oficial confirmou apenas que 19/12 terá um Dia de Reides. Mewtwo de Armadura, Pikachu Clone e os iniciais Clone continuam sem confirmação para essa data.",
+        "summary": "O dia 19/12 foi confirmado oficialmente como Dia de Reides. Mewtwo de Armadura, Pokémon Clone e o nome “Clone Special Raid Day” continuam sem confirmação e não foram adicionados ao calendário.",
         "published_on": "2026-11-03",
         "label": "HISTÓRICO • SUBSTITUÍDO POR DATA OFICIAL"
       },
@@ -63,11 +63,21 @@
         "reported_date_not_confirmed": false,
         "official_date_confirmed": true,
         "species_still_unconfirmed": true,
-        "historical_record_preserved": true
+        "historical_record_preserved": true,
+        "editorial_detail_pending": false,
+        "official_confirmation_url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "superseded_by_event_ids": [
+          "2026-12-19-raid-day-save-date",
+          "official-news-auto-8a38cf8f2093"
+        ]
       },
-      "updated_at": "2026-11-11T07:36:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "superseded_by": "2026-12-19-raid-day-save-date",
-      "superseded_at": "2026-11-11T07:36:00-03:00"
+      "superseded_at": "2026-11-11T07:36:00-03:00",
+      "related_event_ids": [
+        "2026-12-19-raid-day-save-date",
+        "official-news-auto-8a38cf8f2093"
+      ]
     },
     {
       "id": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
@@ -277,7 +287,7 @@
       "slug": "2026-10-26-eternatus-teaser-unconfirmed",
       "content_type": "news",
       "title": "Eternatus vai voltar? Teaser oficial e rumores para novembro",
-      "summary": "O Pokémon GO publicou um teaser de Eternamax Eternatus em 26/10. Dataminers encontraram uma possível janela de 14 a 23/11, mas a data, o método de obtenção e as recompensas ainda NÃO foram confirmados.",
+      "summary": "Registro histórico do teaser de 26/10. O anúncio oficial posterior confirmou Eternatus em Trilhas Dinamax (16–23/11) e Eternamax em Batalhas Max em 21/11, das 11h às 14h locais. A previsão comunitária de 14–23/11 não era a janela oficial e foi substituída.",
       "category": "community_discovery",
       "tags": [
         "Novidade",
@@ -296,18 +306,13 @@
       },
       "verification_sources": [
         {
-          "name": "Pokémon GO • perfil oficial com teaser em 26/10",
-          "url": "https://x.com/PokemonGoApp",
-          "confidence": "official_social_post"
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
         },
         {
-          "name": "PoGoMate • data mining GO Wild Area: Lead Out",
-          "url": "https://pogomate.com/en/datamining/eternatus-wild-area-lead-out-2026",
-          "confidence": "community_unconfirmed"
-        },
-        {
-          "name": "Pokémon GO • Wild Area Global confirmado 14–15/11",
-          "url": "https://pokemongo.com/en/gowildarea/global",
+          "name": "Pokémon GO • anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026",
           "confidence": "official"
         }
       ],
@@ -319,19 +324,15 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Eternatus no teaser oficial: retorno ainda sem data",
-        "summary": "Teaser mostra Eternamax Eternatus. A janela 14–23/11 circula em datamining, não em anúncio oficial. Como participar e quais recompensas receberemos ainda são incógnitas.",
+        "title": "Teaser de Eternatus: histórico atualizado após a confirmação oficial",
+        "summary": "O anúncio oficial confirmou o retorno de Eternatus em Trilhas Dinamax (16–23/11) e a janela própria de Eternamax em 21/11, 11h–14h locais. A previsão anterior de 14–23/11 foi substituída.",
         "published_on": "2026-10-26",
-        "label": "RUMOR / A CONFIRMAR"
+        "label": "HISTÓRICO • SUBSTITUÍDO POR ANÚNCIO OFICIAL"
       },
       "notes": [
-        "OFICIAL: a conta Pokémon GO publicou em 26/10/2026 um teaser de 15 segundos com Eternamax Eternatus; ainda não confirmou a data ou formato de seu retorno.",
-        "Vazamento de configuração remota aponta o nome GO Wild Area: Lead Out e uma janela de 14 a 23 de novembro de 2026. Isso NÃO comprova que Eternatus estará disponível durante todo o período.",
-        "Separadamente, Pokémon GO Wild Area GLOBAL foi anunciado oficialmente para 14 e 15 de novembro, das 10h às 18h locais. Não ampliar esse evento oficial até 23/11.",
-        "Não há confirmação de segunda captura para quem já possui Eternatus, Passe GO, Batalhas Max, número de doces ou doces GG, nem disponibilidade Brilhante.",
-        "Não considerar o teaser confirmação de Eternatus Brilhante, da possibilidade de capturar Eternamax nem de uma recompensa garantida.",
-        "Esta notícia fica apenas nas Novidades do Spidey. Ela NÃO ocupa o Calendário, NÃO cria rota FLY, GPX ou alerta de evento confirmado.",
-        "Quando o anúncio completo sair, revisar as fontes e criar novo cadastro verificado sem transformar rumor antigo em fato."
+        "Registro histórico: em 26/10, uma publicação comunitária relatou um teaser oficial de Eternamax Eternatus e uma previsão de datamining para 14–23/11. A janela rumorada não foi confirmada oficialmente.",
+        "Confirmação posterior: o anúncio oficial definiu Trilhas Dinamax de 16/11 às 10h a 23/11 às 20h locais e Eternamax em Batalhas Max em 21/11, das 11h às 14h locais.",
+        "O teaser e a previsão antiga permanecem arquivados para histórico; consulte os eventos oficiais relacionados para datas e recompensas confirmadas."
       ],
       "pokemon": [
         {
@@ -345,16 +346,28 @@
       },
       "status": "archived",
       "verified_at": "2026-10-26",
-      "updated_at": "2026-10-26T18:10:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "audit": {
-        "classification": "official_teaser_plus_datamining",
+        "classification": "community_report_of_official_teaser_superseded_by_official_announcement",
         "date_range_claim": "2026-11-14 to 2026-11-23",
         "date_range_verified_officially": false,
-        "related_official_event": "2026-11-go-wild-area-global",
-        "not_a_calendar_event": true
+        "related_official_event": "2026-11-16-dynamax-trails",
+        "not_a_calendar_event": true,
+        "editorial_detail_pending": false,
+        "superseded_by_event_ids": [
+          "2026-11-16-dynamax-trails",
+          "2026-11-21-eternamax-eternatus-max-battles"
+        ],
+        "official_confirmation_url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+        "reported_date_range_superseded": true,
+        "historical_record_preserved": true
       },
       "superseded_by": "2026-11-16-dynamax-trails",
-      "superseded_at": "2026-10-28T18:10:35-03:00"
+      "superseded_at": "2026-10-28T18:10:35-03:00",
+      "related_event_ids": [
+        "2026-11-16-dynamax-trails",
+        "2026-11-21-eternamax-eternatus-max-battles"
+      ]
     },
     {
       "id": "2026-10-27-dia-de-muertos-mexico",
@@ -2187,8 +2200,8 @@
         "Batalhas Max"
       ],
       "source": {
-        "name": "Pokémon GO • anúncio oficial",
-        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -2234,7 +2247,12 @@
         "As espécies temáticas podem aparecer na natureza; isso não significa encontrar Pokémon na forma Dinamax fora das Batalhas Max. Lendários e Míticos ficam fora dessa lista comum.",
         "Capturas com Pokémon GO Plus + ou Explorer Gadget não dão as Partículas Max desse bônus.",
         "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais.",
-        "No guia de Batalhas Max, a seleção visual de Pokémon é comunitária e indicativa; não há confirmação oficial de quais estarão disponíveis a cada dia ou da taxa de Fundo Especial."
+        "No guia de Batalhas Max, a seleção visual de Pokémon é comunitária e indicativa; não há confirmação oficial de quais estarão disponíveis a cada dia ou da taxa de Fundo Especial.",
+        "Pesquisa de Campo: tarefas temáticas podem render Poeira Estelar, Doces de Eternatus e encontros com Pokémon do evento.",
+        "Adesivos temáticos: podem ser obtidos ao girar Poképaradas, abrir Presentes, comprar na loja do jogo e progredir no Passe GO.",
+        "Passe GO gratuito: recompensas incluem encontros com Pokémon Dinamax temáticos com Fundo Especial, um encontro com Eternatus ou 100 Doces se ele já tiver sido capturado, Doces e Doces GG de Eternatus, Doce Raro, Poeira Estelar e adesivos.",
+        "Passe GO Deluxe: acrescenta encontros com mais Pokémon Dinamax com Fundo Especial, mais Doces e Doces GG de Eternatus, Frutas Caxí Prateadas, Doce Raro GG e adesivos.",
+        "Preço anunciado do Deluxe: US$ 4,99 ou equivalente local; a disponibilidade pode variar por região. A compra pela Loja online inclui 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas como brinde."
       ],
       "notifications": {
         "enabled": false,
@@ -2243,6 +2261,16 @@
       "status": "published",
       "verified_at": "2026-10-28",
       "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        },
         {
           "name": "Pokémon GO • anúncio oficial",
           "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
@@ -2257,10 +2285,10 @@
           ]
         }
       ],
-      "updated_at": "2026-10-28T20:25:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro. Os Dynamax não lendários já lançados poderão retornar às Batalhas Max, com chance de Fundo Especial após a captura.",
+        "summary": "16–23/11: Pokémon Dinamax já lançados podem retornar às Batalhas Max, exceto Lendários e Míticos, com chance de Fundo Especial. Pesquisa de Campo, adesivos e recompensas do Passe GO; Eternamax em janela própria em 21/11, 11h–14h locais.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
@@ -2368,6 +2396,20 @@
             "confidence": "community"
           }
         ]
+      },
+      "audit": {
+        "classification": "official_announcement_full_text_reviewed",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+        "english_fulltext_url": "https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026",
+        "full_text_reviewed_at": "2026-11-12",
+        "details_completed": [
+          "field_research_rewards",
+          "event_stickers",
+          "go_pass_free_rewards",
+          "go_pass_deluxe_rewards",
+          "web_store_purchase_bonus"
+        ]
       }
     },
     {
@@ -2386,8 +2428,8 @@
         "Anúncio oficial"
       ],
       "source": {
-        "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
-        "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
         "confidence": "official"
       },
       "schedule": {
@@ -2434,16 +2476,19 @@
         "Módulos Atrair comuns duram 1 hora, com Pawniard atraído e chance aumentada de Brilhante, das 14h às 21h locais.",
         "1 Troca Especial adicional (máximo de 2), das 14h às 21h locais.",
         "Trocas exigem 50% menos Poeira Estelar, das 14h às 21h locais.",
-        "Até as 21h, evolua Bisharp em Kingambit após vencer apenas 1 chefe de reide do tipo Sombrio ou Aço."
+        "Até as 21h, evolua Bisharp em Kingambit após derrotar 1 chefe de Reide do tipo Sombrio ou Aço com Bisharp como seu companheiro."
       ],
       "notes": [
         "21 de novembro, sábado | Das 14h às 17h, horário local. Pawniard aparece com mais frequência na natureza. Há chance de encontrar Pawniard Brilhante ou com Fundo Especial.",
         "Até as 21h | Evolua Bisharp para Kingambit e receba o ataque carregado Kowtow Cleave. Potência oficial: 75 em Batalhas de Treinador e 85 em Ginásios e reides.",
-        "Evolução facilitada | Das 14h às 21h, basta derrotar 1 chefe de reide Sombrio ou de tipo Aço para atender o requisito temporário; isso vale para todos os seus Bisharp, mesmo que não sejam seus companheiros.",
+        "Evolução facilitada | Das 14h às 21h, derrote 1 chefe de Reide do tipo Sombrio ou Aço com Bisharp como seu companheiro para cumprir o requisito temporário e evoluí-lo para Kingambit. A correção oficial de 28/10 substitui a orientação anterior que dispensava Bisharp de ser companheiro.",
         "Prepare os Ovos | Para aproveitar o bônus de 1/4, coloque os Ovos em incubadoras dentro das três horas do Dia Comunitário.",
         "Horário estendido | Módulos Atrair comuns continuam oferecendo altas chances de Pawniard das 14h às 21h, mantendo a chance aumentada de Brilhante e Fundo Especial. Cada módulo dura 1 hora.",
         "Pesquisas de campo | Capturar Pawniard pode render Poeira Estelar, Ultra Bolas e encontros extras com Pawniard, inclusive chance de Fundo Especial.",
-        "Ingresso opcional | A Pesquisa Especial custa US$ 1,99 ou valor equivalente no Brasil. Entre as recompensas anunciadas estão 3 encontros com Fundo Especial, encontros extras, 1 Passe de Batalha Premium e 1 Doce Raro GG."
+        "Ingresso opcional | A Pesquisa Especial custa US$ 1,99 ou valor equivalente no Brasil. Entre as recompensas anunciadas estão 3 encontros com Fundo Especial, encontros extras, 1 Passe de Batalha Premium e 1 Doce Raro GG.",
+        "Pesquisa Especial: não inclui medalha no jogo nem história. O ingresso pode ser presenteado a amizades no nível Grande Amizade ou superior, sujeito às restrições oficiais.",
+        "Check-in em evento de Embaixador da Comunidade: pode liberar uma Pesquisa Temporária com encontros adicionais de Pawniard com Fundo Especial e recompensas de itens premium.",
+        "Ultracombo do Ingresso na Loja online: pelo preço equivalente ao ingresso da Pesquisa Especial, inclui o ingresso e cinco Ultra Bolas sem custo adicional."
       ],
       "notifications": {
         "enabled": true,
@@ -2454,6 +2499,16 @@
       "status": "published",
       "verified_at": "2026-10-21",
       "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/communityday-november-2026-pawniard",
+          "confidence": "official"
+        },
         {
           "name": "Pokémon GO • anúncio oficial de Pawniard em novembro",
           "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
@@ -2469,21 +2524,33 @@
       "public_summary": "No dia 21/11, capture Pawniard das 14h às 17h e evolua Bisharp até 21h para conseguir Kingambit com Kowtow Cleave. Bônus e requisitos já confirmados pelo Pokémon GO.",
       "news": {
         "title": "CONFIRMADO: Pawniard é o Dia Comunitário de novembro!",
-        "summary": "21/11, 14h–17h: Pawniard Shiny, 1/4 de distância dos Ovos e 2× Doces. Kingambit aprende Kowtow Cleave ao evoluir até 21h. Veja como aproveitar o requisito reduzido da evolução.",
+        "summary": "21/11, 14h–17h. Para cumprir o requisito temporário de evolução, Bisharp precisa ser seu companheiro ao derrotar 1 chefe de Reide Sombrio ou Aço; a janela estendida vai até 21h. Pesquisa de Campo e check-in de Embaixador podem render encontros com Fundo Especial.",
         "published_on": "2026-10-21",
         "source": {
-          "name": "Pokémon GO • anúncio oficial",
-          "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
           "confidence": "official"
         }
       },
-      "updated_at": "2026-10-21T22:24:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "art": {
         "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
         "web_width": 1024,
         "web_height": 1536,
         "web_sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
         "alt": "Arte Premium do Dia Comunitário de Pawniard, 21 de novembro de 2026: Pawniard e Kingambit, Bônus, Kowtow Cleave e evolução até 21h."
+      },
+      "audit": {
+        "classification": "official_announcement_updated_after_october_28_correction",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
+        "full_text_reviewed_at": "2026-11-12",
+        "official_correction": {
+          "date": "2026-10-28",
+          "field": "Bisharp_buddy_requirement",
+          "corrected": true,
+          "source_url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard"
+        }
       }
     },
     {
@@ -2553,7 +2620,12 @@
         "PESQUISA DE CAMPO • 24/11 10h a 26/11 10h: Applin pode aparecer como recompensa; Brilhante possível.",
         "PESQUISA DE CAMPO • 26/11 10h a 30/11 20h: Gengar com fantasia do Festival Assustador, Drifblim com fantasia Travessura de Halloween e Bramblin podem aparecer.",
         "O Passe GO: Chamados do Crepúsculo funciona durante o evento. Recompensas desbloqueadas podem ser resgatadas até 2/12 às 20h locais.",
-        "A disponibilidade do Passe GO Deluxe varia por região; a compra não garante Pokémon Brilhante."
+        "A disponibilidade do Passe GO Deluxe varia por região; a compra não garante Pokémon Brilhante.",
+        "Pesquisa de Campo temática: as tarefas também podem render Megaenergia e encontros com Pokémon do evento, incluindo Staryu e Elgyem.",
+        "Passe GO gratuito: recompensas incluem encontros temáticos, Pedaço de Estrela, Doce Raro e Megaenergia de Beedrill, Houndoom, Sableye e Manectric.",
+        "Passe GO Deluxe: acrescenta encontros, pose de avatar temática, Pedaços de Estrela e Passes de Batalha Premium.",
+        "Preços anunciados: US$ 4,99 para o Deluxe e US$ 6,99 para o Deluxe + 6 Ranques, ou equivalente na moeda local; disponibilidade pode variar por região.",
+        "Bônus de compra na Loja online: Deluxe inclui 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas; Deluxe + 6 Ranques inclui 2 Passes de Batalha Premium. O Ultracombo exclusivo +6 inclui 20 Ultra Bolas, 10 Máximos Reviver, 10 Poções Máximas e 5 Passes de Batalha Premium."
       ],
       "notifications": {
         "enabled": false,
@@ -2561,7 +2633,7 @@
       },
       "status": "published",
       "verified_at": "2026-11-04",
-      "updated_at": "2026-11-04T07:27:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio completo",
@@ -2596,9 +2668,23 @@
       ],
       "news": {
         "title": "Chamados do Crepúsculo: duas fases de pesquisa e Passe GO",
-        "summary": "De 24 a 30/11, Staryu e Elgyem têm chance Brilhante aumentada. A Pesquisa de Campo muda em 26/11 às 10h locais, e o Passe GO libera bônus por nível.",
+        "summary": "24–30/11: Staryu e Elgyem com chance Brilhante aumentada, reides temáticas e duas fases de Pesquisa de Campo. Passe GO: bônus nos ranques 1 e 10, recompensas gratuitas e Deluxe; resgate até 2/12 às 20h locais.",
         "published_on": "2026-11-02",
         "label": "OFICIAL • DETALHES CONFIRMADOS"
+      },
+      "audit": {
+        "classification": "official_announcement_full_text_reviewed",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+        "english_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026",
+        "full_text_reviewed_at": "2026-11-12",
+        "details_completed": [
+          "field_research_mega_energy",
+          "go_pass_free_rewards",
+          "go_pass_deluxe_rewards",
+          "regional_pricing",
+          "web_store_purchase_bonuses"
+        ]
       }
     },
     {
