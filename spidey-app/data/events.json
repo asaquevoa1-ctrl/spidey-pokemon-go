@@ -11641,6 +11641,18 @@
           "url": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
           "confidence": "official",
           "published_on": "2026-11-04"
+        },
+        {
+          "name": "G47IX · lembrete comunitário de Kyurem Branco",
+          "url": "https://x.com/g47ix/status/2120924589253431444",
+          "confidence": "community",
+          "published_on": "2026-11-12"
+        },
+        {
+          "name": "G47IX · lembrete comunitário de Zekrom",
+          "url": "https://x.com/g47ix/status/2120924589156884883",
+          "confidence": "community",
+          "published_on": "2026-11-12"
         }
       ],
       "schedule": {
@@ -11726,6 +11738,15 @@
         "summary": "A história global reúne o encontro principal e 96 referências no Brasil, Karlsruhe e Estocolmo na Europa, além de 12 locais em 11 comunidades da Ásia-Pacífico. Cada encontro preserva seu horário local; as sedes anunciadas oferecem atividades comunitárias e Pesquisa Temporária por check-in.",
         "published_on": "2026-10-07",
         "updated_on": "2026-11-05"
+      },
+      "audit": {
+        "community_reminders_grouped_on": "2026-11-12",
+        "community_reminder_urls": [
+          "https://x.com/g47ix/status/2120924589253431444",
+          "https://x.com/g47ix/status/2120924589156884883"
+        ],
+        "official_story_remains_canonical": true,
+        "no_duplicate_event_created": true
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -13555,7 +13576,7 @@
       "id": "2026-11-13-max-hour-latias-latios",
       "slug": "2026-11-13-max-hour-latias-latios",
       "title": "Hora Max: Latias e Latios Dinamax",
-      "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+      "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. Podem aparecer Brilhantes e, após uma captura bem-sucedida, podem vir com o Fundo Especial do evento.",
       "category": "max_battle_day",
       "tags": [
         "Global",
@@ -13567,6 +13588,14 @@
         "url": "https://pokemongo.com/news/into-the-wild-2026",
         "confidence": "official"
       },
+      "verification_sources": [
+        {
+          "name": "G47IX · lembrete comunitário",
+          "url": "https://x.com/g47ix/status/2120879287276638504",
+          "confidence": "community",
+          "published_on": "2026-11-12"
+        }
+      ],
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2026-11-13T18:00:00-03:00",
@@ -13590,10 +13619,13 @@
       },
       "pokemon": [
         {
-          "name": "Latias e Latios Dinamax"
+          "name": "Latias e Latios Dinamax",
+          "note": "podem aparecer Brilhantes e podem receber o Fundo Especial após a captura"
         }
       ],
       "notes": [
+        "O anúncio oficial confirma Bola de Névoa para Latias e Purga de Esplendor para Latios capturados durante Natureza Selvagem.",
+        "O Fundo Especial é uma possibilidade após captura bem-sucedida, não uma recompensa garantida.",
         "Janela local em cada fuso; a Rota Mundial converte os horários por cidade, não usa 18h de Brasília para o mundo inteiro.",
         "Sem coordenadas verificadas de ginásios ou Pontos de Energia específicos deste evento; referências urbanas não garantem encontro ou reide."
       ],
@@ -13602,7 +13634,13 @@
         "reason": "Evitar alertas duplicados do evento principal."
       },
       "status": "published",
-      "verified_at": "2026-11-08"
+      "verified_at": "2026-11-12",
+      "audit": {
+        "community_reminder_grouped_on": "2026-11-12",
+        "community_reminder_url": "https://x.com/g47ix/status/2120879287276638504",
+        "official_story_remains_canonical": true,
+        "no_duplicate_event_created": true
+      }
     },
     {
       "id": "official-news-auto-1027790d90b8",
