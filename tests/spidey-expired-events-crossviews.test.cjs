@@ -83,3 +83,10 @@ test('Leônidas e Geminidas permanecem duas janelas de um único artigo Minior',
   assert.equal(stories[0].events.length,2);
   assert.deepEqual(new Set(stories[0].events.map(e=>e.id)),new Set(['2026-11-minior-leonids','2026-12-minior-geminids']));
 });
+
+
+test('eventos locais sem hora permanecem até o fim do último dia no fuso IANA',()=>{
+  const event={id:'seoul-date-only',schedule:{precision:'date',start_date:'2026-11-14',end_date:'2026-11-15',local_timezone:'Asia/Seoul'}};
+  assert.equal(context.window.SpideyDateOnly.status(event,new Date('2026-11-15T14:59:59Z')),'Hoje · horário a confirmar');
+  assert.equal(context.window.SpideyDateOnly.status(event,new Date('2026-11-15T15:00:00Z')),'Data encerrada');
+});
