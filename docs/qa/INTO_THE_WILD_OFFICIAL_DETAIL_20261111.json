@@ -1,0 +1,36 @@
+{
+  "audit_id": "into-the-wild-official-detail-20261111",
+  "base_main_sha": "6486352ac254dbf447b479102efaeb9fce358bf0",
+  "reconciled_at": "2026-11-11T21:05:00-03:00",
+  "sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+    "https://pokemongo.com/news/into-the-wild-2026"
+  ],
+  "confirmed_details": [
+    "featured attacks for Registeel, Regidrago, Latias and Latios",
+    "Magnemite, Noibat and Togedemaru wild encounters",
+    "generic Field Research encounters and rewards without unpublished individual tasks",
+    "Global Challenge conditional Adventure Effect and Max Battle bonuses",
+    "free and Deluxe GO Pass reward categories and rank bonuses"
+  ],
+  "calendar_decisions": {
+    "canonical_story_id_preserved": "2026-11-09-into-the-wild",
+    "distinct_pass_windows_preserved": true,
+    "separate_global_challenge_event_created": false,
+    "reason": "The official publication does not announce a separate start or end window for the Global Challenge."
+  },
+  "collector": {
+    "actual_editorial_detail_pending_items": 0
+  },
+  "preservation": {
+    "approved_art_changed": false,
+    "gpx_changed": false,
+    "push_dispatched": false,
+    "physical_android_test_claimed": false
+  },
+  "validation": {
+    "targeted_node_tests": 20,
+    "targeted_python_tests": 13,
+    "editorial_integrity": "EDITORIAL_OK"
+  }
+}

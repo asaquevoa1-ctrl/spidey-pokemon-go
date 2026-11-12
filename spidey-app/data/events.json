@@ -1793,7 +1793,7 @@
       "id": "2026-11-09-into-the-wild",
       "slug": "2026-11-09-into-the-wild",
       "title": "Natureza Selvagem: Into the Wild 2026",
-      "summary": "9 a 13/11, 10h–20h (horário local): Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Registeel, Regidrago, Latias e Latios Dinamax em Batalhas Max 5★. Fundo especial possível, não garantido.",
+      "summary": "9 a 13/11, 10h–20h (horário local): Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Registeel, Regidrago, Latias e Latios Dinamax em Batalhas Max 5★. Regidrago capturado no evento conhece Sopro do Dragão; Fundo Especial é possível, não garantido.",
       "category": "evento_especial",
       "tags": [
         "Novembro 2026",
@@ -1837,19 +1837,19 @@
         },
         {
           "name": "Registeel Dinamax",
-          "method": "Batalhas Max 5★, 11/11; hora Max 18h–19h local"
+          "method": "Batalhas Max 5★, 11/11; hora Max 18h–19h local; conhece Garra de Metal quando capturado durante o evento"
         },
         {
           "name": "Regidrago Dinamax",
-          "method": "Batalhas Max 5★, 12/11; hora Max 18h–19h local"
+          "method": "Batalhas Max 5★, 12/11; hora Max 18h–19h local; conhece Sopro do Dragão quando capturado durante o evento"
         },
         {
           "name": "Latias Dinamax",
-          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local"
+          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local; conhece Bola de Névoa quando capturada durante o evento"
         },
         {
           "name": "Latios Dinamax",
-          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local"
+          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local; conhece Esfera de Luz quando capturado durante o evento"
         },
         {
           "name": "Meltan Dinamax (Passe GO)"
@@ -1863,7 +1863,10 @@
         "Limite de Reides Remotas aumentado para 30 entre 9 e 13/11; sem limite em 14 e 15/11.",
         "Regidrago Dinamax estreia em Batalhas Max 5★; Meltan Dinamax no Passe GO.",
         "Possibilidade de Gimmighoul Brilhante com Bolsa de Moedas e Meltan Brilhante com Caixa Misteriosa nos períodos oficiais.",
-        "Passe GO Deluxe: Natureza Selvagem concede uma Tampinha Prateada ao completar a trilha; ela aumenta um único atributo por Hiper Treinamento."
+        "Passe GO Deluxe: Natureza Selvagem concede uma Tampinha Prateada ao completar a trilha; ela aumenta um único atributo por Hiper Treinamento.",
+        "Encontros na natureza anunciados incluem Magnemite, Noibat e Togedemaru, entre outros.",
+        "Pesquisas de Campo temáticas concedem encontros e outras recompensas; a publicação não informa tarefas nem recompensas individuais.",
+        "Depois que o Desafio Global for concluído, os Efeitos de Aventura Espada Colossal e Escudo Colossal ficam mais eficazes e o medidor de energia das Batalhas Max enche mais rápido."
       ],
       "notes": [
         "Evento principal: 9/11 às 10h a 13/11 às 20h no horário local; para Brasília, 10h e 20h BRT.",
@@ -1874,7 +1877,8 @@
         "Fonte oficial prevalece sobre horários de 5h e 21h de material comunitário, que não são o período geral oficial.",
         "Passe GO e Passe GO Deluxe: 9/11 às 10h até 15/11 às 18h locais; recompensas desbloqueadas devem ser resgatadas até 17/11 às 23h59 locais.",
         "A Tampinha Prateada da trilha Deluxe deve ser usada até 22/11 às 23h59 locais. Exige Grande Companheiro ou nível superior; Pokémon Sombrosos e Pokémon com todos os atributos já no máximo não são elegíveis.",
-        "Depois de usar a Tampinha, há 365 dias para concluir as tarefas de Hiper Treinamento do atributo escolhido. Pokémon Hiper Treinados não podem ser enviados ao Pokémon HOME."
+        "Depois de usar a Tampinha, há 365 dias para concluir as tarefas de Hiper Treinamento do atributo escolhido. Pokémon Hiper Treinados não podem ser enviados ao Pokémon HOME.",
+        "A publicação não anuncia uma janela própria para o Desafio Global; ele permanece como condição do evento, sem novo evento datado no calendário."
       ],
       "notifications": {
         "enabled": false,
@@ -1886,6 +1890,11 @@
         {
           "name": "Pokémon GO • oficial",
           "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
           "confidence": "official"
         }
       ],
@@ -1900,11 +1909,18 @@
         "2026-11-09-into-the-wild-pass-claim",
         "2026-11-09-silver-bottle-cap-use-deadline"
       ],
-      "updated_at": "2026-11-11T07:36:00-03:00",
+      "updated_at": "2026-11-11T21:05:00-03:00",
       "audit": {
         "official_article_read_in_full": true,
         "distinct_pass_windows_preserved": true,
-        "silver_bottle_cap_verified": true
+        "silver_bottle_cap_verified": true,
+        "official_languages_reconciled": [
+          "pt-BR",
+          "en"
+        ],
+        "field_research_individual_tasks_unpublished": true,
+        "global_challenge_has_no_separate_official_window": true,
+        "reconciled_at": "2026-11-11T21:05:00-03:00"
       }
     },
     {
@@ -1926,7 +1942,7 @@
       "verification_sources": [
         {
           "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/en/news/into-the-wild-2026",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         }
       ],
@@ -1965,7 +1981,9 @@
       "notes": [
         "O Passe gratuito é recebido automaticamente. A trilha Deluxe é paga e contém recompensas adicionais.",
         "Há limite diário de Pontos GO de 9 a 13/11; não há limite em 14 e 15/11.",
-        "Tampinha Prateada, encontros adicionais com Meltan Dinamax e Calças Duraludon estão entre as recompensas anunciadas da trilha Deluxe."
+        "Trilha gratuita: Incenso, MTs, Doces, Incubadoras, Poeira Estelar, PE, Poké Bolas, encontros temáticos e Doces GG.",
+        "Trilha Deluxe: Tampinha Prateada, encontros adicionais com Meltan Dinamax, Passe de Reide Premium, Incubadora, Partícula Max, Doces GG adicionais e Calças Duraludon.",
+        "Ao alcançar o ranque principal, há bônus de Doces por captura; os ranques Ultra e Mestre ampliam Doces e chance de Doce GG por captura."
       ]
     },
     {
@@ -1987,7 +2005,7 @@
       "verification_sources": [
         {
           "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/en/news/into-the-wild-2026",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         }
       ],
@@ -2046,7 +2064,7 @@
       "verification_sources": [
         {
           "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/en/news/into-the-wild-2026",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
           "confidence": "official"
         }
       ],
@@ -13451,7 +13469,7 @@
       "id": "2026-11-12-max-hour-regidrago",
       "slug": "2026-11-12-max-hour-regidrago",
       "title": "Hora Max: Regidrago Dinamax",
-      "summary": "Regidrago Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+      "summary": "Regidrago Dinamax em destaque das 18h às 19h no horário local de cada região. Capturado durante o evento, conhece Sopro do Dragão; pode ser Brilhante e pode ter Fundo Especial, sem garantia.",
       "category": "max_battle_day",
       "tags": [
         "Global",
@@ -13486,7 +13504,10 @@
       },
       "pokemon": [
         {
-          "name": "Regidrago Dinamax"
+          "name": "Regidrago Dinamax",
+          "method": "Batalhas Max 5★; conhece Sopro do Dragão quando capturado durante o evento",
+          "shiny": "possible",
+          "special_background": "possible_not_guaranteed"
         }
       ],
       "notes": [
