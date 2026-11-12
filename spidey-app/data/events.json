@@ -10814,7 +10814,7 @@
       "id": "2026-11-minior-leonids",
       "slug": "2026-11-minior-leonids",
       "title": "Minior: chuva de meteoros Leônidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+      "summary": "Minior na chuva de meteoros Leônidas, de 14 a 19/11, das 17h às 23h59 locais. A chance de encontro aumenta das 17h às 21h; o núcleo que estreia nas Leônidas ainda não foi anunciado oficialmente. Núcleo Verde estreou nas Oriônidas (confirmação comunitária).",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -10848,7 +10848,15 @@
       },
       "notes": [
         "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
+        "Minior possui sete cores de núcleo: vermelho, laranja, amarelo, verde, azul, anil e violeta.",
+        "O Núcleo Verde estreou durante as Oriônidas de outubro; essa confirmação vem de fontes comunitárias Leek Duck e Pokémon GO Hub. A página oficial não anuncia qual cor estreia nas Leônidas ou nas Geminidas.",
+        "Durante cada chuva, Minior pode aparecer na natureza em Forma Meteoro. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes no céu do jogo.",
+        "A página oficial informa mais Poeira Estelar ao capturar Minior, mas não quantifica o bônus. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; esse valor fica identificado como confirmação comunitária.",
+        "Em batalha, Forma Meteoro tem Defesa maior e Ataque menor; ao expor o núcleo, Ataque aumenta e Defesa diminui. A página PT-BR diz que a mudança ocorre com 50% de PS ou menos; a versão EN diz abaixo de 50%. Inicialmente, a mudança só ocorre contra Equipe GO Rocket, líderes de equipe e na Liga de Batalha GO.",
+        "Minior pode não aparecer durante as horas em que houver eventos sobrepostos, como Área Selvagem GO Global, Horas de Holofote ou outros eventos regionais.",
+        "Minior não será elegível para o Campeonato Internacional da América Latina de 2027.",
+        "A página oficial lista outras chuvas anuais sem atribuir ano às datas de maio e julho/agosto; nenhuma janela de 2027 foi criada no Calendário sem ano oficial explícito."
       ],
       "notifications": {
         "enabled": true,
@@ -10859,7 +10867,9 @@
       "status": "published",
       "bonuses": [
         "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
-        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada.",
+        "Maior chance de encontrar Minior das 17h às 21h locais todos os dias, com estrelas cadentes no céu do jogo.",
+        "Mais Poeira Estelar ao capturar Minior. Valor de 1.000 por captura confirmado por fontes comunitárias; a página oficial não informa quantidade."
       ],
       "pokemon": [
         {
@@ -10868,18 +10878,64 @@
         }
       ],
       "news": {
-        "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "title": "Minior Showers: núcleos, encontros e mudanças de forma",
+        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições.",
         "published_on": "2026-10-01",
         "window_label": "Leônidas • 11/2026"
       },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-11-12T23:01:18Z",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO — Minior Showers (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO — Minior Showers (EN)",
+          "url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Orionids 2026",
+          "url": "https://leekduck.com/events/minior-showers-orionids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Leonids 2026",
+          "url": "https://leekduck.com/events/minior-showers-leonids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO Hub — Minior Showers: Orionids October 2026",
+          "url": "https://pokemongohub.net/post/event/minior-showers-orionids-october-2026/",
+          "confidence": "community",
+          "published_on": "2026-10-25"
+        },
+        {
+          "name": "Pokémon GO Hub — This Week in Pokémon GO, November 9–15",
+          "url": "https://pokemongohub.net/post/news/this-week-in-pokemon-go-november-9-15-go-wild-area-global-into-the-wild-and-minior-showers/",
+          "confidence": "community"
+        }
+      ],
+      "audit": {
+        "details_reviewed_at": "2026-11-12T23:01:18Z",
+        "editorial_detail_pending": false,
+        "official_pt_en_full_pages_reviewed": true,
+        "community_green_core_orionids_confirmed": true,
+        "community_stardust_per_catch": 1000,
+        "official_stardust_quantity_disclosed": false,
+        "upcoming_core_colors_officially_unannounced": true,
+        "overlap_warning_added": true,
+        "no_2027_year_inferred": true,
+        "no_new_art_created": true,
+        "approved_minior_art_unchanged": true
+      }
     },
     {
       "id": "2026-12-minior-geminids",
       "slug": "2026-12-minior-geminids",
       "title": "Minior: chuva de meteoros Geminidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Geminidas.",
+      "summary": "Minior na chuva de meteoros Geminidas, de 11 a 16/12, das 17h às 23h59 locais. A chance de encontro aumenta das 17h às 21h. A página oficial prevê dois núcleos diferentes entre os hemisférios Norte e Sul, mas não identifica as cores.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -10914,7 +10970,15 @@
       "notes": [
         "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
         "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
-        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas."
+        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas.",
+        "Minior possui sete cores de núcleo: vermelho, laranja, amarelo, verde, azul, anil e violeta.",
+        "O Núcleo Verde estreou durante as Oriônidas de outubro; essa confirmação vem de fontes comunitárias Leek Duck e Pokémon GO Hub. A página oficial não anuncia qual cor estreia nas Leônidas ou nas Geminidas.",
+        "Durante cada chuva, Minior pode aparecer na natureza em Forma Meteoro. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes no céu do jogo.",
+        "A página oficial informa mais Poeira Estelar ao capturar Minior, mas não quantifica o bônus. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; esse valor fica identificado como confirmação comunitária.",
+        "Em batalha, Forma Meteoro tem Defesa maior e Ataque menor; ao expor o núcleo, Ataque aumenta e Defesa diminui. A página PT-BR diz que a mudança ocorre com 50% de PS ou menos; a versão EN diz abaixo de 50%. Inicialmente, a mudança só ocorre contra Equipe GO Rocket, líderes de equipe e na Liga de Batalha GO.",
+        "Minior pode não aparecer durante as horas em que houver eventos sobrepostos, como Área Selvagem GO Global, Horas de Holofote ou outros eventos regionais.",
+        "Minior não será elegível para o Campeonato Internacional da América Latina de 2027.",
+        "A página oficial lista outras chuvas anuais sem atribuir ano às datas de maio e julho/agosto; nenhuma janela de 2027 foi criada no Calendário sem ano oficial explícito."
       ],
       "notifications": {
         "enabled": true,
@@ -10925,7 +10989,9 @@
       "status": "published",
       "bonuses": [
         "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
-        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada.",
+        "Maior chance de encontrar Minior das 17h às 21h locais todos os dias, com estrelas cadentes no céu do jogo.",
+        "Mais Poeira Estelar ao capturar Minior. Valor de 1.000 por captura confirmado por fontes comunitárias; a página oficial não informa quantidade."
       ],
       "pokemon": [
         {
@@ -10934,12 +11000,58 @@
         }
       ],
       "news": {
-        "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "title": "Minior Showers: núcleos, encontros e mudanças de forma",
+        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições.",
         "published_on": "2026-10-01",
         "window_label": "Geminidas • 12/2026"
       },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-11-12T23:01:18Z",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO — Minior Showers (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO — Minior Showers (EN)",
+          "url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Orionids 2026",
+          "url": "https://leekduck.com/events/minior-showers-orionids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Leonids 2026",
+          "url": "https://leekduck.com/events/minior-showers-leonids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO Hub — Minior Showers: Orionids October 2026",
+          "url": "https://pokemongohub.net/post/event/minior-showers-orionids-october-2026/",
+          "confidence": "community",
+          "published_on": "2026-10-25"
+        },
+        {
+          "name": "Pokémon GO Hub — This Week in Pokémon GO, November 9–15",
+          "url": "https://pokemongohub.net/post/news/this-week-in-pokemon-go-november-9-15-go-wild-area-global-into-the-wild-and-minior-showers/",
+          "confidence": "community"
+        }
+      ],
+      "audit": {
+        "details_reviewed_at": "2026-11-12T23:01:18Z",
+        "editorial_detail_pending": false,
+        "official_pt_en_full_pages_reviewed": true,
+        "community_green_core_orionids_confirmed": true,
+        "community_stardust_per_catch": 1000,
+        "official_stardust_quantity_disclosed": false,
+        "upcoming_core_colors_officially_unannounced": true,
+        "overlap_warning_added": true,
+        "no_2027_year_inferred": true,
+        "no_new_art_created": true,
+        "approved_minior_art_unchanged": true
+      }
     },
     {
       "id": "2026-11-pokexciting-singapore",
@@ -11603,7 +11715,7 @@
       "id": "2026-11-go-wild-area-global",
       "slug": "2026-11-go-wild-area-global",
       "title": "Pokémon GO Wild Area 2026: Global",
-      "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
+      "summary": "Área Selvagem GO Global, 14 e 15/11, das 10h às 18h locais: habitats Aço e Dragão, Pokémon incríveis por dia, reides e Batalhas Max, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso opcional acrescenta pesquisa ramificada, bônus, Unown, Latias e Latios poderosos e balões horários. A Bola Safári GO pode ser usada apenas durante as horas do evento e agora permite transferir capturas ao Pokémon HOME.",
       "category": "evento_especial",
       "tags": [
         "GO Wild Area",
@@ -11653,6 +11765,22 @@
           "url": "https://x.com/g47ix/status/2120924589156884883",
           "confidence": "community",
           "published_on": "2026-11-12"
+        },
+        {
+          "name": "Pokémon GO — Área Selvagem GO Global (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/gowildarea/global",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub — GO Wild Area 2026: Global",
+          "url": "https://pokemongohub.net/post/event/wild-area-2026-global/",
+          "confidence": "community",
+          "published_on": "2026-11-05"
+        },
+        {
+          "name": "Leek Duck — Pokémon GO Wild Area 2026: Global",
+          "url": "https://leekduck.com/events/pokemon-go-wild-area-2026-global/",
+          "confidence": "community"
         }
       ],
       "schedule": {
@@ -11690,7 +11818,19 @@
         "A publicação brasileira repete 2025 em dois subtítulos, mas o título, a introdução e a página oficial do evento confirmam 14 e 15 de novembro de 2026; a divergência foi preservada na auditoria.",
         "Informações oficiais conferidas em 29/10/2026.",
         "Na Ásia-Pacífico, 12 locais em 11 comunidades recebem encontros oficiais nos dias 14 e 15/11, com horários próprios preservados no guia de eventos locais.",
-        "Os encontros da Ásia-Pacífico incluem pop-up do Pokémon GO, fotos, atividades com Embaixadores e comunidades, brindes enquanto durarem os estoques e Pesquisa Temporária por check-in. O anúncio cita encontro com Pokémon e itens sem detalhar espécie, tarefas ou itens."
+        "Os encontros da Ásia-Pacífico incluem pop-up do Pokémon GO, fotos, atividades com Embaixadores e comunidades, brindes enquanto durarem os estoques e Pesquisa Temporária por check-in. O anúncio cita encontro com Pokémon e itens sem detalhar espécie, tarefas ou itens.",
+        "Os habitats selvagens se alternam: Hora Sólido como Aço primeiro e, depois, Hora de Determinação de Dragão. A página oficial não informa os horários exatos de cada rotação; não foi criado horário adicional.",
+        "Hora Sólido como Aço: Sandshrew de Alola, Diglett de Alola, Magnemite, Shellder, Onix, Porygon, Shuckle, Skarmory, Nosepass, Aron, Beldum, Piplup, Shieldon, Bronzor, Lucario, Drilbur, Ferroseed, Klink, Stunfisk de Galar, Durant, Rookidee e Tinkatink.",
+        "Hora de Determinação de Dragão: Charmander, Magikarp, Dratini, Gligar, Trapinch, Swablu, Barboach, Bagon, Gible, Tynamo, Axew, Heatmor, Deino, Skrelp, Tyrunt, Amaura, Goomy, Noibat, Turtonator, Jangmo-o, Sizzlipede e Frigibax.",
+        "Pokémon incríveis de sábado: Exeggutor de Alola, Scizor, Flygon, Walrein, Metagross, Empoleon, Magnezone, Conkeldurr e Haxorus. Domingo: Azumarill, Kingdra, Aggron, Ferrothorn, Hydreigon, Goodra, Noivern, Tinkaton e Clodsire. A página oficial indica possibilidade de Brilhante para esses encontros.",
+        "Ovos de 10 km: Honedge, Klefki, Drampa e Duraludon; a página oficial também indica possibilidade de Brilhante.",
+        "Incenso (exceto Incenso de Aventura Diário) para todos: Exeggutor de Alola, Azumarill, Scizor, Kingdra, Aggron, Flygon, Empoleon, Magnezone, Conkeldurr e Hydreigon. Com ingresso, também Unown D, I, L e W, além de Latias e Latios poderosos; estes dois podem ser Brilhantes.",
+        "Ataques em destaque: Machamp — Golpe de Caratê; Flygon — Poder da Terra; Metagross — Meteoro Esmagador; Magnezone — Bomba Ímã; Haxorus — Golpe Deslizante; Hydreigon — Balanço Violento; Tinkaton — Martelo Gigatônico.",
+        "Bolas Safári GO só podem ser usadas das 10h às 18h locais nos dois dias e desaparecem do inventário ao fim do evento. Titulares de ingresso também recebem Balões de Suprimentos com Bolas Safári GO a cada hora durante as horas do evento.",
+        "Capturas feitas com Bolas Safári GO agora podem ser transferidas do Pokémon GO ao Pokémon HOME; a bola é exibida como Strange Ball (Bola Estranha) no HOME.",
+        "Os lobbies de Batalhas Dinamax oferecem opção de Grupo privado com código. Efeitos de Aventura selecionados de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) podem ser ativados no lobby.",
+        "A pesquisa especial do ingresso permite escolher o caminho Aço ou Dragão. Ao concluir a história, o encontro com Duraludon Gigamax traz Fundo Especial e a recompensa inclui uma pose de avatar exclusiva. O Fundo Especial de capturas em reides e Batalhas Max é uma possibilidade, não garantia.",
+        "Pesquisa de Campo temática terá maior chance de aparecer; tarefas individuais e recompensas específicas não foram publicadas na página oficial."
       ],
       "notifications": {
         "enabled": true,
@@ -11705,7 +11845,11 @@
         "Com ingresso: maior chance de Brilhantes, limite diário de 3.200 Partículas Max e até seis Passes de Reide por dia.",
         "Com ingresso: 2× Doces por captura, Incenso com duração dobrada, Módulos Atrair por duas horas e mais chance de Ovos de 10 km.",
         "Com ingresso: até seis Trocas Especiais por dia e metade do custo de Poeira Estelar nas trocas.",
-        "Após obter a medalha escolhida na Pesquisa Especial: +1 Doce GG (nível 31+) e +1.000 Poeira Estelar ao capturar Pokémon poderosos do tipo Aço ou Dragão correspondente."
+        "Após obter a medalha escolhida na Pesquisa Especial: +1 Doce GG (nível 31+) e +1.000 Poeira Estelar ao capturar Pokémon poderosos do tipo Aço ou Dragão correspondente.",
+        "Bolas Safári GO: uso restrito a 10h–18h locais em 14 e 15/11; as bolas restantes desaparecem ao final do evento.",
+        "Titulares de ingresso recebem Balões de Suprimentos com Bolas Safári GO a cada hora durante as horas do evento.",
+        "Capturas feitas com Bolas Safári GO podem ser transferidas ao Pokémon HOME e aparecem como Strange Ball (Bola Estranha).",
+        "Titulares de ingresso: até seis trocas especiais por dia e metade do custo de Poeira Estelar nas trocas, das 00h às 23h59 locais nos dois dias."
       ],
       "pokemon": [
         {
@@ -11734,8 +11878,8 @@
         }
       ],
       "news": {
-        "title": "Área Selvagem GO Global reúne comunidades no Brasil, Europa e Ásia-Pacífico",
-        "summary": "A história global reúne o encontro principal e 96 referências no Brasil, Karlsruhe e Estocolmo na Europa, além de 12 locais em 11 comunidades da Ásia-Pacífico. Cada encontro preserva seu horário local; as sedes anunciadas oferecem atividades comunitárias e Pesquisa Temporária por check-in.",
+        "title": "Área Selvagem GO Global: programação, bônus e recursos oficiais",
+        "summary": "A página oficial em português detalha habitats Aço e Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso inclui pesquisa ramificada, bônus adicionais, Unown D/I/L/W, Latias e Latios poderosos, balões de suprimentos e pose de avatar. Bolas Safári GO só podem ser usadas das 10h às 18h locais e desaparecem ao fim do evento; capturas com elas agora podem ser transferidas ao Pokémon HOME como Strange Ball. Batalhas Dinamax aceitam grupos privados por código e Efeitos de Aventura selecionados no lobby. A história mantém os encontros presenciais já cadastrados no Brasil, Europa e Ásia-Pacífico.",
         "published_on": "2026-10-07",
         "updated_on": "2026-11-05"
       },
@@ -11746,7 +11890,15 @@
           "https://x.com/g47ix/status/2120924589156884883"
         ],
         "official_story_remains_canonical": true,
-        "no_duplicate_event_created": true
+        "no_duplicate_event_created": true,
+        "details_reviewed_at": "2026-11-12T23:01:18Z",
+        "editorial_detail_pending": false,
+        "official_pt_en_full_pages_reviewed": true,
+        "community_crosscheck": "Pokémon GO Hub e Leek Duck conferem habitats, Pokémon incríveis, ovos, Incenso e bônus; detalhes oficiais prevalecem.",
+        "no_new_art_created": true,
+        "approved_global_poster_unchanged": true,
+        "no_new_gpx_or_coordinates_added": true,
+        "related_local_meetups_remain_in_local_events": true
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -11782,7 +11934,7 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-11-05T01:51:00-03:00",
+      "updated_at": "2026-11-12T23:01:18Z",
       "asia_pacific_community_program": {
         "official_article": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
         "published_on": "2026-11-04",
