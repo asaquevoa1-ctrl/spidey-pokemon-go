@@ -10879,11 +10879,11 @@
       ],
       "news": {
         "title": "Minior Showers: núcleos, encontros e mudanças de forma",
-        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições.",
+        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições. A página oficial lista outras janelas anuais sem informar o ano; calendários comunitários as rotulam como 2027, mas nenhuma janela futura foi datada no Spidey sem ano oficial explícito.",
         "published_on": "2026-10-01",
         "window_label": "Leônidas • 11/2026"
       },
-      "updated_at": "2026-11-12T23:01:18Z",
+      "updated_at": "2026-11-12T23:31:00Z",
       "verification_sources": [
         {
           "name": "Pokémon GO — Minior Showers (PT-BR)",
@@ -10928,7 +10928,13 @@
         "overlap_warning_added": true,
         "no_2027_year_inferred": true,
         "no_new_art_created": true,
-        "approved_minior_art_unchanged": true
+        "approved_minior_art_unchanged": true,
+        "community_future_windows_2027": [
+          "03–08/05",
+          "28/07–02/08",
+          "10–15/08"
+        ],
+        "official_future_year_explicit": false
       }
     },
     {
@@ -11001,11 +11007,11 @@
       ],
       "news": {
         "title": "Minior Showers: núcleos, encontros e mudanças de forma",
-        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições.",
+        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições. A página oficial lista outras janelas anuais sem informar o ano; calendários comunitários as rotulam como 2027, mas nenhuma janela futura foi datada no Spidey sem ano oficial explícito.",
         "published_on": "2026-10-01",
         "window_label": "Geminidas • 12/2026"
       },
-      "updated_at": "2026-11-12T23:01:18Z",
+      "updated_at": "2026-11-12T23:31:00Z",
       "verification_sources": [
         {
           "name": "Pokémon GO — Minior Showers (PT-BR)",
@@ -11050,7 +11056,13 @@
         "overlap_warning_added": true,
         "no_2027_year_inferred": true,
         "no_new_art_created": true,
-        "approved_minior_art_unchanged": true
+        "approved_minior_art_unchanged": true,
+        "community_future_windows_2027": [
+          "03–08/05",
+          "28/07–02/08",
+          "10–15/08"
+        ],
+        "official_future_year_explicit": false
       }
     },
     {
@@ -11831,7 +11843,8 @@
         "Os lobbies de Batalhas Dinamax oferecem opção de Grupo privado com código. Efeitos de Aventura selecionados de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) podem ser ativados no lobby.",
         "A pesquisa especial do ingresso permite escolher o caminho Aço ou Dragão. Ao concluir a história, o encontro com Duraludon Gigamax traz Fundo Especial e a recompensa inclui uma pose de avatar exclusiva. O Fundo Especial de capturas em reides e Batalhas Max é uma possibilidade, não garantia.",
         "Pesquisa de Campo temática terá maior chance de aparecer; tarefas individuais e recompensas específicas não foram publicadas na página oficial.",
-        "Horários detalhados das horas de habitat são uma confirmação comunitária do Leek Duck, não publicados na página oficial: Aço 10h–11h, 12h–13h, 14h–15h e 16h–17h; Dragão 11h–12h, 13h–14h, 15h–16h e 17h–18h, sempre no horário local. A página oficial confirma apenas a ordem Aço primeiro e Dragão depois."
+        "Horários detalhados das horas de habitat são uma confirmação comunitária do Leek Duck, não publicados na página oficial: Aço 10h–11h, 12h–13h, 14h–15h e 16h–17h; Dragão 11h–12h, 13h–14h, 15h–16h e 17h–18h, sempre no horário local. A página oficial confirma apenas a ordem Aço primeiro e Dragão depois.",
+        "Kyurem encontrados em Reides conhecem o ataque carregado Glaciar e concedem Energia de Fusão, conforme a página oficial."
       ],
       "notifications": {
         "enabled": true,
@@ -11937,7 +11950,7 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-11-12T23:24:00Z",
+      "updated_at": "2026-11-12T23:31:00Z",
       "asia_pacific_community_program": {
         "official_article": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
         "published_on": "2026-11-04",
@@ -13158,7 +13171,7 @@
       },
       "status": "published",
       "verified_at": "2026-11-04",
-      "updated_at": "2026-11-12T23:24:00Z",
+      "updated_at": "2026-11-12T23:31:00Z",
       "audit": {
         "classification": "official_announcement_editorially_verified",
         "editorial_detail_pending": false,
@@ -13166,7 +13179,7 @@
         "not_a_calendar_event": true,
         "canonical_fulltext_url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
         "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
-        "details_reviewed_at": "2026-11-12T23:24:00Z",
+        "details_reviewed_at": "2026-11-12T23:31:00Z",
         "official_pt_en_full_pages_reviewed": true,
         "community_crosscheck": "Leek Duck e Pokémon GO Hub usados como conferência comunitária; conteúdo oficial permanece prioritário."
       },
