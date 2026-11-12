@@ -53,7 +53,7 @@ test('forced 0.435.2 notice remains operational metadata, not a dated event', ()
   assert.equal(item.source_classification, 'community_operational');
   assert.equal(item.status, 'no_public_story');
   assert.deepEqual(item.related_event_ids, []);
-  assert.equal(events.some((event) => /0\\.435\\.2/.test(`${event.title || ''} ${event.summary || ''}`)), false);
+  assert.equal(events.some((event) => /0\.435\.2/.test(`${event.title || ''} ${event.summary || ''}`)), false);
 });
 
 test('collector curation introduces no editorial detail pending items', () => {
