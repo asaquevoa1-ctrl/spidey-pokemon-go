@@ -84,7 +84,8 @@ def event_range(event: dict) -> tuple[datetime | None, datetime | None]:
                 return None, None
             local_zone = ZoneInfo(schedule.get("local_timezone") or schedule.get("timezone"))
             local_start = datetime(start.year, start.month, start.day, tzinfo=local_zone)
-            local_end = datetime(end.year, end.month, end.day, 23, 59, 59, 999999, tzinfo=local_zone)
+            end_exclusive = end + timedelta(days=1)
+            local_end = datetime(end_exclusive.year, end_exclusive.month, end_exclusive.day, tzinfo=local_zone)
             return local_start.astimezone(BR), local_end.astimezone(BR)
         except (ValueError, KeyError, TypeError, ZoneInfoNotFoundError):
             return None, None
@@ -226,7 +227,7 @@ def build(anchor: date, reference: datetime | None = None) -> dict:
         start, end = event_range(event)
         if not start or not end or not overlaps(start, end, start_dt, end_dt):
             continue
-        if filter_expired and end < reference:
+        if filter_expired and end <= reference:
             continue
         events.append(event)
 
