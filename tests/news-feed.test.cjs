@@ -66,15 +66,19 @@ test('the confirmed Halloween Part II supersedes its community preview and keeps
  assert.ok(story);assert.equal(story.event.source.confidence,'official');
 });
 
-test('undated news stays in News and never becomes a calendar event',()=>{
+test('undated current news stays in News while a confirmed discovery becomes historical',()=>{
  const stories=build(events,range,new Date('2026-10-11T22:00:00Z'));
- for(const id of ['2026-10-08-gameplay-quality-of-life','2026-10-08-dynamax-forms-datamine']){
+ for(const id of ['2026-10-08-gameplay-quality-of-life']){
   const event=events.find(e=>e.id===id),story=stories.find(s=>s.events.some(e=>e.id===id));
   assert.ok(event&&story,id);assert.equal(event.content_type,'news');assert.equal(event.calendar.mode,'hidden');
   assert.equal(event.schedule,undefined);assert.equal(event.notifications.enabled,false);
  }
  const datamine=events.find(e=>e.id==='2026-10-08-dynamax-forms-datamine');
- assert.equal(datamine.source.confidence,'community');assert.match(datamine.summary,/confirmar/i);
+ assert.equal(datamine.source.confidence,'community');assert.equal(datamine.status,'archived');
+ assert.equal(datamine.superseded_by,'2026-11-09-into-the-wild');
+ assert.equal(stories.some(s=>s.events.some(e=>e.id===datamine.id)),false);
+ assert.equal(datamine.calendar.mode,'hidden');assert.equal(datamine.schedule,undefined);
+ assert.equal(datamine.notifications.enabled,false);
 });
 
 test('Mega Chandelure keeps the existing calendar identity and publishes the official reveal in News',()=>{

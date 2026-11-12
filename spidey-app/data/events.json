@@ -3912,14 +3912,14 @@
       "id": "2026-10-08-dynamax-forms-datamine",
       "slug": "2026-10-08-dynamax-forms-datamine",
       "content_type": "news",
-      "title": "Meltan, Melmetal e Regidrago Dinamax · estreia a confirmar",
-      "summary": "A comunidade encontrou referências às formas Dinamax de Meltan, Melmetal e Regidrago. Não há anúncio oficial; estreia a confirmar.",
+      "title": "Histórico: descoberta de Meltan, Melmetal e Regidrago Dinamax",
+      "summary": "A descoberta comunitária antecipou Meltan Dinamax e Regidrago Dinamax, depois confirmados oficialmente em Natureza Selvagem. Melmetal Dinamax não foi confirmado nesse anúncio.",
       "category": "community_discovery",
       "tags": [
         "Novidade",
         "Comunidade",
         "Dinamax",
-        "A confirmar"
+        "Histórico"
       ],
       "source": {
         "name": "The PokéMod Group · repercussão comunitária no TheSilphRoad",
@@ -3931,6 +3931,16 @@
           "name": "Pokémon GO Hub · acompanhamento comunitário de outubro",
           "url": "https://pokemongohub.net/post/event/october-2026-events/",
           "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO · Natureza Selvagem 2026",
+          "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO · Into the Wild 2026",
+          "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "confidence": "official"
         }
       ],
       "calendar": {
@@ -3941,9 +3951,10 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Formas Dinamax encontradas nos dados do jogo",
-        "summary": "Meltan, Melmetal e Regidrago Dinamax aparecem em descoberta comunitária. Estreia, disponibilidade e detalhes continuam a confirmar.",
+        "title": "Descoberta comunitária antecipou duas estreias Dinamax",
+        "summary": "Registro histórico: Meltan Dinamax e Regidrago Dinamax foram confirmados pelo anúncio oficial de Natureza Selvagem. Melmetal Dinamax continua sem confirmação nesse anúncio.",
         "published_on": "2026-10-08",
+        "label": "HISTÓRICO • PARCIALMENTE CONFIRMADO",
         "source": {
           "name": "The PokéMod Group · fonte comunitária",
           "url": "https://www.reddit.com/r/TheSilphRoad/comments/1x117ql/dynamax_forms_for_meltan_melmetal_and_regidrago/",
@@ -3951,33 +3962,45 @@
         }
       },
       "notes": [
-        "Não é anúncio oficial.",
-        "Sem data, horário, bônus ou formato de obtenção confirmados."
+        "A publicação original era uma descoberta comunitária, não um anúncio oficial.",
+        "Natureza Selvagem confirmou Regidrago Dinamax em Batalhas Max e Meltan Dinamax no Passe GO.",
+        "O anúncio oficial de Natureza Selvagem não confirmou Melmetal Dinamax."
       ],
       "pokemon": [
         {
           "name": "Meltan Dinamax",
-          "note": "referência comunitária; estreia a confirmar"
+          "note": "confirmado oficialmente no Passe GO: Natureza Selvagem"
         },
         {
           "name": "Melmetal Dinamax",
-          "note": "referência comunitária; estreia a confirmar"
+          "note": "referência comunitária; não confirmado no anúncio oficial de Natureza Selvagem"
         },
         {
           "name": "Regidrago Dinamax",
-          "note": "referência comunitária; estreia a confirmar"
+          "note": "confirmado oficialmente em Batalhas Max de Natureza Selvagem"
         }
       ],
       "notifications": {
         "enabled": false,
         "reason": "Descoberta comunitária sem data oficial; não gerar alerta."
       },
-      "status": "published",
-      "verified_at": "2026-10-11",
-      "updated_at": "2026-10-11T23:17:00Z",
+      "status": "archived",
+      "superseded_by": "2026-11-09-into-the-wild",
+      "verified_at": "2026-11-12",
+      "updated_at": "2026-11-12T05:20:00-03:00",
       "audit": {
-        "checked_on": "2026-10-11",
-        "classification": "community_unconfirmed"
+        "checked_on": "2026-11-12",
+        "classification": "community_discovery_partially_confirmed_archived",
+        "official_article_read_in_full": true,
+        "official_languages_reconciled": [
+          "pt-BR",
+          "en"
+        ],
+        "meltan_dynamax_confirmed": true,
+        "regidrago_dynamax_confirmed": true,
+        "melmetal_dynamax_confirmed": false,
+        "historical_record_preserved": true,
+        "not_a_calendar_event": true
       }
     },
     {
