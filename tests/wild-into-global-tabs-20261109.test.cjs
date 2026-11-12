@@ -111,7 +111,7 @@ test('global guide exposes full official detail without changing the approved po
   const global=catalog.find(e=>e.id==='2026-11-go-wild-area-global');
   assert.ok(global);
   for(const term of [
-    'Hora Sólido como Aço','Hora de Determinação de Dragão','Tinkatink','Frigibax',
+    'Hora Sólido como Aço','Hora de Determinação de Dragão','Leek Duck (fonte comunitária)','Tinkatink','Frigibax',
     'Exeggutor de Alola','Haxorus','Clodsire','Honedge','Klefki','Drampa',
     'Unown D, I, L e W','Golpe de Caratê','Poder da Terra','Meteoro Esmagador',
     'Bomba Ímã','Golpe Deslizante','Balanço Violento','Martelo Gigatônico',
