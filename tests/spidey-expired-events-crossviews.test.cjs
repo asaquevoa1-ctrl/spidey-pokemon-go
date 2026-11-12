@@ -59,7 +59,7 @@ const newsRange=e=>e.schedule?.precision==='date'
 test('Novidades encerra eventos com hora exatamente no instante final',()=>{
   const event={id:'boundary-hour',status:'published',source:{url:'https://pokemongo.com/news/boundary-hour'},
     schedule:{start_brazil:'2026-11-12T18:00:00-03:00',end_brazil:'2026-11-12T19:00:00-03:00'},
-    news:{title:'Janela de teste',summary:'Teste de fronteira'}};
+    news:{title:'Janela de teste',summary:'Teste de fronteira',published_on:'2026-11-12'}};
   assert.equal(newsApi.build([event],newsRange,new Date('2026-11-12T18:59:59.999-03:00')).length,1);
   assert.equal(newsApi.build([event],newsRange,new Date('2026-11-12T19:00:00-03:00')).length,0);
 });
@@ -67,7 +67,7 @@ test('Novidades encerra eventos com hora exatamente no instante final',()=>{
 test('Novidades respeita o último dia civil no fuso IANA, não o fuso de Brasília',()=>{
   const event={id:'london-date-only',status:'published',source:{url:'https://pokemongo.com/news/london-date-only'},
     schedule:{precision:'date',start_date:'2026-11-10',end_date:'2026-11-10',local_timezone:'Europe/London'},
-    news:{title:'Encontro em Londres',summary:'Data sem hora'}};
+    news:{title:'Encontro em Londres',summary:'Data sem hora',published_on:'2026-11-10'}};
   const bounds=context.window.SpideyDateOnly.bounds(event);
   assert.equal(bounds.start.toISOString(),'2026-11-10T00:00:00.000Z');
   assert.equal(bounds.end.toISOString(),'2026-11-11T00:00:00.000Z');
