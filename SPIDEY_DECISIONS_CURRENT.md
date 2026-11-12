@@ -679,3 +679,14 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 
 
 - A grade horária de habitats publicada pela comunidade (Leek Duck) fica identificada como comunitária; o artigo oficial confirma apenas a ordem Aço → Dragão. Leek Duck rotula as próximas chuvas anuais de Minior como 2027, mas a página oficial omite o ano; por isso, essas datas permanecem apenas em metadados/editorial e não viram eventos datados.
+
+
+## 12/11/2026 — Revisão integral de anúncios de novembro e correções editoriais
+
+- Pawniard: a página oficial PT-BR foi atualizada em 28/10. O requisito temporário exige Bisharp como companheiro ao derrotar um chefe de Reide Sombrio ou Aço; a orientação anterior que dispensava esse requisito foi corrigida. Pesquisa Especial, Pesquisa de Campo, check-in de Embaixador da Comunidade e Ultracombo foram completados sem inventar tarefas individuais.
+- Chamados do Crepúsculo: adicionados os prêmios de Pesquisa de Campo, recompensas do Passe GO gratuito e Deluxe, preços publicados em USD/equivalente local e bônus de compra na Loja online. As duas fases de Pesquisa de Campo e o prazo de resgate em 02/12 permanecem separados.
+- Trilhas Dinamax: adicionados Pesquisa de Campo, adesivos, recompensas do Passe GO gratuito/Deluxe e bônus de compra na Loja online. A janela do evento (16–23/11) e a janela de Eternamax (21/11, 11h–14h locais) permanecem distintas.
+- O teaser de Eternatus foi preservado como histórico arquivado e vinculado aos anúncios oficiais de Trilhas Dinamax e Eternamax. O rumor de Mewtwo de Armadura/Clone foi preservado e vinculado somente à data oficial de Dia de Reides em 19/12; espécie e nome do evento continuam não confirmados.
+- Revisadas as páginas completas PT-BR/EN de Pawniard, Chamados do Crepúsculo e Trilhas Dinamax. Black Friday, GO Pass de novembro, Pesquisa do Machamp, Dispositivo de Exploração, Pokémon Center Bangkok e LAIC 2027 já estavam cadastrados com suas janelas e detalhes pertinentes; não foram duplicados.
+- A curadoria automática de 12/11 mantém quatro registros concluídos, sem arte obrigatória, sem GPX e sem `editorial_detail_pending`. Nenhum push foi disparado. Nenhuma arte, coordenada, rota, GPX, catálogo, Pokédex, PvP, Push ou Amigos/chat foi alterado.
+- Teste `tests/collector-curation-20261112.test.cjs` protege o requisito de companheiro, detalhes do Passe GO, vínculos históricos, sessões diárias do LAIC e ausência de pendências editoriais.
