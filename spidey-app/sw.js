@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261110-nightout-news1';
+const CACHE = 'spidey-app-20261112-global-details-expiry1';
 const CORE = [
   './wild-area-20261109.js',
   './wild-area-20261109.css',
