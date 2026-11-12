@@ -63,6 +63,8 @@ jobs:
         run: node --test tests/world-route-news-regression-20261109.test.cjs
       - name: Validar detalhes oficiais da Semana Selvagem antes de publicar
         run: node --test tests/into-the-wild-official-detail-20261111.test.cjs tests/wild-into-global-tabs-20261109.test.cjs
+      - name: Bloquear duplicação editorial da curadoria de 12/11
+        run: node --test tests/collector-curation-20261112.test.cjs
       - name: Conferir Novidades Premium e fontes reais
         run: node --test tests/news-premium-20261102.test.cjs tests/official-news-editorial-20261104.test.cjs tests/official-news-editorial-20261111.test.cjs tests/editorial-news-osaka-storage-20261111.test.cjs
       - name: Validar noticia de fundos no perfil sem inventar confirmacao oficial
