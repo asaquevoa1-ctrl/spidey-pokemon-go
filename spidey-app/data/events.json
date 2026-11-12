@@ -10967,7 +10967,7 @@
         "title": "Minior Showers: núcleos, encontros e mudanças de forma",
         "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições. A página oficial lista outras janelas anuais sem informar o ano; calendários comunitários as rotulam como 2027, mas nenhuma janela futura foi datada no Spidey sem ano oficial explícito.",
         "published_on": "2026-10-01",
-        "window_label": "Leônidas • 11/2026"
+        "window_label": "Minior • Leônidas + Geminidas"
       },
       "updated_at": "2026-11-12T23:31:00Z",
       "verification_sources": [
@@ -11021,7 +11021,10 @@
           "10–15/08"
         ],
         "official_future_year_explicit": false
-      }
+      },
+      "related_event_ids": [
+        "2026-12-minior-geminids"
+      ]
     },
     {
       "id": "2026-12-minior-geminids",
@@ -11091,12 +11094,6 @@
           "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
         }
       ],
-      "news": {
-        "title": "Minior Showers: núcleos, encontros e mudanças de forma",
-        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições. A página oficial lista outras janelas anuais sem informar o ano; calendários comunitários as rotulam como 2027, mas nenhuma janela futura foi datada no Spidey sem ano oficial explícito.",
-        "published_on": "2026-10-01",
-        "window_label": "Geminidas • 12/2026"
-      },
       "updated_at": "2026-11-12T23:31:00Z",
       "verification_sources": [
         {
@@ -11148,7 +11145,10 @@
           "28/07–02/08",
           "10–15/08"
         ],
-        "official_future_year_explicit": false
+        "official_future_year_explicit": false,
+        "news_story_group_id": "minior-meteor-showers-2026",
+        "news_story_event_id": "2026-11-minior-leonids",
+        "news_story_grouped": true
       }
     },
     {
