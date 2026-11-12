@@ -676,3 +676,6 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 
 
 - Complemento editorial: os horários específicos das rotações Aço/Dragão não aparecem na página oficial PT-BR; o guia mostra a grade horária do Leek Duck somente com rótulo comunitário, sem promovê-la a anúncio oficial.
+
+
+- A grade horária de habitats publicada pela comunidade (Leek Duck) fica identificada como comunitária; o artigo oficial confirma apenas a ordem Aço → Dragão. Leek Duck rotula as próximas chuvas anuais de Minior como 2027, mas a página oficial omite o ano; por isso, essas datas permanecem apenas em metadados/editorial e não viram eventos datados.
