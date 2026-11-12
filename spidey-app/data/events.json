@@ -11830,7 +11830,8 @@
         "Capturas feitas com Bolas Safári GO agora podem ser transferidas do Pokémon GO ao Pokémon HOME; a bola é exibida como Strange Ball (Bola Estranha) no HOME.",
         "Os lobbies de Batalhas Dinamax oferecem opção de Grupo privado com código. Efeitos de Aventura selecionados de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) podem ser ativados no lobby.",
         "A pesquisa especial do ingresso permite escolher o caminho Aço ou Dragão. Ao concluir a história, o encontro com Duraludon Gigamax traz Fundo Especial e a recompensa inclui uma pose de avatar exclusiva. O Fundo Especial de capturas em reides e Batalhas Max é uma possibilidade, não garantia.",
-        "Pesquisa de Campo temática terá maior chance de aparecer; tarefas individuais e recompensas específicas não foram publicadas na página oficial."
+        "Pesquisa de Campo temática terá maior chance de aparecer; tarefas individuais e recompensas específicas não foram publicadas na página oficial.",
+        "Horários detalhados das horas de habitat são uma confirmação comunitária do Leek Duck, não publicados na página oficial: Aço 10h–11h, 12h–13h, 14h–15h e 16h–17h; Dragão 11h–12h, 13h–14h, 15h–16h e 17h–18h, sempre no horário local. A página oficial confirma apenas a ordem Aço primeiro e Dragão depois."
       ],
       "notifications": {
         "enabled": true,
@@ -11879,7 +11880,7 @@
       ],
       "news": {
         "title": "Área Selvagem GO Global: programação, bônus e recursos oficiais",
-        "summary": "A página oficial em português detalha habitats Aço e Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso inclui pesquisa ramificada, bônus adicionais, Unown D/I/L/W, Latias e Latios poderosos, balões de suprimentos e pose de avatar. Bolas Safári GO só podem ser usadas das 10h às 18h locais e desaparecem ao fim do evento; capturas com elas agora podem ser transferidas ao Pokémon HOME como Strange Ball. Batalhas Dinamax aceitam grupos privados por código e Efeitos de Aventura selecionados no lobby. A história mantém os encontros presenciais já cadastrados no Brasil, Europa e Ásia-Pacífico.",
+        "summary": "A página oficial em português detalha habitats Aço e Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso inclui pesquisa ramificada, bônus adicionais, Unown D/I/L/W, Latias e Latios poderosos, balões de suprimentos e pose de avatar. Bolas Safári GO só podem ser usadas das 10h às 18h locais e desaparecem ao fim do evento; capturas com elas agora podem ser transferidas ao Pokémon HOME como Strange Ball. Batalhas Dinamax aceitam grupos privados por código e Efeitos de Aventura selecionados no lobby. A história mantém os encontros presenciais já cadastrados no Brasil, Europa e Ásia-Pacífico. A programação horária detalhada dos habitats é apresentada separadamente como informação comunitária do Leek Duck; a página oficial confirma apenas a ordem das duas horas.",
         "published_on": "2026-10-07",
         "updated_on": "2026-11-05"
       },
@@ -11898,7 +11899,9 @@
         "no_new_art_created": true,
         "approved_global_poster_unchanged": true,
         "no_new_gpx_or_coordinates_added": true,
-        "related_local_meetups_remain_in_local_events": true
+        "related_local_meetups_remain_in_local_events": true,
+        "community_habitat_hours_from_leekduck": true,
+        "official_habitat_hours_not_published": true
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -11934,7 +11937,7 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-11-12T23:01:18Z",
+      "updated_at": "2026-11-12T23:24:00Z",
       "asia_pacific_community_program": {
         "official_article": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
         "published_on": "2026-11-04",
@@ -13133,8 +13136,8 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Área Selvagem confirma fundos no perfil e grupos privados Dinamax",
-        "summary": "Fundos de Sendai e Cidade do México chegam ao perfil em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores chegam em 9/11 às 10h locais. O anúncio também detalha pesquisas, avatares, Pokémon HOME e Efeitos de Aventura.",
+        "title": "Área Selvagem: fundos no perfil, HOME e grupos privados Dinamax",
+        "summary": "Os Fundos de Localização de Sendai e Cidade do México foram liberados em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores, em 9/11 às 10h locais. Amigos só veem fundos compatíveis quando chega 10h no fuso local deles. O anúncio também confirma pareamento automático ou Grupo Privado por código nas Batalhas Dinamax, Efeitos de Aventura de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) no lobby, transferência de capturas com Bolas Safári GO ao Pokémon HOME como Strange Ball e uma pose de avatar exclusiva para titulares que concluem a Pesquisa Especial do ingresso.",
         "published_on": "2026-11-03",
         "label": "OFICIAL • DETALHES CONFIRMADOS"
       },
@@ -13144,7 +13147,10 @@
         "Batalhas Dinamax passam a oferecer entrada por pareamento automático ou Grupo Privado com código.",
         "Na Área Selvagem Global, a Pesquisa Especial ramificada libera medalha de Aço ou Dragão e bônus do tipo escolhido. Participantes presenciais de Sendai e Cidade do México podem obter as duas medalhas.",
         "Pokémon capturados em Bolas Safári GO agora podem ser enviados ao Pokémon HOME, onde a bola aparece como Bola Estranha.",
-        "Efeitos de Aventura selecionados poderão ser ativados no lobby de reides ou Batalhas Max a partir de Natureza Selvagem; participantes presenciais têm acesso antecipado."
+        "Efeitos de Aventura selecionados poderão ser ativados no lobby de reides ou Batalhas Max a partir de Natureza Selvagem; participantes presenciais têm acesso antecipado.",
+        "Titulares de ingresso que concluem a Pesquisa Especial da Área Selvagem Global recebem uma pose de avatar exclusiva.",
+        "Os Efeitos de Aventura de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) podem ser ativados no lobby antes de uma Batalha Max.",
+        "Os itens de avatar temáticos de Duraludon anunciados para a loja não são uma recompensa de evento datada; a notícia não cria uma janela de calendário adicional."
       ],
       "notifications": {
         "enabled": false,
@@ -13152,20 +13158,46 @@
       },
       "status": "published",
       "verified_at": "2026-11-04",
-      "updated_at": "2026-11-04T07:27:00-03:00",
+      "updated_at": "2026-11-12T23:24:00Z",
       "audit": {
         "classification": "official_announcement_editorially_verified",
         "editorial_detail_pending": false,
         "automatic_index_discovery": true,
         "not_a_calendar_event": true,
         "canonical_fulltext_url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
-        "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026"
+        "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
+        "details_reviewed_at": "2026-11-12T23:24:00Z",
+        "official_pt_en_full_pages_reviewed": true,
+        "community_crosscheck": "Leek Duck e Pokémon GO Hub usados como conferência comunitária; conteúdo oficial permanece prioritário."
       },
       "related_event_ids": [
         "2026-11-go-wild-area-sendai",
         "2026-11-go-wild-area-mexico-city",
         "2026-11-09-into-the-wild",
         "2026-11-go-wild-area-global"
+      ],
+      "verification_sources": [
+        {
+          "name": "Pokémon GO — Get ready for Pokémon GO Wild Area 2026 (EN)",
+          "url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO — Área Selvagem GO Global (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/gowildarea/global",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck — Pokémon GO Wild Area 2026: Global",
+          "url": "https://leekduck.com/events/pokemon-go-wild-area-2026-global/",
+          "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO Hub — GO Wild Area 2026: Global",
+          "url": "https://pokemongohub.net/post/event/wild-area-2026-global/",
+          "confidence": "community",
+          "published_on": "2026-11-05"
+        }
       ]
     },
     {
