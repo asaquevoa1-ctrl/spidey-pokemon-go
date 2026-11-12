@@ -149,3 +149,16 @@
 @media(prefers-reduced-motion:reduce){
   #weeklyView .weekly-item{transition:none!important;transform:none!important}
 }
+/* Mobile accessibility: keep long event names readable without cropping approved art. */
+@media(max-width:480px){
+  #weeklyView .weekly-item-copy>strong{overflow-wrap:anywhere;hyphens:auto}
+  #weeklyView .weekly-item-copy p{overflow-wrap:anywhere}
+  #weeklyView .weekly-date-range,#weeklyView .weekly-time{font-variant-numeric:tabular-nums;line-height:1.5}
+}
+/* Keyboard users must see the focused card, even if its inner control owns focus. */
+#weeklyView .weekly-item:focus-within{outline:3px solid #f1c681!important;outline-offset:2px}
+@media(forced-colors:active){
+  #weeklyView .weekly-item,#weeklyView .weekly-day,#weeklyView .weekly-block{border:1px solid CanvasText!important;forced-color-adjust:auto}
+  #weeklyView .weekly-item:focus-visible,#weeklyView .weekly-item:focus-within{outline:3px solid Highlight!important;outline-offset:2px}
+  #weeklyView .weekly-item-copy>strong,#weeklyView .weekly-item-copy p{color:CanvasText!important}
+}
