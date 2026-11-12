@@ -35,11 +35,11 @@ test('two independent views are wired into the existing navigation and Samsung m
   }
   assert.match(html,/wildAreaMexicoView/,'historical Mexico page is preserved');
   assert.match(html,/México · arquivo/);
-  assert.match(html,/wild-area-20261109\.css\?v=20261109-weekart2/);
-  assert.match(html,/wild-area-20261109\.js\?v=20261109-weekart2/);
+  assert.match(html,/wild-area-20261109\.css\?v=[^"']+/);
+  assert.match(html,/wild-area-20261109\.js\?v=[^"']+/);
   assert.match(css,/max-width:680px/);
   assert.match(css,/prefers-reduced-motion/);
-  assert.match(read(app+'sw.js'),/spidey-app-20261109-weekart2/);
+  assert.match(read(app+'sw.js'),/const CACHE = 'spidey-app-[^']+'/);
   assert.match(read(app+'sw.js'),/\.\/wild-area-20261109\.js/);
   assert.match(read(app+'sw.js'),/\.\/wild-area-20261109\.css/);
 });

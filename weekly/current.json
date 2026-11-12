@@ -294,7 +294,7 @@
       {
         "id": "2026-11-09-into-the-wild",
         "title": "Natureza Selvagem: Into the Wild 2026",
-        "summary": "9 a 13/11, 10h–20h (horário local): Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Registeel, Regidrago, Latias e Latios Dinamax em Batalhas Max 5★. Fundo especial possível, não garantido.",
+        "summary": "9 a 13/11, 10h–20h (horário local): Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Registeel, Regidrago, Latias e Latios Dinamax em Batalhas Max 5★. Regidrago capturado no evento conhece Sopro do Dragão; Fundo Especial é possível, não garantido.",
         "category": "evento_especial",
         "tags": [
           "Novembro 2026",
@@ -322,7 +322,7 @@
       {
         "id": "2026-11-12-max-hour-regidrago",
         "title": "Hora Max: Regidrago Dinamax",
-        "summary": "Regidrago Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+        "summary": "Regidrago Dinamax em destaque das 18h às 19h no horário local de cada região. Capturado durante o evento, conhece Sopro do Dragão; pode ser Brilhante e pode ter Fundo Especial, sem garantia.",
         "category": "max_battle_day",
         "tags": [
           "Global",
@@ -615,8 +615,8 @@
     "events_without_weekly_art": 11,
     "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-12T01:00:01.242245-03:00",
-    "current_items_filtered_at": "2026-11-12T01:00:01.226416-03:00",
+    "generated_at": "2026-11-12T01:43:04.993634-03:00",
+    "current_items_filtered_at": "2026-11-12T01:43:04.953344-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
