@@ -673,3 +673,6 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Encerramento de eventos com hora é exclusivo: remover da Semana e de Novidades quando agora >= fim. Eventos sem hora usam o primeiro instante do dia seguinte no fuso IANA do próprio evento como limite exclusivo.
 - Os testes cobrem 18:59:59/19:00 para a Hora Max de Regidrago, 19:59:59/20:00 para Into the Wild, a fronteira de Londres em Europe/London e o agrupamento único de Minior.
 - Nenhuma arte foi criada ou substituída. Pôster Global aprovado, S cósmico, coordenadas, rotas, GPX, catálogos, Pokédex, PvP, Push e Amigos/chat permanecem intocados.
+
+
+- Complemento editorial: os horários específicos das rotações Aço/Dragão não aparecem na página oficial PT-BR; o guia mostra a grade horária do Leek Duck somente com rótulo comunitário, sem promovê-la a anúncio oficial.
