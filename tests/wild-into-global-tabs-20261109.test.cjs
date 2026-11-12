@@ -141,3 +141,17 @@ test('Minior mantém as janelas separadas e as confirmações comunitárias rotu
   assert.ok(leonids.verification_sources.some(x=>x.confidence==='community'));
   assert.equal(leonids.audit.no_2027_year_inferred,true);
 });
+
+
+test('notícia oficial de recursos da Wild Area é atualizada no mesmo ID, sem evento novo',()=>{
+  const catalog=JSON.parse(read(app+'data/events.json')).events;
+  const item=catalog.find(e=>e.id==='official-news-auto-5e1b1cd68f6c');
+  assert.ok(item);
+  assert.equal(item.content_type,'news');
+  assert.equal(item.audit.editorial_detail_pending,false);
+  for(const term of ['Fundos de Localização','Grupo Privado por código','Behemoth Blade','Behemoth Bash','Strange Ball','pose de avatar exclusiva']) {
+    assert.ok(item.news.summary.includes(term)||item.notes.some(x=>x.includes(term)),'detalhe ausente: '+term);
+  }
+  assert.ok(item.related_event_ids.includes('2026-11-go-wild-area-global'));
+  assert.equal(catalog.filter(e=>e.id==='official-news-auto-5e1b1cd68f6c').length,1);
+});
