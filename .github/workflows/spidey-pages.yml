@@ -58,7 +58,7 @@ jobs:
       - name: Conferir sintaxe das rotas comunitárias Aço e Dragão
         run: node --check spidey-app/wild-mexico-type-stops-20261106.js
       - name: Conferir limites da medição de acessos
-        run: node --test tests/web-analytics.test.cjs
+        run: node --test tests/web-analytics.test.cjs tests/spidey-expired-events-crossviews.test.cjs tests/local-events.test.cjs
       - name: Proteger rota mundial Teddiursa e impedir notícias duplicadas
         run: node --test tests/world-route-news-regression-20261109.test.cjs
       - name: Validar detalhes oficiais da Semana Selvagem antes de publicar
