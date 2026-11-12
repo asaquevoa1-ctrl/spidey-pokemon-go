@@ -350,7 +350,7 @@
       {
         "id": "2026-11-13-max-hour-latias-latios",
         "title": "Hora Max: Latias e Latios Dinamax",
-        "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. A Rota Mundial usa referências geográficas, não ginásios ou Pontos de Energia confirmados.",
+        "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. Podem aparecer Brilhantes e, após uma captura bem-sucedida, podem vir com o Fundo Especial do evento.",
         "category": "max_battle_day",
         "tags": [
           "Global",
@@ -615,8 +615,8 @@
     "events_without_weekly_art": 11,
     "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-12T10:03:37.538597-03:00",
-    "current_items_filtered_at": "2026-11-12T10:03:37.516014-03:00",
+    "generated_at": "2026-11-12T16:12:55.247097-03:00",
+    "current_items_filtered_at": "2026-11-12T16:12:55.227696-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
