@@ -1,0 +1,34 @@
+{
+  "audit_id": "wild-area-global-daily-discoveries-20261113",
+  "base_main_sha": "e9c738e7adfffc29e2930055a0c214b13f4211b4",
+  "base_pr_branch_sha": "5ae5eb6f5c5427b63b3df06255b467e7be143d7e",
+  "reviewed_at": "2026-11-13T12:29:05-03:00",
+  "canonical_story_id": "2026-11-go-wild-area-global",
+  "sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/gowildarea/global",
+    "https://pokemongo.com/en/gowildarea/global"
+  ],
+  "confirmed_details": [
+    "Daily Discoveries do not take place from 2026-11-09 00:01 through 2026-11-15 23:59 local time",
+    "ticket-holder Max Particle bonus requires collecting all Max Particles available in the Nearby menu first",
+    "Adventure Sync may help distance count toward the daily Nearby collection"
+  ],
+  "calendar_decisions": {
+    "event_window_preserved": "2026-11-14 10:00–18:00 and 2026-11-15 10:00–18:00 local",
+    "separate_daily_discoveries_window_record_created": false,
+    "new_event_created": false,
+    "duplicate_story_created": false
+  },
+  "preservation": {
+    "approved_art_changed": false,
+    "gpx_or_coordinates_changed": false,
+    "push_dispatched": false,
+    "third_party_messages_sent": false,
+    "android_physical_test_claimed": false
+  },
+  "validation": {
+    "test_added": "tests/into-the-wild-official-detail-20261111.test.cjs",
+    "test_execution": "pending GitHub Actions on PR #289 updated head",
+    "pages_deploy": "not attempted; PR remains unmerged"
+  }
+}
