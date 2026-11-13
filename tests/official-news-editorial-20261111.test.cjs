@@ -103,3 +103,16 @@ test('Wild Area avatar shop items remain a news detail, not a dated event',()=>{
  assert.match(text,/continuam disponíveis após o evento/i);
  assert.equal(story.news.updated_on,'2026-11-12');
 });
+
+
+test('Área Selvagem lista os três itens de avatar da loja sem criar janela de calendário',()=>{
+ const story=byId('official-news-auto-5e1b1cd68f6c');
+ assert.ok(story);
+ assert.equal(story.calendar.mode,'hidden');
+ assert.equal(story.audit.editorial_detail_pending,false);
+ const text=[story.summary,story.news.summary,...story.notes].join(' ');
+ for(const item of ['Capacete de Duraludon','Mochila de Duraludon Gigamax','Jaqueta do tipo Lutador']) assert.ok(text.includes(item),item);
+ assert.match(text,/continuam disponíveis após seu encerramento/i);
+ assert.equal(story.news.updated_on,'2026-11-12');
+ assert.equal(story.audit.canonical_fulltext_url,'https://pokemongo.com/pt-BR/news/get-ready-for-gowildarea-2026');
+});
