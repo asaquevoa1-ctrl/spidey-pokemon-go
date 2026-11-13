@@ -45,12 +45,12 @@ jobs:
       - name: Fixar a revisão do pacote público
         id: capture_sha
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Conferir empacotamento e integridade
         run: python -m unittest scripts.test_spidey_pages scripts.test_build_spidey_weekly
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '24'
       - name: Conferir sintaxe do verificador Wild Area
@@ -126,7 +126,7 @@ jobs:
           assert len(active) >= 11 and stops >= 744, 'Artefato público incompleto: mínimo aprovado 11 coleções/744 pontos'
           assert {r['id']: r for r in active} == {r['id']: r for r in source_active}, 'Artefato diverge do catálogo da main (coleções, coordenadas ou metadados)'
           PY
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         if: github.event_name != 'pull_request'
         with:
           path: pages-public
@@ -210,18 +210,18 @@ jobs:
                   print('::error::Pages está configurado para publicar por branch, não por GitHub Actions. Em Settings > Pages > Build and deployment > Source, selecionar GitHub Actions.')
                   raise SystemExit(1)
           PY
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - name: Publicar Spidey
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
       # Reconstroi deterministicamente os mesmos arquivos para validar o
       # sw.js e o index.html publicados, que diferem dos arquivos-fonte.
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Preparar pacote identico para auditoria publica
         run: python scripts/build_spidey_pages.py --output pages-public
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
       # Este passo só termina com sucesso quando o site PÚBLICO
