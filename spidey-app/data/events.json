@@ -2177,7 +2177,7 @@
       "id": "2026-11-09-daily-discovery-pause",
       "slug": "2026-11-09-daily-discovery-pause",
       "title": "Aviso: Descobertas Diárias suspensas",
-      "summary": "Sem Descobertas Diárias de 9 a 15 de novembro durante a programação da Área Selvagem.",
+      "summary": "Descobertas Diárias suspensas de 9/11 às 00h01 a 15/11 às 23h59 (horário local), conforme a publicação oficial da Área Selvagem Global. A Hora do Holofote regular de 12/11 também fica incluída na suspensão.",
       "category": "evento_especial",
       "tags": [
         "Novembro 2026",
@@ -2188,15 +2188,16 @@
       ],
       "source": {
         "name": "Pokémon GO • comunicado oficial",
-        "url": "https://pokemongo.com/news/into-the-wild-2026",
+        "url": "https://pokemongo.com/en/gowildarea/global",
         "confidence": "official"
       },
       "schedule": {
-        "precision": "date",
         "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-09",
-        "end_date": "2026-11-15",
-        "brazil_timezone": "America/Sao_Paulo"
+        "start_local": "2026-11-09T00:01:00-03:00",
+        "end_local": "2026-11-15T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-09T00:01:00-03:00",
+        "end_brazil": "2026-11-15T23:59:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -2214,23 +2215,40 @@
       "pokemon": [],
       "bonuses": [],
       "notes": [
-        "Confirmação oficial: não haverá bônus regulares de Descobertas Diárias de 9 a 15/11.",
-        "Inclui a Hora do Holofote regular: não criar evento de destaque em 12/11.",
-        "No sábado e domingo da Área Selvagem Global, há programação própria."
+        "Não haverá Descobertas Diárias entre 9/11/2026 às 00h01 e 15/11/2026 às 23h59, no horário local.",
+        "A suspensão inclui a Hora do Holofote regular de 12/11; não criar um evento de destaque separado nesse dia.",
+        "Nos dias 14 e 15/11, a Área Selvagem Global mantém suas janelas próprias de gameplay, das 10h às 18h locais."
       ],
       "notifications": {
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
-          "name": "Pokémon GO • oficial",
-          "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "name": "Pokémon GO • oficial (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/gowildarea/global",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • oficial (EN)",
+          "url": "https://pokemongo.com/en/gowildarea/global",
           "confidence": "official"
         }
-      ]
+      ],
+      "updated_at": "2026-11-13T12:29:05-03:00",
+      "audit": {
+        "exact_window_verified": true,
+        "window_start_local": "00:01",
+        "window_end_local": "23:59",
+        "window_dates": "2026-11-09/2026-11-15",
+        "source_story_id": "2026-11-go-wild-area-global",
+        "source_url_canonical": "https://pokemongo.com/en/gowildarea/global",
+        "schedule_precision": "timed",
+        "date_only_removed": true,
+        "weekly_regeneration_required": true
+      }
     },
     {
       "id": "2026-11-16-dynamax-trails",
