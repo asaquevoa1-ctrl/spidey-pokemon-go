@@ -54,9 +54,10 @@ const w={addEventListener(){},SPIDEY_APPROVED_ART_MASTER:{regional:{file:'assets
  SpideyPlayer:{art:e=>'assets/'+e.id+'.webp',title:e=>e.title}};
 const doc={readyState:'complete',hidden:false,createElement:tag=>new Element(tag),
  getElementById:id=>id==='playerHome'?home:null,addEventListener(){}};
-vm.runInNewContext(script,{window:w,document:doc,Intl,Date,state:{events:fixture}});
-const api=w.SpideyCalendarPremium;
 const fixed=new Date('2026-11-01T21:00:00.000Z');
+class FixedDate extends Date { constructor(...args){ super(...(args.length?args:[fixed])); } static now(){ return +fixed; } }
+vm.runInNewContext(script,{window:w,document:doc,Intl,Date:FixedDate,state:{events:fixture}});
+const api=w.SpideyCalendarPremium;
 test('BRT dates, cross-midnight and date-only schedule are accurate',()=>{
  assert.equal(api.brazilKey(fixed),'2026-11-01');
  assert.deepEqual(Array.from(api.weekDays(fixed),x=>x.key),

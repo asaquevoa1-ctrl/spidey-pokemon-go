@@ -60,7 +60,7 @@ test('Pokémon Center has 18 community-confirmed coordinates and other rallies d
    const rally=rallies.find(r=>r.id===id);
    assert.ok(rally.stops.every(p=>p.latitude==null&&p.longitude==null));
  }
- assert.ok(ui.includes('Ainda não temos coordenadas confirmadas para esta coleção.'));
+ assert.ok(ui.includes('Ainda não há coordenadas verificadas para esta coleção.'));
 });
 
 test('images and existing GPX logic remain independent from copy lists',()=>{

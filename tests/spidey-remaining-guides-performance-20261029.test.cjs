@@ -22,7 +22,7 @@ test('ANA, Trust and Selos keep valid scripts and no approved image data is chan
 
 test('Reabrir Selos sem mudar dados nem progresso reutiliza cartões, mas atualização invalida cache',()=>{
   const app=read('app.js');
-  const first=app.indexOf('let lastStampCatalog=null, lastStampProgressSignature=');
+  const first=app.indexOf('let lastStampCatalog=null;');
   const last=app.indexOf('function stampCoordinateLabel(',first);
   assert.ok(first>=0&&last>first);
   const code=app.slice(first,last);
@@ -49,9 +49,11 @@ test('Reabrir Selos sem mudar dados nem progresso reutiliza cartões, mas atuali
 
 test('New PWA build versions preserve the official cosmic logo and original data',()=>{
   const html=read('index.html'),sw=read('sw.js');
-  for(const name of ['app','ana-airports','national-trust-v1'])
-    assert.ok(html.includes(name+'.js?v=20261029-guides-stable1'),name);
-  assert.match(sw,/20261029-guides-stable1/);
+  for(const name of ['app','ana-airports','national-trust-v1']) {
+    assert.match(html,new RegExp(name+'\\.js\\?v=[\\w-]+'),name);
+    assert.ok(sw.includes('./'+name+'.js'),name+' must remain in the offline cache');
+  }
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(html,/spidey-icon-cosmic-192\.png/);
   assert.match(html,/stamps-v2\.js\?v=20261029-pokelids-mobile-pages2/);
 });

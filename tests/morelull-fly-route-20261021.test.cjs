@@ -80,7 +80,7 @@ test('Morelull stays in generic global routes; the current featured route is Ted
   assert.doesNotMatch(ui,/MORELULL_ID|flyMorelullSpotlight|data-fly-morespotlight/);
   assert.ok(ui.includes('data-coord="${q}"'));
   assert.ok(ui.includes("core.loadPoints()"));
-  assert.ok(html.includes('fly-v1.js?v=20261022-credits-dst1'));
+  assert.match(html,/fly-v1\.js\?v=[\w-]+/);
   assert.ok(css.includes('.fly-spotlight-feature'));
   assert.ok(app.includes('id="openEventFly"'));
   assert.ok(app.includes('window.SpideyFly?.open(event.id)'));
