@@ -9125,13 +9125,21 @@
         "official_sources_checked": [
           "https://pokemongo.com/pt-BR/news",
           "https://pokemongo.com/en/news",
-          "https://pokemongo.com/en/seasons/forever-forward",
-          "https://pokemongo.com/pt-BR/events/november-2026",
-          "https://pokemongo.com/en/events/november-2026"
+          "https://pokemongo.com/pt-BR/seasons/twilight-trails",
+          "https://pokemongo.com/en/seasons/twilight-trails"
         ],
         "official_november_species_confirmation": false,
         "public_official_event_calendar_requires_sign_in": true,
         "community_event_records_archived": [
+          "2026-11-25-raids-deoxys-four-forms",
+          "2026-11-16-mega-banette-raids",
+          "2026-11-25-mega-metagross-raids",
+          "2026-11-18-raid-hour-cresselia-darkrai",
+          "2026-11-25-raid-hour-deoxys",
+          "2026-11-26-spotlight-noibat",
+          "2026-11-21-shadow-tornadus-weekend",
+          "2026-11-28-shadow-tornadus-weekend",
+          "2026-11-16-max-surprise",
           "2026-11-23-max-espurr",
           "2026-11-30-max-cryogonal"
         ],
