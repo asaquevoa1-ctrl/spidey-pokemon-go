@@ -165,7 +165,7 @@ test('autopublicação aciona o único GitHub Pages oficial somente depois de gr
   const push = auto.indexOf('git push origin HEAD:main');
   const dispatch = auto.indexOf('gh workflow run spidey-pages.yml --ref main --repo "$GH_REPO"');
   assert.ok(push >= 0 && dispatch > push, 'Deploy precisa ocorrer depois do commit público');
-  assert.ok(auto.includes('node --test tests/spidey-maintenance-20261113.test.cjs tests/fly-user-list-20261031.test.cjs'));
+  assert.ok(auto.includes('node --test tests/spidey-maintenance-20261113.test.cjs tests/fly-user-list-20261031.test.cjs tests/mexico-wild-area-stamps-georeference-20261027.test.cjs tests/go-wild-area-stamp-rallies-20261028.test.cjs tests/stamps-community-routes-20261102.test.cjs tests/world-route-news-regression-20261109.test.cjs'));
   assert.match(pages, /workflow_dispatch:/);
   assert.match(pages, /actions\/deploy-pages@v4/);
   assert.match(legacy, /legado desativado/i);

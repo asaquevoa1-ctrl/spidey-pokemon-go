@@ -84,7 +84,7 @@ test('Human-first stamped UI copies only reference locations, keeps exact-gpx re
  assert.ok(ui.includes('Referência do local'));
  assert.ok(ui.includes('Copiar local de referência'));
  assert.ok(ui.includes('Procure o símbolo do selo'));
- assert.ok(ui.includes('isLandmarkGuide ? landmarkVenueCoord(stop) : coord(stop)'));
+ assert.ok(ui.includes('isLandmarkGuide ? landmarkVenueCoord(stop) : (coord(stop) || communityCoord(stop))'));
  assert.ok(app.includes('lugares de referência (não Poképaradas)'));
  assert.match(html,/stamps-v2\.js\?v=[\w-]+/);
  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);

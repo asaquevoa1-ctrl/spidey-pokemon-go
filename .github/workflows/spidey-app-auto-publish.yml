@@ -44,7 +44,7 @@ jobs:
           set -euo pipefail
           python -m py_compile scripts/app_auto_publish_v2.py scripts/test_app_auto_publish.py
           python -m scripts.test_app_auto_publish
-          node --test tests/spidey-maintenance-20261113.test.cjs tests/fly-user-list-20261031.test.cjs
+          node --test tests/spidey-maintenance-20261113.test.cjs tests/fly-user-list-20261031.test.cjs tests/mexico-wild-area-stamps-georeference-20261027.test.cjs tests/go-wild-area-stamp-rallies-20261028.test.cjs tests/stamps-community-routes-20261102.test.cjs tests/world-route-news-regression-20261109.test.cjs
           python -m json.tool spidey-app/data/events.json >/dev/null
           python -m json.tool spidey-app/data/stamps.json >/dev/null
 
