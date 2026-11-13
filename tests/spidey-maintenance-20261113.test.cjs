@@ -172,6 +172,9 @@ test('autopublicação aciona o único GitHub Pages oficial somente depois de gr
   assert.ok(auto.includes('node --test tests/spidey-maintenance-20261113.test.cjs tests/fly-user-list-20261031.test.cjs tests/mexico-wild-area-stamps-georeference-20261027.test.cjs tests/go-wild-area-stamp-rallies-20261028.test.cjs tests/stamps-community-routes-20261102.test.cjs tests/world-route-news-regression-20261109.test.cjs'));
   assert.match(pages, /workflow_dispatch:/);
   assert.match(pages, /actions\/deploy-pages@v5/);
+  for (const path of ['fly-v1.js','fly-core.js','data/world-event-points.json','stamps-community-routes-20261102.js','data/community-routes-20261102.json','assets/events/premium/wild-area-sendai-2026-approved-v1.png','assets/events/premium/wild-area-mexico-city-2026-approved-v1.png']) {
+    assert.ok(pages.includes(`'${path}'`), `HTTP verification must cover ${path}`);
+  }
   assert.match(legacy, /legado desativado/i);
   assert.match(legacy, /if:\s*\$\{\{\s*false\s*\}\}/);
 });
