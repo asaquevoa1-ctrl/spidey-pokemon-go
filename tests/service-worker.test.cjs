@@ -5,7 +5,7 @@ const fs = require('node:fs');
 
 function worker(overrides = {}) {
   const listeners = {};
-  const self = { location: { origin: 'https://spidey.test', href: 'https://spidey.test/spidey-app/sw.js' }, addEventListener: (name, fn) => { listeners[name] = fn; }, clients: { claim: async () => {} }, skipWaiting: async () => {} };
+  const self = { location: { origin: 'https://spidey.test', href: 'https://spidey.test/spidey-app/sw.js' }, addEventListener: (name, fn) => { listeners[name] = fn; }, clients: { claim: async () => {}, matchAll: async () => [] }, skipWaiting: async () => {} };
   const cached = new Response('cached');
   const matches = [];
   const caches = { match: async (request, options) => { matches.push({ request, options }); return cached; }, open: async () => ({ put: async () => {} }), keys: async () => [], delete: async () => {} };

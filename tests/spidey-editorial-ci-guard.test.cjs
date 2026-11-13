@@ -7,7 +7,7 @@ test('GitHub Pages não empacota nem publica catálogo sem gate editorial',()=>{
   const gate=s.indexOf('run: node scripts/check_editorial_integrity.cjs');
   const build=s.indexOf('run: python scripts/build_spidey_pages.py');
   assert.ok(gate>0&&build>gate,'O gate deve acontecer antes do empacotamento público');
-  assert.match(s,/config\/spidey-art-date-scopes\.json/);
+  assert.match(s,/config\/\*\*/,'Changes anywhere under config must trigger the editorial gate');
 });
 test('Autopublicação do catálogo bloqueia erro antes do commit',()=>{
   const s=read('.github/workflows/spidey-app-auto-publish.yml');

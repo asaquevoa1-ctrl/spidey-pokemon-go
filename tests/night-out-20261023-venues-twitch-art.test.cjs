@@ -48,7 +48,7 @@ test('Night Out is updated in place, without duplicate events or loss of approve
 });
 test('Arena coordinates from owner are references, not gym spawns or fake GPX',()=>{
  assert.equal(la.locations[0].coordinate_text,'33.943723,-118.342295');
- assert.equal(ld.locations[0].coordinate_text,'51.502579,0.003202');
+ assert.equal(ld.locations[0].coordinate_text,'51.5029,0.0034');
  assert.ok(guide.locations.some(p=>p.coordinate_text==='33.943723,-118.342295'));
  for(const id of ids){const e=local.find(x=>x.id===id);assert.ok(e,id);assert.equal(e.gpx.enabled,false);assert.equal(e.schedule.precision,'date');assert.equal(e.schedule.start_time,undefined);}
  const sb={window:{},Intl,Date,Math,Object,Set};

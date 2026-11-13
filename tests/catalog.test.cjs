@@ -3,7 +3,7 @@ test('live catalog prefers new main-branch content and falls back to a valid sav
   for (const offline of [false, true]) {
     const calls = [];
     const window = {};
-    const context = vm.createContext({ window, Object, encodeURIComponent, AbortSignal, fetch: async path => {
+    const context = vm.createContext({ window, Object, encodeURIComponent, AbortSignal, location: { hostname: 'spidey.test' }, fetch: async path => {
       calls.push(path);
       if (path.startsWith('api/') && offline) throw Error('offline');
       return { ok: true, json: async () => ({ events: [{ id: path.startsWith('api/') ? 'new' : 'saved' }] }) };

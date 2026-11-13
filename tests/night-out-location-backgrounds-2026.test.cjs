@@ -7,7 +7,7 @@ const events = JSON.parse(fs.readFileSync(root+'data/events.json','utf8')).event
 const original = events.find(e=>e.id==='2026-10-pokemon-night-out-twitch');
 const nights = [
   ['2026-pokemon-night-out-la','2026-10-24','Los Angeles',33.943723,-118.342295],
-  ['2026-pokemon-night-out-london','2026-11-10','Londres',51.502579,0.003202],
+  ['2026-pokemon-night-out-london','2026-11-10','Londres',51.5029,0.0034],
 ];
 test('Night Out has exactly two independently dated on-site events while preserving Twitch', () => {
   assert.ok(original,'Do not remove or duplicate the existing Twitch event');
