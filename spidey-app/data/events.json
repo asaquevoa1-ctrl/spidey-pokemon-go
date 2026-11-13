@@ -23,13 +23,13 @@
       },
       "verification_sources": [
         {
-          "name": "Pokémon GO • datas oficiais da próxima Temporada",
+          "name": "Pokémon GO • comunicado oficial em português (data de Reides)",
           "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
           "confidence": "official"
         },
         {
-          "name": "Pokémon GO • retorno oficial anterior de Mewtwo de Armadura em setembro de 2026 (não confirma dezembro)",
-          "url": "https://pokemongo.com/en/news/megafinale-2026-armored-mewtwo",
+          "name": "Pokémon GO • comunicado oficial em inglês",
+          "url": "https://pokemongo.com/en/news/save-the-date-s25",
           "confidence": "official"
         }
       ],
@@ -42,7 +42,7 @@
       },
       "news": {
         "title": "Rumor de Mewtwo de Armadura em 19/12: data de Dia de Reides confirmada, espécie não",
-        "summary": "A fonte oficial confirmou apenas que 19/12 terá um Dia de Reides. Mewtwo de Armadura, Pikachu Clone e os iniciais Clone continuam sem confirmação para essa data.",
+        "summary": "O dia 19/12 foi confirmado oficialmente como Dia de Reides. Mewtwo de Armadura, Pokémon Clone e o nome “Clone Special Raid Day” continuam sem confirmação e não foram adicionados ao calendário.",
         "published_on": "2026-11-03",
         "label": "HISTÓRICO • SUBSTITUÍDO POR DATA OFICIAL"
       },
@@ -63,11 +63,21 @@
         "reported_date_not_confirmed": false,
         "official_date_confirmed": true,
         "species_still_unconfirmed": true,
-        "historical_record_preserved": true
+        "historical_record_preserved": true,
+        "editorial_detail_pending": false,
+        "official_confirmation_url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "superseded_by_event_ids": [
+          "2026-12-19-raid-day-save-date",
+          "official-news-auto-8a38cf8f2093"
+        ]
       },
-      "updated_at": "2026-11-11T07:36:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "superseded_by": "2026-12-19-raid-day-save-date",
-      "superseded_at": "2026-11-11T07:36:00-03:00"
+      "superseded_at": "2026-11-11T07:36:00-03:00",
+      "related_event_ids": [
+        "2026-12-19-raid-day-save-date",
+        "official-news-auto-8a38cf8f2093"
+      ]
     },
     {
       "id": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
@@ -277,7 +287,7 @@
       "slug": "2026-10-26-eternatus-teaser-unconfirmed",
       "content_type": "news",
       "title": "Eternatus vai voltar? Teaser oficial e rumores para novembro",
-      "summary": "O Pokémon GO publicou um teaser de Eternamax Eternatus em 26/10. Dataminers encontraram uma possível janela de 14 a 23/11, mas a data, o método de obtenção e as recompensas ainda NÃO foram confirmados.",
+      "summary": "Registro histórico do teaser de 26/10. O anúncio oficial posterior confirmou Eternatus em Trilhas Dinamax (16–23/11) e Eternamax em Batalhas Max em 21/11, das 11h às 14h locais. A previsão comunitária de 14–23/11 não era a janela oficial e foi substituída.",
       "category": "community_discovery",
       "tags": [
         "Novidade",
@@ -296,18 +306,18 @@
       },
       "verification_sources": [
         {
-          "name": "Pokémon GO • perfil oficial com teaser em 26/10",
-          "url": "https://x.com/PokemonGoApp",
-          "confidence": "official_social_post"
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
         },
         {
-          "name": "PoGoMate • data mining GO Wild Area: Lead Out",
-          "url": "https://pogomate.com/en/datamining/eternatus-wild-area-lead-out-2026",
-          "confidence": "community_unconfirmed"
+          "name": "Pokémon GO • anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
         },
         {
-          "name": "Pokémon GO • Wild Area Global confirmado 14–15/11",
-          "url": "https://pokemongo.com/en/gowildarea/global",
+          "name": "Pokémon GO • anúncio oficial de Trilhas Dinamax e Eternamax Eternatus",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
           "confidence": "official"
         }
       ],
@@ -319,19 +329,16 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Eternatus no teaser oficial: retorno ainda sem data",
-        "summary": "Teaser mostra Eternamax Eternatus. A janela 14–23/11 circula em datamining, não em anúncio oficial. Como participar e quais recompensas receberemos ainda são incógnitas.",
+        "title": "Teaser de Eternatus: histórico atualizado após a confirmação oficial",
+        "summary": "O anúncio oficial confirmou o retorno de Eternatus em Trilhas Dinamax (16–23/11) e a janela própria de Eternamax em 21/11, 11h–14h locais. A previsão anterior de 14–23/11 foi substituída.",
         "published_on": "2026-10-26",
-        "label": "RUMOR / A CONFIRMAR"
+        "label": "HISTÓRICO • TEASER SUPERADO POR ANÚNCIO OFICIAL"
       },
       "notes": [
-        "OFICIAL: a conta Pokémon GO publicou em 26/10/2026 um teaser de 15 segundos com Eternamax Eternatus; ainda não confirmou a data ou formato de seu retorno.",
-        "Vazamento de configuração remota aponta o nome GO Wild Area: Lead Out e uma janela de 14 a 23 de novembro de 2026. Isso NÃO comprova que Eternatus estará disponível durante todo o período.",
-        "Separadamente, Pokémon GO Wild Area GLOBAL foi anunciado oficialmente para 14 e 15 de novembro, das 10h às 18h locais. Não ampliar esse evento oficial até 23/11.",
-        "Não há confirmação de segunda captura para quem já possui Eternatus, Passe GO, Batalhas Max, número de doces ou doces GG, nem disponibilidade Brilhante.",
-        "Não considerar o teaser confirmação de Eternatus Brilhante, da possibilidade de capturar Eternamax nem de uma recompensa garantida.",
-        "Esta notícia fica apenas nas Novidades do Spidey. Ela NÃO ocupa o Calendário, NÃO cria rota FLY, GPX ou alerta de evento confirmado.",
-        "Quando o anúncio completo sair, revisar as fontes e criar novo cadastro verificado sem transformar rumor antigo em fato."
+        "Registro histórico: em 26/10, uma publicação comunitária relatou um teaser oficial de Eternamax Eternatus e uma previsão de datamining para 14–23/11. A janela rumorada não foi confirmada oficialmente.",
+        "Confirmação posterior: o anúncio oficial definiu Trilhas Dinamax de 16/11 às 10h a 23/11 às 20h locais e Eternamax em Batalhas Max em 21/11, das 11h às 14h locais.",
+        "O teaser e a previsão antiga permanecem arquivados para histórico; consulte os eventos oficiais relacionados para datas e recompensas confirmadas.",
+        "ARQUIVADO • O anúncio oficial de Trilhas Dinamax confirmou o retorno de Eternatus no Passe GO de 16–23/11 e a janela de Eternamax em 21/11, 11h–14h locais. O intervalo comunitário 14–23/11 foi substituído pelos horários oficiais e não deve ser usado como evento."
       ],
       "pokemon": [
         {
@@ -345,16 +352,35 @@
       },
       "status": "archived",
       "verified_at": "2026-10-26",
-      "updated_at": "2026-10-26T18:10:00-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "audit": {
-        "classification": "official_teaser_plus_datamining",
+        "classification": "official_teaser_superseded_by_confirmed_announcement",
         "date_range_claim": "2026-11-14 to 2026-11-23",
         "date_range_verified_officially": false,
-        "related_official_event": "2026-11-go-wild-area-global",
-        "not_a_calendar_event": true
+        "related_official_event": "2026-11-16-dynamax-trails",
+        "not_a_calendar_event": true,
+        "editorial_detail_pending": false,
+        "superseded_by_event_ids": [
+          "2026-11-16-dynamax-trails",
+          "2026-11-21-eternamax-eternatus-max-battles"
+        ],
+        "official_confirmation_url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+        "reported_date_range_superseded": true,
+        "historical_record_preserved": true,
+        "related_official_events": [
+          "2026-11-16-dynamax-trails",
+          "2026-11-21-eternamax-eternatus-max-battles"
+        ],
+        "superseded_by_official_announcement": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
       },
       "superseded_by": "2026-11-16-dynamax-trails",
-      "superseded_at": "2026-10-28T18:10:35-03:00"
+      "superseded_at": "2026-10-28T18:10:35-03:00",
+      "related_event_ids": [
+        "2026-11-16-dynamax-trails",
+        "2026-11-21-eternamax-eternatus-max-battles"
+      ]
     },
     {
       "id": "2026-10-27-dia-de-muertos-mexico",
@@ -1849,7 +1875,7 @@
         },
         {
           "name": "Latios Dinamax",
-          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local; conhece Esfera de Luz quando capturado durante o evento"
+          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local; conhece Purga de Esplendor quando capturado durante o evento"
         },
         {
           "name": "Meltan Dinamax (Passe GO)"
@@ -1866,7 +1892,9 @@
         "Passe GO Deluxe: Natureza Selvagem concede uma Tampinha Prateada ao completar a trilha; ela aumenta um único atributo por Hiper Treinamento.",
         "Encontros na natureza anunciados incluem Magnemite, Noibat e Togedemaru, entre outros.",
         "Pesquisas de Campo temáticas concedem encontros e outras recompensas; a publicação não informa tarefas nem recompensas individuais.",
-        "Depois que o Desafio Global for concluído, os Efeitos de Aventura Espada Colossal e Escudo Colossal ficam mais eficazes e o medidor de energia das Batalhas Max enche mais rápido."
+        "Depois que o Desafio Global for concluído, os Efeitos de Aventura Espada Colossal e Escudo Colossal ficam mais eficazes e o medidor de energia das Batalhas Max enche mais rápido.",
+        "O intervalo para reabrir a Caixa Misteriosa é reduzido durante o evento principal (9/11 10h–13/11 20h locais).",
+        "A chance de Meltan Brilhante com Caixa Misteriosa e Gimmighoul Brilhante com Bolsa de Moedas permanece até 15/11 às 18h locais."
       ],
       "notes": [
         "Evento principal: 9/11 às 10h a 13/11 às 20h no horário local; para Brasília, 10h e 20h BRT.",
@@ -1878,14 +1906,16 @@
         "Passe GO e Passe GO Deluxe: 9/11 às 10h até 15/11 às 18h locais; recompensas desbloqueadas devem ser resgatadas até 17/11 às 23h59 locais.",
         "A Tampinha Prateada da trilha Deluxe deve ser usada até 22/11 às 23h59 locais. Exige Grande Companheiro ou nível superior; Pokémon Sombrosos e Pokémon com todos os atributos já no máximo não são elegíveis.",
         "Depois de usar a Tampinha, há 365 dias para concluir as tarefas de Hiper Treinamento do atributo escolhido. Pokémon Hiper Treinados não podem ser enviados ao Pokémon HOME.",
-        "A publicação não anuncia uma janela própria para o Desafio Global; ele permanece como condição do evento, sem novo evento datado no calendário."
+        "A publicação não anuncia uma janela própria para o Desafio Global; ele permanece como condição do evento, sem novo evento datado no calendário.",
+        "Caixa Misteriosa: o intervalo para reabertura é reduzido durante o evento principal (9/11 10h–13/11 20h locais).",
+        "A chance de Meltan Brilhante com Caixa Misteriosa e Gimmighoul Brilhante com Bolsa de Moedas permanece até 15/11 às 18h locais, além do encerramento do evento principal."
       ],
       "notifications": {
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
       "status": "published",
-      "verified_at": "2026-11-08",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
           "name": "Pokémon GO • oficial",
@@ -1900,16 +1930,17 @@
       ],
       "news": {
         "title": "Zacian e Zamazenta Coroados chegam às reides da Natureza Selvagem",
-        "summary": "De 9 a 13/11: Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★. Ganhe as respectivas energias ao vencer e tenha chance de Fundo Especial ao capturar. Horas de Reide: Zacian 9/11 e Zamazenta 10/11, das 18h às 19h locais. Batalhas Max 5★: Registeel 11/11, Regidrago 12/11, Latias e Latios 13/11. Os ginásios exibidos no registro comunitário de Kiribati ainda não têm coordenadas verificadas.",
+        "summary": "De 9 a 13/11: Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Horas Max incluem Latias com Bola de Névoa e Latios com Purga de Esplendor. Fundo Especial é possível, não garantido.",
         "published_on": "2026-11-08",
-        "label": "NOVIDADE • REIDES 5★ E BATALHAS MAX"
+        "label": "NOVIDADE • REIDES 5★ E BATALHAS MAX",
+        "updated_on": "2026-11-13"
       },
       "related_event_ids": [
         "2026-11-09-into-the-wild-go-pass",
         "2026-11-09-into-the-wild-pass-claim",
         "2026-11-09-silver-bottle-cap-use-deadline"
       ],
-      "updated_at": "2026-11-11T21:05:00-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "audit": {
         "official_article_read_in_full": true,
         "distinct_pass_windows_preserved": true,
@@ -1920,8 +1951,37 @@
         ],
         "field_research_individual_tasks_unpublished": true,
         "global_challenge_has_no_separate_official_window": true,
-        "reconciled_at": "2026-11-11T21:05:00-03:00"
-      }
+        "reconciled_at": "2026-11-11T21:05:00-03:00",
+        "mystery_box_cooldown_reduced": true,
+        "mystery_box_cooldown_window_end_local": "2026-11-13T20:00:00-03:00",
+        "meltan_gimmighoul_bonus_end_local": "2026-11-15T18:00:00-03:00",
+        "latios_attack_name_verified_pt_en": true,
+        "latios_attack_name_corrected_on": "2026-11-13",
+        "official_move_names_source_pt": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+        "official_move_names_source_en": "https://pokemongo.com/news/into-the-wild-2026",
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
+      },
+      "bonus_windows": [
+        {
+          "id": "mystery-box-cooldown",
+          "title": "Intervalo reduzido da Caixa Misteriosa",
+          "start_local": "2026-11-09T10:00:00-03:00",
+          "end_local": "2026-11-13T20:00:00-03:00",
+          "local_timezone": "America/Sao_Paulo",
+          "start_brazil": "2026-11-09T10:00:00-03:00",
+          "end_brazil": "2026-11-13T20:00:00-03:00"
+        },
+        {
+          "id": "meltan-gimmighoul-shiny",
+          "title": "Chance Brilhante com Caixa Misteriosa e Bolsa de Moedas",
+          "start_local": "2026-11-09T10:00:00-03:00",
+          "end_local": "2026-11-15T18:00:00-03:00",
+          "local_timezone": "America/Sao_Paulo",
+          "start_brazil": "2026-11-09T10:00:00-03:00",
+          "end_brazil": "2026-11-15T18:00:00-03:00"
+        }
+      ]
     },
     {
       "id": "2026-11-09-into-the-wild-go-pass",
@@ -2187,8 +2247,8 @@
         "Batalhas Max"
       ],
       "source": {
-        "name": "Pokémon GO • anúncio oficial",
-        "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
         "confidence": "official"
       },
       "schedule": {
@@ -2221,7 +2281,9 @@
       "bonuses": [
         "Chance de Partículas Max após capturas temáticas ou Batalhas Max; mais Pontos de Energia ativos.",
         "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo Especial ao capturar após Batalha Max (não garantido).",
-        "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max."
+        "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max.",
+        "Limite de coleta diário de Partículas Max de 2.400 e 8× Partículas Max em Pontos de Energia; Pontos de Energia se renovam com mais frequência.",
+        "Limite diário de Reides Remotas aumenta de 10 para 30 entre 20/11 13h e 21/11 18h PST (GMT−8), equivalente a 20/11 18h–21/11 23h em Brasília."
       ],
       "notes": [
         "Eternatus está na trilha gratuita do Passe GO. Avance nas tarefas para liberar o encontro; não é necessário comprar o Deluxe.",
@@ -2234,7 +2296,15 @@
         "As espécies temáticas podem aparecer na natureza; isso não significa encontrar Pokémon na forma Dinamax fora das Batalhas Max. Lendários e Míticos ficam fora dessa lista comum.",
         "Capturas com Pokémon GO Plus + ou Explorer Gadget não dão as Partículas Max desse bônus.",
         "Holofote de 19/11: Grookey, Scorbunny e Sobble; 2× Doces por captura, 18h–19h locais.",
-        "No guia de Batalhas Max, a seleção visual de Pokémon é comunitária e indicativa; não há confirmação oficial de quais estarão disponíveis a cada dia ou da taxa de Fundo Especial."
+        "No guia de Batalhas Max, a seleção visual de Pokémon é comunitária e indicativa; não há confirmação oficial de quais estarão disponíveis a cada dia ou da taxa de Fundo Especial.",
+        "Pesquisa de Campo: tarefas temáticas podem render Poeira Estelar, Doces de Eternatus e encontros com Pokémon do evento.",
+        "Adesivos temáticos: podem ser obtidos ao girar Poképaradas, abrir Presentes, comprar na loja do jogo e progredir no Passe GO.",
+        "Passe GO gratuito: recompensas incluem encontros com Pokémon Dinamax temáticos com Fundo Especial, um encontro com Eternatus ou 100 Doces se ele já tiver sido capturado, Doces e Doces GG de Eternatus, Doce Raro, Poeira Estelar e adesivos.",
+        "Passe GO Deluxe: acrescenta encontros com mais Pokémon Dinamax com Fundo Especial, mais Doces e Doces GG de Eternatus, Frutas Caxí Prateadas, Doce Raro GG e adesivos.",
+        "Preço anunciado do Deluxe: US$ 4,99 ou equivalente local; a disponibilidade pode variar por região. A compra pela Loja online inclui 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas como brinde.",
+        "Pontos de Energia serão renovados com mais frequência durante o evento.",
+        "Limite diário de coleta de Partículas Max aumenta para 2.400; Pontos de Energia concedem 8× Partículas Max.",
+        "Janela de Reides Remotas: de 20/11 13h a 21/11 18h PST (GMT−8), equivalente a 20/11 18h a 21/11 23h em Brasília; limite diário aumenta de 10 para 30."
       ],
       "notifications": {
         "enabled": false,
@@ -2243,6 +2313,16 @@
       "status": "published",
       "verified_at": "2026-10-28",
       "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        },
         {
           "name": "Pokémon GO • anúncio oficial",
           "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
@@ -2257,10 +2337,10 @@
           ]
         }
       ],
-      "updated_at": "2026-10-28T20:25:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro. Os Dynamax não lendários já lançados poderão retornar às Batalhas Max, com chance de Fundo Especial após a captura.",
+        "summary": "16–23/11: Dinamax já lançados (exceto Lendários/Míticos) podem voltar às Batalhas Max, com chance de Fundo Especial. Limite de Partículas Max: 2.400 e 8× nos Pontos de Energia. Reides Remotas: 30/dia de 20/11 18h a 21/11 23h BRT. Eternamax em 21/11, 11h–14h locais.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
@@ -2368,13 +2448,49 @@
             "confidence": "community"
           }
         ]
-      }
+      },
+      "audit": {
+        "classification": "official_announcement_full_text_reviewed",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+        "english_fulltext_url": "https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026",
+        "full_text_reviewed_at": "2026-11-12",
+        "details_completed": [
+          "field_research_rewards",
+          "event_stickers",
+          "go_pass_free_rewards",
+          "go_pass_deluxe_rewards",
+          "web_store_purchase_bonus",
+          "max_particle_cap_2400",
+          "power_spot_8x",
+          "power_spot_refresh",
+          "remote_raid_limit_window"
+        ],
+        "remote_raid_limit_timezone": "America/Los_Angeles",
+        "remote_raid_limit_brazil_window": [
+          "2026-11-20T18:00:00-03:00",
+          "2026-11-21T23:00:00-03:00"
+        ]
+      },
+      "bonus_windows": [
+        {
+          "id": "remote-raid-limit",
+          "title": "Limite diário de Reides Remotas: 30",
+          "start_local": "2026-11-20T13:00:00-08:00",
+          "end_local": "2026-11-21T18:00:00-08:00",
+          "local_timezone": "America/Los_Angeles",
+          "start_brazil": "2026-11-20T18:00:00-03:00",
+          "end_brazil": "2026-11-21T23:00:00-03:00",
+          "limit_from": 10,
+          "limit_to": 30
+        }
+      ]
     },
     {
       "id": "2026-11-21-community-day-preview",
       "slug": "2026-11-21-community-day-preview",
       "title": "Dia Comunitário de novembro: Pawniard",
-      "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
+      "summary": "Pawniard confirmado para 21/11, 14h–17h: Brilhante e Fundo Especial possíveis; 1/4 da distância dos Ovos, 2× Doces e Kingambit com Humilhação Dividida (Kowtow Cleave) até 21h.",
       "category": "community_day",
       "tags": [
         "Novembro 2026",
@@ -2386,8 +2502,8 @@
         "Anúncio oficial"
       ],
       "source": {
-        "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
-        "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
         "confidence": "official"
       },
       "schedule": {
@@ -2422,7 +2538,7 @@
         },
         {
           "name": "Kingambit",
-          "note": "Evolua Bisharp até 21h para receber o ataque carregado Kowtow Cleave (75 no PvP e 85 em reides e Ginásios)."
+          "note": "Evolua Bisharp até 21h para receber Humilhação Dividida (Kowtow Cleave; Kowtow Cleave em inglês), com 75 de força em Batalhas de Treinador e 85 em Ginásios e Reides."
         }
       ],
       "bonuses": [
@@ -2434,16 +2550,22 @@
         "Módulos Atrair comuns duram 1 hora, com Pawniard atraído e chance aumentada de Brilhante, das 14h às 21h locais.",
         "1 Troca Especial adicional (máximo de 2), das 14h às 21h locais.",
         "Trocas exigem 50% menos Poeira Estelar, das 14h às 21h locais.",
-        "Até as 21h, evolua Bisharp em Kingambit após vencer apenas 1 chefe de reide do tipo Sombrio ou Aço."
+        "Até as 21h locais, derrote 1 chefe de Reide do tipo Sombrio ou Aço com Bisharp como seu companheiro; depois, evolua Bisharp para Kingambit."
       ],
       "notes": [
         "21 de novembro, sábado | Das 14h às 17h, horário local. Pawniard aparece com mais frequência na natureza. Há chance de encontrar Pawniard Brilhante ou com Fundo Especial.",
         "Até as 21h | Evolua Bisharp para Kingambit e receba o ataque carregado Kowtow Cleave. Potência oficial: 75 em Batalhas de Treinador e 85 em Ginásios e reides.",
-        "Evolução facilitada | Das 14h às 21h, basta derrotar 1 chefe de reide Sombrio ou de tipo Aço para atender o requisito temporário; isso vale para todos os seus Bisharp, mesmo que não sejam seus companheiros.",
         "Prepare os Ovos | Para aproveitar o bônus de 1/4, coloque os Ovos em incubadoras dentro das três horas do Dia Comunitário.",
         "Horário estendido | Módulos Atrair comuns continuam oferecendo altas chances de Pawniard das 14h às 21h, mantendo a chance aumentada de Brilhante e Fundo Especial. Cada módulo dura 1 hora.",
         "Pesquisas de campo | Capturar Pawniard pode render Poeira Estelar, Ultra Bolas e encontros extras com Pawniard, inclusive chance de Fundo Especial.",
-        "Ingresso opcional | A Pesquisa Especial custa US$ 1,99 ou valor equivalente no Brasil. Entre as recompensas anunciadas estão 3 encontros com Fundo Especial, encontros extras, 1 Passe de Batalha Premium e 1 Doce Raro GG."
+        "Pesquisa Especial: não inclui medalha no jogo nem história. O ingresso pode ser presenteado a amizades no nível Grande Amizade ou superior, sujeito às restrições oficiais.",
+        "Check-in em evento de Embaixador da Comunidade: pode liberar uma Pesquisa Temporária com encontros adicionais de Pawniard com Fundo Especial e recompensas de itens premium.",
+        "Ultracombo do Ingresso na Loja online: pelo preço equivalente ao ingresso da Pesquisa Especial, inclui o ingresso e cinco Ultra Bolas sem custo adicional.",
+        "Requisito temporário de evolução corrigido no anúncio em 28/10: Bisharp precisa estar definido como companheiro ao derrotar 1 chefe de Reide do tipo Sombrio ou Aço. Depois, evolua Bisharp para Kingambit até 21h locais.",
+        "Ingresso opcional da Pesquisa Especial: US$ 1,99 ou preço regional equivalente. A data de início da venda ainda não foi anunciada.",
+        "Pode ser presenteado a amizades no nível Grande Amigo ou superior. Não é reembolsável (salvo lei/Termos), não concede medalha no jogo e não inclui uma história.",
+        "Não é possível presentear alguém que já comprou ou já recebeu um ingresso dessa Pesquisa Especial.",
+        "Ultracombo da Loja Online: ingresso da Pesquisa Especial e cinco Ultra Bolas, sem custo adicional."
       ],
       "notifications": {
         "enabled": true,
@@ -2452,8 +2574,18 @@
         ]
       },
       "status": "published",
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-13",
       "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • anúncio oficial em inglês",
+          "url": "https://pokemongo.com/news/communityday-november-2026-pawniard",
+          "confidence": "official"
+        },
         {
           "name": "Pokémon GO • anúncio oficial de Pawniard em novembro",
           "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
@@ -2469,21 +2601,47 @@
       "public_summary": "No dia 21/11, capture Pawniard das 14h às 17h e evolua Bisharp até 21h para conseguir Kingambit com Kowtow Cleave. Bônus e requisitos já confirmados pelo Pokémon GO.",
       "news": {
         "title": "CONFIRMADO: Pawniard é o Dia Comunitário de novembro!",
-        "summary": "21/11, 14h–17h: Pawniard Shiny, 1/4 de distância dos Ovos e 2× Doces. Kingambit aprende Kowtow Cleave ao evoluir até 21h. Veja como aproveitar o requisito reduzido da evolução.",
+        "summary": "21/11, 14h–17h: Pawniard Brilhante e Fundo Especial possíveis, 1/4 da distância dos Ovos e 2× Doces. Kingambit aprende Humilhação Dividida (Kowtow Cleave) ao evoluir até 21h. Pesquisa especial opcional por US$ 1,99.",
         "published_on": "2026-10-21",
         "source": {
-          "name": "Pokémon GO • anúncio oficial",
-          "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
           "confidence": "official"
-        }
+        },
+        "updated_on": "2026-11-13"
       },
-      "updated_at": "2026-10-21T22:24:00-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "art": {
         "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
         "web_width": 1024,
         "web_height": 1536,
         "web_sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
         "alt": "Arte Premium do Dia Comunitário de Pawniard, 21 de novembro de 2026: Pawniard e Kingambit, Bônus, Kowtow Cleave e evolução até 21h."
+      },
+      "audit": {
+        "classification": "official_announcement_updated_after_october_28_correction",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
+        "full_text_reviewed_at": "2026-11-12",
+        "official_correction": {
+          "date": "2026-10-28",
+          "field": "Bisharp_buddy_requirement",
+          "corrected": true,
+          "source_url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard"
+        },
+        "official_pt_en_fulltext_reconciled": true,
+        "evolution_requirement_oct28_correction_applied": true,
+        "requires_bisharp_as_buddy_for_raid_requirement": true,
+        "ticket_price_usd": 1.99,
+        "ticket_sale_start_not_published": true,
+        "ticket_gifting_min_friendship": "Great Friends",
+        "ticket_non_refundable_subject_to_law_and_terms": true,
+        "research_has_no_in_game_medal": true,
+        "research_has_no_story": true,
+        "gifting_blocked_if_recipient_already_purchased_or_received": true,
+        "web_store_box_includes_five_ultra_balls": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
       }
     },
     {
@@ -2553,7 +2711,12 @@
         "PESQUISA DE CAMPO • 24/11 10h a 26/11 10h: Applin pode aparecer como recompensa; Brilhante possível.",
         "PESQUISA DE CAMPO • 26/11 10h a 30/11 20h: Gengar com fantasia do Festival Assustador, Drifblim com fantasia Travessura de Halloween e Bramblin podem aparecer.",
         "O Passe GO: Chamados do Crepúsculo funciona durante o evento. Recompensas desbloqueadas podem ser resgatadas até 2/12 às 20h locais.",
-        "A disponibilidade do Passe GO Deluxe varia por região; a compra não garante Pokémon Brilhante."
+        "A disponibilidade do Passe GO Deluxe varia por região; a compra não garante Pokémon Brilhante.",
+        "Pesquisa de Campo temática: as tarefas também podem render Megaenergia e encontros com Pokémon do evento, incluindo Staryu e Elgyem.",
+        "Passe GO gratuito: recompensas incluem encontros temáticos, Pedaço de Estrela, Doce Raro e Megaenergia de Beedrill, Houndoom, Sableye e Manectric.",
+        "Passe GO Deluxe: acrescenta encontros, pose de avatar temática, Pedaços de Estrela e Passes de Batalha Premium.",
+        "Preços anunciados: US$ 4,99 para o Deluxe e US$ 6,99 para o Deluxe + 6 Ranques, ou equivalente na moeda local; disponibilidade pode variar por região.",
+        "Bônus de compra na Loja online: Deluxe inclui 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas; Deluxe + 6 Ranques inclui 2 Passes de Batalha Premium. O Ultracombo exclusivo +6 inclui 20 Ultra Bolas, 10 Máximos Reviver, 10 Poções Máximas e 5 Passes de Batalha Premium."
       ],
       "notifications": {
         "enabled": false,
@@ -2561,7 +2724,7 @@
       },
       "status": "published",
       "verified_at": "2026-11-04",
-      "updated_at": "2026-11-04T07:27:00-03:00",
+      "updated_at": "2026-11-12T20:28:41-03:00",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio completo",
@@ -2596,9 +2759,23 @@
       ],
       "news": {
         "title": "Chamados do Crepúsculo: duas fases de pesquisa e Passe GO",
-        "summary": "De 24 a 30/11, Staryu e Elgyem têm chance Brilhante aumentada. A Pesquisa de Campo muda em 26/11 às 10h locais, e o Passe GO libera bônus por nível.",
+        "summary": "24–30/11: Staryu e Elgyem com chance Brilhante aumentada, reides temáticas e duas fases de Pesquisa de Campo. Passe GO: bônus nos ranques 1 e 10, recompensas gratuitas e Deluxe; resgate até 2/12 às 20h locais.",
         "published_on": "2026-11-02",
         "label": "OFICIAL • DETALHES CONFIRMADOS"
+      },
+      "audit": {
+        "classification": "official_announcement_full_text_reviewed",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+        "english_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026",
+        "full_text_reviewed_at": "2026-11-12",
+        "details_completed": [
+          "field_research_mega_energy",
+          "go_pass_free_rewards",
+          "go_pass_deluxe_rewards",
+          "regional_pricing",
+          "web_store_purchase_bonuses"
+        ]
       }
     },
     {
@@ -2665,7 +2842,10 @@
         "A Pesquisa temporária dá um Passe de Batalha Premium e um encontro com Metagross; conclua e resgate antes do fim do evento.",
         "O Ultracombo da loja online inclui o ingresso e um Passe de Batalha Premium adicional pelo mesmo nível de preço anunciado.",
         "Super Megarreides podem aparecer apenas em determinados Ginásios; o anúncio orienta consultar o mapa oficial e encontros de comunidades.",
-        "Não confundir com as Megarreides de rotação."
+        "Não confundir com as Megarreides de rotação.",
+        "INGRESSO • US$ 4,99 (ou preço equivalente na moeda local). Os bônus pagos valem em 28/11, das 14h às 17h locais; o ingresso só fica disponível na loja do jogo até 17h locais.",
+        "INGRESSO • Pode ser comprado ou presenteado a amizades no nível Grande Amigo ou superior. Compras, inclusive presentes, não são reembolsáveis, ressalvadas a lei aplicável e as exceções dos Termos de Serviço; não é possível pagar com PokéMoedas.",
+        "LOJA ONLINE • O Ultracombo custa US$ 4,99 (ou preço local) e inclui o ingresso e um Passe de Batalha Premium adicional, sem custo extra."
       ],
       "notifications": {
         "enabled": true,
@@ -2676,16 +2856,17 @@
       "status": "published",
       "news": {
         "title": "Mega Clefable estreia no Dia de Super Megarreides",
-        "summary": "Em 28/11, das 14h às 17h: Mega Clefable, Super Nível Máximo, Explosão Lunar+, Pesquisa Temporária e maior chance de Clefable Brilhante.",
+        "summary": "Em 28/11, das 14h às 17h: Mega Clefable, Super Nível Máximo, Explosão Lunar+, Pesquisa Temporária e maior chance de Clefable Brilhante. Ingresso US$ 4,99 (ou preço local), disponível até 17h e presenteável a Grandes Amigos ou superiores.",
         "published_on": "2026-11-05",
-        "label": "OFICIAL • DETALHES CONFIRMADOS"
+        "label": "OFICIAL • DETALHES CONFIRMADOS",
+        "updated_on": "2026-11-13"
       },
       "related_event_ids": [
         "2026-11-27-clefable-global-challenge",
         "2026-11-30-clefable-global-rewards"
       ],
-      "updated_at": "2026-11-05T16:56:00-03:00",
-      "verified_at": "2026-11-05",
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio oficial em inglês",
@@ -2695,6 +2876,16 @@
         {
           "name": "Pokémon GO Hub • calendário comunitário anterior",
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        {
+          "name": "Leek Duck • guia comunitário completo do evento",
+          "url": "https://leekduck.com/events/clefable-super-mega-raid-day-2026/",
+          "confidence": "verified_community"
+        },
+        {
+          "name": "Pokémon GO Hub • guia comunitário completo do evento",
+          "url": "https://pokemongohub.net/post/event/super-mega-clefable-raid-day/",
           "confidence": "verified_community"
         }
       ],
@@ -2713,7 +2904,20 @@
           "previous_title": "Dia de Super Megarreides — prévia",
           "previous_source": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "preserved_id": true
-        }
+        },
+        "official_ticket_terms_verified_pt_en": true,
+        "ticket_price_usd": 4.99,
+        "ticket_purchase_end_local": "2026-11-28T17:00:00",
+        "ticket_gifting_min_friendship": "Great Friends",
+        "ticket_pokecoins_allowed": false,
+        "ticket_non_refundable_subject_to_law_and_terms": true,
+        "web_store_box_bonus_premium_pass": true,
+        "community_crosscheck_urls": [
+          "https://leekduck.com/events/clefable-super-mega-raid-day-2026/",
+          "https://pokemongohub.net/post/event/super-mega-clefable-raid-day/"
+        ],
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4"
       }
     },
     {
@@ -3855,7 +4059,7 @@
       "slug": "2026-10-08-gameplay-quality-of-life",
       "content_type": "news",
       "title": "Melhorias de jogabilidade já disponíveis",
-      "summary": "Células de Zygarde agora são entregues ao concluir a Rota, e o jogo ganhou proteção para transferências de Pokémon 100% IV e melhorias no mapa.",
+      "summary": "Células de Zygarde são entregues ao concluir a Rota (sem aumento de chance); bússola e clima usam um ícone dinâmico; transferências de Pokémon 100% IV exigem confirmação; mapa e check-in de encontros foram aprimorados.",
       "category": "game_update",
       "tags": [
         "Novidade",
@@ -3884,14 +4088,17 @@
       },
       "news": {
         "title": "Pokémon GO recebe melhorias de jogabilidade",
-        "summary": "Células de Zygarde são entregues ao fim da Rota; transferências de Pokémon 100% IV pedem confirmação; mapa, ícones e check-in de encontros foram ajustados.",
-        "published_on": "2026-10-08"
+        "summary": "Células de Zygarde são entregues ao concluir a Rota (a chance não muda); bússola e clima compartilham um ícone dinâmico; transferências de Pokémon 100% IV pedem confirmação e contagem exata em lote; mapa reduz sobreposições; check-in de encontros pode ser feito no mapa ou navegador, 15 min antes.",
+        "published_on": "2026-10-08",
+        "updated_on": "2026-11-13"
       },
       "notes": [
-        "A chance de receber Células de Zygarde não mudou; uma Rota ainda pode terminar sem Célula.",
-        "Bússola e clima agora usam um único ícone dinâmico.",
-        "O mapa reduz sobreposição entre Pokémon, Ginásios, Pontos de Poder e Poképaradas.",
-        "O check-in de encontros de Embaixadores da Comunidade abre 15 minutos antes do início, no mapa do jogo ou no navegador."
+        "Ao concluir uma Rota, as Células de Zygarde encontradas nela são entregues como recompensa; não é mais necessário recolhê-las no mapa. A probabilidade de encontrar Células não mudou, então uma Rota ainda pode terminar sem Célula.",
+        "BÚSSOLA E CLIMA • Os ícones foram combinados em um único ícone dinâmico: a bússola aparece enquanto a visualização é girada ou ampliada; o clima aparece nos demais momentos. Tocar no clima mostra condições e bônus ativos; tocar na bússola, quando visível, alterna a direção da visualização.",
+        "TRANSFERÊNCIA 100% • Antes de transferir qualquer Pokémon com atributos no máximo, o jogo pede confirmação. Em transferências em massa, o aviso mostra a quantidade exata de Pokémon ★ 100% selecionados.",
+        "MAPA • O espaçamento foi ajustado para reduzir a sobreposição de Pokémon selvagens, Ginásios, Pontos de Energia e Poképaradas, facilitando selecionar encontros específicos.",
+        "CHECK-IN • Encontros de Embaixadores da Comunidade podem ser acessados pelo mapa do jogo ou pelo navegador: abra Proximidades, localize o marcador roxo, confirme que o encontro é organizado por um Embaixador e toque em Fazer check-in. O check-in abre 15 minutos antes do horário programado.",
+        "A publicação informa que os ajustes já foram lançados, mas não fornece uma data exata de início para cada mudança. Este registro permanece em Novidades, sem janela de evento ou data inventada."
       ],
       "notifications": {
         "enabled": false,
@@ -3899,13 +4106,18 @@
       },
       "status": "published",
       "verified_at": "2026-10-11",
-      "updated_at": "2026-10-11T23:17:00Z",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "audit": {
         "checked_on": "2026-10-11",
         "official_languages_checked": [
           "pt-BR",
           "en"
-        ]
+        ],
+        "full_text_reviewed_at": "2026-11-13",
+        "full_text_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "no_exact_rollout_date_published": true,
+        "news_only_no_calendar_window": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4"
       }
     },
     {
@@ -7203,7 +7415,8 @@
       "notes": [
         "A janela é sempre das 10h de 27/09 às 22h de 20/10 no horário local da loja participante nos Estados Unidos.",
         "A Pesquisa temporária pode ser obtida até 20/10 às 22h locais e concluída até 20/11 às 22h locais.",
-        "O Gengar Knit Cap é oferecido no resgate de gift cards elegíveis de Target, GameStop ou Best Buy entre 27/09 e 31/10; limite de um por conta."
+        "O Gengar Knit Cap é oferecido no resgate de gift cards elegíveis de Target, GameStop ou Best Buy entre 27/09 e 31/10; limite de um por conta.",
+        "O prazo final para concluir e resgatar a Pesquisa já obtida está separado do evento de lojas e termina em 20/11 às 22h no horário local do jogador; consulte o registro relacionado."
       ],
       "notifications": {
         "enabled": false
@@ -7219,7 +7432,11 @@
         "title": "Celebração de 30 anos do Pokémon TCG",
         "summary": "Lojas participantes dos Estados Unidos recebem Mega Gengar e Pesquisa temporária até 20/10.",
         "published_on": "2026-09-27"
-      }
+      },
+      "related_event_ids": [
+        "2026-09-tcg-30th-research-claim-deadline"
+      ],
+      "updated_at": "2026-11-13T02:59:11-03:00"
     },
     {
       "id": "2026-10-apac-mall-exploration",
@@ -7413,7 +7630,7 @@
       "id": "2026-11-go-pass-groudon",
       "slug": "2026-11-go-pass-groudon",
       "title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
-      "summary": "Passe gratuito: encontro com Groudon (pode ser Brilhante) e até 400 PokéMoedas. Passe Deluxe pago: mais 1.000 PokéMoedas, total de 1.400.",
+      "summary": "3/11 às 10h–1/12 às 10h locais: Passe gratuito com Groudon e até 400 PokéMoedas; Deluxe acrescenta até 1.000. Sem limite diário de Pontos GO em 28–29/11; resgate de recompensas até 3/12 às 10h.",
       "category": "go_pass",
       "tags": [
         "Passe GO",
@@ -7456,7 +7673,11 @@
         "Deluxe: US$ 7,99 ou preço regional equivalente; versão Deluxe + 10 Ranques: US$ 9,99 ou equivalente. Preços e disponibilidade podem variar por região.",
         "28 e 29/11: sem limite diário de Pontos GO (de sábado 00h até domingo 23h59, horário local).",
         "Recompensas desbloqueadas precisam ser resgatadas até 03/12/2026 às 10h, horário local, depois do fim do Passe.",
-        "A prévia de recompensas por ranque não detalha ainda todos os itens; não confundir este Passe GO mensal com o Passe GO Into the Wild, de 9 a 15/11."
+        "A prévia de recompensas por ranque não detalha ainda todos os itens; não confundir este Passe GO mensal com o Passe GO Into the Wild, de 9 a 15/11.",
+        "RECOMPENSAS COMPLETAS • Passe gratuito: encontro com Groudon (Brilhante possível), até 400 PokéMoedas, Ovo da Sorte, Doce Raro GG, Poeira Estelar e outros itens. Deluxe: até 1.000 PokéMoedas adicionais (1.400 no total), uma Superincubadora e encontros adicionais.",
+        "LOJA ONLINE • Upgrade Deluxe: 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas. Deluxe +10 Ranques: 10 Ultra Bolas, 5 Máximos Reviver, 2 Passes de Batalha Premium e 5 Poções Máximas.",
+        "ULTRACOMBO WEB • Inclui 20 Ultra Bolas, 10 Máximos Reviver, 5 Passes de Batalha Premium e 10 Poções Máximas como brindes pela compra.",
+        "JANELAS SEPARADAS • O bônus sem limite diário de Pontos GO ocorre somente em 28–29/11; o Passe encerra em 1/12 às 10h e as recompensas já desbloqueadas expiram em 3/12 às 10h locais."
       ],
       "notifications": {
         "enabled": true,
@@ -7481,11 +7702,12 @@
       ],
       "news": {
         "title": "Passe GO de novembro: Groudon e até 1.400 PokéMoedas",
-        "summary": "A trilha gratuita oferece Groudon e 400 PokéMoedas; o Deluxe pago acrescenta até 1.000. De 3/11 a 1º/12, com bônus por ranque e resgate até 3/12.",
+        "summary": "Passe gratuito: Groudon, até 400 PokéMoedas, Ovo da Sorte, Doce Raro GG e Poeira Estelar. Deluxe: +1.000 PokéMoedas, Superincubadora e encontros adicionais. Sem limite de Pontos GO em 28–29/11; recompensas até 3/12.",
         "published_on": "2026-10-20",
-        "window_label": "03/11–01/12 • horário local"
+        "window_label": "03/11–01/12 • horário local",
+        "updated_on": "2026-11-13"
       },
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
           "name": "Pokémon GO · anúncio oficial",
@@ -7496,8 +7718,27 @@
           "name": "Pokémon GO Hub · guia 20/10/2026",
           "url": "https://pokemongohub.net/post/guide/go-pass-november-2026/",
           "confidence": "verified_community"
+        },
+        {
+          "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+          "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+          "confidence": "official"
         }
-      ]
+      ],
+      "related_event_ids": [
+        "2026-11-go-pass-groudon-unlimited-points",
+        "2026-11-go-pass-groudon-claim-window"
+      ],
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "audit": {
+        "official_pt_en_fulltext_reconciled": true,
+        "web_store_rewards_reconciled": true,
+        "free_and_deluxe_rewards_reconciled": true,
+        "no_daily_cap_window_verified": true,
+        "claim_deadline_verified": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
+      }
     },
     {
       "id": "2026-10-zorua-community-day",
@@ -7882,7 +8123,8 @@
         "Somente titulares atuais dos ingressos podem participar; não haverá nova venda de ingressos.",
         "A Pesquisa temporária traz Flabébé Flor Laranja, Hawlucha, Mudbray e Komala, além dos bônus ramificados.",
         "A pesquisa suplementar de Boston pode render até nove Eevee com chapéu de explorador e Fundo de Localização de Boston.",
-        "Não haverá GO Stamp Rally de Boston."
+        "Não haverá GO Stamp Rally de Boston.",
+        "A janela para obter a Pesquisa Especial suplementar de Boston foi separada do evento presencial/global e permanece aberta até 23/10/2028; consulte o registro relacionado."
       ],
       "notifications": {
         "enabled": true,
@@ -7901,7 +8143,11 @@
         "title": "City Safari Boston foi remarcado",
         "summary": "A experiência passa a ser global em 24 e 25/10, mas continua exclusiva para titulares dos ingressos originais.",
         "published_on": "2026-10-01"
-      }
+      },
+      "related_event_ids": [
+        "2026-10-city-safari-boston-research-claim-window"
+      ],
+      "updated_at": "2026-11-13T02:59:11-03:00"
     },
     {
       "id": "2026-10-halloween-part-1",
@@ -10814,7 +11060,7 @@
       "id": "2026-11-minior-leonids",
       "slug": "2026-11-minior-leonids",
       "title": "Minior: chuva de meteoros Leônidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+      "summary": "Minior na chuva de meteoros Leônidas, de 14 a 19/11, das 17h às 23h59 locais. A chance de encontro aumenta das 17h às 21h; o núcleo que estreia nas Leônidas ainda não foi anunciado oficialmente. Núcleo Verde estreou nas Oriônidas (confirmação comunitária).",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -10848,7 +11094,15 @@
       },
       "notes": [
         "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
+        "Minior possui sete cores de núcleo: vermelho, laranja, amarelo, verde, azul, anil e violeta.",
+        "O Núcleo Verde estreou durante as Oriônidas de outubro; essa confirmação vem de fontes comunitárias Leek Duck e Pokémon GO Hub. A página oficial não anuncia qual cor estreia nas Leônidas ou nas Geminidas.",
+        "Durante cada chuva, Minior pode aparecer na natureza em Forma Meteoro. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes no céu do jogo.",
+        "A página oficial informa mais Poeira Estelar ao capturar Minior, mas não quantifica o bônus. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; esse valor fica identificado como confirmação comunitária.",
+        "Em batalha, Forma Meteoro tem Defesa maior e Ataque menor; ao expor o núcleo, Ataque aumenta e Defesa diminui. A página PT-BR diz que a mudança ocorre com 50% de PS ou menos; a versão EN diz abaixo de 50%. Inicialmente, a mudança só ocorre contra Equipe GO Rocket, líderes de equipe e na Liga de Batalha GO.",
+        "Minior pode não aparecer durante as horas em que houver eventos sobrepostos, como Área Selvagem GO Global, Horas de Holofote ou outros eventos regionais.",
+        "Minior não será elegível para o Campeonato Internacional da América Latina de 2027.",
+        "A página oficial lista outras chuvas anuais sem atribuir ano às datas de maio e julho/agosto; nenhuma janela de 2027 foi criada no Calendário sem ano oficial explícito."
       ],
       "notifications": {
         "enabled": true,
@@ -10859,7 +11113,9 @@
       "status": "published",
       "bonuses": [
         "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
-        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada.",
+        "Maior chance de encontrar Minior das 17h às 21h locais todos os dias, com estrelas cadentes no céu do jogo.",
+        "Mais Poeira Estelar ao capturar Minior. Valor de 1.000 por captura confirmado por fontes comunitárias; a página oficial não informa quantidade."
       ],
       "pokemon": [
         {
@@ -10868,18 +11124,73 @@
         }
       ],
       "news": {
-        "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "title": "Minior Showers: núcleos, encontros e mudanças de forma",
+        "summary": "A história reúne as janelas distintas de Leônidas (14–19/11) e Geminidas (11–16/12). Minior tem sete cores de núcleo; o Núcleo Verde estreou nas Oriônidas, segundo fontes comunitárias, enquanto as cores das próximas chuvas não foram anunciadas oficialmente. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes e mais Poeira Estelar. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; a página oficial não quantifica o bônus. O artigo também detalha a mudança de forma em batalha e alerta que eventos sobrepostos podem reduzir ou impedir aparições. A página oficial lista outras janelas anuais sem informar o ano; calendários comunitários as rotulam como 2027, mas nenhuma janela futura foi datada no Spidey sem ano oficial explícito.",
         "published_on": "2026-10-01",
-        "window_label": "Leônidas • 11/2026"
+        "window_label": "Minior • Leônidas + Geminidas"
       },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-11-12T23:31:00Z",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO — Minior Showers (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO — Minior Showers (EN)",
+          "url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Orionids 2026",
+          "url": "https://leekduck.com/events/minior-showers-orionids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Leonids 2026",
+          "url": "https://leekduck.com/events/minior-showers-leonids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO Hub — Minior Showers: Orionids October 2026",
+          "url": "https://pokemongohub.net/post/event/minior-showers-orionids-october-2026/",
+          "confidence": "community",
+          "published_on": "2026-10-25"
+        },
+        {
+          "name": "Pokémon GO Hub — This Week in Pokémon GO, November 9–15",
+          "url": "https://pokemongohub.net/post/news/this-week-in-pokemon-go-november-9-15-go-wild-area-global-into-the-wild-and-minior-showers/",
+          "confidence": "community"
+        }
+      ],
+      "audit": {
+        "details_reviewed_at": "2026-11-12T23:01:18Z",
+        "editorial_detail_pending": false,
+        "official_pt_en_full_pages_reviewed": true,
+        "community_green_core_orionids_confirmed": true,
+        "community_stardust_per_catch": 1000,
+        "official_stardust_quantity_disclosed": false,
+        "upcoming_core_colors_officially_unannounced": true,
+        "overlap_warning_added": true,
+        "no_2027_year_inferred": true,
+        "no_new_art_created": true,
+        "approved_minior_art_unchanged": true,
+        "community_future_windows_2027": [
+          "03–08/05",
+          "28/07–02/08",
+          "10–15/08"
+        ],
+        "official_future_year_explicit": false
+      },
+      "related_event_ids": [
+        "2026-12-minior-geminids"
+      ]
     },
     {
       "id": "2026-12-minior-geminids",
       "slug": "2026-12-minior-geminids",
       "title": "Minior: chuva de meteoros Geminidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Geminidas.",
+      "summary": "Minior na chuva de meteoros Geminidas, de 11 a 16/12, das 17h às 23h59 locais. A chance de encontro aumenta das 17h às 21h. A página oficial prevê dois núcleos diferentes entre os hemisférios Norte e Sul, mas não identifica as cores.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -10914,7 +11225,15 @@
       "notes": [
         "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
         "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
-        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas."
+        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas.",
+        "Minior possui sete cores de núcleo: vermelho, laranja, amarelo, verde, azul, anil e violeta.",
+        "O Núcleo Verde estreou durante as Oriônidas de outubro; essa confirmação vem de fontes comunitárias Leek Duck e Pokémon GO Hub. A página oficial não anuncia qual cor estreia nas Leônidas ou nas Geminidas.",
+        "Durante cada chuva, Minior pode aparecer na natureza em Forma Meteoro. A chance de encontro aumenta das 17h às 21h locais, com estrelas cadentes no céu do jogo.",
+        "A página oficial informa mais Poeira Estelar ao capturar Minior, mas não quantifica o bônus. Leek Duck e Pokémon GO Hub informam 1.000 de Poeira Estelar por captura; esse valor fica identificado como confirmação comunitária.",
+        "Em batalha, Forma Meteoro tem Defesa maior e Ataque menor; ao expor o núcleo, Ataque aumenta e Defesa diminui. A página PT-BR diz que a mudança ocorre com 50% de PS ou menos; a versão EN diz abaixo de 50%. Inicialmente, a mudança só ocorre contra Equipe GO Rocket, líderes de equipe e na Liga de Batalha GO.",
+        "Minior pode não aparecer durante as horas em que houver eventos sobrepostos, como Área Selvagem GO Global, Horas de Holofote ou outros eventos regionais.",
+        "Minior não será elegível para o Campeonato Internacional da América Latina de 2027.",
+        "A página oficial lista outras chuvas anuais sem atribuir ano às datas de maio e julho/agosto; nenhuma janela de 2027 foi criada no Calendário sem ano oficial explícito."
       ],
       "notifications": {
         "enabled": true,
@@ -10925,7 +11244,9 @@
       "status": "published",
       "bonuses": [
         "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
-        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada.",
+        "Maior chance de encontrar Minior das 17h às 21h locais todos os dias, com estrelas cadentes no céu do jogo.",
+        "Mais Poeira Estelar ao capturar Minior. Valor de 1.000 por captura confirmado por fontes comunitárias; a página oficial não informa quantidade."
       ],
       "pokemon": [
         {
@@ -10933,13 +11254,62 @@
           "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
         }
       ],
-      "news": {
-        "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
-        "published_on": "2026-10-01",
-        "window_label": "Geminidas • 12/2026"
-      },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-11-12T23:31:00Z",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO — Minior Showers (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO — Minior Showers (EN)",
+          "url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Orionids 2026",
+          "url": "https://leekduck.com/events/minior-showers-orionids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Leek Duck — Minior Showers: Leonids 2026",
+          "url": "https://leekduck.com/events/minior-showers-leonids-2026/",
+          "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO Hub — Minior Showers: Orionids October 2026",
+          "url": "https://pokemongohub.net/post/event/minior-showers-orionids-october-2026/",
+          "confidence": "community",
+          "published_on": "2026-10-25"
+        },
+        {
+          "name": "Pokémon GO Hub — This Week in Pokémon GO, November 9–15",
+          "url": "https://pokemongohub.net/post/news/this-week-in-pokemon-go-november-9-15-go-wild-area-global-into-the-wild-and-minior-showers/",
+          "confidence": "community"
+        }
+      ],
+      "audit": {
+        "details_reviewed_at": "2026-11-12T23:01:18Z",
+        "editorial_detail_pending": false,
+        "official_pt_en_full_pages_reviewed": true,
+        "community_green_core_orionids_confirmed": true,
+        "community_stardust_per_catch": 1000,
+        "official_stardust_quantity_disclosed": false,
+        "upcoming_core_colors_officially_unannounced": true,
+        "overlap_warning_added": true,
+        "no_2027_year_inferred": true,
+        "no_new_art_created": true,
+        "approved_minior_art_unchanged": true,
+        "community_future_windows_2027": [
+          "03–08/05",
+          "28/07–02/08",
+          "10–15/08"
+        ],
+        "official_future_year_explicit": false,
+        "news_story_group_id": "minior-meteor-showers-2026",
+        "news_story_event_id": "2026-11-minior-leonids",
+        "news_story_grouped": true
+      }
     },
     {
       "id": "2026-11-pokexciting-singapore",
@@ -11420,6 +11790,16 @@
           "url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
           "confidence": "official",
           "published_on": "2026-11-03"
+        },
+        {
+          "name": "Pokémon GO • atualização oficial de sexta (inglês)",
+          "url": "https://pokemongo.com/news/gowildarea-mexicocity-friday-update",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • atualização oficial de sexta (espanhol México)",
+          "url": "https://pokemongo.com/es-MX/news/gowildarea-mexicocity-friday-update",
+          "confidence": "official"
         }
       ],
       "schedule": {
@@ -11453,7 +11833,7 @@
         "Latias e Latios poderosos podem aparecer por Incenso comum no dia do ingresso. Brilhantes são possibilidades, nunca garantias.",
         "Confira os sete locais, a ordem flexível do circuito e os horários no guia de Selos do Spidey antes de começar. Os pontos de referência não são coordenadas exatas das Poképaradas.",
         "PESQUISAS: a Especial concede as duas medalhas de tipo e, ao concluir a história, um encontro com Duraludon Gigamax com Fundo de Localização. As duas Pesquisas Temporárias avançam ao girar Poképaradas decoradas e expiram às 20h locais no dia válido; o Dia Extra oferece outra oportunidade para Aço e Dragão. Tarefas e recompensas individuais das Pesquisas Temporárias e de Campo ainda não foram publicadas.",
-        "ATIVIDADES PRESENCIAIS • 6–8/11: encontro com Pikachu e Eevee no Monumento a la Revolución (10h–12h50 e 15h–17h50 CST), Treinadores notáveis, artistas, suporte, acessibilidade, embaixadores e ativações em vários pontos da cidade.",
+        "ATIVIDADES PRESENCIAIS • 6–8/11: atualização oficial de sexta: as experiências no Monumento a la Revolución terminaram mais cedo em 6/11. Na sexta, o encontro com Pikachu e Eevee ocorreu apenas das 10h às 12h50 CST; Keibron Gamer, Niharra e Rochababyface estavam previstos das 12h às 14h. As experiências no Monumento ocorreram conforme planejado em 7 e 8/11; o encontro de Pikachu/Eevee seguiu a grade original de 10h–12h50 e 15h–17h50. A visita a essas experiências no sábado e domingo não exigia ingresso. A jogabilidade da Área Selvagem não foi afetada.",
         "LOJA TEMPORÁRIA: Foro Lucerna, Calle Lucerna 70, de 6 a 8/11, das 10h às 19h locais. Cinépolis Diana e Liverpool Polanco têm ativações de 5 a 9/11; brindes e viseiras são limitados aos estoques."
       ],
       "notifications": {
@@ -11501,9 +11881,10 @@
       "news": {
         "title": "Área Selvagem na Cidade do México: sete selos já têm locais confirmados",
         "summary": "Seu dia de ingresso define quando coletar os sete selos: das 10h às 20h locais. Confira o guia de locais na aba Selos; o Dia Extra não libera outro rally.",
-        "published_on": "2026-10-27"
+        "published_on": "2026-10-27",
+        "updated_on": "2026-11-13"
       },
-      "updated_at": "2026-10-27T17:48:00-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "stamp_rally": {
         "start_time_local": "10:00",
         "end_time_local": "20:00",
@@ -11597,13 +11978,28 @@
         "location_coordinates_are": "landmark_centers_not_exact_pokestops",
         "verification_date": "2026-10-27"
       },
-      "verified_at": "2026-11-04"
+      "verified_at": "2026-11-04",
+      "audit": {
+        "friday_experience_update_fulltext_reviewed": true,
+        "friday_update_urls": [
+          "https://pokemongo.com/news/gowildarea-mexicocity-friday-update",
+          "https://pokemongo.com/es-MX/news/gowildarea-mexicocity-friday-update"
+        ],
+        "friday_update_applied_to_existing_story": true,
+        "friday_gameplay_unchanged": true,
+        "friday_meet_greet_window_local": "10:00-12:50",
+        "friday_notable_trainers_window_local": "12:00-14:00",
+        "weekend_monumento_experiences_no_ticket_required": true,
+        "historical_event_ends_local": "2026-11-08T18:00:00-06:00",
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
+      }
     },
     {
       "id": "2026-11-go-wild-area-global",
       "slug": "2026-11-go-wild-area-global",
       "title": "Pokémon GO Wild Area 2026: Global",
-      "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
+      "summary": "Área Selvagem GO Global, 14 e 15/11, das 10h às 18h locais: habitats Aço e Dragão, Pokémon incríveis por dia, reides e Batalhas Max, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso opcional acrescenta pesquisa ramificada, bônus, Unown, Latias e Latios poderosos e balões horários. A Bola Safári GO pode ser usada apenas durante as horas do evento e agora permite transferir capturas ao Pokémon HOME.",
       "category": "evento_especial",
       "tags": [
         "GO Wild Area",
@@ -11653,6 +12049,22 @@
           "url": "https://x.com/g47ix/status/2120924589156884883",
           "confidence": "community",
           "published_on": "2026-11-12"
+        },
+        {
+          "name": "Pokémon GO — Área Selvagem GO Global (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/gowildarea/global",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub — GO Wild Area 2026: Global",
+          "url": "https://pokemongohub.net/post/event/wild-area-2026-global/",
+          "confidence": "community",
+          "published_on": "2026-11-05"
+        },
+        {
+          "name": "Leek Duck — Pokémon GO Wild Area 2026: Global",
+          "url": "https://leekduck.com/events/pokemon-go-wild-area-2026-global/",
+          "confidence": "community"
         }
       ],
       "schedule": {
@@ -11690,7 +12102,22 @@
         "A publicação brasileira repete 2025 em dois subtítulos, mas o título, a introdução e a página oficial do evento confirmam 14 e 15 de novembro de 2026; a divergência foi preservada na auditoria.",
         "Informações oficiais conferidas em 29/10/2026.",
         "Na Ásia-Pacífico, 12 locais em 11 comunidades recebem encontros oficiais nos dias 14 e 15/11, com horários próprios preservados no guia de eventos locais.",
-        "Os encontros da Ásia-Pacífico incluem pop-up do Pokémon GO, fotos, atividades com Embaixadores e comunidades, brindes enquanto durarem os estoques e Pesquisa Temporária por check-in. O anúncio cita encontro com Pokémon e itens sem detalhar espécie, tarefas ou itens."
+        "Os encontros da Ásia-Pacífico incluem pop-up do Pokémon GO, fotos, atividades com Embaixadores e comunidades, brindes enquanto durarem os estoques e Pesquisa Temporária por check-in. O anúncio cita encontro com Pokémon e itens sem detalhar espécie, tarefas ou itens.",
+        "Os habitats selvagens se alternam: Hora Sólido como Aço primeiro e, depois, Hora de Determinação de Dragão. A página oficial não informa os horários exatos de cada rotação; não foi criado horário adicional.",
+        "Hora Sólido como Aço: Sandshrew de Alola, Diglett de Alola, Magnemite, Shellder, Onix, Porygon, Shuckle, Skarmory, Nosepass, Aron, Beldum, Piplup, Shieldon, Bronzor, Lucario, Drilbur, Ferroseed, Klink, Stunfisk de Galar, Durant, Rookidee e Tinkatink.",
+        "Hora de Determinação de Dragão: Charmander, Magikarp, Dratini, Gligar, Trapinch, Swablu, Barboach, Bagon, Gible, Tynamo, Axew, Heatmor, Deino, Skrelp, Tyrunt, Amaura, Goomy, Noibat, Turtonator, Jangmo-o, Sizzlipede e Frigibax.",
+        "Pokémon incríveis de sábado: Exeggutor de Alola, Scizor, Flygon, Walrein, Metagross, Empoleon, Magnezone, Conkeldurr e Haxorus. Domingo: Azumarill, Kingdra, Aggron, Ferrothorn, Hydreigon, Goodra, Noivern, Tinkaton e Clodsire. A página oficial indica possibilidade de Brilhante para esses encontros.",
+        "Ovos de 10 km: Honedge, Klefki, Drampa e Duraludon; a página oficial também indica possibilidade de Brilhante.",
+        "Incenso (exceto Incenso de Aventura Diário) para todos: Exeggutor de Alola, Azumarill, Scizor, Kingdra, Aggron, Flygon, Empoleon, Magnezone, Conkeldurr e Hydreigon. Com ingresso, também Unown D, I, L e W, além de Latias e Latios poderosos; estes dois podem ser Brilhantes.",
+        "Ataques em destaque: Machamp — Golpe de Caratê; Flygon — Poder da Terra; Metagross — Meteoro Esmagador; Magnezone — Bomba Ímã; Haxorus — Golpe Deslizante; Hydreigon — Balanço Violento; Tinkaton — Martelo Gigatônico.",
+        "Bolas Safári GO só podem ser usadas das 10h às 18h locais nos dois dias e desaparecem do inventário ao fim do evento. Titulares de ingresso também recebem Balões de Suprimentos com Bolas Safári GO a cada hora durante as horas do evento.",
+        "Capturas feitas com Bolas Safári GO agora podem ser transferidas do Pokémon GO ao Pokémon HOME; a bola é exibida como Strange Ball (Bola Estranha) no HOME.",
+        "Os lobbies de Batalhas Dinamax oferecem opção de Grupo privado com código. Efeitos de Aventura selecionados de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) podem ser ativados no lobby.",
+        "A pesquisa especial do ingresso permite escolher o caminho Aço ou Dragão. Ao concluir a história, o encontro com Duraludon Gigamax traz Fundo Especial e a recompensa inclui uma pose de avatar exclusiva. O Fundo Especial de capturas em reides e Batalhas Max é uma possibilidade, não garantia.",
+        "Pesquisa de Campo temática terá maior chance de aparecer; tarefas individuais e recompensas específicas não foram publicadas na página oficial.",
+        "Horários detalhados das horas de habitat são uma confirmação comunitária do Leek Duck, não publicados na página oficial: Aço 10h–11h, 12h–13h, 14h–15h e 16h–17h; Dragão 11h–12h, 13h–14h, 15h–16h e 17h–18h, sempre no horário local. A página oficial confirma apenas a ordem Aço primeiro e Dragão depois.",
+        "Kyurem encontrados em Reides conhecem o ataque carregado Glaciar e concedem Energia de Fusão, conforme a página oficial.",
+        "Preço publicado na página oficial em inglês para o ingresso global: US$ 11,99."
       ],
       "notifications": {
         "enabled": true,
@@ -11705,7 +12132,11 @@
         "Com ingresso: maior chance de Brilhantes, limite diário de 3.200 Partículas Max e até seis Passes de Reide por dia.",
         "Com ingresso: 2× Doces por captura, Incenso com duração dobrada, Módulos Atrair por duas horas e mais chance de Ovos de 10 km.",
         "Com ingresso: até seis Trocas Especiais por dia e metade do custo de Poeira Estelar nas trocas.",
-        "Após obter a medalha escolhida na Pesquisa Especial: +1 Doce GG (nível 31+) e +1.000 Poeira Estelar ao capturar Pokémon poderosos do tipo Aço ou Dragão correspondente."
+        "Após obter a medalha escolhida na Pesquisa Especial: +1 Doce GG (nível 31+) e +1.000 Poeira Estelar ao capturar Pokémon poderosos do tipo Aço ou Dragão correspondente.",
+        "Bolas Safári GO: uso restrito a 10h–18h locais em 14 e 15/11; as bolas restantes desaparecem ao final do evento.",
+        "Titulares de ingresso recebem Balões de Suprimentos com Bolas Safári GO a cada hora durante as horas do evento.",
+        "Capturas feitas com Bolas Safári GO podem ser transferidas ao Pokémon HOME e aparecem como Strange Ball (Bola Estranha).",
+        "Titulares de ingresso: até seis trocas especiais por dia e metade do custo de Poeira Estelar nas trocas, das 00h às 23h59 locais nos dois dias."
       ],
       "pokemon": [
         {
@@ -11734,8 +12165,8 @@
         }
       ],
       "news": {
-        "title": "Área Selvagem GO Global reúne comunidades no Brasil, Europa e Ásia-Pacífico",
-        "summary": "A história global reúne o encontro principal e 96 referências no Brasil, Karlsruhe e Estocolmo na Europa, além de 12 locais em 11 comunidades da Ásia-Pacífico. Cada encontro preserva seu horário local; as sedes anunciadas oferecem atividades comunitárias e Pesquisa Temporária por check-in.",
+        "title": "Área Selvagem GO Global: programação, bônus e recursos oficiais",
+        "summary": "A página oficial em português detalha habitats Aço e Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso inclui pesquisa ramificada, bônus adicionais, Unown D/I/L/W, Latias e Latios poderosos, balões de suprimentos e pose de avatar. Bolas Safári GO só podem ser usadas das 10h às 18h locais e desaparecem ao fim do evento; capturas com elas agora podem ser transferidas ao Pokémon HOME como Strange Ball. Batalhas Dinamax aceitam grupos privados por código e Efeitos de Aventura selecionados no lobby. A história mantém os encontros presenciais já cadastrados no Brasil, Europa e Ásia-Pacífico. A programação horária detalhada dos habitats é apresentada separadamente como informação comunitária do Leek Duck; a página oficial confirma apenas a ordem das duas horas.",
         "published_on": "2026-10-07",
         "updated_on": "2026-11-05"
       },
@@ -11746,7 +12177,19 @@
           "https://x.com/g47ix/status/2120924589156884883"
         ],
         "official_story_remains_canonical": true,
-        "no_duplicate_event_created": true
+        "no_duplicate_event_created": true,
+        "details_reviewed_at": "2026-11-12T23:01:18Z",
+        "editorial_detail_pending": false,
+        "official_pt_en_full_pages_reviewed": true,
+        "community_crosscheck": "Pokémon GO Hub e Leek Duck conferem habitats, Pokémon incríveis, ovos, Incenso e bônus; detalhes oficiais prevalecem.",
+        "no_new_art_created": true,
+        "approved_global_poster_unchanged": true,
+        "no_new_gpx_or_coordinates_added": true,
+        "related_local_meetups_remain_in_local_events": true,
+        "community_habitat_hours_from_leekduck": true,
+        "official_habitat_hours_not_published": true,
+        "ticket_price_verified": true,
+        "ticket_price_usd": 11.99
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -11782,7 +12225,7 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-11-05T01:51:00-03:00",
+      "updated_at": "2026-11-12T23:31:00Z",
       "asia_pacific_community_program": {
         "official_article": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
         "published_on": "2026-11-04",
@@ -11921,6 +12364,13 @@
         ],
         "coordinates_published": false,
         "checked_at": "2026-11-05"
+      },
+      "ticket": {
+        "price_usd": 11.99,
+        "currency": "USD",
+        "display": "US$ 11,99",
+        "source_url": "https://pokemongo.com/en/gowildarea/global",
+        "confidence": "official"
       }
     },
     {
@@ -12961,7 +13411,7 @@
       "slug": "official-news-auto-5e1b1cd68f6c",
       "content_type": "news",
       "title": "Preparem-se para a Área Selvagem do Pokémon GO 2026 com fundos de Pokémon no Perfil de Treinador, novos itens de avatar e mais novidades empolgantes.",
-      "summary": "O anúncio confirma fundos no Perfil do Treinador em duas etapas, grupos privados Dinamax, pesquisas de Aço e Dragão, envio de Bolas Safári ao Pokémon HOME e outros preparativos da Área Selvagem.",
+      "summary": "O anúncio confirma fundos no Perfil do Treinador em duas etapas, grupos privados Dinamax, pesquisa Aço/Dragão, transferência de Bolas Safári ao HOME, três itens de avatar que continuam na loja após o evento e pose exclusiva.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -12981,10 +13431,11 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Área Selvagem confirma fundos no perfil e grupos privados Dinamax",
-        "summary": "Fundos de Sendai e Cidade do México chegam ao perfil em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores chegam em 9/11 às 10h locais. O anúncio também detalha pesquisas, avatares, Pokémon HOME e Efeitos de Aventura.",
+        "title": "Área Selvagem: fundos no perfil, HOME e grupos privados Dinamax",
+        "summary": "Os Fundos de Localização de Sendai e Cidade do México foram liberados em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores, em 9/11 às 10h locais. Amigos só veem fundos compatíveis quando chega 10h no fuso local deles. Os itens Capacete de Duraludon, Mochila de Duraludon Gigamax e Jaqueta do tipo Lutador ficam disponíveis na loja durante o evento e continuam disponíveis depois. O anúncio também confirma pareamento automático ou Grupo Privado por código nas Batalhas Dinamax, Efeitos de Aventura de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) no lobby, transferência de capturas com Bolas Safári GO ao Pokémon HOME como Bola Estranha (Strange Ball) e uma pose de avatar exclusiva para titulares que concluem a Pesquisa Especial do ingresso.",
         "published_on": "2026-11-03",
-        "label": "OFICIAL • DETALHES CONFIRMADOS"
+        "label": "OFICIAL • DETALHES CONFIRMADOS",
+        "updated_on": "2026-11-12"
       },
       "notes": [
         "6/11 ÀS 10H LOCAIS: fundos de localização da Área Selvagem 2026 de Sendai e Cidade do México passam a poder aparecer com o Pokémon companheiro no Perfil do Treinador.",
@@ -12992,28 +13443,62 @@
         "Batalhas Dinamax passam a oferecer entrada por pareamento automático ou Grupo Privado com código.",
         "Na Área Selvagem Global, a Pesquisa Especial ramificada libera medalha de Aço ou Dragão e bônus do tipo escolhido. Participantes presenciais de Sendai e Cidade do México podem obter as duas medalhas.",
         "Pokémon capturados em Bolas Safári GO agora podem ser enviados ao Pokémon HOME, onde a bola aparece como Bola Estranha.",
-        "Efeitos de Aventura selecionados poderão ser ativados no lobby de reides ou Batalhas Max a partir de Natureza Selvagem; participantes presenciais têm acesso antecipado."
+        "Efeitos de Aventura selecionados poderão ser ativados no lobby de reides ou Batalhas Max a partir de Natureza Selvagem; participantes presenciais têm acesso antecipado.",
+        "Titulares de ingresso que concluem a Pesquisa Especial da Área Selvagem Global recebem uma pose de avatar exclusiva.",
+        "Os Efeitos de Aventura de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) podem ser ativados no lobby antes de uma Batalha Max.",
+        "Itens de avatar na loja do jogo: Capacete de Duraludon, Mochila de Duraludon Gigamax e Jaqueta do tipo Lutador ficam disponíveis durante o evento e continuam disponíveis após seu encerramento; o anúncio não define uma data de retirada."
       ],
       "notifications": {
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
       "status": "published",
-      "verified_at": "2026-11-04",
-      "updated_at": "2026-11-04T07:27:00-03:00",
+      "verified_at": "2026-11-12",
+      "updated_at": "2026-11-12T21:54:30-03:00",
       "audit": {
         "classification": "official_announcement_editorially_verified",
         "editorial_detail_pending": false,
         "automatic_index_discovery": true,
         "not_a_calendar_event": true,
-        "canonical_fulltext_url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
-        "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026"
+        "canonical_fulltext_url": "https://pokemongo.com/pt-BR/news/get-ready-for-gowildarea-2026",
+        "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
+        "details_reviewed_at": "2026-11-12T21:54:30-03:00",
+        "official_pt_en_full_pages_reviewed": true,
+        "community_crosscheck": "Leek Duck e Pokémon GO Hub usados como conferência comunitária; conteúdo oficial permanece prioritário."
       },
       "related_event_ids": [
         "2026-11-go-wild-area-sendai",
         "2026-11-go-wild-area-mexico-city",
         "2026-11-09-into-the-wild",
         "2026-11-go-wild-area-global"
+      ],
+      "verification_sources": [
+        {
+          "name": "Pokémon GO — Preparem-se para a Área Selvagem do Pokémon GO 2026 (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/news/get-ready-for-gowildarea-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO — Get ready for Pokémon GO Wild Area 2026 (EN)",
+          "url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO — Área Selvagem GO Global (PT-BR)",
+          "url": "https://pokemongo.com/pt-BR/gowildarea/global",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck — Pokémon GO Wild Area 2026: Global",
+          "url": "https://leekduck.com/events/pokemon-go-wild-area-2026-global/",
+          "confidence": "community"
+        },
+        {
+          "name": "Pokémon GO Hub — GO Wild Area 2026: Global",
+          "url": "https://pokemongohub.net/post/event/wild-area-2026-global/",
+          "confidence": "community",
+          "published_on": "2026-11-05"
+        }
       ]
     },
     {
@@ -14680,6 +15165,282 @@
         "purchasable_and_level_reward_caps_kept_distinct": true,
         "regional_offer_variation_disclosed": true
       }
+    },
+    {
+      "id": "2026-11-go-pass-groudon-unlimited-points",
+      "slug": "2026-11-go-pass-groudon-unlimited-points",
+      "title": "Passe GO: Novembro — sem limite diário de Pontos GO",
+      "summary": "De 28/11 à meia-noite até 29/11 às 23h59, horário local: não haverá limite diário para Pontos GO.",
+      "category": "bonus_window",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+          "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-28T00:00:00-03:00",
+        "end_local": "2026-11-29T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-28T00:00:00-03:00",
+        "end_brazil": "2026-11-29T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "Bônus temporário do Passe GO: não há limite diário para a quantidade de Pontos GO obtida durante essa janela.",
+        "O Passe GO continua disponível até 1/12 às 10h locais; este bônus não prolonga a progressão."
+      ],
+      "related_event_ids": [
+        "2026-11-go-pass-groudon"
+      ],
+      "status": "published",
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "bonus_window",
+        "daily_go_points_limit_removed": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
+    },
+    {
+      "id": "2026-11-go-pass-groudon-claim-window",
+      "slug": "2026-11-go-pass-groudon-claim-window",
+      "title": "Resgate de recompensas — Passe GO: Novembro",
+      "summary": "Recompensas desbloqueadas devem ser resgatadas até 3/12 às 10h locais; a progressão do Passe termina em 1/12 às 10h.",
+      "category": "go_pass_claim_deadline",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+          "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-01T10:00:00-03:00",
+        "end_local": "2026-12-03T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-01T10:00:00-03:00",
+        "end_brazil": "2026-12-03T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "Esta janela é apenas para resgatar recompensas já desbloqueadas; não permite continuar avançando no Passe após 1/12 às 10h locais."
+      ],
+      "related_event_ids": [
+        "2026-11-go-pass-groudon"
+      ],
+      "status": "published",
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "claim_window",
+        "claim_deadline_verified": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
+    },
+    {
+      "id": "2026-10-city-safari-boston-research-claim-window",
+      "slug": "2026-10-city-safari-boston-research-claim-window",
+      "title": "City Safari Boston — resgate da Pesquisa suplementar",
+      "summary": "Titulares dos ingressos originais podem obter a Pesquisa suplementar em qualquer lugar até 23/10/2028. Há uma oportunidade por dia de ingresso; cada pesquisa pode render até nove Eevee com chapéu de explorador e Fundo de Localização de Boston.",
+      "category": "special_research_claim_window",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • City Safari Boston remarcado",
+        "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • City Safari Boston remarcado",
+          "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/New_York",
+        "start_date": "2026-10-24",
+        "end_date": "2028-10-23",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "Somente titulares dos ingressos originais de Boston; não haverá nova venda de ingressos.",
+        "É possível entrar no jogo em qualquer lugar entre 24/10/2026 e 23/10/2028 para obter a Pesquisa suplementar. Cada dia de ingresso dá uma oportunidade de Pesquisa.",
+        "As tarefas pedem para girar Poképaradas em Boston e podem render até nove encontros com Eevee de chapéu de explorador e Fundo de Localização de Boston por oportunidade.",
+        "A publicação informa apenas as datas, sem horário exato de encerramento; o último dia é interpretado no fuso IANA America/New_York, da cidade do evento.",
+        "Não haverá GO Stamp Rally de Boston."
+      ],
+      "related_event_ids": [
+        "2026-10-city-safari-boston-rescheduled"
+      ],
+      "status": "published",
+      "news": {
+        "title": "Pesquisa suplementar de Boston: resgate até 23/10/2028",
+        "summary": "Titulares dos ingressos originais podem obter a Pesquisa suplementar em qualquer lugar até 23/10/2028. Uma oportunidade por dia de ingresso; tarefas em Poképaradas de Boston podem render até nove Eevee com chapéu de explorador e Fundo de Localização.",
+        "published_on": "2026-10-01",
+        "updated_on": "2026-11-13",
+        "label": "PRAZO DE RESGATE • TITULARES DE INGRESSO"
+      },
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "date_only_claim_window",
+        "claim_anywhere_in_world": true,
+        "one_research_per_ticketed_day": true,
+        "max_eevee_encounters_per_research": 9,
+        "claim_tasks_require_boston_pokestop_spins": true,
+        "no_exact_end_time_published": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
+    },
+    {
+      "id": "2026-09-tcg-30th-research-claim-deadline",
+      "slug": "2026-09-tcg-30th-research-claim-deadline",
+      "title": "Prazo final — Pesquisa da Celebração de 30 anos do TCG",
+      "summary": "Quem obteve a Pesquisa temporária em uma loja participante dos EUA deve concluir as tarefas e resgatar as recompensas até 20/11 às 22h no horário local.",
+      "category": "special_research_claim_deadline",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • Celebração de 30 anos do Pokémon TCG",
+        "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Celebração de 30 anos do Pokémon TCG",
+          "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-20T22:00:00-03:00",
+        "end_local": "2026-11-20T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-20T22:00:00-03:00",
+        "end_brazil": "2026-11-20T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "A Pesquisa temporária podia ser obtida em lojas participantes dos EUA até 20/10/2026 às 22h locais.",
+        "Depois de obter a Pesquisa, as tarefas e recompensas precisam ser concluídas e resgatadas até 20/11/2026 às 22h locais.",
+        "O horário é local para a pessoa que joga; no calendário do Spidey, a janela é exibida em America/Sao_Paulo.",
+        "Esta é a data-limite de resgate, não uma extensão do evento de lojas, que terminou em 20/10."
+      ],
+      "related_event_ids": [
+        "2026-09-tcg-30th-us-retail"
+      ],
+      "status": "published",
+      "news": {
+        "title": "Último dia para resgatar a Pesquisa do TCG 30 anos",
+        "summary": "Quem obteve a Pesquisa temporária nas lojas participantes dos EUA deve concluir tarefas e resgatar recompensas até 20/11 às 22h locais.",
+        "published_on": "2026-09-27",
+        "updated_on": "2026-11-13",
+        "label": "PRAZO FINAL • PESQUISA TEMPORÁRIA"
+      },
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "single_deadline",
+        "source_deadline_text": "20/11/2026 às 22h no horário local",
+        "research_obtain_deadline_text": "20/10/2026 às 22h no horário local",
+        "display_timezone_for_brazil": "America/Sao_Paulo",
+        "official_pt_br_page_not_accessible_in_review": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
     }
   ]
 }

@@ -42,13 +42,14 @@ async function waitForWeeklyRender(){
 function check(value,message){if(!value)throw Error(message);}
 try{
  for(const width of [390,1280])for(const theme of ['light','dark']){
-   activeCase={phase:'current',width,theme};const context=await open(width,theme,'2026-10-28T18:00:00-03:00');
+   activeCase={phase:'current',width,theme};const context=await open(width,theme,'2026-11-12T18:00:00-03:00');
    check(await page.locator(`[data-world-event="${la}"]`).count()===0,'Expired LA remains on Home/FLY');
-   checks.push({...activeCase,view:'home',expired_la_visible:false,london_visible:true});
+   check(await page.locator(`[data-world-event="${london}"]`).count()===0,'Expired London remains on Home');
+   checks.push({...activeCase,view:'home',expired_la_visible:false,london_visible:false});
    await page.evaluate(()=>setView('flyView'));await page.locator('#flyView').waitFor({state:'visible'});
    check(await page.locator(`#flyView [data-world-event="${la}"]`).count()===0,'Expired LA remains in FLY');
-   await page.locator(`#flyView [data-world-event="${london}"]`).waitFor();
-   checks.push({...activeCase,view:'fly',expired_la_visible:false,london_visible:true});
+   check(await page.locator(`#flyView [data-world-event="${london}"]`).count()===0,'Expired London remains in FLY');
+   checks.push({...activeCase,view:'fly',expired_la_visible:false,london_visible:false});
    await page.evaluate(()=>setView('newsView'));
    const story=page.locator(`[data-news-story="${key}"]`);await story.waitFor({state:'visible'});
    check(await story.count()===1,'Official article duplicated');

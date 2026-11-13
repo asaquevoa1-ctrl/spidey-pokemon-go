@@ -22,7 +22,7 @@
     for(const event of events){
       const newsOnly=event.content_type==='news';
       const key=articleKey(event),dates=newsOnly?null:range(event);
-      if(event.status!=='published'||!key||(!newsOnly&&(!dates?.start||!dates?.end||dates.end<now)))continue;
+      if(event.status!=='published'||!key||(!newsOnly&&(!dates?.start||!dates?.end||dates.end<=now)))continue;
       if(!groups.has(key))groups.set(key,{key,events:[]});
       groups.get(key).events.push(event);
     }

@@ -103,3 +103,55 @@ test('JS is valid and Data Hub copy retains one coordinate per line',()=>{
   const check=spawnSync(process.execPath,['--check',path.join(root,app,'wild-area-20261109.js')],{encoding:'utf8'});
   assert.equal(check.status,0,check.stderr);
 });
+
+
+test('global guide exposes full official detail without changing the approved poster or route',()=>{
+  const script=read(app+'wild-area-20261109.js');
+  const catalog=JSON.parse(read(app+'data/events.json')).events;
+  const global=catalog.find(e=>e.id==='2026-11-go-wild-area-global');
+  assert.ok(global);
+  for(const term of [
+    'Hora Sólido como Aço','Hora de Determinação de Dragão','Leek Duck (fonte comunitária)','Tinkatink','Frigibax',
+    'Exeggutor de Alola','Haxorus','Clodsire','Honedge','Klefki','Drampa',
+    'Unown D, I, L e W','Golpe de Caratê','Poder da Terra','Meteoro Esmagador',
+    'Bomba Ímã','Golpe Deslizante','Balanço Violento','Martelo Gigatônico',
+    '1.600 Partículas Max','3.200 Partículas Max','6 trocas especiais',
+    'Strange Ball','Grupo privado com código','Behemoth Blade','Behemoth Bash',
+    'pose de avatar exclusiva','Bolas Safári GO'
+  ]) assert.ok(script.includes(term)||JSON.stringify(global).includes(term),'detalhe ausente: '+term);
+  assert.equal(global.audit.editorial_detail_pending,false);
+  assert.ok(global.verification_sources.some(x=>x.url==='https://pokemongo.com/pt-BR/gowildarea/global'&&x.confidence==='official'));
+  assert.ok(global.verification_sources.some(x=>x.url==='https://pokemongo.com/news/get-ready-for-gowildarea-2026'&&x.confidence==='official'));
+  assert.match(script,/wild-area-global-2026-approved-v1\.png/);
+  assert.ok(fs.statSync(path.join(root,app,'assets/events/premium/wild-area-global-2026-approved-v1.png')).size>100000);
+  assert.equal(points.points.filter(x=>x.current_user_list_20261031===true).length,64);
+});
+
+test('Minior mantém as janelas separadas e as confirmações comunitárias rotuladas',()=>{
+  const catalog=JSON.parse(read(app+'data/events.json')).events;
+  const leonids=catalog.find(e=>e.id==='2026-11-minior-leonids');
+  const geminids=catalog.find(e=>e.id==='2026-12-minior-geminids');
+  assert.ok(leonids&&geminids);
+  assert.notEqual(leonids.schedule.start_local,geminids.schedule.start_local);
+  assert.equal(leonids.audit.community_stardust_per_catch,1000);
+  assert.equal(geminids.audit.official_stardust_quantity_disclosed,false);
+  assert.ok(leonids.notes.some(x=>x.includes('Núcleo Verde')));
+  assert.ok(geminids.notes.some(x=>x.includes('eventos sobrepostos')));
+  assert.ok(leonids.verification_sources.some(x=>x.confidence==='official'&&x.url.includes('/pt-BR/')));
+  assert.ok(leonids.verification_sources.some(x=>x.confidence==='community'));
+  assert.equal(leonids.audit.no_2027_year_inferred,true);
+});
+
+
+test('notícia oficial de recursos da Wild Area é atualizada no mesmo ID, sem evento novo',()=>{
+  const catalog=JSON.parse(read(app+'data/events.json')).events;
+  const item=catalog.find(e=>e.id==='official-news-auto-5e1b1cd68f6c');
+  assert.ok(item);
+  assert.equal(item.content_type,'news');
+  assert.equal(item.audit.editorial_detail_pending,false);
+  for(const term of ['Fundos de Localização','Grupo Privado por código','Behemoth Blade','Behemoth Bash','Strange Ball','pose de avatar exclusiva']) {
+    assert.ok(item.news.summary.includes(term)||item.notes.some(x=>x.includes(term)),'detalhe ausente: '+term);
+  }
+  assert.ok(item.related_event_ids.includes('2026-11-go-wild-area-global'));
+  assert.equal(catalog.filter(e=>e.id==='official-news-auto-5e1b1cd68f6c').length,1);
+});

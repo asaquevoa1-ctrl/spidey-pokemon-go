@@ -662,3 +662,38 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Causa identificada: `WEEK_IMAGE` apontava para CDN remoto indisponível e o `error` substituía o banner por `solid-as-steel.webp`; o CSS da mídia reservava altura grande e `object-fit: contain` ampliava os espaços mortos.
 - Correção: remover URL remota e fallback com rótulo genérico; criar composição responsiva, compacta e acessível usando **dois arquivos oficiais já locais** (`solid-as-steel.webp` e `daring-as-dragons.webp`), com crédito editorial proporcional e título próximo da mídia. Não afirmar que as duas imagens sejam um pôster autoral Premium aprovado para a Semana.
 - Não alterar pôster aprovado do Global, calendário, horários por fuso, histórico do México e a lista de 64 coordenadas. Atualizar versões no HTML, cache PWA e testes de navegador da Semana para exigir duas imagens carregadas, altura reduzida e título visível na primeira tela Android.
+
+
+## 12/11/2026 — Detalhes oficiais da Área Selvagem Global, Minior e fronteiras de encerramento
+
+- Revisadas as páginas completas oficiais PT-BR/EN da Área Selvagem Global, do anúncio complementar de recursos e de Minior. A programação e os IDs existentes foram preservados; nenhuma janela ou evento duplicado foi criado.
+- A página Global passa a expor habitats Aço/Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso, ataques em destaque, limites e bônus por ingresso, uso/expiração das Bolas Safári GO, transferência ao HOME como Strange Ball, grupos privados de Batalha Dinamax, Efeitos de Aventura no lobby e pose de avatar.
+- Minior mantém Leônidas e Geminidas como janelas separadas da mesma história. Núcleo Verde nas Oriônidas e 1.000 de Poeira Estelar por captura ficam identificados como confirmação comunitária (Leek Duck/GO Hub); o anúncio oficial não quantifica a Poeira Estelar nem identifica as cores futuras. Datas de 2027 sem ano explícito na página oficial não foram inferidas.
+- Aviso oficial de sobreposição de eventos foi acrescentado a Minior. Diferença de tradução do limite de PS foi preservada em auditoria: PT-BR diz 50% ou menos; EN diz abaixo de 50%.
+- Encerramento de eventos com hora é exclusivo: remover da Semana e de Novidades quando agora >= fim. Eventos sem hora usam o primeiro instante do dia seguinte no fuso IANA do próprio evento como limite exclusivo.
+- Os testes cobrem 12/11 18:59:59/19:00 para a Hora Max de Regidrago, 13/11 19:59:59/20:00 para Into the Wild, a fronteira de Londres em Europe/London, a data local em Asia/Seoul e o agrupamento único de Minior.
+- Nenhuma arte foi criada ou substituída. Pôster Global aprovado, S cósmico, coordenadas, rotas, GPX, catálogos, Pokédex, PvP, Push e Amigos/chat permanecem intocados.
+
+
+- Complemento editorial: os horários específicos das rotações Aço/Dragão não aparecem na página oficial PT-BR; o guia mostra a grade horária do Leek Duck somente com rótulo comunitário, sem promovê-la a anúncio oficial.
+
+
+- A grade horária de habitats publicada pela comunidade (Leek Duck) fica identificada como comunitária; o artigo oficial confirma apenas a ordem Aço → Dragão. Leek Duck rotula as próximas chuvas anuais de Minior como 2027, mas a página oficial omite o ano; por isso, essas datas permanecem apenas em metadados/editorial e não viram eventos datados.
+
+
+## 12/11/2026 — Revisão integral de anúncios de novembro e correções editoriais
+
+- Pawniard: a página oficial PT-BR foi atualizada em 28/10. O requisito temporário exige Bisharp como companheiro ao derrotar um chefe de Reide Sombrio ou Aço; a orientação anterior que dispensava esse requisito foi corrigida. Pesquisa Especial, Pesquisa de Campo, check-in de Embaixador da Comunidade e Ultracombo foram completados sem inventar tarefas individuais.
+- Chamados do Crepúsculo: adicionados os prêmios de Pesquisa de Campo, recompensas do Passe GO gratuito e Deluxe, preços publicados em USD/equivalente local e bônus de compra na Loja online. As duas fases de Pesquisa de Campo e o prazo de resgate em 02/12 permanecem separados.
+- Trilhas Dinamax: adicionados Pesquisa de Campo, adesivos, recompensas do Passe GO gratuito/Deluxe e bônus de compra na Loja online. A janela do evento (16–23/11) e a janela de Eternamax (21/11, 11h–14h locais) permanecem distintas.
+- O teaser de Eternatus foi preservado como histórico arquivado e vinculado aos anúncios oficiais de Trilhas Dinamax e Eternamax. O rumor de Mewtwo de Armadura/Clone foi preservado e vinculado somente à data oficial de Dia de Reides em 19/12; espécie e nome do evento continuam não confirmados.
+- Revisadas as páginas completas PT-BR/EN de Pawniard, Chamados do Crepúsculo e Trilhas Dinamax. Black Friday, GO Pass de novembro, Pesquisa do Machamp, Dispositivo de Exploração, Pokémon Center Bangkok e LAIC 2027 já estavam cadastrados com suas janelas e detalhes pertinentes; não foram duplicados.
+- A curadoria automática de 12/11 mantém quatro registros concluídos, sem arte obrigatória, sem GPX e sem `editorial_detail_pending`. Nenhum push foi disparado. Nenhuma arte, coordenada, rota, GPX, catálogo, Pokédex, PvP, Push ou Amigos/chat foi alterado.
+- Teste `tests/collector-curation-20261112.test.cjs` protege o requisito de companheiro, detalhes do Passe GO, vínculos históricos, sessões diárias do LAIC e ausência de pendências editoriais.
+
+### 12/11/2026 — complementos de detalhes oficiais
+
+- **Into the Wild:** a Caixa Misteriosa tem intervalo de reabertura reduzido somente durante o evento principal (9/11 10h–13/11 20h locais). A chance de Meltan Brilhante com Caixa Misteriosa e Gimmighoul Brilhante com Bolsa de Moedas segue até 15/11 às 18h locais; essas janelas ficam separadas.
+- **Dynamax Trails:** o limite diário de coleta de Partículas Max é 2.400; Pontos de Energia concedem 8× Partículas Max e se renovam com mais frequência. O limite de Reides Remotas passa de 10 para 30 na janela oficial de 20/11 13h–21/11 18h PST (GMT−8), equivalente a 20/11 18h–21/11 23h em Brasília.
+- **GO Wild Area Global:** o ingresso é anunciado por US$ 11,99 na página oficial em inglês; o valor foi acrescentado ao guia da aba Global sem criar evento ou arte.
+- Os detalhes permanecem vinculados às histórias oficiais existentes; não foram criados rumores, bônus adicionais, coordenadas ou GPX.
