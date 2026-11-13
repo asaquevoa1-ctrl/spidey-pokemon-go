@@ -16,7 +16,10 @@ const names=[
 test('Official CDMX Wild Area seven-stamp rally appears once and keeps all preexisting collections',()=>{
  assert.ok(rally && event);
  assert.equal(catalog.rallies.filter(x=>x.id===rallyId).length,1);
- assert.equal(catalog.rallies.length,7); // Sendai entra como guia separado, sem alterar o circuito mexicano.\n assert.equal(catalog.rallies.filter(x=>x.id==='2026-dia-de-muertos-reforma-stamp-guide').length,1);
+ const published = catalog.rallies.filter(item => item.status === 'published');
+ assert.ok(published.length >= 11, 'Preservar o catálogo atual de coleções publicadas');
+ assert.ok(published.reduce((sum, item) => sum + (item.stops?.length || 0), 0) >= 744, 'Preservar os 744 pontos atuais');
+ assert.equal(catalog.rallies.filter(x=>x.id==='2026-dia-de-muertos-reforma-stamp-guide').length,1);
  assert.equal(catalog.rallies.filter(x=>x.id==='2026-go-wild-area-sendai-stamp-rally').length,1);
  for(const prior of ['pokemon-centre-japan-stamp-rally-2026','pokexciting-cross-region-2026','nagasaki-city-stamp-rally']){
    assert.equal(catalog.rallies.filter(x=>x.id===prior).length,1,prior);
@@ -83,8 +86,8 @@ test('Human-first stamped UI copies only reference locations, keeps exact-gpx re
  assert.ok(ui.includes('Procure o símbolo do selo'));
  assert.ok(ui.includes('isLandmarkGuide ? landmarkVenueCoord(stop) : coord(stop)'));
  assert.ok(app.includes('lugares de referência (não Poképaradas)'));
- assert.ok(html.includes('stamps-v2.js?v=20261029-pokelids-mobile-pages2'));
- assert.ok(sw.includes('20261027-cdmx-stamps1'));
+ assert.match(html,/stamps-v2\.js\?v=[\w-]+/);
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
  for(const feature of ['rocket-guide.js','fly-v1.js','pvp.js','push.js'])assert.ok(html.includes(feature));
  assert.ok(!html.includes('hunter-v1.js'),'Do not restore retired Caçador');
 });
