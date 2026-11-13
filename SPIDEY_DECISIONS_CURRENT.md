@@ -721,3 +721,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - O evento de pausa permanece separado como janela de calendário, mas é agrupado na mesma história editorial Global; não foi criado novo evento nem nova notícia.
 - A página brasileira dos encontros comunitários tem conflito interno: introdução em 2026, blocos detalhados em 2025. Preservar 14–15/11/2026, confirmados pela introdução e pela página oficial Global; não inferir coordenadas ou mudar locais por causa do texto contraditório.
 - A semana precisa ser regenerada pelo comando do projeto depois da correção; até isso e o CI não ocorrerem, não considerar o pacote público atualizado.
+
+
+## 13/11/2026 — limites date-only calculados no fuso IANA
+- Registros sem hora permanecem ativos durante todo o último dia local do evento, usando `schedule.local_timezone` (ou `timezone`) como fuso IANA.
+- `SpideyDateOnly.bounds` retorna meia-noite local do primeiro dia e o primeiro instante do dia seguinte ao último dia; o limite final é exclusivo. Não usar offset fixo de Brasília.
+- O cálculo considera mudanças de horário de verão de 23/25 horas. Referências ausentes ou inválidas continuam falhando abertas, sem inventar um término.
+- Novidades relacionadas expiram quando todas as janelas terminam; o teste cobre Ásia/Tóquio, Kiritimati, Los Angeles na virada de DST e a fronteira exata de uma notícia.
