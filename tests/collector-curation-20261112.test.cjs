@@ -56,6 +56,48 @@ test('forced 0.435.2 notice remains operational metadata, not a dated event', ()
   assert.equal(events.some((event) => /0\.435\.2/.test(`${event.title || ''} ${event.summary || ''}`)), false);
 });
 
+
+const pending13 = (name) => JSON.parse(fs.readFileSync(`queue/pending/2026-11-13/${name}.json`, 'utf8'));
+const curated13 = (name) => JSON.parse(fs.readFileSync(`queue/curated/${name}.json`, 'utf8'));
+
+test('G47IX Dialga and Duraludon reminders are grouped into the existing official Global story', () => {
+  for (const name of ['g47ix-noticia-031882684ab5', 'g47ix-noticia-9291c9eb95ac']) {
+    const item = pending13(name);
+    const record = curated13(name);
+    assert.equal(item.status, 'curated_grouped_into_existing_official_story');
+    assert.equal(item.etapa_editorial, 'completed');
+    assert.equal(item.aprovar, false);
+    assert.equal(item.arte_obrigatoria, false);
+    assert.equal(item.proibir_fallback, false);
+    assert.equal(item.editorial_detail_pending, false);
+    assert.deepEqual(item.app_event_ids, ['2026-11-go-wild-area-global']);
+    assert.equal(record.status, 'grouped_without_new_claims');
+    assert.deepEqual(record.related_event_ids, ['2026-11-go-wild-area-global']);
+    assert.equal(record.art_required_for_publication, false);
+    assert.equal(record.source_verified, false);
+  }
+  const global = byId('2026-11-go-wild-area-global');
+  assert.match(global.notes.join(' '), /Dialga Dinamax/);
+  assert.match(global.notes.join(' '), /Duraludon Gigamax/);
+  assert.match(global.notes.join(' '), /Fundo Especial/);
+  assert.equal(events.filter(event => event.id === '2026-11-go-wild-area-global').length, 1);
+});
+
+test('generic shiny claim is not promoted to a separate story or art request', () => {
+  const item = pending13('g47ix-noticia-ac205d9de5f0');
+  const record = curated13('g47ix-noticia-ac205d9de5f0');
+  assert.equal(item.status, 'no_public_story');
+  assert.equal(item.aprovar, false);
+  assert.equal(item.arte_obrigatoria, false);
+  assert.equal(item.editorial_detail_pending, false);
+  assert.deepEqual(item.app_event_ids, ['2026-11-go-wild-area-global']);
+  assert.equal(record.status, 'no_public_story');
+  assert.equal(record.art_required_for_publication, false);
+  assert.match(record.curation_note, /sem lista de espécies/i);
+  assert.equal(events.some(event => /g47ix-noticia-ac205d9de5f0/.test(event.id)), false);
+});
+
+
 test('collector curation introduces no editorial detail pending items', () => {
   assert.deepEqual(events.filter((event) => event.audit?.editorial_detail_pending === true).map((event) => event.id), []);
 });
