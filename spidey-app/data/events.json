@@ -1398,7 +1398,7 @@
       "audit": {
         "archived_at": "2026-11-13T20:38:17Z",
         "archived_by": "editorial_automation",
-        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "archive_reason": "A janela geral de 16–23/11 e o retorno de todos os Pokémon Dynamax não lendários/não míticos já lançados foram confirmados pelo anúncio oficial de Trilhas Dinamax. O registro comunitário foi arquivado para evitar duplicidade e vinculado ao evento oficial, preservando o cronograma original.",
         "original_community_schedule": {
           "precision": "date",
           "local_timezone": "America/Sao_Paulo",
@@ -1406,15 +1406,17 @@
           "end_date": "2026-11-23",
           "brazil_timezone": "America/Sao_Paulo"
         },
-        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "linked_news_id": "2026-11-16-dynamax-trails",
         "superseded_by_event_id": "2026-11-16-dynamax-trails",
         "official_window_confirmation_event_id": "2026-11-16-dynamax-trails",
         "specific_species_officially_announced": false,
         "not_in_current_calendar": true,
         "no_new_art": true,
-        "official_confirmation_found": false,
+        "official_confirmation_found": true,
         "editorial_detail_pending": false,
-        "source_classification": "verified_community"
+        "source_classification": "community_prediction_superseded_by_official",
+        "linked_official_event_id": "2026-11-16-dynamax-trails",
+        "superseded_by_source_url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026"
       }
     },
     {
@@ -9017,7 +9019,7 @@
       "id": "2026-11-max-mondays-community-outlook",
       "slug": "2026-11-max-mondays-community-outlook",
       "title": "Calendário comunitário de novembro: previsões ainda a confirmar",
-      "summary": "Pokémon GO Hub e Leek Duck listam possíveis rotações de Megarreides, Reides, Horas de Reides, Holofote, Reides Sombrias e Max Mondays entre 16/11 e 06/12. São previsões comunitárias sem confirmação oficial pública: permanecem apenas em Novidades, com estreia a confirmar, sem eventos datados no Calendário.",
+      "summary": "Pokémon GO Hub e Leek Duck listam possíveis rotações de Megarreides, Reides, Horas de Reides, Holofote, Reides Sombrias e Max Mondays entre 16/11 e 06/12. A janela geral de Trilhas Dinamax e o retorno dos Dynamax não lendários já lançados estão confirmados oficialmente; as demais previsões comunitárias permanecem sem confirmação oficial e ficam apenas em Novidades, com estreia a confirmar.",
       "category": "community_calendar",
       "tags": [
         "Novembro 2026",
@@ -9052,10 +9054,10 @@
         "HORA DO HOLOFOTE • 26/11, 18h–19h locais: o Pokémon GO Hub prevê Noibat; informação comunitária, sem confirmação oficial pública.",
         "REIDES SOMBRIAS • 21–22/11: o Pokémon GO Hub prevê Tornadus; informação comunitária, sem confirmação oficial pública.",
         "REIDES SOMBRIAS • 28–29/11: o Pokémon GO Hub prevê Tornadus; informação comunitária, sem confirmação oficial pública.",
-        "MAX MONDAY • 16/11: Leek Duck informa que a espécie da semana 16–23/11 ainda não foi anunciada; janela comunitária indicada de 06h–21h local.",
-        "MAX MONDAY • 23/11: Leek Duck prevê Dynamax Espurr em 23–29/11, com janela comunitária de 06h–21h local na segunda-feira.",
-        "MAX MONDAY • 30/11: Leek Duck prevê Dynamax Cryogonal em 30/11–06/12, com janela comunitária de 06h–21h local na segunda-feira.",
-        "Nenhuma dessas previsões foi confirmada nos comunicados públicos oficiais em português/inglês ou na página oficial da Temporada. O calendário oficial de novembro exige login; por isso, as previsões permanecem apenas nesta notícia comunitária."
+        "MAX MONDAY • 16/11: Leek Duck informa que a espécie específica em destaque nessa segunda-feira ainda não foi anunciada. Isso é distinto da janela oficial de Trilhas Dinamax (16–23/11), que confirma que todos os Dynamax não lendários e não míticos já vistos no jogo podem aparecer em Batalhas Max.",
+        "MAX MONDAY • 23/11: Leek Duck prevê Dynamax Espurr em 23–29/11, com janela comunitária de 06h–21h local na segunda-feira; sem confirmação oficial pública.",
+        "MAX MONDAY • 30/11: Leek Duck prevê Dynamax Cryogonal em 30/11–06/12, com janela comunitária de 06h–21h local na segunda-feira; sem confirmação oficial pública.",
+        "As previsões de Mega Banette, Mega Metagross, Deoxys, Horas de Reides, Holofote Noibat, Tornadus Sombroso e espécies de Max Monday 23/30 não foram confirmadas nos comunicados públicos oficiais. O calendário oficial de novembro exige login; por isso, ficam somente nesta notícia comunitária."
       ],
       "notifications": {
         "enabled": false,
@@ -9065,7 +9067,7 @@
       "updated_at": "2026-11-13T17:38:17-03:00",
       "news": {
         "title": "Calendário comunitário de novembro: previsões a confirmar",
-        "summary": "Fontes comunitárias apontam possíveis rotações e horários entre 16/11 e 06/12. Não há confirmação oficial pública para estas previsões; a estreia permanece a confirmar e nenhum item aparece como evento datado no Calendário.",
+        "summary": "Fontes comunitárias apontam possíveis rotações e horários entre 16/11 e 06/12. A janela de Trilhas Dinamax 16–23/11 e o retorno dos Dynamax já lançados têm anúncio oficial próprio; as demais previsões não têm confirmação oficial pública e permanecem apenas em Novidades, com estreia a confirmar, sem eventos datados no Calendário.",
         "published_on": "2026-11-13",
         "label": "COMUNIDADE • ESTREIA A CONFIRMAR"
       },
@@ -9082,10 +9084,10 @@
         "official_confirmation_checked": [
           "https://pokemongo.com/pt-BR/news",
           "https://pokemongo.com/en/news",
+          "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+          "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
           "https://pokemongo.com/pt-BR/seasons/twilight-trails",
-          "https://pokemongo.com/en/seasons/twilight-trails",
-          "https://pokemongo.com/pt-BR/events/november-2026",
-          "https://pokemongo.com/en/events/november-2026"
+          "https://pokemongo.com/en/seasons/twilight-trails"
         ],
         "community_hours": "Leek Duck lists 06:00–21:00 local; not shown as official or scheduled in the app.",
         "calendar_entry_created": false,
@@ -9098,9 +9100,8 @@
             "date": "2026-11-16",
             "pokemon": null,
             "possible_from": "2026-11-16",
-            "possible_through": "2026-11-23",
-            "classification": "community_unconfirmed",
-            "featured_pokemon_announced": false
+            "possible_through": "2026-11-16",
+            "classification": "community_unconfirmed_featured_species_not_announced"
           },
           {
             "date": "2026-11-23",
@@ -9125,6 +9126,8 @@
         "official_sources_checked": [
           "https://pokemongo.com/pt-BR/news",
           "https://pokemongo.com/en/news",
+          "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+          "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
           "https://pokemongo.com/pt-BR/seasons/twilight-trails",
           "https://pokemongo.com/en/seasons/twilight-trails"
         ],
@@ -9139,7 +9142,6 @@
           "2026-11-26-spotlight-noibat",
           "2026-11-21-shadow-tornadus-weekend",
           "2026-11-28-shadow-tornadus-weekend",
-          "2026-11-16-max-surprise",
           "2026-11-23-max-espurr",
           "2026-11-30-max-cryogonal"
         ],
@@ -9153,7 +9155,6 @@
           "2026-11-26-spotlight-noibat",
           "2026-11-21-shadow-tornadus-weekend",
           "2026-11-28-shadow-tornadus-weekend",
-          "2026-11-16-max-surprise",
           "2026-11-23-max-espurr",
           "2026-11-30-max-cryogonal"
         ],
@@ -9187,7 +9188,6 @@
         "2026-11-26-spotlight-noibat",
         "2026-11-21-shadow-tornadus-weekend",
         "2026-11-28-shadow-tornadus-weekend",
-        "2026-11-16-max-surprise",
         "2026-11-23-max-espurr",
         "2026-11-30-max-cryogonal"
       ]
