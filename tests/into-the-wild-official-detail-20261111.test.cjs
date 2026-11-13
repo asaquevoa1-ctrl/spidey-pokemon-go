@@ -27,7 +27,7 @@ test('Natureza Selvagem permanece uma única história com janelas distintas', (
 test('detalhes oficiais completos não criam janela inventada para o Desafio Global', () => {
   const story = byId('2026-11-09-into-the-wild');
   const text = JSON.stringify(story);
-  for (const detail of ['Sopro do Dragão', 'Garra de Metal', 'Bola de Névoa', 'Esfera de Luz', 'Magnemite', 'Noibat', 'Togedemaru', 'Espada Colossal', 'Escudo Colossal']) {
+  for (const detail of ['Sopro do Dragão', 'Garra de Metal', 'Bola de Névoa', 'Purga de Esplendor', 'Magnemite', 'Noibat', 'Togedemaru', 'Espada Colossal', 'Escudo Colossal']) {
     assert.match(text, new RegExp(detail));
   }
   assert.equal(story.audit.field_research_individual_tasks_unpublished, true);
