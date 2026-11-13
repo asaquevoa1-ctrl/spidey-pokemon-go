@@ -13215,7 +13215,7 @@
       "slug": "official-news-auto-5e1b1cd68f6c",
       "content_type": "news",
       "title": "Preparem-se para a Área Selvagem do Pokémon GO 2026 com fundos de Pokémon no Perfil de Treinador, novos itens de avatar e mais novidades empolgantes.",
-      "summary": "O anúncio confirma fundos no Perfil do Treinador em duas etapas, grupos privados Dinamax, pesquisas de Aço e Dragão, envio de Bolas Safári ao Pokémon HOME e outros preparativos da Área Selvagem.",
+      "summary": "O anúncio confirma fundos no Perfil do Treinador em duas etapas, grupos privados Dinamax, pesquisa Aço/Dragão, transferência de Bolas Safári ao HOME, três itens de avatar que continuam na loja após o evento e pose exclusiva.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -13236,9 +13236,10 @@
       },
       "news": {
         "title": "Área Selvagem: fundos no perfil, HOME e grupos privados Dinamax",
-        "summary": "Os Fundos de Localização de Sendai e Cidade do México foram liberados em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores, em 9/11 às 10h locais. Amigos só veem fundos compatíveis quando chega 10h no fuso local deles. O anúncio também confirma pareamento automático ou Grupo Privado por código nas Batalhas Dinamax, Efeitos de Aventura de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) no lobby, transferência de capturas com Bolas Safári GO ao Pokémon HOME como Strange Ball e uma pose de avatar exclusiva para titulares que concluem a Pesquisa Especial do ingresso.",
+        "summary": "Os Fundos de Localização de Sendai e Cidade do México foram liberados em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores, em 9/11 às 10h locais. Amigos só veem fundos compatíveis quando chega 10h no fuso local deles. Os itens Duraludon Helmet, Gigantamax Duraludon Backpack e Fighting-Type Jacket ficam disponíveis na loja durante o evento e continuam disponíveis depois. O anúncio também confirma pareamento automático ou Grupo Privado por código nas Batalhas Dinamax, Efeitos de Aventura de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) no lobby, transferência de capturas com Bolas Safári GO ao Pokémon HOME como Strange Ball e uma pose de avatar exclusiva para titulares que concluem a Pesquisa Especial do ingresso.",
         "published_on": "2026-11-03",
-        "label": "OFICIAL • DETALHES CONFIRMADOS"
+        "label": "OFICIAL • DETALHES CONFIRMADOS",
+        "updated_on": "2026-11-12"
       },
       "notes": [
         "6/11 ÀS 10H LOCAIS: fundos de localização da Área Selvagem 2026 de Sendai e Cidade do México passam a poder aparecer com o Pokémon companheiro no Perfil do Treinador.",
@@ -13249,15 +13250,15 @@
         "Efeitos de Aventura selecionados poderão ser ativados no lobby de reides ou Batalhas Max a partir de Natureza Selvagem; participantes presenciais têm acesso antecipado.",
         "Titulares de ingresso que concluem a Pesquisa Especial da Área Selvagem Global recebem uma pose de avatar exclusiva.",
         "Os Efeitos de Aventura de Zacian Coroado (Behemoth Blade) e Zamazenta Coroado (Behemoth Bash) podem ser ativados no lobby antes de uma Batalha Max.",
-        "Os itens de avatar temáticos de Duraludon anunciados para a loja não são uma recompensa de evento datada; a notícia não cria uma janela de calendário adicional."
+        "Itens de avatar na loja: Duraludon Helmet, Gigantamax Duraludon Backpack e Fighting-Type Jacket ficam disponíveis durante o evento e continuam disponíveis após seu encerramento; o anúncio não define uma data de retirada."
       ],
       "notifications": {
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
       "status": "published",
-      "verified_at": "2026-11-04",
-      "updated_at": "2026-11-12T23:31:00Z",
+      "verified_at": "2026-11-12",
+      "updated_at": "2026-11-12T21:54:30-03:00",
       "audit": {
         "classification": "official_announcement_editorially_verified",
         "editorial_detail_pending": false,
@@ -13265,7 +13266,7 @@
         "not_a_calendar_event": true,
         "canonical_fulltext_url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
         "supersedes_community_story": "2026-11-02-trainer-profile-buddy-backgrounds-2026",
-        "details_reviewed_at": "2026-11-12T23:31:00Z",
+        "details_reviewed_at": "2026-11-12T21:54:30-03:00",
         "official_pt_en_full_pages_reviewed": true,
         "community_crosscheck": "Leek Duck e Pokémon GO Hub usados como conferência comunitária; conteúdo oficial permanece prioritário."
       },
