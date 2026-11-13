@@ -127,7 +127,7 @@ test('Minior mantém uma única história oficial com detalhes completos e janel
   assert.match(leonids.news.summary, /sem quantidade divulgada/i);
   assert.match(textNotes, /estrelas cadentes/i);
   assert.match(textNotes, /GO Wild Area Global/i);
-  assert.match(textNotes, /50% dos PS ou menos/i);
+  assert.match(textNotes, /50% ou menos/i);
   assert.match(textNotes, /Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta/i);
   assert.match(textNotes, /Hemisfério Norte e outra no Hemisfério Sul/i);
   assert.equal(leonids.audit.language_differences.form_change_threshold.pt_BR, '50% ou menos');
