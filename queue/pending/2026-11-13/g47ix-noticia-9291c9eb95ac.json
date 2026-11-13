@@ -1,0 +1,28 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "⚔️ Gigantamax Duraludon will be available in six-star Max Battles from November 14 to 15!\n\n✨ If you’re lucky, you might find a Shiny!\n\n🌍 You’ll also have a chance to encounter it with a Special Background!\n\n#PokemonGO #Gigantamax\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2121241686537809986",
+  "gerar_gpx": false,
+  "aprovar": false,
+  "_source_id": "g47ix-2121241686537809986",
+  "status": "curated_grouped_into_existing_official_story",
+  "etapa_editorial": "completed",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": false,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": false,
+  "created_at_utc": "2026-11-13T15:06:58.718013+00:00",
+  "editorial_detail_pending": false,
+  "curated_at_utc": "2026-11-13T15:29:05+00:00",
+  "curated_path": "queue/curated/g47ix-noticia-9291c9eb95ac.json",
+  "app_event_ids": [
+    "2026-11-go-wild-area-global"
+  ],
+  "source_verified": false,
+  "official_crosscheck": true,
+  "curation_note": "O texto coletado repete Duraludon Gigamax em Batalhas Max de seis estrelas nos dois dias, chance de Brilhante e possibilidade de Fundo Especial. Esses detalhes constam na publicação oficial PT/EN. A página X não pôde ser aberta pelo leitor público; a confirmação usada vem da fonte oficial. Agrupado à história oficial existente, sem evento ou arte duplicada."
+}
