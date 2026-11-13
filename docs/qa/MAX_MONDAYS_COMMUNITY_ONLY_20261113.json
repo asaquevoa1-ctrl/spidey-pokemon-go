@@ -1,8 +1,8 @@
 {
   "audit_id": "max-mondays-community-only-20261113",
-  "base_main_sha": "e9c738e7adfffc29e2930055a0c214b13f4211b4",
-  "base_pr_branch_sha": "93b607f04858c5835ac9cbd9438a37aeca39dec8",
-  "reviewed_at": "2026-11-13T12:29:05-03:00",
+  "base_main_sha": "56685fd58b8164a36ef3f054498eefce50b3208a",
+  "base_pr_branch_sha": "150c501a574da0bce89d6cb9128dd8ea074cbee9",
+  "reviewed_at": "2026-11-13T14:20:56-03:00",
   "official_sources": {
     "pt_br_news": "https://pokemongo.com/pt-BR/news",
     "en_news": "https://pokemongo.com/en/news",
@@ -63,9 +63,10 @@
   },
   "validation": {
     "test": "tests/go-tour-2027-calendar-windows-20261113.test.cjs",
-    "execution": "pending GitHub Actions for updated PR #291 head",
-    "merge": "not attempted; PR branch remains divergent"
+    "execution": "pending GitHub Actions for the updated PR #291 head; no CI result inferred from prior runs",
+    "merge": "not attempted; PR branch remains divergent from current main"
   },
   "calendar_entry_created": false,
-  "no_new_art": true
+  "no_new_art": true,
+  "resulting_pr_branch_sha": "a1f1e1843a355a68c9d808da0b5d18f64e8aae71"
 }
