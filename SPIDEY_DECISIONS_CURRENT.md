@@ -694,3 +694,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - A programação específica de Max Monday em 16/11 continua sem espécie oficialmente anunciada; a previsão comunitária fica somente em Novidades, sem calendário próprio.
 - O arquivo preserva a janela comunitária original e liga o histórico à notícia `2026-11-max-mondays-community-outlook` e ao evento oficial `2026-11-16-dynamax-trails`.
 - O lembrete comunitário de Minior foi alinhado como agrupamento sem arte: `arte_obrigatoria=false`, `art_required_for_publication=false`, sem fallback ou renderização.
+
+
+## 13/11/2026 — limites date-only calculados no fuso IANA
+- Registros sem hora permanecem ativos durante todo o último dia local do evento, usando `schedule.local_timezone` (ou `timezone`) como fuso IANA.
+- `SpideyDateOnly.bounds` retorna meia-noite local do primeiro dia e o primeiro instante do dia seguinte ao último dia; o limite final é exclusivo. Não usar offset fixo de Brasília.
+- O cálculo considera mudanças de horário de verão de 23/25 horas. Referências ausentes ou inválidas continuam falhando abertas, sem inventar um término.
+- Novidades relacionadas expiram quando todas as janelas terminam; o teste cobre Ásia/Tóquio, Kiritimati, Los Angeles na virada de DST e a fronteira exata de uma notícia.
