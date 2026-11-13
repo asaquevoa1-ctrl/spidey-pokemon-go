@@ -99,10 +99,12 @@
   },
   "publication": {
     "status": "PR update prepared only",
-    "ci": "not yet observed after this commit",
-    "merge": "not attempted; PR branch diverges from current main",
-    "pages": "no new deployment claimed",
-    "http": "no new public HTTP verification claimed",
+    "ci": "no workflow run or check status for final head 908ed97",
+    "merge": "not attempted; GitHub reports mergeable=false and mergeable_state=dirty",
+    "weekly_regeneration": "not run on PR branch; latest successful main weekly run 43477820437 used SHA 56685fd58b8164a36ef3f054498eefce50b3208a before this PR update",
+    "public_queue_regeneration": "not run on PR branch; latest successful main notification-queue run 43462265836 used SHA e9c738e7adfffc29e2930055a0c214b13f4211b4",
+    "pages": "no new deployment for this PR",
+    "http": "latest successful public HTTP verification belongs to main Pages run 43489995262 at SHA 297d47ad, not this PR",
     "samsung_physical_test": false
   },
   "preservation": {
@@ -114,5 +116,11 @@
     "push_dispatched": false,
     "third_party_messages_sent": false,
     "gpx_or_coordinates_changed": false
-  }
+  },
+  "branch_head_after": "908ed97fd750f29b6ad672e9fbd26564dedcac4c",
+  "commit_sequence": [
+    "79cbf21a01188516a7e1dd4ff0c1a3bb81f3cf19",
+    "59bbdf4265648305d3fc9adc3f5f6aefa0b6937b",
+    "908ed97fd750f29b6ad672e9fbd26564dedcac4c"
+  ]
 }
