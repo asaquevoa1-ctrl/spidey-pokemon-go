@@ -1,0 +1,55 @@
+{
+  "audit_id": "max-mondays-community-only-20261113",
+  "base_main_sha": "e9c738e7adfffc29e2930055a0c214b13f4211b4",
+  "base_pr_branch_sha": "93b607f04858c5835ac9cbd9438a37aeca39dec8",
+  "reviewed_at": "2026-11-13T12:29:05-03:00",
+  "official_sources": {
+    "pt_br_news": "https://pokemongo.com/pt-BR/news",
+    "en_news": "https://pokemongo.com/en/news",
+    "official_season_reference": "https://pokemongo.com/en/seasons/forever-forward",
+    "pt_br_november_events": "https://pokemongo.com/pt-BR/events/november-2026",
+    "en_november_events": "https://pokemongo.com/en/events/november-2026"
+  },
+  "official_findings": {
+    "max_monday_general_mechanics_in_season_reference": true,
+    "november_2026_featured_species_confirmed": false,
+    "public_november_event_calendar_requires_sign_in": true
+  },
+  "community_sources": [
+    "https://leekduck.com/events/max-mondays-2026-11-16/",
+    "https://leekduck.com/events/max-mondays-2026-11-23/",
+    "https://leekduck.com/events/max-mondays-2026-11-30/",
+    "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/"
+  ],
+  "archived_records": [
+    {
+      "id": "2026-11-23-max-espurr",
+      "status": "archived",
+      "schedule_removed_from_active_record": true,
+      "original_schedule_preserved_in_audit": true,
+      "linked_news_id": "2026-11-max-mondays-community-outlook"
+    },
+    {
+      "id": "2026-11-30-max-cryogonal",
+      "status": "archived",
+      "schedule_removed_from_active_record": true,
+      "original_schedule_preserved_in_audit": true,
+      "linked_news_id": "2026-11-max-mondays-community-outlook"
+    }
+  ],
+  "player_facing_result": "Uma notícia comunitária COMUNIDADE • A CONFIRMAR permanece em Novidades; nenhuma espécie ou janela de novembro entra no Calendário sem anúncio oficial.",
+  "preservation": {
+    "ids_preserved": true,
+    "history_preserved": true,
+    "art_changed": false,
+    "gpx_changed": false,
+    "coordinates_added": false,
+    "push_dispatched": false,
+    "android_physical_test_claimed": false
+  },
+  "validation": {
+    "test": "tests/go-tour-2027-calendar-windows-20261113.test.cjs",
+    "execution": "pending GitHub Actions for updated PR #291 head",
+    "merge": "not attempted; PR branch remains divergent"
+  }
+}
