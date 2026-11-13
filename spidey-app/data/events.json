@@ -1364,15 +1364,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-23",
-        "end_date": "2026-11-29",
-        "brazil_timezone": "America/Sao_Paulo"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1395,7 +1388,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1403,7 +1396,21 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "archived_at": "2026-11-13",
+        "archive_reason": "A espécie e a janela específica foram relatadas por fonte comunitária, sem anúncio oficial público. A orientação editorial exige manter a previsão apenas em Novidades até confirmação oficial.",
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "original_community_schedule": {
+          "precision": "date",
+          "local_timezone": "America/Sao_Paulo",
+          "start_date": "2026-11-23",
+          "end_date": "2026-11-29",
+          "brazil_timezone": "America/Sao_Paulo"
+        }
+      }
     },
     {
       "id": "2026-11-30-max-cryogonal",
@@ -1421,15 +1428,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-30",
-        "end_date": "2026-12-06",
-        "brazil_timezone": "America/Sao_Paulo"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1452,7 +1452,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1460,7 +1460,21 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "archived_at": "2026-11-13",
+        "archive_reason": "A espécie e a janela específica foram relatadas por fonte comunitária, sem anúncio oficial público. A orientação editorial exige manter a previsão apenas em Novidades até confirmação oficial.",
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "original_community_schedule": {
+          "precision": "date",
+          "local_timezone": "America/Sao_Paulo",
+          "start_date": "2026-11-30",
+          "end_date": "2026-12-06",
+          "brazil_timezone": "America/Sao_Paulo"
+        }
+      }
     },
     {
       "id": "2026-11-05-spotlight-teddiursa",
@@ -8757,6 +8771,19 @@
           "Max Monday local window reported by Leek Duck: 06:00–21:00",
           "More frequent Power Spot refresh reported by Leek Duck",
           "Additional Power Spots on Mondays reported by Leek Duck"
+        ],
+        "official_sources_checked": [
+          "https://pokemongo.com/pt-BR/news",
+          "https://pokemongo.com/en/news",
+          "https://pokemongo.com/en/seasons/forever-forward",
+          "https://pokemongo.com/pt-BR/events/november-2026",
+          "https://pokemongo.com/en/events/november-2026"
+        ],
+        "official_november_species_confirmation": false,
+        "public_official_event_calendar_requires_sign_in": true,
+        "community_event_records_archived": [
+          "2026-11-23-max-espurr",
+          "2026-11-30-max-cryogonal"
         ]
       }
     },
