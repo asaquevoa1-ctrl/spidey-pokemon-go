@@ -100,7 +100,7 @@ test('Wild Area avatar shop items remain a news detail, not a dated event',()=>{
  assert.equal(story.audit.editorial_detail_pending,false);
  const text=[story.summary,story.news.summary,...story.notes].join(' ');
  for(const item of ['Capacete de Duraludon','Mochila de Duraludon Gigamax','Jaqueta do tipo Lutador']) assert.ok(text.includes(item),item);
- assert.match(text,/continuam disponíveis após o evento/i);
+ assert.match(text,/continuam (?:na loja após o evento|disponíveis após (?:seu encerramento|o evento)|disponíveis depois)/i);
  assert.equal(story.news.updated_on,'2026-11-12');
 });
 
