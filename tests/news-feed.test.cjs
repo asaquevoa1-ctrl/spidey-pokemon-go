@@ -150,3 +150,41 @@ test('date-only related stories expire after the last IANA event day; unknown re
  const withMissing=build([...events,missing],range,new Date('2026-11-13T08:22:57Z'));
  assert.ok(withMissing.some(story=>story.events.some(event=>event.id===missing.id)));
 });
+
+
+test('community-only November forecasts remain in News, not as dated calendar events',()=>{
+ const ids=["2026-11-25-raids-deoxys-four-forms","2026-11-16-mega-banette-raids","2026-11-25-mega-metagross-raids","2026-11-18-raid-hour-cresselia-darkrai","2026-11-25-raid-hour-deoxys","2026-11-26-spotlight-noibat","2026-11-21-shadow-tornadus-weekend","2026-11-28-shadow-tornadus-weekend","2026-11-16-max-surprise","2026-11-23-max-espurr","2026-11-30-max-cryogonal"];
+ const storyId='2026-11-max-mondays-community-outlook';
+ const story=events.find(e=>e.id===storyId);
+ assert.ok(story);assert.equal(story.status,'published');assert.equal(story.content_type,'news');
+ assert.equal(story.schedule,undefined);assert.equal(story.calendar?.mode,'hidden');
+ assert.match(story.news?.label||'',/COMUNIDADE.*ESTREIA A CONFIRMAR/);
+ assert.equal(story.source?.confidence,'verified_community');assert.equal(story.audit?.official_confirmation_found,false);
+ assert.equal(story.audit?.calendar_entry_created,false);assert.equal(story.presentation?.requires_art,false);
+ assert.equal(story.presentation?.fallback_visual,'spidey-logo');
+ for(const id of ids){const event=events.find(e=>e.id===id);assert.ok(event,id);assert.equal(event.status,'archived',id);assert.equal(event.schedule,undefined,id);assert.equal(event.calendar?.mode,'hidden',id);assert.equal(event.audit?.linked_news_id,storyId,id);assert.ok(event.audit?.original_community_schedule,id);assert.equal(event.notifications?.enabled,false,id);assert.equal(event.gpx?.enabled,false,id);}
+ const groups=build(events,range,new Date('2026-11-18T12:00:00Z'));
+ assert.ok(groups.some(group=>group.events.some(event=>event.id===storyId)));
+ for(const id of ids)assert.equal(groups.some(group=>group.events.some(event=>event.id===id)),false,id);
+ assert.equal(events.find(e=>e.id==='2026-11-16-dynamax-trails')?.status,'published');
+ assert.equal(events.find(e=>e.id==='2026-11-19-spotlight-galar-starters')?.status,'published');
+});
+
+test('Twilight Wishes has one story and distinct field-research and GO Pass claim windows',()=>{
+ const ids=['2026-11-24-twilight-wishes-preview','2026-11-24-twilight-wishes-field-research-phase-1','2026-11-26-twilight-wishes-field-research-phase-2','2026-11-24-twilight-wishes-pass-claim-deadline'];
+ const records=ids.map(id=>events.find(e=>e.id===id));
+ for(const event of records){assert.ok(event);assert.equal(event.status,'published');assert.equal(event.source?.confidence,'official');assert.equal(event.source?.url,'https://pokemongo.com/pt-BR/news/twilight-wishes-2026');}
+ const main=records[0],phase1=records[1],phase2=records[2],claim=records[3];
+ assert.match(main.notes.join(' '),/Maschiff/);assert.match(main.notes.join(' '),/Mega Beedrill/);assert.match(main.notes.join(' '),/3× Poeira Estelar/);
+ assert.deepEqual([phase1.schedule.start_local,phase1.schedule.end_local],['2026-11-24T10:00:00-03:00','2026-11-26T10:00:00-03:00']);
+ assert.deepEqual([phase2.schedule.start_local,phase2.schedule.end_local],['2026-11-26T10:00:00-03:00','2026-11-30T20:00:00-03:00']);
+ assert.deepEqual([claim.schedule.start_local,claim.schedule.end_local],['2026-11-24T10:00:00-03:00','2026-12-02T20:00:00-03:00']);
+ const groups=build(events,range,new Date('2026-11-25T12:00:00Z'));
+ const story=groups.find(group=>group.events.some(event=>event.id===main.id));assert.ok(story);
+ for(const id of ids)assert.ok(story.events.some(event=>event.id===id),id);
+ assert.equal(groups.filter(group=>group.events.some(event=>ids.includes(event.id))).length,1);
+ const beforeEnd=build(events,range,new Date('2026-12-02T22:59:59Z'));
+ const atEnd=build(events,range,new Date('2026-12-02T23:00:00Z'));
+ assert.ok(beforeEnd.some(group=>group.events.some(event=>event.id===claim.id)));
+ assert.equal(atEnd.some(group=>group.events.some(event=>event.id===claim.id)),false);
+});

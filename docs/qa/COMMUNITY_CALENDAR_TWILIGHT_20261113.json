@@ -1,0 +1,118 @@
+{
+  "task": "spidey-editorial-review",
+  "date": "2026-11-13",
+  "base_main_sha": "6a3ec9723f9317f816e5986b6eecff61f3b9d21c",
+  "branch": "automation/2026-11-13-go-tour-windows-and-community-max-mondays",
+  "branch_head_before": "79cbf21a01188516a7e1dd4ff0c1a3bb81f3cf19",
+  "sources": {
+    "official_pt": [
+      "https://pokemongo.com/pt-BR/news",
+      "https://pokemongo.com/pt-BR/seasons/twilight-trails",
+      "https://pokemongo.com/pt-BR/news/twilight-wishes-2026"
+    ],
+    "official_en": [
+      "https://pokemongo.com/en/news",
+      "https://pokemongo.com/en/seasons/twilight-trails",
+      "https://pokemongo.com/news/twilight-wishes-2026"
+    ],
+    "community": [
+      "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+      "https://leekduck.com/events/max-mondays-2026-11-16/",
+      "https://leekduck.com/events/max-mondays-2026-11-23/",
+      "https://leekduck.com/events/max-mondays-2026-11-30/"
+    ]
+  },
+  "community_forecast": {
+    "canonical_story_id": "2026-11-max-mondays-community-outlook",
+    "classification": "verified_community_unconfirmed",
+    "calendar_entry_created": false,
+    "news_label": "COMUNIDADE • ESTREIA A CONFIRMAR",
+    "archived_event_ids": [
+      "2026-11-25-raids-deoxys-four-forms",
+      "2026-11-16-mega-banette-raids",
+      "2026-11-25-mega-metagross-raids",
+      "2026-11-18-raid-hour-cresselia-darkrai",
+      "2026-11-25-raid-hour-deoxys",
+      "2026-11-26-spotlight-noibat",
+      "2026-11-21-shadow-tornadus-weekend",
+      "2026-11-28-shadow-tornadus-weekend",
+      "2026-11-16-max-surprise",
+      "2026-11-23-max-espurr",
+      "2026-11-30-max-cryogonal"
+    ],
+    "original_schedules_preserved_in_audit": true,
+    "official_event_calendar_requires_sign_in": true,
+    "no_official_confirmation_found": true,
+    "no_new_art": true,
+    "no_coordinates_or_gpx": true,
+    "no_push": true
+  },
+  "twilight_wishes": {
+    "canonical_story_event_id": "2026-11-24-twilight-wishes-preview",
+    "canonical_url_pt": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+    "canonical_fulltext_url_en": "https://pokemongo.com/news/twilight-wishes-2026",
+    "full_text_reviewed": true,
+    "editorial_detail_pending": false,
+    "existing_story_preserved": true,
+    "added_windows": [
+      {
+        "id": "2026-11-24-twilight-wishes-field-research-phase-1",
+        "start": "2026-11-24T10:00:00-03:00",
+        "end": "2026-11-26T10:00:00-03:00",
+        "timezone": "America/Sao_Paulo",
+        "type": "field_research_phase_1"
+      },
+      {
+        "id": "2026-11-26-twilight-wishes-field-research-phase-2",
+        "start": "2026-11-26T10:00:00-03:00",
+        "end": "2026-11-30T20:00:00-03:00",
+        "timezone": "America/Sao_Paulo",
+        "type": "field_research_phase_2"
+      },
+      {
+        "id": "2026-11-24-twilight-wishes-pass-claim-deadline",
+        "start": "2026-11-24T10:00:00-03:00",
+        "end": "2026-12-02T20:00:00-03:00",
+        "timezone": "America/Sao_Paulo",
+        "type": "go_pass_reward_claim_window"
+      }
+    ],
+    "details_added": [
+      "wild encounters",
+      "raid tiers and featured Pokémon",
+      "field research rewards and both phases",
+      "GO Pass Rank 1/10 bonuses",
+      "Deluxe details",
+      "claim deadline"
+    ]
+  },
+  "tests": {
+    "updated": "tests/news-feed.test.cjs",
+    "assertions": [
+      "community forecasts archived from current calendar",
+      "single community news story remains",
+      "official Dynamax Trails and Galar starter Spotlight remain published",
+      "Twilight Wishes story groups four records",
+      "field-research windows remain distinct",
+      "GO Pass claim boundary 19:59:59/20:00:00 local"
+    ]
+  },
+  "publication": {
+    "status": "PR update prepared only",
+    "ci": "not yet observed after this commit",
+    "merge": "not attempted; PR branch diverges from current main",
+    "pages": "no new deployment claimed",
+    "http": "no new public HTTP verification claimed",
+    "samsung_physical_test": false
+  },
+  "preservation": {
+    "approved_art_changed": false,
+    "new_art_created": false,
+    "rejected_art_generations_retried": false,
+    "ids_preserved": true,
+    "history_preserved": true,
+    "push_dispatched": false,
+    "third_party_messages_sent": false,
+    "gpx_or_coordinates_changed": false
+  }
+}

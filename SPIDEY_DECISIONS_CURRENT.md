@@ -701,3 +701,13 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - `SpideyDateOnly.bounds` retorna meia-noite local do primeiro dia e o primeiro instante do dia seguinte ao último dia; o limite final é exclusivo. Não usar offset fixo de Brasília.
 - O cálculo considera mudanças de horário de verão de 23/25 horas. Referências ausentes ou inválidas continuam falhando abertas, sem inventar um término.
 - Novidades relacionadas expiram quando todas as janelas terminam; o teste cobre Ásia/Tóquio, Kiritimati, Los Angeles na virada de DST e a fronteira exata de uma notícia.
+
+
+## 13/11/2026 — previsões comunitárias de novembro e janelas completas de Chamados do Crepúsculo
+- A leitura integral do calendário comunitário do Pokémon GO Hub e das três páginas Max Monday do Leek Duck não encontrou confirmação pública oficial para as rotações de Mega Banette, Mega Metagross, Deoxys, Horas de Reides Cresselia/Darkrai e Deoxys, Holofote Noibat, fins de semana de Tornadus Sombroso e espécies específicas de Max Monday.
+- Reutilizar a notícia `2026-11-max-mondays-community-outlook` como história única de previsões comunitárias de novembro. Ela reúne os 11 registros comunitários por IDs e URLs canônicas; os registros de evento são arquivados com o cronograma original em `audit.original_community_schedule`, vínculo à notícia, sem `schedule` ativo, sem Calendário, push, GPX ou arte nova. A notícia permanece em Novidades com rótulo **COMUNIDADE • ESTREIA A CONFIRMAR**.
+- A página oficial de Eventos de novembro em PT-BR e EN exige login; a página oficial da Temporada Trilhas do Entardecer foi consultada e não confirma as rotações específicas acima. Não usar a programação comunitária como evento datado.
+- O texto completo de Chamados do Crepúsculo foi conferido em https://pokemongo.com/news/twilight-wishes-2026 e comparado ao registro PT-BR existente. Atualizar o evento principal com encontros selvagens, reides, Megaenergia, Maschiff, bônus de Ranque 1/10 e recompensas do Passe GO.
+- Preservar uma história canônica pela URL PT-BR existente e adicionar três janelas oficiais separadas: Pesquisa de Campo 24–26/11, Pesquisa de Campo 26–30/11 e prazo de resgate do Passe GO 24/11–02/12. O limite de resgate termina em 02/12 às 20h locais; o teste verifica 19:59:59 e 20:00:00 de Brasília.
+- Nenhuma arte foi criada ou rotulada Premium; fallback de data/logo apenas. Sem coordenadas, GPX, notificações ou push.
+- Base de reconciliação desta preparação: main `6a3ec9723f9317f816e5986b6eecff61f3b9d21c`; branch `automation/2026-11-13-go-tour-windows-and-community-max-mondays`, HEAD anterior `79cbf21a01188516a7e1dd4ff0c1a3bb81f3cf19`. A integração permanece sujeita a CI e reconciliação da branch concorrente.

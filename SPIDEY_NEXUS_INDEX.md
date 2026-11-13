@@ -515,3 +515,9 @@ Alertas já possuem VAPID/Blob e agendamento: public-key 200, dispatch autentica
 
 Guia: [SPIDEYNEXUS_CONTINUIDADE.md](SPIDEYNEXUS_CONTINUIDADE.md). Relatório e pendências: [CONTINUITY_20261005.md](docs/qa/CONTINUITY_20261005.md), JSON homônimo, `continuity-public-http-a48da34-20261005.json` e capturas em `docs/qa/proofs/`. Todas as frentes do guia continuam rastreadas, inclusive PWA/Android, revisão de textos, cobertura de artes, precisão dos locais e Amigos/chat. Organizar o Projeto do ChatGPT e mover conversas não foi realizado por esta atualização do repositório.
 
+
+
+## 13/11/2026 — QA editorial comunitário e Chamados do Crepúsculo
+- Registro: `docs/qa/COMMUNITY_CALENDAR_TWILIGHT_20261113.json`.
+- Testes: `tests/news-feed.test.cjs` cobre a retirada das previsões comunitárias do Calendário, a história única de Novidades e as três janelas oficiais de Chamados do Crepúsculo.
+- Preparação feita na PR #291 sobre a base main SHA `6a3ec9723f9317f816e5986b6eecff61f3b9d21c`; CI, merge e Pages continuam pendentes até reconciliação.
