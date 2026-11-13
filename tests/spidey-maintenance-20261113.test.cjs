@@ -218,13 +218,14 @@ test('GitHub Pages é a única hospedagem automática e os workflows ativos usam
 
 test('GitHub Pages executa o monitor sintético depois da validação HTTP e arquiva o relatório', () => {
   const workflow = read('.github/workflows/spidey-pages.yml');
-  const deploy = workflow.split('  deploy:\\n')[1] || '';
+  const deployStart = workflow.indexOf('  deploy:');
+  const deploy = deployStart >= 0 ? workflow.slice(deployStart) : '';
   const images = deploy.indexOf('Confirmar no endereço público as 5 imagens oficiais da Wild Area');
   const health = deploy.indexOf('Executar monitor sintético completo após publicação');
   const artifact = deploy.indexOf('Guardar relatório de saúde da versão publicada');
   assert.ok(images >= 0 && health > images && artifact > health,
     'O monitor precisa rodar depois das verificações públicas de imagens');
-  assert.match(deploy, /python scripts\\/check_app_health\\.py --hosting github-pages --base-url/);
-  assert.match(deploy, /uses: actions\\/upload-artifact@v7/);
-  assert.match(workflow, /python -m unittest scripts\\.test_app_health -v/);
+  assert.ok(deploy.includes('python scripts/check_app_health.py --hosting github-pages --base-url'));
+  assert.ok(deploy.includes('uses: actions/upload-artifact@v7'));
+  assert.ok(workflow.includes('python -m unittest scripts.test_app_health -v'));
 });
