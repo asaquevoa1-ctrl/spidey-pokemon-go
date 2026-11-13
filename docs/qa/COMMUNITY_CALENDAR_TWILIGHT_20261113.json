@@ -107,13 +107,14 @@
       "field-research windows remain distinct",
       "GO Pass claim boundary 19:59:59/20:00:00 local",
       "Max Monday 16/11 record linked to official Dynamax Trails announcement and excluded from unconfirmed community story",
-      "Clefable Super Mega Raid Day preserves the event, global challenge and post-event reward windows; Remote Raid cap 20 and exact end boundary tested"
+      "Clefable Super Mega Raid Day preserves the event, global challenge and post-event reward windows; Remote Raid cap 20 and exact end boundary tested",
+      "Clefable three-window grouping, remote raid cap 20, ticket bonuses, conditional post-event effects, exact 13/12 17:00 BRT end boundary"
     ]
   },
   "publication": {
     "status": "PR update prepared only",
-    "ci": "no workflow run or check status for final head 908ed97",
-    "merge": "not attempted; GitHub reports mergeable=false and mergeable_state=dirty",
+    "ci": "no workflow run or check status observed for test head ac1ddb2094bb85e45ecda97e8985451ad2d71093",
+    "merge": "not attempted; PR remains dirty/non-mergeable against current main",
     "weekly_regeneration": "not run on PR branch; latest successful main weekly run 43477820437 used SHA 56685fd58b8164a36ef3f054498eefce50b3208a before this PR update",
     "public_queue_regeneration": "not run on PR branch; latest successful main notification-queue run 43462265836 used SHA e9c738e7adfffc29e2930055a0c214b13f4211b4",
     "pages": "no new deployment for this PR",
@@ -134,9 +135,13 @@
   "commit_sequence": [
     "79cbf21a01188516a7e1dd4ff0c1a3bb81f3cf19",
     "59bbdf4265648305d3fc9adc3f5f6aefa0b6937b",
-    "908ed97fd750f29b6ad672e9fbd26564dedcac4c"
+    "84599fab8e0f1c3e2ef8e1b4e42cce65c85b2d0",
+    "91bdd84a3fdcd40534bfa85c69d992c2597a6e5d",
+    "0325eb0737b480463d9cbb8ab05f16d8bc827f10",
+    "b9fc92702c5cc1da97881df4e6103f5055de3692",
+    "ac1ddb2094bb85e45ecda97e8985451ad2d71093"
   ],
-  "branch_head_after_data_commit": "91bdd84a3fdcd40534bfa85c69d992c2597a6e5d",
+  "branch_head_after_data_commit": "b9fc92702c5cc1da97881df4e6103f5055de3692",
   "clefable": {
     "canonical_story_event_id": "2026-11-28-super-mega-raid-day-preview",
     "full_text_reviewed": true,
@@ -162,14 +167,15 @@
       }
     ],
     "details_added": [
-      "Explosão Lunar+ power in Trainer Battles and Raids",
-      "Mega Level Super Max requirement",
-      "6 free passes / 14 ticket passes",
-      "Remote Raid cap 20 during global challenge",
-      "Timed Research Metagross and Premium Battle Pass",
-      "ticket bonus XP/Star Dust/XL Rare Candy",
-      "conditional post-event attack/CP bonuses"
+      "Explosão Lunar+ power: 80 Trainer Battles / 160 Raids",
+      "Super Max Mega Level prerequisite and Mega Energy requirement",
+      "up to 6 free Raid Passes / 14 with event ticket",
+      "Remote Raid limit 20 during global challenge window",
+      "Timed Research: Premium Battle Pass and Metagross encounter",
+      "ticket bonuses: Rare Candy XL chance, +5000 XP and +5000 Stardust in Super Mega Raids",
+      "post-event Moonblast+ base power and CP bonuses conditional on global challenge levels; not in GO Battle League"
     ],
     "exact_end_boundary_test": "2026-12-13T17:00:00-03:00"
-  }
+  },
+  "branch_head_after_test_commit": "ac1ddb2094bb85e45ecda97e8985451ad2d71093"
 }
