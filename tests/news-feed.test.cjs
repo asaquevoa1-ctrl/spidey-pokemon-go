@@ -6,8 +6,8 @@ const range=e=>({start:new Date(e.schedule.start_brazil),end:new Date(e.schedule
 test('one Minior announcement opens all three distinct calendar windows without merging community events',()=>{
  const stories=build(events,range,new Date('2026-10-01T22:00Z'));
  const minior=stories.filter(s=>s.events.some(e=>e.id.includes('minior-')));
- assert.equal(minior.length,1);assert.equal(minior[0].events.length,3);
- assert.deepEqual(Array.from(minior[0].events,e=>e.id),['2026-10-minior-orionids','2026-11-minior-leonids','2026-12-minior-geminids']);
+ assert.equal(minior.length,1);assert.equal(minior[0].events.length,6);
+ assert.deepEqual(Array.from(minior[0].events,e=>e.id),['2026-10-minior-orionids','2026-11-minior-leonids','2026-12-minior-geminids','2027-05-minior-eta-aquariids','2027-07-minior-southern-delta-aquariids','2027-08-minior-perseids']);
  const community=events.filter(e=>e.source?.url==='https://pokemongohub.net/post/event/october-2026-events/'&&range(e).end>=new Date('2026-10-01T22:00Z'));
  assert.ok(community.length>1);for(const e of community)assert.equal(stories.find(s=>s.events.some(x=>x.id===e.id)).events.length,1);
  assert.ok(stories.some(s=>s.event.id==='2026-10-dynamax-max-battle-day'));
@@ -16,7 +16,8 @@ test('one Minior announcement opens all three distinct calendar windows without 
 });
 test('an expired Minior window drops out while later windows and announcement remain accessible',()=>{
  const minior=build(events,range,new Date('2026-11-01T12:00Z')).find(s=>s.key==='official:/news/minior-meteor-showers-2026');
- assert.equal(minior.events.length,2);assert.equal(minior.events[0].id,'2026-11-minior-leonids');
+ assert.equal(minior.events.length,5);assert.equal(minior.events[0].id,'2026-11-minior-leonids');
+ assert.deepEqual(Array.from(minior.events,e=>e.id),['2026-11-minior-leonids','2026-12-minior-geminids','2027-05-minior-eta-aquariids','2027-07-minior-southern-delta-aquariids','2027-08-minior-perseids']);
  assert.equal(minior.title,'Minior chega com as chuvas de meteoros');
 });
 test('official locale/tracking variants deduplicate; unsafe or unpublished entries stay out',()=>{
