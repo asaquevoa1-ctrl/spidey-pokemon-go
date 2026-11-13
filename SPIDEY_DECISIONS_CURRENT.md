@@ -662,3 +662,11 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Causa identificada: `WEEK_IMAGE` apontava para CDN remoto indisponível e o `error` substituía o banner por `solid-as-steel.webp`; o CSS da mídia reservava altura grande e `object-fit: contain` ampliava os espaços mortos.
 - Correção: remover URL remota e fallback com rótulo genérico; criar composição responsiva, compacta e acessível usando **dois arquivos oficiais já locais** (`solid-as-steel.webp` e `daring-as-dragons.webp`), com crédito editorial proporcional e título próximo da mídia. Não afirmar que as duas imagens sejam um pôster autoral Premium aprovado para a Semana.
 - Não alterar pôster aprovado do Global, calendário, horários por fuso, histórico do México e a lista de 64 coordenadas. Atualizar versões no HTML, cache PWA e testes de navegador da Semana para exigir duas imagens carregadas, altura reduzida e título visível na primeira tela Android.
+
+
+## 13/11/2026 — GO Tour 2027 em janelas separadas e Max Monday comunitário
+- Preservar `2027-02-go-tour-alola-save-the-date` como uma única história de Novidades, com a URL canônica existente; a publicação oficial em PT/EN e o índice oficial confirmam Kaohsiung e Los Angeles em 19–21/02/2027 e o Global em 27–28/02/2027. A data de publicação é 23/09/2026.
+- Separar o Calendário em `2027-02-19-go-tour-kaohsiung`, `2027-02-19-go-tour-los-angeles` e `2027-02-27-go-tour-global`, todos date-only e sem horário inventado. Usar `Asia/Taipei` e `America/Los_Angeles` para as etapas presenciais; `America/Sao_Paulo` no Global apenas como referência de exibição pt-BR, pois a fonte não publica um fuso global único nem horários.
+- Manter uma única notícia oficial: os três eventos compartilham a URL canônica e são agrupados pelo `news-feed.js`. Não criar coordenadas, Poképaradas, GPX, notificações ou arte.
+- A programação de Max Monday de 16, 23 e 30/11 vem somente do Leek Duck. Publicar como notícia comunitária `COMUNIDADE • A CONFIRMAR`, sem `schedule` e sem eventos no Calendário até confirmação oficial.
+- Não duplicar a correção de Pawniard: a exigência atualizada de Bisharp como companheiro já está na PR #289 e permanece pendente de merge/CI.
