@@ -690,3 +690,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Revisadas as páginas completas PT-BR/EN de Pawniard, Chamados do Crepúsculo e Trilhas Dinamax. Black Friday, GO Pass de novembro, Pesquisa do Machamp, Dispositivo de Exploração, Pokémon Center Bangkok e LAIC 2027 já estavam cadastrados com suas janelas e detalhes pertinentes; não foram duplicados.
 - A curadoria automática de 12/11 mantém quatro registros concluídos, sem arte obrigatória, sem GPX e sem `editorial_detail_pending`. Nenhum push foi disparado. Nenhuma arte, coordenada, rota, GPX, catálogo, Pokédex, PvP, Push ou Amigos/chat foi alterado.
 - Teste `tests/collector-curation-20261112.test.cjs` protege o requisito de companheiro, detalhes do Passe GO, vínculos históricos, sessões diárias do LAIC e ausência de pendências editoriais.
+
+### 12/11/2026 — complementos de detalhes oficiais
+
+- **Into the Wild:** a Caixa Misteriosa tem intervalo de reabertura reduzido somente durante o evento principal (9/11 10h–13/11 20h locais). A chance de Meltan Brilhante com Caixa Misteriosa e Gimmighoul Brilhante com Bolsa de Moedas segue até 15/11 às 18h locais; essas janelas ficam separadas.
+- **Dynamax Trails:** o limite diário de coleta de Partículas Max é 2.400; Pontos de Energia concedem 8× Partículas Max e se renovam com mais frequência. O limite de Reides Remotas passa de 10 para 30 na janela oficial de 20/11 13h–21/11 18h PST (GMT−8), equivalente a 20/11 18h–21/11 23h em Brasília.
+- **GO Wild Area Global:** o ingresso é anunciado por US$ 11,99 na página oficial em inglês; o valor foi acrescentado ao guia da aba Global sem criar evento ou arte.
+- Os detalhes permanecem vinculados às histórias oficiais existentes; não foram criados rumores, bônus adicionais, coordenadas ou GPX.

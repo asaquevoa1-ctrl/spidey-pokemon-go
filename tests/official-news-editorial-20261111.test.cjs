@@ -116,3 +116,20 @@ test('Área Selvagem lista os três itens de avatar da loja sem criar janela de 
  assert.equal(story.news.updated_on,'2026-11-12');
  assert.equal(story.audit.canonical_fulltext_url,'https://pokemongo.com/pt-BR/news/get-ready-for-gowildarea-2026');
 });
+
+test('full official pages keep Mystery Box, Max Particle and Remote Raid windows distinct',()=>{
+ const into=byId('2026-11-09-into-the-wild');
+ assert.match(into.notes.join(' '),/intervalo para reabertura.*Caixa Misteriosa/i);
+ assert.equal(into.bonus_windows.find(w=>w.id==='mystery-box-cooldown').end_local,'2026-11-13T20:00:00-03:00');
+ assert.equal(into.bonus_windows.find(w=>w.id==='meltan-gimmighoul-shiny').end_local,'2026-11-15T18:00:00-03:00');
+ const dynamax=byId('2026-11-16-dynamax-trails');
+ assert.match(dynamax.notes.join(' '),/2\.400/);
+ assert.match(dynamax.notes.join(' '),/8× Partículas Max/);
+ assert.match(dynamax.notes.join(' '),/20\/11 18h a 21\/11 23h em Brasília/);
+ assert.equal(dynamax.bonus_windows[0].start_local,'2026-11-20T13:00:00-08:00');
+ assert.equal(dynamax.bonus_windows[0].end_local,'2026-11-21T18:00:00-08:00');
+ const global=byId('2026-11-go-wild-area-global');
+ assert.equal(global.ticket.price_usd,11.99);
+ assert.match(global.notes.join(' '),/US\$ 11,99/);
+ assert.match(fs.readFileSync('spidey-app/wild-area-20261109.js','utf8'),/US\$ 11,99/);
+});

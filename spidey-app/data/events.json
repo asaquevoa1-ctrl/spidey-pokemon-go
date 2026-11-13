@@ -1879,7 +1879,9 @@
         "Passe GO Deluxe: Natureza Selvagem concede uma Tampinha Prateada ao completar a trilha; ela aumenta um único atributo por Hiper Treinamento.",
         "Encontros na natureza anunciados incluem Magnemite, Noibat e Togedemaru, entre outros.",
         "Pesquisas de Campo temáticas concedem encontros e outras recompensas; a publicação não informa tarefas nem recompensas individuais.",
-        "Depois que o Desafio Global for concluído, os Efeitos de Aventura Espada Colossal e Escudo Colossal ficam mais eficazes e o medidor de energia das Batalhas Max enche mais rápido."
+        "Depois que o Desafio Global for concluído, os Efeitos de Aventura Espada Colossal e Escudo Colossal ficam mais eficazes e o medidor de energia das Batalhas Max enche mais rápido.",
+        "O intervalo para reabrir a Caixa Misteriosa é reduzido durante o evento principal (9/11 10h–13/11 20h locais).",
+        "A chance de Meltan Brilhante com Caixa Misteriosa e Gimmighoul Brilhante com Bolsa de Moedas permanece até 15/11 às 18h locais."
       ],
       "notes": [
         "Evento principal: 9/11 às 10h a 13/11 às 20h no horário local; para Brasília, 10h e 20h BRT.",
@@ -1891,7 +1893,9 @@
         "Passe GO e Passe GO Deluxe: 9/11 às 10h até 15/11 às 18h locais; recompensas desbloqueadas devem ser resgatadas até 17/11 às 23h59 locais.",
         "A Tampinha Prateada da trilha Deluxe deve ser usada até 22/11 às 23h59 locais. Exige Grande Companheiro ou nível superior; Pokémon Sombrosos e Pokémon com todos os atributos já no máximo não são elegíveis.",
         "Depois de usar a Tampinha, há 365 dias para concluir as tarefas de Hiper Treinamento do atributo escolhido. Pokémon Hiper Treinados não podem ser enviados ao Pokémon HOME.",
-        "A publicação não anuncia uma janela própria para o Desafio Global; ele permanece como condição do evento, sem novo evento datado no calendário."
+        "A publicação não anuncia uma janela própria para o Desafio Global; ele permanece como condição do evento, sem novo evento datado no calendário.",
+        "Caixa Misteriosa: o intervalo para reabertura é reduzido durante o evento principal (9/11 10h–13/11 20h locais).",
+        "A chance de Meltan Brilhante com Caixa Misteriosa e Gimmighoul Brilhante com Bolsa de Moedas permanece até 15/11 às 18h locais, além do encerramento do evento principal."
       ],
       "notifications": {
         "enabled": false,
@@ -1933,8 +1937,31 @@
         ],
         "field_research_individual_tasks_unpublished": true,
         "global_challenge_has_no_separate_official_window": true,
-        "reconciled_at": "2026-11-11T21:05:00-03:00"
-      }
+        "reconciled_at": "2026-11-11T21:05:00-03:00",
+        "mystery_box_cooldown_reduced": true,
+        "mystery_box_cooldown_window_end_local": "2026-11-13T20:00:00-03:00",
+        "meltan_gimmighoul_bonus_end_local": "2026-11-15T18:00:00-03:00"
+      },
+      "bonus_windows": [
+        {
+          "id": "mystery-box-cooldown",
+          "title": "Intervalo reduzido da Caixa Misteriosa",
+          "start_local": "2026-11-09T10:00:00-03:00",
+          "end_local": "2026-11-13T20:00:00-03:00",
+          "local_timezone": "America/Sao_Paulo",
+          "start_brazil": "2026-11-09T10:00:00-03:00",
+          "end_brazil": "2026-11-13T20:00:00-03:00"
+        },
+        {
+          "id": "meltan-gimmighoul-shiny",
+          "title": "Chance Brilhante com Caixa Misteriosa e Bolsa de Moedas",
+          "start_local": "2026-11-09T10:00:00-03:00",
+          "end_local": "2026-11-15T18:00:00-03:00",
+          "local_timezone": "America/Sao_Paulo",
+          "start_brazil": "2026-11-09T10:00:00-03:00",
+          "end_brazil": "2026-11-15T18:00:00-03:00"
+        }
+      ]
     },
     {
       "id": "2026-11-09-into-the-wild-go-pass",
@@ -2234,7 +2261,9 @@
       "bonuses": [
         "Chance de Partículas Max após capturas temáticas ou Batalhas Max; mais Pontos de Energia ativos.",
         "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo Especial ao capturar após Batalha Max (não garantido).",
-        "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max."
+        "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max.",
+        "Limite de coleta diário de Partículas Max de 2.400 e 8× Partículas Max em Pontos de Energia; Pontos de Energia se renovam com mais frequência.",
+        "Limite diário de Reides Remotas aumenta de 10 para 30 entre 20/11 13h e 21/11 18h PST (GMT−8), equivalente a 20/11 18h–21/11 23h em Brasília."
       ],
       "notes": [
         "Eternatus está na trilha gratuita do Passe GO. Avance nas tarefas para liberar o encontro; não é necessário comprar o Deluxe.",
@@ -2252,7 +2281,10 @@
         "Adesivos temáticos: podem ser obtidos ao girar Poképaradas, abrir Presentes, comprar na loja do jogo e progredir no Passe GO.",
         "Passe GO gratuito: recompensas incluem encontros com Pokémon Dinamax temáticos com Fundo Especial, um encontro com Eternatus ou 100 Doces se ele já tiver sido capturado, Doces e Doces GG de Eternatus, Doce Raro, Poeira Estelar e adesivos.",
         "Passe GO Deluxe: acrescenta encontros com mais Pokémon Dinamax com Fundo Especial, mais Doces e Doces GG de Eternatus, Frutas Caxí Prateadas, Doce Raro GG e adesivos.",
-        "Preço anunciado do Deluxe: US$ 4,99 ou equivalente local; a disponibilidade pode variar por região. A compra pela Loja online inclui 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas como brinde."
+        "Preço anunciado do Deluxe: US$ 4,99 ou equivalente local; a disponibilidade pode variar por região. A compra pela Loja online inclui 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas como brinde.",
+        "Pontos de Energia serão renovados com mais frequência durante o evento.",
+        "Limite diário de coleta de Partículas Max aumenta para 2.400; Pontos de Energia concedem 8× Partículas Max.",
+        "Janela de Reides Remotas: de 20/11 13h a 21/11 18h PST (GMT−8), equivalente a 20/11 18h a 21/11 23h em Brasília; limite diário aumenta de 10 para 30."
       ],
       "notifications": {
         "enabled": false,
@@ -2288,7 +2320,7 @@
       "updated_at": "2026-11-12T20:28:41-03:00",
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
-        "summary": "16–23/11: Pokémon Dinamax já lançados podem retornar às Batalhas Max, exceto Lendários e Míticos, com chance de Fundo Especial. Pesquisa de Campo, adesivos e recompensas do Passe GO; Eternamax em janela própria em 21/11, 11h–14h locais.",
+        "summary": "16–23/11: Dinamax já lançados (exceto Lendários/Míticos) podem voltar às Batalhas Max, com chance de Fundo Especial. Limite de Partículas Max: 2.400 e 8× nos Pontos de Energia. Reides Remotas: 30/dia de 20/11 18h a 21/11 23h BRT. Eternamax em 21/11, 11h–14h locais.",
         "published_on": "2026-10-28",
         "label": "OFICIAL • ATUALIZADO"
       },
@@ -2408,9 +2440,31 @@
           "event_stickers",
           "go_pass_free_rewards",
           "go_pass_deluxe_rewards",
-          "web_store_purchase_bonus"
+          "web_store_purchase_bonus",
+          "max_particle_cap_2400",
+          "power_spot_8x",
+          "power_spot_refresh",
+          "remote_raid_limit_window"
+        ],
+        "remote_raid_limit_timezone": "America/Los_Angeles",
+        "remote_raid_limit_brazil_window": [
+          "2026-11-20T18:00:00-03:00",
+          "2026-11-21T23:00:00-03:00"
         ]
-      }
+      },
+      "bonus_windows": [
+        {
+          "id": "remote-raid-limit",
+          "title": "Limite diário de Reides Remotas: 30",
+          "start_local": "2026-11-20T13:00:00-08:00",
+          "end_local": "2026-11-21T18:00:00-08:00",
+          "local_timezone": "America/Los_Angeles",
+          "start_brazil": "2026-11-20T18:00:00-03:00",
+          "end_brazil": "2026-11-21T23:00:00-03:00",
+          "limit_from": 10,
+          "limit_to": 30
+        }
+      ]
     },
     {
       "id": "2026-11-21-community-day-preview",
@@ -11930,7 +11984,8 @@
         "A pesquisa especial do ingresso permite escolher o caminho Aço ou Dragão. Ao concluir a história, o encontro com Duraludon Gigamax traz Fundo Especial e a recompensa inclui uma pose de avatar exclusiva. O Fundo Especial de capturas em reides e Batalhas Max é uma possibilidade, não garantia.",
         "Pesquisa de Campo temática terá maior chance de aparecer; tarefas individuais e recompensas específicas não foram publicadas na página oficial.",
         "Horários detalhados das horas de habitat são uma confirmação comunitária do Leek Duck, não publicados na página oficial: Aço 10h–11h, 12h–13h, 14h–15h e 16h–17h; Dragão 11h–12h, 13h–14h, 15h–16h e 17h–18h, sempre no horário local. A página oficial confirma apenas a ordem Aço primeiro e Dragão depois.",
-        "Kyurem encontrados em Reides conhecem o ataque carregado Glaciar e concedem Energia de Fusão, conforme a página oficial."
+        "Kyurem encontrados em Reides conhecem o ataque carregado Glaciar e concedem Energia de Fusão, conforme a página oficial.",
+        "Preço publicado na página oficial em inglês para o ingresso global: US$ 11,99."
       ],
       "notifications": {
         "enabled": true,
@@ -12000,7 +12055,9 @@
         "no_new_gpx_or_coordinates_added": true,
         "related_local_meetups_remain_in_local_events": true,
         "community_habitat_hours_from_leekduck": true,
-        "official_habitat_hours_not_published": true
+        "official_habitat_hours_not_published": true,
+        "ticket_price_verified": true,
+        "ticket_price_usd": 11.99
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -12175,6 +12232,13 @@
         ],
         "coordinates_published": false,
         "checked_at": "2026-11-05"
+      },
+      "ticket": {
+        "price_usd": 11.99,
+        "currency": "USD",
+        "display": "US$ 11,99",
+        "source_url": "https://pokemongo.com/en/gowildarea/global",
+        "confidence": "official"
       }
     },
     {
