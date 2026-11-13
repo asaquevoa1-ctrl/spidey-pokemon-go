@@ -124,3 +124,14 @@ test('notícia temporária relacionada a evento date-only expira no último inst
  const atEnd=build([event,news],range,new Date('2026-11-15T15:00:00.000Z'));
  assert.equal(atEnd.length,0);
 });
+
+test('pausa de Descobertas Diárias agrupa-se com notícia Global oficial',()=>{
+ const global=events.find(event=>event.id==='2026-11-go-wild-area-global');
+ const pause=events.find(event=>event.id==='2026-11-09-daily-discovery-pause');
+ assert.ok(global && pause);
+ assert.equal(pause.source.url,global.source.url);
+ const groups=build([global,pause],range,new Date('2026-11-13T12:29:05-03:00'));
+ assert.equal(groups.length,1);
+ assert.equal(groups[0].event.id,global.id);
+ assert.equal(groups[0].events.length,2);
+});
