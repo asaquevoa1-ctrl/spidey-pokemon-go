@@ -235,7 +235,7 @@ jobs:
           python3 - <<'PY'
           import hashlib, json, os, pathlib, time, urllib.request
           base = 'https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/'
-          files = ('index.html', 'app.js', 'catalog.js', 'stamps-v2.js', 'news-premium-20261102.js', 'wild-area-20261109.js', 'assets/events/premium/wild-area-global-2026-approved-v1.png', 'wild-mexico-type-stops-20261106.js', 'ticket-rally-community-20261107.js', 'data/ticket-rally-community-20261107.json', 'premium-approved-master.js', 'sw.js', 'data/stamps.json', 'data/events.json', 'data/weekly.json')
+          files = ('index.html', 'app.js', 'catalog.js', 'stamps-v2.js', 'news-premium-20261102.js', 'news-feed.js', 'wild-area-20261109.js', 'assets/events/premium/wild-area-global-2026-approved-v1.png', 'wild-mexico-type-stops-20261106.js', 'ticket-rally-community-20261107.js', 'data/ticket-rally-community-20261107.json', 'premium-approved-master.js', 'sw.js', 'data/stamps.json', 'data/events.json', 'data/weekly.json')
           expected = {name: hashlib.sha256((pathlib.Path('pages-public/spidey-app') / name).read_bytes()).hexdigest() for name in files}
           error = None
           for attempt in range(12):
