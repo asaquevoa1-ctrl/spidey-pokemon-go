@@ -320,34 +320,6 @@
         }
       },
       {
-        "id": "2026-11-12-max-hour-regidrago",
-        "title": "Hora Max: Regidrago Dinamax",
-        "summary": "Regidrago Dinamax em destaque das 18h às 19h no horário local de cada região. Capturado durante o evento, conhece Sopro do Dragão; pode ser Brilhante e pode ter Fundo Especial, sem garantia.",
-        "category": "max_battle_day",
-        "tags": [
-          "Global",
-          "Batalhas Max",
-          "Natureza Selvagem 2026"
-        ],
-        "start_brazil": "2026-11-12T18:00:00-03:00",
-        "end_brazil": "2026-11-12T19:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
-          "url": "https://pokemongo.com/news/into-the-wild-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
         "id": "2026-11-13-max-hour-latias-latios",
         "title": "Hora Max: Latias e Latios Dinamax",
         "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. Podem aparecer Brilhantes e, após uma captura bem-sucedida, podem vir com o Fundo Especial do evento.",
@@ -608,15 +580,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 14,
+    "calendar_events_in_week": 13,
     "events_with_weekly_art": 3,
     "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 11,
-    "events_in_weekly": 14,
+    "events_without_weekly_art": 10,
+    "events_in_weekly": 13,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-12T17:59:25.465033-03:00",
-    "current_items_filtered_at": "2026-11-12T17:59:25.444409-03:00",
+    "generated_at": "2026-11-12T23:00:09.874252-03:00",
+    "current_items_filtered_at": "2026-11-12T23:00:09.854683-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
