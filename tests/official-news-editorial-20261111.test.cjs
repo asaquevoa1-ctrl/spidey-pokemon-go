@@ -133,3 +133,41 @@ test('full official pages keep Mystery Box, Max Particle and Remote Raid windows
  assert.match(global.notes.join(' '),/US\$ 11,99/);
  assert.match(fs.readFileSync('spidey-app/wild-area-20261109.js','utf8'),/US\$ 11,99/);
 });
+
+
+const test20261113 = require('node:test');
+const assert20261113 = require('node:assert/strict');
+const fs20261113 = require('node:fs');
+const catalog20261113 = JSON.parse(fs20261113.readFileSync('spidey-app/data/events.json','utf8')).events;
+
+test20261113('official PT-BR move, Clefable ticket terms, Mexico City Friday update and news-only gameplay', () => {
+  const into = catalog20261113.find(e => e.id === '2026-11-09-into-the-wild');
+  const latios = into.pokemon.find(p => p.name === 'Latios Dinamax');
+  assert.match(latios.method, /Purga de Esplendor/);
+  assert.doesNotMatch(latios.method, /Esfera de Luz/);
+
+  const clefable = catalog20261113.find(e => e.id === '2026-11-28-super-mega-raid-day-preview');
+  const ticketText = [...clefable.notes, clefable.news.summary].join(' ');
+  assert.match(ticketText, /US\$ 4,99/);
+  assert.match(ticketText, /Grande Amigo/);
+  assert.match(ticketText, /não são reembolsáveis/);
+  assert.match(ticketText, /não podem ser adquiridos com PokéMoedas/);
+  assert.match(ticketText, /até 17h locais/);
+  assert.match(ticketText, /Passe de Batalha Premium adicional/);
+  assert.equal(clefable.audit.ticket_purchase_end_local, '2026-11-28T17:00:00');
+  assert.equal(clefable.audit.ticket_pokecoins_allowed, false);
+
+  const mexico = catalog20261113.find(e => e.id === '2026-11-go-wild-area-mexico-city');
+  assert.ok(mexico.notes.some(n => n.includes('experiências no Monumento a la Revolución terminaram mais cedo')));
+  assert.ok(mexico.verification_sources.some(s => s.url.endsWith('/gowildarea-mexicocity-friday-update')));
+  assert.equal(mexico.audit.friday_gameplay_unchanged, true);
+  assert.equal(mexico.schedule.end_local, '2026-11-08T18:00:00-06:00');
+
+  const gameplay = catalog20261113.find(e => e.id === '2026-10-08-gameplay-quality-of-life');
+  assert.equal(gameplay.content_type, 'news');
+  assert.equal(gameplay.calendar.mode, 'hidden');
+  assert.equal(gameplay.schedule, undefined);
+  assert.ok(gameplay.notes.some(n => n.includes('probabilidade de encontrar Células não mudou')));
+  assert.ok(gameplay.notes.some(n => n.includes('check-in abre 15 minutos antes')));
+  assert.equal(gameplay.audit.no_exact_rollout_date_published, true);
+});
