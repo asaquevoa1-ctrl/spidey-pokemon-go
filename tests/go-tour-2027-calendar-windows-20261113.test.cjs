@@ -203,3 +203,28 @@ test('Minior 2027 respeita o último segundo local e sai da superfície após o 
   assert.ok(atEndGroup?.events.some(event => event.id === id));
   assert.ok(!afterGroup?.events.some(event => event.id === id));
 });
+
+
+test('placeholder comunitário 16–23/11 fica arquivado e ligado à história Max Monday',()=>{
+  const placeholder=byId('2026-11-16-max-surprise');
+  assert.ok(placeholder);
+  assert.equal(placeholder.status,'archived');
+  assert.equal(placeholder.schedule,undefined);
+  assert.equal(placeholder.calendar.mode,'hidden');
+  assert.equal(placeholder.audit.linked_news_id,'2026-11-max-mondays-community-outlook');
+  assert.equal(placeholder.audit.superseded_by_event_id,'2026-11-16-dynamax-trails');
+  assert.equal(placeholder.audit.official_window_confirmation_event_id,'2026-11-16-dynamax-trails');
+  assert.equal(placeholder.audit.specific_species_officially_announced,false);
+  assert.equal(placeholder.audit.not_in_current_calendar,true);
+  assert.deepEqual(placeholder.audit.original_community_schedule,{
+    precision:'date',
+    local_timezone:'America/Sao_Paulo',
+    start_date:'2026-11-16',
+    end_date:'2026-11-23'
+  });
+  const story=byId('2026-11-max-mondays-community-outlook');
+  assert.ok(story);
+  assert.equal(story.schedule,undefined);
+  assert.equal(story.calendar.mode,'hidden');
+  assert.match(story.news.summary,/a confirmar|não anunciada/i);
+});
