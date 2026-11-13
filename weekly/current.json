@@ -292,62 +292,6 @@
     "max_pvp": [],
     "also_happening": [
       {
-        "id": "2026-11-09-into-the-wild",
-        "title": "Natureza Selvagem: Into the Wild 2026",
-        "summary": "9 a 13/11, 10h–20h (horário local): Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Registeel, Regidrago, Latias e Latios Dinamax em Batalhas Max 5★. Regidrago capturado no evento conhece Sopro do Dragão; Fundo Especial é possível, não garantido.",
-        "category": "evento_especial",
-        "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO"
-        ],
-        "start_brazil": "2026-11-09T10:00:00-03:00",
-        "end_brazil": "2026-11-13T20:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • comunicado oficial",
-          "url": "https://pokemongo.com/news/into-the-wild-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-11-13-max-hour-latias-latios",
-        "title": "Hora Max: Latias e Latios Dinamax",
-        "summary": "Latias e Latios Dinamax em destaque das 18h às 19h no horário local de cada região. Podem aparecer Brilhantes e, após uma captura bem-sucedida, podem vir com o Fundo Especial do evento.",
-        "category": "max_battle_day",
-        "tags": [
-          "Global",
-          "Batalhas Max",
-          "Natureza Selvagem 2026"
-        ],
-        "start_brazil": "2026-11-13T18:00:00-03:00",
-        "end_brazil": "2026-11-13T19:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • anúncio oficial Natureza Selvagem",
-          "url": "https://pokemongo.com/news/into-the-wild-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
         "id": "2026-11-06-gmax-machamp-research-completion",
         "title": "Prazo para concluir — Pesquisa do Machamp Gigamax",
         "summary": "Somente para quem recebeu a pesquisa até 8/11: concluir tarefas e resgatar recompensas até 15/11 às 23h59 no horário local.",
@@ -580,15 +524,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 13,
+    "calendar_events_in_week": 11,
     "events_with_weekly_art": 3,
     "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 10,
-    "events_in_weekly": 13,
+    "events_without_weekly_art": 8,
+    "events_in_weekly": 11,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-13T14:57:19.440095-03:00",
-    "current_items_filtered_at": "2026-11-13T14:57:19.420398-03:00",
+    "generated_at": "2026-11-13T20:46:00.154852-03:00",
+    "current_items_filtered_at": "2026-11-13T20:46:00.129972-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
