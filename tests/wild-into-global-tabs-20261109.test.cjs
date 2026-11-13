@@ -155,3 +155,28 @@ test('notícia oficial de recursos da Wild Area é atualizada no mesmo ID, sem e
   assert.ok(item.related_event_ids.includes('2026-11-go-wild-area-global'));
   assert.equal(catalog.filter(e=>e.id==='official-news-auto-5e1b1cd68f6c').length,1);
 });
+
+test('Home e guias saem das superfícies no fim da última janela local IANA',async()=>{
+  const api=await loaded();
+  const weekRows=api.allRows('wildIntoView','2026-11-13');
+  const globalRows=api.allRows('wildGlobalView','2026-11-15');
+  assert.equal(weekRows.length,64);
+  assert.equal(globalRows.length,64);
+  const weekEnd=Math.max(...weekRows.map(row=>row.end.getTime()+3600000));
+  const globalEnd=Math.max(...globalRows.map(row=>row.end.getTime()));
+  const beforeWeek=api.surfaceState(new Date(weekEnd-1));
+  const atWeek=api.surfaceState(new Date(weekEnd));
+  assert.equal(beforeWeek.week,true);
+  assert.equal(atWeek.week,false);
+  assert.equal(atWeek.global,true);
+  const beforeGlobal=api.surfaceState(new Date(globalEnd-1));
+  const atGlobal=api.surfaceState(new Date(globalEnd));
+  assert.equal(beforeGlobal.global,true);
+  assert.equal(atGlobal.global,false);
+  assert.equal(atGlobal.archive,true);
+  assert.equal(api.homeStatus(new Date(globalEnd)),'Arquivo dos eventos');
+  const script=read(app+'wild-area-20261109.js');
+  assert.match(script,/weekTab\.hidden=!surface\.week/);
+  assert.match(script,/globalTab\.hidden=!surface\.global/);
+  assert.match(script,/cards\.length\)\{tile\?\.remove\(\);return;\}/);
+});
