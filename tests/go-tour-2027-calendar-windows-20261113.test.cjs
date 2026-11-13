@@ -117,7 +117,7 @@ test('nenhuma arte Premium, coordenada, rota ou notificação foi criada', () =>
 });
 
 test('Minior mantém uma única história oficial com detalhes completos e janelas existentes', () => {
-  const miniorIds = ['2026-10-minior-orionids', '2026-11-minior-leonids', '2026-12-minior-geminids'];
+  const miniorIds = ['2026-10-minior-orionids', '2026-11-minior-leonids', '2026-12-minior-geminids', '2027-05-minior-eta-aquariids', '2027-07-minior-southern-delta-aquariids', '2027-08-minior-perseids'];
   const minior = miniorIds.map(byId);
   assert.ok(minior.every(Boolean));
   const leonids = byId('2026-11-minior-leonids');
@@ -125,12 +125,37 @@ test('Minior mantém uma única história oficial com detalhes completos e janel
   assert.match(leonids.summary, /Poeira Estelar/i);
   assert.match(textNotes, /estrelas cadentes/i);
   assert.match(textNotes, /GO Wild Area Global/i);
-  assert.match(textNotes, /abaixo de 50%/i);
+  assert.match(textNotes, /50% dos PS ou menos/i);
+  assert.match(textNotes, /Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta/i);
+  assert.match(textNotes, /Hemisfério Norte e outra no Hemisfério Sul/i);
+  assert.equal(leonids.audit.language_differences.form_change_threshold.pt_BR, '50% ou menos');
+  assert.equal(leonids.audit.language_differences.form_change_threshold.en, 'below 50%');
+  assert.equal(leonids.audit.language_differences.overlap_availability.pt_BR, 'não aparecerá');
+  assert.equal(leonids.audit.language_differences.overlap_availability.en, 'may not appear');
   assert.match(textNotes, /LAIC 2027/i);
   assert.equal(leonids.audit.community_cross_reference.source_id, 'g47ix-2120984983892586580');
   const group = stories.find(item => item.events.some(event => event.id === '2026-11-minior-leonids'));
   assert.ok(group);
-  assert.equal(group.events.length, 2, 'a janela encerrada de Orionidas não deve aparecer na notícia atual');
+  assert.equal(group.events.length, 5, 'a janela encerrada de Orionidas não deve aparecer; as três próximas janelas anuais devem permanecer agrupadas');
+  assert.ok(!group.events.some(event => event.id === '2026-10-minior-orionids'));
+  const expectedFuture = [
+    ['2027-05-minior-eta-aquariids', '2027-05-03T17:00:00-03:00', '2027-05-08T23:59:59-03:00'],
+    ['2027-07-minior-southern-delta-aquariids', '2027-07-28T17:00:00-03:00', '2027-08-02T23:59:59-03:00'],
+    ['2027-08-minior-perseids', '2027-08-10T17:00:00-03:00', '2027-08-15T23:59:59-03:00']
+  ];
+  for (const [id, start, end] of expectedFuture) {
+    const event = byId(id);
+    assert.ok(event);
+    assert.equal(event.schedule.start_local, start);
+    assert.equal(event.schedule.end_local, end);
+    assert.equal(event.schedule.local_timezone, 'America/Sao_Paulo');
+    assert.equal(event.calendar.mode, 'span');
+    assert.equal(event.source.confidence, 'official');
+    assert.equal(event.audit.annual_window_source, true);
+    assert.equal(event.audit.next_occurrence_year, 2027);
+    assert.equal(event.presentation.requires_art, false);
+    assert.equal(event.gpx.enabled, false);
+  }
   assert.equal(group.title, leonids.news.title);
 });
 
@@ -149,4 +174,16 @@ test('G47IX Minior foi curado sem arte, sem nova história e com histórico pres
 
 test('nenhum registro do catálogo permanece com editorial_detail_pending', () => {
   assert.equal(events.filter(event => event.audit?.editorial_detail_pending === true).length, 0);
+});
+
+
+test('Minior 2027 respeita o último segundo local e sai da superfície após o encerramento', () => {
+  const id = '2027-05-minior-eta-aquariids';
+  const atEnd = sandbox.window.SpideyNews.build(events, range, new Date('2027-05-08T23:59:59-03:00'));
+  const after = sandbox.window.SpideyNews.build(events, range, new Date('2027-05-09T00:00:00-03:00'));
+  const key = 'official:/news/minior-meteor-showers-2026';
+  const atEndGroup = atEnd.find(item => item.key === key);
+  const afterGroup = after.find(item => item.key === key);
+  assert.ok(atEndGroup?.events.some(event => event.id === id));
+  assert.ok(!afterGroup?.events.some(event => event.id === id));
 });
