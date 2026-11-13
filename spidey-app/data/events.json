@@ -8666,7 +8666,7 @@
       "id": "2026-11-max-mondays-community-outlook",
       "slug": "2026-11-max-mondays-community-outlook",
       "title": "Max Mondays de novembro: programação comunitária",
-      "summary": "Leek Duck lista 16/11 com Pokémon a anunciar, 23/11 com Dynamax Espurr e 30/11 com Dynamax Cryogonal. Não há confirmação oficial; manter como pista comunitária, sem calendário.",
+      "summary": "Leek Duck relata que Dynamax Espurr pode aparecer em Batalhas Max de 23 a 29/11 e Dynamax Cryogonal de 30/11 a 06/12; as atrações e janelas são comunitárias, sem confirmação oficial. Em 16/11, a espécie ainda não foi anunciada.",
       "category": "max_monday",
       "tags": [
         "Max Monday",
@@ -8694,19 +8694,20 @@
         "reason": "Pista comunitária sem evento confirmado; nenhuma rota ou coordenada foi adicionada."
       },
       "notes": [
-        "16/11 — Leek Duck lista Max Monday com o Pokémon em destaque ainda a anunciar.",
-        "23/11 — Leek Duck lista Dynamax Espurr para o Max Monday.",
-        "30/11 — Leek Duck lista Dynamax Cryogonal para o Max Monday.",
-        "As páginas são fontes comunitárias; não foi encontrado anúncio oficial Niantic/Scopely para confirmar essas atrações. Permanecem em Novidades, sem eventos datados no Calendário."
+        "16/11 — Leek Duck lista Max Monday, mas informa que o Pokémon em destaque ainda não foi anunciado.",
+        "23/11 — Leek Duck indica Dynamax Espurr em Max Battles de 23 a 29/11; é uma informação comunitária, não confirmada oficialmente.",
+        "30/11 — Leek Duck indica Dynamax Cryogonal em Max Battles de 30/11 a 06/12; é uma informação comunitária, não confirmada oficialmente.",
+        "As páginas de Leek Duck indicam 06h–21h locais para as Segundas Max, com Pontos de Energia renovando mais frequentemente e mais Pontos ativos às segundas; esses detalhes permanecem comunitários.",
+        "Não foi encontrado anúncio oficial Niantic/Scopely para confirmar as espécies, as janelas semanais ou os detalhes de Pontos de Energia. A notícia permanece em Novidades, sem schedule e sem evento no Calendário."
       ],
       "notifications": {
         "enabled": false
       },
       "status": "published",
-      "updated_at": "2026-11-13T03:45:00-03:00",
+      "updated_at": "2026-11-13T03:56:42-03:00",
       "news": {
         "title": "Max Mondays de novembro: programação comunitária a confirmar",
-        "summary": "Leek Duck lista 16/11 sem Pokémon anunciado, 23/11 com Dynamax Espurr e 30/11 com Dynamax Cryogonal. A Niantic/Scopely ainda não confirmou essas atrações; acompanhe como pista comunitária, sem calendário.",
+        "summary": "Leek Duck lista 16/11 sem espécie anunciada, 23/11 com possível Dynamax Espurr em Batalhas Max até 29/11 e 30/11 com possível Dynamax Cryogonal até 06/12. A programação é comunitária, não confirmada oficialmente e não entra no Calendário.",
         "published_on": "2026-11-13",
         "label": "COMUNIDADE • A CONFIRMAR"
       },
@@ -8727,7 +8728,29 @@
         "calendar_entry_created": false,
         "schedule_omitted": true,
         "no_coordinates_or_gpx": true,
-        "no_new_art": true
+        "no_new_art": true,
+        "full_text_review_completed": true,
+        "community_max_battle_windows": [
+          {
+            "date": "2026-11-23",
+            "pokemon": "Dynamax Espurr",
+            "possible_from": "2026-11-23",
+            "possible_through": "2026-11-29",
+            "classification": "community_unconfirmed"
+          },
+          {
+            "date": "2026-11-30",
+            "pokemon": "Dynamax Cryogonal",
+            "possible_from": "2026-11-30",
+            "possible_through": "2026-12-06",
+            "classification": "community_unconfirmed"
+          }
+        ],
+        "community_mechanics": [
+          "Max Monday local window reported by Leek Duck: 06:00–21:00",
+          "More frequent Power Spot refresh reported by Leek Duck",
+          "Additional Power Spots on Mondays reported by Leek Duck"
+        ]
       }
     },
     {
