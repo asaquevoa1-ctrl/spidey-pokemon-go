@@ -1862,7 +1862,7 @@
         },
         {
           "name": "Latios Dinamax",
-          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local; conhece Esfera de Luz quando capturado durante o evento"
+          "method": "Batalhas Max 5★, 13/11; hora Max 18h–19h local; conhece Purga de Esplendor quando capturado durante o evento"
         },
         {
           "name": "Meltan Dinamax (Passe GO)"
@@ -1902,7 +1902,7 @@
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
       "status": "published",
-      "verified_at": "2026-11-08",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
           "name": "Pokémon GO • oficial",
@@ -1917,16 +1917,17 @@
       ],
       "news": {
         "title": "Zacian e Zamazenta Coroados chegam às reides da Natureza Selvagem",
-        "summary": "De 9 a 13/11: Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★. Ganhe as respectivas energias ao vencer e tenha chance de Fundo Especial ao capturar. Horas de Reide: Zacian 9/11 e Zamazenta 10/11, das 18h às 19h locais. Batalhas Max 5★: Registeel 11/11, Regidrago 12/11, Latias e Latios 13/11. Os ginásios exibidos no registro comunitário de Kiribati ainda não têm coordenadas verificadas.",
+        "summary": "De 9 a 13/11: Zacian Espada Coroada e Zamazenta Escudo Coroado em reides 5★; Horas Max incluem Latias com Bola de Névoa e Latios com Purga de Esplendor. Fundo Especial é possível, não garantido.",
         "published_on": "2026-11-08",
-        "label": "NOVIDADE • REIDES 5★ E BATALHAS MAX"
+        "label": "NOVIDADE • REIDES 5★ E BATALHAS MAX",
+        "updated_on": "2026-11-13"
       },
       "related_event_ids": [
         "2026-11-09-into-the-wild-go-pass",
         "2026-11-09-into-the-wild-pass-claim",
         "2026-11-09-silver-bottle-cap-use-deadline"
       ],
-      "updated_at": "2026-11-11T21:05:00-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "audit": {
         "official_article_read_in_full": true,
         "distinct_pass_windows_preserved": true,
@@ -1940,7 +1941,13 @@
         "reconciled_at": "2026-11-11T21:05:00-03:00",
         "mystery_box_cooldown_reduced": true,
         "mystery_box_cooldown_window_end_local": "2026-11-13T20:00:00-03:00",
-        "meltan_gimmighoul_bonus_end_local": "2026-11-15T18:00:00-03:00"
+        "meltan_gimmighoul_bonus_end_local": "2026-11-15T18:00:00-03:00",
+        "latios_attack_name_verified_pt_en": true,
+        "latios_attack_name_corrected_on": "2026-11-13",
+        "official_move_names_source_pt": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+        "official_move_names_source_en": "https://pokemongo.com/news/into-the-wild-2026",
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
       },
       "bonus_windows": [
         {
@@ -2805,7 +2812,10 @@
         "A Pesquisa temporária dá um Passe de Batalha Premium e um encontro com Metagross; conclua e resgate antes do fim do evento.",
         "O Ultracombo da loja online inclui o ingresso e um Passe de Batalha Premium adicional pelo mesmo nível de preço anunciado.",
         "Super Megarreides podem aparecer apenas em determinados Ginásios; o anúncio orienta consultar o mapa oficial e encontros de comunidades.",
-        "Não confundir com as Megarreides de rotação."
+        "Não confundir com as Megarreides de rotação.",
+        "INGRESSO • US$ 4,99 (ou preço equivalente na moeda local). Os bônus pagos valem em 28/11, das 14h às 17h locais; o ingresso só fica disponível na loja do jogo até 17h locais.",
+        "INGRESSO • Pode ser comprado ou presenteado a amizades no nível Grande Amigo ou superior. Compras, inclusive presentes, não são reembolsáveis, ressalvadas a lei aplicável e as exceções dos Termos de Serviço; não é possível pagar com PokéMoedas.",
+        "LOJA ONLINE • O Ultracombo custa US$ 4,99 (ou preço local) e inclui o ingresso e um Passe de Batalha Premium adicional, sem custo extra."
       ],
       "notifications": {
         "enabled": true,
@@ -2816,16 +2826,17 @@
       "status": "published",
       "news": {
         "title": "Mega Clefable estreia no Dia de Super Megarreides",
-        "summary": "Em 28/11, das 14h às 17h: Mega Clefable, Super Nível Máximo, Explosão Lunar+, Pesquisa Temporária e maior chance de Clefable Brilhante.",
+        "summary": "Em 28/11, das 14h às 17h: Mega Clefable, Super Nível Máximo, Explosão Lunar+, Pesquisa Temporária e maior chance de Clefable Brilhante. Ingresso US$ 4,99 (ou preço local), disponível até 17h e presenteável a Grandes Amigos ou superiores.",
         "published_on": "2026-11-05",
-        "label": "OFICIAL • DETALHES CONFIRMADOS"
+        "label": "OFICIAL • DETALHES CONFIRMADOS",
+        "updated_on": "2026-11-13"
       },
       "related_event_ids": [
         "2026-11-27-clefable-global-challenge",
         "2026-11-30-clefable-global-rewards"
       ],
-      "updated_at": "2026-11-05T16:56:00-03:00",
-      "verified_at": "2026-11-05",
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio oficial em inglês",
@@ -2835,6 +2846,16 @@
         {
           "name": "Pokémon GO Hub • calendário comunitário anterior",
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        {
+          "name": "Leek Duck • guia comunitário completo do evento",
+          "url": "https://leekduck.com/events/clefable-super-mega-raid-day-2026/",
+          "confidence": "verified_community"
+        },
+        {
+          "name": "Pokémon GO Hub • guia comunitário completo do evento",
+          "url": "https://pokemongohub.net/post/event/super-mega-clefable-raid-day/",
           "confidence": "verified_community"
         }
       ],
@@ -2853,7 +2874,20 @@
           "previous_title": "Dia de Super Megarreides — prévia",
           "previous_source": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "preserved_id": true
-        }
+        },
+        "official_ticket_terms_verified_pt_en": true,
+        "ticket_price_usd": 4.99,
+        "ticket_purchase_end_local": "2026-11-28T17:00:00",
+        "ticket_gifting_min_friendship": "Great Friends",
+        "ticket_pokecoins_allowed": false,
+        "ticket_non_refundable_subject_to_law_and_terms": true,
+        "web_store_box_bonus_premium_pass": true,
+        "community_crosscheck_urls": [
+          "https://leekduck.com/events/clefable-super-mega-raid-day-2026/",
+          "https://pokemongohub.net/post/event/super-mega-clefable-raid-day/"
+        ],
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4"
       }
     },
     {
@@ -3995,7 +4029,7 @@
       "slug": "2026-10-08-gameplay-quality-of-life",
       "content_type": "news",
       "title": "Melhorias de jogabilidade já disponíveis",
-      "summary": "Células de Zygarde agora são entregues ao concluir a Rota, e o jogo ganhou proteção para transferências de Pokémon 100% IV e melhorias no mapa.",
+      "summary": "Células de Zygarde são entregues ao concluir a Rota (sem aumento de chance); bússola e clima usam um ícone dinâmico; transferências de Pokémon 100% IV exigem confirmação; mapa e check-in de encontros foram aprimorados.",
       "category": "game_update",
       "tags": [
         "Novidade",
@@ -4024,14 +4058,17 @@
       },
       "news": {
         "title": "Pokémon GO recebe melhorias de jogabilidade",
-        "summary": "Células de Zygarde são entregues ao fim da Rota; transferências de Pokémon 100% IV pedem confirmação; mapa, ícones e check-in de encontros foram ajustados.",
-        "published_on": "2026-10-08"
+        "summary": "Células de Zygarde são entregues ao concluir a Rota (a chance não muda); bússola e clima compartilham um ícone dinâmico; transferências de Pokémon 100% IV pedem confirmação e contagem exata em lote; mapa reduz sobreposições; check-in de encontros pode ser feito no mapa ou navegador, 15 min antes.",
+        "published_on": "2026-10-08",
+        "updated_on": "2026-11-13"
       },
       "notes": [
-        "A chance de receber Células de Zygarde não mudou; uma Rota ainda pode terminar sem Célula.",
-        "Bússola e clima agora usam um único ícone dinâmico.",
-        "O mapa reduz sobreposição entre Pokémon, Ginásios, Pontos de Poder e Poképaradas.",
-        "O check-in de encontros de Embaixadores da Comunidade abre 15 minutos antes do início, no mapa do jogo ou no navegador."
+        "Ao concluir uma Rota, as Células de Zygarde encontradas nela são entregues como recompensa; não é mais necessário recolhê-las no mapa. A probabilidade de encontrar Células não mudou, então uma Rota ainda pode terminar sem Célula.",
+        "BÚSSOLA E CLIMA • Os ícones foram combinados em um único ícone dinâmico: a bússola aparece enquanto a visualização é girada ou ampliada; o clima aparece nos demais momentos. Tocar no clima mostra condições e bônus ativos; tocar na bússola, quando visível, alterna a direção da visualização.",
+        "TRANSFERÊNCIA 100% • Antes de transferir qualquer Pokémon com atributos no máximo, o jogo pede confirmação. Em transferências em massa, o aviso mostra a quantidade exata de Pokémon ★ 100% selecionados.",
+        "MAPA • O espaçamento foi ajustado para reduzir a sobreposição de Pokémon selvagens, Ginásios, Pontos de Energia e Poképaradas, facilitando selecionar encontros específicos.",
+        "CHECK-IN • Encontros de Embaixadores da Comunidade podem ser acessados pelo mapa do jogo ou pelo navegador: abra Proximidades, localize o marcador roxo, confirme que o encontro é organizado por um Embaixador e toque em Fazer check-in. O check-in abre 15 minutos antes do horário programado.",
+        "A publicação informa que os ajustes já foram lançados, mas não fornece uma data exata de início para cada mudança. Este registro permanece em Novidades, sem janela de evento ou data inventada."
       ],
       "notifications": {
         "enabled": false,
@@ -4039,13 +4076,18 @@
       },
       "status": "published",
       "verified_at": "2026-10-11",
-      "updated_at": "2026-10-11T23:17:00Z",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "audit": {
         "checked_on": "2026-10-11",
         "official_languages_checked": [
           "pt-BR",
           "en"
-        ]
+        ],
+        "full_text_reviewed_at": "2026-11-13",
+        "full_text_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "no_exact_rollout_date_published": true,
+        "news_only_no_calendar_window": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4"
       }
     },
     {
@@ -11684,6 +11726,16 @@
           "url": "https://pokemongo.com/news/get-ready-for-gowildarea-2026",
           "confidence": "official",
           "published_on": "2026-11-03"
+        },
+        {
+          "name": "Pokémon GO • atualização oficial de sexta (inglês)",
+          "url": "https://pokemongo.com/news/gowildarea-mexicocity-friday-update",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • atualização oficial de sexta (espanhol México)",
+          "url": "https://pokemongo.com/es-MX/news/gowildarea-mexicocity-friday-update",
+          "confidence": "official"
         }
       ],
       "schedule": {
@@ -11717,7 +11769,7 @@
         "Latias e Latios poderosos podem aparecer por Incenso comum no dia do ingresso. Brilhantes são possibilidades, nunca garantias.",
         "Confira os sete locais, a ordem flexível do circuito e os horários no guia de Selos do Spidey antes de começar. Os pontos de referência não são coordenadas exatas das Poképaradas.",
         "PESQUISAS: a Especial concede as duas medalhas de tipo e, ao concluir a história, um encontro com Duraludon Gigamax com Fundo de Localização. As duas Pesquisas Temporárias avançam ao girar Poképaradas decoradas e expiram às 20h locais no dia válido; o Dia Extra oferece outra oportunidade para Aço e Dragão. Tarefas e recompensas individuais das Pesquisas Temporárias e de Campo ainda não foram publicadas.",
-        "ATIVIDADES PRESENCIAIS • 6–8/11: encontro com Pikachu e Eevee no Monumento a la Revolución (10h–12h50 e 15h–17h50 CST), Treinadores notáveis, artistas, suporte, acessibilidade, embaixadores e ativações em vários pontos da cidade.",
+        "ATIVIDADES PRESENCIAIS • 6–8/11: atualização oficial de sexta: as experiências no Monumento a la Revolución terminaram mais cedo em 6/11. Na sexta, o encontro com Pikachu e Eevee ocorreu apenas das 10h às 12h50 CST; Keibron Gamer, Niharra e Rochababyface estavam previstos das 12h às 14h. As experiências no Monumento ocorreram conforme planejado em 7 e 8/11; o encontro de Pikachu/Eevee seguiu a grade original de 10h–12h50 e 15h–17h50. A visita a essas experiências no sábado e domingo não exigia ingresso. A jogabilidade da Área Selvagem não foi afetada.",
         "LOJA TEMPORÁRIA: Foro Lucerna, Calle Lucerna 70, de 6 a 8/11, das 10h às 19h locais. Cinépolis Diana e Liverpool Polanco têm ativações de 5 a 9/11; brindes e viseiras são limitados aos estoques."
       ],
       "notifications": {
@@ -11765,9 +11817,10 @@
       "news": {
         "title": "Área Selvagem na Cidade do México: sete selos já têm locais confirmados",
         "summary": "Seu dia de ingresso define quando coletar os sete selos: das 10h às 20h locais. Confira o guia de locais na aba Selos; o Dia Extra não libera outro rally.",
-        "published_on": "2026-10-27"
+        "published_on": "2026-10-27",
+        "updated_on": "2026-11-13"
       },
-      "updated_at": "2026-10-27T17:48:00-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "stamp_rally": {
         "start_time_local": "10:00",
         "end_time_local": "20:00",
@@ -11861,7 +11914,22 @@
         "location_coordinates_are": "landmark_centers_not_exact_pokestops",
         "verification_date": "2026-10-27"
       },
-      "verified_at": "2026-11-04"
+      "verified_at": "2026-11-04",
+      "audit": {
+        "friday_experience_update_fulltext_reviewed": true,
+        "friday_update_urls": [
+          "https://pokemongo.com/news/gowildarea-mexicocity-friday-update",
+          "https://pokemongo.com/es-MX/news/gowildarea-mexicocity-friday-update"
+        ],
+        "friday_update_applied_to_existing_story": true,
+        "friday_gameplay_unchanged": true,
+        "friday_meet_greet_window_local": "10:00-12:50",
+        "friday_notable_trainers_window_local": "12:00-14:00",
+        "weekend_monumento_experiences_no_ticket_required": true,
+        "historical_event_ends_local": "2026-11-08T18:00:00-06:00",
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
+      }
     },
     {
       "id": "2026-11-go-wild-area-global",
