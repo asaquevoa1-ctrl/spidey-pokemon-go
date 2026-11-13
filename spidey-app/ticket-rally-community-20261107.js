@@ -74,7 +74,7 @@
       <div class="ticket-rally-inline-head">
         <span class="eyebrow">COMUNIDADE · EVENTO COM INGRESSO</span>
         <h3>Referências de localização · ${escapeHtml(city)}</h3>
-        <p>Este bloco complementa a coleção oficial de 7 selos acima; não é uma segunda coleção. As coordenadas foram compartilhadas por treinadores, não são coordenadas oficiais verificadas de Poképaradas e não têm correspondência individual confirmada com os nomes oficiais. Sem GPX.</p>
+        <p>Este bloco complementa a coleção oficial de 7 selos acima; não é uma segunda coleção. ${route.id === 'mexico' ? 'A coleção oficial também apresenta referências de marcos turísticos; esta lista comunitária é adicional e independente.' : 'A coleção oficial de Sendai lista os nomes dos locais, sem coordenadas exatas; esta lista comunitária é independente.'} As coordenadas abaixo não têm correspondência individual confirmada com os nomes oficiais e não são localizações exatas de Poképaradas verificadas. Sem GPX.</p>
       </div>
       <details class="ticket-rally-inline-details">
         <summary>Ver as 7 coordenadas comunitárias</summary>

@@ -44,8 +44,15 @@ test('Sendai e México integram as referências de 7 pontos ao detalhe oficial s
   for (const rally of official) {
     assert.equal(rally.stops.length, 7, rally.id);
     assert.equal(rally.ticket_required, true, rally.id);
-    assert.ok(rally.stops.every(stop => stop.latitude === null && stop.longitude === null
+    assert.ok(rally.stops.every(stop => stop.exact_pokestop_verified === false
       && stop.gpx_enabled === false), rally.id);
+    if (rally.id.includes('sendai')) {
+      assert.ok(rally.stops.every(stop => stop.latitude === null && stop.longitude === null
+        && stop.coordinate_type === 'official_venue_without_coordinates'), rally.id);
+    } else {
+      assert.ok(rally.stops.every(stop => Number.isFinite(stop.latitude) && Number.isFinite(stop.longitude)
+        && stop.coordinate_type === 'venue_reference' && stop.reference_only_copyable === true), rally.id);
+    }
   }
 
   const community = JSON.parse(read('spidey-app/data/ticket-rally-community-20261107.json'));
@@ -61,6 +68,12 @@ test('Sendai e México integram as referências de 7 pontos ao detalhe oficial s
       return Math.abs(lat) <= 90 && Math.abs(lon) <= 180;
     }), route.id);
   }
+
+  const ticketMexico = community.routes.find(route => route.id === 'mexico');
+  const officialMexico = official.find(rally => rally.id.includes('mexico'));
+  const officialMexicoRefs = new Set(officialMexico.stops.map(stop => `${stop.latitude},${stop.longitude}`));
+  assert.ok(ticketMexico.coords.every(point => !officialMexicoRefs.has(point)),
+    'A lista comunitária não pode ser apresentada como pareamento das referências oficiais do México');
 
   const ticketModule = read('spidey-app/ticket-rally-community-20261107.js');
   const stampsModule = read('spidey-app/stamps-v2.js');
