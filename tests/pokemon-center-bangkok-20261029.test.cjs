@@ -4,6 +4,8 @@ const fs = require('node:fs');
 
 const catalog = JSON.parse(fs.readFileSync('spidey-app/data/events.json', 'utf8'));
 const event = catalog.events.find(item => item.id === '2026-12-pokemon-center-bangkok-opening');
+const deadline = catalog.events.find(item => item.id === '2026-12-30-pokemon-center-bangkok-research-deadline');
+const story = catalog.events.find(item => item.id === 'official-news-auto-bangkok-20261029');
 
 test('Pokémon Center Bangkok uses the official nationwide Thailand window', () => {
   assert.ok(event);
@@ -17,20 +19,30 @@ test('Pokémon Center Bangkok uses the official nationwide Thailand window', () 
   assert.ok(event.notes.some(note => note.includes('todo o território da Tailândia')));
 });
 
-test('Bangkok opening does not invent encounters, shiny claims, coordinates or research hours', () => {
-  assert.deepEqual(event.pokemon, []);
-  assert.deepEqual(event.locations, []);
-  assert.equal(event.gpx.enabled, false);
-  assert.equal(event.research_claim_deadline.end_date, '2026-12-30');
-  assert.equal(event.research_claim_deadline.precision, 'date');
-  assert.equal(event.research_claim_deadline.time_confirmed, false);
-  assert.ok(event.notes.some(note => note.includes('nenhum horário foi atribuído')));
-  assert.ok(!JSON.stringify(event).toLowerCase().includes('brilhante possível'));
+test('Bangkok research completion has its own date-only window in Asia/Bangkok', () => {
+  assert.ok(deadline);
+  assert.equal(deadline.source.url, event.source.url);
+  assert.equal(deadline.schedule.precision, 'date');
+  assert.equal(deadline.schedule.local_timezone, 'Asia/Bangkok');
+  assert.equal(deadline.schedule.start_date, '2026-12-01');
+  assert.equal(deadline.schedule.end_date, '2026-12-30');
+  assert.equal(deadline.notifications.enabled, false);
+  assert.equal(deadline.gpx.enabled, false);
+  assert.ok(deadline.notes.some(note => note.includes('último dia inteiro no fuso IANA Asia/Bangkok')));
+  assert.ok(deadline.notes.some(note => note.includes('não informa o horário final')));
 });
 
-test('Bangkok announcement is one useful story linked to the calendar identity', () => {
-  assert.equal(event.news.published_on, '2026-10-29');
-  assert.match(event.news.title, /Bangkok/);
-  assert.equal(catalog.events.filter(item => item.source?.url === event.source.url).length, 1);
-  assert.equal(catalog.events.filter(item => item.id === event.id).length, 1);
+test('Bangkok announcement remains one story linked to two distinct calendar windows', () => {
+  assert.ok(story);
+  assert.equal(event.news, undefined);
+  assert.equal(story.content_type, 'news');
+  assert.equal(story.news.published_on, '2026-10-29');
+  assert.equal(story.news.expire_when_related_windows_end, true);
+  assert.deepEqual(story.related_event_ids, [event.id, deadline.id]);
+  assert.match(story.news.title, /Bangkok/);
+  assert.match(story.news.summary, /30\/12/);
+  const sameCanonical = catalog.events.filter(item => item.source?.url === event.source.url);
+  assert.equal(sameCanonical.length, 3);
+  assert.equal(sameCanonical.filter(item => item.content_type === 'news').length, 1);
+  assert.equal(catalog.events.filter(item => item.id === deadline.id).length, 1);
 });
