@@ -5,9 +5,9 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2120984983892586580",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
-  "pipeline": "spidey_premium_editorial",
+  "status": "grouped_without_new_claims",
+  "etapa_editorial": "curado_agrupado",
+  "pipeline": "spidey_editorial_grouped",
   "art_standard_version": "spidey-premium-v1",
   "media_policy": "premium_editorial",
   "arte_obrigatoria": true,
@@ -15,5 +15,23 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-11-13T06:44:25.036692+00:00"
+  "created_at_utc": "2026-11-13T06:44:25.036692+00:00",
+  "original_status": "aguardando_arte_chatgpt",
+  "source_classification": "community",
+  "related_event_ids": [
+    "2026-11-minior-leonids"
+  ],
+  "art_required_for_publication": false,
+  "curation_note": "Agrupado à história oficial de Minior. As alegações do post comunitário são confirmadas pela publicação oficial; os detalhes oficiais faltantes foram acrescentados ao registro existente. Nenhum evento, horário, quantidade, cor específica ou arte nova foi criado.",
+  "curated_at_utc": "2026-11-13T06:45:00+00:00",
+  "no_new_art": true,
+  "main_reconciliation": {
+    "observed_main_sha": "bfe57c465e3bdb9bb120a85c1f65e8aa3aaaf7dd",
+    "observed_main_queue_blob_sha": "037e9cb6a5afcac0dab5b4b4569509c42a32393c",
+    "observed_main_status": "aguardando_arte_chatgpt",
+    "observed_main_stage": "aguardando_arte_premium_original",
+    "resolution": "O registro bruto permanece preservado; a curadoria agrupada sem novas alegações substitui o estado automático de espera por arte para esta duplicata comunitária.",
+    "resolved_by_pr": 291
+  },
+  "original_etapa_editorial": "aguardando_arte_premium_original"
 }

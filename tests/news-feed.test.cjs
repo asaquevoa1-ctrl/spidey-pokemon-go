@@ -1,13 +1,20 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
-const context=vm.createContext({window:{},URL,Date,Map,Math});
+const context=vm.createContext({window:{},URL,Date,Map,Math,Intl,Object});
+vm.runInContext(fs.readFileSync('spidey-app/date-only.js','utf8'),context);
 vm.runInContext(fs.readFileSync('spidey-app/news-feed.js','utf8'),context);
 const build=context.window.SpideyNews.build,events=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events;
-const range=e=>({start:new Date(e.schedule.start_brazil),end:new Date(e.schedule.end_brazil)});
+const range=e=>{
+ if(context.window.SpideyDateOnly?.valid(e))return context.window.SpideyDateOnly.bounds(e);
+ const schedule=e.schedule||{};
+ const start=Date.parse(schedule.start_brazil||schedule.start_local||'');
+ const end=Date.parse(schedule.end_brazil||schedule.end_local||'');
+ return {start:Number.isFinite(start)?new Date(start):null,end:Number.isFinite(end)?new Date(end):null};
+};
 test('one Minior announcement opens all three distinct calendar windows without merging community events',()=>{
  const stories=build(events,range,new Date('2026-10-01T22:00Z'));
  const minior=stories.filter(s=>s.events.some(e=>e.id.includes('minior-')));
- assert.equal(minior.length,1);assert.equal(minior[0].events.length,3);
- assert.deepEqual(Array.from(minior[0].events,e=>e.id),['2026-10-minior-orionids','2026-11-minior-leonids','2026-12-minior-geminids']);
+ assert.equal(minior.length,1);assert.equal(minior[0].events.length,6);
+ assert.deepEqual(Array.from(minior[0].events,e=>e.id),['2026-10-minior-orionids','2026-11-minior-leonids','2026-12-minior-geminids','2027-05-minior-eta-aquariids','2027-07-minior-southern-delta-aquariids','2027-08-minior-perseids']);
  const community=events.filter(e=>e.source?.url==='https://pokemongohub.net/post/event/october-2026-events/'&&range(e).end>=new Date('2026-10-01T22:00Z'));
  assert.ok(community.length>1);for(const e of community)assert.equal(stories.find(s=>s.events.some(x=>x.id===e.id)).events.length,1);
  assert.ok(stories.some(s=>s.event.id==='2026-10-dynamax-max-battle-day'));
@@ -16,7 +23,8 @@ test('one Minior announcement opens all three distinct calendar windows without 
 });
 test('an expired Minior window drops out while later windows and announcement remain accessible',()=>{
  const minior=build(events,range,new Date('2026-11-01T12:00Z')).find(s=>s.key==='official:/news/minior-meteor-showers-2026');
- assert.equal(minior.events.length,2);assert.equal(minior.events[0].id,'2026-11-minior-leonids');
+ assert.equal(minior.events.length,5);assert.equal(minior.events[0].id,'2026-11-minior-leonids');
+ assert.deepEqual(Array.from(minior.events,e=>e.id),['2026-11-minior-leonids','2026-12-minior-geminids','2027-05-minior-eta-aquariids','2027-07-minior-southern-delta-aquariids','2027-08-minior-perseids']);
  assert.equal(minior.title,'Minior chega com as chuvas de meteoros');
 });
 test('official locale/tracking variants deduplicate; unsafe or unpublished entries stay out',()=>{
@@ -105,4 +113,40 @@ test('curated 24 October guide stays separate from official Dynamax announcement
  assert.notEqual(guide[0].key,official[0].key);
  assert.equal(guide[0].events.length,1,'guide stays a standalone editorial story');
  assert.ok(guide[0].event.source.url.startsWith('https://pokemongo.com/news/'));
+});
+
+
+test('news-only announcements linked to expired windows leave current News while evergreen updates remain',()=>{
+ const now=new Date('2026-11-13T08:22:57Z');
+ const stories=build(events,range,now);
+ for(const id of ['official-news-auto-3226a2a8b105','official-news-auto-1eda22614526']){
+  assert.equal(stories.some(story=>story.events.some(event=>event.id===id)),false,id);
+ }
+ for(const id of ['official-news-auto-6e45ee38e2b8','official-news-auto-5e1b1cd68f6c','official-news-auto-8a38cf8f2093','2026-11-11-storage-cap-increase','2026-11-max-mondays-community-outlook']){
+  assert.ok(stories.some(story=>story.events.some(event=>event.id===id)),id);
+ }
+});
+
+test('an official notice remains through its last related event window and expires at the exact end',()=>{
+ const before=build(events,range,new Date('2026-11-15T20:59:59Z'));
+ assert.ok(before.some(story=>story.events.some(event=>event.id==='official-news-auto-2ff7990f7c9c')));
+ const atEnd=build(events,range,new Date('2026-11-15T21:00:00Z'));
+ assert.equal(atEnd.some(story=>story.events.some(event=>event.id==='official-news-auto-2ff7990f7c9c')),false);
+});
+
+test('Machamp research notice stays current through its separate completion deadline',()=>{
+ const before=build(events,range,new Date('2026-11-16T02:58:59Z'));
+ assert.ok(before.some(story=>story.events.some(event=>event.id==='official-news-auto-6e45ee38e2b8')));
+ const atEnd=build(events,range,new Date('2026-11-16T02:59:00Z'));
+ assert.equal(atEnd.some(story=>story.events.some(event=>event.id==='official-news-auto-6e45ee38e2b8')),false);
+});
+
+test('date-only related stories expire after the last IANA event day; unknown references do not invent an end',()=>{
+ const before=build(events,range,new Date('2027-02-14T02:59:59Z'));
+ assert.ok(before.some(story=>story.events.some(event=>event.id==='official-news-auto-8a38cf8f2093')));
+ const atEnd=build(events,range,new Date('2027-02-14T03:00:00Z'));
+ assert.equal(atEnd.some(story=>story.events.some(event=>event.id==='official-news-auto-8a38cf8f2093')),false);
+ const missing={id:'test-missing-related-news',content_type:'news',status:'published',source:{url:'https://example.com/missing-related',confidence:'community'},related:['not-in-catalog'],news:{title:'Fonte comunitária a confirmar',summary:'Sem data oficial.'}};
+ const withMissing=build([...events,missing],range,new Date('2026-11-13T08:22:57Z'));
+ assert.ok(withMissing.some(story=>story.events.some(event=>event.id===missing.id)));
 });

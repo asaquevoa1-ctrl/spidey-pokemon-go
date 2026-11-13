@@ -1,0 +1,142 @@
+{
+  "task": "spidey-editorial-review",
+  "date": "2026-11-13",
+  "base_main_sha": "db972c78dbc2aee28cb8b54b4854cd044232433d",
+  "branch": "automation/2026-11-13-go-tour-windows-and-community-max-mondays",
+  "sources": {
+    "official_pt": [
+      "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+      "https://pokemongo.com/pt-BR/news",
+      "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026"
+    ],
+    "official_en": [
+      "https://pokemongo.com/en/news/save-the-date-go-tour-2027",
+      "https://pokemongo.com/featured-in-person-events",
+      "https://pokemongo.com/en/news/minior-meteor-showers-2026"
+    ],
+    "community": [
+      "https://leekduck.com/events/max-mondays-2026-11-16/",
+      "https://leekduck.com/events/max-mondays-2026-11-23/",
+      "https://leekduck.com/events/max-mondays-2026-11-30/"
+    ]
+  },
+  "changes": {
+    "go_tour_story_id": "2027-02-go-tour-alola-save-the-date",
+    "official_published_on_corrected": "2026-09-23",
+    "official_windows": [
+      {
+        "id": "2027-02-19-go-tour-kaohsiung",
+        "start": "2027-02-19",
+        "end": "2027-02-21",
+        "timezone": "Asia/Taipei",
+        "precision": "date"
+      },
+      {
+        "id": "2027-02-19-go-tour-los-angeles",
+        "start": "2027-02-19",
+        "end": "2027-02-21",
+        "timezone": "America/Los_Angeles",
+        "precision": "date"
+      },
+      {
+        "id": "2027-02-27-go-tour-global",
+        "start": "2027-02-27",
+        "end": "2027-02-28",
+        "timezone": "America/Sao_Paulo",
+        "precision": "date",
+        "timezone_role": "pt-BR display reference only"
+      }
+    ],
+    "single_news_story": true,
+    "community_news_id": "2026-11-max-mondays-community-outlook",
+    "community_calendar_entries": 0,
+    "community_max_mondays_full_text": [
+      {
+        "date": "2026-11-16",
+        "featured_pokemon": "not_announced_for_week_2026-11-16_to_2026-11-23",
+        "community_hours": "06:00–21:00 local",
+        "calendar_entry": false
+      },
+      {
+        "date": "2026-11-23",
+        "featured_pokemon": "Dynamax Espurr",
+        "possible_max_battle_window": [
+          "2026-11-23",
+          "2026-11-29"
+        ],
+        "classification": "community_unconfirmed",
+        "calendar_entry": false
+      },
+      {
+        "date": "2026-11-30",
+        "featured_pokemon": "Dynamax Cryogonal",
+        "possible_max_battle_window": [
+          "2026-11-30",
+          "2026-12-06"
+        ],
+        "classification": "community_unconfirmed",
+        "calendar_entry": false
+      }
+    ],
+    "community_mechanics": [
+      "Power Spots may refresh more frequently on Mondays (community source only)",
+      "Additional Power Spots may be active on Mondays (community source only)"
+    ],
+    "minior_annual_windows": [
+      {
+        "id": "2027-05-minior-eta-aquariids",
+        "name": "Eta Aquáridas",
+        "start": "2027-05-03",
+        "end": "2027-05-08",
+        "timezone": "America/Sao_Paulo",
+        "precision": "local_datetime",
+        "source_phrase": "a cada ano / each year"
+      },
+      {
+        "id": "2027-07-minior-southern-delta-aquariids",
+        "name": "Delta Aquáridas do Sul",
+        "start": "2027-07-28",
+        "end": "2027-08-02",
+        "timezone": "America/Sao_Paulo",
+        "precision": "local_datetime",
+        "source_phrase": "a cada ano / each year"
+      },
+      {
+        "id": "2027-08-minior-perseids",
+        "name": "Perseidas",
+        "start": "2027-08-10",
+        "end": "2027-08-15",
+        "timezone": "America/Sao_Paulo",
+        "precision": "local_datetime",
+        "source_phrase": "a cada ano / each year"
+      }
+    ]
+  },
+  "queue": {
+    "editorial_detail_pending": 0,
+    "app_ready_items": 0,
+    "raw_g47ix_source_preserved": true,
+    "curated_g47ix_record_added": true,
+    "main_raw_item_status": "aguardando_arte_chatgpt",
+    "main_raw_item_sha": "037e9cb6a5afcac0dab5b4b4569509c42a32393c",
+    "branch_curated_status": "grouped_without_new_claims",
+    "branch_curated_item_sha": "b6c3216b2391e492b7378d4bc4c1ffcb5dc4f7cc",
+    "no_new_art": true
+  },
+  "constraints": {
+    "no_hours_invented": true,
+    "no_coordinates_added": true,
+    "no_pokestops_added": true,
+    "no_gpx_added": true,
+    "no_art_created": true,
+    "no_approved_art_replaced": true,
+    "no_push_dispatched": true,
+    "no_android_physical_test_claimed": true
+  },
+  "publication": {
+    "status": "PR pending; branch reconciled with current main db972c; full application suite still failing on existing maintenance/cache expectations",
+    "main_sha": "db972c78dbc2aee28cb8b54b4854cd044232433d"
+  },
+  "branch_head_before_full_text_update": "8d4240c8194aaa647f7e58c99bb567bb57a5974e",
+  "branch_head_before_minior_annual_update": "567cea266beb85b4afa905b4b2e0492fd01c649b"
+}
