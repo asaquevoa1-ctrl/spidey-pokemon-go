@@ -105,6 +105,19 @@ test('Max Mondays comunitários ficam em Novidades, sem calendário ou horário 
   assert.match(item.notes.join(' '), /06h–21h locais/);
   assert.match(item.notes.join(' '), /Pontos de Energia/);
   assert.equal(stories.filter(group => group.event.id === communityId).length, 1);
+  const archivedIds = ['2026-11-23-max-espurr', '2026-11-30-max-cryogonal'];
+  for (const id of archivedIds) {
+    const archived = byId(id);
+    assert.ok(archived);
+    assert.equal(archived.status, 'archived');
+    assert.equal(archived.schedule, undefined);
+    assert.equal(archived.calendar.mode, 'hidden');
+    assert.equal(archived.audit.linked_news_id, communityId);
+    assert.equal(archived.audit.official_confirmation_found, false);
+    assert.equal(archived.audit.not_in_current_calendar, true);
+    assert.equal(archived.audit.original_community_schedule.precision, 'date');
+  }
+  assert.equal(stories.some(group => archivedIds.includes(group.event.id)), false);
 });
 
 test('nenhuma arte Premium, coordenada, rota ou notificação foi criada', () => {
