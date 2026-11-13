@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const read = path => fs.readFileSync(path, 'utf8');
 const events = JSON.parse(read('spidey-app/data/events.json')).events;
 const normalize = value => String(value || '').normalize('NFD')
-  .replace(/[\\u0300-\\u036f]/g, '').toLowerCase()
+  .replace(/[\u0300-\u036f]/g, '').toLowerCase()
   .replace(/[^a-z0-9]+/g, ' ').trim();
 
 test('Novidades não repete manchetes e o destaque não reaparece como cartão', () => {
@@ -30,8 +30,8 @@ test('Novidades não repete manchetes e o destaque não reaparece como cartão',
   assert.equal(new Set(keys).size, keys.length, 'Um mesmo anúncio foi renderizado em mais de um grupo');
 
   const premium = read('spidey-app/news-premium-20261102.js');
-  assert.match(premium, /target\\.innerHTML=filtered\\.length\\?filtered\\.map\\(article\\)\\.join\\(''\\)/);
-  assert.match(premium, /visibleGroups=hero\\.innerHTML \\? groups\\.filter\\(g=>g\\.event\\?\\.id!==WILD_ID\\)/);
+  assert.match(premium, /target\.innerHTML=filtered\.length\?filtered\.map\(article\)\.join\(''\)/);
+  assert.match(premium, /visibleGroups=hero\.innerHTML \? groups\.filter\(g=>g\.event\?\.id!==WILD_ID\)/);
 });
 
 test('Sendai e México integram as referências de 7 pontos ao detalhe oficial sem uma segunda galeria', () => {
@@ -56,7 +56,7 @@ test('Sendai e México integram as referências de 7 pontos ao detalhe oficial s
   for (const route of community.routes) {
     assert.equal(route.coords.length, 7, route.id);
     assert.ok(route.coords.every(value => {
-      if (!/^-?\\d+(?:\\.\\d+)?,-?\\d+(?:\\.\\d+)?$/.test(value)) return false;
+      if (!/^-?\d+(?:\.\d+)?,-?\d+(?:\.\d+)?$/.test(value)) return false;
       const [lat, lon] = value.split(',').map(Number);
       return Math.abs(lat) <= 90 && Math.abs(lon) <= 180;
     }), route.id);
@@ -64,11 +64,11 @@ test('Sendai e México integram as referências de 7 pontos ao detalhe oficial s
 
   const ticketModule = read('spidey-app/ticket-rally-community-20261107.js');
   const stampsModule = read('spidey-app/stamps-v2.js');
-  assert.match(ticketModule, /window\\.SpideyTicketRallyCommunity = Object\\.freeze\\(\\{ render \\}\\)/);
+  assert.match(ticketModule, /window\.SpideyTicketRallyCommunity = Object\.freeze\(\{ render \}\)/);
   assert.match(ticketModule, /não é uma segunda coleção/);
   assert.match(ticketModule, /não têm correspondência individual confirmada/);
-  assert.doesNotMatch(ticketModule, /ticketRalliesCommunity|view\\.append\\(root\\)|stamp-community-grid/);
-  assert.match(stampsModule, /window\\.SpideyTicketRallyCommunity\\?\\.render\\(detail, rally\\)/);
+  assert.doesNotMatch(ticketModule, /ticketRalliesCommunity|view\.append\(root\)|stamp-community-grid/);
+  assert.match(stampsModule, /window\.SpideyTicketRallyCommunity\?\.render\(detail, rally\)/);
 
   const permanent = JSON.parse(read('spidey-app/data/community-routes-20261102.json'));
   assert.equal(permanent.routes.length, 2);
@@ -84,10 +84,10 @@ test('Sendai e México integram as referências de 7 pontos ao detalhe oficial s
     assert.ok(fs.existsSync('spidey-app/' + file), file);
   }
   const html = read('spidey-app/index.html');
-  assert.equal((html.match(/stamps-v2\\.js/g) || []).length, 1);
-  assert.equal((html.match(/ticket-rally-community-20261107\\.js/g) || []).length, 1);
+  assert.equal((html.match(/stamps-v2\.js/g) || []).length, 1);
+  assert.equal((html.match(/ticket-rally-community-20261107\.js/g) || []).length, 1);
   const css = read('spidey-app/stamps-community-routes-20261102.css');
-  assert.match(css, /\\.ticket-rally-inline/);
+  assert.match(css, /\.ticket-rally-inline/);
   const sw = read('spidey-app/sw.js');
   assert.ok(sw.includes('./ticket-rally-community-20261107.js'));
   assert.ok(sw.includes('./data/ticket-rally-community-20261107.json'));
@@ -146,15 +146,15 @@ test('autopublicação aciona o único GitHub Pages oficial somente depois de gr
   const auto = read('.github/workflows/spidey-app-auto-publish.yml');
   const pages = read('.github/workflows/spidey-pages.yml');
   const legacy = read('.github/workflows/spidey-pages-publish.yml');
-  assert.match(auto, /permissions:\\s*\\n\\s*contents:\\s*write\\s*\\n\\s*actions:\\s*write/m);
-  assert.match(auto, /GH_TOKEN:\\s*\\$\\{\\{\\s*github\\.token\\s*\\}\\}/);
-  assert.match(auto, /GH_REPO:\\s*\\$\\{\\{\\s*github\\.repository\\s*\\}\\}/);
+  assert.match(auto, /permissions:\s*\n\s*contents:\s*write\s*\n\s*actions:\s*write/m);
+  assert.match(auto, /GH_TOKEN:\s*\$\{\{\s*github\.token\s*\}\}/);
+  assert.match(auto, /GH_REPO:\s*\$\{\{\s*github\.repository\s*\}\}/);
   const push = auto.indexOf('git push origin HEAD:main');
   const dispatch = auto.indexOf('gh workflow run spidey-pages.yml --ref main --repo "$GH_REPO"');
   assert.ok(push >= 0 && dispatch > push, 'Deploy precisa ocorrer depois do commit público');
-  assert.match(auto, /node --test tests\\/spidey-maintenance-20261113\\.test\\.cjs tests\\/fly-user-list-20261031\\.test\\.cjs/);
+  assert.match(auto, /node --test tests\/spidey-maintenance-20261113\.test\.cjs tests\/fly-user-list-20261031\.test\.cjs/);
   assert.match(pages, /workflow_dispatch:/);
-  assert.match(pages, /actions\\/deploy-pages@v4/);
+  assert.match(pages, /actions\/deploy-pages@v4/);
   assert.match(legacy, /legado desativado/i);
-  assert.match(legacy, /if:\\s*\\$\\{\\{\\s*false\\s*\\}\\}/);
+  assert.match(legacy, /if:\s*\$\{\{\s*false\s*\}\}/);
 });
