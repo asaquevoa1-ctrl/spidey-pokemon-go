@@ -61,6 +61,8 @@ jobs:
         run: node --test tests/web-analytics.test.cjs
       - name: Proteger rota mundial Teddiursa e impedir notícias duplicadas
         run: node --test tests/world-route-news-regression-20261109.test.cjs
+      - name: Expirar notícias temporárias após a última janela relacionada
+        run: node --test tests/news-expiry-related-events-20261113.test.cjs
       - name: Validar integração completa de Novidades, Sendai/México e FLY Teddiursa
         run: node --test tests/spidey-maintenance-20261113.test.cjs
       - name: Validar detalhes oficiais da Semana Selvagem antes de publicar

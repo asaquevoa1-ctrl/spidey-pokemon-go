@@ -662,3 +662,9 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Causa identificada: `WEEK_IMAGE` apontava para CDN remoto indisponível e o `error` substituía o banner por `solid-as-steel.webp`; o CSS da mídia reservava altura grande e `object-fit: contain` ampliava os espaços mortos.
 - Correção: remover URL remota e fallback com rótulo genérico; criar composição responsiva, compacta e acessível usando **dois arquivos oficiais já locais** (`solid-as-steel.webp` e `daring-as-dragons.webp`), com crédito editorial proporcional e título próximo da mídia. Não afirmar que as duas imagens sejam um pôster autoral Premium aprovado para a Semana.
 - Não alterar pôster aprovado do Global, calendário, horários por fuso, histórico do México e a lista de 64 coordenadas. Atualizar versões no HTML, cache PWA e testes de navegador da Semana para exigir duas imagens carregadas, altura reduzida e título visível na primeira tela Android.
+
+
+## 13/11/2026 — Expiração explícita de notícias temporárias
+- Notícias puramente editoriais só expiram com as janelas relacionadas quando o registro declara `news.expire_when_related_windows_end: true`. A regra só oculta a notícia quando **todas** as referências existem, estão publicadas e têm início/fim com horário explícito; referências ausentes, não publicadas, sem horário ou date-only mantêm a notícia visível (fail-open), sem inventar hora.
+- Aplicar a regra a avisos temporários de eventos; não aplicá-la automaticamente a comunicados permanentes. A notícia de 22/10 sobre os selos do evento presencial Sendai/México expira após o encerramento de 08/11; a notícia de 03/11 sobre as Caças permanentes permanece disponível.
+- Avisos temporários sobre Wild Area Global, pesquisa Machamp, Black Friday e ajuste de recursos em Osaka permanecem até o encerramento da última janela relacionada. Notícias evergreen e calendários date-only não recebem expiração automática.

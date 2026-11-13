@@ -12576,7 +12576,8 @@
         "title": "Área Selvagem: sete selos confirmados em Sendai e na Cidade do México",
         "summary": "Em Sendai e na Cidade do México, a Caça aos Selos funciona das 10h às 20h locais, somente no dia principal do ingresso. São sete Poképaradas em cada cidade, visitáveis em qualquer ordem; o Dia Extra não libera outro rally.",
         "published_on": "2026-10-22",
-        "label": "OFICIAL • VERIFICADO"
+        "label": "OFICIAL • VERIFICADO",
+        "expire_when_related_windows_end": true
       },
       "notes": [
         "A publicação completa foi conferida em 28/10. Ela esclarece apenas as Caças aos Selos de Sendai e da Cidade do México; a jogabilidade principal continua em registros separados no Calendário.",
@@ -12984,7 +12985,8 @@
         "title": "Área Selvagem confirma fundos no perfil e grupos privados Dinamax",
         "summary": "Fundos de Sendai e Cidade do México chegam ao perfil em 6/11 às 10h locais; o Fundo Especial 2026 e fundos de localização anteriores chegam em 9/11 às 10h locais. O anúncio também detalha pesquisas, avatares, Pokémon HOME e Efeitos de Aventura.",
         "published_on": "2026-11-03",
-        "label": "OFICIAL • DETALHES CONFIRMADOS"
+        "label": "OFICIAL • DETALHES CONFIRMADOS",
+        "expire_when_related_windows_end": true
       },
       "notes": [
         "6/11 ÀS 10H LOCAIS: fundos de localização da Área Selvagem 2026 de Sendai e Cidade do México passam a poder aparecer com o Pokémon companheiro no Perfil do Treinador.",
@@ -13191,7 +13193,8 @@
         "title": "Recebeu a pesquisa do Machamp Gigamax? O prazo termina em 15/11",
         "summary": "A aquisição encerrou em 8/11. Para quem entrou no prazo e recebeu a pesquisa, tarefas e recompensas devem ser concluídas e resgatadas até 15/11 às 23h59 no horário local.",
         "published_on": "2026-11-06",
-        "label": "OFICIAL • PRAZO ATIVO"
+        "label": "OFICIAL • PRAZO ATIVO",
+        "expire_when_related_windows_end": true
       },
       "notes": [
         "A pesquisa só foi concedida a quem entrou no Pokémon GO entre 6/11 às 10h e 8/11 às 23h59, no horário local.",
@@ -13672,7 +13675,8 @@
         "title": "Black Friday: dobro de bônus na Loja Online e caixa com prazo menor",
         "summary": "Pacotes elegíveis dão até 2.000 Pokémoedas de bônus, com uma compra por pacote e cliente. A promoção geral termina em 29/11 às 20h PST; a Caixa Delícias Sazonais sai antes, em 27/11 às 20h PST.",
         "published_on": "2026-11-09",
-        "label": "OFICIAL • LOJA ONLINE"
+        "label": "OFICIAL • LOJA ONLINE",
+        "expire_when_related_windows_end": true
       },
       "notes": [
         "Promoção de dobro das Pokémoedas de bônus válida em pacotes de US$ 19,99 ou mais, com até 2.000 moedas de bônus e limite de uma compra por pacote e cliente.",
@@ -14597,7 +14601,8 @@
         "title": "Osaka: possível ajuste temporário de recursos na região de Namba",
         "summary": "O aviso oficial vale para 14 e 15/11, durante a Área Selvagem Global. A publicação não informa quais recursos serão alterados, o perímetro afetado nem horários específicos.",
         "published_on": "2026-11-11",
-        "label": "OFICIAL • AVISO LOCAL"
+        "label": "OFICIAL • AVISO LOCAL",
+        "expire_when_related_windows_end": true
       },
       "notes": [
         "Outro jogo para celular realizará um evento presencial na região de Namba, em Osaka, nos dias 14 e 15 de novembro, ao mesmo tempo que a Área Selvagem Global.",
