@@ -8,12 +8,14 @@
     "official_pt": [
       "https://pokemongo.com/pt-BR/news",
       "https://pokemongo.com/pt-BR/seasons/twilight-trails",
-      "https://pokemongo.com/pt-BR/news/twilight-wishes-2026"
+      "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+      "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026"
     ],
     "official_en": [
       "https://pokemongo.com/en/news",
       "https://pokemongo.com/en/seasons/twilight-trails",
-      "https://pokemongo.com/news/twilight-wishes-2026"
+      "https://pokemongo.com/news/twilight-wishes-2026",
+      "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026"
     ],
     "community": [
       "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
@@ -36,7 +38,6 @@
       "2026-11-26-spotlight-noibat",
       "2026-11-21-shadow-tornadus-weekend",
       "2026-11-28-shadow-tornadus-weekend",
-      "2026-11-16-max-surprise",
       "2026-11-23-max-espurr",
       "2026-11-30-max-cryogonal"
     ],
@@ -45,7 +46,15 @@
     "no_official_confirmation_found": true,
     "no_new_art": true,
     "no_coordinates_or_gpx": true,
-    "no_push": true
+    "no_push": true,
+    "superseded_by_official": [
+      {
+        "id": "2026-11-16-max-surprise",
+        "official_event_id": "2026-11-16-dynamax-trails",
+        "official_source": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026"
+      }
+    ],
+    "note": "A janela geral de Trilhas Dinamax 16–23/11 e o retorno de Dynamax não lendários/não míticos já lançados são oficiais; apenas a espécie específica de Max Monday em 16/11 permanece não anunciada pela comunidade. O registro comunitário redundante foi arquivado com vínculo ao evento oficial."
   },
   "twilight_wishes": {
     "canonical_story_event_id": "2026-11-24-twilight-wishes-preview",
@@ -94,7 +103,8 @@
       "official Dynamax Trails and Galar starter Spotlight remain published",
       "Twilight Wishes story groups four records",
       "field-research windows remain distinct",
-      "GO Pass claim boundary 19:59:59/20:00:00 local"
+      "GO Pass claim boundary 19:59:59/20:00:00 local",
+      "Max Monday 16/11 record linked to official Dynamax Trails announcement and excluded from unconfirmed community story"
     ]
   },
   "publication": {
@@ -122,5 +132,6 @@
     "79cbf21a01188516a7e1dd4ff0c1a3bb81f3cf19",
     "59bbdf4265648305d3fc9adc3f5f6aefa0b6937b",
     "908ed97fd750f29b6ad672e9fbd26564dedcac4c"
-  ]
+  ],
+  "branch_head_after_data_commit": "91bdd84a3fdcd40534bfa85c69d992c2597a6e5d"
 }

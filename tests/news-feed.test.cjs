@@ -153,9 +153,9 @@ test('date-only related stories expire after the last IANA event day; unknown re
 
 
 test('community-only November forecasts remain in News, not as dated calendar events',()=>{
- const ids=["2026-11-25-raids-deoxys-four-forms","2026-11-16-mega-banette-raids","2026-11-25-mega-metagross-raids","2026-11-18-raid-hour-cresselia-darkrai","2026-11-25-raid-hour-deoxys","2026-11-26-spotlight-noibat","2026-11-21-shadow-tornadus-weekend","2026-11-28-shadow-tornadus-weekend","2026-11-16-max-surprise","2026-11-23-max-espurr","2026-11-30-max-cryogonal"];
+ const ids=["2026-11-25-raids-deoxys-four-forms","2026-11-16-mega-banette-raids","2026-11-25-mega-metagross-raids","2026-11-18-raid-hour-cresselia-darkrai","2026-11-25-raid-hour-deoxys","2026-11-26-spotlight-noibat","2026-11-21-shadow-tornadus-weekend","2026-11-28-shadow-tornadus-weekend","2026-11-23-max-espurr","2026-11-30-max-cryogonal"];
  const storyId='2026-11-max-mondays-community-outlook';
- const story=events.find(e=>e.id===storyId);
+ const story=events.find(e=>e.id===storyId);const superseded=events.find(e=>e.id==='2026-11-16-max-surprise');assert.equal(superseded?.status,'archived');assert.equal(superseded?.audit?.official_confirmation_found,true);assert.equal(superseded?.audit?.superseded_by_event_id,'2026-11-16-dynamax-trails');assert.equal(story?.related_event_ids?.includes('2026-11-16-max-surprise'),false);
  assert.ok(story);assert.equal(story.status,'published');assert.equal(story.content_type,'news');
  assert.equal(story.schedule,undefined);assert.equal(story.calendar?.mode,'hidden');
  assert.match(story.news?.label||'',/COMUNIDADE.*ESTREIA A CONFIRMAR/);

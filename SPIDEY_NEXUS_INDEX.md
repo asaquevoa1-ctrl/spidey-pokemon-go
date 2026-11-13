@@ -519,5 +519,5 @@ Guia: [SPIDEYNEXUS_CONTINUIDADE.md](SPIDEYNEXUS_CONTINUIDADE.md). Relatório e p
 
 ## 13/11/2026 — QA editorial comunitário e Chamados do Crepúsculo
 - Registro: `docs/qa/COMMUNITY_CALENDAR_TWILIGHT_20261113.json`.
-- Testes: `tests/news-feed.test.cjs` cobre a retirada das previsões comunitárias do Calendário, a história única de Novidades e as três janelas oficiais de Chamados do Crepúsculo.
+- Testes: `tests/news-feed.test.cjs` cobre a retirada das previsões comunitárias do Calendário e o vínculo do registro Max Monday 16/11 ao anúncio oficial de Trilhas Dinamax, a história única de Novidades e as três janelas oficiais de Chamados do Crepúsculo.
 - Preparação feita na PR #291 sobre a base main SHA `6a3ec9723f9317f816e5986b6eecff61f3b9d21c`; CI, merge e Pages continuam pendentes até reconciliação.
