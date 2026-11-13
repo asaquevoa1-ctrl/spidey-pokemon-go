@@ -314,6 +314,11 @@
           "name": "Pokémon GO • anúncio oficial em inglês",
           "url": "https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026",
           "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • anúncio oficial de Trilhas Dinamax e Eternamax Eternatus",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
         }
       ],
       "calendar": {
@@ -327,12 +332,13 @@
         "title": "Teaser de Eternatus: histórico atualizado após a confirmação oficial",
         "summary": "O anúncio oficial confirmou o retorno de Eternatus em Trilhas Dinamax (16–23/11) e a janela própria de Eternamax em 21/11, 11h–14h locais. A previsão anterior de 14–23/11 foi substituída.",
         "published_on": "2026-10-26",
-        "label": "HISTÓRICO • SUBSTITUÍDO POR ANÚNCIO OFICIAL"
+        "label": "HISTÓRICO • TEASER SUPERADO POR ANÚNCIO OFICIAL"
       },
       "notes": [
         "Registro histórico: em 26/10, uma publicação comunitária relatou um teaser oficial de Eternamax Eternatus e uma previsão de datamining para 14–23/11. A janela rumorada não foi confirmada oficialmente.",
         "Confirmação posterior: o anúncio oficial definiu Trilhas Dinamax de 16/11 às 10h a 23/11 às 20h locais e Eternamax em Batalhas Max em 21/11, das 11h às 14h locais.",
-        "O teaser e a previsão antiga permanecem arquivados para histórico; consulte os eventos oficiais relacionados para datas e recompensas confirmadas."
+        "O teaser e a previsão antiga permanecem arquivados para histórico; consulte os eventos oficiais relacionados para datas e recompensas confirmadas.",
+        "ARQUIVADO • O anúncio oficial de Trilhas Dinamax confirmou o retorno de Eternatus no Passe GO de 16–23/11 e a janela de Eternamax em 21/11, 11h–14h locais. O intervalo comunitário 14–23/11 foi substituído pelos horários oficiais e não deve ser usado como evento."
       ],
       "pokemon": [
         {
@@ -346,9 +352,9 @@
       },
       "status": "archived",
       "verified_at": "2026-10-26",
-      "updated_at": "2026-11-12T20:28:41-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "audit": {
-        "classification": "community_report_of_official_teaser_superseded_by_official_announcement",
+        "classification": "official_teaser_superseded_by_confirmed_announcement",
         "date_range_claim": "2026-11-14 to 2026-11-23",
         "date_range_verified_officially": false,
         "related_official_event": "2026-11-16-dynamax-trails",
@@ -360,7 +366,14 @@
         ],
         "official_confirmation_url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
         "reported_date_range_superseded": true,
-        "historical_record_preserved": true
+        "historical_record_preserved": true,
+        "related_official_events": [
+          "2026-11-16-dynamax-trails",
+          "2026-11-21-eternamax-eternatus-max-battles"
+        ],
+        "superseded_by_official_announcement": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
       },
       "superseded_by": "2026-11-16-dynamax-trails",
       "superseded_at": "2026-10-28T18:10:35-03:00",
@@ -2477,7 +2490,7 @@
       "id": "2026-11-21-community-day-preview",
       "slug": "2026-11-21-community-day-preview",
       "title": "Dia Comunitário de novembro: Pawniard",
-      "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
+      "summary": "Pawniard confirmado para 21/11, 14h–17h: Brilhante e Fundo Especial possíveis; 1/4 da distância dos Ovos, 2× Doces e Kingambit com Humilhação Dividida (Kowtow Cleave) até 21h.",
       "category": "community_day",
       "tags": [
         "Novembro 2026",
@@ -2525,7 +2538,7 @@
         },
         {
           "name": "Kingambit",
-          "note": "Evolua Bisharp até 21h para receber o ataque carregado Kowtow Cleave (75 no PvP e 85 em reides e Ginásios)."
+          "note": "Evolua Bisharp até 21h para receber Humilhação Dividida (Kowtow Cleave; Kowtow Cleave em inglês), com 75 de força em Batalhas de Treinador e 85 em Ginásios e Reides."
         }
       ],
       "bonuses": [
@@ -2537,19 +2550,22 @@
         "Módulos Atrair comuns duram 1 hora, com Pawniard atraído e chance aumentada de Brilhante, das 14h às 21h locais.",
         "1 Troca Especial adicional (máximo de 2), das 14h às 21h locais.",
         "Trocas exigem 50% menos Poeira Estelar, das 14h às 21h locais.",
-        "Até as 21h, evolua Bisharp em Kingambit após derrotar 1 chefe de Reide do tipo Sombrio ou Aço com Bisharp como seu companheiro."
+        "Até as 21h locais, derrote 1 chefe de Reide do tipo Sombrio ou Aço com Bisharp como seu companheiro; depois, evolua Bisharp para Kingambit."
       ],
       "notes": [
         "21 de novembro, sábado | Das 14h às 17h, horário local. Pawniard aparece com mais frequência na natureza. Há chance de encontrar Pawniard Brilhante ou com Fundo Especial.",
         "Até as 21h | Evolua Bisharp para Kingambit e receba o ataque carregado Kowtow Cleave. Potência oficial: 75 em Batalhas de Treinador e 85 em Ginásios e reides.",
-        "Evolução facilitada | Das 14h às 21h, derrote 1 chefe de Reide do tipo Sombrio ou Aço com Bisharp como seu companheiro para cumprir o requisito temporário e evoluí-lo para Kingambit. A correção oficial de 28/10 substitui a orientação anterior que dispensava Bisharp de ser companheiro.",
         "Prepare os Ovos | Para aproveitar o bônus de 1/4, coloque os Ovos em incubadoras dentro das três horas do Dia Comunitário.",
         "Horário estendido | Módulos Atrair comuns continuam oferecendo altas chances de Pawniard das 14h às 21h, mantendo a chance aumentada de Brilhante e Fundo Especial. Cada módulo dura 1 hora.",
         "Pesquisas de campo | Capturar Pawniard pode render Poeira Estelar, Ultra Bolas e encontros extras com Pawniard, inclusive chance de Fundo Especial.",
-        "Ingresso opcional | A Pesquisa Especial custa US$ 1,99 ou valor equivalente no Brasil. Entre as recompensas anunciadas estão 3 encontros com Fundo Especial, encontros extras, 1 Passe de Batalha Premium e 1 Doce Raro GG.",
         "Pesquisa Especial: não inclui medalha no jogo nem história. O ingresso pode ser presenteado a amizades no nível Grande Amizade ou superior, sujeito às restrições oficiais.",
         "Check-in em evento de Embaixador da Comunidade: pode liberar uma Pesquisa Temporária com encontros adicionais de Pawniard com Fundo Especial e recompensas de itens premium.",
-        "Ultracombo do Ingresso na Loja online: pelo preço equivalente ao ingresso da Pesquisa Especial, inclui o ingresso e cinco Ultra Bolas sem custo adicional."
+        "Ultracombo do Ingresso na Loja online: pelo preço equivalente ao ingresso da Pesquisa Especial, inclui o ingresso e cinco Ultra Bolas sem custo adicional.",
+        "Requisito temporário de evolução corrigido no anúncio em 28/10: Bisharp precisa estar definido como companheiro ao derrotar 1 chefe de Reide do tipo Sombrio ou Aço. Depois, evolua Bisharp para Kingambit até 21h locais.",
+        "Ingresso opcional da Pesquisa Especial: US$ 1,99 ou preço regional equivalente. A data de início da venda ainda não foi anunciada.",
+        "Pode ser presenteado a amizades no nível Grande Amigo ou superior. Não é reembolsável (salvo lei/Termos), não concede medalha no jogo e não inclui uma história.",
+        "Não é possível presentear alguém que já comprou ou já recebeu um ingresso dessa Pesquisa Especial.",
+        "Ultracombo da Loja Online: ingresso da Pesquisa Especial e cinco Ultra Bolas, sem custo adicional."
       ],
       "notifications": {
         "enabled": true,
@@ -2558,7 +2574,7 @@
         ]
       },
       "status": "published",
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio oficial em português",
@@ -2585,15 +2601,16 @@
       "public_summary": "No dia 21/11, capture Pawniard das 14h às 17h e evolua Bisharp até 21h para conseguir Kingambit com Kowtow Cleave. Bônus e requisitos já confirmados pelo Pokémon GO.",
       "news": {
         "title": "CONFIRMADO: Pawniard é o Dia Comunitário de novembro!",
-        "summary": "21/11, 14h–17h. Para cumprir o requisito temporário de evolução, Bisharp precisa ser seu companheiro ao derrotar 1 chefe de Reide Sombrio ou Aço; a janela estendida vai até 21h. Pesquisa de Campo e check-in de Embaixador podem render encontros com Fundo Especial.",
+        "summary": "21/11, 14h–17h: Pawniard Brilhante e Fundo Especial possíveis, 1/4 da distância dos Ovos e 2× Doces. Kingambit aprende Humilhação Dividida (Kowtow Cleave) ao evoluir até 21h. Pesquisa especial opcional por US$ 1,99.",
         "published_on": "2026-10-21",
         "source": {
           "name": "Pokémon GO • anúncio oficial em português",
           "url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard",
           "confidence": "official"
-        }
+        },
+        "updated_on": "2026-11-13"
       },
-      "updated_at": "2026-11-12T20:28:41-03:00",
+      "updated_at": "2026-11-13T02:59:11-03:00",
       "art": {
         "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
         "web_width": 1024,
@@ -2611,7 +2628,20 @@
           "field": "Bisharp_buddy_requirement",
           "corrected": true,
           "source_url": "https://pokemongo.com/pt-BR/news/communityday-november-2026-pawniard"
-        }
+        },
+        "official_pt_en_fulltext_reconciled": true,
+        "evolution_requirement_oct28_correction_applied": true,
+        "requires_bisharp_as_buddy_for_raid_requirement": true,
+        "ticket_price_usd": 1.99,
+        "ticket_sale_start_not_published": true,
+        "ticket_gifting_min_friendship": "Great Friends",
+        "ticket_non_refundable_subject_to_law_and_terms": true,
+        "research_has_no_in_game_medal": true,
+        "research_has_no_story": true,
+        "gifting_blocked_if_recipient_already_purchased_or_received": true,
+        "web_store_box_includes_five_ultra_balls": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
       }
     },
     {
@@ -7385,7 +7415,8 @@
       "notes": [
         "A janela é sempre das 10h de 27/09 às 22h de 20/10 no horário local da loja participante nos Estados Unidos.",
         "A Pesquisa temporária pode ser obtida até 20/10 às 22h locais e concluída até 20/11 às 22h locais.",
-        "O Gengar Knit Cap é oferecido no resgate de gift cards elegíveis de Target, GameStop ou Best Buy entre 27/09 e 31/10; limite de um por conta."
+        "O Gengar Knit Cap é oferecido no resgate de gift cards elegíveis de Target, GameStop ou Best Buy entre 27/09 e 31/10; limite de um por conta.",
+        "O prazo final para concluir e resgatar a Pesquisa já obtida está separado do evento de lojas e termina em 20/11 às 22h no horário local do jogador; consulte o registro relacionado."
       ],
       "notifications": {
         "enabled": false
@@ -7401,7 +7432,11 @@
         "title": "Celebração de 30 anos do Pokémon TCG",
         "summary": "Lojas participantes dos Estados Unidos recebem Mega Gengar e Pesquisa temporária até 20/10.",
         "published_on": "2026-09-27"
-      }
+      },
+      "related_event_ids": [
+        "2026-09-tcg-30th-research-claim-deadline"
+      ],
+      "updated_at": "2026-11-13T02:59:11-03:00"
     },
     {
       "id": "2026-10-apac-mall-exploration",
@@ -7595,7 +7630,7 @@
       "id": "2026-11-go-pass-groudon",
       "slug": "2026-11-go-pass-groudon",
       "title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
-      "summary": "Passe gratuito: encontro com Groudon (pode ser Brilhante) e até 400 PokéMoedas. Passe Deluxe pago: mais 1.000 PokéMoedas, total de 1.400.",
+      "summary": "3/11 às 10h–1/12 às 10h locais: Passe gratuito com Groudon e até 400 PokéMoedas; Deluxe acrescenta até 1.000. Sem limite diário de Pontos GO em 28–29/11; resgate de recompensas até 3/12 às 10h.",
       "category": "go_pass",
       "tags": [
         "Passe GO",
@@ -7638,7 +7673,11 @@
         "Deluxe: US$ 7,99 ou preço regional equivalente; versão Deluxe + 10 Ranques: US$ 9,99 ou equivalente. Preços e disponibilidade podem variar por região.",
         "28 e 29/11: sem limite diário de Pontos GO (de sábado 00h até domingo 23h59, horário local).",
         "Recompensas desbloqueadas precisam ser resgatadas até 03/12/2026 às 10h, horário local, depois do fim do Passe.",
-        "A prévia de recompensas por ranque não detalha ainda todos os itens; não confundir este Passe GO mensal com o Passe GO Into the Wild, de 9 a 15/11."
+        "A prévia de recompensas por ranque não detalha ainda todos os itens; não confundir este Passe GO mensal com o Passe GO Into the Wild, de 9 a 15/11.",
+        "RECOMPENSAS COMPLETAS • Passe gratuito: encontro com Groudon (Brilhante possível), até 400 PokéMoedas, Ovo da Sorte, Doce Raro GG, Poeira Estelar e outros itens. Deluxe: até 1.000 PokéMoedas adicionais (1.400 no total), uma Superincubadora e encontros adicionais.",
+        "LOJA ONLINE • Upgrade Deluxe: 10 Ultra Bolas, 5 Máximos Reviver, 1 Passe de Batalha Premium e 5 Poções Máximas. Deluxe +10 Ranques: 10 Ultra Bolas, 5 Máximos Reviver, 2 Passes de Batalha Premium e 5 Poções Máximas.",
+        "ULTRACOMBO WEB • Inclui 20 Ultra Bolas, 10 Máximos Reviver, 5 Passes de Batalha Premium e 10 Poções Máximas como brindes pela compra.",
+        "JANELAS SEPARADAS • O bônus sem limite diário de Pontos GO ocorre somente em 28–29/11; o Passe encerra em 1/12 às 10h e as recompensas já desbloqueadas expiram em 3/12 às 10h locais."
       ],
       "notifications": {
         "enabled": true,
@@ -7663,11 +7702,12 @@
       ],
       "news": {
         "title": "Passe GO de novembro: Groudon e até 1.400 PokéMoedas",
-        "summary": "A trilha gratuita oferece Groudon e 400 PokéMoedas; o Deluxe pago acrescenta até 1.000. De 3/11 a 1º/12, com bônus por ranque e resgate até 3/12.",
+        "summary": "Passe gratuito: Groudon, até 400 PokéMoedas, Ovo da Sorte, Doce Raro GG e Poeira Estelar. Deluxe: +1.000 PokéMoedas, Superincubadora e encontros adicionais. Sem limite de Pontos GO em 28–29/11; recompensas até 3/12.",
         "published_on": "2026-10-20",
-        "window_label": "03/11–01/12 • horário local"
+        "window_label": "03/11–01/12 • horário local",
+        "updated_on": "2026-11-13"
       },
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-13",
       "verification_sources": [
         {
           "name": "Pokémon GO · anúncio oficial",
@@ -7678,8 +7718,27 @@
           "name": "Pokémon GO Hub · guia 20/10/2026",
           "url": "https://pokemongohub.net/post/guide/go-pass-november-2026/",
           "confidence": "verified_community"
+        },
+        {
+          "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+          "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+          "confidence": "official"
         }
-      ]
+      ],
+      "related_event_ids": [
+        "2026-11-go-pass-groudon-unlimited-points",
+        "2026-11-go-pass-groudon-claim-window"
+      ],
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "audit": {
+        "official_pt_en_fulltext_reconciled": true,
+        "web_store_rewards_reconciled": true,
+        "free_and_deluxe_rewards_reconciled": true,
+        "no_daily_cap_window_verified": true,
+        "claim_deadline_verified": true,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00"
+      }
     },
     {
       "id": "2026-10-zorua-community-day",
@@ -8064,7 +8123,8 @@
         "Somente titulares atuais dos ingressos podem participar; não haverá nova venda de ingressos.",
         "A Pesquisa temporária traz Flabébé Flor Laranja, Hawlucha, Mudbray e Komala, além dos bônus ramificados.",
         "A pesquisa suplementar de Boston pode render até nove Eevee com chapéu de explorador e Fundo de Localização de Boston.",
-        "Não haverá GO Stamp Rally de Boston."
+        "Não haverá GO Stamp Rally de Boston.",
+        "A janela para obter a Pesquisa Especial suplementar de Boston foi separada do evento presencial/global e permanece aberta até 23/10/2028; consulte o registro relacionado."
       ],
       "notifications": {
         "enabled": true,
@@ -8083,7 +8143,11 @@
         "title": "City Safari Boston foi remarcado",
         "summary": "A experiência passa a ser global em 24 e 25/10, mas continua exclusiva para titulares dos ingressos originais.",
         "published_on": "2026-10-01"
-      }
+      },
+      "related_event_ids": [
+        "2026-10-city-safari-boston-research-claim-window"
+      ],
+      "updated_at": "2026-11-13T02:59:11-03:00"
     },
     {
       "id": "2026-10-halloween-part-1",
@@ -15101,6 +15165,282 @@
         "purchasable_and_level_reward_caps_kept_distinct": true,
         "regional_offer_variation_disclosed": true
       }
+    },
+    {
+      "id": "2026-11-go-pass-groudon-unlimited-points",
+      "slug": "2026-11-go-pass-groudon-unlimited-points",
+      "title": "Passe GO: Novembro — sem limite diário de Pontos GO",
+      "summary": "De 28/11 à meia-noite até 29/11 às 23h59, horário local: não haverá limite diário para Pontos GO.",
+      "category": "bonus_window",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+          "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-28T00:00:00-03:00",
+        "end_local": "2026-11-29T23:59:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-28T00:00:00-03:00",
+        "end_brazil": "2026-11-29T23:59:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "Bônus temporário do Passe GO: não há limite diário para a quantidade de Pontos GO obtida durante essa janela.",
+        "O Passe GO continua disponível até 1/12 às 10h locais; este bônus não prolonga a progressão."
+      ],
+      "related_event_ids": [
+        "2026-11-go-pass-groudon"
+      ],
+      "status": "published",
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "bonus_window",
+        "daily_go_points_limit_removed": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
+    },
+    {
+      "id": "2026-11-go-pass-groudon-claim-window",
+      "slug": "2026-11-go-pass-groudon-claim-window",
+      "title": "Resgate de recompensas — Passe GO: Novembro",
+      "summary": "Recompensas desbloqueadas devem ser resgatadas até 3/12 às 10h locais; a progressão do Passe termina em 1/12 às 10h.",
+      "category": "go_pass_claim_deadline",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Passe GO: novembro (português do Brasil)",
+          "url": "https://pokemongo.com/pt-BR/news/go-pass-november-2026",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-01T10:00:00-03:00",
+        "end_local": "2026-12-03T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-01T10:00:00-03:00",
+        "end_brazil": "2026-12-03T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "Esta janela é apenas para resgatar recompensas já desbloqueadas; não permite continuar avançando no Passe após 1/12 às 10h locais."
+      ],
+      "related_event_ids": [
+        "2026-11-go-pass-groudon"
+      ],
+      "status": "published",
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "claim_window",
+        "claim_deadline_verified": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
+    },
+    {
+      "id": "2026-10-city-safari-boston-research-claim-window",
+      "slug": "2026-10-city-safari-boston-research-claim-window",
+      "title": "City Safari Boston — resgate da Pesquisa suplementar",
+      "summary": "Titulares dos ingressos originais podem obter a Pesquisa suplementar em qualquer lugar até 23/10/2028. Há uma oportunidade por dia de ingresso; cada pesquisa pode render até nove Eevee com chapéu de explorador e Fundo de Localização de Boston.",
+      "category": "special_research_claim_window",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • City Safari Boston remarcado",
+        "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • City Safari Boston remarcado",
+          "url": "https://pokemongo.com/news/city-safari-boston-rescheduled",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/New_York",
+        "start_date": "2026-10-24",
+        "end_date": "2028-10-23",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "Somente titulares dos ingressos originais de Boston; não haverá nova venda de ingressos.",
+        "É possível entrar no jogo em qualquer lugar entre 24/10/2026 e 23/10/2028 para obter a Pesquisa suplementar. Cada dia de ingresso dá uma oportunidade de Pesquisa.",
+        "As tarefas pedem para girar Poképaradas em Boston e podem render até nove encontros com Eevee de chapéu de explorador e Fundo de Localização de Boston por oportunidade.",
+        "A publicação informa apenas as datas, sem horário exato de encerramento; o último dia é interpretado no fuso IANA America/New_York, da cidade do evento.",
+        "Não haverá GO Stamp Rally de Boston."
+      ],
+      "related_event_ids": [
+        "2026-10-city-safari-boston-rescheduled"
+      ],
+      "status": "published",
+      "news": {
+        "title": "Pesquisa suplementar de Boston: resgate até 23/10/2028",
+        "summary": "Titulares dos ingressos originais podem obter a Pesquisa suplementar em qualquer lugar até 23/10/2028. Uma oportunidade por dia de ingresso; tarefas em Poképaradas de Boston podem render até nove Eevee com chapéu de explorador e Fundo de Localização.",
+        "published_on": "2026-10-01",
+        "updated_on": "2026-11-13",
+        "label": "PRAZO DE RESGATE • TITULARES DE INGRESSO"
+      },
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "date_only_claim_window",
+        "claim_anywhere_in_world": true,
+        "one_research_per_ticketed_day": true,
+        "max_eevee_encounters_per_research": 9,
+        "claim_tasks_require_boston_pokestop_spins": true,
+        "no_exact_end_time_published": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
+    },
+    {
+      "id": "2026-09-tcg-30th-research-claim-deadline",
+      "slug": "2026-09-tcg-30th-research-claim-deadline",
+      "title": "Prazo final — Pesquisa da Celebração de 30 anos do TCG",
+      "summary": "Quem obteve a Pesquisa temporária em uma loja participante dos EUA deve concluir as tarefas e resgatar as recompensas até 20/11 às 22h no horário local.",
+      "category": "special_research_claim_deadline",
+      "tags": [
+        "Prazo",
+        "Calendário",
+        "Pokémon GO"
+      ],
+      "content_type": "event",
+      "source": {
+        "name": "Pokémon GO • Celebração de 30 anos do Pokémon TCG",
+        "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • Celebração de 30 anos do Pokémon TCG",
+          "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-20T22:00:00-03:00",
+        "end_local": "2026-11-20T22:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-20T22:00:00-03:00",
+        "end_brazil": "2026-11-20T22:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "start"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Janela de prazo ou bônus global; não exige coordenadas nem rota."
+      },
+      "notes": [
+        "A Pesquisa temporária podia ser obtida em lojas participantes dos EUA até 20/10/2026 às 22h locais.",
+        "Depois de obter a Pesquisa, as tarefas e recompensas precisam ser concluídas e resgatadas até 20/11/2026 às 22h locais.",
+        "O horário é local para a pessoa que joga; no calendário do Spidey, a janela é exibida em America/Sao_Paulo.",
+        "Esta é a data-limite de resgate, não uma extensão do evento de lojas, que terminou em 20/10."
+      ],
+      "related_event_ids": [
+        "2026-09-tcg-30th-us-retail"
+      ],
+      "status": "published",
+      "news": {
+        "title": "Último dia para resgatar a Pesquisa do TCG 30 anos",
+        "summary": "Quem obteve a Pesquisa temporária nas lojas participantes dos EUA deve concluir tarefas e resgatar recompensas até 20/11 às 22h locais.",
+        "published_on": "2026-09-27",
+        "updated_on": "2026-11-13",
+        "label": "PRAZO FINAL • PESQUISA TEMPORÁRIA"
+      },
+      "audit": {
+        "editorial_detail_pending": false,
+        "reviewed_main_sha": "b140831540148026c15d6be18790ab0274f460f4",
+        "fulltext_reconciled_at": "2026-11-13T02:59:11-03:00",
+        "window_type": "single_deadline",
+        "source_deadline_text": "20/11/2026 às 22h no horário local",
+        "research_obtain_deadline_text": "20/10/2026 às 22h no horário local",
+        "display_timezone_for_brazil": "America/Sao_Paulo",
+        "official_pt_br_page_not_accessible_in_review": true
+      },
+      "updated_at": "2026-11-13T02:59:11-03:00",
+      "verified_at": "2026-11-13"
     }
   ]
 }
