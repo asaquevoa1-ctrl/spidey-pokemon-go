@@ -69,6 +69,8 @@ jobs:
         run: node --test tests/collector-curation-20261112.test.cjs
       - name: Conferir Novidades Premium e fontes reais
         run: node --test tests/news-premium-20261102.test.cjs tests/official-news-editorial-20261104.test.cjs tests/official-news-editorial-20261111.test.cjs tests/editorial-news-osaka-storage-20261111.test.cjs
+      - name: Validar limites date-only no fuso IANA
+        run: node --test tests/date-only-iana-news-expiry-20261113.test.cjs
       - name: Validar janelas anuais de Minior e expiração das Novidades
         run: node --test tests/go-tour-2027-calendar-windows-20261113.test.cjs tests/news-feed.test.cjs
       - name: Validar noticia de fundos no perfil sem inventar confirmacao oficial
