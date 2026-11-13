@@ -678,3 +678,5 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Os sete núcleos são Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta. Uma cor estreia em cada chuva; uma cor estreia no Hemisfério Norte e outra no Sul. A fonte não associa uma cor específica a cada chuva.
 - Registrar a diferença entre idiomas: PT-BR descreve a mudança de forma a 50% dos PS ou menos; EN diz abaixo de 50%. PT-BR diz que Minior não aparecerá durante sobreposições; EN diz “may not appear”. A interface usa a redação conservadora “pode não aparecer” e a auditoria preserva as duas formulações.
 - Não duplicar a correção de Pawniard: a exigência atualizada de Bisharp como companheiro já está na PR #289 e permanece pendente de merge/CI.
+
+- Max Mondays comunitários: a leitura integral do Leek Duck indica semana 16–23/11 sem espécie anunciada, Dynamax Espurr possível em Batalhas Max de 23–29/11 e Dynamax Cryogonal possível de 30/11–06/12; as páginas também relatam 06h–21h locais e mudanças em Pontos de Energia. Manter tudo em Novidades, sem schedule nem Calendário por falta de anúncio oficial.
