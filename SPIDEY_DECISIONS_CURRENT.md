@@ -214,7 +214,7 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 
 ## 23/10/2026 — Night Out Los Angeles/Londres: roteiro, horários e fundos especiais
 - Confirmação oficial Pokémon GO: Pikachu em reides 1★ e Gengar em reides 3★ com Fundos de Localização correspondentes a Los Angeles (24/10) e Londres (10/11); Toxtricity Grave/Aguda nas pesquisas; Módulos Atrair 1h exceto dourados. Mewtwo Sombroso com Fundo NÃO foi anunciado.
-- Referências geográficas enviadas pelo responsável: Intuit Dome `33.943723,-118.342295` e The O2 `51.502579,0.003202`. São referências de arenas, não Ginásios/Poképaradas confirmados. GPX continua desativado.
+- Referências geográficas enviadas pelo responsável: Intuit Dome `33.943723,-118.342295` e The O2 `51.5029,0.0034` (referência geográfica mais recente fornecida pelo responsável; substitui o valor anterior). São referências de arenas, não Ginásios/Poképaradas confirmados. GPX continua desativado.
 - Los Angeles: show e transmissão em 24/10 às 19h30 PDT = 23h30 Brasília. YouTube e Twitch exibem o show, porém o Drop da pesquisa da camiseta requer 30 minutos na Twitch. Os bônus locais não são acessíveis mundialmente.
 - Londres: AXS/The O2 confirmou portas em 10/11 às 18h GMT (15h Brasília) e show às 19h30 GMT (16h30 Brasília). A alegação de 15h30 de Brasília não foi confirmada; Pokémon informa que não haverá transmissão londrina. O horário exato da jogabilidade não foi informado em nenhuma das cidades, portanto nenhuma hora de reides foi inventada.
 - Preservar intactos os pôsteres Premium já aprovados do Night Out e roteiro de 24/10. O roteiro da live distingue evento físico e participação do Brasil. Qualquer nova peça usa o S cósmico original e exige QA visual.

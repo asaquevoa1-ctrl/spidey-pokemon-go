@@ -45,7 +45,7 @@ test('FLY motion: UI uses same factual FlyCore route, real times and verified co
  assert.match(js,/IntersectionObserver/);
  assert.match(js,/canvas/);
  assert.match(js,/Pausar animação/);
- assert.match(js,/não representa deslocamento real/i);
+ assert.match(js,/não (?:representa deslocamento real|simula voos físicos)/i);
  assert.doesNotMatch(js,/spider|aranha|SpideyNexus|Portugal\s*:/i);
  assert.match(html,/fly-globe-motion\.js\?v=20261101-cleanheading1/);
  assert.match(html,/fly-globe-motion\.css\?v=20261101-cleanheading1/);

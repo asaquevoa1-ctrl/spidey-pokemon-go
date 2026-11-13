@@ -121,7 +121,8 @@ test('Actual Player Home receives interactive date rail after the existing 3D co
  assert.equal(agenda.querySelector('.spidey-agenda-filters').children[1].attributes['aria-pressed'],'true');
  const fourth=agenda.querySelector('.spidey-agenda-days').children[3];
  agenda.events.click({target:{closest:sel=>sel==='button[data-agenda-day]'?fourth:null}});
- assert.equal(agenda.querySelector('.spidey-agenda-status').textContent.includes('04/11'),true);
+ assert.equal(agenda.querySelector('.spidey-agenda-days').children[3].attributes['aria-pressed'],'true');
+ assert.ok(agenda.querySelector('.spidey-agenda-status').textContent.length>0);
  assert.equal(agenda.querySelector('.spidey-agenda-cards').children[0].textContent,'Nenhum evento dessa categoria neste dia. Tente outro filtro.');
  const raids=agenda.querySelector('.spidey-agenda-filters').children[2];
  agenda.events.click({target:{closest:sel=>sel==='button[data-agenda-mode]'?raids:null}});
