@@ -167,18 +167,19 @@ test('autopublicação aciona o único GitHub Pages oficial somente depois de gr
   assert.ok(push >= 0 && dispatch > push, 'Deploy precisa ocorrer depois do commit público');
   assert.ok(auto.includes('node --test tests/spidey-maintenance-20261113.test.cjs tests/fly-user-list-20261031.test.cjs tests/mexico-wild-area-stamps-georeference-20261027.test.cjs tests/go-wild-area-stamp-rallies-20261028.test.cjs tests/stamps-community-routes-20261102.test.cjs tests/world-route-news-regression-20261109.test.cjs'));
   assert.match(pages, /workflow_dispatch:/);
-  assert.match(pages, /actions\/deploy-pages@v4/);
+  assert.match(pages, /actions\/deploy-pages@v5/);
   assert.match(legacy, /legado desativado/i);
   assert.match(legacy, /if:\s*\$\{\{\s*false\s*\}\}/);
 });
 
 
+
 test('publicador oficial usa releases Node 24 e evita actions com runtime Node 20', () => {
   const pages = read('.github/workflows/spidey-pages.yml');
-  assert.equal((pages.match(/uses:\\s*actions\\/setup-python@v6/g) || []).length, 2);
-  assert.equal((pages.match(/uses:\\s*actions\\/setup-node@v5/g) || []).length, 2);
-  assert.match(pages, /uses:\\s*actions\\/upload-pages-artifact@v5\\b/);
-  assert.match(pages, /uses:\\s*actions\\/configure-pages@v6\\b/);
-  assert.match(pages, /uses:\\s*actions\\/deploy-pages@v5\\b/);
-  assert.doesNotMatch(pages, /actions\\/(?:setup-python@v5|setup-node@v4|upload-pages-artifact@v3|configure-pages@v5|deploy-pages@v4)\\b/);
+  assert.equal((pages.match(/uses:\s*actions\/setup-python@v6/g) || []).length, 2);
+  assert.equal((pages.match(/uses:\s*actions\/setup-node@v5/g) || []).length, 2);
+  assert.match(pages, /uses:\s*actions\/upload-pages-artifact@v5\b/);
+  assert.match(pages, /uses:\s*actions\/configure-pages@v6\b/);
+  assert.match(pages, /uses:\s*actions\/deploy-pages@v5\b/);
+  assert.doesNotMatch(pages, /actions\/(?:setup-python@v5|setup-node@v4|upload-pages-artifact@v3|configure-pages@v5|deploy-pages@v4)\b/);
 });
