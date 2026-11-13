@@ -5,6 +5,7 @@ on:
     - cron: '17 9 * * *'
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: spidey-pvpoke-sync
   cancel-in-progress: false
@@ -14,17 +15,27 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Importar e validar sem acessar dados dos jogadores
         run: python scripts/sync_pvpoke.py
-      - name: Gravar somente se o PvPoke mudou
+      - name: Gravar e solicitar publicação oficial quando o PvP mudar
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        shell: bash
         run: |
+          set -euo pipefail
           git add spidey-app/data/pvp.json
-          if git diff --cached --quiet; then exit 0; fi
+          if git diff --cached --quiet; then
+            echo "PvPoke já está atualizado; nenhuma publicação necessária."
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'Spidey PvP: atualiza rankings verificados [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
+          gh api -X POST "repos/${GH_REPOSITORY}/actions/workflows/spidey-pages.yml/dispatches" -f ref=main
+          echo "Publicação oficial do GitHub Pages solicitada após a atualização PvP."
