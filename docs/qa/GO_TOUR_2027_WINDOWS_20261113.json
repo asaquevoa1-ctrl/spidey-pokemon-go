@@ -1,16 +1,18 @@
 {
   "task": "spidey-editorial-review",
   "date": "2026-11-13",
-  "base_main_sha": "bfe57c465e3bdb9bb120a85c1f65e8aa3aaaf7dd",
+  "base_main_sha": "db972c78dbc2aee28cb8b54b4854cd044232433d",
   "branch": "automation/2026-11-13-go-tour-windows-and-community-max-mondays",
   "sources": {
     "official_pt": [
       "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
-      "https://pokemongo.com/pt-BR/news"
+      "https://pokemongo.com/pt-BR/news",
+      "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026"
     ],
     "official_en": [
       "https://pokemongo.com/en/news/save-the-date-go-tour-2027",
-      "https://pokemongo.com/featured-in-person-events"
+      "https://pokemongo.com/featured-in-person-events",
+      "https://pokemongo.com/en/news/minior-meteor-showers-2026"
     ],
     "community": [
       "https://leekduck.com/events/max-mondays-2026-11-16/",
@@ -79,6 +81,35 @@
     "community_mechanics": [
       "Power Spots may refresh more frequently on Mondays (community source only)",
       "Additional Power Spots may be active on Mondays (community source only)"
+    ],
+    "minior_annual_windows": [
+      {
+        "id": "2027-05-minior-eta-aquariids",
+        "name": "Eta Aquáridas",
+        "start": "2027-05-03",
+        "end": "2027-05-08",
+        "timezone": "America/Sao_Paulo",
+        "precision": "local_datetime",
+        "source_phrase": "a cada ano / each year"
+      },
+      {
+        "id": "2027-07-minior-southern-delta-aquariids",
+        "name": "Delta Aquáridas do Sul",
+        "start": "2027-07-28",
+        "end": "2027-08-02",
+        "timezone": "America/Sao_Paulo",
+        "precision": "local_datetime",
+        "source_phrase": "a cada ano / each year"
+      },
+      {
+        "id": "2027-08-minior-perseids",
+        "name": "Perseidas",
+        "start": "2027-08-10",
+        "end": "2027-08-15",
+        "timezone": "America/Sao_Paulo",
+        "precision": "local_datetime",
+        "source_phrase": "a cada ano / each year"
+      }
     ]
   },
   "queue": {
@@ -103,8 +134,9 @@
     "no_android_physical_test_claimed": true
   },
   "publication": {
-    "status": "PR pending; branch is behind main by the 13/11 automatic queue-status commit",
-    "main_sha": "bfe57c465e3bdb9bb120a85c1f65e8aa3aaaf7dd"
+    "status": "PR pending; branch reconciled with current main db972c; full application suite still failing on existing maintenance/cache expectations",
+    "main_sha": "db972c78dbc2aee28cb8b54b4854cd044232433d"
   },
-  "branch_head_before_full_text_update": "8d4240c8194aaa647f7e58c99bb567bb57a5974e"
+  "branch_head_before_full_text_update": "8d4240c8194aaa647f7e58c99bb567bb57a5974e",
+  "branch_head_before_minior_annual_update": "567cea266beb85b4afa905b4b2e0492fd01c649b"
 }
