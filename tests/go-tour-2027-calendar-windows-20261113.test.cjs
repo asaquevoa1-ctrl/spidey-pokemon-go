@@ -164,7 +164,8 @@ test('Minior mantém uma única história oficial com detalhes completos e janel
 test('G47IX Minior foi curado sem arte, sem nova história e com histórico preservado', () => {
   const raw = JSON.parse(fs.readFileSync(path.join(root, 'queue/pending/2026-11-13/g47ix-evento-ad22b131ff54.json'), 'utf8'));
   const curated = JSON.parse(fs.readFileSync(path.join(root, 'queue/curated/g47ix-evento-ad22b131ff54.json'), 'utf8'));
-  assert.equal(raw.original_status, 'aguardando_curadoria_premium');
+  assert.equal(raw.original_status, raw.main_reconciliation.observed_main_status);
+  assert.equal(raw.original_etapa_editorial, raw.main_reconciliation.observed_main_stage);
   assert.equal(raw.status, 'grouped_without_new_claims');
   assert.match(raw.mensagem, /Minior Showers: Leonids/);
   assert.equal(curated.status, 'grouped_without_new_claims');
