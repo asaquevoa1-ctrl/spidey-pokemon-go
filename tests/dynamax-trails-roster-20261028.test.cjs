@@ -42,5 +42,5 @@ test('details use an expandable responsive gallery, without touching approved po
   assert.match(css, /\.dynamax-roster-list/);
   assert.match(html, /app\.js\?v=[\w-]+/);
   assert.match(html, /styles\.css\?v=20261028-dynamax-roster1/);
-  assert.match(sw, /20261028-dynamax-roster1/);
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
 });

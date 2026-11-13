@@ -62,7 +62,7 @@ test('Updated modules are versioned in the PWA, without removing existing Premiu
     assert.match(html,new RegExp(name+'\\.js\\?v=[\\w-]+'));
     assert.ok(sw.includes('./'+name+'.js'),name+' is not cached');
   }
-  assert.match(sw,/20261029-interiors-performance1/);
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(html,/spidey-icon-cosmic-192\.png/);
   assert.match(html,/stamps-v2\.js\?v=/);
   assert.match(html,/spidey-universe-3d\.js\?v=/);

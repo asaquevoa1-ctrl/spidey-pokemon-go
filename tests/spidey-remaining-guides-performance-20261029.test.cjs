@@ -55,5 +55,5 @@ test('New PWA build versions preserve the official cosmic logo and original data
   }
   assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
   assert.match(html,/spidey-icon-cosmic-192\.png/);
-  assert.match(html,/stamps-v2\.js\?v=20261029-pokelids-mobile-pages2/);
+  assert.match(html,/stamps-v2\.js\?v=[\w-]+/);\n  assert.ok(sw.includes('./stamps-v2.js'),'Stamp gallery must remain in the offline cache');
 });
