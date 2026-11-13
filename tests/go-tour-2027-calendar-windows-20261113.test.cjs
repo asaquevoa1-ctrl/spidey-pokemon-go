@@ -92,6 +92,17 @@ test('Max Mondays comunitários ficam em Novidades, sem calendário ou horário 
     'https://leekduck.com/events/max-mondays-2026-11-23/',
     'https://leekduck.com/events/max-mondays-2026-11-30/'
   ]);
+  assert.match(item.summary, /23 a 29\/11/i);
+  assert.match(item.summary, /30\/11 a 06\/12/i);
+  assert.equal(item.audit.full_text_review_completed, true);
+  assert.deepEqual(item.audit.community_max_battle_windows.map(window => [
+    window.date, window.pokemon, window.possible_from, window.possible_through, window.classification
+  ]), [
+    ['2026-11-23', 'Dynamax Espurr', '2026-11-23', '2026-11-29', 'community_unconfirmed'],
+    ['2026-11-30', 'Dynamax Cryogonal', '2026-11-30', '2026-12-06', 'community_unconfirmed']
+  ]);
+  assert.match(item.notes.join(' '), /06h–21h locais/);
+  assert.match(item.notes.join(' '), /Pontos de Energia/);
   assert.equal(stories.filter(group => group.event.id === communityId).length, 1);
 });
 
