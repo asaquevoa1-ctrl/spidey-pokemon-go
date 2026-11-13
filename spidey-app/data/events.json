@@ -11041,7 +11041,7 @@
       "id": "2026-10-minior-orionids",
       "slug": "2026-10-minior-orionids",
       "title": "Minior: chuva de meteoros Orionidas",
-      "summary": "Minior aparece mais na natureza das 17h às 21h locais e rende mais Poeira Estelar por captura. O céu terá estrelas cadentes; encontros podem ser interrompidos por eventos sobrepostos.",
+      "summary": "Minior aparece na natureza de 19/10 a 24/10/2026, das 17h às 23h59 locais. Das 17h às 21h há maior chance de encontro e estrelas cadentes; a cor específica deste núcleo não foi anunciada.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -11074,14 +11074,14 @@
         "reason": "Evento global sem PokéStop exata confirmada."
       },
       "notes": [
-        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
-        "Capturar Minior rende mais Poeira Estelar; o anúncio não informa uma quantidade específica.",
-        "Das 17h às 21h locais, há maior chance de encontrar Minior e o céu do jogo fica iluminado por estrelas cadentes.",
-        "Minior pode não aparecer durante períodos de sobreposição com GO Wild Area Global, Horas em Destaque e outros eventos regionais; a Niantic não especifica uma janela de bloqueio exata.",
-        "Minior permanece na Forma Meteoro até os PS caírem abaixo de 50%; então revela o núcleo. A Forma Meteoro tem Defesa maior e Ataque menor; o Núcleo exposto tem Ataque maior e Defesa menor.",
+        "Janela oficial: 19/10 a 24/10/2026, das 17h às 23h59 locais.",
+        "Os sete núcleos são Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta. Uma cor estreia em cada chuva; uma cor estreia no Hemisfério Norte e outra no Hemisfério Sul. A publicação não associa cores específicas a cada janela.",
+        "Capturar Minior rende Poeira Estelar adicional; a publicação não informa a quantidade.",
+        "Das 17h às 21h locais, o céu do jogo fica iluminado por estrelas cadentes e há maior chance de encontrar Minior.",
+        "Minior pode não aparecer durante eventos sobrepostos, como GO Wild Area Global, Horas em Destaque e outros eventos regionais. A versão PT-BR diz que não aparecerá; a versão inglesa diz may not appear. Nenhuma das versões informa horas exatas de bloqueio.",
+        "Minior muda da Forma Meteoro quando os PS chegam a 50% ou menos, segundo a versão PT-BR; a versão em inglês diz abaixo de 50%. Na Forma Meteoro, tem Defesa maior e Ataque menor; com o núcleo exposto, Ataque maior e Defesa menor.",
         "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027.",
-        "A cor específica do núcleo das Oriônidas não foi anunciada."
+        "Oriônidas: a cor específica do núcleo que estreia nesta chuva não foi anunciada."
       ],
       "notifications": {
         "enabled": true,
@@ -11097,22 +11097,57 @@
       "pokemon": [
         {
           "name": "Minior (Forma Meteoro)",
-          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+          "note": "estreia do Pokémon no Pokémon GO; uma cor de núcleo estreia em cada chuva"
         }
       ],
       "news": {
         "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia na Forma Meteoro, rende mais Poeira Estelar por captura e ganha uma cor de núcleo em cada chuva. Das 17h às 21h locais há maior chance de encontro e estrelas cadentes; Minior pode não aparecer durante eventos sobrepostos.",
+        "summary": "Minior aparece na Forma Meteoro durante seis chuvas anuais: Oriônidas (19–24/10/2026), Leônidas (14–19/11/2026), Gemínidas (11–16/12/2026), Eta Aquáridas (03–08/05/2027), Delta Aquáridas do Sul (28/07–02/08/2027) e Perseidas (10–15/08/2027). Uma cor de núcleo estreia por chuva; das 17h às 21h locais há maior chance de encontro e estrelas cadentes.",
         "published_on": "2026-10-01",
         "window_label": "Orionidas • 10/2026"
       },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-11-13T03:56:42-03:00",
+      "audit": {
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+        "official_en_url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+        "official_article_says_annual_windows": true,
+        "annual_source_phrase_pt": "a cada ano",
+        "annual_source_phrase_en": "each year",
+        "next_occurrence_year": 2027,
+        "next_occurrence_basis": "As três janelas 2027 são as próximas ocorrências anuais das datas explicitamente listadas no anúncio, após as janelas de 2026.",
+        "core_colors": [
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Anil",
+          "Violeta"
+        ],
+        "one_core_color_debuts_each_shower": true,
+        "different_core_color_by_hemisphere": true,
+        "specific_color_by_shower_announced": false,
+        "language_differences": {
+          "form_change_threshold": {
+            "pt_BR": "50% ou menos",
+            "en": "below 50%"
+          },
+          "overlap_availability": {
+            "pt_BR": "não aparecerá",
+            "en": "may not appear"
+          },
+          "app_wording": "pode não aparecer"
+        },
+        "timezone_role": "A fonte determina horário local; America/Sao_Paulo é a referência de exibição pt-BR nos registros.",
+        "verified_at": "2026-11-13T03:56:42-03:00",
+        "no_specific_color_assignment": true
+      }
     },
     {
       "id": "2026-11-minior-leonids",
       "slug": "2026-11-minior-leonids",
       "title": "Minior: chuva de meteoros Leônidas",
-      "summary": "Minior aparece mais na natureza das 17h às 21h locais e rende mais Poeira Estelar por captura. O céu terá estrelas cadentes; encontros podem ser interrompidos por eventos sobrepostos.",
+      "summary": "Minior aparece na natureza de 14/11 a 19/11/2026, das 17h às 23h59 locais. Das 17h às 21h há maior chance de encontro e estrelas cadentes; a cor específica deste núcleo não foi anunciada.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -11145,14 +11180,14 @@
         "reason": "Evento global sem PokéStop exata confirmada."
       },
       "notes": [
-        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
-        "Capturar Minior rende mais Poeira Estelar; o anúncio não informa uma quantidade específica.",
-        "Das 17h às 21h locais, há maior chance de encontrar Minior e o céu do jogo fica iluminado por estrelas cadentes.",
-        "Minior pode não aparecer durante períodos de sobreposição com GO Wild Area Global, Horas em Destaque e outros eventos regionais; a Niantic não especifica uma janela de bloqueio exata.",
-        "Minior permanece na Forma Meteoro até os PS caírem abaixo de 50%; então revela o núcleo. A Forma Meteoro tem Defesa maior e Ataque menor; o Núcleo exposto tem Ataque maior e Defesa menor.",
+        "Janela oficial: 14/11 a 19/11/2026, das 17h às 23h59 locais.",
+        "Os sete núcleos são Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta. Uma cor estreia em cada chuva; uma cor estreia no Hemisfério Norte e outra no Hemisfério Sul. A publicação não associa cores específicas a cada janela.",
+        "Capturar Minior rende Poeira Estelar adicional; a publicação não informa a quantidade.",
+        "Das 17h às 21h locais, o céu do jogo fica iluminado por estrelas cadentes e há maior chance de encontrar Minior.",
+        "Minior pode não aparecer durante eventos sobrepostos, como GO Wild Area Global, Horas em Destaque e outros eventos regionais. A versão PT-BR diz que não aparecerá; a versão inglesa diz may not appear. Nenhuma das versões informa horas exatas de bloqueio.",
+        "Minior muda da Forma Meteoro quando os PS chegam a 50% ou menos, segundo a versão PT-BR; a versão em inglês diz abaixo de 50%. Na Forma Meteoro, tem Defesa maior e Ataque menor; com o núcleo exposto, Ataque maior e Defesa menor.",
         "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027.",
-        "A cor específica do núcleo das Leônidas não foi anunciada."
+        "Leônidas: a cor específica do núcleo que estreia nesta chuva não foi anunciada."
       ],
       "notifications": {
         "enabled": true,
@@ -11168,18 +11203,18 @@
       "pokemon": [
         {
           "name": "Minior (Forma Meteoro)",
-          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+          "note": "uma nova cor de núcleo estreia nesta chuva; cor específica não anunciada"
         }
       ],
       "news": {
         "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia na Forma Meteoro, rende mais Poeira Estelar por captura e ganha uma cor de núcleo em cada chuva. Das 17h às 21h locais há maior chance de encontro e estrelas cadentes; Minior pode não aparecer durante eventos sobrepostos.",
+        "summary": "Minior aparece na Forma Meteoro durante seis chuvas anuais: Oriônidas (19–24/10/2026), Leônidas (14–19/11/2026), Gemínidas (11–16/12/2026), Eta Aquáridas (03–08/05/2027), Delta Aquáridas do Sul (28/07–02/08/2027) e Perseidas (10–15/08/2027). Uma cor de núcleo estreia por chuva; das 17h às 21h locais há maior chance de encontro e estrelas cadentes.",
         "published_on": "2026-10-01",
         "window_label": "Leônidas • 11/2026"
       },
-      "updated_at": "2026-10-01T22:47:56Z",
+      "updated_at": "2026-11-13T03:56:42-03:00",
       "audit": {
-        "verified_at": "2026-11-13T03:45:00-03:00",
+        "verified_at": "2026-11-13T03:56:42-03:00",
         "official_pt_url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
         "official_en_url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
         "official_details_added": [
@@ -11198,14 +11233,44 @@
         },
         "specific_leonids_core_color_confirmed": false,
         "no_new_event_or_window": true,
-        "no_new_art": true
+        "no_new_art": true,
+        "official_article_says_annual_windows": true,
+        "annual_source_phrase_pt": "a cada ano",
+        "annual_source_phrase_en": "each year",
+        "next_occurrence_year": 2027,
+        "next_occurrence_basis": "As três janelas 2027 são as próximas ocorrências anuais das datas explicitamente listadas no anúncio, após as janelas de 2026.",
+        "core_colors": [
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Anil",
+          "Violeta"
+        ],
+        "one_core_color_debuts_each_shower": true,
+        "different_core_color_by_hemisphere": true,
+        "specific_color_by_shower_announced": false,
+        "language_differences": {
+          "form_change_threshold": {
+            "pt_BR": "50% ou menos",
+            "en": "below 50%"
+          },
+          "overlap_availability": {
+            "pt_BR": "não aparecerá",
+            "en": "may not appear"
+          },
+          "app_wording": "pode não aparecer"
+        },
+        "timezone_role": "A fonte determina horário local; America/Sao_Paulo é a referência de exibição pt-BR nos registros.",
+        "no_specific_color_assignment": true
       }
     },
     {
       "id": "2026-12-minior-geminids",
       "slug": "2026-12-minior-geminids",
       "title": "Minior: chuva de meteoros Geminidas",
-      "summary": "Minior aparece mais na natureza das 17h às 21h locais e rende mais Poeira Estelar por captura. O céu terá estrelas cadentes; encontros podem ser interrompidos por eventos sobrepostos.",
+      "summary": "Minior aparece na natureza de 11/12 a 16/12/2026, das 17h às 23h59 locais. Das 17h às 21h há maior chance de encontro e estrelas cadentes; a cor específica deste núcleo não foi anunciada.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -11238,15 +11303,14 @@
         "reason": "Evento global sem PokéStop exata confirmada."
       },
       "notes": [
-        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
-        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas.",
-        "Capturar Minior rende mais Poeira Estelar; o anúncio não informa uma quantidade específica.",
-        "Das 17h às 21h locais, há maior chance de encontrar Minior e o céu do jogo fica iluminado por estrelas cadentes.",
-        "Minior pode não aparecer durante períodos de sobreposição com GO Wild Area Global, Horas em Destaque e outros eventos regionais; a Niantic não especifica uma janela de bloqueio exata.",
-        "Minior permanece na Forma Meteoro até os PS caírem abaixo de 50%; então revela o núcleo. A Forma Meteoro tem Defesa maior e Ataque menor; o Núcleo exposto tem Ataque maior e Defesa menor.",
+        "Janela oficial: 11/12 a 16/12/2026, das 17h às 23h59 locais.",
+        "Os sete núcleos são Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta. Uma cor estreia em cada chuva; uma cor estreia no Hemisfério Norte e outra no Hemisfério Sul. A publicação não associa cores específicas a cada janela.",
+        "Capturar Minior rende Poeira Estelar adicional; a publicação não informa a quantidade.",
+        "Das 17h às 21h locais, o céu do jogo fica iluminado por estrelas cadentes e há maior chance de encontrar Minior.",
+        "Minior pode não aparecer durante eventos sobrepostos, como GO Wild Area Global, Horas em Destaque e outros eventos regionais. A versão PT-BR diz que não aparecerá; a versão inglesa diz may not appear. Nenhuma das versões informa horas exatas de bloqueio.",
+        "Minior muda da Forma Meteoro quando os PS chegam a 50% ou menos, segundo a versão PT-BR; a versão em inglês diz abaixo de 50%. Na Forma Meteoro, tem Defesa maior e Ataque menor; com o núcleo exposto, Ataque maior e Defesa menor.",
         "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027.",
-        "As Geminidas estreiam uma cor de núcleo no Hemisfério Norte e outra no Hemisfério Sul; as cores específicas não foram anunciadas."
+        "Gemínidas: a cor específica do núcleo que estreia nesta chuva não foi anunciada."
       ],
       "notifications": {
         "enabled": true,
@@ -11262,16 +11326,51 @@
       "pokemon": [
         {
           "name": "Minior (Forma Meteoro)",
-          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+          "note": "uma nova cor de núcleo estreia nesta chuva; cor específica não anunciada"
         }
       ],
       "news": {
         "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia na Forma Meteoro, rende mais Poeira Estelar por captura e ganha uma cor de núcleo em cada chuva. Das 17h às 21h locais há maior chance de encontro e estrelas cadentes; Minior pode não aparecer durante eventos sobrepostos.",
+        "summary": "Minior aparece na Forma Meteoro durante seis chuvas anuais: Oriônidas (19–24/10/2026), Leônidas (14–19/11/2026), Gemínidas (11–16/12/2026), Eta Aquáridas (03–08/05/2027), Delta Aquáridas do Sul (28/07–02/08/2027) e Perseidas (10–15/08/2027). Uma cor de núcleo estreia por chuva; das 17h às 21h locais há maior chance de encontro e estrelas cadentes.",
         "published_on": "2026-10-01",
         "window_label": "Geminidas • 12/2026"
       },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-11-13T03:56:42-03:00",
+      "audit": {
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+        "official_en_url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+        "official_article_says_annual_windows": true,
+        "annual_source_phrase_pt": "a cada ano",
+        "annual_source_phrase_en": "each year",
+        "next_occurrence_year": 2027,
+        "next_occurrence_basis": "As três janelas 2027 são as próximas ocorrências anuais das datas explicitamente listadas no anúncio, após as janelas de 2026.",
+        "core_colors": [
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Anil",
+          "Violeta"
+        ],
+        "one_core_color_debuts_each_shower": true,
+        "different_core_color_by_hemisphere": true,
+        "specific_color_by_shower_announced": false,
+        "language_differences": {
+          "form_change_threshold": {
+            "pt_BR": "50% ou menos",
+            "en": "below 50%"
+          },
+          "overlap_availability": {
+            "pt_BR": "não aparecerá",
+            "en": "may not appear"
+          },
+          "app_wording": "pode não aparecer"
+        },
+        "timezone_role": "A fonte determina horário local; America/Sao_Paulo é a referência de exibição pt-BR nos registros.",
+        "verified_at": "2026-11-13T03:56:42-03:00",
+        "no_specific_color_assignment": true
+      }
     },
     {
       "id": "2026-11-pokexciting-singapore",
@@ -15011,6 +15110,333 @@
         "official_article_found": false,
         "purchasable_and_level_reward_caps_kept_distinct": true,
         "regional_offer_variation_disclosed": true
+      }
+    },
+    {
+      "id": "2027-05-minior-eta-aquariids",
+      "slug": "2027-05-minior-eta-aquariids",
+      "title": "Minior: chuva de meteoros Eta Aquáridas",
+      "summary": "Minior na Forma Meteoro aparece na natureza de 03/05 a 08/05/2027, das 17h às 23h59 locais. Das 17h às 21h há maior chance de encontro e estrelas cadentes; a cor específica deste núcleo não foi anunciada.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Eta Aquáridas",
+        "Global",
+        "2027"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-05-03T17:00:00-03:00",
+        "end_local": "2027-05-08T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-05-03T17:00:00-03:00",
+        "end_brazil": "2027-05-08T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Janela oficial anual: 03/05 a 08/05/2027, das 17h às 23h59 locais.",
+        "Os sete núcleos são Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta. Uma cor estreia em cada chuva; uma cor estreia no Hemisfério Norte e outra no Hemisfério Sul. A publicação não associa cores específicas a cada janela.",
+        "Capturar Minior rende Poeira Estelar adicional; a publicação não informa a quantidade.",
+        "Das 17h às 21h locais, o céu do jogo fica iluminado por estrelas cadentes e há maior chance de encontrar Minior.",
+        "Minior pode não aparecer durante eventos sobrepostos, como GO Wild Area Global, Horas em Destaque e outros eventos regionais. A versão PT-BR diz que não aparecerá; a versão inglesa diz may not appear. Nenhuma das versões informa horas exatas de bloqueio.",
+        "Minior muda da Forma Meteoro quando os PS chegam a 50% ou menos, segundo a versão PT-BR; a versão em inglês diz abaixo de 50%. Na Forma Meteoro, tem Defesa maior e Ataque menor; com o núcleo exposto, Ataque maior e Defesa menor.",
+        "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027.",
+        "Eta Aquáridas: a cor específica do núcleo que estreia nesta chuva não foi anunciada."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "uma nova cor de núcleo estreia nesta chuva; cor específica não anunciada"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior aparece na Forma Meteoro durante seis chuvas anuais: Oriônidas (19–24/10/2026), Leônidas (14–19/11/2026), Gemínidas (11–16/12/2026), Eta Aquáridas (03–08/05/2027), Delta Aquáridas do Sul (28/07–02/08/2027) e Perseidas (10–15/08/2027). Uma cor de núcleo estreia por chuva; das 17h às 21h locais há maior chance de encontro e estrelas cadentes.",
+        "published_on": "2026-10-01",
+        "window_label": "Eta Aquáridas • 05/2027"
+      },
+      "updated_at": "2026-11-13T03:56:42-03:00",
+      "audit": {
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+        "official_en_url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+        "official_article_says_annual_windows": true,
+        "annual_source_phrase_pt": "a cada ano",
+        "annual_source_phrase_en": "each year",
+        "next_occurrence_year": 2027,
+        "next_occurrence_basis": "As três janelas 2027 são as próximas ocorrências anuais das datas explicitamente listadas no anúncio, após as janelas de 2026.",
+        "core_colors": [
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Anil",
+          "Violeta"
+        ],
+        "one_core_color_debuts_each_shower": true,
+        "different_core_color_by_hemisphere": true,
+        "specific_color_by_shower_announced": false,
+        "language_differences": {
+          "form_change_threshold": {
+            "pt_BR": "50% ou menos",
+            "en": "below 50%"
+          },
+          "overlap_availability": {
+            "pt_BR": "não aparecerá",
+            "en": "may not appear"
+          },
+          "app_wording": "pode não aparecer"
+        },
+        "timezone_role": "A fonte determina horário local; America/Sao_Paulo é a referência de exibição pt-BR nos registros.",
+        "verified_at": "2026-11-13T03:56:42-03:00",
+        "annual_window_source": true,
+        "no_new_art": true,
+        "no_gpx": true
+      }
+    },
+    {
+      "id": "2027-07-minior-southern-delta-aquariids",
+      "slug": "2027-07-minior-southern-delta-aquariids",
+      "title": "Minior: chuva de meteoros Delta Aquáridas do Sul",
+      "summary": "Minior na Forma Meteoro aparece na natureza de 28/07 a 02/08/2027, das 17h às 23h59 locais. Das 17h às 21h há maior chance de encontro e estrelas cadentes; a cor específica deste núcleo não foi anunciada.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Delta Aquáridas do Sul",
+        "Global",
+        "2027"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-07-28T17:00:00-03:00",
+        "end_local": "2027-08-02T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-07-28T17:00:00-03:00",
+        "end_brazil": "2027-08-02T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Janela oficial anual: 28/07 a 02/08/2027, das 17h às 23h59 locais.",
+        "Os sete núcleos são Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta. Uma cor estreia em cada chuva; uma cor estreia no Hemisfério Norte e outra no Hemisfério Sul. A publicação não associa cores específicas a cada janela.",
+        "Capturar Minior rende Poeira Estelar adicional; a publicação não informa a quantidade.",
+        "Das 17h às 21h locais, o céu do jogo fica iluminado por estrelas cadentes e há maior chance de encontrar Minior.",
+        "Minior pode não aparecer durante eventos sobrepostos, como GO Wild Area Global, Horas em Destaque e outros eventos regionais. A versão PT-BR diz que não aparecerá; a versão inglesa diz may not appear. Nenhuma das versões informa horas exatas de bloqueio.",
+        "Minior muda da Forma Meteoro quando os PS chegam a 50% ou menos, segundo a versão PT-BR; a versão em inglês diz abaixo de 50%. Na Forma Meteoro, tem Defesa maior e Ataque menor; com o núcleo exposto, Ataque maior e Defesa menor.",
+        "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027.",
+        "Delta Aquáridas do Sul: a cor específica do núcleo que estreia nesta chuva não foi anunciada."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "uma nova cor de núcleo estreia nesta chuva; cor específica não anunciada"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior aparece na Forma Meteoro durante seis chuvas anuais: Oriônidas (19–24/10/2026), Leônidas (14–19/11/2026), Gemínidas (11–16/12/2026), Eta Aquáridas (03–08/05/2027), Delta Aquáridas do Sul (28/07–02/08/2027) e Perseidas (10–15/08/2027). Uma cor de núcleo estreia por chuva; das 17h às 21h locais há maior chance de encontro e estrelas cadentes.",
+        "published_on": "2026-10-01",
+        "window_label": "Delta Aquáridas do Sul • 07–08/2027"
+      },
+      "updated_at": "2026-11-13T03:56:42-03:00",
+      "audit": {
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+        "official_en_url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+        "official_article_says_annual_windows": true,
+        "annual_source_phrase_pt": "a cada ano",
+        "annual_source_phrase_en": "each year",
+        "next_occurrence_year": 2027,
+        "next_occurrence_basis": "As três janelas 2027 são as próximas ocorrências anuais das datas explicitamente listadas no anúncio, após as janelas de 2026.",
+        "core_colors": [
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Anil",
+          "Violeta"
+        ],
+        "one_core_color_debuts_each_shower": true,
+        "different_core_color_by_hemisphere": true,
+        "specific_color_by_shower_announced": false,
+        "language_differences": {
+          "form_change_threshold": {
+            "pt_BR": "50% ou menos",
+            "en": "below 50%"
+          },
+          "overlap_availability": {
+            "pt_BR": "não aparecerá",
+            "en": "may not appear"
+          },
+          "app_wording": "pode não aparecer"
+        },
+        "timezone_role": "A fonte determina horário local; America/Sao_Paulo é a referência de exibição pt-BR nos registros.",
+        "verified_at": "2026-11-13T03:56:42-03:00",
+        "annual_window_source": true,
+        "no_new_art": true,
+        "no_gpx": true
+      }
+    },
+    {
+      "id": "2027-08-minior-perseids",
+      "slug": "2027-08-minior-perseids",
+      "title": "Minior: chuva de meteoros Perseidas",
+      "summary": "Minior na Forma Meteoro aparece na natureza de 10/08 a 15/08/2027, das 17h às 23h59 locais. Das 17h às 21h há maior chance de encontro e estrelas cadentes; a cor específica deste núcleo não foi anunciada.",
+      "category": "evento_especial",
+      "tags": [
+        "Minior",
+        "Perseidas",
+        "Global",
+        "2027"
+      ],
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-08-10T17:00:00-03:00",
+        "end_local": "2027-08-15T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-08-10T17:00:00-03:00",
+        "end_brazil": "2027-08-15T23:59:59-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Evento global sem PokéStop exata confirmada."
+      },
+      "notes": [
+        "Janela oficial anual: 10/08 a 15/08/2027, das 17h às 23h59 locais.",
+        "Os sete núcleos são Vermelho, Laranja, Amarelo, Verde, Azul, Anil e Violeta. Uma cor estreia em cada chuva; uma cor estreia no Hemisfério Norte e outra no Hemisfério Sul. A publicação não associa cores específicas a cada janela.",
+        "Capturar Minior rende Poeira Estelar adicional; a publicação não informa a quantidade.",
+        "Das 17h às 21h locais, o céu do jogo fica iluminado por estrelas cadentes e há maior chance de encontrar Minior.",
+        "Minior pode não aparecer durante eventos sobrepostos, como GO Wild Area Global, Horas em Destaque e outros eventos regionais. A versão PT-BR diz que não aparecerá; a versão inglesa diz may not appear. Nenhuma das versões informa horas exatas de bloqueio.",
+        "Minior muda da Forma Meteoro quando os PS chegam a 50% ou menos, segundo a versão PT-BR; a versão em inglês diz abaixo de 50%. Na Forma Meteoro, tem Defesa maior e Ataque menor; com o núcleo exposto, Ataque maior e Defesa menor.",
+        "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027.",
+        "Perseidas: a cor específica do núcleo que estreia nesta chuva não foi anunciada."
+      ],
+      "notifications": {
+        "enabled": true,
+        "default_lead_minutes": [
+          60
+        ]
+      },
+      "status": "published",
+      "bonuses": [
+        "Maior chance de encontrar Minior das 17h às 21h locais, com estrelas cadentes.",
+        "Mais Poeira Estelar por capturar Minior; quantidade não informada."
+      ],
+      "pokemon": [
+        {
+          "name": "Minior (Forma Meteoro)",
+          "note": "uma nova cor de núcleo estreia nesta chuva; cor específica não anunciada"
+        }
+      ],
+      "news": {
+        "title": "Minior chega com as chuvas de meteoros",
+        "summary": "Minior aparece na Forma Meteoro durante seis chuvas anuais: Oriônidas (19–24/10/2026), Leônidas (14–19/11/2026), Gemínidas (11–16/12/2026), Eta Aquáridas (03–08/05/2027), Delta Aquáridas do Sul (28/07–02/08/2027) e Perseidas (10–15/08/2027). Uma cor de núcleo estreia por chuva; das 17h às 21h locais há maior chance de encontro e estrelas cadentes.",
+        "published_on": "2026-10-01",
+        "window_label": "Perseidas • 08/2027"
+      },
+      "updated_at": "2026-11-13T03:56:42-03:00",
+      "audit": {
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+        "official_en_url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+        "official_article_says_annual_windows": true,
+        "annual_source_phrase_pt": "a cada ano",
+        "annual_source_phrase_en": "each year",
+        "next_occurrence_year": 2027,
+        "next_occurrence_basis": "As três janelas 2027 são as próximas ocorrências anuais das datas explicitamente listadas no anúncio, após as janelas de 2026.",
+        "core_colors": [
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Anil",
+          "Violeta"
+        ],
+        "one_core_color_debuts_each_shower": true,
+        "different_core_color_by_hemisphere": true,
+        "specific_color_by_shower_announced": false,
+        "language_differences": {
+          "form_change_threshold": {
+            "pt_BR": "50% ou menos",
+            "en": "below 50%"
+          },
+          "overlap_availability": {
+            "pt_BR": "não aparecerá",
+            "en": "may not appear"
+          },
+          "app_wording": "pode não aparecer"
+        },
+        "timezone_role": "A fonte determina horário local; America/Sao_Paulo é a referência de exibição pt-BR nos registros.",
+        "verified_at": "2026-11-13T03:56:42-03:00",
+        "annual_window_source": true,
+        "no_new_art": true,
+        "no_gpx": true
       }
     }
   ]
