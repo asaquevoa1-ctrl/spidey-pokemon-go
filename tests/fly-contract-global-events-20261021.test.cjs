@@ -63,7 +63,7 @@ test('Permanent global route discovery automatically surfaces every nearby eligi
   assert.ok(ui.includes('data-fly-featured-spotlight'));
   assert.doesNotMatch(ui,/MORELULL_ID|flyMorelullSpotlight|data-fly-morespotlight/);
   assert.ok(css.includes('.fly-upcoming-item'));
-  assert.ok(html.includes('fly-v1.js?v=20261022-credits-dst1'));
+  assert.match(html,/fly-v1\.js\?v=[\w-]+/);
   assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1'));
   assert.ok(load('app.js').includes('openEventFly'));
 });

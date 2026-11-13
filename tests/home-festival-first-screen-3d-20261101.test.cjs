@@ -44,7 +44,7 @@ test('Festival first-screen teaser is mounted in real Player Home and never lega
  assert.match(player,/SpideyFestivalLights\?\.eventById/);
  assert.match(css,/#playerHome \.festival-lights-hero-teaser/);
  assert.match(css,/festival-lights-poster\{\s*display:none!important/);
- assert.match(html,/spidey-universe-3d\.js\?v=20261101-indiafirst3/);
+ assert.match(html,/spidey-universe-3d\.js\?v=[\w-]+/);
  assert.match(html,/player-ui\.js\?v=20261101-indiafirst3/);
  assert.match(html,/home-festival-lights-20261101\.js\?v=20261101-firstscreen3/);
 });

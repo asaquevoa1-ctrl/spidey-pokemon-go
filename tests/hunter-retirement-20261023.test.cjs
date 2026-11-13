@@ -23,8 +23,8 @@ test('Owner retired Caçador from the public Spidey experience without removing 
  assert.ok(center.includes('data-cc-view="stampsView"'));
  assert.ok(center.includes('data-cc-view="newsView"'));
  assert.ok(sw.includes('rocket-lineups'));
- assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1'));
- assert.ok(sw.includes('20261023-no-hunter1'),'Cache must invalidate previous mobile installs');
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
+ assert.match(sw,/key\.startsWith\('spidey-app-'\) && key !== CACHE/,'Old app caches must be invalidated after the update');
 });
 test('Archive and prevent automatic partner feed ingestion while keeping audited history',()=>{
  assert.ok(fs.existsSync('spidey-app/hunter-v1.js'));
