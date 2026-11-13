@@ -8666,7 +8666,7 @@
       "id": "2026-11-max-mondays-community-outlook",
       "slug": "2026-11-max-mondays-community-outlook",
       "title": "Max Mondays de novembro: programação comunitária",
-      "summary": "Leek Duck relata que Dynamax Espurr pode aparecer em Batalhas Max de 23 a 29/11 e Dynamax Cryogonal de 30/11 a 06/12; as atrações e janelas são comunitárias, sem confirmação oficial. Em 16/11, a espécie ainda não foi anunciada.",
+      "summary": "Leek Duck relata que a semana de 16–23/11 ainda não tem espécie Dynamax anunciada, Dynamax Espurr pode aparecer em Batalhas Max de 23 a 29/11 e Dynamax Cryogonal de 30/11 a 06/12. Tudo é informação comunitária, sem confirmação oficial.",
       "category": "max_monday",
       "tags": [
         "Max Monday",
@@ -8694,11 +8694,11 @@
         "reason": "Pista comunitária sem evento confirmado; nenhuma rota ou coordenada foi adicionada."
       },
       "notes": [
-        "16/11 — Leek Duck lista Max Monday, mas informa que o Pokémon em destaque ainda não foi anunciado.",
-        "23/11 — Leek Duck indica Dynamax Espurr em Max Battles de 23 a 29/11; é uma informação comunitária, não confirmada oficialmente.",
-        "30/11 — Leek Duck indica Dynamax Cryogonal em Max Battles de 30/11 a 06/12; é uma informação comunitária, não confirmada oficialmente.",
-        "As páginas de Leek Duck indicam 06h–21h locais para as Segundas Max, com Pontos de Energia renovando mais frequentemente e mais Pontos ativos às segundas; esses detalhes permanecem comunitários.",
-        "Não foi encontrado anúncio oficial Niantic/Scopely para confirmar as espécies, as janelas semanais ou os detalhes de Pontos de Energia. A notícia permanece em Novidades, sem schedule e sem evento no Calendário."
+        "16–23/11 — Leek Duck informa que o Pokémon Dynamax em destaque para essa semana ainda não foi anunciado; a janela da Max Monday de 16/11 é indicada como 06h–21h local.",
+        "23/11 — Leek Duck indica que Dynamax Espurr pode aparecer em Batalhas Max de 23 a 29/11; informação comunitária, não confirmada oficialmente.",
+        "30/11 — Leek Duck indica que Dynamax Cryogonal pode aparecer em Batalhas Max de 30/11 a 06/12; informação comunitária, não confirmada oficialmente.",
+        "As páginas comunitárias indicam 06h–21h locais para as Segundas Max, com Pontos de Energia renovando mais frequentemente e mais Pontos ativos às segundas; esses detalhes não foram confirmados pela Niantic/Scopely.",
+        "Não foi encontrado anúncio oficial para confirmar espécies, janelas semanais ou mecânicas de Pontos de Energia. A notícia permanece em Novidades, sem schedule e sem evento no Calendário."
       ],
       "notifications": {
         "enabled": false
@@ -8707,7 +8707,7 @@
       "updated_at": "2026-11-13T03:56:42-03:00",
       "news": {
         "title": "Max Mondays de novembro: programação comunitária a confirmar",
-        "summary": "Leek Duck lista 16/11 sem espécie anunciada, 23/11 com possível Dynamax Espurr em Batalhas Max até 29/11 e 30/11 com possível Dynamax Cryogonal até 06/12. A programação é comunitária, não confirmada oficialmente e não entra no Calendário.",
+        "summary": "Leek Duck informa que a espécie da semana 16–23/11 ainda não foi anunciada; Dynamax Espurr pode aparecer em Batalhas Max de 23–29/11 e Dynamax Cryogonal de 30/11–06/12. As páginas também relatam Max Battles das 06h às 21h locais às segundas e mudanças nos Pontos de Energia. Conteúdo comunitário, sem confirmação oficial e sem entrada no Calendário.",
         "published_on": "2026-11-13",
         "label": "COMUNIDADE • A CONFIRMAR"
       },
@@ -8731,6 +8731,14 @@
         "no_new_art": true,
         "full_text_review_completed": true,
         "community_max_battle_windows": [
+          {
+            "date": "2026-11-16",
+            "pokemon": null,
+            "possible_from": "2026-11-16",
+            "possible_through": "2026-11-23",
+            "classification": "community_unconfirmed",
+            "featured_pokemon_announced": false
+          },
           {
             "date": "2026-11-23",
             "pokemon": "Dynamax Espurr",
