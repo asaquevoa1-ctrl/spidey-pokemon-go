@@ -19,8 +19,9 @@
   // several calendar windows; community calendar links do not merge events.
   // A temporary news-only announcement may expire with its related event windows.
   // Evergreen notices and permanent route announcements remain visible unless
-  // explicitly opted in. Missing, unpublished, undated or date-only references
-  // fail open: never invent an end time.
+  // explicitly opted in. Missing, unpublished or invalid references fail open.
+  // Valid date-only references use the first instant after the last local day
+  // in the event IANA timezone; their end is exclusive just like timed windows.
   function relatedNewsHasLiveWindow(event,byId,range,now){
     if(event.news?.expire_when_related_windows_end!==true)return true;
     const ids=Array.isArray(event.related_event_ids)?event.related_event_ids:
@@ -28,7 +29,6 @@
     if(!ids.length)return true;
     const related=ids.map(id=>byId.get(id));
     if(related.some(item=>!item||item.status!=='published'))return true;
-    if(related.some(item=>item.schedule?.precision==='date'))return true;
     const windows=related.map(item=>range(item));
     if(windows.some(dates=>!dates?.start||!dates?.end))return true;
     return windows.some(dates=>dates.end>now);
@@ -41,7 +41,7 @@
       if(event.status!=='published'||!key)continue;
       if(newsOnly){
         if(!relatedNewsHasLiveWindow(event,byId,range,now))continue;
-      }else if(!dates?.start||!dates?.end||dates.end<now)continue;
+      }else if(!dates?.start||!dates?.end||dates.end<=now)continue;
       if(!groups.has(key))groups.set(key,{key,events:[]});
       groups.get(key).events.push(event);
     }
