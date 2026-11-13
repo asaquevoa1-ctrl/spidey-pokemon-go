@@ -1,0 +1,66 @@
+{
+  "audit_id": "g47ix-wild-area-global-duplicates-20261113",
+  "base_main_sha": "e9c738e7adfffc29e2930055a0c214b13f4211b4",
+  "base_pr_branch_sha": "8d6ad07dcdcd15b16e4d736bb2ae27c903d3f971",
+  "reviewed_at": "2026-11-13T12:29:05-03:00",
+  "official_sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/gowildarea/global",
+    "https://pokemongo.com/en/gowildarea/global"
+  ],
+  "community_posts": [
+    {
+      "id": "g47ix-2121166194296361412",
+      "url": "https://x.com/g47ix/status/2121166194296361412",
+      "result": "grouped_without_new_claims",
+      "officially_confirmed": [
+        "Dialga Dynamax on Saturday 2026-11-14",
+        "Shiny possible",
+        "Special Background chance"
+      ],
+      "not_adopted": [
+        "five-star Max Battle tier"
+      ],
+      "reason": "The official article does not state a five-star tier for Dialga."
+    },
+    {
+      "id": "g47ix-2121241686537809986",
+      "url": "https://x.com/g47ix/status/2121241686537809986",
+      "result": "grouped_without_new_claims",
+      "officially_confirmed": [
+        "Gigantamax Duraludon in six-star Max Battles on both event days",
+        "Shiny possible",
+        "Special Background chance"
+      ],
+      "reason": "The official article confirms the six-star tier and event dates."
+    },
+    {
+      "id": "g47ix-2121219832943452482",
+      "url": "https://x.com/g47ix/status/2121219832943452482",
+      "result": "no_public_story",
+      "reason": "The collector text contains only a generic shiny claim and no species list or independent detail."
+    }
+  ],
+  "source_access": {
+    "x_full_pages_read": false,
+    "reason": "The public web reader returned DisabledError for all three X URLs; raw collector payloads were read in full. No claim was based on unseen media."
+  },
+  "grouping": {
+    "canonical_story_id": "2026-11-go-wild-area-global",
+    "new_event_ids": [],
+    "new_news_stories": 0,
+    "art_requests": 0
+  },
+  "preservation": {
+    "raw_collector_text_preserved": true,
+    "approved_art_changed": false,
+    "gpx_or_coordinates_changed": false,
+    "push_dispatched": false,
+    "third_party_messages_sent": false,
+    "android_physical_test_claimed": false
+  },
+  "validation": {
+    "test": "tests/collector-curation-20261112.test.cjs",
+    "execution": "pending GitHub Actions on updated PR #289 head",
+    "merge": "not attempted; PR branch diverges from current main"
+  }
+}
