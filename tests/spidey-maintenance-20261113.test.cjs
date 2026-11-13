@@ -183,3 +183,16 @@ test('publicador oficial usa releases Node 24 e evita actions com runtime Node 2
   assert.match(pages, /uses:\s*actions\/deploy-pages@v5\b/);
   assert.doesNotMatch(pages, /actions\/(?:setup-python@v5|setup-node@v4|upload-pages-artifact@v3|configure-pages@v5|deploy-pages@v4)\b/);
 });
+
+test('atualização PvPoke dispara o publicador oficial somente após gravar dados novos', () => {
+  const pvpoke = read('.github/workflows/spidey-pvpoke.yml');
+  assert.match(pvpoke, /permissions:\s*\n\s*contents:\s*write\s*\n\s*actions:\s*write/m);
+  assert.match(pvpoke, /actions\/setup-python@v6/);
+  assert.match(pvpoke, /GH_TOKEN:\s*\$\{\{\s*github\.token\s*\}\}/);
+  assert.match(pvpoke, /GH_REPOSITORY:\s*\$\{\{\s*github\.repository\s*\}\}/);
+  const noChange = pvpoke.indexOf('if git diff --cached --quiet; then');
+  const push = pvpoke.indexOf('git push origin HEAD:main');
+  const dispatch = pvpoke.indexOf('gh api -X POST "repos/${GH_REPOSITORY}/actions/workflows/spidey-pages.yml/dispatches" -f ref=main');
+  assert.ok(noChange >= 0 && push > noChange && dispatch > push,
+    'O Pages só pode ser acionado depois de um commit PvP novo e do push para main');
+});
