@@ -525,6 +525,8 @@
 
     renderGallery();
     renderActive();
+    // Coordenadas comunitárias dos rallies com ingresso ficam dentro da coleção oficial correspondente.
+    window.SpideyTicketRallyCommunity?.render(detail, rally);
     showAppDialog();
   };
 })();

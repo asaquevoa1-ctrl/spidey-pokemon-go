@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: spidey-app-content-writer
@@ -43,6 +44,7 @@ jobs:
           set -euo pipefail
           python -m py_compile scripts/app_auto_publish_v2.py scripts/test_app_auto_publish.py
           python -m scripts.test_app_auto_publish
+          node --test tests/spidey-maintenance-20261113.test.cjs tests/fly-user-list-20261031.test.cjs
           python -m json.tool spidey-app/data/events.json >/dev/null
           python -m json.tool spidey-app/data/stamps.json >/dev/null
 
@@ -67,6 +69,9 @@ jobs:
 
       - name: Gravar resultado
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -84,3 +89,6 @@ jobs:
           git commit -m "$MSG"
           git pull --rebase origin main
           git push origin HEAD:main
+          # GITHUB_TOKEN não dispara workflows por evento push; solicitar o deploy oficial somente após um commit de conteúdo.
+          gh workflow run spidey-pages.yml --ref main --repo "$GH_REPO"
+          echo "Publicação oficial do GitHub Pages solicitada para o HEAD de main."

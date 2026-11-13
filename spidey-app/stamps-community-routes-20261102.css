@@ -112,3 +112,78 @@ html[data-theme='light'] #stampsView .stamp-community-disclaimer :is(strong,a){c
 html[data-theme='light'] #stampsView .stamp-community-visual figcaption{
   background:linear-gradient(140deg,#2b4051,#253345)
 }
+
+
+/* Coordenadas dos rallies com ingresso integradas ao detalhe da coleção oficial. */
+#eventDetail .ticket-rally-inline {
+  min-width:0;margin:18px 0 0;padding:clamp(13px,2vw,18px);
+  border:1px solid rgba(232,198,138,.27);border-top:2px solid rgba(232,198,138,.55);
+  border-radius:16px;background:linear-gradient(145deg,#232c39,#171f2d 78%);
+  color:#f4f0e8;box-shadow:0 12px 26px rgba(0,0,0,.14);
+}
+#eventDetail .ticket-rally-inline .eyebrow {
+  color:#e8c68a;font-size:.64rem;font-weight:850;letter-spacing:.11em;
+}
+#eventDetail .ticket-rally-inline h3 {
+  margin:6px 0 8px;color:#f9f3e6;font-size:1.05rem;line-height:1.25;
+}
+#eventDetail .ticket-rally-inline p {
+  margin:0;color:#cdd6df;font-size:.79rem;line-height:1.55;
+}
+#eventDetail .ticket-rally-inline-details {
+  margin-top:12px;border-top:1px solid rgba(232,198,138,.16);padding-top:10px;
+}
+#eventDetail .ticket-rally-inline-details > summary {
+  color:#f1d49d;font-size:.82rem;font-weight:850;cursor:pointer;
+}
+#eventDetail .ticket-rally-inline-points {
+  list-style:none;display:grid;gap:6px;margin:12px 0;padding:0;
+}
+#eventDetail .ticket-rally-inline-points li {
+  min-width:0;display:grid;grid-template-columns:22px minmax(0,1fr) auto auto;
+  align-items:center;gap:7px;padding:8px;border:1px solid rgba(255,255,255,.09);
+  border-radius:10px;background:rgba(8,18,29,.33);
+}
+#eventDetail .ticket-rally-inline-points li > span {
+  color:#e9c98d;font-size:.74rem;font-weight:850;text-align:center;
+}
+#eventDetail .ticket-rally-inline-points code {
+  min-width:0;color:#edf0f3;white-space:nowrap;overflow:auto;
+  font-size:clamp(.7rem,1.5vw,.8rem);font-variant-numeric:tabular-nums;
+}
+#eventDetail .ticket-rally-inline-points :is(button,a) {
+  display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:7px 9px;
+  color:#f1dfbe;border:1px solid rgba(226,193,139,.28);border-radius:8px;
+  font:inherit;font-size:.7rem;font-weight:780;text-decoration:none;
+  background:rgba(232,198,138,.06);cursor:pointer;
+}
+#eventDetail .ticket-rally-inline-copy-all {
+  width:100%;min-height:44px;border-radius:11px;font-weight:850;
+}
+#eventDetail .ticket-rally-inline :is(button,a,summary):focus-visible {
+  outline:3px solid #e8c68a;outline-offset:3px;
+}
+@media(max-width:480px) {
+  #eventDetail .ticket-rally-inline-points li {
+    grid-template-columns:22px repeat(2,minmax(0,1fr));
+    grid-template-areas:'number coord coord' '. copy map';gap:6px;
+  }
+  #eventDetail .ticket-rally-inline-points li > span {grid-area:number;}
+  #eventDetail .ticket-rally-inline-points code {grid-area:coord;font-size:.82rem;}
+  #eventDetail .ticket-rally-inline-points button {grid-area:copy;}
+  #eventDetail .ticket-rally-inline-points a {grid-area:map;}
+}
+@media(prefers-reduced-motion:reduce) {
+  #eventDetail .ticket-rally-inline * {transition:none!important;scroll-behavior:auto!important;}
+}
+html[data-theme='light'] #eventDetail .ticket-rally-inline {
+  background:linear-gradient(145deg,#f7f0e5,#e8ebef);border-color:#c4af86;color:#263542;
+}
+html[data-theme='light'] #eventDetail .ticket-rally-inline h3 {color:#263542;}
+html[data-theme='light'] #eventDetail .ticket-rally-inline p {color:#4f5b67;}
+html[data-theme='light'] #eventDetail .ticket-rally-inline-details > summary {color:#6c4e1d;}
+html[data-theme='light'] #eventDetail .ticket-rally-inline-points li {background:#ffffffba;border-color:#d4c9b3;}
+html[data-theme='light'] #eventDetail .ticket-rally-inline-points code {color:#233243;}
+html[data-theme='light'] #eventDetail .ticket-rally-inline-points :is(button,a) {
+  color:#654d24;background:#fcf6eb;border-color:#c6af7f;
+}
