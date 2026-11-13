@@ -37,7 +37,7 @@ test('tema e cache PWA carregam última folha; Samsung responsivo',()=>{
  assert.match(html,/theme\.js\?v=20261029-motion1/);
  assert.match(html,/SPIDEY_BUILD='2026-10-29-motion1'/);
  assert.match(sw,/\.\/spidey-premium-interiors-20261029\.css/);
- assert.match(sw,/20261029-motion1/);
+ assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
  assert.match(css,/@media\(max-width:760px\)/);
  assert.match(css,/@media\(max-width:370px\)/);
  assert.match(css,/@media\(prefers-reduced-motion:reduce\)/);

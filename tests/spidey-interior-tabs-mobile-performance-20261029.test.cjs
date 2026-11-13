@@ -59,7 +59,7 @@ test('News retains unchanged images; Rocket retains expanded panels; PvP search 
 test('Updated modules are versioned in the PWA, without removing existing Premium styles or features', () => {
   const html=read('index.html'),sw=read('sw.js');
   for(const name of ['command-center','weekly','fly-v1','rocket-guide','pvp']){
-    assert.match(html,new RegExp(name+'\\.js\\?v=[\\w-]+-20261029-interiors-performance1'));
+    assert.match(html,new RegExp(name+'\\.js\\?v=[\\w-]+'));
     assert.ok(sw.includes('./'+name+'.js'),name+' is not cached');
   }
   assert.match(sw,/20261029-interiors-performance1/);

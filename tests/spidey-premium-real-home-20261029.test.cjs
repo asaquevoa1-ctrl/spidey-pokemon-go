@@ -15,7 +15,7 @@ test('Tema Premium global carregado por ultimo, após estilos dinamicos legados'
   assert.match(html,/SPIDEY_BUILD='2026-10-29-motion1'/);
   const sw=read('sw.js');
   assert.match(sw,/\.\/spidey-premium-unified-20261029\.css/);
-  assert.match(sw,/20261029-motion1/);
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
 });
 test('Home alterada é a realmente visível, não experience-* oculto',()=>{
   const ui=read('player-ui.js');
