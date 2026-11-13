@@ -97,7 +97,7 @@ test('notícias evergreen sem janela relacionada continuam visíveis', () => {
 test('versão do módulo de Novidades invalida o cache PWA após a correção', () => {
   const index = fs.readFileSync(path.join(root, 'spidey-app/index.html'), 'utf8');
   const sw = fs.readFileSync(path.join(root, 'spidey-app/sw.js'), 'utf8');
-  assert.match(index, /news-feed\\.js\\?v=20261113-news-expiry1/);
-  assert.match(sw, /const CACHE = 'spidey-app-20261113-news-expiry1'/);
-  assert.match(sw, /['"]\\.\\/news-feed\\.js['"]/);
+  assert.ok(index.includes('news-feed.js?v=20261113-news-expiry1'));
+  assert.ok(sw.includes("const CACHE = 'spidey-app-20261113-news-expiry1'"));
+  assert.ok(sw.includes("'./news-feed.js'"));
 });
