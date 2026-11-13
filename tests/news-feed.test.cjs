@@ -106,3 +106,4 @@ test('curated 24 October guide stays separate from official Dynamax announcement
  assert.equal(guide[0].events.length,1,'guide stays a standalone editorial story');
  assert.ok(guide[0].event.source.url.startsWith('https://pokemongo.com/news/'));
 });
+
