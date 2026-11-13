@@ -1,7 +1,7 @@
 {
   "task": "spidey-editorial-curation",
   "date": "2026-11-13",
-  "base_main_sha": "1a459f02950c3cf365922f9d4f85002f2cd06da5",
+  "base_main_sha": "db972c78dbc2aee28cb8b54b4854cd044232433d",
   "source": {
     "official_pt": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
     "official_en": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
@@ -16,15 +16,17 @@
     "Poeira Estelar adicional sem quantidade",
     "estrelas cadentes e maior chance 17h–21h locais",
     "ressalva de sobreposição com GO Wild Area Global, Horas em Destaque e eventos regionais",
-    "mudança de forma abaixo de 50% dos PS",
+    "mudança de forma: PT-BR 50% ou menos; EN abaixo de 50%",
     "contextos iniciais de batalha para mudança de forma",
-    "não elegível ao LAIC 2027"
+    "não elegível ao LAIC 2027",
+    "sete cores de núcleo e estreia de uma cor por chuva, com uma cor por hemisfério",
+    "três próximas janelas anuais oficiais em 2027: Eta Aquáridas, Delta Aquáridas do Sul e Perseidas"
   ],
   "details_not_invented": [
     "quantidade de Poeira Estelar",
-    "cor específica das Leônidas",
+    "cor específica por chuva",
     "horário de bloqueio durante sobreposições",
-    "novas datas ou janelas"
+    "Poképaradas, Ginásios, coordenadas ou GPX"
   ],
   "collector_item": {
     "source_id": "g47ix-2120984983892586580",
@@ -41,16 +43,32 @@
     "new_public_story": false
   },
   "constraints": {
-    "no_new_event": true,
-    "no_new_window": true,
+    "official_future_windows_added": true,
+    "no_specific_color_assignment": true,
     "no_art_generated": true,
     "no_approved_art_replaced": true,
     "no_gpx": true,
-    "no_push": true,
+    "no_push_dispatched": true,
     "no_physical_android_test": true
   },
   "publication": {
     "status": "PR pending",
-    "main_sha": "1a459f02950c3cf365922f9d4f85002f2cd06da5"
+    "main_sha": "db972c78dbc2aee28cb8b54b4854cd044232433d"
+  },
+  "new_official_annual_window_ids": [
+    "2027-05-minior-eta-aquariids",
+    "2027-07-minior-southern-delta-aquariids",
+    "2027-08-minior-perseids"
+  ],
+  "language_differences": {
+    "form_change_threshold": {
+      "pt_BR": "50% ou menos",
+      "en": "below 50%"
+    },
+    "overlap_availability": {
+      "pt_BR": "não aparecerá",
+      "en": "may not appear"
+    },
+    "app_wording": "pode não aparecer"
   }
 }
