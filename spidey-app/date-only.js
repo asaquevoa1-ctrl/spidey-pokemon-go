@@ -1,58 +1,86 @@
 (() => {
   'use strict';
+  // Date-only entries cover complete calendar days in their own IANA timezone.
+  // End is exclusive: the first instant after the final local day.
+  const formatterCache = new Map();
+  const dayStartCache = new Map();
+  const boundsCache = new Map();
+  function formatter(timeZone) {
+    if (!formatterCache.has(timeZone)) formatterCache.set(timeZone, new Intl.DateTimeFormat('en-US', {
+      timeZone, calendar: 'gregory', numberingSystem: 'latn',
+      year: 'numeric', month: '2-digit', day: '2-digit'
+    }));
+    return formatterCache.get(timeZone);
+  }
+  function partsObject(parts) {
+    return Object.fromEntries(parts.filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
+  }
   function valid(event) {
-    const s = event && event.schedule;
-    if (!s || s.precision !== 'date' || !/^\d{4}-\d{2}-\d{2}$/.test(s.start_date || '') || !/^\d{4}-\d{2}-\d{2}$/.test(s.end_date || '') || s.end_date < s.start_date) return false;
-    if (!s.local_timezone && !s.timezone) return false;
+    const s = event?.schedule;
+    if (s?.precision !== 'date' || !/^\d{4}-\d{2}-\d{2}$/.test(s.start_date || '') || !/^\d{4}-\d{2}-\d{2}$/.test(s.end_date || '') || s.end_date < s.start_date) return false;
+    const zone = s.local_timezone || s.timezone;
+    if (!zone) return false;
     for (const value of [s.start_date, s.end_date]) {
       const date = new Date(value + 'T12:00:00Z');
       if (!Number.isFinite(+date) || date.toISOString().slice(0, 10) !== value) return false;
     }
-    try { new Intl.DateTimeFormat('en-CA', {timeZone: s.local_timezone || s.timezone}).format(); return true; } catch (_) { return false; }
+    try { formatter(zone).format(new Date()); return true; } catch { return false; }
   }
-  function formatter(zone) {
-    return new Intl.DateTimeFormat('en-CA', {timeZone: zone, year: 'numeric', month: '2-digit', day: '2-digit'});
+  function localDay(event, now = new Date()) {
+    const s = event.schedule, zone = s.local_timezone || s.timezone;
+    const p = partsObject(formatter(zone).formatToParts(now));
+    return p.year + '-' + p.month + '-' + p.day;
   }
-  function formattedDay(date, fmt) {
-    const parts = Object.fromEntries(fmt.formatToParts(date).filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
-    return parts.year + '-' + parts.month + '-' + parts.day;
-  }
-  function addDays(value, amount) {
+  function nextDate(value) {
     const date = new Date(value + 'T12:00:00Z');
-    date.setUTCDate(date.getUTCDate() + amount);
+    date.setUTCDate(date.getUTCDate() + 1);
     return date.toISOString().slice(0, 10);
   }
-  function firstInstantOfLocalDay(value, zone) {
-    const pieces = value.split('-').map(Number);
-    const center = Date.UTC(pieces[0], pieces[1] - 1, pieces[2], 12, 0, 0, 0);
-    let low = center - 48 * 60 * 60 * 1000;
-    let high = center + 48 * 60 * 60 * 1000;
-    const fmt = formatter(zone);
-    const dayAt = ms => formattedDay(new Date(ms), fmt);
-    if (dayAt(low) >= value || dayAt(high) < value) return null;
-    while (high - low > 1) {
-      const mid = low + Math.floor((high - low) / 2);
-      if (dayAt(mid) >= value) high = mid;
-      else low = mid;
+  function localDateKey(instant, timeZone) {
+    const p = partsObject(formatter(timeZone).formatToParts(instant));
+    return p.year + '-' + p.month + '-' + p.day;
+  }
+  function firstInstantOfLocalDay(value, timeZone) {
+    const cacheKey = timeZone + '|' + value;
+    if (dayStartCache.has(cacheKey)) {
+      const cached = dayStartCache.get(cacheKey);
+      return cached === null ? null : new Date(cached);
     }
-    return dayAt(high) === value ? new Date(high) : null;
+    const [year, month, day] = value.split('-').map(Number);
+    const target = Date.UTC(year, month - 1, day);
+    let low = target - 36 * 60 * 60 * 1000;
+    let high = target + 36 * 60 * 60 * 1000;
+    for (let attempt = 0; attempt < 64 && low < high; attempt++) {
+      const middle = Math.floor((low + high) / 2);
+      if (localDateKey(new Date(middle), timeZone) < value) low = middle + 1;
+      else high = middle;
+    }
+    const result = new Date(low);
+    const timestamp = localDateKey(result, timeZone) === value ? result.getTime() : null;
+    dayStartCache.set(cacheKey, timestamp);
+    return timestamp === null ? null : new Date(timestamp);
   }
-  function localDay(event, now) {
-    const s = event.schedule;
-    return formattedDay(now || new Date(), formatter(s.local_timezone || s.timezone));
+  function bounds(event) {
+    if (!valid(event)) return {start: null, end: null};
+    const s = event.schedule, zone = s.local_timezone || s.timezone;
+    const cacheKey = zone + '|' + s.start_date + '|' + s.end_date;
+    if (boundsCache.has(cacheKey)) {
+      const cached = boundsCache.get(cacheKey);
+      return cached ? {start: new Date(cached.start), end: new Date(cached.end), dateOnly: true} : {start: null, end: null};
+    }
+    const start = firstInstantOfLocalDay(s.start_date, zone);
+    const end = firstInstantOfLocalDay(nextDate(s.end_date), zone);
+    if (!start || !end || end <= start) {
+      boundsCache.set(cacheKey, null);
+      return {start: null, end: null};
+    }
+    boundsCache.set(cacheKey, {start: start.getTime(), end: end.getTime()});
+    return {start, end, dateOnly: true};
   }
-  function status(event, now) {
+  function status(event, now = new Date()) {
     if (!valid(event)) return 'Horário a confirmar';
     const today = localDay(event, now), s = event.schedule;
     return today < s.start_date ? 'Data confirmada · horário a confirmar' : today > s.end_date ? 'Data encerrada' : 'Hoje · horário a confirmar';
-  }
-  function bounds(event) {
-    if (!valid(event)) return {start: null, end: null, dateOnly: true};
-    const s = event.schedule, zone = s.local_timezone || s.timezone;
-    const start = firstInstantOfLocalDay(s.start_date, zone);
-    const end = firstInstantOfLocalDay(addDays(s.end_date, 1), zone);
-    if (!start || !end) return {start: null, end: null, dateOnly: true};
-    return {start: start, end: end, dateOnly: true};
   }
   function label(event) {
     if (!valid(event)) return 'Horário a confirmar';
