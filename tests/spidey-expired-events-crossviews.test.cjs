@@ -104,3 +104,30 @@ test('Into the Wild and Mexico City leave current surfaces at their exact local 
   assert.equal(visible(mexico,new Date('2026-11-08T18:00:00-06:00')),false);
   assert.equal(newsApi.build([mexico],newsRange,new Date('2026-11-13T02:59:11-03:00')).length,0);
 });
+
+
+test('GO Pass, Boston and TCG claim windows expire at their exact local boundaries', () => {
+  const noCap = events.find(e => e.id === '2026-11-go-pass-groudon-unlimited-points');
+  assert.equal(visible(noCap,new Date('2026-11-28T00:00:00-03:00')),true);
+  assert.equal(visible(noCap,new Date('2026-11-29T23:58:59-03:00')),true);
+  assert.equal(visible(noCap,new Date('2026-11-29T23:59:01-03:00')),false);
+
+  const goClaim = events.find(e => e.id === '2026-11-go-pass-groudon-claim-window');
+  assert.equal(visible(goClaim,new Date('2026-12-01T10:00:00-03:00')),true);
+  assert.equal(visible(goClaim,new Date('2026-12-03T10:00:00-03:00')),false);
+
+  const boston = events.find(e => e.id === '2026-10-city-safari-boston-research-claim-window');
+  assert.equal(visible(boston,new Date('2028-10-23T23:59:59-04:00')),true);
+  assert.equal(visible(boston,new Date('2028-10-24T00:00:00-04:00')),false);
+
+  const tcg = events.find(e => e.id === '2026-09-tcg-30th-research-claim-deadline');
+  assert.equal(visible(tcg,new Date('2026-11-20T21:59:59.999-03:00')),true);
+  assert.equal(visible(tcg,new Date('2026-11-20T22:00:00-03:00')),false);
+
+  const goParent = events.find(e => e.id === '2026-11-go-pass-groudon');
+  assert.equal(newsApi.build([goParent,noCap,goClaim],newsRange,new Date('2026-11-13T02:59:11-03:00')).length,1);
+  const bostonParent = events.find(e => e.id === '2026-10-city-safari-boston-rescheduled');
+  assert.equal(newsApi.build([bostonParent,boston],newsRange,new Date('2026-11-13T02:59:11-03:00')).length,1);
+  const tcgParent = events.find(e => e.id === '2026-09-tcg-30th-us-retail');
+  assert.equal(newsApi.build([tcgParent,tcg],newsRange,new Date('2026-11-13T02:59:11-03:00')).length,1);
+});
