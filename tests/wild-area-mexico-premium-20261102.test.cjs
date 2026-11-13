@@ -71,7 +71,7 @@ test('Imagem oficial Machamp e Safari Ball reais; artes anteriores preservadas n
   assert.match(html,/Bola Safári GO original, com camuflagem verde e marrom/);
   assert.match(art,/wild-mx-real-safari img/);
   assert.match(art,/object-fit:contain!important/);
-  assert.match(sw,/spidey-app-20261109-weekart2/);
+  assert.match(sw,/spidey-app-20261112-global-details-expiry1/);
   assert.match(sw,/\.\/wild-area-20261109\.js/);
   assert.match(sw,/\.\/wild-area-20261109\.css/);
   assert.match(sw,/\.\/wild-area-mexico-art-20261102\.css/);
