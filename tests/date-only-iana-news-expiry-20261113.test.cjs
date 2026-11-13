@@ -81,3 +81,23 @@ test('referências ausentes ou inválidas continuam falhando abertas sem inventa
   assert.equal(has(groups, unknown.id), true);
   assert.equal(has(groups, invalidNews.id), true);
 });
+
+
+test('notícia do Pokémon Center Bangkok permanece até o último dia da Pesquisa em Asia/Bangkok', () => {
+  const catalog = JSON.parse(fs.readFileSync(path.join(root, 'spidey-app/data/events.json'), 'utf8')).events;
+  const opening = catalog.find(event => event.id === '2026-12-pokemon-center-bangkok-opening');
+  const deadline = catalog.find(event => event.id === '2026-12-30-pokemon-center-bangkok-research-deadline');
+  const story = catalog.find(event => event.id === 'official-news-auto-bangkok-20261029');
+  assert.ok(opening && deadline && story);
+  assert.equal(deadline.schedule.local_timezone, 'Asia/Bangkok');
+  assert.equal(dateOnly.bounds(deadline).end.toISOString(), '2026-12-30T17:00:00.000Z');
+  const afterOpening = build([opening, deadline, story], '2026-12-11T00:00:00.000Z');
+  assert.equal(has(afterOpening, opening.id), false);
+  assert.equal(has(afterOpening, story.id), true);
+  const beforeLastLocalDayEnds = build([opening, deadline, story], '2026-12-30T16:59:59.999Z');
+  const atLastLocalDayEnd = build([opening, deadline, story], '2026-12-30T17:00:00.000Z');
+  assert.equal(has(beforeLastLocalDayEnds, deadline.id), true);
+  assert.equal(has(beforeLastLocalDayEnds, story.id), true);
+  assert.equal(has(atLastLocalDayEnd, deadline.id), false);
+  assert.equal(has(atLastLocalDayEnd, story.id), false);
+});
