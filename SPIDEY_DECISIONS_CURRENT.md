@@ -687,3 +687,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - O limite é exclusivo: `end <= now` significa encerrado. Eventos com data sem hora usam os limites calculados pelo fuso IANA do próprio registro.
 - Notícias sem eventos relacionados permanecem como informação contínua ou descoberta comunitária a confirmar. Referências ausentes ou sem janela válida falham abertas: não inventar um encerramento.
 - A regra é protegida por `tests/news-feed.test.cjs` e executada também no workflow `.github/workflows/spidey-pages.yml`.
+
+
+## 13/11/2026 — placeholder Max Monday arquivado e Minior sem arte nova
+- O registro comunitário `2026-11-16-max-surprise` (16–23/11) duplicava a janela oficial de Trilhas Dinamax e foi arquivado sem apagar o histórico.
+- A programação específica de Max Monday em 16/11 continua sem espécie oficialmente anunciada; a previsão comunitária fica somente em Novidades, sem calendário próprio.
+- O arquivo preserva a janela comunitária original e liga o histórico à notícia `2026-11-max-mondays-community-outlook` e ao evento oficial `2026-11-16-dynamax-trails`.
+- O lembrete comunitário de Minior foi alinhado como agrupamento sem arte: `arte_obrigatoria=false`, `art_required_for_publication=false`, sem fallback ou renderização.
