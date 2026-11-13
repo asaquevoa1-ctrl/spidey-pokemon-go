@@ -85,4 +85,10 @@ test('Área Selvagem Global informa a suspensão das Descobertas Diárias e o pr
   assert.match(global.news.summary, /Descobertas Diárias/);
   assert.equal(global.audit.daily_discoveries_suspension_verified, true);
   assert.equal(global.audit.ticket_max_particle_bonus_requires_nearby_collection, true);
+  const dailyPause = byId('2026-11-09-daily-discovery-pause');
+  assert.equal(dailyPause.schedule.precision, undefined);
+  assert.equal(dailyPause.schedule.start_local, '2026-11-09T00:01:00-03:00');
+  assert.equal(dailyPause.schedule.end_local, '2026-11-15T23:59:00-03:00');
+  assert.equal(dailyPause.source.url, global.source.url);
+  assert.ok(dailyPause.notes.some(note => note.includes('00h01') && note.includes('23h59')));
 });
