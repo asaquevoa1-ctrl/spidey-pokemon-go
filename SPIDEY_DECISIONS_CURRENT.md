@@ -714,3 +714,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Esta regra segue a instrução mais recente do responsável e substitui a orientação anterior que mantinha referências date-only visíveis por falta de hora.
 - Testes cobrem Seul (Asia/Seoul): 15/11/2026 23:59:59.999 local ainda visível; 16/11/2026 00:00:00 local encerrado, equivalente a 15/11 15:00:00Z.
 - Ao alterar `news-feed.js`, a versão de consulta no `index.html` e o cache PWA também são atualizados.
+
+
+## 13/11/2026 — Janela exata da suspensão das Descobertas Diárias
+- A publicação oficial completa da Área Selvagem Global informa suspensão de 9/11/2026 às 00h01 até 15/11/2026 às 23h59, horário local. O registro existente `2026-11-09-daily-discovery-pause` foi corrigido de date-only para janela temporizada, com a mesma URL canônica da história Global para evitar notícia duplicada.
+- O evento de pausa permanece separado como janela de calendário, mas é agrupado na mesma história editorial Global; não foi criado novo evento nem nova notícia.
+- A página brasileira dos encontros comunitários tem conflito interno: introdução em 2026, blocos detalhados em 2025. Preservar 14–15/11/2026, confirmados pela introdução e pela página oficial Global; não inferir coordenadas ou mudar locais por causa do texto contraditório.
+- A semana precisa ser regenerada pelo comando do projeto depois da correção; até isso e o CI não ocorrerem, não considerar o pacote público atualizado.
