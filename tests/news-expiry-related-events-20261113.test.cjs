@@ -93,3 +93,11 @@ test('notícias evergreen sem janela relacionada continuam visíveis', () => {
   };
   assert.equal(has(sandbox.window.SpideyNews.build([evergreen], range, new Date('2027-01-01T00:00:00Z')), evergreen.id), true);
 });
+
+test('versão do módulo de Novidades invalida o cache PWA após a correção', () => {
+  const index = fs.readFileSync(path.join(root, 'spidey-app/index.html'), 'utf8');
+  const sw = fs.readFileSync(path.join(root, 'spidey-app/sw.js'), 'utf8');
+  assert.match(index, /news-feed\\.js\\?v=20261113-news-expiry1/);
+  assert.match(sw, /const CACHE = 'spidey-app-20261113-news-expiry1'/);
+  assert.match(sw, /['"]\\.\\/news-feed\\.js['"]/);
+});
