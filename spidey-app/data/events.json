@@ -8454,10 +8454,10 @@
         "label": "OFICIAL • DATAS CONFIRMADAS"
       },
       "content_type": "news",
-      "updated_at": "2026-11-13T03:26:42-03:00",
+      "updated_at": "2026-11-13T03:45:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
-        "verified_at": "2026-11-13T03:26:42-03:00",
+        "verified_at": "2026-11-13T03:45:00-03:00",
         "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
         "official_pt_url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
         "official_en_url": "https://pokemongo.com/en/news/save-the-date-go-tour-2027",
@@ -8521,7 +8521,7 @@
         "enabled": false
       },
       "status": "published",
-      "updated_at": "2026-11-13T03:26:42-03:00",
+      "updated_at": "2026-11-13T03:45:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
@@ -8583,7 +8583,7 @@
         "enabled": false
       },
       "status": "published",
-      "updated_at": "2026-11-13T03:26:42-03:00",
+      "updated_at": "2026-11-13T03:45:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
@@ -8646,7 +8646,7 @@
         "enabled": false
       },
       "status": "published",
-      "updated_at": "2026-11-13T03:26:42-03:00",
+      "updated_at": "2026-11-13T03:45:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
@@ -8703,7 +8703,7 @@
         "enabled": false
       },
       "status": "published",
-      "updated_at": "2026-11-13T03:26:42-03:00",
+      "updated_at": "2026-11-13T03:45:00-03:00",
       "news": {
         "title": "Max Mondays de novembro: programação comunitária a confirmar",
         "summary": "Leek Duck lista 16/11 sem Pokémon anunciado, 23/11 com Dynamax Espurr e 30/11 com Dynamax Cryogonal. A Niantic/Scopely ainda não confirmou essas atrações; acompanhe como pista comunitária, sem calendário.",
@@ -8712,7 +8712,7 @@
       },
       "audit": {
         "classification": "community_schedule_unconfirmed",
-        "verified_at": "2026-11-13T03:26:42-03:00",
+        "verified_at": "2026-11-13T03:45:00-03:00",
         "source_urls": [
           "https://leekduck.com/events/max-mondays-2026-11-16/",
           "https://leekduck.com/events/max-mondays-2026-11-23/",
@@ -11018,7 +11018,7 @@
       "id": "2026-10-minior-orionids",
       "slug": "2026-10-minior-orionids",
       "title": "Minior: chuva de meteoros Orionidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Orionidas.",
+      "summary": "Minior aparece mais na natureza das 17h às 21h locais e rende mais Poeira Estelar por captura. O céu terá estrelas cadentes; encontros podem ser interrompidos por eventos sobrepostos.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -11052,7 +11052,13 @@
       },
       "notes": [
         "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
+        "Capturar Minior rende mais Poeira Estelar; o anúncio não informa uma quantidade específica.",
+        "Das 17h às 21h locais, há maior chance de encontrar Minior e o céu do jogo fica iluminado por estrelas cadentes.",
+        "Minior pode não aparecer durante períodos de sobreposição com GO Wild Area Global, Horas em Destaque e outros eventos regionais; a Niantic não especifica uma janela de bloqueio exata.",
+        "Cada chuva de meteoros estreia uma cor de núcleo de Minior; a cor específica das Leônidas não foi anunciada.",
+        "Minior permanece na Forma Meteoro até os PS caírem abaixo de 50%; então revela o núcleo. A Forma Meteoro tem Defesa maior e Ataque menor; o Núcleo exposto tem Ataque maior e Defesa menor.",
+        "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027."
       ],
       "notifications": {
         "enabled": true,
@@ -11073,7 +11079,7 @@
       ],
       "news": {
         "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "summary": "Minior estreia na Forma Meteoro, rende mais Poeira Estelar por captura e ganha uma cor de núcleo em cada chuva. Das 17h às 21h locais há maior chance de encontro e estrelas cadentes; Minior pode não aparecer durante eventos sobrepostos.",
         "published_on": "2026-10-01",
         "window_label": "Orionidas • 10/2026"
       },
@@ -11083,7 +11089,7 @@
       "id": "2026-11-minior-leonids",
       "slug": "2026-11-minior-leonids",
       "title": "Minior: chuva de meteoros Leônidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+      "summary": "Minior aparece mais na natureza das 17h às 21h locais e rende mais Poeira Estelar por captura. O céu terá estrelas cadentes; encontros podem ser interrompidos por eventos sobrepostos.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -11117,7 +11123,13 @@
       },
       "notes": [
         "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
+        "Capturar Minior rende mais Poeira Estelar; o anúncio não informa uma quantidade específica.",
+        "Das 17h às 21h locais, há maior chance de encontrar Minior e o céu do jogo fica iluminado por estrelas cadentes.",
+        "Minior pode não aparecer durante períodos de sobreposição com GO Wild Area Global, Horas em Destaque e outros eventos regionais; a Niantic não especifica uma janela de bloqueio exata.",
+        "Cada chuva de meteoros estreia uma cor de núcleo de Minior; a cor específica das Leônidas não foi anunciada.",
+        "Minior permanece na Forma Meteoro até os PS caírem abaixo de 50%; então revela o núcleo. A Forma Meteoro tem Defesa maior e Ataque menor; o Núcleo exposto tem Ataque maior e Defesa menor.",
+        "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027."
       ],
       "notifications": {
         "enabled": true,
@@ -11138,17 +11150,39 @@
       ],
       "news": {
         "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "summary": "Minior estreia na Forma Meteoro, rende mais Poeira Estelar por captura e ganha uma cor de núcleo em cada chuva. Das 17h às 21h locais há maior chance de encontro e estrelas cadentes; Minior pode não aparecer durante eventos sobrepostos.",
         "published_on": "2026-10-01",
         "window_label": "Leônidas • 11/2026"
       },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-10-01T22:47:56Z",
+      "audit": {
+        "verified_at": "2026-11-13T03:45:00-03:00",
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+        "official_en_url": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+        "official_details_added": [
+          "increased_stardust_without_amount",
+          "shooting_stars_17_21_local",
+          "overlap_caveat",
+          "form_change_below_50_percent_hp",
+          "battle_context_for_form_change",
+          "not_eligible_for_LAIC_2027"
+        ],
+        "community_cross_reference": {
+          "source_id": "g47ix-2120984983892586580",
+          "source_url": "https://x.com/g47ix/status/2120984983892586580",
+          "classification": "community",
+          "disposition": "grouped_without_new_claims"
+        },
+        "specific_leonids_core_color_confirmed": false,
+        "no_new_event_or_window": true,
+        "no_new_art": true
+      }
     },
     {
       "id": "2026-12-minior-geminids",
       "slug": "2026-12-minior-geminids",
       "title": "Minior: chuva de meteoros Geminidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Geminidas.",
+      "summary": "Minior aparece mais na natureza das 17h às 21h locais e rende mais Poeira Estelar por captura. O céu terá estrelas cadentes; encontros podem ser interrompidos por eventos sobrepostos.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -11183,7 +11217,13 @@
       "notes": [
         "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
         "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia.",
-        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas."
+        "As Geminidas estreiam núcleos diferentes no Hemisfério Norte e no Hemisfério Sul; cores não anunciadas.",
+        "Capturar Minior rende mais Poeira Estelar; o anúncio não informa uma quantidade específica.",
+        "Das 17h às 21h locais, há maior chance de encontrar Minior e o céu do jogo fica iluminado por estrelas cadentes.",
+        "Minior pode não aparecer durante períodos de sobreposição com GO Wild Area Global, Horas em Destaque e outros eventos regionais; a Niantic não especifica uma janela de bloqueio exata.",
+        "Cada chuva de meteoros estreia uma cor de núcleo de Minior; a cor específica das Leônidas não foi anunciada.",
+        "Minior permanece na Forma Meteoro até os PS caírem abaixo de 50%; então revela o núcleo. A Forma Meteoro tem Defesa maior e Ataque menor; o Núcleo exposto tem Ataque maior e Defesa menor.",
+        "Inicialmente, Minior só muda de forma em batalhas contra a Equipe GO Rocket, líderes de equipe ou na Liga de Batalha GO; não é elegível ao LAIC 2027."
       ],
       "notifications": {
         "enabled": true,
@@ -11204,7 +11244,7 @@
       ],
       "news": {
         "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
+        "summary": "Minior estreia na Forma Meteoro, rende mais Poeira Estelar por captura e ganha uma cor de núcleo em cada chuva. Das 17h às 21h locais há maior chance de encontro e estrelas cadentes; Minior pode não aparecer durante eventos sobrepostos.",
         "published_on": "2026-10-01",
         "window_label": "Geminidas • 12/2026"
       },

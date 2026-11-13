@@ -104,3 +104,38 @@ test('nenhuma arte Premium, coordenada, rota ou notificação foi criada', () =>
     assert.equal(event.locations.length, 0);
   }
 });
+
+test('Minior mantém uma única história oficial com detalhes completos e janelas existentes', () => {
+  const miniorIds = ['2026-10-minior-orionids', '2026-11-minior-leonids', '2026-12-minior-geminids'];
+  const minior = miniorIds.map(byId);
+  assert.ok(minior.every(Boolean));
+  const leonids = byId('2026-11-minior-leonids');
+  const textNotes = leonids.notes.join(' ');
+  assert.match(leonids.summary, /Poeira Estelar/i);
+  assert.match(textNotes, /estrelas cadentes/i);
+  assert.match(textNotes, /GO Wild Area Global/i);
+  assert.match(textNotes, /abaixo de 50%/i);
+  assert.match(textNotes, /LAIC 2027/i);
+  assert.equal(leonids.audit.community_cross_reference.source_id, 'g47ix-2120984983892586580');
+  const group = stories.find(item => item.events.some(event => event.id === '2026-11-minior-leonids'));
+  assert.ok(group);
+  assert.equal(group.events.length, 2, 'a janela encerrada de Orionidas não deve aparecer na notícia atual');
+  assert.equal(group.title, leonids.news.title);
+});
+
+test('G47IX Minior foi curado sem arte, sem nova história e com histórico preservado', () => {
+  const raw = JSON.parse(fs.readFileSync(path.join(root, 'queue/pending/2026-11-13/g47ix-evento-ad22b131ff54.json'), 'utf8'));
+  const curated = JSON.parse(fs.readFileSync(path.join(root, 'queue/curated/g47ix-evento-ad22b131ff54.json'), 'utf8'));
+  assert.equal(raw.original_status, 'aguardando_curadoria_premium');
+  assert.equal(raw.status, 'grouped_without_new_claims');
+  assert.match(raw.mensagem, /Minior Showers: Leonids/);
+  assert.equal(curated.status, 'grouped_without_new_claims');
+  assert.equal(curated.source_classification, 'community');
+  assert.equal(curated.art_required_for_publication, false);
+  assert.deepEqual(curated.related_event_ids, ['2026-11-minior-leonids']);
+  assert.equal(curated.no_new_art, true);
+});
+
+test('nenhum registro do catálogo permanece com editorial_detail_pending', () => {
+  assert.equal(events.filter(event => event.audit?.editorial_detail_pending === true).length, 0);
+});

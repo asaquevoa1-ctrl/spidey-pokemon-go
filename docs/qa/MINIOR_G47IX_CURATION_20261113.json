@@ -1,0 +1,56 @@
+{
+  "task": "spidey-editorial-curation",
+  "date": "2026-11-13",
+  "base_main_sha": "1a459f02950c3cf365922f9d4f85002f2cd06da5",
+  "source": {
+    "official_pt": "https://pokemongo.com/pt-BR/news/minior-meteor-showers-2026",
+    "official_en": "https://pokemongo.com/en/news/minior-meteor-showers-2026",
+    "community": "https://x.com/g47ix/status/2120984983892586580"
+  },
+  "existing_event_ids": [
+    "2026-10-minior-orionids",
+    "2026-11-minior-leonids",
+    "2026-12-minior-geminids"
+  ],
+  "details_added": [
+    "Poeira Estelar adicional sem quantidade",
+    "estrelas cadentes e maior chance 17h–21h locais",
+    "ressalva de sobreposição com GO Wild Area Global, Horas em Destaque e eventos regionais",
+    "mudança de forma abaixo de 50% dos PS",
+    "contextos iniciais de batalha para mudança de forma",
+    "não elegível ao LAIC 2027"
+  ],
+  "details_not_invented": [
+    "quantidade de Poeira Estelar",
+    "cor específica das Leônidas",
+    "horário de bloqueio durante sobreposições",
+    "novas datas ou janelas"
+  ],
+  "collector_item": {
+    "source_id": "g47ix-2120984983892586580",
+    "status": "grouped_without_new_claims",
+    "related_event_ids": [
+      "2026-11-minior-leonids"
+    ],
+    "raw_file_preserved": true,
+    "curated_copy": "queue/curated/g47ix-evento-ad22b131ff54.json"
+  },
+  "queue": {
+    "editorial_detail_pending": 0,
+    "app_ready_items": 0,
+    "new_public_story": false
+  },
+  "constraints": {
+    "no_new_event": true,
+    "no_new_window": true,
+    "no_art_generated": true,
+    "no_approved_art_replaced": true,
+    "no_gpx": true,
+    "no_push": true,
+    "no_physical_android_test": true
+  },
+  "publication": {
+    "status": "PR pending",
+    "main_sha": "1a459f02950c3cf365922f9d4f85002f2cd06da5"
+  }
+}
