@@ -26,7 +26,9 @@
     {date:'2026-11-14',short:'SÁB 14',pokemon:'Dialga Dinamax · Zekrom · Kyurem Branco',activity:'10h às 18h locais'},
     {date:'2026-11-15',short:'DOM 15',pokemon:'Palkia Dinamax · Reshiram · Kyurem Preto',activity:'10h às 18h locais'}
   ];
-  let points=[],loading=false,loadError=false;
+  let points=[],loading=false,loadError=false,homeRefreshTimer=null;
+  const WEEK_END_FALLBACK=Date.parse('2026-11-14T08:00:00Z');
+  const GLOBAL_END_FALLBACK=Date.parse('2026-11-16T06:00:00Z');
   const state={
     wildIntoView:{day:'2026-11-09',mode:'essential'},
     wildGlobalView:{day:'2026-11-14',mode:'essential'}
@@ -214,31 +216,58 @@
       notify(root,ok?(selected?'Coordenada copiada.':all.length+' coordenadas copiadas para o Data Hub.'):'Não foi possível copiar automaticamente neste navegador.');
     });
   }
-  function homeStatus(){
-    const now=Date.now();
-    if(now>Date.parse('2026-11-15T23:59:59-12:00'))return 'Arquivo dos eventos';
-    if(now>=Date.parse('2026-11-14T10:00:00+14:00'))return 'Área Selvagem Global';
-    return 'Prepare-se para o Global';
+  function homeSurfaceState(now=new Date()){
+    const weekRows=allRows('wildIntoView','2026-11-13');
+    const globalRows=allRows('wildGlobalView','2026-11-15');
+    // Rota da Semana cobre 18h–19h; a atividade global termina às 20h locais.
+    // Usar as 64 referências IANA evita esconder o guia enquanto outro fuso ainda joga.
+    const weekEnd=weekRows.length===64?Math.max(...weekRows.map(row=>row.end.getTime()+3600000)):WEEK_END_FALLBACK;
+    const globalEnd=globalRows.length===64?Math.max(...globalRows.map(row=>row.end.getTime())):GLOBAL_END_FALLBACK;
+    const timestamp=now instanceof Date?now.getTime():Number(now);
+    return {week:timestamp<weekEnd,global:timestamp<globalEnd,archive:timestamp>=globalEnd,weekEnd,globalEnd};
   }
-  function mountHome(){
+  function homeStatus(now=new Date()){
+    const surface=homeSurfaceState(now);
+    if(surface.global)return 'Área Selvagem Global';
+    if(surface.week)return 'Semana Selvagem';
+    return 'Arquivo dos eventos';
+  }
+  function updateHomeHub(){
+    const surface=homeSurfaceState();
+    const weekTab=document.querySelector('.app-tab[data-view="wildIntoView"]');
+    const globalTab=document.querySelector('.app-tab[data-view="wildGlobalView"]');
+    if(weekTab){weekTab.hidden=!surface.week;weekTab.style.display=surface.week?'':'none';}
+    if(globalTab){globalTab.hidden=!surface.global;globalTab.style.display=surface.global?'':'none';}
+    document.querySelector('#wildGlobalContent [data-wild-nav="wildIntoView"]')?.toggleAttribute('hidden',!surface.week);
+    document.querySelector('#wildIntoContent [data-wild-nav="wildGlobalView"]')?.toggleAttribute('hidden',!surface.global);
+    const activeView=document.querySelector('.app-view:not([hidden])')?.id;
+    if((activeView==='wildIntoView'&&!surface.week)||(activeView==='wildGlobalView'&&!surface.global)){
+      document.querySelector('.app-tab[data-view="calendarView"]')?.click();
+    }
     const home=document.getElementById('playerHome');
     if(!home)return;
     let tile=home.querySelector('#wild2026HomeHub');
-    if(tile)return;
-    tile=document.createElement('section');
-    tile.id='wild2026HomeHub';tile.className='wild-home-hub';
-    tile.setAttribute('aria-label','Semana Selvagem e Área Selvagem Global');
-    tile.innerHTML='<div class="wild-home-hub-heading"><span>✦ SPIDEY · ESPECIAL NOVEMBRO</span><h2>Da Semana Selvagem ao Global</h2><p>Confira os horários, Pokémon, artes e coordenadas nas duas áreas.</p></div>'+
-    '<div class="wild-home-hub-cards"><button type="button" data-wild-nav="wildIntoView"><span>09–13 NOV · SEMANA</span><strong>Semana Selvagem</strong><small>Reides e Batalhas Max · Rota das 18h</small></button>'+
-    '<button type="button" data-wild-nav="wildGlobalView"><span>14–15 NOV · GLOBAL</span><strong>Área Selvagem Global</strong><small>Dialga, Palkia, Duraludon · Rota das 10h</small></button></div>';
-    const anchor=home.querySelector('.spidey-command-cockpit')||home.querySelector('#spideyCalendarPremium')||home.querySelector('.player-home-head');
-    if(anchor)anchor.insertAdjacentElement('beforebegin',tile);
-    else home.prepend(tile);
-    tile.addEventListener('click',ev=>{
-      const btn=ev.target.closest('[data-wild-nav]');
-      if(btn)document.querySelector('.app-tab[data-view="'+btn.dataset.wildNav+'"]')?.click();
-    });
+    const cards=[];
+    if(surface.week)cards.push('<button type="button" data-wild-nav="wildIntoView"><span>09–13 NOV · SEMANA</span><strong>Semana Selvagem</strong><small>Reides e Batalhas Max · Rota das 18h</small></button>');
+    if(surface.global)cards.push('<button type="button" data-wild-nav="wildGlobalView"><span>14–15 NOV · GLOBAL</span><strong>Área Selvagem Global</strong><small>Dialga, Palkia, Duraludon · Rota das 10h</small></button>');
+    if(!cards.length){tile?.remove();return;}
+    if(!tile){
+      tile=document.createElement('section');
+      tile.id='wild2026HomeHub';tile.className='wild-home-hub';
+      tile.setAttribute('aria-label','Semana Selvagem e Área Selvagem Global');
+      const anchor=home.querySelector('.spidey-command-cockpit')||home.querySelector('#spideyCalendarPremium')||home.querySelector('.player-home-head');
+      if(anchor)anchor.insertAdjacentElement('beforebegin',tile);
+      else home.prepend(tile);
+      tile.addEventListener('click',ev=>{
+        const btn=ev.target.closest('[data-wild-nav]');
+        if(btn)document.querySelector('.app-tab[data-view="'+btn.dataset.wildNav+'"]')?.click();
+      });
+    }
+    const title=surface.week&&surface.global?'Da Semana Selvagem ao Global':surface.global?'Área Selvagem Global':'Semana Selvagem';
+    const description=surface.week&&surface.global?'Confira os horários, Pokémon, artes e coordenadas nas duas áreas.':surface.global?'Confira os horários, Pokémon, arte aprovada e coordenadas da Área Selvagem Global.':'Confira os horários, Pokémon e a Rota das 18h da Semana Selvagem.';
+    tile.innerHTML='<div class="wild-home-hub-heading"><span>✦ SPIDEY · ESPECIAL NOVEMBRO</span><h2>'+title+'</h2><p>'+description+'</p></div><div class="wild-home-hub-cards">'+cards.join('')+'</div>';
   }
+  function mountHome(){updateHomeHub();}
   async function loadPoints(retry=false){
     if(loading)return;
     loading=true;loadError=false;
@@ -255,11 +284,14 @@
     }finally{
       loading=false;
       for(const view of Object.keys(state))displayRows(view,state[view].day);
+      updateHomeHub();
     }
   }
   function init(){
     mount('wildIntoView');mount('wildGlobalView');mountHome();
     window.addEventListener('spideyhomeupdated',mountHome);
+    if(!homeRefreshTimer)homeRefreshTimer=setInterval(updateHomeHub,60000);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateHomeHub();});
     loadPoints();
     const mexico=document.getElementById('wildAreaMexicoView');
     if(mexico){
@@ -275,7 +307,7 @@
       }
     }
   }
-  window.SpideyWild2026=Object.freeze({allRows,loadPoints,homeStatus});
+  window.SpideyWild2026=Object.freeze({allRows,loadPoints,homeStatus,surfaceState:homeSurfaceState});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
   else init();
 })();
