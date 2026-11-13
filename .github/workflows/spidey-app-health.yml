@@ -7,7 +7,8 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: '2/5 * * * *'
+    # Quatro verificações por hora, fora do início da hora para reduzir pressão e perda de eventos agendados.
+    - cron: '11,26,41,56 * * * *'
   push:
     branches: [main]
     paths: ['spidey-app/**', 'api/**', 'vercel.json', 'scripts/check_app_health.py', 'scripts/test_app_health.py', '.github/workflows/spidey-app-health.yml']

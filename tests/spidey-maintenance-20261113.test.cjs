@@ -229,3 +229,11 @@ test('GitHub Pages executa o monitor sintético depois da validação HTTP e arq
   assert.ok(deploy.includes('uses: actions/upload-artifact@v7'));
   assert.ok(workflow.includes('python -m unittest scripts.test_app_health -v'));
 });
+
+
+test('monitor de saúde usa agenda escalonada de 15 minutos, fora do início da hora', () => {
+  const health = read('.github/workflows/spidey-app-health.yml');
+  assert.match(health, /cron:\s*'11,26,41,56 \* \* \* \*'/);
+  assert.doesNotMatch(health, /cron:\s*'2\/5 \* \* \* \*'/);
+  assert.match(health, /cancel-in-progress:\s*false/);
+});
