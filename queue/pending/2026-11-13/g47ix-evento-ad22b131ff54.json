@@ -16,7 +16,7 @@
   "proibir_render_arte": true,
   "proibir_fallback": true,
   "created_at_utc": "2026-11-13T06:44:25.036692+00:00",
-  "original_status": "aguardando_curadoria_premium",
+  "original_status": "aguardando_arte_chatgpt",
   "source_classification": "community",
   "related_event_ids": [
     "2026-11-minior-leonids"
@@ -32,5 +32,6 @@
     "observed_main_stage": "aguardando_arte_premium_original",
     "resolution": "O registro bruto permanece preservado; a curadoria agrupada sem novas alegações substitui o estado automático de espera por arte para esta duplicata comunitária.",
     "resolved_by_pr": 291
-  }
+  },
+  "original_etapa_editorial": "aguardando_arte_premium_original"
 }
