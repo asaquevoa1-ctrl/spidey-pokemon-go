@@ -123,6 +123,7 @@ test('Minior mantém uma única história oficial com detalhes completos e janel
   const leonids = byId('2026-11-minior-leonids');
   const textNotes = leonids.notes.join(' ');
   assert.match(leonids.summary, /Poeira Estelar/i);
+  assert.match(leonids.news.summary, /sem quantidade divulgada/i);
   assert.match(textNotes, /estrelas cadentes/i);
   assert.match(textNotes, /GO Wild Area Global/i);
   assert.match(textNotes, /50% dos PS ou menos/i);
