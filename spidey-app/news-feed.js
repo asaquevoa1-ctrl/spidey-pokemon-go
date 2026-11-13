@@ -15,14 +15,30 @@
       return `official:${path}`;
     }catch{return null}
   }
+  // A news-only announcement linked to event windows stays current only
+  // while at least one confirmed related window is still open or upcoming.
+  // Missing/undated references fail open: never invent an expiry date.
+  function relatedNewsHasLiveWindow(event,byId,range,now){
+    const ids=Array.isArray(event.related_event_ids)?event.related_event_ids:
+      Array.isArray(event.related)?event.related:[];
+    if(!ids.length)return true;
+    const related=ids.map(id=>byId.get(id));
+    if(related.some(item=>!item))return true;
+    const windows=related.map(item=>range(item));
+    if(windows.some(dates=>!dates?.start||!dates?.end))return true;
+    return related.some((item,index)=>item.status==='published'&&windows[index].end>now);
+  }
   // News is a view of the event catalog. One official announcement may have
   // several calendar windows; community calendar links do not merge events.
   function build(events,range,now=new Date()){
-    const groups=new Map();
+    const groups=new Map(),byId=new Map(events.map(event=>[event.id,event]));
     for(const event of events){
       const newsOnly=event.content_type==='news';
       const key=articleKey(event),dates=newsOnly?null:range(event);
-      if(event.status!=='published'||!key||(!newsOnly&&(!dates?.start||!dates?.end||dates.end<now)))continue;
+      if(event.status!=='published'||!key)continue;
+      if(newsOnly){
+        if(!relatedNewsHasLiveWindow(event,byId,range,now))continue;
+      }else if(!dates?.start||!dates?.end||dates.end<=now)continue;
       if(!groups.has(key))groups.set(key,{key,events:[]});
       groups.get(key).events.push(event);
     }
