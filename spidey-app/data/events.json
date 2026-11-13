@@ -12117,7 +12117,9 @@
         "Pesquisa de Campo temática terá maior chance de aparecer; tarefas individuais e recompensas específicas não foram publicadas na página oficial.",
         "Horários detalhados das horas de habitat são uma confirmação comunitária do Leek Duck, não publicados na página oficial: Aço 10h–11h, 12h–13h, 14h–15h e 16h–17h; Dragão 11h–12h, 13h–14h, 15h–16h e 17h–18h, sempre no horário local. A página oficial confirma apenas a ordem Aço primeiro e Dragão depois.",
         "Kyurem encontrados em Reides conhecem o ataque carregado Glaciar e concedem Energia de Fusão, conforme a página oficial.",
-        "Preço publicado na página oficial em inglês para o ingresso global: US$ 11,99."
+        "Preço publicado na página oficial em inglês para o ingresso global: US$ 11,99.",
+        "Descobertas Diárias não ocorrerão de 9/11/2026 às 00h01 até 15/11/2026 às 23h59, sempre no horário local. Essa janela é mais ampla que as horas de jogo (10h–18h) dos dias 14 e 15.",
+        "Para que o bônus de Partículas Max dos titulares de ingresso seja aplicado, é necessário coletar primeiro todas as Partículas Max disponíveis no menu Proximidades. A coleta diária ocorre por exploração, e a Sincroaventura pode ajudar a contar a distância."
       ],
       "notifications": {
         "enabled": true,
@@ -12166,9 +12168,9 @@
       ],
       "news": {
         "title": "Área Selvagem GO Global: programação, bônus e recursos oficiais",
-        "summary": "A página oficial em português detalha habitats Aço e Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso inclui pesquisa ramificada, bônus adicionais, Unown D/I/L/W, Latias e Latios poderosos, balões de suprimentos e pose de avatar. Bolas Safári GO só podem ser usadas das 10h às 18h locais e desaparecem ao fim do evento; capturas com elas agora podem ser transferidas ao Pokémon HOME como Strange Ball. Batalhas Dinamax aceitam grupos privados por código e Efeitos de Aventura selecionados no lobby. A história mantém os encontros presenciais já cadastrados no Brasil, Europa e Ásia-Pacífico. A programação horária detalhada dos habitats é apresentada separadamente como informação comunitária do Leek Duck; a página oficial confirma apenas a ordem das duas horas.",
+        "summary": "A página oficial em português detalha habitats Aço e Dragão, Pokémon incríveis por dia, ovos de 10 km, encontros de Incenso e sete ataques em destaque. O ingresso inclui pesquisa ramificada, bônus adicionais, Unown D/I/L/W, Latias e Latios poderosos, balões de suprimentos e pose de avatar. Bolas Safári GO só podem ser usadas das 10h às 18h locais e desaparecem ao fim do evento; capturas com elas agora podem ser transferidas ao Pokémon HOME como Strange Ball. Batalhas Dinamax aceitam grupos privados por código e Efeitos de Aventura selecionados no lobby. A história mantém os encontros presenciais já cadastrados no Brasil, Europa e Ásia-Pacífico. A programação horária detalhada dos habitats é apresentada separadamente como informação comunitária do Leek Duck; a página oficial confirma apenas a ordem das duas horas. Atenção: as Descobertas Diárias ficam suspensas de 9/11 às 00h01 a 15/11 às 23h59 (horário local).",
         "published_on": "2026-10-07",
-        "updated_on": "2026-11-05"
+        "updated_on": "2026-11-13"
       },
       "audit": {
         "community_reminders_grouped_on": "2026-11-12",
@@ -12189,7 +12191,17 @@
         "community_habitat_hours_from_leekduck": true,
         "official_habitat_hours_not_published": true,
         "ticket_price_verified": true,
-        "ticket_price_usd": 11.99
+        "ticket_price_usd": 11.99,
+        "daily_discoveries_suspension_verified": true,
+        "daily_discoveries_window_local": {
+          "start": "2026-11-09T00:01:00",
+          "end": "2026-11-15T23:59:00",
+          "timezone": "local"
+        },
+        "ticket_max_particle_bonus_requires_nearby_collection": true,
+        "official_detail_reviewed_on": "2026-11-13",
+        "no_new_event_or_window_created": true,
+        "no_new_art_or_gpx": true
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -12225,7 +12237,7 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-11-12T23:31:00Z",
+      "updated_at": "2026-11-13T12:29:05-03:00",
       "asia_pacific_community_program": {
         "official_article": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
         "published_on": "2026-11-04",
