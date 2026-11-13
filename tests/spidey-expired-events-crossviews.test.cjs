@@ -85,6 +85,13 @@ test('Leônidas e Geminidas permanecem duas janelas de um único artigo Minior',
 });
 
 
+
+test('agenda date-only de Seul encerra no instante exclusivo após o último dia local',()=>{
+  const seoul={id:'seoul-date-only-boundary',status:'published',schedule:{precision:'date',start_date:'2026-11-14',end_date:'2026-11-15',local_timezone:'Asia/Seoul'}};
+  assert.equal(visible(seoul,new Date('2026-11-15T14:59:59.999Z')),true);
+  assert.equal(visible(seoul,new Date('2026-11-15T15:00:00.000Z')),false);
+});
+
 test('eventos locais sem hora permanecem até o fim do último dia no fuso IANA',()=>{
   const event={id:'seoul-date-only',schedule:{precision:'date',start_date:'2026-11-14',end_date:'2026-11-15',local_timezone:'Asia/Seoul'}};
   assert.equal(context.window.SpideyDateOnly.status(event,new Date('2026-11-15T14:59:59Z')),'Hoje · horário a confirmar');
