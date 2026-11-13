@@ -138,3 +138,12 @@ test('GO Pass, Boston and TCG claim windows expire at their exact local boundari
   const tcgParent = events.find(e => e.id === '2026-09-tcg-30th-us-retail');
   assert.equal(newsApi.build([tcgParent,tcg],newsRange,new Date('2026-11-13T02:59:11-03:00')).length,1);
 });
+
+test('pausa de Descobertas Diárias encerra no horário oficial exato',()=>{
+  const pause=events.find(event=>event.id==='2026-11-09-daily-discovery-pause');
+  assert.ok(pause);
+  assert.equal(pause.schedule.start_local,'2026-11-09T00:01:00-03:00');
+  assert.equal(pause.schedule.end_local,'2026-11-15T23:59:00-03:00');
+  assert.equal(visible(pause,new Date('2026-11-15T23:58:59-03:00')),true);
+  assert.equal(visible(pause,new Date('2026-11-15T23:59:00-03:00')),false);
+});
