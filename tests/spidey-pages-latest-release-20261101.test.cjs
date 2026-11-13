@@ -11,7 +11,7 @@ test('GitHub Pages serializes releases and verifies ACTUAL public deployment',()
  assert.match(yml,/group: spidey-pages-/);
  assert.match(yml,/cancel-in-progress: false/);
  assert.match(yml,/cron: '47 \* \* \* \*'/); // Scheduled release catches HEAD after catalog-only commits.
- assert.match(yml,/uses: actions\/deploy-pages@v4/);
+ assert.match(yml,/uses: actions\/deploy-pages@v5/);
  // O pacote que sobe ao Pages precisa corresponder ao commit do build,
  // mesmo se outros fluxos atualizarem a branch principal enquanto ele roda.
  assert(yml.includes('source_sha: ${{ steps.capture_sha.outputs.sha }}'));
@@ -19,10 +19,10 @@ test('GitHub Pages serializes releases and verifies ACTUAL public deployment',()
  assert(yml.includes('ref: ${{ needs.build.outputs.source_sha }}'));
  const deploy=yml.slice(yml.indexOf('  deploy:'));
  assert.match(deploy,/uses: actions\/checkout@v5/);
- assert(deploy.indexOf('uses: actions/checkout@v5')<deploy.indexOf('uses: actions/deploy-pages@v4'));
+ assert(deploy.indexOf('uses: actions/checkout@v5')<deploy.indexOf('uses: actions/deploy-pages@v5'));
  assert(deploy.indexOf('uses: actions/checkout@v5')<deploy.indexOf('node scripts/qa_trust_27_public_pages.mjs'));
 
- assert(yml.indexOf('uses: actions/deploy-pages@v4')<yml.indexOf('node scripts/qa_trust_27_public_pages.mjs'));
+ assert(yml.indexOf('uses: actions/deploy-pages@v5')<yml.indexOf('node scripts/qa_trust_27_public_pages.mjs'));
  for(const file of ['app.js','national-trust-v1.js','national-trust-v1.css','data/events.json']) {
    assert(checker.includes("'"+file+"'"),file);
  }
