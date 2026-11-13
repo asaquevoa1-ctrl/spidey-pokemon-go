@@ -1,8 +1,11 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
-const context=vm.createContext({window:{},URL,Date,Map,Math});
+const context=vm.createContext({window:{},URL,Date,Map,Math,Intl});
+vm.runInContext(fs.readFileSync('spidey-app/date-only.js','utf8'),context);
 vm.runInContext(fs.readFileSync('spidey-app/news-feed.js','utf8'),context);
 const build=context.window.SpideyNews.build,events=JSON.parse(fs.readFileSync('spidey-app/data/events.json')).events;
-const range=e=>({start:new Date(e.schedule.start_brazil),end:new Date(e.schedule.end_brazil)});
+const range=e=>e.schedule?.precision==='date'
+  ? context.window.SpideyDateOnly.bounds(e)
+  : {start:new Date(e.schedule.start_brazil||e.schedule.start_local),end:new Date(e.schedule.end_brazil||e.schedule.end_local)};
 test('one Minior announcement opens all three distinct calendar windows without merging community events',()=>{
  const stories=build(events,range,new Date('2026-10-01T22:00Z'));
  const minior=stories.filter(s=>s.events.some(e=>e.id.includes('minior-')));
@@ -107,3 +110,17 @@ test('curated 24 October guide stays separate from official Dynamax announcement
  assert.ok(guide[0].event.source.url.startsWith('https://pokemongo.com/news/'));
 });
 
+
+test('notícia temporária relacionada a evento date-only expira no último instante do dia IANA',()=>{
+ const event={id:'seoul-date-only',status:'published',source:{url:'https://pokemongo.com/news/seoul-date-only'},
+  schedule:{precision:'date',start_date:'2026-11-14',end_date:'2026-11-15',local_timezone:'Asia/Seoul'}};
+ const news={id:'seoul-news',content_type:'news',status:'published',source:{url:'https://pokemongo.com/news/seoul-date-only'},
+  related_event_ids:['seoul-date-only'],news:{title:'Encontro em Seul',summary:'Data sem hora',expire_when_related_windows_end:true}};
+ const bounds=context.window.SpideyDateOnly.bounds(event);
+ assert.equal(bounds.end.toISOString(),'2026-11-15T15:00:00.000Z');
+ const before=build([event,news],range,new Date('2026-11-15T14:59:59.999Z'));
+ assert.equal(before.length,1);
+ assert.equal(before[0].events.length,2);
+ const atEnd=build([event,news],range,new Date('2026-11-15T15:00:00.000Z'));
+ assert.equal(atEnd.length,0);
+});
