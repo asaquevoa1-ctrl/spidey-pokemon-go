@@ -13299,7 +13299,7 @@
       },
       "status": "published",
       "verified_at": "2026-10-29",
-      "updated_at": "2026-10-29T02:20:00-03:00",
+      "updated_at": "2026-11-13T15:28:05-03:00",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio oficial",
@@ -13313,11 +13313,14 @@
         "precision": "date",
         "time_confirmed": false
       },
-      "news": {
-        "title": "Pokémon Center Bangkok ganha evento nacional no Pokémon GO",
-        "summary": "Treinadores em qualquer lugar da Tailândia poderão participar de 1º a 10/12. A Pesquisa Temporária dará adesivos da inauguração, Poeira Estelar e outras recompensas ainda não detalhadas.",
-        "published_on": "2026-10-29",
-        "label": "OFICIAL • NOVO"
+      "audit": {
+        "classification": "official_event_window",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+        "completion_window_separated": true,
+        "completion_event_id": "2026-12-30-pokemon-center-bangkok-research-deadline",
+        "story_id": "official-news-auto-bangkok-20261029",
+        "verified_on": "2026-11-13"
       }
     },
     {
@@ -15471,6 +15474,145 @@
       },
       "updated_at": "2026-11-13T02:59:11-03:00",
       "verified_at": "2026-11-13"
+    },
+    {
+      "id": "2026-12-30-pokemon-center-bangkok-research-deadline",
+      "slug": "2026-12-30-pokemon-center-bangkok-research-deadline",
+      "title": "Prazo para concluir a Pesquisa — Pokémon Center Bangkok",
+      "summary": "A Pesquisa Temporária obtida durante o evento pode ser concluída e resgatada até 30/12. O anúncio não informa o horário de encerramento.",
+      "category": "special_research_claim_deadline",
+      "tags": [
+        "Pokémon Center Bangkok",
+        "Tailândia",
+        "Pesquisa Temporária",
+        "Prazo"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "Asia/Bangkok",
+        "start_date": "2026-12-01",
+        "end_date": "2026-12-30",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Prazo de Pesquisa Temporária; o anúncio não publica coordenadas, Poképaradas ou rotas."
+      },
+      "pokemon": [],
+      "bonuses": [],
+      "notes": [
+        "A Pesquisa Temporária pode ser obtida durante o evento nacional na Tailândia, de 1º/12 às 6h a 10/12 às 23h59, no horário de Bangkok.",
+        "Quem recebeu a Pesquisa deve concluir as tarefas e resgatar as recompensas até 30/12/2026.",
+        "A publicação não informa o horário final de 30/12; o calendário mantém o último dia inteiro no fuso IANA Asia/Bangkok.",
+        "Não foram acrescentados Pokémon, encontros, brilho, quantidades de recompensa ou coordenadas não publicados."
+      ],
+      "related_event_ids": [
+        "2026-12-pokemon-center-bangkok-opening"
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "verified_at": "2026-11-13",
+      "updated_at": "2026-11-13T15:28:05-03:00",
+      "audit": {
+        "classification": "official_research_completion_deadline",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+        "window_role": "research_completion",
+        "acquisition_window_event_id": "2026-12-pokemon-center-bangkok-opening",
+        "date_only_iana_timezone": "Asia/Bangkok",
+        "date_only_last_day": "2026-12-30",
+        "no_time_inferred": true,
+        "verified_on": "2026-11-13"
+      }
+    },
+    {
+      "id": "official-news-auto-bangkok-20261029",
+      "slug": "official-news-auto-bangkok-20261029",
+      "title": "Pokémon Center Bangkok: evento e prazo da Pesquisa",
+      "summary": "Evento em toda a Tailândia de 1º a 10/12. A Pesquisa Temporária pode ser obtida nessa janela e concluída até 30/12; a fonte não informa o horário final nem encontros ou quantidades adicionais.",
+      "category": "official_update",
+      "tags": [
+        "Pokémon Center Bangkok",
+        "Tailândia",
+        "Pesquisa Temporária"
+      ],
+      "content_type": "news",
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+          "confidence": "official"
+        }
+      ],
+      "news": {
+        "title": "Pokémon Center Bangkok: evento e prazo da Pesquisa",
+        "summary": "Evento nacional na Tailândia de 1º a 10/12; quem receber a Pesquisa Temporária nessa janela poderá concluir e resgatar as recompensas até 30/12. O horário final não foi divulgado.",
+        "published_on": "2026-10-29",
+        "updated_on": "2026-11-13",
+        "label": "OFICIAL • TAILÂNDIA",
+        "expire_when_related_windows_end": true
+      },
+      "related_event_ids": [
+        "2026-12-pokemon-center-bangkok-opening",
+        "2026-12-30-pokemon-center-bangkok-research-deadline"
+      ],
+      "calendar": {
+        "mode": "hidden"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Notícia editorial; não há rota ou coordenadas anunciadas."
+      },
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "verified_at": "2026-11-13",
+      "updated_at": "2026-11-13T15:28:05-03:00",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
+        "canonical_fulltext_url": "https://pokemongo.com/en/news/pokemon-center-bangkok-opens-2026",
+        "story_group_id": "pokemon-center-bangkok-2026",
+        "related_event_ids": [
+          "2026-12-pokemon-center-bangkok-opening",
+          "2026-12-30-pokemon-center-bangkok-research-deadline"
+        ],
+        "date_only_deadline_iana": "Asia/Bangkok",
+        "event_windows_preserved": true,
+        "no_time_inferred": true,
+        "no_new_art": true,
+        "verified_on": "2026-11-13"
+      }
     }
   ]
 }
