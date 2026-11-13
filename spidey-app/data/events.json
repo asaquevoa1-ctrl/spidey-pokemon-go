@@ -852,15 +852,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-25",
-        "end_date": "2026-12-01",
-        "brazil_timezone": "America/Sao_Paulo"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -895,7 +888,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -903,7 +896,25 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "precision": "date",
+          "local_timezone": "America/Sao_Paulo",
+          "start_date": "2026-11-25",
+          "end_date": "2026-12-01",
+          "brazil_timezone": "America/Sao_Paulo"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
+      }
     },
     {
       "id": "2026-11-16-mega-banette-raids",
@@ -921,15 +932,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-16",
-        "end_date": "2026-11-24",
-        "brazil_timezone": "America/Sao_Paulo"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -952,7 +956,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -960,7 +964,25 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "precision": "date",
+          "local_timezone": "America/Sao_Paulo",
+          "start_date": "2026-11-16",
+          "end_date": "2026-11-24",
+          "brazil_timezone": "America/Sao_Paulo"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
+      }
     },
     {
       "id": "2026-11-25-mega-metagross-raids",
@@ -978,15 +1000,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-25",
-        "end_date": "2026-12-01",
-        "brazil_timezone": "America/Sao_Paulo"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1009,7 +1024,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1017,7 +1032,25 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "precision": "date",
+          "local_timezone": "America/Sao_Paulo",
+          "start_date": "2026-11-25",
+          "end_date": "2026-12-01",
+          "brazil_timezone": "America/Sao_Paulo"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
+      }
     },
     {
       "id": "2026-11-04-raid-hour-altered-giratina",
@@ -1104,16 +1137,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "local_timezone": "America/Sao_Paulo",
-        "start_local": "2026-11-18T18:00:00-03:00",
-        "end_local": "2026-11-18T19:00:00-03:00",
-        "brazil_timezone": "America/Sao_Paulo",
-        "start_brazil": "2026-11-18T18:00:00-03:00",
-        "end_brazil": "2026-11-18T19:00:00-03:00"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1141,7 +1166,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1156,6 +1181,25 @@
         "coordinates": "city_references",
         "generated_by": "spidey_fly_core",
         "timezone_conversion": "America/Sao_Paulo"
+      },
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "local_timezone": "America/Sao_Paulo",
+          "start_local": "2026-11-18T18:00:00-03:00",
+          "end_local": "2026-11-18T19:00:00-03:00",
+          "brazil_timezone": "America/Sao_Paulo",
+          "start_brazil": "2026-11-18T18:00:00-03:00",
+          "end_brazil": "2026-11-18T19:00:00-03:00"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
       }
     },
     {
@@ -1175,16 +1219,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "local_timezone": "America/Sao_Paulo",
-        "start_local": "2026-11-25T18:00:00-03:00",
-        "end_local": "2026-11-25T19:00:00-03:00",
-        "brazil_timezone": "America/Sao_Paulo",
-        "start_brazil": "2026-11-25T18:00:00-03:00",
-        "end_brazil": "2026-11-25T19:00:00-03:00"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1216,7 +1252,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1231,6 +1267,25 @@
         "coordinates": "city_references",
         "generated_by": "spidey_fly_core",
         "timezone_conversion": "America/Sao_Paulo"
+      },
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "local_timezone": "America/Sao_Paulo",
+          "start_local": "2026-11-25T18:00:00-03:00",
+          "end_local": "2026-11-25T19:00:00-03:00",
+          "brazil_timezone": "America/Sao_Paulo",
+          "start_brazil": "2026-11-25T18:00:00-03:00",
+          "end_brazil": "2026-11-25T19:00:00-03:00"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
       }
     },
     {
@@ -1341,9 +1396,9 @@
         }
       ],
       "audit": {
-        "archived_at": "2026-11-13T17:20:56Z",
+        "archived_at": "2026-11-13T20:38:17Z",
         "archived_by": "editorial_automation",
-        "archive_reason": "Placeholder comunitário 16–23/11 duplicava a janela oficial de Trilhas Dinamax. A espécie específica do Max Monday de 16/11 não foi anunciada oficialmente; a previsão comunitária permanece apenas em Novidades, sem evento datado separado.",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
         "original_community_schedule": {
           "precision": "date",
           "local_timezone": "America/Sao_Paulo",
@@ -1356,7 +1411,10 @@
         "official_window_confirmation_event_id": "2026-11-16-dynamax-trails",
         "specific_species_officially_announced": false,
         "not_in_current_calendar": true,
-        "no_new_art": true
+        "no_new_art": true,
+        "official_confirmation_found": false,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community"
       }
     },
     {
@@ -1409,8 +1467,8 @@
         }
       ],
       "audit": {
-        "archived_at": "2026-11-13",
-        "archive_reason": "A espécie e a janela específica foram relatadas por fonte comunitária, sem anúncio oficial público. A orientação editorial exige manter a previsão apenas em Novidades até confirmação oficial.",
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
         "linked_news_id": "2026-11-max-mondays-community-outlook",
         "official_confirmation_found": false,
         "not_in_current_calendar": true,
@@ -1420,7 +1478,11 @@
           "start_date": "2026-11-23",
           "end_date": "2026-11-29",
           "brazil_timezone": "America/Sao_Paulo"
-        }
+        },
+        "archived_by": "editorial_automation",
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
       }
     },
     {
@@ -1473,8 +1535,8 @@
         }
       ],
       "audit": {
-        "archived_at": "2026-11-13",
-        "archive_reason": "A espécie e a janela específica foram relatadas por fonte comunitária, sem anúncio oficial público. A orientação editorial exige manter a previsão apenas em Novidades até confirmação oficial.",
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
         "linked_news_id": "2026-11-max-mondays-community-outlook",
         "official_confirmation_found": false,
         "not_in_current_calendar": true,
@@ -1484,7 +1546,11 @@
           "start_date": "2026-11-30",
           "end_date": "2026-12-06",
           "brazil_timezone": "America/Sao_Paulo"
-        }
+        },
+        "archived_by": "editorial_automation",
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
       }
     },
     {
@@ -1580,16 +1646,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "local_timezone": "America/Sao_Paulo",
-        "start_local": "2026-11-26T18:00:00-03:00",
-        "end_local": "2026-11-26T19:00:00-03:00",
-        "brazil_timezone": "America/Sao_Paulo",
-        "start_brazil": "2026-11-26T18:00:00-03:00",
-        "end_brazil": "2026-11-26T19:00:00-03:00"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1614,7 +1672,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1629,6 +1687,25 @@
         "coordinates": "city_references",
         "generated_by": "spidey_fly_core",
         "timezone_conversion": "America/Sao_Paulo"
+      },
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "local_timezone": "America/Sao_Paulo",
+          "start_local": "2026-11-26T18:00:00-03:00",
+          "end_local": "2026-11-26T19:00:00-03:00",
+          "brazil_timezone": "America/Sao_Paulo",
+          "start_brazil": "2026-11-26T18:00:00-03:00",
+          "end_brazil": "2026-11-26T19:00:00-03:00"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
       }
     },
     {
@@ -1708,15 +1785,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-21",
-        "end_date": "2026-11-22",
-        "brazil_timezone": "America/Sao_Paulo"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1743,7 +1813,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1751,7 +1821,25 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "precision": "date",
+          "local_timezone": "America/Sao_Paulo",
+          "start_date": "2026-11-21",
+          "end_date": "2026-11-22",
+          "brazil_timezone": "America/Sao_Paulo"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
+      }
     },
     {
       "id": "2026-11-28-shadow-tornadus-weekend",
@@ -1769,15 +1857,8 @@
         "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
         "confidence": "verified_community"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-11-28",
-        "end_date": "2026-11-29",
-        "brazil_timezone": "America/Sao_Paulo"
-      },
       "calendar": {
-        "mode": "span"
+        "mode": "hidden"
       },
       "presentation": {
         "requires_art": false,
@@ -1804,7 +1885,7 @@
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
-      "status": "published",
+      "status": "archived",
       "verified_at": "2026-10-19",
       "verification_sources": [
         {
@@ -1812,7 +1893,25 @@
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "confidence": "verified_community"
         }
-      ]
+      ],
+      "audit": {
+        "archived_at": "2026-11-13T20:38:17Z",
+        "archived_by": "editorial_automation",
+        "archive_reason": "Previsão comunitária sem anúncio oficial público. A regra editorial mantém a informação somente em Novidades com estreia a confirmar, sem evento datado no Calendário; o registro histórico é preservado.",
+        "original_community_schedule": {
+          "precision": "date",
+          "local_timezone": "America/Sao_Paulo",
+          "start_date": "2026-11-28",
+          "end_date": "2026-11-29",
+          "brazil_timezone": "America/Sao_Paulo"
+        },
+        "linked_news_id": "2026-11-max-mondays-community-outlook",
+        "official_confirmation_found": false,
+        "not_in_current_calendar": true,
+        "editorial_detail_pending": false,
+        "source_classification": "verified_community",
+        "no_new_art": true
+      }
     },
     {
       "id": "2026-11-09-into-the-wild",
@@ -2515,7 +2614,7 @@
       "id": "2026-11-24-twilight-wishes-preview",
       "slug": "2026-11-24-twilight-wishes-preview",
       "title": "Chamados do Crepúsculo",
-      "summary": "24/11 às 10h até 30/11 às 20h locais: Staryu e Elgyem com chance Brilhante aumentada, reides temáticas, Pesquisas de Campo em duas fases e Passe GO próprio.",
+      "summary": "24–30/11, 10h–20h locais: encontros selvagens e reides temáticas, duas fases de Pesquisa de Campo e bônus do Passe GO. As recompensas desbloqueadas do Passe precisam ser resgatadas até 2/12 às 20h locais.",
       "category": "evento_especial",
       "tags": [
         "Novembro 2026",
@@ -2574,11 +2673,18 @@
         "Passe GO, no nível 10: 2× Poeira Estelar por captura; no Passe GO Deluxe, 3× Poeira Estelar por captura."
       ],
       "notes": [
-        "A janela oficial é de 24/11 às 10h a 30/11 às 20h no horário local.",
-        "PESQUISA DE CAMPO • 24/11 10h a 26/11 10h: Applin pode aparecer como recompensa; Brilhante possível.",
-        "PESQUISA DE CAMPO • 26/11 10h a 30/11 20h: Gengar com fantasia do Festival Assustador, Drifblim com fantasia Travessura de Halloween e Bramblin podem aparecer.",
-        "O Passe GO: Chamados do Crepúsculo funciona durante o evento. Recompensas desbloqueadas podem ser resgatadas até 2/12 às 20h locais.",
-        "A disponibilidade do Passe GO Deluxe varia por região; a compra não garante Pokémon Brilhante."
+        "EVENTO • 24/11 às 10h a 30/11 às 20h, horário local.",
+        "BÔNUS: maior chance de encontrar Staryu e Elgyem Brilhantes.",
+        "ENCONTROS SELVAGENS: Clefairy, Staryu, Elgyem e Rockruff; a publicação indica que cada um pode aparecer Brilhante.",
+        "REIDES 1★: Pikachu com coroa de sol e Pikachu com coroa de lua. REIDES 3★: Espeon com cachecol de sol e Umbreon com cachecol de lua. MEGAREIDES: Mega Beedrill, Mega Houndoom, Mega Sableye e Mega Manectric; a publicação indica possibilidade de Brilhante para os encontros marcados.",
+        "TAREFAS DE PESQUISA DE CAMPO do evento podem conceder Megaenergia e encontros com Staryu, Elgyem e outros Pokémon temáticos.",
+        "PESQUISA DE CAMPO — fase 1: 24/11 às 10h a 26/11 às 10h locais; Applin pode aparecer e pode ser Brilhante; Maschiff também pode aparecer, sem indicação de Brilhante no anúncio.",
+        "PESQUISA DE CAMPO — fase 2: 26/11 às 10h a 30/11 às 20h locais; Gengar com fantasia do Festival Assustador e Drifblim com fantasia Travessura de Halloween podem aparecer Brilhantes; Bramblin também pode aparecer.",
+        "PASSE GO: disponível de 24/11 às 10h a 30/11 às 20h locais. No Ranque 1, aumentam as chances de Pokémon Sortudos em trocas e de se tornar Amigo Sortudo; no Ranque 10, o bônus é 2× Poeira Estelar por captura, ou 3× no Passe GO Deluxe.",
+        "O Passe GO Deluxe custa US$ 4,99; Deluxe + 6 Ranques custa US$ 6,99. Preços equivalentes e disponibilidade podem variar por região.",
+        "Recompensas do Passe GO incluem encontros temáticos, Pedaço de Estrela, Doce Raro e Megaenergia de Beedrill, Houndoom, Sableye e Manectric. O Deluxe acrescenta encontros, pose de avatar, Pedaços de Estrela e Passes de Batalha Premium.",
+        "A Loja Online oferece itens adicionais na compra do Deluxe; os detalhes completos e condicionais permanecem na publicação oficial.",
+        "PRAZO SEPARADO: recompensas desbloqueadas no Passe GO expiram em 2/12 às 20h locais; ver o registro próprio de prazo de resgate no Calendário."
       ],
       "notifications": {
         "enabled": false,
@@ -2586,17 +2692,12 @@
       },
       "status": "published",
       "verified_at": "2026-11-04",
-      "updated_at": "2026-11-04T07:27:00-03:00",
+      "updated_at": "2026-11-13T17:38:17-03:00",
       "verification_sources": [
         {
-          "name": "Pokémon GO • anúncio completo",
+          "name": "Pokémon GO • versão oficial em inglês, texto completo",
           "url": "https://pokemongo.com/news/twilight-wishes-2026",
           "confidence": "official"
-        },
-        {
-          "name": "Pokémon GO Hub • prévia comunitária preservada",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
         }
       ],
       "field_research_windows": [
@@ -2621,10 +2722,235 @@
       ],
       "news": {
         "title": "Chamados do Crepúsculo: duas fases de pesquisa e Passe GO",
-        "summary": "De 24 a 30/11, Staryu e Elgyem têm chance Brilhante aumentada. A Pesquisa de Campo muda em 26/11 às 10h locais, e o Passe GO libera bônus por nível.",
+        "summary": "De 24 a 30/11: Staryu e Elgyem têm chance Brilhante aumentada; há encontros selvagens, reides temáticas, duas fases de Pesquisa de Campo e bônus do Passe GO. Resgates até 2/12 às 20h locais.",
         "published_on": "2026-11-02",
         "label": "OFICIAL • DETALHES CONFIRMADOS"
-      }
+      },
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026",
+        "source_urls": [
+          "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+          "https://pokemongo.com/news/twilight-wishes-2026"
+        ],
+        "full_text_review_completed": true,
+        "editorial_detail_pending": false,
+        "updated_on": "2026-11-13",
+        "field_research_window_ids": [
+          "2026-11-24-twilight-wishes-field-research-phase-1",
+          "2026-11-26-twilight-wishes-field-research-phase-2"
+        ],
+        "pass_claim_deadline_id": "2026-11-24-twilight-wishes-pass-claim-deadline",
+        "distinct_calendar_windows_preserved": true,
+        "no_new_art": true,
+        "no_coordinates_or_gpx": true
+      },
+      "related_event_ids": [
+        "2026-11-24-twilight-wishes-field-research-phase-1",
+        "2026-11-26-twilight-wishes-field-research-phase-2",
+        "2026-11-24-twilight-wishes-pass-claim-deadline"
+      ]
+    },
+    {
+      "id": "2026-11-24-twilight-wishes-field-research-phase-1",
+      "slug": "2026-11-24-twilight-wishes-field-research-phase-1",
+      "title": "Pesquisa de Campo — Applin e Maschiff",
+      "summary": "Primeira fase das recompensas de Pesquisa de Campo de Chamados do Crepúsculo: 24/11 às 10h a 26/11 às 10h locais.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Chamados do Crepúsculo",
+        "Pesquisa de Campo"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês, texto completo",
+          "url": "https://pokemongo.com/news/twilight-wishes-2026",
+          "confidence": "official"
+        }
+      ],
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-13",
+      "audit": {
+        "classification": "official_distinct_field_research_window",
+        "calendar_event": true,
+        "parent_event_id": "2026-11-24-twilight-wishes-preview",
+        "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026",
+        "editorial_detail_pending": false,
+        "full_text_review_completed": true,
+        "no_new_art": true,
+        "no_coordinates_or_gpx": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-24T10:00:00-03:00",
+        "end_local": "2026-11-26T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-24T10:00:00-03:00",
+        "end_brazil": "2026-11-26T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "notes": [
+        "Applin pode aparecer como recompensa e pode ser Brilhante; Maschiff também pode aparecer, sem indicação de Brilhante no anúncio."
+      ],
+      "related_event_ids": [
+        "2026-11-24-twilight-wishes-preview"
+      ]
+    },
+    {
+      "id": "2026-11-26-twilight-wishes-field-research-phase-2",
+      "slug": "2026-11-26-twilight-wishes-field-research-phase-2",
+      "title": "Pesquisa de Campo — Gengar, Drifblim e Bramblin",
+      "summary": "Segunda fase das recompensas de Pesquisa de Campo de Chamados do Crepúsculo: 26/11 às 10h a 30/11 às 20h locais.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Chamados do Crepúsculo",
+        "Pesquisa de Campo"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês, texto completo",
+          "url": "https://pokemongo.com/news/twilight-wishes-2026",
+          "confidence": "official"
+        }
+      ],
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-13",
+      "audit": {
+        "classification": "official_distinct_field_research_window",
+        "calendar_event": true,
+        "parent_event_id": "2026-11-24-twilight-wishes-preview",
+        "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026",
+        "editorial_detail_pending": false,
+        "full_text_review_completed": true,
+        "no_new_art": true,
+        "no_coordinates_or_gpx": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-26T10:00:00-03:00",
+        "end_local": "2026-11-30T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-26T10:00:00-03:00",
+        "end_brazil": "2026-11-30T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "notes": [
+        "Gengar com fantasia do Festival Assustador e Drifblim com fantasia Travessura de Halloween podem aparecer como recompensa e podem ser Brilhantes; Bramblin também pode aparecer."
+      ],
+      "related_event_ids": [
+        "2026-11-24-twilight-wishes-preview"
+      ]
+    },
+    {
+      "id": "2026-11-24-twilight-wishes-pass-claim-deadline",
+      "slug": "2026-11-24-twilight-wishes-pass-claim-deadline",
+      "title": "Prazo para resgatar recompensas do Passe GO: Chamados do Crepúsculo",
+      "summary": "As recompensas desbloqueadas no Passe GO precisam ser resgatadas até 2/12 às 20h locais.",
+      "category": "research",
+      "tags": [
+        "Global",
+        "Chamados do Crepúsculo",
+        "Pesquisa de Campo"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês, texto completo",
+          "url": "https://pokemongo.com/news/twilight-wishes-2026",
+          "confidence": "official"
+        }
+      ],
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-13",
+      "audit": {
+        "classification": "official_distinct_pass_claim_window",
+        "calendar_event": true,
+        "parent_event_id": "2026-11-24-twilight-wishes-preview",
+        "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026",
+        "editorial_detail_pending": false,
+        "full_text_review_completed": true,
+        "no_new_art": true,
+        "no_coordinates_or_gpx": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-24T10:00:00-03:00",
+        "end_local": "2026-12-02T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-24T10:00:00-03:00",
+        "end_brazil": "2026-12-02T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "notes": [
+        "O Passe GO fica disponível durante o evento, de 24/11 às 10h a 30/11 às 20h locais. Esta janela separada representa somente o prazo final para resgatar recompensas já desbloqueadas."
+      ],
+      "related_event_ids": [
+        "2026-11-24-twilight-wishes-preview"
+      ]
     },
     {
       "id": "2026-11-28-super-mega-raid-day-preview",
@@ -8690,20 +9016,19 @@
     {
       "id": "2026-11-max-mondays-community-outlook",
       "slug": "2026-11-max-mondays-community-outlook",
-      "title": "Max Mondays de novembro: programação comunitária",
-      "summary": "Leek Duck relata que a semana de 16–23/11 ainda não tem espécie Dynamax anunciada, Dynamax Espurr pode aparecer em Batalhas Max de 23 a 29/11 e Dynamax Cryogonal de 30/11 a 06/12. Tudo é informação comunitária, sem confirmação oficial.",
-      "category": "max_monday",
+      "title": "Calendário comunitário de novembro: previsões ainda a confirmar",
+      "summary": "Pokémon GO Hub e Leek Duck listam possíveis rotações de Megarreides, Reides, Horas de Reides, Holofote, Reides Sombrias e Max Mondays entre 16/11 e 06/12. São previsões comunitárias sem confirmação oficial pública: permanecem apenas em Novidades, com estreia a confirmar, sem eventos datados no Calendário.",
+      "category": "community_calendar",
       "tags": [
-        "Max Monday",
-        "Dinamax",
         "Novembro 2026",
         "Comunidade",
-        "A confirmar"
+        "Previsões",
+        "Estreia a confirmar"
       ],
       "source": {
-        "name": "Leek Duck • calendário comunitário",
-        "url": "https://leekduck.com/events/max-mondays-2026-11-16/",
-        "confidence": "community"
+        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+        "confidence": "verified_community"
       },
       "content_type": "news",
       "calendar": {
@@ -8716,29 +9041,39 @@
       "locations": [],
       "gpx": {
         "enabled": false,
-        "reason": "Pista comunitária sem evento confirmado; nenhuma rota ou coordenada foi adicionada."
+        "reason": "Previsões comunitárias sem evento oficial confirmado; nenhuma rota ou coordenada foi adicionada."
       },
       "notes": [
-        "16–23/11 — Leek Duck informa que o Pokémon Dynamax em destaque para essa semana ainda não foi anunciado; a janela da Max Monday de 16/11 é indicada como 06h–21h local.",
-        "23/11 — Leek Duck indica que Dynamax Espurr pode aparecer em Batalhas Max de 23 a 29/11; informação comunitária, não confirmada oficialmente.",
-        "30/11 — Leek Duck indica que Dynamax Cryogonal pode aparecer em Batalhas Max de 30/11 a 06/12; informação comunitária, não confirmada oficialmente.",
-        "As páginas comunitárias indicam 06h–21h locais para as Segundas Max, com Pontos de Energia renovando mais frequentemente e mais Pontos ativos às segundas; esses detalhes não foram confirmados pela Niantic/Scopely.",
-        "Não foi encontrado anúncio oficial para confirmar espécies, janelas semanais ou mecânicas de Pontos de Energia. A notícia permanece em Novidades, sem schedule e sem evento no Calendário."
+        "MEGARREIDES • 16–24/11: o Pokémon GO Hub prevê Mega Banette; informação comunitária, sem confirmação oficial pública.",
+        "REIDES 5★ • 25/11–01/12: o Pokémon GO Hub prevê Deoxys nas quatro formas; informação comunitária, sem confirmação oficial pública.",
+        "MEGARREIDES • 25/11–01/12: o Pokémon GO Hub prevê Mega Metagross; informação comunitária, sem confirmação oficial pública.",
+        "HORA DE REIDES • 18/11, 18h–19h locais: o Pokémon GO Hub prevê Cresselia e Darkrai; informação comunitária, sem confirmação oficial pública.",
+        "HORA DE REIDES • 25/11, 18h–19h locais: o Pokémon GO Hub prevê Deoxys nas quatro formas; informação comunitária, sem confirmação oficial pública.",
+        "HORA DO HOLOFOTE • 26/11, 18h–19h locais: o Pokémon GO Hub prevê Noibat; informação comunitária, sem confirmação oficial pública.",
+        "REIDES SOMBRIAS • 21–22/11: o Pokémon GO Hub prevê Tornadus; informação comunitária, sem confirmação oficial pública.",
+        "REIDES SOMBRIAS • 28–29/11: o Pokémon GO Hub prevê Tornadus; informação comunitária, sem confirmação oficial pública.",
+        "MAX MONDAY • 16/11: Leek Duck informa que a espécie da semana 16–23/11 ainda não foi anunciada; janela comunitária indicada de 06h–21h local.",
+        "MAX MONDAY • 23/11: Leek Duck prevê Dynamax Espurr em 23–29/11, com janela comunitária de 06h–21h local na segunda-feira.",
+        "MAX MONDAY • 30/11: Leek Duck prevê Dynamax Cryogonal em 30/11–06/12, com janela comunitária de 06h–21h local na segunda-feira.",
+        "Nenhuma dessas previsões foi confirmada nos comunicados públicos oficiais em português/inglês ou na página oficial da Temporada. O calendário oficial de novembro exige login; por isso, as previsões permanecem apenas nesta notícia comunitária."
       ],
       "notifications": {
-        "enabled": false
+        "enabled": false,
+        "reason": "Notícia comunitária a confirmar; nenhum push foi autorizado."
       },
       "status": "published",
-      "updated_at": "2026-11-13T03:56:42-03:00",
+      "updated_at": "2026-11-13T17:38:17-03:00",
       "news": {
-        "title": "Max Mondays de novembro: programação comunitária a confirmar",
-        "summary": "Leek Duck informa que a espécie da semana 16–23/11 ainda não foi anunciada; Dynamax Espurr pode aparecer em Batalhas Max de 23–29/11 e Dynamax Cryogonal de 30/11–06/12. As páginas também relatam Max Battles das 06h às 21h locais às segundas e mudanças nos Pontos de Energia. Conteúdo comunitário, sem confirmação oficial e sem entrada no Calendário.",
-        "label": "COMUNIDADE • A CONFIRMAR"
+        "title": "Calendário comunitário de novembro: previsões a confirmar",
+        "summary": "Fontes comunitárias apontam possíveis rotações e horários entre 16/11 e 06/12. Não há confirmação oficial pública para estas previsões; a estreia permanece a confirmar e nenhum item aparece como evento datado no Calendário.",
+        "published_on": "2026-11-13",
+        "label": "COMUNIDADE • ESTREIA A CONFIRMAR"
       },
       "audit": {
-        "classification": "community_schedule_unconfirmed",
-        "verified_at": "2026-11-13T03:45:00-03:00",
+        "classification": "community_calendar_forecast_unconfirmed",
+        "verified_at": "2026-11-13T17:38:17-03:00",
         "source_urls": [
+          "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
           "https://leekduck.com/events/max-mondays-2026-11-16/",
           "https://leekduck.com/events/max-mondays-2026-11-23/",
           "https://leekduck.com/events/max-mondays-2026-11-30/"
@@ -8746,7 +9081,11 @@
         "official_confirmation_found": false,
         "official_confirmation_checked": [
           "https://pokemongo.com/pt-BR/news",
-          "https://pokemongo.com/en/news"
+          "https://pokemongo.com/en/news",
+          "https://pokemongo.com/pt-BR/seasons/twilight-trails",
+          "https://pokemongo.com/en/seasons/twilight-trails",
+          "https://pokemongo.com/pt-BR/events/november-2026",
+          "https://pokemongo.com/en/events/november-2026"
         ],
         "community_hours": "Leek Duck lists 06:00–21:00 local; not shown as official or scheduled in the app.",
         "calendar_entry_created": false,
@@ -8795,8 +9134,55 @@
         "community_event_records_archived": [
           "2026-11-23-max-espurr",
           "2026-11-30-max-cryogonal"
-        ]
-      }
+        ],
+        "official_event_calendar_requires_sign_in": true,
+        "community_event_ids": [
+          "2026-11-25-raids-deoxys-four-forms",
+          "2026-11-16-mega-banette-raids",
+          "2026-11-25-mega-metagross-raids",
+          "2026-11-18-raid-hour-cresselia-darkrai",
+          "2026-11-25-raid-hour-deoxys",
+          "2026-11-26-spotlight-noibat",
+          "2026-11-21-shadow-tornadus-weekend",
+          "2026-11-28-shadow-tornadus-weekend",
+          "2026-11-16-max-surprise",
+          "2026-11-23-max-espurr",
+          "2026-11-30-max-cryogonal"
+        ],
+        "not_in_calendar": true,
+        "original_schedules_preserved": true,
+        "editorial_detail_pending": false
+      },
+      "verification_sources": [
+        {
+          "name": "Leek Duck • página comunitária Max Monday 1",
+          "url": "https://leekduck.com/events/max-mondays-2026-11-16/",
+          "confidence": "community"
+        },
+        {
+          "name": "Leek Duck • página comunitária Max Monday 2",
+          "url": "https://leekduck.com/events/max-mondays-2026-11-23/",
+          "confidence": "community"
+        },
+        {
+          "name": "Leek Duck • página comunitária Max Monday 3",
+          "url": "https://leekduck.com/events/max-mondays-2026-11-30/",
+          "confidence": "community"
+        }
+      ],
+      "related_event_ids": [
+        "2026-11-25-raids-deoxys-four-forms",
+        "2026-11-16-mega-banette-raids",
+        "2026-11-25-mega-metagross-raids",
+        "2026-11-18-raid-hour-cresselia-darkrai",
+        "2026-11-25-raid-hour-deoxys",
+        "2026-11-26-spotlight-noibat",
+        "2026-11-21-shadow-tornadus-weekend",
+        "2026-11-28-shadow-tornadus-weekend",
+        "2026-11-16-max-surprise",
+        "2026-11-23-max-espurr",
+        "2026-11-30-max-cryogonal"
+      ]
     },
     {
       "id": "2026-10-01-spotlight-seedot",
@@ -13347,9 +13733,10 @@
         "label": "HISTÓRICO • INCORPORADO AO EVENTO"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "O texto completo oficial em inglês foi lido e comparado à página oficial em português.",
+        "Os detalhes de encontros selvagens, reides, bônus do Passe GO e as duas fases de Pesquisa de Campo foram incorporados ao registro canônico 2026-11-24-twilight-wishes-preview.",
+        "As duas fases de Pesquisa de Campo e o prazo de resgate do Passe GO foram registrados como janelas distintas, agrupadas na mesma história pela URL canônica.",
+        "Esta notícia automática permanece arquivada para evitar duplicidade; o registro canônico do evento mantém a história pública."
       ],
       "notifications": {
         "enabled": false,
@@ -13363,7 +13750,10 @@
         "editorial_detail_pending": false,
         "automatic_index_discovery": true,
         "not_a_calendar_event": true,
-        "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026"
+        "canonical_fulltext_url": "https://pokemongo.com/news/twilight-wishes-2026",
+        "full_text_review_completed": true,
+        "grouped_with_event_id": "2026-11-24-twilight-wishes-preview",
+        "archived_to_avoid_duplicate_story": true
       },
       "related_event_ids": [
         "2026-11-24-twilight-wishes-preview"
