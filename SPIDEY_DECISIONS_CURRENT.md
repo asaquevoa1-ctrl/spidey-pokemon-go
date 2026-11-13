@@ -705,3 +705,12 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Dialga no sábado, Duraludon Gigamax em Batalhas Max de seis estrelas nos dois dias, possibilidade de Brilhante e chance de Fundo Especial estão confirmados na página oficial. A alegação de cinco estrelas para Dialga não consta da publicação oficial e não foi adotada.
 - A mensagem genérica sobre “todos os Brilhantes” não traz lista de espécies nem detalhe independente; fica como `no_public_story`, vinculada à história Global, sem notícia ou arte separada.
 - As páginas X não foram acessíveis pelo leitor público; os textos do coletor foram preservados, mas a origem comunitária não recebeu selo de verificada. O cruzamento de fatos foi feito exclusivamente com a página oficial completa. Nenhuma coordenada, GPX ou arte foi criada.
+
+
+## 13/11/2026 — Expiração de Novidades com datas sem hora no fuso IANA
+- Para notícias temporárias com `news.expire_when_related_windows_end: true`, eventos date-only válidos usam `SpideyDateOnly.bounds`: o fim exclusivo é o primeiro instante do dia seguinte à última data no fuso IANA do evento.
+- Ocultar quando `now >= end`, tanto para eventos com hora quanto para date-only. A notícia sai quando todas as janelas relacionadas terminaram; o registro histórico permanece.
+- Fail-open fica restrito a referências ausentes, não publicadas ou com agenda/fuso inválido. Uma referência date-only válida não pode manter a notícia visível depois do último dia.
+- Esta regra segue a instrução mais recente do responsável e substitui a orientação anterior que mantinha referências date-only visíveis por falta de hora.
+- Testes cobrem Seul (Asia/Seoul): 15/11/2026 23:59:59.999 local ainda visível; 16/11/2026 00:00:00 local encerrado, equivalente a 15/11 15:00:00Z.
+- Ao alterar `news-feed.js`, a versão de consulta no `index.html` e o cache PWA também são atualizados.
