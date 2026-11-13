@@ -35,6 +35,20 @@
       "schedule_removed_from_active_record": true,
       "original_schedule_preserved_in_audit": true,
       "linked_news_id": "2026-11-max-mondays-community-outlook"
+    },
+    {
+      "id": "2026-11-16-max-surprise",
+      "original_community_schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-11-16",
+        "end_date": "2026-11-23",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "status": "archived",
+      "linked_news_id": "2026-11-max-mondays-community-outlook",
+      "superseded_by_event_id": "2026-11-16-dynamax-trails",
+      "reason": "Placeholder 16–23/11 duplicava a janela oficial de Trilhas Dinamax; espécie de Max Monday não anunciada oficialmente. Previsão fica somente em Novidades, como fonte comunitária."
     }
   ],
   "player_facing_result": "Uma notícia comunitária COMUNIDADE • A CONFIRMAR permanece em Novidades; nenhuma espécie ou janela de novembro entra no Calendário sem anúncio oficial.",
@@ -51,5 +65,7 @@
     "test": "tests/go-tour-2027-calendar-windows-20261113.test.cjs",
     "execution": "pending GitHub Actions for updated PR #291 head",
     "merge": "not attempted; PR branch remains divergent"
-  }
+  },
+  "calendar_entry_created": false,
+  "no_new_art": true
 }
