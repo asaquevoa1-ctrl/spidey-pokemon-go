@@ -203,3 +203,15 @@ test('atualização PvPoke dispara o publicador oficial somente após gravar dad
   assert.ok(noChange >= 0 && push > noChange && dispatch > push,
     'O Pages só pode ser acionado depois de um commit PvP novo e do push para main');
 });
+
+test('GitHub Pages é a única hospedagem automática e os workflows ativos usam actions compatíveis com Node 24', () => {
+  const vercel = JSON.parse(read('vercel.json'));
+  assert.equal(vercel.git?.deploymentEnabled, false, 'Vercel não pode voltar a publicar automaticamente pelo Git');
+  const health = read('.github/workflows/spidey-app-health.yml');
+  assert.match(health, /actions\/setup-python@v6/);
+  assert.match(health, /actions\/upload-artifact@v5/);
+  assert.doesNotMatch(health, /actions\/(?:setup-python@v5|upload-artifact@v4)\b/);
+  const governance = read('.github/workflows/spidey-governance.yml');
+  assert.match(governance, /actions\/setup-node@v5/);
+  assert.doesNotMatch(governance, /actions\/setup-node@v4\b/);
+});
