@@ -90,3 +90,17 @@ test('eventos locais sem hora permanecem até o fim do último dia no fuso IANA'
   assert.equal(context.window.SpideyDateOnly.status(event,new Date('2026-11-15T14:59:59Z')),'Hoje · horário a confirmar');
   assert.equal(context.window.SpideyDateOnly.status(event,new Date('2026-11-15T15:00:00Z')),'Data encerrada');
 });
+
+
+test('Into the Wild and Mexico City leave current surfaces at their exact local end', () => {
+  const into = events.find(e => e.id === '2026-11-09-into-the-wild');
+  assert.equal(visible(into,new Date('2026-11-13T19:59:59.999-03:00')),true);
+  assert.equal(visible(into,new Date('2026-11-13T20:00:00-03:00')),false);
+  assert.equal(newsApi.build([into],newsRange,new Date('2026-11-13T19:59:59.999-03:00')).length,1);
+  assert.equal(newsApi.build([into],newsRange,new Date('2026-11-13T20:00:00-03:00')).length,0);
+
+  const mexico = events.find(e => e.id === '2026-11-go-wild-area-mexico-city');
+  assert.equal(visible(mexico,new Date('2026-11-08T17:59:59-06:00')),true);
+  assert.equal(visible(mexico,new Date('2026-11-08T18:00:00-06:00')),false);
+  assert.equal(newsApi.build([mexico],newsRange,new Date('2026-11-13T02:59:11-03:00')).length,0);
+});
