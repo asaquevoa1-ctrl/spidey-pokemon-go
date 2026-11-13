@@ -216,15 +216,15 @@ test('placeholder comunitário 16–23/11 fica arquivado e ligado à história M
   assert.equal(placeholder.audit.official_window_confirmation_event_id,'2026-11-16-dynamax-trails');
   assert.equal(placeholder.audit.specific_species_officially_announced,false);
   assert.equal(placeholder.audit.not_in_current_calendar,true);
-  assert.deepEqual(placeholder.audit.original_community_schedule,{
-    precision:'date',
-    local_timezone:'America/Sao_Paulo',
-    start_date:'2026-11-16',
-    end_date:'2026-11-23'
-  });
+  assert.equal(placeholder.audit.original_community_schedule.precision,'date');
+  assert.equal(placeholder.audit.original_community_schedule.local_timezone,'America/Sao_Paulo');
+  assert.equal(placeholder.audit.original_community_schedule.start_date,'2026-11-16');
+  assert.equal(placeholder.audit.original_community_schedule.end_date,'2026-11-23');
+  assert.equal(placeholder.audit.original_community_schedule.brazil_timezone,'America/Sao_Paulo');
   const story=byId('2026-11-max-mondays-community-outlook');
   assert.ok(story);
   assert.equal(story.schedule,undefined);
   assert.equal(story.calendar.mode,'hidden');
-  assert.match(story.news.summary,/a confirmar|não anunciada/i);
+  assert.match(story.news.title,/a confirmar/i);
+  assert.equal(story.news.label,'COMUNIDADE • A CONFIRMAR');
 });
