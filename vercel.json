@@ -68,5 +68,8 @@
       "source": "/spidey-app/api/catalog",
       "destination": "/api/catalog"
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": false
+  }
 }
