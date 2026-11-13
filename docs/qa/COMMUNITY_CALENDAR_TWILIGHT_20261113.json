@@ -9,13 +9,15 @@
       "https://pokemongo.com/pt-BR/news",
       "https://pokemongo.com/pt-BR/seasons/twilight-trails",
       "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
-      "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026"
+      "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+      "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026"
     ],
     "official_en": [
       "https://pokemongo.com/en/news",
       "https://pokemongo.com/en/seasons/twilight-trails",
       "https://pokemongo.com/news/twilight-wishes-2026",
-      "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026"
+      "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+      "https://pokemongo.com/news/clefable-super-mega-raid-day-2026"
     ],
     "community": [
       "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
@@ -104,7 +106,8 @@
       "Twilight Wishes story groups four records",
       "field-research windows remain distinct",
       "GO Pass claim boundary 19:59:59/20:00:00 local",
-      "Max Monday 16/11 record linked to official Dynamax Trails announcement and excluded from unconfirmed community story"
+      "Max Monday 16/11 record linked to official Dynamax Trails announcement and excluded from unconfirmed community story",
+      "Clefable Super Mega Raid Day preserves the event, global challenge and post-event reward windows; Remote Raid cap 20 and exact end boundary tested"
     ]
   },
   "publication": {
@@ -133,5 +136,40 @@
     "59bbdf4265648305d3fc9adc3f5f6aefa0b6937b",
     "908ed97fd750f29b6ad672e9fbd26564dedcac4c"
   ],
-  "branch_head_after_data_commit": "91bdd84a3fdcd40534bfa85c69d992c2597a6e5d"
+  "branch_head_after_data_commit": "91bdd84a3fdcd40534bfa85c69d992c2597a6e5d",
+  "clefable": {
+    "canonical_story_event_id": "2026-11-28-super-mega-raid-day-preview",
+    "full_text_reviewed": true,
+    "editorial_detail_pending": false,
+    "distinct_windows_preserved": [
+      {
+        "id": "2026-11-27-clefable-global-challenge",
+        "start": "2026-11-27T22:00:00-03:00",
+        "end": "2026-11-29T01:00:00-03:00",
+        "timezone": "America/Los_Angeles"
+      },
+      {
+        "id": "2026-11-28-super-mega-raid-day-preview",
+        "start": "2026-11-28T14:00:00-03:00",
+        "end": "2026-11-28T17:00:00-03:00",
+        "timezone": "America/Sao_Paulo"
+      },
+      {
+        "id": "2026-11-30-clefable-global-rewards",
+        "start": "2026-11-30T17:00:00-03:00",
+        "end": "2026-12-13T17:00:00-03:00",
+        "timezone": "America/Los_Angeles"
+      }
+    ],
+    "details_added": [
+      "Explosão Lunar+ power in Trainer Battles and Raids",
+      "Mega Level Super Max requirement",
+      "6 free passes / 14 ticket passes",
+      "Remote Raid cap 20 during global challenge",
+      "Timed Research Metagross and Premium Battle Pass",
+      "ticket bonus XP/Star Dust/XL Rare Candy",
+      "conditional post-event attack/CP bonuses"
+    ],
+    "exact_end_boundary_test": "2026-12-13T17:00:00-03:00"
+  }
 }

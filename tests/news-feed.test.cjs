@@ -188,3 +188,25 @@ test('Twilight Wishes has one story and distinct field-research and GO Pass clai
  assert.ok(beforeEnd.some(group=>group.events.some(event=>event.id===claim.id)));
  assert.equal(atEnd.some(group=>group.events.some(event=>event.id===claim.id)),false);
 });
+
+
+test('Clefable Super Mega Raid Day retains its three official windows and conditional bonuses',()=>{
+ const main=events.find(e=>e.id==='2026-11-28-super-mega-raid-day-preview');
+ const challenge=events.find(e=>e.id==='2026-11-27-clefable-global-challenge');
+ const rewards=events.find(e=>e.id==='2026-11-30-clefable-global-rewards');
+ assert.ok(main&&challenge&&rewards);
+ assert.deepEqual([main.schedule.start_brazil,main.schedule.end_brazil],['2026-11-28T14:00:00-03:00','2026-11-28T17:00:00-03:00']);
+ assert.deepEqual([challenge.schedule.start_brazil,challenge.schedule.end_brazil],['2026-11-27T22:00:00-03:00','2026-11-29T01:00:00-03:00']);
+ assert.deepEqual([rewards.schedule.start_brazil,rewards.schedule.end_brazil],['2026-11-30T17:00:00-03:00','2026-12-13T17:00:00-03:00']);
+ assert.match(main.notes.join(' '),/até seis Passes de Reide/);assert.match(main.notes.join(' '),/até 14 Passes de Reide/);
+ assert.match(main.notes.join(' '),/limite de Reides a Distância aumenta para 20/);assert.match(main.notes.join(' '),/Metagross/);
+ assert.match(challenge.notes.join(' '),/limite de Reides a Distância aumenta para 20/);
+ assert.match(rewards.notes.join(' '),/Liga de Batalha GO/);
+ const during=build(events,range,new Date('2026-11-28T18:00:00Z'));
+ const story=during.find(group=>group.events.some(event=>event.id===main.id));assert.ok(story);
+ assert.ok(story.events.some(event=>event.id===challenge.id));assert.ok(story.events.some(event=>event.id===rewards.id));
+ const beforeEnd=build(events,range,new Date('2026-12-13T19:59:59Z'));
+ const atEnd=build(events,range,new Date('2026-12-13T20:00:00Z'));
+ assert.ok(beforeEnd.some(group=>group.events.some(event=>event.id===rewards.id)));
+ assert.equal(atEnd.some(group=>group.events.some(event=>event.id===rewards.id)),false);
+});

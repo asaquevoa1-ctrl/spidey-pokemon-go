@@ -713,3 +713,8 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Base de reconciliação desta preparação: main `6a3ec9723f9317f816e5986b6eecff61f3b9d21c`; branch `automation/2026-11-13-go-tour-windows-and-community-max-mondays`, HEAD anterior `79cbf21a01188516a7e1dd4ff0c1a3bb81f3cf19`. A integração permanece sujeita a CI e reconciliação da branch concorrente.
 
 - A janela geral de Trilhas Dinamax 16–23/11 e a presença de Dynamax não lendários/não míticos já lançados foram confirmadas oficialmente; somente a espécie específica do Max Monday de 16/11 segue sem anúncio comunitário, sem criar um evento separado.
+
+## 13/11/2026 — detalhes completos de Dia de Super Megarreides de Mega Clefable
+- Leitura integral da publicação oficial PT-BR e conferência do texto EN. Atualizados o evento de 28/11, o Desafio Global 27–29/11 (horário Brasília) e a janela condicional 30/11–13/12, sem fundir as três janelas.
+- Acrescentados Explosão Lunar+ (80 em Batalhas de Treinador/160 em Reides), Super Nível Máximo, até 6 Passes gratuitos/14 com ingresso, limite de Reides a Distância 20, Pesquisa Temporária com Metagross e Passe Premium, bônus do ingresso e efeitos pós-desafio condicionais.
+- Teste de fronteira para 13/12 às 17h de Brasília: 16:59:59 ainda ativo; 17:00:00 encerrado. Sem coordenadas, GPX, arte nova ou push.
