@@ -8412,7 +8412,7 @@
       "id": "2027-02-go-tour-alola-save-the-date",
       "slug": "2027-02-go-tour-alola-save-the-date",
       "title": "Pokémon GO Tour 2027: Alola",
-      "summary": "Datas oficiais anunciadas para Kaohsiung, Los Angeles e para o evento global.",
+      "summary": "Datas oficiais: eventos presenciais em Kaohsiung e Los Angeles, de 19 a 21/02/2027; evento global, 27 e 28/02/2027. Horários, ingressos e detalhes de jogabilidade ainda serão divulgados.",
       "category": "go_fest",
       "tags": [
         "GO Tour",
@@ -8425,14 +8425,6 @@
         "name": "Pokémon GO",
         "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
         "confidence": "official"
-      },
-      "schedule": {
-        "local_timezone": "America/Sao_Paulo",
-        "start_local": "2027-02-19T00:00:00-03:00",
-        "end_local": "2027-02-28T23:59:59-03:00",
-        "brazil_timezone": "America/Sao_Paulo",
-        "start_brazil": "2027-02-19T00:00:00-03:00",
-        "end_brazil": "2027-02-28T23:59:59-03:00"
       },
       "calendar": {
         "mode": "hidden"
@@ -8457,8 +8449,285 @@
       "status": "published",
       "news": {
         "title": "GO Tour 2027 celebrará Alola",
-        "summary": "Kaohsiung e Los Angeles recebem eventos presenciais de 19 a 21/02; o evento global será em 27 e 28/02.",
-        "published_on": "2026-09-25"
+        "summary": "Kaohsiung e Los Angeles recebem eventos presenciais de 19 a 21/02/2027; o evento global acontece em 27 e 28/02/2027. Ingressos e detalhes serão divulgados na próxima Temporada.",
+        "published_on": "2026-09-23",
+        "label": "OFICIAL • DATAS CONFIRMADAS"
+      },
+      "content_type": "news",
+      "updated_at": "2026-11-13T03:26:42-03:00",
+      "audit": {
+        "classification": "official_save_the_date",
+        "verified_at": "2026-11-13T03:26:42-03:00",
+        "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "official_en_url": "https://pokemongo.com/en/news/save-the-date-go-tour-2027",
+        "official_events_index_url": "https://pokemongo.com/featured-in-person-events",
+        "published_on_verified": "2026-09-23",
+        "calendar_windows_separate": true,
+        "hours_announced": false,
+        "ticketing_status": "tickets_next_season",
+        "gameplay_details_status": "pending",
+        "child_event_ids": [
+          "2027-02-19-go-tour-kaohsiung",
+          "2027-02-19-go-tour-los-angeles",
+          "2027-02-27-go-tour-global"
+        ],
+        "no_coordinates_or_gpx": true
+      }
+    },
+    {
+      "id": "2027-02-19-go-tour-kaohsiung",
+      "slug": "2027-02-19-go-tour-kaohsiung",
+      "title": "Pokémon GO Tour 2027 — Kaohsiung",
+      "summary": "Evento presencial em Kaohsiung, Taiwan, de 19 a 21/02/2027. Horários, ingressos e detalhes de jogabilidade ainda serão divulgados.",
+      "category": "go_fest",
+      "tags": [
+        "GO Tour 2027",
+        "Alola",
+        "Pokémon GO Tour",
+        "in_person"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial PT/EN",
+        "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "confidence": "official"
+      },
+      "content_type": "event",
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "Asia/Taipei",
+        "start_date": "2027-02-19",
+        "end_date": "2027-02-21",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Nenhuma rota ou coordenada oficial foi anunciada."
+      },
+      "notes": [
+        "Evento presencial anunciado oficialmente para Kaohsiung, Taiwan, de 19 a 21 de fevereiro de 2027.",
+        "Horários, local exato, ingressos e detalhes de jogabilidade ainda serão divulgados na próxima Temporada.",
+        "Nenhuma coordenada, Poképarada ou rota oficial foi publicada; não há GPX."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "updated_at": "2026-11-13T03:26:42-03:00",
+      "audit": {
+        "classification": "official_save_the_date",
+        "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "official_en_url": "https://pokemongo.com/en/news/save-the-date-go-tour-2027",
+        "window_role": "in_person",
+        "precision": "date_only",
+        "hours_announced": false,
+        "tickets_next_season": true,
+        "no_coordinates_or_pokestops": true,
+        "no_gpx": true,
+        "no_new_art": true,
+        "timezone_role": "Fuso IANA da cidade do evento, usado apenas para delimitar os dias locais."
+      }
+    },
+    {
+      "id": "2027-02-19-go-tour-los-angeles",
+      "slug": "2027-02-19-go-tour-los-angeles",
+      "title": "Pokémon GO Tour 2027 — Los Angeles",
+      "summary": "Evento presencial em Los Angeles, Califórnia, de 19 a 21/02/2027. Horários, ingressos e detalhes de jogabilidade ainda serão divulgados.",
+      "category": "go_fest",
+      "tags": [
+        "GO Tour 2027",
+        "Alola",
+        "Pokémon GO Tour",
+        "in_person"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial PT/EN",
+        "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "confidence": "official"
+      },
+      "content_type": "event",
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Los_Angeles",
+        "start_date": "2027-02-19",
+        "end_date": "2027-02-21",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Nenhuma rota ou coordenada oficial foi anunciada."
+      },
+      "notes": [
+        "Evento presencial anunciado oficialmente para Los Angeles, Califórnia, de 19 a 21 de fevereiro de 2027.",
+        "Horários, local exato, ingressos e detalhes de jogabilidade ainda serão divulgados na próxima Temporada.",
+        "Nenhuma coordenada, Poképarada ou rota oficial foi publicada; não há GPX."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "updated_at": "2026-11-13T03:26:42-03:00",
+      "audit": {
+        "classification": "official_save_the_date",
+        "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "official_en_url": "https://pokemongo.com/en/news/save-the-date-go-tour-2027",
+        "window_role": "in_person",
+        "precision": "date_only",
+        "hours_announced": false,
+        "tickets_next_season": true,
+        "no_coordinates_or_pokestops": true,
+        "no_gpx": true,
+        "no_new_art": true,
+        "timezone_role": "Fuso IANA da cidade do evento, usado apenas para delimitar os dias locais."
+      }
+    },
+    {
+      "id": "2027-02-27-go-tour-global",
+      "slug": "2027-02-27-go-tour-global",
+      "title": "Pokémon GO Tour 2027 — Global",
+      "summary": "Evento global no jogo em 27 e 28/02/2027. Horários e detalhes de jogabilidade ainda serão divulgados.",
+      "category": "go_fest",
+      "tags": [
+        "GO Tour 2027",
+        "Alola",
+        "Pokémon GO Tour",
+        "global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial PT/EN",
+        "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "confidence": "official"
+      },
+      "content_type": "event",
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-02-27",
+        "end_date": "2027-02-28",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Nenhuma rota ou coordenada oficial foi anunciada."
+      },
+      "notes": [
+        "Evento global no jogo anunciado oficialmente para 27 e 28 de fevereiro de 2027.",
+        "Horários e detalhes de jogabilidade ainda serão divulgados; o calendário exibe somente as datas, sem horário.",
+        "America/Sao_Paulo é apenas a referência de exibição date-only do app em português do Brasil, não um horário oficial do evento.",
+        "Ingressos e mais detalhes serão divulgados na próxima Temporada."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "updated_at": "2026-11-13T03:26:42-03:00",
+      "audit": {
+        "classification": "official_save_the_date",
+        "canonical_url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+        "official_pt_url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "official_en_url": "https://pokemongo.com/en/news/save-the-date-go-tour-2027",
+        "window_role": "global",
+        "precision": "date_only",
+        "hours_announced": false,
+        "tickets_next_season": true,
+        "no_coordinates_or_pokestops": true,
+        "no_gpx": true,
+        "no_new_art": true,
+        "timezone_role": "America/Sao_Paulo é apenas referência de exibição date-only do app pt-BR; o anúncio não informa horário nem um fuso global único."
+      }
+    },
+    {
+      "id": "2026-11-max-mondays-community-outlook",
+      "slug": "2026-11-max-mondays-community-outlook",
+      "title": "Max Mondays de novembro: programação comunitária",
+      "summary": "Leek Duck lista 16/11 com Pokémon a anunciar, 23/11 com Dynamax Espurr e 30/11 com Dynamax Cryogonal. Não há confirmação oficial; manter como pista comunitária, sem calendário.",
+      "category": "max_monday",
+      "tags": [
+        "Max Monday",
+        "Dinamax",
+        "Novembro 2026",
+        "Comunidade",
+        "A confirmar"
+      ],
+      "source": {
+        "name": "Leek Duck • calendário comunitário",
+        "url": "https://leekduck.com/events/max-mondays-2026-11-16/",
+        "confidence": "community"
+      },
+      "content_type": "news",
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "spidey-logo"
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Pista comunitária sem evento confirmado; nenhuma rota ou coordenada foi adicionada."
+      },
+      "notes": [
+        "16/11 — Leek Duck lista Max Monday com o Pokémon em destaque ainda a anunciar.",
+        "23/11 — Leek Duck lista Dynamax Espurr para o Max Monday.",
+        "30/11 — Leek Duck lista Dynamax Cryogonal para o Max Monday.",
+        "As páginas são fontes comunitárias; não foi encontrado anúncio oficial Niantic/Scopely para confirmar essas atrações. Permanecem em Novidades, sem eventos datados no Calendário."
+      ],
+      "notifications": {
+        "enabled": false
+      },
+      "status": "published",
+      "updated_at": "2026-11-13T03:26:42-03:00",
+      "news": {
+        "title": "Max Mondays de novembro: programação comunitária a confirmar",
+        "summary": "Leek Duck lista 16/11 sem Pokémon anunciado, 23/11 com Dynamax Espurr e 30/11 com Dynamax Cryogonal. A Niantic/Scopely ainda não confirmou essas atrações; acompanhe como pista comunitária, sem calendário.",
+        "published_on": "2026-11-13",
+        "label": "COMUNIDADE • A CONFIRMAR"
+      },
+      "audit": {
+        "classification": "community_schedule_unconfirmed",
+        "verified_at": "2026-11-13T03:26:42-03:00",
+        "source_urls": [
+          "https://leekduck.com/events/max-mondays-2026-11-16/",
+          "https://leekduck.com/events/max-mondays-2026-11-23/",
+          "https://leekduck.com/events/max-mondays-2026-11-30/"
+        ],
+        "official_confirmation_found": false,
+        "official_confirmation_checked": [
+          "https://pokemongo.com/pt-BR/news",
+          "https://pokemongo.com/en/news"
+        ],
+        "community_hours": "Leek Duck lists 06:00–21:00 local; not shown as official or scheduled in the app.",
+        "calendar_entry_created": false,
+        "schedule_omitted": true,
+        "no_coordinates_or_gpx": true,
+        "no_new_art": true
       }
     },
     {
