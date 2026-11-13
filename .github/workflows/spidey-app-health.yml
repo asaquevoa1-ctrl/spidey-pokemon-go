@@ -31,7 +31,7 @@ jobs:
         run: python -m unittest scripts.test_app_health -v
       - name: Aguardar a publicação após mudanças
         if: github.event_name == 'push'
-        run: sleep 45
+        run: sleep 120
       - name: Conferir link público, agenda, PvP, imagens e disponibilidade de alertas sem telemetria
         if: github.event_name != 'pull_request'
         env:

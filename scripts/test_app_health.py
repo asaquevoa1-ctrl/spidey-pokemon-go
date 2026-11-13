@@ -4,7 +4,7 @@ import unittest
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from unittest.mock import patch
-from scripts.check_app_health import check, validate_catalogs, validate_shell, validate_push
+from scripts.check_app_health import check, validate_catalogs, validate_shell, validate_push, validate_stamp_catalog
 
 PAGES_SHELL = '<button data-view="pvpView"></button><section id="privacyView"></section><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos;; connect-src &apos;self&apos;">'
 
@@ -69,7 +69,7 @@ class AppHealthTests(unittest.TestCase):
             'index.html': PAGES_SHELL.encode(),
             'premium-approved-master.js': ('const master = ' + json.dumps(master) + ';').encode(),
             'api/push/public-key': b'{"available":false,"publicKey":null,"error":"push_not_configured"}',
-            'data/stamps.json': b'{"rallies":[{"id":"public-rally"}]}',
+            'data/stamps.json': Path('spidey-app/data/stamps.json').read_bytes(),
             'assets/events/approved.png': image,
         })
         for path in ['pvp.js', 'pvp.css', 'navigation.js', 'sw.js', 'catalog.js', 'stamps-v2.js', 'manifest.webmanifest', 'player-ui.js', 'world-route-preview.js']:
@@ -93,6 +93,30 @@ class AppHealthTests(unittest.TestCase):
         self.assertEqual(report['approved_art']['audit'], 'all')
         self.assertTrue(report['checks'][-1]['sha256_checked'])
         self.assertFalse(any('api/catalog' in row['path'] for row in report['checks']))
+
+    def test_public_stamp_catalog_matches_main_and_reports_exact_counts(self):
+        source = json.loads(Path('spidey-app/data/stamps.json').read_text(encoding='utf-8'))
+        public = json.loads(json.dumps(source))
+        errors, metrics = validate_stamp_catalog(public, source)
+        self.assertEqual(errors, [])
+        published = [row for row in source['rallies'] if row.get('status') == 'published']
+        points = sum(len(row.get('stops') or []) for row in published)
+        self.assertEqual(metrics['rallies'], len(published))
+        self.assertEqual(metrics['stamp_points'], points)
+        self.assertEqual(metrics['source_stamp_points'], points)
+        self.assertTrue(metrics['stamp_catalog_matches_source'])
+
+    def test_static_site_detects_stale_stamp_points_even_when_catalog_is_nonempty(self):
+        files, now = self.fake_public_files()
+        public = json.loads(files['data/stamps.json'])
+        rally = next(row for row in public['rallies'] if row.get('status') == 'published' and row.get('stops'))
+        rally['stops'].pop()
+        files['data/stamps.json'] = json.dumps(public).encode()
+        report = self.run_fake_site(files, now)
+        self.assertFalse(report['ok'])
+        self.assertTrue(any('Catálogo público de Selos diverge da main' in issue for issue in report['failures']))
+        self.assertEqual(report['catalogs']['stamp_points'], report['catalogs']['source_stamp_points'] - 1)
+        self.assertFalse(report['catalogs']['stamp_catalog_matches_source'])
 
     def test_static_site_missing_asset_is_not_masked_by_disabled_push(self):
         files, now = self.fake_public_files()

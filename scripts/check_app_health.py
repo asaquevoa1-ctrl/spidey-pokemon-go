@@ -131,6 +131,53 @@ def validate_catalogs(catalogs, now):
     return issues
 
 
+def validate_stamp_catalog(public_catalog, source_catalog):
+    """Compare the public published rallies with the canonical main catalog."""
+    issues = []
+
+    def published(data, label):
+        rallies = data.get('rallies') or []
+        rows = [row for row in rallies if row.get('status') == 'published']
+        if not rows:
+            issues.append(f'{label} vazio')
+        return rows
+
+    public_rows = published(public_catalog, 'Catálogo público de Selos')
+    source_rows = published(source_catalog, 'Catálogo fonte de Selos')
+
+    def index(rows, label):
+        result = {}
+        for row in rows:
+            rally_id = row.get('id')
+            if not rally_id:
+                issues.append(f'{label} contém coleção publicada sem ID')
+                continue
+            if rally_id in result:
+                issues.append(f'{label} contém ID duplicado: {rally_id}')
+            result[rally_id] = row
+        return result
+
+    public_index = index(public_rows, 'Catálogo público de Selos')
+    source_index = index(source_rows, 'Catálogo fonte de Selos')
+    public_points = sum(len(row.get('stops') or []) for row in public_rows)
+    source_points = sum(len(row.get('stops') or []) for row in source_rows)
+    matches = public_index == source_index and not issues
+    if public_index != source_index:
+        issues.append(
+            'Catálogo público de Selos diverge da main '
+            f'({len(public_rows)} coleções/{public_points} pontos; '
+            f'main {len(source_rows)} coleções/{source_points} pontos)'
+        )
+
+    return issues, {
+        'rallies': len(public_rows),
+        'stamp_points': public_points,
+        'source_rallies': len(source_rows),
+        'source_stamp_points': source_points,
+        'stamp_catalog_matches_source': matches,
+    }
+
+
 def check(base=BASE, now=None, hosting='github-pages', all_images=False):
     now = now or datetime.now(timezone.utc)
     if hosting not in {'github-pages', 'vercel'}:
@@ -172,10 +219,12 @@ def check(base=BASE, now=None, hosting='github-pages', all_images=False):
                     report['checks'].append({'path': 'web-analytics.js', 'ok': False})
                     report['failures'].append(str(error))
                 report['limitations'].append('Configuração de estatísticas não comprova recebimento no painel Cloudflare ou número de pessoas')
-            rallies = json.loads(results['data/stamps.json'][0]).get('rallies', [])
-            if not rallies:
-                report['failures'].append('Catálogo de Selos vazio')
-            report['catalogs']['rallies'] = len(rallies)
+            public_stamps = json.loads(results['data/stamps.json'][0])
+            source_stamps_path = Path(__file__).resolve().parents[1] / 'spidey-app' / 'data' / 'stamps.json'
+            source_stamps = json.loads(source_stamps_path.read_text(encoding='utf-8'))
+            stamp_issues, stamp_metrics = validate_stamp_catalog(public_stamps, source_stamps)
+            report['failures'].extend(stamp_issues)
+            report['catalogs'].update(stamp_metrics)
         source = results['premium-approved-master.js'][0].decode()
         master = json.loads(re.search(r'const master = (\{.*?\});',source,re.S).group(1))
         items = list({item['file']: item for item in master.values()}.values())
