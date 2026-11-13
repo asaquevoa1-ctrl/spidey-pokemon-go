@@ -48,6 +48,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: Testar monitor sintético antes da publicação
+        run: python -m unittest scripts.test_app_health -v
       - name: Conferir empacotamento e integridade
         run: python -m unittest scripts.test_spidey_pages scripts.test_build_spidey_weekly
       - uses: actions/setup-node@v5
@@ -284,3 +286,14 @@ jobs:
         run: node scripts/qa_trust_27_public_pages.mjs
       - name: Confirmar no endereço público as 5 imagens oficiais da Wild Area
         run: node scripts/qa_wild_cdmx_public_pages.mjs
+      # A saúde da versão publicada também é validada dentro do próprio deploy;
+      # não depende de o agendamento separado do monitor executar naquele ciclo.
+      - name: Executar monitor sintético completo após publicação
+        run: python scripts/check_app_health.py --hosting github-pages --base-url https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ --output app-health.json
+      - name: Guardar relatório de saúde da versão publicada
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: spidey-app-health
+          path: app-health.json
+          retention-days: 7
