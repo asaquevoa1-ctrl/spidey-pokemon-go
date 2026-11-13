@@ -697,3 +697,11 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - **Dynamax Trails:** o limite diário de coleta de Partículas Max é 2.400; Pontos de Energia concedem 8× Partículas Max e se renovam com mais frequência. O limite de Reides Remotas passa de 10 para 30 na janela oficial de 20/11 13h–21/11 18h PST (GMT−8), equivalente a 20/11 18h–21/11 23h em Brasília.
 - **GO Wild Area Global:** o ingresso é anunciado por US$ 11,99 na página oficial em inglês; o valor foi acrescentado ao guia da aba Global sem criar evento ou arte.
 - Os detalhes permanecem vinculados às histórias oficiais existentes; não foram criados rumores, bônus adicionais, coordenadas ou GPX.
+
+
+
+## 13/11/2026 — G47IX agrupado à Área Selvagem Global
+- Os lembretes de Dialga Dinamax (14/11) e Duraludon Gigamax (14–15/11) repetem informações já confirmadas pela publicação oficial PT-BR/EN e ficam agrupados à história existente `2026-11-go-wild-area-global`, sem novos eventos, artes ou notificações.
+- Dialga no sábado, Duraludon Gigamax em Batalhas Max de seis estrelas nos dois dias, possibilidade de Brilhante e chance de Fundo Especial estão confirmados na página oficial. A alegação de cinco estrelas para Dialga não consta da publicação oficial e não foi adotada.
+- A mensagem genérica sobre “todos os Brilhantes” não traz lista de espécies nem detalhe independente; fica como `no_public_story`, vinculada à história Global, sem notícia ou arte separada.
+- As páginas X não foram acessíveis pelo leitor público; os textos do coletor foram preservados, mas a origem comunitária não recebeu selo de verificada. O cruzamento de fatos foi feito exclusivamente com a página oficial completa. Nenhuma coordenada, GPX ou arte foi criada.
