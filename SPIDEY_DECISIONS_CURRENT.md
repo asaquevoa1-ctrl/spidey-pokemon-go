@@ -680,3 +680,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - Não duplicar a correção de Pawniard: a exigência atualizada de Bisharp como companheiro já está na PR #289 e permanece pendente de merge/CI.
 
 - Max Mondays comunitários: a leitura integral do Leek Duck indica semana 16–23/11 sem espécie anunciada, Dynamax Espurr possível em Batalhas Max de 23–29/11 e Dynamax Cryogonal possível de 30/11–06/12; as páginas também relatam 06h–21h locais e mudanças em Pontos de Energia. Manter tudo em Novidades, sem schedule nem Calendário por falta de anúncio oficial.
+
+## 13/11/2026 — Novidades vinculadas a eventos encerram com a última janela
+- Itens `content_type: "news"` que referenciam eventos por `related` ou `related_event_ids` permanecem na superfície Novidades somente enquanto pelo menos uma janela relacionada estiver publicada e tiver término posterior ao instante atual.
+- Quando todas as janelas relacionadas terminarem, a notícia sai das superfícies atuais; o registro e suas fontes permanecem no catálogo/histórico.
+- O limite é exclusivo: `end <= now` significa encerrado. Eventos com data sem hora usam os limites calculados pelo fuso IANA do próprio registro.
+- Notícias sem eventos relacionados permanecem como informação contínua ou descoberta comunitária a confirmar. Referências ausentes ou sem janela válida falham abertas: não inventar um encerramento.
+- A regra é protegida por `tests/news-feed.test.cjs` e executada também no workflow `.github/workflows/spidey-pages.yml`.
