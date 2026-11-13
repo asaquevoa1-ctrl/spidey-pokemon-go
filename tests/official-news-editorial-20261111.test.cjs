@@ -171,3 +171,53 @@ test20261113('official PT-BR move, Clefable ticket terms, Mexico City Friday upd
   assert.ok(gameplay.notes.some(n => n.includes('check-in abre 15 minutos antes')));
   assert.equal(gameplay.audit.no_exact_rollout_date_published, true);
 });
+
+
+const test20261113b = require('node:test');
+const assert20261113b = require('node:assert/strict');
+const fs20261113b = require('node:fs');
+const records20261113b = JSON.parse(fs20261113b.readFileSync('spidey-app/data/events.json','utf8')).events;
+
+test20261113b('GO Pass, Pawniard, Boston and TCG full-text windows plus archived Eternatus teaser', () => {
+  const paw = records20261113b.find(e => e.id === '2026-11-21-community-day-preview');
+  assert.match(paw.news.summary, /Humilhação Dividida/);
+  assert.match(paw.bonuses.join(' '), /Bisharp como seu companheiro/);
+  assert.doesNotMatch(paw.notes.join(' '), /mesmo que não sejam seus companheiros/);
+  assert.match(paw.notes.join(' '), /Grande Amigo ou superior/);
+  assert.match(paw.notes.join(' '), /não reembolsável/);
+  assert.match(paw.notes.join(' '), /não incluirá uma medalha/);
+  assert.match(paw.notes.join(' '), /não contará com uma história/);
+  assert.match(paw.notes.join(' '), /cinco Ultra Bolas/);
+
+  const go = records20261113b.find(e => e.id === '2026-11-go-pass-groudon');
+  const goText = [...go.notes, ...go.bonuses, go.news.summary].join(' ');
+  for (const fragment of ['10 Ultra Bolas','5 Máximos Reviver','2 Passes de Batalha Premium','20 Ultra Bolas','10 Poções Máximas','sem limite diário de Pontos GO']) {
+    assert.ok(goText.includes(fragment), fragment);
+  }
+  assert.ok(go.related_event_ids.includes('2026-11-go-pass-groudon-unlimited-points'));
+  assert.ok(go.related_event_ids.includes('2026-11-go-pass-groudon-claim-window'));
+
+  const noCap = records20261113b.find(e => e.id === '2026-11-go-pass-groudon-unlimited-points');
+  assert.equal(noCap.schedule.start_local,'2026-11-28T00:00:00-03:00');
+  assert.equal(noCap.schedule.end_local,'2026-11-29T23:59:00-03:00');
+  const goClaim = records20261113b.find(e => e.id === '2026-11-go-pass-groudon-claim-window');
+  assert.equal(goClaim.schedule.start_local,'2026-12-01T10:00:00-03:00');
+  assert.equal(goClaim.schedule.end_local,'2026-12-03T10:00:00-03:00');
+
+  const boston = records20261113b.find(e => e.id === '2026-10-city-safari-boston-research-claim-window');
+  assert.equal(boston.schedule.start_date,'2026-10-24');
+  assert.equal(boston.schedule.end_date,'2028-10-23');
+  assert.ok(boston.related_event_ids.includes('2026-10-city-safari-boston-rescheduled'));
+  const tcg = records20261113b.find(e => e.id === '2026-09-tcg-30th-research-claim-deadline');
+  assert.equal(tcg.schedule.start_local,'2026-11-20T22:00:00-03:00');
+  assert.ok(tcg.related_event_ids.includes('2026-09-tcg-30th-us-retail'));
+
+  const teaser = records20261113b.find(e => e.id === '2026-10-26-eternatus-teaser-unconfirmed');
+  assert.equal(teaser.status,'archived');
+  assert.equal(teaser.calendar.mode,'hidden');
+  assert.ok(teaser.related_event_ids.includes('2026-11-16-dynamax-trails'));
+  assert.ok(teaser.related_event_ids.includes('2026-11-21-eternamax-eternatus-max-battles'));
+
+  assert.equal(new Set(records20261113b.map(e => e.id)).size, records20261113b.length);
+  assert.equal(records20261113b.filter(e => e.audit?.editorial_detail_pending === true).length, 0);
+});
