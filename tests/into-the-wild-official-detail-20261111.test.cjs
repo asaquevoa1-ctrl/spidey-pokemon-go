@@ -66,3 +66,23 @@ test('fontes oficiais usam URLs canônicas e o Passe registra as recompensas pub
   assert.match(passText, /Doce GG adicional/);
   assert.doesNotMatch(passText, /MTs|Passe de Reide Premium|ranques Ultra e Mestre/);
 });
+
+
+test('Área Selvagem Global informa a suspensão das Descobertas Diárias e o pré-requisito de Partículas Max', () => {
+  const global = byId('2026-11-go-wild-area-global');
+  assert.equal(global.schedule.start_local, '2026-11-14T10:00:00-03:00');
+  assert.equal(global.schedule.end_local, '2026-11-15T18:00:00-03:00');
+  assert.ok(global.notes.some(note =>
+    note.includes('Descobertas Diárias') &&
+    note.includes('9/11/2026 às 00h01') &&
+    note.includes('15/11/2026 às 23h59') &&
+    note.includes('horário local')
+  ));
+  assert.ok(global.notes.some(note =>
+    note.includes('menu Proximidades') &&
+    note.includes('todas as Partículas Max disponíveis')
+  ));
+  assert.match(global.news.summary, /Descobertas Diárias/);
+  assert.equal(global.audit.daily_discoveries_suspension_verified, true);
+  assert.equal(global.audit.ticket_max_particle_bonus_requires_nearby_collection, true);
+});
