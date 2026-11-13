@@ -152,7 +152,11 @@ test('FLY Teddiursa 05/11 calcula 64 referências e 18h–19h no fuso IANA de ca
   assert.equal(brasilia(route.find(point => point.timezone === 'Europe/London')), '05/11, 15:00');
   assert.equal(brasilia(route.find(point => point.timezone === 'America/Sao_Paulo')), '05/11, 18:00');
   assert.equal(brasilia(route.find(point => point.timezone === 'America/Los_Angeles')), '05/11, 23:00');
-  assert.match(read('spidey-app/fly-v1.js'), /FEATURED_SPOTLIGHT_ID='2026-11-05-spotlight-teddiursa'/);
+  const flyUi = read('spidey-app/fly-v1.js');
+  assert.match(flyUi, /FEATURED_SPOTLIGHT_ID='2026-11-05-spotlight-teddiursa'/);
+  assert.match(flyUi, /selected=FEATURED_SPOTLIGHT_ID/);
+  assert.match(flyUi, /data-fly-featured-spotlight/);
+  assert.doesNotMatch(flyUi, /MORELULL_ID|flyMorelullSpotlight|data-fly-morespotlight/);
 });
 
 test('autopublicação aciona o único GitHub Pages oficial somente depois de gravar conteúdo', () => {

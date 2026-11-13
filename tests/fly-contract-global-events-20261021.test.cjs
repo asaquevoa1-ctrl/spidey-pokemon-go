@@ -58,7 +58,10 @@ test('Permanent global route discovery automatically surfaces every nearby eligi
   assert.ok(ui.includes("mode='all'"));
   assert.ok(ui.includes('upcomingGlobalRoutes(list,now)'));
   assert.ok(ui.includes('spotlightStatus(list,now)'), 'Morelull shortcut stays');
-  assert.ok(ui.includes('const MORELULL_ID'));
+  assert.ok(ui.includes("const FEATURED_SPOTLIGHT_ID='2026-11-05-spotlight-teddiursa'"));
+  assert.ok(ui.includes('selected=FEATURED_SPOTLIGHT_ID'));
+  assert.ok(ui.includes('data-fly-featured-spotlight'));
+  assert.doesNotMatch(ui,/MORELULL_ID|flyMorelullSpotlight|data-fly-morespotlight/);
   assert.ok(css.includes('.fly-upcoming-item'));
   assert.ok(html.includes('fly-v1.js?v=20261022-credits-dst1'));
   assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1'));

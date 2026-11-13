@@ -68,20 +68,21 @@ test('Morelull global times align exactly with Brasília across DST and half-hou
   assert.equal(byZone(core.route(event,points,new Date('2026-10-23T05:30:00Z')),'Pacific/Pago_Pago').status,'ÚLTIMA CHANCE');
 });
 
-test('FLY UI shows a timely Morelull feature, selected complete global route and clickable coordinate links',()=>{
+test('Morelull stays in generic global routes; the current featured route is Teddiursa',()=>{
   const ui=read('fly-v1.js'),html=read('index.html'),css=read('fly-v1.css'),app=read('app.js'),sw=read('sw.js');
   assert.doesNotThrow(()=>new vm.Script(ui,{filename:'fly-v1.js'}));
   assert.doesNotThrow(()=>new vm.Script(app,{filename:'app.js'}));
-  assert.ok(ui.includes("const MORELULL_ID='2026-10-22-spotlight-morelull'"));
+  assert.ok(ui.includes("const FEATURED_SPOTLIGHT_ID='2026-11-05-spotlight-teddiursa'"));
   assert.ok(ui.includes('spotlightStatus(list,now)'));
-  assert.ok(ui.includes('id="flyMorelullSpotlight"'));
-  assert.ok(ui.includes("if(selected===MORELULL_ID)mode='all'"));
-  assert.ok(ui.includes('data-fly-morespotlight'));
+  assert.ok(ui.includes('id="flyFeaturedSpotlight"'));
+  assert.ok(ui.includes('selected=FEATURED_SPOTLIGHT_ID'));
+  assert.ok(ui.includes('data-fly-featured-spotlight'));
+  assert.doesNotMatch(ui,/MORELULL_ID|flyMorelullSpotlight|data-fly-morespotlight/);
   assert.ok(ui.includes('data-coord="${q}"'));
   assert.ok(ui.includes("core.loadPoints()"));
   assert.ok(html.includes('fly-v1.js?v=20261022-credits-dst1'));
   assert.ok(css.includes('.fly-spotlight-feature'));
   assert.ok(app.includes('id="openEventFly"'));
   assert.ok(app.includes('window.SpideyFly?.open(event.id)'));
-  assert.ok(sw.includes('spidey-app-20261022-credits-dst-v1'));
+  assert.match(sw,/const CACHE = 'spidey-app-[0-9]{8}-[^']+'/);
 });

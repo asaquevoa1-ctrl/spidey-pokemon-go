@@ -80,7 +80,7 @@
           </button>`;
         }).join('')}</div>` : '');
     }
-    const feature=s.querySelector('#flyMorelullSpotlight');
+    const feature=s.querySelector('#flyFeaturedSpotlight');
     if(feature){
       feature.hidden=!spotlight;
       if(spotlight){
@@ -91,7 +91,7 @@
           <p><strong>18h às 19h no horário de cada cidade · 2× XP por evolução</strong></p>
           <p aria-live="polite">${esc(spotlight.status)}</p>
           <small>Primeira referência: ${esc(first.name)} · ${brazil(first.start)} (Brasília) • ${spotlight.route.length} locais em todos os fusos. São referências geográficas, não pontos de captura confirmados.</small>
-        </div><button class="action-btn gold" type="button" data-fly-morespotlight>Ver rota do Teddiursa →</button>`);
+        </div><button class="action-btn gold" type="button" data-fly-featured-spotlight>Ver rota do Teddiursa →</button>`);
       }
     }
     if(points.length && (!selected||!list.some(e=>e.id===selected))){
@@ -122,12 +122,12 @@
     if(document.getElementById('flyView'))return;
     const main=document.querySelector('main'),nav=document.querySelector('.app-tabs');if(!main||!nav)return;
     const s=document.createElement('section');s.id='flyView';s.className='app-view';s.hidden=true;
-    s.innerHTML=`<section class="hero hero-compact"><span class="eyebrow">FLY • JOGAR PELO MUNDO</span><h1>Rota Mundial</h1><p>Do primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.</p></section><section class="section"><label class="fly-event-label" for="flyEventSelect">Escolha o evento</label><select id="flyEventSelect" class="fly-event-select"></select><div id="flyMorelullSpotlight" class="fly-spotlight-feature" hidden></div><div id="flyUpcomingRoutes" class="fly-upcoming-routes" hidden></div><div class="fly-live-grid"><article><span class="eyebrow">ONDE JOGAR AGORA</span><h2 id="flyNow">Carregando…</h2></article><article><span class="eyebrow">PRÓXIMO</span><h2 id="flyNext">Carregando…</h2><p id="flyCountdown" role="status"></p></article></div><p id="flyLast" class="fly-last"></p><div class="fly-toolbar"><button class="action-btn" data-fly-mode="essential" aria-pressed="true">Essenciais</button><button class="action-btn" data-fly-mode="all" aria-pressed="false">Todos os locais</button><span><strong id="flyCount">0</strong> locais</span></div><p class="microcopy">Os pontos abaixo ajudam a escolher onde jogar. Não representam PokéStops exatas.</p><div id="flyRouteList" class="fly-route-list"></div><details id="flyEventDetails" class="fly-event-details"><summary>Ver detalhes e arte do evento</summary><div id="flyEventSummary"></div></details></section>`;main.append(s);
+    s.innerHTML=`<section class="hero hero-compact"><span class="eyebrow">FLY • JOGAR PELO MUNDO</span><h1>Rota Mundial</h1><p>Do primeiro fuso à última chance. Horário local, Brasília e coordenadas na mesma rota.</p></section><section class="section"><label class="fly-event-label" for="flyEventSelect">Escolha o evento</label><select id="flyEventSelect" class="fly-event-select"></select><div id="flyFeaturedSpotlight" class="fly-spotlight-feature" hidden></div><div id="flyUpcomingRoutes" class="fly-upcoming-routes" hidden></div><div class="fly-live-grid"><article><span class="eyebrow">ONDE JOGAR AGORA</span><h2 id="flyNow">Carregando…</h2></article><article><span class="eyebrow">PRÓXIMO</span><h2 id="flyNext">Carregando…</h2><p id="flyCountdown" role="status"></p></article></div><p id="flyLast" class="fly-last"></p><div class="fly-toolbar"><button class="action-btn" data-fly-mode="essential" aria-pressed="true">Essenciais</button><button class="action-btn" data-fly-mode="all" aria-pressed="false">Todos os locais</button><span><strong id="flyCount">0</strong> locais</span></div><p class="microcopy">Os pontos abaixo ajudam a escolher onde jogar. Não representam PokéStops exatas.</p><div id="flyRouteList" class="fly-route-list"></div><details id="flyEventDetails" class="fly-event-details"><summary>Ver detalhes e arte do evento</summary><div id="flyEventSummary"></div></details></section>`;main.append(s);
     const b=document.createElement('button');b.className='app-tab';b.dataset.view='flyView';b.textContent='FLY';nav.insertBefore(b,nav.querySelector('[data-view="stampsView"]'));b.addEventListener('click',()=>{render();setView('flyView')});
     s.querySelector('#flyEventSelect').addEventListener('change',e=>{selected=e.target.value;mode='all';render()});
     s.addEventListener('click',async e=>{const quick=e.target.closest('[data-fly-select]');
       if(quick){selected=quick.dataset.flySelect;mode='all';render();return}
-      const spotlightButton=e.target.closest('[data-fly-morespotlight]');if(spotlightButton){selected=MORELULL_ID;mode='all';render();return}const f=e.target.closest('[data-fly-mode]');if(f){mode=f.dataset.flyMode;render();return}const c=e.target.closest('[data-coord]');if(!c)return;try{await navigator.clipboard.writeText(c.dataset.coord);showToast('Coordenadas copiadas.')}catch{prompt('Copie as coordenadas:',c.dataset.coord)}});
+      const spotlightButton=e.target.closest('[data-fly-featured-spotlight]');if(spotlightButton){selected=FEATURED_SPOTLIGHT_ID;mode='all';render();return}const f=e.target.closest('[data-fly-mode]');if(f){mode=f.dataset.flyMode;render();return}const c=e.target.closest('[data-coord]');if(!c)return;try{await navigator.clipboard.writeText(c.dataset.coord);showToast('Coordenadas copiadas.')}catch{prompt('Copie as coordenadas:',c.dataset.coord)}});
     core.loadPoints().then(p=>{points=p;window.SPIDEY_FLY_POINTS=p;render()}).catch(()=>{s.querySelector('#flyRouteList').innerHTML='<p class="empty">Não foi possível carregar a rota. Recarregue para tentar novamente.</p>'});
     window.addEventListener('spideycontentready',render);
     // Text clocks are minute-granular; no benefit in rebuilding a multi-stop route every 30s.
