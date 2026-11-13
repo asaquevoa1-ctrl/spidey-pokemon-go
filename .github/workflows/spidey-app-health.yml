@@ -24,7 +24,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Testar detecção de falhas nos dois tipos de hospedagem
@@ -40,7 +40,7 @@ jobs:
           audit_args=()
           if [ "$FULL_ART_AUDIT" = "true" ]; then audit_args+=(--all-images); fi
           python scripts/check_app_health.py --hosting github-pages --base-url https://asaquevoa1-ctrl.github.io/spidey-pokemon-go/spidey-app/ "${audit_args[@]}"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: always() && github.event_name != 'pull_request'
         with:
           name: spidey-app-health
