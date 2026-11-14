@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "https://store.pokemongo.com/offer-redemption?passcode=COMMUNITYMAX10\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2121683397475262865",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2121683397475262865",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-14T19:55:47.739812+00:00"
+}
