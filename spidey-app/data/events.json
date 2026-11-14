@@ -11653,6 +11653,25 @@
           "url": "https://x.com/g47ix/status/2120924589156884883",
           "confidence": "community",
           "published_on": "2026-11-12"
+        },
+        {
+          "name": "Leek Duck · tarefas observadas da Pesquisa Especial Global",
+          "url": "https://leekduck.com/pokemon-go-wild-area/research/",
+          "confidence": "verified_community",
+          "published_on": "2026-11-14"
+        },
+        {
+          "name": "Serebii · registro comunitário da Pesquisa Especial Streets to Skies",
+          "url": "https://www.serebii.net/pokemongo/specialresearch/gowildarea2026:streetstoskies.shtml",
+          "confidence": "verified_community",
+          "published_on": "2026-11-14"
+        },
+        {
+          "name": "Pokémon GO Hub · guia comunitário da Área Selvagem Global",
+          "url": "https://pokemongohub.net/post/event/wild-area-2026-global/",
+          "confidence": "verified_community",
+          "published_on": "2026-11-13",
+          "reviewed_on": "2026-11-14"
         }
       ],
       "schedule": {
@@ -11687,6 +11706,9 @@
         "Os encontros europeus oferecem Pesquisa Temporária por check-in, atividades com Embaixadores da Comunidade e brindes enquanto durarem os estoques.",
         "A Pesquisa Especial do ingresso começa em 14/11 às 10h locais e pede escolha entre Aço e Dragão. Ao obter a medalha do tipo, o bônus correspondente dura até 15/11 às 18h locais.",
         "Caminho Aço: +1 Doce GG por captura de Pokémon poderoso do tipo Aço para nível 31+ e +1.000 Poeira Estelar por captura. Caminho Dragão: os mesmos bônus para Pokémon poderosos do tipo Dragão.",
+        "COMUNIDADE • PESQUISA OBSERVADA: Streets to Skies tem seis etapas. A primeira pede capturar 10 Pokémon, fazer cinco boas jogadas e usar um Incenso; depois, a escolha Aço ou Dragão mantém objetivos paralelos com o tipo selecionado.",
+        "Nos dois caminhos, os relatos ao vivo coincidem em objetivos de captura e exploração, companheiro do tipo escolhido, fortalecimento e ataque carregado, além de vencer Batalhas Max ou Gigamax e Reides e melhorar um Movimento Max. As quantidades exatas dessas etapas divergem entre as fontes comunitárias. A conclusão concede a pose oficial do evento e encontro com Duraludon Gigamax com Fundo Especial.",
+        "As recompensas individuais e algumas quantidades de objetivos divergem entre Leek Duck, Serebii e Pokémon GO Hub em 14/11; esses pontos permanecem fora do texto público até nova confirmação. As tarefas observadas são comunitárias e não substituem o anúncio oficial.",
         "A publicação brasileira repete 2025 em dois subtítulos, mas o título, a introdução e a página oficial do evento confirmam 14 e 15 de novembro de 2026; a divergência foi preservada na auditoria.",
         "Informações oficiais conferidas em 29/10/2026.",
         "Na Ásia-Pacífico, 12 locais em 11 comunidades recebem encontros oficiais nos dias 14 e 15/11, com horários próprios preservados no guia de eventos locais.",
@@ -11746,7 +11768,46 @@
           "https://x.com/g47ix/status/2120924589156884883"
         ],
         "official_story_remains_canonical": true,
-        "no_duplicate_event_created": true
+        "no_duplicate_event_created": true,
+        "community_observed_special_research": {
+          "reviewed_on": "2026-11-14",
+          "official_scope": "A fonte oficial confirma a pesquisa com ingresso, a escolha Aço/Dragão, as medalhas, os bônus por tipo, a pose e Duraludon Gigamax com Fundo Especial; não publica a lista individual de tarefas e recompensas.",
+          "community_confidence": "verified_community",
+          "story_name": "GO Wild Area 2026: Streets to Skies",
+          "step_count": 6,
+          "common_step_1_tasks": [
+            "Capturar 10 Pokémon",
+            "Fazer cinco boas jogadas",
+            "Usar um Incenso"
+          ],
+          "parallel_path_tasks": [
+            "Capturar 30 Pokémon; girar cinco Poképaradas ou Ginásios; explorar 1 km; concluir duas Pesquisas de Campo",
+            "Evoluir três Pokémon do tipo escolhido; ganhar um Doce explorando e três corações com companheiro desse tipo",
+            "Capturar seis espécies diferentes do tipo escolhido; fortalecer Pokémon desse tipo 15 vezes; usar ataque carregado desse tipo em três batalhas",
+            "Vencer Batalha Max ou Gigamax; vencer Reides; melhorar um Movimento Max",
+            "Resgatar as recompensas finais"
+          ],
+          "officially_supported_final_rewards": [
+            "Pose da Área Selvagem GO 2026",
+            "Encontro com Duraludon Gigamax com Fundo Especial"
+          ],
+          "individual_reward_details_status": "community_sources_conflict_on_rewards_and_task_quantities",
+          "conflicting_fields": [
+            "step_1_rewards",
+            "later_task_quantities",
+            "step_4_encounters",
+            "later_step_rewards"
+          ],
+          "conflict_note": "Em 14/11, Leek Duck, Serebii e Pokémon GO Hub exibiam diferenças em recompensas, quantidades de objetivos e encontros de etapas posteriores; nenhuma delas foi promovida a fato oficial no Spidey.",
+          "sources": [
+            "https://leekduck.com/pokemon-go-wild-area/research/",
+            "https://www.serebii.net/pokemongo/specialresearch/gowildarea2026:streetstoskies.shtml",
+            "https://pokemongohub.net/post/event/wild-area-2026-global/",
+            "https://pokemongo.com/pt-BR/news/get-ready-for-gowildarea-2026",
+            "https://pokemongo.com/pt-BR/gowildarea/global"
+          ],
+          "no_new_event_created": true
+        }
       },
       "brazil_community_program": {
         "official_article": "https://pokemongo.com/pt-BR/news/gowa-global-2026-brazil",
@@ -11782,7 +11843,7 @@
         "coordinates_published": false,
         "checked_at": "2026-10-29"
       },
-      "updated_at": "2026-11-05T01:51:00-03:00",
+      "updated_at": "2026-11-14T01:10:00-03:00",
       "asia_pacific_community_program": {
         "official_article": "https://pokemongo.com/news/community-meetups-go-wild-area-2026-details-asia-pacific",
         "published_on": "2026-11-04",
