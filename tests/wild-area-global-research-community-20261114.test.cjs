@@ -17,7 +17,14 @@ test('GO Wild Area Global keeps one official event and labels observed research 
   assert.equal(research.step_count, 6);
   assert.equal(research.common_step_1_tasks.length, 3);
   assert.equal(research.parallel_path_tasks.length, 5);
-  assert.equal(research.individual_reward_details_status, 'community_sources_conflict');
+  assert.equal(research.individual_reward_details_status, 'community_sources_conflict_on_rewards_and_task_quantities');
+  assert.deepEqual(research.conflicting_fields, [
+    'step_1_rewards',
+    'later_task_quantities',
+    'step_4_encounters',
+    'later_step_rewards',
+  ]);
+  assert.ok(research.sources.includes('https://pokemongohub.net/post/event/wild-area-2026-global/'));
   assert.equal(research.no_new_event_created, true);
   assert.match(research.conflict_note, /nenhuma delas foi promovida a fato oficial/i);
 });
@@ -27,7 +34,8 @@ test('research notes expose useful tasks without publishing disputed individual 
   const notes = event.notes.join(' ');
   assert.match(notes, /COMUNIDADE • PESQUISA OBSERVADA/);
   assert.match(notes, /seis etapas/);
-  assert.match(notes, /duas Batalhas Max/);
+  assert.match(notes, /Batalhas Max ou Gigamax/);
+  assert.doesNotMatch(notes, /duas Batalhas Max/);
   assert.match(notes, /Duraludon Gigamax com Fundo Especial/);
-  assert.match(notes, /recompensas individuais.*divergem/i);
+  assert.match(notes, /recompensas individuais.*quantidades de objetivos divergem/i);
 });
