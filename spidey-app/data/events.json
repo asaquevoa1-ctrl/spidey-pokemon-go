@@ -3620,7 +3620,8 @@
         "Reides locais e Pesquisas Temporárias disponíveis em locais participantes, conforme anúncio oficial.",
         "O tutorial comunitário de 27 Passes Premium é uma possibilidade condicionada à disponibilidade e conclusão das pesquisas, não uma garantia.",
         "Horário exato de término em 31/12 não foi divulgado na atualização oficial; final do dia em Londres usado apenas para delimitar a validade do cadastro sem promover o card ao calendário.",
-        "As 27 coordenadas comunitárias também estão incluídas no cadastro do próprio evento, sem depender da aba Trust.","FLY • PARA QUEM PLANEJA À DISTÂNCIA: as 27 coordenadas são referências geográficas das localidades participantes; não são Ginásios ou Poképaradas verificadas e não geram GPX. A disponibilidade das atividades continua vinculada aos locais participantes e às regras oficiais."
+        "As 27 coordenadas comunitárias também estão incluídas no cadastro do próprio evento, sem depender da aba Trust.",
+        "FLY • PARA QUEM PLANEJA À DISTÂNCIA: as 27 coordenadas são referências geográficas das localidades participantes; não são Ginásios ou Poképaradas verificadas e não geram GPX. A disponibilidade das atividades continua vinculada aos locais participantes e às regras oficiais."
       ],
       "bonuses": [],
       "notifications": {
@@ -10814,7 +10815,7 @@
       "id": "2026-11-minior-leonids",
       "slug": "2026-11-minior-leonids",
       "title": "Minior: chuva de meteoros Leônidas",
-      "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+      "summary": "Minior aparece na natureza durante as Leônidas; os Núcleos Amarelo e Verde ficam disponíveis nesta janela.",
       "category": "evento_especial",
       "tags": [
         "Minior",
@@ -10847,8 +10848,9 @@
         "reason": "Evento global sem PokéStop exata confirmada."
       },
       "notes": [
-        "Cada chuva estreia um núcleo de Minior; as cores específicas ainda não foram identificadas no anúncio.",
-        "O período do evento termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia."
+        "Núcleo Amarelo estreia durante as Leônidas, de 14/11 às 17h até 19/11 às 23h59, no horário local; Núcleo Verde também estará disponível. Informação complementar enviada pelo responsável em 15/11/2026, baseada no material visual compartilhado.",
+        "Minior na Forma Meteoro aparece na natureza durante as chuvas de meteoros. As aparições podem ser interrompidas por eventos sobrepostos, como Área Selvagem Global e Horas de Holofote; não prometer aparições contínuas.",
+        "O período termina às 23h59 locais; a janela de maior chance é das 17h às 21h de cada dia, quando não houver evento sobreposto."
       ],
       "notifications": {
         "enabled": true,
@@ -10864,16 +10866,16 @@
       "pokemon": [
         {
           "name": "Minior (Forma Meteoro)",
-          "note": "estreia em Pokémon GO; cores dos núcleos liberadas por chuva"
+          "note": "Núcleos Amarelo (estreia) e Verde disponíveis nas Leônidas, conforme material compartilhado pelo responsável; disponibilidade sujeita a eventos sobrepostos."
         }
       ],
       "news": {
-        "title": "Minior chega com as chuvas de meteoros",
-        "summary": "Minior estreia durante chuvas de meteoros. As próximas janelas são Orionidas em outubro, Leônidas em novembro e Geminidas em dezembro; veja cada período no calendário.",
-        "published_on": "2026-10-01",
+        "title": "Minior: Núcleos Amarelo e Verde nas Leônidas",
+        "summary": "De 14/11 às 17h a 19/11 às 23h59, horário local: estreia do Núcleo Amarelo e aparições do Verde. Eventos sobrepostos podem interromper as aparições.",
+        "published_on": "2026-11-15",
         "window_label": "Leônidas • 11/2026"
       },
-      "updated_at": "2026-10-01T22:47:56Z"
+      "updated_at": "2026-11-15T10:08:00-03:00"
     },
     {
       "id": "2026-12-minior-geminids",
