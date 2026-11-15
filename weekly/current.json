@@ -172,7 +172,7 @@
       {
         "id": "2026-11-minior-leonids",
         "title": "Minior: chuva de meteoros Leônidas",
-        "summary": "Minior na Forma Meteoro aparece na natureza durante as Leônidas.",
+        "summary": "Minior aparece na natureza durante as Leônidas; os Núcleos Amarelo e Verde ficam disponíveis nesta janela.",
         "category": "evento_especial",
         "tags": [
           "Minior",
@@ -531,8 +531,8 @@
     "events_without_weekly_art": 8,
     "events_in_weekly": 11,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-15T08:21:02.460585-03:00",
-    "current_items_filtered_at": "2026-11-15T08:21:02.437149-03:00",
+    "generated_at": "2026-11-15T10:09:30.282816-03:00",
+    "current_items_filtered_at": "2026-11-15T10:09:30.259100-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
