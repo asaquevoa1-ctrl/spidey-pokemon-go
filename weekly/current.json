@@ -35,74 +35,12 @@
     {
       "date": "2026-11-14",
       "weekday": "saturday",
-      "items": [
-        {
-          "id": "2026-11-go-wild-area-global",
-          "title": "Pokémon GO Wild Area 2026: Global",
-          "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
-          "category": "evento_especial",
-          "tags": [
-            "GO Wild Area",
-            "Duraludon Gigamax",
-            "Kyurem Branco",
-            "Kyurem Preto",
-            "Global"
-          ],
-          "start_brazil": "2026-11-14T10:00:00-03:00",
-          "end_brazil": "2026-11-15T18:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO",
-            "url": "https://pokemongo.com/en/gowildarea/global",
-            "confidence": "official"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "assets/events/premium/wild-area-global-2026-approved-v1.png",
-            "width": 1122,
-            "height": 1402,
-            "sha256": "772cd973f35942f42d6d55565d6d4c68f81bc7799b993f3a333e31fc7d440770",
-            "source_role": "canonical_master",
-            "kind": "approved_master",
-            "premium": true
-          }
-        }
-      ]
+      "items": []
     },
     {
       "date": "2026-11-15",
       "weekday": "sunday",
-      "items": [
-        {
-          "id": "2026-11-go-wild-area-global",
-          "title": "Pokémon GO Wild Area 2026: Global",
-          "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
-          "category": "evento_especial",
-          "tags": [
-            "GO Wild Area",
-            "Duraludon Gigamax",
-            "Kyurem Branco",
-            "Kyurem Preto",
-            "Global"
-          ],
-          "start_brazil": "2026-11-14T10:00:00-03:00",
-          "end_brazil": "2026-11-15T18:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO",
-            "url": "https://pokemongo.com/en/gowildarea/global",
-            "confidence": "official"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "assets/events/premium/wild-area-global-2026-approved-v1.png",
-            "width": 1122,
-            "height": 1402,
-            "sha256": "772cd973f35942f42d6d55565d6d4c68f81bc7799b993f3a333e31fc7d440770",
-            "source_role": "canonical_master",
-            "kind": "approved_master",
-            "premium": true
-          }
-        }
-      ]
+      "items": []
     }
   ],
   "sections": {
@@ -137,36 +75,6 @@
           "source_role": "missing",
           "kind": "missing",
           "premium": false
-        }
-      },
-      {
-        "id": "2026-11-go-wild-area-global",
-        "title": "Pokémon GO Wild Area 2026: Global",
-        "summary": "Evento global com Duraludon Gigamax, Dialga e Palkia Dinamax e o retorno de Kyurem Branco e Kyurem Preto.",
-        "category": "evento_especial",
-        "tags": [
-          "GO Wild Area",
-          "Duraludon Gigamax",
-          "Kyurem Branco",
-          "Kyurem Preto",
-          "Global"
-        ],
-        "start_brazil": "2026-11-14T10:00:00-03:00",
-        "end_brazil": "2026-11-15T18:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/en/gowildarea/global",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/wild-area-global-2026-approved-v1.png",
-          "width": 1122,
-          "height": 1402,
-          "sha256": "772cd973f35942f42d6d55565d6d4c68f81bc7799b993f3a333e31fc7d440770",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
         }
       },
       {
@@ -348,34 +256,6 @@
         }
       },
       {
-        "id": "2026-11-09-into-the-wild-go-pass",
-        "title": "Passe GO: Natureza Selvagem — progressão",
-        "summary": "Colete Pontos GO de 9/11 às 10h até 15/11 às 18h no horário local. No Ranque 25, ovos colocados em Incubadoras durante o evento exigem metade da distância; a Tampinha Prateada pertence à trilha Deluxe.",
-        "category": "research",
-        "tags": [
-          "Global",
-          "Passe GO",
-          "Natureza Selvagem 2026"
-        ],
-        "start_brazil": "2026-11-09T10:00:00-03:00",
-        "end_brazil": "2026-11-15T18:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • Natureza Selvagem 2026",
-          "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
         "id": "2026-11-09-into-the-wild-pass-claim",
         "title": "Prazo para resgatar recompensas — Passe GO Natureza Selvagem",
         "summary": "As recompensas já desbloqueadas no Passe GO: Natureza Selvagem devem ser resgatadas até 17/11 às 23h59 no horário local.",
@@ -524,15 +404,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 11,
-    "events_with_weekly_art": 3,
-    "events_with_premium_weekly_art": 3,
+    "calendar_events_in_week": 9,
+    "events_with_weekly_art": 2,
+    "events_with_premium_weekly_art": 2,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 8,
-    "events_in_weekly": 11,
+    "events_without_weekly_art": 7,
+    "events_in_weekly": 9,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-15T14:54:12.302926-03:00",
-    "current_items_filtered_at": "2026-11-15T14:54:12.279397-03:00",
+    "generated_at": "2026-11-15T20:02:57.053023-03:00",
+    "current_items_filtered_at": "2026-11-15T20:02:57.035853-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
