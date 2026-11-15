@@ -40,3 +40,15 @@ test('cards globais de Dialga e Palkia não reutilizam artes de outros Pokémon'
     assert.doesNotMatch(card, /\+STEEL\+|\+DRAGON\+/, 'Card com arte genérica: ' + pokemon);
   }
 });
+
+test('Minior Leônidas informa os dois núcleos, janela local e pausa por sobreposição', () => {
+  const e = events.find(item => item.id === '2026-11-minior-leonids');
+  assert.ok(e, 'Leônidas ausente do catálogo');
+  assert.equal(e.status, 'published');
+  assert.match(e.schedule.start_local, /^2026-11-14T17:00:00-03:00$/);
+  assert.match(e.schedule.end_local, /^2026-11-19T23:59:59-03:00$/);
+  assert.match(e.news.title, /Amarelo.*Verde/);
+  assert.match(e.news.summary, /sobrepostos/i);
+  assert.match(e.notes.join(' '), /Área Selvagem Global/);
+  assert.match(e.pokemon.map(p => p.note || '').join(' '), /Núcleos Amarelo.*Verde/);
+});
