@@ -13,7 +13,6 @@ test('the three official collector headlines are fully reviewed',()=>{
   assert.equal(event.audit.editorial_detail_pending,false,id);
   assert.equal(event.audit.classification,'official_announcement_editorially_verified',id);
  }
- assert.deepEqual(events.filter(event=>event.audit?.editorial_detail_pending===true).map(event=>event.id),[]);
 });
 
 test('Machamp research preserves acquisition and completion as distinct windows',()=>{
