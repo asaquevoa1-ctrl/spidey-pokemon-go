@@ -1,80 +1,245 @@
 {
   "schema_version": "spidey-weekly-v1",
-  "week_start": "2026-11-09",
-  "week_end": "2026-11-15",
+  "week_start": "2026-11-16",
+  "week_end": "2026-11-22",
   "timezone": "America/Sao_Paulo",
-  "title": "Spidey Weekly • 09/11 a 15/11",
+  "title": "Spidey Weekly • 16/11 a 22/11",
   "visual_standard": "spidey-weekly-premium-v1",
   "status": "ready_for_art",
   "days": [
     {
-      "date": "2026-11-09",
+      "date": "2026-11-16",
       "weekday": "monday",
       "items": []
     },
     {
-      "date": "2026-11-10",
+      "date": "2026-11-17",
       "weekday": "tuesday",
       "items": []
     },
     {
-      "date": "2026-11-11",
+      "date": "2026-11-18",
       "weekday": "wednesday",
       "items": []
     },
     {
-      "date": "2026-11-12",
+      "date": "2026-11-19",
       "weekday": "thursday",
-      "items": []
+      "items": [
+        {
+          "id": "2026-11-19-spotlight-galar-starters",
+          "title": "Hora do Holofote: Grookey, Scorbunny e Sobble",
+          "summary": "19/11, das 18h às 19h locais: Grookey, Scorbunny e Sobble em destaque, com 2× Doces por captura. Brilhantes são possíveis.",
+          "category": "spotlight_hour",
+          "tags": [
+            "Grookey",
+            "Scorbunny",
+            "Sobble",
+            "Global"
+          ],
+          "start_brazil": "2026-11-19T18:00:00-03:00",
+          "end_brazil": "2026-11-19T19:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • anúncio oficial",
+            "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
     },
     {
-      "date": "2026-11-13",
+      "date": "2026-11-20",
       "weekday": "friday",
       "items": []
     },
     {
-      "date": "2026-11-14",
+      "date": "2026-11-21",
       "weekday": "saturday",
-      "items": []
+      "items": [
+        {
+          "id": "2026-11-21-shadow-tornadus-weekend",
+          "title": "Reides Sombrosas: Tornadus (Fim de semana 21–22)",
+          "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Novembro 2026",
+            "Calendário",
+            "Pokémon GO"
+          ],
+          "start_brazil": null,
+          "end_brazil": null,
+          "schedule_precision": "date",
+          "calendar_date": "2026-11-21",
+          "source": {
+            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+            "confidence": "verified_community"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        },
+        {
+          "id": "2026-11-21-eternamax-eternatus-max-battles",
+          "title": "Batalhas Max: Eternamax Eternatus",
+          "summary": "21/11, das 11h às 14h locais: Eternamax ocupa a maioria dos Pontos de Energia. As batalhas dão Doces e Doces GG; a forma Eternamax não pode ser capturada.",
+          "category": "max_battle_day",
+          "tags": [
+            "Eternatus",
+            "Eternamax",
+            "Batalhas Max",
+            "Global"
+          ],
+          "start_brazil": "2026-11-21T11:00:00-03:00",
+          "end_brazil": "2026-11-21T14:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • anúncio oficial",
+            "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        },
+        {
+          "id": "2026-11-21-community-day-preview",
+          "title": "Dia Comunitário de novembro: Pawniard",
+          "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
+          "category": "community_day",
+          "tags": [
+            "Novembro 2026",
+            "Pawniard",
+            "Kingambit",
+            "Shiny",
+            "Dia Comunitário",
+            "Global",
+            "Anúncio oficial"
+          ],
+          "start_brazil": "2026-11-21T14:00:00-03:00",
+          "end_brazil": "2026-11-21T17:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
+            "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
+            "confidence": "official"
+          },
+          "art": {
+            "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
+            "web_width": 1024,
+            "web_height": 1536,
+            "web_sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
+            "alt": "Arte Premium do Dia Comunitário de Pawniard, 21 de novembro de 2026: Pawniard e Kingambit, Bônus, Kowtow Cleave e evolução até 21h."
+          },
+          "weekly_art": {
+            "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
+            "width": 1024,
+            "height": 1536,
+            "sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
+            "source_role": "canonical_master",
+            "kind": "approved_master",
+            "premium": true
+          }
+        }
+      ]
     },
     {
-      "date": "2026-11-15",
+      "date": "2026-11-22",
       "weekday": "sunday",
-      "items": []
+      "items": [
+        {
+          "id": "2026-11-21-shadow-tornadus-weekend",
+          "title": "Reides Sombrosas: Tornadus (Fim de semana 21–22)",
+          "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Novembro 2026",
+            "Calendário",
+            "Pokémon GO"
+          ],
+          "start_brazil": null,
+          "end_brazil": null,
+          "schedule_precision": "date",
+          "calendar_date": "2026-11-21",
+          "source": {
+            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+            "confidence": "verified_community"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
     }
   ],
   "sections": {
     "featured": [
       {
-        "id": "2026-11-09-daily-discovery-pause",
-        "title": "Aviso: Descobertas Diárias suspensas",
-        "summary": "Sem Descobertas Diárias de 9 a 15 de novembro durante a programação da Área Selvagem.",
-        "category": "evento_especial",
+        "id": "2026-11-21-community-day-preview",
+        "title": "Dia Comunitário de novembro: Pawniard",
+        "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
+        "category": "community_day",
         "tags": [
           "Novembro 2026",
-          "Calendário",
-          "Pokémon GO",
-          "Atenção",
-          "Sem Holofote"
+          "Pawniard",
+          "Kingambit",
+          "Shiny",
+          "Dia Comunitário",
+          "Global",
+          "Anúncio oficial"
         ],
-        "start_brazil": null,
-        "end_brazil": null,
-        "schedule_precision": "date",
-        "calendar_date": "2026-11-09",
+        "start_brazil": "2026-11-21T14:00:00-03:00",
+        "end_brazil": "2026-11-21T17:00:00-03:00",
         "source": {
-          "name": "Pokémon GO • comunicado oficial",
-          "url": "https://pokemongo.com/news/into-the-wild-2026",
+          "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
+          "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
           "confidence": "official"
         },
-        "art": {},
+        "art": {
+          "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
+          "web_width": 1024,
+          "web_height": 1536,
+          "web_sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
+          "alt": "Arte Premium do Dia Comunitário de Pawniard, 21 de novembro de 2026: Pawniard e Kingambit, Bônus, Kowtow Cleave e evolução até 21h."
+        },
         "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
+          "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
         }
       },
       {
@@ -103,6 +268,37 @@
           "source_role": "canonical_master",
           "kind": "approved_master",
           "premium": true
+        }
+      },
+      {
+        "id": "2026-11-16-dynamax-trails",
+        "title": "Trilhas Dinamax — Eternatus e Passe GO",
+        "summary": "De 16/11 às 10h a 23/11 às 20h locais: Batalhas Max, Passe GO e recompensas de Eternatus. Eternamax terá uma janela própria em 21/11, das 11h às 14h locais.",
+        "category": "evento_especial",
+        "tags": [
+          "Trilhas Dinamax",
+          "Eternatus",
+          "Passe GO",
+          "Global",
+          "Fundo Especial",
+          "Batalhas Max"
+        ],
+        "start_brazil": "2026-11-16T10:00:00-03:00",
+        "end_brazil": "2026-11-23T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
         }
       },
       {
@@ -195,26 +391,147 @@
           "kind": "missing",
           "premium": false
         }
+      },
+      {
+        "id": "2026-11-16-mega-banette-raids",
+        "title": "Megarreides: Mega Banette",
+        "summary": "Mega Banette é destaque em Megarreides de 16 a 24 de novembro.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-16",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-21-shadow-tornadus-weekend",
+        "title": "Reides Sombrosas: Tornadus (Fim de semana 21–22)",
+        "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+        "category": "shadow_raids",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-21",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
       }
     ],
-    "max_pvp": [],
+    "max_pvp": [
+      {
+        "id": "2026-11-16-max-surprise",
+        "title": "Batalhas Max: Pokémon surpresa",
+        "summary": "Período reservado para uma rotação Dinamax ainda sem espécie divulgada.",
+        "category": "max_monday",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-16",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-21-eternamax-eternatus-max-battles",
+        "title": "Batalhas Max: Eternamax Eternatus",
+        "summary": "21/11, das 11h às 14h locais: Eternamax ocupa a maioria dos Pontos de Energia. As batalhas dão Doces e Doces GG; a forma Eternamax não pode ser capturada.",
+        "category": "max_battle_day",
+        "tags": [
+          "Eternatus",
+          "Eternamax",
+          "Batalhas Max",
+          "Global"
+        ],
+        "start_brazil": "2026-11-21T11:00:00-03:00",
+        "end_brazil": "2026-11-21T14:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      }
+    ],
     "also_happening": [
       {
-        "id": "2026-11-06-gmax-machamp-research-completion",
-        "title": "Prazo para concluir — Pesquisa do Machamp Gigamax",
-        "summary": "Somente para quem recebeu a pesquisa até 8/11: concluir tarefas e resgatar recompensas até 15/11 às 23h59 no horário local.",
-        "category": "research",
+        "id": "2026-11-18-raid-hour-cresselia-darkrai",
+        "title": "Hora de Reides: Cresselia e Darkrai",
+        "summary": "Das 18h às 19h no horário local: Cresselia e Darkrai.",
+        "category": "raid_hour",
         "tags": [
-          "Global",
-          "Pesquisa temporária",
-          "Machamp Gigamax"
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO",
+          "Global"
         ],
-        "start_brazil": "2026-11-06T10:00:00-03:00",
-        "end_brazil": "2026-11-15T23:59:00-03:00",
+        "start_brazil": "2026-11-18T18:00:00-03:00",
+        "end_brazil": "2026-11-18T19:00:00-03:00",
         "source": {
-          "name": "Pokémon GO • comunicado oficial",
-          "url": "https://pokemongo.com/pt-BR/news/gowildarea-2026-timed-research",
-          "confidence": "official"
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
         },
         "art": {},
         "weekly_art": {
@@ -298,6 +615,36 @@
         "source": {
           "name": "Pokémon GO • Natureza Selvagem 2026",
           "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-20-laic-2027-sao-paulo",
+        "title": "Pokémon GO no LAIC 2027 — São Paulo",
+        "summary": "De 20 a 22/11, das 8h às 18h em cada dia, o espaço de Pokémon GO no LAIC terá atividades da comunidade, fotos com os líderes de equipe e transmissão oficial em português.",
+        "category": "local_event",
+        "tags": [
+          "LAIC 2027",
+          "São Paulo",
+          "Evento presencial",
+          "Transmissão em português",
+          "Competitivo"
+        ],
+        "start_brazil": "2026-11-20T08:00:00-03:00",
+        "end_brazil": "2026-11-22T18:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
           "confidence": "official"
         },
         "art": {},
@@ -404,15 +751,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 9,
-    "events_with_weekly_art": 2,
-    "events_with_premium_weekly_art": 2,
+    "calendar_events_in_week": 16,
+    "events_with_weekly_art": 3,
+    "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 7,
-    "events_in_weekly": 9,
+    "events_without_weekly_art": 13,
+    "events_in_weekly": 16,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-15T23:55:32.166700-03:00",
-    "current_items_filtered_at": "2026-11-15T23:55:32.152577-03:00",
+    "generated_at": "2026-11-16T08:52:50.524053-03:00",
+    "current_items_filtered_at": "2026-11-16T08:52:50.502073-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
