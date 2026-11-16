@@ -8450,7 +8450,8 @@
       "notes": [
         "Eventos presenciais: Kaohsiung e Los Angeles, de 19 a 21/02/2027.",
         "Evento global: 27 e 28/02/2027.",
-        "Ingressos, horários e detalhes de jogabilidade ainda serão divulgados."
+        "Ingressos, horários e detalhes de jogabilidade ainda serão divulgados.",
+        "Este anúncio é o registro editorial único; as agendas regionais e global estão nos três eventos específicos do catálogo."
       ],
       "notifications": {
         "enabled": false
@@ -8460,6 +8461,221 @@
         "title": "GO Tour 2027 celebrará Alola",
         "summary": "Kaohsiung e Los Angeles recebem eventos presenciais de 19 a 21/02; o evento global será em 27 e 28/02.",
         "published_on": "2026-09-25"
+      },
+      "content_type": "news",
+      "related_event_ids": [
+        "2027-go-tour-alola-kaohsiung",
+        "2027-go-tour-alola-los-angeles",
+        "2027-go-tour-alola-global"
+      ]
+    },
+    {
+      "id": "2027-go-tour-alola-kaohsiung",
+      "slug": "2027-go-tour-alola-kaohsiung",
+      "title": "GO Tour Alola 2027 • Kaohsiung",
+      "summary": "Evento presencial confirmado em Kaohsiung, Taiwan, de 19 a 21 de fevereiro de 2027. Horários, local exato, ingressos e bônus serão divulgados.",
+      "category": "regional_event",
+      "tags": [
+        "GO Tour",
+        "Alola",
+        "Taiwan",
+        "Kaohsiung",
+        "Presencial",
+        "Data confirmada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio original em inglês",
+          "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "Asia/Taipei",
+        "start_date": "2027-02-19",
+        "end_date": "2027-02-21",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "art": {
+        "url": "assets/events/go-tour-alola-2027.svg",
+        "alt": "Arte temática do Spidey: litoral tropical e céu de Alola, sem Pokémon ou locais específicos"
+      },
+      "location_label": "Kaohsiung, Taiwan",
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Não há coordenadas de Ginásios, Poképaradas ou local exato anunciados para este evento."
+      },
+      "notes": [
+        "Evento presencial oficial na cidade de Kaohsiung, Taiwan, de sexta 19/02 a domingo 21/02/2027.",
+        "A Niantic ainda não divulgou endereço, parque, Ginásios ou Poképaradas do evento; não há coordenadas oficiais para copiar.",
+        "Os ingressos, horários diários, Pokémon, fundos especiais e bônus serão detalhados na próxima Temporada."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Horários e detalhes ainda não foram anunciados; sem alerta de início inventado."
+      },
+      "status": "published",
+      "verified_at": "2026-11-16",
+      "updated_at": "2026-11-16T12:20:00-03:00",
+      "audit": {
+        "classification": "official_save_the_date",
+        "date_confirmed_details_unannounced": true,
+        "exact_venue_unannounced": true,
+        "coordinates_not_confirmed": true
+      }
+    },
+    {
+      "id": "2027-go-tour-alola-los-angeles",
+      "slug": "2027-go-tour-alola-los-angeles",
+      "title": "GO Tour Alola 2027 • Los Angeles",
+      "summary": "Evento presencial confirmado em Los Angeles, Califórnia, de 19 a 21 de fevereiro de 2027. Horários, local exato, ingressos e bônus serão divulgados.",
+      "category": "regional_event",
+      "tags": [
+        "GO Tour",
+        "Alola",
+        "Los Angeles",
+        "Califórnia",
+        "Presencial",
+        "Data confirmada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio original em inglês",
+          "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Los_Angeles",
+        "start_date": "2027-02-19",
+        "end_date": "2027-02-21",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "art": {
+        "url": "assets/events/go-tour-alola-2027.svg",
+        "alt": "Arte temática do Spidey: litoral tropical e céu de Alola, sem Pokémon ou locais específicos"
+      },
+      "location_label": "Los Angeles, Califórnia, EUA",
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Não há coordenadas de Ginásios, Poképaradas ou local exato anunciados para este evento."
+      },
+      "notes": [
+        "Evento presencial oficial em Los Angeles, Califórnia, EUA, de sexta 19/02 a domingo 21/02/2027.",
+        "A Niantic não divulgou ainda endereço, parque, Ginásios ou Poképaradas vinculados; não exibir coordenadas sem verificação.",
+        "Ingressos, horários, Pokémon, fundos especiais e bônus serão detalhados na próxima Temporada."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Horários e detalhes ainda não foram anunciados; sem alerta de início inventado."
+      },
+      "status": "published",
+      "verified_at": "2026-11-16",
+      "updated_at": "2026-11-16T12:20:00-03:00",
+      "audit": {
+        "classification": "official_save_the_date",
+        "date_confirmed_details_unannounced": true,
+        "exact_venue_unannounced": true,
+        "coordinates_not_confirmed": true
+      }
+    },
+    {
+      "id": "2027-go-tour-alola-global",
+      "slug": "2027-go-tour-alola-global",
+      "title": "GO Tour Alola 2027 • Global",
+      "summary": "O Pokémon GO Tour Alola terá evento global em 27 e 28 de fevereiro de 2027. Horários, bônus e ingressos ainda serão divulgados.",
+      "category": "global_event",
+      "tags": [
+        "GO Tour",
+        "Alola",
+        "Global",
+        "Mundo todo",
+        "Data confirmada"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • anúncio original em inglês",
+          "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
+          "confidence": "official"
+        }
+      ],
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2027-02-27",
+        "end_date": "2027-02-28",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": true,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "art": {
+        "url": "assets/events/go-tour-alola-2027.svg",
+        "alt": "Arte temática do Spidey: litoral tropical e céu de Alola, sem Pokémon ou locais específicos"
+      },
+      "location_label": "Global",
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Não há coordenadas de Ginásios, Poképaradas ou local exato anunciados para este evento."
+      },
+      "notes": [
+        "Celebração global confirmada para sábado 27/02 e domingo 28/02/2027.",
+        "O anúncio ainda não confirmou horários locais, bônus, Pokémon, mecânicas ou a modalidade de ingresso no jogo.",
+        "Não há rota global exclusiva nem coordenadas de Ginásios ou Poképaradas específicas anunciadas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Horários e detalhes ainda não foram anunciados; sem alerta de início inventado."
+      },
+      "status": "published",
+      "verified_at": "2026-11-16",
+      "updated_at": "2026-11-16T12:20:00-03:00",
+      "audit": {
+        "classification": "official_save_the_date",
+        "date_confirmed_details_unannounced": true,
+        "exact_venue_unannounced": true,
+        "coordinates_not_confirmed": true
       }
     },
     {

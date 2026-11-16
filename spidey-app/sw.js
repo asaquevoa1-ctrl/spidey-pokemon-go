@@ -1,5 +1,8 @@
-const CACHE = 'spidey-app-20261113-news-expiry1';
+const CACHE = 'spidey-app-20261116-alola1';
 const CORE = [
+  './go-tour-alola-2027.js',
+  './go-tour-alola-2027.css',
+  './assets/events/go-tour-alola-2027.svg',
   './wild-area-20261109.js',
   './wild-area-20261109.css',
   './rare-candy-alert-20261102.js',

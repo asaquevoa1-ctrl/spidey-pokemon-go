@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 640" role="img" aria-label="Paisagem tropical inspirada em Alola: sol, lua, oceano e ilhas">
+<defs>
+  <linearGradient id="sky" x2=".9" y2="1"><stop stop-color="#ffb75c"/><stop offset=".27" stop-color="#ef8e82"/><stop offset=".58" stop-color="#515fae"/><stop offset="1" stop-color="#16255c"/></linearGradient>
+  <linearGradient id="water" x2=".4" y2="1"><stop stop-color="#2da9bc"/><stop offset=".6" stop-color="#066381"/><stop offset="1" stop-color="#09364c"/></linearGradient>
+  <linearGradient id="hill" x2="0" y2="1"><stop stop-color="#174d60"/><stop offset=".7" stop-color="#0b364a"/><stop offset="1" stop-color="#052b3e"/></linearGradient>
+  <radialGradient id="sun"><stop stop-color="#fff5bf"/><stop offset=".45" stop-color="#ffd888"/><stop offset="1" stop-color="#ffd388" stop-opacity="0"/></radialGradient>
+  <radialGradient id="moon"><stop stop-color="#faffff"/><stop offset=".6" stop-color="#cbe8f4"/><stop offset="1" stop-color="#cbe8f4" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="21"/></filter>
+</defs>
+<path fill="url(#sky)" d="M0 0h1440v640H0z"/>
+<circle cx="286" cy="214" r="225" fill="url(#sun)" opacity=".88"/><circle cx="293" cy="210" r="66" fill="#fff0bd" opacity=".95"/>
+<circle cx="1254" cy="117" r="107" fill="url(#moon)" opacity=".9"/><circle cx="1253" cy="112" r="43" fill="#dbeefb"/>
+<g fill="#f7f0ff" opacity=".8"><circle cx="934" cy="70" r="2"/><circle cx="1070" cy="171" r="2"/><circle cx="1172" cy="28" r="2"/><circle cx="1345" cy="197" r="2"/><circle cx="787" cy="33" r="2"/><circle cx="1007" cy="106" r="1.6"/><circle cx="1342" cy="58" r="1.6"/><circle cx="1100" cy="42" r="1"/></g>
+<path d="M0 309Q220 252 415 320T820 298T1440 286V550H0" fill="#f8aba1" opacity=".22"/>
+<path d="M0 380L120 351 210 362 320 299 390 351 477 320 574 373 716 364 824 325 881 300 922 336 1005 253 1060 307 1178 273 1265 320 1374 281 1440 328V570H0" fill="#243d70" opacity=".7"/>
+<path d="M0 438l90-43 92 16 72-25 80-17 76 42 62-27 110 40 98-13 92-48 58 33 92-53 63-54 55 62 84-60 69 18 85-35 98 60 72-38 60 39V640H0" fill="url(#hill)"/>
+<path d="M0 449C350 430 571 474 719 449s481-25 721-4v195H0z" fill="url(#water)"/>
+<path d="M0 483Q330 457 610 485T1440 476" stroke="#8ce8e1" stroke-width="2.5" opacity=".48" fill="none"/>
+<path d="M0 531Q381 508 734 526T1440 521" stroke="#c5fef4" opacity=".25" stroke-width="2" fill="none"/>
+<path d="M0 590Q444 554 812 572T1440 566" stroke="#b4fce4" opacity=".23" stroke-width="2" fill="none"/>
+<path d="M1001 432l61-136 57 114 29-45 90 79-35 5z" fill="#174e62"/><path d="M1094 389l34-73 23 53 21-25 47 52" stroke="#8ac8a0" stroke-width="7" fill="none" opacity=".5"/>
+<path d="M1397 449c-42-48-90-62-155-41s-139 37-173 37v24h371z" fill="#08717b"/>
+<path d="M1376 471c-54 8-137 40-188 64l252 105V487z" fill="#e6c98b"/><path d="M1280 543q74-26 160-6" stroke="#fffae3" stroke-width="7" fill="none" opacity=".7"/>
+<path d="M0 516l106-45 147 35 103-31 166 48 84-16 157 24-128 52L0 640Z" fill="#064f59"/>
+<g fill="#083b48"><path d="M1390 570c-18-72-31-115-40-189" stroke="#063741" stroke-width="23" fill="none" stroke-linecap="round"/><path d="M1354 390q-63-44-110-15 62 2 113 29z"/><path d="M1355 380q-48-77-108-70 60 28 98 85z"/><path d="M1354 386q-11-100 35-124-24 74-24 127z"/><path d="M1361 395q65-73 103-58-75 48-102 71z"/><path d="M1361 393q87-18 109 31-59-24-115-16z"/></g>
+<g fill="#073c4d"><path d="M70 564c8-76 20-143 46-223" stroke="#073644" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M108 355Q45 306-18 333q76 9 131 39z"/><path d="M116 347Q96 255 16 261q74 48 92 107z"/><path d="M119 355q18-91 102-98-76 60-92 110z"/><path d="M113 366q64-63 146-23-83-7-134 40z"/><path d="M110 363q-35-89-101-88 73 57 99 107z"/></g>
+<g fill="#fce6a3" opacity=".6"><circle cx="302" cy="464" r="2"/><circle cx="304" cy="482" r="2"/><circle cx="308" cy="507" r="2"/><circle cx="320" cy="532" r="2"/></g>
+</svg>

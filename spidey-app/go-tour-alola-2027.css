@@ -1,0 +1,47 @@
+/* Spidey GO Tour Alola 2027 • vitrine compacta e responsiva */
+#spideyGoTourAlola2027{--alola-ink:#e8faff;--alola-muted:#b4d7db;--alola-gold:#ffe28d;margin:26px auto 30px;max-width:1220px;border-radius:26px;overflow:hidden;background:#092b40;border:1px solid rgba(121,234,237,.26);box-shadow:0 25px 65px rgba(0,9,32,.23);color:var(--alola-ink);isolation:isolate}
+#spideyGoTourAlola2027 *{box-sizing:border-box}
+.alola-tour-hero{height:clamp(240px,32vw,370px);position:relative;overflow:hidden;background:radial-gradient(circle at 73% 23%,#4360a2,#0b5165 70%)}
+.alola-tour-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 47%}
+.alola-tour-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,19,34,.92) 0%,rgba(2,33,51,.72) 39%,rgba(2,17,39,.03) 100%),linear-gradient(0deg,rgba(0,22,41,.34),transparent 50%)}
+.alola-tour-hero-copy{position:absolute;z-index:1;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(20px,5vw,46px);max-width:790px}
+.alola-tour-eyebrow,.alola-tour-overline{font-size:.72rem;font-weight:850;letter-spacing:.18em;color:#8de9e8}
+.alola-tour-state{border-radius:999px;border:1px solid rgba(255,235,165,.6);padding:5px 10px;margin:14px 0 10px;color:#ffefb1;background:rgba(5,31,49,.65);font-size:.62rem;font-weight:800;letter-spacing:.08em}
+#spideyGoTourAlola2027 .alola-tour-hero h2{font-size:clamp(2.3rem,6vw,4.3rem);line-height:1.04;margin:0;color:white;font-weight:950;letter-spacing:-.055em;text-shadow:0 5px 22px rgba(0,0,0,.23)}
+.alola-tour-hero h2 em{font-style:normal;color:#ffdb81}
+.alola-tour-hero-copy p{font-size:clamp(.88rem,1.5vw,1.06rem);max-width:415px;margin:16px 0;color:#edfaff;line-height:1.5}
+.alola-tour-countdown{font-size:.78rem;font-weight:800;color:#fff4ba;border-left:3px solid #ffe28d;padding:7px 0 7px 12px}
+.alola-tour-content{padding:clamp(18px,3vw,28px)}
+.alola-tour-intro{display:flex;gap:12px 30px;align-items:end;justify-content:space-between;flex-wrap:wrap;margin:0 0 18px}
+#spideyGoTourAlola2027 .alola-tour-intro h3{color:#f4feff;font-size:clamp(1.16rem,2vw,1.55rem);margin:6px 0 0;letter-spacing:-.02em}
+.alola-tour-intro p{font-size:.78rem;max-width:345px;color:var(--alola-muted);line-height:1.5;margin:0}
+.alola-tour-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#spideyGoTourAlola2027 .alola-tour-card{appearance:none;cursor:pointer;display:flex;min-width:0;align-items:flex-start;flex-direction:column;min-height:146px;gap:5px;padding:18px;text-align:left;color:#fff;border:1px solid rgba(199,255,251,.18);border-radius:18px;background:linear-gradient(145deg,#174d67 0%,#0e3850 60%,#052a41 100%);box-shadow:none;position:relative;transition:transform .15s,border-color .15s,box-shadow .15s}
+#spideyGoTourAlola2027 .alola-tour-losangeles{background:linear-gradient(145deg,#294e70,#1d4560 55%,#123147)}
+#spideyGoTourAlola2027 .alola-tour-global{background:linear-gradient(145deg,#135e74,#134357 55%,#07334a)}
+#spideyGoTourAlola2027 .alola-tour-card:hover,#spideyGoTourAlola2027 .alola-tour-card:focus-visible{transform:translateY(-2px);border-color:rgba(255,233,152,.72)}
+#spideyGoTourAlola2027 .alola-tour-card.is-selected{border-color:#ffe49c;box-shadow:inset 0 0 0 1px rgba(255,226,137,.26),0 6px 22px rgba(0,0,0,.25)}
+.alola-tour-card-kind{font-size:.7rem;color:#b7f2e9;font-weight:800}
+#spideyGoTourAlola2027 .alola-tour-card strong{font-size:clamp(1.1rem,2vw,1.46rem);line-height:1.12;letter-spacing:-.025em}
+.alola-tour-card-region{font-size:.74rem;color:#c7dce9}
+.alola-tour-card-date{margin-top:auto;color:#ffe4a0;letter-spacing:.05em;font-weight:850;font-size:.96rem}
+.alola-tour-card-date small{font-size:.7rem;color:#f1e4ca}
+.alola-tour-detail{margin-top:16px;padding:clamp(18px,3vw,28px);background:linear-gradient(135deg,rgba(1,28,48,.95),rgba(8,54,73,.8));border:1px solid rgba(134,223,224,.2);border-radius:18px}
+#spideyGoTourAlola2027 .alola-tour-detail h3{font-size:1.65rem;margin:8px 0 3px;letter-spacing:-.025em;color:white}
+.alola-tour-period{color:#ffe4a0!important;font-size:1.15rem!important;font-weight:900!important;margin:0 0 10px!important}
+.alola-tour-period span{font-size:.75rem;opacity:.8}
+.alola-tour-detail>p{font-size:.9rem;color:#e3f0f2;line-height:1.55;margin:10px 0}
+.alola-tour-detail-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.alola-tour-detail-facts>div{padding:11px 13px;border:1px solid rgba(170,232,230,.2);border-radius:13px;background:rgba(23,82,101,.38)}
+.alola-tour-detail-facts small{display:block;color:#a9d3dd;font-size:.7rem}
+.alola-tour-detail-facts strong{display:block;color:#ffedbe;font-size:.91rem;margin-top:5px}
+.alola-tour-coordinates{color:#bce3ed!important}
+.alola-tour-fact-note{font-size:.8rem!important;color:#b6d3d9!important}
+.alola-tour-detail-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:17px}
+#spideyGoTourAlola2027 .alola-tour-detail-actions button{cursor:pointer;background:#ffe39e;color:#103747;border:0;border-radius:12px;padding:12px 17px;font-weight:900;min-height:44px}
+#spideyGoTourAlola2027 .alola-tour-detail-actions a{color:#d9f7f8;font-weight:800;text-decoration:underline;text-underline-offset:4px;padding:12px 3px}
+.alola-tour-action-status{font-size:.77rem!important;color:#ffebaf!important;margin:8px 0 0!important}
+.alola-tour-action-status:empty{display:none}
+.alola-tour-source{color:#8eb8c5;font-size:.72rem;line-height:1.5;margin:17px 3px 0}
+@media(max-width:650px){#spideyGoTourAlola2027{margin:18px 8px 24px;border-radius:20px}.alola-tour-hero{height:310px}.alola-tour-art{object-position:68% 50%}.alola-tour-hero::after{background:linear-gradient(90deg,rgba(0,19,35,.9),rgba(0,24,41,.46) 72%,rgba(0,23,44,.13))}.alola-tour-hero-copy{padding:22px;justify-content:flex-end;padding-bottom:29px}.alola-tour-hero-copy p{margin:12px 0}.alola-tour-state{margin:12px 0}.alola-tour-cards{grid-template-columns:1fr;gap:8px}#spideyGoTourAlola2027 .alola-tour-card{min-height:98px;padding:13px 15px;gap:3px}#spideyGoTourAlola2027 .alola-tour-card strong{font-size:1.2rem}.alola-tour-card-date{position:absolute;right:14px;bottom:17px;font-size:.83rem}.alola-tour-detail-facts{gap:8px}}
+@media(prefers-reduced-motion:reduce){#spideyGoTourAlola2027 .alola-tour-card{transition:none}#spideyGoTourAlola2027 .alola-tour-card:hover{transform:none}}
