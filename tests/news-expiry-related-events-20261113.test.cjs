@@ -98,6 +98,8 @@ test('versão do módulo de Novidades invalida o cache PWA após a correção', 
   const index = fs.readFileSync(path.join(root, 'spidey-app/index.html'), 'utf8');
   const sw = fs.readFileSync(path.join(root, 'spidey-app/sw.js'), 'utf8');
   assert.ok(index.includes('news-feed.js?v=20261113-news-expiry1'));
-  assert.ok(sw.includes("const CACHE = 'spidey-app-20261113-news-expiry1'"));
+  const cacheVersion = sw.match(/const CACHE = 'spidey-app-(\d{8})-[a-z0-9-]+';/);
+  assert.ok(cacheVersion, 'O cache do PWA precisa ter versão explícita');
+  assert.ok(cacheVersion[1] >= '20261113', 'A versão do cache não pode retroceder à correção de Novidades');
   assert.ok(sw.includes("'./news-feed.js'"));
 });
