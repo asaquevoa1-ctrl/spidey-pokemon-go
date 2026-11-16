@@ -218,3 +218,30 @@ body.spidey-month-premium-ready.spidey-player-ui #calendarView>.spidey-premium-l
     transition:none!important;transform:none!important
   }
 }
+/* Mobile-first accessibility refinement: visible keyboard focus and readable controls.
+   No change to event data, posters, calendar rendering or interaction handlers. */
+#spideyMonthPremium :is(button,a,[tabindex="0"]):focus-visible{
+  outline:3px solid #e6bb7b!important;
+  outline-offset:3px!important;
+  box-shadow:0 0 0 5px rgba(9,22,31,.95)!important;
+}
+#spideyMonthPremium .spidey-month-more{
+  min-height:44px;
+  touch-action:manipulation;
+}
+#spideyMonthPremium .spidey-month-event{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+@media(max-width:480px){
+  #spideyMonthPremium .spidey-month-event-time{
+    font-size:.75rem;
+    line-height:1.45;
+  }
+}
+@media(forced-colors:active){
+  #spideyMonthPremium :is(button,a,[tabindex="0"]):focus-visible{
+    outline:3px solid Highlight!important;
+    box-shadow:none!important;
+  }
+}
