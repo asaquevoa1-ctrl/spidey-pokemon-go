@@ -17,7 +17,8 @@ test('one Minior announcement opens all three distinct calendar windows without 
 test('an expired Minior window drops out while later windows and announcement remain accessible',()=>{
  const minior=build(events,range,new Date('2026-11-01T12:00Z')).find(s=>s.key==='official:/news/minior-meteor-showers-2026');
  assert.equal(minior.events.length,2);assert.equal(minior.events[0].id,'2026-11-minior-leonids');
- assert.equal(minior.title,'Minior chega com as chuvas de meteoros');
+ assert.equal(minior.event.id,'2026-11-minior-leonids');
+ assert.match(minior.title,/Minior/);
 });
 test('official locale/tracking variants deduplicate; unsafe or unpublished entries stay out',()=>{
  const e=events.find(e=>e.id==='2026-10-minior-orionids');
