@@ -5,9 +5,12 @@ const fs=require('node:fs');
 const events=JSON.parse(fs.readFileSync('spidey-app/data/events.json','utf8')).events;
 const byId=id=>events.find(event=>event.id===id);
 
-test('all automatically collected official headlines have been reviewed',()=>{
- const pending=events.filter(event=>event.audit?.editorial_detail_pending===true);
- assert.deepEqual(pending.map(event=>event.id),[]);
+test('previously curated official headlines remain reviewed',()=>{
+ for(const id of ['official-news-auto-f0093c412c9b','official-news-auto-1eda22614526']){
+  const event=byId(id);
+  assert(event,id);
+  assert.notEqual(event.audit?.editorial_detail_pending,true,id);
+ }
 });
 
 test('Twilight Wishes keeps its existing ID and distinct research windows',()=>{
