@@ -8511,8 +8511,8 @@
         "no_unverified_poster": true
       },
       "art": {
-        "url": "assets/events/go-tour-alola-2027.svg",
-        "alt": "Arte temática do Spidey: litoral tropical e céu de Alola, sem Pokémon ou locais específicos"
+        "url": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365",
+        "alt": "Arte promocional oficial do Pokémon GO Tour 2027: praia tropical, logotipo GO Tour e placas Kaohsiung, Los Angeles e Global"
       },
       "location_label": "Kaohsiung, Taiwan",
       "locations": [],
@@ -8531,12 +8531,17 @@
       },
       "status": "published",
       "verified_at": "2026-11-16",
-      "updated_at": "2026-11-16T12:20:00-03:00",
+      "updated_at": "2026-11-16T13:45:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "date_confirmed_details_unannounced": true,
         "exact_venue_unannounced": true,
         "coordinates_not_confirmed": true
+      },
+      "official_media": {
+        "classification": "official_illustration",
+        "source": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "file": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365"
       }
     },
     {
@@ -8581,8 +8586,8 @@
         "no_unverified_poster": true
       },
       "art": {
-        "url": "assets/events/go-tour-alola-2027.svg",
-        "alt": "Arte temática do Spidey: litoral tropical e céu de Alola, sem Pokémon ou locais específicos"
+        "url": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365",
+        "alt": "Arte promocional oficial do Pokémon GO Tour 2027: praia tropical, logotipo GO Tour e placas Kaohsiung, Los Angeles e Global"
       },
       "location_label": "Los Angeles, Califórnia, EUA",
       "locations": [],
@@ -8601,12 +8606,17 @@
       },
       "status": "published",
       "verified_at": "2026-11-16",
-      "updated_at": "2026-11-16T12:20:00-03:00",
+      "updated_at": "2026-11-16T13:45:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "date_confirmed_details_unannounced": true,
         "exact_venue_unannounced": true,
         "coordinates_not_confirmed": true
+      },
+      "official_media": {
+        "classification": "official_illustration",
+        "source": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "file": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365"
       }
     },
     {
@@ -8650,8 +8660,8 @@
         "no_unverified_poster": true
       },
       "art": {
-        "url": "assets/events/go-tour-alola-2027.svg",
-        "alt": "Arte temática do Spidey: litoral tropical e céu de Alola, sem Pokémon ou locais específicos"
+        "url": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365",
+        "alt": "Arte promocional oficial do Pokémon GO Tour 2027: praia tropical, logotipo GO Tour e placas Kaohsiung, Los Angeles e Global"
       },
       "location_label": "Global",
       "locations": [],
@@ -8670,12 +8680,17 @@
       },
       "status": "published",
       "verified_at": "2026-11-16",
-      "updated_at": "2026-11-16T12:20:00-03:00",
+      "updated_at": "2026-11-16T13:45:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "date_confirmed_details_unannounced": true,
         "exact_venue_unannounced": true,
         "coordinates_not_confirmed": true
+      },
+      "official_media": {
+        "classification": "official_illustration",
+        "source": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+        "file": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365"
       }
     },
     {
