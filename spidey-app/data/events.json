@@ -13314,14 +13314,15 @@
       "slug": "2026-11-20-laic-2027-sao-paulo",
       "content_type": "event",
       "title": "Pokémon GO no LAIC 2027 — São Paulo",
-      "summary": "De 20 a 22/11, das 8h às 18h em cada dia, o espaço de Pokémon GO no LAIC terá atividades da comunidade, fotos com os líderes de equipe e transmissão oficial em português.",
+      "summary": "LAIC 2027 no Distrito Anhembi, 20 a 22/11: espaço oficial de Pokémon GO das 8h às 18h por dia, transmissão em português e Drops online. Há relatos comunitários de bônus locais ainda sem confirmação oficial.",
       "category": "local_event",
       "tags": [
         "LAIC 2027",
         "São Paulo",
-        "Evento presencial",
-        "Transmissão em português",
-        "Competitivo"
+        "Distrito Anhembi",
+        "Coordenadas",
+        "Presencial",
+        "Twitch Drops"
       ],
       "source": {
         "name": "Pokémon GO • comunicado oficial em português",
@@ -13362,19 +13363,38 @@
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "date"
+        "fallback_visual": "date",
+        "art_note": "Banner oficial da competição em composição editorial do Spidey; não é pôster original aprovado como Premium."
       },
-      "location_label": "Distrito Anhembi • Av. Olavo Fontoura, 1209 • Santana • São Paulo",
-      "locations": [],
+      "location_label": "Distrito Anhembi • São Paulo (SP)",
+      "locations": [
+        {
+          "id": "laic-2027-anhembi-venue-reference",
+          "label": "Distrito Anhembi • referência da sede (não é Poképarada/Ginásio)",
+          "name": "Centro de Convenções - Distrito Anhembi",
+          "address": "Av. Olavo Fontoura, 1209 - Santana, São Paulo - SP, Brasil",
+          "latitude": -23.5147,
+          "longitude": -46.6375,
+          "coordinate_text": "-23.5147, -46.6375",
+          "coordinate_type": "venue_reference",
+          "coordinate_confidence": "community_supplied_approximate",
+          "exact_pokestop_verified": false,
+          "exact_raid_gym_verified": false,
+          "exact_power_spot_verified": false,
+          "access_note": "Coordenada de referência fornecida pela comunidade; não representa área oficial de ativação, limite de bônus, Poképarada ou Ginásio.",
+          "source_url": "https://championships.pokemon.com/es-la/events/internationals/2027/sao-paulo"
+        }
+      ],
       "gpx": {
         "enabled": false,
-        "reason": "O comunicado informa o endereço do evento, mas não publica coordenadas de Poképaradas, Ginásios ou uma rota oficial."
+        "reason": "A coordenada é referência aproximada da sede; Poképaradas, Ginásios e perímetro preciso dos bônus não foram confirmados."
       },
       "notes": [
-        "O espaço de Pokémon GO funcionará das 8h às 18h em cada um dos três dias; as janelas diárias foram mantidas separadas no calendário.",
-        "O comunicado anuncia atividades da comunidade, área para recarregar baterias e fotos com estátuas em tamanho real dos líderes de equipe.",
-        "As partidas de Pokémon GO terão transmissão oficial em português na Twitch, YouTube, TikTok e Facebook. A transmissão da Twitch em português terá Drops.",
-        "A publicação não detalha bônus no jogo, encontros, tarefas de pesquisa, recompensas presenciais ou Poképaradas; nenhum desses itens foi inferido."
+        "OFICIAL • Espaço de Pokémon GO: 20 a 22 de novembro, 8h às 18h em cada dia (não 8h–20h).",
+        "OFICIAL • Área da comunidade, fotos com estátuas de líderes de equipe e transmissão em português; transmissão Twitch com Drops e recompensas separadas.",
+        "RELATO COMUNITÁRIO • Janela até 20h do dia 22, duas pesquisas presenciais, Corsola de Galar, Megaenergia, MTs e bônus locais não estão confirmados pelos comunicados oficiais consultados em 16/11/2026.",
+        "LOCAL • -23.5147, -46.6375 é referência aproximada da sede, não limite verificado do evento nem ponto confirmado do jogo.",
+        "NÃO CONFUNDIR • Pesquisa Temporária presencial com MT de Elite (relato) versus pacote de Drops com MT de Elite (anúncio oficial)."
       ],
       "notifications": {
         "enabled": true,
@@ -13384,22 +13404,100 @@
       },
       "status": "published",
       "verified_at": "2026-11-04",
-      "updated_at": "2026-11-04T17:54:00-03:00",
+      "updated_at": "2026-11-16T21:46:00-03:00",
       "news": {
         "title": "LAIC 2027 terá espaço de Pokémon GO e transmissão em português",
-        "summary": "O encontro será no Distrito Anhembi, de 20 a 22/11, das 8h às 18h por dia. A publicação confirma atividades da comunidade, fotos e transmissão oficial; não anuncia bônus ou encontros no jogo.",
+        "summary": "Presencial oficial de 20 a 22/11, 8h–18h por dia, no Distrito Anhembi. Drops da Twitch confirmados; bônus de jogo e pesquisas locais divulgados pela comunidade ainda aguardam confirmação.",
         "published_on": "2026-11-04",
-        "label": "OFICIAL • SÃO PAULO"
+        "label": "OFICIAL • DETALHES COMUNITÁRIOS A CONFIRMAR"
       },
       "audit": {
         "classification": "official_announcement_editorially_verified",
-        "editorial_detail_pending": false,
+        "editorial_detail_pending": true,
         "automatic_index_discovery": true,
         "canonical_fulltext_url": "https://pokemongo.com/news/pokemon-go-at-laic2027",
         "collector_source_id": "oficial-https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
         "collector_queue_file": "queue/pending/2026-11-04/oficial-noticia-c0b30b540fab.json",
         "daily_sessions_preserved": true,
-        "no_gameplay_bonuses_announced": true
+        "no_gameplay_bonuses_announced": true,
+        "user_supplied_community_claims_pending_confirmation": true,
+        "official_vs_community_kept_separate": true,
+        "location_reference_only": true,
+        "community_claimed_end_at_20_not_official": true,
+        "community_claims_reviewed_at": "2026-11-16",
+        "official_stream_drops_verified": true,
+        "art_source": "official_laic_banner",
+        "art_visual_approval_claimed": false
+      },
+      "art": {
+        "url": "https://championships.pokemon.com/static-assets/images/full-width-generic/2027-sao-paulo-2048.webp",
+        "alt": "Arte promocional oficial do LAIC 2027, com a marca do Campeonato Internacional Pokémon sobre São Paulo",
+        "source_url": "https://championships.pokemon.com/es-la/events/internationals/2027/sao-paulo",
+        "classification": "official_promo_banner_external_not_original_spidey"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • área presencial (8h–18h) e transmissões em português",
+          "url": "https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • Drops de Twitch: Samurott e MT de Elite",
+          "url": "https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon • endereço e período oficial do LAIC 2027",
+          "url": "https://championships.pokemon.com/es-la/events/internationals/2027/sao-paulo",
+          "confidence": "official"
+        },
+        {
+          "name": "LAIC • programação da competição",
+          "url": "https://laic.gg/pt/",
+          "confidence": "official_event_website"
+        }
+      ],
+      "bonuses": [
+        "ONLINE • Acompanhe 30 minutos de transmissão com Drops na Twitch oficial para receber uma Pesquisa Temporária com Samurott, Doces GG de Oshawott e MTs de ataque.",
+        "ONLINE • Ao acompanhar 45 minutos com Drops, é possível receber o Combo de Batalha do LAIC: 1 MT de Elite de Ataque Carregado, 1 Doce Raro GG, 25 MTs de Ataque Carregado e 25 MTs de Ataque Ágil.",
+        "ONLINE • A Pesquisa Temporária de Drops deve ser concluída e resgatada até 4 de dezembro de 2026, às 17h de Brasília (12h PST)."
+      ],
+      "pokemon": [
+        {
+          "name": "Samurott",
+          "note": "Pesquisa Temporária oficial por assistir à transmissão com Drops; não confundir com as pesquisas presenciais relatadas."
+        }
+      ],
+      "community_reports": {
+        "label": "INFORMAÇÕES DA COMUNIDADE • AGUARDANDO CONFIRMAÇÃO",
+        "shared_on": "2026-11-16",
+        "claimed_window": "20/11 às 8h até 22/11 às 20h (horário de Brasília) — janela relatada para os bônus no jogo, NÃO confirmada pela organização; o espaço presencial anunciado oficialmente funciona das 8h às 18h por dia.",
+        "groups": [
+          {
+            "title": "Pesquisas Temporárias relatadas",
+            "items": [
+              "Pesquisa 1: MT de Elite e Megaenergia. Segundo o relato, quem já concluiu a pesquisa de MT de Elite em outro Campeonato Regional não poderá recebê-la novamente.",
+              "Pesquisa 2: encontro com Heracross ou Kangaskhan e Megaenergia (recompensas e critérios ainda não confirmados oficialmente)."
+            ]
+          },
+          {
+            "title": "Encontros e atividades relatados",
+            "items": [
+              "Módulos Atrair poderiam atrair Corsola de Galar e outros Pokémon.",
+              "Ao girar Poképaradas, poderiam ser concedidas MTs de Ataque Ágil ou Carregado.",
+              "Pokémon atraídos pelos módulos poderiam conceder Megaenergia ao serem capturados."
+            ]
+          },
+          {
+            "title": "Bônus locais relatados",
+            "items": [
+              "Módulos Atrair durariam 3 horas.",
+              "Até 3 Trocas Especiais por dia.",
+              "Mega Evoluções poderiam durar 72 horas."
+            ]
+          }
+        ],
+        "warning": "O relato restringe encontros e bônus aos arredores da sede no Distrito Anhembi, NÃO à cidade inteira. O perímetro exato não foi anunciado oficialmente. A coordenada exibida é apenas a referência do local, não garante a ativação de bônus."
       }
     },
     {
