@@ -258,7 +258,8 @@ function locationRows(event) {
     const airportReference = loc.coordinate_type === 'airport_terminal_reference' && loc.exact_raid_gym_verified === false;
     const stadiumReference = loc.coordinate_type === 'stadium_venue_reference' && loc.exact_raid_gym_verified === false;
     const landmarkReference = loc.coordinate_type === 'landmark_reference' && loc.exact_raid_gym_verified === false;
-    const venueReference = airportReference || stadiumReference || landmarkReference;
+    const siteReference = loc.coordinate_type === 'venue_reference' && loc.exact_pokestop_verified === false;
+    const venueReference = airportReference || stadiumReference || landmarkReference || siteReference;
     const communityReference = loc.coordinate_type === 'community_site_reference' && loc.exact_pokestop_verified === false;
     const communityValue=communityReference && /^-?\d{1,2}\.\d+,-?\d{1,3}\.\d+$/.test(String(loc.coordinate_text||'')) ? loc.coordinate_text : null;
     const value = communityValue || (venueReference || event.id === '2026-10-24-spidey-full-day-guide') && /^-?\\d{1,2}\\.\\d+,-?\\d{1,3}\\.\\d+$/.test(String(loc.coordinate_text || ''))
@@ -266,6 +267,7 @@ function locationRows(event) {
     const description = airportReference ? '<small>Referência do aeroporto/terminal • NÃO é Ginásio ANA verificado</small><br>'
       : stadiumReference ? '<small>Referência do Estádio de Seul • NÃO é Ginásio de reide verificado</small><br>'
       : landmarkReference ? '<small>Marco de orientação no Paseo de la Reforma. NÃO é Ginásio, Poképarada, Power Spot, ponto de selos nem limite confirmado do evento.</small><br>'
+      : siteReference ? '<small>Referência da sede, NÃO é Poképarada, Ginásio ou perímetro verificado de bônus.</small><br>'
       : communityReference ? '<small>Referência comunitária não verificada para ativação de pesquisa, Poképarada ou Ginásio.</small><br>' : '';
     return `<div class="coordinates"><div><strong>${loc.label || `Ponto ${index + 1}`}</strong><br>${description}<code>${value}</code></div><button class="action-btn copy-coord" data-value="${value}">Copiar</button></div>`;
   }).join('');
@@ -531,6 +533,25 @@ function newsVerificationSources(event) {
   return links ? '<h3>Fontes para conferir</h3><ul class="event-notes">' + links + '</ul>' : '';
 }
 
+function renderCommunityReports(event) {
+  const reports = event?.community_reports;
+  if (!reports || !Array.isArray(reports.groups) || !reports.groups.length) return '';
+  const safe = value => String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
+  const groupHtml = reports.groups.map(group => '<section class="spidey-laic-community-group"><h4>' +
+    safe(group.title) + '</h4><ul class="bonus-list">' +
+    (group.items || []).map(item => '<li>' + safe(item) + '</li>').join('') +
+    '</ul></section>').join('');
+  return '<section class="spidey-laic-community" aria-label="Informações comunitárias ainda não confirmadas">' +
+    '<span class="spidey-laic-community-tag">' + safe(reports.label || 'COMUNIDADE · A CONFIRMAR') + '</span>' +
+    '<h3>Pesquisas, encontros e bônus no local</h3>' +
+    '<p class="spidey-laic-claimed-window">' + safe(reports.claimed_window) + '</p>' +
+    groupHtml +
+    '<p class="spidey-laic-community-warning">' + safe(reports.warning) + '</p>' +
+    '</section>';
+}
+
 function openEvent(event) {
   if (!event) return;
   beginAppDialog();
@@ -566,7 +587,7 @@ function openEvent(event) {
       : '<p data-nt-event-status role="status">Abrindo a lista de coordenadas…</p><div data-nt-event-list class="nt-event-list"></div>')+'</section>';
   detail.innerHTML = `
     ${isNationalTrust ? trustCoordinatesMarkup : ''}
-    ${newsOnly ? '' : (eventArtVisible(event) ? `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">` : verifiedDateVisual(event))}
+    ${newsOnly ? '' : (eventArtVisible(event) ? (event.id === "2026-11-20-laic-2027-sao-paulo" ? `<section class="spidey-laic-hero" aria-label="LAIC 2027 São Paulo: arte promocional oficial em composição Spidey"><img class="spidey-laic-hero-image" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" loading="eager" decoding="async" onerror="this.hidden=true"><div class="spidey-laic-hero-overlay"><span class="spidey-laic-hero-brand"><img src="assets/branding/20261019/spidey-icon-cosmic-192.png" alt="" width="42" height="42"><span>SPIDEY · POKÉMON GO</span></span><span class="spidey-laic-hero-kicker">CAMPEONATO INTERNACIONAL</span><strong>LAIC <em>2027</em></strong><span class="spidey-laic-hero-city">SÃO PAULO · BRASIL</span><span class="spidey-laic-hero-date">20—22 NOV · DISTRITO ANHEMBI</span></div><span class="spidey-laic-official-credit">Imagem promocional: Pokémon Championships</span></section>` : `<img class="detail-hero" src="${eventImage(event)}" alt="${event.art?.alt || event.title}" onerror="this.onerror=null;this.src=this.dataset.fallback" data-fallback="${generatedEventArtUrl(event)}">`) : verifiedDateVisual(event))}
     <div class="detail-body">
       <span class="eyebrow">${event.source?.name || 'SPIDEY'}</span>
       <h2>${event.public_title || event.title}</h2><p>${isNationalTrust ? '27 localidades do National Trust, com referências para copiar disponíveis no início desta tela. A parceria segue até 31/12/2026.' : (event.public_summary || event.summary || '')}</p>
@@ -592,7 +613,8 @@ function openEvent(event) {
         ${event.gpx?.enabled !== false && (event.locations || []).length ? '<button id="downloadGpx" class="action-btn gold">Baixar GPX</button>' : ''}
         ${event.source?.url ? `<a class="action-btn" href="${event.source.url}" target="_blank" rel="noopener">${event.source.confidence === 'official' ? 'Anúncio oficial' : 'Ver fonte'}</a>` : ''}
       </div>
-      ${pokemon.length ? `<h3>Pokémon em destaque</h3><ul class="bonus-list">${pokemon.map((item) => `<li>${item.name}${item.note ? ` — ${item.note}` : ''}</li>`).join('')}</ul>` : ''}
+      ${renderCommunityReports(event)}
+       ${pokemon.length ? `<h3>Pokémon em destaque</h3><ul class="bonus-list">${pokemon.map((item) => `<li>${item.name}${item.note ? ` — ${item.note}` : ''}</li>`).join('')}</ul>` : ''}
       ${renderMaxBattleGuide(event)}
       ${bonuses.length ? `<h3>Bônus e informações</h3><ul class="bonus-list">${bonuses.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
       
