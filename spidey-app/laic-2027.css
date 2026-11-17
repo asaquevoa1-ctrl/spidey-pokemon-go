@@ -1,0 +1,83 @@
+/* LAIC 2027 · Sao Paulo. Original Spidey identity + official Championship promo art.
+   The official photo/logo remains credited; these CSS elements do not claim an approved original poster. */
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero {
+  position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:end;
+  min-height:340px;margin:0; padding:clamp(22px,5vw,42px);
+  color:#fff; background:radial-gradient(ellipse at 80% 10%,#405e8f 0%,#101b38 60%,#050c1e 100%);
+  border-radius:18px 18px 0 0; box-sizing:border-box;
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-image {
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 36%;
+  opacity:.63;filter:saturate(1.13) contrast(1.06);
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero::after {
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(3,9,26,.94),rgba(3,9,26,.63) 56%,rgba(3,9,26,.22)),
+    linear-gradient(0deg,rgba(3,9,26,.7),transparent 56%);
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-overlay {
+  position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:9px;
+  max-width:100%;text-shadow:0 2px 18px rgba(0,0,0,.48);
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-brand {
+  display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:10px;letter-spacing:.21em;
+  font-weight:800;color:#ffe3a0;
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-brand img{
+  display:block;width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-kicker{
+  font-weight:700;font-size:clamp(10px,2.4vw,13px);letter-spacing:.2em;color:#e7dbb8;
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-overlay strong{
+  font-size:clamp(48px,13vw,88px);line-height:.96;letter-spacing:-.05em;font-weight:950;
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-overlay strong em{
+  color:#ffcc69;font-weight:800;font-style:normal;
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-city{
+  font-size:clamp(14px,3vw,19px);letter-spacing:.25em;font-weight:850;
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-date{
+  display:inline-block;margin-top:8px;padding:8px 12px;border:1px solid rgba(255,217,153,.48);
+  border-radius:6px;background:rgba(10,20,37,.48);color:#ffda9d;font-size:11px;
+  font-weight:800;letter-spacing:.08em;
+}
+#eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-official-credit{
+  position:absolute;z-index:1;right:12px;bottom:8px;color:#e4e9f7;font-size:9px;
+  opacity:.78;text-shadow:0 2px 8px #000;
+}
+.event-card[data-event-id="2026-11-20-laic-2027-sao-paulo"] .event-thumb{
+  background:linear-gradient(145deg,#132844,#263b58);object-fit:cover;
+  border-radius:11px;box-shadow:0 5px 18px rgba(13,28,54,.3);
+}
+#eventDetail .spidey-laic-community{margin:22px 0;padding:20px;border:1px solid rgba(188,153,85,.35);
+  border-radius:15px;background:linear-gradient(165deg,rgba(180,143,64,.09),transparent 56%);
+}
+#eventDetail .spidey-laic-community-tag{
+  display:block;font-size:10px;letter-spacing:.11em;font-weight:800;color:#a87b28;
+  margin-bottom:8px;
+}
+#eventDetail .spidey-laic-community h3{margin-top:0;margin-bottom:8px;}
+#eventDetail .spidey-laic-community-group{margin-top:17px;}
+#eventDetail .spidey-laic-community-group h4{font-size:1rem;margin:0 0 8px;font-weight:800;}
+#eventDetail .spidey-laic-community-group .bonus-list{margin:0;padding-left:20px;}
+#eventDetail .spidey-laic-community-group .bonus-list li{margin:7px 0;line-height:1.52;}
+#eventDetail .spidey-laic-claimed-window,#eventDetail .spidey-laic-community-warning{
+  line-height:1.56;font-size:.92rem;
+}
+#eventDetail .spidey-laic-community-warning{font-weight:700;margin:17px 0 0;}
+@media(max-width:520px){
+  #eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero{
+    min-height:330px;border-radius:13px 13px 0 0;padding:22px 19px 36px;
+  }
+  #eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-brand{margin-bottom:18px;}
+  #eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-hero-overlay strong{font-size:62px;}
+  #eventDetail[data-event-id="2026-11-20-laic-2027-sao-paulo"] .spidey-laic-official-credit{
+    bottom:6px;font-size:8px;
+  }
+  #eventDetail .spidey-laic-community{padding:14px;margin:18px 0;}
+}
+@media(prefers-reduced-motion:reduce){
+  #eventDetail .spidey-laic-hero *,#eventDetail .spidey-laic-community *{animation:none!important;transition:none!important;}
+}
