@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261116-alola3';
+const CACHE = 'spidey-app-20261116-laic1';
 const CORE = [
   './go-tour-alola-2027.js',
   './go-tour-alola-2027.css',
@@ -211,6 +211,7 @@ const CORE = [
   './assets/events/review/zorua-community-day-correction-v1.png',
   './assets/events/premium/zorua-community-day-approved-v1.png',
   './command-center.css',
+  './laic-2027.css',
   './assets/events/premium/wild-area-sendai-2026-approved-v1.png',
   './assets/events/premium/wild-area-mexico-city-2026-approved-v1.png',
   './assets/events/premium/wild-area-global-2026-approved-v1.png',
