@@ -631,14 +631,15 @@
       {
         "id": "2026-11-20-laic-2027-sao-paulo",
         "title": "Pokémon GO no LAIC 2027 — São Paulo",
-        "summary": "De 20 a 22/11, das 8h às 18h em cada dia, o espaço de Pokémon GO no LAIC terá atividades da comunidade, fotos com os líderes de equipe e transmissão oficial em português.",
+        "summary": "LAIC 2027 no Distrito Anhembi, 20 a 22/11: espaço oficial de Pokémon GO das 8h às 18h por dia, transmissão em português e Drops online. Há relatos comunitários de bônus locais ainda sem confirmação oficial.",
         "category": "local_event",
         "tags": [
           "LAIC 2027",
           "São Paulo",
-          "Evento presencial",
-          "Transmissão em português",
-          "Competitivo"
+          "Distrito Anhembi",
+          "Coordenadas",
+          "Presencial",
+          "Twitch Drops"
         ],
         "start_brazil": "2026-11-20T08:00:00-03:00",
         "end_brazil": "2026-11-22T18:00:00-03:00",
@@ -647,7 +648,12 @@
           "url": "https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
           "confidence": "official"
         },
-        "art": {},
+        "art": {
+          "url": "https://championships.pokemon.com/static-assets/images/full-width-generic/2027-sao-paulo-2048.webp",
+          "alt": "Arte promocional oficial do LAIC 2027, com a marca do Campeonato Internacional Pokémon sobre São Paulo",
+          "source_url": "https://championships.pokemon.com/es-la/events/internationals/2027/sao-paulo",
+          "classification": "official_promo_banner_external_not_original_spidey"
+        },
         "weekly_art": {
           "url": "",
           "width": 0,
@@ -758,8 +764,8 @@
     "events_without_weekly_art": 13,
     "events_in_weekly": 16,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-16T21:38:13.916049-03:00",
-    "current_items_filtered_at": "2026-11-16T21:38:13.897727-03:00",
+    "generated_at": "2026-11-16T21:51:15.144469-03:00",
+    "current_items_filtered_at": "2026-11-16T21:51:15.126293-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
