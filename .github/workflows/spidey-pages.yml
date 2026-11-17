@@ -190,6 +190,7 @@ jobs:
               files = comparison.get('files', [])
               allowed = lambda path: (
                   path == 'last_g47ix.txt'
+                  or path == 'last_news.txt'
                   or path == 'last_pokeminers.txt'
                   or path == 'notifications/queue.json'
                   or path.startswith('queue/pending/')
