@@ -24,6 +24,6 @@ test('Alola: cards mobile, pôster ampliável, cache atualizado',()=>{
  assert.match(js,/let selected=null/);assert.match(css,/alola-tour-lightbox/);
  assert.match(html,/go-tour-alola-2027\.js\?v=20261116-alola3/);
  assert.match(html,/go-tour-alola-2027\.css\?v=20261116-alola3/);
- assert.match(sw,/spidey-app-20261116-alola3/);
+ assert.match(sw,/const CACHE = 'spidey-app-2026\\d{4}-[a-z0-9-]+'/);
  assert.ok(sw.includes("'./"+asset+"'"));
 });
