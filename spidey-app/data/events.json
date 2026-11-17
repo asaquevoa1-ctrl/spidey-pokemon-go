@@ -13413,7 +13413,7 @@
       },
       "audit": {
         "classification": "official_announcement_editorially_verified",
-        "editorial_detail_pending": true,
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
         "canonical_fulltext_url": "https://pokemongo.com/news/pokemon-go-at-laic2027",
         "collector_source_id": "oficial-https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
@@ -13427,7 +13427,8 @@
         "community_claims_reviewed_at": "2026-11-16",
         "official_stream_drops_verified": true,
         "art_source": "official_laic_banner",
-        "art_visual_approval_claimed": false
+        "art_visual_approval_claimed": false,
+        "community_reports_pending_confirmation": true
       },
       "art": {
         "url": "https://championships.pokemon.com/static-assets/images/full-width-generic/2027-sao-paulo-2048.webp",
