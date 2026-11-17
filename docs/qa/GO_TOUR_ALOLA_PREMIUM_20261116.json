@@ -1,0 +1,22 @@
+{
+  "id": "GO_TOUR_ALOLA_PREMIUM_20261116",
+  "date": "2026-11-16",
+  "asset": "assets/events/premium/go-tour-alola-2027-spidey-v1.avif",
+  "sha256": "d85f36424bae2581447c52362494bfa4cb81fb2429de0834226ddc8b19e30242",
+  "dimensions": {
+    "width": 700,
+    "height": 1114
+  },
+  "format": "AVIF",
+  "approval_basis": "USER_DELEGATED_VISUAL_QA",
+  "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json",
+  "visual_inspection": "Prévia otimizada inspecionada: Solgaleo e Lunala temáticos, litoral tropical, três regiões e datas legíveis. S gerado removido, emblema S cósmico real aplicado na interface.",
+  "facts": {
+    "kaohsiung": "19–21/02/2027",
+    "los_angeles": "19–21/02/2027",
+    "global": "27–28/02/2027",
+    "solgaleo_lunala_announced": false
+  },
+  "android_physical": "PENDING",
+  "deployment": "PENDING"
+}

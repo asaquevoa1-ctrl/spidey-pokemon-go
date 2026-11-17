@@ -8511,8 +8511,9 @@
         "no_unverified_poster": true
       },
       "art": {
-        "url": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365",
-        "alt": "Arte promocional oficial do Pokémon GO Tour 2027: praia tropical, logotipo GO Tour e placas Kaohsiung, Los Angeles e Global"
+        "url": "assets/events/premium/go-tour-alola-2027-spidey-v1.avif",
+        "web_sha256": "d85f36424bae2581447c52362494bfa4cb81fb2429de0834226ddc8b19e30242",
+        "alt": "Pôster Premium Spidey: Solgaleo e Lunala temáticos, cenário de Alola, três datas confirmadas"
       },
       "location_label": "Kaohsiung, Taiwan",
       "locations": [],
@@ -8531,12 +8532,18 @@
       },
       "status": "published",
       "verified_at": "2026-11-16",
-      "updated_at": "2026-11-16T13:45:00-03:00",
+      "updated_at": "2026-11-16T21:30:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "date_confirmed_details_unannounced": true,
         "exact_venue_unannounced": true,
         "coordinates_not_confirmed": true
+      },
+      "visual_qa": {
+        "status": "APPROVED",
+        "approval_basis": "USER_DELEGATED_VISUAL_QA",
+        "approval_record": "docs/qa/GO_TOUR_ALOLA_PREMIUM_20261116.json",
+        "notes": "Arte conjunta; presença dos Pokémon não anunciada"
       }
     },
     {
@@ -8581,8 +8588,9 @@
         "no_unverified_poster": true
       },
       "art": {
-        "url": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365",
-        "alt": "Arte promocional oficial do Pokémon GO Tour 2027: praia tropical, logotipo GO Tour e placas Kaohsiung, Los Angeles e Global"
+        "url": "assets/events/premium/go-tour-alola-2027-spidey-v1.avif",
+        "web_sha256": "d85f36424bae2581447c52362494bfa4cb81fb2429de0834226ddc8b19e30242",
+        "alt": "Pôster Premium Spidey: Solgaleo e Lunala temáticos, cenário de Alola, três datas confirmadas"
       },
       "location_label": "Los Angeles, Califórnia, EUA",
       "locations": [],
@@ -8601,12 +8609,18 @@
       },
       "status": "published",
       "verified_at": "2026-11-16",
-      "updated_at": "2026-11-16T13:45:00-03:00",
+      "updated_at": "2026-11-16T21:30:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "date_confirmed_details_unannounced": true,
         "exact_venue_unannounced": true,
         "coordinates_not_confirmed": true
+      },
+      "visual_qa": {
+        "status": "APPROVED",
+        "approval_basis": "USER_DELEGATED_VISUAL_QA",
+        "approval_record": "docs/qa/GO_TOUR_ALOLA_PREMIUM_20261116.json",
+        "notes": "Arte conjunta; presença dos Pokémon não anunciada"
       }
     },
     {
@@ -8650,8 +8664,9 @@
         "no_unverified_poster": true
       },
       "art": {
-        "url": "https://lh3.googleusercontent.com/ZD_ZnJIVRb8a2RWD8L9wF4UR3f0fBAT2ZKk9lLB58yOlXhKOrghIstmijArGABhFlVacGQU56R514Pl0NsA9tTqEpGxbIo4D4oipystojQ=s0-e365",
-        "alt": "Arte promocional oficial do Pokémon GO Tour 2027: praia tropical, logotipo GO Tour e placas Kaohsiung, Los Angeles e Global"
+        "url": "assets/events/premium/go-tour-alola-2027-spidey-v1.avif",
+        "web_sha256": "d85f36424bae2581447c52362494bfa4cb81fb2429de0834226ddc8b19e30242",
+        "alt": "Pôster Premium Spidey: Solgaleo e Lunala temáticos, cenário de Alola, três datas confirmadas"
       },
       "location_label": "Global",
       "locations": [],
@@ -8670,12 +8685,18 @@
       },
       "status": "published",
       "verified_at": "2026-11-16",
-      "updated_at": "2026-11-16T13:45:00-03:00",
+      "updated_at": "2026-11-16T21:30:00-03:00",
       "audit": {
         "classification": "official_save_the_date",
         "date_confirmed_details_unannounced": true,
         "exact_venue_unannounced": true,
         "coordinates_not_confirmed": true
+      },
+      "visual_qa": {
+        "status": "APPROVED",
+        "approval_basis": "USER_DELEGATED_VISUAL_QA",
+        "approval_record": "docs/qa/GO_TOUR_ALOLA_PREMIUM_20261116.json",
+        "notes": "Arte conjunta; presença dos Pokémon não anunciada"
       }
     },
     {

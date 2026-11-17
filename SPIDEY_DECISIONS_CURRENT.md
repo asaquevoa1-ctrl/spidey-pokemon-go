@@ -724,3 +724,10 @@ Duas peças **originais** ANA, enviadas pelo responsável em 18/10, são **refer
 - AGENTS.md, config/spidey-governance.json, stamps.json, dados de rotas, coordenadas protegidas e imagens aprovadas não foram alterados. spidey-pages-publish.yml permanece desativado; GitHub Pages é o único publicador. vercel.json mantém git.deploymentEnabled=false.
 - O monitor independente push #43506559819 concluiu com sucesso às 21:01:35Z: 13 testes Python de saúde aprovados, HTTP com ok=true, paridade 11/744, sem falhas; artefato spidey-app-health ID 14075369471 (1.071 bytes, SHA-256 030a044b51af0bf2f35c564b72c99ad8ff542e5f6ecef04807417dfc97415214). A primeira ocorrência schedule após o novo cron (21:11Z de 13/11) ainda não tinha ocorrido; confirmar no próximo histórico, sem alegar reativação já observada.
 - A publicação atual contém o mesmo payload do aplicativo anterior: o commit mudou somente workflow/teste; o deploy foi executado para validar o novo HEAD e a paridade HTTP. SHA do aplicativo efetivamente publicado: 4a1d85975a20513e9f06d0b82da5e69a572465bd.
+
+
+## 16/11/2026 — Arte Premium GO Tour Alola 2027
+- O responsável reforçou a delegação sem aprovações repetidas. Peça cinematográfica original criada, inspecionada e integrada ao aplicativo.
+- Solgaleo e Lunala representam tematicamente Alola: não estão oficialmente anunciados. Datas confirmadas: 19–21/02 (Kaohsiung e Los Angeles) e 27–28/02/2027 (Global).
+- Arquivo AVIF local com hash e inspeção documentados em docs/qa/GO_TOUR_ALOLA_PREMIUM_20261116.json. S estilizado removido da imagem e emblema S cósmico oficial usado na seção; card compacto e ampliação da arte no próprio app.
+- QA Android físico separado dos testes e do deploy.

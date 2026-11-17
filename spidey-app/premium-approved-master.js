@@ -1,6 +1,39 @@
 (() => {
   'use strict';
   const master = {
+  "2027-go-tour-alola-kaohsiung": {
+    "file": "assets/events/premium/go-tour-alola-2027-spidey-v1.avif",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 700,
+    "height": 1114,
+    "sha256": "d85f36424bae2581447c52362494bfa4cb81fb2429de0834226ddc8b19e30242",
+    "approval_record": "docs/qa/GO_TOUR_ALOLA_PREMIUM_20261116.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2027-go-tour-alola-los-angeles": {
+    "file": "assets/events/premium/go-tour-alola-2027-spidey-v1.avif",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 700,
+    "height": 1114,
+    "sha256": "d85f36424bae2581447c52362494bfa4cb81fb2429de0834226ddc8b19e30242",
+    "approval_record": "docs/qa/GO_TOUR_ALOLA_PREMIUM_20261116.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
+  "2027-go-tour-alola-global": {
+    "file": "assets/events/premium/go-tour-alola-2027-spidey-v1.avif",
+    "status": "APPROVED",
+    "display": "full_poster",
+    "width": 700,
+    "height": 1114,
+    "sha256": "d85f36424bae2581447c52362494bfa4cb81fb2429de0834226ddc8b19e30242",
+    "approval_record": "docs/qa/GO_TOUR_ALOLA_PREMIUM_20261116.json",
+    "approval_basis": "USER_DELEGATED_VISUAL_QA",
+    "authorization_record": "docs/qa/ART_CONTINUATION_AUTHORIZATION_20261003.json"
+  },
   "2026-10-29-spotlight-gastly": {
     "file": "assets/events/premium/gastly-spotlight-20261029-cosmic-s-approved-v1.webp",
     "status": "APPROVED",
