@@ -8,15 +8,20 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1572054387730288722",
-  "status": "duplicado",
-  "etapa_editorial": "aguardando_curadoria_premium",
+  "status": "grouped_into_existing_official_story",
+  "etapa_editorial": "completed",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
   "created_at_utc": "2026-11-17T03:59:50.050389+00:00",
-  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/duolingo-2026"
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/duolingo-2026",
+  "curated_path": "queue/curated/catch-a-new-language-with-pokemon-go-and-duolingo-5111c434e2b4.json",
+  "related_event_ids": [
+    "official-news-auto-5ea008a69ab9"
+  ],
+  "curated_at_utc": "2026-11-18T21:55:00+00:00"
 }

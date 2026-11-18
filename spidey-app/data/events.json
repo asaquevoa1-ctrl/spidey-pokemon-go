@@ -13441,7 +13441,12 @@
         "official_stream_drops_verified": true,
         "art_source": "official_laic_banner",
         "art_visual_approval_claimed": false,
-        "community_reports_pending_confirmation": true
+        "community_reports_pending_confirmation": true,
+        "no_duplicate_story_created": true,
+        "collector_source_ids": [
+          "pokeminers-1571993839244153054",
+          "oficial-https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026"
+        ]
       },
       "art": {
         "url": "https://championships.pokemon.com/static-assets/images/full-width-generic/2027-sao-paulo-2048.webp",
@@ -15090,7 +15095,15 @@
         "canonical_fulltext_url": "https://pokemongo.com/news/pokemon-crocs-2026",
         "official_redemption_end_date": "2027-12-31",
         "official_redemption_end_time_not_announced": true,
-        "community_shared_gengar_jigglypuff_codes_not_promoted_to_official": true
+        "community_shared_gengar_jigglypuff_codes_not_promoted_to_official": true,
+        "no_duplicate_story_created": true,
+        "collector_source_ids": [
+          "pokeminers-1571918956103733343",
+          "g47ix-2122428662339215635",
+          "g47ix-2122376249092051240",
+          "oficial-https://pokemongo.com/pt-BR/news/pokemon-crocs-2026"
+        ],
+        "community_shared_gengar_jigglypuff_codes_archived": true
       },
       "verification_sources": [
         {
@@ -15215,7 +15228,13 @@
         "collector_queue_file": "queue/pending/2026-11-17/catch-a-new-language-with-pokemon-go-and-duolingo-5111c434e2b4.json",
         "distinct_participation_windows_preserved": true,
         "individual_offer_code_not_shared_code": true,
-        "research_start_is_participant_dependent": true
+        "research_start_is_participant_dependent": true,
+        "no_duplicate_story_created": true,
+        "collector_source_ids": [
+          "pokeminers-1572054387730288722",
+          "g47ix-2122496363724435965",
+          "oficial-https://pokemongo.com/pt-BR/news/duolingo-2026"
+        ]
       },
       "verification_sources": [
         {

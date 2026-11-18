@@ -1,0 +1,14 @@
+{
+  "titulo": "Pokémon GO × Duolingo — anúncio oficial agrupado",
+  "source_url": "https://pokemongo.com/pt-BR/news/duolingo-2026",
+  "source_classification": "official",
+  "status": "grouped_into_existing_official_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "official-news-auto-5ea008a69ab9"
+  ],
+  "curation_note": "Anúncio oficial já detalhado com as janelas distintas e o código individual; nenhuma segunda notícia foi criada.",
+  "curated_at_utc": "2026-11-18T21:55:00+00:00"
+}

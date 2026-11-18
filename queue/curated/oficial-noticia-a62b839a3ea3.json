@@ -1,0 +1,14 @@
+{
+  "titulo": "LAIC 2027 — anúncio de Drops agrupado",
+  "source_url": "https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026",
+  "source_classification": "official",
+  "status": "grouped_into_existing_official_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "2026-11-20-laic-2027-sao-paulo"
+  ],
+  "curation_note": "As recompensas de transmissão já foram incorporadas ao registro canônico do LAIC, sem misturá-las com pesquisas presenciais relatadas pela comunidade.",
+  "curated_at_utc": "2026-11-18T21:55:00+00:00"
+}

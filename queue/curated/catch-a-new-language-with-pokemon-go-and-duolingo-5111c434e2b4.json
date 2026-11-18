@@ -1,0 +1,14 @@
+{
+  "titulo": "Pokémon GO × Duolingo — descoberta automática agrupada",
+  "source_url": "https://pokemongo.com/news/duolingo-2026",
+  "source_classification": "official_duplicate",
+  "status": "grouped_into_existing_official_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "official-news-auto-5ea008a69ab9"
+  ],
+  "curation_note": "A descoberta em inglês aponta para a história oficial já detalhada. As três janelas de adesão, conclusão da missão e conclusão da Pesquisa Temporária permanecem separadas.",
+  "curated_at_utc": "2026-11-18T21:55:00+00:00"
+}

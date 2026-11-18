@@ -1,0 +1,14 @@
+{
+  "titulo": "Crocs Pokémon — anúncio oficial agrupado",
+  "source_url": "https://pokemongo.com/pt-BR/news/pokemon-crocs-2026",
+  "source_classification": "official",
+  "status": "grouped_into_existing_official_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "official-news-auto-f9833bb35968"
+  ],
+  "curation_note": "Anúncio oficial já detalhado no registro canônico, sem evento datado porque não foi publicada hora de encerramento.",
+  "curated_at_utc": "2026-11-18T21:55:00+00:00"
+}
