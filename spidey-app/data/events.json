@@ -12999,8 +12999,21 @@
           "name": "Pokémon GO • anúncio oficial",
           "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
           "confidence": "official"
+        },
+        {
+          "name": "G47IX • lembrete comunitário",
+          "url": "https://x.com/g47ix/status/2123072733458375021",
+          "confidence": "community"
         }
-      ]
+      ],
+      "audit": {
+        "editorial_detail_pending": false,
+        "official_story_remains_canonical": true,
+        "no_duplicate_event_created": true,
+        "collector_source_ids": [
+          "g47ix-2123072733458375021"
+        ]
+      }
     },
     {
       "id": "2026-12-pokemon-center-bangkok-opening",
