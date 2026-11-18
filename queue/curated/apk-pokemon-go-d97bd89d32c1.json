@@ -1,0 +1,12 @@
+{
+  "titulo": "Rollout de APK — registro operacional sem notícia pública",
+  "source_url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo",
+  "source_classification": "operational_observation",
+  "status": "no_public_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [],
+  "curation_note": "O registro repete um rollout de Android datado de 10/11 e não traz versão, mudança pública ou anúncio oficial novo. Mantido apenas como auditoria operacional; nenhuma notícia, data, arte ou notificação foi criada.",
+  "curated_at_utc": "2026-11-18T21:55:00+00:00"
+}

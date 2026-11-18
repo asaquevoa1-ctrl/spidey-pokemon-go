@@ -5,15 +5,26 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2122116354689945739",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
+  "status": "grouped_without_new_claims",
+  "etapa_editorial": "completed",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
   "media_policy": "premium_editorial",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-11-16T10:57:03.150683+00:00"
+  "created_at_utc": "2026-11-16T10:57:03.150683+00:00",
+  "curated_path": "queue/curated/g47ix-evento-9b1e26bec9c3.json",
+  "related_event_ids": [
+    "2026-11-21-shadow-tornadus-weekend",
+    "2026-11-09-raids-cresselia-darkrai",
+    "2026-11-16-mega-banette-raids",
+    "2026-11-16-dynamax-trails",
+    "2026-11-minior-leonids",
+    "2026-11-21-eternamax-eternatus-max-battles",
+    "2026-11-21-community-day-preview"
+  ],
+  "curated_at_utc": "2026-11-18T21:55:00+00:00"
 }
