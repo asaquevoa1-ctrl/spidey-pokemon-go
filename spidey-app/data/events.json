@@ -15029,12 +15029,14 @@
       "slug": "official-news-auto-f9833bb35968",
       "content_type": "news",
       "title": "Itens de avatar da coleção Crocs Pokémon estão chegando ao Pokémon GO!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "Resgate o Pikachu Classic Clog com o código POKEMONGOxCROCSxELECTRIFYING na Loja online do Pokémon GO. Os códigos da coleção valem até 31/12/2027; os itens de Gengar e Jigglypuff acompanham a compra dos respectivos modelos Crocs.",
       "category": "official_update",
       "tags": [
         "Novidade",
         "Pokémon GO oficial",
-        "Atualização automática"
+        "Crocs Pokémon",
+        "Item de avatar",
+        "Código promocional"
       ],
       "source": {
         "name": "Pokémon GO • comunicado oficial",
@@ -15050,77 +15052,175 @@
       },
       "news": {
         "title": "Itens de avatar da coleção Crocs Pokémon estão chegando ao Pokémon GO!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "Código oficial gratuito: POKEMONGOxCROCSxELECTRIFYING libera o Pikachu Classic Clog na Loja online. Gengar e Jigglypuff vêm com a compra dos modelos correspondentes; resgates até 31/12/2027.",
         "published_on": "2026-11-16",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • CÓDIGO DE ITEM"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "Pikachu Classic Clog: use o código POKEMONGOxCROCSxELECTRIFYING na Loja online do Pokémon GO.",
+        "Os códigos dos itens Gengar Classic Clog e Jigglypuff Classic Platform acompanham a compra dos modelos Crocs correspondentes; o anúncio oficial não publica códigos compartilhados para esses dois itens.",
+        "Os códigos promocionais podem ser resgatados até 31 de dezembro de 2027. O anúncio não informa horário de encerramento; por isso, o Spidey não inventa 23h59 nem cria um evento datado no Calendário.",
+        "Códigos adicionais divulgados por fontes comunitárias não foram incorporados como oficiais."
       ],
       "notifications": {
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
       "status": "published",
-      "verified_at": "2026-11-16",
-      "updated_at": "2026-11-16T00:00:00+00:00",
+      "verified_at": "2026-11-18",
+      "updated_at": "2026-11-18T08:05:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/pokemon-crocs-2026",
+        "official_redemption_end_date": "2027-12-31",
+        "official_redemption_end_time_not_announced": true,
+        "community_shared_gengar_jigglypuff_codes_not_promoted_to_official": true
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • comunicado oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/pokemon-crocs-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • comunicado oficial em inglês",
+          "url": "https://pokemongo.com/en/news/pokemon-crocs-2026",
+          "confidence": "official"
+        }
+      ]
     },
     {
       "id": "official-news-auto-5ea008a69ab9",
       "slug": "official-news-auto-5ea008a69ab9",
-      "content_type": "news",
-      "title": "Aprendam um novo idioma com Pokémon GO e Duolingo.",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
-      "category": "official_update",
+      "content_type": "event",
+      "title": "Pokémon GO × Duolingo: Festa de Pokémon do Duo",
+      "summary": "Faça ao menos uma lição por dia em sete dias diferentes no Duolingo para receber um código individual de Pesquisa Temporária no Pokémon GO. Entre na missão até 21/12, conclua-a até 29/12 e termine a pesquisa até 31/12, sempre às 23h59 locais.",
+      "category": "timed_research",
       "tags": [
         "Novidade",
         "Pokémon GO oficial",
-        "Atualização automática"
+        "Duolingo",
+        "Pesquisa Temporária",
+        "Fundo Especial",
+        "Tag de idioma"
       ],
       "source": {
         "name": "Pokémon GO • comunicado oficial",
         "url": "https://pokemongo.com/pt-BR/news/duolingo-2026",
         "confidence": "official"
       },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-11-16T22:00:00-03:00",
+        "end_local": "2026-12-31T23:59:59-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-16T22:00:00-03:00",
+        "end_brazil": "2026-12-31T23:59:59-03:00"
+      },
       "calendar": {
-        "mode": "hidden"
+        "mode": "span"
       },
       "presentation": {
         "requires_art": false,
-        "fallback_visual": "none"
+        "fallback_visual": "date"
       },
       "news": {
-        "title": "Aprendam um novo idioma com Pokémon GO e Duolingo.",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "title": "Pokémon GO e Duolingo liberam Pesquisa Temporária em vários idiomas",
+        "summary": "Entre na missão do Duolingo até 21/12, faça lições em sete dias diferentes até 29/12 e conclua a Pesquisa Temporária do Pokémon GO até 31/12. Há PE, Poeira Estelar e encontros com Fundo Especial.",
         "published_on": "2026-11-17",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • PESQUISA TEMPORÁRIA"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "A Festa de Pokémon do Duo começou em 17/11 às 10h JST, equivalente a 16/11 às 22h em Brasília.",
+        "Adesão: entre na missão do Duolingo até 21/12/2026 às 23h59 no horário local.",
+        "Conclusão da missão: faça ao menos uma lição por dia em sete dias diferentes e resgate as recompensas no Duolingo até 29/12/2026 às 23h59 no horário local.",
+        "Pesquisa Temporária: depois de receber e resgatar o código individual na Loja online do Pokémon GO, conclua as tarefas e resgate as recompensas até 31/12/2026 às 23h59 no horário local.",
+        "As tarefas aparecem no idioma escolhido e trazem dicas do Professor Willow. Alguns Pokémon da pesquisa exibem a nova tag de idioma na página de resumo.",
+        "O código é obtido pela missão do Duolingo; não existe um código compartilhado oficial para todos os jogadores."
+      ],
+      "participation_windows": [
+        {
+          "id": "duolingo-quest-join",
+          "label": "Entrar na Festa de Pokémon do Duo",
+          "start_local": "2026-11-16T22:00:00-03:00",
+          "end_local": "2026-12-21T23:59:59-03:00",
+          "timezone": "America/Sao_Paulo"
+        },
+        {
+          "id": "duolingo-quest-complete",
+          "label": "Concluir sete dias de lições e resgatar as recompensas",
+          "start_local": "2026-11-16T22:00:00-03:00",
+          "end_local": "2026-12-29T23:59:59-03:00",
+          "timezone": "America/Sao_Paulo"
+        },
+        {
+          "id": "pokemon-go-timed-research",
+          "label": "Concluir a Pesquisa Temporária do Pokémon GO",
+          "start_precision": "participant_dependent_after_offer_code_redemption",
+          "end_local": "2026-12-31T23:59:59-03:00",
+          "timezone": "America/Sao_Paulo"
+        }
+      ],
+      "bonuses": [
+        "Até quatro trajes de Pokémon para o avatar do Duolingo ao avançar na missão.",
+        "Pesquisa Temporária do Pokémon GO com PE, Poeira Estelar e encontros com Fundo Especial."
+      ],
+      "pokemon": [
+        {
+          "name": "Pikachu",
+          "note": "Encontro com Fundo Especial; possibilidade de Brilhante."
+        },
+        {
+          "name": "Meowth",
+          "note": "Encontro com Fundo Especial; possibilidade de Brilhante."
+        },
+        {
+          "name": "Chatot",
+          "note": "Encontro com Fundo Especial; possibilidade de Brilhante."
+        },
+        {
+          "name": "Lucario",
+          "note": "Encontro com Fundo Especial; possibilidade de Brilhante."
+        }
       ],
       "notifications": {
         "enabled": false,
-        "reason": "A notícia não tem horário de evento validado."
+        "reason": "Evento confirmado; não acionar envio de push nesta atualização editorial."
       },
       "status": "published",
-      "verified_at": "2026-11-17",
-      "updated_at": "2026-11-17T00:00:00+00:00",
+      "verified_at": "2026-11-18",
+      "updated_at": "2026-11-18T08:05:00-03:00",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": false,
+        "canonical_fulltext_url": "https://pokemongo.com/news/duolingo-2026",
+        "collector_queue_file": "queue/pending/2026-11-17/catch-a-new-language-with-pokemon-go-and-duolingo-5111c434e2b4.json",
+        "distinct_participation_windows_preserved": true,
+        "individual_offer_code_not_shared_code": true,
+        "research_start_is_participant_dependent": true
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • comunicado oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/duolingo-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • comunicado oficial em inglês",
+          "url": "https://pokemongo.com/en/news/duolingo-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Leek Duck • conferência comunitária dos prazos",
+          "url": "https://leekduck.com/events/duolingo-timed-research-2026/",
+          "confidence": "verified_community"
+        }
+      ]
     }
   ]
 }

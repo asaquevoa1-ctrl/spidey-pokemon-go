@@ -67,3 +67,29 @@ test('LAIC 2027 is one official story with three separate daily windows',()=>{
  assert.equal(event.audit.no_gameplay_bonuses_announced,true);
  assert.equal(events.filter(item=>item.source?.url?.includes('pokemon-go-at-laic2027')).length,1);
 });
+
+test('Crocs announcement exposes only the officially published shared code',()=>{
+ const story=byId('official-news-auto-f9833bb35968');
+ assert(story);
+ assert.equal(story.calendar.mode,'hidden');
+ assert.equal(story.audit.editorial_detail_pending,false);
+ assert.equal(story.audit.official_redemption_end_time_not_announced,true);
+ assert.match(story.summary,/POKEMONGOxCROCSxELECTRIFYING/);
+ assert.doesNotMatch(story.notes.join(' '),/POKEMONGOxCROCSxENCHANTING|POKEMONGOxCROCSxMELODY/);
+});
+
+test('Duolingo story preserves the three official participation deadlines',()=>{
+ const event=byId('official-news-auto-5ea008a69ab9');
+ assert(event);
+ assert.equal(event.calendar.mode,'span');
+ assert.equal(event.audit.editorial_detail_pending,false);
+ assert.equal(event.schedule.start_local,'2026-11-16T22:00:00-03:00');
+ assert.equal(event.schedule.end_local,'2026-12-31T23:59:59-03:00');
+ assert.deepEqual(event.participation_windows.map(window=>[window.id,window.end_local]),[
+  ['duolingo-quest-join','2026-12-21T23:59:59-03:00'],
+  ['duolingo-quest-complete','2026-12-29T23:59:59-03:00'],
+  ['pokemon-go-timed-research','2026-12-31T23:59:59-03:00']
+ ]);
+ assert.equal(event.participation_windows[2].start_precision,'participant_dependent_after_offer_code_redemption');
+ assert.deepEqual(event.pokemon.map(pokemon=>pokemon.name),['Pikachu','Meowth','Chatot','Lucario']);
+});
