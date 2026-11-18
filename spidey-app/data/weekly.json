@@ -302,6 +302,37 @@
         }
       },
       {
+        "id": "official-news-auto-5ea008a69ab9",
+        "title": "Pokémon GO × Duolingo: Festa de Pokémon do Duo",
+        "summary": "Faça ao menos uma lição por dia em sete dias diferentes no Duolingo para receber um código individual de Pesquisa Temporária no Pokémon GO. Entre na missão até 21/12, conclua-a até 29/12 e termine a pesquisa até 31/12, sempre às 23h59 locais.",
+        "category": "timed_research",
+        "tags": [
+          "Novidade",
+          "Pokémon GO oficial",
+          "Duolingo",
+          "Pesquisa Temporária",
+          "Fundo Especial",
+          "Tag de idioma"
+        ],
+        "start_brazil": "2026-11-16T22:00:00-03:00",
+        "end_brazil": "2026-12-31T23:59:59-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/duolingo-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
         "id": "2026-11-go-pass-groudon",
         "title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
         "summary": "Passe gratuito: encontro com Groudon (pode ser Brilhante) e até 400 PokéMoedas. Passe Deluxe pago: mais 1.000 PokéMoedas, total de 1.400.",
@@ -729,15 +760,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 15,
+    "calendar_events_in_week": 16,
     "events_with_weekly_art": 3,
     "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 12,
-    "events_in_weekly": 15,
+    "events_without_weekly_art": 13,
+    "events_in_weekly": 16,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-18T01:37:33.736003-03:00",
-    "current_items_filtered_at": "2026-11-18T01:37:33.713955-03:00",
+    "generated_at": "2026-11-18T07:50:40.855896-03:00",
+    "current_items_filtered_at": "2026-11-18T07:50:40.802285-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
