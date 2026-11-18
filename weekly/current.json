@@ -573,34 +573,6 @@
         }
       },
       {
-        "id": "2026-11-09-into-the-wild-pass-claim",
-        "title": "Prazo para resgatar recompensas — Passe GO Natureza Selvagem",
-        "summary": "As recompensas já desbloqueadas no Passe GO: Natureza Selvagem devem ser resgatadas até 17/11 às 23h59 no horário local.",
-        "category": "research",
-        "tags": [
-          "Global",
-          "Passe GO",
-          "Natureza Selvagem 2026"
-        ],
-        "start_brazil": "2026-11-09T10:00:00-03:00",
-        "end_brazil": "2026-11-17T23:59:00-03:00",
-        "source": {
-          "name": "Pokémon GO • Natureza Selvagem 2026",
-          "url": "https://pokemongo.com/pt-BR/news/into-the-wild-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
         "id": "2026-11-09-silver-bottle-cap-use-deadline",
         "title": "Prazo para usar a Tampinha Prateada",
         "summary": "Quem obtiver a Tampinha Prateada ao concluir o Passe GO Deluxe deve aplicá-la a um Pokémon elegível até 22/11 às 23h59 no horário local.",
@@ -757,15 +729,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 16,
+    "calendar_events_in_week": 15,
     "events_with_weekly_art": 3,
     "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 13,
-    "events_in_weekly": 16,
+    "events_without_weekly_art": 12,
+    "events_in_weekly": 15,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-17T20:03:15.231198-03:00",
-    "current_items_filtered_at": "2026-11-17T20:03:15.212973-03:00",
+    "generated_at": "2026-11-18T01:37:33.736003-03:00",
+    "current_items_filtered_at": "2026-11-18T01:37:33.713955-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
