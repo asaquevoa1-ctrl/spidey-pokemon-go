@@ -122,10 +122,7 @@
     const node = document.createElement('div');
     node.className = `spidey-cover-art spidey-cover-art--${role} spidey-art-pending`;
     node.dataset.coverageEvent = event?.id || normalize(event?.title);
-    const label = document.createElement('span');
-    label.className = 'spidey-art-pending-label';
-    label.textContent = 'Arte Premium pendente';
-    node.appendChild(label);
+    // Never expose internal art-production status in the public interface.
     return node;
   }
 
