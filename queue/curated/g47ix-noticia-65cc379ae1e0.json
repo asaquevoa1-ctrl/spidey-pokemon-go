@@ -1,0 +1,27 @@
+{
+  "titulo": "Eternamax Eternatus em 21/11 — resumo comunitário agrupado",
+  "source_url": "https://x.com/g47ix/status/2123461304556150929",
+  "source_classification": "community_summary",
+  "status": "grouped_without_new_claims",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [
+    "2026-11-16-dynamax-trails",
+    "2026-11-21-eternamax-eternatus-max-battles"
+  ],
+  "verification_sources": [
+    {
+      "name": "Pokémon GO • anúncio oficial em português",
+      "url": "https://pokemongo.com/pt-BR/news/dynamax-trails-eternamax-eternatus-2026",
+      "classification": "official"
+    },
+    {
+      "name": "Pokémon GO • anúncio oficial em inglês",
+      "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+      "classification": "official"
+    }
+  ],
+  "curation_note": "A publicação comunitária repete a janela oficial de 21/11, 11h–14h locais, as recompensas em Doces e Doces GG e a ausência de captura após a Batalha Max. Todos esses dados já estavam no evento canônico; nenhuma notícia, janela, arte ou notificação foi duplicada.",
+  "curated_at_utc": "2026-11-19T19:06:00+00:00"
+}
