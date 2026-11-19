@@ -25,37 +25,7 @@
     {
       "date": "2026-11-19",
       "weekday": "thursday",
-      "items": [
-        {
-          "id": "2026-11-19-spotlight-galar-starters",
-          "title": "Hora do Holofote: Grookey, Scorbunny e Sobble",
-          "summary": "19/11, das 18h às 19h locais: Grookey, Scorbunny e Sobble em destaque, com 2× Doces por captura. Brilhantes são possíveis.",
-          "category": "spotlight_hour",
-          "tags": [
-            "Grookey",
-            "Scorbunny",
-            "Sobble",
-            "Global"
-          ],
-          "start_brazil": "2026-11-19T18:00:00-03:00",
-          "end_brazil": "2026-11-19T19:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO • anúncio oficial",
-            "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
-            "confidence": "official"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
-          }
-        }
-      ]
+      "items": []
     },
     {
       "date": "2026-11-20",
@@ -731,15 +701,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 15,
+    "calendar_events_in_week": 14,
     "events_with_weekly_art": 3,
     "events_with_premium_weekly_art": 3,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 12,
-    "events_in_weekly": 15,
+    "events_without_weekly_art": 11,
+    "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-19T15:33:24.032189-03:00",
-    "current_items_filtered_at": "2026-11-19T15:33:24.014181-03:00",
+    "generated_at": "2026-11-19T19:21:15.164013-03:00",
+    "current_items_filtered_at": "2026-11-19T19:21:15.143683-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
