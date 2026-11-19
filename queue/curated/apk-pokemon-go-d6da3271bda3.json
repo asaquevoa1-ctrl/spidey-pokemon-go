@@ -1,0 +1,26 @@
+{
+  "titulo": "Pokémon GO 0.437.0 — rollout operacional",
+  "source_url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo",
+  "source_verified": true,
+  "verification_scope": "Conclusão do rollout confirmada pela fonte comunitária operacional; a loja oficial publica somente changelog genérico, sem confirmar recursos de jogabilidade.",
+  "source_classification": "community_operational",
+  "status": "no_public_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [],
+  "verification_sources": [
+    {
+      "name": "PokeMiners",
+      "url": "https://pokeminers.com/",
+      "classification": "community_operational"
+    },
+    {
+      "name": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo",
+      "classification": "official_store"
+    }
+  ],
+  "curation_note": "O item informa somente que o rollout 0.437.0 foi concluído. A loja oficial limita o changelog a correções menores e melhorias de desempenho; não há anúncio oficial de evento, bônus, data ou recurso factual para Calendário ou Novidades.",
+  "curated_at_utc": "2026-11-19T03:28:00+00:00"
+}
