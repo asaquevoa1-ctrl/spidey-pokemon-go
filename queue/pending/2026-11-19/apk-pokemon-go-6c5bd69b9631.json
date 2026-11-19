@@ -8,14 +8,20 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1573035719230881804",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
+  "status": "curated_operational_no_public_story",
+  "etapa_editorial": "completed",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
-  "proibir_fallback": true,
-  "created_at_utc": "2026-11-19T19:11:21.138787+00:00"
+  "proibir_fallback": false,
+  "created_at_utc": "2026-11-19T19:11:21.138787+00:00",
+  "curated_at_utc": "2026-11-19T20:53:00+00:00",
+  "curated_path": "queue/curated/apk-pokemon-go-6c5bd69b9631.json",
+  "related_queue_files": [
+    "queue/pending/2026-11-19/apk-pokemon-go-d6da3271bda3.json"
+  ],
+  "curation_note": "A fonte operacional informa apenas outro marco do rollout iniciado em 18/11 e não identifica uma nova versão nem mudanças de jogabilidade. A URL canônica da Google Play é a mesma do item 0.437.0 já curado e continua exibindo somente correções menores e melhorias de desempenho; não vira notícia, calendário nem arte."
 }
