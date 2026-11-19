@@ -2220,6 +2220,7 @@
       ],
       "bonuses": [
         "Chance de Partículas Max após capturas temáticas ou Batalhas Max; mais Pontos de Energia ativos.",
+        "Observação comunitária (Leek Duck, 19/11): uma captura selvagem elegível pode render 10 Partículas Max. Elas contam para o limite diário normal de 800 obtido em Pontos de Energia e exploração, mas podem continuar vindo por captura após esse limite.",
         "Batalhas com espécies Dinamax já lançadas, exceto Lendários e Míticos; chance de Fundo Especial ao capturar após Batalha Max (não garantido).",
         "Passe GO: ranque 15 libera 2× Poeira por captura; ranque 35 reduz pela metade Doces e Poeira do Efeito de Aventura Canhão Dinamax; ranque 55 dá Doces e Doces GG adicionais em Batalhas Max."
       ],
@@ -2249,6 +2250,16 @@
           "confidence": "official"
         },
         {
+          "name": "Leek Duck • observação ao vivo das Partículas Max",
+          "url": "https://leekduck.com/events/dynamax-trails-2026/",
+          "confidence": "verified_community",
+          "claims": [
+            "wild_catch_max_particles_10",
+            "normal_daily_limit_800_then_catch_drops_continue"
+          ],
+          "observed_on": "2026-11-19"
+        },
+        {
           "name": "Bulbapedia • custo de fortalecimento (comunidade)",
           "url": "https://bulbapedia.bulbagarden.net/wiki/Candy_XL",
           "confidence": "verified_community",
@@ -2257,7 +2268,14 @@
           ]
         }
       ],
-      "updated_at": "2026-10-28T20:25:00-03:00",
+      "updated_at": "2026-11-19T05:55:00-03:00",
+      "audit": {
+        "official_bonus_preserved_as_chance": true,
+        "community_live_detail_labeled": true,
+        "community_live_detail_observed_on": "2026-11-19",
+        "no_spotlight_duplicate_created": true,
+        "editorial_detail_pending": false
+      },
       "news": {
         "title": "Eternatus volta em novembro: veja as datas e como participar",
         "summary": "Trilhas Dinamax: 16–23/11. Holofote dos iniciais de Galar em 19/11, 18h–19h. Eternamax Eternatus em 21/11, 11h–14h locais. Eternatus vem no Passe GO gratuito; quem já capturou recebe 100 Doces, sem outro encontro. Os Dynamax não lendários já lançados poderão retornar às Batalhas Max, com chance de Fundo Especial após a captura.",
