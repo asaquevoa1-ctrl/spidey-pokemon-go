@@ -1,0 +1,30 @@
+{
+  "titulo": "Pokémon GO — marco operacional de rollout de 18/11",
+  "source_url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo",
+  "source_id": "pokeminers-1573035719230881804",
+  "source_classification": "community_operational",
+  "status": "no_public_story",
+  "art_required_for_publication": false,
+  "gerar_gpx": false,
+  "coordenadas": [],
+  "related_event_ids": [],
+  "related_queue_files": [
+    "queue/pending/2026-11-19/apk-pokemon-go-d6da3271bda3.json"
+  ],
+  "verification_sources": [
+    {
+      "name": "Google Play — Pokémon GO",
+      "url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo",
+      "classification": "official_store",
+      "verified_update_date": "2026-11-18",
+      "verified_changelog_scope": "Minor bug fixes and performance improvements"
+    },
+    {
+      "name": "PokeMiners",
+      "url": "https://pokeminers.com/",
+      "classification": "community_operational"
+    }
+  ],
+  "curation_note": "O item não informa número de versão nem recurso novo. Ele aponta para a mesma ficha canônica da Google Play usada pelo rollout 0.437.0 já curado; a loja confirma atualização em 18/11, mas publica apenas um changelog genérico. O registro fica na auditoria operacional sem duplicar notícia, evento, arte ou push.",
+  "curated_at_utc": "2026-11-19T20:53:00+00:00"
+}
