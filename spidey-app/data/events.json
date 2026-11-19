@@ -8431,20 +8431,36 @@
       "id": "2027-02-go-tour-alola-save-the-date",
       "slug": "2027-02-go-tour-alola-save-the-date",
       "title": "Pokémon GO Tour 2027: Alola",
-      "summary": "Datas oficiais anunciadas para Kaohsiung, Los Angeles e para o evento global.",
+      "summary": "As datas de Kaohsiung, Los Angeles e do evento global são oficiais. Uma atualização remota observada pela comunidade menciona Poipole Brilhante em uma Pesquisa Magistral, mas isso ainda não foi anunciado pelo Pokémon GO.",
       "category": "go_fest",
       "tags": [
         "GO Tour",
         "Alola",
         "Kaohsiung",
         "Los Angeles",
-        "Global"
+        "Global",
+        "Poipole",
+        "Pesquisa Magistral",
+        "Datamine",
+        "Não confirmado"
       ],
       "source": {
         "name": "Pokémon GO",
         "url": "https://pokemongo.com/news/save-the-date-go-tour-2027",
         "confidence": "official"
       },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • comunicado oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+          "confidence": "official"
+        },
+        {
+          "name": "TheSilphRoad • atualização remota observada pela comunidade",
+          "url": "https://www.reddit.com/r/TheSilphRoad/comments/1y0bl9y/datamined_shiny_poipole_in_the_go_tour_2027/",
+          "confidence": "community_unconfirmed"
+        }
+      ],
       "schedule": {
         "local_timezone": "America/Sao_Paulo",
         "start_local": "2027-02-19T00:00:00-03:00",
@@ -8469,6 +8485,8 @@
         "Eventos presenciais: Kaohsiung e Los Angeles, de 19 a 21/02/2027.",
         "Evento global: 27 e 28/02/2027.",
         "Ingressos, horários e detalhes de jogabilidade ainda serão divulgados.",
+        "DATAMINE DA COMUNIDADE • NÃO CONFIRMADO: em 19/11, uma atualização remota observada pela comunidade exibiu Poipole Brilhante associado ao GO Tour: Alola Global e foi descrita como Pesquisa Magistral.",
+        "O Pokémon GO ainda não anunciou Poipole Brilhante, a Pesquisa Magistral, preço, disponibilidade, tarefas ou recompensas. Nenhum desses elementos foi adicionado aos eventos datados.",
         "Este anúncio é o registro editorial único; as agendas regionais e global estão nos três eventos específicos do catálogo."
       ],
       "notifications": {
@@ -8476,11 +8494,29 @@
       },
       "status": "published",
       "news": {
-        "title": "GO Tour 2027 celebrará Alola",
-        "summary": "Kaohsiung e Los Angeles recebem eventos presenciais de 19 a 21/02; o evento global será em 27 e 28/02.",
-        "published_on": "2026-09-25"
+        "title": "GO Tour Alola 2027: Poipole Brilhante aparece em dados do jogo",
+        "summary": "As datas do GO Tour são oficiais. A menção a Poipole Brilhante em uma Pesquisa Magistral vem de datamine comunitário e continua sem confirmação oficial.",
+        "published_on": "2026-09-25",
+        "label": "OFICIAL + COMUNIDADE • POIPOLE NÃO CONFIRMADO"
       },
       "content_type": "news",
+      "verified_at": "2026-11-19",
+      "updated_at": "2026-11-19T15:25:00-03:00",
+      "audit": {
+        "classification": "official_save_the_date_with_unconfirmed_community_datamine",
+        "official_articles_read_in_full": true,
+        "official_languages_checked": [
+          "pt-BR",
+          "en"
+        ],
+        "community_publication_read_in_full": true,
+        "community_claim": "A atualização remota mostra Poipole Brilhante associado ao GO Tour: Alola Global e foi relatada como Pesquisa Magistral.",
+        "official_poipole_confirmation_found": false,
+        "masterwork_tasks_or_rewards_announced": false,
+        "price_or_availability_announced": false,
+        "calendar_changed_by_datamine": false,
+        "editorial_detail_pending": false
+      },
       "related_event_ids": [
         "2027-go-tour-alola-kaohsiung",
         "2027-go-tour-alola-los-angeles",
