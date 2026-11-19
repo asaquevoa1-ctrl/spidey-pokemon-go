@@ -1,0 +1,46 @@
+{
+  "schema": "spidey-editorial-audit-v1",
+  "checked_at": "2026-11-19T15:25:00-03:00",
+  "base_main_sha": "fc47829bb73d796ac2d80cd97e528990499236a0",
+  "story_id": "2027-02-go-tour-alola-save-the-date",
+  "classification": "community_unconfirmed_datamine_attached_to_existing_official_story",
+  "official_sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/news/save-the-date-go-tour-2027",
+    "https://pokemongo.com/en/news/save-the-date-go-tour-2027"
+  ],
+  "community_source_read_in_full": "https://www.reddit.com/r/TheSilphRoad/comments/1y0bl9y/datamined_shiny_poipole_in_the_go_tour_2027/",
+  "confirmed_officially": {
+    "theme": "Alola",
+    "kaohsiung_dates": "2027-02-19..2027-02-21",
+    "los_angeles_dates": "2027-02-19..2027-02-21",
+    "global_dates": "2027-02-27..2027-02-28"
+  },
+  "community_claim_only": {
+    "remote_config_mentions": "Shiny Poipole",
+    "reported_context": "Pokémon GO Tour: Alola - Global / Masterwork Research"
+  },
+  "not_confirmed_or_inferred": [
+    "official release of Shiny Poipole",
+    "Masterwork Research availability or price",
+    "research tasks or rewards",
+    "event hours",
+    "additional encounters or bonuses"
+  ],
+  "catalog_effect": {
+    "new_event_created": false,
+    "official_windows_changed": false,
+    "existing_story_updated": true,
+    "approved_art_changed": false,
+    "push_triggered": false
+  },
+  "collector": {
+    "editorial_detail_pending_count_before_edit": 0,
+    "2026-11-19_item": "apk-pokemon-go-d6da3271bda3",
+    "2026-11-19_item_status": "curated_operational_no_public_story"
+  },
+  "concurrency": {
+    "open_pr_291_reviewed": true,
+    "open_pr_291_scope": "older GO Tour window work already represented in main; no Poipole datamine",
+    "duplicate_work_found": false
+  }
+}
