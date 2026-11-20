@@ -489,6 +489,35 @@
     ],
     "also_happening": [
       {
+        "id": "2026-11-20-tcg-30th-timed-research-deadline",
+        "title": "Prazo final — Pesquisa do Pokémon TCG 30 anos",
+        "summary": "Somente para quem recebeu a pesquisa nas lojas participantes: concluir tarefas e resgatar recompensas até 20/11 às 22h no horário local da loja nos Estados Unidos.",
+        "category": "research",
+        "tags": [
+          "Pokémon TCG",
+          "Pesquisa temporária",
+          "Estados Unidos",
+          "Prazo"
+        ],
+        "start_brazil": "2026-10-21T07:00:00-03:00",
+        "end_brazil": "2026-11-21T05:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial em inglês",
+          "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
         "id": "2026-11-08-seasonal-delights-box",
         "title": "Caixa Delícias Sazonais — janela da Black Friday",
         "summary": "Caixa de 6.095 Pokémoedas com Incubadoras, passes e Partículas Max; disponível até 27/11 às 20h PST, com limite de três compras e disponibilidade regional.",
@@ -673,15 +702,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 13,
+    "calendar_events_in_week": 14,
     "events_with_weekly_art": 2,
     "events_with_premium_weekly_art": 2,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 11,
-    "events_in_weekly": 13,
+    "events_without_weekly_art": 12,
+    "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-20T00:38:15.782487-03:00",
-    "current_items_filtered_at": "2026-11-20T00:38:15.760958-03:00",
+    "generated_at": "2026-11-20T01:34:52.208757-03:00",
+    "current_items_filtered_at": "2026-11-20T01:34:52.190899-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

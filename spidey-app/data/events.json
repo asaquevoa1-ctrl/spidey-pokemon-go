@@ -7238,6 +7238,77 @@
         "title": "Celebração de 30 anos do Pokémon TCG",
         "summary": "Lojas participantes dos Estados Unidos recebem Mega Gengar e Pesquisa temporária até 20/10.",
         "published_on": "2026-09-27"
+      },
+      "related_event_ids": [
+        "2026-11-20-tcg-30th-timed-research-deadline"
+      ]
+    },
+    {
+      "id": "2026-11-20-tcg-30th-timed-research-deadline",
+      "slug": "2026-11-20-tcg-30th-timed-research-deadline",
+      "title": "Prazo final — Pesquisa do Pokémon TCG 30 anos",
+      "summary": "Somente para quem recebeu a pesquisa nas lojas participantes: concluir tarefas e resgatar recompensas até 20/11 às 22h no horário local da loja nos Estados Unidos.",
+      "category": "research",
+      "tags": [
+        "Pokémon TCG",
+        "Pesquisa temporária",
+        "Estados Unidos",
+        "Prazo"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial em inglês",
+        "url": "https://pokemongo.com/news/tcg-30th-celebration-event",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • resumo comunitário da mesma publicação",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-pokemon-tcg-30th-celebration-event-for-us-players/",
+          "confidence": "community"
+        }
+      ],
+      "schedule": {
+        "local_timezone": "Pacific/Honolulu",
+        "local_place": "Estados Unidos • última janela por fuso",
+        "start_local": "2026-10-21T00:00:00-10:00",
+        "end_local": "2026-11-20T22:00:00-10:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-10-21T07:00:00-03:00",
+        "end_brazil": "2026-11-21T05:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Prazo da pesquisa; a fonte não publica uma lista canônica de Poképaradas ou coordenadas individuais."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-20",
+      "related_news_id": "2026-09-tcg-30th-us-retail",
+      "notes": [
+        "A pesquisa só podia ser obtida nas lojas participantes até 20/10 às 22h locais; esse período não foi reaberto.",
+        "O prazo de conclusão e resgate é 20/11 às 22h no horário local de cada loja participante.",
+        "A conversão até 21/11 às 05h em Brasília preserva a última janela dos Estados Unidos, no fuso Pacific/Honolulu; ela não afirma que o prazo seja simultâneo no país.",
+        "A fonte oficial informa Poké Bolas, encontros temáticos e outras recompensas, sem publicar tarefas ou encontros individuais."
+      ],
+      "audit": {
+        "classification": "official_distinct_completion_window",
+        "canonical_story_id": "2026-09-tcg-30th-us-retail",
+        "calendar_event": true,
+        "acquisition_window_reopened": false,
+        "individual_tasks_or_encounters_invented": false,
+        "editorial_detail_pending": false
       }
     },
     {
