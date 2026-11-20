@@ -83,7 +83,7 @@ try {
   if(await page.locator('#anaView').isVisible())throw Error('ANA not hidden after switching tab');
   await page.waitForFunction(()=>document.querySelectorAll('#nationalTrustPlaces .nt-place').length===27,null,{timeout:15000});
   if(!await page.locator('#nationalTrustGuide').evaluate(x=>x.open))throw Error('Trust list not open initially');
-  if(!String(await page.locator('#nationalTrustView').textContent()).includes('não pontos exatos verificados'))throw Error('National Trust point caveat missing');
+  if(!String(await page.locator('#nationalTrustGuide').textContent()).includes('coordenadas de referência'))throw Error('National Trust reference label missing');
   await page.locator('#ntSearch').fill('Chirk');
   if(await page.locator('.nt-place').count()!==1)throw Error('Trust place search does not filter');
   await openView('calendarView');
