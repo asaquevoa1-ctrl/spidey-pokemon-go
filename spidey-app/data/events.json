@@ -7239,6 +7239,10 @@
         "summary": "Lojas participantes dos Estados Unidos recebem Mega Gengar e Pesquisa temporária até 20/10.",
         "published_on": "2026-09-27"
       },
+      "audit": {
+        "canonical_story_id": "2026-09-tcg-30th-us-retail",
+        "distinct_acquisition_and_completion_windows_preserved": true
+      },
       "related_event_ids": [
         "2026-11-20-tcg-30th-timed-research-deadline"
       ]
@@ -13551,6 +13555,7 @@
       },
       "audit": {
         "classification": "official_announcement_editorially_verified",
+        "canonical_story_id": "2026-11-20-laic-2027-sao-paulo",
         "editorial_detail_pending": false,
         "automatic_index_discovery": true,
         "canonical_fulltext_url": "https://pokemongo.com/news/pokemon-go-at-laic2027",
@@ -13564,6 +13569,7 @@
         "community_claimed_end_at_20_not_official": true,
         "community_claims_reviewed_at": "2026-11-16",
         "official_stream_drops_verified": true,
+        "distinct_stream_and_research_windows_preserved": true,
         "art_source": "official_laic_banner",
         "art_visual_approval_claimed": false,
         "community_reports_pending_confirmation": true,
@@ -13573,6 +13579,10 @@
           "oficial-https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026"
         ]
       },
+      "related_event_ids": [
+        "2026-11-20-laic-2027-twitch-drops",
+        "2026-12-04-laic-2027-timed-research-deadline"
+      ],
       "art": {
         "url": "https://championships.pokemon.com/static-assets/images/full-width-generic/2027-sao-paulo-2048.webp",
         "alt": "Arte promocional oficial do LAIC 2027, com a marca do Campeonato Internacional Pokémon sobre São Paulo",
@@ -13642,6 +13652,142 @@
           }
         ],
         "warning": "O relato restringe encontros e bônus aos arredores da sede no Distrito Anhembi, NÃO à cidade inteira. O perímetro exato não foi anunciado oficialmente. A coordenada exibida é apenas a referência do local, não garante a ativação de bônus."
+      }
+    },
+    {
+      "id": "2026-11-20-laic-2027-twitch-drops",
+      "slug": "2026-11-20-laic-2027-twitch-drops",
+      "content_type": "event",
+      "title": "LAIC 2027 — janela dos Drops da transmissão",
+      "summary": "Na Twitch oficial do Pokémon GO: assista 30 minutos para receber a Pesquisa Temporária com Samurott e 45 minutos para receber o Combo de Batalha do LAIC.",
+      "category": "livestream",
+      "tags": [
+        "LAIC 2027",
+        "Twitch Drops",
+        "Transmissão",
+        "Pesquisa temporária"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "local_place": "Transmissão online • horário do Pacífico",
+        "start_local": "2026-11-20T04:00:00-08:00",
+        "end_local": "2026-11-22T15:00:00-08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-20T09:00:00-03:00",
+        "end_brazil": "2026-11-22T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Transmissão online; não há Poképaradas, rotas ou coordenadas relacionadas a esta janela."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-20",
+      "updated_at": "2026-11-20T02:24:00-03:00",
+      "related_news_id": "2026-11-20-laic-2027-sao-paulo",
+      "notes": [
+        "A janela oficial dos Drops vai de 20/11 às 4h até 22/11 às 15h no horário do Pacífico, equivalentes a 20/11 às 9h até 22/11 às 20h em Brasília.",
+        "Assista 30 minutos na Twitch oficial do Pokémon GO com Drops para receber uma Pesquisa Temporária com encontro com Samurott, Doces GG de Oshawott e MTs de ataque.",
+        "Assista 45 minutos para receber o Combo de Batalha do LAIC: 1 MT de Elite de Ataque Carregado, 1 Doce Raro GG, 25 MTs de Ataque Carregado e 25 MTs de Ataque Ágil.",
+        "Os Drops dependem da Twitch oficial e da vinculação correta da conta. Esta janela online não confirma nem amplia os bônus presenciais relatados pela comunidade."
+      ],
+      "audit": {
+        "classification": "official_distinct_stream_window",
+        "canonical_story_id": "2026-11-20-laic-2027-sao-paulo",
+        "calendar_event": true,
+        "official_twitch_only": true,
+        "onsite_window_unchanged": true,
+        "editorial_detail_pending": false,
+        "push_triggered": false,
+        "art_generated": false
+      }
+    },
+    {
+      "id": "2026-12-04-laic-2027-timed-research-deadline",
+      "slug": "2026-12-04-laic-2027-timed-research-deadline",
+      "content_type": "event",
+      "title": "Prazo final — Pesquisa Temporária do LAIC 2027",
+      "summary": "Somente para quem recebeu a pesquisa pelos Drops: concluir as tarefas e resgatar as recompensas até 4/12 às 12h no horário do Pacífico, 17h de Brasília.",
+      "category": "research",
+      "tags": [
+        "LAIC 2027",
+        "Pesquisa temporária",
+        "Twitch Drops",
+        "Prazo"
+      ],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial em português",
+        "url": "https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "local_place": "Transmissão online • horário do Pacífico",
+        "start_local": "2026-11-20T04:00:00-08:00",
+        "end_local": "2026-12-04T12:00:00-08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-11-20T09:00:00-03:00",
+        "end_brazil": "2026-12-04T17:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Prazo de pesquisa obtida online; não há Poképaradas, rotas ou coordenadas relacionadas."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+      },
+      "status": "published",
+      "verified_at": "2026-11-20",
+      "updated_at": "2026-11-20T02:24:00-03:00",
+      "related_news_id": "2026-11-20-laic-2027-sao-paulo",
+      "pokemon": [
+        {
+          "name": "Samurott",
+          "note": "Encontro entre as recompensas confirmadas da pesquisa obtida por assistir 30 minutos com Drops."
+        }
+      ],
+      "notes": [
+        "A pesquisa só pode ser recebida durante a janela dos Drops da transmissão; este registro não reabre a obtenção depois de 22/11 às 15h no horário do Pacífico.",
+        "Quem recebeu a Pesquisa Temporária deve concluir as tarefas e resgatar as recompensas até 4/12 às 12h PST, equivalentes a 17h de Brasília.",
+        "O anúncio confirma encontro com Samurott, Doces GG de Oshawott e MTs de ataque, mas não publica as tarefas individuais; nenhuma etapa adicional foi cadastrada."
+      ],
+      "audit": {
+        "classification": "official_distinct_completion_window",
+        "canonical_story_id": "2026-11-20-laic-2027-sao-paulo",
+        "calendar_event": true,
+        "acquisition_window_reopened": false,
+        "individual_tasks_or_encounters_invented": false,
+        "onsite_window_unchanged": true,
+        "editorial_detail_pending": false,
+        "push_triggered": false,
+        "art_generated": false
       }
     },
     {

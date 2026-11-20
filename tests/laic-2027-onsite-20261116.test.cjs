@@ -8,7 +8,7 @@ const read = p => fs.readFileSync(path.join(appRoot, p), 'utf8');
 const events = JSON.parse(read('data/events.json')).events;
 const matches = events.filter(event => event.id === '2026-11-20-laic-2027-sao-paulo');
 
-test('LAIC 2027: apenas um evento, janelas oficiais de 8h a 18h preservadas', () => {
+test('LAIC 2027: apenas um evento presencial, janelas oficiais de 8h a 18h preservadas', () => {
   assert.equal(matches.length, 1);
   const event = matches[0];
   assert.equal(event.source.confidence, 'official');

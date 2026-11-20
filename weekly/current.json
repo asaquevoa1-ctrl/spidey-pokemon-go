@@ -332,6 +332,64 @@
           "kind": "missing",
           "premium": false
         }
+      },
+      {
+        "id": "2026-11-20-laic-2027-twitch-drops",
+        "title": "LAIC 2027 — janela dos Drops da transmissão",
+        "summary": "Na Twitch oficial do Pokémon GO: assista 30 minutos para receber a Pesquisa Temporária com Samurott e 45 minutos para receber o Combo de Batalha do LAIC.",
+        "category": "livestream",
+        "tags": [
+          "LAIC 2027",
+          "Twitch Drops",
+          "Transmissão",
+          "Pesquisa temporária"
+        ],
+        "start_brazil": "2026-11-20T09:00:00-03:00",
+        "end_brazil": "2026-11-22T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-12-04-laic-2027-timed-research-deadline",
+        "title": "Prazo final — Pesquisa Temporária do LAIC 2027",
+        "summary": "Somente para quem recebeu a pesquisa pelos Drops: concluir as tarefas e resgatar as recompensas até 4/12 às 12h no horário do Pacífico, 17h de Brasília.",
+        "category": "research",
+        "tags": [
+          "LAIC 2027",
+          "Pesquisa temporária",
+          "Twitch Drops",
+          "Prazo"
+        ],
+        "start_brazil": "2026-11-20T09:00:00-03:00",
+        "end_brazil": "2026-12-04T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
       }
     ],
     "raids": [
@@ -702,15 +760,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 14,
+    "calendar_events_in_week": 16,
     "events_with_weekly_art": 2,
     "events_with_premium_weekly_art": 2,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 12,
-    "events_in_weekly": 14,
+    "events_without_weekly_art": 14,
+    "events_in_weekly": 16,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-20T01:40:12.117326-03:00",
-    "current_items_filtered_at": "2026-11-20T01:40:12.097351-03:00",
+    "generated_at": "2026-11-20T02:33:04.039770-03:00",
+    "current_items_filtered_at": "2026-11-20T02:33:04.019192-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
