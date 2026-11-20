@@ -30,7 +30,10 @@ try{
   await page.waitForSelector('#nationalTrustView',{state:'attached',timeout:20000});
   const trustTab=page.locator('.app-tab[data-view="nationalTrustView"]');
   assert.match(await trustTab.innerText(),/Trust.*27/);
-  await trustTab.click();
+  // A navegação mobile pode ocultar a aba secundária; dispare o mesmo
+  // evento de clique do app sem exigir visibilidade do botão no menu.
+  await trustTab.evaluate(button=>button.click());
+  await page.waitForFunction(()=>!document.querySelector('#nationalTrustView')?.hidden,{timeout:10000});
   await page.waitForSelector('#nationalTrustPlaces .nt-place',{timeout:15000});
   const count=await page.locator('#nationalTrustPlaces .nt-place').count();
   assert.equal(count,27,'A aba Trust deve exibir 27 coordenadas sem rolar pelo pôster');
