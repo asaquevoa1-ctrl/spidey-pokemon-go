@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 Celebrate the launch of the Blue Pokémon Jet: Take flight on a new adventure through the ANA and Pokémon GO partnership!",
+  "mensagem": "Celebrate the launch of the Blue Pokémon Jet: Take flight on a new adventure through the ANA and Pokémon GO partnership!\n\n🔗 https://pokemongo.com/news/2026_ana_blue\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/2026_ana_blue",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1573157458279534664",
+  "image_url": "https://lh3.googleusercontent.com/Jld2IxLcGvx_Pm6Zm5pz5zr6Td6kwfeN8-FrP8HKXUk1mlYRSbdAjNwvqq4VkYIuZ6c79alLPHTH0YrDF1AZX1USaSjfi1ZR1h1wUmMns40",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1573157458279534664",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-20T09:05:36.291364+00:00"
+}
