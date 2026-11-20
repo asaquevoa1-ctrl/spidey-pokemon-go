@@ -1,4 +1,4 @@
-const CACHE = 'spidey-app-20261116-laic1';
+const CACHE = 'spidey-app-20261120-ana-blue1';
 const CORE = [
   './go-tour-alola-2027.js',
   './go-tour-alola-2027.css',

@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const IDS=['2026-ana-pokemon-jet-red','2026-ana-pokemon-jet-green'];
+  const IDS=['2026-ana-pokemon-jet-red','2026-ana-pokemon-jet-green','2026-ana-pokemon-jet-blue'];
   const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const parse=v=>{
     const match=/^(-?\d{1,2}\.\d+),(-?\d{1,3}\.\d+)$/.exec(String(v||''));
@@ -23,6 +23,7 @@
     const refs=(event.locations||[]).filter(p=>
       p.coordinate_type==='airport_terminal_reference'&&
       p.exact_raid_gym_verified===false&&parse(p.coordinate_text));
+    const officialNames=(event.participating_airports||[]).filter(p=>p&&p.label);
     // A imagem exibida precisa ser o PNG ORIGINAL fornecido pelo usuário.
     // Não reutilizar SVG sintético, gerador automático nem registro delegado de aprovação.
     const original=originalPosters.find(item=>item.phase===phase);
@@ -52,18 +53,22 @@
     }
     const hero=root.querySelector('#anaEventSummary');
     if(hero){
-      const who=phase.endsWith('-red')?'Charmander':'Bulbasaur';
-      const since=phase.endsWith('-red')?'28/07/2026 às 16h':'18/09/2026 às 14h';
-      const origin=phase.endsWith('-red')?'Vermelho':'Verde';
+      const isRed=phase.endsWith('-red'),isGreen=phase.endsWith('-green');
+      const who=isRed?'Charmander':isGreen?'Bulbasaur':'Squirtle';
+      const since=isRed?'28/07/2026 às 16h':isGreen?'18/09/2026 às 14h':'11/12/2026 às 13h';
+      const origin=isRed?'Vermelho':isGreen?'Verde':'Azul';
       hero.innerHTML='<strong>Pokémon Jet '+origin+' • '+who+'</strong>'+
         '<span>'+since+' até 31/08/2027 às 20h • horário do Japão</span>'+
         '<span>Reides especiais, fundo de localização ANA e Pesquisa Temporária de 3 dias.</span>';
     }
-    const filtered=refs.filter(p=>matchesAirport(p,search));
-    root.querySelector('#anaAirportStatus').textContent=(search?filtered.length+' de ':'')+refs.length+
-      ' pontos de aeroportos • nenhum Ginásio especial confirmado';
+    const points=refs.length?refs:officialNames;
+    const filtered=points.filter(p=>matchesAirport(p,search));
+    root.querySelector('#anaAirportStatus').textContent=(search?filtered.length+' de ':'')+points.length+
+      (refs.length?' pontos de aeroportos • nenhum Ginásio especial confirmado':' aeroportos oficiais • coordenadas dos Ginásios não publicadas');
     const markup=filtered.length?filtered.map(p=>{
       const value=parse(p.coordinate_text);
+      if(!value)return '<article class="ana-airport-row"><div><strong>'+esc(p.label)+'</strong>'+
+        '<small>Aeroporto participante oficial • sem coordenada publicada do Ginásio</small></div></article>';
       return '<article class="ana-airport-row"><div><strong>'+esc(p.label)+'</strong>'+
         '<small>Referência de aeroporto/terminal • Ginásio NÃO verificado</small>'+
         '<code>'+esc(value)+'</code></div>'+
@@ -85,10 +90,11 @@
     const section=document.createElement('section');
     section.id='anaAirportPanel';section.className='section ana-airport-panel';
     section.innerHTML='<span class="eyebrow">JAPÃO • ANA × POKÉMON GO</span>'+
-      '<h2>Pokémon Jet • eventos ANA</h2><p>Charmander e Bulbasaur com fundos exclusivos em Reides no Japão. Copie as referências dos aeroportos; estes pontos <strong>não são coordenadas verificadas dos Ginásios das Reides</strong>.</p>'+
+      '<h2>Pokémon Jet • eventos ANA</h2><p>Charmander, Bulbasaur e Squirtle com fundos exclusivos em Reides no Japão. As referências comunitárias <strong>não são coordenadas verificadas</strong> dos Ginásios; a fase Azul mostra somente os nomes publicados pela organização.</p>'+
       '<div class="ana-phase-tabs" role="group" aria-label="Fase do evento">'+
       '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-red" aria-pressed="true" type="button">🔴 Charmander • 6 aeroportos</button>'+
-      '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-green" aria-pressed="false" type="button">🟢 Bulbasaur • 14 aeroportos</button></div>'+
+      '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-green" aria-pressed="false" type="button">🟢 Bulbasaur • 14 aeroportos</button>'+
+      '<button class="action-btn" data-ana-phase="2026-ana-pokemon-jet-blue" aria-pressed="false" type="button">🔵 Squirtle • 7 aeroportos</button></div>'+
       '<div id="anaPosterStage" class="ana-poster-stage" hidden><a id="anaPosterEnlarge" target="_blank" rel="noopener noreferrer" aria-label="Ampliar o cartaz ANA"><img id="anaEventPoster" alt="Cartaz do evento ANA" loading="eager"></a></div>'+
       '<div id="anaEventSummary" class="ana-event-summary" aria-live="polite"></div>'+
       '<label class="ana-search-label" for="anaAirportSearch">Buscar aeroporto</label>'+

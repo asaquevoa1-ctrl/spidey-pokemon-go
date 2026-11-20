@@ -6,6 +6,26 @@ from scripts.build_spidey_weekly import BR, build, event_range
 
 
 class WeeklyCurrentExpiryTest(unittest.TestCase):
+    def test_ana_blue_expires_at_the_official_japan_end_boundary(self):
+        event_id = "2026-ana-pokemon-jet-blue"
+
+        def current_ids(reference):
+            payload = build(date(2027, 8, 31), reference=reference)
+            return {
+                item["id"]
+                for section in payload["sections"].values()
+                for item in section
+            }
+
+        self.assertIn(
+            event_id,
+            current_ids(datetime.fromisoformat("2027-08-31T07:59:59-03:00")),
+        )
+        self.assertNotIn(
+            event_id,
+            current_ids(datetime.fromisoformat("2027-08-31T08:00:01-03:00")),
+        )
+
     def test_laic_research_deadline_expires_at_the_official_brazil_boundary(self):
         event_id = "2026-12-04-laic-2027-timed-research-deadline"
 
