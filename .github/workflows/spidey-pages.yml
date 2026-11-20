@@ -67,7 +67,9 @@ jobs:
         run: node --test tests/news-expiry-related-events-20261113.test.cjs
       - name: Validar integração completa de Novidades, Sendai/México e FLY Teddiursa
         run: node --test tests/spidey-maintenance-20261113.test.cjs
-      - name: Impedir retorno de eventos Wild encerrados na Home\n        run: node --test tests/wild-home-expiry-20261120.test.cjs\n      - name: Validar detalhes oficiais da Semana Selvagem antes de publicar
+      - name: Impedir retorno de eventos Wild encerrados na Home
+        run: node --test tests/wild-home-expiry-20261120.test.cjs
+      - name: Validar detalhes oficiais da Semana Selvagem antes de publicar
         run: node --test tests/into-the-wild-official-detail-20261111.test.cjs tests/wild-into-global-tabs-20261109.test.cjs
       - name: Bloquear duplicação editorial da curadoria de 12/11
         run: node --test tests/collector-curation-20261112.test.cjs tests/galar-starters-collector-curation-20261118.test.cjs tests/recent-collector-backlog-curation-20261118.test.cjs tests/apk-0437-operational-curation-20261119.test.cjs tests/dynamax-trails-live-community-detail-20261119.test.cjs tests/go-tour-alola-poipole-datamine-20261119.test.cjs tests/eternatus-g47ix-duplicate-curation-20261119.test.cjs tests/apk-rollout-followup-curation-20261119.test.cjs
