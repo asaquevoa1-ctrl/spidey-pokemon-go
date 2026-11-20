@@ -213,34 +213,6 @@
         }
       },
       {
-        "id": "2026-11-minior-leonids",
-        "title": "Minior: chuva de meteoros Leônidas",
-        "summary": "Minior aparece na natureza durante as Leônidas; os Núcleos Amarelo e Verde ficam disponíveis nesta janela.",
-        "category": "evento_especial",
-        "tags": [
-          "Minior",
-          "Leônidas",
-          "Global"
-        ],
-        "start_brazil": "2026-11-14T17:00:00-03:00",
-        "end_brazil": "2026-11-19T23:59:59-03:00",
-        "source": {
-          "name": "Pokémon GO",
-          "url": "https://pokemongo.com/news/minior-meteor-showers-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "assets/events/premium/minior-leonids-20261114-19-spidey-reference-approved-v2.webp",
-          "width": 1056,
-          "height": 1320,
-          "sha256": "a8dbf8e9b2988493e61b75ef4f351b6b4ebdc9c734714304e7c16d7fe39aed35",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      },
-      {
         "id": "2026-11-16-dynamax-trails",
         "title": "Trilhas Dinamax — Eternatus e Passe GO",
         "summary": "De 16/11 às 10h a 23/11 às 20h locais: Batalhas Max, Passe GO e recompensas de Eternatus. Eternamax terá uma janela própria em 21/11, das 11h às 14h locais.",
@@ -701,15 +673,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 14,
-    "events_with_weekly_art": 3,
-    "events_with_premium_weekly_art": 3,
+    "calendar_events_in_week": 13,
+    "events_with_weekly_art": 2,
+    "events_with_premium_weekly_art": 2,
     "events_with_official_weekly_art": 0,
     "events_without_weekly_art": 11,
-    "events_in_weekly": 14,
+    "events_in_weekly": 13,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-19T19:21:15.164013-03:00",
-    "current_items_filtered_at": "2026-11-19T19:21:15.143683-03:00",
+    "generated_at": "2026-11-20T00:21:07.332984-03:00",
+    "current_items_filtered_at": "2026-11-20T00:21:07.302360-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
