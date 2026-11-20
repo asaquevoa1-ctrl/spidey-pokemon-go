@@ -6,6 +6,26 @@ from scripts.build_spidey_weekly import BR, build, event_range
 
 
 class WeeklyCurrentExpiryTest(unittest.TestCase):
+    def test_tcg_research_deadline_preserves_the_last_us_local_window(self):
+        event_id = "2026-11-20-tcg-30th-timed-research-deadline"
+
+        def current_ids(reference):
+            payload = build(date(2026, 11, 20), reference=reference)
+            return {
+                item["id"]
+                for section in payload["sections"].values()
+                for item in section
+            }
+
+        self.assertIn(
+            event_id,
+            current_ids(datetime.fromisoformat("2026-11-21T04:59:59-03:00")),
+        )
+        self.assertNotIn(
+            event_id,
+            current_ids(datetime.fromisoformat("2026-11-21T05:00:01-03:00")),
+        )
+
     def test_minior_leonids_leaves_current_week_after_brazil_end_boundary(self):
         event_id = "2026-11-minior-leonids"
 
