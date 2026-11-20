@@ -1,6 +1,9 @@
 (() => {
   'use strict';
   function articleKey(event){
+    // Explicit editorial grouping keeps distinct official windows from the same
+    // real-world story together even when their details came from separate posts.
+    if(event.audit?.canonical_story_id)return `story:${event.audit.canonical_story_id}`;
     // A curated day guide brings together multiple announcements and must remain
     // separate even when its primary link points to one official Pokémon GO post.
     if (event.category === 'day_guide' && event.source?.confidence === 'editorial_verified') return `event:${event.id}`;

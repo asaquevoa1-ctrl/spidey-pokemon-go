@@ -59,6 +59,19 @@ test('official Boston and Night Out stay separate while TCG keeps both official 
  assert.ok(tcg.events.every(event=>event.source.confidence==='official'));
 });
 
+test('LAIC groups onsite, stream and research deadline despite two official article URLs',()=>{
+ const stories=build(events,range,new Date('2026-11-20T12:00:00Z'));
+ const laic=stories.find(item=>item.events.some(event=>event.id==='2026-11-20-laic-2027-sao-paulo'));
+ assert.ok(laic);
+ assert.equal(laic.key,'story:2026-11-20-laic-2027-sao-paulo');
+ assert.deepEqual(Array.from(laic.events,event=>event.id),[
+  '2026-11-20-laic-2027-sao-paulo',
+  '2026-11-20-laic-2027-twitch-drops',
+  '2026-12-04-laic-2027-timed-research-deadline'
+ ]);
+ assert.ok(laic.events.every(event=>event.source.confidence==='official'));
+});
+
 test('the confirmed Halloween Part II supersedes its community preview and keeps pass bonuses conditional',()=>{
  const e=events.find(e=>e.id==='2026-11-halloween-part-2');
  assert.equal(e.source.confidence,'official');
