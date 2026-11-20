@@ -19,21 +19,33 @@ try {
   await page.goto('http://127.0.0.1:4175/spidey-app/index.html',{waitUntil:'domcontentloaded'});
   const anaTab=page.locator('nav.app-tabs [data-view="anaView"]');
   const trustTab=page.locator('nav.app-tabs [data-view="nationalTrustView"]');
-  await anaTab.waitFor({state:'visible',timeout:20000});
-  await trustTab.waitFor({state:'visible',timeout:20000});
+  const openView=async view=>{
+    if(width<600){
+      await page.locator('#spideyMenuToggle').click();
+      const item=page.locator('#spideyMobileMenuLinks [data-menu-view="'+view+'"]');
+      await item.waitFor({state:'visible',timeout:10000});
+      await item.click();
+    }else{
+      const tab=page.locator('nav.app-tabs [data-view="'+view+'"]');
+      await tab.waitFor({state:'visible',timeout:10000});
+      await tab.click();
+    }
+  };
+  if(width<600){
+    if(await page.locator('nav.app-tabs').isVisible())throw Error('Legacy bottom tabs remain visible with mobile drawer ready');
+    await page.locator('#spideyMenuToggle').waitFor({state:'visible',timeout:20000});
+  }else{
+    await anaTab.waitFor({state:'visible',timeout:20000});
+    await trustTab.waitFor({state:'visible',timeout:20000});
+  }
   if(await page.locator('#hunterView, .cc-shortcuts [data-cc-view="hunterView"],nav.app-tabs [data-view="hunterView"]').count())throw Error('Retired Caçador remains in public app');
   await page.locator('#anaAirportPanel').waitFor({state:'attached',timeout:10000});
   await page.locator('#nationalTrustGuide').waitFor({state:'attached',timeout:10000});
   if(width<600){
-    const nav=await page.locator('nav.app-tabs').evaluate(el=>{
-      const tabs=[...el.querySelectorAll('.app-tab')].map(x=>x.getBoundingClientRect());
-      const rows=new Set(tabs.map(x=>Math.round(x.top))).size;
-      const cs=getComputedStyle(el);
-      return {display:cs.display,flexWrap:cs.flexWrap,rows,height:el.getBoundingClientRect().height,scrollWidth:el.scrollWidth,clientWidth:el.clientWidth};
-    });
-    if(nav.display!=='flex'||nav.flexWrap!=='nowrap'||nav.rows!==1||nav.height>90)throw Error('Mobile bottom tabs wrapped: '+JSON.stringify(nav));
+    if(await page.locator('#spideyMobileMenuLinks [data-menu-view="anaView"]').count()!==1)throw Error('ANA missing from mobile drawer');
+    if(await page.locator('#spideyMobileMenuLinks [data-menu-view="nationalTrustView"]').count()!==1)throw Error('Trust missing from mobile drawer');
   }
-  await anaTab.click();
+  await openView('anaView');
   if(!await page.locator('#anaView').isVisible())throw Error('ANA did not open its own tab');
   if(await page.locator('#flyView').isVisible())throw Error('ANA incorrectly opens FLY');
   await page.waitForFunction(()=>document.querySelectorAll('#anaAirportList .ana-airport-row').length===7,null,{timeout:15000});
@@ -60,15 +72,21 @@ try {
   await search.fill('FUK');
   if(await page.locator('#anaAirportList .ana-airport-row').count()!==1)throw Error('ANA airport search not filtered');
   await search.fill('');
-  await trustTab.click();
+  await page.locator('[data-ana-phase="2026-ana-pokemon-jet-blue"]').click();
+  await page.waitForFunction(()=>document.querySelectorAll('#anaAirportList .ana-airport-row').length===7,null,{timeout:10000});
+  if(await page.locator('#anaPosterStage').isVisible())throw Error('Unapproved poster displayed for ANA Blue');
+  if(await page.locator('#anaAirportList [data-ana-coord], #anaAirportList a[href*="google.com/maps"]').count())throw Error('ANA Blue exposed unverified coordinates');
+  if(!String(await page.locator('#anaAirportList').textContent()).includes('sem coordenada publicada do Ginásio'))throw Error('ANA Blue coordinate caveat missing');
+  await page.screenshot({path:output+'/ana-blue-'+width+'-'+theme+'.png',fullPage:true});
+  await openView('nationalTrustView');
   if(!await page.locator('#nationalTrustView').isVisible())throw Error('Trust not direct');
   if(await page.locator('#anaView').isVisible())throw Error('ANA not hidden after switching tab');
   await page.waitForFunction(()=>document.querySelectorAll('#nationalTrustPlaces .nt-place').length===27,null,{timeout:15000});
   if(!await page.locator('#nationalTrustGuide').evaluate(x=>x.open))throw Error('Trust list not open initially');
-  if(!String(await page.locator('#nationalTrustGuide').textContent()).includes('não são pontos exatos verificados'))throw Error('National Trust point caveat missing');
+  if(!String(await page.locator('#nationalTrustGuide').textContent()).includes('coordenadas de referência'))throw Error('National Trust reference label missing');
   await page.locator('#ntSearch').fill('Chirk');
   if(await page.locator('.nt-place').count()!==1)throw Error('Trust place search does not filter');
-  await page.locator('nav.app-tabs [data-view="calendarView"]').click();
+  await openView('calendarView');
   await page.waitForFunction(()=>window.SpideyCatalog&&document.querySelector('#monthCount'),null,{timeout:10000});
   await page.waitForFunction(()=>document.getElementById('calendarUpdateStatus')?.textContent.includes('Novidades no mesmo link'),null,{timeout:15000});
   const historical=await page.evaluate(()=>{
@@ -78,13 +96,13 @@ try {
   if(historical.length)throw Error('Expired event on public calendar: '+historical.slice(0,10).join(','));
   const todayDisabled=await page.locator('#prevMonth').isDisabled();
   if(!todayDisabled)throw Error('Historical month still directly browsable');
-  await page.locator('nav.app-tabs [data-view="weeklyView"]').click();
+  await openView('weeklyView');
   if(!await page.locator('#weeklyView').isVisible())throw Error('Week view did not open after ANA integration');
   if(await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth+2))throw Error('Week view gained horizontal overflow after ANA integration');
   await page.screenshot({path:output+'/week-'+width+'-'+theme+'.png',fullPage:false});
-  await page.locator('nav.app-tabs [data-view="calendarView"]').click();
+  await openView('calendarView');
   await page.screenshot({path:output+'/main-'+width+'-'+theme+'.png',fullPage:false});
-  results.push({width,theme,ana:7,bulbasaur:14,nationalTrust:27,redPoster,greenPoster,calendar:true,week:true,anaGuide:true,retiredHunter:true,expiredEvents:0});
+  results.push({width,theme,ana:7,bulbasaur:14,squirtle:7,nationalTrust:27,redPoster,greenPoster,calendar:true,week:true,anaGuide:true,retiredHunter:true,expiredEvents:0});
   await page.close();
  }
 } finally{await browser.close();server.kill('SIGTERM');}

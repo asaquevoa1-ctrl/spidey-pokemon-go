@@ -12870,6 +12870,150 @@
       ]
     },
     {
+      "id": "2026-ana-pokemon-jet-blue",
+      "slug": "2026-ana-pokemon-jet-blue",
+      "content_type": "event",
+      "title": "ANA × Pokémon GO: Pokémon Jet Azul",
+      "summary": "Squirtle aparece em Reides especiais de sete aeroportos japoneses com Fundo de Localização do Pokémon Jet Azul; a terceira fase também oferece uma Pesquisa Temporária válida por três dias após o recebimento.",
+      "category": "regional_event",
+      "tags": [
+        "ANA",
+        "Pokémon Jet",
+        "Azul",
+        "Japão",
+        "Squirtle",
+        "Reides especiais",
+        "Fundo de Localização"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial em inglês",
+        "url": "https://pokemongo.com/news/2026_ana_blue",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "Asia/Tokyo",
+        "local_place": "Japão • sete aeroportos participantes",
+        "start_local": "2026-12-11T13:00:00+09:00",
+        "end_local": "2027-08-31T20:00:00+09:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-11T01:00:00-03:00",
+        "end_brazil": "2027-08-31T08:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "location_label": "Japão • 7 aeroportos",
+      "locations": [],
+      "participating_airports": [
+        {
+          "label": "Aeroporto Internacional Chubu Centrair",
+          "official_name": "Chubu Centrair International Airport"
+        },
+        {
+          "label": "Aeroporto de Noto",
+          "official_name": "Noto Airport"
+        },
+        {
+          "label": "Aeroporto de Hiroshima",
+          "official_name": "Hiroshima Airport"
+        },
+        {
+          "label": "Aeroporto de Okayama",
+          "official_name": "Okayama Airport"
+        },
+        {
+          "label": "Aeroporto Internacional de Osaka (Itami)",
+          "official_name": "Osaka International Airport"
+        },
+        {
+          "label": "Aeroporto de Kansai",
+          "official_name": "Kansai Airport"
+        },
+        {
+          "label": "Aeroporto de Kobe",
+          "official_name": "Kobe Airport"
+        }
+      ],
+      "gpx": {
+        "enabled": false,
+        "reason": "O anúncio publica os nomes dos aeroportos, mas não fornece coordenadas verificadas dos Ginásios ou Poképaradas ANA."
+      },
+      "notes": [
+        "Fase 3 • sete aeroportos participantes no Japão. A aba ANA mostra os nomes oficiais, sem inventar coordenadas de terminais ou Ginásios.",
+        "Nos Ginásios especiais de cada aeroporto participante, cada treinador pode participar de uma Reide por Ginásio por dia.",
+        "Squirtle capturado nessas Reides recebe Fundo de Localização do Pokémon Jet Azul; a forma Brilhante é uma possibilidade, nunca garantia.",
+        "A Pesquisa Temporária pode ser recebida uma vez em qualquer aeroporto elegível desta fase e expira três dias após o recebimento. O anúncio não publica as tarefas nem os encontros individuais.",
+        "Quem recebeu pesquisas nas fases Vermelha ou Verde pode receber novamente uma pesquisa na fase Azul.",
+        "Depois do início da fase, os horários das Reides seguem a programação regular; o anúncio não informa uma janela diária fixa."
+      ],
+      "bonuses": [
+        "Squirtle com Fundo de Localização do Pokémon Jet Azul nas Reides dos Ginásios ANA participantes.",
+        "Possibilidade de encontrar Squirtle Brilhante.",
+        "Uma participação por Ginásio especial por dia, por treinador.",
+        "Pesquisa Temporária recebida uma vez nesta fase e válida por três dias após o recebimento."
+      ],
+      "pokemon": [
+        {
+          "name": "Squirtle",
+          "note": "Reides ANA com Fundo de Localização do Pokémon Jet Azul; Brilhante possível."
+        }
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Evento de longa duração, sem janela diária de Reides confirmada; nenhum push foi autorizado."
+      },
+      "status": "published",
+      "verified_at": "2026-11-20",
+      "updated_at": "2026-11-20T06:40:00-03:00",
+      "news": {
+        "title": "Pokémon Jet Azul traz Squirtle a sete aeroportos do Japão",
+        "summary": "A terceira fase ANA começa em 11/12 às 13h no Japão, com Reides de Squirtle, Fundo de Localização e Pesquisa Temporária de três dias.",
+        "published_on": "2026-11-20",
+        "label": "OFICIAL • FASE 3"
+      },
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "canonical_story_id": "2026-ana-pokemon-jet-blue",
+        "editorial_detail_pending": false,
+        "automatic_index_discovery": true,
+        "canonical_fulltext_url": "https://pokemongo.com/news/2026_ana_blue",
+        "collector_queue_file": "queue/pending/2026-11-20/celebrate-the-launch-of-the-blue-pokemon-jet-take-flight-on-a-new-adve-215183dcc0ce.json",
+        "collector_source_ids": [
+          "pokeminers-1573157458279534664",
+          "oficial-https://pokemongo.com/news/2026_ana_blue"
+        ],
+        "no_duplicate_story_created": true,
+        "rolling_research_expiry_preserved": true,
+        "daily_raid_hours_not_invented": true,
+        "official_airport_names_only": true,
+        "airport_coordinates_invented": false,
+        "art_required_for_publication": false,
+        "push_triggered": false
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • comunicado oficial em inglês",
+          "url": "https://pokemongo.com/news/2026_ana_blue",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO • comunicado oficial em japonês",
+          "url": "https://pokemongo.com/ja/news/2026_ana_blue",
+          "confidence": "official"
+        },
+        {
+          "name": "ANA • página oficial dos Pokémon Jets",
+          "url": "https://www.ana.co.jp/en/us/the-ana-experience/pokemonjet/",
+          "confidence": "official_partner"
+        }
+      ]
+    },
+    {
       "id": "official-news-auto-fdcd3a9d813c",
       "slug": "official-news-auto-fdcd3a9d813c",
       "content_type": "news",
