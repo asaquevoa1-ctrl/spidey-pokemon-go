@@ -206,6 +206,11 @@
     const home=document.getElementById('playerHome');
     if(!home)return;
     let tile=home.querySelector('#wild2026HomeHub');
+    // Eventos encerrados permanecem nos guias, mas não ocupam destaque na Home.
+    if(homeStatus()==='Arquivo dos eventos'){
+      if(tile)tile.remove();
+      return;
+    }
     if(tile)return;
     tile=document.createElement('section');
     tile.id='wild2026HomeHub';tile.className='wild-home-hub';
