@@ -275,3 +275,27 @@
 @media(prefers-reduced-motion:reduce){
   #wildAreaMexicoView *{scroll-behavior:auto!important;transition:none!important}
 }
+
+/* 05/11 — Legibilidade e navegação por toque no guia CDMX.
+   Somente CSS: sem alterar cartazes, fontes, eventos ou destinos. */
+@media (max-width: 650px) {
+  #wildAreaMexicoView .wild-mx-local-nav {
+    gap: 9px;
+    padding-block: 10px 13px;
+    scroll-padding-inline: 12px;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  #wildAreaMexicoView .wild-mx-local-nav button {
+    min-height: 44px;
+    padding-inline: 16px;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+  #wildAreaMexicoView .wild-mx-fact-strip > div {
+    overflow-wrap: anywhere;
+  }
+  #wildAreaMexicoView .wild-mx-hero-tags span {
+    line-height: 1.35;
+  }
+}
