@@ -67,35 +67,6 @@
           }
         },
         {
-          "id": "2026-11-21-eternamax-eternatus-max-battles",
-          "title": "Batalhas Max: Eternamax Eternatus",
-          "summary": "21/11, das 11h às 14h locais: Eternamax ocupa a maioria dos Pontos de Energia. As batalhas dão Doces e Doces GG; a forma Eternamax não pode ser capturada.",
-          "category": "max_battle_day",
-          "tags": [
-            "Eternatus",
-            "Eternamax",
-            "Batalhas Max",
-            "Global"
-          ],
-          "start_brazil": "2026-11-21T11:00:00-03:00",
-          "end_brazil": "2026-11-21T14:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO • anúncio oficial",
-            "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
-            "confidence": "official"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
-          }
-        },
-        {
           "id": "2026-11-21-community-day-preview",
           "title": "Dia Comunitário de novembro: Pawniard",
           "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
@@ -514,35 +485,6 @@
           "kind": "missing",
           "premium": false
         }
-      },
-      {
-        "id": "2026-11-21-eternamax-eternatus-max-battles",
-        "title": "Batalhas Max: Eternamax Eternatus",
-        "summary": "21/11, das 11h às 14h locais: Eternamax ocupa a maioria dos Pontos de Energia. As batalhas dão Doces e Doces GG; a forma Eternamax não pode ser capturada.",
-        "category": "max_battle_day",
-        "tags": [
-          "Eternatus",
-          "Eternamax",
-          "Batalhas Max",
-          "Global"
-        ],
-        "start_brazil": "2026-11-21T11:00:00-03:00",
-        "end_brazil": "2026-11-21T14:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • anúncio oficial",
-          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
       }
     ],
     "also_happening": [
@@ -731,15 +673,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 15,
+    "calendar_events_in_week": 14,
     "events_with_weekly_art": 2,
     "events_with_premium_weekly_art": 2,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 13,
-    "events_in_weekly": 15,
+    "events_without_weekly_art": 12,
+    "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-21T08:33:27.411265-03:00",
-    "current_items_filtered_at": "2026-11-21T08:33:27.386991-03:00",
+    "generated_at": "2026-11-21T16:37:34.223536-03:00",
+    "current_items_filtered_at": "2026-11-21T16:37:34.207546-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
