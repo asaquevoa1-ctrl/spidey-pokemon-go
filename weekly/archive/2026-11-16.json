@@ -65,44 +65,6 @@
             "kind": "missing",
             "premium": false
           }
-        },
-        {
-          "id": "2026-11-21-community-day-preview",
-          "title": "Dia Comunitário de novembro: Pawniard",
-          "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
-          "category": "community_day",
-          "tags": [
-            "Novembro 2026",
-            "Pawniard",
-            "Kingambit",
-            "Shiny",
-            "Dia Comunitário",
-            "Global",
-            "Anúncio oficial"
-          ],
-          "start_brazil": "2026-11-21T14:00:00-03:00",
-          "end_brazil": "2026-11-21T17:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
-            "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
-            "confidence": "official"
-          },
-          "art": {
-            "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
-            "web_width": 1024,
-            "web_height": 1536,
-            "web_sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
-            "alt": "Arte Premium do Dia Comunitário de Pawniard, 21 de novembro de 2026: Pawniard e Kingambit, Bônus, Kowtow Cleave e evolução até 21h."
-          },
-          "weekly_art": {
-            "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
-            "width": 1024,
-            "height": 1536,
-            "sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
-            "source_role": "canonical_master",
-            "kind": "approved_master",
-            "premium": true
-          }
         }
       ]
     },
@@ -145,44 +107,6 @@
   ],
   "sections": {
     "featured": [
-      {
-        "id": "2026-11-21-community-day-preview",
-        "title": "Dia Comunitário de novembro: Pawniard",
-        "summary": "Pawniard confirmado oficialmente para 21/11, das 14h às 17h. Shiny, Fundo Especial, 1/4 de distância dos Ovos, 2× Doces e Kingambit com Kowtow Cleave.",
-        "category": "community_day",
-        "tags": [
-          "Novembro 2026",
-          "Pawniard",
-          "Kingambit",
-          "Shiny",
-          "Dia Comunitário",
-          "Global",
-          "Anúncio oficial"
-        ],
-        "start_brazil": "2026-11-21T14:00:00-03:00",
-        "end_brazil": "2026-11-21T17:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • anúncio oficial do Dia Comunitário de novembro",
-          "url": "https://pokemongo.com/en/news/communityday-november-2026-pawniard",
-          "confidence": "official"
-        },
-        "art": {
-          "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
-          "web_width": 1024,
-          "web_height": 1536,
-          "web_sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
-          "alt": "Arte Premium do Dia Comunitário de Pawniard, 21 de novembro de 2026: Pawniard e Kingambit, Bônus, Kowtow Cleave e evolução até 21h."
-        },
-        "weekly_art": {
-          "url": "assets/events/premium/spidey-2026-11-21-pawniard-community-day-v1-approved-v1.png",
-          "width": 1024,
-          "height": 1536,
-          "sha256": "f706accbed444df97391badd2f7b78a889f12a1e6adafd181cbaf13ae4a595e4",
-          "source_role": "canonical_master",
-          "kind": "approved_master",
-          "premium": true
-        }
-      },
       {
         "id": "2026-11-16-dynamax-trails",
         "title": "Trilhas Dinamax — Eternatus e Passe GO",
@@ -673,15 +597,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 14,
-    "events_with_weekly_art": 2,
-    "events_with_premium_weekly_art": 2,
+    "calendar_events_in_week": 13,
+    "events_with_weekly_art": 1,
+    "events_with_premium_weekly_art": 1,
     "events_with_official_weekly_art": 0,
     "events_without_weekly_art": 12,
-    "events_in_weekly": 14,
+    "events_in_weekly": 13,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-21T16:37:34.223536-03:00",
-    "current_items_filtered_at": "2026-11-21T16:37:34.207546-03:00",
+    "generated_at": "2026-11-21T21:33:44.157915-03:00",
+    "current_items_filtered_at": "2026-11-21T21:33:44.143818-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
