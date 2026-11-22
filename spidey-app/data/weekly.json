@@ -467,42 +467,6 @@
           "kind": "missing",
           "premium": false
         }
-      },
-      {
-        "id": "2026-11-20-laic-2027-sao-paulo",
-        "title": "Pokémon GO no LAIC 2027 — São Paulo",
-        "summary": "LAIC 2027 no Distrito Anhembi, 20 a 22/11: espaço oficial de Pokémon GO das 8h às 18h por dia, transmissão em português e Drops online. Há relatos comunitários de bônus locais ainda sem confirmação oficial.",
-        "category": "local_event",
-        "tags": [
-          "LAIC 2027",
-          "São Paulo",
-          "Distrito Anhembi",
-          "Coordenadas",
-          "Presencial",
-          "Twitch Drops"
-        ],
-        "start_brazil": "2026-11-20T08:00:00-03:00",
-        "end_brazil": "2026-11-22T18:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • comunicado oficial em português",
-          "url": "https://pokemongo.com/pt-BR/news/pokemon-go-at-laic2027",
-          "confidence": "official"
-        },
-        "art": {
-          "url": "https://championships.pokemon.com/static-assets/images/full-width-generic/2027-sao-paulo-2048.webp",
-          "alt": "Arte promocional oficial do LAIC 2027, com a marca do Campeonato Internacional Pokémon sobre São Paulo",
-          "source_url": "https://championships.pokemon.com/es-la/events/internationals/2027/sao-paulo",
-          "classification": "official_promo_banner_external_not_original_spidey"
-        },
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
       }
     ]
   },
@@ -597,15 +561,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 13,
+    "calendar_events_in_week": 12,
     "events_with_weekly_art": 1,
     "events_with_premium_weekly_art": 1,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 12,
-    "events_in_weekly": 13,
+    "events_without_weekly_art": 11,
+    "events_in_weekly": 12,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-22T13:34:09.863698-03:00",
-    "current_items_filtered_at": "2026-11-22T13:34:09.852020-03:00",
+    "generated_at": "2026-11-22T19:40:12.774508-03:00",
+    "current_items_filtered_at": "2026-11-22T19:40:12.760782-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
