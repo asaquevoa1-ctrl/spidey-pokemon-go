@@ -1,0 +1,839 @@
+{
+  "schema_version": "spidey-weekly-v1",
+  "week_start": "2026-11-23",
+  "week_end": "2026-11-29",
+  "timezone": "America/Sao_Paulo",
+  "title": "Spidey Weekly • 23/11 a 29/11",
+  "visual_standard": "spidey-weekly-premium-v1",
+  "status": "ready_for_art",
+  "days": [
+    {
+      "date": "2026-11-23",
+      "weekday": "monday",
+      "items": []
+    },
+    {
+      "date": "2026-11-24",
+      "weekday": "tuesday",
+      "items": []
+    },
+    {
+      "date": "2026-11-25",
+      "weekday": "wednesday",
+      "items": []
+    },
+    {
+      "date": "2026-11-26",
+      "weekday": "thursday",
+      "items": [
+        {
+          "id": "2026-11-26-spotlight-noibat",
+          "title": "Hora do Holofote: Noibat",
+          "summary": "Noibat, das 18h às 19h, com 2× doces por captura.",
+          "category": "spotlight_hour",
+          "tags": [
+            "Novembro 2026",
+            "Calendário",
+            "Pokémon GO",
+            "Global"
+          ],
+          "start_brazil": "2026-11-26T18:00:00-03:00",
+          "end_brazil": "2026-11-26T19:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+            "confidence": "verified_community"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "weekday": "friday",
+      "items": [
+        {
+          "id": "2026-11-27-clefable-global-challenge",
+          "title": "Desafio Global de Mega Clefable",
+          "summary": "Complete Batalhas de Reide com a comunidade global para ampliar os bônus posteriores de Mega Clefable.",
+          "category": "evento_especial",
+          "tags": [
+            "Mega Clefable",
+            "Desafio Global",
+            "Global"
+          ],
+          "start_brazil": "2026-11-27T22:00:00-03:00",
+          "end_brazil": "2026-11-29T01:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • anúncio oficial em português",
+            "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "weekday": "saturday",
+      "items": [
+        {
+          "id": "2026-11-28-shadow-tornadus-weekend",
+          "title": "Reides Sombrosas: Tornadus (Fim de semana 28–29)",
+          "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Novembro 2026",
+            "Calendário",
+            "Pokémon GO"
+          ],
+          "start_brazil": null,
+          "end_brazil": null,
+          "schedule_precision": "date",
+          "calendar_date": "2026-11-28",
+          "source": {
+            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+            "confidence": "verified_community"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        },
+        {
+          "id": "2026-11-27-clefable-global-challenge",
+          "title": "Desafio Global de Mega Clefable",
+          "summary": "Complete Batalhas de Reide com a comunidade global para ampliar os bônus posteriores de Mega Clefable.",
+          "category": "evento_especial",
+          "tags": [
+            "Mega Clefable",
+            "Desafio Global",
+            "Global"
+          ],
+          "start_brazil": "2026-11-27T22:00:00-03:00",
+          "end_brazil": "2026-11-29T01:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • anúncio oficial em português",
+            "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "weekday": "sunday",
+      "items": [
+        {
+          "id": "2026-11-28-shadow-tornadus-weekend",
+          "title": "Reides Sombrosas: Tornadus (Fim de semana 28–29)",
+          "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+          "category": "shadow_raids",
+          "tags": [
+            "Novembro 2026",
+            "Calendário",
+            "Pokémon GO"
+          ],
+          "start_brazil": null,
+          "end_brazil": null,
+          "schedule_precision": "date",
+          "calendar_date": "2026-11-28",
+          "source": {
+            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+            "confidence": "verified_community"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        },
+        {
+          "id": "2026-11-27-clefable-global-challenge",
+          "title": "Desafio Global de Mega Clefable",
+          "summary": "Complete Batalhas de Reide com a comunidade global para ampliar os bônus posteriores de Mega Clefable.",
+          "category": "evento_especial",
+          "tags": [
+            "Mega Clefable",
+            "Desafio Global",
+            "Global"
+          ],
+          "start_brazil": "2026-11-27T22:00:00-03:00",
+          "end_brazil": "2026-11-29T01:00:00-03:00",
+          "source": {
+            "name": "Pokémon GO • anúncio oficial em português",
+            "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+            "confidence": "official"
+          },
+          "art": {},
+          "weekly_art": {
+            "url": "",
+            "width": 0,
+            "height": 0,
+            "sha256": "",
+            "source_role": "missing",
+            "kind": "missing",
+            "premium": false
+          }
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "featured": [
+      {
+        "id": "2026-11-16-dynamax-trails",
+        "title": "Trilhas Dinamax — Eternatus e Passe GO",
+        "summary": "De 16/11 às 10h a 23/11 às 20h locais: Batalhas Max, Passe GO e recompensas de Eternatus. Eternamax terá uma janela própria em 21/11, das 11h às 14h locais.",
+        "category": "evento_especial",
+        "tags": [
+          "Trilhas Dinamax",
+          "Eternatus",
+          "Passe GO",
+          "Global",
+          "Fundo Especial",
+          "Batalhas Max"
+        ],
+        "start_brazil": "2026-11-16T10:00:00-03:00",
+        "end_brazil": "2026-11-23T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial",
+          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-24-twilight-wishes-preview",
+        "title": "Chamados do Crepúsculo",
+        "summary": "24/11 às 10h até 30/11 às 20h locais: Staryu e Elgyem com chance Brilhante aumentada, reides temáticas, Pesquisas de Campo em duas fases e Passe GO próprio.",
+        "category": "evento_especial",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO",
+          "Anúncio oficial",
+          "Passe GO"
+        ],
+        "start_brazil": "2026-11-24T10:00:00-03:00",
+        "end_brazil": "2026-11-30T20:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-27-clefable-global-challenge",
+        "title": "Desafio Global de Mega Clefable",
+        "summary": "Complete Batalhas de Reide com a comunidade global para ampliar os bônus posteriores de Mega Clefable.",
+        "category": "evento_especial",
+        "tags": [
+          "Mega Clefable",
+          "Desafio Global",
+          "Global"
+        ],
+        "start_brazil": "2026-11-27T22:00:00-03:00",
+        "end_brazil": "2026-11-29T01:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "official-news-auto-5ea008a69ab9",
+        "title": "Pokémon GO × Duolingo: Festa de Pokémon do Duo",
+        "summary": "Faça ao menos uma lição por dia em sete dias diferentes no Duolingo para receber um código individual de Pesquisa Temporária no Pokémon GO. Entre na missão até 21/12, conclua-a até 29/12 e termine a pesquisa até 31/12, sempre às 23h59 locais.",
+        "category": "timed_research",
+        "tags": [
+          "Novidade",
+          "Pokémon GO oficial",
+          "Duolingo",
+          "Pesquisa Temporária",
+          "Fundo Especial",
+          "Tag de idioma"
+        ],
+        "start_brazil": "2026-11-16T22:00:00-03:00",
+        "end_brazil": "2026-12-31T23:59:59-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/duolingo-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-go-pass-groudon",
+        "title": "Passe GO: Novembro — Groudon e até 1.400 PokéMoedas",
+        "summary": "Passe gratuito: encontro com Groudon (pode ser Brilhante) e até 400 PokéMoedas. Passe Deluxe pago: mais 1.000 PokéMoedas, total de 1.400.",
+        "category": "go_pass",
+        "tags": [
+          "Passe GO",
+          "Novembro 2026",
+          "Groudon",
+          "PokéMoedas",
+          "Deluxe",
+          "Global"
+        ],
+        "start_brazil": "2026-11-03T10:00:00-03:00",
+        "end_brazil": "2026-12-01T10:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO",
+          "url": "https://pokemongo.com/en/news/go-pass-november-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "assets/events/premium/groudon-go-pass-20261103-1201-cosmic-s-approved-v1.webp",
+          "width": 1024,
+          "height": 1536,
+          "sha256": "e62598c5fdef662d5afa2dc7b4cabb015585b411768e9cf10f5e09cb9444ee99",
+          "source_role": "canonical_master",
+          "kind": "approved_master",
+          "premium": true
+        }
+      },
+      {
+        "id": "2026-11-08-black-friday-double-pokecoins",
+        "title": "Black Friday — dobro de Pokémoedas de bônus",
+        "summary": "Pacotes de US$ 19,99 ou mais na Loja Online oferecem o dobro das Pokémoedas de bônus, até 2.000 moedas extras, com uma compra por pacote e cliente.",
+        "category": "official_update",
+        "tags": [
+          "Global",
+          "Loja Online",
+          "Black Friday"
+        ],
+        "start_brazil": "2026-11-08T22:00:00-03:00",
+        "end_brazil": "2026-11-30T01:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-12-04-laic-2027-timed-research-deadline",
+        "title": "Prazo final — Pesquisa Temporária do LAIC 2027",
+        "summary": "Somente para quem recebeu a pesquisa pelos Drops: concluir as tarefas e resgatar as recompensas até 4/12 às 12h no horário do Pacífico, 17h de Brasília.",
+        "category": "research",
+        "tags": [
+          "LAIC 2027",
+          "Pesquisa temporária",
+          "Twitch Drops",
+          "Prazo"
+        ],
+        "start_brazil": "2026-11-20T09:00:00-03:00",
+        "end_brazil": "2026-12-04T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/latin-america-international-championships-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      }
+    ],
+    "raids": [
+      {
+        "id": "2026-11-09-raids-cresselia-darkrai",
+        "title": "Reides 5★: Cresselia e Darkrai",
+        "summary": "Cresselia e Darkrai na rotação mensal; atenção às reides temáticas de 9 a 15/11.",
+        "category": "raid_rotation",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-09",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-25-raids-deoxys-four-forms",
+        "title": "Reides 5★: Deoxys (quatro formas)",
+        "summary": "Deoxys retorna nas formas Normal, Ataque, Defesa e Velocidade.",
+        "category": "raid_rotation",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-25",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-16-mega-banette-raids",
+        "title": "Megarreides: Mega Banette",
+        "summary": "Mega Banette é destaque em Megarreides de 16 a 24 de novembro.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-16",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-25-mega-metagross-raids",
+        "title": "Megarreides: Mega Metagross",
+        "summary": "Mega Metagross aparece nas Megarreides de 25 de novembro a 1º de dezembro.",
+        "category": "mega_raid_rotation",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-25",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-28-shadow-tornadus-weekend",
+        "title": "Reides Sombrosas: Tornadus (Fim de semana 28–29)",
+        "summary": "Tornadus Sombroso (Forma Encarnada) em reides sombrosas de fim de semana.",
+        "category": "shadow_raids",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-28",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      }
+    ],
+    "max_pvp": [
+      {
+        "id": "2026-11-16-max-surprise",
+        "title": "Batalhas Max: Pokémon surpresa",
+        "summary": "Período reservado para uma rotação Dinamax ainda sem espécie divulgada.",
+        "category": "max_monday",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-16",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-23-max-espurr",
+        "title": "Batalhas Max: Espurr Dinamax",
+        "summary": "Espurr Dinamax em destaque nos Pontos de Energia.",
+        "category": "max_monday",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO"
+        ],
+        "start_brazil": null,
+        "end_brazil": null,
+        "schedule_precision": "date",
+        "calendar_date": "2026-11-23",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      }
+    ],
+    "also_happening": [
+      {
+        "id": "2026-11-28-super-mega-raid-day-preview",
+        "title": "Dia de Super Megarreides de Mega Clefable",
+        "summary": "Mega Clefable estreia em Super Megarreides em 28/11, das 14h às 17h, no horário local, com Explosão Lunar+ e chance aumentada de Clefable Brilhante.",
+        "category": "raid_day",
+        "tags": [
+          "Super Mega",
+          "Raid Day",
+          "Mega Clefable",
+          "Global"
+        ],
+        "start_brazil": "2026-11-28T14:00:00-03:00",
+        "end_brazil": "2026-11-28T17:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • anúncio oficial em português",
+          "url": "https://pokemongo.com/pt-BR/news/clefable-super-mega-raid-day-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-25-raid-hour-deoxys",
+        "title": "Hora de Reides: Deoxys (quatro formas)",
+        "summary": "Das 18h às 19h no horário local: Deoxys nas quatro formas.",
+        "category": "raid_hour",
+        "tags": [
+          "Novembro 2026",
+          "Calendário",
+          "Pokémon GO",
+          "Global"
+        ],
+        "start_brazil": "2026-11-25T18:00:00-03:00",
+        "end_brazil": "2026-11-25T19:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
+          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      },
+      {
+        "id": "2026-11-08-seasonal-delights-box",
+        "title": "Caixa Delícias Sazonais — janela da Black Friday",
+        "summary": "Caixa de 6.095 Pokémoedas com Incubadoras, passes e Partículas Max; disponível até 27/11 às 20h PST, com limite de três compras e disponibilidade regional.",
+        "category": "official_update",
+        "tags": [
+          "Global",
+          "Loja Online",
+          "Black Friday"
+        ],
+        "start_brazil": "2026-11-08T22:00:00-03:00",
+        "end_brazil": "2026-11-28T01:00:00-03:00",
+        "source": {
+          "name": "Pokémon GO • comunicado oficial",
+          "url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
+          "confidence": "official"
+        },
+        "art": {},
+        "weekly_art": {
+          "url": "",
+          "width": 0,
+          "height": 0,
+          "sha256": "",
+          "source_role": "missing",
+          "kind": "missing",
+          "premium": false
+        }
+      }
+    ]
+  },
+  "stamps": [
+    {
+      "id": "pokexciting-singapore-changi-jewel-five-stamps-2026",
+      "title": "PokéXciting! Singapura · 5 selos",
+      "summary": "Cinco selos locais no Aeroporto de Changi e no Jewel. Coordenadas compartilhadas pela comunidade, ainda não verificadas como PokéStops exatas.",
+      "stamp_count": 5,
+      "source": {
+        "name": "Pokémon GO • PokéXciting! Singapore",
+        "url": "https://pokemongo.com/news/event-singapore-30th-anniversary-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-dia-de-muertos-reforma-stamp-guide",
+      "title": "Día de Muertos • Caça aos Selos no Paseo de la Reforma",
+      "summary": "Día de Muertos no Paseo de la Reforma: de 31/10 a 05/11, use as seis referências do mapa para encontrar os selos no jogo e buscar Duskull com coroa de cempasúchil e Fundo de Localização.",
+      "stamp_count": 0,
+      "source": {
+        "name": "Pokémon GO • anúncio oficial Día de Muertos",
+        "url": "https://pokemongo.com/es-MX/news/dia-de-muertos-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-lego-pikachu-europa",
+      "title": "LEGO × Pikachu · Europa",
+      "summary": "Coordenadas comunitárias de pontos LEGO × Pokémon GO, organizadas por continente. O jogo mostra encerramento em 3 de fevereiro de 2027. Pontos não verificados individualmente.",
+      "stamp_count": 74,
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      }
+    },
+    {
+      "id": "2026-lego-pikachu-austrália",
+      "title": "LEGO × Pikachu · Oceania · Austrália",
+      "summary": "Coordenadas comunitárias de pontos LEGO × Pokémon GO, organizadas por continente. O jogo mostra encerramento em 3 de fevereiro de 2027. Pontos não verificados individualmente.",
+      "stamp_count": 21,
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      }
+    },
+    {
+      "id": "2026-lego-pikachu-estados-unidos",
+      "title": "LEGO × Pikachu · América do Norte · Estados Unidos",
+      "summary": "Coordenadas comunitárias de pontos LEGO × Pokémon GO, organizadas por continente. O jogo mostra encerramento em 3 de fevereiro de 2027. Pontos não verificados individualmente.",
+      "stamp_count": 117,
+      "source": {
+        "name": "Comunidade Pokémon GO • lista de coordenadas LEGO",
+        "url": "https://www.reddit.com/r/PokemonGoSpoofing/comments/1ve2nlr/lego_x_pokemon_event/",
+        "confidence": "community"
+      }
+    },
+    {
+      "id": "2026-go-wild-area-sendai-stamp-rally",
+      "title": "Área Selvagem GO 2026 · 7 selos de Sendai",
+      "summary": "A Caça aos Selos oficial reúne sete Poképaradas em Sendai, visitáveis em qualquer ordem somente no dia principal do ingresso.",
+      "stamp_count": 7,
+      "source": {
+        "name": "Pokémon GO • esclarecimento oficial das Caças aos Selos",
+        "url": "https://pokemongo.com/en/news/go-wild-area-stamp-rally-details-2026",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "2026-go-wild-area-mexico-city-stamp-rally",
+      "title": "Área Selvagem GO 2026 · 7 selos da Cidade do México",
+      "summary": "O circuito oficial passa por sete lugares da Cidade do México. Confira onde ficam os pontos, planeje a visita e marque seus selos sem confundir referências de locais com Poképaradas.",
+      "stamp_count": 7,
+      "source": {
+        "name": "Pokémon GO • Área Selvagem — gameplay oficial",
+        "url": "https://pokemongo.com/gowildarea/mexico-city/gameplay",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "pokexciting-cross-region-2026",
+      "title": "PokéXciting! Cross-Region GO Stamp Rally",
+      "summary": "Rally regional oficial com cinco selos PokéXciting! distribuídos por cidades da Ásia-Pacífico.",
+      "stamp_count": 5,
+      "source": {
+        "name": "Pokémon GO",
+        "url": "https://pokemongo.com/en/news/event-apac-stamp-rally-2026",
+        "confidence": "official"
+      }
+    }
+  ],
+  "meta": {
+    "calendar_events_in_week": 18,
+    "events_with_weekly_art": 1,
+    "events_with_premium_weekly_art": 1,
+    "events_with_official_weekly_art": 0,
+    "events_without_weekly_art": 17,
+    "events_in_weekly": 18,
+    "events_with_generated_weekly_art": 0,
+    "generated_at": "2026-11-23T00:53:34.126323-03:00",
+    "current_items_filtered_at": "2026-11-23T00:53:34.113639-03:00",
+    "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
+  }
+}
