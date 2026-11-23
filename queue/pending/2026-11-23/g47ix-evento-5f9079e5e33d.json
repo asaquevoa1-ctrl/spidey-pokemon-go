@@ -1,0 +1,19 @@
+{
+  "titulo": "📅 G47IX • EVENTO",
+  "mensagem": "📅 Pokémon GO Weekly: November 23–29!\n🐾 Dynamax Espurr Max Monday\n🌙 Twilight Wishes begins Tuesday\n🧬 All four Deoxys formesin raidss\n✨ Clefable Super Mega Raid Day on Saturday!\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2124623134401929573",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2124623134401929573",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-23T21:53:38.923115+00:00"
+}
