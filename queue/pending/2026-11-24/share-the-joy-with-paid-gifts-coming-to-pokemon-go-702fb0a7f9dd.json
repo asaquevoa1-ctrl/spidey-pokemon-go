@@ -1,0 +1,21 @@
+{
+  "titulo": "📰 Share the joy with paid gifts coming to Pokémon GO!",
+  "mensagem": "Share the joy with paid gifts coming to Pokémon GO!\n\n🔗 https://pokemongo.com/news/paid-gifts-2026\n\n🔎 Fonte operacional: PokeMiners #miner-bot",
+  "url": "https://pokemongo.com/news/paid-gifts-2026",
+  "source_channel_url": "https://discord.com/channels/1139279003451150467/1550962794814373898/1574583301333721120",
+  "image_url": "https://lh3.googleusercontent.com/VRFIDm_zrfcdrwC1Vgwbg-6Xs3vcm9DBHblzOKvcq8EWc3NQpz5dZqhb3O_WLqHO5RIEzSG90ungqVyHrV7idJh7sOBe2DDhL-PVF5n5CWE",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "media_policy": "source_first",
+  "_source_id": "pokeminers-1574583301333721120",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-24T06:28:36.618440+00:00"
+}
