@@ -223,37 +223,6 @@
   "sections": {
     "featured": [
       {
-        "id": "2026-11-16-dynamax-trails",
-        "title": "Trilhas Dinamax — Eternatus e Passe GO",
-        "summary": "De 16/11 às 10h a 23/11 às 20h locais: Batalhas Max, Passe GO e recompensas de Eternatus. Eternamax terá uma janela própria em 21/11, das 11h às 14h locais.",
-        "category": "evento_especial",
-        "tags": [
-          "Trilhas Dinamax",
-          "Eternatus",
-          "Passe GO",
-          "Global",
-          "Fundo Especial",
-          "Batalhas Max"
-        ],
-        "start_brazil": "2026-11-16T10:00:00-03:00",
-        "end_brazil": "2026-11-23T20:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • anúncio oficial",
-          "url": "https://pokemongo.com/en/news/dynamax-trails-eternamax-eternatus-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
         "id": "2026-11-24-twilight-wishes-preview",
         "title": "Chamados do Crepúsculo",
         "summary": "24/11 às 10h até 30/11 às 20h locais: Staryu e Elgyem com chance Brilhante aumentada, reides temáticas, Pesquisas de Campo em duas fases e Passe GO próprio.",
@@ -825,15 +794,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 18,
+    "calendar_events_in_week": 17,
     "events_with_weekly_art": 1,
     "events_with_premium_weekly_art": 1,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 17,
-    "events_in_weekly": 18,
+    "events_without_weekly_art": 16,
+    "events_in_weekly": 17,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-23T12:08:02.421582-03:00",
-    "current_items_filtered_at": "2026-11-23T12:08:02.406723-03:00",
+    "generated_at": "2026-11-23T23:28:00.186840-03:00",
+    "current_items_filtered_at": "2026-11-23T23:28:00.170825-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
