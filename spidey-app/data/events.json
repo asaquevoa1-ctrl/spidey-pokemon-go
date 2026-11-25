@@ -17538,52 +17538,190 @@
       "related_news_id": "official-news-tropical-paradise-2026"
     },
     {
-      "id": "2026-12-08-unannounced-event",
-      "slug": "2026-12-08-unannounced-event",
-      "title": "Evento ainda não anunciado",
-      "summary": "Data confirmada no calendário oficial de dezembro; detalhes e horário ainda não foram publicados em texto.",
-      "category": "event",
-      "tags": [
-        "Pokémon GO oficial",
-        "Destinos dos Sonhos",
-        "Global"
-      ],
+      "id": "official-news-pokemon-champions-celebration-2026",
+      "slug": "official-news-pokemon-champions-celebration-2026",
+      "content_type": "news",
+      "title": "Preparem-se para o Evento de Celebração de Pokémon Champions!",
+      "summary": "De 8 a 14/12, o evento oficial conecta Pokémon GO, Pokémon HOME e Pokémon Champions com encontros, reides, bônus do Passe GO, Doces Raros de Pesquisa de Campo e uma campanha própria no Pokémon Champions.",
+      "category": "official_update",
+      "tags": ["Novidade", "Pokémon GO oficial", "Pokémon Champions", "Destinos dos Sonhos"],
       "source": {
-        "name": "Pokémon GO • calendário oficial de dezembro",
-        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/pokemon-champions-celebration-event-2026",
         "confidence": "official"
       },
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-12-08",
-        "end_date": "2026-12-14",
-        "brazil_timezone": "America/Sao_Paulo"
+      "calendar": {"mode": "hidden"},
+      "presentation": {"requires_art": false, "fallback_visual": "none", "no_unverified_poster": true},
+      "news": {
+        "title": "Celebração de Pokémon Champions: evento, reides e campanha no Pokémon HOME",
+        "summary": "O anúncio confirma o evento de 8 a 14/12, a rotação sazonal de reides de cinco estrelas de 9 a 15/12, o resgate do Passe GO até 16/12 e a campanha vinculada ao Pokémon Champions até 18/12.",
+        "published_on": "2026-11-25",
+        "label": "OFICIAL • DETALHES CONFERIDOS"
       },
-      "calendar": {
-        "mode": "span"
-      },
-      "presentation": {
-        "requires_art": false,
-        "fallback_visual": "date",
-        "no_unverified_poster": true
-      },
-      "locations": [],
-      "gpx": {
-        "enabled": false,
-        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
-      },
-      "notifications": {
-        "enabled": false,
-        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
-      },
+      "notes": [
+        "As publicações oficiais do Pokémon GO em português e inglês foram lidas integralmente.",
+        "A página oficial do Pokémon HOME foi consultada para registrar a campanha no Pokémon Champions em sua janela própria, sem confundi-la com o evento do Pokémon GO.",
+        "As tarefas individuais da Pesquisa de Campo e do Passe GO não foram publicadas; somente recompensas e bônus anunciados estão resumidos."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
       "status": "published",
       "verified_at": "2026-11-25",
-      "notes": [
-        "Registro date-only: permanece ativo até o fim do último dia no fuso IANA do evento.",
-        "Nenhum Pokémon, bônus, Brilhante, tarefa ou horário foi inferido do título."
+      "updated_at": "2026-11-25T22:00:00Z",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
+        "full_article_reviewed": true,
+        "canonical_url_checked": true,
+        "supersedes_date_only_preview": "2026-12-08-unannounced-event"
+      },
+      "related_event_ids": [
+        "2026-12-08-unannounced-event",
+        "2026-12-09-pokemon-champions-five-star-raids",
+        "2026-12-14-pokemon-champions-go-pass-claim",
+        "2026-12-08-pokemon-home-champions-campaign"
+      ]
+    },
+    {
+      "id": "2026-12-08-unannounced-event",
+      "slug": "2026-12-08-unannounced-event",
+      "title": "Evento de Celebração de Pokémon Champions",
+      "summary": "De 08/12 às 10h a 14/12 às 20h locais: encontros, reides, Kecleon em Poképaradas, Pesquisa de Campo com Doce Raro e um Passe GO próprio.",
+      "category": "event",
+      "tags": ["Pokémon GO oficial", "Destinos dos Sonhos", "Global", "Pokémon Champions", "Passe GO"],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/pokemon-champions-celebration-event-2026",
+        "confidence": "official"
+      },
+      "verification_sources": [
+        {"name": "Pokémon GO • anúncio em inglês", "url": "https://pokemongo.com/news/pokemon-champions-celebration-event-2026", "confidence": "official"},
+        {"name": "Pokémon HOME • campanha vinculada", "url": "https://news.pokemon-home.com/en/page/879.html", "confidence": "official"}
       ],
-      "related_news_id": "official-news-auto-51ffde89c630"
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-08T10:00:00-03:00",
+        "end_local": "2026-12-14T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-08T10:00:00-03:00",
+        "end_brazil": "2026-12-14T20:00:00-03:00"
+      },
+      "calendar": {"mode": "span"},
+      "presentation": {"requires_art": false, "fallback_visual": "date", "no_unverified_poster": true},
+      "locations": [],
+      "gpx": {"enabled": false, "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."},
+      "pokemon": [
+        {"name": "Charmander, Starly e Grookey", "note": "Encontros na natureza; podem ser Brilhantes, sem garantia."},
+        {"name": "Absol e Gible", "note": "Podem aparecer com sorte; formas Brilhantes possíveis, sem garantia."},
+        {"name": "Bagon, Litten e Frigibax", "note": "Reides de uma estrela; formas Brilhantes possíveis."},
+        {"name": "Raichu, Garchomp e Rillaboom", "note": "Reides de três estrelas; formas Brilhantes possíveis quando indicadas no anúncio."}
+      ],
+      "bonuses": [
+        "Maior chance de encontrar Kecleon em Poképaradas.",
+        "Passe GO, Ranque 1: 7× mais Energia do Transportador GO obtida por hora.",
+        "Passe GO, Ranque 10: 2× Doces por captura; não acumula com os bônus do Dia Comunitário de dezembro.",
+        "Passe GO, Ranque 20: 3.000 PE adicionais ao concluir Batalhas de Reide.",
+        "Passe GO Deluxe, Ranque 20: até dois Passes de Reide gratuitos por dia ao girar fotodiscos de Ginásios."
+      ],
+      "notes": [
+        "A Pesquisa de Campo concede Doces Raros; as tarefas individuais não foram publicadas.",
+        "Adesivos temáticos poderão ser obtidos ao girar Poképaradas e abrir presentes.",
+        "O Passe GO gratuito é recebido automaticamente. Deluxe: US$ 4,99; Deluxe + 6 Ranques: US$ 6,99, ou preço regional equivalente; disponibilidade varia por região.",
+        "O Passe anuncia encontros temáticos, Frutas Frambo Douradas, Frutas Caxí Prateadas e Passe de Batalha Premium. O Deluxe acrescenta mais encontros, Passes de Batalha Premium, MT Elite de Ataque Carregado e Doce Raro GG, sem listar tarefas individuais."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "updated_at": "2026-11-25T22:00:00Z",
+      "related_news_id": "official-news-pokemon-champions-celebration-2026",
+      "audit": {
+        "previous_state": "official_date_only_preview",
+        "preview_source": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "confirmed_by": "https://pokemongo.com/pt-BR/news/pokemon-champions-celebration-event-2026",
+        "history_preserved": true
+      }
+    },
+    {
+      "id": "2026-12-09-pokemon-champions-five-star-raids",
+      "slug": "2026-12-09-pokemon-champions-five-star-raids",
+      "title": "Celebração de Pokémon Champions — rotação de Reides 5★",
+      "summary": "De 9 a 15/12, Latias, Latios, Heatran, Cobalion, Terrakion, Virizion, Regieleki e Regidrago terão aparições programadas na rotação sazonal; o anúncio não informa a distribuição individual.",
+      "category": "raid_rotation",
+      "tags": ["Pokémon GO oficial", "Pokémon Champions", "Reides 5★", "Global"],
+      "source": {"name": "Pokémon GO • comunicado oficial", "url": "https://pokemongo.com/pt-BR/news/pokemon-champions-celebration-event-2026", "confidence": "official"},
+      "schedule": {"precision": "date", "local_timezone": "America/Sao_Paulo", "start_date": "2026-12-09", "end_date": "2026-12-15", "brazil_timezone": "America/Sao_Paulo"},
+      "calendar": {"mode": "span"},
+      "presentation": {"requires_art": false, "fallback_visual": "date", "no_unverified_poster": true},
+      "locations": [],
+      "gpx": {"enabled": false, "reason": "Rotação global; nenhuma coordenada específica foi anunciada."},
+      "pokemon": [{"name": "Latias, Latios, Heatran, Cobalion, Terrakion, Virizion, Regieleki e Regidrago", "note": "Aparições programadas ao longo de 9–15/12; não são prometidos simultaneamente. Brilhante possível, sem garantia."}],
+      "notes": [
+        "O Fundo Especial só estará disponível durante o evento principal, de 8/12 às 10h a 14/12 às 20h locais, e não é garantido.",
+        "O anúncio não fornece dias ou horários individuais para cada chefe; nenhuma divisão foi inferida."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-pokemon-champions-celebration-2026"
+    },
+    {
+      "id": "2026-12-14-pokemon-champions-go-pass-claim",
+      "slug": "2026-12-14-pokemon-champions-go-pass-claim",
+      "title": "Passe GO: Celebração de Pokémon Champions — resgate final",
+      "summary": "Depois do fim do evento, recompensas já desbloqueadas podem ser resgatadas até 16/12 às 20h locais.",
+      "category": "go_pass_deadline",
+      "tags": ["Pokémon GO oficial", "Pokémon Champions", "Global"],
+      "source": {"name": "Pokémon GO • comunicado oficial", "url": "https://pokemongo.com/pt-BR/news/pokemon-champions-celebration-event-2026", "confidence": "official"},
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-14T20:00:00-03:00",
+        "end_local": "2026-12-16T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-14T20:00:00-03:00",
+        "end_brazil": "2026-12-16T20:00:00-03:00"
+      },
+      "calendar": {"mode": "span"},
+      "presentation": {"requires_art": false, "fallback_visual": "date", "no_unverified_poster": true},
+      "locations": [],
+      "gpx": {"enabled": false, "reason": "Prazo global de resgate; nenhuma coordenada específica foi anunciada."},
+      "notes": ["Somente recompensas já desbloqueadas; não é uma extensão do evento nem do período para ganhar Pontos GO."],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-pokemon-champions-celebration-2026"
+    },
+    {
+      "id": "2026-12-08-pokemon-home-champions-campaign",
+      "slug": "2026-12-08-pokemon-home-champions-campaign",
+      "title": "Pokémon GO → HOME → Champions — campanha vinculada",
+      "summary": "De 08/12 às 01:00 UTC a 18/12 às 14:59 UTC, Pokémon capturados no GO podem visitar o Pokémon Champions pelo HOME para liberar recompensas no Champions.",
+      "category": "crossover_campaign",
+      "tags": ["Pokémon HOME oficial", "Pokémon Champions", "Pokémon GO", "Global"],
+      "source": {"name": "Pokémon HOME • anúncio oficial", "url": "https://news.pokemon-home.com/en/page/879.html", "confidence": "official"},
+      "schedule": {
+        "local_timezone": "UTC",
+        "start_local": "2026-12-08T01:00:00Z",
+        "end_local": "2026-12-18T14:59:00Z",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-07T22:00:00-03:00",
+        "end_brazil": "2026-12-18T11:59:00-03:00"
+      },
+      "calendar": {"mode": "span"},
+      "presentation": {"requires_art": false, "fallback_visual": "date", "no_unverified_poster": true},
+      "locations": [],
+      "gpx": {"enabled": false, "reason": "Campanha digital global; não envolve coordenadas ou rota."},
+      "bonuses": [
+        "Um conjunto de roupa do Professor Willow no Pokémon Champions, resgatável uma vez.",
+        "Até 10 Bilhetes de Treino no Pokémon Champions: um pela primeira visita de um Pokémon do GO descoberto em cada uma das dez regiões listadas no anúncio."
+      ],
+      "notes": [
+        "O Pokémon precisa ter sido capturado no Pokémon GO, transferido ao Pokémon HOME e levado como visitante ao Pokémon Champions.",
+        "As recompensas chegam à caixa de mensagens do Pokémon Champions; não são itens do Pokémon GO.",
+        "Pokémon obtidos fora do Pokémon GO não liberam essas recompensas."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-pokemon-champions-celebration-2026"
     },
     {
       "id": "2026-12-22-winter-holiday",
@@ -17682,5 +17820,5 @@
       "related_news_id": "official-news-auto-51ffde89c630"
     }
   ],
-  "updated_at": "2026-11-25T20:30:00Z"
+  "updated_at": "2026-11-25T22:00:00Z"
 }
