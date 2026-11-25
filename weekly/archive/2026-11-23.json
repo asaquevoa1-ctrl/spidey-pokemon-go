@@ -416,9 +416,9 @@
         "schedule_precision": "date",
         "calendar_date": "2026-11-25",
         "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
+          "name": "Pokémon GO • calendário oficial de dezembro",
+          "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+          "confidence": "official"
         },
         "art": {},
         "weekly_art": {
@@ -711,8 +711,8 @@
     "events_without_weekly_art": 13,
     "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-25T14:29:21.422201-03:00",
-    "current_items_filtered_at": "2026-11-25T14:29:21.406352-03:00",
+    "generated_at": "2026-11-25T14:41:13.744384-03:00",
+    "current_items_filtered_at": "2026-11-25T14:41:13.721690-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

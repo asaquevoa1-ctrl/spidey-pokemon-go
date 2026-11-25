@@ -64,7 +64,7 @@ test('aba ANA inclui a fase Azul e não oferece cópia quando não há coordenad
   assert.match(source, /const points=refs\.length\?refs:officialNames/);
   assert.match(source, /sem coordenada publicada do Ginásio/);
   assert.match(source, /if\(!value\)return/);
-  assert.match(fs.readFileSync('spidey-app/sw.js', 'utf8'), /spidey-app-20261120-ana-blue1/);
+  assert.match(fs.readFileSync('spidey-app/sw.js', 'utf8'), /spidey-app-20261125-data-network1/);
 });
 
 test('registro automático fica concluído e ligado à auditoria pública', () => {

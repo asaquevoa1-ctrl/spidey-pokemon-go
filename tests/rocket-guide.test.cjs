@@ -48,7 +48,8 @@ test('Rocket guides are packaged offline, data network-first, and external sourc
  const sw=read('spidey-app/sw.js'),html=read('spidey-app/index.html');
  for(const path of ['./rocket-guide.js','./rocket-guide.css','./data/rocket-lineups.json'])
   assert.ok(sw.includes(path),path);
- assert.ok(sw.includes('national-trust-2026|rocket-lineups'));
+ assert.ok(sw.includes("url.pathname.startsWith(new URL('./data/', self.location.href).pathname)"));
+ assert.ok(sw.includes("url.pathname.endsWith('.json')"));
  assert.ok(!sw.includes('hunter-feed'));
  assert.ok(!html.includes('hunter-v1.js'));
  assert.ok(!html.includes('hunter-live-feed.js'));

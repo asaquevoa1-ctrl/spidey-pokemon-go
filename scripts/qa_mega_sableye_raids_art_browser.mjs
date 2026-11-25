@@ -20,7 +20,7 @@ const browser=await chromium.launch({headless:true,executablePath:process.env.CH
 const checks=[];
 try{
   for(const width of [390,1280])for(const theme of ['light','dark']){
-    const page=await browser.newPage({viewport:{width,height:900},timezoneId:'America/Sao_Paulo'});
+    const page=await browser.newPage({viewport:{width,height:900},timezoneId:'America/Sao_Paulo',serviceWorkers:'block'});
     await page.route('**/data/weekly.json*',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(weekly)}));
     await page.addInitScript(({fixed,theme})=>{const NativeDate=Date,now=new NativeDate(fixed).valueOf();class FixedDate extends NativeDate{constructor(...args){super(...(args.length?args:[now]));}static now(){return now;}}Object.setPrototypeOf(FixedDate,NativeDate);window.Date=FixedDate;localStorage.setItem('spidey-theme',theme);},{fixed,theme});
     await page.goto('http://127.0.0.1:4173/spidey-app/index.html',{waitUntil:'domcontentloaded'});

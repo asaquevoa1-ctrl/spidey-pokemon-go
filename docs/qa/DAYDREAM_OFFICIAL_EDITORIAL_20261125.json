@@ -1,0 +1,40 @@
+{
+  "schema": "spidey-editorial-audit-v1",
+  "checked_at": "2026-11-25T12:00:00Z",
+  "base_sha": "d2466d42c07a563ff58dcd661f95385f73bc9c00",
+  "official_sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/news/community-day-december-2026",
+    "https://pokemongo.com/en/news/community-day-december-2026",
+    "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+    "https://pokemongo.com/news/choose-your-path-daydream-destinations-2026",
+    "https://pokemongo.com/news/go-pass-december-2026",
+    "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+    "https://pokemongo.com/news/paid-gifts-2026",
+    "https://pokemongo.com/seasons/daydream-destinations"
+  ],
+  "community_sources_cross_checked": [
+    "https://pokemongohub.net/post/guide/daydream-destinations-season/",
+    "https://pokemongohub.net/post/research/daydream-destinations-choose-your-path-timed-research/",
+    "https://leekduck.com/events"
+  ],
+  "decisions": {
+    "automatic_headlines_completed": 5,
+    "remaining_editorial_detail_pending": 0,
+    "community_day_windows": 3,
+    "choose_your_path_windows": 4,
+    "go_pass_windows": 3,
+    "gbl_rotations": 13,
+    "paid_gifts": "news_only_without_global_date",
+    "monthly_unknown_event": "date_only_without_species_or_bonus",
+    "g47ix_deoxys": "linked_to_existing_canonical_event"
+  },
+  "preservation": {
+    "approved_art_changed": false,
+    "cosmic_s_changed": false,
+    "catalog_ids_reused_where_present": true,
+    "pokedex_pvp_rankings_gpx_changed": false,
+    "push_triggered": false,
+    "friends_chat_changed": false,
+    "hunter_reintroduced": false
+  }
+}

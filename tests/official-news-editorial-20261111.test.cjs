@@ -38,7 +38,7 @@ test('Black Friday keeps the general promotion and shorter box window separate',
  assert.match(box.notes.join(' '),/três compras/);
 });
 
-test('save-the-date creates exactly eleven date-only records without invented detail',()=>{
+test('save-the-date keeps unannounced records date-only and allows official confirmation in place',()=>{
  const ids=[
   '2026-12-05-max-battle-day-save-date','2026-12-12-community-day-save-date',
   '2026-12-19-raid-day-save-date','2026-12-26-hatch-day-save-date',
@@ -48,7 +48,7 @@ test('save-the-date creates exactly eleven date-only records without invented de
   '2027-02-13-raid-day-save-date'
  ];
  assert.deepEqual(byId('official-news-auto-8a38cf8f2093').related_event_ids,ids);
- for(const id of ids){
+ for(const id of ids.filter(id=>id!=='2026-12-12-community-day-save-date')){
   const event=byId(id);
   assert.equal(event.schedule.precision,'date',id);
   for(const field of ['start_local','end_local','start_brazil','end_brazil']) assert.equal(event.schedule[field],undefined,`${id} ${field}`);
@@ -57,7 +57,11 @@ test('save-the-date creates exactly eleven date-only records without invented de
   assert.equal(event.notifications.enabled,false,id);
   assert.equal(event.gpx.enabled,false,id);
  }
- assert.equal(byId('2026-12-12-community-day-save-date').schedule.end_date,'2026-12-13');
+ const confirmed=byId('2026-12-12-community-day-save-date');
+ assert.equal(confirmed.schedule.start_local,'2026-12-12T14:00:00-03:00');
+ assert.equal(confirmed.schedule.end_local,'2026-12-12T17:00:00-03:00');
+ assert.equal(confirmed.source.confidence,'official');
+ assert.equal(confirmed.audit.confirmed_from_save_date,true);
 });
 
 test('date-only expiry uses the event IANA day through its last local second',()=>{
