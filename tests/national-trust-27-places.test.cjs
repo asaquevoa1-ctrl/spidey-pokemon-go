@@ -54,7 +54,7 @@ test('unverified/spoofed exact PokéStops never pass the coordinate loader',()=>
  assert.equal(core.validPlaces({...doc,places:[fake,q]}).length,0);
  assert.throws(()=>core.validPlaces({schema:'other',places:[]}));
 });
-test('one-tap copy, official sources, no GPS modification or fake no-cooldown guarantee',()=>{
+test('one-tap copy, official sources, no GPS modification or fake no-cooldown guarantee',async()=>{
  assert.match(js,/navigator\.clipboard\.writeText\(v\)/);
  assert.match(js,/data-coord/);
  assert.match(js,/NÃO|não são pontos exatos/i);
@@ -67,6 +67,22 @@ test('one-tap copy, official sources, no GPS modification or fake no-cooldown gu
  assert.match(js,/id='nationalTrustView'/);
  assert.match(html,/data-view="nationalTrustView"/);
  assert.ok(sw.includes('./national-trust-v1.css'));
- assert.match(sw,/pvp\|national-trust-2026/);
+ // Exercise the actual fetch handler instead of requiring the old filename allowlist.
+ const handlers={};
+ const location=new URL('https://example.org/spidey-app/sw.js');
+ const calls=[];
+ const cached={offline:true};
+ vm.runInNewContext(sw,{
+   URL,self:{location,addEventListener:(name,fn)=>{handlers[name]=fn;}},
+   fetch:async(request,options)=>{calls.push([request.url,options?.cache]);throw Error('offline');},
+   caches:{match:async()=>cached},Response:{error:()=>({error:true})}
+ });
+ for(const name of ['national-trust-2026','pvp','future-catalog']){
+   let response;
+   handlers.fetch({request:{method:'GET',url:new URL('data/'+name+'.json',location).href},respondWith:p=>{response=p;}});
+   assert.ok(response);
+   assert.equal(calls.at(-1)[1],'no-store');
+   assert.equal(await response,cached);
+ }
  assert.match(sw,/pushsubscriptionchange/);
 });
