@@ -1,0 +1,36 @@
+{
+  "schema": "spidey-editorial-audit-v1",
+  "checked_at": "2026-11-25T20:30:00Z",
+  "initial_base_sha": "ae215af1d05241720c2d3cd5c3cbd064a73ce561",
+  "reconciled_base_shas": [
+    "6868c7b3baddf1d39a169a42c68f0ff6f9f601d4",
+    "2db555b0e3af97bbea00563cb57a21fa56cf47dd"
+  ],
+  "official_sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/news/tropical-paradise-2026",
+    "https://pokemongo.com/news/tropical-paradise-2026"
+  ],
+  "community_sources_cross_checked": [
+    "https://pokemongohub.net/post/event/pokemon-go-tropical-paradise-2026/",
+    "https://www.serebii.net/pokemongo/events/tropicalparadise.shtml"
+  ],
+  "decisions": {
+    "existing_event_id_preserved": "2026-12-01-tropical-paradise",
+    "canonical_news_id": "official-news-tropical-paradise-2026",
+    "additional_wild_window": "2026-12-04-tropical-paradise-additional-wild",
+    "claim_window": "2026-12-07-tropical-paradise-claim-window",
+    "g47ix_tropical_paradise": "linked_to_official_story",
+    "official_collector_tropical_paradise": "linked_to_official_story",
+    "pokeminers_tropical_paradise": "linked_to_official_story",
+    "g47ix_noibat": "linked_to_existing_calendar_event",
+    "individual_tasks_or_rewards_invented": false
+  },
+  "preservation": {
+    "approved_art_changed": false,
+    "cosmic_s_changed": false,
+    "pokedex_pvp_rankings_gpx_changed": false,
+    "push_triggered": false,
+    "friends_chat_changed": false,
+    "hunter_reintroduced": false
+  }
+}

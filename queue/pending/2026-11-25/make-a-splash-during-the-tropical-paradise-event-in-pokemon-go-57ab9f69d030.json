@@ -8,8 +8,8 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1575210561795268659",
-  "status": "aguardando_curadoria_premium",
-  "etapa_editorial": "aguardando_curadoria_premium",
+  "status": "duplicado",
+  "etapa_editorial": "vinculado_ao_registro_canonico",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
   "arte_obrigatoria": true,
@@ -17,5 +17,10 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-11-25T20:42:57.855347+00:00"
+  "created_at_utc": "2026-11-25T20:42:57.855347+00:00",
+  "duplicate_of": "official-https://pokemongo.com/pt-BR/news/tropical-paradise-2026",
+  "related_event_id": "2026-12-01-tropical-paradise",
+  "related_news_id": "official-news-tropical-paradise-2026",
+  "editorial_reviewed_at": "2026-11-25T20:48:00Z",
+  "editorial_detail_pending": false
 }
