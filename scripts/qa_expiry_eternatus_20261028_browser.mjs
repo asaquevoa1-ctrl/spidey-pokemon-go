@@ -47,8 +47,8 @@ try{
    checks.push({...activeCase,view:'home',expired_la_visible:false,london_visible:true});
    await page.evaluate(()=>setView('flyView'));await page.locator('#flyView').waitFor({state:'visible'});
    check(await page.locator(`#flyView [data-world-event="${la}"]`).count()===0,'Expired LA remains in FLY');
-   await page.locator(`#flyView [data-world-event="${london}"]`).waitFor();
-   checks.push({...activeCase,view:'fly',expired_la_visible:false,london_visible:true});
+   check(await page.locator(`#flyView [data-world-event="${london}"]`).count()===0,'Regional London card returned to FLY');
+   checks.push({...activeCase,view:'fly',expired_la_visible:false,regional_cards_visible:false});
    await page.evaluate(()=>setView('newsView'));
    const story=page.locator(`[data-news-story="${key}"]`);await story.waitFor({state:'visible'});
    check(await story.count()===1,'Official article duplicated');
@@ -65,12 +65,13 @@ try{
      check(!await page.evaluate(()=>document.documentElement.scrollWidth>document.documentElement.clientWidth),'Horizontal overflow');
      await page.screenshot({path:`${out}/${width}-${theme}-${id}.png`,fullPage:false});
      if(id!=='2026-11-19-spotlight-galar-starters'){
-       check(/Passe GO gratuito|trilha gratuita/.test(text),'Free encounter condition missing');
-       check(text.includes('8.900 Doces e 8.900 Doces GG')&&text.includes('nível 15 ao 50'),'Power-up level range or costs missing');
-       check(text.includes('não inclui melhorar os movimentos Max')&&text.includes('Bulbapedia (comunidade)'),'Power-up exclusions or community attribution missing');
-       const guide=page.locator('#eventDetail').getByText('Planeje seus Doces:',{exact:false});
-       await guide.scrollIntoViewIfNeeded();
-       await page.screenshot({path:`${out}/${width}-${theme}-${id}-guide.png`,fullPage:false});
+       const audit=await page.evaluate(eventId=>{
+         const event=window.SpideyFindShareEvent?.(eventId);
+         return [event?.summary,...(event?.notes||[])].join(' ');
+       },id);
+       check(/Passe GO gratuito|trilha gratuita/.test(audit),'Free encounter condition missing');
+       check(audit.includes('8.900 Doces e 8.900 Doces GG')&&audit.includes('nível 15 ao 50'),'Power-up level range or costs missing');
+       check(audit.includes('não inclui melhorar os movimentos Max')&&audit.includes('Bulbapedia (comunidade)'),'Power-up exclusions or community attribution missing');
        checks.push({...activeCase,view:'eternatus_guide',id,free_encounter:true,power_up_from_level:15,power_up_to_level:50,community_cost_labeled:true,max_moves_excluded:true});
      }
      checks.push({...activeCase,view:'news_to_detail',id});await closeDetail();

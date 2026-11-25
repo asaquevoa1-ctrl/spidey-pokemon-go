@@ -5,8 +5,8 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2125334425185759595",
-  "status": "aguardando_arte_chatgpt",
-  "etapa_editorial": "aguardando_arte_premium_original",
+  "status": "duplicado",
+  "etapa_editorial": "vinculado_ao_registro_canonico",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
   "media_policy": "premium_editorial",
@@ -15,5 +15,8 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-11-25T01:25:04.155495+00:00"
+  "created_at_utc": "2026-11-25T01:25:04.155495+00:00",
+  "related_event_id": "2026-12-go-pass-kyurem",
+  "editorial_reviewed_at": "2026-11-25T12:00:00Z",
+  "editorial_detail_pending": false
 }

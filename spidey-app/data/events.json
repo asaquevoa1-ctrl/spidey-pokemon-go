@@ -848,9 +848,9 @@
         "Pokémon GO"
       ],
       "source": {
-        "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-        "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-        "confidence": "verified_community"
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "confidence": "official"
       },
       "schedule": {
         "precision": "date",
@@ -888,19 +888,18 @@
       ],
       "bonuses": [],
       "notes": [
-        "Todas as quatro formas estão listadas na programação comunitária de novembro.",
-        "Sem promessa de Fundo Especial não anunciado."
+        "O infográfico oficial confirma as quatro formas de Deoxys até 01/12 e indica possibilidade de Brilhante; não é garantia."
       ],
       "notifications": {
         "enabled": false,
         "reason": "Programação mensal informativa, não enviar alertas sem entrega e horários validados."
       },
       "status": "published",
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-25",
       "verification_sources": [
         {
-          "name": "Pokémon GO Hub • calendário comunitário",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "name": "Leek Duck • calendário comunitário",
+          "url": "https://leekduck.com/events",
           "confidence": "verified_community"
         }
       ]
@@ -14693,14 +14692,14 @@
         "Próxima Temporada"
       ],
       "source": {
-        "name": "Pokémon GO • comunicado oficial",
-        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
         "confidence": "official"
       },
       "verification_sources": [
         {
           "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "url": "https://pokemongo.com/news/monthly-content-update-dec2026",
           "confidence": "official"
         }
       ],
@@ -14733,43 +14732,32 @@
         "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-11-11",
-      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-auto-51ffde89c630",
       "audit": {
-        "classification": "official_save_the_date",
+        "classification": "official_calendar_date_confirmed",
         "calendar_event": true,
-        "date_confirmed_details_unannounced": true
+        "date_confirmed_details_unannounced": true,
+        "editorial_detail_pending": false,
+        "full_article_reviewed": true
       }
     },
     {
       "id": "2026-12-12-community-day-save-date",
       "slug": "2026-12-12-community-day-save-date",
-      "title": "Dias Comunitários de dezembro",
-      "summary": "Data oficial confirmada para Dias Comunitários de dezembro. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "title": "Dia Comunitário de dezembro — sábado",
+      "summary": "12/12, das 14h às 17h locais: Vulpix, Vulpix de Alola, Grookey, Scorbunny, Lechonk e Tinkatink, com possibilidade de Piplup, Brilhantes e Fundos Especiais.",
       "category": "community_day",
       "tags": [
+        "Dia Comunitário",
+        "Dezembro 2026",
         "Global",
-        "Data confirmada",
-        "Próxima Temporada"
+        "Anúncio oficial"
       ],
       "source": {
-        "name": "Pokémon GO • comunicado oficial",
-        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/community-day-december-2026",
         "confidence": "official"
-      },
-      "verification_sources": [
-        {
-          "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/en/news/save-the-date-s25",
-          "confidence": "official"
-        }
-      ],
-      "schedule": {
-        "precision": "date",
-        "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-12-12",
-        "end_date": "2026-12-13",
-        "brazil_timezone": "America/Sao_Paulo"
       },
       "calendar": {
         "mode": "span"
@@ -14782,24 +14770,71 @@
       "locations": [],
       "gpx": {
         "enabled": false,
-        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
       },
-      "notes": [
-        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
-        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
-      ],
       "notifications": {
         "enabled": false,
-        "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
       },
       "status": "published",
-      "verified_at": "2026-11-11",
-      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "verified_at": "2026-11-25",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/community-day-december-2026",
+          "confidence": "official"
+        }
+      ],
+      "related_news_id": "official-news-auto-3ecb87a52d86",
       "audit": {
-        "classification": "official_save_the_date",
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "calendar_event": true,
-        "date_confirmed_details_unannounced": true
-      }
+        "full_article_reviewed": true,
+        "confirmed_from_save_date": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-12T14:00:00-03:00",
+        "end_local": "2026-12-12T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-12T14:00:00-03:00",
+        "end_brazil": "2026-12-12T17:00:00-03:00"
+      },
+      "pokemon": [
+        {
+          "name": "Vulpix"
+        },
+        {
+          "name": "Vulpix de Alola"
+        },
+        {
+          "name": "Grookey"
+        },
+        {
+          "name": "Scorbunny"
+        },
+        {
+          "name": "Lechonk"
+        },
+        {
+          "name": "Tinkatink"
+        },
+        {
+          "name": "Piplup"
+        }
+      ],
+      "bonuses": [
+        "2× PE, 2× Poeira Estelar e 2× Doces por captura.",
+        "Metade da distância para chocar Ovos colocados em Incubadoras durante a janela principal.",
+        "2× chance de Doces GG por captura para nível 31 ou superior.",
+        "Incenso por três horas durante a janela principal."
+      ],
+      "notes": [
+        "Os Pokémon da janela principal têm a mesma chance de Brilhante de seus Dias Comunitários originais de 2026 e podem aparecer com Fundo Especial.",
+        "A Pesquisa Especial custa US$ 4,99 ou preço regional equivalente; inclui encontros com Fundos Especiais, uma MT Elite de Ataque Carregado, uma MT Elite de Ataque Ágil e um Radar Rocket.",
+        "Pesquisas de Campo concedem encontros com Pokémon de Dias Comunitários e Clássicos de 2026; tarefas individuais não foram publicadas."
+      ]
     },
     {
       "id": "2026-12-19-raid-day-save-date",
@@ -14813,14 +14848,14 @@
         "Próxima Temporada"
       ],
       "source": {
-        "name": "Pokémon GO • comunicado oficial",
-        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
         "confidence": "official"
       },
       "verification_sources": [
         {
           "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "url": "https://pokemongo.com/news/monthly-content-update-dec2026",
           "confidence": "official"
         }
       ],
@@ -14853,12 +14888,14 @@
         "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-11-11",
-      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-auto-51ffde89c630",
       "audit": {
-        "classification": "official_save_the_date",
+        "classification": "official_calendar_date_confirmed",
         "calendar_event": true,
-        "date_confirmed_details_unannounced": true
+        "date_confirmed_details_unannounced": true,
+        "editorial_detail_pending": false,
+        "full_article_reviewed": true
       }
     },
     {
@@ -14873,14 +14910,14 @@
         "Próxima Temporada"
       ],
       "source": {
-        "name": "Pokémon GO • comunicado oficial",
-        "url": "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
         "confidence": "official"
       },
       "verification_sources": [
         {
           "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/en/news/save-the-date-s25",
+          "url": "https://pokemongo.com/news/monthly-content-update-dec2026",
           "confidence": "official"
         }
       ],
@@ -14913,12 +14950,14 @@
         "reason": "Registro editorial; nenhum push foi autorizado nesta atualização."
       },
       "status": "published",
-      "verified_at": "2026-11-11",
-      "related_news_id": "official-news-auto-8a38cf8f2093",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-auto-51ffde89c630",
       "audit": {
-        "classification": "official_save_the_date",
+        "classification": "official_calendar_date_confirmed",
         "calendar_event": true,
-        "date_confirmed_details_unannounced": true
+        "date_confirmed_details_unannounced": true,
+        "editorial_detail_pending": false,
+        "full_article_reviewed": true
       }
     },
     {
@@ -15674,7 +15713,7 @@
       "slug": "official-news-auto-3ecb87a52d86",
       "content_type": "news",
       "title": "Celebre o ano com todos os Pokémon dos Dias Comunitários de 2026!",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "Dias 12 e 13/12 têm elencos diferentes das 14h às 17h, com aparições e bônus estendidos das 9h de sábado às 21h de domingo. Evoluções recuperam os ataques de destaque de 2026.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -15695,35 +15734,41 @@
       },
       "news": {
         "title": "Celebre o ano com todos os Pokémon dos Dias Comunitários de 2026!",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "Dias 12 e 13/12 têm elencos diferentes das 14h às 17h, com aparições e bônus estendidos das 9h de sábado às 21h de domingo. Evoluções recuperam os ataques de destaque de 2026.",
         "published_on": "2026-11-20",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • DETALHES CONFERIDOS"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "Sábado: Vulpix, Vulpix de Alola, Grookey, Scorbunny, Lechonk e Tinkatink; Piplup também pode aparecer.",
+        "Domingo: Zorua, Pawniard, Sobble, Nickit e Frigibax; Gible e Deino também podem aparecer.",
+        "Brilhante e Fundo Especial são possibilidades, nunca garantias; a Pesquisa Especial paga não inclui medalha no jogo."
       ],
       "notifications": {
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
       "status": "published",
-      "verified_at": "2026-11-20",
-      "updated_at": "2026-11-20T00:00:00+00:00",
+      "verified_at": "2026-11-25",
+      "updated_at": "2026-11-25T12:00:00Z",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "full_article_reviewed": true
+      },
+      "related_event_ids": [
+        "2026-12-12-community-day-save-date",
+        "2026-12-13-community-day-sunday",
+        "2026-12-12-community-day-extended-bonuses"
+      ]
     },
     {
       "id": "official-news-auto-e64ac0063928",
       "slug": "official-news-auto-e64ac0063928",
       "content_type": "news",
       "title": "Atualização da Liga de Batalha GO: Destinos dos Sonhos",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "A temporada da Liga de Batalha começa em 01/12 às 18h de Brasília, com 13 rotações semanais até 02/03. Quintas de Batalhas GO permitem até 50 batalhas e até 4× Poeira por vitória, exceto na semana do GO Tour Global.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -15744,35 +15789,51 @@
       },
       "news": {
         "title": "Atualização da Liga de Batalha GO: Destinos dos Sonhos",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "A temporada da Liga de Batalha começa em 01/12 às 18h de Brasília, com 13 rotações semanais até 02/03. Quintas de Batalhas GO permitem até 50 batalhas e até 4× Poeira por vitória, exceto na semana do GO Tour Global.",
         "published_on": "2026-11-24",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • DETALHES CONFERIDOS"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "Ranque é redefinido no início; o passe gratuito de Pesquisa Temporária acompanha vitórias e oferece Poeira Estelar, Doce Raro GG e MTs Elite ao longo da temporada.",
+        "Encontros garantidos incluem Altaria, Golem de Alola, Drampa, Duraludon e Pikachu Libre; outros encontros e Brilhantes dependem de ranque e sorte.",
+        "Itens de avatar inspirados em Winona aparecem nos ranques 10, 15, 20 e Lenda. Regras completas das Copas permanecem no anúncio oficial."
       ],
       "notifications": {
         "enabled": false,
         "reason": "A notícia não tem horário de evento validado."
       },
       "status": "published",
-      "verified_at": "2026-11-24",
-      "updated_at": "2026-11-24T00:00:00+00:00",
+      "verified_at": "2026-11-25",
+      "updated_at": "2026-11-25T12:00:00Z",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "full_article_reviewed": true
+      },
+      "related_event_ids": [
+        "2026-12-01-gbl-mega-leagues",
+        "2026-12-08-gbl-great-mountain",
+        "2026-12-15-gbl-ultra-holiday",
+        "2026-12-22-gbl-master-holiday",
+        "2026-12-29-gbl-mega-leagues",
+        "2027-01-05-gbl-great-fighting",
+        "2027-01-12-gbl-ultra-willpower",
+        "2027-01-19-gbl-master",
+        "2027-01-26-gbl-mega-leagues",
+        "2027-02-02-gbl-great-master",
+        "2027-02-09-gbl-ultra-love-euic",
+        "2027-02-16-gbl-master-catch-euic",
+        "2027-02-23-gbl-season-finale"
+      ]
     },
     {
       "id": "official-news-auto-265735736d49",
       "slug": "official-news-auto-265735736d49",
       "content_type": "news",
       "title": "Explore livremente com a Pesquisa Temporária de Escolha Seu Caminho durante o evento Destinos dos Sonhos.",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "Quatro semanas de Pesquisa Temporária permitem escolher Explorar, Capturar ou Batalhar. Cada janela mantém seu próprio prazo local e pode ter experiências diferentes entre treinadores.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -15793,14 +15854,14 @@
       },
       "news": {
         "title": "Explore livremente com a Pesquisa Temporária de Escolha Seu Caminho durante o evento Destinos dos Sonhos.",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "Quatro semanas de Pesquisa Temporária permitem escolher Explorar, Capturar ou Batalhar. Cada janela mantém seu próprio prazo local e pode ter experiências diferentes entre treinadores.",
         "published_on": "2026-11-25",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • DETALHES CONFERIDOS"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "15–21/12, 12–18/01, 26/01–01/02 e 16–21/02, sempre das 10h do primeiro dia às 20h do último dia, horário local.",
+        "O fuso do encerramento é o fuso em que a pesquisa foi recebida; tarefas e recompensas precisam ser concluídas e resgatadas antes do prazo.",
+        "A publicação não lista tarefas, quantidades ou recompensas individuais."
       ],
       "notifications": {
         "enabled": false,
@@ -15808,20 +15869,27 @@
       },
       "status": "published",
       "verified_at": "2026-11-25",
-      "updated_at": "2026-11-25T00:00:00+00:00",
+      "updated_at": "2026-11-25T12:00:00Z",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "full_article_reviewed": true
+      },
+      "related_event_ids": [
+        "2026-12-15-choose-your-path",
+        "2027-01-12-choose-your-path",
+        "2027-01-26-choose-your-path",
+        "2027-02-16-choose-your-path"
+      ]
     },
     {
       "id": "official-news-auto-b07016703fe4",
       "slug": "official-news-auto-b07016703fe4",
       "content_type": "news",
       "title": "Um fabul-ovo conjunto de recompensas espera por vocês no Passe GO: dezembro.",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "Passe GO de dezembro vai de 01/12 a 05/01, com Kyurem possível Brilhante na trilha gratuita. O Deluxe inclui Incubadora Temporária; recompensas expiram em 07/01 e a incubadora em 12/01.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -15842,14 +15910,14 @@
       },
       "news": {
         "title": "Um fabul-ovo conjunto de recompensas espera por vocês no Passe GO: dezembro.",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "Passe GO de dezembro vai de 01/12 a 05/01, com Kyurem possível Brilhante na trilha gratuita. O Deluxe inclui Incubadora Temporária; recompensas expiram em 07/01 e a incubadora em 12/01.",
         "published_on": "2026-11-24",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • DETALHES CONFERIDOS"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "O Passe gratuito é recebido automaticamente; o Deluxe custa US$ 7,99 e a versão +10 Ranques US$ 9,99, ou preço regional equivalente.",
+        "Ranque 1 melhora amizade e dano em reides; ranque 25 amplia Presentes; ranque 50 dobra o Incenso de Aventura Diário; ranque 75 melhora PE/Poeira ao chocar.",
+        "02–03/01 não há limite diário de Pontos GO. Kyurem Brilhante é possibilidade, não garantia."
       ],
       "notifications": {
         "enabled": false,
@@ -15857,20 +15925,26 @@
       },
       "status": "published",
       "verified_at": "2026-11-25",
-      "updated_at": "2026-11-25T00:00:00+00:00",
+      "updated_at": "2026-11-25T12:00:00Z",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
-      }
+        "not_a_calendar_event": true,
+        "full_article_reviewed": true
+      },
+      "related_event_ids": [
+        "2026-12-go-pass-kyurem",
+        "2027-01-05-go-pass-december-claim-window",
+        "2027-01-12-timed-incubator-expiry"
+      ]
     },
     {
       "id": "official-news-auto-51ffde89c630",
       "slug": "official-news-auto-51ffde89c630",
       "content_type": "news",
       "title": "Atualização de conteúdo de dezembro de 2026",
-      "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+      "summary": "O calendário oficial de dezembro confirma Paraíso Tropical, Dias Comunitários, Chuva de Minior, Férias de Inverno e Ano-Novo, além de rotações de reides, Megarreides, Segundas Max e Horas do Holofote.",
       "category": "official_update",
       "tags": [
         "Novidade",
@@ -15891,14 +15965,14 @@
       },
       "news": {
         "title": "Atualização de conteúdo de dezembro de 2026",
-        "summary": "Novo comunicado oficial do Pokémon GO. Confira os detalhes na fonte; horários, recompensas e participação só entram no Calendário depois de verificação.",
+        "summary": "O calendário oficial de dezembro confirma Paraíso Tropical, Dias Comunitários, Chuva de Minior, Férias de Inverno e Ano-Novo, além de rotações de reides, Megarreides, Segundas Max e Horas do Holofote.",
         "published_on": "2026-11-24",
-        "label": "OFICIAL • NOVO"
+        "label": "OFICIAL • DETALHES CONFERIDOS"
       },
       "notes": [
-        "Esta notícia foi identificada automaticamente na página de notícias do Pokémon GO.",
-        "A fonte é oficial, mas o Spidey ainda não verificou individualmente o cronograma, os Pokémon, as recompensas ou os bônus desta publicação.",
-        "Não confundir uma notícia detectada com evento confirmado no calendário; utilize o link do comunicado para consultar o texto completo."
+        "A publicação usa infográficos oficiais para as datas. Registros sem horário textual permanecem date-only até uma fonte oficial detalhar a hora.",
+        "Atualização de qualidade: Ginásios ficam visualmente mais baixos quando não hospedam Reides, com novos ícones e cronômetros.",
+        "Fonte comunitária usada apenas para cruzamento: Pokémon GO Hub e Leek Duck; anúncios ainda não revelados continuam sem espécie ou bônus inventados."
       ],
       "notifications": {
         "enabled": false,
@@ -15906,13 +15980,1501 @@
       },
       "status": "published",
       "verified_at": "2026-11-25",
-      "updated_at": "2026-11-25T00:00:00+00:00",
+      "updated_at": "2026-11-25T12:00:00Z",
       "audit": {
-        "classification": "official_headline_only",
-        "editorial_detail_pending": true,
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
         "automatic_index_discovery": true,
-        "not_a_calendar_event": true
+        "not_a_calendar_event": true,
+        "full_article_reviewed": true
+      },
+      "related_event_ids": [
+        "2026-12-01-tropical-paradise",
+        "2026-12-08-unannounced-event",
+        "2026-12-22-winter-holiday",
+        "2026-12-29-new-year-2027"
+      ]
+    },
+    {
+      "id": "2026-12-13-community-day-sunday",
+      "slug": "2026-12-13-community-day-sunday",
+      "title": "Dia Comunitário de dezembro — domingo",
+      "summary": "13/12, das 14h às 17h locais: Zorua, Pawniard, Sobble, Nickit e Frigibax, com possibilidade de Gible e Deino, Brilhantes e Fundos Especiais.",
+      "category": "community_day",
+      "tags": [
+        "Dia Comunitário",
+        "Dezembro 2026",
+        "Global",
+        "Anúncio oficial"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/community-day-december-2026",
+        "confidence": "official"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/community-day-december-2026",
+          "confidence": "official"
+        }
+      ],
+      "related_news_id": "official-news-auto-3ecb87a52d86",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
+        "calendar_event": true,
+        "full_article_reviewed": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-13T14:00:00-03:00",
+        "end_local": "2026-12-13T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-13T14:00:00-03:00",
+        "end_brazil": "2026-12-13T17:00:00-03:00"
+      },
+      "pokemon": [
+        {
+          "name": "Zorua"
+        },
+        {
+          "name": "Pawniard"
+        },
+        {
+          "name": "Sobble"
+        },
+        {
+          "name": "Nickit"
+        },
+        {
+          "name": "Frigibax"
+        },
+        {
+          "name": "Gible"
+        },
+        {
+          "name": "Deino"
+        }
+      ],
+      "bonuses": [
+        "2× PE, 2× Poeira Estelar e 2× Doces por captura.",
+        "Metade da distância para chocar Ovos colocados em Incubadoras durante a janela principal.",
+        "2× chance de Doces GG por captura para nível 31 ou superior.",
+        "Incenso por três horas durante a janela principal."
+      ],
+      "notes": [
+        "Os Pokémon da janela principal têm a mesma chance de Brilhante de seus Dias Comunitários originais de 2026 e podem aparecer com Fundo Especial.",
+        "A Pesquisa Especial e as Pesquisas de Campo são as mesmas do fim de semana; tarefas individuais da Pesquisa de Campo não foram publicadas."
+      ]
+    },
+    {
+      "id": "2026-12-12-community-day-extended-bonuses",
+      "slug": "2026-12-12-community-day-extended-bonuses",
+      "title": "Dia Comunitário de dezembro — janela estendida",
+      "summary": "De 12/12 às 9h a 13/12 às 21h locais: aparições do elenco fora das janelas principais, ataques de evolução e bônus estendidos de Módulos Atrair e trocas.",
+      "category": "community_day_bonus",
+      "tags": [
+        "Dia Comunitário",
+        "Dezembro 2026",
+        "Global",
+        "Anúncio oficial"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/community-day-december-2026",
+        "confidence": "official"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/en/news/community-day-december-2026",
+          "confidence": "official"
+        }
+      ],
+      "related_news_id": "official-news-auto-3ecb87a52d86",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
+        "calendar_event": true,
+        "full_article_reviewed": true
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-12T09:00:00-03:00",
+        "end_local": "2026-12-13T21:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-12T09:00:00-03:00",
+        "end_brazil": "2026-12-13T21:00:00-03:00"
+      },
+      "bonuses": [
+        "Módulos Atrair comuns duram uma hora.",
+        "Até duas Trocas Especiais por dia.",
+        "Trocas custam 50% menos Poeira Estelar.",
+        "Ataques de destaque de 2026 ficam disponíveis ao evoluir as espécies anunciadas."
+      ],
+      "notes": [
+        "Fora das janelas de 14h–17h, qualquer Pokémon em destaque pode aparecer das 9h às 21h em cada dia.",
+        "O requisito temporário de evolução de Bisharp para Kingambit volta ao normal em 13/12 às 21h locais.",
+        "Esta janela não substitui as duas janelas principais de Brilhante aumentado."
+      ]
+    },
+    {
+      "id": "2026-12-15-choose-your-path",
+      "slug": "2026-12-15-choose-your-path",
+      "title": "Escolha Seu Caminho — dezembro",
+      "summary": "Pesquisa Temporária com escolha entre Explorar, Capturar ou Batalhar; a escolha define tarefas e bônus da semana.",
+      "category": "timed_research",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/choose-your-path-daydream-destinations-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-15T10:00:00-03:00",
+        "end_local": "2026-12-21T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-15T10:00:00-03:00",
+        "end_brazil": "2026-12-21T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "O prazo usa o fuso em que a pesquisa foi originalmente recebida.",
+        "Conclua tarefas e resgate recompensas antes do fim da janela.",
+        "As oportunidades podem variar entre treinadores; tarefas e recompensas individuais não foram divulgadas."
+      ],
+      "related_news_id": "official-news-auto-265735736d49"
+    },
+    {
+      "id": "2027-01-12-choose-your-path",
+      "slug": "2027-01-12-choose-your-path",
+      "title": "Escolha Seu Caminho — janeiro I",
+      "summary": "Pesquisa Temporária com escolha entre Explorar, Capturar ou Batalhar; a escolha define tarefas e bônus da semana.",
+      "category": "timed_research",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/choose-your-path-daydream-destinations-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-12T10:00:00-03:00",
+        "end_local": "2027-01-18T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-12T10:00:00-03:00",
+        "end_brazil": "2027-01-18T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "O prazo usa o fuso em que a pesquisa foi originalmente recebida.",
+        "Conclua tarefas e resgate recompensas antes do fim da janela.",
+        "As oportunidades podem variar entre treinadores; tarefas e recompensas individuais não foram divulgadas."
+      ],
+      "related_news_id": "official-news-auto-265735736d49"
+    },
+    {
+      "id": "2027-01-26-choose-your-path",
+      "slug": "2027-01-26-choose-your-path",
+      "title": "Escolha Seu Caminho — janeiro II",
+      "summary": "Pesquisa Temporária com escolha entre Explorar, Capturar ou Batalhar; a escolha define tarefas e bônus da semana.",
+      "category": "timed_research",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/choose-your-path-daydream-destinations-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-26T10:00:00-03:00",
+        "end_local": "2027-02-01T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-26T10:00:00-03:00",
+        "end_brazil": "2027-02-01T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "O prazo usa o fuso em que a pesquisa foi originalmente recebida.",
+        "Conclua tarefas e resgate recompensas antes do fim da janela.",
+        "As oportunidades podem variar entre treinadores; tarefas e recompensas individuais não foram divulgadas."
+      ],
+      "related_news_id": "official-news-auto-265735736d49"
+    },
+    {
+      "id": "2027-02-16-choose-your-path",
+      "slug": "2027-02-16-choose-your-path",
+      "title": "Escolha Seu Caminho — fevereiro",
+      "summary": "Pesquisa Temporária com escolha entre Explorar, Capturar ou Batalhar; a escolha define tarefas e bônus da semana.",
+      "category": "timed_research",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/choose-your-path-daydream-destinations-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-02-16T10:00:00-03:00",
+        "end_local": "2027-02-21T20:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-02-16T10:00:00-03:00",
+        "end_brazil": "2027-02-21T20:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "O prazo usa o fuso em que a pesquisa foi originalmente recebida.",
+        "Conclua tarefas e resgate recompensas antes do fim da janela.",
+        "As oportunidades podem variar entre treinadores; tarefas e recompensas individuais não foram divulgadas."
+      ],
+      "related_news_id": "official-news-auto-265735736d49"
+    },
+    {
+      "id": "2026-12-go-pass-kyurem",
+      "slug": "2026-12-go-pass-kyurem",
+      "title": "Passe GO: dezembro — Kyurem e Incubadora Temporária",
+      "summary": "De 01/12 às 10h a 05/01 às 10h locais: Passe gratuito com encontro de Kyurem e Passe Deluxe pago com Incubadora Temporária e recompensas extras.",
+      "category": "go_pass",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-december-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-01T10:00:00-03:00",
+        "end_local": "2027-01-05T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-01T10:00:00-03:00",
+        "end_brazil": "2027-01-05T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "pokemon": [
+        {
+          "name": "Kyurem",
+          "note": "Encontro na trilha; pode ser Brilhante, sem garantia."
+        }
+      ],
+      "bonuses": [
+        "Ranque 1: mais PE ao subir nível de amizade e 2× dano bônus de amizade em reides.",
+        "Ranque 25: abrir até 40 Presentes, receber até 125 por dia e guardar 10 adicionais; Deluxe amplia para 50, 150 e 20.",
+        "Ranque 50: 2× duração do Incenso de Aventura Diário.",
+        "Ranque 75: mais PE e Poeira Estelar ao chocar Ovos.",
+        "02–03/01: sem limite diário de Pontos GO."
+      ],
+      "notes": [
+        "Deluxe: US$ 7,99; Deluxe + 10 Ranques: US$ 9,99, ou preço regional equivalente. Disponibilidade pode variar por região.",
+        "A Incubadora Temporária aparece no Ranque 20 do Deluxe e expira em 12/01 às 10h locais.",
+        "A loja web oferece brindes de compra diferentes conforme o pacote; nenhum deles é recompensa gratuita do Passe."
+      ],
+      "related_news_id": "official-news-auto-b07016703fe4"
+    },
+    {
+      "id": "2027-01-05-go-pass-december-claim-window",
+      "slug": "2027-01-05-go-pass-december-claim-window",
+      "title": "Passe GO: dezembro — resgate final",
+      "summary": "Depois do fim do Passe, as recompensas desbloqueadas podem ser resgatadas até 07/01 às 10h locais.",
+      "category": "go_pass_deadline",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-december-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-05T10:00:00-03:00",
+        "end_local": "2027-01-07T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-05T10:00:00-03:00",
+        "end_brazil": "2027-01-07T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Somente recompensas já desbloqueadas; não é uma extensão para ganhar Pontos GO."
+      ]
+    },
+    {
+      "id": "2027-01-12-timed-incubator-expiry",
+      "slug": "2027-01-12-timed-incubator-expiry",
+      "title": "Incubadora Temporária — prazo final",
+      "summary": "A Incubadora Temporária do Passe GO Deluxe de dezembro expira em 12/01/2027 às 10h locais, independentemente da data de resgate.",
+      "category": "go_pass_deadline",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-pass-december-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-05T10:00:00-03:00",
+        "end_local": "2027-01-12T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-05T10:00:00-03:00",
+        "end_brazil": "2027-01-12T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Se houver um Ovo ainda incubando no prazo, ele passa para uma Incubadora de uso único que desaparece após a eclosão."
+      ]
+    },
+    {
+      "id": "2026-12-daydream-destinations-season",
+      "slug": "2026-12-daydream-destinations-season",
+      "title": "Temporada Destinos dos Sonhos",
+      "summary": "De 01/12/2026 às 10h a 01/03/2027 às 10h locais: temporada com GO Tour Alola, Mega Froslass, Mega Drampa e novas rotações Dinamax/Gigamax.",
+      "category": "season",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • página oficial da temporada",
+        "url": "https://pokemongo.com/seasons/daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-01T10:00:00-03:00",
+        "end_local": "2027-03-01T10:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-01T10:00:00-03:00",
+        "end_brazil": "2027-03-01T10:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "pokemon": [
+        {
+          "name": "Mega Froslass",
+          "note": "Anunciada para Dia de Reides; data específica não informada."
+        },
+        {
+          "name": "Mega Drampa",
+          "note": "Anunciado para Dia de Reides; data específica não informada."
+        },
+        {
+          "name": "Sandshrew de Alola Dinamax"
+        },
+        {
+          "name": "Slowpoke Dinamax"
+        },
+        {
+          "name": "Corphish Dinamax"
+        },
+        {
+          "name": "Inteleon Gigamax",
+          "note": "Dia de Batalhas Max; data específica não informada."
+        },
+        {
+          "name": "Toxtricity Gigamax",
+          "note": "Formas Aguda e Grave em Dia de Batalhas Max; data específica não informada."
+        }
+      ],
+      "notes": [
+        "GO Tour Alola: presenciais em Los Angeles e Kaohsiung, 19–21/02; Global em 27–28/02.",
+        "A página confirma estreias e destaques, mas não publica datas específicas para Mega Froslass, Mega Drampa, Inteleon Gigamax ou Toxtricity Gigamax.",
+        "Não foram inferidas datas, horários, Brilhantes ou recompensas para anúncios sem janela própria."
+      ],
+      "verification_sources": [
+        {
+          "name": "Pokémon GO Hub • guia da temporada",
+          "url": "https://pokemongohub.net/post/guide/daydream-destinations-season/",
+          "confidence": "verified_community"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-paid-gifts-regional-rollout",
+      "slug": "2026-11-paid-gifts-regional-rollout",
+      "content_type": "news",
+      "title": "Presentes pagos começam em cinco regiões",
+      "summary": "Austrália, Alemanha, Coreia do Sul, México e França recebem primeiro a compra de itens como presente para Grandes Amigos ou nível superior que usem a mesma moeda. O Brasil ainda não foi anunciado.",
+      "category": "official_update",
+      "tags": [
+        "Novidade",
+        "Pokémon GO oficial",
+        "Presentes pagos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/news/paid-gifts-2026",
+        "confidence": "official"
+      },
+      "calendar": {
+        "mode": "hidden"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "none"
+      },
+      "news": {
+        "title": "Presentes pagos: lançamento inicial em cinco regiões",
+        "summary": "Até 20 presentes pagos por dia, somente pela loja do jogo, para Grandes Amigos ou nível superior e contas com a mesma moeda. Brasil e data global ainda não foram anunciados.",
+        "published_on": "2026-11-24",
+        "label": "OFICIAL • ESTREIA REGIONAL, SEM DATA GLOBAL"
+      },
+      "notes": [
+        "Disponível inicialmente em Austrália, Alemanha, Coreia do Sul, México e França; expansão global futura sem data oficial.",
+        "Não inclui caixas/pacotes por tempo limitado, adesivos, PokéMoedas, Medalhão de Equipe, itens de avatar ou poses.",
+        "A compra dá Pontos de Recompensa a quem envia, não ao destinatário; o limite é 20 presentes pagos por dia.",
+        "Não pode ser enviado pela Loja Web. Depois do envio, não pode ser cancelado ou retomado; preferências de recebimento podem ser pausadas ou desativadas."
+      ],
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
+        "not_a_calendar_event": true,
+        "full_article_reviewed": true
       }
+    },
+    {
+      "id": "2026-12-01-gbl-mega-leagues",
+      "slug": "2026-12-01-gbl-mega-leagues",
+      "title": "Liga de Batalha GO: Grande, Ultra e Mestra: Megaedição",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-01T18:00:00-03:00",
+        "end_local": "2026-12-08T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-01T18:00:00-03:00",
+        "end_brazil": "2026-12-08T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2026-12-08-gbl-great-mountain",
+      "slug": "2026-12-08-gbl-great-mountain",
+      "title": "Liga de Batalha GO: Grande: Megaedição + Copa Montanhosa",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-08T18:00:00-03:00",
+        "end_local": "2026-12-15T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-08T18:00:00-03:00",
+        "end_brazil": "2026-12-15T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2026-12-15-gbl-ultra-holiday",
+      "slug": "2026-12-15-gbl-ultra-holiday",
+      "title": "Liga de Batalha GO: Ultra: Megaedição + Copa Festiva",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-15T18:00:00-03:00",
+        "end_local": "2026-12-22T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-15T18:00:00-03:00",
+        "end_brazil": "2026-12-22T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2026-12-22-gbl-master-holiday",
+      "slug": "2026-12-22-gbl-master-holiday",
+      "title": "Liga de Batalha GO: Mestra: Megaedição + Copa Festiva",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-22T18:00:00-03:00",
+        "end_local": "2026-12-29T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-22T18:00:00-03:00",
+        "end_brazil": "2026-12-29T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2026-12-29-gbl-mega-leagues",
+      "slug": "2026-12-29-gbl-mega-leagues",
+      "title": "Liga de Batalha GO: Grande, Ultra e Mestra: Megaedição",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-29T18:00:00-03:00",
+        "end_local": "2027-01-05T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-29T18:00:00-03:00",
+        "end_brazil": "2027-01-05T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-01-05-gbl-great-fighting",
+      "slug": "2027-01-05-gbl-great-fighting",
+      "title": "Liga de Batalha GO: Grande: Megaedição + Copa dos Lutadores",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-05T18:00:00-03:00",
+        "end_local": "2027-01-12T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-05T18:00:00-03:00",
+        "end_brazil": "2027-01-12T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-01-12-gbl-ultra-willpower",
+      "slug": "2027-01-12-gbl-ultra-willpower",
+      "title": "Liga de Batalha GO: Ultra: Megaedição + Copa Selvagem",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-12T18:00:00-03:00",
+        "end_local": "2027-01-19T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-12T18:00:00-03:00",
+        "end_brazil": "2027-01-19T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-01-19-gbl-master",
+      "slug": "2027-01-19-gbl-master",
+      "title": "Liga de Batalha GO: Mestra: Megaedição + Liga Mestra",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-19T18:00:00-03:00",
+        "end_local": "2027-01-26T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-19T18:00:00-03:00",
+        "end_brazil": "2027-01-26T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-01-26-gbl-mega-leagues",
+      "slug": "2027-01-26-gbl-mega-leagues",
+      "title": "Liga de Batalha GO: Grande, Ultra e Mestra: Megaedição",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-01-26T18:00:00-03:00",
+        "end_local": "2027-02-02T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-01-26T18:00:00-03:00",
+        "end_brazil": "2027-02-02T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-02-02-gbl-great-master",
+      "slug": "2027-02-02-gbl-great-master",
+      "title": "Liga de Batalha GO: Grande: Megaedição + Liga Mestra",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-02-02T18:00:00-03:00",
+        "end_local": "2027-02-09T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-02-02T18:00:00-03:00",
+        "end_brazil": "2027-02-09T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-02-09-gbl-ultra-love-euic",
+      "slug": "2027-02-09-gbl-ultra-love-euic",
+      "title": "Liga de Batalha GO: Ultra: Megaedição + Copa do Amor + EUIC",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-02-09T18:00:00-03:00",
+        "end_local": "2027-02-16T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-02-09T18:00:00-03:00",
+        "end_brazil": "2027-02-16T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-02-16-gbl-master-catch-euic",
+      "slug": "2027-02-16-gbl-master-catch-euic",
+      "title": "Liga de Batalha GO: Mestra: Megaedição + Mega Copa da Captura + EUIC",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-02-16T18:00:00-03:00",
+        "end_local": "2027-02-23T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-02-16T18:00:00-03:00",
+        "end_brazil": "2027-02-23T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2027-02-23-gbl-season-finale",
+      "slug": "2027-02-23-gbl-season-finale",
+      "title": "Liga de Batalha GO: Grande, Ultra, Mestra e Mega Copa da Captura",
+      "summary": "Rotação oficial da Liga de Batalha GO: Destinos dos Sonhos.",
+      "category": "pvp",
+      "tags": [
+        "PvP",
+        "Liga de Batalha GO",
+        "Destinos dos Sonhos"
+      ],
+      "source": {
+        "name": "Pokémon GO • anúncio oficial",
+        "url": "https://pokemongo.com/pt-BR/news/go-battle-league-daydream-destinations",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2027-02-23T18:00:00-03:00",
+        "end_local": "2027-03-02T18:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2027-02-23T18:00:00-03:00",
+        "end_brazil": "2027-03-02T18:00:00-03:00"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Início e término às 13h PST, equivalentes a 18h de Brasília nas datas publicadas.",
+        "Megaedição permite Pokémon Megaevoluídos; consulte o anúncio para regras completas de cada Copa."
+      ],
+      "related_news_id": "official-news-auto-e64ac0063928"
+    },
+    {
+      "id": "2026-12-01-tropical-paradise",
+      "slug": "2026-12-01-tropical-paradise",
+      "title": "Paraíso Tropical",
+      "summary": "Data confirmada no calendário oficial de dezembro; detalhes e horário ainda não foram publicados em texto.",
+      "category": "event",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-01",
+        "end_date": "2026-12-07",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Registro date-only: permanece ativo até o fim do último dia no fuso IANA do evento.",
+        "Nenhum Pokémon, bônus, Brilhante, tarefa ou horário foi inferido do título."
+      ],
+      "related_news_id": "official-news-auto-51ffde89c630"
+    },
+    {
+      "id": "2026-12-08-unannounced-event",
+      "slug": "2026-12-08-unannounced-event",
+      "title": "Evento ainda não anunciado",
+      "summary": "Data confirmada no calendário oficial de dezembro; detalhes e horário ainda não foram publicados em texto.",
+      "category": "event",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-08",
+        "end_date": "2026-12-14",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Registro date-only: permanece ativo até o fim do último dia no fuso IANA do evento.",
+        "Nenhum Pokémon, bônus, Brilhante, tarefa ou horário foi inferido do título."
+      ],
+      "related_news_id": "official-news-auto-51ffde89c630"
+    },
+    {
+      "id": "2026-12-22-winter-holiday",
+      "slug": "2026-12-22-winter-holiday",
+      "title": "Férias de Inverno 2026",
+      "summary": "Data confirmada no calendário oficial de dezembro; detalhes e horário ainda não foram publicados em texto.",
+      "category": "event",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-22",
+        "end_date": "2026-12-28",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Registro date-only: permanece ativo até o fim do último dia no fuso IANA do evento.",
+        "Nenhum Pokémon, bônus, Brilhante, tarefa ou horário foi inferido do título."
+      ],
+      "related_news_id": "official-news-auto-51ffde89c630"
+    },
+    {
+      "id": "2026-12-29-new-year-2027",
+      "slug": "2026-12-29-new-year-2027",
+      "title": "Ano-Novo 2027",
+      "summary": "Data confirmada no calendário oficial de dezembro; detalhes e horário ainda não foram publicados em texto.",
+      "category": "event",
+      "tags": [
+        "Pokémon GO oficial",
+        "Destinos dos Sonhos",
+        "Global"
+      ],
+      "source": {
+        "name": "Pokémon GO • calendário oficial de dezembro",
+        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "precision": "date",
+        "local_timezone": "America/Sao_Paulo",
+        "start_date": "2026-12-29",
+        "end_date": "2027-01-04",
+        "brazil_timezone": "America/Sao_Paulo"
+      },
+      "calendar": {
+        "mode": "span"
+      },
+      "presentation": {
+        "requires_art": false,
+        "fallback_visual": "date",
+        "no_unverified_poster": true
+      },
+      "locations": [],
+      "gpx": {
+        "enabled": false,
+        "reason": "Programação global; nenhuma coordenada, Poképarada, Ginásio ou rota específica foi anunciada."
+      },
+      "notifications": {
+        "enabled": false,
+        "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."
+      },
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "notes": [
+        "Registro date-only: permanece ativo até o fim do último dia no fuso IANA do evento.",
+        "Nenhum Pokémon, bônus, Brilhante, tarefa ou horário foi inferido do título."
+      ],
+      "related_news_id": "official-news-auto-51ffde89c630"
     }
-  ]
+  ],
+  "updated_at": "2026-11-25T12:00:00Z"
 }

@@ -9,7 +9,7 @@
   "media_policy": "source_first",
   "_source_id": "pokeminers-1574893095320031437",
   "status": "duplicado",
-  "etapa_editorial": "aguardando_curadoria_premium",
+  "etapa_editorial": "vinculado_ao_registro_canonico",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
   "arte_obrigatoria": true,
@@ -18,5 +18,8 @@
   "proibir_render_arte": true,
   "proibir_fallback": true,
   "created_at_utc": "2026-11-25T02:34:10.776047+00:00",
-  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/go-pass-december-2026"
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/go-pass-december-2026",
+  "related_event_id": "official-news-auto-b07016703fe4",
+  "editorial_reviewed_at": "2026-11-25T12:00:00Z",
+  "editorial_detail_pending": false
 }

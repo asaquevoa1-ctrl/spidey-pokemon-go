@@ -8,7 +8,8 @@ test('Retired Caçador is absent from public app but essential features remain',
 test('Legacy feed stays archived in GitHub, never in public offline installation',()=>{
  const sw=path('sw.js'),data=JSON.parse(path('data/hunter-feed.json'));
  for(const s of ['hunter-v1.js','hunter-v1.css','hunter-live-feed.js','hunter-feed.json'])assert.ok(!sw.includes(s),s);
- assert.ok(sw.includes('national-trust-2026|rocket-lineups'));
+ assert.ok(sw.includes("url.pathname.startsWith(new URL('./data/', self.location.href).pathname)"));
+ assert.ok(sw.includes("url.pathname.endsWith('.json')"));
  assert.ok(sw.includes("fetch(request, { cache: 'no-store' })"));
  assert.equal(data.source_status,'awaiting_authorization');
  assert.deepEqual(data.items,[]);
