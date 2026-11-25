@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "🌴 Tropical Paradise\n📅 December 1–7 | 10 AM – 8 PM local time\n✨ Pyukumuku debuts with Shiny available!\n💧 New Fast Attack: Soak\n🧬 Mega Slowbro Super Max debut with Chilling Water+\n#PokemonGO\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2125652436425822323",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2125652436425822323",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-25T20:02:12.438452+00:00"
+}
