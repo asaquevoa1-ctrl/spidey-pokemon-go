@@ -1,0 +1,19 @@
+{
+  "titulo": "📅 G47IX • EVENTO",
+  "mensagem": "🌴 Welcome to Pokémon GO: Daydream Destinations! \n📅 December 1, 2026 – March 1, 2027\n\n✨ New Pokémon debuts, including Pyukumuku and Wishiwashi\n🧬 Mega Froslass & Mega Drampa debuts\n⚡ New Dynamax Pokémon and Gigantamax Max Battle Days\n🏝️ Pokémon GO Tour: Alola in February 2027\n#PokemonGO #DaydreamDestinations\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2125231876847661215",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2125231876847661215",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-25T01:25:00.805309+00:00"
+}
