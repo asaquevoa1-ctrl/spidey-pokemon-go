@@ -402,36 +402,6 @@
     ],
     "raids": [
       {
-        "id": "2026-11-09-raids-cresselia-darkrai",
-        "title": "Reides 5★: Cresselia e Darkrai",
-        "summary": "Cresselia e Darkrai na rotação mensal; atenção às reides temáticas de 9 a 15/11.",
-        "category": "raid_rotation",
-        "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO"
-        ],
-        "start_brazil": null,
-        "end_brazil": null,
-        "schedule_precision": "date",
-        "calendar_date": "2026-11-09",
-        "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
         "id": "2026-11-25-raids-deoxys-four-forms",
         "title": "Reides 5★: Deoxys (quatro formas)",
         "summary": "Deoxys retorna nas formas Normal, Ataque, Defesa e Velocidade.",
@@ -445,36 +415,6 @@
         "end_brazil": null,
         "schedule_precision": "date",
         "calendar_date": "2026-11-25",
-        "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
-        "id": "2026-11-16-mega-banette-raids",
-        "title": "Megarreides: Mega Banette",
-        "summary": "Mega Banette é destaque em Megarreides de 16 a 24 de novembro.",
-        "category": "mega_raid_rotation",
-        "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO"
-        ],
-        "start_brazil": null,
-        "end_brazil": null,
-        "schedule_precision": "date",
-        "calendar_date": "2026-11-16",
         "source": {
           "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
@@ -764,15 +704,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 16,
+    "calendar_events_in_week": 14,
     "events_with_weekly_art": 1,
     "events_with_premium_weekly_art": 1,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 15,
-    "events_in_weekly": 16,
+    "events_without_weekly_art": 13,
+    "events_in_weekly": 14,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-24T20:11:18.869343-03:00",
-    "current_items_filtered_at": "2026-11-24T20:11:18.851167-03:00",
+    "generated_at": "2026-11-25T02:34:45.119708-03:00",
+    "current_items_filtered_at": "2026-11-25T02:34:45.107075-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
