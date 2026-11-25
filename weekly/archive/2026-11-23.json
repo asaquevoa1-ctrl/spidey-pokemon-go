@@ -555,35 +555,6 @@
         }
       },
       {
-        "id": "2026-11-25-raid-hour-deoxys",
-        "title": "Hora de Reides: Deoxys (quatro formas)",
-        "summary": "Das 18h às 19h no horário local: Deoxys nas quatro formas.",
-        "category": "raid_hour",
-        "tags": [
-          "Novembro 2026",
-          "Calendário",
-          "Pokémon GO",
-          "Global"
-        ],
-        "start_brazil": "2026-11-25T18:00:00-03:00",
-        "end_brazil": "2026-11-25T19:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-          "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-          "confidence": "verified_community"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
-      },
-      {
         "id": "2026-11-08-seasonal-delights-box",
         "title": "Caixa Delícias Sazonais — janela da Black Friday",
         "summary": "Caixa de 6.095 Pokémoedas com Incubadoras, passes e Partículas Max; disponível até 27/11 às 20h PST, com limite de três compras e disponibilidade regional.",
@@ -704,15 +675,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 14,
+    "calendar_events_in_week": 13,
     "events_with_weekly_art": 1,
     "events_with_premium_weekly_art": 1,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 13,
-    "events_in_weekly": 14,
+    "events_without_weekly_art": 12,
+    "events_in_weekly": 13,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-25T17:49:07.092260-03:00",
-    "current_items_filtered_at": "2026-11-25T17:49:07.077268-03:00",
+    "generated_at": "2026-11-25T19:03:20.870588-03:00",
+    "current_items_filtered_at": "2026-11-25T19:03:20.855514-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }

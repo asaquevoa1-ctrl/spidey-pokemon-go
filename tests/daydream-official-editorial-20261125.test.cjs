@@ -66,9 +66,9 @@ test('GBL has thirteen non-overlapping official rotations',()=>{
 test('date-only official placeholders expire after the final IANA day',()=>{
   const window={};
   vm.runInContext(fs.readFileSync('spidey-app/date-only.js','utf8'),vm.createContext({window,Date,Intl,Object}));
-  const event=byId('2026-12-08-unannounced-event');
-  assert.match(window.SpideyDateOnly.status(event,new Date('2026-12-15T02:59:59Z')),/Hoje|Em andamento/);
-  assert.equal(window.SpideyDateOnly.status(event,new Date('2026-12-15T03:00:00Z')),'Data encerrada');
+  const event=byId('2026-12-22-winter-holiday');
+  assert.match(window.SpideyDateOnly.status(event,new Date('2026-12-29T02:59:59Z')),/Hoje|Em andamento/);
+  assert.equal(window.SpideyDateOnly.status(event,new Date('2026-12-29T03:00:00Z')),'Data encerrada');
   assert.equal(event.pokemon,undefined);
   assert.equal(event.bonuses,undefined);
 });
