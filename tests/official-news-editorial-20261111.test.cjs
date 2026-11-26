@@ -48,7 +48,7 @@ test('save-the-date keeps unannounced records date-only and allows official conf
   '2027-02-13-raid-day-save-date'
  ];
  assert.deepEqual(byId('official-news-auto-8a38cf8f2093').related_event_ids,ids);
- for(const id of ids.filter(id=>id!=='2026-12-12-community-day-save-date')){
+ for(const id of ids.filter(id=>!['2026-12-05-max-battle-day-save-date','2026-12-12-community-day-save-date'].includes(id))){
   const event=byId(id);
   assert.equal(event.schedule.precision,'date',id);
   for(const field of ['start_local','end_local','start_brazil','end_brazil']) assert.equal(event.schedule[field],undefined,`${id} ${field}`);
@@ -62,14 +62,18 @@ test('save-the-date keeps unannounced records date-only and allows official conf
  assert.equal(confirmed.schedule.end_local,'2026-12-12T17:00:00-03:00');
  assert.equal(confirmed.source.confidence,'official');
  assert.equal(confirmed.audit.confirmed_from_save_date,true);
+ const inteleon=byId('2026-12-05-max-battle-day-save-date');
+ assert.equal(inteleon.schedule.start_local,'2026-12-05T14:00:00-03:00');
+ assert.equal(inteleon.schedule.end_local,'2026-12-05T17:00:00-03:00');
+ assert.equal(inteleon.audit.confirmed_from_save_date,true);
 });
 
 test('date-only expiry uses the event IANA day through its last local second',()=>{
  const window={};
  vm.runInContext(fs.readFileSync('spidey-app/date-only.js','utf8'),vm.createContext({window,Date,Intl,Object}));
- const event=byId('2026-12-05-max-battle-day-save-date');
- assert.match(window.SpideyDateOnly.status(event,new Date('2026-12-06T02:59:59Z')),/^Hoje/);
- assert.equal(window.SpideyDateOnly.status(event,new Date('2026-12-06T03:00:00Z')),'Data encerrada');
+ const event=byId('2027-01-23-max-battle-day-save-date');
+ assert.match(window.SpideyDateOnly.status(event,new Date('2027-01-24T02:59:59Z')),/^Hoje/);
+ assert.equal(window.SpideyDateOnly.status(event,new Date('2027-01-24T03:00:00Z')),'Data encerrada');
 });
 
 test('the Mewtwo clone rumor remains historical and does not gain unannounced species',()=>{

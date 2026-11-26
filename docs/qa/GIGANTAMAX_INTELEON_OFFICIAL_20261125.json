@@ -1,0 +1,31 @@
+{
+  "schema": "spidey-editorial-audit-v1",
+  "reviewed_at": "2026-11-25T21:30:00-03:00",
+  "main_before_edit": "779b2dbb2d4d5d0decefd4fb04f0bfcb897a6d4d",
+  "official_sources_full_text": [
+    "https://pokemongo.com/pt-BR/news/gigantamax-inteleon-max-battle-day-2026",
+    "https://pokemongo.com/news/gigantamax-inteleon-max-battle-day-2026"
+  ],
+  "community_cross_check": [
+    "https://pokemongohub.net/post/event/gigantamax-inteleon-max-battle-day-december-2026/",
+    "https://leekduck.com/events/"
+  ],
+  "collector": {
+    "editorial_detail_pending_true": 0,
+    "announcement_present_at_review": false
+  },
+  "preserved_id": "2026-12-05-max-battle-day-save-date",
+  "canonical_news_id": "official-news-gigantamax-inteleon-max-battle-day-2026",
+  "distinct_windows": [
+    "2026-12-04-inteleon-remote-raid-limit",
+    "2026-12-05-inteleon-exploration-bonuses",
+    "2026-12-05-max-battle-day-save-date"
+  ],
+  "publication_constraints": {
+    "new_art_created": false,
+    "approved_art_replaced": false,
+    "gpx_enabled": false,
+    "push_dispatched": false,
+    "individual_research_tasks_invented": false
+  }
+}
