@@ -1,0 +1,29 @@
+{
+  "schema": "spidey-editorial-audit-v1",
+  "checked_at": "2026-11-26T10:42:00-03:00",
+  "base_sha": "65218fc35e556e5c6efdb05eda8b67116fe6e7bb",
+  "canonical_event_id": "2026-11-24-twilight-wishes-preview",
+  "official_sources_read_in_full": [
+    "https://pokemongo.com/pt-BR/news/twilight-wishes-2026",
+    "https://pokemongo.com/news/twilight-wishes-2026"
+  ],
+  "community_sources_read_in_full": [
+    "https://leekduck.com/events/twilight-wishes-2026/",
+    "https://pokemongohub.net/post/event/twilight-wishes-2026/",
+    "https://www.serebii.net/pokemongo/events/twilightwishes.shtml"
+  ],
+  "decision": {
+    "official": "A Niantic confirmou os encontros e as duas janelas, mas não associou cada tarefa à recompensa.",
+    "community": "As tarefas individuais são observações comunitárias. Incenso/Bramblin e vencer Reide/Gengar ou Drifblim coincidem em Leek Duck e Pokémon GO Hub.",
+    "history": "A fase Applin/Maschiff foi arquivada nos metadados após 26/11 às 10h locais, sem apagar o histórico.",
+    "calendar": "O evento canônico e suas duas janelas internas foram preservados; nenhum ID ou evento duplicado foi criado."
+  },
+  "preservation": {
+    "approved_art_changed": false,
+    "cosmic_s_changed": false,
+    "pokedex_pvp_gpx_changed": false,
+    "push_triggered": false,
+    "friends_chat_changed": false,
+    "hunter_reintroduced": false
+  }
+}
