@@ -17748,6 +17748,55 @@
       ]
     },
     {
+      "id": "official-news-go-battle-league-known-issues-20261125",
+      "slug": "official-news-go-battle-league-known-issues-20261125",
+      "content_type": "news",
+      "title": "Liga de Batalha GO: lista oficial de problemas atualizada",
+      "summary": "A página oficial, atualizada em 25/11, mantém um problema de rede em investigação, marca dois erros como corrigidos em uma versão futura e registra cinco problemas como resolvidos.",
+      "category": "official_update",
+      "tags": ["Novidade", "Pokémon GO oficial", "Liga de Batalha GO", "PvP"],
+      "source": {
+        "name": "Pokémon GO • Central de Ajuda oficial",
+        "url": "https://scopelyexplore.helpshift.com/hc/en/5-pokemon-go/faq/866-go-battle-league-known-issues-1793149376/",
+        "confidence": "official"
+      },
+      "calendar": {"mode": "hidden"},
+      "presentation": {"requires_art": false, "fallback_visual": "none", "no_unverified_poster": true},
+      "news": {
+        "title": "Liga de Batalha GO: problemas conhecidos e correções a caminho",
+        "summary": "Conexões adversas continuam em investigação. Partidas salvas apagadas por Pokémon inelegível e toque no Ataque Carregado acionando Ataque Ágil aparecem como corrigidos em uma versão futura.",
+        "published_on": "2026-11-25",
+        "label": "OFICIAL • SUPORTE"
+      },
+      "notes": [
+        "Em investigação: condições adversas de rede podem deixar a batalha sem resposta após uma troca inicial ou exibir incorretamente o Pokémon que entrou.",
+        "Corrigidos em versão futura: uma Equipe de Batalha salva pode ser apagada ao conter um Pokémon inelegível; tocar em um Ataque Carregado pronto pode acionar um Ataque Ágil.",
+        "Resolvidos: escudo visual sem bloqueio, troca inesperada após desmaio simultâneo, animações repetidas de Ataques Ágeis, cena incorreta com Economia de bateria e HP incompleto de Mega Pokémon em Copa com limite de PC maior.",
+        "A lista oficial não é completa e não informa o número nem a data da versão futura. O Spidey não atribui prazo de correção."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial de suporte; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-26",
+      "updated_at": "2026-11-26T04:05:00Z",
+      "audit": {
+        "classification": "official_support_update_editorially_verified",
+        "editorial_detail_pending": false,
+        "full_article_reviewed": true,
+        "rolling_support_page": true,
+        "support_page_last_updated": "2026-11-25",
+        "no_release_date_inferred": true,
+        "collector_item": "queue/pending/2026-11-26/datamine-pokeminers-b72d267661d5.json",
+        "supersedes_collector_item": "queue/pending/2026-11-07/datamine-pokeminers-ffdec8024ee7.json"
+      },
+      "verification_sources": [
+        {
+          "name": "PokeMiners • sinal operacional da alteração",
+          "url": "https://pokeminers.com/blogdiff/go-battle-league-known-issues-435",
+          "confidence": "community_signal"
+        }
+      ]
+    },
+    {
       "id": "2026-12-08-unannounced-event",
       "slug": "2026-12-08-unannounced-event",
       "title": "Evento de Celebração de Pokémon Champions",
@@ -17986,5 +18035,5 @@
       "related_news_id": "official-news-auto-51ffde89c630"
     }
   ],
-  "updated_at": "2026-11-26T00:30:00Z"
+  "updated_at": "2026-11-26T04:05:00Z"
 }

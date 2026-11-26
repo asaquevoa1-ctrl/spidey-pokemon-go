@@ -5,8 +5,8 @@
   "gerar_gpx": false,
   "aprovar": true,
   "_source_id": "g47ix-2125742735214727572",
-  "status": "aguardando_curadoria_premium",
-  "etapa_editorial": "aguardando_curadoria_premium",
+  "status": "duplicado",
+  "etapa_editorial": "vinculado_ao_registro_canonico",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
   "media_policy": "premium_editorial",
@@ -15,5 +15,9 @@
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-11-26T02:50:53.731078+00:00"
+  "created_at_utc": "2026-11-26T02:50:53.731078+00:00",
+  "duplicate_of": "oficial-https://pokemongo.com/pt-BR/news/gigantamax-inteleon-max-battle-day-2026",
+  "related_event_id": "official-news-gigantamax-inteleon-max-battle-day-2026",
+  "editorial_reviewed_at": "2026-11-26T04:05:00Z",
+  "editorial_detail_pending": false
 }

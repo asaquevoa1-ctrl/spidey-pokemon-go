@@ -1,0 +1,22 @@
+{
+  "schema": "spidey-editorial-audit-v1",
+  "reviewed_at": "2026-11-26T04:05:00Z",
+  "main_before_edit": "80b18d25dea126e5afa8b0bbbc6c7aed49f91eb2",
+  "official_source_full_text": "https://scopelyexplore.helpshift.com/hc/en/5-pokemon-go/faq/866-go-battle-league-known-issues-1793149376/",
+  "community_detection_source": "https://pokeminers.com/blogdiff/go-battle-league-known-issues-435",
+  "canonical_news_id": "official-news-go-battle-league-known-issues-20261125",
+  "support_page_last_updated": "2026-11-25",
+  "classification": "official_support_update_news_only",
+  "collector_records_reviewed": 8,
+  "preserved_history": [
+    "queue/pending/2026-11-07/datamine-pokeminers-ffdec8024ee7.json"
+  ],
+  "constraints": {
+    "calendar_event_created": false,
+    "release_date_inferred": false,
+    "new_art_created": false,
+    "approved_art_replaced": false,
+    "gpx_enabled": false,
+    "push_dispatched": false
+  }
+}

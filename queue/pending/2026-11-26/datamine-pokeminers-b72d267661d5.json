@@ -8,14 +8,17 @@
   "aprovar": true,
   "media_policy": "source_first",
   "_source_id": "pokeminers-1575282981566677147",
-  "status": "aguardando_curadoria_premium",
-  "etapa_editorial": "aguardando_curadoria_premium",
+  "status": "integrado",
+  "etapa_editorial": "integrado_no_app",
   "pipeline": "spidey_premium_editorial",
   "art_standard_version": "spidey-premium-v1",
-  "arte_obrigatoria": true,
+  "arte_obrigatoria": false,
   "arte_padrao_spidey": true,
   "usar_logo_oficial": true,
   "proibir_render_arte": true,
   "proibir_fallback": true,
-  "created_at_utc": "2026-11-26T03:12:15.710565+00:00"
+  "created_at_utc": "2026-11-26T03:12:15.710565+00:00",
+  "related_event_id": "official-news-go-battle-league-known-issues-20261125",
+  "editorial_reviewed_at": "2026-11-26T04:05:00Z",
+  "editorial_detail_pending": false
 }
