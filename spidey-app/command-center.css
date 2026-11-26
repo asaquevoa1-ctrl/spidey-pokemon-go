@@ -3,3 +3,31 @@
 .cc-fly-label{display:block;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:#137b84}[data-theme=dark] .cc-fly-label{color:#67deeb}@media(max-width:640px){.spidey-command-center .app-tabs{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));width:calc(100% - 20px)!important;max-width:calc(100% - 20px)!important;overflow:visible;padding:5px;gap:0}.spidey-command-center .app-tab{min-width:0;padding:13px 2px;font-size:.72rem;letter-spacing:0}}
 
 .notification-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;padding:8px 18px;background:var(--surface);border-bottom:1px solid var(--border)}.notification-controls .microcopy{margin:0;max-width:100%;flex:1 1 200px}.notification-controls .ghost-btn{padding:8px 12px;font-size:.8rem}.notification-controls [hidden]{display:none}
+
+/* Desktop Premium: compact navigation, legible focus and stable long labels.
+   Visual-only; navigation destinations and event data remain untouched. */
+@media (min-width: 1100px) {
+  body.spidey-command-center nav.app-tabs {
+    gap: 3px;
+    padding: 7px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100dvh - 116px);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(212, 174, 111, .35) transparent;
+  }
+  body.spidey-command-center nav.app-tabs .app-tab {
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: 10px 11px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    border-radius: 12px;
+  }
+  body.spidey-command-center nav.app-tabs .app-tab:focus-visible {
+    outline: 2px solid #e9c17d;
+    outline-offset: -3px;
+  }
+}
