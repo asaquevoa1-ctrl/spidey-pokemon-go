@@ -147,3 +147,15 @@
 @media(prefers-reduced-motion:reduce){
   #wildAreaMexicoView .wild-mx-roster-visual img{transition:none!important}
 }
+/* Acessibilidade mobile: foco visível sem alterar os pôsteres nem os dados. */
+#wildAreaMexicoView :is(button,a):focus-visible,
+#wildMxHomeFeature :is(button,a):focus-visible{
+  outline:3px solid #f1cb91;
+  outline-offset:3px;
+  box-shadow:0 0 0 5px #102130;
+}
+@media(max-width:650px){
+  #wildAreaMexicoView .wild-mx-roster-content,
+  #wildMxHomeFeature .wild-mx-home-copy{overflow-wrap:break-word}
+  #wildAreaMexicoView .wild-mx-roster-tags span{max-width:100%;overflow-wrap:anywhere}
+}
