@@ -1,0 +1,19 @@
+{
+  "titulo": "📰 G47IX • NOTÍCIA",
+  "mensagem": "✨ Shiny Gigantamax Inteleon makes its Pokémon GO debut!\n📅 December 5 | 2–5 PM local time\n#PokemonGO #Gigantamax\n\n📌 Fonte: G47IX",
+  "url": "https://x.com/g47ix/status/2125742735214727572",
+  "gerar_gpx": false,
+  "aprovar": true,
+  "_source_id": "g47ix-2125742735214727572",
+  "status": "aguardando_curadoria_premium",
+  "etapa_editorial": "aguardando_curadoria_premium",
+  "pipeline": "spidey_premium_editorial",
+  "art_standard_version": "spidey-premium-v1",
+  "media_policy": "premium_editorial",
+  "arte_obrigatoria": true,
+  "arte_padrao_spidey": true,
+  "usar_logo_oficial": true,
+  "proibir_render_arte": true,
+  "proibir_fallback": true,
+  "created_at_utc": "2026-11-26T02:50:53.731078+00:00"
+}
