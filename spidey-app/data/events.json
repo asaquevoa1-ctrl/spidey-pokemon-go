@@ -14609,7 +14609,7 @@
       "slug": "official-news-auto-8a38cf8f2093",
       "content_type": "news",
       "title": "Datas oficiais da próxima Temporada: Dias Comunitários e outros eventos",
-      "summary": "O Pokémon GO confirmou onze datas entre 5/12/2026 e 13/2/2027. Horários, espécies, bônus e demais detalhes ainda não foram anunciados; os registros permanecem marcados como data confirmada.",
+      "summary": "O anúncio inicial confirmou onze datas entre 5/12/2026 e 13/2/2027. Inteleon Gigamax e o Dia Comunitário de dezembro já receberam anúncios próprios; as demais previsões continuam sem detalhes inventados.",
       "category": "official_update",
       "tags": [
         "Oficial",
@@ -14632,15 +14632,16 @@
         "fallback_visual": "none"
       },
       "news": {
-        "title": "Próxima Temporada: 11 datas confirmadas, detalhes ainda a anunciar",
-        "summary": "A lista inclui Dias Comunitários, Batalhas Max, Reides, Super Mega Reides e Dia de Chocar. Como a fonte divulga somente datas, o Spidey não atribui horários, espécies ou bônus.",
+        "title": "Próxima Temporada: 11 datas inicialmente confirmadas",
+        "summary": "A lista inicial inclui Dias Comunitários, Batalhas Max, Reides, Super Mega Reides e Dia de Chocar. Confirmações posteriores são vinculadas aos mesmos IDs, preservando este histórico.",
         "published_on": "2026-11-09",
         "label": "OFICIAL • DATAS CONFIRMADAS"
       },
       "notes": [
         "12 e 13/12/2026 formam uma única janela de Dias Comunitários.",
         "As demais datas são registros separados para preservar cada janela oficial.",
-        "Horários, Pokémon, possibilidade de Brilhante, bônus, tarefas, locais e coordenadas não foram publicados."
+        "Inteleon Gigamax em 05/12 e o Dia Comunitário de 12–13/12 foram confirmados posteriormente em publicações oficiais próprias.",
+        "Os demais registros continuam sem horários, Pokémon, possibilidade de Brilhante, bônus, tarefas, locais ou coordenadas inferidos."
       ],
       "notifications": {
         "enabled": false,
@@ -14657,7 +14658,12 @@
         "collector_source_id": "oficial-https://pokemongo.com/pt-BR/news/save-the-date-s25",
         "collector_queue_file": "queue/pending/2026-11-09/oficial-noticia-5a9eba78468a.json",
         "date_only": true,
-        "details_unannounced": true
+        "details_unannounced": false,
+        "partially_superseded_by_confirmations": true,
+        "confirmed_event_ids": [
+          "2026-12-05-max-battle-day-save-date",
+          "2026-12-12-community-day-save-date"
+        ]
       },
       "verification_sources": [
         {
@@ -14683,32 +14689,39 @@
     {
       "id": "2026-12-05-max-battle-day-save-date",
       "slug": "2026-12-05-max-battle-day-save-date",
-      "title": "Dia de Batalhas Max",
-      "summary": "Data oficial confirmada para Dia de Batalhas Max. Horário, Pokémon, bônus e demais detalhes ainda não foram anunciados.",
+      "title": "Dia de Batalhas Max: Inteleon Gigamax",
+      "summary": "Em 05/12, das 14h às 17h locais, Inteleon Gigamax estará em Batalhas Max de seis estrelas, com possibilidade de Brilhante e bônus de Partículas Max.",
       "category": "max_battle_day",
       "tags": [
         "Global",
-        "Data confirmada",
-        "Próxima Temporada"
+        "Pokémon GO oficial",
+        "Inteleon Gigamax",
+        "Batalhas Max"
       ],
       "source": {
-        "name": "Pokémon GO • calendário oficial de dezembro",
-        "url": "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026",
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/gigantamax-inteleon-max-battle-day-2026",
         "confidence": "official"
       },
       "verification_sources": [
         {
           "name": "Pokémon GO • versão oficial em inglês",
-          "url": "https://pokemongo.com/news/monthly-content-update-dec2026",
+          "url": "https://pokemongo.com/news/gigantamax-inteleon-max-battle-day-2026",
           "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub • guia comunitário",
+          "url": "https://pokemongohub.net/post/event/gigantamax-inteleon-max-battle-day-december-2026/",
+          "confidence": "verified_community"
         }
       ],
       "schedule": {
-        "precision": "date",
         "local_timezone": "America/Sao_Paulo",
-        "start_date": "2026-12-05",
-        "end_date": "2026-12-05",
-        "brazil_timezone": "America/Sao_Paulo"
+        "start_local": "2026-12-05T14:00:00-03:00",
+        "end_local": "2026-12-05T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-05T14:00:00-03:00",
+        "end_brazil": "2026-12-05T17:00:00-03:00"
       },
       "calendar": {
         "mode": "span"
@@ -14721,11 +14734,27 @@
       "locations": [],
       "gpx": {
         "enabled": false,
-        "reason": "Comunicado global sem coordenadas, Poképaradas, Ginásios ou Pontos de Energia específicos."
+        "reason": "Os Pontos de Energia são dinâmicos; o anúncio não publicou coordenadas específicas nem uma rota confirmada."
       },
+      "pokemon": [
+        {
+          "name": "Inteleon Gigamax",
+          "shiny": true,
+          "note": "Batalhas Max de seis estrelas; Brilhante possível pela primeira vez, sem garantia."
+        }
+      ],
+      "bonuses": [
+        "Limite de coleta de Partículas Max aumentado para 1.600.",
+        "Todos os Pontos de Energia terão Batalhas Gigamax.",
+        "Pontos de Energia serão atualizados com mais frequência e pontos adicionais estarão ativos.",
+        "8× mais Partículas Max em Pontos de Energia.",
+        "Até três Trocas Especiais no dia."
+      ],
       "notes": [
-        "A fonte oficial divulgou somente a data; o último dia permanece atual até 23h59 no fuso IANA do evento.",
-        "Nenhum horário, Pokémon, bônus, brilho, encontro, tarefa ou local foi inferido."
+        "Ingresso por US$ 4,99 ou faixa regional equivalente: Pesquisa Temporária ativa das 14h às 17h locais, com 1 Cogumelo Max, 25.000 PE, 6.400 Partículas Max e 2× PE de Batalhas Max.",
+        "O ingresso pode ser presenteado a Grandes Amigos ou nível superior, não pode ser comprado com Pokémoedas e fica na loja do jogo até 05/12 às 17h locais.",
+        "O Ultracombo da loja online custa US$ 4,99 ou faixa regional equivalente e inclui o ingresso e 800 Partículas Max adicionais.",
+        "As tarefas individuais da Pesquisa Temporária e coordenadas de Pontos de Energia não foram publicadas."
       ],
       "notifications": {
         "enabled": false,
@@ -14733,14 +14762,91 @@
       },
       "status": "published",
       "verified_at": "2026-11-25",
-      "related_news_id": "official-news-auto-51ffde89c630",
+      "updated_at": "2026-11-25T21:30:00-03:00",
+      "related_news_id": "official-news-gigantamax-inteleon-max-battle-day-2026",
       "audit": {
-        "classification": "official_calendar_date_confirmed",
+        "classification": "official_announcement_editorially_verified",
         "calendar_event": true,
-        "date_confirmed_details_unannounced": true,
+        "date_confirmed_details_unannounced": false,
         "editorial_detail_pending": false,
-        "full_article_reviewed": true
+        "full_article_reviewed": true,
+        "canonical_url_checked": true,
+        "confirmed_from_save_date": true,
+        "previous_sources": [
+          "https://pokemongo.com/pt-BR/news/save-the-date-s25",
+          "https://pokemongo.com/pt-BR/news/monthly-content-update-dec2026"
+        ],
+        "history_preserved": true
       }
+    },
+    {
+      "id": "2026-12-04-inteleon-remote-raid-limit",
+      "slug": "2026-12-04-inteleon-remote-raid-limit",
+      "title": "Inteleon Gigamax — limite de Reides a Distância",
+      "summary": "De 04/12 às 21h a 06/12 à 1h em Brasília, o limite diário de Reides a Distância aumenta de 10 para 20.",
+      "category": "event_bonus_window",
+      "tags": ["Pokémon GO oficial", "Global", "Inteleon Gigamax", "Reides a Distância"],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/gigantamax-inteleon-max-battle-day-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Los_Angeles",
+        "start_local": "2026-12-04T16:00:00-08:00",
+        "end_local": "2026-12-05T20:00:00-08:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-04T21:00:00-03:00",
+        "end_brazil": "2026-12-06T01:00:00-03:00"
+      },
+      "calendar": {"mode": "span"},
+      "presentation": {"requires_art": false, "fallback_visual": "date", "no_unverified_poster": true},
+      "locations": [],
+      "gpx": {"enabled": false, "reason": "Bônus global sem coordenadas ou rota específica."},
+      "notes": [
+        "Esta janela altera somente o limite diário de Reides a Distância; o anúncio não afirma participação remota na Batalha Max de Inteleon.",
+        "Janela oficial original: 04/12 às 16h a 05/12 às 20h PST (GMT−8)."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-gigantamax-inteleon-max-battle-day-2026"
+    },
+    {
+      "id": "2026-12-05-inteleon-exploration-bonuses",
+      "slug": "2026-12-05-inteleon-exploration-bonuses",
+      "title": "Inteleon Gigamax — bônus de exploração",
+      "summary": "Em 05/12, da meia-noite às 17h locais, ficam ativos 2× Partículas Max ao explorar e 1/4 da distância para recebê-las.",
+      "category": "event_bonus_window",
+      "tags": ["Pokémon GO oficial", "Global", "Inteleon Gigamax", "Partículas Max"],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/gigantamax-inteleon-max-battle-day-2026",
+        "confidence": "official"
+      },
+      "schedule": {
+        "local_timezone": "America/Sao_Paulo",
+        "start_local": "2026-12-05T00:00:00-03:00",
+        "end_local": "2026-12-05T17:00:00-03:00",
+        "brazil_timezone": "America/Sao_Paulo",
+        "start_brazil": "2026-12-05T00:00:00-03:00",
+        "end_brazil": "2026-12-05T17:00:00-03:00"
+      },
+      "calendar": {"mode": "span"},
+      "presentation": {"requires_art": false, "fallback_visual": "date", "no_unverified_poster": true},
+      "locations": [],
+      "gpx": {"enabled": false, "reason": "Bônus global de exploração sem coordenadas ou rota específica."},
+      "bonuses": [
+        "2× mais Partículas Max ao explorar.",
+        "1/4 da distância de aventura para receber Partículas Max."
+      ],
+      "notes": [
+        "Para os bônus entrarem em vigor, é preciso primeiro coletar todas as Partículas Max disponíveis no menu Proximidades."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "related_news_id": "official-news-gigantamax-inteleon-max-battle-day-2026"
     },
     {
       "id": "2026-12-12-community-day-save-date",
@@ -16577,7 +16683,7 @@
         },
         {
           "name": "Inteleon Gigamax",
-          "note": "Dia de Batalhas Max; data específica não informada."
+          "note": "Dia de Batalhas Max confirmado para 05/12, das 14h às 17h locais, em anúncio oficial posterior."
         },
         {
           "name": "Toxtricity Gigamax",
@@ -16586,8 +16692,11 @@
       ],
       "notes": [
         "GO Tour Alola: presenciais em Los Angeles e Kaohsiung, 19–21/02; Global em 27–28/02.",
-        "A página confirma estreias e destaques, mas não publica datas específicas para Mega Froslass, Mega Drampa, Inteleon Gigamax ou Toxtricity Gigamax.",
+        "A página da temporada não publicou datas específicas para Mega Froslass, Mega Drampa, Inteleon Gigamax ou Toxtricity Gigamax; um anúncio posterior confirmou Inteleon em 05/12.",
         "Não foram inferidas datas, horários, Brilhantes ou recompensas para anúncios sem janela própria."
+      ],
+      "related_event_ids": [
+        "2026-12-05-max-battle-day-save-date"
       ],
       "verification_sources": [
         {
@@ -17582,6 +17691,63 @@
       ]
     },
     {
+      "id": "official-news-gigantamax-inteleon-max-battle-day-2026",
+      "slug": "official-news-gigantamax-inteleon-max-battle-day-2026",
+      "content_type": "news",
+      "title": "O Pokémon Agente Secreto está em uma missão importante. Preparem-se para o Dia de Batalhas Max com Inteleon Gigamax.",
+      "summary": "O anúncio confirma Inteleon Gigamax em Batalhas Max de seis estrelas em 05/12, das 14h às 17h locais, sua estreia Brilhante e janelas próprias de bônus.",
+      "category": "official_update",
+      "tags": ["Novidade", "Pokémon GO oficial", "Inteleon Gigamax", "Batalhas Max", "Destinos dos Sonhos"],
+      "source": {
+        "name": "Pokémon GO • comunicado oficial",
+        "url": "https://pokemongo.com/pt-BR/news/gigantamax-inteleon-max-battle-day-2026",
+        "confidence": "official"
+      },
+      "calendar": {"mode": "hidden"},
+      "presentation": {"requires_art": false, "fallback_visual": "none", "no_unverified_poster": true},
+      "news": {
+        "title": "Inteleon Gigamax: Dia de Batalhas Max confirmado para 5 de dezembro",
+        "summary": "Além das Batalhas Max das 14h às 17h, há bônus de exploração desde a meia-noite e aumento do limite de Reides a Distância em uma janela absoluta separada.",
+        "published_on": "2026-11-25",
+        "label": "OFICIAL • DETALHES CONFERIDOS"
+      },
+      "notes": [
+        "As publicações oficiais em português e inglês foram lidas integralmente; a data técnica da página é 26/11 às 00:00 UTC, equivalente a 25/11 às 21h em Brasília.",
+        "O guia comunitário do Pokémon GO Hub foi usado apenas para cruzamento e não acrescentou tarefas, coordenadas ou recompensas ao anúncio oficial.",
+        "As tarefas individuais da Pesquisa Temporária não foram publicadas."
+      ],
+      "notifications": {"enabled": false, "reason": "Atualização editorial; nenhum push foi autorizado nesta manutenção."},
+      "status": "published",
+      "verified_at": "2026-11-25",
+      "updated_at": "2026-11-25T21:30:00-03:00",
+      "audit": {
+        "classification": "official_announcement_editorially_verified",
+        "editorial_detail_pending": false,
+        "full_article_reviewed": true,
+        "canonical_url_checked": true,
+        "source_date_published_utc": "2026-11-26T00:00:00.000Z",
+        "collector_status_at_review": "not_yet_discovered",
+        "supersedes_date_only_preview": "2026-12-05-max-battle-day-save-date"
+      },
+      "verification_sources": [
+        {
+          "name": "Pokémon GO • versão oficial em inglês",
+          "url": "https://pokemongo.com/news/gigantamax-inteleon-max-battle-day-2026",
+          "confidence": "official"
+        },
+        {
+          "name": "Pokémon GO Hub • guia comunitário",
+          "url": "https://pokemongohub.net/post/event/gigantamax-inteleon-max-battle-day-december-2026/",
+          "confidence": "verified_community"
+        }
+      ],
+      "related_event_ids": [
+        "2026-12-04-inteleon-remote-raid-limit",
+        "2026-12-05-inteleon-exploration-bonuses",
+        "2026-12-05-max-battle-day-save-date"
+      ]
+    },
+    {
       "id": "2026-12-08-unannounced-event",
       "slug": "2026-12-08-unannounced-event",
       "title": "Evento de Celebração de Pokémon Champions",
@@ -17820,5 +17986,5 @@
       "related_news_id": "official-news-auto-51ffde89c630"
     }
   ],
-  "updated_at": "2026-11-25T22:00:00Z"
+  "updated_at": "2026-11-26T00:30:00Z"
 }
