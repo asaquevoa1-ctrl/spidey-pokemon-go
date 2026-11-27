@@ -25,37 +25,7 @@
     {
       "date": "2026-11-26",
       "weekday": "thursday",
-      "items": [
-        {
-          "id": "2026-11-26-spotlight-noibat",
-          "title": "Hora do Holofote: Noibat",
-          "summary": "Noibat, das 18h às 19h, com 2× doces por captura.",
-          "category": "spotlight_hour",
-          "tags": [
-            "Novembro 2026",
-            "Calendário",
-            "Pokémon GO",
-            "Global"
-          ],
-          "start_brazil": "2026-11-26T18:00:00-03:00",
-          "end_brazil": "2026-11-26T19:00:00-03:00",
-          "source": {
-            "name": "Pokémon GO Hub • calendário de novembro (comunidade)",
-            "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
-            "confidence": "verified_community"
-          },
-          "art": {},
-          "weekly_art": {
-            "url": "",
-            "width": 0,
-            "height": 0,
-            "sha256": "",
-            "source_role": "missing",
-            "kind": "missing",
-            "premium": false
-          }
-        }
-      ]
+      "items": []
     },
     {
       "date": "2026-11-27",
@@ -675,15 +645,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 13,
+    "calendar_events_in_week": 12,
     "events_with_weekly_art": 1,
     "events_with_premium_weekly_art": 1,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 12,
-    "events_in_weekly": 13,
+    "events_without_weekly_art": 11,
+    "events_in_weekly": 12,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-26T17:22:06.526533-03:00",
-    "current_items_filtered_at": "2026-11-26T17:22:06.507626-03:00",
+    "generated_at": "2026-11-27T00:01:59.016923-03:00",
+    "current_items_filtered_at": "2026-11-27T00:01:58.998328-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
