@@ -2764,7 +2764,7 @@
       "notes": [
         "Mega Clefable pode chegar ao Super Nível Máximo e usar Explosão Lunar+: 80 de força em Batalhas de Treinador, com chance de reduzir o Ataque do oponente em um estágio; 160 de força em Reides.",
         "A Pesquisa temporária dá um Passe de Batalha Premium e um encontro com Metagross; conclua e resgate antes do fim do evento.",
-        "FONTE COMUNITÁRIA — tarefas observadas da Pesquisa Temporária: capturar 1 Pokémon rende encontro com Metagross; fortalecer Pokémon 15 vezes rende 200 Doces Beldum; usar 3 ataques carregados supereficazes rende 5.000 Poeira Estelar; vencer 1 Reide rende 3 MTs de Ataque Carregado; derrotar um Pokémon do tipo Fada ou Voador em uma Reide rende 10 Doces Beldum GG. Recompensa final: 1 Passe de Batalha Premium.",
+        "FONTE COMUNITÁRIA — tarefas observadas da Pesquisa Temporária: capturar 1 Pokémon rende encontro com Metagross; fortalecer Pokémon 15 vezes rende 300 de Megaenergia de Metagross; usar 3 ataques carregados supereficazes rende 5.000 Poeira Estelar; vencer 1 Reide rende 3 MTs de Ataque Carregado; derrotar um Pokémon do tipo Fada ou Voador em uma Reide rende 10 Doces Beldum GG. Recompensa final: 1 Passe de Batalha Premium.",
         "O Ultracombo da loja online inclui o ingresso e um Passe de Batalha Premium adicional pelo mesmo nível de preço anunciado.",
         "Super Megarreides podem aparecer apenas em determinados Ginásios; o anúncio orienta consultar o mapa oficial e encontros de comunidades.",
         "Não confundir com as Megarreides de rotação."
@@ -2786,7 +2786,7 @@
         "2026-11-27-clefable-global-challenge",
         "2026-11-30-clefable-global-rewards"
       ],
-      "updated_at": "2026-11-28T05:32:00-03:00",
+      "updated_at": "2026-11-28T08:12:00-03:00",
       "verified_at": "2026-11-28",
       "verification_sources": [
         {
@@ -2803,6 +2803,11 @@
           "name": "Serebii • tarefas observadas da Pesquisa Temporária",
           "url": "https://www.serebii.net/pokemongo/todaysviewresearch/clefablesupermegaraiddaytimedresearch.shtml",
           "confidence": "verified_community"
+        },
+        {
+          "name": "Pokémon GO Hub • tarefas observadas da Pesquisa Temporária",
+          "url": "https://pokemongohub.net/post/event/super-mega-clefable-raid-day/",
+          "confidence": "verified_community"
         }
       ],
       "audit": {
@@ -2816,10 +2821,10 @@
         "canonical_fulltext_url": "https://pokemongo.com/news/clefable-super-mega-raid-day-2026",
         "html_canonical_url": "https://pokemongolive.com/news/clefable-super-mega-raid-day-2026",
         "research": {
-          "classification": "community_observed_timed_research",
+          "classification": "community_observed_with_source_conflict",
           "observed_on": "2026-11-28",
           "official_scope": "O anúncio oficial confirma apenas a recompensa final de um Passe de Batalha Premium e um encontro com Metagross; as tarefas individuais abaixo foram observadas pela fonte comunitária.",
-          "source_url": "https://www.serebii.net/pokemongo/todaysviewresearch/clefablesupermegaraiddaytimedresearch.shtml",
+          "source_url": "https://pokemongohub.net/post/event/super-mega-clefable-raid-day/",
           "tasks": [
             {
               "task": "Capturar 1 Pokémon",
@@ -2827,7 +2832,7 @@
             },
             {
               "task": "Fortalecer Pokémon 15 vezes",
-              "reward": "200 Doces Beldum"
+              "reward": "300 de Megaenergia de Metagross"
             },
             {
               "task": "Usar 3 ataques carregados supereficazes",
@@ -2842,7 +2847,18 @@
               "reward": "10 Doces Beldum GG"
             }
           ],
-          "final_reward": "1 Passe de Batalha Premium"
+          "final_reward": "1 Passe de Batalha Premium",
+          "source_conflict": {
+            "status": "preserved_for_audit",
+            "selected_public_reward": "300 de Megaenergia de Metagross",
+            "selected_basis": "Pokémon GO Hub e relatos comunitários publicados durante a janela do evento; a previsão anterior do Leek Duck também apontava 300 de Megaenergia de Metagross.",
+            "conflicting_report": {
+              "source": "Serebii",
+              "url": "https://www.serebii.net/pokemongo/todaysviewresearch/clefablesupermegaraiddaytimedresearch.shtml",
+              "reward": "200 Doces Beldum"
+            },
+            "official_individual_task_details_available": false
+          }
         },
         "prediction_history": {
           "confirmed_on": "2026-11-05",
