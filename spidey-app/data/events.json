@@ -2764,6 +2764,7 @@
       "notes": [
         "Mega Clefable pode chegar ao Super Nível Máximo e usar Explosão Lunar+: 80 de força em Batalhas de Treinador, com chance de reduzir o Ataque do oponente em um estágio; 160 de força em Reides.",
         "A Pesquisa temporária dá um Passe de Batalha Premium e um encontro com Metagross; conclua e resgate antes do fim do evento.",
+        "FONTE COMUNITÁRIA — tarefas observadas da Pesquisa Temporária: capturar 1 Pokémon rende encontro com Metagross; fortalecer Pokémon 15 vezes rende 200 Doces Beldum; usar 3 ataques carregados supereficazes rende 5.000 Poeira Estelar; vencer 1 Reide rende 3 MTs de Ataque Carregado; derrotar um Pokémon do tipo Fada ou Voador em uma Reide rende 10 Doces Beldum GG. Recompensa final: 1 Passe de Batalha Premium.",
         "O Ultracombo da loja online inclui o ingresso e um Passe de Batalha Premium adicional pelo mesmo nível de preço anunciado.",
         "Super Megarreides podem aparecer apenas em determinados Ginásios; o anúncio orienta consultar o mapa oficial e encontros de comunidades.",
         "Não confundir com as Megarreides de rotação."
@@ -2785,8 +2786,8 @@
         "2026-11-27-clefable-global-challenge",
         "2026-11-30-clefable-global-rewards"
       ],
-      "updated_at": "2026-11-05T16:56:00-03:00",
-      "verified_at": "2026-11-05",
+      "updated_at": "2026-11-28T05:32:00-03:00",
+      "verified_at": "2026-11-28",
       "verification_sources": [
         {
           "name": "Pokémon GO • anúncio oficial em inglês",
@@ -2796,6 +2797,11 @@
         {
           "name": "Pokémon GO Hub • calendário comunitário anterior",
           "url": "https://pokemongohub.net/post/event/pokemon-go-november-2026-events/",
+          "confidence": "verified_community"
+        },
+        {
+          "name": "Serebii • tarefas observadas da Pesquisa Temporária",
+          "url": "https://www.serebii.net/pokemongo/todaysviewresearch/clefablesupermegaraiddaytimedresearch.shtml",
           "confidence": "verified_community"
         }
       ],
@@ -2809,6 +2815,35 @@
         ],
         "canonical_fulltext_url": "https://pokemongo.com/news/clefable-super-mega-raid-day-2026",
         "html_canonical_url": "https://pokemongolive.com/news/clefable-super-mega-raid-day-2026",
+        "research": {
+          "classification": "community_observed_timed_research",
+          "observed_on": "2026-11-28",
+          "official_scope": "O anúncio oficial confirma apenas a recompensa final de um Passe de Batalha Premium e um encontro com Metagross; as tarefas individuais abaixo foram observadas pela fonte comunitária.",
+          "source_url": "https://www.serebii.net/pokemongo/todaysviewresearch/clefablesupermegaraiddaytimedresearch.shtml",
+          "tasks": [
+            {
+              "task": "Capturar 1 Pokémon",
+              "reward": "Encontro com Metagross"
+            },
+            {
+              "task": "Fortalecer Pokémon 15 vezes",
+              "reward": "200 Doces Beldum"
+            },
+            {
+              "task": "Usar 3 ataques carregados supereficazes",
+              "reward": "5.000 Poeira Estelar"
+            },
+            {
+              "task": "Vencer 1 Reide",
+              "reward": "3 MTs de Ataque Carregado"
+            },
+            {
+              "task": "Derrotar um Pokémon do tipo Fada ou Voador em uma Reide",
+              "reward": "10 Doces Beldum GG"
+            }
+          ],
+          "final_reward": "1 Passe de Batalha Premium"
+        },
         "prediction_history": {
           "confirmed_on": "2026-11-05",
           "previous_title": "Dia de Super Megarreides — prévia",
