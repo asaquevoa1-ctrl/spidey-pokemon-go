@@ -523,34 +523,6 @@
           "kind": "missing",
           "premium": false
         }
-      },
-      {
-        "id": "2026-11-08-seasonal-delights-box",
-        "title": "Caixa Delícias Sazonais — janela da Black Friday",
-        "summary": "Caixa de 6.095 Pokémoedas com Incubadoras, passes e Partículas Max; disponível até 27/11 às 20h PST, com limite de três compras e disponibilidade regional.",
-        "category": "official_update",
-        "tags": [
-          "Global",
-          "Loja Online",
-          "Black Friday"
-        ],
-        "start_brazil": "2026-11-08T22:00:00-03:00",
-        "end_brazil": "2026-11-28T01:00:00-03:00",
-        "source": {
-          "name": "Pokémon GO • comunicado oficial",
-          "url": "https://pokemongo.com/pt-BR/news/black-friday-2026",
-          "confidence": "official"
-        },
-        "art": {},
-        "weekly_art": {
-          "url": "",
-          "width": 0,
-          "height": 0,
-          "sha256": "",
-          "source_role": "missing",
-          "kind": "missing",
-          "premium": false
-        }
       }
     ]
   },
@@ -645,15 +617,15 @@
     }
   ],
   "meta": {
-    "calendar_events_in_week": 12,
+    "calendar_events_in_week": 11,
     "events_with_weekly_art": 1,
     "events_with_premium_weekly_art": 1,
     "events_with_official_weekly_art": 0,
-    "events_without_weekly_art": 11,
-    "events_in_weekly": 12,
+    "events_without_weekly_art": 10,
+    "events_in_weekly": 11,
     "events_with_generated_weekly_art": 0,
-    "generated_at": "2026-11-27T19:13:00.354792-03:00",
-    "current_items_filtered_at": "2026-11-27T19:13:00.339790-03:00",
+    "generated_at": "2026-11-28T01:04:04.195176-03:00",
+    "current_items_filtered_at": "2026-11-28T01:04:04.183773-03:00",
     "source": "spidey-app/data/events.json + stamps.json + premium-approved-master.js"
   }
 }
